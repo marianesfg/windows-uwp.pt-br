@@ -1,5 +1,5 @@
 ---
-Description: Use links de conteúdo para inserir dados avançados em seus controles de texto.
+Description: Usar links de conteúdo para inserir dados avançados em seus controles de texto.
 title: Links de conteúdo em controles de texto
 label: Content links
 template: detail.hbs
@@ -11,22 +11,22 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363056"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
-Links de conteúdo fornecem uma maneira de inserir dados avançados em seus controles de texto, o que permite que um usuário encontre e use mais informações sobre uma pessoa ou um local sem sair do contexto do seu aplicativo.
+Links de conteúdo fornecem uma maneira de inserir dados avançados em seus controles de texto, o que permite que um usuário encontre e use mais informações sobre uma pessoa ou um local sem sair do contexto de seu aplicativo.
 
-Quando o usuário prefixa uma entrada com um símbolo de e comercial (@) em uma RichEditBox, aparece uma lista de sugestões de pessoas e/ou locais que corresponde à entrada. Em seguida, por exemplo, quando o usuário seleciona um lugar, um ContentLink para esse local é inserido no texto. Quando o usuário invoca o link de conteúdo da RichEditBox, um submenu é mostrado com um mapa e informações adicionais sobre o lugar.
+Quando o usuário prefixa uma entrada com um símbolo de E comercial (@) em uma RichEditBox, aparece uma lista de sugestões de pessoas e/ou locais que corresponde à entrada. Em seguida, por exemplo, quando o usuário seleciona um local, um ContentLink para esse local é inserido no texto. Quando o usuário invoca o link de conteúdo da RichEditBox, um submenu é mostrado com um mapa e informações adicionais sobre o local.
 
-> **APIs importantes**: [Classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange classe](/uwp/api/windows.ui.text.richedittextrange)
+> **APIs importantes**: [classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [classe RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> As APIs para links de conteúdo são distribuídas entre os namespaces a seguir: Windows, Windows.UI.Xaml.Documents e Windows.UI.Text.
+> As APIs para links de conteúdo são distribuídas entre os namespaces a seguir: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents e Windows.UI.Text.
 
 
 
@@ -39,7 +39,7 @@ Há duas maneiras distintas de usar links de conteúdo:
 
 Veja a aparência de links de conteúdo por padrão em uma RichEditBox e em um TextBlock.
 
-![caixa de edição de link de conteúdo em rich](images/content-link-default-richedit.png)
+![link de conteúdo em caixa de edição avançada](images/content-link-default-richedit.png)
 ![link de conteúdo no bloco de texto](images/content-link-default-textblock.png)
 
 Diferenças em uso, renderização e comportamento são abordadas em detalhes nas seções a seguir. Esta tabela dá uma rápida comparação das principais diferenças entre um link de conteúdo em uma RichEditBox e um bloco de texto.
@@ -52,9 +52,9 @@ Diferenças em uso, renderização e comportamento são abordadas em detalhes na
 
 ## <a name="enable-content-links-in-a-richeditbox"></a>Habilitar links de conteúdo em uma RichEditBox
 
-O uso mais comum de um link de conteúdo é permitir que um usuário adicione informações rapidamente por meio da prefixação de um nome de pessoa ou local com um símbolo de e comercial (@) no texto. Quando habilitada em uma [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox), isso abre um seletor e permite que o usuário insira uma pessoa de sua lista de contatos ou um local nas proximidades, dependendo do que você ativou.
+O uso mais comum de um link de conteúdo é permitir que um usuário adicione informações rapidamente por meio da prefixação de um nome de pessoa ou local com um símbolo de e comercial (@) no texto. Quando habilitada em uma [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox), isso abre um seletor e permite que o usuário insira uma pessoa de sua lista de contatos ou um local nas proximidades, dependendo do que você habilitou.
 
-O link de conteúdo pode ser salvo com o conteúdo de texto avançado, e você pode extrair para usar em outras partes do seu aplicativo. Por exemplo, em um aplicativo de email, você pode extrair as informações da pessoa e usá-las para preencher a caixa Para com um endereço de email.
+O link de conteúdo pode ser salvo com o conteúdo de texto avançado. Você pode extraí-lo para usar em outras partes do seu aplicativo. Por exemplo, em um aplicativo de email, você pode extrair as informações da pessoa e usá-las para preencher a caixa Para com um endereço de email.
 
 > [!NOTE]
 > O seletor de link de conteúdo é um aplicativo que faz parte do Windows, portanto, ele é executado em um processo separado do seu aplicativo.
@@ -115,9 +115,9 @@ editor.ContentLinkProviders = new ContentLinkProviderCollection
 
 ### <a name="content-link-colors"></a>Cores dos links de conteúdo
 
-A aparência de um link de conteúdo é determinada pelo seu primeiro plano, plano de fundo e ícone. Em uma RichEditBox, você pode definir as propriedades [ContentLinkForegroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkForegroundColor) e [ContentLinkBackgroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkBackgroundColor) para alterar as cores padrão. 
+A aparência de um link de conteúdo é determinada pelo seu primeiro plano, segundo plano e ícone. Em uma RichEditBox, você pode definir as propriedades [ContentLinkForegroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkForegroundColor) e [ContentLinkBackgroundColor](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkBackgroundColor) para alterar as cores padrão. 
 
-Você não pode definir o cursor. O cursor é renderizado pela RichEditbox com base no tipo de link de conteúdo - um cursor [Pessoa](/uwp/api/windows.ui.core.corecursortype) para um link de pessoa, ou um cursor [Pin](/uwp/api/windows.ui.core.corecursortype) para um link de lugar.
+Você não pode definir o cursor. O cursor é renderizado pela RichEditbox com base no tipo de link de conteúdo – um cursor [Pessoa](/uwp/api/windows.ui.core.corecursortype) para um link de pessoa ou um cursor [Pin](/uwp/api/windows.ui.core.corecursortype) para um link de lugar.
 
 ### <a name="the-contentlinkinfo-object"></a>O objeto ContentLinkInfo
 
@@ -126,11 +126,11 @@ Quando o usuário faz uma seleção no seletor de pessoas ou locais, o sistema c
 O objeto ContentLinkInfo contém as informações usadas para exibir, invocar e gerenciar o link de conteúdo.
 
 - **DisplayText** – Cadeia de caracteres que é mostrada quando o link de conteúdo é renderizado. Em uma RichEditBox, o usuário pode editar o texto de um link de conteúdo após ser criado, o que altera o valor dessa propriedade.
-- **SecondaryText** – Essa cadeia de caracteres é mostrada na dica de ferramenta de um link de conteúdo renderizado.
-  - Em um link de conteúdo de lugar criado pelo seletor, ele contém o endereço do local, se disponível.
-- **URI** – O link para obter mais informações sobre o assunto do link de conteúdo. Esse Uri pode abrir um aplicativo instalado ou um site.
-- **Id** - Contador somente leitura, por controle, criado pelo controle RichEditBox. Ele é usado para acompanhar esse ContentLinkInfo durante ações como excluir ou editar. Se o ContentLinkInfo é recortar e colar no controle, ele receberá uma nova ID. Valores de ID são incrementais.
-- **LinkContentKind** – Cadeia de caracteres que descreve o tipo de link de conteúdo. Os tipos de conteúdo internos são _Locais_ e _Contatos_ . A valor diferencia maiúsculas de minúsculas.
+- **SecondaryText** – Essa cadeia de caracteres é mostrada na ToolTip de um link de conteúdo renderizado.
+  - Em um link de conteúdo de lugar criado pelo seletor, ele contém o endereço da localização, se disponível.
+- **URI** – O link para obter mais informações sobre o assunto do link de conteúdo. Esse URI pode abrir um aplicativo instalado ou um site.
+- **ID** – Contador somente leitura, por controle, criado pelo controle RichEditBox. Ele é usado para acompanhar esse ContentLinkInfo durante ações como excluir ou editar. Se ContentLinkInfo for recortar e colar no controle, ele receberá uma nova ID. Os valores de ID são incrementais.
+- **LinkContentKind** – Cadeia de caracteres que descreve o tipo de link de conteúdo. Os tipos de conteúdo internos são _Locais_ e _Contatos_. A valor diferencia maiúsculas de minúsculas.
 
 #### <a name="link-content-kind"></a>Tipo de conteúdo de link
 
@@ -138,35 +138,35 @@ Existem várias situações em que o LinkContentKind é importante.
 
 - Quando um usuário copia um link de conteúdo de RichEditBox e cola em outra RichEditBox, ambos os controles devem ter um ContentLinkProvider para esse tipo de conteúdo. Caso contrário, o link é colado como texto.
 - Você pode usar LinkContentKind em um manipulador de eventos [ContentLinkChanged](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkChanged) para determinar o que fazer com um link de conteúdo quando você usá-lo em outras partes do seu aplicativo. Veja a seção Exemplo para mais informações.
-- O LinkContentKind influencia como o sistema abre o Uri quando o link é invocado. Veremos isso na discussão de inicialização do Uri em seguida.
+- O LinkContentKind influencia como o sistema abre o URI quando o link é invocado. Veremos isso na discussão de inicialização do URI em seguida.
 
-#### <a name="uri-launching"></a>Inicialização de Uri
+#### <a name="uri-launching"></a>Inicialização de URI
 
-A propriedade Uri funciona como a propriedade NavigateUri de um hiperlink. Quando um usuário clica nela, ela inicia o Uri no navegador padrão ou no aplicativo que está registrado para o protocolo especificado no valor do Uri.
+A propriedade URI funciona como a propriedade NavigateUri de um hiperlink. Quando um usuário clica nela, ela inicia o URI no navegador padrão ou no aplicativo que está registrado para o protocolo especificado no valor do URI.
 
 O comportamento específico dos 2 tipos de conteúdo de link é descrito aqui.
 
-##### <a name="places"></a>Lugares
+##### <a name="places"></a>Locais
 
-O seletor de lugares cria um ContentLinkInfo com uma raiz de Uri de https://maps.windows.com/. Este link pode ser aberto de 3 modos:
+O seletor de Locais cria um ContentLinkInfo com uma raiz de URI de https://maps.windows.com/. Este link pode ser aberto de 3 modos:
 
 - Se LinkContentKind = "Locais", ele abre um cartão de informações em um submenu. O submenu é semelhante ao submenu do seletor de link de conteúdo. Ele faz parte do Windows e é executado em um processo separado do seu aplicativo.
-- Se LinkContentKind não for "Locais", ele tenta abrir o aplicativo **Mapas** no local especificado. Por exemplo, isso pode acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
-- Se o Uri não puder ser aberto no aplicativo Mapas, o mapa será aberto no navegador padrão. Isso normalmente acontece quando as configurações _aplicativos para sites_ do usuário não permitirem abrir o Uri com o aplicativo **Mapas**.
+- Se LinkContentKind não for "Locais", ele tenta abrir o aplicativo **Mapas** na localização especificada. Por exemplo, isso poderá acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
+- Se o URI não puder ser aberto no aplicativo Mapas, o mapa será aberto no navegador padrão. Isso normalmente acontece quando as configurações _aplicativos para sites_ do usuário não permitirem abrir o URI com o aplicativo **Mapas**.
 
 ##### <a name="people"></a>People
 
-O seletor de pessoas cria um ContentLinkInfo com um Uri que usa o protocolo **ms-people**.
+O seletor de pessoas cria um ContentLinkInfo com um URI que usa o protocolo **ms-people**.
 
 - Se LinkContentKind = "Pessoas", ele abre um cartão de informações em um submenu. O submenu é semelhante ao submenu do seletor de link de conteúdo. Ele faz parte do Windows e é executado em um processo separado do seu aplicativo.
-- Se LinkContentKind não for "People", ele abre o aplicativo **Pessoas**. Por exemplo, isso pode acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
+- Se LinkContentKind não for "People", ele abrirá o aplicativo **Pessoas**. Por exemplo, isso poderá acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
 
 > [!TIP]
-> Para obter mais informações sobre como abrir outros aplicativos e sites do seu aplicativo, consulte os tópicos em [iniciar um aplicativo com um Uri](/windows/uwp/launch-resume/launch-app-with-uri).
+> Para obter mais informações sobre como abrir outros aplicativos e sites de seu aplicativo, confira os tópicos em [Iniciar um aplicativo com um URI](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Invocado
 
-Quando o usuário invoca um link de conteúdo, o evento [ContentLinkInvoked](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkInvoked) é acionado antes que o comportamento padrão de iniciar o Uri ocorra. Você pode manipular esse evento para substituir ou cancelar o comportamento padrão.
+Quando o usuário invoca um link de conteúdo, o evento [ContentLinkInvoked](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkInvoked) é acionado antes que o comportamento padrão de iniciar o URI ocorra. Você pode manipular esse evento para substituir ou cancelar o comportamento padrão.
 
 Este exemplo mostra como você pode substituir o comportamento padrão de inicialização o de um link de conteúdo de Local. Em vez de abrir o mapa em um cartão de informações de lugar, no aplicativo Mapas ou um navegador da Web padrão, você pode marcar o evento como Handled e abrir o mapa em um controle interno de aplicativo [WebView](/uwp/api/windows.ui.xaml.controls.webview).
 
@@ -196,12 +196,12 @@ private void editor_ContentLinkInvoked(RichEditBox sender, ContentLinkInvokedEve
 
 #### <a name="contentlinkchanged"></a>ContentLinkChanged
 
-Você pode usar o evento [ContentLinkChanged](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkChanged) para ser notificado quando um link de conteúdo é adicionado, modificado ou removido. Isso permite que você extraia o link de conteúdo do texto e o use em outros lugares no seu aplicativo. Isto é exibido posteriormente na seção Exemplos.
+Você pode usar o evento [ContentLinkChanged](/uwp/api/windows.ui.xaml.controls.richeditbox.ContentLinkChanged) para ser notificado quando um link de conteúdo é adicionado, modificado ou removido. Isso permite que você extraia o link de conteúdo do texto e o use em outros locais no seu aplicativo. Isto é exibido posteriormente na seção Exemplos.
 
 As propriedades do [ContentLinkChangedEventArgs](/uwp/api/windows.ui.xaml.controls.contentlinkchangedeventargs) são:
 
-- **ChangedKind** - Essa enumeração ContentLinkChangeKind é a ação dentro do ContentLink. Por exemplo, se o ContentLink é inserido, removido ou editado.
-- **Info** - ContentLinkInfo que era o destino da ação.
+- **ChangedKind** – Essa enumeração ContentLinkChangeKind é a ação dentro do ContentLink. Por exemplo, se o ContentLink é inserido, removido ou editado.
+- **Info** – ContentLinkInfo que era o destino da ação.
 
 Esse evento é gerado para cada ação ContentLinkInfo. Por exemplo, se o usuário copia e cola vários links de conteúdo em RichEditBox ao mesmo tempo, esse evento é gerado para cada item adicionado. Ou, se o usuário seleciona e exclui vários links de conteúdo ao mesmo tempo, esse evento é gerado para cada item excluído.
 
@@ -271,7 +271,7 @@ Para outras situações, um elemento de texto de hiperlink é geralmente apropri
 
 ### <a name="contentlink-appearance"></a>Aparência do ContentLink
 
-A aparência de um link de conteúdo é determinada pelo seu primeiro plano, plano de fundo e cursor. Em um bloco de texto, você pode definir as propriedades Foreground (no TextElement) e [Background](/uwp/api/windows.ui.xaml.documents.contentlink.background) para alterar as cores padrão.
+A aparência de um link de conteúdo é determinada pelo seu primeiro plano, segundo plano e cursor. Em um bloco de texto, você pode definir as propriedades Foreground (no TextElement) e [Background](/uwp/api/windows.ui.xaml.documents.contentlink.background) para alterar as cores padrão.
 
 Por padrão, o cursor [Mão](/uwp/api/windows.ui.core.corecursortype) é mostrado quando o usuário passa sobre o link de conteúdo. Ao contrário de RichEditBlock, controles de bloco de texto não mudam o cursor automaticamente com base no tipo de link. Você pode definir a propriedade [Cursor](/uwp/api/windows.ui.xaml.documents.contentlink.Cursor) para alterar o cursor com base no tipo de link ou outros fatores.
 

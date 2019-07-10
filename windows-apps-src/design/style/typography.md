@@ -1,31 +1,31 @@
 ---
-description: Saiba como usar a tipografia em seu aplicativo para ajudar os usuários a entenderem o conteúdo facilmente.
-title: Tipografia nos aplicativos UWP
+description: Aprenda a usar a tipografia em seu aplicativo para ajudar os usuários a entenderem o conteúdo facilmente.
+title: Tipografia em aplicativos UWP
 ms.date: 04/06/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244382"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820590"
 ---
 # <a name="typography"></a>Tipografia
 
-![imagem hero](images/header-typography.svg)
+![imagem Hero](images/header-typography.svg)
 
-Como a representação visual da linguagem, a tarefa principal da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, vamos discutir como definir o estilo de tipografia em seu aplicativo UWP para ajudar os usuários a entender o conteúdo de modo fácil e eficiente.
+Como a representação visual da linguagem, a principal tarefa da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, discutiremos como definir o estilo de tipografia em seu aplicativo UWP para ajudar os usuários a entenderem o conteúdo de modo fácil e eficiente.
 
 ## <a name="font"></a>Font
 
-Você deve usar uma fonte em toda a interface do usuário do aplicativo e recomendamos manter a fonte padrão para aplicativos UWP, **Segoe UI**. Ela foi projetada para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
+Você precisa usar uma fonte em toda a interface do usuário do aplicativo, e recomendamos manter a fonte padrão para aplicativos UWP, a **Segoe UI**. Ela foi projetado para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
 ![Texto de exemplo da fonte Segoe UI](images/type/segoe-sample.svg)
 
-Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o aplicativo, consulte [Idiomas](#Languages) e [Fontes](#Fonts) e veja as fontes recomendadas para aplicativos UWP.
+Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o seu aplicativo, confira [Idiomas](#Languages) e [Fontes](#Fonts) e veja as fontes recomendadas para aplicativos UWP.
 
 :::row:::
     :::column:::
@@ -44,7 +44,7 @@ Os tamanhos de fonte em aplicativos UWP são ajustados automaticamente em todos 
 
 ![distâncias de visualização em diferentes dispositivos](images/type/scaling-chart.svg)
 
-Devido ao funcionamento do sistema de dimensionamento, você está projetando em pixels efetivos e não pixels físicos reais, e você não precisa alterar os tamanhos da fonte de acordo com diferentes telas ou resoluções.
+Devido ao funcionamento do sistema de dimensionamento, você está projetando em pixels efetivos e não em pixels físicos reais, e não precisa alterar os tamanhos da fonte de acordo com diferentes telas ou resoluções.
 
 :::row:::
     :::column:::
@@ -112,7 +112,7 @@ A rampa de tipos da UWP estabelece relações específicas entre os estilos de t
 
 ## <a name="alignment"></a>Alinhamento
 
-O [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) padrão é à esquerda e, na maioria dos casos, essa abordagem com recuo à esquerda e irregular à direita fornece ancoragem consistente de conteúdo e um layout uniforme. Para os idiomas da direita para a esquerda, consulte [Ajuste de layout e fontes para oferecer suporte à globalização](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
+O [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) padrão é à esquerda e, na maioria dos casos, essa abordagem com recuo à esquerda e irregular à direita fornece ancoragem consistente de conteúdo e um layout uniforme. Para os idiomas da direita para a esquerda, confira [Ajustando layout e fontes para dar suporte à globalização](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
 
 ![Mostra texto à esquerda.](images/type/alignment.svg)
 
@@ -135,7 +135,7 @@ O [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignme
 
 ## <a name="clipping-and-ellipses"></a>Recorte e elipses
 
-Quando a quantidade de texto se estende além do espaço disponível, recomendamos recortar o texto, que é o comportamento padrão da maioria dos [controles de texto UWP](../controls-and-patterns/text-controls.md).
+Quando a quantidade de texto se estende para além do espaço disponível, recomendamos dividir o texto, que é o comportamento padrão da maioria dos [controles de texto da UWP](../controls-and-patterns/text-controls.md).
 
 ![Mostra um quadro de dispositivo com alguns recortes de texto](images/type/clipping.svg)
 
@@ -154,11 +154,11 @@ Quando a quantidade de texto se estende além do espaço disponível, recomendam
     :::column-end:::
 :::row-end:::
 
-**Observação**: Se os contêineres não são bem definidos (por exemplo, nenhuma diferenciação cor de fundo), ou quando há um link para ver mais texto, em seguida, use elipses.
+**Observação**: se os contêineres não estão bem definidos (por exemplo, não há uma cor de tela de fundo para diferenciar) ou quando há um link para ver mais texto, use as reticências.
 
 ## <a name="languages"></a>Idiomas 
 
-A Segoe UI é nossa fonte para inglês, idiomas europeus, grego, hebraico, armênio, georgiano e árabe. Para outros idiomas, consulte as recomendações a seguir.
+A Segoe UI é nossa fonte para inglês, idiomas europeus, grego, hebraico, armênio, georgiano e árabe. Para outros idiomas, confira as recomendações a seguir.
 
 ### <a name="globalizinglocalizing-fonts"></a>Fontes de globalização/localização
 
@@ -222,7 +222,7 @@ Use as [APIs de mapeamento de fonte LanguageFont](https://docs.microsoft.com/uwp
 </tr>
 <tr class="even">
 <td align="left" style="font-family: Yu Gothic UI;">Interface do usuário Yu Gothic</td>
-<td align="left">Leve, Semi-leve, Regular, Semi-negrito, Negrito</td>
+<td align="left">Leve, semileve, regular, seminegrito e negrito</td>
 <td align="left">Fonte de interface do usuário para japonês.</td>
 </tr>
 </tbody>
@@ -272,7 +272,7 @@ As fontes sans-serif são uma excelente escolha para títulos e elementos de int
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">Regular, semileve, claro, negrito, seminegrito</td>
-<td align="left">Uma fonte de código-fonte que é metricamente compatível com Segoe UI, destinada a aplicativos em outras plataformas que não desejam usar Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtenha Selawik no GitHub.</a></td>
+<td align="left">Uma fonte de código-fonte que é metricamente compatível com Segoe UI, destinada a aplicativos em outras plataformas que não desejam usar Segoe UI. <a href="https://github.com/Microsoft/Selawik">Obtenha a Selawik no GitHub.</a></td>
 </tr>
 
 </tbody>

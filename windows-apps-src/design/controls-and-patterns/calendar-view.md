@@ -13,17 +13,17 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 02206d1f237eeeb113910aece7345ae35f22a80b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363093"
 ---
 # <a name="calendar-view"></a>Exibição de calendário
 
 Uma exibição de calendário permite que um usuário visualize e interaja com um calendário em que ele pode navegar por mês, ano ou década. Um usuário pode selecionar uma única data ou um intervalo de datas. Ele não tem uma superfície de seletor e o calendário está sempre visível. 
 
-> **APIs importantes**:  [Classe de exibição de calendário](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [SelectedDatesChanged evento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddateschanged)
+> **APIs importantes**:  [classe CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [evento SelectedDatesChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddateschanged)
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
@@ -49,7 +49,7 @@ Para obter mais informações sobre como escolher o controle correto, consulte o
 </tr>
 </table>
 
-A exibição de calendário é composta de três visões separadas: a visão de mês, a visão de ano e a visão de década. Por padrão, ele abre com o modo de exibição de mês. Você pode especificar um modo de exibição de inicialização ao definir a propriedade [DisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.displaymode).
+A exibição de calendário é composta de três visões separadas: a visão de mês, a visão de ano e a visão de década. Por padrão, ele abre com o modo de exibição de mês. Você pode especificar um modo de exibição de inicialização definindo a propriedade [DisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.displaymode).
 
 ![Os três modos de exibição de um modo de exibição de calendário](images/calendar-view-3-views.png)
 
@@ -69,9 +69,9 @@ O modo de exibição de calendário resultante fica assim:
 
 ### <a name="selecting-dates"></a>Selecionando datas
 
-Por padrão, a propriedade [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) é definida como **Única**. Isso permite que um usuário escolha uma única data no calendário. Defina SelectionMode como **Nenhum** para desabilitar a seleção de data. 
+Por padrão, a propriedade [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) é definida como **Single**. Isso permite que um usuário escolha uma única data no calendário. Defina SelectionMode como **Nenhum** para desabilitar a seleção de data. 
 
-Defina SelectionMode como **Múltiplo** para permitir que um usuário selecione várias datas. Você pode selecionar várias datas programaticamente ao adicionar objetos [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) à coleção [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates), conforme mostrado aqui:
+Defina SelectionMode como **Múltiplo** para permitir que um usuário selecione várias datas. Você pode selecionar várias datas programaticamente, adicionando objetos [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) à coleção [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates), conforme mostrado aqui:
 
 ```csharp
 calendarView1.SelectedDates.Add(DateTimeOffset.Now);
@@ -91,7 +91,7 @@ O modo de exibição de calendário é composto de elementos XAML definidos em C
 - Os elementos XAML definidos no modelo de controle incluem a borda que envolve o controle, o cabeçalho, os botões Anterior e Próximo e elementos DayOfWeek. Você pode definir o estilo e o novo modelo desses elementos como qualquer controle XAML. 
 - A grade de calendário é composta de objetos [CalendarViewDayItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarViewDayItem). Você não pode definir o estilo ou o novo modelo desses elementos, mas são fornecidas várias propriedades para permitir que você personalize a aparência deles.
 
-Este diagrama mostra os elementos que compõem o modo de exibição de mês do calendário. Para obter mais informações, consulte os Comentários sobre a classe [CalendarViewDayItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarViewDayItem).
+Este diagrama mostra os elementos que compõem o modo de exibição de mês do calendário. Para obter mais informações, confira os Comentários sobre a classe [CalendarViewDayItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarViewDayItem).
 
 ![Os elementos de um modo de exibição de mês de calendário](images/calendar-view-month-elements.png)
 
@@ -109,7 +109,7 @@ Bordas de Estado Visual | [FocusBorderBrush](https://docs.microsoft.com/uwp/api/
 OutofScope | [IsOutOfScopeEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.isoutofscopeenabled), [OutOfScopeBackground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.outofscopebackground), [OutOfScopeForeground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.outofscopeforeground)  
 Hoje | [IsTodayHighlighted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.istodayhighlighted), [TodayFontWeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.todayfontweight), [TodayForeground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.todayforeground)  
 
- Por padrão, o modo de exibição de mês mostra 6 semanas de cada vez. Você pode alterar o número de semanas mostrado ao definir a propriedade [NumberOfWeeksInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.numberofweeksinview). O número mínimo de semanas para mostrar é 2; o máximo, 8.
+ Por padrão, o modo de exibição de mês mostra 6 semanas de cada vez. Você pode alterar o número de semanas mostrado, definindo a propriedade [NumberOfWeeksInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.numberofweeksinview). O número mínimo de semanas para mostrar é 2; o máximo, 8.
 
 Por padrão, os modos de exibição de ano e de década aparecem em uma grade de 4 x 4. Para alterar o número de linhas ou colunas, chame [SetYearDecadeDisplayDimensions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.setyeardecadedisplaydimensions) com o número desejado de linhas e colunas. Isso irá alterar a grade para os modos de exibição de ano e de década.
 
@@ -119,7 +119,7 @@ Aqui, os modos de exibição de ano e de década são definidos para aparecer em
 calendarView1.SetYearDecadeDisplayDimensions(3, 4);
 ```
 
-Por padrão, a data mínima mostrada na exibição de calendário é 100 anos antes da data atual, e a data máxima mostrada é 100 anos após a data atual. Você pode alterar as datas mínima e máxima que o calendário mostra ao definir as propriedades [MinDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.mindate) e [MaxDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.maxdate).
+Por padrão, a data mínima mostrada na exibição de calendário é 100 anos antes da data atual, e a data máxima mostrada é 100 anos após a data atual. Você pode alterar as datas mínima e máxima que o calendário mostra definindo as propriedades [MinDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.mindate) e [MaxDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.maxdate).
 
 ```csharp
 calendarView1.MinDate = new DateTime(2000, 1, 1);
@@ -130,7 +130,7 @@ calendarView1.MaxDate = new DateTime(2099, 12, 31);
 
 Cada dia no calendário é representado por um objeto [CalendarViewDayItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarViewDayItem). Para acessar um item individual de dia e usar seus métodos e propriedades, manipule o evento [CalendarViewDayItemChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging) e use a propriedade Item de argumentos de evento para acessar o CalendarViewDayItem.
 
-Você pode fazer um dia não selecionável na exibição de calendário ao definir sua propriedade [CalendarViewDayItem.IsBlackout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.isblackout) como **true**. 
+Você pode fazer um dia não selecionável na exibição de calendário definindo sua propriedade [CalendarViewDayItem.IsBlackout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.isblackout) como **true**. 
 
 Você pode mostrar informações contextuais sobre a densidade de eventos em um dia chamando o método [CalendarViewDayItem.SetDensityColors](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.setdensitycolors). Você pode mostrar de 0 a 10 barras de densidade para cada dia, e definir a cor de cada barra. 
 
@@ -210,7 +210,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

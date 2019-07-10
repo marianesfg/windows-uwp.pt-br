@@ -14,49 +14,49 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 210431928c5dd7c5d5dfb99855322f1560e91dd7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363226"
 ---
 # <a name="buttons"></a>Botões
 
-Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botões são especializados para determinadas tarefas, como navegação, ações repetidas ou apresentação de menus.
+Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botões são especializados para tarefas específicas, como navegação, ações repetidas ou apresentação de menus.
 
 ![Exemplo de botões](images/controls/button.png)
 
-A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializado.
+A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializados.
 
 Controle | Descrição
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou evento de clique.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento de clique continuamente enquanto pressionado.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
+[Button](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com um evento de Clique ou uma associação de Comando.
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento de Clique continuamente enquanto pressionado.
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo de um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro lado abre um menu.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Um botão de alternância com dois lados. Um dos lados alterna liga/desliga, e o outro lado abre um menu.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro abre um menu.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Um botão de alternância com dois lados. Um lado ativa/desativa e o outro abre um menu.
 
 | **Obter a biblioteca de interface do usuário do Windows** |
 | - |
-| DropDownButton, botão de divisão e ToggleSplitButton são incluídos como parte da biblioteca de interface do usuário do Windows, um pacote do NuGet que contém os novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte o [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| DropDownButton, SplitButton e ToggleSplitButton estão incluídos como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **APIs de plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
+| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
 | - | - |
-| [Evento de clique](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), [propriedade de comando](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [Classe DropDownButton](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [classe SplitButton](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [ToggleSplitButton classe](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
+| [Evento de Clique](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), [Propriedade de Comando](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [Classe DropDownButton](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [Classe SplitButton](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [Classe ToggleSplitButton](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use uma **botão** para permitir que o usuário iniciar uma ação imediata, como o envio de um formulário.
+Use um **Botão** para permitir que o usuário inicie uma ação imediata, como enviar um formulário.
 
-Não use um botão quando a ação é navegar para outra página; usar um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) em vez disso. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
-> Exceção: Para a navegação do assistente, use botões rotulado "Fazer" e "Avançar". Para outros tipos de versões anteriores, navegação ou navegação para um nível superior, use um [botão Voltar](../basics/navigation-history-and-backwards-navigation.md).
+Não use um botão quando a ação for de navegar para outra página; em vez disso, use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton). Para saber mais, consulte [Hiperlinks](hyperlinks.md).
+> Exceção: para navegação do assistente, use botões rotulados como "Voltar" e "Avançar". Para outros tipos de navegação regressiva ou para um nível superior, use um [botão voltar](../basics/navigation-history-and-backwards-navigation.md).
 
-Use uma **RepeatButton** quando o usuário pode querer disparar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou decrementar um valor em um contador.
+Use **RepeatButton** quando o usuário quiser disparar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou reduzir um valor em um contador.
 
-Use uma **DropDownButton** quando o botão tem um submenu que contém mais opções. A divisa padrão fornece uma indicação visual de que o botão inclui um submenu.
+Use um **DropDownButton** quando o botão tiver um submenu que contém mais opções. A divisa padrão fornece uma indicação visual de que o botão inclui um submenu.
 
-Use uma **SplitButton** quando deseja que o usuário seja capaz de iniciar uma ação imediata ou escolher opções adicionais de forma independente.
+Use um **SplitButton** quando quiser que o usuário seja capaz de iniciar uma ação imediata ou escolher opções adicionais de forma independente.
 
 ## <a name="examples"></a>Exemplos
 
@@ -120,42 +120,42 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 ### <a name="button-interaction"></a>Interação de botão
 
-Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
+Quando você toca em um botão com um dedo ou uma caneta ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento de [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
 
-Geralmente, não se pode manipular eventos de baixo nível [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) em um Botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+Geralmente, não se pode manipular eventos [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) de baixo nível em um Botão porque ele tem o comportamento de Clique. Para saber mais, consulte [Events and routed events overview](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
-Você pode alterar a forma como um botão aciona o evento Click alterando a propriedade [ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode). O valor ClickMode padrão é **Release**, mas você também pode definir ClickMode de um botão como **Passar o mouse sobre** ou **Pressionar**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque.
+Você pode alterar a forma como um botão aciona o evento de Clique alterando a propriedade [ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode). O valor padrão de ClickMode é **Release**, mas você também pode definir ClickMode de um botão como **Hover** ou **Press**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque.
 
 
 ### <a name="button-content"></a>Conteúdo do botão
 
-Botão é um [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl). Sua propriedade de conteúdo XAML é [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content), que habilita uma sintaxe semelhante para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
+O Botão é um [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl). Sua propriedade de conteúdo XAML é [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content), que habilita uma sintaxe assim para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
 
 Geralmente, o conteúdo de um botão é texto. Veja as recomendações de design para botões com conteúdo de texto:
 -   Utilize um texto conciso, específico e autoexplicativo que descreva claramente a ação executada pelo botão. Geralmente, o conteúdo de texto do botão é uma única palavra, um verbo.
 -   Use a fonte padrão a menos que suas diretrizes de marca digam para usar algo diferente.
 -   Para texto mais curto, evite botões de comando estreitos usando uma largura mínima do botão de 120px.
-- Para texto mais longo, evite botões de comando largos limitando o texto a um tamanho máximo de 26 caracteres.
--   Se o conteúdo em texto de um botão for dinâmico (isto é, [localizado](../globalizing/globalizing-portal.md)), considere como o botão será redimensionado e o que acontecerá para controles em volta dele.
+- Para texto mais longo, evite botões de comando largos, limitando o texto a um tamanho máximo de 26 caracteres.
+-   Se o conteúdo de texto de um botão for dinâmico (isto é, [localizado](../globalizing/globalizing-portal.md)), considere como o botão será redimensionado e o que acontecerá com controles em volta dele.
 
 <table>
 <tr>
-<td> <b>Preciso corrigir:</b><br> Botões com estouro de texto. </td>
+<td> <b>Necessário corrigir:</b><br> botões com estouro de texto. </td>
 <td> <img src="images/button-wraptext.png"/> </td>
 </tr>
 <tr>
-<td> <b>Opção 1:</b><br> Aumente a largura do botão, empilhe botões e delimite se o comprimento do texto for maior que 26 caracteres. </td>
+<td> <b>Opção 1:</b><br> aumente a largura do botão, empilhe botões e delimite se o comprimento do texto for maior que 26 caracteres. </td>
 <td> <img src="images/button-wraptext1.png"> </td>
 </tr>
 <tr>
-<td> <b>Opção 2:</b><br> Aumente a altura do botão e delimite o texto. </td>
+<td> <b>Opção 2:</b><br> aumente a altura do botão e delimite o texto. </td>
 <td> <img src="images/button-wraptext2.png"> </td>
 </tr>
 </table>
 
 Você também pode personalizar elementos visuais que compõem a aparência do botão. Por exemplo, você poderia substituir o texto por um ícone ou usar um ícone mais texto.
 
-Aqui, um **StackPanel** que contém uma imagem e o texto está definido como conteúdo de um botão.
+Aqui, um **StackPanel** que contém uma imagem e texto está definido como conteúdo de um botão.
 
 ```xaml
 <Button Click="Button_Click"
@@ -175,7 +175,7 @@ O botão fica assim.
 
 ## <a name="create-a-repeat-button"></a>Criar um botão de repetição
 
-Um [RepeatButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) é um botão que gera eventos [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) repetidas vezes a partir do momento em que é pressionado até ser liberado. Defina a propriedade [Delay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.delay) para especificar o tempo que o RepeatButton aguarda após ser pressionado antes de começar a repetir a ação de clique. Defina a propriedade [Interval](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.interval) para especificar o tempo entre as repetições da ação de clique. O tempo para as duas propriedades são especificados em milissegundos.
+Um [RepeatButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) é um botão que gera eventos de [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) repetidas vezes do momento em que é pressionado até ser liberado. Defina a propriedade [Delay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.delay) para especificar o tempo que RepeatButton aguarda após ser pressionado antes de começar a repetir a ação de clique. Defina a propriedade [Interval](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton.interval) para especificar o tempo entre as repetições da ação de clique. O tempo para as duas propriedades são especificados em milissegundos.
 
 O exemplo a seguir mostra dois controles RepeatButton cujos respectivos eventos Click são usados para aumentar e diminuir o valor mostrado em um bloco de texto.
 
@@ -207,20 +207,20 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Criar um botão suspenso
 
-> DropDownButton requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou o [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> DropDownButton exige o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Um [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) é um botão que mostra uma divisa como um indicador visual que tem um submenu anexado que contém mais opções. Ele tem o mesmo comportamento que um botão padrão com um submenu; apenas a aparência é diferente.
+Um [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) é um botão que mostra uma divisa como um indicador visual de que ele tem um submenu anexado que contém mais opções. Ele tem o mesmo comportamento de um Botão padrão com um submenu, apenas a aparência é diferente.
 
-Na lista suspensa do botão herda o evento de clique, mas você normalmente não usá-lo. Em vez disso, você deve usar a propriedade de submenu para anexar um submenu e invocar ações usando as opções de menu no submenu. O menu suspenso é aberto automaticamente quando o botão é clicado. Certifique-se de especificar o [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade do seu submenu para garantir que o posicionamento desejado em relação ao botão. O algoritmo de posicionamento padrão pode não produzir o posicionamento desejado em todas as situações.
+O botão suspenso herda o evento de Clique, mas normalmente você não o usa. Em vez disso, você usa a propriedade Flyout para anexar um submenu e invocar ações usando as opções de menu no submenu. O submenu é aberto automaticamente quando o botão é clicado. Especifique a propriedade [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) do submenu para garantir o posicionamento desejado em relação ao botão. O algoritmo de posicionamento padrão pode não produzir o posicionamento desejado em todas as situações.
 
 > [!TIP]
-> Para obter mais informações sobre submenus, consulte [Menus e menus de contexto](menus.md).
+> Para obter mais informações sobre submenus, confira [Menus e menus de contexto](menus.md).
 
-### <a name="example---drop-down-button"></a>Exemplo - botão suspenso
+### <a name="example---drop-down-button"></a>Exemplo – Botão suspenso
 
-Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para alinhamento de parágrafo em um RichEditBox. (Para obter mais informações e código, consulte [caixa de edição de Rich](rich-edit-box.md)).
+Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para alinhamento de parágrafo em uma RichEditBox. (Para obter mais informações e código, confira [Caixa de edição com formato](rich-edit-box.md)).
 
-![Uma lista suspensa do botão com comandos de alinhamento](images/drop-down-button-align.png)
+![Um botão suspenso com comandos de alinhamento](images/drop-down-button-align.png)
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
@@ -266,27 +266,27 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>Criar um botão de divisão
 
-> Botão de divisão requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou o [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> SplitButton exige o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
+Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocadas separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
 > [!NOTE]
-> Quando chamado com toque, o botão de divisão se comporta como uma lista suspensa do botão; as duas metades do botão de invocar o menu suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente.
+> Quando invocado com toque, o botão de divisão se comporta como um botão suspenso; as duas metades do botão invocam o submenu. Com outros métodos de entrada, um usuário pode invocar qualquer metade do botão separadamente.
 
-O comportamento típico para um botão de divisão é:
+O comportamento típico de um botão de divisão é:
 
-- Quando o usuário clica a parte do botão, manipule o evento de clique para invocar a opção selecionada no momento na lista suspensa.
-- Quando a lista suspensa é aberta, o identificador de invocação dos itens no menu suspenso para ambas as alterações que a opção é selecionada e chamá-la. É importante invocar o item de submenu, porque o evento Click não ocorre ao usar o toque de botão.
+- Quando o usuário clica na parte do botão, manipule o evento de Clique para invocar a opção selecionada no momento na lista suspensa.
+- Quando a lista suspensa é aberta, manipule a invocação dos itens no menu suspenso para alterar a opção que está selecionada e invocá-la. É importante invocar o item do submenu, pois o evento de Clique do botão não ocorre ao usar o toque.
 
 > [!TIP]
-> Há muitas maneiras de colocar os itens na lista para baixo e lidar com sua invocação. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) à **falso**. Isso permite aos usuários navegar as opções usando o teclado sem invocar o item em cada alteração.
+> Há muitas maneiras de colocar itens na lisa suspensa e manipular sua invocação. Se você usa um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar pelas opções usando um teclado, sem invocar o item a cada alteração.
 
-### <a name="example---split-button"></a>Exemplo - botão de divisão
+### <a name="example---split-button"></a>Exemplo – Botão de divisão
 
-Este exemplo mostra como criar um botão de divisão é usado para alterar a cor de primeiro plano do texto selecionado em um RichEditBox. (Para obter mais informações e código, consulte [caixa de edição de Rich](rich-edit-box.md)).
-Usos de submenu do botão de divisão [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como o valor padrão para seu [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade. Você não pode substituir esse valor.
+Este exemplo mostra como criar um botão de divisão usado para alterar a cor de primeiro plano do texto selecionado em uma RichEditBox. (Para obter mais informações e código, confira [Caixa de edição com formato](rich-edit-box.md)).
+O submenu do botão de divisão usa [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como valor padrão para sua propriedade [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement). Você não pode substituir esse valor.
 
-![Um botão de divisão para a seleção de cor de primeiro plano](images/split-button-rtb.png)
+![Um botão de divisão para selecionar a cor de primeiro plano](images/split-button-rtb.png)
 
 ```xaml
 <SplitButton ToolTipService.ToolTip="Foreground color"
@@ -374,27 +374,27 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>Criar um botão de divisão de alternância
 
-> ToggleSplitButton requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou o [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> ToggleSplitButton exige o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
+Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocadas separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
-Um botão de divisão de alternância é normalmente usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ela pode ser usada para ativar ou desativar, a listas enquanto a lista suspensa é usada para escolher o estilo da lista.
+Um botão de divisão de alternância normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documentos, ele pode ser usado para ativar ou desativar listas, enquanto a lista suspensa é usada para escolher o estilo da lista.
 
 > [!NOTE]
-> Quando chamado com toque, o botão de divisão de alternância se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode ativar/desativar e invocar as duas metades do botão separadamente. Com o toque, as duas metades do botão invocar o menu suspenso. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativada ou desativada.
+> Quando invocado com toque, o botão de divisão de alternância se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode alternar e invocar as duas metades do botão separadamente. Com toque, as duas metades do botão invocam o menu suspenso. Portanto, você precisa incluir uma opção no conteúdo do submenu para alternar o botão entre ativado ou desativado.
 
 ### <a name="differences-with-togglebutton"></a>Diferenças com ToggleButton
 
-Diferentemente [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton), ToggleSplitButton não tem um estado indeterminado. Como resultado, você deve ter em mente essas diferenças:
+Diferente de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton), ToggleSplitButton não tem estado indeterminado. Como resultado, você deve ter em mente as seguintes diferenças:
 
-- ToggleSplitButton não tem um **IsThreeState** propriedade ou **indeterminado** eventos.
-- O [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) propriedade é apenas uma **bool**, e não um **bool anulável**.
-- ToggleSplitButton tem apenas o [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) evento; ele não tem separada **Checked** e **desmarcado** eventos.
+- ToggleSplitButton não tem uma propriedade **IsThreeState** ou um evento **Indeterminate**.
+- A propriedade [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) é apenas um **booliano**, e não um **booliano anulável**.
+- ToggleSplitButton tem apenas o evento [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged); ele não tem eventos **Checked** e **Unchecked** separados.
 
-### <a name="example---toggle-split-button"></a>Exemplo - botão de divisão de alternância
+### <a name="example---toggle-split-button"></a>Exemplo – Botão de divisão de alternância
 
-O exemplo a seguir mostra como uma alternância de botão de divisão pode ser usado para ativar ou desativar a formatação de lista e alterar o estilo da lista, em um RichEditBox. (Para obter mais informações e código, consulte [caixa de edição de Rich](rich-edit-box.md)).
-Usos de submenu do botão de divisão de alternância [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como o valor padrão para seu [posicionamento](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement) propriedade. Você não pode substituir esse valor.
+O exemplo a seguir mostra como um botão de divisão de alternância pode ser usado para ativar ou desativar a formatação de lista, bem como alterar o estilo da lista, em uma RichEditBox. (Para obter mais informações e código, confira [Caixa de edição com formato](rich-edit-box.md)).
+O submenu do botão de divisão de alternância usa [BottomEdgeAlignedLeft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutplacementmode) como valor padrão para sua propriedade [Placement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.placement). Você não pode substituir esse valor.
 
 ![Um botão de divisão de alternância para selecionar estilos de lista](images/toggle-split-button-open.png)
 
@@ -502,7 +502,7 @@ private void ApplyListStyle(string listStyle)
 ## <a name="recommendations"></a>Recomendações
 
 - Assegure que a finalidade e o estado de um botão estejam claros para o usuário.
-- Quando houver vários botões para a mesma decisão (como em uma caixa de diálogo de confirmação), apresente os botões de confirmação nesta ordem, onde [Faça isso] e [Não faça isso] são respostas específicas para a instrução principal:
+- Quando houver vários botões para a mesma decisão (como em uma caixa de diálogo de confirmação), apresente os botões de confirmação nesta ordem, em que [Faça] e [Não faça] são respostas específicas para a instrução principal:
     - OK/[Faça]/Sim
     - [Não faça]/Não
     - Cancel
@@ -511,17 +511,17 @@ private void ApplyListStyle(string listStyle)
 
 ### <a name="recommended-single-button-layout"></a>Layout de botão único recomendado
 
-Se o layout requer apenas um botão, ele deve ser alinhado à esquerda ou à direita com base no contexto de contêiner.
+Se o layout exige apenas um botão, ele deve ser alinhado à esquerda ou à direita com base no contexto de contêiner.
 
-- As caixas de diálogo com apenas um botão devem **alinhar o botão à direita**. Se a caixa de diálogo contém apenas um botão, verifique se o botão executa a ação segura e não destrutiva. Se você usar [ContentDialog](dialogs.md) e especificar um único botão, ele será automaticamente para alinhar à direita.
+- As caixas de diálogo com apenas um botão devem **alinhar o botão à direita**. Se a caixa de diálogo contiver apenas um botão, verifique se o botão executa a ação segura e não destrutiva. Se você usar [ContentDialog](dialogs.md) e especificar um único botão, ele será automaticamente alinhado à direita.
 
 ![Um botão dentro de uma caixa de diálogo](images/pushbutton_doc_dialog.png)
 
 - Se o botão é exibido dentro de um contêiner da interface do usuário (por exemplo, em uma notificação do sistema, um submenu ou um item de modo de exibição de lista), você deve **alinhar o botão à direita** no contêiner.
 
-![Um botão em um contêiner](images/pushbutton_doc_container.png)
+![Um botão dentro de um contêiner](images/pushbutton_doc_container.png)
 
-- Nas páginas com um único botão (por exemplo, um botão de "Aplicação" na parte inferior de uma página de configurações), você deve **alinhar o botão à esquerda**. Isso garante que o botão esteja alinhado com o restante do conteúdo da página.
+- Em páginas com um único botão (por exemplo, um botão de "Aplicação" na parte inferior de uma página de configurações), você deve **alinhar o botão à esquerda**. Isso garante que o botão esteja alinhado com o restante do conteúdo da página.
 
 ![Um botão em uma página](images/pushbutton_doc_page.png)
 
@@ -531,11 +531,11 @@ O botão Voltar é um elemento de interface do usuário fornecida pelo sistema q
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe de botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button)
+- [Classe Button](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button)
 - [Botões de opção](radio-button.md)
 - [Caixas de seleção](checkbox.md)
-- [Comutadores de alternância](toggles.md)
+- [Botões de alternância](toggles.md)

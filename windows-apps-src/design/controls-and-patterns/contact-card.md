@@ -10,37 +10,37 @@ dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c227629ace1f3fdbb2af8582401f9273cf11c2e
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913976"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63799649"
 ---
 # <a name="contact-card"></a>Cartão de visita
 
-O cartão de visita exibe informações de contato, como o nome, número de telefone e endereço, para um [Contato](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
+O cartão de visita exibe informações de contato, como nome, número de telefone e endereço, para um [Contato](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (o mecanismo que a UWP usa para representar pessoas e empresas).  O cartão de visita também permite que o usuário edite informações de contato. Você pode optar por exibir um cartão de visita compacto ou completo que contém informações adicionais.
 
-> **APIs importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [entre em contato com a classe](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **APIs importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [classe Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Há duas maneiras de exibir o cartão de visita:  
-* Como um cartão de contato padrão que é exibido em um submenu é light-rejeitável relativa às ações – o cartão de contato dissapears quando o usuário clica fora dele. 
-* Como um cartão de contato completas que ocupa mais espaço e não é light-rejeitável relativa às ações — o usuário deve clicar **fechar** para fechá-lo. 
+* Como um cartão de visita padrão exibido em um submenu light dismiss – o cartão de visita desaparece quando o usuário clica fora dele. 
+* Como um cartão de visita completo que ocupa mais espaço e não é light dismiss – o usuário deve clicar em **Fechar** para fechá-lo. 
 
 
 <figure>
     <img src="images/contact-card/contact-card-standard.png" alt="The full contact card">
-    <figcaption>O cartão de contato padrão</figcaption>
+    <figcaption>O cartão de visita padrão</figcaption>
 </figure>
 
 <figure>
     <img src="images/contact-card/contact-card-full.png" alt="The full contact card">
-    <figcaption>O cartão de contato completo</figcaption>
+    <figcaption>O cartão de visita completo</figcaption>
 </figure>
 
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use o cartão de contato quando você deseja exibir informações de contato de um contato. Se você quiser exibir o nome do contato e a imagem, use o [controle de imagem da pessoa](person-picture.md). 
+Use o cartão de visita quando quiser exibir informações de contato para um contato. Se você quiser exibir somente o nome e a imagem do contato, use o [controle de imagem da pessoa](person-picture.md). 
 
 
 <!-- TODO: Add examples back when the contact card has been added. -->
@@ -61,11 +61,11 @@ Use o cartão de contato quando você deseja exibir informações de contato de 
 </tr>
 </table> -->
 
-## <a name="show-a-standard-contact-card"></a>Exibir um cartão de contato padrão
+## <a name="show-a-standard-contact-card"></a>Exibir um cartão de visita padrão
 
-1. Normalmente, você mostrar um cartão de contato, como o usuário clicou algo: um botão ou talvez o [controle de imagem da pessoa](person-picture.md). Não queremos ocultar o elemento. Para evitar ocultá-la, precisamos criar um [Rect](/uwp/api/windows.foundation.rect) que descreve a localização e o tamanho do elemento. 
+1. Normalmente, você mostra um cartão de visita porque o usuário clicou em algo: um botão ou talvez o [controle de imagem da pessoa](person-picture.md). Não queremos ocultar o elemento. Para evitar isso, precisamos criar um [Rect](/uwp/api/windows.foundation.rect) que descreve a localização e o tamanho do elemento. 
 
-    Vamos criar uma função de utilitário que faz que para nós – vamos usá-lo posteriormente.
+    Vamos criar uma função de utilitário que faz isso para nós – vamos usá-la posteriormente.
     ```csharp
     // Gets the rectangle of the element 
     public static Rect GetElementRectHelper(FrameworkElement element) 
@@ -78,7 +78,7 @@ Use o cartão de contato quando você deseja exibir informações de contato de 
 
     ```
 
-2. Determinar se você pode exibir o cartão de contato chamando o método [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported). Se não houver suporte, exiba uma mensagem de erro. (Este exemplo pressupõe que você vai mostrando o cartão de contato em resposta a um evento click.)
+2. Determine se você pode exibir o cartão de visita chamando o método [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported). Se não for compatível, exiba uma mensagem de erro. Este exemplo pressupõe que você mostrará o cartão de visita em resposta a um evento de clique.
     ```csharp
     // Contact and Contact Managers are existing classes 
     private void OnUserClickShowContactCard(object sender, RoutedEventArgs e) 
@@ -88,13 +88,13 @@ Use o cartão de contato quando você deseja exibir informações de contato de 
 
     ```
 
-3. Use a função de utilitário que você criou na etapa 1 para obter os limites do controle que disparou o evento (para que não tenha sido abordado-com o cartão de contato).
+3. Use a função de utilitário criada na etapa 1 para obter os limites do controle que disparou o evento (para que não seja coberto pelo cartão de visita).
 
     ```csharp
             Rect selectionRect = GetElementRect((FrameworkElement)sender); 
     ```
 
-4. Obtenha o objeto [contato](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) que você deseja exibir. Este exemplo cria apenas um contato simple, mas seu código deve recuperar um contato real. 
+4. Obtenha o objeto [Contato](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) que você deseja exibir. Este exemplo apenas cria um contato simples, mas o código precisa recuperar um contato real. 
 
     ```csharp
                 // Retrieve the contact to display
@@ -103,7 +103,7 @@ Use o cartão de contato quando você deseja exibir informações de contato de 
                 email.Address = "jsmith@contoso.com"; 
                 contact.Emails.Add(email); 
     ```
-5. Mostrar cartão de contato chamando o método [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard). 
+5. Mostre o cartão de visita chamando o método [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard). 
 
     ```csharp
             ContactManager.ShowFullContactCard(
@@ -144,9 +144,9 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ```
 
-## <a name="show-a-full-contact-card"></a>Exibir um cartão de contato completo
+## <a name="show-a-full-contact-card"></a>Exibir um cartão de visita completo
 
-Para mostrar o cartão de contato completas, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
+Para mostrar o cartão de visita completo, chame o método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard) em vez de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
 
 ```csharp
 private void onUserClickShowContactCard() 
@@ -174,12 +174,12 @@ private void onUserClickShowContactCard()
 
 ## <a name="retrieving-real-contacts"></a>Recuperar contatos "reais"
 
-Os exemplos neste artigo criam um contato simples. Em um aplicativo real, você provavelmente deseja recuperar um contato existente. Para obter instruções, consulte o artigo [contatos e calendário](/windows/uwp/contacts-and-calendar/).
+Os exemplos neste artigo criam um contato simples. Em um aplicativo real, você provavelmente deseja recuperar um contato existente. Para obter instruções, confira o artigo [Contatos e calendário](/windows/uwp/contacts-and-calendar/).
 
 
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Contatos e calendário](/windows/uwp/contacts-and-calendar/)
-- [Exemplo de cartões de contato](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [Amostra de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)
 - [Controle de imagem de pessoas](/windows/uwp/controls-and-patterns/person-picture/)

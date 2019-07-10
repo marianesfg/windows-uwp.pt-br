@@ -1,5 +1,5 @@
 ---
-Description: Uma visão geral dos padrões comuns de página e elementos de interface do usuário para exibir o conteúdo em seu aplicativo da UWP.
+Description: Uma visão geral de padrões comuns de página e elementos de interface do usuário para exibir conteúdo no aplicativo UWP.
 title: Noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -10,57 +10,57 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913956"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63796347"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Noções básicas de design de conteúdo para aplicativos UWP
 
 O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Já que os aplicativos existem por diversos motivos, o conteúdo vem em diversos formatos: em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, mapas e informações sobre destinos de viagem são o conteúdo; e assim por diante. 
 
-Este artigo fornece uma visão geral de como você pode apresentar conteúdo em seu aplicativo. Nós descrevemos padrões comuns de página e elementos de interface do usuário que você pode usar para exibir seu conteúdo, qualquer que seja sua forma.
+Este artigo fornece uma visão geral de como você pode apresentar conteúdo em um aplicativo. Descrevemos padrões comuns de página e elementos de interface do usuário que você pode usar para exibir seu conteúdo, qualquer que seja sua forma.
 
 ## <a name="common-page-patterns"></a>Padrões comuns de página
 
-Muitos aplicativos usam alguns ou todos esses padrões comuns de página para exibir diferentes tipos de conteúdo. Da mesma forma, fique à vontade para misturar e combinar esses padrões para otimizar o conteúdo do seu aplicativo.
+Muitos aplicativos usam alguns ou todos esses padrões comuns de página para exibir diferentes tipos de conteúdo. Da mesma forma, fique à vontade para misturar e combinar esses padrões para otimizar o conteúdo do aplicativo.
 
 ### <a name="landing"></a>Inicial
 
 ![Página de aterrissagem](images/content-basics/hero-screen.png)
 
-Páginas de aterrissagem, também conhecidas como telas de celebridades, geralmente aparecem no nível superior de uma experiência de aplicativo. A área de superfície grande serve como um palco de aplicativos para destacar o conteúdo que os usuários podem querer procurar e consumir.
+Páginas de aterrissagem, também conhecidas como telas de celebridades, geralmente aparecem no nível superior de uma experiência de aplicativo. A área de superfície grande serve como um palco de aplicativos para realçar o conteúdo que os usuários podem querer procurar e consumir.
 
 ### <a name="collections"></a>Coleções
 
 ![galeria](images/content-basics/gridview.png)
 
-Coleções permitem que os usuários naveguem grupos de conteúdo ou dados. [Modo de exibição de grade](../controls-and-patterns/item-templates-gridview.md) é uma boa opção para fotos ou conteúdo centrado em mídia, e [exibição de lista](../controls-and-patterns/item-templates-listview.md) é uma boa opção para conteúdo de uso intenso de texto ou dados.
+Coleções permitem que os usuários naveguem em grupos de conteúdo ou dados. O [modo de exibição de grade](../controls-and-patterns/item-templates-gridview.md) é uma boa opção para fotos ou conteúdo centrado em mídia e a [exibição de lista](../controls-and-patterns/item-templates-listview.md) é uma boa opção para conteúdo de uso intenso de texto ou dados.
 
 
 ### <a name="masterdetail"></a>Mestre/detalhes
 
 ![mestre/detalhes](images/content-basics/master-detail.png)
 
-O modelo [mestre/detalhes](../controls-and-patterns/master-details.md) consiste em uma exibição de lista (mestre) e um modo de exibição de conteúdo (detalhes). Ambos os painéis são fixos e têm a rolagem vertical. Há uma relação clara entre o item de lista e a exibição de conteúdo: o item no modo de exibição mestre é selecionado e o modo de exibição de detalhes é atualizado correspondentemente. Além de fornecer navegação no modo de exibição de detalhes, os itens no modo de exibição mestre podem ser adicionados e removidos.
+O modelo [mestre/detalhes](../controls-and-patterns/master-details.md) consiste em uma exibição de lista (mestre) e um modo de exibição de conteúdo (detalhes). Ambos os painéis são fixos e têm a rolagem vertical. Há uma relação clara entre o item de lista e a exibição de conteúdo: o item no modo de exibição mestre é selecionado e o modo de exibição de detalhes é respectivamente atualizado. Além de fornecer navegação no modo de exibição de detalhes, os itens no modo de exibição mestre podem ser adicionados e removidos.
 
 ### <a name="details"></a>Detalhes
 
 ![várias exibições](images/multi-view.png)
 
-Quando os usuários encontram o conteúdo que estão procurando, considere criar uma página de exibição de conteúdo dedicado para que os usuários possam visualizar a página livre de distrações. Se possível, [crie uma opção de exibição de tela inteira](../layout/show-multiple-views.md) que expande o conteúdo para preencher a tela inteira e oculta todos os outros elementos de interface do usuário. 
+Quando os usuários encontram o conteúdo que estão procurando, considere criar uma página de exibição de conteúdo dedicado para que eles possam exibir a página sem distrações. Se possível, [crie uma opção de exibição de tela inteira](../layout/show-multiple-views.md) que expande o conteúdo para preencher a tela inteira e oculta todos os outros elementos de interface do usuário. 
 
 Para ajustar as alterações no tamanho da tela, considere também criar um [design responsivo](design-and-ui-intro.md) que oculta/mostra os elementos de interface do usuário conforme apropriado.
 
 ### <a name="forms"></a>Formulários
 ![formulário](images/content-basics/forms.png)
 
-Um [formulário](../controls-and-patterns/forms.md) é um grupo de controles que coleta e envia dados de usuários. A maioria, se não todos os aplicativos, usam uma forma de páginas de configurações, portais de logon, hubs de comentários, criação de conta ou outros fins. 
+Um [formulário](../controls-and-patterns/forms.md) é um grupo de controles que coleta e envia dados de usuários. A maioria, se não todos os aplicativos, usam um formulário para páginas de configurações, portais de logon, hubs de comentários, criação de conta ou outros fins. 
 
 ## <a name="common-content-elements"></a>Elementos de conteúdo comum
 
-Para criar esses padrões de página, você precisará usar uma combinação de elementos de conteúdo individuais. Veja alguns elementos de interface do usuário comumente usados para exibir o conteúdo. (Para obter uma lista completa dos elementos de interface de usuário, consulte [controles e padrões](../controls-and-patterns/index.md).
+Para criar esses padrões de página, você precisará usar uma combinação de elementos de conteúdo individuais. Veja alguns elementos de interface do usuário comumente usados para exibir o conteúdo. Para ver uma lista completa dos elementos de interface do usuário, confira [controles e padrões](../controls-and-patterns/index.md).
 
 <div class="mx-responsive-img">
 <table>
@@ -100,8 +100,8 @@ Para criar esses padrões de página, você precisará usar uma combinação de 
     <img src="images/content-basics/textbox.png" alt="text box" /></td>
 <td align="left"><p><a href="../controls-and-patterns/text-block.md">Bloco de texto</a>, <a href="../controls-and-patterns/text-box.md">caixa de texto</a>, <a href="../controls-and-patterns/rich-edit-box.md">caixa de edição com formato</a></p>
 </td>
-<td align="left">Exibe texto. Alguns elementos permitem que o usuário edite texto. Para obter mais informações, consulte <a href="../controls-and-patterns/text-controls.md">Controles de texto</a>.
-<p>Para obter diretrizes sobre como exibir texto, consulte <a href="../style/typography.md">Tipografia</a>.</p>
+<td align="left">Exibe texto. Alguns elementos permitem que o usuário edite texto. Para obter mais informações, confira <a href="../controls-and-patterns/text-controls.md">Controles de texto</a>.
+<p>Para obter diretrizes sobre como exibir texto, confira <a href="../style/typography.md">Tipografia</a>.</p>
 </td>
 </tr>
 <tr class="odd">

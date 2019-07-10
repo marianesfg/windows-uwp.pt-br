@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c42a058398539701cc1df003717eec99d1b2cd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362862"
 ---
 # <a name="create-custom-transport-controls"></a>Criar controles personalizados de transporte
@@ -35,7 +35,7 @@ Antes de começar, você deve estar familiarizado com as classes MediaPlayerElem
 
 **MediaPlayerElement** tem controles de transporte internos que foram projetados para funcionar bem sem modificação na maioria dos aplicativos de reprodução de áudio e vídeo. Eles são fornecidos pela classe [**MediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) e incluem botões para executar, parar e navegar na mídia, além de ajustar volume, alternar tela inteira, converter em um segundo dispositivo, habilitar legendas, alternar faixas de áudio e ajustar a taxa de reprodução. MediaTransportControls tem propriedades que permitem controlar se cada botão é mostrado e habilitado. Você também pode definir a propriedade [**IsCompact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediatransportcontrols.iscompact) para especificar se os controles são mostrados em uma linha ou duas.
 
-No entanto, talvez haja cenários em que você precise personalizar ainda mais a aparência do controle ou alterar seu comportamento. Estes são alguns exemplos:
+No entanto, talvez haja cenários em que você precise personalizar ainda mais a aparência do controle ou alterar seu comportamento. Veja alguns exemplos:
 - Altere os ícones, o comportamento do controle deslizante e as cores.
 - Mover botões de comando menos usados para um menu de estouro.
 - Altere a ordem na qual os comandos saem quando o controle é redimensionado.
@@ -57,10 +57,10 @@ O [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contr
 - A terceira seção contém o [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) que contém vários elementos MediaTransportControls juntos e define o layout dos componentes.
 
 > [!NOTE]
-> Para obter mais informações sobre como modificar modelos, consulte [Modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates). Você pode usar um editor de texto ou editores semelhantes em seu IDE para abrir os arquivos XAML no \( *arquivos de programas*) \Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK versão*) \Generic. O modelo e o estilo padrão para cada controle são definidos no arquivo **generic.xaml**. Você pode encontrar o modelo MediaTransportControls em generic.xaml procurando por "MediaTransportControls".
+> Para obter mais informações sobre como modificar modelos, consulte [Modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates). É possível usar um editor de texto ou editores semelhantes no IDE para abrir os arquivos XAML em \(*Arquivos de Programas*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*versão do SDK*)\Generic. O modelo e o estilo padrão para cada controle são definidos no arquivo **generic.xaml**. Você pode encontrar o modelo MediaTransportControls em generic.xaml procurando por "MediaTransportControls".
 
 Nas seguintes seções, você aprende a personalizar diversos dos principais elementos dos controles de transporte:
-- [**Controle deslizante**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider): permite que um usuário remover por meio de suas mídias e também exibe o progresso
+- [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider): permite que um usuário navegue em sua mídia e também exibe o progresso
 - [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar): contém todos os botões.
 Para obter mais informações, consulte a seção Anatomia do tópico de referência MediaTransportControls.
 
@@ -70,7 +70,7 @@ Se você quiser modificar apenas a aparência dos MediaTransportControls, crie u
 
 ### <a name="re-template-the-control"></a>Novo modelo do controle
 
-**Para personalizar o estilo de padrão de MediaTransportControls e modelo**
+**Para personalizar o modelo e o estilo padrão MediaTransportControls**
 1. Copie o estilo padrão de Estilos e modelos MediaTransportControls para um ResourceDictionary em seu projeto.
 2. Atribua a Style um valor x:Key para identificá-lo, assim.
 
@@ -97,7 +97,7 @@ Para obter mais informações sobre como modificar estilos e modelos, consulte [
 
 Para adicionar ou modificar a funcionalidade dos controles de transporte, você deve criar uma nova classe que seja derivada de MediaTransportControls. Uma classe derivada chamada `CustomMediaTransportControls` é mostrada na [Amostra de controles de transporte de mídia](https://go.microsoft.com/fwlink/p/?LinkId=620023) e os demais exemplos nesta página.
 
-**Para criar uma nova classe derivada MediaTransportControls**
+**Para criar uma nova classe derivada de MediaTransportControls**
 1. Adicione um novo arquivo de classe ao projeto.
     - No Visual Studio, selecione Projeto > Adicionar Classe. A caixa de diálogo Adicionar Novo Item é aberta.
     - Na caixa de diálogo Adicionar Novo Item, insira um nome para o arquivo de classe e clique em Adicionar. (Na amostra de Controles de Transporte de Mídia, a classe é chamada `CustomMediaTransportControls`.)
@@ -215,9 +215,9 @@ Uma razão pela qual você talvez queira personalizar MediaTransportControls é 
               VerticalAlignment="Center" />
 ```
 
-Você deve adicioná-lo para a barra de comandos no local apropriado. (Para obter mais informações, consulte Trabalhando com a seção do menu de estouro). Como ele está posicionado na interface do usuário é determinado em que o botão está na marcação. Por exemplo, se você quiser que esse botão seja exibido como o último elemento em comandos primários, adicioná-lo no final da lista de comandos principal.
+É necessário adicioná-lo à CommandBar na localização correta. Para saber mais, confira a seção "Trabalhar com o menu de estouro". A maneira como ele está posicionado na interface do usuário é determinada pela posição do botão na marcação. Por exemplo, se você quiser que o botão apareça como o último elemento nos comandos principais, adicione-o no fim da lista de comandos principais.
 
-Você também pode personalizar o ícone do botão. Para obter mais informações, consulte o <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"> <b>AppBarButton</b> </a> referência.
+Também é possível personalizar o ícone do botão. Para saber mais, confira a referência <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a>.
     
 
 2. Na substituição [**OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate), obtenha o botão do modelo e registre um manipulador para seu evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Esse código entra na classe `CustomMediaTransportControls`.
@@ -272,8 +272,8 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 }
 ```
 
-**Controles de transporte de mídia personalizada com o botão "Curtir" adicionado**
-![botão, como controle de transporte de mídia personalizada com adicionais](images/controls/mtc_double_custom_inprod.png)
+**Controles personalizados de transporte de mídia com o botão "Curtir" adicionado**
+![Controle personalizado de transporte de mídia com botão Curtir adicional](images/controls/mtc_double_custom_inprod.png)
 
 ### <a name="modifying-the-slider"></a>Modificando o controle deslizante
 

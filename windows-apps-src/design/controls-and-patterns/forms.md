@@ -1,68 +1,68 @@
 ---
-Description: Diretrizes de layout para formulários em aplicativos UWP.
+Description: Diretrizes de layout para formulários em aplicativos da UWP.
 title: Formulários
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
-keywords: windows 10, uwp, fluent
+keywords: windows 10, uwp, fluente
 ms.openlocfilehash: 8a57f13e168a248569bca1beeceed7b4f6c89f69
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658151"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63794307"
 ---
 # <a name="forms"></a>Formulários
-Um formulário é um grupo de controles que coletam e enviar dados de usuários. Formulários são usados normalmente para páginas de configurações, pesquisas, criação de contas e muito mais. 
+Um formulário é um grupo de controles que coleta e envia dados de usuários. Os formulários são usados normalmente em páginas de configurações, pesquisas, criação de contas e muito mais. 
 
-Este artigo discute as diretrizes de design para a criação de layouts XAML de formulários.
+Este artigo discute as diretrizes de design para a criação de layouts XAML para formulários.
 
 ![Exemplo de formulário](images/PivotHeader.png)
 
-## <a name="when-should-you-use-a-form"></a>Quando você usar um formulário?
-Um formulário é uma página dedicada para coletar entradas de dados que estão claramente relacionadas uns aos outros. Você deve usar um formulário quando você precisar coletar explicitamente os dados de um usuário. Você pode criar um formulário para um usuário:
-- Faça logon em uma conta
-- Inscreva-se para uma conta
-- Alterar configurações de aplicativo, como a privacidade ou opções de exibição
-- Faça uma pesquisa
+## <a name="when-should-you-use-a-form"></a>Quando devo usar um formulário?
+Um formulário é uma página dedicada a coletar entradas de dados que estão claramente relacionadas umas com as outras. Você deve usar um formulário quando precisar coletar explicitamente os dados de um usuário. Você pode criar um formulário para um usuário para:
+- Fazer logon em uma conta
+- Inscrever-se em uma conta
+- Alterar configurações de aplicativo, como privacidade ou opções de exibição
+- Fazer uma pesquisa
 - Comprar um item
 - Enviar comentários
 
 ## <a name="types-of-forms"></a>Tipos de formulários
 
-Ao pensar sobre como a entrada do usuário é enviada e exibida, há dois tipos de formulários:
+Em relação a como a entrada do usuário é enviada e exibida, há dois tipos de formulários:
 
-### <a name="1-instantly-updating"></a>1. Atualizando instantaneamente
-![Página de configurações](images/control-examples/toggle-switch-news.png)
+### <a name="1-instantly-updating"></a>1. Atualização instantânea
+![página de configurações](images/control-examples/toggle-switch-news.png)
 
-Use um formulário de atualização instantaneamente quando você deseja que os usuários para ver imediatamente os resultados de alteração dos valores no formulário. Por exemplo, nas páginas de configurações, as seleções atuais são exibidas e as alterações feitas às seleções são aplicadas imediatamente. Para confirmar as alterações em seu aplicativo, você precisará [adicionar um manipulador de eventos](controls-and-events-intro.md) para cada controle de entrada. Se um usuário altera um controle de entrada, seu aplicativo pode responder adequadamente.
+Use um formulário de atualização instantânea quando desejar que os usuários vejam imediatamente os resultados da alteração dos valores no formulário. Por exemplo, nas páginas de configurações, as seleções atuais são exibidas e as alterações feitas às seleções são aplicadas imediatamente. Para confirmar as alterações em seu aplicativo, você precisará [adicionar um manipulador de eventos](controls-and-events-intro.md) para cada controle de entrada. Se um usuário altera um controle de entrada, seu aplicativo pode responder adequadamente.
 
-### <a name="2-submitting-with-button"></a>2. Enviando com o botão
+### <a name="2-submitting-with-button"></a>2. Envio com botão
 O outro tipo de formulário permite que o usuário escolha quando enviar os dados com um clique de um botão.
 
-![Calendário adicionar nova página de eventos](images/calendar-form.png)
+![página adicionar novo evento ao calendário](images/calendar-form.png)
 
-Esse tipo de formulário fornece a flexibilidade de usuário para responder. Normalmente, esse tipo de formulário contém mais campos de entrada de forma livre e, portanto, recebe uma maior variedade de respostas. Para garantir que a entrada de usuário válido e dados formatados corretamente após o envio, considere as seguintes recomendações:
+Esse tipo de formulário fornece ao usuário flexibilidade para responder. Normalmente, esse tipo de formulário contém mais campos de entrada de formato livre e, portanto, recebe uma maior variedade de respostas. Para garantir entrada de usuário válida e dados formatados corretamente após o envio, considere as seguintes recomendações:
 
-- Tornar impossível enviar informações inválidas, usando o controle correto (ou seja, use um CalendarDatePicker em vez de uma caixa de texto para datas do calendário). Veja mais sobre como selecionar os controles de entrada apropriados no seu formulário na seção de controles de entrada.
-- Ao usar controles de caixa de texto, fornecer aos usuários uma dica do formato de entrada desejado com o [PlaceholderText](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText) propriedade.
-- Fornecer aos usuários com os devidos teclado na tela informando a entrada esperada de um controle com o [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope) propriedade.
-- Marca necessária entrada com um asterisco * no rótulo.
-- Desabilite o botão de envio até que todas as informações necessárias são preenchidas.
-- Se não houver dados inválidos após o envio, marcar os controles com uma entrada inválida com campos realçados ou bordas e que o usuário envie o formulário novamente.
-- Para outros erros, como conexão de rede com falha, certifique-se exibir uma mensagem de erro apropriado para o usuário. 
+- Não possibilitar o envio de informações inválidas usando o controle correto (ou seja, use um CalendarDatePicker em vez de um TextBox para datas do calendário). Veja mais sobre como selecionar os controles de entrada apropriados no seu formulário na seção de Controles de Entrada.
+- Ao usar controles de TextBox, forneça aos usuários uma dica do formato de entrada desejado com a propriedade [PlaceholderText](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText).
+- Forneça aos usuários o teclado virtual adequado informando a entrada esperada de um controle com a propriedade [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope).
+- Marque a entrada necessária com um asterisco * no rótulo.
+- Desabilite o botão de envio até que todas as informações necessárias sejam preenchidas.
+- Se houver dados inválidos após o envio, marque os controles com entrada inválida com campos ou bordas realçadas e solicite que o usuário envie o formulário novamente.
+- Para outros erros, como conexão de rede com falha, certifique-se exibir uma mensagem de erro apropriada para o usuário. 
 
 
 ## <a name="layout"></a>Layout
 
-Para facilitar a experiência do usuário e certifique-se de que os usuários sejam capazes de inserir a entrada correta, considere as seguintes recomendações para a criação de layouts de formulários. 
+Para facilitar a experiência do usuário e certificar-se de que os usuários sejam capazes de inserir a entrada correta, considere as seguintes recomendações para a criação de layouts de formulários. 
 
 ### <a name="labels"></a>Rótulos
-[Rótulos](labels.md) deve ser alinhado à esquerda e colocado acima do controle de entrada. Muitos controles têm uma propriedade de cabeçalho interna para exibir o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
+Os [rótulos](labels.md) devem estar alinhados à esquerda e ser colocados acima do controle de entrada. Muitos controles têm uma propriedade Header interna para exibir o rótulo. Para controles que não tenham uma propriedade Header ou para rotular grupos de controles, use um [TextBlock](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
-Para [design de acessibilidade](../accessibility/accessibility.md), todos os individuais e grupos de controles para maior clareza para ambos os humanos e leitores de tela de rótulo. 
+Para [design com acessibilidade](../accessibility/accessibility.md), rotule todos os indivíduos e grupos de controles para maior clareza tanto para leitores de tela quanto para pessoas. 
 
-Para estilos de fonte, use o padrão [rampa de tipo UWP](../style/typography.md). Use `TitleTextBlockStyle` títulos de página, `SubtitleTextBlockStyle` de cabeçalhos de grupo, e `BodyTextBlockStyle` para rótulos de controle.
+Para estilos de fonte, use o padrão [rampa de tipo UWP](../style/typography.md). Use `TitleTextBlockStyle` para títulos de página, `SubtitleTextBlockStyle` para cabeçalhos de grupo e `BodyTextBlockStyle` para rótulos de controle.
 
 <div class="mx-responsive-img">
 <table>
@@ -75,12 +75,12 @@ Para estilos de fonte, use o padrão [rampa de tipo UWP](../style/typography.md)
 </div>
 
 ### <a name="spacing"></a>Espaçamento
-Para separar visualmente os grupos de controles entre si, use [alinhamento, margens e preenchimento](../layout/alignment-margin-padding.md). Controles de entrada individuais são 80px de altura e devem ser espaçados 24px distância. Grupos de controles de entrada devem ser espaçados 48px de distância.
+Para separar visualmente os grupos de controles entre si, use [alinhamento, margens e preenchimento](../layout/alignment-margin-padding.md). Os controles de entrada individuais têm 80px de altura e devem ter um espaçamento de 24px. Os grupos de controles de entrada devem ter um espaçamento de 48px.
 
 ![grupos de formulários](images/forms-groups.png)
 
 ### <a name="columns"></a>Colunas
-Criação de colunas pode reduzir o espaço em branco desnecessário em formulários, especialmente com os maiores tamanhos de tela. No entanto, se você quiser criar um formulário de várias coluna, o número de colunas deve depender o número de controles na página de entrada e o tamanho de tela da janela do aplicativo. Em vez de sobrecarregar a tela com vários controles de entrada, considere a criação de várias páginas para o seu formulário.  
+A criação de colunas pode reduzir o espaço em branco desnecessário em formulários, especialmente os com telas maiores. No entanto, se você quiser criar um formulário de várias colunas, o número de colunas deverá depender do número de controles de entrada na página e do tamanho de tela da janela do aplicativo. Em vez de sobrecarregar a tela com vários controles de entrada, considere a criação de várias páginas para o seu formulário.  
 
 <div class="mx-responsive-img">
 <table>
@@ -94,65 +94,65 @@ Criação de colunas pode reduzir o espaço em branco desnecessário em formulá
 
 </div>
 
-### <a name="responsive-layout"></a>Layout dinâmico
-Formulários devem ser redimensionado como as alterações de tamanho de tela ou janela, para que os usuários não se esqueçam quaisquer campos de entrada. Para obter mais informações, consulte [técnicas de design dinâmico](../layout/responsive-design.md). Por exemplo, você talvez queira manter regiões específicas do formulário sempre no modo de exibição, independentemente do tamanho da tela.
+### <a name="responsive-layout"></a>Layouts dinâmicos
+Os formulários devem ser redimensionados conforme o tamanho da janela ou da tela for alterado para que os usuários não se esqueçam de algum campo de entrada. Para obter mais informações, confira [técnicas de design dinâmico](../layout/responsive-design.md). Por exemplo, você talvez queira manter regiões específicas do formulário sempre em exibição, independentemente do tamanho da tela.
 
-![foco de formulários](images/forms-focus2.png)
+![foco dos formulários](images/forms-focus2.png)
 
 ### <a name="tab-stops"></a>Paradas de tabulação
-Os usuários podem usar o teclado para navegar com os controles [paradas de tabulação](../input/keyboard-interactions.md#tab-stops). Por padrão, a ordem de tabulação dos controles reflete a ordem na qual eles são criados em XAML. Para substituir o comportamento padrão, altere o **IsTabStop** ou **TabIndex** propriedades do controle. 
+Os usuários podem usar o teclado para navegar pelos controles com as [paradas de tabulação](../input/keyboard-interactions.md#tab-stops). Por padrão, a ordem de tabulação dos controles reflete a ordem na qual eles são criados em XAML. Para substituir o comportamento padrão, altere as propriedades **IsTabStop** ou **TabIndex** do controle. 
 
 ![foco de tabulação no controle no formulário](images/forms-focus1.png)
 
 ## <a name="input-controls"></a>Controles de entrada
-Controles de entrada são os elementos de interface do usuário que permitem aos usuários inserir informações em formulários. Alguns controles comuns que podem ser adicionados a formulários estão listadas abaixo, bem como informações sobre quando usá-los.
+Os controles de entrada são os elementos de interface do usuário que permitem aos usuários inserir informações em formulários. Alguns controles comuns que podem ser adicionados aos formulários estão listados abaixo, bem como informações sobre quando usá-los.
 
 ### <a name="text-input"></a>Entrada de texto
 Controle | Uso | Exemplo
  - | - | -
-[TextBox](text-box.md) | Capturar uma ou várias linhas de texto | Nomes, as respostas de forma livre ou comentários
-[PasswordBox](password-box.md) | Coletar dados particulares, concedendo os caracteres | Pinos de senhas, números do seguro Social (SSN), informações de cartão de crédito 
-[AutoSuggestBox](auto-suggest-box.md) | Mostrar aos usuários uma lista de sugestões de um conjunto correspondente de dados enquanto digitam | Pesquisa de banco de dados, de email para: de linha, consultas anteriores
-[RichEditBox](rich-edit-box.md) | Editar arquivos de texto com texto formatado, hiperlinks e imagens | Carregar arquivo, visualização e edição no aplicativo
+[TextBox](text-box.md) | Capturar uma ou várias linhas de texto | Nomes, comentários ou respostas em formato livre
+[PasswordBox](password-box.md) | Colete dados particulares ao ocultar caracteres | Senhas, SSN (Número do Seguro Social), PINs, informações de cartão de crédito 
+[AutoSuggestBox](auto-suggest-box.md) | Mostre aos usuários uma lista de sugestões de um conjunto correspondente de dados à medida que eles digitam | Pesquisa de banco de dados, enviar email para: linha, consultas anteriores
+[RichEditBox](rich-edit-box.md) | Edite arquivos de texto com texto formatado, hiperlinks e imagens | Faça upload do arquivo, visualização e edição no aplicativo
 
 ### <a name="selection"></a>Seleção
 Controle | Uso | Exemplo
 - | - | - 
-| [Caixa de seleção](checkbox.md) | Marque ou desmarque uma ou mais itens de ação | Concordar com os termos e condições, adicionar itens opcionais, selecione todas as alternativas aplicáveis
-[Botão de opção](radio-button.md) | Selecione uma opção de duas ou mais opções | Escolha tipo de envio de método, etc.
-[ToggleSwitch](toggles.md) | Escolha uma das duas opções mutuamente exclusivas | Ativar/desativar
+| [CheckBox](checkbox.md) | Selecione ou anule a seleção de itens de ação | Concorde com os termos e condições, adicione itens opcionais, selecione todas as alternativas aplicáveis
+[RadioButton](radio-button.md) | Selecione uma opção entre duas ou mais escolhas | Escolha tipo, método de envio, etc.
+[ToggleSwitch](toggles.md) | Escolha uma de duas opções mutuamente exclusivas | Ativar/desativar
 
 > **Observação**: Se houver cinco ou mais itens de seleção, use um controle de lista.
 
 ### <a name="lists"></a>Listas
 Controle | Uso | Exemplo
 - | - | -
-[ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Iniciar em estado compact e expanda para mostrar a lista de itens selecionáveis | Selecione de uma longa lista de itens, como estados ou países
-[ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | Categorizar itens e atribuir os cabeçalhos de grupo, arraste e solte itens de, organizar o conteúdo e reordenar os itens | Opções de classificação
-[GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | Organizar e procurar coleções baseadas em imagem | Escolher uma foto, cor, a exibição de tema
+[ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Inicie no estado compacto e expanda para mostrar a lista de itens selecionáveis | Selecione de uma longa lista de itens, como estados ou países
+[ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | Categorize itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens | Opções de classificação
+[GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | Organize e procure coleções baseadas em imagem | Escolha uma foto, cor, tema de exibição
 
 ### <a name="numeric-input"></a>Entrada numérica
 Controle | Uso | Exemplo
 - | - | -
-[Slider](slider.md) | Selecione um número em um intervalo de valores contíguos de numérico | Porcentagens, o volume e velocidade de reprodução
-[Classificação](rating.md) | Taxa de estrelas | Comentários do cliente
+[Slider](slider.md) | Selecione um número de um intervalo de valores numéricos contíguos | Porcentagens, volume e velocidade de reprodução
+[Classificação](rating.md) | Classificação por estrelas | Comentários do cliente
 
 ### <a name="date-and-time"></a>Data e Hora
 
 Controle | Uso 
 - | - 
-[Exibição de calendário](calendar-view.md) | Escolher uma única data ou um intervalo de datas a partir de um calendário sempre visível 
-[CalendarDatePicker](calendar-date-picker.md) | Escolha uma data única de um calendário contextual 
-[DatePicker](date-picker.md) | Escolher uma única data localizada quando informações contextuais não não importante
-[TimePicker](time-picker.md) | Selecione um valor único de tempo
+[CalendarView](calendar-view.md) | Selecione uma única data ou um intervalo de datas de um calendário sempre visível 
+[CalendarDatePicker](calendar-date-picker.md) | Selecione uma única data de um calendário contextual 
+[DatePicker](date-picker.md) | Selecione uma única data localizada quando informações contextuais não forem importantes
+[TimePicker](time-picker.md) | Selecione um valor temporal único
 
 ### <a name="additional-controls"></a>Controles adicionais 
-Para obter uma lista completa de controles UWP, consulte [índice de controles por função](controls-by-function.md).
+Para obter uma lista completa de controles da UWP, confira [índice de controles por função](controls-by-function.md).
 
-Para controles de interface do usuário mais complexos e personalizados, examinar os UWP recursos disponíveis de empresas, como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [ A Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP), e [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
+Para controles de interface do usuário mais complexos e personalizados, confira os recursos da UWP disponíveis de empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) e [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
 
 ## <a name="one-column-form-example"></a>Exemplo de formulário de uma coluna
-Este exemplo usa uma tinta Acrílica [mestre/detalhes](master-details.md) [exibição de lista](lists.md) e [NavigationView](navigationview.md) controle.
+Este exemplo usa uma [exibição de lista](master-details.md) [mestre/detalhada](lists.md) acrílica e o controle [NavigationView](navigationview.md).
 ![Captura de tela de outro exemplo de formulário](images/FormExample2.png)
 ```xaml
 <StackPanel>
@@ -178,8 +178,8 @@ Este exemplo usa uma tinta Acrílica [mestre/detalhes](master-details.md) [exibi
 ```
 
 ## <a name="two-column-form-example"></a>Exemplo de formulário de duas colunas
-Este exemplo usa o [Pivot](pivot.md) controle, [tinta Acrílica](../style/acrylic.md) em segundo plano, e [CommandBar](app-bars.md) além dos controles de entrada.
-![Captura de tela do exemplo de formulário](images/FormExample.png)
+Este exemplo usa o controle [Pivô](pivot.md), a tela de fundo [Acrílica](../style/acrylic.md) e o [CommandBar](app-bars.md), além dos controles de entrada.
+![Captura de tela de exemplo de formulário](images/FormExample.png)
 ```xaml
 <Grid>
     <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
@@ -233,8 +233,8 @@ Este exemplo usa o [Pivot](pivot.md) controle, [tinta Acrílica](../style/acryli
 </Grid>
 ```
 
-## <a name="customer-orders-database-sample"></a>Exemplo de banco de dados de pedidos do cliente
-![captura de tela do banco de dados de pedidos de clientes](images/customerorderform.png) para aprender a conectar-se a entrada de formulário para um **Azure** de banco de dados e ver um formulário totalmente implementado, consulte o [banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) aplicativo de exemplo.
+## <a name="customer-orders-database-sample"></a>Amostra de banco de dados de pedidos de clientes
+![captura de tela do banco de dados de pedidos de clientes](images/customerorderform.png) Para saber como conectar entradas de formulário a um banco de dados do **Azure** e ver um formulário totalmente implementado, confira a amostra de aplicativo do [Banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Controles de entrada](controls-and-events-intro.md)

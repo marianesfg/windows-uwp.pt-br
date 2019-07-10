@@ -11,21 +11,21 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 297b907191dfa07084e5e4ada0e3468733e47090
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363125"
 ---
 # <a name="combo-box"></a>Caixa de combinação
 
-Use uma caixa de combinação (também conhecido como uma lista suspensa) para apresentar uma lista de itens que um usuário pode selecionar. Uma caixa de combinação começa em um estado compact e se expande para mostrar uma lista de itens selecionáveis.
+Use uma caixa de combinação (também conhecida como lista suspensa) para apresentar uma lista de itens que o usuário pode selecionar. Uma caixa de combinação começa em um estado compacto e se expande para mostrar uma lista de itens selecionáveis.
 
-Quando a caixa de combinação é fechada, ele exibe a seleção atual ou está vazio se não houver nenhum item selecionado. Quando o usuário expande a caixa de combinação, ele exibe a lista de itens selecionáveis.
+Quando a caixa de combinação é fechada, ela exibe a seleção atual ou fica vazia se não há nenhum item selecionado. Quando o usuário expande a caixa de combinação, ela exibe a lista de itens selecionáveis.
 
-> **APIs importantes**: [Classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propriedade IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted evento](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+> **APIs importantes**: [classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propriedade IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
-Uma caixa de combinação em seu estado compact com um cabeçalho.
+Uma caixa de combinação no estado compacto com um cabeçalho.
 
 ![Exemplo de uma lista suspensa no estado compacto](images/combo_box_collapsed.png)
 
@@ -43,7 +43,7 @@ Uma caixa de combinação em seu estado compact com um cabeçalho.
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ComboBox">abrir o aplicativo e ver a caixa de combinação em ação</a>.</p>
+    <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ComboBox">abrir o aplicativo e conferir a ComboBox em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -66,9 +66,9 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 ## <a name="create-a-combo-box"></a>Criar uma caixa de combinação
 
-Preencher a caixa de combinação adicionando objetos diretamente para o [itens](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) coleção ou vinculando a [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) propriedade a uma fonte de dados. Itens adicionados à caixa de combinação são encapsulados em [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) contêineres.
+Popule a caixa de combinação adicionando objetos diretamente à coleção [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou associando a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) a uma fonte de dados. Itens adicionados a ComboBox são encapsulados em contêineres [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem).
 
-Aqui está uma caixa de combinação simples com itens adicionados em XAML.
+Esta é uma caixa de combinação simples com itens adicionados em XAML.
 
 ```xaml
 <ComboBox Header="Colors" PlaceholderText="Pick a color" Width="200">
@@ -79,7 +79,7 @@ Aqui está uma caixa de combinação simples com itens adicionados em XAML.
 </ComboBox>
 ```
 
-O exemplo a seguir demonstra uma caixa de combinação de associação a uma coleção de objetos FontFamily.
+O exemplo a seguir demonstra a associação de uma caixa de combinação a uma coleção de objetos FontFamily.
 
 ```xaml
 <ComboBox x:Name="FontsCombo" Header="Fonts" Height="44" Width="296"
@@ -100,20 +100,20 @@ public MainPage()
 
 ### <a name="item-selection"></a>Seleção de item
 
-Como ListView e GridView, caixa de combinação é derivada de [seletor](/uwp/api/windows.ui.xaml.controls.primitives.selector), portanto, você pode obter a seleção do usuário da mesma maneira padrão.
+Assim como ListView e GridView, ComboBox deriva de [Selector](/uwp/api/windows.ui.xaml.controls.primitives.selector), portanto, você pode obter a seleção do usuário da mesma maneira padrão.
 
-Você pode obter ou definir a caixa de combinação item selecionado usando o [SelectedItem](/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem) propriedade e get ou set, o índice do item selecionado usando o [SelectedIndex](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex) propriedade.
+Você pode obter ou definir o item selecionado de uma caixa de combinação usando a propriedade [SelectedItem](/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem) e pode obter ou definir o índice do item selecionado usando a propriedade [SelectedIndex](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex).
 
-Para obter o valor de uma propriedade específica no item de dados selecionado, você pode usar o [SelectedValue](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvalue) propriedade. Nesse caso, defina as [SelectedValuePath](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvaluepath) para especificar qual propriedade do item selecionado para obter o valor.
+Para obter o valor de uma propriedade específica no item de dados selecionado, você pode usar a propriedade [SelectedValue](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvalue). Nesse caso, defina o [SelectedValuePath](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvaluepath) para especificar de qual propriedade do item selecionado obter o valor.
 
 > [!TIP]
-> Se você definir SelectedItem ou SelectedIndex para indicar a seleção padrão, ocorrerá uma exceção se a propriedade é definida antes que a coleção de itens de caixa de combinação é preenchida. A menos que você defina seus itens em XAML, é melhor manipular o evento Loaded de caixa de combinação e definir SelectedItem ou SelectedIndex no manipulador de eventos Loaded.
+> Se você definir SelectedItem ou SelectedIndex para indicar a seleção padrão, ocorrerá uma exceção se a propriedade for definida antes que a coleção de Itens da caixa de combinação seja populada. A menos que você defina seus Itens em XAML, é melhor manipular o evento Loaded da caixa de combinação e definir SelectedItem ou SelectedIndex no manipulador de eventos Loaded.
 
-Você pode associar a essas propriedades em XAML ou lidar com o [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) eventos para responder a alterações de seleção.
+Você pode associar a essas propriedades em XAML ou manipular o evento [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) para responder a alterações de seleção.
 
-No evento código do manipulador, você pode obter o item selecionado dos [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) propriedade. Você pode obter o item selecionado anteriormente (se houver) da [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) propriedade. As coleções AddedItems e RemovedItems cada contêm apenas 1 item porque a caixa de combinação não oferece suporte a seleção múltipla.
+No código do manipulador de eventos, você pode o item selecionado na propriedade [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems). Você poderá obter o item selecionado anteriormente (se houver) na propriedade [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems). As coleções AddedItems e RemovedItems contêm, cada uma, apenas um item porque a caixa de combinação não dá suporte à seleção múltipla.
 
-Este exemplo mostra como tratar o evento SelectionChanged e também como vincular ao item selecionado.
+Este exemplo mostra como manipular o evento SelectionChanged e como associar ao item selecionado.
 
 ```xaml
 <StackPanel>
@@ -159,48 +159,48 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-#### <a name="selectionchanged-and-keyboard-navigation"></a>Navegação SelectionChanged e o teclado
+#### <a name="selectionchanged-and-keyboard-navigation"></a>SelectionChanged e navegação com teclado
 
-Por padrão, o evento SelectionChanged ocorre quando um usuário clica, toca ou pressiona Enter em um item na lista para confirmar sua seleção e fecha a caixa de combinação. Seleção não muda quando o usuário navega listagem aberto com as teclas de direção do teclado.
+Por padrão, o evento SelectionChanged ocorre quando um usuário clica, toca ou pressiona Enter em um item na lista para confirmar sua seleção e a caixa de combinação é fechada. A seleção não muda quando o usuário navega na lista da caixa de combinação aberta com as teclas de direção do teclado.
 
-Para fazer uma combinação de caixa que "live updates" enquanto o usuário está navegando abrir a lista com as teclas de direção (como uma fonte seleção suspensa), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) à [sempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged ocorre quando o foco muda para outro item na lista de abertos.
+Para fazer uma caixa de combinação com “atualizações ao vivo” enquanto o usuário está navegando na lista aberta usando as teclas de seta (como um menu suspenso de seleção de fonte), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) como [Always](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged ocorra quando o foco mudar para outro item na lista aberta.
 
 #### <a name="selected-item-behavior-change"></a>Alteração de comportamento do item selecionado
 
-No Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, o comportamento dos itens selecionados é atualizado para dar suporte a caixas de combinação editável.
+No Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, o comportamento dos itens selecionados é atualizado para dar suporte a caixas de combinação editáveis.
 
-Antes do SDK 17763, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) foi necessária para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+Antes do SDK 17763, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) precisava estar na coleção de Itens da caixa de combinação. Usando o exemplo anterior, definir `colorComboBox.SelectedItem = "Pink"` resulta em:
 
 - SelectedItem = null
 - SelectedValue = null
 - SelectedIndex = -1
 
-No SDK 17763 e versões posterior, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não é necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+No SDK 17763 e posteriores, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não precisa estar na coleção de Itens da caixa de combinação. Usando o exemplo anterior, definir `colorComboBox.SelectedItem = "Pink"` resulta em:
 
-- SelectedItem = rosa
-- SelectedValue = rosa
+- SelectedItem = Pink
+- SelectedValue = Pink
 - SelectedIndex = -1
 
 ### <a name="text-search"></a>Pesquisa de texto
 
-As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, ao interagir com uma lista suspensa que contém uma lista de estados, os usuários poderão pressionar a chave "w" para trazer "Washington" para exibição para seleção rápida. A pesquisa de texto, não diferencia maiusculas de minúsculas.
+As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida. A pesquisa de texto não diferencia maiúsculas de minúsculas.
 
-Você pode definir a [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox.istextsearchenabled) propriedade **falso** para desabilitar essa funcionalidade.
+Você pode definir a propriedade [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox.istextsearchenabled) como **false** para desabilitar essa funcionalidade.
 
 ## <a name="make-a-combo-box-editable"></a>Tornar uma caixa de combinação editável
 
 > [!IMPORTANT]
 > Este recurso requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
 
-Por padrão, uma caixa de combinação permite que o usuário selecione de uma lista predefinida de opções. No entanto, há casos em que a lista contém apenas um subconjunto de valores válidos, e o usuário deve ser capaz de inserir outros valores que não estão listados. Para dar suporte a isso, você pode tornar a caixa de combinação editável.
+Por padrão, uma caixa de combinação permite que o usuário selecione em uma lista predefinida de opções. No entanto, há casos em que a lista contém apenas um subconjunto de valores válidos e o usuário deve ser capaz de inserir outros valores que não estão listados. Para dar suporte a isso, você pode tornar a caixa de combinação editável.
 
-Para fazer com que uma caixa de combinação editável, defina as [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) propriedade **verdadeiro**. Em seguida, lidar com o [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) eventos para trabalhar com o valor inserido pelo usuário.
+Para tornar uma caixa de combinação editável, defina a propriedade [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) como **true**. Em seguida, manipule o evento [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para trabalhar com o valor inserido pelo usuário.
 
-Por padrão, o valor de SelectedItem é atualizado quando o usuário confirma texto personalizado. Você pode substituir esse comportamento, definindo **Handled** à **verdadeiro** nos args de evento TextSubmitted. Quando o evento é marcado como manipulado, a caixa de combinação será executar nenhuma ação adicional após o evento e permanecerá no estado de edição. SelectedItem não será atualizado.
+Por padrão, o valor de SelectedItem é atualizado quando o usuário confirma texto personalizado. Você pode substituir esse comportamento definindo **Handled** como **true** nos argumentos do evento TextSubmitted. Quando o evento for marcado como manipulado, a caixa de combinação não executará mais nenhuma ação após o evento e permanecerá no estado de edição. SelectedItem não será atualizado.
 
-Este exemplo mostra uma caixa de combinação editável simples. A lista contém cadeias de caracteres simples, e qualquer valor inserido pelo usuário é usado como digitado.
+Este exemplo mostra uma caixa de combinação editável simples. A lista contém cadeias de caracteres simples e qualquer valor inserido pelo usuário é usado como digitado.
 
-Um seletor de "nomes usados recentemente" permite que o usuário insira cadeias de caracteres personalizadas. A lista de 'RecentlyUsedNames' contém alguns valores que o usuário pode escolher, mas o usuário também pode adicionar um novo valor personalizado. A propriedade 'CurrentName' representa o nome digitado no momento.
+Um seletor de "nomes usados recentemente" permite que o usuário insira cadeias de caracteres personalizadas. A lista 'RecentlyUsedNames' contém alguns valores que o usuário pode escolher, mas também é possível adicionar um novo valor personalizado. A propriedade 'CurrentName' representa o nome digitado no momento.
 
 ```xaml
 <ComboBox IsEditable="true"
@@ -210,23 +210,23 @@ Um seletor de "nomes usados recentemente" permite que o usuário insira cadeias 
 
 ### <a name="text-submitted"></a>Texto enviado
 
-Você pode lidar com o [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) eventos para trabalhar com o valor inserido pelo usuário. No caso de manipulador, você normalmente irá validar que o valor inserido pelo usuário é válido, em seguida, use o valor em seu aplicativo. Dependendo da situação, você também pode adicionar o valor à lista da caixa de combinação de opções para uso futuro.
+Você pode manipular o evento [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para trabalhar com o valor inserido pelo usuário. No caso de manipulador de eventos, normalmente você validará que o valor inserido pelo usuário é válido e, em seguida, usará o valor em seu aplicativo. Dependendo da situação, você também pode adicionar o valor à lista de opções da caixa de combinação para uso futuro.
 
-O evento TextSubmitted ocorre quando essas condições forem atendidas:
+O evento TextSubmitted ocorre quando essas condições são atendidas:
 
 - A propriedade IsEditable é **true**
-- O usuário insere o texto que não corresponde a uma entrada existente na lista da caixa de combinação
-- O usuário pressiona Enter ou move o foco da caixa de combinação.
+- O usuário insere texto que não corresponde a uma entrada existente na lista da caixa de combinação
+- O usuário pressiona Enter ou tira o foco da caixa de combinação.
 
-O evento TextSubmitted não ocorrerá se o usuário insere o texto e, em seguida, navega para cima ou para baixo na lista.
+O evento TextSubmitted não ocorrerá se o usuário inserir o texto e, em seguida, navegar para cima ou para baixo na lista.
 
-### <a name="sample---validate-input-and-use-locally"></a>Exemplo – validar a entrada e usar localmente
+### <a name="sample---validate-input-and-use-locally"></a>Exemplo – Validar a entrada e usar localmente
 
-Neste exemplo, um seletor de tamanho de fonte contém um conjunto de valores correspondentes para o crescimento de tamanho da fonte, mas o usuário pode inserir os tamanhos de fonte que não estão na lista.
+Neste exemplo, um seletor de tamanho da fonte contém um conjunto de valores correspondentes ao crescimento do tamanho da fonte, mas o usuário pode inserir tamanhos de fonte que não estão na lista.
 
-Quando o usuário adiciona um valor que não esteja na lista, as atualizações de tamanho de fonte, mas o valor não é adicionado à lista de tamanhos de fonte.
+Quando o usuário adiciona um valor que não está na lista, o tamanho da fonte é atualizado, mas o valor não é adicionado à lista de tamanhos de fonte.
 
-Se o valor inserido recentemente não for válido, que use o SelectedValue para reverter a propriedade de texto para a última conhecido bom valor.
+Se o valor inserido recentemente não for válido, use SelectedValue para reverter a propriedade Text para o último valor válido conhecido.
 
 ```xaml
 <ComboBox x:Name="fontSizeComboBox"
@@ -253,9 +253,9 @@ private void FontSizeComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSubmitt
 }
 ```
 
-### <a name="sample---validate-input-and-add-to-list"></a>Exemplo – validar a entrada e adicionar à lista
+### <a name="sample---validate-input-and-add-to-list"></a>Exemplo – Validar a entrada e adicionar à lista
 
-Aqui, um seletor de cor favorita"" contém as cores favoritas mais comuns (vermelho, azul, verde e laranja), mas o usuário pode inserir uma cor favorita que não está na lista. Quando o usuário adiciona uma cor válida (como rosa), a cor recém-inseridos é adicionada à lista e definida como "cor favorita" ativo.
+Aqui, um "seletor de cor favorita" contém as cores favoritas mais comuns (vermelho, azul, verde e laranja), mas o usuário pode inserir uma cor favorita que não está na lista. Quando o usuário adiciona uma cor válida (como rosa), a cor recém-inserida é adicionada à lista e definida como "cor favorita" ativa.
 
 ```xaml
 <ComboBox x:Name="favoriteColorComboBox"
@@ -298,13 +298,13 @@ bool IsValid(string Text)
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 - [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
-- [Exemplo de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
+- [Amostra de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Verificação ortográfica](text-controls.md)
 - [Pesquisa](search.md)
-- [Classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Classe PasswordBox Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propriedade String. Length](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Propriedade String.Length](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)

@@ -13,15 +13,15 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614371"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63789050"
 ---
 # <a name="sound"></a>Som
 
-![imagem hero](images/header-sound.svg)
+![imagem Hero](images/header-sound.svg)
 
 Há muitas maneiras de usar o som para aprimorar o aplicativo. Você pode usar som para complementar outros elementos de interface do usuário permitindo que os usuários reconheçam eventos de maneira audível. O som pode ser um elemento de interface do usuário efetivo para pessoas com deficiências visuais. É possível usar som para criar uma atmosfera que envolva o usuário; por exemplo, convém executar uma trilha sonora extravagante em segundo plano do quebra-cabeça ou usar efeitos sonoros de suspense para um jogo de terror/sobrevivência.
 
@@ -29,11 +29,11 @@ Há muitas maneiras de usar o som para aprimorar o aplicativo. Você pode usar s
 
 O UWP fornece um sistema de som facilmente acessível que permite simplesmente "usar um interruptor" e obter uma intensa experiência de áudio em seu aplicativo inteiro.
 
-O [**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) é um sistema de som integrado no XAML e, quando ativado em todos os controles padrão, reproduz sons automaticamente.
+O [**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) é um sistema de som integrado no XAML e, quando ativado em todos os controles padrão, reproduzirá sons automaticamente.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-O **ElementSoundPlayer** tem três estados diferentes: **Na** **desativada** e **automática**.
+O **ElementSoundPlayer** tem três estados diferentes: **Ativado** **Desativado** e **Automático**.
 
 Se definido como **Desativado**, não importa onde seu aplicativo seja executado, o som nunca será reproduzido. Se definido como **Ativado** os sons de seu aplicativo serão executados em todas as plataformas.
 
@@ -44,11 +44,11 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 A propriedade **SpatialAudioMode** pode usar esses valores: 
-- **Auto**: Áudio espacial será ligada ao som é no. 
-- **Desativado**: Áudio espacial sempre é desativado, mesmo se o som é no.
-- **Ativado**: Áudio espacial sempre será executada.
+- **Auto**: o áudio espacial é ligado quando som está ativado. 
+- **Desativado**: o áudio espacial sempre está desativado, mesmo quando o som está ativado.
+- **Ativado**: o áudio espacial sempre será reproduzido.
 
-Para saber mais sobre o áudio espacial e como o XAML processa isso, veja [AudioGraph - Áudio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
+Para saber mais sobre o áudio espacial e como o XAML processa isso, veja [AudioGraph – Áudio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
 
 ### <a name="sound-for-tv-and-xbox"></a>Som de TV e Xbox
 
@@ -69,7 +69,7 @@ Onde volume máximo (em relação ao volume do sistema) é 1,0 e o mínimo é 0,
 
 Se não desejar o som do padrão de um controle, ele poderá ser desativado. Isso é feito por meio do **ElementSoundMode** no controle.
 
-O **ElementSoundMode** tem dois estados: **Desativar** e **padrão**. Quando não definido, é **Padrão**. Se definido como **Desativado**, cada som que for reproduzido pelo controle será silenciado, *exceto o foco*.
+O **ElementSoundMode** tem dois estados: **Desativado** e **Padrão**. Quando não definido, é **Padrão**. Se definido como **Desativado**, cada som que for reproduzido pelo controle será silenciado, *exceto o foco*.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navegação dentro de uma página
 
-Ao navegar entre os painéis ou modos de exibição na página do aplicativo (consulte [guias e inverte](../controls-and-patterns/pivot.md)), normalmente há movimentação bidirecional. Ou seja, você pode passar para o modo de exibição/painel próximo ou o anterior, sem sair da página atual do aplicativo.
+Quando se navega entre os painéis ou modos de exibição na página do aplicativo (confira [Guias e pivôs](../controls-and-patterns/pivot.md)), normalmente há movimento bidirecional. Ou seja, você pode passar para o modo de exibição/painel próximo ou o anterior, sem sair da página atual do aplicativo.
 
 A experiência de áudio em torno esse conceito de navegação é englobada pelos sons **MovePrevious** e **MoveNext**.
 

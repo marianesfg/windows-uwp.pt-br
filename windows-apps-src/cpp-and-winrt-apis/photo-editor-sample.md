@@ -1,26 +1,30 @@
 ---
-description: O Editor de Fotos é um aplicativo de exemplo UWP que mostra o desenvolvimento com a projeção de linguagem C++/WinRT. O aplicativo de exemplo permite que você recupere fotos a partir da biblioteca de Imagens e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes.
-title: Aplicativos de exemplo de C++/WinRT do Editor de Fotos
-ms.date: 06/08/2018
+description: O Editor de Fotos é um aplicativo de exemplo UWP que mostra o desenvolvimento com a projeção de linguagem C++/WinRT. O aplicativo de exemplo permite recuperar fotos da biblioteca Imagens e, em seguida, editar a imagem selecionada com efeitos fotográficos variados.
+title: Exemplo de aplicativo Editor de fotos em C++/WinRT
+ms.date: 04/23/2019
 ms.topic: article
-keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, amostra, aplicativo, foto, editor
+keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, exemplo, aplicativo, foto, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c6f668ef3d92f968e75659b0ba1937abadb079c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: bbac9d6a6d08d327bf1bf55de5e86cbb1edd51ea
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606701"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64745195"
 ---
-# <a name="photo-editor-cwinrt-sample-application"></a>Aplicativos de exemplo de C++/WinRT do Editor de Fotos
-Você pode clonar ou baixar o aplicativo de exemplo do repositório do GitHub para o [aplicativo de exemplo do Editor de fotos do C++/WinRT](https://github.com/Microsoft/Windows-appsample-photo-editor).
+# <a name="photo-editor-cwinrt-sample-application"></a>Exemplo de aplicativo Editor de fotos em C++/WinRT
 
-O Editor de Fotos é um aplicativo de exemplo da UWP (Plataforma Universal do Windows) que mostra o desenvolvimento com a projeção de linguagem [C++/WinRT](intro-to-using-cpp-with-winrt.md). O aplicativo de exemplo permite que você recupere fotos a partir da biblioteca de **Imagens** e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes. No código-fonte do exemplo, você verá um número de práticas comuns&mdash;como [associação de dados](binding-property.md) e [ações e operações assíncronas](concurrency.md)&mdash;realizadas usando a projeção do C++/WinRT. Veja alguns dos recursos específicos demonstrados pela amostra.
-    
-- Use a sintaxe e as bibliotecas do C++17 com as APIs do Windows Runtime (WinRT).
-- Use de corrotinas, incluindo o uso de co_await, co_return, [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) e [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_).
-- Criação e o uso de tipos projetados da classe personalizada do Windows Runtime (classe do tempo de execução) e tipos de implementação. Para obter mais informações sobre estes termos, consulte [Consumir APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
+> [!NOTE]
+> O exemplo é tem como alvo o Windows 10, versão 1903 (10.0; Build 18362) e o Visual Studio 2019, e foi testado em ambos. Se preferir, use as propriedades do projeto para redirecionar o(s) projeto(s) para o Windows 10, versão 1809 (10.0; Build 17763) e/ou abrir o exemplo com o Visual Studio 2017.
+
+É possível clonar ou baixar o [aplicativo de exemplo do Editor de fotos do C++/WinRT](https://github.com/Microsoft/Windows-appsample-photo-editor) do repositório do GitHub.
+
+O Editor de fotos é um exemplo de aplicativo UWP (Plataforma Universal do Windows) que mostra o desenvolvimento com a projeção de linguagem [C++/WinRT](intro-to-using-cpp-with-winrt.md). O aplicativo de exemplo permite que você recupere fotos da biblioteca de **Imagens** e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes. No código-fonte do exemplo, você verá várias práticas comuns, como [associação de dados](binding-property.md) e [ações e operações assíncronas](concurrency.md), realizadas usando a projeção do C++/WinRT. Eis alguns dos recursos específicos demonstrados pela amostra.
+
+- Uso da sintaxe e das bibliotecas padrão do C++17 com as APIs do Windows Runtime (WinRT).
+- Uso de corrotinas, incluindo o uso de co_await, co_return, [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) e [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_).
+- Criação e uso de tipos projetados da classe personalizada do Windows Runtime (classe de tempo de execução) e tipos de implementação. Para saber mais sobre estes termos, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 - [Processamento de eventos](handle-events.md), incluindo o uso de tokens de evento de revogação automática.
 - Uso do pacote NuGet Win2D externo e [Windows::UI::Composition](/uwp/api/windows.ui.composition) para efeitos de imagem.
 - Associação de dados XAML, incluindo a [extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
-- Estilo XAML e personalização da interface do usuário, incluindo [animações conectadas](../design/motion/connected-animation.md).
+- Aplicação de estilos XAML e personalização da interface do usuário, incluindo [animações conectadas](../design/motion/connected-animation.md).

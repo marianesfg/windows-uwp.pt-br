@@ -11,10 +11,10 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd11427ed1b53641a25c32742ca114b121efcfe8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363956"
 ---
 # <a name="xaml-styles"></a>Estilos de XAML
@@ -107,11 +107,11 @@ Neste exemplo, o primeiro estilo tem um [atributo x:Key](../../xaml-platform/x-k
 
 ## <a name="use-based-on-styles"></a>Usar estilos baseados em outros
 
-Para facilitar a manutenção de estilos e otimizar sua reutilização, você pode criar estilos que herdam de outros estilos. Você usa a propriedade [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) para criar estilos herdados. Estilos que herdam de outros estilos devem ter como destino o mesmo tipo de controle ou um controle derivado do tipo de destino do estilo base. Por exemplo, se um estilo base tiver como destino [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), estilos baseados nesse estilo podem ter como alvo **ContentControl** ou tipos derivados de **ContentControl**, como [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) e [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Se um valor não é definido no estilo baseado, ele é herdado do estilo base. Para alterar um valor do estilo base, o estilo baseado substitui esse valor. O próximo exemplo mostra um **Button** e uma [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) com estilos herdados do mesmo estilo base.
+Para facilitar a manutenção de estilos e otimizar sua reutilização, você pode criar estilos que herdam de outros estilos. Você usa a propriedade [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) para criar estilos herdados. Estilos que herdam de outros estilos devem ter como destino o mesmo tipo de controle ou um controle derivado do tipo de destino do estilo base. Por exemplo, se um estilo base tiver como destino [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), estilos baseados nesse estilo poderão ter como alvo **ContentControl** ou tipos derivados de **ContentControl**, como [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) e [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Se um valor não é definido no estilo baseado, ele é herdado do estilo base. Para alterar um valor do estilo base, o estilo baseado substitui esse valor. O próximo exemplo mostra um **Button** e uma [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) com estilos herdados do mesmo estilo base.
 
 ![botões estilizados com estilos baseados.](images/styles-buttons-based-on.png)
 
-O estio base tem como destino [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) e define as propriedades [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width). Os estilos baseados neste estilo têm como destino [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) e [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), que derivam de **ContentControl**. Os estilos baseados definem cores diferentes para as propriedades [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush) e [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground). (Normalmente você não coloca uma borda ao redor de uma **CheckBox**. Fazemos isso aqui para mostrar os efeitos do estilo.)
+O estilo base tem como destino [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) e define as propriedades [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width). Os estilos baseados neste estilo têm como destino [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) e [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), que derivam de **ContentControl**. Os estilos baseados definem cores diferentes para as propriedades [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush) e [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground). (Normalmente você não coloca uma borda ao redor de uma **CheckBox**. Fazemos isso aqui para mostrar os efeitos do estilo.)
 
 ```XAML
 <Page.Resources>
@@ -165,7 +165,7 @@ Substituir os pincéis do sistema é geralmente feito no nível do aplicativo ou
 </Page.Resources>
 ```
 
-Para estados como PointerOver (mouse passa sobre o botão), **PointerPressed** (botão foi invocado) ou Desabilitado (botão não é interativo). Esses terminações são acrescentadas até os nomes originais do estilo leve: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. Modificando os pincéis, também garantirá que seus controles são coloridos de forma consistente para o tema do seu aplicativo.
+Para estados como PointerOver (mouse passa sobre o botão), **PointerPressed** (botão foi invocado) ou Desabilitado (botão não é interativo). Essas terminações são acrescentadas aos nomes originais do estilo leve: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** etc. Modificar também os pincéis garantirá que seus controles sejam coloridos de forma consistente com o tema do aplicativo.
 
 Colocar essas substituições de pincel no nível **App.Resources** irá alterar todos os botões dentro do aplicativo inteiro, em vez de em uma única página.
 

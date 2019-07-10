@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363034"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
 No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-> **APIs importantes**: [Windows.UI.Xaml.Controls namespace](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+> **APIs importantes**: [Namespace Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
-Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o [mestre/detalhes](master-details.md) padrão é uma maneira que você pode usar um [SplitView](split-view.md) controle de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um [NavigationView](navigationview.md) controle para implementar o padrão de guia.
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [mestre/detalhes](master-details.md) é uma maneira de você usar um controle [SplitView](split-view.md) para navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [NavigationView](navigationview.md) para implementar o padrão de guias.
 
 Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
 
@@ -144,7 +144,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 ## <a name="related-topics"></a>Tópicos relacionados
 
 -   [Índice de controles por função](controls-by-function.md)
--   [Windows.UI.Xaml.Controls namespace](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+-   [Namespace Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 -   [Layout](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Usabilidade](../usability/index.md)

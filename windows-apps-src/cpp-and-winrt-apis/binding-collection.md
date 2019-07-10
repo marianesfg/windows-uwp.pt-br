@@ -3,35 +3,35 @@ description: Uma coleção que pode ser efetivamente vinculada a um controle de 
 title: Controles de itens XAML; associar a uma coleção C++/WinRT
 ms.date: 04/24/2019
 ms.topic: article
-keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, coleção
+keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, associação, coleção
 ms.localizationpriority: medium
 ms.openlocfilehash: 7669c6536f28d5f979567f5b433dbf614800bec3
-ms.sourcegitcommit: d23dab1533893b7fe0f01ca6eb273edfac4705e6
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65627673"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de itens XAML; associar a uma coleção C++/WinRT
 
-Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), e todos os itens como XAML de associar controles a eles.
+Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como vincular controles de itens XAML a elas.
 
-Se você deseja acompanhar este tópico, é recomendável que você primeiro crie o projeto que é descrito em [XAML controla; associar a um C++propriedade /WinRT](binding-property.md). Este tópico adiciona mais código para o projeto, e adiciona aos conceitos explicados nesse tópico.
+Se você deseja acompanhar este tópico, recomendamos que crie primeiro o projeto descrito em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md). Este tópico adiciona mais código e expande os conceitos explicados naquele tópico.
 
 > [!IMPORTANT]
-> Para conceitos e termos essenciais que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com C++/WinRT, consulte [Consumir APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
+> Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de tempo de execução com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
-## <a name="what-does-observable-mean-for-a-collection"></a>O que faz *observável* significa para uma coleção?
-Se uma classe de tempo de execução que representa uma coleção escolhe acionar o evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) sempre que um elemento é adicionado a ele ou removido dele, então a classe de tempo de execução é um coleção observável. Um controle de itens XAML pode se associar a e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando ele mesmo para mostrar os elementos atuais.
+## <a name="what-does-observable-mean-for-a-collection"></a>O que significa *observável* para uma coleção?
+Se uma classe de tempo de execução que representa uma coleção escolhe acionar o evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) sempre que um elemento é adicionado ou removido dele, então a classe de tempo de execução é uma coleção observável. Um controle de itens XAML pode se associar e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando a si mesmo para mostrar os elementos atuais.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="add-a-bookskus-collection-to-bookstoreviewmodel"></a>Adicionar uma coleção **BookSkus** a **BookstoreViewModel**
 
-Em [Controles XAML; vincular a uma propriedade C++/WinRT](binding-property.md), nós adicionamos um tipo de propriedade **BookSku** a nosso modelo de visualização principal. Nesta etapa, vamos usar o [ **winrt::single_threaded_observable_vector** ](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) modelo de função de fábrica para nos ajudar a implementar uma coleção observável de **BookSku** sobre o mesmo modelo de exibição.
+Em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md), nós adicionamos um tipo de propriedade **BookSku** a nosso modelo de visualização principal. Nesta etapa, usaremos o modelo de função de fábrica [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) para ajudar a implementar uma coleção observável de **BookSku** no mesmo modelo de exibição.
 
-Declarar uma nova propriedade em `BookstoreViewModel.idl`.
+Declare uma nova propriedade em `BookstoreViewModel.idl`.
 
 ```idl
 // BookstoreViewModel.idl
@@ -45,9 +45,9 @@ runtimeclass BookstoreViewModel
 ```
 
 > [!IMPORTANT]
-> Na listagem MIDL 3.0 acima, observe que o tipo dos **BookSkus** é de propriedade [ **IObservableVector** ](/uwp/api/windows.foundation.collections.ivector_t_) de [ **IInspectable** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable). Na próxima seção deste tópico, podemos estarei vinculando a fonte de itens de uma [ **ListBox** ](/uwp/api/windows.ui.xaml.controls.listbox) para **BookSkus**. Uma caixa de listagem é um controle de itens e para definir corretamente as [ **ItemsControl** ](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) propriedade, você precisa defini-lo como um valor do tipo **IObservableVector** (ou **IVector**) de **IInspectable**, ou de um tipo de interoperabilidade, como [ **IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
+> Na listagem MIDL 3.0 acima, observe que o tipo da propriedade **BookSkus** é [**IObservableVector**](/uwp/api/windows.foundation.collections.ivector_t_) de [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable). Na próxima seção deste tópico, associaremos a fonte de itens de uma [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) a **BookSkus**. Uma caixa de listagem é um controle de itens e, para definir corretamente a propriedade [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), é necessário defini-la como um valor do tipo **IObservableVector** (ou **IVector**) de **IInspectable**, ou de um tipo de interoperabilidade, como [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
 
-Salvar e compilar. Copie os stubs de acessador do `BookstoreViewModel.h` e `BookstoreViewModel.cpp` na `\Bookstore\Bookstore\Generated Files\sources` pasta (para obter mais detalhes, consulte o tópico anterior, [XAML controla; associar a um C++propriedade /WinRT](binding-property.md)). Implemente os stubs de acessador assim.
+Salve e compile. Copie os stubs de acessador de `BookstoreViewModel.h` e `BookstoreViewModel.cpp` na pasta `\Bookstore\Bookstore\Generated Files\sources` (para saber mais, confira o tópico anterior, [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md)). Implemente os stubs de acessador dessa forma.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -89,8 +89,8 @@ Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspec
 ...
 ```
 
-## <a name="bind-a-listbox-to-the-bookskus-property"></a>Vincular uma ListBox à propriedade **BookSkus**
-Abra `MainPage.xaml`, que contém a marcação XAML para nossa página da interface do usuário principal. Adicione a seguinte marcação dentro do mesmo **StackPanel** como o **Botão**.
+## <a name="bind-a-listbox-to-the-bookskus-property"></a>Associar uma ListBox à propriedade **BookSkus**
+Abra `MainPage.xaml`, que contém a marcação XAML para a página principal da interface do usuário. Adicione a seguinte marcação dentro do mesmo **StackPanel** que **Button**.
 
 ```xaml
 <ListBox ItemsSource="{x:Bind MainViewModel.BookSkus}">
@@ -102,7 +102,7 @@ Abra `MainPage.xaml`, que contém a marcação XAML para nossa página da interf
 </ListBox>
 ```
 
-Em `MainPage.cpp`, adicione uma linha de código para o manipulador de eventos de **Clique** para acrescentar um livro à coleção.
+Em `MainPage.cpp`, adicione uma linha de código ao manipulador de eventos **Click** para acrescentar um livro à coleção.
 
 ```cppwinrt
 // MainPage.cpp
@@ -115,11 +115,11 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 ...
 ```
 
-Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos de **Clique**. Vimos que a implementação de **Anexar** aciona um evento para informar à interface do usuário que a coleção foi alterada; e o **ListBox** consulta novamente a coleção para atualizar seu próprio valor de **Itens**. Exatamente como antes, o título de um dos livros muda; e essa alteração de título será refletida no botão e na caixa de listagem.
+Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos **Click**. Vimos que a implementação de **Append** aciona um evento para informar à interface do usuário que a coleção foi alterada; a **ListBox** consulta novamente a coleção para atualizar seu próprio valor de **Items**. Exatamente como antes, o título de um dos livros muda e essa alteração de título é refletida no botão e na caixa de listagem.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
-* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
+* [Modelo da função winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

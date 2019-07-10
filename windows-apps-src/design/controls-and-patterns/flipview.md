@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7942839b43739ca5fb15106abbfa1877ead81dc2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362767"
 ---
 # <a name="flip-view"></a>Exibição de inversão
@@ -38,7 +38,7 @@ O recurso exibição de inversão é melhor para examinar imagens em coleções 
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/FlipView">abrir o aplicativo e ver o FlipView em ação</a>.</p>
+    <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/FlipView">abri-lo e ver o FlipView em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -126,7 +126,7 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://docs
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Observação**&nbsp;&nbsp;Você pode preencher um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item em XAML, o item adicionado será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
+>**Observação**&nbsp;&nbsp;É possível preencher uma exibição de inversão adicionando itens à coleção Items ou definindo a propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item em XAML, o item adicionado será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
 ### <a name="specify-the-look-of-the-items"></a>Especificar a aparência dos itens
 
@@ -227,9 +227,9 @@ Para conferir um código de exemplo que mostra como adicionar um indicador de co
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para listas](lists.md)
-- [**Classe de FlipView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
+- [**Classe FlipView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)

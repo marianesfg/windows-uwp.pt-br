@@ -1,25 +1,25 @@
 ---
-description: Este tópico mostra como consumir as APIs do C++/WinRT, sejam elas implementadas pelo Windows, um fornecedor de componentes de terceiros, ou por você mesmo.
-title: Consumir APIs com C++/WinRT
+description: Este tópico mostra como consumir as APIs do C++/WinRT, sejam elas implementadas pelo Windows, um fornecedor de componentes de terceiros ou por você mesmo.
+title: Utilizar APIs com C++/WinRT
 ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: e6bf1e7fb32533aa9d7b865ac7c8afc374290e54
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66360348"
 ---
-# <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
+# <a name="consume-apis-with-cwinrt"></a>Utilizar APIs com C++/WinRT
 
-Este tópico mostra como utilizar [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, se eles fazem parte do Windows, implementado por um fornecedor de componentes de terceiros ou implementados por conta própria.
+Este tópico mostra como utilizar as APIs do [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), sejam elas parte do Windows, implementadas por um fornecedor de componentes de terceiros, ou implementada por você mesmo.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Se a API estiver em um namespace do Windows
-Esse é o caso mais comum em que você consumirá uma API do Windows Runtime. Para cada tipo em um namespace do Windows definido nos metadados, C ++/WinRT define um equivalente C++ amigável (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt** usando a sintaxe do C++. Por exemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) é projetado no C++/WinRT como **winrt::Windows::Foundation::Uri**.
+Esse é o caso mais comum de utilização de uma API do Windows Runtime. Para cada tipo em um namespace do Windows definido nos metadados, C ++/WinRT define um equivalente C++ amigável (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas é colocado no namespace C++ **winrt** usando a sintaxe do C++. Por exemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) é projetado no C++/WinRT como **winrt::Windows::Foundation::Uri**.
 
-A seguir está um exemplo simples de código. Se você quiser copiar e colar os exemplos de código a seguir diretamente no arquivo de código fonte principal de um **aplicativo de Console do Windows (C++/WinRT)** projeto e, em seguida, primeiro conjunto **não usando cabeçalhos pré-compilados** nas propriedades do projeto.
+A seguir apresentamos um exemplo de código simples. Se quiser copiar e colar os exemplos de código a seguir diretamente no arquivo de código-fonte principal de um projeto de **Aplicativo de Console do Windows (C++/WinRT)** , primeiro defina **Não usar Cabeçalhos Pré-compilados** nas propriedades do projeto.
 
 ```cppwinrt
 // main.cpp
@@ -36,37 +36,37 @@ int main()
 }
 ```
 
-O cabeçalho `winrt/Windows.Foundation.h` incluído faz parte do SDK, encontrado dentro da pasta `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt\`. Os cabeçalhos nessa pasta contêm tipos de namespace do Windows projetados em C++/WinRT. Neste exemplo, `winrt/Windows.Foundation.h` contém **winrt::Windows::Foundation::Uri**, que é o tipo projetado para a classe de tempo de execução [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri).
+O cabeçalho `winrt/Windows.Foundation.h` incluído faz parte do SDK, e pode ser encontrado dentro da pasta `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt\`. Os cabeçalhos nessa pasta contêm tipos de namespace do Windows projetados em C++/WinRT. Neste exemplo, `winrt/Windows.Foundation.h` contém **winrt::Windows::Foundation::Uri**, que é o tipo projetado para a classe de tempo de execução [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri).
 
 > [!TIP]
-> Sempre que desejar usar um tipo de namespace do Windows, inclua o cabeçalho do C++/WinRT correspondente a esse namespace. As diretivas de `using namespace` são opcionais, mas convenientes.
+> Sempre que desejar usar um tipo de namespace do Windows, inclua o cabeçalho do C++/WinRT correspondente a esse namespace. As diretivas `using namespace` são opcionais, mas convenientes.
 
-No exemplo de código acima, após inicializar C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)** ](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Para isso, o caso de uso mais comum, que normalmente é tudo o que você precisa fazer. Quando você tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
+No exemplo de código acima, após iniciar o C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)** ](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Este é o caso de uso mais comum, e normalmente é tudo o que você precisa fazer. Quando tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
 
-Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Conforme ilustrado abaixo, as chamadas aos membros do valor projetado, na verdade, delegar, via o ponteiro inteligente, para o objeto de backup; o que é onde ocorrem as alterações de estado.
+Na verdade, esse valor projetado é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto existente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para criar uma instância da classe existente do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Como mostrado abaixo, suas chamadas para os membros do valor projetado na verdade delegam, por meio do ponteiro inteligente, para o objeto existente, que é onde ocorrem alterações de estado.
 
-![O tipo Windows::Foundation::Uri projetado](images/uri.png)
+![O tipo projetado Windows::Foundation::Uri](images/uri.png)
 
-Quando o valor `contosoUri` não estiver mais no escopo, e destrói e libera a referência à interface padrão. Se essa referência é a última referência ao objeto de suporte **Windows.Foundation.Uri** do Windows Runtime, o objeto de suporte também é destruído.
+Quando o valor `contosoUri` não está mais no escopo, ele destrói e libera a referência à interface padrão. Se essa é a última referência ao objeto existente **Windows.Foundation.Uri** do Windows Runtime, o objeto existente também é destruído.
 
 > [!TIP]
-> Um *tipo projetado* é um wrapper ao longo de uma classe de tempo de execução para fins de consumo de suas APIs. Uma *interface projetada* é um wrapper sobre uma interface do Windows Runtime.
+> Um *tipo projetado* é um wrapper ao longo de uma classe de tempo de execução para utilizar suas APIs. Uma *interface projetada* é um wrapper sobre uma interface do Windows Runtime.
 
 ## <a name="cwinrt-projection-headers"></a>Cabeçalhos de projeção do C++/WinRT
-Para consumir APIs de namespace do Windows do C++/WinRT, você deve incluir os cabeçalhos da pasta `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt`. É comum para um tipo em um namespace subordinado referenciar tipos no namespace pai imediato. Consequentemente, cada cabeçalho de projeção do C++/WinRT inclui automaticamente o arquivo de cabeçalho do namespace pai para que você não *precise* inclui-lo explicitamente. Embora, nesse caso, não exista nenhum erro.
+Para utilizar APIs de namespace do Windows a partir do C++/WinRT, é preciso incluir os cabeçalhos da pasta `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt`. É comum que um tipo em um namespace subordinado faça referência aos tipos no namespace pai imediato. Consequentemente, cada cabeçalho de projeção do C++/WinRT inclui automaticamente o arquivo de cabeçalho do namespace pai para que você não *precise* incluí-lo explicitamente. No entanto, se você fizer isso, não haverá nenhum erro.
 
-Por exemplo, para o namespace [**Windows::Security::Cryptography::Certificates**](/uwp/api/windows.security.cryptography.certificates), as definições de tipo do C++/WinRT equivalentes residem em `winrt/Windows.Security.Cryptography.Certificates.h`. Os tipos em **Windows::Security::Cryptography::Certificates** exigem tipos no namespace pai **Windows::Security::Cryptography** e os tipos nesse namespace podem exigir tipos no próprio pai, **Windows::Security**.
+Por exemplo, para o namespace [**Windows::Security::Cryptography::Certificates**](/uwp/api/windows.security.cryptography.certificates), as definições de tipo do C++/WinRT equivalentes estão em `winrt/Windows.Security.Cryptography.Certificates.h`. Os tipos em **Windows::Security::Cryptography::Certificates** exigem tipos no namespace pai **Windows::Security::Cryptography** e os tipos nesse namespace podem exigir tipos no próprio pai, **Windows::Security**.
 
-Então, ao incluir `winrt/Windows.Security.Cryptography.Certificates.h`, esse arquivo inclui `winrt/Windows.Security.Cryptography.h`; e `winrt/Windows.Security.Cryptography.h`inclui `winrt/Windows.Security.h`. É onde a trilha para, pois não há nenhum `winrt/Windows.h`. Esse processo de inclusão transitiva para no namespace de segundo nível.
+Então, ao incluir `winrt/Windows.Security.Cryptography.Certificates.h`, esse arquivo inclui `winrt/Windows.Security.Cryptography.h`; e `winrt/Windows.Security.Cryptography.h` inclui `winrt/Windows.Security.h`. E é aqui que a trilha acaba, pois não há um `winrt/Windows.h`. Esse processo de inclusão transitiva para no namespace de segundo nível.
 
-Esse processo inclui temporariamente os arquivos de cabeçalho que fornecem as *declarações* e *implementações* necessárias para as classes definidas nos namespaces pai.
+Esse processo inclui transitivamente os arquivos de cabeçalho que fornecem as *declarações* e *implementações* necessárias para as classes definidas nos namespaces pai.
 
-Um membro de um tipo em um namespace pode fazer referência a um ou mais tipos de outros namespaces não relacionados. Para que o compilador faça a compilação dessa definições de membros, ele deve ver as declarações de tipo para o fechamento de todos esses tipos. Consequentemente, cada cabeçalho de projeção do C++/WinRT inclui os cabeçalhos de namespace necessários para *declarar* quaisquer tipos dependentes. Ao contrário do namespaces pai, esse processo *não* usa as *implementações* para tipos mencionados.
+Um membro de um tipo em um namespace pode fazer referência a um ou mais tipos de outros namespaces não relacionados. Para que o compilador faça a compilação dessa definições de membros, deve ver as declarações de tipo para o fechamento de todos esses tipos. Consequentemente, cada cabeçalho de projeção do C++/WinRT inclui os cabeçalhos de namespace necessários para *declarar* quaisquer tipos dependentes. Ao contrário do namespaces pai, esse processo *não* usa as *implementações* para tipos mencionados.
 
 > [!IMPORTANT]
-> Quando você realmente deseja *usar* um tipo (instanciar, chamar métodos etc.) declarado em um namespace não relacionado, você deve incluir o arquivo de cabeçalho de namespace apropriado para o tipo. Somente *declarações* e não *implementações* são incluídas automaticamente.
+> Quando você realmente deseja *usar* um tipo (instanciar, chamar métodos, etc.) declarado em um namespace não relacionado, deve incluir o arquivo de cabeçalho de namespace apropriado para o tipo. Somente *declarações*, e não *implementações*, são incluídas automaticamente.
 
-Por exemplo, se você incluir somente `winrt/Windows.Security.Cryptography.Certificates.h`, isso faz com que declarações sejam obtidos dos namespaces (e assim por diante, temporariamente).
+Por exemplo, se você incluir somente `winrt/Windows.Security.Cryptography.Certificates.h`, isso fará com que as declarações sejam obtidas desses namespaces (e assim por diante, transitivamente).
 
 - Windows.Foundation
 - Windows.Foundation.Collections
@@ -74,17 +74,17 @@ Por exemplo, se você incluir somente `winrt/Windows.Security.Cryptography.Certi
 - Windows.Storage.Streams
 - Windows.Security.Cryptography
 
-Ou seja, algumas APIs são de encaminhamento declarado em um cabeçalho que você incluiu. Mas suas definições estão em um cabeçalho ainda não incluído. Portanto, ao chamar [**Windows::Foundation::Uri::RawUri**](/uwp/api/windows.foundation.uri.rawuri), você receberá um erro de vinculador indicando que o membro não é definido. A solução é `#include <winrt/Windows.Foundation.h>` explicitamente. Em geral, ao ver um erro de vinculador assim, inclua o cabeçalho nomeado para o namespace da API e recompile.
+Ou seja, algumas APIs têm encaminhamento declarado em um cabeçalho que você incluiu. Entretanto, suas definições estão em um cabeçalho ainda não incluído. Portanto, ao chamar [**Windows::Foundation::Uri::RawUri**](/uwp/api/windows.foundation.uri.rawuri), você receberá um erro de vinculador indicando que o membro não está definido. A solução é usar `#include <winrt/Windows.Foundation.h>` explicitamente. Em geral, ao ver um erro de vinculador assim, inclua o cabeçalho nomeado para o namespace da API e recompile.
 
-## <a name="accessing-members-via-the-object-via-an-interface-or-via-the-abi"></a>Acessar membros pelo objeto, por meio de uma interface ou ABI
-Com a projeção do C++/WinRT, a representação do tempo de execução de uma classe do Windows Runtime é a interface de ABI subjacente. No entanto, para sua conveniência, é possível codificar em relação às classes da maneira que o autor pretendia. Por exemplo, você pode chamar o método **ToString** de um [**Uri**](/uwp/api/windows.foundation.uri) como se fosse um método da classe (na verdade, por trás é um método na interface separada de **IStringable**).
+## <a name="accessing-members-via-the-object-via-an-interface-or-via-the-abi"></a>Acessar membros pelo objeto, por uma interface ou pela ABI
+Com a projeção do C++/WinRT, a representação do tempo de execução de uma classe do Windows Runtime é somente uma interface ABI subjacente. No entanto, para sua conveniência, é possível codificar em relação às classes da maneira que o autor pretendia. Por exemplo, chame o método **ToString** de um [**Uri**](/uwp/api/windows.foundation.uri) como se fosse um método da classe (na verdade, por baixo dos panos, é um método na interface **IStringable** separada).
 
 ```cppwinrt
 Uri contosoUri{ L"http://www.contoso.com" };
 WINRT_ASSERT(contosoUri.ToString() == L"http://www.contoso.com/"); // QueryInterface is called at this point.
 ```
 
-Essa conveniência é obtida por meio de uma consulta para a interface apropriada. Mas você está sempre no controle. Você pode optar por trocar um pouco dessa conveniência por desempenho recuperando a interface IStringable por conta própria e usando-a diretamente. No exemplo de código abaixo, você pode obter um ponteiro de interface IStringable real no tempo de execução (por meio de uma única consulta). Depois disso, a chamada para **ToString** é direta e evita qualquer chamada para **QueryInterface**.
+Essa conveniência é obtida por meio de uma consulta na interface apropriada. Entretanto, você está sempre no controle. É possível optar por trocar um pouco dessa conveniência por desempenho ao recuperar a interface IStringable por conta própria e usando-a diretamente. No exemplo de código abaixo, obtém-se um ponteiro de interface IStringable real no tempo de execução (por meio de uma consulta única). Depois disso, a chamada para **ToString** é direta e evita qualquer chamada para **QueryInterface**.
 
 ```cppwinrt
 ...
@@ -92,9 +92,9 @@ IStringable stringable = contosoUri; // One-off QueryInterface.
 WINRT_ASSERT(stringable.ToString() == L"http://www.contoso.com/");
 ```
 
-Você pode escolher essa técnica se souber que chamará vários métodos na mesma interface.
+Escolha essa técnica se souber que chamará vários métodos na mesma interface.
 
-A propósito, é possível acessar membros no nível de ABI, se quiser. O exemplo de código abaixo mostra como fazer isso, e há mais detalhes e exemplos de código em [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md).
+A propósito, é possível acessar membros no nível da ABI, se quiser. O exemplo de código abaixo mostra como fazer isso, e é possível saber mais e obter exemplos de código em [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md).
 
 ```cppwinrt
 #include <Windows.Foundation.h>
@@ -115,7 +115,7 @@ int main()
 ```
 
 ## <a name="delayed-initialization"></a>Inicialização atrasada
-Até mesmo o construtor padrão de um tipo projetado faz com que um objeto de suporte do Windows Runtime seja criado. É possível construir uma variável de um tipo projetado sem construir um objeto do Windows Runtime (para que você pode atrasar esse trabalho até mais tarde), se desejar. Declare a variável ou o campo usando o construtor especial do C++/WinRT `nullptr_t` para o tipo projetado.
+Até mesmo o construtor padrão de um tipo projetado faz com que um objeto existente do Windows Runtime seja criado. É possível construir uma variável de um tipo projetado sem construir um objeto do Windows Runtime, para que seja possível atrasar esse trabalho, se desejar. Declare a variável ou o campo usando o construtor especial do C++/WinRT `nullptr_t` para o tipo projetado.
 
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
@@ -144,31 +144,31 @@ int main()
 }
 ```
 
-Todos os construtores no tipo projetado *exceto* o construtor `nullptr_t` resultam na criação do objeto de suporte do Windows Runtime. O construtor `nullptr_t` é essencialmente uma não operação. Ele espera que o objeto projetado seja inicializado em um momento subsequente. Portanto, se uma classe de tempo de execução tem um construtor padrão ou não, você pode usar essa técnica para a inicialização atrasada eficiente.
+Todos os construtores no tipo projetado *exceto* o construtor `nullptr_t` resultam na criação do objeto existente do Windows Runtime. O construtor `nullptr_t` é, essencialmente, inoperante. Ele espera que o objeto projetado seja iniciado posteriormente. Portanto, se uma classe de tempo de execução tem ou não um construtor padrão, use essa técnica para uma inicialização atrasada eficiente.
 
-Essa consideração afeta outros lugares onde você invoca o construtor padrão, como em vetores e mapas. Considere este exemplo de código, para os quais você precisará de uma **aplicativo em branco (C++/WinRT)** projeto.
+Essa consideração afeta outros lugares em que se chama o construtor padrão, como em vetores e mapas. Considere este exemplo de código, para o qual será necessário um projeto **Aplicativo em Branco (C++/WinRT)** .
 
 ```cppwinrt
 std::map<int, TextBlock> lookup;
 lookup[2] = value;
 ```
 
-A atribuição cria uma nova **TextBlock**e, em seguida, substitui-lo com imediatamente `value`. Aqui está a solução.
+A atribuição cria um novo **TextBlock** e o substitui imediatamente por `value`. A solução é a seguinte.
 
 ```cppwinrt
 std::map<int, TextBlock> lookup;
 lookup.insert_or_assign(2, value);
 ```
 
-## <a name="if-the-api-is-implemented-in-a-windows-runtime-component"></a>Se a API é implementada em um componente do Tempo de Execução do Windows
+## <a name="if-the-api-is-implemented-in-a-windows-runtime-component"></a>Se a API é implementada em um componente do Windows Runtime
 Esta seção se aplica se você criou o componente por conta própria ou se ele veio por meio de um fornecedor.
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C++WinRT Visual Studio VSIX (extensão) e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), consulte [suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-No seu projeto de aplicativo, referencie o arquivo de metadados do Windows Runtime do componente do Tempo de Execução do Windows (`.winmd`) e compile. Durante a compilação, a ferramenta `cppwinrt.exe` gera uma biblioteca C++ padrão que descreve completamente&mdash;ou *projeta*&mdash;a superfície de API do componente. Em outras palavras, a biblioteca gerada contém os tipos projetados para o componente.
+No seu projeto de aplicativo, faça referência ao arquivo de metadados do Windows Runtime do componente do Windows Runtime (`.winmd`) e compile. Durante a compilação, a ferramenta `cppwinrt.exe` gera uma biblioteca C++ padrão que descreve completamente, ou *projeta*, a superfície de API do componente. Em outras palavras, a biblioteca gerada contém os tipos projetados para o componente.
 
-Em seguida, assim como acontece com um tipo de namespace do Windows, inclua um cabeçalho e construa o tipo projetado por meio de um de seus construtores. O código de inicialização do seu projeto de aplicativo registra a classe de tempo de execução, e o construtor do tipo projetado chama [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para ativar a classe de tempo de execução do componente referenciado.
+Em seguida, assim como acontece com um tipo de namespace do Windows, inclua um cabeçalho e construa o tipo projetado por meio de um de seus construtores. O código de inicialização do seu projeto de aplicativo registra a classe de tempo de execução, e o construtor do tipo projetado chama [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para ativar a classe de tempo de execução do componente mencionado.
 
 ```cppwinrt
 #include <winrt/BankAccountWRC.h>
@@ -180,14 +180,14 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 };
 ```
 
-Para obter mais detalhes, código e um passo a passo do consumo de APIs implementadas em um componente do Tempo de Execução do Windows, consulte [Criar eventos em C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component).
+Para saber mais, obter códigos e ver um passo a passo do consumo de APIs implementadas em um componente do Windows Runtime, confira [Criar eventos em C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component).
 
-## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>Se a API é implementada no projeto de consumo
-Um tipo consumido a partir da interface de usuário do XAML deve ser uma classe de tempo de execução, mesmo que ele esteja no mesmo projeto como o XAML.
+## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>Se a API é implementada no projeto utilizado
+Um tipo utilizado a partir da interface de usuário do XAML deve ser uma classe de tempo de execução, mesmo que esteja no mesmo projeto do XAML.
 
-Para esse cenário, você deve gerar um tipo projetado de metadados do Windows Runtime da classe de tempo de execução (`.winmd`). Novamente, inclua um cabeçalho, mas desta vez construa o tipo projetado por meio de seu construtor `nullptr`. Esse construtor não realiza qualquer inicialização, portanto, em seguida você deve atribuir um valor para a instância por meio da função auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), passando quaisquer argumentos de construtor necessários. Uma classe de tempo de execução implementada no mesmo projeto que o código não precisa ser registrada, nem instanciada por meio de ativação do Windows Runtime/COM.
+Para esse cenário, gere um tipo projetado a partir de metadados do Windows Runtime da classe de tempo de execução (`.winmd`). Novamente, inclua um cabeçalho, mas desta vez construa o tipo projetado por meio de seu construtor `nullptr`. Esse construtor não realiza qualquer inicialização, portanto, em seguida é preciso atribuir um valor para a instância por meio da função auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), passando quaisquer argumentos de construtor necessários. Uma classe de tempo de execução implementada no mesmo projeto que o código utilizado não precisa ser registrada, nem instanciada por meio de ativação do Windows Runtime/COM.
 
-Você precisará de uma **aplicativo em branco (C++/WinRT)** projeto para este exemplo de código.
+É preciso um projeto **Aplicativo em Branco (C++/WinRT))** para este exemplo de código.
 
 ```cppwinrt
 // MainPage.h
@@ -212,17 +212,17 @@ MainPage::MainPage()
 }
 ```
 
-Para obter mais detalhes, código e um passo a passo sobre consumo de uma classe de tempo de execução implementada no projeto do consumo, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
+Para saber mais, obter códigos e ver um passo a passo sobre o consumo de uma classe de tempo de execução implementada no projeto de consumo, confira [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Criação de instância e retorno de tipos projetados e interfaces
-Veja um exemplo de como os tipos e interfaces projetados podem parecer em seu projeto de consumo. Lembre-se de que um tipo projetado (como aquele neste exemplo), é gerado por ferramenta e não é algo que você poderia criar por conta própria.
+## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Instanciar e retornar tipos e interfaces projetados
+Veja um exemplo da aparência dos tipos projetados e interfaces ao utilizar seu projeto. Lembre-se de que um tipo projetado (como o deste exemplo), é gerado por ferramenta e não é algo que você pode criar por conta própria.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,
     Windows::Foundation::IStringable, Windows::Foundation::IClosable>
 ```
 
-**MyRuntimeClass** é um tipo projetado; interfaces projetadas incluem **IMyRuntimeClass**, **IStringable** e **IClosable**. Este tópico mostra as diferentes maneiras de como você pode instanciar um tipo projetado. Aqui está um lembrete e um resumo, usando **MyRuntimeClass** como exemplo.
+**MyRuntimeClass** é um tipo projetado; as interfaces projetadas incluem **IMyRuntimeClass**, **IStringable** e **IClosable**. Este tópico mostra as diferentes maneiras de como instanciar um tipo projetado. Este é um lembrete e um resumo, usando **MyRuntimeClass** como exemplo.
 
 ```cppwinrt
 // The runtime class is implemented in another compilation unit (it's either a Windows API,
@@ -234,9 +234,9 @@ MyProject::MyRuntimeClass myrc2{ nullptr };
 myrc2 = winrt::make<MyProject::implementation::MyRuntimeClass>();
 ```
 
-- Você pode acessar os membros de todas as interfaces de um tipo projetado.
-- Você pode retornar um tipo projetado para o chamador.
-- Tipos projetados e interfaces derivam de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Assim, você pode chamar [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) em um tipo projetado ou interface para consultar outras interfaces projetadas, que você também pode usar ou retornar para o chamador. A função de membro **como** funciona como [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+- É possível acessar os membros de todas as interfaces de um tipo projetado.
+- E retornar um tipo projetado para um chamador.
+- Tipos projetados e interfaces derivam de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Assim, chame [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) em um tipo projetado ou interface para consultar outras interfaces projetadas, que também podem ser usadas ou retornadas para um chamador. A função de membro **as** funciona como [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
 
 ```cppwinrt
 void f(MyProject::MyRuntimeClass const& myrc)
@@ -249,7 +249,7 @@ void f(MyProject::MyRuntimeClass const& myrc)
 ```
 
 ## <a name="activation-factories"></a>Alocadores de ativação
-A maneira conveniente e direta de criar um objeto C++/WinRT é a seguinte.
+A maneira conveniente e direta de criar um objeto de C++/WinRT é a seguinte.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;
@@ -257,7 +257,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-Pode haver momentos em que você vai desejar criar o alocador de ativação por conta própria e, em seguida, criar objetos a partir dele para sua conveniência. Veja alguns exemplos mostrando como fazer isso usando o modelo de função [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory).
+Pode haver momentos em que se deseja criar o alocador de ativação por conta própria e, em seguida, criar objetos a partir dele para sua conveniência. Veja alguns exemplos mostrando como fazer isso usando o modelo de função [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory).
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;
@@ -283,13 +283,13 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ## <a name="important-apis"></a>APIs Importantes
 * [Interface QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [Função RoActivateInstance](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)
-* [Classe Windows::Foundation::URI](/uwp/api/windows.foundation.uri)
-* [modelo de função WinRT::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)
-* [modelo de função WinRT::make](/uwp/cpp-ref-for-winrt/make)
-* [struct WinRT::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [Classe Windows::Foundation::Uri](/uwp/api/windows.foundation.uri)
+* [Modelo de função winrt::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)
+* [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [Struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar eventos no C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
+* [Criar eventos em C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
 * [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md)
 * [Introdução ao C++/WinRT](intro-to-using-cpp-with-winrt.md)
 * [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)

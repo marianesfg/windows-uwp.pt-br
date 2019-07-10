@@ -1,25 +1,25 @@
 ---
-Description: Modelos de item para visualização de lista
-title: Modelos de item para visualização de lista
+Description: Modelos de item para exibição de lista
+title: Modelos de item para exibição de lista
 template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
-keywords: windows 10, uwp, fluent
+keywords: windows 10, uwp, fluente
 ms.openlocfilehash: 0a772c0ec6aad2c0d6a099b54eb4c6faa413cc7b
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913936"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63793895"
 ---
-# <a name="item-templates-for-list-view"></a>Modelos de item para visualização de lista
+# <a name="item-templates-for-list-view"></a>Modelos de item para exibição de lista
 
-Esta seção contém modelos de item que você pode usar com um controle [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView). Use esses modelos para obter a aparência de tipos de app comuns. 
+Esta seção contém modelos de item que você pode usar com um controle [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView). Use esses modelos para obter a aparência de tipos de aplicativos comuns. 
 
-Para demonstrar a ligação de dados, esses modelos se associar **ListViewItems** para a classe de gravação de exemplo do [visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md).
+Para demonstrar associação de dados, esses modelos associam **ListViewItems** à classe Recording de exemplo da [visão geral da associação de dados](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente de .ToString () no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, consulte [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
+> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente de .ToString () no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, confira [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
 
 ## <a name="single-line-list-item"></a>Item de lista de linha única
 Use esse modelo para exibir uma lista de itens com uma imagem e uma única linha de texto.
@@ -132,5 +132,5 @@ Use esse modelo para exibir uma lista de itens com texto em colunas definidas.
 - [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview)
 - [Visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md)
 - [Visão geral sobre acessibilidade](../accessibility/accessibility-overview.md)
-- [Exemplo de ListView e GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Amostra de ListView e GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 - [Imagens em miniatura](../../files/thumbnails.md)

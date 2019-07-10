@@ -1,5 +1,5 @@
 ---
-Description: Use o controle de puxar para atualizar para obter o novo conteúdo em uma lista.
+Description: Use o controle de deslizar para atualizar para obter o novo conteúdo em uma lista.
 title: Puxar para atualizar
 label: Pull-to-refresh
 template: detail.hbs
@@ -13,114 +13,114 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659251"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63791505"
 ---
 # <a name="pull-to-refresh"></a>Puxar para atualizar
 
-A ação de Puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. Puxar para atualizar é amplamente usado em dispositivos com tela touch. Você pode a API exibida aqui implementar o padrão puxar para atualizar em seu aplicativo.
+A ação deslizar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. Deslizar para atualizar é amplamente usado em dispositivos com tela touch. Você pode usar a API mostrada aqui para implementar a ação deslizar para atualizar em seu aplicativo.
 
 > **APIs importantes**: [RefreshContainer](/uwp/api/windows.ui.xaml.controls.refreshcontainer), [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)
 
-![gif puxar para atualizar](images/Pull-To-Refresh.gif)
+![gif deslizar para atualizar](images/Pull-To-Refresh.gif)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use o padrão puxar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente, e é provável que seu aplicativo seja executado em dispositivos móveis touch-first.
+Use a ação deslizar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente e será provável que seu aplicativo seja executado em dispositivos móveis touch-first.
 
-Você também pode usar o [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer) para criar uma experiência consistente de atualização que é chamada de outras maneiras, como por um botão Atualizar.
+Você também pode usar o [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer) para criar uma experiência consistente de atualização que é invocada de outras maneiras, como por um botão Atualizar.
 
 ## <a name="refresh-controls"></a>Controles de atualização
 
-Atualização de recepção é habilitada por 2 controles.
+Deslizar para atualizar é habilitado por dois controles.
 
-- **RefreshContainer** -um ContentControl que fornece um wrapper para a experiência de atualização de recepção. Ele manipula as interações de toque e gerencia o estado do seu visualizador interno de atualização.
-- **RefreshVisualizer** -encapsula a visualização de atualização explicada na próxima seção.
+- **RefreshContainer** – um ContentControl que fornece um wrapper para a experiência de deslizar para atualizar. Ele manipula as interações de toque e gerencia o estado do seu visualizador interno de atualização.
+- **RefreshVisualizer** – encapsula a visualização de atualização explicada na próxima seção.
 
-O controle principal é o **RefreshContainer**, que você insere como um wrapper em torno do conteúdo que o usuário agrupa para disparar uma atualização. RefreshContainer só funciona com toque, portanto, recomendamos que você também tem um botão de atualização disponível para os usuários que não têm uma interface de toque. Você pode posicionar o botão Atualizar em um local adequado no aplicativo, em uma barra de comandos ou em um local próximo a superfície sendo atualizado.
+O controle principal é o **RefreshContainer**, que você insere como um wrapper em torno do conteúdo que o usuário desliza para disparar uma atualização. RefreshContainer só funciona com toque, portanto, recomendamos que você também tenha um botão de atualização disponível para os usuários que não têm uma interface de toque. Você pode posicionar o botão Atualizar em uma localização adequada no aplicativo, em uma barra de comandos ou em uma localização próxima à superfície sendo atualizada.
 
 ## <a name="refresh-visualization"></a>Visualização de atualização
 
-A visualização de atualização padrão é um controle giratório progresso circular que é usado para se comunicar quando uma atualização ocorrerá e o progresso da atualização depois que ele é iniciado. O Visualizador de atualização tem 5 estados.
+A visualização de atualização padrão é um controle giratório de progresso circular que é usado para comunicação para quando uma atualização ocorrer e o progresso da atualização depois que ele for iniciado. O visualizador de atualização tem cinco estados.
 
- A distância que o usuário precisa puxe para baixo em uma lista para iniciar uma atualização é chamada a _limite_. O visualizador [estado](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.State) é determinado pelo estado pull que diz respeito a esse limite. Os valores possíveis são contidos na enumeração [RefreshVisualizerState](/uwp/api/windows.ui.xaml.controls.refreshvisualizerstate).
+ A distância que o usuário precisa deslizar para baixo em uma lista para iniciar uma atualização é chamada de _limite_. O [Estado](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.State) do visualizador é determinado pelo estado da ação de deslizar que diz respeito a esse limite. Os valores possíveis estão contidos na enumeração [RefreshVisualizerState](/uwp/api/windows.ui.xaml.controls.refreshvisualizerstate).
 
 ### <a name="idle"></a>Idle
 
-O estado padrão do Visualizador é **Idle**. O usuário não está interagindo com o RefreshContainer através do toque e não há uma atualização em andamento.
+O estado padrão do visualizador é **Ocioso**. O usuário não está interagindo com o RefreshContainer por toque e não há uma atualização em andamento.
 
-Visualmente, não há nenhuma evidência de Visualizador de atualização.
+Visualmente, não há nenhuma evidência do visualizador de atualização.
 
 ### <a name="interacting"></a>Interação
 
-Quando o usuário agrupa a lista na direção especificada pela propriedade PullDirection e antes do limite é alcançado, o visualizador consta o estado **interagindo**.
+Quando o usuário deslizar a lista na direção especificada pela propriedade PullDirection, antes de o limite ser alcançado, o visualizador estará no estado **Interação**.
 
-- Se o usuário libera o controle nesse estado, o controle retorna ao **Idle**.
+- Se o usuário liberar o controle nesse estado, o controle retornará para **Ocioso**.
 
-    ![Atualização de recepção Pre-limite](images/ptr-prethreshold.png)
+    ![deslizar para atualizar antes do limite](images/ptr-prethreshold.png)
 
-    Visualmente, o ícone é exibido como desativado (60% de opacidade). Além disso, o ícone gira uma rotação completa com a ação de rolagem.
+    Visualmente, o ícone é exibido como desabilitado (60% de opacidade). Além disso, o ícone gira uma rotação completa com a ação de rolagem.
 
-- Se o usuário agrupa a lista ultrapassou o limite, o Visualizador de transição da **interagindo** para **pendente**.
+- Se o usuário desliza a lista para depois do limite, o visualizador faz a transição de **Interação** para **Pendente**.
 
-    ![puxar para atualizar no limite](images/ptr-atthreshold.png)
+    ![deslizar para atualizar no limite](images/ptr-atthreshold.png)
 
-    Visualmente, o ícone alterna para 100% de opacidade e pulsos no tamanho até 150% e depois retornar para 100% do tamanho durante a transição.
+    Visualmente, o ícone alterna para 100% de opacidade e pulsos no tamanho de até 150% e, depois, retorna para 100% do tamanho durante a transição.
 
 ### <a name="pending"></a>Pending (Pendente)
 
-Quando o usuário ter recebido a lista ultrapassou o limite, o visualizador consta o estado **pendente**.
+Quando o usuário desliza a lista para além do limite, o visualizador fica no estado **Pendente**.
 
-- Se o usuário move a lista volta acima do limite sem liberá-lo, ele retorna para o estado **interagindo**.
-- Se o usuário libera a lista, uma solicitação de atualização será iniciada e faz a transição para o estado **Refreshing**.
+- Se o usuário move a lista de volta acima do limite sem liberá-lo, ele retorna para o estado **Interação**.
+- Se o usuário libera a lista, uma solicitação de atualização é iniciada e faz a transição para o estado **Em atualização**.
 
-![puxar para atualizar após o limite](images/ptr-postthreshold.png)
+![deslizar para atualizar após o limite](images/ptr-postthreshold.png)
 
 Visualmente, o ícone é 100% em tamanho e opacidade. Nesse estado, o ícone continua a se mover para baixo com a ação de rolagem, mas não gira.
 
 ### <a name="refreshing"></a>Atualizando
 
-Quando o usuário libera o visualiser ultrapassou o limite, cabe ao estado **Refreshing**.
+Quando o usuário libera o visualizador além do limite, ele fica no estado **Em atualização**.
 
-Quando esse estado é inserido, o evento **RefreshRequested** é acionado. Este é o sinal para começar a atualização de conteúdo do aplicativo. Argumentos de evento ([RefreshRequestedEventArgs](/uwp/api/windows.ui.xaml.controls.refreshrequestedeventargs)) contêm um objeto [adiamento](/uwp/api/windows.foundation.deferral), o que você deve executar um identificador para o manipulador de eventos. Em seguida, você deve marcar o adiamento como concluído quando seu código para realizar a atualização foi concluída.
+Quando esse estado é inserido, o evento **RefreshRequested** é acionado. Este é o sinal para começar a atualização de conteúdo do aplicativo. Argumentos de evento ([RefreshRequestedEventArgs](/uwp/api/windows.ui.xaml.controls.refreshrequestedeventargs)) contêm um objeto [Deferral](/uwp/api/windows.foundation.deferral), que você deve executar um identificador para o manipulador de eventos. Em seguida, você deverá marcar o adiamento como concluído quando seu código para realizar a atualização tiver sido concluído.
 
-Quando a atualização for concluída, o visualizador retorna para o estado **Idle**.
+Quando a atualização for concluída, o visualizador retornará para o estado **Ocioso**.
 
-Visualmente, o ícone paga para o local do limite e gira para a duração da atualização. Este giratório é usado para mostrar o progresso da atualização e é substituído pela animação do conteúdo de entrada.
+Visualmente, o ícone volta para a localização do limite e gira para a duração da atualização. Este giro é usado para mostrar o progresso da atualização e é substituído pela animação do conteúdo de entrada.
 
-### <a name="peeking"></a>Inspecionar
+### <a name="peeking"></a>Espiar
 
-Quando o usuário recebe a direção de atualização de uma posição inicial em que uma atualização não é permitida, o visualizador insere o estado **inspeção**. Isso normalmente acontece quando o ScrollViewer não está na posição 0 quando o usuário começa a puxar.
+Quando o usuário desliza na direção de atualização de uma posição inicial em que uma atualização não é permitida, o visualizador entra no estado **Espiar**. Isso normalmente acontece quando o ScrollViewer não está na posição 0 quando o usuário começa a deslizar.
 
-- Se o usuário libera o controle nesse estado, o controle retorna ao **Idle**.
+- Se o usuário liberar o controle nesse estado, o controle retornará para **Ocioso**.
 
-## <a name="pull-direction"></a>Trajeto para puxar
+## <a name="pull-direction"></a>Direção de deslizamento
 
-Por padrão, o usuário recebe uma lista de cima para baixo para iniciar uma atualização. Se você tiver uma lista ou grade com uma orientação diferente, você deve alterar a direção de pull do contêiner de atualização para corresponder.
+Por padrão, o usuário desliza uma lista de cima para baixo para iniciar uma atualização. Se você tiver uma lista ou grade com uma orientação diferente, deverá alterar a direção de deslizamento do contêiner de atualização para corresponder.
 
-O [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) propriedade usa um desses [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection) valores: **BottomToTop**, **TopToBottom**, **RightToLeft**, ou **LeftToRight**.
+A propriedade [PullDirection](/uwp/api/windows.ui.xaml.controls.refreshcontainer.PullDirection) usa um desses valores de [RefreshPullDirection](/uwp/api/windows.ui.xaml.controls.refreshpulldirection): **BottomToTop**, **TopToBottom**, **RightToLeft** ou **LeftToRight**.
 
-Quando você altera o dircetion pull, a posição inicial do controle giratório de progresso do visualizador gira automaticamente para a seta é iniciado na posição apropriada para a direção de recepção. Se necessário, você pode alterar a propriedade [RefreshVisualizer.Orientation](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.Orientation) para substituir o comportamento automático. Na maioria dos casos, recomendamos deixar o valor padrão de **automática**.
+Quando você altera a direção de deslizamento, a posição inicial do controle giratório de progresso do visualizador gira automaticamente para que a seta seja iniciada na posição apropriada para a direção de deslizamento. Se necessário, você pode alterar a propriedade [RefreshVisualizer.Orientation](/uwp/api/windows.ui.xaml.controls.refreshvisualizer.Orientation) para substituir o comportamento automático. Na maioria dos casos, recomendamos deixar o valor padrão como **Automático**.
 
 ## <a name="implement-pull-to-refresh"></a>Implementar o padrão puxar para atualizar
 
-Para adicionar a funcionalidade de recepção para atualizar para uma lista requer apenas algumas etapas.
+Adicionar a funcionalidade deslizar para atualizar a uma lista requer apenas algumas etapas.
 
-1. Empacotar sua lista em um controle **RefreshContainer**.
-1. Manipular o evento **RefreshRequested** para atualizar seu conteúdo.
-1. Opcionalmente, iniciar uma atualização chamando **RequestRefresh** (por exemplo, de um botão clique).
+1. Encapsule sua lista em um controle **RefreshContainer**.
+1. Manipule o evento **RefreshRequested** para atualizar seu conteúdo.
+1. Opcionalmente, inicie uma atualização chamando **RequestRefresh** (por exemplo, com o clique de um botão).
 
 > [!NOTE]
-> Você pode instanciar um RefreshVisualizer por conta própria. No entanto, recomendamos que você encapsula seu conteúdo em um RefreshContainer e use o RefreshVisualizer fornecido pela propriedade RefreshContainer.Visualizer, até mesmo para cenários não sensíveis ao toque. Neste artigo, presumimos que o visualizador sempre é obtido do contêiner de atualização.
+> Você pode instanciar um RefreshVisualizer por conta própria. No entanto, recomendamos que você encapsule seu conteúdo em um RefreshContainer e use o RefreshVisualizer fornecido pela propriedade RefreshContainer.Visualizer, até mesmo para cenários não sensíveis ao toque. Neste artigo, assumimos que o visualizador é sempre obtido do contêiner de atualização.
 
-> Além disso, use RequestRefresh e RefreshRequested membros de atualização do contêiner por conveniência. `refreshContainer.RequestRefresh()` é equivalente a `refreshContainer.Visualizer.RequestRefresh()`, e qualquer um irá gerar o evento RefreshContainer.RefreshRequested e os eventos de RefreshVisualizer.RefreshRequested.
+> Além disso, usamos os membros RequestRefresh e RefreshRequested do contêiner de atualização por conveniência. `refreshContainer.RequestRefresh()` é equivalente a `refreshContainer.Visualizer.RequestRefresh()` e nenhum acionará o evento RefreshContainer.RefreshRequested e os eventos RefreshVisualizer.RefreshRequested.
 
 ### <a name="request-a-refresh"></a>Solicitar uma atualização
 
-O contêiner de atualização manipula interações de toque para permitir que o usuário atualizar conteúdo através do toque. Recomendamos que você fornecer outras funcionalidades para interfaces não sensíveis ao toque, como um controle de voz ou botão de atualização.
+O contêiner de atualização manipula interações de toque para permitir que o usuário atualize conteúdo por toque. Recomendamos que você forneça outras funcionalidades para interfaces não sensíveis ao toque, como um controle de voz ou botão de atualização.
 
 Para iniciar uma atualização, chame o método [RequestRefresh](/uwp/api/windows.ui.xaml.controls.refreshcontainer.RequestRefresh).
 
@@ -132,13 +132,13 @@ private void RefreshButtonClick(object sender, RoutedEventArgs e)
 }
 ```
 
-Quando você chamar RequestRefresh, o estado do visualizador vai diretamente da **Idle** para **Refreshing**.
+Quando você chama RequestRefresh, o estado do visualizador vai diretamente de **Ocioso** para **Em atualização**.
 
-### <a name="handle-a-refresh-request"></a>Tratar uma solicitação de atualização
+### <a name="handle-a-refresh-request"></a>Manipular uma solicitação de atualização
 
-Para obter conteúdo atualizado quando necessário, manipule o evento RefreshRequested. No caso de manipulador, você precisará código específico ao seu aplicativo para obter o conteúdo atualizado.
+Para obter conteúdo atualizado quando necessário, manipule o evento RefreshRequested. No manipulador de eventos, você precisará de código específico ao seu aplicativo para obter o conteúdo atualizado.
 
-Argumentos de evento ([RefreshRequestedEventArgs](/uwp/api/windows.ui.xaml.controls.refreshrequestedeventargs)) contêm um objeto [adiamento](/uwp/api/windows.foundation.deferral). Obtenha um identificador para o adiamento no manipulador de eventos. Em seguida, você deve marcar o adiamento como concluído quando seu código para realizar a atualização foi concluída.
+Os argumentos de evento ([RefreshRequestedEventArgs](/uwp/api/windows.ui.xaml.controls.refreshrequestedeventargs)) contêm um objeto [Deferral](/uwp/api/windows.foundation.deferral). Obtenha um identificador para o adiamento no manipulador de eventos. Em seguida, marque o adiamento como concluído quando seu código para executar a atualização for concluído.
 
 ```csharp
 // See the Examples section for the full code.
@@ -161,7 +161,7 @@ private async void RefreshContainer_RefreshRequested(RefreshContainer sender, Re
 
 ### <a name="respond-to-state-changes"></a>Responder a alterações de estado
 
-Você pode responder a alterações no estado do visualizador, se necessário. Por exemplo, para evitar várias solicitações de atualização, você pode desabilitar um botão Atualizar enquanto o visualizador estão sendo atualizado.
+É possível responder a alterações no estado do visualizador, se necessário. Por exemplo, para evitar várias solicitações de atualização, você poderá desabilitar um botão de atualização enquanto o visualizador estiver sendo atualizado.
 
 ```csharp
 // See the Examples section for the full code.
@@ -182,9 +182,9 @@ private void Visualizer_RefreshStateChanged(RefreshVisualizer sender, RefreshSta
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="using-a-scrollviewer-in-a-refreshcontainer"></a>Usando um ScrollViewer em um RefreshContainer
+### <a name="using-a-scrollviewer-in-a-refreshcontainer"></a>Como usar um ScrollViewer em um RefreshContainer
 
-Este exemplo mostra como usar a atualização de recepção com um visualizador de rolagem.
+Este exemplo mostra como usar a ação deslizar para atualizar com um visualizador de rolagem.
 
 ```xaml
 <RefreshContainer>
@@ -198,9 +198,9 @@ Este exemplo mostra como usar a atualização de recepção com um visualizador 
 </RefreshContainer>
 ```
 
-### <a name="adding-pull-to-refresh-to-a-listview"></a>Adicionando pull para atualizar a um ListView
+### <a name="adding-pull-to-refresh-to-a-listview"></a>Como adicionar a ação deslizar para atualizar a um ListView
 
-Este exemplo mostra como usar a atualização de recepção com um visualizador de lista.
+Este exemplo mostra como usar a ação deslizar para atualizar com uma exibição de lista.
 
 ```xaml
 <StackPanel Margin="0,40" Width="280">
@@ -334,6 +334,6 @@ public class ListItemData
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Interações por toque](../input/touch-interactions.md)
-- [Exibição de lista e o modo de exibição de grade](listview-and-gridview.md)
-- [Modelos e contêineres de itens](item-containers-templates.md)
+- [Exibição de lista e exibição de grade](listview-and-gridview.md)
+- [Contêineres e modelos de itens](item-containers-templates.md)
 - [Animações de expressão](../../composition/composition-animation.md)

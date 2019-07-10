@@ -1,5 +1,5 @@
 ---
-description: Exibe a imagem de avatar de uma pessoa, se existir uma disponível; caso contrário, ele exibe as iniciais da pessoa ou um glifo genérico.
+description: Exibe a imagem de avatar de uma pessoa, se existir uma disponível. Caso contrário, exibe as iniciais da pessoa ou um glifo genérico.
 title: Controle de imagem da pessoa
 template: detail.hbs
 label: Parallax View
@@ -12,19 +12,19 @@ dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1897eded4d18a00a3c11cf1926adb1ebec6ae69a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638931"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63791715"
 ---
 # <a name="person-picture-control"></a>Controle de imagem da pessoa
 
-O controle de imagem da pessoa exibe a imagem de avatar de uma pessoa, se existir uma disponível; caso contrário, ele exibe as iniciais da pessoa ou um glifo genérico. Você pode usar o controle para exibir um [objeto Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), um objeto que gerencia informações de contato da pessoa ou você pode fornecer informações de contato, como o nome de exibição e a imagem de perfil manualmente.  
+O controle de imagem da pessoa exibe a imagem de avatar de uma pessoa, se existir uma disponível. Caso contrário, ele exibe as iniciais da pessoa ou um glifo genérico. Você pode usar o controle para exibir um [objeto Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), um objeto que gerencia informações de contato da pessoa ou você pode fornecer informações de contato, como o nome de exibição e a imagem de perfil, manualmente.  
 
-> **APIs importantes**: [Classe PersonPicture](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [entre em contato com a classe](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager classe](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **APIs importantes**: [classe PersonPicture](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [classe Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [classe ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
-Esta ilustração mostra dois pessoa foto controles acompanhada por dois elementos [bloco de texto](text-block.md) que exibem os nomes dos usuários. 
+Esta ilustração mostra dois controles de imagem da pessoa acompanhados por dois elementos de [bloco de texto](text-block.md) que exibem os nomes dos usuários. 
 ![O controle de imagem da pessoa](images/person-picture/person-picture_hero.png)
 
 
@@ -36,7 +36,7 @@ Use a imagem da pessoa quando desejar representar uma pessoa e suas informaçõe
 * Para exibir o remetente da mensagem 
 * Para exibir um contato de redes sociais
 
-A ilustração mostra pessoa controle de imagem em uma lista de contatos: ![O controle de imagem da pessoa](images/person-picture/person-picture-control.png)
+A ilustração mostra o controle de imagem da pessoa em uma lista de contatos: ![O controle de imagem da pessoa](images/person-picture/person-picture-control.png)
 
 ## <a name="examples"></a>Exemplos
 
@@ -45,7 +45,7 @@ A ilustração mostra pessoa controle de imagem em uma lista de contatos: ![O co
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PersonPicture">abrir o aplicativo e ver o PersonPicture em ação</a>.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PersonPicture">abrir o aplicativo e ver o PersonPicture em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -77,7 +77,7 @@ Para criar uma imagem da pessoa, você deve usar a classe PersonPicture. Este ex
 </Page>
 ```
 
-## <a name="using-the-person-picture-control-to-display-a-contact-object"></a>Uso do controle de imagem da pessoa para exibir um objeto de Contact
+## <a name="using-the-person-picture-control-to-display-a-contact-object"></a>Como usar o controle de imagem da pessoa para exibir um objeto de Contact
 
 Você pode usar o controle seletor de pessoa para exibir um objeto [Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact): 
 
@@ -167,27 +167,27 @@ namespace SampleApp
 ```
 
 > [!NOTE]
-> Para simplificar o código, este exemplo cria um novo objeto Contact. Em um aplicativo real, você pode permitir que o usuário selecione um contato ou é possível usar [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager) para consultar uma lista de contatos. Para obter informações sobre como recuperar e gerenciar contatos, consulte os [artigos sobre Contatos e calendário](../../contacts-and-calendar/index.md). 
+> Para simplificar o código, este exemplo cria um novo objeto Contact. Em um aplicativo real, você pode permitir que o usuário selecione um contato ou é possível usar [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager) para consultar uma lista de contatos. Para obter informações sobre como recuperar e gerenciar contatos, confira os [artigos sobre Contatos e calendário](../../contacts-and-calendar/index.md). 
 
-## <a name="determining-which-info-to-display"></a>Determinar quais informações devem ser exibidas
+## <a name="determining-which-info-to-display"></a>Como determinar quais informações devem ser exibidas
 
 Ao fornecer um objeto [Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), o controle de imagem da pessoa o avalia para determinar quais informações podem ser exibidas. 
 
-Se uma imagem estiver disponível, o controle exibe a primeira imagem encontrada, nesta ordem:
+Se uma imagem estiver disponível, o controle exibirá a primeira imagem encontrada, nesta ordem:
 
 1. LargeDisplayPicture
 1. SmallDisplayPicture
 1. Thumbnail
 
-Você pode alterar a imagem escolhida ao definir a propriedade PreferSmallImage como true; assim, SmallDisplayPicture tem uma prioridade maior do que LargeDisplayPicture.
+Você pode alterar a imagem escolhida ao definir a propriedade PreferSmallImage como true. Assim, SmallDisplayPicture tem uma prioridade maior do que LargeDisplayPicture.
 
-Se não houver uma imagem, o controle exibe o nome ou as iniciais do contato; se não houver quaisquer dados de nome, o controle exibe informações de contato, como um endereço de email ou um número de telefone. 
+Se não houver uma imagem, o controle exibirá o nome ou as iniciais do contato. Se não houver dados de nome, o controle exibirá dados de contato, como um endereço de email ou um número de telefone. 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Contatos e calendário](../../contacts-and-calendar/index.md)
-* [Exemplo de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+* [Amostra de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)

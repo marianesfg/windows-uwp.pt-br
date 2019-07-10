@@ -1,5 +1,5 @@
 ---
-description: Como usar comandos contextuais para implementar esses tipos de ações de um modo que forneça a melhor experiência possível para todos os tipos de entrada.
+description: Como usar comandos contextuais para implementar esses tipos de ações de um modo que proporcione a melhor experiência possível para todos os tipos de entrada.
 title: Comandos contextuais
 ms.assetid: ''
 label: Contextual commanding in collections
@@ -13,49 +13,49 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658591"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63801199"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuais para coleções e listas
 
 
 
-Muitos aplicativos contêm coleções de conteúdo na forma de listas, grades e árvores que os usuários podem manipular. Por exemplo, os usuários podem excluir, renomear, sinalizar ou atualizar os itens. Este artigo mostra como usar os comandos contextuais para implementar esses tipos de ações de maneira que fornece a melhor experiência possível para todos os tipos de entrada.  
+Muitos aplicativos contêm coleções de conteúdo na forma de listas, grades e árvores que os usuários podem manipular. Por exemplo, os usuários podem excluir, renomear, sinalizar ou atualizar os itens. Este artigo mostra como usar os comandos contextuais para implementar esses tipos de ações de maneira que proporcione a melhor experiência possível para todos os tipos de entrada.  
 
-> **APIs importantes**: [Interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [propriedade UIElement.ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [interface INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **APIs importantes**: [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [propriedade UIElement.ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [interface INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![Usar uma variedade de entradas para executar o comando de favorito](images/ContextualCommand_AddFavorites.png)
 
 ## <a name="creating-commands-for-all-input-types"></a>Criar comandos para todos os tipos de entrada
 
-Como os usuários podem interagir com um aplicativo UWP usando [uma ampla gama de dispositivos e entradas](../devices/index.md), seu aplicativo deve expor comandos por menus de contexto independentes do tipo de entrada e aceleradores de entrada específicos. A inclusão de ambos permite que o usuário invoque rapidamente comandos no conteúdo, independentemente do tipo de entrada ou dispositivo.
+Como os usuários podem interagir com um aplicativo UWP usando [uma ampla variedade de dispositivos e entradas](../devices/index.md), o aplicativo deve expor comandos por meio de menus de contexto independentes do tipo de entrada e aceleradores de entrada específicos. A inclusão de ambos permite que o usuário invoque rapidamente comandos no conteúdo, independentemente do tipo de entrada ou dispositivo.
 
-Esta tabela mostra alguns comandos típicos de coleção e os modos de expor esses comandos. 
+Esta tabela mostra alguns comandos típicos de coleção e os modos de expô-los. 
 
 | Comando          | Independentes do tipo de entrada | Acelerador de mouse | Acelerador de teclado | Acelerador de toque |
 | ---------------- | -------------- | ----------------- | -------------------- | ----------------- |
-| Excluir item      | Menu de contexto   | Focalizar botão      | Tecla DEL              | Passar o dedo para excluir   |
-| Sinalizar item        | Menu de contexto   | Focalizar botão      | Ctrl+Shift+G         | Passar o dedo para sinalizar     |
+| Excluir item      | Menu de contexto   | Botão Focalizar      | Tecla DEL              | Deslizar o dedo para excluir   |
+| Sinalizar item        | Menu de contexto   | Botão Focalizar      | Ctrl+Shift+G         | Deslizar o dedo para sinalizar     |
 | Atualizar dados     | Menu de contexto   | N/D               | Tecla F5               | Puxar para atualizar   |
-| Um item favorito | Menu de contexto   | Focalizar botão      | F, Ctrl+S            | Passar o dedo para incluir nos Favoritos |
+| Adicionar item a Favoritos | Menu de contexto   | Botão Focalizar      | F, Ctrl+S            | Deslizar o dedo para adicionar a Favoritos |
 
 
-* **Em geral, você deve disponibilizar todos os comandos para um item no item de [menu de contexto](menus.md).** Os menus de contexto são acessíveis aos usuários, independentemente do tipo de entrada e devem conter todos os comandos contextuais que o usuário pode executar.
+* **Em geral, você deve disponibilizar todos os comandos de um item no [menu de contexto do item](menus.md).** Os menus de contexto são acessíveis aos usuários independentemente do tipo de entrada e devem conter todos os comandos contextuais que o usuário pode executar.
 
-* **Para comandos acessados com frequência, considere usar entradas aceleradores.** Os aceleradores de entrada permitem que o usuário execute ações rapidamente com base em seus dispositivos de entrada. Os aceleradores de entrada incluem:
-    - Ação de passar o dedo (acelerador de toque)
-    - Puxe para atualizar dados (acelerador de toque)
+* **Para comandos acessados com frequência, considere o uso de aceleradores de entrada.** Os aceleradores de entrada permitem que o usuário execute ações rapidamente com base nos dispositivos de entrada. Os aceleradores de entrada incluem:
+    - Ação de deslizar o dedo (acelerador de toque)
+    - Deslizar para atualizar dados (acelerador de toque)
     - Atalhos de teclado (acelerador de teclado)
     - Teclas de acesso (acelerador de teclado)
     - Botões de foco de mouse e caneta (acelerador de ponteiro)
 
 > [!NOTE]
-> Os usuários devem ser capazes de acessar todos os comandos de qualquer tipo de dispositivo. Por exemplo, se os comandos do seu aplicativo são expostos somente por meio de aceleradores de ponteiro do botão de foco, os usuários de toque não poderão acessá-los. No mínimo, use um menu de contexto para fornecer acesso a todos os comandos.  
+> Os usuários devem ser capazes de acessar todos os comandos de qualquer tipo de dispositivo. Por exemplo, se os comandos do aplicativo forem expostos somente por meio de aceleradores de ponteiro do botão de foco, os usuários de toque não poderão acessá-los. No mínimo, use um menu de contexto para fornecer acesso a todos os comandos.  
 
-## <a name="example-the-podcastobject-data-model"></a>Exemplo: O modelo de dados PodcastObject
+## <a name="example-the-podcastobject-data-model"></a>Exemplo: o modelo de dados PodcastObject
 
 Para demonstrar nossas recomendações de comandos, este artigo cria uma lista de podcasts para um aplicativo de podcast. O exemplo de código demonstra como permitir que o usuário salve como "favorito" um podcast específico de uma lista.
 
@@ -98,9 +98,9 @@ Observe que PodcastObject implementa [INotifyPropertyChanged](https://docs.micro
 
 ## <a name="defining-commands-with-the-icommand-interface"></a>Definição de comandos com a interface ICommand
 
-A [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand) ajuda você a definir um comando que está disponível para vários tipos de entrada. Por exemplo, em vez de escrever o mesmo código para um comando de exclusão nos dois manipuladores de eventos diferentes, um para quando o usuário pressiona a tecla Delete e outro para quando o usuário clica com o botão direito do mouse em "Excluir" em um menu de contexto, você pode implementar a lógica de excluir uma vez como um [ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)e, em seguida, torná-lo disponível para diferentes tipos de entrada.
+A [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand) ajuda você a definir um comando que está disponível para vários tipos de entrada. Por exemplo, em vez de escrever o mesmo código para um comando de exclusão nos dois manipuladores de eventos diferentes, um para quando o usuário pressiona a tecla Delete e outro para quando o usuário clica com o botão direito do mouse em "Excluir" em um menu de contexto, você pode implementar a lógica de exclusão uma vez como um [ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)e, em seguida, torná-lo disponível para diferentes tipos de entrada.
 
-É necessário definir o ICommand que representa a ação "Favoritos". Vamos usar o método [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) do comando para incluir o podcast nos favoritos. O podcast específico será fornecido para o método execute por meio do parâmetro do comando, que pode ser vinculado usando a propriedade CommandParameter.
+É necessário definir o ICommand que representa a ação "Favoritos". Vamos usar o método [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) do comando para incluir o podcast nos favoritos. O podcast específico será fornecido para o método Execute por meio do parâmetro do comando, que pode ser associado usando a propriedade CommandParameter.
 
 ```csharp
 public class FavoriteCommand: ICommand
@@ -119,7 +119,7 @@ public class FavoriteCommand: ICommand
 }
 ```
 
-Para usar o mesmo comando com vários elementos e coleções, você pode armazenar o comando como um recurso na página ou no aplicativo.
+Para usar o mesmo comando com vários elementos e coleções, você pode armazená-lo como um recurso na página ou no aplicativo.
 
 ```xaml
 <Application.Resources>
@@ -127,7 +127,7 @@ Para usar o mesmo comando com vários elementos e coleções, você pode armazen
 </Application.Resources>
 ```
 
-Para executar o comando, é necessário chamar o método [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute).
+Para executar o comando, chame o método [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute).
 
 ```csharp
 // Favorite the item using the defined command
@@ -136,20 +136,20 @@ favoriteCommand.Execute(PodcastObject);
 ```
 
 
-## <a name="creating-a-usercontrol-to-respond-to-a-variety-of-inputs"></a>Criação de um UserControl para responder a diversas entradas
+## <a name="creating-a-usercontrol-to-respond-to-a-variety-of-inputs"></a>Criar um UserControl para responder a diversas entradas
 
-Quando você tiver uma lista de itens e cada um deve responder a várias entradas, é possível simplificar o código ao definir uma [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) para o item e usá-lo para definir manipuladores de eventos e o menu de contexto dos itens. 
+Quando você tiver uma lista de itens e cada um deve responder a várias entradas, é possível simplificar o código ao definir um [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) para o item e usá-lo para definir manipuladores de eventos e o menu de contexto dos itens. 
 
 Para criar um UserControl no Visual Studio:
-1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto. Um menu de contexto aparece.
-2. Selecione **Adicionar > Novo Item...** <br />A caixa de diálogo **Adicionar Novo Item** aparece. 
-3. Selecione UserControl na lista de itens. Dê o nome que você deseja e clique em **Adicionar**. O Visual Studio gera um stub UserControl para você. 
+1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto. Um menu de contexto aparecerá.
+2. Selecione **Adicionar > Novo Item...** <br />A caixa de diálogo **Adicionar Novo Item** aparecerá. 
+3. Selecione UserControl na lista de itens. Dê o nome que você deseja e clique em **Adicionar**. O Visual Studio gerará um stub UserControl para você. 
 
-No exemplo de podcast, cada um será exibido em uma lista, o que expõe diversas maneiras de incluir um podcast nos "Favoritos". O usuário será capaz de executar as seguintes ações para incluir o podcast nos "Favoritos":
+No exemplo do podcast, cada um será exibido em uma lista, o que expõe diversas maneiras de incluir um podcast nos "Favoritos". O usuário poderá executar as seguintes ações para incluir o podcast nos "Favoritos":
 - Invocar um menu de contexto
 - Executar atalhos de teclado
 - Mostrar um botão de foco
-- Executar um gesto de passar o dedo
+- Executar um gesto de deslizar o dedo
 
 Para encapsular esses comportamentos e usar o FavoriteCommand, vamos criar um novo [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) chamado "PodcastUserControl" para representar um podcast na lista.
 
@@ -204,7 +204,7 @@ public sealed partial class PodcastUserControl : UserControl
 
 Observe que o PodcastUserControl mantém uma referência ao PodcastObject como uma DependencyProperty. Isso nos permite associar PodcastObjects ao PodcastUserControl.
 
-Depois de gerar alguns PodcastObjects, você pode criar uma lista de podcasts ao vincular PodcastObjects a um ListView. Os objetos PodcastUserControl descrevem a visualização do PodcastObjects e, portanto, são definidos usando o ItemTemplate do ListView.
+Depois de gerar alguns PodcastObjects, você pode criar uma lista de podcasts ao associar PodcastObjects a um ListView. Os objetos PodcastUserControl descrevem a visualização do PodcastObjects e, portanto, são definidos usando o ItemTemplate do ListView.
 
 **MainPage.xaml**
 ```xaml
@@ -236,19 +236,19 @@ O usuário pode invocar os menus de contexto usando essas "ações de contexto":
 
 | Entrada    | Ação de contexto                          |
 | -------- | --------------------------------------- |
-| Mouse    | Clique com o botão direito do mouse                             |
-| Teclado | Shift+F10, botão de Menu                  |
-| Touch    | Pressionamento prolongado em item                      |
-| Caneta      | Pressionamento de botão do cilindro da caneta, um pressionamento prolongado em item |
+| Mouse    | Clicar com o botão direito do mouse                             |
+| Teclado | Shift+F10, botão de menu                  |
+| Touch    | Pressionamento longo em item                      |
+| Caneta      | Pressionamento de botão da caneta, um pressionamento longo em item |
 | Gamepad  | Botão Menu                             |
 
-**Uma vez que o usuário pode abrir um menu de contexto, independentemente do tipo de entrada, seu menu de contexto deve conter todos os comandos contextuais disponíveis para o item de lista.**
+**Como o usuário pode abrir um menu de contexto independentemente do tipo de entrada, o menu de contexto deve conter todos os comandos contextuais disponíveis para o item de lista.**
 
 ### <a name="contextflyout"></a>ContextFlyout
 
-A [propriedade ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), definida pela classe UIElement, facilita a criação de um menu de contexto que funciona com todos os tipos de entrada. Você fornece um submenu que representa o menu de contexto usando MenuFlyout e, quando o usuário executa uma "ação de contexto" conforme definido acima, o MenuFlyout correspondente ao item será exibido.
+A [propriedade ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), definida pela classe UIElement, facilita a criação de um menu de contexto que funciona com todos os tipos de entrada. Você fornece um submenu que representa o menu de contexto que usa MenuFlyout e, quando o usuário executa uma "ação de contexto" conforme definido acima, o MenuFlyout correspondente ao item será exibido.
 
-Adicionaremos um ContextFlyout para o PodcastUserControl. O MenuFlyout especificado como ContextFlyout contém um único item para incluir um podcast nos favoritos. Observe que este MenuFlyoutItem usa o favoriteCommand definido acima, com o CommandParamter associado a PodcastObject.
+Adicionaremos um ContextFlyout ao PodcastUserControl. O MenuFlyout especificado como ContextFlyout contém um único item para incluir um podcast nos favoritos. Observe que este MenuFlyoutItem usa o favoriteCommand definido acima, com o CommandParamter associado a PodcastObject.
 
 **PodcastUserControl.xaml**
 ```xaml
@@ -265,9 +265,9 @@ Adicionaremos um ContextFlyout para o PodcastUserControl. O MenuFlyout especific
 
 ```
 
-Observe que você também pode usar o [evento ContextRequested](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextRequested) para responder às ações de contexto. O evento ContextRequested não será acionado se um ContextFlyout foi especificado.
+Observe que você também pode usar o [evento ContextRequested](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextRequested) para responder às ações de contexto. O evento ContextRequested não será acionado se um ContextFlyout tiver sido especificado.
 
-## <a name="creating-input-accelerators"></a>Criação de aceleradores de entrada
+## <a name="creating-input-accelerators"></a>Criar aceleradores de entrada
 
 Embora cada item da coleção deva ter um menu de contexto com todos os comandos contextuais, convém permitir que os usuários realizem rapidamente um conjunto menor de comandos realizados com frequência. Por exemplo, um aplicativo de endereçamento pode ter comandos secundários como Responder, Arquivar, Mover para pasta, Definir sinalizador e Excluir que aparecem em um menu de contexto, mas os comandos mais comuns são Excluir e Sinalizar. Depois de identificar os comandos mais comuns, você pode usar aceleradores com base na entrada para facilitar a execução desses comandos por um usuário.
 
@@ -279,11 +279,11 @@ No aplicativo de podcast, o comando executado com frequência é o comando "Favo
 
 ![Pressione Ctrl e F para executar uma ação](images/ContextualCommand_Keyboard.png)
 
-Dependendo do tipo de conteúdo, você pode identificar determinadas combinações de teclas que devem realizar uma ação. Por exemplo, em um aplicativo de email, a tecla DEL pode ser usada para excluir o email selecionado. Em um aplicativo de podcast, as teclas Ctrl + S ou F poderiam incluir um podcast como favorito para uso posterior. Embora alguns comandos tenham atalhos de teclado comuns e conhecidas, como DEL para excluir, outros comandos têm atalhos de aplicativo ou domínio específico. Use atalhos conhecidos se possível ou considere o fornecer um texto de lembrete em uma dica de ferramenta para ensinar o usuário sobre o comando de atalho.
+Dependendo do tipo de conteúdo, você pode identificar determinadas combinações de teclas que devem realizar uma ação. Por exemplo, em um aplicativo de email, a tecla DEL pode ser usada para excluir o email selecionado. Em um aplicativo de podcast, as teclas Ctrl + S ou F poderiam incluir um podcast como favorito para uso posterior. Embora alguns comandos tenham atalhos de teclado comuns e conhecidos, como DEL para excluir, outros comandos têm atalhos de aplicativo ou domínio específico. Use atalhos conhecidos se possível ou considere o fornecer um texto de lembrete em uma dica de ferramenta para ensinar o usuário sobre o comando de atalho.
 
 O aplicativo pode responder quando o usuário pressionar uma tecla usando o evento [KeyDown](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.KeyDownEvent). Em geral, os usuários esperam que o aplicativo responda ao pressionarem a tecla em vez de aguardar até que a soltem.
 
-Este exemplo explica como adicionar o manipulador de eventos KeyDown a PodcastUserControl para incluir um podcast como favorito quando o usuário pressiona Ctrl + S ou F. Ele usa o mesmo comando de antes.
+Este exemplo explica como adicionar o manipulador KeyDown a PodcastUserControl para incluir um podcast nos favoritos quando o usuário pressiona Ctrl + S ou F. Ele usa o mesmo comando de antes.
 
 **PodcastUserControl.xaml.cs**
 ```csharp
@@ -304,9 +304,9 @@ protected override void OnKeyDown(KeyRoutedEventArgs e)
 
 ### <a name="mouse-accelerators"></a>Aceleradores de mouse
 
-![Passe o mouse sobre um item para relevar um botão](images/ContextualCommand_HovertoReveal.png)
+![Passar o mouse sobre um item para relevar um botão](images/ContextualCommand_HovertoReveal.png)
 
-Os usuários estão familiarizados com os menus de contexto ao clicar com o botão direito do mouse, mas você pode desejar capacitar os usuários para executar comandos comuns com apenas um único clique do mouse. Para habilitar essa experiência, você pode incluir botões dedicados em canvas do item de coleção. Para permitir que os usuários atuem rapidamente usando o mouse e reduzir a poluição visual, você pode optar por exibir somente esses botões quando o usuário está com o ponteiro dentro de um item de lista específico.
+Os usuários estão familiarizados com os menus de contexto ao clicar com o botão direito do mouse, mas você pode desejar capacitá-los para executar comandos comuns com apenas um único clique no mouse. Para habilitar essa experiência, você pode incluir botões dedicados na tela do item da coleção. Para permitir que os usuários atuem rapidamente usando o mouse e reduzir a poluição visual, você pode optar por exibir somente esses botões quando o usuário está com o ponteiro dentro de um item de lista específico.
 
 Neste exemplo, o comando Favorite é representado por um botão definido diretamente no PodcastUserControl. Observe que o botão neste exemplo usa o mesmo comando, FavoriteCommand, como antes. Para alternar a visibilidade desse botão, você pode usar VisualStateManager para alternar entre os estados visuais quando o ponteiro entra e sai do controle.
 
@@ -343,7 +343,7 @@ Neste exemplo, o comando Favorite é representado por um botão definido diretam
 </UserControl>
 ```
 
-Os botões de foco devem aparecer e desaparecer quando o mouse entra e sai do item. Para responder a eventos de mouse, você pode usar os eventos [PointerEntered](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerEnteredEvent) e [PointerExited](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerExitedEvent) em PodcastUserControl.
+Os botões de foco devem aparecer e desaparecer quando o mouse entra e sai do item. Para responder a eventos de mouse, use os eventos [PointerEntered](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerEnteredEvent) e [PointerExited](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerExitedEvent) em PodcastUserControl.
 
 **PodcastUserControl.xaml.cs**
 ```csharp
@@ -366,7 +366,7 @@ protected override void OnPointerExited(PointerRoutedEventArgs e)
 }
 ```
 
-Os botões exibidos no estado de foco podem ser acessados somente por meio do tipo de entrada de ponteiro. Como esses botões são limitados à entrada de ponteiro, você pode optar por minimizar ou remover o preenchimento ao redor do ícone do botão para otimizar a entrada de ponteiro. Se você optar por fazer isso, certifique-se de que o volume do botão seja de pelo menos 20 x 20 px para ser utilizável com caneta e mouse.
+Os botões exibidos no estado de foco podem ser acessados somente por meio do tipo de entrada de ponteiro. Como esses botões são limitados à entrada de ponteiro, você pode optar por minimizar ou remover o preenchimento ao redor do ícone do botão para otimizar a entrada de ponteiro. Se você optar por fazer isso, garanta que o volume do botão seja de pelo menos 20 x 20 px para ser utilizável com caneta e mouse.
 
 ### <a name="touch-accelerators"></a>Aceleradores de toque
 
@@ -374,9 +374,9 @@ Os botões exibidos no estado de foco podem ser acessados somente por meio do ti
 
 ![Deslizar o dedo sobre um item para revelar o comando](images/ContextualCommand_Swipe.png)
 
-Os comandos efetuados ao deslizar o dedo são aceleradores de toque que permitem aos usuários em dispositivos sensíveis ao toque executar ações comuns secundárias. Ao deslizar o dedo, os usuários podem interagir com conteúdo de maneira rápida e natural, usando as ações comuns como passar o dedo para excluir ou passar o dedo para invocar. Consulte o artigo sobre [comandos de deslizar o dedo](swipe.md) para saber mais.
+Os comandos efetuados ao deslizar o dedo são aceleradores de toque, que permitem aos usuários em dispositivos sensíveis ao toque executar ações comuns secundárias. Ao deslizar o dedo, os usuários podem interagir com conteúdo de maneira rápida e natural, usando as ações comuns como passar o dedo para excluir ou passar o dedo para invocar. Confira o artigo sobre [comandos de deslizar o dedo](swipe.md) para saber mais.
 
-Para integrar o dedo em sua coleção, você precisa de dois componentes: SwipeItems, que hospeda os comandos; e um SwipeControl, que encapsula o item e permite a interação de passar o dedo.
+Para integrar os comandos de deslizar o dedo em sua coleção, você precisa de dois componentes: SwipeItems, que hospeda os comandos; e SwipeControl, que encapsula o item e permite a interação de deslizar o dedo.
 
 Os SwipeItems podem ser definidos como um Recurso no PodcastUserControl. Neste exemplo, o SwipeItems contém um comando para tornar um item Favorito.
 
@@ -389,7 +389,7 @@ Os SwipeItems podem ser definidos como um Recurso no PodcastUserControl. Neste e
 </UserControl.Resources>
 ```
 
-O SwipeControl envolve o item e permite que o usuário interaja com ele usando o gesto de passar o dedo. Observe que o SwipeControl contém uma referência aos SwipeItems como seus RightItems. O item Favoritos será exibido quando o usuário passar o dedo da direita para a esquerda.
+O SwipeControl encapsula o item e permite que o usuário interaja com ele usando o gesto de deslizar o dedo. Observe que o SwipeControl contém uma referência aos SwipeItems como seus RightItems. O item Favoritos será exibido quando o usuário deslizar o dedo da direita para a esquerda.
 
 ```xaml
 <SwipeControl x:Name="swipeContainer" RightItems="{StaticResource RevealOtherCommands}">
@@ -434,26 +434,26 @@ private void SwipeItem_Invoked(SwipeItem sender, SwipeItemInvokedEventArgs args)
 
 #### <a name="pull-to-refresh"></a>Puxar para atualizar
 
-A ação de Puxar para atualizar permite a um usuário extrair uma coleção de dados com toque para recuperar mais dados. Consulte o artigo [puxar para atualizar](pull-to-refresh.md) a fim de saber mais.
+A ação de Deslizar para atualizar permite a um usuário extrair uma coleção de dados com toque para recuperar mais dados. Confira o artigo [Deslizar para atualizar](pull-to-refresh.md) para saber mais.
 
 ### <a name="pen-accelerators"></a>Aceleradores de caneta
 
-O tipo de entrada de caneta fornece a precisão de entrada de ponteiro. Os usuários podem realizar ações comuns, como abrir os menus de contexto com aceleradores baseados em caneta. Para abrir um menu de contexto, os usuários podem tocar na tela com o botão do cilindro da caneta pressionado ou manter o conteúdo pressionado. Os usuários também podem usar a caneta para focalizar o conteúdo a fim de obter uma compreensão mais profunda da interface do usuário, como exibir dicas de ferramentas ou para revelar ações de foco secundário, semelhante ao mouse.
+O tipo de entrada de caneta fornece a precisão de entrada de ponteiro. Os usuários podem realizar ações comuns, como abrir os menus de contexto com aceleradores baseados em caneta. Para abrir um menu de contexto, os usuários podem tocar na tela com o botão da caneta pressionado ou manter o conteúdo pressionado. Os usuários também podem usar a caneta para focalizar o conteúdo a fim de obter uma compreensão mais profunda da interface do usuário, como exibir dicas de ferramentas ou para revelar ações de foco secundário, semelhante ao mouse.
 
-Para otimizar seu aplicativo para entrada de caneta, consulte o artigo [interação com caneta](../input/pen-and-stylus-interactions.md).
+Para otimizar o aplicativo para entrada de caneta, confira o artigo [Interação com caneta](../input/pen-and-stylus-interactions.md).
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
-* Certifique-se de que os usuários podem acessar todos os comandos de todos os tipos de dispositivos UWP.
+* Verifique se os usuários podem acessar todos os comandos de todos os tipos de dispositivos UWP.
 * Inclua um menu de contexto que fornece acesso a todos os comandos disponíveis para um item da coleção. 
 * Forneça aceleradores de entradas para comandos usados com frequência. 
 * Use a [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand) para implementar comandos. 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
-* [Menus e Menus de contexto](menus.md)
-* [Passe o dedo](swipe.md)
+* [Menus e menus de contexto](menus.md)
+* [Deslizar o dedo](swipe.md)
 * [Deslizar para atualizar](pull-to-refresh.md)
-* [Interação de caneta e caneta](../input/pen-and-stylus-interactions.md)
-* [Personalize seu aplicativo para gamepad e Xbox](../devices/designing-for-tv.md)
+* [Interações por caneta](../input/pen-and-stylus-interactions.md)
+* [Adaptar seu aplicativo para gamepad e Xbox](../devices/designing-for-tv.md)

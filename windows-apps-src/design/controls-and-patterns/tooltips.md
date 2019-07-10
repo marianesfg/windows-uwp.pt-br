@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364029"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
@@ -25,7 +25,7 @@ Dica de ferramenta é uma breve descrição vinculada a outro controle ou objeto
 
 ![Dica de ferramenta](images/controls/tool-tip.png)
 
-> **APIs importantes**: [Classe de dica de ferramenta](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [classe ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **APIs importantes**: [classe ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [classe ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -33,16 +33,16 @@ Use uma dica de ferramenta para descobrir mais informações sobre um controle a
 
 Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas:
 
-- **Deve informações se tornam visíveis com base em ao passar o ponteiro?**
+- **Informações devem se tornar visíveis com base no foco do ponteiro?**
     Se não, use outro controle. Exiba dicas apenas como resultado da interação do usuário; nunca as exiba por conta própria.
 
-- **Um controle que tem um rótulo de texto?**
+- **Um controle tem um rótulo de texto?**
     Se não, use uma dica de ferramenta para fornecer o rótulo. É uma boa prática de design de UX rotular a maioria dos controles em linha, e para isso você não precisa de dicas de ferramenta. Controles de barra de ferramentas e botões de comando que mostrem apenas ícones precisam de dicas de ferramentas.
 
-- **Um objeto se beneficiar de uma descrição ou informação adicional?**
+- **Um objeto se beneficia de uma descrição ou informações adicionais?**
     Se sim, use uma dica de ferramenta. Mas o texto deve ser complementar, ou seja, não essencial às tarefas principais. Se for essencial, coloque-o diretamente na interface do usuário para que os usuários não precisem procurar nem buscá-lo.
 
-- **São a informações complementares, um erro, aviso ou status?**
+- **As informações complementares são um erro, aviso ou status?**
     Se sim, use outro elemento da interface do usuário, como um menu suspenso.
 
 - **Os usuários precisam interagir com a dica?**
@@ -51,7 +51,7 @@ Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas
 - **Os usuários precisam imprimir as informações complementares?**
     Se sim, use outro controle.
 
-- **Os usuários encontrará as dicas incômodos ou distrair?**
+- **Os usuários considerarão as dicas incômodas ou distrativas?**
     Se sim, considere usar outra solução, incluindo não fazer nada. Se você usar dicas onde elas possam distrair os usuários, deixe que eles as ative ou desative.
 
 ## <a name="example"></a>Exemplo
@@ -61,7 +61,7 @@ Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ToolTip">abrir o aplicativo e ver o ToolTip em ação</a>.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ToolTip">abrir o aplicativo e ver o ToolTip em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -76,15 +76,15 @@ Uma dica de ferramenta no aplicativo Bing Mapas.
 
 ## <a name="create-a-tooltip"></a>Criar uma dica de ferramenta
 
-Uma [Dica de ferramenta](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) deve ser atribuída a outro elemento de interface do usuário que é seu proprietário. A classe [ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice) fornece métodos estáticos para exibir uma dica de ferramenta.
+Uma [ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) deve ser atribuída a outro elemento de interface do usuário que é seu proprietário. A classe [ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice) fornece métodos estáticos para exibir uma ToolTip.
 
-No XAML, use a propriedade associada **ToolTipService.Tooltip** para atribuir a dica de ferramenta a um proprietário.
+No XAML, use a propriedade associada **ToolTipService.Tooltip** para atribuir a ToolTip a um proprietário.
 
 ```xaml
 <Button Content="Submit" ToolTipService.ToolTip="Click to submit"/>
 ```
 
-No código, use o método [ToolTipService.SetToolTip](/uwp/api/windows.ui.xaml.controls.tooltipservice.settooltip) para atribuir a dica de ferramenta a um proprietário.
+No código, use o método [ToolTipService.SetToolTip](/uwp/api/windows.ui.xaml.controls.tooltipservice.settooltip) para atribuir a ToolTip a um proprietário.
 
 ```xaml
 <Button x:Name="submitButton" Content="Submit"/>
@@ -98,7 +98,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 ### <a name="content"></a>Conteúdo
 
-Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) de uma dica de ferramenta. Veja um exemplo de uso de uma [Imagem](/uwp/api/windows.ui.xaml.controls.image) em uma dica de ferramenta.
+Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) de uma ToolTip. Veja um exemplo de uso de uma [Imagem](/uwp/api/windows.ui.xaml.controls.image) em uma ToolTip.
 
 ```xaml
 <TextBlock Text="store logo">
@@ -110,9 +110,9 @@ Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.cont
 
 ### <a name="placement"></a>Colocação
 
-Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a dica de ferramenta seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
+Por padrão, uma ToolTip é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a ToolTip seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
 
-Ajustes de amplo, use o [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) propriedade ou **ToolTipService.Placement** propriedade anexada para especificar se a dica de ferramenta deve ser desenhado acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) propriedades para alterar a distância entre o ponteiro e a dica de ferramenta. Somente um dos dois valores de deslocamento influenciarão a posição final - VerticalOffset quando o posicionamento é superior ou inferior, HorizontalOffset quando o posicionamento é à esquerda ou à direita.
+Use a propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou a propriedade **ToolTipService.Placement** associada para posicionar a ToolTip acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a ToolTip. Somente um dos dois valores de deslocamento influenciará a posição final – VerticalOffset quando Placement for Top ou Bottom, HorizontalOffset quando Placement for Left ou Right.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ Ajustes de amplo, use o [posicionamento](/uwp/api/windows.ui.xaml.controls.toolt
 </Image>
 ```
 
-Se uma dica de ferramenta obscurece o conteúdo que ele está se referindo, você pode ajustar seu posicionamento com precisão usando as novas **PlacementRect** propriedade. PlacementRect Ancora a posição da dica de ferramenta e também serve como uma área que não serão occlude a dica de ferramenta, desde que haja espaço suficiente na tela para desenhar a dica de ferramenta fora desta área. Você pode especificar a origem do retângulo em relação ao proprietário da dica de ferramenta e a altura e largura da área de exclusão. O [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) propriedade definirá se a dica de ferramenta deve ser desenhado acima, abaixo, esquerda ou direita do PlacementRect. 
+Se uma ToolTip cobrir o conteúdo a que está se referindo, você poderá ajustar seu posicionamento com precisão usando a nova propriedade **PlacementRect**. PlacementRect ancora a posição da ToolTip e também serve como uma área que não será coberta por ela, desde que haja espaço suficiente na tela para desenhar a ToolTip fora desta área. Você pode especificar a origem do retângulo em relação ao proprietário da ToolTip e a altura e largura da área de exclusão. A propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se a ToolTip deve ser desenhada acima, abaixo, à esquerda ou à direita de PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,8 +149,8 @@ Se uma dica de ferramenta obscurece o conteúdo que ele está se referindo, voc�
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe de dica de ferramenta](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)
+- [Classe ToolTip](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

@@ -13,17 +13,17 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606131"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63813667"
 ---
 # <a name="radio-buttons"></a>Botões de opção
 
-> **APIs importantes**: [Classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [eventos marcados](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+> **APIs importantes**: [Classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
-Botões de opção permitem que os usuários selecionem uma opção de um conjunto. Cada opção é representada por um botão de opção, e os usuários podem selecionar apenas um botão de opção em um grupo de botões de opção.
+Os botões de opção possibilitam que os usuários selecionem uma opção de um conjunto. Cada opção é representada por um botão de opção, e os usuários podem selecionar apenas um botão de opção de um grupo.
 
 (Se você tem curiosidade em saber a origem do nome, os botões de opção, também conhecidos como botões de rádio, receberam esse nome por causa dos botões predefinidos de canais em um rádio.)
 
@@ -35,7 +35,7 @@ Use botões de opção para apresentar aos usuários duas ou mais opções mutua
 
 ![Um grupo de botões de opção](images/radiobutton_basic.png)
 
-Use botões de opção quando os usuários precisam ver todas as opções para fazer uma seleção. Como os botões de opção enfatizam todas as opções da mesma forma, isso pode chamar mais atenção para as opções que o necessário. Considere usar outros controles, a menos que as opções mereçam atenção adicional do usuário. Por exemplo, se a opção padrão for recomendada para a maioria dos usuários na maioria das situações, use uma [lista suspensa](lists.md).
+Use botões de opção quando os usuários precisam ver todas as opções para fazer uma seleção. Como os botões de opção enfatizam todas as opções igualmente, isso pode chamar mais atenção para as opções que o necessário. Considere usar outros controles, a menos que as opções mereçam atenção adicional do usuário. Por exemplo, se a opção padrão for recomendada para a maioria dos usuários na maioria das situações, use uma [lista suspensa](lists.md).
 
 ![lista suspensa](images/combo_box_collapsed.png)
 
@@ -43,19 +43,19 @@ Se houver apenas duas opções mutuamente exclusivas, combine-as em uma única [
 
 ![Duas formas de apresentar uma opção binária](images/radiobutton_vs_checkbox.png)
 
-Quando o usuário puder selecionar várias opções, use uma [caixa de seleção](checkbox.md).
+Quando o usuário pode selecionar várias opções, use uma [caixa de seleção](checkbox.md).
 
 ![Selecionando várias opções com caixas de seleção](images/checkbox2.png)
 
-Quando opções forem números que corrigimos etapas (10, 20, 30), use um [controle deslizante](slider.md).
+Quando as opções são números com etapas fixas (10, 20, 30), use um [controle deslizante](slider.md).
 
 ![controle deslizante](images/controls/slider.png)
 
-Se houver mais que oito opções, use uma [lista suspensa](lists.md) ou [caixa de listagem](lists.md).
+Se há mais que oito opções, use uma [lista suspensa](lists.md) ou [caixa de listagem](lists.md).
 
 ![caixa de combinação](images/combo_box_scroll.png)
 
-Se as opções disponíveis estiverem baseadas no contexto atual do aplicativo ou, de outra forma, variar dinamicamente use uma [caixa de listagem](lists.md) de seleção única.
+Se as opções disponíveis baseiam-se no contexto atual do aplicativo ou, de outra forma, variam dinamicamente, use uma [caixa de listagem](lists.md) de seleção única.
 
 ## <a name="examples"></a>Exemplos
 
@@ -64,7 +64,7 @@ Se as opções disponíveis estiverem baseadas no contexto atual do aplicativo o
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RadioButton">abrir o aplicativo e ver o RadioButton em ação</a>.</p>
+    <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RadioButton">abri-lo e ver o RadioButton em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -81,7 +81,7 @@ Botões de opção nas configurações do navegador Microsoft Edge.
 
 Botões de opção funcionam em grupos. Há 2 maneiras de agrupar controles de botão de opção:
 - Colocá-los dentro do mesmo contêiner pai.
-- Defina a propriedade [GroupName](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton.GroupName) em cada botão de opção como o mesmo valor.
+- Defina a propriedade [GroupName](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton.GroupName) em cada botão de opção com o mesmo valor.
 
 Neste exemplo, o primeiro grupo de botões de opção é implicitamente agrupado por estar no painel empilhado. O segundo grupo é dividido entre 2 painéis empilhados e, portanto, são explicitamente agrupados por GroupName.
 
@@ -169,15 +169,15 @@ Os grupos de botões de opção têm a seguinte aparência.
 
 ![Botões de opção em dois grupos](images/radio-button-groups.png)
 
-Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um botão de opção está marcado, sua propriedade [IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked) é **true**. Quando um botão de opção está desmarcado, sua propriedade **IsChecked** é **false**. Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente, definindo sua propriedade IsChecked como **false**. Na verdade, você pode comparar o **IsChecked** propriedade com um bool, obtendo o **valor** da propriedade **IsChecked**
+Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um botão de opção está marcado, sua propriedade [IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked) é **true**. Quando um botão de opção está desmarcado, sua propriedade **IsChecked** é **false**. Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente, definindo sua propriedade IsChecked como **false**. Na verdade, é possível comparar a propriedade **IsChecked** com um bool ao obter o **Value** da propriedade **IsChecked**
 
 ## <a name="recommendations"></a>Recomendações
 
--   Certifique-se de que a finalidade e o estado atual de um conjunto de botões de opção seja clara.
+-   Certifique-se de que a finalidade e o estado atual de um conjunto de botões de opção sejam claros.
 -   Limite o conteúdo em texto do botão de opção para uma única linha.
 -   Se o conteúdo do texto for dinâmico, considere como o botão redimensionará e o que acontecerá com os elementos visuais ao redor dele.
 -   Use fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
--   Não coloque dois grupos de botão de opção próximos um ao lado do outro. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo.
+-   Não coloque dois grupos de botão de opção lado a lado. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo.
 
 ## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
 
@@ -185,13 +185,13 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 ![Um conjunto de botões de opção](images/radiobutton-layout.png)
 
-![diretrizes de espaçamento de botões de opção](images/radiobutton-redlines.png)
+![diretrizes de espaçamento para botões de opção](images/radiobutton-redlines.png)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 **Para designers**
 - [Botões](buttons.md)
-- [Comutadores de alternância](toggles.md)
+- [Botões de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
 - [Listas e caixas de combinação](lists.md)
 - [Controles deslizantes](slider.md)

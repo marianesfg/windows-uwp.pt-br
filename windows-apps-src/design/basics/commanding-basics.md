@@ -12,29 +12,29 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ac2bd55d1cea25359c3c609148c7098532d76c46
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654051"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63796479"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para aplicativos UWP
 
-Em um aplicativo de plataforma Universal do Windows (UWP), *elementos de comando* são elementos de interface do usuário interativos que permitem aos usuários executar ações como enviar um email, excluindo um item ou enviar um formulário. *Interfaces de comando* são compostos de elementos de comando comuns, as superfícies de comando que os hospedam, as interações que eles oferecem suporte e as experiências que eles fornecem.
+Em um aplicativo UWP (Plataforma Universal do Windows), *elementos de comando* são os elementos interativos da interface do usuário que permitem aos usuários executar ações como enviar um email, excluir um item ou enviar um formulário. As *interfaces de comando* são formadas por elementos de comando comuns, as superfícies de comando que as hospedam, as interações compatíveis com elas e as experiências que elas oferecem.
 
-## <a name="provide-the-best-command-experience"></a>Fornecer a melhor experiência de comando
+## <a name="provide-the-best-command-experience"></a>Proporcionar a melhor experiência de comando
 
-O aspecto mais importante de uma interface de comando é o que você está tentando permitir que um usuário realizar. Ao planejar a funcionalidade do seu aplicativo, considere as etapas necessárias para realizar essas tarefas e as experiências de usuário que você deseja habilitar. Depois de concluir um esboço inicial de uma dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e as interações para implementá-los.
+O aspecto mais importante de uma interface de comando é o que você está tentando permitir que o usuário realize. Ao planejar a funcionalidade de um aplicativo, considere seguir as etapas necessárias para realizar essas tarefas e as experiências de usuário que você quer oferecer. Após concluir um rascunho inicial dessas experiências, tome decisões sobre as ferramentas e as interações para implementá-las.
 
-Aqui estão algumas experiências de comando comuns:
+Veja algumas experiências de comando comuns:
 
 - Enviar informações
 - Selecionar configurações e opções
 - Conteúdo de filtro e pesquisa
 - Abrir, salvar e excluir arquivos
-- Edição ou a criação de conteúdo
+- Editar ou criar conteúdo
 
-Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte a, e como seu aplicativo responde a cada dispositivo. Dando suporte a mais ampla variedade de recursos e as preferências de tornar seu aplicativo como aproveitável, portátil e acessível possível (consulte [comandos de design para aplicativos da plataforma Universal do Windows (UWP)](../controls-and-patterns/commanding.md) para obter mais detalhes).
+Seja criativo ao projetar experiências de comando. Escolha quais dispositivos de entrada serão compatíveis e como o aplicativo responderá a cada um deles. Ao oferecer compatibilidade com a mais ampla variedade de funcionalidades e preferências, o aplicativo fica o mais utilizável, móvel e acessível o possível. Confira [Noções básicas de design de comandos para aplicativos da UWP (Plataforma Universal do Windows)](../controls-and-patterns/commanding.md) para saber mais detalhes.
 
 
 
@@ -42,9 +42,9 @@ Seja criativo com o design de suas experiências de comando. Escolha quais dispo
 When designing a command interface, the most important decision is choosing what a user can do. To plan the right type of interactions, focus on your app - consider the user experiences you want to enable, and what steps users will need to take. Once you decide what you want users to accomplish, then you can provide them the tools to do so.
 -->
 
-## <a name="choose-the-right-command-elements"></a>Escolha os elementos de comando corretos
+## <a name="choose-the-right-command-elements"></a>Escolher os elementos de comando certos
 
-Usando os elementos à direita em uma interface de comando pode fazer a diferença entre um aplicativo intuitivo, fácil de usar e um aplicativo difícil, confuso. Um conjunto abrangente de elementos de comando estão disponíveis no Universal Windows Platform (UWP). Aqui está uma lista de alguns dos elementos mais comuns de comando do UWP.
+Usar os elementos certos em uma interface de comando pode fazer a diferença entre um aplicativo que parece intuitivo e fácil de usar e um que parece difícil ou confuso. Um conjunto abrangente de elementos de comando está disponível na UWP (Plataforma Universal do Windows). Veja uma lista de alguns dos elementos de comando mais comuns da UWP.
 
 :::row:::
     :::column:::
@@ -100,13 +100,13 @@ Para obter uma lista completa, consulte [Controles e elementos de interface do u
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 
-Você pode colocar os elementos de comando em um número de superfícies em seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, o submenu da barra de comando, a barra de menus ou a caixa de diálogo.
+É possível colocar elementos de comando em várias superfícies no aplicativo, inclusive na tela do aplicativo ou em contêineres de comando especial, como uma barra de comando, o submenu de uma barra de comando, a barra de menus e as caixas de diálogo.
 
-Sempre tenta permitir que os usuários manipular conteúdo diretamente em vez de por meio de comandos que atuam no conteúdo, como arrastar e soltar para reorganizar os itens de lista em vez de botões de comando acima e abaixo. 
+Sempre tente permitir que os usuários manipulem o conteúdo diretamente em vez de por meio de comandos que atuam no conteúdo, como arrastar e soltar para reorganizar itens de lista em vez de botões de comando para cima e para baixo. 
 
-No entanto, talvez isso não seja possível com determinados dispositivos de entrada, ou ao acomodar as preferências e habilidades de usuário específico. Nesses casos, fornecer capacidades de comandos tantos quanto possível e coloque esses elementos de comando em uma superfície de comando em seu aplicativo.
+No entanto, talvez isso não seja possível com determinados dispositivos de entrada ou ao acomodar as preferências e as habilidades de um usuário específico. Nesses casos, oferecer o maior número possível de funcionalidades e colocar esses elementos de comando em uma superfície de comando no aplicativo.
 
-Veja uma lista de algumas das superfícies de comando mais comuns.
+Veja uma lista das superfícies de comando mais comuns.
 
 :::row:::
     :::column:::
@@ -142,14 +142,14 @@ Veja uma lista de algumas das superfícies de comando mais comuns.
         <p>UWP also provides a set of traditional menus and context menus; for more info, see the <a href="../controls-and-patterns/menus.md">menus and context menus overview</a>.</p>
 :::row-end:::
 
-## <a name="provide-command-feedback"></a>Fornecer comentários de comando 
+## <a name="provide-command-feedback"></a>Fazer comentários sobre o comando 
 
-Comentários de comando comunica-se aos usuários que foi detectado uma interação ou o comando, como o comando foi interpretado e manipulado, e se o comando foi bem-sucedido ou não. Isso ajuda os usuários a entender o que eles fizeram, e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
+Os comentários sobre o comando comunicam aos usuários que uma interação ou comando foi detectado, como o comando foi interpretado e manipulado e se o comando foi bem-sucedido ou não. Isso ajuda os usuários a entender o que fizeram e o que pode ser feito. Idealmente, os comentários devem ser integrados naturalmente em sua interface do usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
 
 > [!NOTE]
-> Fornece comentários somente quando necessário, e somente se ele não está disponível em outro lugar. Mantenha seu aplicativo da interface do usuário limpa e organizada, a menos que você está adicionando o valor.
+> Faça comentários somente quando necessário e se não estiver disponível em outro local. Mantenha a interface do usuário do aplicativo limpa e organizada, a menos que você esteja agregando valor.
 
-Aqui estão algumas maneiras de fornecer comentários em seu aplicativo.
+Aqui estão algumas maneiras de fazer comentários em seu aplicativo.
 
 :::row:::
     :::column:::
@@ -168,7 +168,7 @@ Aqui estão algumas maneiras de fornecer comentários em seu aplicativo.
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Flyouts</a> são leves contextuais pop-ups que podem ser descartados, tocando ou clicando em algum lugar fora do submenu.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Submenus</a> são pop-ups contextuais leves que podem ser ignorados tocando ou clicando em algum lugar fora deles.
 :::row-end:::
 
 :::row:::
@@ -187,7 +187,7 @@ Aqui estão algumas maneiras de fornecer comentários em seu aplicativo.
 
 ### <a name="when-to-confirm-or-undo-actions"></a>Quando confirmar ou desfazer ações
 
-Não importa como bem projetado IU de seu aplicativo é, todos os usuários executam uma ação que desejarem que eles não tinha. Seu aplicativo pode ajudar nessas situações, exigindo a confirmação de uma ação ou fornecendo uma forma de desfazer ações mais recentes.
+Não importa se a interface do usuário do aplicativo foi bem projetada, todos os usuários podem executar as ações indesejadas. O aplicativo pode ajudar nessas situações ao exigir que a confirmação de uma ação ou ao fornecer uma forma de desfazer ações recentes.
 
 :::row:::
     :::column:::

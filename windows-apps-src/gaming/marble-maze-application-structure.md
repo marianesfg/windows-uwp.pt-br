@@ -100,7 +100,7 @@ O exemplo a seguir mostra onde o método **App::SetWindow** cria o objeto de cla
 
 A classe **App** também começa a carregar os recursos adiados para o jogo. Consulte a próxima seção para saber mais detalhes.
 
-Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain*** .
+Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain**.
 
 ## <a name="loading-game-assets-in-the-background"></a>Carregando ativos de jogo em segundo plano
 

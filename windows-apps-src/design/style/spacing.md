@@ -1,64 +1,64 @@
 ---
-title: Tamanhos e espaçamento
-description: Novos estilos de controle padrão Fluent e Compact garantir uma experiência de usuário está confortável, independentemente do método de entrada e de dispositivo.
-keywords: UWP, Windows 10, controles, tamanho, densidade, standard, compact
-ms.date: 4/4/2019
+title: Espaçamento e tamanhos
+description: Os novos estilos de controle Fluent Padrão e Compacto garantem uma experiência de usuário confortável, independentemente do dispositivo e do método de entrada.
+keywords: UWP, Windows 10, controles, tamanho, densidade, padrão, compacto
+ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 7b74e3dc2ad047d9e52509b71ef00b829ad63a0d
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
-ms.translationtype: MT
+ms.openlocfilehash: ff88332e0b44749bcd86e06adafeb596ca8678b3
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59249448"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820632"
 ---
 # <a name="control-size-and-density"></a>Controle de tamanho e densidade
 
-Use uma combinação do tamanho do controle e a densidade para otimizar o aplicativo de plataforma Universal do Windows (UWP) e fornecer uma experiência de usuário que é mais apropriada para os requisitos de funcionalidade e a interação do seu aplicativo.
+Use uma combinação de tamanho e densidade do controle para otimizar o aplicativo UWP (Plataforma Universal do Windows) e fornecer uma experiência de usuário que é mais apropriada aos requisitos de funcionalidade e interação do seu aplicativo.
 
-Por padrão, os aplicativos UWP são processados com uma baixa densidade (ou `Standard`) layout. No entanto, começando com o WinUI 2.1, uma alta densidade (ou `Compact`) opção de layout para informações de interface de usuário rica e semelhantes cenários especializados, também tem suporte. Isso pode ser especificado por meio de um recurso de estilo básico (veja os exemplos abaixo).
+Por padrão, os aplicativos UWP são processados com um layout de baixa densidade (ou `Standard`). No entanto, a partir do WinUI 2.1, também é compatível com uma opção de layout de alta densidade (ou `Compact`), para oferecer uma interface de usuário rica em informações e cenários especializados semelhantes. Isso pode ser especificado por meio de um recurso de estilo básico (veja os exemplos abaixo).
 
-Durante a funcionalidade e o comportamento não foi alterado e permanece consistente entre as duas opções de tamanho e densidade, o tamanho de fonte de corpo padrão foi atualizado para 14px para todos os controles dar suporte a essas opções de densidade de dois. Esse tamanho de fonte funciona em regiões e dispositivos e garante que seu aplicativo permaneça balanceada e confortável para os usuários.
+Embora a funcionalidade e o comportamento não tenham mudado e permaneçam consistentes nas duas opções de tamanho e densidade, o tamanho de fonte de corpo padrão foi atualizado para 14 px para todos os controles a fim de suportar as duas opções de densidade. Esse tamanho de fonte funciona em vários dispositivos e regiões, e garante que seu aplicativo permaneça equilibrado e confortável para os usuários.
 
-## <a name="fluent-standard-sizing"></a>Dimensionamento padrão Fluent
+## <a name="fluent-standard-sizing"></a>Dimensionamento Fluent padrão
 
-*Dimensionamento padrão Fluent* foi criado para fornecer um equilíbrio entre o conforto de densidade e o usuário de informações. Na verdade, todos os itens na tela alinham a um destino efetivo de 40 x 40 pixels (epx), que permite que elementos de interface do usuário se alinham com uma grade e dimensionada de forma adequada com base em dimensionamento do nível do sistema.
+O *Dimensionamento Fluent padrão* foi criado para fornecer um equilíbrio entre densidade de informações e conforto do usuário. Na verdade, todos os itens na tela se alinham a um alvo de 40 px x 40 px efetivos (epx), o que permite que os elementos da interface do usuário se alinhem com uma grade e sejam dimensionados de forma adequada com base no nível do sistema.
 
-**Dimensionamento padrão foi projetado para acomodar o toque e o ponteiro de entrada.**
+**O dimensionamento padrão foi projetado para acomodar a entrada com ponteiro e toque.**
 
 > [!NOTE]
->Para obter mais informações sobre pixels relevantes e dimensionamento, consulte [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>Para saber mais sobre dimensionamento e pixels efetivos, confira [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
 >
-> Para obter mais informações sobre o dimensionamento de nível de sistema, consulte [alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
+> Para saber mais sobre o dimensionamento no nível de sistema, confira [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
 
-Para o Windows 10 de outubro de 2018 Update (versão 1809), o padrão, o tamanho padrão para todos os controles UWP foi reduzido para aumentar a usabilidade em todos os cenários de uso.
+Para a Atualização de outubro de 2018 do Windows 10 (versão 1809), o tamanho padrão para todos os controles UWP foi reduzido para aumentar a usabilidade em todos os cenários de uso.
 
-A imagem a seguir mostra alguns do controle de alterações no layout que foram introduzidas com o Windows Update 10 de outubro de 2018. Especificamente, a margem entre um cabeçalho e a parte superior de um controle foi reduzida em relação a 8epx para 4epx e a grade de 44epx foi alterada para uma grade 40epx.
+A imagem a seguir mostra algumas das alterações no layout de controle que foram introduzidas com a Atualização de outubro de 2018 do Windows 10. Especificamente, a margem entre um cabeçalho e a parte superior de um controle foi reduzida de 8 epx para 4 epx, e a grade de 44 epx foi alterada para 40 epx.
 
 ![Exemplo de layout de controle padrão](images/standarddensity.png)
 
 *Exemplo de layout de controle padrão*
 
-Essa imagem a seguir mostra as alterações feitas em tamanhos de controle para o Windows Update 10 de outubro de 2018. Especificamente, alinhamento à grade 40epx.
+A imagem a seguir mostra as alterações feitas nos tamanhos de controle para a Atualização de outubro de 2018 do Windows 10. Especificamente, alinhamento à grade de 40 epx.
 
-![Exemplo de comando padrão](images/standarddensitycommanding.png)
+![Exemplo de execução de comando padrão](images/standarddensitycommanding.png)
 
-## <a name="fluent-compact-sizing"></a>Dimensionamento Compact Fluent
+## <a name="fluent-compact-sizing"></a>Dimensionamento Fluent compacto
 
-Dimensionamento Compact habilita densos, ricos em informações de grupos de controles e pode ajudar com o seguinte:
+O dimensionamento compacto permite grupos de controles densos e ricos em informações e pode ajudar com o seguinte:
 
-- Navegando em grandes volumes de conteúdo.
-- Maximizando o conteúdo visível em uma página.
+- Navegar em grandes volumes de conteúdo.
+- Maximizar o conteúdo visível em uma página.
 - Navegar e interagir com controles e conteúdo
 
-**Dimensionamento Compact é projetado principalmente para acomodar o ponteiro de entrada.**
+**O dimensionamento compacto é projetado principalmente para acomodar a entrada com ponteiro.**
 
 ### <a name="examples"></a>Exemplos
 
-Dimensionamento Compact é implementado por meio de um dicionário de recursos especiais que pode ser especificado em seu aplicativo no nível de página ou em um layout específico. O dicionário de recursos está disponível na [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/) pacote do Nuget.
+O dimensionamento compacto é implementado por meio de um dicionário de recursos especiais que pode ser especificado em seu aplicativo no nível da página ou em um layout específico. O dicionário de recursos está disponível no pacote Nuget [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
 
-Os exemplos a seguir mostram como o o `Compact` estilo pode ser aplicado para a página e um controle de grade individual.
+Os exemplos a seguir mostram como o estilo `Compact` pode ser aplicado à página e a um controle de grade individual.
 
 #### <a name="page-level"></a>Nível de página
 
@@ -81,6 +81,6 @@ Os exemplos a seguir mostram como o o `Compact` estilo pode ser aplicado para a 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para destinos de toque](../input/guidelines-for-targeting.md)
-- [Referências de recursos de ResourceDictionary e XAML](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
+- [Referências de ResourceDictionary e recursos XAML](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
 - [Dicionário de recursos](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.resourcedictionary)
 - [Estilos de XAML](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-styles) 

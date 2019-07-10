@@ -1,5 +1,5 @@
 ---
-description: Permite que os usuários facilmente visualizem e definam classificações que refletem o grau de satisfação com o conteúdo e serviços.
+description: Permite que os usuários facilmente exibam e definam classificações que refletem o grau de satisfação com o conteúdo e os serviços.
 title: Controle de classificação
 template: detail.hbs
 ms.date: 10/25/2017
@@ -11,19 +11,19 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c5736e917d77415eeb6df53b3fd92f7ab584884
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644921"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63787452"
 ---
 # <a name="rating-control"></a>Controle de classificação
 
-O controle de classificação permite que os usuários facilmente visualizem e definam classificações que refletem o grau de satisfação com o conteúdo e serviços. Os usuários podem interagir com o controle de classificação com toque, caneta, mouse, gamepad e teclado. Diretrizes a seguir mostra como usar os recursos do controle de classificação para oferecem flexibilidade e personalização.
+O controle de classificação permite que os usuários facilmente exibam e definam classificações que refletem o grau de satisfação com o conteúdo e os serviços. Os usuários podem interagir com o controle de classificação com toque, caneta, mouse, gamepad e teclado. As diretrizes a seguir mostram como usar os recursos do controle de classificação para oferecer flexibilidade e personalização.
 
 > **APIs importantes**: [Classe RatingControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
 
-![Exemplo de controle de classificações](images/rating_rs2_doc_ratings_intro.png)
+![Exemplo de controle de classificação](images/rating_rs2_doc_ratings_intro.png)
 
 ## <a name="examples"></a>Exemplos
 
@@ -32,7 +32,7 @@ O controle de classificação permite que os usuários facilmente visualizem e d
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RatingControl">abrir o aplicativo e ver o RatingControl em ação</a>.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RatingControl">abrir o aplicativo e ver o RatingControl em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -43,14 +43,14 @@ O controle de classificação permite que os usuários facilmente visualizem e d
 
 ### <a name="editable-rating-with-placeholder-value"></a>Classificação editável com o valor de espaço reservado
 
-Talvez a maneira mais comum de usar o controle de classificações é exibir uma classificação média e ainda permitir que o usuário insira seu próprio valor de classificação. Nesse cenário, o controle de classificações é definido inicialmente para refletir a classificação média de satisfação de todos os usuários de determinado serviço ou tipo de conteúdo (como músicas, vídeos, livros etc.). Ele permanece nesse estado até que um usuário interaja com o controle para classificar um item individualmente. Essa interação altera o estado do controle de classificações para refletir a classificação do usuário em relação à satisfação pessoal.
+Talvez a maneira mais comum de usar o controle de classificação seja exibir uma classificação média e ainda permitir que o usuário insira seu próprio valor de classificação. Nesse cenário, o controle de classificação é definido inicialmente para refletir a classificação média de satisfação de todos os usuários de determinado serviço ou tipo de conteúdo (como músicas, vídeos, livros etc.). Ele permanece nesse estado até que um usuário interaja com o controle para classificar um item individualmente. Essa interação altera o estado do controle de classificações para refletir a classificação do usuário em relação à satisfação pessoal.
 
 #### <a name="initial-average-rating-state"></a>Estado inicial de classificação média
-![Estado inicial de classificação média](images/rating_rs2_doc_movie_aggregate.png)
+![Estado Inicial de Classificação Média](images/rating_rs2_doc_movie_aggregate.png)
 
 #### <a name="representation-of-user-rating-once-set"></a>Representação da classificação do usuário depois de definida
 
-![Representação da Classificação do usuário depois de definida](images/rating_rs2_doc_movie_user.png)
+![Representação da Classificação do Usuário Depois de Definida](images/rating_rs2_doc_movie_user.png)
 
 ```XAML
 <RatingControl x:Name="MyRating" ValueChanged="RatingChanged"/>
@@ -74,7 +74,7 @@ private void RatingChanged(RatingControl sender, object args)
 ### <a name="read-only-rating-mode"></a>Modo de classificação somente leitura
 
 Às vezes, você precisa mostrar classificações de conteúdo secundário, como o exibido no conteúdo recomendado ou ao exibir uma lista de comentários e suas classificações correspondentes. Nesse caso, o usuário não deve ser capaz de editar a classificação, então você pode deixar o controle como somente leitura.
-O modo somente leitura também é a maneira recomendada de usar o controle de classificações quando ele é usado em listas virtualizadas muito grandes de conteúdo, por motivos de desempenho e design da interface do usuário.
+O modo somente leitura também é a maneira recomendada de usar o controle de classificações quando ele é usado em listas de conteúdo virtualizadas muito grandes, por motivos de desempenho e design da interface do usuário.
 
 ![Lista longa somente leitura](images/rating_rs2_doc_reviews.png)
 
@@ -89,7 +89,7 @@ Para fazer isso, proceda da seguinte maneira:
 O controle de classificações tem muitos recursos adicionais que podem ser usados. Detalhes para usar esses recursos podem ser encontrados em nossa documentação de referência do MSDN.
 Esta é uma lista não abrangente de funcionalidade adicional:
 -   Ótimo desempenho da longa lista
--   Dimensionamento compacto para cenários de interface do usuário firmes
+-   Dimensionamento compacto para cenários de interface do usuário restritos
 -   Preenchimento e classificação de valor contínuo
 -   Personalização de espaçamento
 -   Desabilitar animações de crescimento
