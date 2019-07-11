@@ -1,16 +1,16 @@
 ---
 description: O C++/WinRT é uma linguagem C++17 moderna e inteiramente padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em arquivo e cabeçalho.
 title: C++/WinRT
-ms.date: 05/14/2018
+ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 664fd22fc954403776e1becc31563a06d5fdd15b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8b3cb74e3b3613cf562af7b5290697f111722226
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57581975"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800543"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -55,6 +55,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md) | Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela. |
 | [Controles de itens XAML; associar a uma coleção C++/WinRT](binding-collection.md) | Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela. |
 | [Controles personalizados (modelos) XAML com C++/WinRT](xaml-cust-ctrl.md) | Este tópico orienta você pelas etapas de criação de um controle personalizado simples usando C++/WinRT. Você pode usar as informações aqui como base para criar seus próprios controles de interface do usuário personalizáveis e ricos em recursos. |
+| [Passagem de parâmetros para o limite do ABI](pass-parms-to-abi.md) | O C++/WinRT simplifica a passagem de parâmetros para o limite do ABI, fornecendo conversões automáticas para casos comuns. |
 | [Consumir componentes COM com C++/WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++/WinRT para consumir classes e interfaces COM. |
 | [Criar componentes COM com C++/WinRT](author-coclasses.md) | C++/WinRT pode ajudá-lo a criar componentes COM clássicos, exatamente como ajuda a criar classes no Windows Runtime. |
 | [Mover do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT. |
