@@ -5,12 +5,12 @@ keywords: XAML, UWP, Introdução
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 707c2ed110498f4ef18fea31ace87d1fd2434112
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639981"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820339"
 ---
 # <a name="create-data-bindings"></a>Criar vinculações de dados
 
@@ -22,17 +22,17 @@ Você iniciará com uma versão simplificada do exemplo do PhotoLab. Esta versã
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017, e a última versão do SDK do Windows 10](https://developer.microsoft.com/windows/downloads).
+* [2019 do Visual Studio e a versão mais recente do SDK do Windows 10](https://developer.microsoft.com/windows/downloads).
 
 ## <a name="part-0-get-the-code"></a>Parte 0: Obter o código
-O ponto de partida deste laboratório é o repositório de exemplos do PhotoLab, na pasta [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding). Após ter clonado ou baixado o repositório, você poderá editar o projeto abrindo o PhotoLab.sln com o Visual Studio 2017.
+O ponto de partida deste laboratório é o repositório de exemplos do PhotoLab, na pasta [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding). Depois que você clonou ou baixou o repositório, você pode editar o projeto abrindo PhotoLab.sln com o Visual Studio de 2019.
 
 O app PhotoLab tem duas páginas principais:
 
-**MainPage. XAML:** exibe uma exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
+**MainPage.xaml**: mostra uma exibição de galeria de fotos, com algumas informações sobre cada arquivo de imagem.
 ![MainPage](../design/basics/images/xaml-basics/mainpage.png)
 
-**DetailPage.xaml:** exibe uma única foto após ela ter sido selecionada. Um menu de edição de submenu permite que a foto seja alterada, renomeada e salva.
+**DetailPage.xaml:** exibe uma única foto após ela ter sido selecionada. Um submenu suspenso de edição permite alterar, renomear e salvar a foto.
 ![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
 
 ## <a name="part-1-replace-the-placeholders"></a>Parte 1: Substitua os espaços reservados
@@ -160,7 +160,7 @@ No exemplo do PhotoLab, uma as funções de uma vinculação como estsa é conec
               ItemsSource="{x:Bind Images}" 
     ```
 
-    O **imagens** propriedade é do tipo **ObservableCollection\<ImageFileInfo\>**, portanto, os itens individuais são exibidos no **GridView** são do tipo **ImageFileInfo**. Isso corresponde ao valor **x: DataType** descrito na Parte 1. 
+    O **imagens** propriedade é do tipo **ObservableCollection\<ImageFileInfo\>** , portanto, os itens individuais são exibidos no **GridView** são do tipo **ImageFileInfo**. Isso corresponde ao valor **x: DataType** descrito na Parte 1. 
 
 Todas as vinculações que examinamos até agora são únicas e somente leitura, que é o comportamento padrão das expressões **x:Bind** sem formatação. Os dados são carregados apenas na inicialização, o que torna as vinculações de alto desempenho perfeito para suporte a várias exibições complexas de grandes conjuntos de dados. 
 
@@ -171,7 +171,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-O **imagens** nunca muda o valor da propriedade, mas porque a propriedade é do tipo **ObservableCollection\<T\>**, o *conteúdo* das coleção pode alterar, e a associação automaticamente observar as alterações e atualizar a interface do usuário. 
+O **imagens** nunca muda o valor da propriedade, mas porque a propriedade é do tipo **ObservableCollection\<T\>** , o *conteúdo* das coleção pode alterar, e a associação automaticamente observar as alterações e atualizar a interface do usuário. 
 
 Para testar isso, vamos adicionar temporariamente um botão que exclua a imagem atualmente selecionada. Esse botão não está na versão final porque a seleção de uma imagem o levará a uma página de detalhes. No entanto, o comportamento de **ObservableCollection\<T\>**  ainda é importante na amostra PhotoLab final porque o XAML é inicializado no construtor da página (por meio de  **InitializeComponent** chamada de método), mas o **imagens** coleção é preenchida posteriormente no **OnNavigatedTo** método. 
 
@@ -211,7 +211,7 @@ Nesta parte, você criará vinculações unidirecionais de um controle no modelo
 
 * Localize o **DataTemplate** chamado **ImageGridView_DefaultItemTemplate** e substitua os valores **Height** e **Width** do controle **Grid** na parte superior do modelo.
 
-    **Antes de**
+    **Antes**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -220,7 +220,7 @@ Nesta parte, você criará vinculações unidirecionais de um controle no modelo
               Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Depois de**
+    **Depois**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -303,7 +303,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
 
 4. No MainPage.xaml, localize o **DataTemplate** chamado **ImageGridView_DefaultItemTemplate** e substitua os valores **Height** e **Width** do controle **Grid** na parte superior do modelo. (Se você fez a vinculação entre controles na parte anterior deste tutorial, as únicas alterações serão substituir **Value** por **ItemSize** e **ZoomSlider** por **page**. Não deixe de fazer isso para Height e Width!)
 
-    **Antes de**
+    **Antes**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">
@@ -312,7 +312,7 @@ Diferente das propriedades de controle internas, as propriedades personalizadas 
             Margin="{StaticResource LargeItemMargin}">
     ```
     
-    **Depois de**
+    **Depois**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate" 
                   x:DataType="local:ImageFileInfo">

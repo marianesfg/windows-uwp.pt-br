@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bd1c15a971beca0b0015e774865808310138fd0
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: c75eec01a41d31270e55b0da6f11ed38c971e8cb
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713813"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820336"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -65,7 +65,7 @@ Para especificar um computador remoto para aplicativos do C# ou Microsoft Visual
 
 ![Caixa de Diálogo Conexões Remotas](images/debug-remote-connections.png)
 
-Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e acessar até a guia **Depurar**. Então, selecione **Localizar...** próximo a **Máquina remota:**
+Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e acessar até a guia **Depurar**. Então, selecione Localizar... próximo a **Máquina remota:**
 
 ![Guia de depuração](images/debug-remote-machine-config.png)
 
@@ -98,10 +98,10 @@ Para obter mais informações, consulte a página [Centro de Download Visual Stu
 
 ## <a name="passing-command-line-debug-arguments"></a>Como passar argumentos de depuração de linha de comando
 
-No Visual Studio de 2017, você pode passar argumentos de depuração de linha de comando quando inicia a depuração de aplicativos UWP. Você pode acessar os argumentos de depuração de linha de comando do parâmetro *args* no método **OnLaunched** da classe [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar os argumentos de depuração de linha de comando, abra as propriedades do projeto e navegue até a guia **Depuração**.
+No Visual Studio de 2019, você pode passar argumentos de depuração de linha de comando ao iniciar a depuração de aplicativos UWP. Você pode acessar os argumentos de depuração de linha de comando do parâmetro *args* no método **OnLaunched** da classe [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar os argumentos de depuração de linha de comando, abra as propriedades do projeto e navegue até a guia **Depuração**.
 
 > [!NOTE]
-> Isso está disponível no Visual Studio 2017 (versão 15.1) para C#, VB e C++. O JavaScript está disponível em versões posteriores do Visual Studio 2017. Os argumentos de depuração de linha de comando estão disponíveis para todos os tipos de implantação, exceto para o Simulador.
+> Isso está disponível no Visual Studio 2017 (versão 15.1) para C#, VB e C++. JavaScript está disponível em versões posteriores. Os argumentos de depuração de linha de comando estão disponíveis para todos os tipos de implantação, exceto para o Simulador.
 
 Para projetos UWP em C# e VB, você verá um campo **Argumentos da linha de comando:** em **Opções iniciais**.
 
@@ -197,7 +197,7 @@ Você pode definir as seguintes opções de implementação na página da propri
 
 - **Permitir loopback de rede local**
 
-  Por motivos de segurança, um aplicativo UWP que foi instalado de modo padrão não pode fazer chamadas de rede para o dispositivo em que estiver instalado. Por padrão, a implantação do Visual Studio cria uma isenção da regra para o aplicativo implantado. Esse isolamento permite que você teste procedimentos de comunicação em uma única máquina. Antes de enviar seu aplicativo para a Microsoft Store, você deve testar seu aplicativo sem a isenção.
+  Por motivos de segurança, um aplicativo UWP que foi instalado de modo padrão não pode fazer chamadas de rede para o dispositivo em que estiver instalado. Por padrão, a implantação do Visual Studio cria uma isenção dessa regra para o aplicativo implantado. Essa isenção permite que você teste procedimentos de comunicação em um único computador. Antes de enviar seu aplicativo para a Microsoft Store, você deve testar seu aplicativo sem a isenção.
 
   Para remover a isenção de loopback de rede do aplicativo:
 
