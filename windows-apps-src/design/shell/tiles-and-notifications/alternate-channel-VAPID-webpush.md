@@ -1,26 +1,29 @@
 ---
-title: Canais de push alternativo usando Webpush e VAPID na UWP
+title: Canais de push alternativo usando VAPID na UWP
 description: Instruções para usar os canais de push alternativo com o protocolo VAPID de um aplicativo UWP
 ms.date: 01/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API do WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: bf224b6c0997ce8af86ab2919a1d0513f619a8a3
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 6512eb891967b6c17bc4845d5e47639ae3c97d31
+ms.sourcegitcommit: 0c97c025d751082db3424cb9941bf6688d9b7381
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067821"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67835020"
 ---
-# <a name="alternate-push-channels-using-webpush-and-vapid-in-uwp"></a>Canais de push alternativo usando Webpush e VAPID na UWP 
-A partir o Fall Creators Update, aplicativos da UWP podem usar push web com autenticação VAPID a enviar notificações por push.  
+# <a name="alternate-push-channels-using-vapid-in-uwp"></a>Canais de push alternativo usando VAPID na UWP 
+A partir o Fall Creators Update, aplicativos UWP podem usar a autenticação VAPID para enviar notificações por push.  
+
+> [!NOTE]
+> Essas APIs são destinadas para navegadores da web que estão hospedando outros sites e criar canais em seu nome.  Se você estiver procurando para adicionar notificações webpush ao seu aplicativo web, é recomendável que você siga os padrões W3C e WhatWG para criar um trabalho de serviço e enviar uma notificação.
 
 ## <a name="introduction"></a>Introdução
 A introdução do padrão de envio por push da web permite que sites podem funcionar mais como aplicativos, mesmo quando os usuários não estão no site do envio de notificações.
 
 O protocolo de autenticação VAPID foi criado para permitir que os sites autenticar com os servidores de envio por push em um fornecedor de maneira independente. Com todos os fornecedores usando o protocolo VAPID, sites podem enviar notificações por push sem conhecer o navegador no qual ele está em execução. Isso é uma melhoria significativa sobre a implementação de um protocolo de envio por push diferentes para cada plataforma. 
 
-Aplicativos UWP podem usar webpush e VAPID para enviar notificações por push com as seguintes vantagens. Esses protocolos podem economizar tempo de desenvolvimento para novos aplicativos e simplificar o suporte de plataforma cruzada para aplicativos existentes. Além disso, aplicativos corporativos ou aplicativos com sideload agora podem enviar notificações sem registrar em que a Microsoft Store. Felizmente, isso abrirá novas maneiras de interagir com usuários em todas as plataformas.  
+Aplicativos UWP podem usar VAPID para enviar notificações por push com essas vantagens. Esses protocolos podem economizar tempo de desenvolvimento para novos aplicativos e simplificar o suporte de plataforma cruzada para aplicativos existentes. Além disso, aplicativos corporativos ou aplicativos com sideload agora podem enviar notificações sem registrar em que a Microsoft Store. Felizmente, isso abrirá novas maneiras de interagir com usuários em todas as plataformas.  
 
 ## <a name="alternate-channels"></a>Canais alternativos 
 Na UWP, esses canais VAPID são chamados de canais alternativos em fornecem funcionalidade semelhante a um canal de push da web. Eles podem disparar uma tarefa de plano de fundo do aplicativo para executar, habilitar a criptografia de mensagem e permitir vários canais de um único aplicativo. Para obter mais informações sobre a diferença entre os tipos de canal diferente, consulte [escolhendo o canal corretos](channel-types.md).
@@ -106,8 +109,8 @@ Você pode usar qualquer esquema de criptografia você considere mais útil para
 Se você quiser usar outra forma de criptografia, a chave é o uso bruto. Propriedade Headers. Ele contém todos os cabeçalhos de criptografia que foram incluídos na solicitação POST para o servidor de envio por push. A partir daí, seu aplicativo pode usar as chaves para descriptografar a mensagem.  
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Tipos de canal de notificação](channel-types.md)
-- [Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
+- [Tipos de canais de notificação](channel-types.md)
+- [Serviços de notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 - [Classe PushNotificationChannel](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [Classe PushNotificationChannelManager](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

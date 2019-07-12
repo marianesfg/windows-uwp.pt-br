@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0f6cdf4818743e3b5a3cc7c5a6b13f69f40afa
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f0549aa1e20d8ed787eed550f4a7e7171a812831
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318456"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820186"
 ---
 # <a name="my-people-sharing"></a>Compartilhamento de Minhas Pessoas
 
@@ -20,7 +20,7 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos na barra de tar
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 e Microsoft Visual Studio 2017. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ Windows 10 e Microsoft Visual Studio 2019. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="overview"></a>Visão geral
@@ -40,7 +40,7 @@ Feito isso, seu aplicativo será exibido como destino de compartilhamento na jan
 Para declarar suporte para seu aplicativo como destino de compartilhamento, abra seu aplicativo no Visual Studio. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Package.appxmanifest** e selecione **Abrir com**. No menu, selecione **Editor de XML (texto)** e clique em **OK**. Em seguida, faça as seguintes alterações no manifesto:
 
 
-**Antes de**
+**Antes**
 ```xml
 <Applications>
     <Application Id="MyApp"
@@ -50,7 +50,7 @@ Para declarar suporte para seu aplicativo como destino de compartilhamento, abra
 </Applications>
 ```
 
-**Depois de**
+**Depois**
 
 ```xml
 <Applications>

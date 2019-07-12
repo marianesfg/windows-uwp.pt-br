@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, update, tarefa em segundo plano, updatetask, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: d943623a9978d39fd3930edc07e7524fe1cadf55
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: fa5420b14d3d73f370031eed917e0e7c367c41c7
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321787"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820951"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
 
@@ -86,12 +86,12 @@ Em seguida, para garantir que o UpdateTask é acionado, aumente o número de ver
 
 ![atualizar a versão](images/bump-version.png)
 
-Agora, no Visual Studio 2017, ao pressionar F5, o aplicativo será atualizado e o sistema ativará o componente UpdateTask em segundo plano. O depurador será automaticamente anexado ao processo em segundo plano. O ponto de interrupção será atingido e você pode percorrer a lógica de atualização de código.
+Agora, no Visual Studio de 2019 quando você pressiona F5, seu aplicativo será atualizado e o sistema irá ativar seu componente UpdateTask em segundo plano. O depurador será automaticamente anexado ao processo em segundo plano. O ponto de interrupção será atingido e você pode percorrer a lógica de atualização de código.
 
 Quando a tarefa em segundo plano é concluída, você pode iniciar o aplicativo em primeiro plano a partir do menu Iniciar do Windows na mesma sessão de depuração. O depurador será anexado automaticamente, desta vez para o processo em primeiro plano, e você pode percorrer a lógica do aplicativo.
 
 > [!NOTE]
-> Usuários do Visual Studio 2015: As etapas acima se aplicam ao Visual Studio 2017. Se você estiver usando o Visual Studio 2015, é possível usar as mesmas técnicas para acionar e testar UpdateTask, mas o Visual Studio não será anexado a elas. Um procedimento alternativo no VS 2015 é configurar um [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) que define o UpdateTask como o Ponto de entrada e acionar a execução diretamente do aplicativo em primeiro plano.
+> Usuários do Visual Studio 2015: As etapas acima se aplicam ao Visual Studio 2017 ou Visual Studio de 2019. Se você estiver usando o Visual Studio 2015, é possível usar as mesmas técnicas para acionar e testar UpdateTask, mas o Visual Studio não será anexado a elas. Um procedimento alternativo no VS 2015 é configurar um [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) que define o UpdateTask como o Ponto de entrada e acionar a execução diretamente do aplicativo em primeiro plano.
 
 ## <a name="see-also"></a>Consulte também
 

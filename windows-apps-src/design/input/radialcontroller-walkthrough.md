@@ -6,12 +6,12 @@ keywords: dial, radial, tutorial
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a16b455d692eaf9f73b7dc90200bd0f021025e52
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cf27f6f9893b3d4cc68c899bf3ff1902320a910
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365653"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820558"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
 
@@ -41,7 +41,7 @@ O Dial oferece suporte a três gestos básicos:
 ## <a name="prerequisites"></a>Pré-requisitos
 
 * Um computador (ou uma máquina virtual) executando a Atualização do Windows 10 para Criadores ou mais recente
-* [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Um dispositivo de roda de rolagem (somente o [Surface Dial](https://aka.ms/purchasesurfacedial) no momento)
 * Se você for novato no desenvolvimento de aplicativos UWP (Plataforma Universal do Windows) com o Visual Studio, dê uma olhada nestes tópicos antes de iniciar este tutorial:  
@@ -641,6 +641,6 @@ Parabéns, você concluiu o *Tutorial de Introdução: Suporte Surface Dial (e o
 #### <a name="other-samples"></a>Outros exemplos
 [Exemplo do livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
-[Exemplos de plataforma Windows universais (C# e do C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+[Amostras da Plataforma Universal do Windows (C# e C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 
 [Exemplo de área de trabalho clássico do Windows](https://aka.ms/radialcontrollerclassicsample)

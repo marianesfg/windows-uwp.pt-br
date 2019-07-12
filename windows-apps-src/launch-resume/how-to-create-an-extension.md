@@ -5,12 +5,12 @@ keywords: extensão de aplicativo, serviço de aplicativo, segundo plano
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7bb6f719f95766c07c1e5f92b50148cf0f2cce
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2cfb3be556cb681bc9ed2d9d46bb86304182e5ca
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642361"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821024"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -18,7 +18,7 @@ Este artigo mostra como criar uma extensão de aplicativo UWP e hospedá-la em u
 
 Este artigo é acompanhado por um exemplo de código:
 - Baixe e descompacte [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
-- No Visual Studio 2017, abra MathExtensionSample.sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
+- No Visual Studio de 2019, abra MathExtensionSample.sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
 - Implante a solução: **Crie** > **implantar solução**.
 
 ## <a name="introduction-to-app-extensions"></a>Introdução a extensões de aplicativo
@@ -41,7 +41,7 @@ Em um nível alto, para configurar uma relação de extensão do aplicativo, nó
 4. Defina como os hosts e suas extensões se comunicarão.
 5. Use o API do [Windows.ApplicationModel.AppExtensions](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppExtensions) no aplicativo host para acessar as extensões.
 
-Vamos ver como isso é feito examinando o [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa uma calculadora hipotética onde você pode adicionar novas funções para usar extensões. No Microsoft Visual Studio 2017, carregue **MathExtensionSample.sln** da amostra de código.
+Vamos ver como isso é feito examinando o [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa uma calculadora hipotética onde você pode adicionar novas funções para usar extensões. No Microsoft Visual de 2019 Studio, carregue **MathExtensionSample.sln** do exemplo de código.
 
 ![Exemplo de código de extensão de matemática](images/mathextensionhost-calctab.png)
 
@@ -122,7 +122,7 @@ O significado dos atributos `<uap3:AppExtension>` é o seguinte:
 
 |Atributo|Descrição|Obrigatório|
 |---------|-----------|:------:|
-|**Nome**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
+|**Name**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
 |**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
 |**DisplayName**| Pode ser usado em seu próprio aplicativo host para identificar a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**Descrição** | Pode ser usado em seu próprio aplicativo host para descrever a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |

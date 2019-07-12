@@ -5,18 +5,18 @@ ms.date: 07/13/2017
 ms.topic: article
 keywords: windows 10, uwp, empacotamento, arquitetura, configuração do pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: c691605ad121ee1e218bfe7947a9026a46fc5234
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 12de19b78c3aab27a7fbc29dd5e8183de1a0c0be
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319799"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821018"
 ---
 # <a name="app-package-architectures"></a>Arquiteturas de pacote do aplicativo
 
 Os pacotes de apps estão configurados para serem executados em uma arquitetura de processador específica. Ao selecionar uma arquitetura, você está especificando em quais dispositivos quer que seu app seja executado. Os aplicativos UWP (Plataforma Universal do Windows) podem ser configurados para serem executados nas seguintes arquiteturas:
 - x86
-- x64
+- X64
 - ARM
 - ARM64
 
@@ -28,7 +28,7 @@ Os pacotes de apps estão configurados para serem executados em uma arquitetura 
 | Arquitetura UWP | Desktop (x86)      | Desktop (x86)      | Desktop (ARM)      | Celular             | HoloLens e realidade mista do Windows           | Xbox               | IoT Core (depende do dispositivo) | Surface Hub        |
 |------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|--------------------|
 | x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
-| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| X64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
 | ARM e ARM64              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
 
 
@@ -37,14 +37,15 @@ Vamos falar sobre essas arquiteturas mais detalhadamente.
 ### <a name="x86"></a>x86
 Escolher x86 é geralmente a configuração mais segura para um pacote de aplicativo, já que será executada em quase todos os dispositivos. Em alguns dispositivos, um pacote de aplicativo com a configuração x86 não será executado, como no Xbox ou em alguns dispositivos IoT Core. No entanto, para um PC, o pacote x86 é a opção mais segura e tem o maior alcance para implantação de dispositivo. Uma parte considerável de dispositivos Windows 10 continua a executar a versão x86 do Windows.
 
-### <a name="x64"></a>x64
+### <a name="x64"></a>X64
 Essa configuração é usada com menos frequência do que a configuração x86. Observe que essa configuração é reservada para desktops que usam versões de 64 bits do Windows 10, [aplicativos UWP no Xbox](https://docs.microsoft.com/windows/uwp/xbox-apps/system-resource-allocation) e o Windows 10 IoT Core no Intel Joule.
 
 ### <a name="arm-and-arm64"></a>ARM e ARM64
 O Windows 10 na configuração do ARM inclui computadores desktop, dispositivos móveis e alguns dispositivos IoT Core (Rasperry Pi 2, Raspberry Pi 3 e DragonBoard). O Windows 10 em computadores desktop ARM são uma novidade para a família do Windows e, portanto, se você for um desenvolvedor de aplicativos UWP, deverá enviar pacotes ARM para a Loja para ter a melhor experiência nesses computadores.
 
 >[!NOTE]
-> Para compilar seu aplicativo UWP nativamente a ARM64 para plataforma como destino, você deve ter o Visual Studio 2017 versão 15.9 ou posterior. Para obter mais informações, consulte [esta postagem de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development/).
+> Para compilar seu aplicativo UWP nativamente a ARM64 para plataforma como destino, você deve ter o Visual Studio 2017 versão 15.9 ou posterior, ou Visual Studio de 2019. Para obter mais informações, consulte [esta postagem de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+
 
 Para obter mais informações, consulte [Windows 10 no ARM](../porting/apps-on-arm.md). Confira esta //Build talk para ver uma demonstração do [Windows 10 em ARM](https://channel9.msdn.com/Events/Build/2017/P4171) e saiba mais sobre como ele funciona.
 

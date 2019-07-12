@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 62f603a6ff5aadc1c3e5342db6a7d771f8c37a7b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: cc5b3598f2d50a49aa9d51721c2c1eb1261c8aa8
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320836"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820507"
 ---
 # <a name="storyboarded-animations"></a>Animações com storyboard
 
@@ -265,7 +265,7 @@ A obrigação do desenvolvedor de aplicativo em habilitar animações dependente
 Como um desenvolvedor de aplicativo, você também pode optar por aplicar uma configuração válida para todo o aplicativo que sempre desabilite animações dependentes, até mesmo aquelas em que **EnableDependentAnimation** é **true**. Consulte [**Timeline.AllowDependentAnimations**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
 
 > [!TIP]
-> Se você estiver usando o painel Animação no Blend for Visual Studio 2017, sempre que você tentar aplicar uma animação dependente a uma propriedade de estado visual, os avisos serão exibidos no designer. Avisos não serão exibidas na saída da compilação ou lista de erros. Se você estiver editando o XAML manualmente, o designer não mostrará um aviso. Em tempo de execução durante a depuração, a saída de depuração do painel de saída mostrará um aviso de que a animação não é independente e será ignorada.
+> Se você estiver usando o painel Animação no Blend for Visual Studio de 2019, sempre que você tentar aplicar uma animação dependente a uma propriedade de estado visual, os avisos serão exibidos no designer. Avisos não serão exibidas na saída da compilação ou lista de erros. Se você estiver editando o XAML manualmente, o designer não mostrará um aviso. Em tempo de execução durante a depuração, a saída de depuração do painel de saída mostrará um aviso de que a animação não é independente e será ignorada.
 
 
 ## <a name="starting-and-controlling-an-animation"></a>Iniciando e controlando uma animação

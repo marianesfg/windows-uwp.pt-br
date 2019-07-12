@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 950f9415e63a31a5204a15f4f72b968535489cfa
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 53e977e07337c11036916c2087a00e9ec7a95118
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321250"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821122"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -214,7 +214,7 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>
     <tr>
         <td>Exemplos de jogos do Xbox One (XGD)</td>
-        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Exemplos</a></td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Amostras</a></td>
     </tr>
     <tr>
         <td>Exemplos de jogos do Windows (Galeria de Códigos do MSDN)</td>
@@ -521,7 +521,7 @@ O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a po
     </tr>
     <tr>
         <td>Guia e referência de programação do Visual C++</td>
-        <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">Visual C++ no Visual Studio 2017</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">O Visual C++ no Visual Studio de 2019</a></td>
     </tr>
 </table>
  
@@ -1018,7 +1018,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </colgroup>
     <tr>
         <td>Usar código C++ existente para desenvolvimento de jogos UWP</td>
-        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">Como: Use o código C++ existente em um aplicativo UWP</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">Como Use o código C++ existente em um aplicativo UWP</a></td>
     </tr>
     <tr>
         <td>APIs UWP para APIs COM e Win32</td>
@@ -1026,7 +1026,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </tr>
     <tr>
         <td>Funções CRT sem suporte na UWP</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">Funções de CRT sem suporte em aplicativos da plataforma Universal do Windows</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows</a></td>
     </tr>
     <tr>
         <td>Comandos alternativos para as APIs do Windows</td>
@@ -1409,7 +1409,7 @@ O Windows Performance Toolkit (WPT) consiste em ferramentas que produzem perfis 
     </tr>
     <tr>
         <td>Obtenha o Windows Performance Toolkit (WPT) do SDK do Windows 10</td>
-        <td><a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk">Windows 10 SDK</a></td>
+        <td><a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk">SDK do Windows 10</a></td>
     </tr>
     <tr>
         <td>Obtenha o Windows Performance Toolkit (WPT) do Windows ADK</td>
@@ -1519,7 +1519,7 @@ Desenvolva jogos prontos para o mundo para a plataforma Windows e saiba mais sob
 
 Os guias e as informações a seguir ajudam a tornar o processo de publicação e envio o mais simples possível.
 
-### <a name="publishing"></a>Publicação
+### <a name="publishing"></a>Publicando
 
 Você usará [Partner Center](https://partner.microsoft.com/dashboard) para publicar e gerenciar seus pacotes de jogos.
 

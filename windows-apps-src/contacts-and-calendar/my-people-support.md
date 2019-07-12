@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317972"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820222"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
 
@@ -20,7 +20,7 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos de um aplicativ
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 e Microsoft Visual Studio 2017. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ Windows 10 e Microsoft Visual Studio 2019. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="overview"></a>Visão geral
@@ -37,7 +37,7 @@ Feito isso, seu aplicativo será exibido no painel de contato para os contatos a
 
 Para declarar o suporte para o contrato do recurso Minhas Pessoas, abra seu aplicativo no Visual Studio. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Package.appxmanifest** e selecione **Abrir com**. No menu, selecione **Editor de XML (texto)** e clique em **OK**. Faça as seguintes alterações no manifesto:
 
-**Antes de**
+**Antes**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ Para declarar o suporte para o contrato do recurso Minhas Pessoas, abra seu apli
 
 ```
 
-**Depois de**
+**Depois**
 
 ```xml
 <Package
@@ -107,7 +107,7 @@ O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da classe ati
 
 Por padrão, seu aplicativo só aparecerá no painel de contato para os contatos que você tiver anotado especificamente.  Isso é para evitar confusão com os contatos que não podem interagir por meio de seu app.  Se você quiser que o aplicativo apareça para os contatos que ele não conhece (para convidar os usuários a adicionarem esse contato à conta deles, por exemplo), você poderá adicionar o seguinte ao seu manifesto:
 
-**Antes de**
+**Antes**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ Por padrão, seu aplicativo só aparecerá no painel de contato para os contatos
 </Applications>
 ```
 
-**Depois de**
+**Depois**
 
 ```Csharp
 <Applications>
@@ -185,7 +185,7 @@ Se você deseja fixar contatos na barra de tarefas para marcação quando chegam
 
 Para marcar um contato, o nó de nível superior da notificação do sistema deve incluir o parâmetro hint-people para indicar o envio ou o contato relacionado. Esse parâmetro pode ter qualquer um dos seguintes valores:
 + **Endereço de email** 
-    + Ex. mailto:johndoe@mydomain.com
+    + Ex. [https://support.microsoft.com/en-us/help/172983/explanation-of-the-three-way-handshake-via-tcp-ip](mailto:johndoe@mydomain.com)
 + **Número de telefone** 
     + Ex. tel:888-888-8888
 + **ID remota** 

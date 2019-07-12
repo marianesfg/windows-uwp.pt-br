@@ -6,12 +6,12 @@ keywords: tinta, escrita à tinta, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be7005e64a431d65006315fbee551e5c6c3a2a6f
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 929d72da46c52cfdb510f1e1b6a97ddcbbe066d5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343275"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820567"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: Oferecer suporte à tinta no aplicativo UWP
 
@@ -36,7 +36,7 @@ Com o Windows Ink, você pode fornecer aos clientes o equivalente digital de pra
 ## <a name="prerequisites"></a>Pré-requisitos
 
 * Um computador (ou uma máquina virtual) executando a versão atual do Windows 10
-* [Visual Studio 2017 e o RS2 SDK](https://developer.microsoft.com/windows/downloads)
+* [2019 do Visual Studio e o RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Dependendo da sua configuração, talvez seja necessário instalar o [universalwindowsplatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet empacotar e habilite **modo de desenvolvedor** nas configurações do sistema (Configurações -> atualização & Segurança -> para os desenvolvedores -> recursos de desenvolvedor usar).
 * Se você for novato no desenvolvimento de aplicativos UWP (Plataforma Universal do Windows) com o Visual Studio, dê uma olhada nestes tópicos antes de iniciar este tutorial:  
@@ -464,7 +464,7 @@ Parabéns, você concluiu o **entrada: Suporte a tinta no seu aplicativo UWP** t
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Interações com caneta e tinta do Windows em aplicativos UWP](pen-and-stylus-interactions.md)
+* [Interações com caneta e Windows Ink em aplicativos UWP](pen-and-stylus-interactions.md)
 
 ### <a name="samples"></a>Exemplos
 

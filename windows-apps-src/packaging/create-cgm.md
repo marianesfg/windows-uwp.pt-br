@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa de grupo de conteúdo, instalação de streaming, instalação de streaming de aplicativos uwp, mapa de grupo de conteúdo de origem
 ms.localizationpriority: medium
-ms.openlocfilehash: 882db0a6a97c5ee203a072156ca3eb82615607bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e25f30a2288f6be76ce108de2056ab6407187de
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647941"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821030"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Criar e converter um mapa de grupo de conteúdo de origem
 
@@ -143,7 +143,7 @@ Você também pode usar curingas com texto para nomes de arquivos. Por exemplo, 
 
 ## <a name="convert-sourceappxcontentgroupmapxml-to-appxcontentgroupmapxml"></a>Converter SourceAppxContentGroupMap.xml em AppxContentGroupMap.xml
 
-Para converter o `SourceAppxContentGroupMap.xml` para a versão final, `AppxContentGroupMap.xml`, você pode usar o Visual Studio 2017 ou a ferramenta **MakeAppx.exe** de linha de comando.
+Para converter o `SourceAppxContentGroupMap.xml` para a versão final, `AppxContentGroupMap.xml`, você pode usar o Visual Studio de 2019 ou o **MakeAppx.exe** ferramenta de linha de comando.
 
 Para usar o Visual Studio para converter seu mapa de grupo de conteúdo:
 1. Adicione o `SourceAppxContentGroupMap.xml`para sua pasta do projeto

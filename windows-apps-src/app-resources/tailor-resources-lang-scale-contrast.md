@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359348"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820212"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 
@@ -61,7 +61,7 @@ O arquivo cujo nome contém o qualificador mais apropriado para a configuração
 
 ## <a name="reference-a-string-or-image-resource-by-name"></a>Referência a um recurso de cadeia de caracteres ou imagem pelo nome
 
-Consulte [Fazer referência a um identificador de recurso de cadeia de caracteres na marcação XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml-markup), [Fazer referência a um identificador de recurso de cadeia de caracteres no código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) e [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
+Consulte [Fazer referência a um identificador de recurso de cadeia de caracteres na marcação XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml), [Fazer referência a um identificador de recurso de cadeia de caracteres no código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) e [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
 
 ## <a name="actual-and-neutral-qualifier-matches"></a>Correspondências de qualificador reais e neutras
 Você não precisa fornecer um arquivo de recurso para *cada* valor de qualificador. Por exemplo, se você achar que só precisa de um ativo visual para alto contraste e outro para o contraste padrão, nomeie esses ativos da seguinte forma.
@@ -256,7 +256,7 @@ Você pode definir os ativos que representam os vários tamanhos do valor de qua
 
 Para obter informações sobre qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para tamanho alvo](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
-## <a name="theme"></a>Tema
+## <a name="theme"></a>{1&gt;Tema&lt;1}
 
 O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 

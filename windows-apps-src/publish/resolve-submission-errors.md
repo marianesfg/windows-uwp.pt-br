@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1df93195578c1e7c6fd87ab7403375a1a3dcc825
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 8ec2b10b402db7398dad6643355e064c26318170
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468905"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820599"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -25,7 +25,7 @@ Caso um erro de compilação seja exibido, certifique-se de que você consiga co
 
 ## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você planeja enviar um pacote que contém os binários do Win32 e UWP, certifique-se de que você crie o pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 atualização 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote à Store ou fazer sideload-lo em outros PCs. Mesmo se o pacote foi publicado com êxito, ele pode se comportar de maneiras inesperadas no PC do usuário. Para obter mais informações, consulte [empacotar um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você planeja enviar um pacote que contém os binários do Win32 e UWP, certifique-se de que você crie o pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 atualização 4 e versões posteriores. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote à Store ou fazer sideload-lo em outros PCs. Mesmo se o pacote foi publicado com êxito, ele pode se comportar de maneiras inesperadas no PC do usuário. Para obter mais informações, consulte [empacotar um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8. x e anteriores
 
