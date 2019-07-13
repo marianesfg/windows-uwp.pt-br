@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b212ff435e58bdb8766972d1832bbf0690db3ed1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364738"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319390"
 ---
 # <a name="media-player"></a>Media player
 
@@ -143,7 +143,7 @@ private void LoadMediaFromString(string path)
 }
 ```
 
-Para definir a origem da mídia para um arquivo de mídia inserido no aplicativo, inicialize um [URI](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) com o caminho com o prefixo **ms-appx:///** , crie uma [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource) com o URI e defina a [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) como o URI. Por exemplo, para um arquivo chamado **video1. mp4** que está em uma subpasta **Videos**, o caminho ficaria: **ms-appx:///Videos/video1.mp4**
+Para definir a origem da mídia para um arquivo de mídia inserido no aplicativo, inicialize um [URI](https://docs.microsoft.com/uwp/api/windows.foundation.uri) com o caminho com o prefixo **ms-appx:///** , crie uma [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource) com o URI e defina a [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) como o URI. Por exemplo, para um arquivo chamado **video1. mp4** que está em uma subpasta **Videos**, o caminho ficaria: **ms-appx:///Videos/video1.mp4**
 
 Esse código define a propriedade [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) do [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) definido anteriormente em XAML para **ms-appx:///Videos/video1.mp4**.
 
@@ -392,7 +392,7 @@ Embora os controles padrão tenham sido otimizados para reprodução de mídia, 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

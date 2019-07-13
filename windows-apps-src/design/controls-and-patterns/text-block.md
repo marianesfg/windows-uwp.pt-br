@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b69bc093fb9aae6e35618949bf6eebe8c36c893
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b60fbe26de6a3400972bdd216f292a45cb89df9e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364165"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319500"
 ---
 # <a name="text-block"></a>Bloco de texto
 
@@ -190,14 +190,14 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](text-controls.md)
-- [Adicionando pesquisa](search.md)
+- [Como adicionar pesquisa](search.md)
 - [Diretrizes para entrada de texto](text-controls.md)
 - [Classe TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Classe Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [Propriedade String.Length](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)

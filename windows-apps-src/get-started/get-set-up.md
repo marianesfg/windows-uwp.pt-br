@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d0f3e7ca98f01750d7d05cc06b56783e3b32359
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 30ffec0f2a5e771e649eda6240d9e7ef90f50890
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564464"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318791"
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
 
@@ -34,7 +34,7 @@ Quando você instalar o Visual Studio, selecione a opção de Ferramentas de Des
 
 ![Ferramentas do Visual Studio para UWP](images/vs-2017-community-setup.png)
 
-Precisa de ajuda com o Visual Studio? Confira [Introdução ao Visual Studio](https://www.visualstudio.com/vs/getting-started).
+Precisa de ajuda com o Visual Studio? Confira [Introdução ao Visual Studio](https://visualstudio.microsoft.com/vs/getting-started/).
 
 Se você já começou a usar o Visual Studio, mas descobrir que está faltando alguns componentes, é possível iniciar o instalador novamente na caixa de diálogo *Novo Projeto*:
 
@@ -73,4 +73,4 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 
 * [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
 * [O que é um aplicativo UWP?](universal-application-platform-guide.md)
-* [Inscreva-se na conta do Windows](sign-up.md)
+* [Criar uma conta do Windows](sign-up.md)

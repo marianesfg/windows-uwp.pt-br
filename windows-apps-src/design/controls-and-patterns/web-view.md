@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c996b22395fc8186fb1b6dc786a73fa4a97ecf16
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: cad33c0f1b72bbd379be9b8f13ed648231f1a1ca
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363990"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319357"
 ---
 # <a name="web-view"></a>Modo de exibição da Web
  
@@ -306,7 +306,7 @@ Para obter uma imagem de visualização do conteúdo atual do modo de exibição
 
 ### <a name="threading-behavior"></a>Comportamento de threading
 
-Por padrão, o conteúdo de modo de exibição da Web é hospedado no thread da interface do usuário em dispositivos na família de dispositivos da área de trabalho e fora do thread de interface do usuário em todos os outros dispositivos. Você pode usar a propriedade estática [WebView.DefaultExecutionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.defaultexecutionmode) para consultar o comportamento de threading padrão para o cliente atual. Se necessário, você pode usar o construtor [WebView(WebViewExecutionMode)](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.) para substituir esse comportamento. 
+Por padrão, o conteúdo de modo de exibição da Web é hospedado no thread da interface do usuário em dispositivos na família de dispositivos da área de trabalho e fora do thread de interface do usuário em todos os outros dispositivos. Você pode usar a propriedade estática [WebView.DefaultExecutionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.defaultexecutionmode) para consultar o comportamento de threading padrão para o cliente atual. Se necessário, você pode usar o construtor [WebView(WebViewExecutionMode)](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview.-ctor#Windows_UI_Xaml_Controls_WebView__ctor_Windows_UI_Xaml_Controls_WebViewExecutionMode_) para substituir esse comportamento. 
 
 > **Observação**&nbsp;&nbsp;pode haver problemas de desempenho ao hospedar conteúdo no thread da interface do usuário em dispositivos móveis, então não deixe de testar em todos os dispositivos de destino quando você alterar o DefaultExecutionMode.
 

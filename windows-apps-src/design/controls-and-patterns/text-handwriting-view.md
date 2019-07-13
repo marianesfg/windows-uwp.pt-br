@@ -11,12 +11,12 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f7b31898e6a90410e4edc73ee36f71a7e4d94155
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 262e033c8393544e3b5b8394d0e9a5be410cd080
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63774766"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319473"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com exibição de texto manuscrito
 
@@ -275,8 +275,7 @@ Se você tiver interface do usuário personalizada que aparece em resposta à en
 
 ![TextBox com a interface do usuário personalizada](images/handwritingview/textbox-with-customui.png)
 
-O exemplo a seguir mostra como escutar eventos [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.opened), [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.closed
-) e [SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para definir o posição de um [pop-up](https://docs.microsoft.com/uwp/api/windows.ui.popups).
+O exemplo a seguir mostra como escutar eventos [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.opened), [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.closed) e [SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para definir o posição de um [pop-up](https://docs.microsoft.com/uwp/api/windows.ui.popups).
 
 ```csharp
 private void Search_HandwritingViewOpened(

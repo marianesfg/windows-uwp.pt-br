@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 67ba9f5c9bc4a5e723eb2696d88804df5300eda0
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66748452"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468992"
 ---
 # <a name="dialog-controls"></a>Controles de caixa de diálogo
 
@@ -254,7 +254,7 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
 
 > OBSERVAÇÃO: esta seção se aplica somente a aplicativos direcionados ao Windows 10, versão 1903 ou posterior. AppWindow e Ilhas XAML não estão disponíveis em versões anteriores. Para saber mais sobre controle de versão, consulte [Aplicativos adaptáveis à versão](../../../debug-test-perf/version-adaptive-apps.md).
 
-Por padrão, as caixas de diálogo de conteúdo são exibidas modalmente em relação à [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview) raiz. Quando você usa ContentDialog em [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) ou [Ilha XAML](/apps/desktop/modernize/xaml-islands), é preciso definir manualmente [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) na caixa de diálogo para a raiz do host do XAML.
+Por padrão, as caixas de diálogo de conteúdo são exibidas modalmente em relação à [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview) raiz. Quando você usa ContentDialog em [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) ou [Ilha XAML](/windows/apps/desktop/modernize/xaml-islands), é preciso definir manualmente [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) na caixa de diálogo para a raiz do host do XAML.
 
 Para fazer isso, defina a propriedade XamlRoot de ContentDialog para o mesmo XamlRoot como um elemento já em AppWindow ou Ilha XAML, como mostrado aqui.
 

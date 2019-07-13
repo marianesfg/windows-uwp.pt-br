@@ -5,12 +5,12 @@ keywords: aplicativo web hospedado, HWA, API REST, aplicativo de página única,
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b1b837d6585507311dc2246d42f3094ce8b07421
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366980"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321171"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um aplicativo Web de página única com back-end da API REST
 
@@ -233,7 +233,7 @@ Essa camada do programa representa as própria cartas de memória e fornece a ma
  - Este código [guess.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/guess.js?token=ACEfkvY69Zr1AZQ4iXgfCgDxeinT21bBks5ZFhYBwA%3D%3D) no arquivo **data\guess.js**
  - Este código [new.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/new.js?token=ACEfkiqeDN0HjZ4-gIKRh3wfVZPSlEmgks5ZFhYPwA%3D%3D) no arquivo **data\new.js**
 
-Para simplificar, estamos armazenando o tabuleiro do jogo em uma variável global (`global.board`) no servidor do nó. Mas, na verdade, você usaria o armazenamento em nuvem (como o Google [Cloud Datastore](https://cloud.google.com/datastore/) ou o Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) para torná-lo um serviço de API de jogo de memória viável que dá suporte a vários jogadores e jogos simultaneamente.
+Para simplificar, estamos armazenando o tabuleiro do jogo em uma variável global (`global.board`) no servidor do nó. Mas, na verdade, você usaria o armazenamento em nuvem (como o Google [Cloud Datastore](https://cloud.google.com/datastore/) ou o Azure [DocumentDB](https://azure.microsoft.com/services/cosmos-db/)) para torná-lo um serviço de API de jogo de memória viável que dá suporte a vários jogadores e jogos simultaneamente.
 
 Verifique se você salvou todas as alterações no VS Code, acione o servidor novamente (F5 no VS Code ou `npm start` no shell e vá até [https://localhost:8000](https://localhost:8000)) para testar a API do jogo.
 
@@ -284,7 +284,7 @@ Se você fez isso e o Azure já está atendendo à interface do usuário do Swag
 
 ### <a name="going-further"></a>Aprofundamento
 
-Para tornar a API do jogo de memória um serviço back-end viável para um aplicativo de produção, você estenderá o código para dar suporte a vários jogadores e jogos. Para isso, você provavelmente precisará inserir a [autenticação](https://swagger.io/docs/specification/authentication/) (para o gerenciamento das identidades do jogador), de um [banco de dados NoSQL](https://docs.microsoft.com/en-us/azure/documentdb/) (para o rastreamento de jogos e jogadores) e de alguns [testes de unidade](https://apigee.com/about/blog/developer/swagger-test-templates-test-your-apis) básicos para sua API.
+Para tornar a API do jogo de memória um serviço back-end viável para um aplicativo de produção, você estenderá o código para dar suporte a vários jogadores e jogos. Para isso, você provavelmente precisará inserir a [autenticação](https://swagger.io/docs/specification/authentication/) (para o gerenciamento das identidades do jogador), de um [banco de dados NoSQL](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/) (para o rastreamento de jogos e jogadores) e de alguns [testes de unidade](https://apigee.com/about/blog/api-technology/swagger-test-templates-test-your-apis) básicos para sua API.
 
 Veja a seguir alguns recursos úteis para aprofundamento:
 
@@ -292,7 +292,7 @@ Veja a seguir alguns recursos úteis para aprofundamento:
 
  - [Documentos do Azure para Web + dispositivos móveis](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
 
- - [Documentos do Azure DocumentDB](https://docs.microsoft.com/en-us/azure/documentdb/index)
+ - [Documentos do Azure DocumentDB](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
 ## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: Compilar um aplicativo Web de página única
 
@@ -575,7 +575,7 @@ O sistema de grade permite até 12 colunas. Como queremos apenas quatro colunas 
 ### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. Adicionar uma animação de virada de carta com transformações CSS
 Substitua o arquivo style.css em memory\public\stylesheets pelo arquivo style.css da pasta Start.
 
-A adição de um movimento de virada por meio de [Transformações CSS](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/css/transforms) confere às cartas um movimento 3D realista. As cartas do jogo são criadas por meio da estrutura HTML a seguir e adicionadas de forma programática ao tabuleiro do jogo (na função `drawGameBoard()` mostrada anteriormente).
+A adição de um movimento de virada por meio de [Transformações CSS](https://developer.mozilla.org/docs/Web/CSS/CSS_Transforms) confere às cartas um movimento 3D realista. As cartas do jogo são criadas por meio da estrutura HTML a seguir e adicionadas de forma programática ao tabuleiro do jogo (na função `drawGameBoard()` mostrada anteriormente).
 
 ``` html
 <div class="flipContainer">
@@ -642,6 +642,6 @@ Veja a seguir alguns recursos úteis para aprofundamento:
 
  - [Implantar o projeto de desenvolvimento de aplicativos para sites do Azure](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [Converter o seu aplicativo Web em um aplicativo UWP (Plataforma Universal do Windows)](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
+ - [Converter o seu aplicativo Web em um aplicativo UWP (Plataforma Universal do Windows)](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)
 
- - [Publicar aplicativos do Windows](https://developer.microsoft.com/en-us/store/publish-apps)
+ - [Publicar aplicativos do Windows](https://docs.microsoft.com/windows/uwp/publish/)

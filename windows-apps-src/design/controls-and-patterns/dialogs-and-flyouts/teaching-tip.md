@@ -10,18 +10,18 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ea4dc1d77c5cf7199d084d4646b5862599a1d54
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794396"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319104"
 ---
 # <a name="teaching-tip"></a>Dica de ensino
 
 Uma dica de ensino é um submenu semipersistente e rico em conteúdo que fornece informações contextuais. Geralmente, é usada para informar, lembrar e ensinar os usuários sobre recursos novos e importantes que podem aprimorar a experiência.
 
-**APIs importantes:** [Classe TeachingTip](https://docs.microsoft.com/en-us/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+**APIs importantes:** [Classe TeachingTip](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
 
 Uma dica de ensino pode ser um light dismiss ou exigir uma ação explícita para ser fechada. Uma dica de ensino pode apontar para um elemento específico da interface do usuário com sua cauda. Também pode não ter uma cauda ou um alvo.
 

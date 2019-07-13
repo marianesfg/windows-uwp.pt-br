@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, caminho de aprendizagem, arquivos, e/s de arquivo, ler arquivo, gravar arquivo, criar arquivo, gravar texto, ler texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5480638e201dca8a5eb5363d7a5944422c626f67
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 29cfeef852f240548f1cd961f73766346da7afa4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366897"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321129"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -145,4 +145,4 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 | [Exemplo de acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Mostra como criar, ler, gravar, copiar e excluir um arquivo. |
 | [Exemplo do seletor de arquivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário, e mostra como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
 | [Exemplo de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Mostra como codificar e decodificar objetos JSON (JavaScript Object Notation), matrizes, cadeias de caracteres, números e boolianos usando o [namespace Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
-| [Exemplos de código adicionais](https://developer.microsoft.com//windows/samples) | Escolha **Arquivos, pastas e bibliotecas** na lista suspensa de categoria. |
+| [Exemplos de código adicionais](https://developer.microsoft.com/windows/samples) | Escolha **Arquivos, pastas e bibliotecas** na lista suspensa de categoria. |

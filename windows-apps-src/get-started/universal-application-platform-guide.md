@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 37207d4ce65551a7bdd33d57f72f3fa6a0a6185d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8b1f6e0e04cdf81512918e0cd3e33ec0f93e2245
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370705"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321007"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
@@ -121,13 +121,12 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 - Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) para acomodar dispositivos móveis com tela pequena e grande. [Dispor a interface do usuário](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) para responder a diferentes tamanhos de tela e resoluções.
 
-- Considere como você vai acomodar vários tipos de entrada. Consulte as [Diretrizes para interações](https://developer.microsoft.com/windows/design/inputs-devices) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [Controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [Interações por toque](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), o [Teclado virtual](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) e muito mais.  Ou confira as [Diretrizes de texto e entrada de texto](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls) para obter mais experiências de interação tradicionais.
+- Considere como você vai acomodar vários tipos de entrada. Consulte as [Diretrizes para interações](https://docs.microsoft.com/windows/uwp/design/layout/index) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [Controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [Interações por toque](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), o [Teclado virtual](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) e muito mais.  Ou confira as [Diretrizes de texto e entrada de texto](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls) para obter mais experiências de interação tradicionais.
 
 ### <a name="add-services"></a>Adicionar serviços
 
 - Use [serviços de nuvem](https://go.microsoft.com/fwlink/?LinkId=526377) para sincronização entre dispositivos.
 - Saiba como [conectar-se a serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10)) para melhorar a experiência do aplicativo.
-- Saiba como [Adicionar a Cortana a seu aplicativo](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382) para que seu aplicativo possa responder a comandos de voz.
 - Inclua [Notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) e [compras no aplicativo](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.
 
 ### <a name="submit-your-app-to-the-store"></a>Envie seu aplicativo para a Loja.
@@ -142,7 +141,7 @@ Para mais material introdutório, confira [Uma Introdução sobre como criar apl
 
 - Saiba como usar [Atividades do usuário](https://blogs.windows.com/buildingapps/2017/12/19/application-engagement-windows-timeline-user-activities/#tHuZ6tLPtCXqYKvw.97) para que a atividade do usuário no aplicativo apareça no recurso Continuar do ponto em que parei da Cortana e na Linha do Tempo do Windows.
 - Saiba como usar [Blocos, selos e notificações para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/).
-- Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://docs.microsoft.com/previous-versions//mt186421(v=vs.85)) e [Dlls para aplicativos UWP](https://docs.microsoft.com/previous-versions//mt186422(v=vs.85)).
+- Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)) e [Dlls para aplicativos UWP](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85)).
 - Confira [Aplicativos Universais do Windows em .NET](https://devblogs.microsoft.com/dotnet/universal-windows-apps-in-net/) para obter uma visão geral de como escrever aplicativos UWP em .NET.
 - Para obter uma lista de tipos .NET que você pode usar em um aplicativo UWP, confira [.NET para aplicativos UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
 - [Compilar aplicativos com .NET nativo](https://docs.microsoft.com/dotnet/framework/net-native/)

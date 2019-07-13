@@ -3,16 +3,16 @@ Description: Saiba como implementar a navegação regressiva para analisar o his
 title: Histórico de navegação e navegação regressiva (aplicativos do Windows)
 template: detail.hbs
 op-migration-status: ready
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e3ab6760ed3eff1d284e51205de261796db0fb2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: de2e70a09f75ed5380a47bed225c0689eb029e89
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63799119"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713795"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para aplicativos UWP
 
@@ -31,7 +31,17 @@ Para criar um botão Voltar, use o controle de [Botão](../controls-and-patterns
 ![Botão Voltar na parte superior esquerda da interface do usuário do aplicativo](images/back-nav/BackEnabled.png)
 
 ```xaml
-<Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+
+    </Grid>
+</Page>
 ```
 
 Se o aplicativo tiver um [CommandBar](../controls-and-patterns/app-bars.md) superior, o controle de botão com 44px de altura não será bem alinhado com AppBarButtons de 48px. No entanto, para evitar inconsistência, alinhe o controle de botão dentro dos limites de 48px.
@@ -39,8 +49,23 @@ Se o aplicativo tiver um [CommandBar](../controls-and-patterns/app-bars.md) supe
 ![Botão Voltar na barra de comandos superior](images/back-nav/CommandBar.png)
 
 ```xaml
-<Button VerticalAlignment="Top" HorizontalAlignment="Left" 
-Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <CommandBar>
+            <CommandBar.Content>
+                <Button Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top"/>
+            </CommandBar.Content>
+        
+            <AppBarButton Icon="Delete" Label="Delete"/>
+            <AppBarButton Icon="Save" Label="Save"/>
+        </CommandBar>
+    </Grid>
+</Page>
 ```
 
 Para minimizar a movimentação de elementos de interface do usuário no aplicativo, mostre um botão Voltar desabilitado quando não houver nada no backstack (veja o exemplo de código abaixo). No entanto, se você espera que o aplicativo nunca tenha um backstack, não precisa exibir o botão Voltar.
@@ -287,17 +312,6 @@ Anteriormente, os aplicativos UWP usavam [AppViewBackButtonVisibility](https://d
 Se o aplicativo continuar usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), a interface do usuário do sistema o renderizará o botão Voltar do sistema dentro da barra de título. (A aparência e as interações do usuário com o botão Voltar não foram alteradas em relação aos builds anteriores.)
 
 ![Botão Voltar da barra de título](images/nav-back-pc.png)
-
-### <a name="system-back-bar"></a>Barra de voltar do sistema
-
-> [!NOTE]
-> "Barra de voltar do sistema" é somente uma descrição, e não um nome oficial.
-
-A barra de voltar do sistema é uma "faixa" inserida entre a faixa de guia e a área de conteúdo do aplicativo. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. A faixa tem uma altura vertical de 32 pixels para garantir o tamanho certo do alvo de toque para o botão Voltar.
-
-A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar estiver visível, a barra de voltar do sistema será inserida, mudando o conteúdo do aplicativo para 32 pixels abaixo da faixa da guia. Quando o botão Voltar estiver oculto, a barra de voltar do sistema será removida dinamicamente, mudando o conteúdo do aplicativo para 32 pixels acima da faixa da guia. Para evitar que a interface do usuário do aplicativo mova-se para cima ou para baixo, é recomendável desenhar um [botão Voltar no aplicativo](#back-button).
-
-As [personalizações da barra de título](../shell/title-bar.md) serão transferidas para a guia do aplicativo e a barra de voltar do sistema. Se o aplicativo especificar as propriedades de cor de primeiro e segundo plano com [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), as cores serão aplicadas à guia e à barra de voltar do sistema.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Diretrizes para o comportamento da navegação regressiva personalizada
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43423bc1475e446fcc0c6ab3f0d65b5a844d19d2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 97407ec48eaac3415980b9313092b21e9532250a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370687"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321110"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criar um aplicativo complexo da UWP (Plataforma Universal do Windows)
 
@@ -220,7 +220,7 @@ Para obter mais detalhes sobre como usar superfícies diferentes, dê uma olhada
 
 ![designs móveis e de computador para um aplicativo](images/ux-budgettracker1-md-notablet.png)
 
-Para obter mais informações sobre a criação de diferentes tamanhos de tela, confira [Tamanhos de tela e pontos de interrupção para um design responsivo](https://docs.microsoft.com/en-us/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design).
+Para obter mais informações sobre a criação de diferentes tamanhos de tela, confira [Tamanhos de tela e pontos de interrupção para um design responsivo](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design).
 
 ## <a name="make-a-good-first-impression"></a>Causar uma boa primeira impressão
 
@@ -238,4 +238,4 @@ Pense naquilo que você quer que os usuários pensem, sintam ou façam assim que
 
 Antes de você se aprofundar muito no desenvolvimento do seu aplicativo, deve validar o seu design ou protótipo de acordo com diretrizes, impressões de usuário e exigências para evitar ter que refazer o trabalho depois. Cada recurso tem um conjunto de diretrizes de experiência do usuário para ajudá-lo a refinar seu aplicativo e um conjunto de requisitos da Store que você precisa cumprir para vender seu aplicativo na Microsoft Store. Você pode usar o [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para testar a conformidade técnica com os requisitos da Loja. Você também pode usar as ferramentas de desempenho no Microsoft Visual Studio para garantir que o usuário tenha uma excelente experiência em todos os cenários.
 
-Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://developer.microsoft.com/windows/design) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) para analisar o desempenho de cada uma das situações do seu aplicativo.
+Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://developer.microsoft.com/windows/apps/design) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) para analisar o desempenho de cada uma das situações do seu aplicativo.

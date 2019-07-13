@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae5001e907d7d38cbf05fd6863b192337fe365f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1312c55d98d3e1df2c9e583422df7938c994c2b5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63801081"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320376"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
 
@@ -24,22 +24,22 @@ O Fall Creators Update também está chegando, portanto, fique atento a uma gran
 
 ### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
 
-O Programa de Criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+O Programa de Criadores do Xbox Live agora é dinâmico, permitindo que você crie e publique facilmente jogos UWP que podem ser executados em computadores com Windows 10 e consoles Xbox One. Para obter mais informações, consulte [Introdução ao Programa de Criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="developer-guidance"></a>Diretrizes do desenvolvedor
 
 ### <a name="xaml-basics-tutorials"></a>Tutoriais sobre noções básicas de XAML
 
-Escrevemos quatro [tutoriais sobre noções básicas de XAML](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-intro) para acompanhar a nova [amostra do PhotoLab](https://github.com/Microsoft/Windows-appsample-photo-lab), abordando quatro aspectos essenciais da programação em XAML: interfaces do usuário, vinculação de dados, estilos personalizados e layouts adaptáveis. Cada tutorial é iniciado com uma versão parcialmente completa da Amostra do PhotoLab e mostra a criação, passo a passo, de um componente ausente do aplicativo final. 
+Escrevemos quatro [tutoriais sobre noções básicas de XAML](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui) para acompanhar a nova [amostra do PhotoLab](https://github.com/Microsoft/Windows-appsample-photo-lab), abordando quatro aspectos essenciais da programação em XAML: interfaces do usuário, vinculação de dados, estilos personalizados e layouts adaptáveis. Cada tutorial é iniciado com uma versão parcialmente completa da Amostra do PhotoLab e mostra a criação, passo a passo, de um componente ausente do aplicativo final. 
 
 ![Captura de tela da amostra do PhotoLab mostrando a página da galeria de fotos](images/PhotoLab-gallery-page.png)  
 
 Esta é uma visão geral rápida dos novos artigos:
 
-+ [**Criar interfaces do usuário**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-ui) mostra como criar a interface básica da galeria de fotos.
-+ [**Criar vinculações de dados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-data-binding) mostra como adicionar vinculações de dados à galeria de fotos, preenchendo-a usando dados de imagens reais.
-+ [**Criar estilos personalizados**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados ao menu de edição de fotos.
-+ [**Criar layouts adaptáveis**](https://docs.microsoft.com/en-us/windows/uwp/get-started/xaml-basics-adaptive-layout) mostra como tornar o layout de galeria adaptável para que tenha uma boa aparência em todos os tamanhos de dispositivo e tela.
++ [**Criar interfaces do usuário**](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui) mostra como criar a interface básica da galeria de fotos.
++ [**Criar vinculações de dados**](https://docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding) mostra como adicionar vinculações de dados à galeria de fotos, preenchendo-a usando dados de imagens reais.
++ [**Criar estilos personalizados**](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-basics-style) mostra como adicionar estilos personalizados sofisticados ao menu de edição de fotos.
++ [**Criar layouts adaptáveis**](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-adaptive-layout) mostra como tornar o layout de galeria adaptável para que tenha uma boa aparência em todos os tamanhos de dispositivo e tela.
 
 ### <a name="get-started-tutorials"></a>Tutoriais de introdução
 

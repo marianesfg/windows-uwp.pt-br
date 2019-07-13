@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, store para empresas, store para educação, organizacional, licenciamento por volume, empresa, store educacional, store empresarial, compra em volume, massa
 localizationpriority: high
-ms.openlocfilehash: b7f0ecc1eb7faec39eaad925ccd6c9d501d39749
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8cfa4d4a18112ef1cad793048399d04835ff4633
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63788395"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320579"
 ---
 # <a name="organizational-licensing-options"></a>Opções de licenciamento para organizações
 
@@ -59,7 +59,7 @@ O licenciamento offline permite que as organizações adquiram seu aplicativo po
 Atualmente, as contas de desenvolvedor localizadas em determinados mercados podem oferecer aplicativos pagos para aquisição de volume por meio da Microsoft Store para Empresas. 
 
 > [!NOTE]
-> Em alguns mercados, o preço exibido para um aplicativo na Microsoft Store para Empresas ou na Microsoft Store para Educação pode ser diferente do preço mostrado para clientes comerciais na Microsoft Store na mesma faixa de preço. O pagamento de receitas das compras organizacionais funciona da mesma maneira que para compras de consumidor do seu aplicativo. Para obter mais informações, consulte [Recebendo pagamento](getting-paid-apps.md) e o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para ver uma lista dos mercados em que a Microsoft Store para Empresas e a Microsoft Store para Educação estão disponíveis, confira [Visão geral da Microsoft Store para Empresas e da Microsoft Store para Educação](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
+> Em alguns mercados, o preço exibido para um aplicativo na Microsoft Store para Empresas ou na Microsoft Store para Educação pode ser diferente do preço mostrado para clientes comerciais na Microsoft Store na mesma faixa de preço. O pagamento de receitas das compras organizacionais funciona da mesma maneira que para compras de consumidor do seu aplicativo. Para obter mais informações, consulte [Recebendo pagamento](getting-paid-apps.md) e o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para ver uma lista dos mercados em que a Microsoft Store para Empresas e a Microsoft Store para Educação estão disponíveis, confira [Visão geral da Microsoft Store para Empresas e da Microsoft Store para Educação](https://docs.microsoft.com/windows/manage/windows-store-for-business-overview#supported-markets).
 
 Caso seu país ou região não esteja listado abaixo, seus aplicativos pagos não serão oferecidos na Microsoft Store para Empresas e na Microsoft Store para Educação. Se esse for o caso, as seleções de licenciamento organizacionais feitas para seus aplicativos pagos poderão ser aplicadas futuramente, pois poderemos adicionar suporte para envios de outros mercados de conta de desenvolvedor no futuro.
 

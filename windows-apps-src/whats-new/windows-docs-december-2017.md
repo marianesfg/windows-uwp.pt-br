@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a79edb39cc4bfa5794d79d68f4fb8d5b0e976105
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c715a48e0f9d6dea5939e6363441b0300544c252
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63806064"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321912"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novidades dos Documentos de Desenvolvedor do Windows em dezembro de 2017
 
@@ -44,7 +44,7 @@ Em dispositivos com suporte para interações por toque, adicione a funcionalida
 
 ### <a name="microsoft-collaborate"></a>Microsoft Collaborate
 
-O portal Microsoft Collaborate fornece ferramentas e serviços para simplificar a colaboração de engenharia dentro do ecossistema da Microsoft, habilitando o compartilhamento de itens de trabalho do sistema de engenharia (bugs, solicitações de recursos etc.) e a distribuição de conteúdo (builds, documentos, especificações). [Saiba mais](https://docs.microsoft.com/en-us/collaborate).
+O portal Microsoft Collaborate fornece ferramentas e serviços para simplificar a colaboração de engenharia dentro do ecossistema da Microsoft, habilitando o compartilhamento de itens de trabalho do sistema de engenharia (bugs, solicitações de recursos etc.) e a distribuição de conteúdo (builds, documentos, especificações). [Saiba mais](https://docs.microsoft.com/collaborate/).
 
 ![Microsoft Collaborate no Partner Center](images/microsoft_collaborate_screenshot.PNG)
 
@@ -52,7 +52,7 @@ O portal Microsoft Collaborate fornece ferramentas e serviços para simplificar 
 
 A versão 15.5 do Visual Studio 2017 atualizou o modelo **Projeto de empacotamento de aplicativos do Windows** para que seja muito mais fácil incluir um projeto UWP. Você não precisará mais usar um projeto de empacotamento baseado em JavaScript e depois ajustar manualmente o manifesto do pacote.  
 
-Consulte [Empacotar um aplicativo usando o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) para saber como usar esse novo modelo para empacotar o aplicativo da área de trabalho.
+Consulte [Empacotar um aplicativo usando o Visual Studio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) para saber como usar esse novo modelo para empacotar o aplicativo da área de trabalho.
 
 Consulte [Estender seu aplicativo da área de trabalho com componentes UWP modernos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) para saber como adicionar um projeto UWP ao pacote.
 

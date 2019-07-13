@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro aplicativo, olá mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a7f0302dfdc9f9fa980f0fe93a3371328f9e5c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 65dfc7b5f9a870f3ccdd5c0c046b996a01c06a00
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367431"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321213"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um aplicativo "Hello, world" (XAML)
 
@@ -40,7 +40,7 @@ Aqui, você aprenderá a:
 
 
 
-## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: Crie um novo projeto no Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: Criar um novo projeto no Visual Studio.
 
 1.  Inicie o Visual Studio.
 
@@ -57,7 +57,7 @@ Aqui, você aprenderá a:
     ![A janela Novo projeto](images/win10-cs-01.png)
 
 > [!NOTE]
-> Se esta for a primeira vez que usa o Visual Studio, talvez veja uma caixa de diálogo Configurações solicitando a habilitação do **Modo de desenvolvedor**. O modo de desenvolvedor é uma configuração especial que habilita certos recursos, como a permissão para executar aplicativos diretamente, em vez de apenas na Store. Para saber mais, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
+> Se esta for a primeira vez que usa o Visual Studio, talvez veja uma caixa de diálogo Configurações solicitando a habilitação do **Modo de desenvolvedor**. O Modo de desenvolvedor é uma configuração especial que habilita determinados recursos, como a permissão para executar aplicativos diretamente, em vez de apenas na Store. Para saber mais, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
 
  ![Ativar a caixa de diálogo Modo de desenvolvedor](images/win10-cs-00.png)
 
@@ -240,8 +240,8 @@ Para saber como usar XAML para definir os controles usados por seu aplicativo, e
 ## <a name="see-also"></a>Consulte também
 
 * [Seu primeiro aplicativo](your-first-app.md)
-* [Publicar seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
-* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Publicando seu aplicativo UWP](https://docs.microsoft.com/windows/uwp/publish/).
+* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://docs.microsoft.com/windows/uwp/develop/)
 * [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
 * [O que é um aplicativo Universal do Windows?](universal-application-platform-guide.md)
 * [Inscreva-se em uma conta do Windows](sign-up.md)

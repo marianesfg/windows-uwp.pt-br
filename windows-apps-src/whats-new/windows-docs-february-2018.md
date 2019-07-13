@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 421fb7c973c1aaa4e9e1924548d7f11439fd5350
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e02c253e9fe2e3bd25485c8af0429b19a65886cf
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780305"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320398"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novidades dos documentos de desenvolvedor Windows em fevereiro de 2018
 
@@ -73,4 +73,4 @@ Os inicializadores 3D fornecem um modo exclusivo para que os usuários façam um
 
 ### <a name="motion-controller-tracking"></a>Acompanhamento do controlador de movimentos
 
-Os controladores de movimento representam as mãos de um usuário no Windows Mixed Reality. [Assista ao vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para saber como os controladores de movimentos funcionam quando estão dentro e fora do campo de visão do headset do Mixed Reality e [leia mais sobre como o acompanhamento do controlador aqui.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+Os controladores de movimento representam as mãos de um usuário no Windows Mixed Reality. [Assista ao vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para saber como os controladores de movimentos funcionam quando estão dentro e fora do campo de visão do headset do Mixed Reality e [leia mais sobre como o acompanhamento do controlador aqui.](https://docs.microsoft.com/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)

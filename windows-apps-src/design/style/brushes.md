@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e5f8dfc780b50e70f92fc388a04258ce7be11a4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 84f1bca419423ce6dcda4636acc9d624a0efadc1
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366846"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317747"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>Usar pincéis para pintar tela de fundo, primeiro plano e contorno
 
@@ -189,7 +189,7 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 Para [**WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush) e [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush), use o construtor padrão e, depois, chame outras APIs antes de tentar usar esse pincel para uma propriedade da IU.
 
--   [**ImageSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesourceproperty) requer uma [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) ao definir [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) usando código. Se a sua origem for um fluxo, use o método [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar o valor. Se sua origem for um URI que inclua conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) que inclui um URI. Você também pode considerar a manipulação do evento [**ImageOpened**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, onde você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível.
+-   [**ImageSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesourceproperty) requer uma [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) ao definir [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) usando código. Se a sua origem for um fluxo, use o método [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar o valor. Se sua origem for um URI que inclua conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que inclui um URI. Você também pode considerar a manipulação do evento [**ImageOpened**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, onde você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível.
 -   Para [**WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush), talvez seja necessário chamar [**Redraw**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webviewbrush.redraw) se você tiver redefinido recentemente a propriedade [**SourceName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webviewbrush.sourcename) ou se o conteúdo de [**WebView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) também estiver sendo alterado com código.
 
 Para obter exemplos de código, confira as páginas de referência de [**WebViewBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebViewBrush), [**ImageBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush) e [**XamlCompositionBrushBase**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 61fa4f8afa0404591831be4136c16672503274f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 59678dc5eca7dec0857cadd9249dd19e25b3430b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362781"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319043"
 ---
 # <a name="images-and-image-brushes"></a>Imagens e pincéis de imagem
 
@@ -35,7 +35,7 @@ Use um **ImageBrush** para aplicar uma imagem a outro objeto. Os usos de um Imag
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Image">abri-lo e ver o Image em ação</a>.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
     </ul>
 </td>
@@ -149,13 +149,13 @@ A classe [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml
 
 Você deve criar origens de imagens em vários tamanhos recomendados para garantir que seu aplicativo tenha uma ótima aparência quando o Windows o dimensionar. Ao especificar **Source** para um **Image**, você pode usar uma convenção de nomenclatura que referencie automaticamente o recurso correto da escala atual. Para saber mais sobre a convenção de nomenclatura, confira [Início rápido: usando recursos de arquivo ou imagem](https://docs.microsoft.com/previous-versions/windows/apps/hh965325(v=win.10)).
 
-Para obter mais informações sobre como desenvolver para dimensionamento, consulte [Diretrizes da experiência do usuário para layout e dimensionamento](https://developer.microsoft.com/windows/design).
+Para obter mais informações sobre como desenvolver para dimensionamento, consulte [Diretrizes da experiência do usuário para layout e dimensionamento](https://developer.microsoft.com/windows/apps/design).
 
 ### <a name="image-and-imagebrush-in-code"></a>Image e ImageBrush em código
 
 É comum especificar os elementos Image e ImageBrush usando XAML em vez de código. Isso ocorre porque esses elementos costumam ser a saída das ferramentas de design como parte de uma definição da interface do usuário do XAML.
 
-Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) ou [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). As propriedades da origem exigem um [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para iniciar o valor. Se sua origem for um URI que inclui conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.) que usa um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, em que você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](https://go.microsoft.com/fwlink/p/?linkid=238575).
+Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) ou [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). As propriedades da origem exigem um [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para iniciar o valor. Se sua origem for um URI que inclui conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que usa um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, em que você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](https://go.microsoft.com/fwlink/p/?linkid=238575).
 
 > [!NOTE]
 > Se definir as imagens usando código, use a manipulação automática para acessar recursos não qualificados com os qualificadores atuais de escala e cultura ou use [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) e [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap) com qualificadores de escala e cultura para obter esses recursos diretamente. Para saber mais, veja [Sistema de gerenciamento de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)).

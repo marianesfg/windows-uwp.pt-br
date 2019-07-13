@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22a3a9614a4488791a36f81a3d4dedac572111b4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4030796e942c76ccf32e04dbf951cac68718a6a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780254"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320392"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades nos documentos de desenvolvedor Windows em julho de 2018
 
@@ -22,7 +22,7 @@ A Documentação do Desenvolvedor Windows recebe atualizações constantes com i
 
 ### <a name="progressive-web-apps-on-windows"></a>Aplicativos Web Progressivos no Windows
 
-Os [PWAs (Aplicativos Web Progressivos)](https://developer.microsoft.com/windows/pwa) são simplesmente aplicativos Web [aprimorados progressivamente](https://wikipedia.org/wiki/Progressive_enhancement) com recursos semelhantes ao aplicativo nativo no suporte a plataformas e mecanismos de navegador, como instalação com inicialização na tela inicial, suporte offline e notificações por push. No Windows 10 com o mecanismo Microsoft Edge (EdgeHTML), os PWAs aproveitam a vantagem adicional de execução [independentemente da janela do navegador como aplicativos UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+Os [PWAs (Aplicativos Web Progressivos)](https://developer.microsoft.com/windows/pwa) são simplesmente aplicativos Web [aprimorados progressivamente](https://www.wikipedia.org/wiki/Progressive_enhancement) com recursos semelhantes ao aplicativo nativo no suporte a plataformas e mecanismos de navegador, como instalação com inicialização na tela inicial, suporte offline e notificações por push. No Windows 10 com o mecanismo Microsoft Edge (EdgeHTML), os PWAs aproveitam a vantagem adicional de execução [independentemente da janela do navegador como aplicativos UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Uma imagem de PWAs em ação](images/progressive-web-apps.jpg)
 
@@ -48,11 +48,9 @@ Os kits de ferramentas do Adobe Illustrator e do Adobe XD foram atualizados com 
 
 ### <a name="webvr"></a>WebVR
 
-Adicionamos vários tópicos novos à [documentação do WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
-):
+Adicionamos vários tópicos novos à [documentação do WebVR](https://docs.microsoft.com/microsoft-edge/webvr/):
 
-* [O que é o WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) Explica o que é o WebVR, por que você deve usá-lo e como começar o desenvolvimento nele.
+* [O que é o WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) Explica o que é o WebVR, por que você deve usá-lo e como começar o desenvolvimento nele.
 
 * [WebVR nos Aplicativos Web Progressivos](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): Saiba como adicionar o WebVR a um PWA (Aplicativo Web Progressivo).
 

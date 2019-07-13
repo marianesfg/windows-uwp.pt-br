@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar seu dispositivo para desenvolvimento
 description: Configure seu dispositivo Windows 10 para desenvolvimento e depuração.
 keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de desenvolvedor, habilitar dispositivo
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9c1979f8e8232ee3bfd2e2961307608bf8da7836
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367027"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714142"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -56,7 +56,7 @@ Por padrão, você só pode instalar aplicativos UWP (Plataforma Universal do Wi
 
 ### <a name="sideload-apps"></a>Fazer o sideload de aplicativos
 
-A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store, ou por alguém que precisa executar aplicativos de outras fontes, que não a Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introdução à implantação de aplicativo no Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store, ou por alguém que precisa executar aplicativos de outras fontes, que não a Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introdução à implantação de aplicativo no Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
 Informações específicas à família de dispositivos
 
@@ -94,7 +94,7 @@ Para saber mais sobre o Portal de Dispositivos, consulte [Visão geral do Portal
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
 - [Portal de Dispositivos para Desktop](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de Dispositivos para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [Portal de Dispositivos para HoloLens](https://developer.microsoft.com/mixed-reality)
 - [Portal de Dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal de Dispositivos para celulares](../debug-test-perf/device-portal-mobile.md)
 - [Portal de Dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
@@ -238,8 +238,8 @@ Erro : DEP0700 : Falha no registro do aplicativo.
 ## <a name="see-also"></a>Consulte também
 
 * [Seu primeiro aplicativo](your-first-app.md)
-* [Publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
-* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Publicando seu aplicativo UWP](https://docs.microsoft.com/windows/uwp/publish/).
+* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://docs.microsoft.com/windows/uwp/develop/)
 * [Amostras de código para desenvolvedores da UWP](https://developer.microsoft.com/windows/samples)
 * [O que é um aplicativo UWP?](universal-application-platform-guide.md)
 * [Criar uma conta do Windows](sign-up.md)

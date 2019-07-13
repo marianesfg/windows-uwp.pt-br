@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 54da5ea68dad0bbd2c7f00ae5fc4128f14d1ce43
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0c980acc3b9887dac68712bd65de96e8f3a327a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362878"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319058"
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
@@ -124,7 +124,7 @@ O .NET também dá suporte a um tipo chamado [DateTime](https://docs.microsoft.c
 > **Observação**&nbsp;&nbsp;propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão da [extensão de marcação \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

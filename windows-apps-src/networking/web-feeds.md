@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bc422f57cdc268ea517aff729a9c3e57c80acf69
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372781"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320618"
 ---
 # <a name="rssatom-feeds"></a>Feeds RSS/Atom
 
@@ -60,7 +60,7 @@ Para garantir que o aplicativo UWP esteja pronto para a rede, defina alguns recu
 
 Agora iremos revisar alguns códigos que demonstram como recuperar um feed e, depois, exibir cada item individual que o feed contém. Antes de configurar e enviar a solicitação, iremos definir algumas variáveis que usaremos durante a operação, e inicializar uma instância de [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient), que define os métodos e propriedades que usaremos para recuperar e exibir o feed.
 
-O construtor [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) lança uma exceção se o *uriString* passado para o construtor não for um URI válido. Portanto, validamos o *uriString* usando um bloco try/catch.
+O construtor [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) lança uma exceção se o *uriString* passado para o construtor não for um URI válido. Portanto, validamos o *uriString* usando um bloco try/catch.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,13 +93,13 @@ try {
 }
 ```
 
-Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo. O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar o feed.
+Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo. O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar o feed.
 
 Pressupondo que o conteúdo de feed desejado foi retornado, o exemplo de código itera cada item do feed, chamando **displayCurrentItem** (que definiremos em seguida), para exibir itens e seu conteúdo como uma lista na IU.
 
 É necessário escrever um código para tratar exceções quando você chama a maioria dos métodos de rede assíncronos. Seu manipulador de exceção recupera informações mais detalhadas sobre a causa da exceção para entender melhor a falha e tomar as medidas adequadas.
 
-O método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) não apontar para um AtomPub ou RSS feed válido. O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro.
+O método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) não apontar para um AtomPub ou RSS feed válido. O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
