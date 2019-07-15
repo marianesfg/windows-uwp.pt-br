@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b3cb74e3b3613cf562af7b5290697f111722226
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: a55f543aae5efae101590bd892278a30b3ca9907
+ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800543"
+ms.lasthandoff: 07/14/2019
+ms.locfileid: "67870319"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -64,6 +64,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
 | [Referências fortes e fracas em C++/WinRT](weak-references.md) | O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas. |
 | [Objetos ágeis](agile-objects.md) | Um objeto ágil é aquele que pode ser acessado de qualquer thread. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los. |
+| [Um exemplo simples de biblioteca de interface do usuário do Windows em C++/WinRT](simple-winui-example.md) | Este tópico orienta você no processo de adicionar suporte simples ao WinUI em um projeto C++/WinRT. |
 
 ### <a name="topics-about-the-c-language"></a>Tópicos sobre a linguagem C++
 
