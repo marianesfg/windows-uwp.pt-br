@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: b6caf2de67b72c01391d47037150d76500a1cb42
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 23cd899a196fbe3d28b7156890d65e90ac88cdad
+ms.sourcegitcommit: 9f097438937539f94b6a14a09ee65d30f71da9c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223962"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo
 
@@ -301,23 +301,21 @@ Basta criar seus controles/bibliotecas de usuário do UWP e [armazenar as cadeia
 
 Para usar recursos em aplicativos não empacotado, você deve fazer algumas coisas:
 
-1. Para dar suporte a cenários não empacotado, use [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) em vez de [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) pois não há nenhum *exibição atual* em cenários não empacotado. A seguinte exceção ocorre se você chamar [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) em cenários não empacotado: *Contextos de recurso não podem ser criados em threads que não têm um CoreWindow.*
+1. Use [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) em vez de [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) ao resolver recursos do código, pois não há nenhum *exibição atual* em cenários não empacotado. A seguinte exceção ocorre se você chamar [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) em cenários não empacotado: *Contextos de recurso não podem ser criados em threads que não têm um CoreWindow.*
 1. Use [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) para gerar manualmente arquivos de resources.pri do seu aplicativo.
     - Execute `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /dq <DEFAULTLANGUAGEQUALIFIER> /of resources.pri`
-    - O <PRICONFIG> deve omitir o "<packaging>", de modo que todos os recursos são agrupados em um arquivo único resources.pri de seção. Se usando o padrão [arquivo de configuração MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) criados pelo [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command), você precisa excluir o "<packaging>" seção manualmente depois que ele é criado.
-    - O <PRICONFIG> deve conter todos os indexadores relevantes necessários para mesclar todos os recursos em seu projeto em um arquivo único resources.pri. O padrão [arquivo de configuração MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) criados pelo [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) inclui todos os indexadores.
+    - O &lt;PRICONFIG&gt; deve omitir o "&lt;empacotamento&gt;", de modo que todos os recursos são agrupados em um arquivo único resources.pri de seção. Se usando o padrão [arquivo de configuração MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) criados pelo [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command), você precisa excluir o "&lt;empacotamento&gt;" seção manualmente depois que ele é criado.
+    - O &lt;PRICONFIG&gt; deve conter todos os indexadores relevantes necessários para mesclar todos os recursos em seu projeto em um arquivo único resources.pri. O padrão [arquivo de configuração MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) criados pelo [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) inclui todos os indexadores.
     - Se você não usar a configuração padrão, verifique se o indexador PRI está habilitado (examine a configuração padrão para saber como fazer isso) para mesclar PRIs encontrados de referências do projeto UWP, referências de NuGet e assim por diante, que estão localizados na raiz do projeto.
         > [!NOTE]
-        > Omitindo `/IndexName`, e pelo projeto não tem um manifesto do aplicativo, o namespace IndexName/raiz do arquivo PRI é definido automaticamente como *aplicativo*, que entende que o tempo de execução para aplicativos empacotados não (Isso remove o anterior dependência em ID do pacote). No entanto, você pode especificar o namespace raiz explicitamente da seguinte maneira:
-        > - ResourceLoader.GetForViewIndependentUse("ControlName\Resources").GetStringForUri(new Uri("ms-resource:///ManagedWinRT/Resources/Header"))
-        > - ResourceLoader.GetForViewIndependentUse("ControlName\Resources").GetStringForUri(new Uri("ms-resource://Application/ManagedWinRT/Resources/Header"))
+        > Omitindo `/IndexName`, e pelo projeto não tem um manifesto do aplicativo, o namespace IndexName/raiz do arquivo PRI é definido automaticamente como *aplicativo*, que entende que o tempo de execução para aplicativos empacotados não (Isso remove o anterior dependência em ID do pacote). Ao especificar o recurso de URIs, ms-resource: / / / referências que omitir o namespace raiz inferir *Application* como o namespace raiz para os aplicativos empacotados não (ou você pode especificar *aplicativo* explicitamente como no ms-resource://Application/).
 1. Copie o arquivo PRI para o diretório de saída de compilação do .exe
 1. Execute o .exe 
     > [!NOTE]
     > O sistema de gerenciamento de recursos usa o idioma de exibição do sistema em vez da lista de idioma preferencial do usuário durante a resolução de recursos com base no idioma em aplicativos não empacotado. A lista de idioma preferencial do usuário é usada apenas para aplicativos UWP.
 
 > [!Important]
-> Você deve recriar manualmente arquivos PRI se o conteúdo do arquivo de recurso é alterado, como um script de pós-compilação que lida com o [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) de comando e copia a saída de resources.pri .exe no diretório.
+> Você deve recriar manualmente os arquivos PRI sempre que os recursos são modificados. É recomendável usar um script de pós-compilação que lida com o [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) de comando e copia a saída de resources.pri .exe no diretório.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [ApplicationModel.Resources.ResourceLoader](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.ResourceLoader)
