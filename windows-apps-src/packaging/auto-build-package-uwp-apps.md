@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 61525e2a4a088e37184bb93526722e0bf23fbd56
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5837674f2cb20710a59eeac0af59498bf28b197e
+ms.sourcegitcommit: a86d0bd1c2f67e5986cac88a98ad4f9e667cfec5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319817"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229393"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -64,11 +64,21 @@ steps:
 
 O modelo padrão tenta assinar o pacote com o certificado especificado no arquivo. csproj. Se você deseja assinar seu pacote durante a compilação, você deve ter acesso à chave privada. Caso contrário, você pode desabilitar a assinatura, adicionando o parâmetro `/p:AppxPackageSigningEnabled=false` para o `msbuildArgs` seção no arquivo YAML.
 
-## <a name="add-your-project-certificate-to-a-repository"></a>Adicionar seu certificado de projeto para um repositório
+## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Adicionar seu certificado de projeto para a biblioteca de arquivos seguros
 
-Pipelines funciona com repositórios do TFVC e Git de repositórios do Azure. Se você usar um repositório de Git, adicione o arquivo de certificado do seu projeto ao repositório para que o agente de compilação possa assinar o pacote do aplicativo. Se você não fizer isso, o repositório de Git ignorará o arquivo de certificado. Para adicionar o arquivo de certificado em seu repositório, clique no arquivo de certificado no **Gerenciador de soluções**e, em seguida, no menu de atalho, escolha o **Adicionar arquivo ignorado ao controle do código-fonte** comando.
+Você deve evitar o envio de certificados ao seu repositório, se possível, e ignora git-los por padrão. Para gerenciar o tratamento seguro de arquivos confidenciais, como certificados, DevOps do Azure dá suporte a [proteger arquivos](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops).
 
-![como incluir um certificado](images/building-screen1.png)
+Para carregar um certificado para a compilação automatizada:
+
+1. Em Pipelines do Azure, expanda **Pipelines** no painel de navegação e clique **biblioteca**.
+2. Clique o **proteger arquivos** guia e, em seguida, clique em **+ arquivo seguro**.
+
+    ![como carregar um arquivo seguro](images/secure-file1.png)
+
+3. Navegue até o arquivo de certificado e clique em **Okey**.
+4. Depois de carregar o certificado, selecione-o para exibir suas propriedades. Sob **permissões de Pipeline**, habilite a **autorizar para uso em todos os pipelines** ativar/desativar.
+
+    ![como carregar um arquivo seguro](images/secure-file2.png)
 
 ## <a name="configure-the-build-solution-build-task"></a>Configurar a tarefa de compilação Compilar solução
 
@@ -82,7 +92,12 @@ Essa tarefa usa argumentos de MSBuild. Você precisará especificar o valor dess
 | AppxBundle | Sempre | Cria um.msixbundle/.appxbundle com os arquivos de.msix/.appx para a plataforma especificada. |
 | UapAppxPackageBuildMode | StoreUpload | Gera o arquivo.msixupload/.appxupload e o **Test** pasta para o sideload. |
 | UapAppxPackageBuildMode | CI | Gera o arquivo.msixupload/.appxupload apenas. |
-| UapAppxPackageBuildMode | SideloadOnly | Gera o **Test** pasta para o sideload apenas |
+| UapAppxPackageBuildMode | SideloadOnly | Gera o **Test** pasta para o sideload apenas. |
+| AppxPackageSigningEnabled | true | Habilita a assinatura do pacote. |
+| PackageCertificateThumbprint | Impressão digital do certificado | Esse valor **deve** corresponda a impressão digital no certificado de assinatura, ou ser uma cadeia de caracteres vazia. |
+| Valor PackageCertificateKeyFile | Path | O caminho para o certificado a ser usado. Isso é recuperado dos metadados de arquivo seguro. |
+
+### <a name="configure-the-build"></a>Configure a compilação
 
 Se você quiser criar uma solução usando a linha de comando ou por meio de qualquer outro sistema de compilação, execute o MSBuild com estes argumentos.
 
@@ -92,6 +107,41 @@ Se você quiser criar uma solução usando a linha de comando ou por meio de qua
 /p:AppxBundlePlatforms="$(Build.BuildPlatform)"
 /p:AppxBundle=Always
 ```
+
+### <a name="configure-package-signing"></a>Configurar a assinatura de pacote
+
+Para assinar o pacote MSIX (ou APPX) pipeline precisa recuperar o certificado de autenticação. Para fazer isso, adicione uma tarefa de DownloadSecureFile antes da tarefa VSBuild.
+Isso lhe dará acesso para o certificado de autenticação por meio de ```signingCert```.
+
+```yml
+- task: DownloadSecureFile@1
+  name: signingCert
+  displayName: 'Download CA certificate'
+  inputs:
+    secureFile: '[Your_Pfx].pfx'
+```
+
+Em seguida, atualize a tarefa VSBuild para referenciar o certificado de autenticação:
+
+```yml
+- task: VSBuild@1
+  inputs:
+    platform: 'x86'
+    solution: '$(solution)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" 
+                  /p:AppxPackageDir="$(appxPackageDir)" 
+                  /p:AppxBundle=Always 
+                  /p:UapAppxPackageBuildMode=StoreUpload 
+                  /p:AppxPackageSigningEnabled=true
+                  /p:PackageCertificateThumbprint="" 
+                  /p:PackageCertificateKeyFile="$(signingCert.secureFilePath)"'
+```
+
+> [!NOTE]
+> O argumento de PackageCertificateThumbprint intencionalmente é definido como uma cadeia de caracteres vazia como uma precaução. Se a impressão digital é definida no projeto, mas não coincide com o certificado de autenticação, a compilação falhará com o erro: `Certificate does not match supplied signing thumbprint`.
+
+### <a name="review-parameters"></a>Parâmetros de revisão
 
 Os parâmetros definidos com o `$()` sintaxe são variáveis definidas na definição de compilação, e será compilado de alteração em outros sistemas.
 
@@ -131,7 +181,7 @@ Se você adicionar mais de um projeto UWP à sua solução e, em seguida, tente 
 
 Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote. Para resolver esse problema, abra cada arquivo de projeto e adicione as seguintes propriedades no final da primeira `<PropertyGroup>` elemento.
 
-|**Project**|**Propriedades**|
+|**Projeto**|**Propriedades**|
 |-------|----------|
 |Aplicativo|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
