@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 466747cbbfe6f599f42a39f0d2766f78775ec6c8
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f57cc53eaea51c56e665660cfaf6ecdf6456b96b
+ms.sourcegitcommit: b0aea3c2061f7b9a87e7396e8e5f7735748718ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820594"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68239503"
 ---
 # <a name="globalization-and-localization"></a>Globalização e localização
 
@@ -69,4 +69,5 @@ A maioria das equipes de localização usa ferramentas especiais para ajudar no 
 | [Projetar seu aplicativo para texto bidirecional](design-for-bidi-text.md) | Projete seu app de modo a fornecer suporte bidirecional a texto (BiDi) para que você possa combinar o script de sistemas de escrita da esquerda para a direita e da direita para a esquerda. |
 | [Use o Multilingual App Toolkit 4.0](use-mat.md) | O Multilingual App Toolkit (MAT) 4.0 integra-se com o Microsoft Visual Studio 2017 e posterior para fornecer aplicativos UWP com o suporte a tradução, gerenciamento de arquivos de tradução e ferramentas do editor. |
 | [Perguntas frequentes sobre o aplicativo Toolkit 4.0 multilíngues e solução de problemas](mat-faq-troubleshooting.md) | Este tópico fornece respostas a perguntas frequentes e problemas relacionados ao Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0. |
+| [Use a página de código UTF-8](use-utf8-code-page.md) | UTF-8 é a página de código universal para internacionalização. |
 | [Preparar seu aplicativo para que a alteração era japonesa](japanese-era-change.md) | Saiba mais sobre a mudança de era japonesa em maio de 2019 e como preparar seu aplicativo. |
