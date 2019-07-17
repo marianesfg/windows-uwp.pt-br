@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: bd6a17b5e1684fbee21965158295dba123737bd6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b3a18d9ee63a2ecded07f8b779195d5274b6210
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141827"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
@@ -33,7 +33,7 @@ Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era 
 
 O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow), dentro do contêiner de aplicativo.
 
-> **Observação**    Windows fornece ponteiros gerenciados a recursos como o objeto de aplicativo de origem e o [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Consulte [**operador Handle to Object (^)** ]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Observação**    Windows fornece ponteiros gerenciados a recursos como o objeto de aplicativo de origem e o [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Ver [ **operador Handle to Object (^)** ](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx).
 
  
 

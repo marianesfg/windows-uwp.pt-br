@@ -7,12 +7,12 @@ ms.date: 03/18/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 996bbaf4dd05ce5b24e536459c6d7d009a53fa19
-ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
+ms.openlocfilehash: 2a4de1a43e60250e7efc2faf70f3c49e8253beb3
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141794"
 ---
 # <a name="choose-your-app-platform"></a>Escolha sua plataforma de aplicativo
 
@@ -83,7 +83,7 @@ Aqui estão alguns destaques da API do Win32 e C++ oferece para que você possa 
 -   Programação genérica eficiente e fortemente tipada usando modelos.
 -   Seguros e eficientes de contêineres e algoritmos.
 -   DirectX, em particular Direct3D e DirectCompute (Observe que a UWP também oferece interoperabilidade DirectX).
--   C++ AMP.
+-   C++AMP.
 
 Para obter mais informações, consulte [Introdução aos aplicativos da área de trabalho do Windows que usam a API do Win32](/windows/desktop/desktop-programming) e [tecnologias de aplicativo da área de trabalho](/windows/desktop/desktop-app-technologies).
 
