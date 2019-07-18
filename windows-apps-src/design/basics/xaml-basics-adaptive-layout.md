@@ -5,12 +5,12 @@ keywords: XAML, UWP, Introdução
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 67d5861e65a85a07cdda486ddb9c9634c388e819
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63798611"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820462"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Criar layouts adaptáveis
 
@@ -28,7 +28,7 @@ A **página de detalhes**, que exibe uma única foto após ela ter sido selecion
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Visual Studio 2017: [Baixar o Visual Studio 2017 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* Visual Studio 2019: [Baixar o Visual Studio 2019 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * SDK do Windows 10 (10.0.15063.468 ou posterior):  [Baixar o SDK mais recente do Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Windows Mobile Emulator: [Baixar o Windows 10 Mobile Emulator (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
@@ -321,8 +321,8 @@ Agora que você concluiu este laboratório, tem conhecimento suficiente sobre la
 
 Se você não conseguir mais avançar, busque mais orientações nestas seções de [Definir layouts de página com o XAML](../layout/layouts-with-xaml.md).
 
-+ [Estados visuais e gatilhos de estado](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [Layouts personalizados](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
++ [Estados visuais e gatilhos de estado](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
++ [Layouts personalizados](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
 
 Como alternativa, se você quiser saber mais sobre como o aplicativo inicial de edição de fotos foi criado, confira estes tutoriais sobre [interfaces do usuário](../basics/xaml-basics-ui.md) XAML e [associação de dados](../../data-binding/xaml-basics-data-binding.md).
 

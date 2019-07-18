@@ -5,16 +5,18 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: a1745f9ad98ed8dac2e54e17d18467981eafdcec
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d1def649772f94a03d5a1f352dcec1d32c7b0868
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360232"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800571"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidade entre C++/WinRT e ABI
 
 Este tópico mostra como realizar a conversão entre a interface binária do aplicativo (ABI) do SDK e objetos do [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Utilize essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou à medida que migra gradativamente o código da ABI para o C++/WinRT.
+
+De modo geral, C++/WinRT expõe tipos de ABI como **void\*** , de modo que você não precisa incluir os arquivos de cabeçalho da plataforma.
 
 ## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>O que é a ABI do Windows Runtime e o que são tipos da ABI?
 Uma classe do Windows Runtime (classe de tempo de execução) é uma abstração. Essa abstração define uma interface binária (a interface binária do aplicativo, ou ABI), que permite a interação entre várias linguagens de programação com um objeto. Independentemente da linguagem de programação, a interação do código de cliente com um objeto do Windows Runtime acontece no nível mais baixo, com construções de linguagem do cliente convertidas em chamadas na ABI do objeto.
@@ -141,6 +143,8 @@ Apresentamos a seguir outras técnicas de conversão de nível inferior similare
 
 Nas conversões de nível inferior, que apenas copiam endereços, use as funções auxiliares [**winrt::get_abi**](/uwp/cpp-ref-for-winrt/get-abi), [**winrt::detach_abi**](/uwp/cpp-ref-for-winrt/detach-abi) e [**winrt::attach_abi**](/uwp/cpp-ref-for-winrt/attach-abi).
 
+`WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
+
 ```cppwinrt
     // The code in main() already shown above remains here.
 
@@ -242,6 +246,111 @@ int main()
     WINRT_ASSERT(uri == uri_from_abi);
 }
 ```
+
+## <a name="interoperating-with-abi-com-interface-pointers"></a>Interoperação com ponteiros de interface COM da ABI
+
+O modelo de função auxiliar a seguir ilustra como copiar um ponteiro de interface COM da ABI de um determinado tipo no tipo de ponteiro inteligente equivalente projetado em C++/WinRT.
+
+```cppwinrt
+template<typename To, typename From>
+To to_winrt(From* ptr)
+{
+    To result{ nullptr };
+    winrt::check_hresult(ptr->QueryInterface(winrt::guid_of<To>(), winrt::put_abi(result)));
+    return result;
+}
+...
+ID2D1Factory1* com_ptr{ ... };
+auto cppwinrt_ptr {to_winrt<winrt::com_ptr<ID2D1Factory1>>(com_ptr)};
+```
+
+Esse próximo modelo de função auxiliar é equivalente, exceto pelo fato de copiar do tipo de ponteiro inteligente da [Biblioteca de Implementação do Windows (WIL)](https://github.com/Microsoft/wil).
+
+```cppwinrt
+template<typename To, typename From, typename ErrorPolicy>
+To to_winrt(wil::com_ptr_t<From, ErrorPolicy> const& ptr)
+{
+    To result{ nullptr };
+    if constexpr (std::is_same_v<typename ErrorPolicy::result, void>)
+    {
+        ptr.query_to(winrt::guid_of<To>(), winrt::put_abi(result));
+    }
+    else
+    {
+        winrt::check_result(ptr.query_to(winrt::guid_of<To>(), winrt::put_abi(result)));
+    }
+    return result;
+}
+```
+
+Confira também [Consumir componentes COM com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-com).
+
+### <a name="unsafe-interop-with-abi-com-interface-pointers"></a>Interoperação não segura com ponteiros de interface COM da ABI
+
+A tabela a seguir mostra (além de outras operações) conversões não seguras entre um ponteiro de interface COM da ABI de um determinado tipo no tipo de ponteiro inteligente equivalente projetado em C++/WinRT. Para o código na tabela, suponha essas declarações.
+
+```cppwinrt
+winrt::Sample s;
+ISample* p;
+
+void GetSample(_Out_ ISample** pp);
+```
+
+Além disso, suponha que **ISample** é a interface padrão para **Sample**.
+
+Você pode declarar isso em tempo de compilação com esse código.
+
+```cppwinrt
+static_assert(std::is_same_v<winrt::default_interface<winrt::Sample>, winrt::ISample>);
+```
+
+| Operação | Como fazer | Observações |
+|-|-|-|
+| Extrair **ISample\*** de **winrt::Sample** | `p = reinterpret_cast<ISample*>(get_abi(s));` | *s* ainda tem o objeto. |
+| Desanexar **ISample\*** de **winrt::Sample** | `p = reinterpret_cast<ISample*>(detach_abi(s));` | *s* não tem mais o objeto. |
+| Transferir **ISample\*** para um novo **winrt::Sample** | `winrt::Sample s{ p, winrt::take_ownership_from_abi };` | *s* assume a propriedade do objeto. |
+| Definir **ISample\*** em **winrt::Sample** | `*put_abi(s) = p;` | *s* assume a propriedade do objeto. Qualquer objeto anteriormente pertencente a *s* é vazado (será declarado na depuração). |
+| Receber **ISample\*** em **winrt::Sample** | `GetSample(reinterpret_cast<ISample**>(put_abi(s)));` | *s* assume a propriedade do objeto. Qualquer objeto anteriormente pertencente a *s* é vazado (será declarado na depuração). |
+| Substituir **ISample\*** em **winrt::Sample** | `attach_abi(s, p);` | *s* assume a propriedade do objeto. O objeto anteriormente pertencente a *s* é liberado. |
+| Copiar **ISample\*** para **winrt::Sample** | `copy_from_abi(s, p);` | *s* faz uma nova referência ao objeto. O objeto anteriormente pertencente a *s* é liberado. |
+| Copiar **winrt::Sample** para **ISample\*** | `copy_to_abi(s, reinterpret_cast<void*&>(p));` | *p* recebe uma cópia do objeto. Qualquer objeto anteriormente pertencente a *s* é vazado. |
+
+## <a name="interoperating-with-the-abis-guid-struct"></a>Interoperação com o struct de GUID da ABI
+
+[**GUID**](/previous-versions/aa373931(v%3Dvs.80)) agora é projetado como **winrt::guid**. Para as APIs que você implementa, você deve usar **winrt::guid** para parâmetros de GUID. Caso contrário, há conversões automáticas entre **winrt::guid** e **GUID**, desde que você inclua `unknwn.h` (incluído implicitamente por <windows.h> e por muitos outros arquivos de cabeçalho) antes de incluir qualquer cabeçalho C++/WinRT.
+
+Se não fizer isso, você poderá embutir `reinterpret_cast` entre eles. Para a tabela a seguir, suponha essas declarações.
+
+```cppwinrt
+winrt::guid winrtguid;
+GUID abiguid;
+```
+
+| Conversão | Com `#include <unknwn.h>` | Sem `#include <unknwn.h>` |
+|-|-|-|
+| De **winrt::guid** em **GUID** | `abiguid = winrtguid;` | `abiguid = reinterpret_cast<GUID&>(winrtguid);` |
+| De **GUID** em **winrt::guid** | `winrtguid = abiguid;` | `winrtguid = reinterpret_cast<winrt::guid&>(abiguid);` |
+
+## <a name="interoperating-with-the-abis-hstring"></a>Interoperação com a HSTRING da ABI
+
+A tabela a seguir mostra conversões entre **winrt::hstring** e [**HSTRING**](/windows/win32/winrt/hstring), bem como outras operações. Para o código na tabela, suponha essas declarações.
+
+```cppwinrt
+winrt::hstring s;
+HSTRING h;
+
+void GetString(_Out_ HSTRING* value);
+```
+
+| Operação | Como fazer | Observações |
+|-|-|-|
+| Extrair **HSTRING** de **hstring** | `h = static_cast<HSTRING>(get_abi(s));` | *s* ainda tem a cadeia de caracteres. |
+| Desanexar **HSTRING** de **hstring** | `h = reinterpret_cast<HSTRING>(detach_abi(s));` | *s* não tem mais a cadeia de caracteres. |
+| Definir **HSTRING** em **hstring** | `*put_abi(s) = h;` | *s* assume a propriedade da cadeia de caracteres. Qualquer cadeia de caracteres anteriormente pertencente a *s* é vazada (será declarada na depuração). |
+| Receber **HSTRING** em **hstring** | `GetString(reinterpret_cast<HSTRING*>(put_abi(s)));` | *s* assume a propriedade da cadeia de caracteres. Qualquer cadeia de caracteres anteriormente pertencente a *s* é vazada (será declarada na depuração). |
+| Substituir **HSTRING** em **hstring** | `attach_abi(s, h);` | *s* assume a propriedade da cadeia de caracteres. A cadeia de caracteres anteriormente pertencente a *s* é liberada. |
+| Copiar **HSTRING** para **hstring** | `copy_from_abi(s, h);` | *s* faz uma cópia particular da cadeia de caracteres. A cadeia de caracteres anteriormente pertencente a *s* é liberada. |
+| Copiar **hstring** para **HSTRING** | `copy_to_abi(s, reinterpret_cast<void*&>(h));` | *h* recebe uma cópia da cadeia de caracteres. Qualquer cadeia de caracteres anteriormente pertencente a *h* é vazada. |
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Função AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)

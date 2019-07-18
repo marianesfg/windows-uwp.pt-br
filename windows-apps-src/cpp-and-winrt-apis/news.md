@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, novidades, o que há, de novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 537150f6fc000794b11ef9236bfd88469d3f6b19
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721646"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800580"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -144,13 +144,13 @@ Devido ao leitor de metadados xlang, C++/WinRT agora gera todas as interfaces co
 
 #### <a name="component-optimizations"></a>Otimizações de componente
 
-Esta atualização adiciona suporte para várias otimizações de aceitação adicionais para C++/WinRT, descritas nas seções a seguir. Como essas otimizações são alterações significativas (e você talvez precise fazer pequenas alterações para dar suporte a elas), será preciso ativá-las explicitamente usando a ferramenta `cppwinrt.exe`, sinalizador `-opt`.
+Esta atualização adiciona suporte para várias otimizações de aceitação adicionais para C++/WinRT, descritas nas seções a seguir. Como essas otimizações são alterações significativas (e você talvez precise fazer pequenas alterações para dar suporte a elas), será preciso ativá-las explicitamente. No Visual Studio, defina a propriedade do projeto **Common Properties** > **C++/WinRT** > **Optimized** como *Yes*. Isso tem o efeito de adicionar `<CppWinRTOptimized>true</CppWinRTOptimized>` ao arquivo de projeto. E tem o mesmo efeito que adicionar o comutador `-opt[imize]` ao invocar `cppwinrt.exe` da linha de comando.
 
 Um novo projeto (de um modelo de projeto) usará `-opt` por padrão.
 
 ##### <a name="uniform-construction-and-direct-implementation-access"></a>Construção uniforme e acesso direto de implementação
 
-Essas duas otimizações permitem acesso direto do componente a seus próprios tipos de implementação, mesmo quando ele está usando somente tipos projetados. Não será necessário usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) nem [**get_self**](/uwp/cpp-ref-for-winrt/get-self) se você desejar simplesmente usar a superfície de API pública. Suas chamadas serão compiladas para chamadas diretas na implementação e elas poderão, inclusive, ser totalmente embutidas.
+Essas duas otimizações permitem acesso direto do componente a seus próprios tipos de implementação, mesmo quando ele está usando somente tipos projetados. Não será necessário usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) nem [**get_self**](/uwp/cpp-ref-for-winrt/get-self) se você desejar simplesmente usar a superfície de API pública. Suas chamadas serão compiladas para chamadas diretas na implementação e elas poderão, inclusive, ser totalmente embutidas. Para obter mais informações sobre a construção uniforme, consulte a pergunta frequente [Por que estou recebendo uma exceção de "classe não registrada"?](faq.md#why-am-i-getting-a-class-not-registered-exception).
 
 ##### <a name="type-erased-factories"></a>Fábricas de tipo apagado
 
@@ -198,9 +198,13 @@ Essa atualização também adiciona suporte para [**get_strong**](/uwp/cpp-ref-f
 
 #### <a name="support-for-deferred-destruction-and-safe-qi-during-destruction"></a>Suporte para destruição adiada e QI segura durante a destruição
 
-Um aplicativo XAML pode encontrar dificuldade devido à necessidade de executar uma QI ([**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))) em um destruidor para chamar uma implementação de limpeza acima ou abaixo na hierarquia. No entanto, essa chamada envolve uma QI após a contagem de referência do objeto já ter chegou a zero. Essa atualização adiciona suporte para ressalto da contagem de referência, garantindo que, após atingir zero, nunca mais possa ser reativado, ao mesmo tempo ainda permitindo QI para qualquer temporário necessário durante a destruição. Esse procedimento é inevitável em certos controles/aplicativos em XAML, e C++/WinRT agora é resiliente a ele.
+Não é incomum no destruidor de um objeto de classe de tempo de execução chamar um método que eleva temporariamente a contagem de referência. Quando a contagem de referência volta a ser zero, o objeto é destruído uma segunda vez. Em um aplicativo XAML, você pode precisar executar uma QI ([**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))) em um destruidor para chamar uma implementação de limpeza acima ou abaixo na hierarquia. Mas a contagem de referência do objeto já atingiu zero, de modo que essa QI também constitui um salto na contagem.
 
-A destruição pode ser adiada fornecendo uma função **final_release** estática e movendo a propriedade de **unique_ptr** para algum outro contexto.
+Essa atualização adiciona suporte para eliminar o salto da contagem de referência, garantindo que, após atingir zero, ele nunca mais possa ser reativado, enquanto ainda permite QI para qualquer temporário necessário durante a destruição. Esse procedimento é inevitável em certos controles/aplicativos em XAML, e C++/WinRT agora é resiliente a ele.
+
+Você pode adiar a destruição fornecendo uma função **final_release** estática em seu tipo de implementação. Esse último ponteiro restante para o objeto, na forma de um **std::unique_ptr**, é passado para seu **final_release**. Você pode, em seguida, optar por mover a propriedade desse ponteiro para algum outro contexto. É seguro executar QI com o ponteiro sem acionar uma destruição dupla. No entanto, a alteração líquida da contagem de referência deverá ser zero no ponto em que você destruir o objeto.
+
+O valor retornado por **final_release** pode ser `void`, um objeto de operação assíncrona, como [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) ou **winrt::fire_and_forget**.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -215,14 +219,16 @@ struct Sample : implements<Sample, IStringable>
         // Called when the unique_ptr below is reset.
     }
 
-    static void final_release(std::unique_ptr<Sample> ptr) noexcept
+    static void final_release(std::unique_ptr<Sample> self) noexcept
     {
-        // Move 'ptr' as needed to delay destruction.
+        // Move 'self' as needed to delay destruction.
     }
 };
 ```
 
-No exemplo a seguir, uma vez que **MainPage** é liberada (para a hora final), **final_release** é chamada. Essa função passa cinco aguardando (no pool de threads) e, em seguida, é retomada usando a página **Dispatcher** (o que exige que QI/AddRef/Release funcione). Então, limpa **unique_ptr**, fazendo com que o destruidor **MainPage** realmente seja chamado. Até aqui, **DataContext** é chamado, o que requer uma QI para **IFrameworkElement**. Obviamente, você não precisa implementar sua **final_release** como uma rotina combinada. Porém, isso de fato funciona e torna muito simples mover a destruição para um thread diferente.
+No exemplo a seguir, uma vez que **MainPage** é liberada (para a hora final), **final_release** é chamada. Essa função passa cinco aguardando (no pool de threads) e, em seguida, é retomada usando a página **Dispatcher** (o que exige que QI/AddRef/Release funcione). Em seguida, ela limpa um recurso nesse thread da interface do usuário. E, por fim, limpa **unique_ptr**, fazendo com que o destruidor de **MainPage** realmente seja chamado. Mesmo nesse destruidor, **DataContext** é chamado, o que requer uma QI para **IFrameworkElement**.
+
+Você não precisa implementar sua **final_release** como uma corrotina. No entanto, isso funciona e torna muito simples mover a destruição para um thread diferente, que é o que está acontecendo neste exemplo.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -236,13 +242,17 @@ struct MainPage : PageT<MainPage>
         DataContext(nullptr);
     }
 
-    static IAsyncAction final_release(std::unique_ptr<MainPage> ptr)
+    static IAsyncAction final_release(std::unique_ptr<MainPage> self)
     {
         co_await 5s;
 
-        co_await resume_foreground(ptr->Dispatcher());
+        co_await resume_foreground(self->Dispatcher());
+        co_await self->resource.CloseAsync();
 
-        ptr = nullptr;
+        // The object is destructed normally at the end of final_release,
+        // when the std::unique_ptr<MyClass> destructs. If you want to destruct
+        // the object earlier than that, then you can set *self* to `nullptr`.
+        self = nullptr;
     }
 };
 ```
@@ -279,10 +289,10 @@ A tabela a seguir contém as novidades e as alterações ao C++/WinRT no SDK do 
 
 Outras alterações.
 
-- **Alteração da falha**. [**WinRT::get_abi(WinRT::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) agora retorna `void*`, em vez de `HSTRING`. Você pode usar `static_cast<HSTRING>(get_abi(my_hstring));` para obter um HSTRING.
-- **Alteração da falha**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) agora retorna `void**`, em vez de `HSTRING*`. Você pode usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obter um HSTRING*.
+- **Alteração da falha**. [**WinRT::get_abi(WinRT::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) agora retorna `void*`, em vez de `HSTRING`. Você pode usar `static_cast<HSTRING>(get_abi(my_hstring));` para obter um HSTRING. Confira [Interoperação com a HSTRING de GUID da ABI](interop-winrt-abi.md#interoperating-with-the-abis-hstring).
+- **Alteração da falha**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) agora retorna `void**`, em vez de `HSTRING*`. Você pode usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obter um HSTRING*. Confira [Interoperação com a HSTRING de GUID da ABI](interop-winrt-abi.md#interoperating-with-the-abis-hstring).
 - **Alteração da falha**. HRESULT agora é projetada como **winrt::hresult**. Se você precisar de um HRESULT (para a verificação de tipo ou para dar suporte a características de tipo), poderá `static_cast` um **winrt::hresult**. Caso contrário, **winrt::hresult** será convertido em HRESULT, contanto que você inclua `unknwn.h` antes de incluir qualquer cabeçalho C++/WinRT.
-- **Alteração da falha**. O GUID agora é projetado como **winrt::guid**. Para as APIs que você implementa, você deve usar **winrt::guid** para parâmetros de GUID. Caso contrário, **winrt::guid** será convertido em GUID, contanto que você inclua `unknwn.h` antes de incluir qualquer cabeçalho C++/WinRT.
+- **Alteração da falha**. O GUID agora é projetado como **winrt::guid**. Para as APIs que você implementa, você deve usar **winrt::guid** para parâmetros de GUID. Caso contrário, **winrt::guid** será convertido em GUID, contanto que você inclua `unknwn.h` antes de incluir qualquer cabeçalho C++/WinRT. Confira [Interoperação com o struct de GUID da ABI](interop-winrt-abi.md#interoperating-with-the-abis-guid-struct).
 - **Alteração da falha**. O [**winrt::handle_type construtor**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) foi reforçado tornando-o explícito (agora é mais difícil escrever um código incorreto com ele). Se você precisar atribuir um valor de identificador bruto, chame a [**função handle_type::attach**](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) em vez disso.
 - **Alteração da falha**. As assinaturas de **WINRT_CanUnloadNow** e **WINRT_GetActivationFactory** foram alteradas. Você não deve declarar essas funções de modo algum. Em vez disso, inclua `winrt/base.h` (que será incluído automaticamente se você incluir qualquer arquivos de cabeçalho de namespace do Windows C++/WinRT) para incluir as declarações de uma dessas funções.
 - Para [**winrt::clock struct**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** foram preteridos em prol do **from_file_time/to_file_time**.

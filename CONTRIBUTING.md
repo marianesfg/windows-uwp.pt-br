@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a91c080805bca5d536aad3755ca7edf052d1fe0e
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66214743"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414054"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribuir para a documentação conceitual da UWP
 
@@ -48,7 +48,7 @@ Para fazer alterações mais extensas em um artigo existente, adicionar ou alter
 
 Ao criar uma solicitação de pull no repositório interno, certifique-se de mesclar sua ramificação pessoal à ramificação na qual o repositório foi criado.
 
-Após enviar sua solicitação de pull, ela é avaliada em relação a uma [lista de verificação de qualidade do conteúdo](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master) para garantir que atende aos nossos padrões básicos. Se for aprovada, é atribuída a um membro da equipe de documentação da UWP para análise adicional. Se falhar, você será informado de quais alterações deve fazer.
+Após você enviar sua solicitação de pull, ela será avaliada com uma [Mesclagem de PR](https://review.docs.microsoft.com/help/contribute/prmerger-overview?branch=master) para garantir que atenda a nossos padrões básicos. Se ela for aprovada, você poderá comentar `#sign-off` para passá-la para um membro da equipe de documentação da UWP para análise adicional. Se falhar, você será informado de quais alterações deve fazer para aprovar.
 
 O(s) revisor(es) atribuído(s) podem aprovar ou rejeitar a solicitação de pull ou trabalhar com você para fazer mais alterações. Os revisores não mesclarão a solicitação de pull até que você a aprove.
 

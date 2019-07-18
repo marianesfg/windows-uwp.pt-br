@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fbe10e41da1b330d6f5042bea109a8a0e04f8ad
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d2b92bf5e265c2d596a7fc7eb54b127010cee897
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717604"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mover do C++/CX para C++/WinRT
 
@@ -181,7 +181,7 @@ private:
 };
 ```
 
-O mesmo código portado para o C++/WinRT. Observe o uso do construtor `nullptr`. Para saber mais sobre esse construtor, veja como [consumir APIs com o C++/WinRT](consume-apis.md).
+O mesmo código portado para o C++/WinRT. Observe o uso do construtor **std::nullptr_t**. Para saber mais sobre esse construtor, veja como [consumir APIs com o C++/WinRT](consume-apis.md#delayed-initialization).
 
 ```cppwinrt
 using namespace winrt::Windows::Storage::Streams;
@@ -365,7 +365,7 @@ winrt::Windows::Foundation::IInspectable var{ nullptr };
 ### <a name="port-platformstring-to-winrthstring"></a>Fazer a portabilidade de **Platform::String\^** para **winrt::hstring**
 **Platform::String\^** é equivalente ao tipo ABI de HSTRING do Tempo de Execução do Windows. Para o C++/WinRT, o equivalente é [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring). Porém, com o C++/WinRT, você pode chamar as APIs do Tempo de Execução do Windows usando tipos de cadeia de caracteres longas da Biblioteca Padrão do C++, como **std::wstring**, e/ou literais de cadeias de caracteres longas. Para obter mais detalhes e exemplos de código, confira [Processamento da cadeia de caracteres em C++/WinRT](strings.md).
 
-Com o C++/CX, você pode acessar a propriedade [**Platform::String::Data**](https://docs.microsoft.com/en-us/cpp/cppcx/platform-string-class#data) para recuperar a cadeia de caracteres como uma matriz **const wchar_t\*** C-style (por exemplo, para passá-lá a **std::wcout**).
+Com o C++/CX, você pode acessar a propriedade [**Platform::String::Data**](https://docs.microsoft.com/cpp/cppcx/platform-string-class?view=vs-2019#data) para recuperar a cadeia de caracteres como uma matriz **const wchar_t\*** C-style (por exemplo, para passá-lá a **std::wcout**).
 
 ```cppcx
 auto var{ titleRecord->TitleName->Data() };

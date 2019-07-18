@@ -1,17 +1,17 @@
 ---
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: Criar um aplicativo Olá, Mundo em C++/CX (Windows 10)
-description: Com o Microsoft Visual Studio 2017, você pode usar C++/CX para desenvolver um aplicativo que é executado no Windows 10, inclusive em telefones que executam o Windows 10. Esses aplicativos têm uma interface do usuário definida em linguagem XAML.
+description: Com o Microsoft Visual Studio 2019, você pode usar C++/CX para desenvolver um aplicativo que é executado no Windows 10, inclusive em telefones que executam o Windows 10. Esses aplicativos têm uma interface do usuário definida em linguagem XAML.
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf7e2c56f7d059a164d94bd608fbb8c179d5125f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 65436d7efd1de6e9c3649ad27b29b925bc632d95
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367383"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820653"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Criar um aplicativo "Olá, Mundo" em C++/CX
 
@@ -21,7 +21,7 @@ ms.locfileid: "66367383"
 Com o Microsoft Visual Studio, você pode usar C++/CX para desenvolver um aplicativo que é executado no Windows 10 com uma interface do usuário definida em linguagem XAML.
 
 > [!NOTE]
-> Este tutorial usa o Visual Studio Community 2017. Se você estiver usando uma versão diferente do Visual Studio, talvez ele seja um pouco diferente.
+> Este tutorial usa o Visual Studio Community 2019. Se você estiver usando uma versão diferente do Visual Studio, talvez ele seja um pouco diferente.
 
 ## <a name="before-you-start"></a>Antes de começar
 
@@ -73,25 +73,18 @@ Começaremos com os conceitos básicos:
 
 **Primeiro, crie uma solução no Visual Studio**
 
-1.  No Visual Studio, na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.
+1.  No Visual Studio, na barra de menus, selecione **Arquivo** > **Novo** > **Projeto...** .
 
-2.  Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Instalado** > **Visual C++**  > **Universal do Windows**.
+2.  Na caixa de diálogo **Criar projeto**, selecione **Aplicativo em branco (Universal Windows – C++/CX)** .  Se não vir essa opção, verifique se você tem as ferramentas de desenvolvimento de aplicativo universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.
 
-> [!NOTE]
-> Você pode ser solicitado a instalar as ferramentas Universais do Windows para desenvolvimento em C++.
+![Modelos de projetos em C++/CX na caixa de diálogo Criar projeto ](images/vs2019-uwp-01.png)
 
-3.  No painel central, selecione **Aplicativo em Branco (Universal Windows)** .
+3.  Escolha **Avançar** e, em seguida, insira um nome para o projeto. Vamos chamá-lo de HelloWorld.
 
-   (Se você não vir essas opções, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
-
-4.  Insira um nome para o projeto. Vamos chamá-lo de HelloWorld.
-
- ![Modelos de projetos em C++/CX na caixa de diálogo Novo Projeto ](images/vs2017-uwp-01.png)
-
-5.  Escolha o botão **OK**.
+4.  Escolha o botão **Criar**.
 
 > [!NOTE]
-> Se esta for a primeira vez que você usa o Visual Studio, talvez seja exibida a caixa de diálogo Configurações solicitando a habilitação do **Modo de desenvolvedor**. O Modo de desenvolvedor é uma configuração especial que habilita determinados recursos, como a permissão para executar aplicativos diretamente, em vez de apenas na Store. Para saber mais, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
+> Se esta for a primeira vez que usa o Visual Studio, talvez veja uma caixa de diálogo Configurações solicitando a habilitação do **Modo de desenvolvedor**. O Modo de desenvolvedor é uma configuração especial que habilita determinados recursos, como a permissão para executar aplicativos diretamente, em vez de apenas na Store. Para saber mais, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
 
    Os arquivos do seu projeto são criados.
 

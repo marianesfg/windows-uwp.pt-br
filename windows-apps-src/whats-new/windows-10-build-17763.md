@@ -6,16 +6,16 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2b172844e75d9af3d0112e03f155708af3ca6bed
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d393ee92be8768861da0fb0783372c8bafc6f815
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780355"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821116"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novidades no Windows 10 para desenvolvedores, build 17763
 
-O Windows 10, build 17763 (também conhecido como Atualização de outubro de 2018 ou versão 1809), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para criar aplicativos incríveis da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10, build 17763 (também conhecido como Atualização de outubro de 2018 ou versão 1809), em combinação com o Visual Studio 2019 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para criar aplicativos incríveis da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 Esta é uma coleção de recursos novos e aprimorados e diretrizes de interesse para os desenvolvedores Windows neste lançamento. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, confira as [Alterações na API do Windows 10 build 17763](windows-10-build-17763-api-diff.md). Para saber mais sobre os recursos em destaque do Windows 10, confira [Novidades no Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). Além disso, confira [Recursos da Plataforma para Desenvolvedores Windows](https://developer.microsoft.com/windows/platform/features) para ter mais detalhes das adições passadas e futuras à plataforma do Windows.
 

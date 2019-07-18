@@ -5,12 +5,12 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 53bd11950d30e3924d6d196e911fa05208d0f5ec
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 52b929f2b6f95c2be2feb68a6221a606ca3715e5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371913"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821137"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades nos documentos de desenvolvedor do Windows de agosto de 2017
 
@@ -22,7 +22,7 @@ A Documentação do Desenvolvedor do Windows recebe atualizações constantes co
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Use a nova extensão do [Windows Template Studio](https://aka.ms/wtsinstall) para Visual Studio 2017 para criar rapidamente um aplicativo UWP com as páginas, a estrutura e os recursos desejados. Essa experiência baseada em assistente implementa padrões comprovados e práticas recomendadas para economizar seu tempo e evitar problemas ao adicionar recursos ao seu aplicativo.
+Use a nova extensão do [Windows Template Studio](https://aka.ms/wtsinstall) para Visual Studio 2019 para criar rapidamente um aplicativo UWP com as páginas, a estrutura e os recursos desejados. Essa experiência baseada em assistente implementa padrões comprovados e práticas recomendadas para economizar seu tempo e evitar problemas ao adicionar recursos ao seu aplicativo.
 
 ![Windows Template Studio](images/template-studio.png)
 
@@ -63,11 +63,11 @@ Adicionamos um novo guia para ajudar você [a começar a usar os dispositivos de
 
 Adicionamos documentos para desenvolvedores do Xbox Live, tanto para jogos da UWP quanto do XDK (Kit do Desenvolvedor Xbox).
 
-Confira o [Guia do desenvolvedor do Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/) e saiba como usar as APIs do Xbox Live para conectar seu jogo à rede social de jogos do Xbox Live.
+Confira o [Guia do desenvolvedor do Xbox Live](https://docs.microsoft.com//gaming/xbox-live/index) e saiba como usar as APIs do Xbox Live para conectar seu jogo à rede social de jogos do Xbox Live.
 
-Com o [Programa de Criadores do Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), qualquer desenvolvedor de jogos da UWP pode desenvolver e publicar um jogo habilitado para Xbox Live no computador e no Xbox One.
+Com o [Programa de Criadores do Xbox Live](https://docs.microsoft.com//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), qualquer desenvolvedor de jogos da UWP pode desenvolver e publicar um jogo habilitado para Xbox Live no computador e no Xbox One.
 
-Confira a [Visão geral do programa para desenvolvedores do Xbox Live](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview) para saber mais sobre os programas e recursos disponíveis para os desenvolvedores do Xbox Live.
+Confira a [Visão geral do programa para desenvolvedores do Xbox Live](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview) para saber mais sobre os programas e recursos disponíveis para os desenvolvedores do Xbox Live.
 
 ## <a name="videos"></a>Vídeos
 
@@ -77,7 +77,7 @@ Uma série com novos tutoriais em vídeo foi lançada para o [Curso Microsoft Ho
 
 ### <a name="narrator-and-dev-mode"></a>Narrador e modo de desenvolvedor
 
-Talvez você já saiba que é possível usar o [Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) para testar a experiência de leitura da tela do seu aplicativo. No entanto, o Narrador também apresenta um modo de desenvolvedor que fornece uma boa representação visual das informações expostas para ele. [Assista ao vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode) para saber mais sobre o [Modo de desenvolvedor do Narrador](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode).
+Talvez você já saiba que é possível usar o [Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator) para testar a experiência de leitura da tela do seu aplicativo. No entanto, o Narrador também apresenta um modo de desenvolvedor que fornece uma boa representação visual das informações expostas para ele. [Assista ao vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode) para saber mais sobre o [Modo de desenvolvedor do Narrador](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode).
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 

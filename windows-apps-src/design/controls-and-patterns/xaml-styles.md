@@ -10,12 +10,12 @@ label: XAML styles
 template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cd11427ed1b53641a25c32742ca114b121efcfe8
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5a2f73fe6280d3a86510ce48f47017dd4897139a
+ms.sourcegitcommit: 3ec8c1d0ea3798cdb2745e7a941a025cf3cf21c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363956"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650773"
 ---
 # <a name="xaml-styles"></a>Estilos de XAML
 
@@ -177,26 +177,26 @@ Em outros casos, é desejável mudar um único controle em uma página somente p
 
 ```XAML
 <CheckBox Content="Normal CheckBox" Margin="5"/>
-    <CheckBox Content="Special CheckBox" Margin="5">
-        <CheckBox.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Light">
-                        <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxForegroundChecked"
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
-                            Color="White"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
-                            Color="Purple"/>
-                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
-                            Color="Purple"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </CheckBox.Resources>
-    </CheckBox>
+<CheckBox Content="Special CheckBox" Margin="5">
+    <CheckBox.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxForegroundChecked"
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
+                        Color="White"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
+                        Color="Purple"/>
+                    <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
+                        Color="Purple"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </CheckBox.Resources>
+</CheckBox>
 <CheckBox Content="Normal CheckBox" Margin="5"/>
 ```
 

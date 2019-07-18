@@ -1,16 +1,16 @@
 ---
 description: Este tópico mostra as maneiras nas quais você pode criar e consumir objetos assíncronos do Windows Runtime com C++/WinRT.
 title: Simultaneidade e operações assíncronas com C++/WinRT
-ms.date: 04/24/2019
+ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 910d7a7ca2aaebac6dd462d7104b26a989cf8814
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: cbabf38f41ae940f5c92944154638eae7016e043
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721662"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660092"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -230,12 +230,16 @@ IASyncAction DoWorkAsync(Param const& value)
 }
 ```
 
-Em uma corrotina, a execução é síncrona até o primeiro ponto de suspensão, no qual o controle é retornado para o autor da chamada. Quando a corrotina é retomada, qualquer coisa pode ter acontecido com o valor de origem que faz referência a um parâmetro de referência. Da perspectiva da corrotina, um parâmetro de referência tem um tempo de vida não controlado. Por isso, no exemplo acima, podemos acessar o *valor* até o `co_await`, mas não depois. Nem poderemos passar com segurança o *valor* para **DoOtherWorkAsync** se houver qualquer risco de que a função seja suspensa e, em seguida, tente usar o *valor* após ser retomada. Para tornar os parâmetros seguros para uso após a suspensão e retomada, as corrotinas devem usar passagem por valor por padrão a fim de assegurar que elas capturem pelo valor e evitar problemas de tempo de vida. São raros os casos em que é possível ignorar essa diretriz tendo certeza de que é seguro fazê-lo.
+Em uma corrotina, a execução é síncrona até o primeiro ponto de suspensão, no qual o controle é retornado para o autor da chamada. Quando a corrotina é retomada, qualquer coisa pode ter acontecido com o valor de origem que faz referência a um parâmetro de referência. Da perspectiva da corrotina, um parâmetro de referência tem um tempo de vida não controlado. Por isso, no exemplo acima, podemos acessar o *valor* até o `co_await`, mas não depois. Caso o *valor* seja destruído pelo chamador, tentar acessá-lo dentro da corrotina depois disso resultará em uma corrupção de memória. Nem poderemos passar com segurança o *valor* para **DoOtherWorkAsync** se houver qualquer risco de que a função seja suspensa e, em seguida, tente usar o *valor* após ser retomada.
+
+Para tornar os parâmetros seguros para uso após a suspensão e retomada, as corrotinas devem usar passagem por valor por padrão a fim de assegurar que elas capturem pelo valor e evitar problemas de tempo de vida. São raros os casos em que é possível ignorar essa diretriz tendo certeza de que é seguro fazê-lo.
 
 ```cppwinrt
 // Coroutine
-IASyncAction DoWorkAsync(Param value);
+IASyncAction DoWorkAsync(Param value); // not const&
 ```
+
+A passagem por valor exige que a movimentação ou cópia do argumento tenha baixo custo; e esse normalmente é o caso de um ponteiro inteligente.
 
 Também é possível afirmar que (exceto quando você quiser mover o valor) passar pelo valor const é uma boa prática. Isso não afeta o valor de origem do qual você está fazendo uma cópia, mas torna a intenção clara e ajuda caso você modifique a cópia inadvertidamente.
 
@@ -245,6 +249,38 @@ IASyncAction DoWorkAsync(Param const value);
 ```
 
 Consulte também [Matrizes e vetores padrão](std-cpp-data-types.md#standard-arrays-and-vectors), que aborda como passar um vetor padrão para um computador chamado assíncrono.
+
+Se não puder alterar a assinatura de sua corrotina, mas puder alterar a implementação, você poderá fazer uma cópia local antes do primeiro `co_await`.
+
+```cppwinrt
+IASyncAction DoWorkAsync(Param const& value)
+{
+    auto safe_value = value;
+    // It's ok to access both safe_value and value here.
+
+    co_await DoOtherWorkAsync();
+
+    // It's ok to access only safe_value here (not value).
+}
+```
+
+Se for caro copiar `Param`, basta extrair apenas as partes necessárias antes do primeiro `co_await`.
+
+```cppwinrt
+IASyncAction DoWorkAsync(Param const& value)
+{
+    auto safe_data = value.data;
+    // It's ok to access safe_data, value.data, and value here.
+
+    co_await DoOtherWorkAsync();
+
+    // It's ok to access only safe_data here (not value.data, nor value).
+}
+```
+
+## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acessar com segurança o ponteiro *this* em uma corrotina de membro de classe
+
+Confira [Referências fortes e fracas em C++/WinRT](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine).
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Descarregar o trabalho no pool de threads do Windows
 
@@ -683,7 +719,7 @@ int main()
 ```
 
 > [!NOTE]
-> Não é correto implementar mais de um *manipulador de conclusão* para uma ação ou operação assíncrona. Você pode ter um único delegado para seu evento concluído ou você pode `co_await`-lo. Se você tiver ambos, o segundo falhará. Qualquer um dos seguintes dois tipos de manipuladores de conclusão é apropriado, mas não ambos para o mesmo objeto assíncrono.
+> Não é correto implementar mais de um *manipulador de conclusão* para uma ação ou operação assíncrona. Você pode ter um único delegado para seu evento concluído ou pode usar `co_await`. Se você tiver ambos, o segundo falhará. Qualquer um dos seguintes dois tipos de manipuladores de conclusão é apropriado, mas não ambos para o mesmo objeto assíncrono.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };
@@ -723,6 +759,23 @@ int main()
     // Do other work here.
 }
 ```
+
+**winrt::fire_and_forget** também é útil como tipo retornado de seu manipulador de eventos quando você precisa realizar operações assíncronas nele. Veja um exemplo (confira também [Referências fortes e fracas em C++/WinRT](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)).
+
+```cppwinrt
+winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, MediaBindingEventArgs args)
+{
+    auto lifetime{ get_strong() }; // Prevent *this* from prematurely being destructed.
+    auto ensure_completion{ unique_deferral(args.GetDeferral()) }; // Take a deferral, and ensure that we complete it.
+
+    auto file{ co_await StorageFile::GetFileFromApplicationUriAsync(Uri(L"ms-appx:///video_file.mp4")) };
+    args.SetStorageFile(file);
+
+    // The destructor of unique_deferral completes the deferral here.
+}
+```
+
+O primeiro argumento (o *remetente*) fica sem nome, porque nunca o usamos. Por esse motivo, é seguro deixá-lo como referência. Mas observe que *args* é passado por valor. Consulte a seção [Passagem de parâmetros](#parameter-passing) acima.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [concurrency::task class](/cpp/parallel/concrt/reference/task-class)

@@ -5,16 +5,16 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 69df2bbe8bc91fcf4a2631c0f257fc44851c24f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9adf5a80595e00a30098044536d1ecfe4fd62279
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63805890"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820492"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades nos documentos de Desenvolvedor Windows em maior de 2018
 
-A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores, os vídeos e as amostras a seguir foram disponibilizados em maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build).
+A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores, os vídeos e as amostras a seguir foram disponibilizados em maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build/).
 
 [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -55,7 +55,7 @@ Além disso, reescrevemos as páginas a seguir com informações novas sobre sua
 
 ### <a name="app-installer-files-in-visual-studio"></a>Arquivos do Instalador de Aplicativo no Visual Studio
 
-Arquivos do Instalador de Aplicativos agora podem ser criados com o Visual Studio 2017, atualização 15.7. [Saiba como usar o Visual Studio para criar um arquivo do Instalador de Aplicativo](../packaging/create-appinstallerfile-vs.md) e habilitar as atualizações automáticas em seus aplicativos. Se estiver com problemas, consulte [solução de problemas de instalação com o arquivo do Instalador de Aplicativo](../packaging/troubleshoot-appinstaller-issues.md) para ver os problemas e soluções comuns.
+Arquivos do Instalador de Aplicativo agora podem ser criados com o Visual Studio 2017, atualização 15.7 e com versões posteriores. [Saiba como usar o Visual Studio para criar um arquivo do Instalador de Aplicativo](../packaging/create-appinstallerfile-vs.md) e habilitar as atualizações automáticas em seus aplicativos. Se estiver com problemas, consulte [solução de problemas de instalação com o arquivo do Instalador de Aplicativo](../packaging/troubleshoot-appinstaller-issues.md) para ver os problemas e soluções comuns.
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Controle Edge WebView para aplicativos Windows Forms e WPF
 

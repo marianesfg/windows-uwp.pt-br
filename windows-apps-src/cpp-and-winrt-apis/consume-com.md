@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c36c7b896b4d08240f08e85570110b45e0a9f3c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bb28ec7afa22f81033bfce2aff530119e53a4b91
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66421263"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660153"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
@@ -30,7 +30,7 @@ Para ser mais específico, estamos falando sobre como interagir com os *ponteiro
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-O código acima mostra como declarar um ponteiro inteligente não inicializado para uma interface COM [**ID2D1Factory1**](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1). O ponteiro inteligente não foi inicializado, portanto, ele ainda não está apontando para uma interface **ID2D1Factory1** pertencendo a qualquer objeto real (não está apontando para uma interface). Mas ele tem potencial para isso; e (sendo um ponteiro inteligente) tem a capacidade por meio da contagem de referência COM de gerenciar o tempo de vida do objeto proprietário da interface para o qual ele aponta, assim como para ser o meio pelo qual você chama funções nessa interface.
+O código acima mostra como declarar um ponteiro inteligente não inicializado para uma interface COM [**ID2D1Factory1**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1). O ponteiro inteligente não foi inicializado, portanto, ele ainda não está apontando para uma interface **ID2D1Factory1** pertencendo a qualquer objeto real (não está apontando para uma interface). Mas ele tem potencial para isso; e (sendo um ponteiro inteligente) tem a capacidade por meio da contagem de referência COM de gerenciar o tempo de vida do objeto proprietário da interface para o qual ele aponta, assim como para ser o meio pelo qual você chama funções nessa interface.
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>Funções COM que retornam um ponteiro de interface como **void**
 
@@ -72,7 +72,7 @@ D2D1CreateFactory(
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>Funções COM que retornam um ponteiro de interface como **IUnknown**
 
-A função [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) retorna um ponteiro de interface de fábrica DirectWrite por meio de seu último parâmetro, que tem o tipo [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown). Para essa função, use [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function), mas reinterprete a transmissão disso para **IUnknown**.
+A função [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) retorna um ponteiro de interface de fábrica DirectWrite por meio de seu último parâmetro, que tem o tipo [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Para essa função, use [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function), mas reinterprete a transmissão disso para **IUnknown**.
 
 ```cppwinrt
 DWriteCreateFactory(
@@ -171,7 +171,7 @@ Como alternativa, use [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#com_p
 
 Se você quiser compilar e executar esse exemplo de código-fonte, primeiramente, no Visual Studio, crie um novo **aplicativo de núcleo (C++/WinRT)** . `Direct2D` é um nome razoável para o projeto, mas você pode nomeá-lo como desejar. Abra `App.cpp`, exclua todo o seu conteúdo e cole na lista abaixo.
 
-O código a seguir usa a função [winrt::com_ptr::capture](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function) sempre que possível.
+O código a seguir usa a função [winrt::com_ptr::capture](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function) sempre que possível. `WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 
 ```cppwinrt
 #include "pch.h"
@@ -488,6 +488,55 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 Como você pode ver, C++/WinRT fornece suporte para implementar e chamar interfaces COM. Para usar tipos de COM, como BSTR e VARIANT, é recomendável usar wrappers fornecidos pelas [WILs (Bibliotecas de Implementação do Windows)](https://github.com/Microsoft/wil), como **wil::unique_bstr** e **wil::unique_variant** (que gerenciam os tempos de vida dos recursos).
 
 A [WIL](https://github.com/Microsoft/wil) substitui estruturas como a ATL (Active Template Library) e o suporte COM do compilador do Visual C++. E é recomendável substituir seus próprios wrappers ou usar tipos de COM como BSTR e VARIANT na respectiva forma bruta (com as APIs apropriadas).
+
+## <a name="avoiding-namespace-collisions"></a>Evitar conflitos de namespace
+
+É prática comum em C++/WinRT, &mdash;como a listagem de código neste tópico demonstra&mdash;, usar diretivas de uso livremente. Em alguns casos, no entanto, isso pode levar ao problema de importar nomes conflitantes para o namespace global. Aqui está um exemplo.
+
+C++/WinRT contém um tipo denominado [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown); enquanto COM define um tipo denominado [ **::IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Sendo assim, considere o código a seguir, em um projeto de C++/WinRT que consome cabeçalhos COM.
+
+```cppwinrt
+using namespace winrt::Windows::Foundation;
+...
+void MyFunction(IUnknown*); // error C2872:  'IUnknown': ambiguous symbol
+```
+
+O nome não qualificado *IUnknown* entra em conflito com o namespace global, daí o erro do compilador de *símbolo ambíguo*. Em vez disso, você pode isolar a versão C++/WinRT do nome no namespace **winrt**, dessa forma.
+
+```cppwinrt
+namespace winrt
+{
+    using namespace Windows::Foundation;
+}
+...
+void MyFunctionA(IUnknown*); // Ok.
+void MyFunctionB(winrt::IUnknown const&); // Ok.
+```
+
+Ou, se quiser a conveniência de `using namespace winrt`, você pode. Você só precisa qualificar a versão global de *IUnknown*, dessa forma.
+
+```cppwinrt
+using namespace winrt;
+namespace winrt
+{
+    using namespace Windows::Foundation;
+}
+...
+void MyFunctionA(::IUnknown*); // Ok.
+void MyFunctionB(winrt::IUnknown const&); // Ok.
+```
+
+Naturalmente, isso funciona com qualquer namespace de C++/WinRT.
+
+```cppwinrt
+namespace winrt
+{
+    using namespace Windows::Storage;
+    using namespace Windows::System;
+}
+```
+
+Você pode, em seguida, fazer referência a **winrt::Windows::Storage::StorageFile**, por exemplo, apenas como **winrt::StorageFile**.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [função winrt::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)

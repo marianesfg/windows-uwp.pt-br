@@ -5,16 +5,18 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, dados, tipos
 ms.localizationpriority: medium
-ms.openlocfilehash: 83d2c0c2c544d63d2806dc71bfc367613d34e23a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a87ba48a0853058ba1259e079c586b97af551656
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745284"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844327"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de dados C++ e C++/WinRT padrão
 
 Com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), é possível chamar APIs do Windows Runtime usando tipos de dados C++ padrão, incluindo alguns tipos de dados da Biblioteca Padrão do C++. É possível passar cadeias de caracteres padrão para as APIs (confira [Processamento da cadeia de caracteres em C++/WinRT](strings.md)) e passar as listas de inicializadores e contêineres padrão para APIs que esperam uma coleção semanticamente equivalente.
+
+Confira também [Passagem de parâmetros para o limite do ABI](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi).
 
 ## <a name="standard-initializer-lists"></a>Listas de inicializadores padrão
 Uma lista de inicializadores (**std::initializer_list**) é um constructo da Biblioteca Padrão do C++. Use listas de inicializadores para chamar determinados construtores e métodos do Windows Runtime. Por exemplo, chame com [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes) com uma lista dessas.

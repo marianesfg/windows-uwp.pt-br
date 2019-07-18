@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: 914cf884b97d14af523cc61b0fcce719104783ba
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 01ff6fb443550287330d6fe503c3d49d81e2142c
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721692"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717645"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -54,6 +54,24 @@ Se o símbolo não resolvido for uma função livre do Windows Runtime, como [Ro
 ```
 
 É importante que você resolva todos os erros de vinculador possíveis vinculando **WindowsApp.lib** em vez de uma biblioteca de vínculo estático alternativa, caso contrário, seu aplicativo não passará nos testes do [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar os envios (isso significa que, consequentemente, não será possível para o aplicativo ser ingerido com êxito pela Microsoft Store).
+
+## <a name="why-am-i-getting-a-class-not-registered-exception"></a>Por que estou recebendo uma exceção de "classe não registrada"?
+
+Nesse caso, o sintoma é que&mdash;ao construir uma classe de tempo de execução ou acessar um membro estático&mdash;você vê uma exceção acionada em tempo de execução com REGDB_E_CLASSNOTREGISTERED com um valor de REGDB.
+
+Uma das causas disso é que o Componente do Tempo de Execução do Windows não pode ser carregado. Verifique se o arquivo de metadados do componente de Tempo de Execução do Windows (`.winmd`) tem o mesmo nome do binário de componente (o `.dll`), que também é o nome do projeto e o nome do namespace raiz. Além disso, verifique se os metadados do Tempo de Execução do Windows e o binário foram copiados corretamente pelo processo de compilação para a pasta `Appx` do aplicativo de consumo. Confirme se o `AppxManifest.xml` do aplicativo de consumo (também na pasta `Appx`) contém um elemento **&lt;InProcessServer&gt;** que está declarando corretamente a classe ativável e o nome binário.
+
+### <a name="uniform-construction"></a>Construção uniforme
+
+Esse erro também poderá ocorrer se você tentar criar uma instância de uma classe de tempo de execução implementada localmente por meio de qualquer um dos construtores do tipo projetado (diferente de seu construtor **std::nullptr_t**). Para fazer isso, você precisará do recurso de C++/WinRT 2.0 que costuma ser chamado de construção uniforme. No entanto, para saber como criar uma instância de suas classes de tempo de execução implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
+
+Se você *quiser* a construção uniforme, ela será habilitada por padrão para novos projetos. Para um projeto existente, você precisará aceitar a construção uniforme configurando a ferramenta `cppwinrt.exe`. No Visual Studio, defina a propriedade do projeto **Common Properties** > **C++/WinRT** > **Optimized** como *Yes*. Isso tem o efeito de adicionar `<CppWinRTOptimized>true</CppWinRTOptimized>` ao arquivo de projeto. E tem o mesmo efeito que adicionar o comutador `-opt[imize]` ao invocar `cppwinrt.exe` da linha de comando.
+
+Quando você compila seu projeto *sem* essa configuração, a projeção de C++/WinRT resultante chama [**RoGetActivationFactory**](/windows/win32/api/roapi/nf-roapi-rogetactivationfactory) para acessar os construtores e membros estáticos de sua classe de tempo de execução. E isso exige que as classes sejam registradas e que seu módulo implemente o ponto de entrada [**DllGetActivationFactory**](/previous-versions/br205771(v=vs.85)).
+
+Quando você compila seu projeto *com* o comutador `-opt[imize]`, isso faz com que o projeto ignore **RoGetActivationFactory** para as classes em seu componente, o que permite que você os construa (sem necessidade de ser registrado) de todas as mesmas formas que seriam possíveis se eles estivessem fora do componente.
+
+Para usar a construção uniforme, você também precisará editar o arquivo `.cpp` de cada implementação para `#include <Sub/Namespace/ClassName.g.cpp>` após incluir o arquivo de cabeçalho da implementação.
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime), é recomendável implementar também **IClosable** para dar suporte ao consumo de sua classe de tempo de execução por linguagens que carecem de finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close), ou ambos forem chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.
@@ -155,5 +173,24 @@ O padrão recomendado mostrado acima se aplica não somente ao C++/WinRT, mas a 
 ## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>Como transformar uma cadeia de caracteres em um tipo&mdash;para navegação, por exemplo?
 No final do [exemplo de código do modo de exibição de navegação](/windows/uwp/design/controls-and-patterns/navigationview#code-example) (que é principalmente em C#), há um snippet de código do C++/WinRT mostrando como fazer isso.
 
+## <a name="how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try"></a>Como resolver ambiguidades com GetCurrentTime e/ou TRY?
+
+O arquivo de cabeçalho `winrt/Windows.UI.Xaml.Media.Animation.h` declara um método denominado **GetCurrentTime**, enquanto `windows.h` (via `winbase.h`) define uma macro denominada **GetCurrentTime**. Quando os dois entram em conflito, o compilador C++ produz "*Erro C4002: Muitos argumentos para a invocação de macro do tipo função GetCurrentTime*".
+
+Da mesma forma, `winrt/Windows.Globalization.h` declara um método denominado **TRY**, enquanto `afx.h` define uma macro denominada **GetCurrentTime**. Quando eles entram em conflito, o compilador C++ produz o "*Erro C2334: tokens inesperados antes de '{'; ignorando o corpo aparente da função*".
+
+Para corrigir um ou ambos os problemas, você pode fazer isso.
+
+```cppwinrt
+#pragma push_macro("GetCurrentTime")
+#pragma push_macro("TRY")
+#undef GetCurrentTime
+#undef TRY
+#include <winrt/include_your_cppwinrt_headers_here.h>
+#include <winrt/include_your_cppwinrt_headers_here.h>
+#pragma pop_macro("TRY")
+#pragma pop_macro("GetCurrentTime")
+```
+
 > [!NOTE]
-> Se este tópico não respondeu à sua dúvida, você poderá encontrar ajuda visitando a [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html) ou usando a marcação [`c++-winrt` no Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Se este tópico não solucionar sua dúvida, você pode encontrar ajuda visitando a [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html) ou usando a marca [`c++-winrt` no Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

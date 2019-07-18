@@ -5,16 +5,16 @@ keywords: novidades, novidade, atualização, atualizações, recursos, novos, W
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b7fe830e07c1daf95928ab747259cb57aaa7a9f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc35dc50b8dc523aff5478b3ec19c3daeed9dafb
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371346"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820448"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novidades no Windows 10 para desenvolvedores, build 17134
 
-O Windows 10, build 17134 (também conhecido como a Atualização de abril ou versão 1803), em combinação com o Visual Studio 2017 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para tornar notáveis os aplicativos da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10, build 17134 (também conhecido como a Atualização de abril ou versão 1803), em combinação com o Visual Studio 2019 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para criar aplicativos incríveis da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 Esta é uma coleção de recursos novos e aprimorados e diretrizes de interesse para os desenvolvedores Windows neste lançamento. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, confira as [Alterações na API do Windows 10 build 17134](windows-10-build-17134-api-diff.md). Para saber mais sobre os recursos em destaque do Windows 10, confira [Novidades no Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). Além disso, confira [Recursos da Plataforma para Desenvolvedores Windows](https://developer.microsoft.com/windows/platform/features) para ter mais detalhes das adições passadas e futuras à plataforma do Windows.
 
@@ -102,7 +102,7 @@ O Windows Machine Learning permite que você crie aplicativos que avaliam modelo
 
 ### <a name="motion-controller-tracking"></a>Acompanhamento do controlador de movimentos
 
-Os controladores de movimento representam as mãos de um usuário no Windows Mixed Reality. [Assista ao vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para saber como os controladores de movimentos funcionam quando estão dentro e fora do campo de visão do headset do Mixed Reality e [leia mais sobre como o acompanhamento do controlador aqui.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+Os controladores de movimento representam as mãos de um usuário no Windows Mixed Reality. [Assista ao vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para saber como os controladores de movimentos funcionam quando estão dentro e fora do campo de visão do headset do Mixed Reality e [leia mais sobre como o acompanhamento do controlador aqui.](https://docs.microsoft.com/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Empacotar um aplicativo .NET no Visual Studio
 

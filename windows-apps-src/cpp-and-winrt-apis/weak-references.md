@@ -6,18 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, forte, fraca, referência
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 46a0e21295ba430671be4e36ab213e182c2b1737
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 77fcd8369b2df3fdb42facf9d2b2a1d93188322b
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721631"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844319"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas em C++/WinRT
 
 O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas (e as referências que não se enquadram em nenhum dos dois casos, como o ponteiro *this* implícito). Como você verá neste tópico, saber como gerenciar essas referências corretamente pode significar a diferença entre um sistema confiável que é executado sem problemas e outro que falha de forma imprevisível. Ao fornecer funções auxiliares com amplo suporte na projeção de linguagem, o [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e você alcançam um meio-termo para seu trabalho de criar sistemas mais complexos de maneira simples e correta.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acessar com segurança o ponteiro *this* em uma corrotina de membro de classe
+
+Para saber mais sobre corrotinas e obter exemplos de código, confira [Simultaneidade e operações assíncronas com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 A listagem de códigos abaixo mostra um exemplo típico de uma corrotina que é uma função de membro de uma classe. Você pode copiar e colar esse exemplo para os arquivos especificados em um novo projeto de **aplicativo de console do Windows (C++/WinRT)** .
 
@@ -59,14 +61,16 @@ int main()
 
 **MyClass::RetrieveValueAsync** passa algum tempo trabalhando e, eventualmente, retorna uma cópia do membro de dados `MyClass::m_value`. Chamar **RetrieveValueAsync** faz com que um objeto assíncrono seja criado, contendo um ponteiro *this* implícito (por meio do qual, por fim, `m_value` é acessado).
 
+Lembre-se de que, em uma corrotina, a execução é síncrona até o primeiro ponto de suspensão, no qual o controle é retornado para o autor da chamada. Em **RetrieveValueAsync**, o primeiro `co_await` é o primeiro ponto de suspensão. Quando a corrotina for retomada (cerca de cinco segundos mais tarde, neste caso), qualquer coisa pode ter acontecido com o ponteiro implícito *this*, por meio do qual acessamos `m_value`.
+
 Aqui está a sequência completa de eventos.
 
 1. Em **main**, uma instância de **MyClass** é criada (`myclass_instance`).
 2. O objeto `async` é criado, que aponta para (por meio de seu *this*) para `myclass_instance`.
-3. A função **winrt::Windows::Foundation::IAsyncAction::get** bloqueia por alguns segundos e, em seguida, retorna o resultado de **RetrieveValueAsync**.
+3. A função **winrt::Windows::Foundation::IAsyncAction::get** atinge seu primeiro ponto de suspensão, bloqueia por alguns segundos e, em seguida, retorna o resultado de **RetrieveValueAsync**.
 4. **RetrieveValueAsync** retorna o valor de `this->m_value`.
 
-A etapa 4 é segura, desde que *this* seja válido.
+A etapa 4 é segura desde que *this* permaneça válido.
 
 Mas e se a instância da classe for destruída antes que a operação assíncrona seja concluída? Há todos os tipos de maneiras em que a instância da classe poderia sair do escopo antes do método assíncrono ser concluído. No entanto, é possível simulá-la definindo a instância da classe como `nullptr`.
 
@@ -193,7 +197,9 @@ int main()
 }
 ```
 
-O padrão é que o destinatário do evento tenha um manipulador de eventos de lambda com dependências seu ponteiro *this*. Sempre que o destinatário do evento durar mais que a origem do evento, ela durará mais do que essas dependências. E nesses casos, que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página dura mais que o botão &mdash; dessa forma, o manipulador também dura mais que o botão. Isso permanece sendo verdadeiro sempre que o destinatário é proprietário da origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto. Se tiver certeza de que tem um caso no qual o manipulador não durará mais que o *this* do qual ele depende, então você poderá capturar *this* normalmente, sem se preocupar com tempo de vida forte ou fraco.
+O padrão é que o destinatário do evento tenha um manipulador de eventos de lambda com dependências seu ponteiro *this*. Sempre que o destinatário do evento durar mais que a origem do evento, ela durará mais do que essas dependências. E nesses casos, que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página dura mais que o botão &mdash; dessa forma, o manipulador também dura mais que o botão. Isso permanece sendo verdadeiro sempre que o destinatário é proprietário da origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto. Outro caso seguro é quando a origem do evento gera seus eventos de forma síncrona. Nesse caso, você pode revogar seu manipulador tendo a certeza de que não serão recebidos mais eventos.
+
+Quando tiver certeza de que tem um caso no qual o manipulador não durará mais que o *this* do qual ele depende, você poderá capturar *this* normalmente, sem se preocupar com tempo de vida forte ou fraco.
 
 Mas ainda há casos em que *this* não dura até cumprir sua função em um manipulador (incluindo os manipuladores de eventos de progresso e de conclusão gerados por ações e operações assíncronas) e é importante saber como lidar com eles.
 

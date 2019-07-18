@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manipulação, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 00870a196517f975d2736298513be7567f3dd29e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 194fd9041b76acb1ef76288fed21c8098462b406
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745050"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844343"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manipular eventos usando delegados em C++/WinRT
 
@@ -18,6 +18,15 @@ Este tópico mostra como registrar e revogar delegados que manipulam eventos usa
 
 > [!NOTE]
 > Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+
+## <a name="using-visual-studio-2019-to-add-an-event-handler"></a>Usando o Visual Studio 2019 para adicionar um manipulador de eventos
+
+Uma maneira conveniente de adicionar um manipulador de eventos ao seu projeto é usar a IU (interface do usuário) do Designer XAML no Visual Studio 2019. Com sua página XAML aberta no Designer XAML, selecione o controle cujo evento você deseja manipular. Na página de propriedades do controle, clique no ícone de raio para listar todos os eventos originados do controle. Em seguida, clique duas vezes no evento que deseja manipular; por exemplo, *OnClicked*.
+
+O Designer XAML adiciona o protótipo da função do manipulador de eventos apropriado (e uma implementação de stub) aos arquivos de origem, prontos para substituição pela sua implementação.
+
+> [!NOTE]
+> Normalmente, seus manipuladores de eventos não precisam ser descritos em seu arquivo Midl (`.idl`). Portanto, o Designer XAML não adiciona protótipos de função do manipulador de eventos ao seu arquivo Midl. Ele apenas adiciona seus arquivos `.h` e `.cpp`.
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Registrar um delegado para manipular um evento
 
@@ -49,7 +58,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Ao registrar o delegado, o exemplo de código acima passa um ponteiro bruto *this* (apontando para o objeto atual). Para saber como estabelecer uma referência forte ou fraca para o objeto atual, confira a subseção **Se usar uma função de membro como delegado** na seção [Acessar com segurança o ponteiro *this* com um delegado de manipulação de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Ao registrar o delegado, o exemplo de código acima passa um ponteiro bruto *this* (apontando para o objeto atual). Para saber como estabelecer uma referência fraca ou forte ao objeto atual, consulte [Se você usar uma função de membro como um delegado](weak-references.md#if-you-use-a-member-function-as-a-delegate).
 
 Há outras formas de criar um **RoutedEventHandler**. Apresentamos a seguir o bloco de sintaxe tirado do tópico da documentação de [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (escolha *C++/WinRT* na lista suspensa **Language** no canto superior direito da página). Observe os vários construtores: um deles usa um lambda; outro uma função livre; e outro (aquele que usamos acima) usa um objeto e um ponteiro para função de membro.
 
@@ -177,8 +186,11 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 > [!NOTE]
 > No exemplo de código acima, `Button::Click_revoker` é um alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Um padrão semelhante aplica-se a todos os eventos de C++/WinRT. Cada evento de tempo de execução do Windows tem uma sobrecarga de função de revogação que retorna um revogador de evento, e esse tipo de revogador é um membro da origem do evento. Vejamos outro exemplo, o evento [**CoreWindow::SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tem uma sobrecarga de função de registro que retorna um valor do tipo **CoreWindow::SizeChanged_revoker**.
 
-
 Considere a revogação de manipuladores em um cenário de navegação de página. Se estiver navegando repetidamente em uma página e depois retroceder, é possível revogar quaisquer manipuladores ao navegar para fora da página. Como alternativa, se estiver reutilizando a mesma instância de página, verifique o valor do token e registre somente se ele ainda não tiver sido definido (`if (!m_token){ ... }`). Uma terceira opção é armazenar um revogador de evento na página como um membro de dados. E uma quarta opção, conforme descrito mais adiante neste tópico, é capturar uma referência forte ou fraca para o objeto *this* na sua função lambda.
+
+### <a name="if-your-auto-revoke-delegate-fails-to-register"></a>Se o registro de seu delegado de revogação automática falhar
+
+Se você tentar especificar [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t) ao registrar um delegado e o resultado for uma exceção [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface), normalmente isso significa que a origem do evento não dará suporte a referências fracas. Essa é uma situação comum no namespace [**Windows.UI.Composition**](/uwp/api/windows.ui.composition), por exemplo. Nessa situação, você não pode usar o recurso de revogação automática. Você precisará fazer fallback para revogar manualmente seus manipuladores de eventos.
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>Tipos delegados para ações e operações assíncronas
 

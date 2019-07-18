@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 00a65324b799b0cf974271da23fdbcb36aa6c8e2
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364353"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399621"
 ---
 # <a name="rich-edit-box"></a>Caixa de edição com formato
 
@@ -29,8 +29,7 @@ ms.locfileid: "66364353"
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um RichEditBox para obter a entrada do usuário em seu aplicativo da maneira que você usa outras caixas de entrada de texto padrão. Em vez disso, você o usa para trabalhar com arquivos de texto que são separados de seu aplicativo. Em geral, você salva o texto inserido em um RichEditBox em um arquivo. rtf.
--   Se a finalidade principal da caixa de texto multilinha for criar documentos (como entradas de blog ou o conteúdo de uma mensagem de email), e esses documentos exigirem rich text, utilize uma caixa RTF.
--   Se você quiser que os usuários consigam formatar seu texto, use uma caixa RTF.
+-   Se a finalidade principal da caixa de texto multilinha for criar documentos somente leitura (como entradas de blog ou o conteúdo de uma mensagem de email), e esses documentos exigirem rich text, utilize um [bloco de rich text](/windows/uwp/design/controls-and-patterns/rich-text-block).
 -   Ao capturar texto que só será consumido e não exibido mais tarde aos usuários, use um controle de entrada de texto sem formatação.
 -   Para todos os outros cenários, use um controle de entrada de texto sem formatação.
 
@@ -218,7 +217,7 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

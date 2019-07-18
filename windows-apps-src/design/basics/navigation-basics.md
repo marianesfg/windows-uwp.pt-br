@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c764eeb57ec8046a93e7fb58e156fa68daea8df
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 6290b142eee4aff7287b9542b645df89164d173b
+ms.sourcegitcommit: 34671182c26f5d0825c216a6cededc02b0059a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564516"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286939"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -150,7 +150,7 @@ Recomendamos uma estrutura hierárquica quando:
     :::column span="2":::
         ### Combining structures
 
-Você não tem que escolher uma ou outra estrutura; muitos aplicativos com design satisfatório usam ambas. Um aplicativo pode usar estruturas simples em páginas de nível superior que podem ser exibidas em qualquer ordem, e estruturas hierárquicas em páginas que têm relações mais complexas.
+Você não precisa escolher uma ou outra estrutura; muitos aplicativos com design satisfatório usam ambas. Um aplicativo pode usar estruturas simples em páginas de nível superior que podem ser exibidas em qualquer ordem, e estruturas hierárquicas em páginas que têm relações mais complexas.
 
 Se a sua estrutura de navegação tiver vários níveis, recomendamos que elementos de navegação ponto a ponto sejam vinculados apenas aos pares em sua subárvore atual. Considere a ilustração ao lado, que mostra uma estrutura de navegação que tem dois níveis:
 
