@@ -1,5 +1,5 @@
 ---
-Description: Descubra as diferentes opções de aplicativos de desktop do Win32 têm para o envio de notificações do sistema
+Description: Descubra as diferentes opções que os aplicativos Win32 da área de trabalho têm para enviar notificações do sistema
 title: Notificações do sistema a partir de aplicativos da área de trabalho
 label: Toast notifications from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: bab89962bdc7986f7653e39c7e5967a493421f05
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ef4810ec594173f3cc4da35d63143909f4859e3c
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636081"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340817"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 
@@ -30,8 +30,8 @@ A tabela a seguir ilustra as opções para oferecer suporte a notificações do 
 
 | Opção | Elementos visuais | Ações | Entradas | Ativas no processo |
 | -- | -- | -- | -- | -- |
-| [Ativador de COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
-| [Não há COM / CLSID de Stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
+| [COM Activator](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
+| [Nenhum CLSID de COM/stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
 
 
 ## <a name="preferred-option---com-activator"></a>Opção preferida - ativador COM
@@ -74,13 +74,13 @@ Com essa opção, se houver suporte para Win32 clássico, você é muito mais li
 | Protocolo ToastGeneric | ✔️ | ✔️ |
 | Modelos herdados | ✔️ | ❌ |
 
-Vamos publicar documentos no futuro, mostrando como usar essa opção. Basicamente, para aplicativos de Ponte de Desktop, basta enviar notificações do sistema da mesma forma que um aplicativo UWP. Quando o usuário clica em sua notificação do sistema, o aplicativo será iniciado pela linha de comando com os argumentos de inicialização especificados na notificação do sistema.
+Para aplicativos de ponte de desktop, basta enviar notificações do sistema como um aplicativo UWP. Quando o usuário clica em sua notificação do sistema, o aplicativo será iniciado pela linha de comando com os argumentos de inicialização especificados na notificação do sistema.
 
 Para aplicativos clássicos do Win32, configure a AUMID para que você pode enviar notificações do sistema e, em seguida, especifique uma CLSID no seu atalho. Pode ser qualquer GUID aleatória. Não adicione o servidor/ativador COM. Você estiver adicionando um "stub" COM CLSID, que fará com que a Central de ações mantenha a notificação. Observe que você pode usar somente notificações de ativação de protocolo, pois o CLSID stub interrompe a ativação de outras ativações de notificação do sistema. Portanto, você precisa atualizar seu aplicativo para oferecer suporte à ativação de protocolo e fazer com que o protocolo de notificações do sistema ative seu próprio aplicativo.
 
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar uma notificação do sistema local a partir da área de trabalho C# aplicativos](send-local-toast-desktop.md)
-* [Enviar uma notificação do sistema local do WRL C++ da área de trabalho aplicativos](send-local-toast-desktop-cpp-wrl.md)
-* [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
+* [Enviar uma notificação do sistema local de C# aplicativos Destkop](send-local-toast-desktop.md)
+* [Enviar uma notificação do sistema local de C++ aplicativos Destkop WRL](send-local-toast-desktop-cpp-wrl.md)
+* [Documentação do conteúdo do sistema](adaptive-interactive-toasts.md)
