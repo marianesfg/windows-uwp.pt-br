@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 7be1fe8f23d51ecff6dbee30ad6ebecc6d65b4d8
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 5a65fe882057370f9d0ca603157279b3aa7429fb
+ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270033"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387022"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -65,6 +65,8 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
 | [Referências fortes e fracas em C++/WinRT](weak-references.md) | O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas. |
 | [Objetos ágeis](agile-objects.md) | Um objeto ágil é aquele que pode ser acessado de qualquer thread. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los. |
+| [Diagnosticando alocações diretas](diag-direct-alloc.md) | Este tópico apresenta detalhes sobre um recurso do C++s/WinRT 2.0 que ajuda você a diagnosticar o erro de criação de um objeto do tipo de implementação na pilha, em vez de usar a família [**winrt::make**](/uwp/cpp-ref-for-winrt/make) de auxiliares, como deveria ser. |
+| [Detalhes sobre destruidores](details-about-destructors.md) | O C++O/WinRT 2.0 permite adiar a destruição de seus tipos de implementação e consultar com segurança durante a destruição. Este tópico descreve esses recursos e explica quando usá-los. |
 | [Um exemplo simples de biblioteca de interface do usuário do Windows em C++/WinRT](simple-winui-example.md) | Este tópico orienta você no processo de adicionar suporte simples ao WinUI em um projeto C++/WinRT. |
 
 ### <a name="topics-about-the-c-language"></a>Tópicos sobre a linguagem C++
