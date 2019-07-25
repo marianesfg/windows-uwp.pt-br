@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a65fe882057370f9d0ca603157279b3aa7429fb
-ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
+ms.openlocfilehash: ba8576402165f2d36d048eb3d214cb1dad601d76
+ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387022"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428627"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -52,6 +52,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Criar eventos](author-events.md) | Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos. |
 | [Coleções com C++/WinRT](collections.md) | C++/WinRT fornece funções e classes base que economizam muito tempo e esforço quando você deseja implementar e/ou passar coleções. |
 | [Simultaneidade e operações assíncronas](concurrency.md) | Este tópico mostra as maneiras nas quais você pode criar e consumir objetos assíncronos do Windows Runtime com C++/WinRT. |
+| [Simultaneidade e assincronia mais avançadas](concurrency-2.md) | Cenários mais avançados com simultaneidade e assincronia no C++/WinRT. |
 | [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md) | Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela. |
 | [Controles de itens XAML; associar a uma coleção C++/WinRT](binding-collection.md) | Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela. |
 | [Controles personalizados (modelos) XAML com C++/WinRT](xaml-cust-ctrl.md) | Este tópico orienta você pelas etapas de criação de um controle personalizado simples usando C++/WinRT. Você pode usar as informações aqui como base para criar seus próprios controles de interface do usuário personalizáveis e ricos em recursos. |

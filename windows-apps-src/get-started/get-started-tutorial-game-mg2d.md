@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: a3fa5833d126ea41a6efbf714d2f9dae87eba933
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 01ddc46c80c0ed9a9999ec7c8e67ab9034803a3d
+ms.sourcegitcommit: deb1cdecf34feaa92b0342adc61a5d08f3f10687
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318878"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68332829"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -566,7 +566,7 @@ if (!gameStarted)
 
 Primeiro, criamos duas cadeias de caracteres, uma para cada linha de texto que queremos desenhar. Em seguida, medimos a largura e a altura de cada linha quando impressa, usando o método **SpriteFont.MeasureString(String)** . Isso nos dá o tamanho como um objeto **Vector2**, com a propriedade **X** que contém a largura e **Y** que contém a altura.
 
-Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, tornamos o valor **X** de seu vetor de posição igual a **screenWidth / 2 - textSize.X / 2**.
+Por fim, desenhamos cada linha. Para centralizar o texto horizontalmente, tornamos o valor **X** de seu vetor de posição igual a **screenWidth / 2 – textSize.X / 2**.
 
 **Desafio:** como você alteraria o procedimento descrito acima para centralizar o texto verticalmente e também horizontalmente?
 

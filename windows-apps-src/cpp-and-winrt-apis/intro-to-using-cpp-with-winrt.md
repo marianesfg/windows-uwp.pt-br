@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: da8452329e353c0bbb4b0cedbfe269fd239f9c78
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: 87ab033ddd9de92922f043a069b793ca101307d0
+ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800565"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308450"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -62,7 +62,7 @@ Da 2.0 em diante, o pacote NuGet **Microsoft.Windows.CppWinRT** inclui a ferrame
 
 Com o C++/WinRT, você também pode implementar suas próprias classes de tempo de execução usando o C++ padrão, sem precisar recorrer à programação de estilo COM. Para uma classe de tempo de execução, você descreve apenas os tipos em um arquivo IDL e `midl.exe` e `cppwinrt.exe` geram os arquivos de código-fonte clichê de implementação para você. Você também pode implementar apenas interfaces derivando uma classe base do C++/WinRT. Para obter mais informações, confira [Criar APIs com C++/WinRT](author-apis.md).
 
-Para obter uma lista de opções de personalização para a ferramenta `cppwinrt.exe`, definido por meio das propriedades do projeto, consulte [https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing ].
+Para obter uma lista de opções de personalização para o conjunto de ferramentas `cppwinrt.exe` por meio das propriedades do projeto, confira o [arquivo Leiame](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
 
 Você pode identificar um projeto que usa o suporte do MSBuild C++/WinRT pela presença do pacote NuGet **Microsoft.Windows.CppWinRT** instalado dentro do projeto.
 
@@ -71,7 +71,7 @@ Veja os modelos de projeto do Visual Studio fornecidos pela extensão do VSIX.
 ### <a name="blank-app-cwinrt"></a>Aplicativo em Branco (C++/WinRT)
 Um modelo de projeto para um aplicativo UWP (Plataforma Universal do Windows) que tem uma interface do usuário XAML.
 
-O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de tempo de execução local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução local. É recomendável declarar cada classe de tempo de execução em seu próprio arquivo IDL.
+O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de tempo de execução local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução local. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 O suporte de superfície de design do XAML no Visual Studio de 2019 para C++/WinRT está perto da paridade com o C#. No Visual Studio de 2019, você pode usar a guia **Eventos** da janela **Propriedades** para adicionar manipuladores de eventos dentro de um projeto do C++/WinRT. Você também pode adicionar manipuladores de eventos ao seu código manualmente&mdash;. Confira [Processar eventos usando delegados em C++/WinRT](handle-events.md) para obter mais informações.
 
@@ -91,7 +91,7 @@ Um modelo de projeto para um componente; normalmente para consumo de uma UWP (Pl
 
 Esse modelo demonstra a cadeia de ferramentas `midl.exe` > `cppwinrt.exe`, na qual os metadados do Windows Runtime (`.winmd`) são gerados com base na IDL. Depois, os stubs de implementação e de cabeçalho são gerados com base nesses metadados.
 
-Em um arquivo IDL, defina as classes de tempo de execução no componente, na interface padrão e em qualquer outra interface implementada por ele. Compile o projeto uma vez para gerar `module.g.cpp`, `module.h.cpp`, modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução no componente. É recomendável declarar cada classe de tempo de execução em seu próprio arquivo IDL.
+Em um arquivo IDL, defina as classes de tempo de execução no componente, na interface padrão e em qualquer outra interface implementada por ele. Compile o projeto uma vez para gerar `module.g.cpp`, `module.h.cpp`, modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução no componente. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 Agrupe o binário interno do componente do Tempo de Execução do Windows e seu `.winmd` com o aplicativo UWP que os utiliza.
 

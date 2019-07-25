@@ -5,12 +5,12 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, associação, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ce3164ece443c8c1d95bccbc2bfb57e3347a55
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 5ff15e9b86d90aa14fd56e4e7015e949e2742bf6
+ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717657"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68328884"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; associar a uma propriedade de C++/WinRT
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como associar controles de XAML a elas.
@@ -127,7 +127,7 @@ Na função modificadora **Title**, verificamos se um valor está sendo definido
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>Declare e implemente **BookstoreViewModel**
 Nossa página principal de XAML será associada a um modelo de exibição principal. E esse modelo de exibição terá várias propriedades, incluindo uma do tipo **BookSku**. Nesta etapa, vamos declarar e implementar nossa classe de tempo de execução do modelo de exibição principal.
 
-Adicione um novo item **Midl File (.idl)** chamado `BookstoreViewModel.idl`.
+Adicione um novo item **Midl File (.idl)** chamado `BookstoreViewModel.idl`. Confira também [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 ```idl
 // BookstoreViewModel.idl
@@ -298,6 +298,55 @@ runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
 ```
 
 Isso é necessário pelo seguinte motivo. Todos os tipos que o compilador XAML precisa validar (incluindo aqueles usados em [{X:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) são lidos dos Metadados do Windows (WinMD). Você precisa apenas adicionar a propriedade somente leitura ao arquivo Midl. Não implemente-a, porque o code-behind XAML gerado automaticamente fornece a implementação para você.
+
+## <a name="consuming-objects-from-xaml-markup"></a>Como consumir objetos por meio da marcação XAML
+
+Todas as entidades consumidas com o uso da [**extensão de marcação XAML {x:Bind}** ](/windows/uwp/xaml-platform/x-bind-markup-extension) precisam ser expostas publicamente em IDL. Além disso, se a marcação XAML contiver uma referência a outro elemento que também esteja na marcação, o getter dessa marcação deverá estar presente em IDL.
+
+```xaml
+<Page x:Name="MyPage">
+    <StackPanel>
+        <CheckBox x:Name="UseCustomColorCheckBox" Content="Use custom color"
+             Click="UseCustomColorCheckBox_Click" />
+        <Button x:Name="ChangeColorButton" Content="Change color"
+            Click="{x:Bind ChangeColorButton_OnClick}"
+            IsEnabled="{x:Bind UseCustomColorCheckBox.IsChecked.Value, Mode=OneWay}"/>
+    </StackPanel>
+</Page>
+```
+
+O elemento *ChangeColorButton* refere-se ao elemento *UseCustomColorCheckBox* por meio da associação. Portanto, a IDL dessa página precisa declarar uma propriedade somente leitura chamada *UseCustomColorCheckBox* para que ela seja acessível à associação.
+
+O representante do manipulador de eventos de clique de *UseCustomColorCheckBox* usa a sintaxe clássica de representante do XAML, de modo que ele não precise de uma entrada na IDL; ele só precisa ser público na classe de implementação. Por outro lado, *ChangeColorButton* também tem um manipulador de eventos de clique `{x:Bind}`, que também precisa entrar na IDL.
+
+```idl
+runtimeclass MyPage : Windows.UI.Xaml.Controls.Page
+{
+    MyPage();
+
+    // These members are consumed by binding.
+    void ChangeColorButton_OnClick();
+    Windows.UI.Xaml.Controls.CheckBox UseCustomColorCheckBox{ get; };
+}
+```
+
+Você não precisa fornecer uma implementação para a propriedade **UseCustomColorCheckBox**. O gerador de código XAML faz isso para você.
+
+### <a name="binding-to-boolean"></a>Associação a um booliano
+
+Você pode fazer isso em um modo de diagnóstico.
+
+<syntaxhighlight lang="xml">
+<TextBlock Text="{Binding CanPair}"/>
+</syntaxhighlight>
+
+Isso mostra `true` ou `false` no C++/CX, mas mostra **Windows.Foundation.IReference`1<Boolean>** no C++/WinRT.
+
+Use `x:Bind` ao fazer a associação a um booliano.
+
+```xaml
+<TextBlock Text="{x:Bind CanPair}"/>
+```
 
 ## <a name="important-apis"></a>APIs Importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
-ms.openlocfilehash: c75cf8763b5f47772a138c15049155458772eeb5
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 37819d1626d3adc6f5647f447567a9273e72668d
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660142"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270125"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
 
@@ -92,7 +92,9 @@ Como as APIs do Windows relatam erros em tempo de execução usando vários tipo
 Você pode usar essas funções auxiliares para tipos comuns de código de retorno ou pode responder a qualquer condição de erro e chamar [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) ou [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult). 
 
 ## <a name="throwing-exceptions-when-authoring-an-api"></a>Gerando exceções ao criar uma API
-Como é inválido para uma exceção cruzar o limite do [ABI do Windows Runtime](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types), uma condição de erro que ocorre durante uma implementação é retornada na camada ABI na forma de um código de erro HRESULT. Ao criar uma API usando C++/WinRT, o código é gerado para você converter qualquer exceção *gerada* na implementação em um HRESULT. A função [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) é usada no código gerado em um padrão semelhante a este.
+Todos os limites da [Interface Binária de Aplicativo do Windows Runtime](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) (ou limites do ABI) precisam ser *noexcept*&mdash;o que significa que as exceções nunca devem fazer escape nesse local. Ao criar uma API, você sempre deverá marcar o limite do ABI com a palavra-chave `noexcept` do C++. `noexcept` tem um comportamento específico no C++. Se uma exceção do C++ atingir um limite `noexcept`, o processo falhará rapidamente com **std::terminate**. Esse comportamento é geralmente desejável, porque uma exceção sem tratamento quase sempre implica um estado desconhecido no processo.
+
+Como as exceções não devem cruzar o limite do ABI, uma condição de erro acionada em uma implementação é retornada na camada do ABI na forma de um código de erro HRESULT. Ao criar uma API usando C++/WinRT, o código é gerado para você converter qualquer exceção *gerada* na implementação em um HRESULT. A função [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) é usada no código gerado em um padrão semelhante a este.
 
 ```cppwinrt
 HRESULT DoWork() noexcept
@@ -110,6 +112,48 @@ HRESULT DoWork() noexcept
 ```
 
 [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) processa as exceções derivadas de **std::exception**, [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) e seus tipos derivados. Na implementação, você deve preferir **winrt::hresult_error**, ou um tipo derivado, para que os consumidores da API recebam informações de erro detalhadas. **std::exception** (mapeada para E_FAIL) será aceita caso surjam exceções devido ao uso da Biblioteca de Modelos Padrão.
+
+### <a name="debuggability-with-noexcept"></a>Capacidade de depuração com noexcept
+Como mencionamos acima, uma exceção do C++ que atinge um limite `noexcept` falha rapidamente com **std::terminate**. Isso não é ideal para depuração, porque **std::terminate** muitas vezes perde grande parte ou todo o contexto de erro ou de exceção gerado, especialmente quando as corrotinas estão envolvidas.
+
+Portanto, esta seção trata do caso em que o método do ABI (que você anotou corretamente com `noexcept`) usa `co_await` para chamar o código de projeção assíncrona do C++/WinRT. Recomendamos que você encapsule as chamadas ao código de projeção do C++/WinRT em um **winrt::fire_and_forget**. Essa ação fornece um local adequado para que uma exceção sem tratamento seja registrada corretamente como uma exceção recolhida, o que aumenta significativamente a capacidade de depuração.
+
+```cppwinrt
+HRESULT MyWinRTObject::MyABI_Method() noexcept
+{
+    winrt::com_ptr<Foo> foo{ get_a_foo() };
+
+    [/*no captures*/](winrt::com_ptr<Foo> foo) -> winrt::fire_and_forget
+    {
+        co_await winrt::resume_background();
+
+        foo->ABICall();
+
+        AnotherMethodWithLotsOfProjectionCalls();
+    }(foo);
+
+    return S_OK;
+}
+```
+
+**winrt::fire_and_forget** tem um auxiliar de método `unhandled_exception` interno, que chama **winrt::terminate**, que, por sua vez, chama **RoFailFastWithErrorContext**. Isso garante que qualquer contexto (exceção recolhida, código de erro, mensagem de erro, backtrace de pilha e assim por diante) seja preservado para depuração dinâmica ou para um despejo post-mortem. Para sua conveniência, você pode fatorar a parte de acionamento e esquecimento em uma função separada que retorna um **winrt::fire_and_forget** e, em seguida, chama isso.
+
+### <a name="synchronous-code"></a>Código síncrono
+Em alguns casos, o método do ABI (que, mais uma vez, você anotou corretamente com `noexcept`) chama apenas o código síncrono. Em outras palavras, ele nunca usa `co_await`, seja para chamar um método assíncrono do Windows Runtime, seja para alternar entre os threads de primeiro e segundo plano. Nesse caso, a técnica fire_and_forget ainda funcionará, mas não será eficiente. Em vez disso, você poderá fazer algo assim.
+
+```cppwinrt
+HRESULT abi() noexcept try
+{
+    // ABI code goes here.
+} catch (...) { winrt::terminate(); }
+```
+
+### <a name="fail-fast"></a>Fail fast
+O código na seção anterior ainda falha rapidamente. Conforme escrito, esse código não trata nenhuma exceção. Qualquer exceção sem tratamento resulta na terminação do programa.
+
+Mas esse formato é superior, pois garante a capacidade de depuração. Em casos raros, talvez você deseje aplicar `try/catch` e tratar determinadas exceções. Mas isso deve ser raro porque, como este tópico explica, não recomendamos o uso de exceções como um mecanismo de controle de fluxo para condições esperadas.
+
+Lembre-se de que é uma boa ideia deixar uma exceção sem tratamento fazer escape de um contexto `noexcept` naked. Sob essa condição, o tempo de execução C++ usará **std::terminate** para terminar o processo, perdendo todas as informações de exceção recolhidas cuidadosamente registradas pelo C++/WinRT.
 
 ## <a name="assertions"></a>Asserções
 Para suposições internas em seu aplicativo, existem asserções. Prefira **static_assert** para a validação de tempo de compilação sempre que possível. Para condições de tempo de execução, use `WINRT_ASSERT` com uma expressão booliana. `WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).

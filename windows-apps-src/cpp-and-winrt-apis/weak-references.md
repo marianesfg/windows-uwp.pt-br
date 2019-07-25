@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, forte, fraca, referência
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77fcd8369b2df3fdb42facf9d2b2a1d93188322b
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 3ad6bb9a98b0fe2a699580001698740e44cea14f
+ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844319"
+ms.lasthandoff: 07/14/2019
+ms.locfileid: "67870313"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas em C++/WinRT
 
@@ -197,12 +197,13 @@ int main()
 }
 ```
 
-O padrão é que o destinatário do evento tenha um manipulador de eventos de lambda com dependências seu ponteiro *this*. Sempre que o destinatário do evento durar mais que a origem do evento, ela durará mais do que essas dependências. E nesses casos, que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página dura mais que o botão &mdash; dessa forma, o manipulador também dura mais que o botão. Isso permanece sendo verdadeiro sempre que o destinatário é proprietário da origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto. Outro caso seguro é quando a origem do evento gera seus eventos de forma síncrona. Nesse caso, você pode revogar seu manipulador tendo a certeza de que não serão recebidos mais eventos.
+O padrão é que o destinatário do evento tenha um manipulador de eventos de lambda com dependências seu ponteiro *this*. Sempre que o destinatário do evento durar mais que a origem do evento, ela durará mais do que essas dependências. E nesses casos, que são comuns, o padrão funciona bem. Alguns desses casos são óbvios, como quando uma página de interface do usuário manipula um evento gerado por um controle que está na página. A página dura mais que o botão &mdash; dessa forma, o manipulador também dura mais que o botão. Isso permanece sendo verdadeiro sempre que o destinatário é proprietário da origem (como um membro de dados, por exemplo), ou sempre que o destinatário e a origem são irmãos e diretamente pertencentes a algum outro objeto.
 
 Quando tiver certeza de que tem um caso no qual o manipulador não durará mais que o *this* do qual ele depende, você poderá capturar *this* normalmente, sem se preocupar com tempo de vida forte ou fraco.
 
 Mas ainda há casos em que *this* não dura até cumprir sua função em um manipulador (incluindo os manipuladores de eventos de progresso e de conclusão gerados por ações e operações assíncronas) e é importante saber como lidar com eles.
 
+- Quando uma origem do evento gerar seus eventos *de forma síncrona*, você poderá revogar o manipulador e ter certeza de que não receberá nenhum outro evento. Mas para eventos assíncronos, mesmo após a revogação (e especialmente durante a revogação no destruidor), um evento em andamento poderá acessar o objeto depois que ele começar a ser destruído. Encontrar um local para cancelar a assinatura antes da destruição pode atenuar o problema, mas continue lendo para obter uma solução robusta.
 - Se você estiver criando uma corrotina para implementar um método assíncrono, então isso será possível.
 - Em casos raros com objetos de estrutura de interface de usuário XAML ([**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel), por exemplo), então será possível, se o destinatário for finalizado sem cancelar o registro da fonte de evento.
 
@@ -252,7 +253,7 @@ Em ambos os casos, estamos apenas capturando o ponteiro *this* bruto. E isso nã
 
 ### <a name="the-solution"></a>A solução
 
-A solução é capturar uma referência forte. Uma referência forte *incrementa* a contagem de referências e *mantém* o objeto atual ativo. Basta declarar uma variável de captura (chamada `strong_this` neste exemplo) e inicializá-la com uma chamada para [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera uma referência forte para nosso ponteiro *this*.
+A solução é capturar uma referência forte (ou, como veremos adiante, uma referência fraca, caso isso seja mais apropriado). Uma referência forte *incrementa* a contagem de referências e *mantém* o objeto atual ativo. Basta declarar uma variável de captura (chamada `strong_this` neste exemplo) e inicializá-la com uma chamada para [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera uma referência forte para nosso ponteiro *this*.
 
 > [!IMPORTANT]
 > Devido a **get_strong** ser uma função de membro do modelo de struct **winrt::implements**, você pode chamá-lo apenas de uma classe que deriva direta ou indiretamente de **winrt::implements**, tal como uma classe C++/WinRT. Para obter mais informações sobre derivação de **winrt::implements** e exemplos, consulte [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
@@ -273,7 +274,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Se uma referência forte não for apropriada, você poderá, em vez disso, chamar [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *this*. Apenas confirme que você ainda pode recuperar uma referência forte dele antes de acessar membros.
+Se uma referência forte não for apropriada, você poderá, em vez disso, chamar [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) para recuperar uma referência fraca para *this*. Uma referência fraca *não* mantém o objeto atual ativo. Portanto, apenas confirme que você ainda pode recuperar uma referência forte da referência fraca antes de acessar os membros.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -284,6 +285,8 @@ event_source.Event([weak_this{ get_weak() }](auto&& ...)
     }
 });
 ```
+
+Se você capturar um ponteiro bruto, precisará garantir que manterá o objeto apontado ativo.
 
 ### <a name="if-you-use-a-member-function-as-a-delegate"></a>Se você usar uma função de membro como um delegado
 
@@ -314,11 +317,15 @@ Para obter uma referência forte, basta chamar [**get_strong**](/uwp/cpp-ref-for
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
+Capturar uma referência forte significa que o objeto se tornará qualificado para destruição somente depois que o registro do manipulador for cancelado e todos os retornos de chamada pendentes forem retornados. No entanto, essa garantia é válida somente no momento em que o evento é gerado. Se o manipulador de eventos for assíncrono, você precisará fornecer à corrotina uma referência forte para a instância de classe antes do primeiro ponto de suspensão (para obter detalhes e código, confira a seção [Como acessar com segurança o ponteiro *this* em uma corrotina de membro de classe](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) anteriormente neste tópico). Mas isso cria uma referência circular entre a origem do evento e o objeto e, portanto, você precisa desfazer isso explicitamente revogando o evento.
+
 Para obter uma referência fraca, chame [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function). O C++/ WinRT garante que o delegado resultante contenha uma referência fraca. No último momento e em segundo plano, o delegado tentará resolver a referência fraca para uma forte e chamará a função de membro apenas se for bem-sucedido.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
 ```
+
+Se o representante *chamar* a função de membro, o C++/WinRT manterá o objeto ativo até que o manipulador seja retornado. No entanto, se o manipulador for assíncrono, ele será retornado nos pontos de suspensão e, portanto, você precisará fornecer à corrotina uma referência forte à instância de classe antes do primeiro ponto de suspensão. Novamente, para obter mais informações, confira a seção [Como acessar com segurança o ponteiro *this* em uma corrotina de membro de classe](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) anteriormente neste tópico.
 
 ### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>Um exemplo de referência fraca usando **SwapChainPanel::CompositionScaleChanged**
 

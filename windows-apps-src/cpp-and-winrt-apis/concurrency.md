@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: cbabf38f41ae940f5c92944154638eae7016e043
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: f7db1e5810de478f1c6198860100409d79d4f5d5
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660092"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270139"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -224,13 +224,13 @@ IASyncAction DoWorkAsync(Param const& value)
 {
     // While it's ok to access value here...
 
-    co_await DoOtherWorkAsync();
+    co_await DoOtherWorkAsync(); // (this is the first suspension point)...
 
     // ...accessing value here carries no guarantees of safety.
 }
 ```
 
-Em uma corrotina, a execução é síncrona até o primeiro ponto de suspensão, no qual o controle é retornado para o autor da chamada. Quando a corrotina é retomada, qualquer coisa pode ter acontecido com o valor de origem que faz referência a um parâmetro de referência. Da perspectiva da corrotina, um parâmetro de referência tem um tempo de vida não controlado. Por isso, no exemplo acima, podemos acessar o *valor* até o `co_await`, mas não depois. Caso o *valor* seja destruído pelo chamador, tentar acessá-lo dentro da corrotina depois disso resultará em uma corrupção de memória. Nem poderemos passar com segurança o *valor* para **DoOtherWorkAsync** se houver qualquer risco de que a função seja suspensa e, em seguida, tente usar o *valor* após ser retomada.
+Em uma corrotina, a execução é síncrona até o primeiro ponto de suspensão, no qual o controle é retornado para o autor da chamada e o quadro de chamada sai do escopo. Quando a corrotina é retomada, qualquer coisa pode ter acontecido com o valor de origem que faz referência a um parâmetro de referência. Da perspectiva da corrotina, um parâmetro de referência tem um tempo de vida não controlado. Por isso, no exemplo acima, podemos acessar o *valor* até o `co_await`, mas não depois. Caso o *valor* seja destruído pelo chamador, tentar acessá-lo dentro da corrotina depois disso resultará em uma corrupção de memória. Nem poderemos passar com segurança o *valor* para **DoOtherWorkAsync** se houver qualquer risco de que a função seja suspensa e, em seguida, tente usar o *valor* após ser retomada.
 
 Para tornar os parâmetros seguros para uso após a suspensão e retomada, as corrotinas devem usar passagem por valor por padrão a fim de assegurar que elas capturem pelo valor e evitar problemas de tempo de vida. São raros os casos em que é possível ignorar essa diretriz tendo certeza de que é seguro fazê-lo.
 
@@ -776,6 +776,68 @@ winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, Medi
 ```
 
 O primeiro argumento (o *remetente*) fica sem nome, porque nunca o usamos. Por esse motivo, é seguro deixá-lo como referência. Mas observe que *args* é passado por valor. Consulte a seção [Passagem de parâmetros](#parameter-passing) acima.
+
+## <a name="awaiting-a-kernel-handle"></a>Como aguardar um identificador de kernel
+
+O C++/WinRT fornece uma classe **resume_on_signal**, que pode ser usada para suspensão até que um evento de kernel seja sinalizado. Você é responsável por garantir que o identificador permaneça válido até o retorno de `co_await resume_on_signal(h)`. **resume_on_signal** por si só não pode fazer isso por você, porque você pode ter perdido o identificador mesmo antes de **resume_on_signal** ser iniciado, como neste primeiro exemplo.
+
+```cppwinrt
+IAsyncAction Async(HANDLE event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle is not valid here.
+}
+```
+
+O **HANDLE** de entrada é válido somente até a função retornar e essa função (que é uma corrotina) é retornada no primeiro ponto de suspensão (o primeiro `co_await`, nesse caso). Enquanto aguardava **DoWorkAsync**, o controle foi retornado ao autor da chamada, o quadro de chamada saiu do escopo e você não sabe mais se o identificador será válido quando a corrotina for retomada.
+
+Tecnicamente, nossa corrotina está recebendo seus parâmetros por valor, como deveria (confira [Passagem de parâmetro](#parameter-passing) acima). Mas, nesse caso, precisamos avançar um pouco para que estejamos seguindo o *espírito* dessas diretrizes (em vez de apenas a letra). Precisamos passar uma referência forte (em outras palavras, propriedade) junto com o identificador. Veja aqui como fazer isso.
+
+```cppwinrt
+IAsyncAction Async(winrt::handle event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle *is* not valid here.
+}
+```
+
+Passar um [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) por valor fornece uma semântica de propriedade, o que garante que o identificador do kernel permaneça válido durante o tempo de vida da corrotina.
+
+Veja como você pode chamar essa corrotina.
+
+```cppwinrt
+namespace
+{
+    winrt::handle duplicate(winrt::handle const& other, DWORD access)
+    {
+        winrt::handle result;
+        if (other)
+        {
+            winrt::check_bool(::DuplicateHandle(::GetCurrentProcess(),
+                other.get(), ::GetCurrentProcess(), result.put(), access, FALSE, 0));
+        }
+        return result;
+    }
+
+    winrt::handle make_manual_reset_event(bool initialState = false)
+    {
+        winrt::handle event{ ::CreateEvent(nullptr, true, initialState, nullptr) };
+        winrt::check_bool(static_cast<bool>(event));
+        return event;
+    }
+}
+
+IAsyncAction SampleCaller()
+{
+    handle event{ make_manual_reset_event() };
+    auto async{ Async(duplicate(event)) };
+
+    ::SetEvent(event.get());
+    event.close(); // Our handle is closed, but Async still has a valid handle.
+
+    co_await async; // Will wake up when *event* is signaled.
+}
+```
 
 ## <a name="important-apis"></a>APIs Importantes
 * [concurrency::task class](/cpp/parallel/concrt/reference/task-class)

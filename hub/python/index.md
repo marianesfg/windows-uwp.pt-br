@@ -7,17 +7,17 @@ ms.author: mattwoj
 manager: jken
 ms.topic: landing-page
 ms.date: 07/19/2019
-keywords: windows, desenvolvimento em python
-ms.openlocfilehash: efaa587578fef891f9b870c9f357f19c5f8e5bb7
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+keywords: Windows, desenvolvimento em Python, como posso começar a usar o Python no Windows, subsistema Python no Windows para Linux, Python com WSL, configurar o ambiente de desenvolvimento para Python no Windows, IDE para Python no Windows, em que local o Python é instalado no Windows, executar o Python no Windows, Python para iniciantes no Windows
+ms.openlocfilehash: 7711230b141c57135e1cda3f68416f0ed5287eac
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349329"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473645"
 ---
 # <a name="develop-with-python-on-windows"></a>Desenvolva com o Python no Windows
 
-Seja você um desenvolvedor experiente ou iniciante, uma das decisões mais importantes que precisa tomar é o tipo de ambiente de hardware e de desenvolvimento a ser usado. O Windows está fazendo avanços significativos para dar um suporte melhor aos desenvolvedores de Python. Comece aqui para encontrar orientação sobre como configurar seu ambiente de desenvolvimento, se deseja instalar suas ferramentas no Windows nativo ou no Windows para Linux, e como integrar ferramentas como VS Code e Git.
+Seja você um desenvolvedor experiente ou iniciante em codificação Python, uma das decisões mais importantes é decidir qual ambiente de desenvolvimento usar. Aqui você pode encontrar diretrizes sobre como configurar seu ambiente de desenvolvimento, decidir se é melhor instalar suas ferramentas no Windows nativo ou no subsistema Windows para Linux e saber como integrar ferramentas como o VS Code e o Git. O Windows está fazendo melhorias significativas para ajudar desenvolvedores do Python, e queremos ajudar você a começar a desenvolver.
 
 <ul class="cardsK panelContent">
     <li>

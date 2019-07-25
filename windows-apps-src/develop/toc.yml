@@ -816,6 +816,8 @@
           href: ../cpp-and-winrt-apis/collections.md
         - name: Simultaneidade e operações assíncronas
           href: ../cpp-and-winrt-apis/concurrency.md
+        - name: Simultaneidade e assincronia mais avançadas
+          href: ../cpp-and-winrt-apis/concurrency-2.md
         - name: Controles XAML; associar a uma propriedade
           href: ../cpp-and-winrt-apis/binding-property.md
         - name: Controles de itens XAML; associar a uma coleção

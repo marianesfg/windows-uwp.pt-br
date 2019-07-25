@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 88a4c65b20c2fb805baecb8a90498e8e4ec9b229
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 5a3d4b554fafeb2053e4e6af831c224b5eacd151
+ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717628"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68328873"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Utilizar APIs com C++/WinRT
 
@@ -119,7 +119,9 @@ int main()
 
 ## <a name="delayed-initialization"></a>Inicialização atrasada
 
-Até mesmo o construtor padrão de um tipo projetado faz com que um objeto existente do Windows Runtime seja criado. É possível construir uma variável de um tipo projetado sem construir um objeto do Windows Runtime, para que seja possível atrasar esse trabalho, se desejar. Declare a variável ou o campo usando o construtor especial do C++/WinRT **std::nullptr_t** para o tipo projetado. a projeção de C++/WinRT injeta este construtor em cada classe de tempo de execução.
+No C++/WinRT, cada tipo projetado tem um construtor **std::nullptr_t** especial do C++/WinRT. Com exceção desse, todos os construtores de tipo projetado&mdash;incluindo o construtor padrão&mdash;fazem com que um objeto de suporte do Windows Runtime seja criado e fornecem um ponteiro inteligente para ele. Portanto, essa regra se aplica em qualquer lugar em que o construtor padrão é usado, como variáveis locais não inicializadas, variáveis globais não inicializadas e variáveis de membro não inicializadas.
+
+Se, por outro lado, você desejar construir uma variável de um tipo projetado sem construir um objeto do Windows Runtime (para atrasar esse trabalho até um momento posterior), poderá fazer isso. Declare a variável ou o campo usando o construtor **std::nullptr_t** especial do C++/WinRT (que a projeção do C++/WinRT injeta em toda classe de tempo de execução). Usamos esse construtor especial com *m_gamerPicBuffer* no exemplo de código abaixo.
 
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
@@ -163,6 +165,8 @@ A atribuição cria um novo **TextBlock** e o substitui imediatamente por `value
 std::map<int, TextBlock> lookup;
 lookup.insert_or_assign(2, value);
 ```
+
+Confira também [Como o construtor padrão afeta as coleções](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx#how-the-default-constructor-affects-collections).
 
 ### <a name="dont-delay-initialize-by-mistake"></a>Não inicializar com atraso por engano
 
@@ -375,6 +379,66 @@ As classes nos dois exemplos acima são tipos de um namespace do Windows. No exe
 auto factory = winrt::get_activation_factory<BankAccountWRC::BankAccount>();
 BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::BankAccount>();
 ```
+
+## <a name="membertype-ambiguities"></a>Ambiguidades de membro/tipo
+
+Quando uma função de membro tem o mesmo nome de um tipo, há ambiguidade. As regras para a pesquisa de nome não qualificado do C++ em funções de membro fazem com que ele pesquise a classe antes de fazer a pesquisa em namespaces. A regra *a falha de substituição não é um erro* (SFINAE) não se aplica (ela se aplica durante a resolução de sobrecarga dos modelos de função). Portanto, se o nome dentro da classe não fizer sentido, o compilador não continuará procurando uma correspondência melhor&mdash;ele simplesmente relatará um erro.
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoWork()
+    {
+        // This doesn't compile. You get the error
+        // "'winrt::Windows::Foundation::IUnknown::as':
+        // no matching overloaded function found".
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Style>() };
+    }
+}
+```
+
+Acima, o compilador pensa que você está passando [**FrameworkElement.Style()** ](/uwp/api/windows.ui.xaml.frameworkelement.style) (que, no C++/WinRT, é uma função membro) como o parâmetro de modelo para [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). A solução é forçar o nome `Style` a ser interpretado como o tipo [**Windows::UI::Xaml::Style**](/uwp/api/windows.ui.xaml.style).
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoWork()
+    {
+        // One option is to fully-qualify it.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Windows::UI::Xaml::Style>() };
+
+        // Another is to force it to be interpreted as a struct name.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<struct Style>() };
+
+        // If you have "using namespace Windows::UI;", then this is sufficient.
+        auto style{ Application::Current().Resources().
+            Lookup(L"MyStyle").as<Xaml::Style>() };
+
+        // Or you can force it to be resolved in the global namespace (into which
+        // you imported the Windows::UI::Xaml namespace when you did
+        // "using namespace Windows::UI::Xaml;".
+        auto style = Application::Current().Resources().
+            Lookup(L"MyStyle").as<::Style>();
+    }
+}
+```
+
+A pesquisa de nome não qualificado tem uma exceção especial no caso de o nome ser seguido por `::`; nesse caso, ele ignora funções, variáveis e valores de enumeração. Isso permite realizar ações semelhantes às mostradas a seguir.
+
+```cppwinrt
+struct MyPage : Page
+{
+    void DoSomething()
+    {
+        Visibility(Visibility::Collapsed); // No ambiguity here (special exception).
+    }
+}
+```
+
+A chamada a `Visibility()` é resolvida para o nome da função de membro [**UIElement.Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility). Mas o parâmetro `Visibility::Collapsed` segue a palavra `Visibility` com `::` e, portanto, o nome do método é ignorado e o compilador localiza a classe de enumeração.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Interface QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))

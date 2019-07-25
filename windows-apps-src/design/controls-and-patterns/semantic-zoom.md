@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c8cc237dec082096eb235237490e4f5d29cc6dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c655fbf5582ae5abbb3f415e6e0778b9c64ca7fd
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364314"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340835"
 ---
 # <a name="semantic-zoom"></a>Zoom Semântico
 
@@ -76,7 +76,7 @@ Um catálogo de endereços é outro exemplo de conjunto de dados que pode ser mu
 O controle **SemanticZoom** não tem nenhuma representação visual dele próprio. Ele é um controle de host que gerencia a transição entre 2 outros controles que fornecem as exibição do conteúdo, normalmente os controles **ListView** ou **GridView**.  Você define os controles de exibição como as propriedades [ZoomedInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) e [ZoomedOutView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) do SemanticZoom.
 
 Os 3 elementos de que você precisa para um Zoom Semântico são:
-- Uma fonte de dados agrupados
+- Uma fonte de dados agrupada. (Os grupos são definidos pela definição de GroupStyle na exibição ampliada.)
 - Uma exibição ampliada que mostre os dados no nível do item.
 - Uma exibição reduzida que mostre os dados no nível do grupo.
 
@@ -195,7 +195,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 
 ## <a name="related-articles"></a>Artigos relacionados
