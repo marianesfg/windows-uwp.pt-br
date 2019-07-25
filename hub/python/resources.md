@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: Python, Microsoft, Windows 10, tutoriais, cursos online, Blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: ffcb2b280077d96b0405691976e04fc82959cf4c
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: a987043735dd433288fd53090cf3623b035fad7d
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349383"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473640"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para desenvolvimento com Python no Windows
 
@@ -24,6 +24,8 @@ Uma lista de links que recomendamos para desenvolvedores de Python que trabalham
 ## <a name="general"></a>Geral
 
 - [Blogs de desenvolvimento da Microsoft: Python](https://devblogs.microsoft.com/python/): Leia as atualizações mais recentes sobre todas as coisas Python na Microsoft.
+
+- [Um tutorial aprofundado sobre o desenvolvimento do Linux no Windows com WSL e Visual Studio Code](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/): Orientações de como configurar seu ambiente de desenvolvimento, criar um aplicativo Python e fazer algumas depurações.
 
 - [Usando o Python no Windows](https://docs.python.org/3/using/windows.html): Esta documentação do Python.org fornece uma visão geral do comportamento específico do Windows que você deve saber ao usar o Python no Microsoft Windows.
 

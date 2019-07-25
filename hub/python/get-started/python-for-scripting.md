@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: Python, Windows 10, Microsoft, Python System Administration, Python File Automation, scripts Python no Windows, configurar o Python no Windows, ambiente de desenvolvedor Python no Windows, ambiente de desenvolvimento do Python no Windows, Python com PowerShell, scripts Python para tarefas do sistema de arquivos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 0571d442d17cdac8989df10d7c11f3e762ab6fb6
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: b34bf61f4ce4d2157df572cfbbc9337fced6cf2f
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349517"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473663"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Comece a usar o Python no Windows para scripts e automação
 
@@ -23,10 +23,9 @@ Veja a seguir um guia passo a passo para configurar seu ambiente de desenvolvedo
 
 ## <a name="set-up-your-development-environment"></a>Configurar seu ambiente de desenvolvimento
 
-Ao usar o Python para gravar scripts que executam operações do sistema de arquivos, recomendamos que você [Instale o Python da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). 
+Ao usar o Python para gravar scripts que executam operações do sistema de arquivos, recomendamos que você [Instale o Python da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio do Microsoft Store usa o interpretador Python3 básico, mas trata da configuração de suas configurações de caminho para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas.
 
-> [!IMPORTANT]
-> Se você estiver usando o Python no Windows para desenvolvimento para a **Web**, recomendamos uma configuração diferente para seu ambiente de desenvolvimento. Em vez de instalar diretamente no Windows, instale o Python por meio do subsistema do Windows para Linux. Encontre instruções em nosso guia: Comece [a usar o Python para desenvolvimento para a Web no Windows](./python-for-web.md). Se você for um novato no Python, experimente nosso guia: Comece [a usar o Python no Windows para iniciantes](./python-for-education.md). <br>Para alguns cenários avançados, talvez você queira baixar uma versão específica do Python diretamente do [Python.org](https://www.python.org/downloads/windows/) ou considerar a instalação de uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador de Python mais avançado com um motivo específico para escolher uma implementação alternativa.
+Se você estiver usando o Python para **desenvolvimento na Web** no Windows, recomendamos uma configuração diferente usando o subsistema do Windows para Linux. Encontre instruções em nosso guia: Comece [a usar o Python para desenvolvimento para a Web no Windows](./python-for-web.md). Se você for um novato no Python, experimente nosso guia: Comece [a usar o Python no Windows para iniciantes](./python-for-education.md). Para alguns cenários avançados (como a necessidade de acessar/modificar os arquivos instalados do Python, fazer cópias de binários ou usar as DLLs do Python diretamente), convém considerar o download de uma versão específica do Python diretamente do [Python.org](https://www.python.org/downloads/) ou considerar a instalação uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador de Python mais avançado com um motivo específico para escolher uma implementação alternativa.
 
 ## <a name="install-python"></a>Instalar o Python
 

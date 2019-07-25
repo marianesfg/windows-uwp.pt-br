@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: Python, Windows 10, Microsoft, Learning Python, Python no Windows para iniciantes, instalar o Python com a Microsoft Store, Python com vs Code, Pygame no Windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 9bc9a75b11e90b53f46e8a2b267921078b27ad36
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.openlocfilehash: 9ef2349b296e5518d6bbb85a035526d7de25ea5c
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349351"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473678"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>Comece a usar o Python no Windows para iniciantes
 
@@ -23,10 +23,9 @@ Veja a seguir um guia passo a passo para iniciantes interessados em aprender sob
 
 ## <a name="set-up-your-development-environment"></a>Configurar seu ambiente de desenvolvimento
 
-Para iniciantes que são novos no Python, recomendamos que você [Instale o Python da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). Isso é especialmente importante se você estiver em um ambiente educacional ou em uma parte de uma organização que restringe permissões ou acesso administrativo em seu computador. Usando o Microsoft Store para instalar o Python, ele será colocado no caminho do seu sistema operacional para o usuário atual (evitando a necessidade de acesso de administrador).
+Para iniciantes que são novos no Python, recomendamos que você [Instale o Python da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio do Microsoft Store usa o interpretador Python3 básico, mas trata da configuração de suas configurações de caminho para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas. Isso é especialmente útil se você estiver em um ambiente educacional ou em uma parte de uma organização que restringe permissões ou acesso administrativo em seu computador.
 
-> [!IMPORTANT]
-> Se você estiver usando o Python no Windows para desenvolvimento para a **Web**, recomendamos uma configuração diferente para seu ambiente de desenvolvimento. Em vez de instalar diretamente no Windows, recomendamos instalar e usar o Python por meio do subsistema do Windows para Linux. Para obter ajuda, consulte: Comece [a usar o Python para desenvolvimento para a Web no Windows](./python-for-web.md). Se você estiver interessado em automatizar tarefas comuns em seu sistema operacional, consulte nosso guia: Comece [a usar o Python no Windows para scripts e automação](./python-for-scripting.md). <br>Para alguns cenários avançados, talvez você queira baixar uma versão específica do Python diretamente do [Python.org](https://www.python.org/downloads/windows/) ou considerar a instalação de uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador de Python mais avançado com um motivo específico para escolher uma implementação alternativa.
+Se você estiver usando o Python no Windows para desenvolvimento para a **Web**, recomendamos uma configuração diferente para seu ambiente de desenvolvimento. Em vez de instalar diretamente no Windows, recomendamos instalar e usar o Python por meio do subsistema do Windows para Linux. Para obter ajuda, consulte: Comece [a usar o Python para desenvolvimento para a Web no Windows](./python-for-web.md). Se você estiver interessado em automatizar tarefas comuns em seu sistema operacional, consulte nosso guia: Comece [a usar o Python no Windows para scripts e automação](./python-for-scripting.md). Para alguns cenários avançados (como a necessidade de acessar/modificar os arquivos instalados do Python, fazer cópias de binários ou usar as DLLs do Python diretamente), convém considerar o download de uma versão específica do Python diretamente do [Python.org](https://www.python.org/downloads/) ou considerar a instalação uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador de Python mais avançado com um motivo específico para escolher uma implementação alternativa.
 
 ## <a name="install-python"></a>Instalar o Python
 
