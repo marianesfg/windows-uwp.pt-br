@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 74d15b517c5ec6547115bc8ffdb44a2b742c68d6
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: e6b1b443a847fd8d7af3ad46d5263fd6ae2675a4
+ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717665"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68328893"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -126,12 +126,11 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="if-youre-authoring-a-runtime-class-in-a-windows-runtime-component"></a>Se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime
 
-Se o tipo estiver empacotado em um componente do Windows Runtime para consumo a partir de um aplicativo, então, ele precisará ser uma classe de tempo de execução.
+Se o tipo estiver empacotado em um componente do Windows Runtime para consumo a partir de um aplicativo, então, ele precisará ser uma classe de tempo de execução. Declare uma classe de tempo de execução em um arquivo de IDL (linguagem IDL da Microsoft) (.idl) (confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](#factoring-runtime-classes-into-midl-files-idl)).
 
-> [!TIP]
-> É recomendável que você declare cada classe de tempo de execução em seu próprio arquivo de linguagem IDL (.idl), para otimizar o desempenho do build ao editar um arquivo IDL e para a correspondência lógica de um arquivo IDL com seus arquivos de código-fonte gerados. O Visual Studio mescla todos os arquivos `.winmd` resultantes em um único arquivo com o mesmo nome do namespace raiz. O arquivo `.winmd` final será aquele que os consumidores de seu componente consultarão.
+Cada arquivo IDL resulta em um arquivo `.winmd`, e o Visual Studio mescla todos eles em um único arquivo com o mesmo nome do namespace raiz. O arquivo `.winmd` final será aquele que os consumidores de seu componente consultarão.
 
-Aqui está um exemplo.
+Veja abaixo um exemplo de declaração de uma classe de tempo de execução em um arquivo IDL.
 
 ```idl
 // MyRuntimeClass.idl
@@ -211,6 +210,12 @@ namespace winrt::MyProject
 Para obter um exemplo de um passo a passo para implementar a interface **INotifyPropertyChanged** em uma classe de tempo de execução, confira os [controles XAML; associar a uma propriedade C++/WinRT](binding-property.md).
 
 O procedimento para o consumo da classe de tempo de execução neste cenário está descrito em [Consumir APIs com C++/WinRT](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project).
+
+## <a name="factoring-runtime-classes-into-midl-files-idl"></a>Como fatorar classes de tempo de execução em arquivos MIDL (.idl)
+
+Os modelos de projeto e item do Visual Studio produzem um arquivo IDL separado para cada classe de tempo de execução. Isso fornece uma correspondência lógica entre um arquivo IDL e seus arquivos de código-fonte gerados.
+
+No entanto, se você consolidar todas as classes de tempo de execução do projeto em um único arquivo IDL, isso poderá melhorar significativamente o tempo de build. Se, de outra forma, você tiver dependências `import` complexas (ou circulares) entre eles, a consolidação poderá ser realmente necessária. Talvez você ache mais fácil criar e examinar as classes de tempo de execução se elas estiverem juntas.
 
 ## <a name="runtime-class-constructors"></a>Construtores de classe de tempo de execução
 
@@ -455,6 +460,49 @@ Veja vários lugares onde um recurso de C++/WinRT espera um tipo e qual tipo ele
 | `make_self<T>`|Implementação|Usar o tipo projetado gera o erro: `'Release': is not a member of any direct or indirect base class of 'T'`|
 | `name_of<T>`|Projetado|Se usar o tipo de implementação, você receberá o GUID em cadeias de caracteres da interface padrão.|
 | `weak_ref<T>`|Ambos|Se você usar o tipo de implementação, o argumento do construtor deverá ser `com_ptr<T>`.|
+
+## <a name="overriding-base-class-virtual-methods"></a>Como substituir métodos virtuais da classe base
+
+A classe derivada poderá ter problemas com métodos virtuais se a classe base e a derivada forem classes definidas pelo aplicativo, mas o método virtual for definido em uma classe avô do Windows Runtime. Na prática, isso acontecerá se for feita a derivação de classes XAML. O restante desta seção continua após o exemplo dado em [Classes derivadas](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx#derived-classes).
+
+```cppwinrt
+namespace winrt::MyNamespace::implementation
+{
+    struct BasePage : BasePageT<BasePage>
+    {
+        void OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e);
+    };
+
+    struct DerivedPage : DerivedPageT<DerivedPage>
+    {
+        void OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e);
+    };
+}
+```
+
+A hierarquia é [**Windows::UI::Xaml::Controls::Page**](/uwp/api/windows.ui.xaml.controls.page) \<- **BasePage** \<- **DerivedPage**. O método **BasePage::OnNavigatedFrom** substitui corretamente [**Page::OnNavigatedFrom**](/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom), mas **DerivedPage::OnNavigatedFrom** não substitui **BasePage::OnNavigatedFrom**.
+
+Aqui, **DerivedPage** reutiliza a vtable **IPageOverrides** de **BasePage**, o que significa que ela não substitui o método **IPageOverrides::OnNavigatedFrom**. Uma possível solução exige que a própria **BasePage** seja uma classe de modelo e tenha sua implementação inteiramente em um arquivo de cabeçalho, mas isso torna as coisas complicadas e inaceitáveis.
+
+Como alternativa, declare o método **OnNavigatedFrom** como explicitamente virtual na classe base. Dessa forma, quando a entrada de vtable para **DerivedPage::IPageOverrides::OnNavigatedFrom** chamar **BasePage::IPageOverrides::OnNavigatedFrom**, o produtor chamará **BasePage::OnNavigatedFrom**, que (devido à sua natureza virtual) acabará chamando **DerivedPage::OnNavigatedFrom**.
+
+```cppwinrt
+namespace winrt::MyNamespace::implementation
+{
+    struct BasePage : BasePageT<BasePage>
+    {
+        // Note the `virtual` keyword here.
+        virtual void OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e);
+    };
+
+    struct DerivedPage : DerivedPageT<DerivedPage>
+    {
+        void OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e);
+    };
+}
+```
+
+Isso exige que todos os membros da hierarquia de classe concordem com o valor retornado e os tipos de parâmetro do método **OnNavigatedFrom**. Se eles discordarem, você deverá usar a versão acima como o método virtual e encapsular as alternativas.
 
 ## <a name="important-apis"></a>APIs Importantes
 * [modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
