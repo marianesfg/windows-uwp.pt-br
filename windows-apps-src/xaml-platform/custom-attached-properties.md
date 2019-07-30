@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 7ff5d49521591300214b8ce451e38b4b83d64ef8
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ebfbfdd0e8d55fa0118fe33868946e673a594427
+ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322213"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68603412"
 ---
 # <a name="custom-attached-properties"></a>Propriedades anexadas personalizadas
 
@@ -31,49 +31,49 @@ Pressupomos que você compreende as propriedades de dependência sob a perspecti
 Você pode criar uma propriedade anexada quando, por algum motivo, precisa disponibilizar um mecanismo de definição de propriedade para outras classes que não a classe de definição. A maioria dos cenários comuns são layout e suporte de serviços. Exemplos de propriedades de layout existente são [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8). Em um cenário de layout, os elementos que existem como elementos filho para elementos de controle de layout podem expressar requisitos de layout para cada elemento pai. Cada um desses elementos configura um valor de propriedade que o pai define como propriedade anexada. Um exemplo do cenário de suporte de serviços na API do Tempo de Execução do Windows é o conjunto de propriedades anexadas de [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), como [**ScrollViewer.IsZoomChainingEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.iszoomchainingenabled).
 
 > [!WARNING]
-> Uma limitação existente da implementação do XAML de tempo de execução do Windows é que você não pode animar sua propriedade anexada personalizada.
+> Uma limitação existente da implementação Windows Runtime XAML é que você não pode animar sua propriedade anexa personalizada.
 
 ## <a name="registering-a-custom-attached-property"></a>Registrando uma propriedade anexada personalizada
 
 Se estiver definindo a propriedade anexada estritamente para uso em outros tipos, a classe em que a propriedade foi registrada não precisará derivar de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject). Mas você realmente vai precisar ter o parâmetro de destino para que os acessadores usem **DependencyObject**, se seguir o modelo típico que determina que a propriedade anexada também será uma propriedade de dependência, de modo que você possa usar o repositório de propriedades existentes.
 
-Defina a propriedade anexada como uma propriedade de dependência, declarando uma **pública** **estático** **readonly** propriedade do tipo [  **DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty). Essa propriedade é definida com o uso do valor de retorno do método [**RegisterAttached**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.registerattached). O nome da propriedade deve corresponder ao nome da propriedade anexada que você especificar como o **RegisterAttached** *nome* parâmetro, com a cadeia de caracteres "Property" é adicionado ao final. Esta é a convenção estabelecida para nomeação das entidades de propriedades de dependência em relação às propriedades que representam.
+Defina a propriedade anexada como uma propriedade de dependência, declarando uma propriedade **somente leitura** **estática** e **pública** do tipo [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty). Essa propriedade é definida com o uso do valor de retorno do método [**RegisterAttached**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.registerattached). O nome da propriedade deve corresponder ao nome da propriedade anexada que você especificar como o parâmetro de *nome* **RegisterAttached** , com a cadeia de caracteres "Property" adicionada ao final. Esta é a convenção estabelecida para nomeação das entidades de propriedades de dependência em relação às propriedades que representam.
 
 A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), também é preciso fornecer os métodos estáticos **Get**_PropertyName_ e **Set**_PropertyName_ como acessadores da propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
 
 > [!IMPORTANT]
-> Se você não definir os acessadores corretamente, o processador XAML não é possível acessar a propriedade anexada e qualquer pessoa que tenta usá-lo provavelmente obterá um erro do analisador XAML. Além disso, design e ferramentas de codificação geralmente dependem de "\*propriedade" convenções de nomenclatura de identificadores quando encontra uma propriedade de dependência personalizada em um assembly referenciado.
+> Se você não definir os acessadores corretamente, o processador XAML não poderá acessar sua propriedade anexada e qualquer pessoa que tentar usá-la provavelmente obterá um erro de analisador XAML. Além disso, as ferramentas de design e codificação geralmente dependem\*das convenções de "Propriedade" para identificadores de nomenclatura quando eles encontram uma propriedade de dependência personalizada em um assembly referenciado.
 
 ## <a name="accessors"></a>Acessadores
 
 A assinatura do acessador **Get**_PropertyName_ deve ser esta.
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static`_ValueType_ **Obter** _PropertyName_`(DependencyObject target)`
 
 Para Microsoft Visual Basic, é esta.
 
-`Public Shared Function Get`_PropertyName_`(ByVal target As DependencyObject) As `_valueType_`)`
+`Public Shared Function Get``(ByVal target As DependencyObject) As `_ValueType_ de PropertyName`)`
 
 O objeto *target* pode ser de um tipo mais específico na sua implementação, mas deve derivar de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject). O valor de retorno de *valueType* também pode ser de um tipo mais específico na sua implementação. O tipo **Object** básico é aceitável, mas geralmente o que você quer é que a propriedade anexada imponha a segurança de tipo. O uso de digitação nas assinaturas getter e setter é uma técnica recomendada de segurança de tipo.
 
-A assinatura para o **definir * * * PropertyName* acessador deve ser isso.
+A assinatura do acessador **Set**_PropertyName_ deve ser esta.
 
-`public static void Set`_PropertyName_` (DependencyObject target , `_valueType_` value)`
+`public static void Set`` (DependencyObject target , `_ValueType_ de PropertyName` value)`
 
 Para Visual Basic, é esta.
 
-`Public Shared Sub Set`_PropertyName_` (ByVal target As DependencyObject, ByVal value As `_valueType_`)`
+`Public Shared Sub Set`` (ByVal target As DependencyObject, ByVal value As `_ValueType_ de PropertyName`)`
 
 O objeto *target* pode ser de um tipo mais específico na sua implementação, mas deve derivar de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject). O objeto *value* e seu *valueType* também podem ser de um tipo mais específico na sua implementação. Lembre-se de que o valor desse método é a entrada que vem do processador XAML quando ele encontra a sua propriedade anexada na marcação. É preciso haver suporte para conversão de tipo ou extensão de marcação existente para o tipo usado, para que o tipo adequado possa ser criado com base num valor de atributo (que, em última análise, é apenas uma cadeia de caracteres). O tipo **Object** básico é aceitável, mas geralmente o que você quer é mais segurança de tipo. Para fazer isso, coloque a aplicação de tipo nos acessadores.
 
 > [!NOTE]
-> Também é possível definir uma propriedade anexada em que o uso pretendido é por meio da sintaxe de elemento de propriedade. Nesse caso, você não precisa de conversão de tipos para os valores, mas precisa garantir que os valores que você pretende possam ser criados em XAML. [**Visualstategroups** ](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8) é um exemplo de uma propriedade anexada existente que dá suporte apenas ao uso do elemento de propriedade.
+> Também é possível definir uma propriedade anexada na qual o uso pretendido é por meio da sintaxe do elemento Property. Nesse caso, você não precisa de conversão de tipos para os valores, mas precisa garantir que os valores que você pretende possam ser criados em XAML. [**VisualStateManager. VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8) é um exemplo de uma propriedade anexa existente que dá suporte apenas ao uso do elemento de propriedade.
 
 ## <a name="code-example"></a>Exemplo de código
 
 Este exemplo de código mostra o registro de propriedade de dependência (usando o método [**RegisterAttached**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.registerattached)) e também os acessadores **Get** e **Set** para uma propriedade anexada personalizada. No exemplo, o nome da propriedade anexada é `IsMovable`. Portanto, os nomes dos acessadores devem ser `GetIsMovable` e `SetIsMovable`. O proprietário da propriedade anexada é uma classe de serviço denominada `GameService` que não tem uma interface do usuário própria; sua finalidade é apenas fornecer os serviços de propriedade anexada quando for usada a propriedade anexada **GameService.IsMovable**.
 
-Definindo a propriedade anexada em C++/CX é um pouco mais complexo. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). No C++/CX, você deve definir explicitamente essa relação de campo de propriedade em vez de depender de .NET **somente leitura** palavras-chave e backup implícito de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o aplicativo é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) no código de seu arquivo app.xaml.
+Definir a propriedade anexada C++em/CX é um pouco mais complexo. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). Em C++/CX, você deve definir essa relação de campo de propriedade explicitamente, em vez de depender de palavras-chave do .NET **ReadOnly** e do apoio implícito de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o aplicativo é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) no código de seu arquivo app.xaml.
 
 ```csharp
 public class GameService : DependencyObject
@@ -209,7 +209,7 @@ GameService::RegisterDependencyProperties() {
 ## <a name="setting-your-custom-attached-property-from-xaml-markup"></a>Definindo a propriedade anexada personalizada da marcação XAML
 
 > [!NOTE]
-> Se você estiver usando o C++/WinRT e, em seguida, vá para a seção a seguir ([definindo a propriedade anexada personalizada imperativamente com C++/WinRT](#setting-your-custom-attached-property-imperatively-with-cwinrt)).
+> Se você estiver usando C++/WinRT, pule para a seção a seguir ([definindo sua propriedade anexa personalizada imperativamente com C++/WinRT](#setting-your-custom-attached-property-imperatively-with-cwinrt)).
 
 Depois de definir a propriedade anexada e incluir seus membros de suporte como parte de um tipo personalizado, disponibilize as definições para uso do XAML. Para isso, mapeie um namespace XAML que faça referência ao namespace do código contendo a classe relevante. Nos casos em que você tiver definido a propriedade anexada como parte de uma biblioteca, inclua essa biblioteca no pacote do aplicativo.
 
@@ -235,11 +235,11 @@ Se estiver definindo a propriedade em um elemento que também está no mesmo nam
 ```
 
 > [!NOTE]
-> Se você estiver escrevendo uma UI XAML com C++/CX, em seguida, você deve incluir o cabeçalho para o tipo personalizado que define a propriedade anexada, sempre que uma página XAML usa esse tipo. Cada página XAML tem um cabeçalho de code-behind associado (. xaml.h). Isso é onde você deve incluir (usando  **\#incluem**) o cabeçalho para a definição de tipo de proprietário da propriedade anexada.
+> Se você estiver escrevendo uma interface do usuário C++XAML com o/CX, deverá incluir o cabeçalho do tipo personalizado que define a propriedade anexada, sempre que uma página XAML usar esse tipo. Cada página XAML tem um cabeçalho code-behind associado (. XAML. h). É aqui que você deve incluir (usando  **\#include**) o cabeçalho para a definição do tipo de proprietário da propriedade anexada.
 
-## <a name="setting-your-custom-attached-property-imperatively-with-cwinrt"></a>Definindo a propriedade anexada personalizada imperativamente com C++/WinRT
+## <a name="setting-your-custom-attached-property-imperatively-with-cwinrt"></a>Definindo sua propriedade personalizada anexada de imperativa C++com/WinRT
 
-Se você estiver usando o C++/WinRT, você pode acessar uma propriedade anexada personalizada de código obrigatório, mas não da marcação XAML. O código a seguir mostra como.
+Se você estiver usando C++/WinRT, poderá acessar uma propriedade anexa personalizada do código imperativo, mas não da marcação XAML. O código a seguir mostra como.
 
 ```xaml
 <Image x:Name="gameServiceImage"/>
@@ -279,7 +279,7 @@ A função principal de um [**Canvas**](https://docs.microsoft.com/uwp/api/Windo
 
 Para ser um painel prático, [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) tem um comportamento que substitui os métodos [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) e [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) de nível de estrutura. É aí que **Canvas** realmente verifica se há valores de propriedades anexadas em seus filhos. Parte dos padrões **Measure** e **Arrange** é um loop que itera sobre qualquer conteúdo, e um painel tem a propriedade [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) que torna explícito o que é deve ser considerado o filho de um painel. Assim, o **Canvas** o comportamento do layout itera através desses filhos e faz chamadas de [**Canvas.GetLeft**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.getleft) e [**Canvas.GetTop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.gettop) estáticas em cada filho para ver se essas propriedades anexadas contêm um valor que não é padrão (o padrão é 0). Esses valores são usados para posicionar absolutamente cada filho no espaço de layout disponível de **Canvas** de acordo com os valores específicos fornecidos por cada filho e confirmados usando **Arrange**.
 
-O código é semelhante este pseudocódigo.
+O código é semelhante a este pseudocódigo.
 
 ```syntax
 protected override Size ArrangeOverride(Size finalSize)
@@ -296,7 +296,7 @@ protected override Size ArrangeOverride(Size finalSize)
 ```
 
 > [!NOTE]
-> Para obter mais informações sobre como funcionam os painéis, consulte [visão geral de painéis personalizados de XAML](https://docs.microsoft.com/windows/uwp/layout/custom-panels-overview).
+> Para obter mais informações sobre como os painéis funcionam, consulte [visão geral dos painéis personalizados XAML](https://docs.microsoft.com/windows/uwp/layout/custom-panels-overview).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
