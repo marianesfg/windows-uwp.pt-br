@@ -4,27 +4,27 @@ title: Kit de Certificação de Aplicativos Windows
 description: Para aumentar as chances de seu aplicativo ser publicado na Microsoft Store ou obter a certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, certificação de aplicativos
+keywords: Windows 10, UWP, certificação de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: ea84d57fbfba9666a2553500dc94275bd8b4d209
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d6be00fdbfc7ef5950f6cc35ba35d4afd0dc2791
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359747"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682449"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 
 
-Para obter seu aplicativo [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação para a Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo está seguro e eficiente.
+Para fazer com que o Windows do aplicativo seja [certificado](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação no Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), você deve validá-lo e testá-lo no local primeiro. Este tópico mostra como instalar e executar o kit de [certificação de aplicativos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo seja seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Pré-requisitos para testar um Aplicativo Universal do Windows:
 
 -   Você deve instalar e executar o Windows 10.
--   Você deve instalar [versão do Kit de certificação de aplicativos do Windows 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666), que está incluído no Windows Software Development Kit (SDK) para Windows 10.
+-   Você deve instalar o [Kit de certificação de aplicativos do Windows versão 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666), que está incluído no SDK (Software Development Kit) do Windows para Windows 10.
 -   Você deve [habilitar o dispositivo para desenvolvimento](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Você deve implantar o aplicativo do Windows que deseja testar no seu computador.
 
@@ -36,13 +36,13 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 1.  No menu **Iniciar**, procure por **Aplicativos**, localize **Kits do Windows** e clique em **Kit de Certificação de Aplicativos Windows**.
 
-2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo:  Se você está validando um aplicativo do Windows, selecione **validar um aplicativo do Windows**.
+2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo:  Se você estiver validando um aplicativo do Windows, selecione **validar um aplicativo do Windows**.
 
     Você pode navegar diretamente para o aplicativo em teste ou escolher o aplicativo em uma lista na interface do usuário. Quando o Kit de Certificação de Aplicativos Windows é executado pela primeira vez, a interface do usuário lista todos os aplicativos do Windows instalados no computador. Nas execuções subsequentes, a interface do usuário exibirá os aplicativos do Windows que você validou. Se o aplicativo que você deseja testar não estiver listado, clique em **Meu aplicativo não está na lista** para obter uma lista completa de todos os aplicativos instalados no sistema.
 
 3.  Depois de inserir ou selecionar o aplicativo que você deseja testar, clique em **Avançar**.
 
-4.  Na próxima tela, você verá o fluxo de trabalho de teste que se alinha ao tipo de aplicativo que você está testando. Se um teste estiver esmaecido na lista, ele não é aplicável ao seu ambiente. Por exemplo, se você estiver testando um Windows 10 app no Windows 7, somente os testes estáticos serão aplicadas ao fluxo de trabalho. Observe que a Microsoft Store podem ser aplicadas a todos os testes deste fluxo de trabalho. Selecione os testes que você deseja executar e clique em **Avançar**.
+4.  Na próxima tela, você verá o fluxo de trabalho de teste que se alinha ao tipo de aplicativo que você está testando. Se um teste estiver esmaecido na lista, ele não é aplicável ao seu ambiente. Por exemplo, se você estiver testando um Windows 10 app no Windows 7, somente os testes estáticos serão aplicadas ao fluxo de trabalho. Observe que o Microsoft Store pode aplicar todos os testes desse fluxo de trabalho. Selecione os testes que você deseja executar e clique em **Avançar**.
 
     O Kit de Certificação de Aplicativos Windows começa a validar o aplicativo.
 
@@ -52,17 +52,19 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 6.  Abra o arquivo de relatório e examine os resultados do teste.
 
-**Observação**  se você estiver usando o Visual Studio, você pode executar o Kit de certificação de aplicativos do Windows quando você cria seu pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) para saber como.
+> [!NOTE]
+> Se você estiver usando o Visual Studio, poderá executar o kit de certificação de aplicativos do Windows ao criar o pacote do aplicativo. Consulte [Empacotando aplicativos UWP](/windows/msix/package/packaging-uwp-apps) para saber como.
 
  
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows a partir de uma linha de comando
 
-**Importante**  o Kit de certificação de aplicativos do Windows deve ser executado dentro do contexto de uma sessão de usuário do Active Directory.
+> [!IMPORTANT]
+> O kit de certificação de aplicativos para Windows deve ser executado dentro do contexto de uma sessão de usuário ativa.
 
 1.  Na janela de comando, navegue até o diretório que contém o Kit de Certificação de Aplicativos Windows.
 
-    **Observação**    o caminho padrão é c:\\arquivos de programas\\Kits do Windows\\10\\Kit de certificação de aplicativos\\.
+    **Observe** \\\\\\\\que o caminho padrão é C\\: Program Files Windows kits 10 App Certification Kit.  
 
 2.  Insira os seguintes comandos nesta ordem para testar um aplicativo que já está instalado no computador de teste:
 
@@ -78,21 +80,21 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 3.  Quando o teste for concluído, abra o arquivo de relatório denominado `[report file name]` e examine os resultados.
 
-**Observação**  o Kit de certificação de aplicativos do Windows podem ser executado de um serviço, mas o serviço deve iniciar o processo de kit em uma sessão de usuário ativas e não pode ser executado em Session0.
+**Observação o kit**de certificação de aplicativos para Windows pode ser executado de um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado no Session0.  
 
-**Observação**    para obter mais informações sobre a linha de comando do Kit de certificação de aplicativos do Windows, digite o comando `appcert.exe /?`
+**Observação para obter** mais informações sobre a linha de comando do kit de certificação de aplicativos do Windows, digite o comando  `appcert.exe /?`
 
 ## <a name="testing-with-a-low-power-computer"></a>Testando com um computador com baixo consumo de energia
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
-As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende a [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador do Intel Atom com uma resolução de tela de 1366 x 768 (ou superior) e um disco rígido rotatório (em vez de um disco rígido de estado sólido).
+As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [políticas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador Intel Atom com uma resolução de tela de 1366x768 (ou superior) e um disco rígido rotacional (em oposição a um disco rígido de estado sólido).
 
-As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as mais atuais [Microsoft Store políticas](https://docs.microsoft.com/legal/windows/agreements/store-policies) e testar seu aplicativo com a versão mais atual do Kit de certificação de aplicativo Windows para certificar-se de que seu aplicativo está em conformidade com os requisitos de desempenho mais recentes.
+As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as [políticas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) mais atuais e teste seu aplicativo com a versão mais atual do kit de certificação de aplicativos do Windows para garantir que seu aplicativo esteja em conformidade com os requisitos de desempenho mais recentes.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Testes do Kit de certificação de aplicativos do Windows](windows-app-certification-kit-tests.md)
+* [Testes do kit de certificação de aplicativos para Windows](windows-app-certification-kit-tests.md)
 * [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  
 

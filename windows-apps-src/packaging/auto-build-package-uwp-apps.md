@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: de623240e275dda5b6fc4df9afee31e1adf9fd4f
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340854"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682536"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -83,7 +83,7 @@ Para carregar um certificado para a compilação automatizada:
 5. Se o certificado tiver uma senha, recomendamos que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e, em seguida, vincule a senha a um [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode usar a variável para acessar a senha do pipeline.
 
 > [!NOTE]
-> A partir do Visual Studio 2019, um certificado temporário não é mais gerado em projetos UWP. Para criar ou exportar certificados, use os cmdlets do PowerShell descritos neste [artigo](create-certificate-package-signing.md).
+> A partir do Visual Studio 2019, um certificado temporário não é mais gerado em projetos UWP. Para criar ou exportar certificados, use os cmdlets do PowerShell descritos neste [artigo](/windows/msix/package/create-certificate-package-signing).
 
 ## <a name="configure-the-build-solution-build-task"></a>Configurar a tarefa de compilação Compilar solução
 
@@ -172,7 +172,7 @@ O pipeline UWP padrão não salva os artefatos gerados. Para adicionar os recurs
     PathtoPublish: '$(build.artifactstagingdirectory)'
 ```
 
-Você pode ver os artefatos gerados na  opção artefatos da página compilar resultados.
+Você pode ver os artefatos gerados na opção artefatos da página compilar resultados.
 
 ![artifacts](images/building-screen6.png)
 
@@ -196,6 +196,6 @@ Em seguida, remova `AppxBundle` o argumento MSBuild da etapa de compilação.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [Crie seu aplicativo .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
-- [Empacotando aplicativos UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+- [Empacotando aplicativos UWP](/windows/msix/package/packaging-uwp-apps)
 - [Aplicativos LOB Sideload no Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
-- [Criar um certificado para assinatura de pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)
+- [Criar um certificado para assinatura de pacote](/windows/msix/package/create-certificate-package-signing)

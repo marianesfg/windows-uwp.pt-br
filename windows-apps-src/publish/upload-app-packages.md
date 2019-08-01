@@ -1,38 +1,38 @@
 ---
-Description: A página de pacotes é onde você carrega todos os arquivos de pacote (. appxupload,. AppX,. appxbundle e/ou. xap) para o aplicativo que você está enviando.
+Description: A página pacotes é onde você carrega todos os arquivos de pacote (. appxupload,. Appx,. appxbundle e/ou. xap) para o aplicativo que você está enviando.
 title: Carregue os pacotes do aplicativo
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.date: 10/02/2018
 ms.topic: article
-keywords: Windows 10, uwp, pacotes, carregamento, upload do pacote
+keywords: Windows 10, UWP, pacotes, carregar, carregar pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: 97735a8e860f7c941cc35d77a21496696683640f
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 570ccc1329fd1b2f768ca528b75fe22b982bdaf6
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468876"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682619"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
-O **pacotes** página é onde você carrega todos os arquivos de pacote (.msix, .msixupload, .msixbundle,. AppX,. appxupload e/ou. appxbundle) para o aplicativo que você está enviando. Você pode carregar todos os seus pacotes para o mesmo aplicativo nesta página, e quando um cliente baixa o seu aplicativo, a Store fornecerá automaticamente cada cliente com o pacote que funciona melhor para seu dispositivo. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
+A página **pacotes** é onde você carrega todos os arquivos de pacote (. msix,. msixupload,. msixbundle,. Appx,. appxupload e/ou. appxbundle) para o aplicativo que você está enviando. Você pode carregar todos os seus pacotes para o mesmo aplicativo nesta página e, quando um cliente baixa seu aplicativo, a loja fornecerá automaticamente a cada cliente o pacote que funciona melhor para seus dispositivos. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir os pacotes direcionados a 8.x/Windows do Windows Phone 8.x ou anterior. Para obter mais informações, consulte este [postagem de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> A partir de 31 de outubro de 2018, os produtos recém-criados não podem incluir pacotes destinados ao Windows 8. x/Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta postagem no [blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
-Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como números de versão impacto quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como gerenciar pacotes para vários cenários](guidance-for-app-package-management.md).
+Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também desejará saber [como os números de versão afetam quais pacotes são entregues a clientes específicos](package-version-numbering.md) e [como gerenciar pacotes para vários cenários](guidance-for-app-package-management.md).
 
 
 ## <a name="uploading-packages-to-your-submission"></a>Carregando pacotes para seu envio
 
-Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. O **pacotes** página permitirá que você carregue arquivos .msix, .msixupload, .msixbundle,. AppX,. appxupload e/ou. appxbundle.
+Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. A página **pacotes** permitirá que você carregue arquivos. msix,. msixupload,. msixbundle,. Appx,. appxupload e/ou. appxbundle.
 
 > [!IMPORTANT]
-> Para Windows 10, é recomendável carregar o arquivo. appxupload ou de .msixupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para o Windows 10, é recomendável carregar o arquivo. msixupload ou. appxupload aqui em vez de. msix,. Appx,. msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-Se detectarmos erros com um pacote ao validá-lo, vamos exibir uma mensagem para que você saiba o que está errado. Você precisará remover o pacote, corrija o problema e, em seguida, tente carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
+Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para que você saiba o que está errado. Você precisará remover o pacote, corrigir o problema e, em seguida, tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
 
 
 ## <a name="device-family-availability"></a>Disponibilidade da família de dispositivos

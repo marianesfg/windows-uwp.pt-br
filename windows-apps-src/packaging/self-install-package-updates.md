@@ -1,23 +1,23 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Baixar e instalar atualizações de pacote a partir da Store
-description: Aprenda a marcar pacotes como obrigatórias no Partner Center e escrever código em seu aplicativo para baixar e instalar atualizações de pacote.
+description: Saiba como marcar pacotes como obrigatórios no Partner Center e escrever código em seu aplicativo para baixar e instalar atualizações de pacote.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc5fca95ca475444792fb0209a936bdfc64cb3c6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cb1ac05bdc5dcaaf31074f1b89e5bbb35e4f850d
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372357"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682722"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Baixar e instalar atualizações de pacote a partir da Store
 
-Desde o Windows 10, versão 1607, você pode usar métodos da classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para verificar programaticamente se há atualizações do pacote do aplicativo atual na Microsoft Store, baixar e instalar os pacotes atualizados. Você também pode consultar para pacotes que você tiver marcado como obrigatório no Partner Center e desabilitar a funcionalidade em seu aplicativo até que a atualização obrigatória de agente está instalada.
+Desde o Windows 10, versão 1607, você pode usar métodos da classe [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para verificar programaticamente se há atualizações do pacote do aplicativo atual na Microsoft Store, baixar e instalar os pacotes atualizados. Você também pode consultar pacotes marcados como obrigatórios no Partner Center e desabilitar a funcionalidade em seu aplicativo até que a atualização obrigatória seja instalada.
 
-Métodos [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) adicionais introduzidos no Windows 10, versão 1803, permitem que você baixe e instale atualizações de pacote silenciosamente (sem exibir uma interface do usuário de notificação para o usuário), desinstale um [pacote opcional](optional-packages.md)e obtenha informações sobre pacotes na fila de download e de instalação para seu aplicativo.
+Métodos [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) adicionais introduzidos no Windows 10, versão 1803, permitem que você baixe e instale atualizações de pacote silenciosamente (sem exibir uma interface do usuário de notificação para o usuário), desinstale um [pacote opcional](/windows/msix/package/optional-packages)e obtenha informações sobre pacotes na fila de download e de instalação para seu aplicativo.
 
 Esses recursos ajudam a manter a base de usuários atualizada automaticamente com a versão mais recente do aplicativo, pacotes opcionais e os serviços relacionados da Store.
 
@@ -26,7 +26,7 @@ Esses recursos ajudam a manter a base de usuários atualizada automaticamente co
 Este exemplo de código demonstra como usar o método [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) para descobrir todas as atualizações de pacote disponíveis na Store e, então, chamar o método [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) para baixar e instalar as atualizações. Ao usar este método para baixar e instalar atualizações, o sistema operacional exibe uma caixa de diálogo que solicita a permissão do usuário antes de baixar as atualizações.
 
 > [!NOTE]
-> Este método possui suporte para à [pacotes opcionais](optional-packages.md) e necessários para seu aplicativo. Pacotes opcionais são úteis para complementos de conteúdo para download (DLC), dividindo seu aplicativo grande para restrições de tamanho ou para enviar qualquer conteúdo adicional para separado do seu aplicativo principal. Para ter a permissão para enviar um aplicativo que usa pacotes adicionais (incluindo complementos de DLC) para a Store, consulte [Suporte para desenvolvedores do Windows](https://developer.microsoft.com/windows/support).
+> Este método possui suporte para à [pacotes opcionais](/windows/msix/package/optional-packages) e necessários para seu aplicativo. Pacotes opcionais são úteis para complementos de conteúdo para download (DLC), dividindo seu aplicativo grande para restrições de tamanho ou para enviar qualquer conteúdo adicional para separado do seu aplicativo principal. Para ter a permissão para enviar um aplicativo que usa pacotes adicionais (incluindo complementos de DLC) para a Store, consulte [Suporte para desenvolvedores do Windows](https://developer.microsoft.com/windows/support).
 
 Este exemplo de código pressupõe que:
 
@@ -193,14 +193,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Atualizações de pacote obrigatórias
 
-Quando você cria o envio de um pacote no Partner Center para um aplicativo que tem como alvo o Windows 10, versão 1607 ou posterior, você pode [marcar o pacote como obrigatórias](../publish/upload-app-packages.md#mandatory-update) a data e hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível, ele pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).
+Quando você cria um envio de pacote no Partner Center para um aplicativo que tem como destino o Windows 10, versão 1607 ou posterior, você pode [marcar o pacote como obrigatório](../publish/upload-app-packages.md#mandatory-update) e a data e hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível, ele pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).
 
 > [!NOTE]
 > O status obrigatório de uma atualização de pacote não é imposto pela Microsoft, e o sistema operacional não fornece uma interface do usuário para indicar aos usuários que uma atualização de aplicativo obrigatória deve ser instalada. Os desenvolvedores devem usar a configuração obrigatória para impor atualizações obrigatórias de aplicativos no próprio código.  
 
 Para marcar um envio de pacote como obrigatório:
 
-1. Entrar no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página de visão geral de seu aplicativo.
+1. Entre no [Partner Center](https://partner.microsoft.com/dashboard) e navegue até a página Visão geral do seu aplicativo.
 2. Clique no nome do envio que contém a atualização de pacote que você deseja tornar obrigatória.
 3. Navegue até a página **Pacotes** do envio. Na parte inferior dessa página, selecione **Make this update mandatory** e, em seguida, escolha o dia e hora em que a atualização de pacote e se tornará obrigatória. Essa opção se aplica a todos os pacotes UWP no envio.
 
@@ -326,7 +326,7 @@ private void HandleMandatoryPackageError()
 
 ## <a name="uninstall-optional-packages"></a>Desinstalar pacotes opcionais
 
-A partir do Windows 10, versão 1803, você pode usar os métodos [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) ou [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) para desinstalar um [pacote opcional](optional-packages.md) (incluindo um pacote de DLC) para o aplicativo atual. Por exemplo, se você tiver um aplicativo com conteúdo que é instalado por meio de pacotes opcionais, talvez seja necessário fornecer uma interface do usuário que permita que os usuários desinstalem os pacotes opcionais para liberar espaço em disco.
+A partir do Windows 10, versão 1803, você pode usar os métodos [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) ou [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) para desinstalar um [pacote opcional](/windows/msix/package/optional-packages) (incluindo um pacote de DLC) para o aplicativo atual. Por exemplo, se você tiver um aplicativo com conteúdo que é instalado por meio de pacotes opcionais, talvez seja necessário fornecer uma interface do usuário que permita que os usuários desinstalem os pacotes opcionais para liberar espaço em disco.
 
 O exemplo de código a seguir demonstra como chamar [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync). Este exemplo pressupõe que:
 * O arquivo de código tem uma declaração em **uso** para o **Windows.Services.Store**, e namespaces **System.Threading.Tasks**.
@@ -463,4 +463,4 @@ private void StoreItem_StatusChanged(StoreQueueItem sender, object args)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criação de pacotes opcionais e conjunto relacionado](optional-packages.md)
+* [Criação de pacotes opcionais e conjunto relacionado](/windows/msix/package/optional-packages)

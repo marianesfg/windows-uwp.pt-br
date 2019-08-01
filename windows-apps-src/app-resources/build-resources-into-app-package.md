@@ -6,18 +6,18 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bf2d34bc3dae20750f66c9116499a17444b798c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f7acabc9858f5a2fa0b6b76d752d2a342959f41f
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627281"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682507"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Compilar recursos no pacote de aplicativos, e não em um pacote de recursos
 
 Alguns tipos de apps (dicionários multilíngues, ferramentas de tradução etc.) precisam substituir o comportamento padrão de um lote de aplicativo e compilar recursos no pacote de aplicativos, em vez de tê-los em pacotes de recursos separados. Este tópico explica como fazer isso.
 
-Por padrão, quando você compila um [lote de aplicativo (.appxbundle)](../packaging/packaging-uwp-apps.md), somente os recursos padrão de idioma, escala e nível de recurso DirectX estão integrados ao pacote de aplicativos. Os recursos traduzidos, e seus recursos personalizados para escalas não padrão e/ou níveis de recurso DirectX, são integrados aos pacotes de recursos e são apenas baixados para dispositivos que precisam deles. Se um cliente estiver comprando o app na Microsoft Store usando um dispositivo com uma preferência de idioma definida como Espanhol, somente seu app e o pacote de recursos em espanhol serão baixados e instalados. Se o mesmo usuário alterar posteriormente sua preferência de idioma para Francês em **Configurações**, o pacote de recursos em francês do app será baixado e instalado. O mesmo se aplicará aos recursos qualificados para escala e nível de recurso DirectX. Na maioria dos apps, esse comportamento constitui uma eficiência valiosa e é exatamente o que você e o cliente *querem* que aconteça.
+Por padrão, quando você compila um [lote de aplicativo (.appxbundle)](/windows/msix/package/packaging-uwp-apps), somente os recursos padrão de idioma, escala e nível de recurso DirectX estão integrados ao pacote de aplicativos. Os recursos traduzidos, e seus recursos personalizados para escalas não padrão e/ou níveis de recurso DirectX, são integrados aos pacotes de recursos e são apenas baixados para dispositivos que precisam deles. Se um cliente estiver comprando o app na Microsoft Store usando um dispositivo com uma preferência de idioma definida como Espanhol, somente seu app e o pacote de recursos em espanhol serão baixados e instalados. Se o mesmo usuário alterar posteriormente sua preferência de idioma para Francês em **Configurações**, o pacote de recursos em francês do app será baixado e instalado. O mesmo se aplicará aos recursos qualificados para escala e nível de recurso DirectX. Na maioria dos apps, esse comportamento constitui uma eficiência valiosa e é exatamente o que você e o cliente *querem* que aconteça.
 
 Mas, se o app permitir que o usuário altere o idioma em tempo real no app (e não por meio de **Configurações**), esse comportamento padrão não será adequado. Na verdade, você quer que todos os recursos de idioma sejam baixados e instalados incondicionalmente junto com o app uma vez e, depois, permaneçam no dispositivo. Você deseja compilar todos esses recursos no pacote de aplicativos, e não em pacotes de recursos separados.
 
@@ -48,7 +48,7 @@ Você pode configurar o Visual Studio para compilar recursos no pacote de aplica
 
 Para confirmar que suas opções de divisão automática estão sendo levadas em consideração, procure o arquivo `<ProjectFolder>\obj\<ReleaseConfiguration folder>\split.priconfig.xml` e confirme se seu conteúdo corresponde às suas opções. Em caso afirmativo, você configurou com êxito o Visual Studio para compilar os recursos de sua preferência no pacote de aplicativos.
 
-Há uma etapa final que você precisa executar. **Mas somente se você tiver excluído o nome de qualificador `Language`**. Você precisa especificar a união de todos os idiomas com suporte do app como o padrão de idioma do app. Para obter detalhes, consulte [Especificar os recursos padrão usados pelo app](specify-default-resources-installed.md). É isso que o `priconfig.default.xml` conteria se você estivesse incluindo recursos para inglês, espanhol e francês no pacote de aplicativos.
+Há uma etapa final que você precisa executar. **Mas somente se você tiver excluído o nome de qualificador `Language`** . Você precisa especificar a união de todos os idiomas com suporte do app como o padrão de idioma do app. Para obter detalhes, consulte [Especificar os recursos padrão usados pelo app](specify-default-resources-installed.md). É isso que o `priconfig.default.xml` conteria se você estivesse incluindo recursos para inglês, espanhol e francês no pacote de aplicativos.
 
 ```xml
    <default>
@@ -89,7 +89,7 @@ Esta será a aparência do arquivo depois que você excluir o primeiro nome de q
 
 Salve e feche o arquivo, e recompile o projeto.
 
-Há uma etapa final que você precisa executar. **Mas somente se você tiver excluído o nome de qualificador `Language`**. Você precisa especificar a união de todos os idiomas com suporte do app como o padrão de idioma do app. Para obter detalhes, consulte [Especificar os recursos padrão usados pelo app](specify-default-resources-installed.md). É isso que o arquivo de projeto conteria se você estivesse incluindo recursos para inglês, espanhol e francês no pacote de aplicativos.
+Há uma etapa final que você precisa executar. **Mas somente se você tiver excluído o nome de qualificador `Language`** . Você precisa especificar a união de todos os idiomas com suporte do app como o padrão de idioma do app. Para obter detalhes, consulte [Especificar os recursos padrão usados pelo app](specify-default-resources-installed.md). É isso que o arquivo de projeto conteria se você estivesse incluindo recursos para inglês, espanhol e francês no pacote de aplicativos.
 
 ```xml
 <AppxDefaultResourceQualifiers>Language=en;es;fr</AppxDefaultResourceQualifiers>

@@ -5,12 +5,12 @@ keywords: extensão de aplicativo, serviço de aplicativo, segundo plano
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cfb3be556cb681bc9ed2d9d46bb86304182e5ca
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: bdd6d3fb875e95f251e02f07e7af563c95a400a6
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821024"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682784"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -18,8 +18,8 @@ Este artigo mostra como criar uma extensão de aplicativo UWP e hospedá-la em u
 
 Este artigo é acompanhado por um exemplo de código:
 - Baixe e descompacte [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
-- No Visual Studio de 2019, abra MathExtensionSample.sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
-- Implante a solução: **Crie** > **implantar solução**.
+- No Visual Studio 2019, abra MathExtensionSample. sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
+- Implantar a solução:Compilar > **solução de implantação**.
 
 ## <a name="introduction-to-app-extensions"></a>Introdução a extensões de aplicativo
 
@@ -29,7 +29,7 @@ Extensões de aplicativos UWP são aplicativos UWP que têm uma declaração de 
 
 Como extensões de aplicativos são apenas aplicativos UWP, eles também podem ser aplicativos totalmente funcionais, e fornecerem extensões do host para outros aplicativos — tudo isso sem a criação de pacotes de aplicativo separados.
 
-Quando você cria um host de extensão do aplicativo, você cria uma oportunidade de desenvolver um ecossistema em torno de seu aplicativo em que outros desenvolvedores podem melhorar seu aplicativo de maneiras de que você possa não esperado ou que não tinha os recursos para. Considere a possibilidade de extensões do Microsoft Office, extensões do Visual Studio, as extensões de navegador, etc. Esses modelos criam experiências mais sofisticadas para os aplicativos que vão além da funcionalidade que elas acompanhavam. Extensões podem adicionar valor e longevidade ao seu aplicativo.
+Quando você cria um host de extensão do aplicativo, você cria uma oportunidade de desenvolver um ecossistema em torno de seu aplicativo em que outros desenvolvedores podem melhorar seu aplicativo de maneiras de que você possa não esperado ou que não tinha os recursos para. Considere as extensões de Microsoft Office, extensões do Visual Studio, extensões de navegador, etc. Elas criam experiências mais ricas para os aplicativos que vão além da funcionalidade com a qual acompanham. Extensões podem adicionar valor e longevidade ao seu aplicativo.
 
 **Visão geral**
 
@@ -41,7 +41,7 @@ Em um nível alto, para configurar uma relação de extensão do aplicativo, nó
 4. Defina como os hosts e suas extensões se comunicarão.
 5. Use o API do [Windows.ApplicationModel.AppExtensions](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppExtensions) no aplicativo host para acessar as extensões.
 
-Vamos ver como isso é feito examinando o [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa uma calculadora hipotética onde você pode adicionar novas funções para usar extensões. No Microsoft Visual de 2019 Studio, carregue **MathExtensionSample.sln** do exemplo de código.
+Vamos ver como isso é feito examinando o [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa uma calculadora hipotética onde você pode adicionar novas funções para usar extensões. No Microsoft Visual Studio 2019, carregue **MathExtensionSample. sln** no exemplo de código.
 
 ![Exemplo de código de extensão de matemática](images/mathextensionhost-calctab.png)
 
@@ -74,7 +74,7 @@ _Package. appxmanifest no projeto MathExtensionHost_
 
 Observe o `xmlns:uap3="http://..."` e a presença de `uap3` em `IgnorableNamespaces`. Elas são necessárias porque estamos usando o namespace uap3.
 
-`<uap3:Extension Category="windows.appExtensionHost">` identifica esse aplicativo como um host de extensão.
+`<uap3:Extension Category="windows.appExtensionHost">`identifica este aplicativo como um host de extensão.
 
 O elemento do **Nome** em `<uap3:AppExtensionHost>` é o nome do _contrato de extensão_. Quando uma extensão especifica o mesmo nome de contrato de extensão, o host poderá encontrá-la. Por convenção, é recomendável criar o nome do contrato de extensão usando seu aplicativo ou o nome do fornecedor para evitar possíveis conflitos com outros nomes de contrato de extensão.
 
@@ -116,19 +116,19 @@ _Package. appxmanifest no projeto MathExtension:_
 
 Novamente, observe a linha `xmlns:uap3="http://..."` e a presença de `uap3` em `IgnorableNamespaces`. Estes são necessários porque estamos usando o namespace `uap3`.
 
-`<uap3:Extension Category="windows.appExtension">` identifica esse aplicativo como uma extensão.
+`<uap3:Extension Category="windows.appExtension">`identifica este aplicativo como uma extensão.
 
 O significado dos atributos `<uap3:AppExtension>` é o seguinte:
 
 |Atributo|Descrição|Obrigatório|
 |---------|-----------|:------:|
 |**Name**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
-|**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
+|**SESSÃO**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
 |**DisplayName**| Pode ser usado em seu próprio aplicativo host para identificar a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**Descrição** | Pode ser usado em seu próprio aplicativo host para descrever a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**PublicFolder**|O nome de uma pasta, relativo à raiz do pacote, onde você pode compartilhar conteúdo com o host de extensão. Por convenção, o nome é "Public", mas você pode usar qualquer nome que corresponde a uma pasta na sua extensão.| :heavy_check_mark: |
 
-`<uap3:Properties>` é um elemento opcional que contém metadados personalizados que podem ser lidos hosts em tempo de execução. No exemplo de código, a extensão é implementada como um serviço de aplicativo, assim o host precisa de uma maneira de obter o nome desse serviço de aplicativo para que ele possa chamá-lo. O nome do serviço de aplicativo é definido no elemento <Service>, que definimos (nós poderíamos ter chamado de qualquer nome que gostaríamos). O host no exemplo de código procura por essa propriedade em tempo de execução para saber o nome do serviço de aplicativo.
+`<uap3:Properties>`é um elemento opcional que contém metadados personalizados que os hosts podem ler em tempo de execução. No exemplo de código, a extensão é implementada como um serviço de aplicativo, assim o host precisa de uma maneira de obter o nome desse serviço de aplicativo para que ele possa chamá-lo. O nome do serviço de aplicativo é definido no elemento <Service>, que definimos (nós poderíamos ter chamado de qualquer nome que gostaríamos). O host no exemplo de código procura por essa propriedade em tempo de execução para saber o nome do serviço de aplicativo.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>Decida como implementar a extensão.
 
@@ -211,7 +211,7 @@ Você pode definir seu próprio XML no elemento `<uap3:Properties>`. Nesse caso,
 
 Quando o host carrega uma extensão, um código como este extrai o nome do serviço das propriedades definidas no Package.appxmanifest da extensão:
 
-_`Update()` no ExtensionManager.cs, no projeto MathExtensionHost_
+_`Update()`no ExtensionManager.cs, no projeto MathExtensionHost_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,7 +233,7 @@ if (_properties != null)
 
 Com o nome do serviço de aplicativo armazenado em `_serviceName`, o host pode usá-lo para invocar o serviço de aplicativo.
 
-Chamar um serviço de aplicativo também exige o nome da família do pacote que contém o serviço de aplicativo. Felizmente, a API de extensão de aplicativo fornece essas informações que são obtidas na linha: `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
+Chamar um serviço de aplicativo também exige o nome da família do pacote que contém o serviço de aplicativo. Felizmente, a API de extensão de aplicativo fornece essas informações que são obtidas na linha:`connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>Defina como o host e a extensão se comunicarão
 
@@ -247,7 +247,7 @@ No exemplo de código, o serviço de aplicativo da extensão não é implementad
 
 O sistema chega ao `OnBackgroundActivate()` quando o serviço de aplicativo é ativado. Esse código define manipuladores de eventos para lidar com a chamada de serviço de aplicativo real, quando se trata de (`OnAppServiceRequestReceived()`), bem como lidar com eventos de manutenção do sistema, como obter um objeto de adiamento manipulando um cancelamento ou evento fechado.
 
-_App.XAML.cs no projeto MathExtension._
+_App.xaml.cs no projeto MathExtension._
 ```cs
 protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 {
@@ -271,7 +271,7 @@ protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 
 O código que faz o trabalho da extensão está em `OnAppServiceRequestReceived()`. Essa função é chamada quando o serviço de aplicativo é invocado para executar um cálculo. Ela extrai os valores que precisa do **ValueSet**. Se ele puder fazer o cálculo, colocará o resultado, sob uma chave denominada **Resultado**, no **ValueSet** que é retornado para o host. Lembre-se de que, de acordo com o protocolo definido para esse host e suas extensões irão se comunicar, a presença de uma chave de **Resultado** indicará êxito; caso contrário, falha.
 
-_App.XAML.cs no projeto MathExtension._
+_App.xaml.cs no projeto MathExtension._
 ```cs
 private async void OnAppServiceRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
 {
@@ -342,7 +342,7 @@ Muitas vezes, o host de extensão e a extensão não fazem parte da mesma soluç
 Agora você poderá atingir pontos de interrupção do host e a extensão.
 Se você iniciar a depuração do próprio aplicativo de extensão, você verá uma janela em branco para o aplicativo. Se você não quiser ver a janela em branco, você pode alterar as configurações de depuração para o projeto de extensão para não iniciar o aplicativo, mas em vez disso, depurá-lo quando ele for iniciado (clique com botão direito do projeto de extensão, **Propriedades** > **Depurar**> selecione **Mão iniciar, mas sim depurar meu código quando ele é iniciado**), mas ainda será necessário iniciar depuração (**F5**) do projeto de extensão, mas ele esperará até que o host ative a extensão e, em seguida, os pontos de interrupção no extensão sejam atingidos.
 
-**Depurar o código de exemplo**
+**Depurar o exemplo de código**
 
 No exemplo de código, o host e a extensão estão na mesma solução. Faça o seguinte para depurar:
 
@@ -403,7 +403,7 @@ Quando você compila um host de extensão e está pronto para testar o quanto el
 
 ## <a name="how-app-extensions-differ-from-optional-packages"></a>Como extensões de aplicativos diferem dos pacotes opcionais
 
-O diferencial entre [pacotes opcionais](https://docs.microsoft.com/windows/uwp/packaging/optional-packages) e extensões de aplicativos é o ecossistema aberto versus ecossistema fechado e pacote dependente versus pacote independente.
+O diferencial entre [pacotes opcionais](/windows/msix/package/optional-packages) e extensões de aplicativos é o ecossistema aberto versus ecossistema fechado e pacote dependente versus pacote independente.
 
 Extensões de aplicativo participam de um ecossistema aberto. Se seu aplicativo puder hospedar extensões de aplicativo, qualquer pessoa pode gravar uma extensão para seu host, desde que elas cumpram seu método de passar/receber informações da extensão. Isso difere pacotes opcionais, que participam de um ecossistema fechado, onde o fornecedor decide quem tem permissão para fazer um pacote opcional que pode ser usado com o aplicativo.
 
@@ -420,9 +420,9 @@ Este tópico fornece uma introdução às extensões de aplicativo. Os principai
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Introdução às extensões de aplicativo](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
-* [Sessão Build 2016 sobre extensões de aplicativo](https://channel9.msdn.com/Events/Build/2016/B808)
-* [Exemplo de código de extensão de aplicativo do Build 2016](https://github.com/Microsoft/App-Extensibility-Sample)
+* [Compilar sessão 2016 sobre extensões de aplicativo](https://channel9.msdn.com/Events/Build/2016/B808)
+* [Compilar exemplo de código de extensão de aplicativo 2016](https://github.com/Microsoft/App-Extensibility-Sample)
 * [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md)
 * [Como criar e consumir um serviço de aplicativo](how-to-create-and-consume-an-app-service.md).
-* [Namespace de AppExtensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)
-* [Estender seu aplicativo com serviços, extensões e pacotes](https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages)
+* [Namespace AppExtensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)
+* [Estenda seu aplicativo com serviços, extensões e pacotes](https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages)

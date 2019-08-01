@@ -6,23 +6,23 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 24326c19688a0fa6f2300da50e6d13308b79ee2e
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603391"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682466"
 ---
 # <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> O MakePri. exe é instalado quando você verifica o **SDK do Windows para a opção de aplicativos gerenciados UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como em pastas chamadas para outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-## <a name="getting-help-from-the-command-line"></a>Obtendo ajuda de linha de comando
+## <a name="getting-help-from-the-command-line"></a>Obtendo ajuda da linha de comando
 
-Você pode executar `MakePri.exe help` ou `MakePri.exe /?` para ver os comandos que você pode usar com MakePri.exe. Você também pode emitir `MakePri.exe <command> /?` para ver detalhes sobre um comando e, em casos raros, até mesmo `MakePri.exe <command> <option>` para ver os detalhes sobre uma opção.
+Você pode executar `MakePri.exe help` ou `MakePri.exe /?` para ver os comandos que podem ser usados com o MakePri. exe. Você também pode emitir `MakePri.exe <command> /?` para ver informações específicas sobre um comando e, em casos muito raros, até `MakePri.exe <command> <option>` mesmo para ver informações específicas sobre uma opção.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
@@ -115,7 +115,7 @@ Help:
 O comando `dump` gera um arquivo xml despejado contendo uma lista de todos os recursos em um arquivo PRI especificado. Execute `MakePri.exe dump /?` para ver uma ajuda detalhada deste comando.
 
 > [!NOTE]
-> Um pacote de recursos sem esquema é aquele que foi criado com a opção *omitSchemaFromResourcePacks* no arquivo de configuração PRI. Para despejar um pacote de recursos sem esquema, use a opção `/es <main_package_PRI_file>`. Se você não especificar o arquivo principal, você verá a mensagem de erro "*o resources.pri no pacote estava corrompido para que a criptografia falhou (erro PRI222: 0xdef0000f - erro não especificado ocorreu)*".
+> Um pacote de recursos sem esquema é aquele que foi criado com a opção *omitSchemaFromResourcePacks* no arquivo de configuração PRI. Para despejar um pacote de recursos sem esquema, use a opção `/es <main_package_PRI_file>`. Se você não especificar o arquivo principal, verá a mensagem de erro "*o Resources. pri no pacote foi corrompido, portanto a criptografia falhou (PRI222 de erro: 0xdef0000f-ocorreu um erro não especificado*) ".
 
 ```console
 C:\>makepri dump /?
@@ -416,22 +416,22 @@ Para `resourcepack` e `versioned`, em vez de fornecer um arquivo PRI como parâm
 
 **FILEPATH** é um token que especifica o local do arquivo PRI de entrada ou do arquivo de esquema PRI.
 
-## <a name="47indexoptionsio-option"></a>&#47;Opção IndexOptions(io)
+## <a name="47indexoptionsio-option"></a>&#47;Opção IndexOptions (Io)
 
-Você usa a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e `versioned` para especificar as opções que fornecem controle detalhado sobre o comportamento de indexadores de recurso. Opções de índice são desabilitadas por padrão.
+Use a opção de opções de índice (/Io) `new`com `resourcepack`, e `versioned` para especificar opções que fornecem controle detalhado sobre o comportamento de indexadores de recursos. As opções de índice são desabilitadas por padrão.
 
 ```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**Opções de** é uma lista separada por vírgulas composta das seguintes opções.
+**Opções** é uma lista separada por vírgulas composta pelas opções a seguir.
 
-- + /-HiddenFiles(hf). (+) De índice ou ignorar (-) arquivos e pastas ocultos.
-- + /-LinkedFiles(lf). (+) De índice ou ignorar (-) vinculado a arquivos e pastas.
+- +/-HiddenFiles (HF). Indexe (+) ou ignore (-) arquivos e pastas ocultos.
+- +/-LinkedFiles (LF). Indexe (+) ou ignore (-) arquivos e pastas vinculados.
 
 ## <a name="47mappingfilemf-option"></a>Opção &#47;MappingFile(mf)
 
-Use a opção de arquivo de mapeamento (/mf) com `new`, `resourcepack` e `versioned` para gerar um arquivo de mapeamento. O [MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md) usa o arquivo de mapeamento para gerar pacotes de aplicativos.
+Use a opção de arquivo de mapeamento (/mf) com `new`, `resourcepack` e `versioned` para gerar um arquivo de mapeamento. O [MakeAppx.exe](/windows/msix/package/create-app-package-with-makeappx-tool) usa o arquivo de mapeamento para gerar pacotes de aplicativos.
 
 ```console
 /MappingFile(mf) <MAPPINGFILETYPE>
@@ -501,7 +501,7 @@ Esta é uma condição de erro de exemplo e a mensagem de erro correspondente.
 
 | Condição de erro | Mensagem de erro |
 | --------------- | ------------- |
-| O nome do arquivo de saída é igual a um dos nomes de pacote de recursos na configuração. | Configuração inválida: Nome do pacote de recursos <resource pack name> não pode ser o mesmo que o arquivo de saída < outputfilename.pri >. |
+| O nome do arquivo de saída é igual a um dos nomes de pacote de recursos na configuração. | Configuração inválida: O nome <resource pack name> do pacote de recursos não pode ser o mesmo que o arquivo de saída < NomeDoArquivoDeSaída. pri >. |
 
 ## <a name="reversemaprm-option"></a>Opção /ReverseMap(rm)
 
@@ -551,4 +551,4 @@ Para fornecer o número de versão principal, use o atributo [resources@majorVer
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [MakePri.exe](compile-resources-manually-with-makepri.md)
+* [MakePri. exe](compile-resources-manually-with-makepri.md)
