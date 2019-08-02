@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 560d339476ef3cd45f30bfc678661fb0a4a11ee1
-ms.sourcegitcommit: f6af7aeb8506379a184207035c8e43288cb31453
+ms.openlocfilehash: 765fefa0b489e1620d7a37fe75acd02acb8d5ae8
+ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601543"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68729474"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Hospedar controles XAML UWP em aplicativos de área de trabalho (Ilhas XAML)
 
@@ -77,7 +77,7 @@ As APIs que aparecem na parte inferior do diagrama com o SDK do Windows. Os cont
 As ilhas XAML exigem o Windows 10, versão 1903 e posterior. Para usar as ilhas XAML em seu aplicativo, você deve primeiro configurar seu projeto:
 
 1. Modifique seu projeto para usar Windows Runtime APIs. Para obter instruções, consulte [Este artigo](desktop-to-uwp-enhance.md#set-up-your-project).
-2. Instale um desses pacotes NuGet em seu projeto. Certifique-se de instalar a versão 6.0.0-Preview 6.4 ou uma versão posterior do pacote.
+2. Instale um desses pacotes NuGet em seu projeto. Certifique-se de instalar a versão 6.0.0-preview7 ou uma versão posterior do pacote.
     * WPF: Instalar [Microsoft. Toolkit. WPF. UI. Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls)
     * Windows Forms: [Microsoft. Toolkit. Forms. UI. Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls)
     * C++Win32 [Microsoft. Toolkit. Win32. UI. XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)
@@ -91,7 +91,7 @@ A partir do lançamento do Windows 10, versão 1903, os controles encapsulados e
 
 * A versão 1,0 dos controles para o .NET Framework 4.6.2 e posterior está planejada para ser lançada na [versão 6,0 do kit de ferramentas](https://github.com/windows-toolkit/WindowsCommunityToolkit/milestones).
 * A versão 1,0 dos controles para o .NET Core 3 está planejada para uma versão posterior do kit de ferramentas.
-* Se você quiser experimentar as versões mais recentes dos lançamentos da versão 1,0 desses controles para o .NET Framework e o .NET Core 3, consulte os pacotes NuGet **6.0.0-Preview 6.4** na Galeria [da ferramenta UWP Community Toolkit](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) .
+* Se você quiser experimentar as versões mais recentes dos lançamentos da versão 1,0 desses controles para o .NET Framework e o .NET Core 3, consulte os pacotes NuGet **6.0.0-preview7** na Galeria [da ferramenta UWP Community Toolkit](https://dotnet.myget.org/gallery/uwpcommunitytoolkit) .
 
 Para obter mais detalhes, consulte [esta postagem de blog](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap).
 
