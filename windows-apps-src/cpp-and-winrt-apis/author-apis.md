@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: e6b1b443a847fd8d7af3ad46d5263fd6ae2675a4
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 18dc65198d476204cfd54bd241fbd3c9ac401155
+ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328893"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485172"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -425,7 +425,7 @@ Até você fazer a edição descrita acima (para passar esse parâmetro do const
 Como você viu anteriormente neste tópico, uma classe de tempo de execução C++/WinRT existe na forma de mais de uma classe C++ em mais de um namespace. Sendo assim, o nome **MyRuntimeClass** tem um significado no namespace **winrt::MyProject** e um significado diferente no namespace **winrt::MyProject::implementation**. Observe qual namespace que você tem no contexto atualmente e, em seguida, use os prefixos de namespace se precisar de um nome de um namespace diferente. Vamos examinar com mais detalhes os namespaces em questão.
 
 - **winrt::MyProject**. Este namespace contém tipos projetados. Um objeto de tipo projetado é um proxy; ele é essencialmente um ponteiro inteligente para um objeto de backup, podendo esse objeto de backup ser implementado aqui em seu projeto ou em outra unidade de compilação.
-- **winrt::MyProject::implementation**. Este namespace contém tipos de implementação. Um objeto de um tipo de implementação não é um ponteiro; ele é um valor&mdash;um objeto de pilha C++ completo. Não construa um tipo de implementação diretamente; em vez disso, chame [**winrt::make**](/uwp/cpp-ref-for-winrt/make) passando o tipo de implementação como o parâmetro de modelo. Mostramos exemplos de **winrt::make** em ação anteriormente neste tópico, e há outro exemplo em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
+- **winrt::MyProject::implementation**. Este namespace contém tipos de implementação. Um objeto de um tipo de implementação não é um ponteiro; ele é um valor&mdash;um objeto de pilha C++ completo. Não construa um tipo de implementação diretamente; em vez disso, chame [**winrt::make**](/uwp/cpp-ref-for-winrt/make) passando o tipo de implementação como o parâmetro de modelo. Mostramos exemplos de **winrt::make** em ação anteriormente neste tópico, e há outro exemplo em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage). Confira também [Diagnosticar alocações diretas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
 - **winrt::MyProject::factory_implementation**. Este namespace contém fábricas. Um objeto no namespace dá suporte a [**IActivationFactory**](/windows/win32/api/activation/nn-activation-iactivationfactory).
 
 Esta tabela mostra a qualificação de namespace mínima que você precisa usar em diferentes contextos.
@@ -440,7 +440,7 @@ Esta tabela mostra a qualificação de namespace mínima que você precisa usar 
 >
 > O problema com `MyRuntimeClass myRuntimeClass;` nesse cenário é que ele cria um objeto **winrt::MyProject::implementation::MyRuntimeClass** na pilha. Esse objeto (do tipo de implementação) se comporta como o tipo projetado de algumas maneiras&mdash;é possível invocar métodos nele da mesma forma e ele até mesmo é convertido em um tipo de projetado. Mas o objeto é destruído, de acordo com as regras normais de C++, quando o escopo é encerrado. Portanto, se você tiver retornado um tipo projetado (um ponteiro inteligente) para o objeto, esse ponteiro estará pendente.
 >
-> Esse tipo de bug com corrupção de memória é difícil de diagnosticar. Portanto, para compilações de depuração, uma asserção C++/WinRT ajuda a identificar esse erro usando um detector de pilha. No entanto, as corrotinas são alocadas no heap, de modo que você não obterá ajuda com esse erro se ele ocorrer dentro de uma corrotina.
+> Esse tipo de bug com corrupção de memória é difícil de diagnosticar. Portanto, para compilações de depuração, uma asserção C++/WinRT ajuda a identificar esse erro usando um detector de pilha. No entanto, as corrotinas são alocadas no heap, de modo que você não obterá ajuda com esse erro se ele ocorrer dentro de uma corrotina. Para saber mais, confira [Diagnosticar alocações diretas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
 
 ## <a name="using-projected-types-and-implementation-types-with-various-cwinrt-features"></a>Usando tipos projetados e tipos de implementação com vários recursos de C++/WinRT
 
@@ -460,6 +460,199 @@ Veja vários lugares onde um recurso de C++/WinRT espera um tipo e qual tipo ele
 | `make_self<T>`|Implementação|Usar o tipo projetado gera o erro: `'Release': is not a member of any direct or indirect base class of 'T'`|
 | `name_of<T>`|Projetado|Se usar o tipo de implementação, você receberá o GUID em cadeias de caracteres da interface padrão.|
 | `weak_ref<T>`|Ambos|Se você usar o tipo de implementação, o argumento do construtor deverá ser `com_ptr<T>`.|
+
+## <a name="opt-in-to-uniform-construction-and-direct-implementation-access"></a>Aceitar a construção uniforme e o acesso direto de implementação
+
+Esta seção descreve um recurso do C++/WinRT 2.0 que é aceito, embora esteja habilitado por padrão para novos projetos. Para um projeto existente, será necessário aceitar configurando a ferramenta `cppwinrt.exe`. No Visual Studio, defina a propriedade do projeto **Common Properties** > **C++/WinRT** > **Optimized** como *Yes*. Isso tem o efeito de adicionar `<CppWinRTOptimized>true</CppWinRTOptimized>` ao arquivo de projeto. E tem o mesmo efeito que adicionar a opção ao invocar `cppwinrt.exe` da linha de comando.
+
+A opção `-opt[imize]` habilita o que geralmente é chamado de *construção uniforme*. Com a construção uniforme (ou *unificada*), você usa a própria projeção de linguagem do C++/WinRT para criar e usar seus tipos de implementação (tipos implementados por seu componente, para consumo por aplicativos) com eficiência e sem nenhuma dificuldade de carregador.
+
+Antes de descrever o recurso, vamos mostrar primeiro a situação *sem* a construção uniforme. Para ilustrar, começaremos com o exemplo da classe do Windows Runtime.
+
+```idl
+// MyClass.idl
+namespace MyProject
+{
+    runtimeclass MyClass
+    {
+        MyClass();
+        void Method();
+        static void StaticMethod();
+    }
+}
+```
+
+Conforme o desenvolvedor do C++ se familiariza com a biblioteca do C++/WinRT, convém usar a classe como esta.
+
+```cppwinrt
+using namespace winrt::MyProject;
+
+MyClass c;
+c.Method();
+MyClass::StaticMethod();
+```
+
+E isso seria perfeitamente razoável, desde que o código de consumo mostrado não resida no mesmo componente que implementa essa classe. Como uma projeção de linguagem, o C++/WinRT protege você, como desenvolvedor, da ABI (a interface binária de aplicativo baseada em COM definida pelo Windows Runtime). O C++/WinRT não chama diretamente na implementação; ele viaja pela ABI.
+
+Consequentemente, na linha de código em que você está construindo um objeto **MyClass** (`MyClass c;`), a projeção do C++/WinRT chama [**RoGetActivationFactory**](/windows/win32/api/roapi/nf-roapi-rogetactivationfactory) para recuperar a classe ou a fábrica de ativação e, em seguida, o usa essa fábrica para criar o objeto. A última linha, da mesma forma, usa a fábrica para fazer o que parece ser uma chamada de método estático. Tudo isso exige que as classes sejam registradas e que seu módulo implemente o ponto de entrada [**DllGetActivationFactory**](/previous-versions/br205771(v=vs.85)). O C++/WinRT tem um cache de fábrica muito rápido; portanto, nada disso causa um problema para um aplicativo que consome seu componente. O problema é que, em seu componente, você acabou de fazer algo um pouco problemático.
+
+Em primeiro lugar, não importa a rapidez do cache de fábrica do C++/WinRT, chamar por meio de **RoGetActivationFactory** (ou até mesmo chamadas subsequentes por meio do cache de fábrica) sempre será mais lento do que chamar diretamente na implementação. Uma chamada a **RoGetActivationFactory** seguida por [**IActivationFactory::ActivateInstance**](/windows/win32/api/activation/nf-activation-iactivationfactory-activateinstance) seguido por [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)) não será obviamente tão eficiente quanto usar a expressão `new` em C++ para um tipo definido localmente. Como consequência, os desenvolvedores do C++/WinRT experientes estão acostumados a usar as funções auxiliares [**winrt::make**](/uwp/cpp-ref-for-winrt/make) ou [**winrt::make_self**](/uwp/cpp-ref-for-winrt/make-self) ao criar objetos dentro de um componente.
+
+```cppwinrt
+// MyClass c;
+MyProject::MyClass c{ winrt::make<implementation::MyClass>() };
+```
+
+Mas, como você pode ver, isso não é tão conveniente nem conciso. É necessário usar uma função auxiliar para criar o objeto, além de desfazer a ambiguidade entre o tipo de implementação e o tipo projetado.
+
+Em segundo lugar, o uso da projeção para criar a classe significa que sua fábrica de ativação será armazenada em cache. Normalmente, é isso o que você deseja, mas se a fábrica residir no mesmo módulo (DLL) que está realizando a chamada, você terá efetivamente fixado a DLL e impedido que ela nunca fosse descarregada. Em muitos casos, isso não importa; no entanto, alguns componentes do sistema *devem* dar suporte ao descarregamento.
+
+É aí que entra o termo *construção uniforme*. Independentemente de o código de criação residir em um projeto que simplesmente consuma a classe ou residir no projeto que realmente *implemente* a classe, você pode usar livremente a mesma sintaxe para criar o objeto.
+
+```cppwinrt
+// MyProject::MyClass c{ winrt::make<implementation::MyClass>() };
+MyClass c;
+```
+
+Quando você cria seu projeto de componente com a opção `-opt[imize]`, a chamada por meio da projeção de idioma é compilada para a mesma chamada eficiente à função **winrt::make** que cria diretamente o tipo de implementação. Isso torna sua sintaxe simples e previsível e evita qualquer impacto de chamar por meio da fábrica e a fixação do componente no processo. Além dos projetos de componente, isso também é útil para aplicativos XAML. Ignorar **RoGetActivationFactory** para classes implementadas no mesmo aplicativo permite que você as construa (sem precisar estar registrado) de todas as formas possíveis se elas estivessem fora do componente.
+
+A construção uniforme aplica-se a *qualquer* chamada atendida pela fábrica nos bastidores. Praticamente, isso significa que a otimização funciona tanto para construtores quanto para membros estáticos. Veja o exemplo original novamente.
+
+```cppwinrt
+MyClass c;
+c.Method();
+MyClass::StaticMethod();
+```
+
+Sem `-opt[imize]`, a primeira e a última instruções exigem chamadas por meio do objeto de fábrica. *Com* `-opt[imize]`, nem uma delas exige. E essas chamadas são compiladas diretamente com relação à implementação e, inclusive, têm o potencial de serem embutidas. O que conversa com o outro termo frequentemente usado ao falar sobre `-opt[imize]`, ou seja, o acesso *direto de implementação*.
+
+As projeções de linguagem são convenientes, mas, quando você pode acessar diretamente a implementação, você pode e deve aproveitar isso para produzir o código mais eficiente possível. O C++/WinRT pode fazer isso por você, sem forçá-lo a deixar a segurança e a produtividade da projeção.
+
+Essa é uma alteração da falha, porque o componente deve cooperar para permitir que a projeção de linguagem alcance e acesse diretamente seus tipos de implementação. Como o C++/WinRT é uma biblioteca somente de cabeçalho, você pode olhar para dentro e ver o que está acontecendo. Sem `-opt[imize]`, o construtor **MyClass** e o membro **StaticMethod** são definidos pela projeção como esta.
+
+```cppwinrt
+namespace winrt::MyProject
+{
+    inline MyClass::MyClass() :
+        MyClass(impl::call_factory<MyClass>([](auto&& f){
+            return f.template ActivateInstance<MyClass>(); }))
+    {
+    }
+    inline void MyClass::StaticMethod()
+    {
+        impl::call_factory<MyClass, MyProject::IClassStatics>([&](auto&& f) {
+            return f.StaticMethod(); });
+    }
+}
+```
+
+Não é necessário seguir todas as instruções acima; a intenção é mostrar que as duas chamadas envolvem uma chamada para uma função chamada **call_factory**. Essa é a pista de que essas chamadas envolvem o cache de fábrica e não estão acessando diretamente a implementação. *Com* `-opt[imize]`, essas mesmas funções não são definidas. Em vez disso, elas são declaradas pela projeção e suas definições são deixadas até o componente.
+
+O componente pode, então, fornecer definições que chamam diretamente para a implementação. Agora, chegamos à alteração da falha. Essas definições são geradas quando você usa `-component` e `-opt[imize]`, e são exibidas em um arquivo chamado `Type.g.cpp`, em que *Type* é o nome da classe de tempo de execução que está sendo implementada. É por isso que você pode atingir vários erros de vinculador quando habilita `-opt[imize]` pela primeira vez em um projeto existente. É necessário incluir esse arquivo gerado para sua implementação a fim de unir as coisas.
+
+Em nosso exemplo, `MyClass.h` pode ter essa aparência (independentemente se `-opt[imize]` está sendo usado).
+
+```cppwinrt
+// MyClass.h
+#pragma once
+#include "MyClass.g.h"
+ 
+namespace winrt::MyProject::implementation
+{
+    struct MyClass : ClassT<MyClass>
+    {
+        MyClass() = default;
+ 
+        static void StaticMethod();
+        void Method();
+    };
+}
+namespace winrt::MyProject::factory_implementation
+{
+    struct MyClass : ClassT<MyClass, implementation::MyClass>
+    {
+    };
+}
+```
+
+Seu `MyClass.cpp` é o local em que tudo isso se reúne.
+
+```cppwinrt
+#include "pch.h"
+#include "MyClass.h"
+#include "MyClass.g.cpp" // !!It's important that you add this line!!
+ 
+namespace winrt::MyProject::implementation
+{
+    void MyClass::StaticMethod()
+    {
+    }
+ 
+    void MyClass::Method()
+    {
+    }
+}
+```
+
+Portanto, para usar a construção uniforme em um projeto existente, é necessário editar o arquivo `.cpp` de cada implementação para que você `#include <Sub/Namespace/Type.g.cpp>` depois da inclusão (e da definição) da classe de implementação. Esse arquivo fornece as definições dessas funções que a projeção deixou indefinida. Veja a aparência dessas definições dentro do arquivo `MyClass.g.cpp`.
+
+```cppwinrt
+namespace winrt::MyProject
+{
+    MyClass::MyClass() :
+        MyClass(make<MyProject::implementation::MyClass>())
+    {
+    }
+    void MyClass::StaticMethod()
+    {
+        return MyProject::implementation::MyClass::StaticMethod();
+    }
+}
+```
+
+E isso conclui perfeitamente a projeção com chamadas eficientes diretamente para a implementação, evitando chamadas ao cache de fábrica e atendendo ao vinculador.
+
+A última coisa que o `-opt[imize]` faz por você é alterar a implementação do `module.g.cpp` do seu projeto (o arquivo que ajuda você a implementar as exportações **DllGetActivationFactory** e **DllCanUnloadNow** de sua DLL) de tal forma que os builds incrementais tendem a ser muito mais rápidos ao eliminar o acoplamento de tipo forte que era exigido pelo C++/WinRT 1.0. Isso é geralmente conhecido como *fábricas de tipo apagado*. Sem `-opt[imize]`, o arquivo `module.g.cpp` gerado para seu componente começa incluindo as definições de todas as suas classes de implementação&mdash;the `MyClass.h`, neste exemplo. Em seguida, ele cria diretamente a fábrica de implementação para cada classe como esta.
+
+```cppwinrt
+if (requal(name, L"MyProject.MyClass"))
+{
+    return winrt::detach_abi(winrt::make<winrt::MyProject::factory_implementation::MyClass>());
+}
+```
+
+Novamente, você não precisa seguir todos os detalhes. É útil ver que isso requer a definição completa para todas as classes implementadas por seu componente. Isso pode ter um efeito significativo sobre seu loop interno, uma vez que qualquer alteração em uma única implementação fará `module.g.cpp` ser recompilado. Com o `-opt[imize]`, isso não acontece mais. Em vez disso, duas coisas acontecem com o arquivo `module.g.cpp` gerado. A primeira é que ele não inclui mais nenhuma classe de implementação. Neste exemplo, ele não incluirá `MyClass.h`. Em vez disso, ele cria as fábricas de implementação sem conhecer sua implementação.
+
+```cppwinrt
+void* winrt_make_MyProject_MyClass();
+ 
+if (requal(name, L"MyProject.MyClass"))
+{
+    return winrt_make_MyProject_MyClass();
+}
+```
+
+Obviamente, não há necessidade de incluir suas definições, e cabe ao vinculador resolver a definição da função **winrt_make_Component_Class**. É claro que você não precisa pensar nisso, porque o arquivo `MyClass.g.cpp` gerado para você (e que você anteriormente incluiu para dar suporte à construção uniforme) também define essa função. Veja a totalidade do arquivo `MyClass.g.cpp` gerado para este exemplo.
+
+```cppwinrt
+void* winrt_make_MyProject_MyClass()
+{
+    return winrt::detach_abi(winrt::make<winrt::MyProject::factory_implementation::MyClass>());
+}
+namespace winrt::MyProject
+{
+    MyClass::MyClass() :
+        MyClass(make<MyProject::implementation::MyClass>())
+    {
+    }
+    void MyClass::StaticMethod()
+    {
+        return MyProject::implementation::MyClass::StaticMethod();
+    }
+}
+```
+
+Como você pode ver, a função **winrt_make_MyProject_MyClass** cria diretamente a fábrica de sua implementação. Isso tudo significa que você pode alterar qualquer implementação determinada e que o `module.g.cpp` não precisa ser recompilado. Somente quando você adiciona ou remove classes do Windows Runtime que o `module.g.cpp` será atualizado e precisará ser recompilado.
 
 ## <a name="overriding-base-class-virtual-methods"></a>Como substituir métodos virtuais da classe base
 

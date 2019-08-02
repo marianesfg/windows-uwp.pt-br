@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: 01ff6fb443550287330d6fe503c3d49d81e2142c
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: 6bac3fec34467f29d9cf2cc3f1ce4e3754187745
+ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717645"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485155"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -63,15 +63,9 @@ Uma das causas disso é que o Componente do Tempo de Execução do Windows não 
 
 ### <a name="uniform-construction"></a>Construção uniforme
 
-Esse erro também poderá ocorrer se você tentar criar uma instância de uma classe de tempo de execução implementada localmente por meio de qualquer um dos construtores do tipo projetado (diferente de seu construtor **std::nullptr_t**). Para fazer isso, você precisará do recurso de C++/WinRT 2.0 que costuma ser chamado de construção uniforme. No entanto, para saber como criar uma instância de suas classes de tempo de execução implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
+Esse erro também poderá ocorrer se você tentar criar uma instância de uma classe de tempo de execução implementada localmente por meio de qualquer um dos construtores do tipo projetado (diferente de seu construtor **std::nullptr_t**). Para fazer isso, você precisará do recurso de C++/WinRT 2.0 que costuma ser chamado de construção uniforme. Se desejar aceitar esse recurso, então, para saber mais e obter exemplos de código, confira [Aceitar a construção uniforme e o acesso direto de implementação](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access).
 
-Se você *quiser* a construção uniforme, ela será habilitada por padrão para novos projetos. Para um projeto existente, você precisará aceitar a construção uniforme configurando a ferramenta `cppwinrt.exe`. No Visual Studio, defina a propriedade do projeto **Common Properties** > **C++/WinRT** > **Optimized** como *Yes*. Isso tem o efeito de adicionar `<CppWinRTOptimized>true</CppWinRTOptimized>` ao arquivo de projeto. E tem o mesmo efeito que adicionar o comutador `-opt[imize]` ao invocar `cppwinrt.exe` da linha de comando.
-
-Quando você compila seu projeto *sem* essa configuração, a projeção de C++/WinRT resultante chama [**RoGetActivationFactory**](/windows/win32/api/roapi/nf-roapi-rogetactivationfactory) para acessar os construtores e membros estáticos de sua classe de tempo de execução. E isso exige que as classes sejam registradas e que seu módulo implemente o ponto de entrada [**DllGetActivationFactory**](/previous-versions/br205771(v=vs.85)).
-
-Quando você compila seu projeto *com* o comutador `-opt[imize]`, isso faz com que o projeto ignore **RoGetActivationFactory** para as classes em seu componente, o que permite que você os construa (sem necessidade de ser registrado) de todas as mesmas formas que seriam possíveis se eles estivessem fora do componente.
-
-Para usar a construção uniforme, você também precisará editar o arquivo `.cpp` de cada implementação para `#include <Sub/Namespace/ClassName.g.cpp>` após incluir o arquivo de cabeçalho da implementação.
+Para saber como criar uma instância de suas classes de tempo de execução implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime), é recomendável implementar também **IClosable** para dar suporte ao consumo de sua classe de tempo de execução por linguagens que carecem de finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close), ou ambos forem chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.

@@ -4,13 +4,13 @@ description: Como usar as classes XamlUICommand e StandardUICommand (juntamente 
 author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
-ms.date: 03/11/2019
-ms.openlocfilehash: a85a101cd529bf487cbc97b93bb3905f28213c19
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.date: 07/23/2019
+ms.openlocfilehash: 338cae7b6238c3c773f409322600c8bee8c193f5
+ms.sourcegitcommit: 401c8ecaf74eee247f1ed0093028cc6558b4a605
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793850"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446376"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Aplique comandos em aplicativos da UWP (Plataforma Universal do Windows) usando StandardUICommand, XamlUICommand e ICommand
 
@@ -36,9 +36,11 @@ Os comandos podem ser invocados diretamente por meio de interações de interfac
 
 Os comandos podem ser operados em um contexto específico no aplicativo, como ao excluir texto ou desfazer uma ação, ou podem ter contexto livre, como desativar o áudio ou ajustar o brilho.
 
-A imagem a seguir mostra duas interfaces de comando (um [CommandBar](app-bars.md) e um [CommandBarFlyout](command-bar-flyout.md) contextual flutuante) que compartilham muitos dos mesmos comandos.
+A imagem a seguir mostra duas interfaces de comando (um [CommandBar](app-bars.md) e um [CommandBarFlyout](command-bar-flyout.md) contextual flutuante) que compartilham alguns dos mesmos comandos.
 
-![Exemplo de interface de comando](images/commanding/command-interface-example.png)
+![Barra de comandos no Fotos do Windows](images/control-examples/command-bar-photos.png)<br>*Barra de comandos no Fotos do Windows*
+
+![Menu de contexto na galeria do Fotos do Windows](images/ContextMenu_example.png)<br>*Menu de contexto na galeria do Fotos do Windows*
 
 ## <a name="command-interactions"></a>Interações de comando
 

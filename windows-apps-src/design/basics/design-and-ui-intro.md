@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 25dc7118fcb7d9c6e997fae458ef7846777b1262
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2b0f5918b240bf5c28e49f2ede6f10dbeefcbbfc
+ms.sourcegitcommit: e13f06042a28a8455a211b8693a009098e150cd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65983925"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68522096"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -47,12 +47,12 @@ Você pode ignorar a densidade de pixels e a resolução de tela real ao projeta
 
 :::row:::
     :::column span:::
-        The sizes, margins, and positions of UI elements should always be in **multiples of 4 epx** in your UWP apps.
+Os tamanhos, margens e posições dos elementos de interface do usuário devem estar sempre em **múltiplos de 4 epx** em aplicativos UWP.
 
-        UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+A UWP é dimensionada em uma variedade de dispositivos com níveis de ajuste de dimensionamento de 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350% e 400%. A unidade base é 4 porque é o único inteiro que pode ser dimensionado por números não inteiros (por exemplo, 4 * 1,5 = 6). O uso de múltiplos de quatro alinha todos os elementos da interface do usuário com pixels inteiros e fazem os elementos da interface do usuário terem bordas nítidas. (Observe que esse requisito não se aplica ao texto; o texto pode ter qualquer tamanho e posição.)
     :::column-end:::
     :::column:::
-        ![grid](images/4epx.svg)
+![grade](images/4epx.svg)
     :::column-end:::
 :::row-end:::
 
@@ -64,21 +64,21 @@ Como os aplicativos UWP são dimensionados automaticamente para todos os disposi
 
 :::row:::
     :::column:::
-        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/windows.ui.xaml.window) with a [Frame](/uwp/api/windows.ui.xaml.controls.frame), which can navigate between [Page](/uwp/api/windows.ui.xaml.controls.page) instances.
+Quando um aplicativo UWP é lançado em qualquer dispositivo Windows 10, ele é iniciado em uma [Janela](/uwp/api/windows.ui.xaml.window) com um [Quadro](/uwp/api/windows.ui.xaml.controls.frame), que pode navegar entre instâncias de [Página](/uwp/api/windows.ui.xaml.controls.page).
     :::column-end:::
     :::column:::
-        ![Frame](images/frame.svg)
+![Frame](images/frame.svg)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        You can think of your app's UI as a collection of pages. It's up to you to decide what should go on each page, and the relationships between pages.
+É possível pensar na interface do usuário do aplicativo como uma coleção de páginas. Cabe a você decidir o que deve ir em cada página e as relações entre elas.
 
-        To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
+Para saber como é possível organizar suas páginas, confira [Noções básicas sobre navegação](navigation-basics.md).
     :::column-end:::
     :::column:::
-        ![Frame](images/collection-pages.svg)
+![Frame](images/collection-pages.svg)
     :::column-end:::
 :::row-end:::
 
@@ -116,14 +116,14 @@ Os controles comuns são altamente personalizáveis: você pode alterar a cor de
 
 :::row:::
     :::column:::
-        Your UWP app will interact with the broader Windows experience with tiles and notifications in the Windows [Shell](../shell/tiles-and-notifications/creating-tiles.md).
+Seu aplicativo UWP interage com a experiência mais ampla do Windows com blocos e notificações no [Shell](../shell/tiles-and-notifications/creating-tiles.md) do Windows.
 
-        Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
+Os blocos são exibidos no menu Iniciar e quando seu aplicativo é iniciado e fornecem uma prévia do que está acontecendo em seu aplicativo. A energia deles vem do conteúdo por trás deles e da inteligência e habilidade com a qual são oferecidos.
 
-        UWP apps have four tile sizes (small, medium, wide, and large) that can be customized with the app's icon and identity. For guidance on designing tiles for your UWP app, see [Guidelines for tile and icon assets](../shell/tiles-and-notifications/app-assets.md).
+Os aplicativos UWP têm quatro tamanhos de bloco (pequeno, médio, largo e grande) que podem ser personalizados com o ícone e a identidade do aplicativo. Para obter diretrizes sobre design de blocos para seu aplicativo UWP, consulte [Diretrizes para blocos e ativos de ícones](../shell/tiles-and-notifications/app-assets.md).
     :::column-end:::
     :::column:::
-        ![tiles on start menu](images/shell.svg)
+![blocos no menu Iniciar](images/shell.svg)
     :::column-end:::
 :::row-end:::
 
@@ -131,10 +131,10 @@ Os controles comuns são altamente personalizáveis: você pode alterar a cor de
 
 :::row:::
     :::column:::
-        UWP apps rely on smart interactions. You can design around a click interaction without having to know or define whether the click comes from a mouse, a stylus, or a tap of a finger. However, you can also design your apps for [specific input modes](../input/input-primer.md).
+Os aplicativos UWP dependem de interações inteligentes. É possível criar uma interação de clique sem precisar saber nem definir se o clique vem de um mouse, de uma caneta ou do toque de um dedo. No entanto, você também pode criar seus aplicativos para [modos de entrada específicos](../input/input-primer.md).
     :::column-end:::
     :::column:::
-        ![inputs](images/inputs.svg)
+![entradas](images/inputs.svg)
     :::column-end:::
 :::row-end:::
 
