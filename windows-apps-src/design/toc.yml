@@ -39,7 +39,13 @@
     - name: Layouts com XAML
       href: layout/layouts-with-xaml.md
     - name: Mostrar várias exibições
-      href: layout/show-multiple-views.md
+      items:
+        - name: Mostrar várias exibições
+          href: layout/show-multiple-views.md
+        - name: Usar AppWindow
+          href: layout/app-window.md
+        - name: Usar ApplicationView
+          href: layout/application-view.md
     - name: 'Alinhamento, margem e preenchimento'
       href: layout/alignment-margin-padding.md
     - name: Painéis
