@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 21df2a5b12af7b84c0d3f857f121820c35424fb6
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 2a846fee7f72242d9e3becc19cf5be71128dbd9e
+ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682611"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796732"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -148,7 +148,7 @@ A tabela a seguir lista os recursos restritos. Você pode solicitar aprovação 
 | **Aplicativo de VPN** | A funcionalidade restrita **networkingVpnProvider** permite que os aplicativos tenham acesso total aos recursos de VPN, inclusive a capacidade de gerenciar conexões e fornecer funcionalidade de plug-in de VPN.<br /><br />Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.Networking.Vpn**](https://docs.microsoft.com/uwp/api/Windows.Networking.Vpn). |
 | **Outro gerenciamento de aplicativo** | A funcionalidade restrita **packageManagement** permite que os aplicativos gerenciem diretamente outros aplicativos.<br /><br />A funcionalidade do dispositivo **packageQuery** permite que os aplicativos coletem informações de outros aplicativos.<br /><br />Essas funcionalidades são necessárias para acessar alguns métodos e propriedades na classe [**PackageManager**](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). |
 | **Projeção de tela** | A funcionalidade restrita **screenDuplication** permite que os aplicativos projetem a tela em outro dispositivo.<br /><br />Essa funcionalidade é necessária para usar APIs no namespace DirectX. <br /><br />Não recomendamos que você declare esse recurso em aplicativos que você envia para o Microsoft Store. Na maioria dos casos, o uso desse recurso não será aprovado. |
-| **Nome principal do usuário** | A funcionalidade restrita **userPrincipalName** permite que os aplicativos modifiquem e acessem o cache de miniaturas das fotos.<br /><br />Essa funcionalidade é necessária para chamar a função [**GetUserNameEx**](https://docs.microsoft.com/windows/desktop/api/secext/nf-secext-getusernameexa). <br /><br />Não recomendamos que você declare esse recurso em aplicativos que você envia para o Microsoft Store. Na maioria dos casos, o uso desse recurso não será aprovado. |
+| **Nome principal do usuário** | O recurso de permissão restrita de **userPrincipalName** permite que os aplicativos acessem o UPN (nome principal do usuário) do usuário atual.<br /><br />Essa funcionalidade é necessária para chamar a função [**GetUserNameEx**](https://docs.microsoft.com/windows/desktop/api/secext/nf-secext-getusernameexa). <br /><br />Não recomendamos que você declare esse recurso em aplicativos que você envia para o Microsoft Store. Na maioria dos casos, o uso desse recurso não será aprovado. |
 | **Carteira** | A funcionalidade restrita **walletSystem** permite que os aplicativos tenham acesso completo aos cartões de carteira armazenados.<br /><br />Essa funcionalidade é necessária para usar APIs no namespace [**Windows.ApplicationModel.Wallet.System**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Wallet.System). <br /><br />Não recomendamos que você declare esse recurso em aplicativos que você envia para o Microsoft Store. Na maioria dos casos, o uso desse recurso não será aprovado. |
 | **Histórico de localização** | A funcionalidade restrita **locationHistory** permite que os aplicativos acessem o histórico de localização do dispositivo.<br /><br />Essa funcionalidade é necessária para usar APIs no namespace [**Windows.Devices.Geolocation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation).
 | **Confirmação de fechamento do aplicativo** | A funcionalidade restrita **confirmAppClose** permite que os aplicativos fechem a si mesmos e suas próprias janelas, e atrasem o fechamento do aplicativo.<br /><br />Os apps podem solicitar essa funcionalidade na versão 1703 do Windows 10 (compilação 10.0.15063) e versões posteriores. Nas versões anteriores do Windows 10, a funcionalidade é privada e causará uma falha na instalação do app com a mensagem de erro "a funcionalidade solicitada não pode ser autorizada para este aplicativo." |
