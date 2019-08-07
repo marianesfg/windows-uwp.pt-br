@@ -3,7 +3,7 @@ description: Você pode criar um modo de exibição de árvore expansível assoc
 title: Modo de exibição em árvore
 label: Tree view
 template: detail.hbs
-ms.date: 06/14/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.localizationpriority: medium
 pm-contact: predavid
@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 4c29e8f2f88469dfbf260268682cf18e0399e327
-ms.sourcegitcommit: 81cb0b597bedfed8a54ac8b7e84089ef057fa9e3
+ms.openlocfilehash: 8e18455a39441d46e13e5a9a72291c9cd379c310
+ms.sourcegitcommit: 9effd88952bd26611f7b0a0e7baa68aba7d0ee8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68514126"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68616523"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -99,7 +99,7 @@ Para criar um modo de exibição de árvore, use um controle [TreeView](/uwp/api
 Você pode associar uma fonte de dados hierárquica à propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo do modo de exibição de árvore, assim como faria com [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de **ListView**. De forma semelhante, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) opcional) para fornecer um [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) que renderiza o item.
 
 > [!IMPORTANT]
-> **ItemsSource** e suas APIs relacionadas exigem o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **ItemsSource** e suas APIs relacionadas exigem o Windows 10, versão 1809 ([SDK 17763 ou posterior](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 >
 > **ItemsSource** é um mecanismo alternativo a **TreeView.RootNodes** para colocar conteúdo no controle **TreeView**. Não é possível definir **ItemsSource** e **RootNodes** ao mesmo tempo. Quando você usa **ItemsSource**, são criados nós que você pode acessar da propriedade **TreeView.RootNodes**.
 

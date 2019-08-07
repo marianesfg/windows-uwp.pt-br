@@ -5,19 +5,19 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, exemplo, aplicativo, foto, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: bbac9d6a6d08d327bf1bf55de5e86cbb1edd51ea
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 92aff51b6e5ba98d0f5fd157dd3a2dd57e861821
+ms.sourcegitcommit: f8c354def02d5c82d195e4f629e6470110268223
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745195"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68623380"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Exemplo de aplicativo Editor de fotos em C++/WinRT
 
 > [!NOTE]
 > O exemplo é tem como alvo o Windows 10, versão 1903 (10.0; Build 18362) e o Visual Studio 2019, e foi testado em ambos. Se preferir, use as propriedades do projeto para redirecionar o(s) projeto(s) para o Windows 10, versão 1809 (10.0; Build 17763) e/ou abrir o exemplo com o Visual Studio 2017.
 
-É possível clonar ou baixar o [aplicativo de exemplo do Editor de fotos do C++/WinRT](https://github.com/Microsoft/Windows-appsample-photo-editor) do repositório do GitHub.
+Para clonar ou baixar o aplicativo de exemplo, consulte o [aplicativo de exemplo do Editor de fotos do C++/WinRT](/samples/microsoft/windows-appsample-photo-editor/photo-editor-cwinrt-sample-application/) na galeria de exemplos de código.
 
 O Editor de fotos é um exemplo de aplicativo UWP (Plataforma Universal do Windows) que mostra o desenvolvimento com a projeção de linguagem [C++/WinRT](intro-to-using-cpp-with-winrt.md). O aplicativo de exemplo permite que você recupere fotos da biblioteca de **Imagens** e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes. No código-fonte do exemplo, você verá várias práticas comuns, como [associação de dados](binding-property.md) e [ações e operações assíncronas](concurrency.md), realizadas usando a projeção do C++/WinRT. Eis alguns dos recursos específicos demonstrados pela amostra.
 
