@@ -6,21 +6,21 @@ ms.date: 04/03/2019
 ms.localizationpriority: medium
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-keywords: Acessibilidade no Windows 10, acessibilidade, criar aplicativos do win32 acessível, a criação de aplicativos UWP acessíveis, criação de aplicativos WPF acessíveis, criação de aplicativos acessíveis do WinForms
-ms.openlocfilehash: b818b99ebf896b2d2de219d2eedbfd101f3a5caa
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+keywords: Acessibilidade no Windows 10, acessibilidade, criação de aplicativos Win32 acessíveis, criação de aplicativos UWP acessíveis, criação de aplicativos WPF acessíveis, criação de aplicativos WinForms acessíveis
+ms.openlocfilehash: bb82103c030c436655630a37678bbec11e588f61
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66214992"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867424"
 ---
 # <a name="accessibility-in-windows-10"></a>Acessibilidade no Windows 10
 
-![Hero-acessibilidade barra smaller.png](images/hero-accessibility-bar-smaller.png)
+![Hero-Accessibility-bar-Smaller. png](images/hero-accessibility-bar-smaller.png)
 
-Aplicativos acessíveis são projetados para ser inclusivo, melhorando a facilidade de uso para quantas pessoas como possíveis, incluindo aquelas com deficiências, preferências pessoais, estilos de trabalho específicas ou situacional restrições (como dirigir, cooking, a indicação de espera e assim por diante).
+Os aplicativos acessíveis são projetados para serem inclusivos, melhorando a usabilidade para o máximo de pessoas possível, incluindo aquelas com deficiências, preferências pessoais, estilos de trabalho específicos ou restrições de situação (como dirigir, culinária, anti-reflexo e assim por diante).
 
-Esta página fornece informações sobre como as diversas estruturas de desenvolvimento do Windows dão suporte a acessibilidade para os desenvolvedores que criam aplicativos do Windows, os desenvolvedores de tecnologia assistencial Criando ferramentas, como leitores de tela e ampliadores e teste de software engenheiros de criação de scripts automatizados para testar aplicativos.
+Esta página fornece informações sobre como as várias estruturas de desenvolvimento do Windows dão suporte à acessibilidade para desenvolvedores que criam aplicativos do Windows, desenvolvedores de tecnologia assistencial criando ferramentas como leitores de tela e lentes de desenvolvimento e teste de software engenheiros que criam scripts automatizados para testar aplicativos.
 
 ## <a name="platform-specific-documentation"></a>Documentação específica à plataforma
 
@@ -28,7 +28,7 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
     :::column:::
         ![Universal Windows Platform (UWP)](images/platform-uwp.png)
 
-        ### Universal Windows Platform (UWP)
+        **Universal Windows Platform (UWP)**
 
         Develop accessible apps and tools on the modern platform for Windows 10 applications and games on any Windows device (including PCs, phones, Xbox One, HoloLens, and more), and publish them to the Microsoft Store.
 
@@ -43,7 +43,7 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
     :::column:::
         ![Win32 platform apps](images/platform-win32.png)
 
-        ### Win32 platform
+        **Win32 platform**
 
         Develop accessible apps and tools on the original platform for C/C++ Windows applications.
 
@@ -68,7 +68,7 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
     :::column:::
         ![WPF platform](images/platform-wpf.png)
 
-        ### Windows Presentation Foundation (WPF)
+        **Windows Presentation Foundation (WPF)**
 
         Develop accessible apps and tools on the established platform for managed Windows applications with a XAML UI model and the .NET Framework.
 
@@ -91,7 +91,7 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
     :::column:::
         ![Windows Forms platform apps](images/platform-winforms.png)
 
-        ### Windows Forms (WinForms)
+        **Windows Forms (WinForms)**
 
         Develop accessible apps and tools for managed Windows applications with a XAML UI model and the .NET Framework.
 

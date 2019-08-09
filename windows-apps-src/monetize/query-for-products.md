@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, exibir produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: 700cb111f74a4534f2f5e1de70eddfb88b456aa7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c071ca83381e47664e44ef506927c82a4687992d
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596801"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867712"
 ---
 # <a name="query-for-products"></a>Consulta por produtos
 
@@ -36,14 +36,14 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Método | URI da solicitação                                                 |
 |--------|-------------------------------------------------------------|
-| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
+| POSTAR   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
-| Cabeçalho         | Tipo   | Descrição                                                                                           |
+| Cabeçalho         | type   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.                           |
+| Authorization  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no &lt; *token*&gt;de portador do formulário.                           |
 | Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
@@ -51,21 +51,21 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ### <a name="request-body"></a>Corpo da solicitação
 
-| Parâmetro         | Tipo         | Descrição         | Obrigatório |
+| Parâmetro         | type         | Descrição         | Obrigatório |
 |-------------------|--------------|---------------------|----------|
-| beneficiários     | UserIdentity | Um objeto UserIdentity que representa o usuário está sendo consultado por produtos. Para obter mais informações, consulte a tabela abaixo.    | Sim      |
+| beneficiários     | listar&lt;UserIdentity & gt | Uma lista de objetos UserIdentity que representam os usuários que estão sendo consultados para produtos. Para obter mais informações, consulte a tabela abaixo.    | Sim      |
 | continuationToken | cadeia de caracteres       | Se houver vários conjuntos de produtos, o corpo da resposta retornará um token de continuação quando o limite de página for atingido. Forneça esse token de continuação em chamadas subsequentes para recuperar produtos restantes.       | Não       |
 | maxPageSize       | number       | O número máximo de produtos para retornar uma resposta. O valor máximo e padrão é 100.                 | Não       |
 | modifiedAfter     | datetime     | Se especificado, o serviço retorna apenas produtos que foram modificados após essa data.        | Não       |
 | parentProductId   | cadeia de caracteres       | Se especificado, o serviço retorna apenas complementos que correspondem ao aplicativo especificado.      | Não       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Se especificado, o serviço retornará apenas os produtos aplicáveis aos pares produto/SKU fornecidos. Para obter mais informações, consulte a tabela abaixo.      | Não       |
-| productTypes      | lista&lt;cadeia de caracteres&gt;       | Especifica quais tipos de produtos para retornar nos resultados da consulta. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.     | Sim       |
+| productTypes      | cadeia&lt;de caracteres da lista&gt;       | Especifica os tipos de produtos a serem retornados nos resultados da consulta. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.     | Sim       |
 | validityType      | cadeia de caracteres       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
 
 O objeto UserIdentity contém os parâmetros a seguir.
 
-| Parâmetro            | Tipo   |  Descrição      | Obrigatório |
+| Parâmetro            | type   |  Descrição      | Obrigatório |
 |----------------------|--------|----------------|----------|
 | identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
 | identityValue        | cadeia de caracteres | O [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário cujos produtos você deseja consultar.  | Sim      |
@@ -74,7 +74,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 
 O objeto ProductSkuId contém os parâmetros a seguir.
 
-| Parâmetro | Tipo   | Descrição          | Obrigatório |
+| Parâmetro | type   | Descrição          | Obrigatório |
 |-----------|--------|----------------------|----------|
 | productId | cadeia de caracteres | O [ID da Store](in-app-purchases-and-trials.md#store-ids) para um [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da loja para um produto é 9NBLGGH42CFD. | Sim      |
 | skuID     | cadeia de caracteres | O [ID da Store](in-app-purchases-and-trials.md#store-ids) para [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de produto no catálogo da Microsoft Store. Um exemplo de ID da loja para SKU é 0010.       | Sim      |
@@ -117,22 +117,22 @@ Content-Type: application/json
 
 ### <a name="response-body"></a>Corpo da resposta
 
-| Parâmetro         | Tipo                     | Descrição          | Obrigatório |
+| Parâmetro         | type                     | Descrição          | Obrigatório |
 |-------------------|--------------------------|-----------------------|----------|
 | continuationToken | cadeia de caracteres                   | Se houver vários conjuntos de produtos, esse token será retornado quando o limite de página for atingido. Você pode especificar esse token de continuação em chamadas subsequentes para recuperar produtos restantes. | Não       |
-| itens             | CollectionItemContractV6 | Uma matriz de produtos para o usuário especificado. Para obter mais informações, consulte a tabela abaixo.        | Não       |
+| items             | CollectionItemContractV6 | Uma matriz de produtos para o usuário especificado. Para obter mais informações, consulte a tabela abaixo.        | Não       |
 
 
 O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 
-| Parâmetro            | Tipo               | Descrição            | Obrigatório |
+| Parâmetro            | type               | Descrição            | Obrigatório |
 |----------------------|--------------------|-------------------------|----------|
 | acquiredDate         | datetime           | A data em que o usuário adquiriu o item.                  | Sim      |
 | campaignId           | cadeia de caracteres             | A ID da campanha que foi fornecida para este item no momento da compra.                  | Não       |
 | devOfferId           | cadeia de caracteres             | A ID de oferta de uma compra realizada em aplicativo.              | Não       |
 | endDate              | datetime           | A data de término do item.              | Sim      |
 | fulfillmentData      | cadeia de caracteres             | N/D         | Não       |
-| inAppOfferToken      | cadeia de caracteres             | A cadeia de identificação do produto especificados pelo desenvolvedor que é atribuída ao item no Partner Center. ID é um produto de exemplo *product123*. | Não       |
+| inAppOfferToken      | cadeia de caracteres             | A cadeia de caracteres de ID do produto especificada pelo desenvolvedor que é atribuída ao item no Partner Center. Uma ID de produto de exemplo é *product123*. | Não       |
 | itemId               | cadeia de caracteres             | A ID que identifica esse item de coleção em relação a outros itens que o usuário tem. Essa ID é exclusiva por produto.   | Sim      |
 | localTicketReference | cadeia de caracteres             | A ID de *localTicketReference* anteriormente fornecida no corpo da solicitação.                  | Sim      |
 | modifiedDate         | datetime           | A data em que este item foi modificado pela última vez.              | Sim      |
@@ -140,7 +140,7 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | orderLineItemId      | cadeia de caracteres             | Se presente, o item de linha da ordem específica para a qual o item foi obtido.              | Não       |
 | ownershipType        | cadeia de caracteres             | A cadeia de caracteres *OwnedByBeneficiary*.   | Sim      |
 | productId            | cadeia de caracteres             | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da loja para um produto é 9NBLGGH42CFD.          | Sim      |
-| productType          | cadeia de caracteres             | Um dos seguintes tipos de produtos: **Aplicativo**, **durável**, e **UnmanagedConsumable**.        | Sim      |
+| productType          | cadeia de caracteres             | Um dos seguintes tipos de produto: **Aplicativo**, **durável**e **UnmanagedConsumable**.        | Sim      |
 | purchasedCountry     | cadeia de caracteres             | N/D   | Não       |
 | comprador            | IdentityContractV6 | Se presente, representa a identidade do comprador do item. Veja os detalhes para esse objeto abaixo.        | Não       |
 | quantity             | number             | A quantidade do item. Atualmente, sempre será 1.      | Não       |
@@ -154,7 +154,7 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 
 O objeto IdentityContractV6 contém os parâmetros a seguir.
 
-| Parâmetro     | Tipo   | Descrição                                                                        | Obrigatório |
+| Parâmetro     | type   | Descrição                                                                        | Obrigatório |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
 | identityType  | cadeia de caracteres | Contém o valor *pub*.                                                      | Sim      |
 | identityValue | cadeia de caracteres | O valor da sequência de *publisherUserId* da chave de ID da Microsoft Store especificada. | Sim      |
@@ -205,6 +205,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Gerenciar direitos de produto de um serviço](view-and-grant-products-from-a-service.md)
-* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
+* [Relatar produtos consumíveis como atendidos](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
-* [Renovar uma chave de ID do Microsoft Store](renew-a-windows-store-id-key.md)
+* [Renovar uma chave de ID de Microsoft Store](renew-a-windows-store-id-key.md)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 9df150d4a8873630a371fa2ad02e8c88bed7f42e
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682536"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867747"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -80,7 +80,7 @@ Para carregar um certificado para a compilação automatizada:
 
     ![como carregar um arquivo seguro](images/secure-file2.png)
 
-5. Se o certificado tiver uma senha, recomendamos que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e, em seguida, vincule a senha a um [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode usar a variável para acessar a senha do pipeline.
+5. Se a chave privada no certificado tiver uma senha, recomendamos que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e, em seguida, vincule a senha a um [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode usar a variável para acessar a senha do pipeline. Observe que uma senha tem suporte apenas para a chave privada; no momento, não há suporte para o uso de um arquivo de certificado que não seja protegido por senha.
 
 > [!NOTE]
 > A partir do Visual Studio 2019, um certificado temporário não é mais gerado em projetos UWP. Para criar ou exportar certificados, use os cmdlets do PowerShell descritos neste [artigo](/windows/msix/package/create-certificate-package-signing).
@@ -100,7 +100,7 @@ Esta tarefa compila qualquer solução que esteja na pasta de trabalho para bin�
 | AppxPackageSigningEnabled | true | Habilita a assinatura de pacote. |
 | PackageCertificateThumbprint | Impressão digital do certificado | Esse valor **deve** corresponder à impressão digital no certificado de autenticação ou ser uma cadeia de caracteres vazia. |
 | PackageCertificateKeyFile | Path | O caminho para o certificado a ser usado. Isso é recuperado dos metadados de arquivo seguro. |
-| PackageCertificatePassword | Senha | A senha do certificado. É recomendável que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e vincule a senha ao [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode passar a variável para esse argumento. |
+| PackageCertificatePassword | Senha | A senha da chave privada no certificado. É recomendável que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e vincule a senha ao [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode passar a variável para esse argumento. |
 
 ### <a name="configure-the-build"></a>Configurar a compilação
 
