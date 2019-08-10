@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c8514d7936bcc6fb14d9ff6f8fc33cd660438d3
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: ae0fc2eca3d32a0e491ef0d8ca00ef22c05eb27f
+ms.sourcegitcommit: 698a86640b365dc1ca772fb6f53ca556dc284ed6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820130"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68935768"
 ---
 # <a name="tools-for-profiling-and-performance"></a>Ferramentas de criação de perfil e de desempenho
 
@@ -24,6 +24,6 @@ Confira também:
 
 |           |             |
 |-----------|-------------|
-| [Analisar o desempenho de aplicativos UWP usando as ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) | Ao mostrar onde o código do aplicativo perde tempo conforme o programa é executado, os criadores de perfis do Visual Studio podem ajudá-lo a encontrar os obstáculos ao desempenho em seus aplicativos, funções e algoritmos. |
-| [Desempenho de XAML: Técnicas para maximizar a experiências de aplicativo Universal do Windows criados com XAML](https://channel9.msdn.com/Events/Build/2015/3-698) | Nesta sessão //build, você aprenderá sobre os novos recursos da plataforma, novos recursos de ferramentas e novas técnicas para aumentar significativamente o desempenho do seu Aplicativo Universal do Windows baseado em XAML. |
-| [Novas ferramentas XAML no Visual Studio](https://channel9.msdn.com/Events/Build/2015/2-697) | Nesta sessão //build, você aprenderá sobre alguns dos novos recursos no Visual Studio 2015, incluindo a experiência do Blend reprojetada, as ferramentas de depuração de interface do usuário e as melhorias no editor XAML. Essas ferramentas também estão disponíveis no Visual Studio de 2019 |
+| [Analisar o desempenho de aplicativos UWP usando as ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools) | Ao mostrar onde o código do aplicativo perde tempo conforme o programa é executado, os criadores de perfis do Visual Studio podem ajudá-lo a encontrar os obstáculos ao desempenho em seus aplicativos, funções e algoritmos. |
+| [Desempenho XAML: Técnicas para maximizar experiências de aplicativos universais do Windows criadas com XAML](https://channel9.msdn.com/Events/Build/2015/3-698) | Nesta sessão //build, você aprenderá sobre os novos recursos da plataforma, novos recursos de ferramentas e novas técnicas para aumentar significativamente o desempenho do seu Aplicativo Universal do Windows baseado em XAML. |
+| [Novas ferramentas XAML no Visual Studio](https://channel9.msdn.com/Events/Build/2015/2-697) | Nesta sessão //build, você aprenderá sobre alguns dos novos recursos no Visual Studio 2015, incluindo a experiência do Blend reprojetada, as ferramentas de depuração de interface do usuário e as melhorias no editor XAML. Essas ferramentas também estão disponíveis no Visual Studio 2019 |
