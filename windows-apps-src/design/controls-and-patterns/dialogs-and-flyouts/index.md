@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d542c9809eb939553a851508886e34265f269263
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 43d63b1831766ecdf65fe1c1d7fd15457f728f83
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582035"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867448"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -29,20 +29,20 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 
 :::row:::
     :::column:::
-        **Dialogs**
-        
-        ![Example of a dialog](../images/dialogs/dialog_RS2_delete_file.png)
+**Caixas de diálogo**
 
-        Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.
+![Exemplo de uma caixa de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
+
+Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. As caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.
     :::column-end:::
     :::column::: 
-        **Flyouts**
+**Submenus**
 
-        ![Example of a flyout](../images/flyout-example2.png)
+![Exemplo de um submenu](../images/flyout-example2.png)
 
-        A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a secondary control or show more detail about an item.
+Um submenu é um pop-up contextual leve que exibe a interface do usuário relacionada ao que o usuário está fazendo. Inclui a lógica de dimensionamento e posicionamento e, além disso, pode ser usado para exibir um controle secundário ou mostrar mais detalhes sobre um item.
 
-        Unlike a dialog, a flyout can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
+Ao contrário de uma caixa de diálogo, um submenu pode ser ignorado rapidamente tocando ou clicando em algum lugar fora do submenu, pressionando a tecla Escape ou botão Back, redimensionando a janela do aplicativo ou mudando a orientação do dispositivo.
     :::column-end:::
 :::row-end:::
 

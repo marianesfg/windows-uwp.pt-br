@@ -6,12 +6,12 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 33bb7aa6a5a244f1d7b9dcd178b036ac571032f8
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 7ab0344acc40103620da5164faa397c081a4a079
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065272"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867330"
 ---
 # <a name="layout"></a>Layout
 
@@ -21,52 +21,52 @@ Estes artigos ajudarão você a criar uma interface do usuário flexível que te
 
 :::row:::
     :::column:::
-        ### [Page layout](page-layout.md)
-        Walk through a basic page layout structure.
+### <a name="page-layoutpage-layoutmd"></a>[Layout da página](page-layout.md)
+Percorra uma estrutura de layout da página básica.
     :::column-end:::
     :::column:::
-        ### [Screen sizes and breakpoints](screen-sizes-and-breakpoints-for-responsive-design.md)
-        Learn about screen sizes across the Windows 10 ecosystem and how to design for breakpoints.
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ### [Responsive design techniques](responsive-design.md)
-        Learn about responsive design techniques that optimize your app's layout for breakpoints.
-    :::column-end:::
-    :::column:::
-        ### [Layouts with XAML](layouts-with-xaml.md)
-        Implement responsive UI in XAML with adaptive or tailored layouts.
+### <a name="screen-sizes-and-breakpointsscreen-sizes-and-breakpoints-for-responsive-designmd"></a>[Tamanhos de tela e pontos de interrupção](screen-sizes-and-breakpoints-for-responsive-design.md)
+Saiba mais sobre os tamanhos de tela no ecossistema do Windows 10 e como fazer design para pontos de interrupção.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ### [Multiple views](show-multiple-views.md)
-        Show independent parts of your app in separate windows.
+### <a name="responsive-design-techniquesresponsive-designmd"></a>[Técnicas de design dinâmico](responsive-design.md)
+Saiba mais sobre técnicas de design responsivas que otimizam o layout de seu aplicativo para pontos de interrupção.
     :::column-end:::
     :::column:::
-        ### [Alignment, margin, padding](alignment-margin-padding.md)
-        Use alignment, margin, and padding to influence layout behavior.
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ### [Layout panels](layout-panels.md)
-        Learn about each type of layout panel an how to use them to arrange UI elements.
-    :::column-end:::
-    :::column:::
-        ### [Transforms](transforms.md)
-        Use transforms to rotate, skew, and scale elements.
+### <a name="layouts-with-xamllayouts-with-xamlmd"></a>[Layouts com XAML](layouts-with-xaml.md)
+Implemente a interface do usuário responsiva em XAML com layouts adaptativos ou personalizados.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ### [Attached layouts](attached-layouts.md)
-        Learn advanced layout concepts in XAML and how to create a custom virtualizing layout.
+### <a name="multiple-viewsshow-multiple-viewsmd"></a>[Várias exibições](show-multiple-views.md)
+Mostre partes independentes de seu aplicativo em janelas separadas.
+    :::column-end:::
+    :::column:::
+### <a name="alignment-margin-paddingalignment-margin-paddingmd"></a>[Alinhamento, margem, preenchimento](alignment-margin-padding.md)
+Use alinhamento, margem e preenchimento para influenciar o comportamento do layout.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+### <a name="layout-panelslayout-panelsmd"></a>[Painéis de layout](layout-panels.md)
+Saiba mais sobre cada tipo de painel de layout e como usá-los para organizar elementos da interface do usuário.
+    :::column-end:::
+    :::column:::
+### <a name="transformstransformsmd"></a>[Transformações](transforms.md)
+Use as transformações para girar, distorcer e ajustar a escala dos elementos.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+### <a name="attached-layoutsattached-layoutsmd"></a>[Layout anexado](attached-layouts.md)
+Aprenda conceitos de layout avançado em XAML e como criar um layout de virtualização personalizada.
     :::column-end:::
     :::column:::
     :::column-end:::
