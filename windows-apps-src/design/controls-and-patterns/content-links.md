@@ -10,18 +10,18 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b72d7fced63a4c3ef4b1b233afcbb9f9874d9a3f
+ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363056"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796716"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
 Links de conteúdo fornecem uma maneira de inserir dados avançados em seus controles de texto, o que permite que um usuário encontre e use mais informações sobre uma pessoa ou um local sem sair do contexto de seu aplicativo.
 
-Quando o usuário prefixa uma entrada com um símbolo de E comercial (@) em uma RichEditBox, aparece uma lista de sugestões de pessoas e/ou locais que corresponde à entrada. Em seguida, por exemplo, quando o usuário seleciona um local, um ContentLink para esse local é inserido no texto. Quando o usuário invoca o link de conteúdo da RichEditBox, um submenu é mostrado com um mapa e informações adicionais sobre o local.
+Quando o usuário estabelece como prefixo de uma entrada o símbolo de arroba (@) em uma RichEditBox, uma lista de sugestões de pessoas e/ou locais que corresponde à entrada é exibida. Em seguida, por exemplo, quando o usuário seleciona um local, um ContentLink para esse local é inserido no texto. Quando o usuário invoca o link de conteúdo da RichEditBox, um submenu é mostrado com um mapa e informações adicionais sobre o local.
 
 > **APIs importantes**: [classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [classe RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
 

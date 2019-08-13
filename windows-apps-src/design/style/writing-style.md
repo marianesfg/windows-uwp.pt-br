@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: aaaf13c455d3d05d5ccfac6b2bd61418f3e8e5bb
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f5f38fdfb3ba9fd32a6e06ec19cdbfb6c3b09f24
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63820519"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867680"
 ---
 # <a name="writing-style"></a>Estilo de escrita
 
@@ -41,12 +41,10 @@ Os usuários precisam ler e entender o texto rapidamente. Não enrole com aprese
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        Select **filters** to add effects to your image.
+![Fazer](images/do.svg) Selecionar **filtros** para adicionar efeitos à sua imagem.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        If you want to add visual effects or alterations to your image, select **filters.**
+![Não fazer](images/dont.svg) Se você quiser adicionar efeitos visuais ou alterações à sua imagem, selecione **filtros**.
     :::column-end:::
 :::row-end:::
 
@@ -56,12 +54,10 @@ Os aplicativos são definidos por ações. Os usuários executam essas ações q
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        Restart the app to see your changes.
+![Fazer](images/do.svg) Reiniciar o aplicativo para ver as alterações.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        The changes will be applied when the app is restarted.
+![Não fazer](images/dont.svg) As alterações serão aplicadas quando o aplicativo for reiniciado.
     :::column-end:::
 :::row-end:::
 
@@ -71,12 +67,10 @@ Os usuários leem o texto e, frequentemente, ignoram totalmente os blocos maiore
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        We couldn't upload the picture. If this happens again, try restarting the app. But don't worry — your picture will be waiting when you come back.
+![Fazer](images/do.svg) Não foi possível carregar a imagem. Se ocorrer novamente, tente reiniciar o aplicativo. Mas não se preocupe, sua imagem estará esperando por você ao retornar.
     :::column-end:::
     :::column:::
-        ![Don't](images/dont.svg)
-        An error occured, and we weren't able to upload the picture. Please try again, and if you encounter this problem again, you may need to restart the app. But don't worry — we've saved your work locally, and it'll be waiting for you when you come back.
+![Não fazer](images/dont.svg) Ocorreu um erro e não conseguimos carregar a imagem. Tente novamente. Se esse problema ocorrer novamente, talvez seja necessário reiniciar o aplicativo. Mas não se preocupe, salvamos o trabalho localmente e ele estará esperando por você quando retornar.
     :::column-end:::
 :::row-end:::
 
@@ -93,8 +87,7 @@ Fale diretamente com o usuário.
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        We couldn't save your file to that location.
+![Fazer](images/do.svg) Não foi possível salvar seu arquivo nesse local.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -110,8 +103,7 @@ Fale diretamente com o usuário.
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        The Universal Windows Platform (UWP) design guidance is a resource to help you design and build beautiful, polished apps. With the design features that are included in every UWP app, you can build user interfaces (UI) that scale across a range of devices.
+![Fazer](images/do.svg) As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Com os recursos de design que estão incluídos em cada aplicativo UWP, você pode criar UIs (interfaces do usuário) que sejam dimensionadas em uma ampla variedade de dispositivos.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -125,8 +117,7 @@ As pessoas estão acostumadas com contrações e esperam vê-las. Ao evitar o us
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        When you're happy with your image, select **save** to add it to your gallery. From there, you'll be able to share it with friends.
+![Fazer](images/do.svg) Quando estiver satisfeito com sua imagem, selecione **salvar** para adicioná-la à galeria. Lá, você poderá compartilhá-la com amigos.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -140,12 +131,12 @@ As pessoas estão acostumadas com contrações e esperam vê-las. Ao evitar o us
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>You’re not connected.</b>
-        * Check that your network cables are plugged in.
-        * Make sure you're not in airplane mode.
-        * See if your wireless switch is turned on.
-        * Restart your router.
+![Fazer](images/do.svg)
+<b>Você não está conectado.</b>
+* Verifique se os cabos de rede estão conectados.
+* Verifique se você não está no modo avião.
+* Veja se o comutador sem fio está ligado.
+* Reinicie o roteador.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -159,11 +150,11 @@ Letras maiúsculas são importantes, mas são fáceis de usar em excesso.
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>Which part is giving you trouble?</b>
-        * I forgot your password.
-        * It won't accept password.
-        * Someone else might be using my account.
+![Fazer](images/do.svg)
+<b>Qual parte está causando problemas?</b>
+* Esqueci minha senha.
+* Não aceita a senha.
+* Alguém pode estar usando minha conta.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -183,12 +174,12 @@ O mais importante é que sua mensagem de erro não culpe o usuário. Também é 
 
 :::row:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>You’re not connected.</b>
-        * Check that your network cables are plugged in.
-        * Make sure you're not in airplane mode.
-        * See if your wireless switch is turned on.
-        * Restart your router.
+![Fazer](images/do.svg)
+<b>Você não está conectado.</b>
+* Verifique se os cabos de rede estão conectados.
+* Verifique se você não está no modo avião.
+* Veja se o comutador sem fio está ligado.
+* Reinicie o roteador.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -198,16 +189,16 @@ O mais importante é que sua mensagem de erro não culpe o usuário. Também é 
 
 :::row:::
     :::column:::
-        Many of the same advice for writing error messages also applies when creating the text for any dialogs in your app. While dialogs are expected by the user, they still interrupt the normal flow of the app, and need to be helpful and concise so the user can get back to what they were doing.
+Muitos dos mesmos conselhos para escrever mensagens de erro também se aplicam à criação do texto para todas as caixas de diálogo do aplicativo. Embora as caixas de diálogo sejam esperadas pelo usuário, elas acabam interrompendo o fluxo normal do aplicativo e devem ser úteis e concisas para que o usuário possa voltar rapidamente ao que estava fazendo.
 
-        But most important is the "call and response" between the title of a dialog and its buttons. Make sure that your buttons are clear answers to the question posed by the title, and that their format is consistent across your app.
+Mas o mais importante é a "chamada e a resposta" entre o título de uma caixa de diálogo e seus botões. Certifique-se de que os botões oferecem respostas claras para a pergunta apresentada pelo título e que seu formato seja consistente com o aplicativo.
     :::column-end:::
     :::column:::
-        ![Do](images/do.svg)
-        <b>Which part is giving you trouble?</b>
-        1. I forgot my password
-        2. It won't accept my password
-        3. Someone else might be using my account
+![Fazer](images/do.svg)
+<b>Qual parte está causando problemas?</b>
+1. Esqueci minha senha
+2. Não aceita minha senha
+3. Alguém pode estar usando minha conta
     :::column-end:::
 :::row-end:::
 
@@ -215,13 +206,13 @@ O mais importante é que sua mensagem de erro não culpe o usuário. Também é 
 
 :::row:::
     :::column:::
-        Text on buttons needs to be concise enough that users can read it all at a glance and clear enough that the button's function is immediately obvious. The longest the text on a button should ever be is a couple short words, and many should be shorter than that.
-        When writing the text for buttons, remember that every button represents an action. Be sure to use the *active voice* in button text, to use words that represent actions rather than reactions.
+O texto dos botões deve ser conciso o suficiente para que os usuários possam ler tudo em uma olhada e de forma clara o suficiente para que a função do botão seja imediatamente óbvia. O texto de um botão nunca deve ter mais do que algumas palavras curtas, sendo que a maioria deles deve ser ainda menores do que isso.
+Ao escrever o texto dos botões, lembre-se de que cada um deles representa uma ação. Certifique-se de usar a *voz ativa* no texto do botão, de usar palavras que representam ações em vez de reações.
     :::column-end:::
     :::column:::
-        ![Do](images/do.svg)
-        * Install now
-        * Share
+![Você deve](images/do.svg)
+* Instalar agora
+* Share
     :::column-end:::
 :::row-end:::
 

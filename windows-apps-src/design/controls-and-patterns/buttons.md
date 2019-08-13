@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f8d4172389fc2778fda4e335a29b3bae7d90fd0
-ms.sourcegitcommit: 5fcd3a595efd3686009505602c34e10163fd0aa5
+ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
+ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558765"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68835636"
 ---
 # <a name="buttons"></a>Botões
 
@@ -36,6 +36,7 @@ Controle | Descrição
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Um botão com dois lados. Um dos lados inicia uma ação e o outro abre um menu.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Um botão de alternância com dois lados. Um lado ativa/desativa e o outro abre um menu.
+[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | Um botão que pode estar ativado ou desativado.
 
 | **Obter a biblioteca de interface do usuário do Windows** |
 | - |
@@ -59,6 +60,8 @@ Use um controle **RepeatButton** quando o usuário quiser disparar uma ação re
 Use um controle **DropDownButton** quando o botão tiver um submenu que contém mais opções. A divisa padrão fornece uma indicação visual de que o botão inclui um submenu.
 
 Use um controle **SplitButton** quando quiser que o usuário seja capaz de iniciar uma ação imediata ou escolher opções adicionais de forma independente.
+
+Use um controle **ToggleButton** quando quiser que o usuário seja capaz de alternar imediatamente entre dois estados mutuamente exclusivos e um botão for a melhor opção para as necessidades da sua interface do usuário. Exceto quando a interface do usuário se beneficia do uso desse botão, pode ser uma melhor opção usar um [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), uma [CheckBox](checkbox.md), um [RadioButton](radio-button.md) ou um [ToggleSwitch](toggles.md).
 
 ## <a name="examples"></a>Exemplos
 

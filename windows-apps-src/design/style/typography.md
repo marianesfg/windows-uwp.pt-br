@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1d162fcf9a0f1023c58792e8c9f7a0e22fac4440
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63820590"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867753"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -25,16 +25,14 @@ Você precisa usar uma fonte em toda a interface do usuário do aplicativo, e re
 
 ![Texto de exemplo da fonte Segoe UI](images/type/segoe-sample.svg)
 
-Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o seu aplicativo, confira [Idiomas](#Languages) e [Fontes](#Fonts) e veja as fontes recomendadas para aplicativos UWP.
+Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o seu aplicativo, confira [Idiomas](#languages) e [Fontes](#fonts) e veja as fontes recomendadas para aplicativos UWP.
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Pick one font for your UI.
+![fazer](images/do.svg) Escolher uma fonte para a sua interface do usuário.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Don't mix multiple fonts.
+![não fazer](images/dont.svg) Não misturar várias fontes.
     :::column-end:::
 :::row-end:::
 
@@ -48,12 +46,10 @@ Devido ao funcionamento do sistema de dimensionamento, você está projetando em
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Follow the UWP [type ramp](#type-ramp) sizing.
+![fazer](images/do.svg) Seguir o dimensionamento da [rampa de tipos da UWP](#type-ramp).
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use a font size smaller than 12 px.
+![não fazer](images/dont.svg) Usar um tamanho de fonte inferior a 12 px.
     :::column-end:::
 :::row-end:::
 
@@ -61,10 +57,10 @@ Devido ao funcionamento do sistema de dimensionamento, você está projetando em
 
 :::row:::
     :::column:::
-        Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail. To create a clear visual hierarchy in your app, follow the UWP type ramp.
+Os usuário dependem de uma hierarquia visual ao examinar uma página: os cabeçalhos resumem o conteúdo e o texto do corpo fornece mais detalhes. Para criar uma hierarquia visual clara em seu aplicativo, siga a rampa de tipos da UWP.
     :::column-end:::
     :::column:::
-        ![text block styles](images/type/type-hierarchy.svg)
+![estilos de bloco de texto](images/type/type-hierarchy.svg)
     :::column-end:::
 :::row-end:::
 
@@ -78,10 +74,10 @@ A rampa de tipos da UWP estabelece relações específicas entre os estilos de t
 
 :::row:::
     :::column:::
-        You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). The styles follow the `*TextBlockStyle` naming convention.
+Você pode acessar os níveis da rampa de tipos como [recursos estáticos](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp) XAML. Os estilos seguem a convenção de nomenclatura `*TextBlockStyle`.
     :::column-end:::
     :::column:::
-        ![text block styles](images/type/text-block-type-ramp.svg)
+![estilos de bloco de texto](images/type/text-block-type-ramp.svg)
     :::column-end:::
 :::row-end:::
 
@@ -97,16 +93,14 @@ A rampa de tipos da UWP estabelece relações específicas entre os estilos de t
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Use "Body" for most text.
+![fazer](images/do.svg) Usar "Corpo" para a maioria dos textos.
 
-        Use "Base" for titles when space is constrained.
+Usar "Base" para títulos quando o espaço é limitado.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use "Caption" for primary action or any long strings.
+![não fazer](images/dont.svg) Usar "Legenda" para ação principal ou cadeias de caracteres longas.
 
-        Use "Header" or "Subheader" if text needs to wrap.
+Usar "Cabeçalho" ou "Subcabeçalho" se for preciso quebra automática de linha.
     :::column-end:::
 :::row-end:::
 
@@ -124,12 +118,10 @@ O [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignme
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Keep to 50–60 letters per line for ease of reading.
+![fazer](images/do.svg) Manter 50 a 60 letras por linha para facilitar a leitura.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Less than 20 characters or more than 60 characters per line is difficult to read.
+![não fazer](images/dont.svg) Menos de 20 caracteres ou mais de 60 caracteres por linha dificulta a leitura.
     :::column-end:::
 :::row-end:::
 
@@ -145,12 +137,10 @@ Quando a quantidade de texto se estende para além do espaço disponível, recom
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        Clip text, and wrap if multiple lines are enabled.
+![fazer](images/do.svg) Recortar o texto e usar a quebra automática se várias linhas estiverem habilitadas.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        Use ellipses to avoid visual clutter.
+![não fazer](images/dont.svg) Usar reticências para evitar a poluição visual.
     :::column-end:::
 :::row-end:::
 

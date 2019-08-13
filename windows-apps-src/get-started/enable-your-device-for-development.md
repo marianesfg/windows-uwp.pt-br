@@ -6,12 +6,12 @@ keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de de
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 09f115cad236582ccb0008c2274a7472ed4c0d55
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682662"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867609"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -46,6 +46,9 @@ Veja a seguir a página de configurações na família de dispositivos de deskto
 
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>Qual configuração devo escolher: sideload de aplicativos ou Modo de Desenvolvedor?
 
+> [!NOTE]
+> A partir do Build 18956 do Windows Insider, a opção de sideload foi removida e o modo de desenvolvedor agora é uma alternância. Veja mais sobre sideload na próxima seção. 
+
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
 -   *Aplicativos da Windows Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
@@ -55,6 +58,9 @@ Veja a seguir a página de configurações na família de dispositivos de deskto
 Por padrão, você só pode instalar aplicativos UWP (Plataforma Universal do Windows) da Microsoft Store. A alteração dessas configurações para usar recursos de desenvolvedor pode alterar o nível de segurança do seu dispositivo. Você não deve instalar aplicativos de fontes não verificadas.
 
 ### <a name="sideload-apps"></a>Fazer o sideload de aplicativos
+
+> [!NOTE]
+> A partir do Build 18956 do Windows Insider, o sideload é habilitado por padrão. Agora você pode implantar um pacote MSIX assinado em um dispositivo sem uma configuração especial. 
 
 A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store, ou por alguém que precisa executar aplicativos de outras fontes, que não a Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introdução à implantação de aplicativo no Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
