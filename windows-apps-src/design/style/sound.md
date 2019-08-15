@@ -138,7 +138,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 O som **Foco** é o único som implícito em nosso sistema. Ou seja, um usuário não está interagindo diretamente com nada, mas ainda ouve um som.
 
-O foco acontece quando um usuário navega por meio de um aplicativo, que pode ser com o teclado/gamepad/remoto ou kinect. Normalmente, o som **Foco***não é reproduzido em eventos PointerEntered nem do mouse*.
+O foco acontece quando um usuário navega por meio de um aplicativo, que pode ser com o teclado/gamepad/remoto ou kinect. Normalmente, o som **Foco** *não é reproduzido em eventos PointerEntered nem do mouse*.
 
 Para configurar um controle para reproduzir o som **Foco** quando o controle recebe foco, chame:
 
