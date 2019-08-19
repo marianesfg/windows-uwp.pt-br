@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fb8132e7b382ee801d83986261bf71d8fef490f
-ms.sourcegitcommit: 04a6e60c3b24d6efae0f0e2ada1d66a369471fb3
-ms.translationtype: HT
+ms.openlocfilehash: d582d4815b4fb2168b187a1efff3795cc98aca02
+ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69487801"
 ---
 # <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Capture fotos e vídeos com a interface do usuário da câmera interna do Windows
 
@@ -46,7 +46,7 @@ Chame [**CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.ca
 
 Para usar sua foto em seu aplicativo, talvez você queira criar um objeto [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) que pode ser usado com vários recursos diferentes de aplicativo Universal do Windows.
 
-Primeiro, você deve incluir o namespace [**Windows. Graphics. Imaging**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging) em seu projeto.
+Primeiro, inclua o namespace [**Windows. Graphics. Imaging**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging) em seu projeto.
 
 [!code-cs[UsingSoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmap)]
 
