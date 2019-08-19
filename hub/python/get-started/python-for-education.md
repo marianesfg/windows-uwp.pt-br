@@ -5,17 +5,15 @@ author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-ms.prod: windows
-ms.technology: hub
 keywords: Python, Windows 10, Microsoft, Learning Python, Python no Windows para iniciantes, instalar o Python com a Microsoft Store, Python com vs Code, Pygame no Windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 9ef2349b296e5518d6bbb85a035526d7de25ea5c
-ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
+ms.openlocfilehash: 5c1861d76a98ff76b130f3012d730980482cda75
+ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473678"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68959089"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>Comece a usar o Python no Windows para iniciantes
 
@@ -41,7 +39,7 @@ Para instalar o Python usando o Microsoft Store:
 
 ## <a name="install-visual-studio-code"></a>Instalar Visual Studio Code
 
-Usando VS Code como seu editor de texto/ambiente de desenvolvimento integrado (IDE), você pode tirar proveito do [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) (um auxílio de auto-completar de código), rebaixando [(ajuda](https://code.visualstudio.com/docs/python/linting) a evitar a criação de erros em seu código), o [suporte à depuração](https://code.visualstudio.com/docs/python/debugging) (ajuda a encontrar erros em seu código depois de executá-lo), trechos de [código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (modelos para pequenos blocos de código reutilizáveis) e [testes de unidade](https://code.visualstudio.com/docs/python/unit-testing) (testando a interface do seu código com diferentes tipos de entrada).
+Usando VS Code como seu editor de texto/ambiente de desenvolvimento integrado (IDE), você pode tirar proveito do [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) (um auxílio de auto-completar de código), [rebaixando](https://code.visualstudio.com/docs/python/linting) (ajuda a evitar a criação de erros em seu código), o [suporte à depuração](https://code.visualstudio.com/docs/python/debugging) (ajuda a encontrar erros em seu código depois de executá-lo), [trechos de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (modelos para pequenos blocos de código reutilizáveis) e [testes de unidade](https://code.visualstudio.com/docs/python/unit-testing) (testando a interface do seu código com diferentes tipos de entrada).
 
 O VS Code também contém um [terminal interno](https://code.visualstudio.com/docs/editor/integrated-terminal) que permite que você abra uma linha de comando do Python com o prompt de comando do Windows, o PowerShell ou o que preferir, estabelecendo um fluxo de trabalho contínuo entre o editor de código e a linha de comando.
 
