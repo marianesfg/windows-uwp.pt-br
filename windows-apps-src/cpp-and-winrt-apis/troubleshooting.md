@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: add3875e15ad747422b2e53e5d8f8438b61b3b20
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 7c34ca6da522726f07e3f4ff5092b011bd15dd93
+ms.sourcegitcommit: 260d1a0b73ef422eb6875a3e3b52495a82630f06
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270098"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560161"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Como solucionar problemas de C++/WinRT
 
@@ -41,7 +41,7 @@ Se o aplicativo for encerrado e tudo o que você sabe é que uma exceção sem t
 | Os testes do Kit de Certificação de Aplicativos Windows produzem um erro que uma das suas classes de tempo de execução "*não deriva de uma classe base do Windows. Todas as classes combináveis devem derivar, por fim, de um tipo no namespace do Windows*".|Qualquer classe de tempo de execução (que você declara em seu aplicativo) que é derivada de uma classe base é conhecida como uma classe *combinável*. A classe base definitiva de uma classe combinável deve ser um tipo de origem em um namespace do Windows.*; por exemplo, [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Para obter mais detalhes, confira [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md).|
 | O compilador C++ gera o erro "*deve ser do tipo WinRT*" para uma especialização de delegação de EventHandler ou TypedEventHandler.|Em vez disso, é recomendável o uso de **winrt::delegate&lt;...T&gt;** . Confira [Criar eventos em C++/WinRT](author-events.md).|
 | O compilador C++ gera o erro "*deve ser do tipo WinRT*" para uma especialização de operação assíncrona do Windows Runtime.|Em vez disso, é recomendável retornar uma [**tarefa**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class) PPL (Parallel Patterns Library). Confira [Simultaneidade e operações assíncronas](concurrency.md).|
-| O compilador C++ gera "*erro C2220: aviso tratado como erro - nenhum arquivo 'object' gerado*".|Corrija o aviso ou defina **C/C++**  > **Geral** > **Tratar Avisos como Erros** como **Não (/WX-)** .|
+| O compilador C++ gera "*erro C2220: aviso tratado como erro - nenhum arquivo 'object' gerado*".|Corrija o aviso ou defina **C/C++**  > **Geral** > **Tratar Avisos como Erros** como **Não (/WX-)** .|
 | O aplicativo falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Confira [Acessar com segurança o ponteiro *isso* com um representante de manipulação de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).|
 | O compilador C++ produz o "*erro C2338: somente para suporte a referência fraca*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Confira [Como recusar o suporte de referência fraca](weak-references.md#opting-out-of-weak-reference-support).|
 | O vinculador C++ produz o "*erro LNK2019: símbolo externo não resolvido*"|Confira [Por que o vinculador fornece um erro "LNK2019: erro externo não resolvido"?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error).|

@@ -22,7 +22,11 @@
           items:
             - name: Visão geral
               href: apps/desktop/modernize/xaml-islands.md
-            - name: Usando o XAML da UWP que hospeda a API
+            - name: Hospedar um controle UWP padrão em um aplicativo WPF
+              href: apps/desktop/modernize/host-standard-control-with-xaml-islands.md
+            - name: Hospedar um controle UWP personalizado em um aplicativo WPF
+              href: apps/desktop/modernize/host-custom-control-with-xaml-islands.md
+            - name: Usar a API de hospedagem XAML UWP em um aplicativo C++ Win32
               href: apps/desktop/modernize/using-the-xaml-hosting-api.md
         - name: Usar a camada Visual (Windows.UI.Composition)
           items:
@@ -76,7 +80,7 @@
           href: python/get-started/python-for-web.md
         - name: Introdução à automação
           href: python/get-started/python-for-scripting.md
-        - name: Perguntas frequentes
+        - name: Perguntas Frequentes
           href: python/faqs.md
         - name: Recursos
           href: python/resources.md
