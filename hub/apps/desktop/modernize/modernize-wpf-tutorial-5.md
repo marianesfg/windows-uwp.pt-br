@@ -8,23 +8,23 @@ author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 961157bc3d3429b56d3da24a46d71cbb5b84e7a3
-ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
+ms.openlocfilehash: 940a81d21e071558d510e565785d1f52ca0bb1a3
+ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68729494"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69643385"
 ---
 # <a name="part-5-package-and-deploy-with-msix"></a>Parte 5: Empacotar e implantar com o MSIX
 
 Esta é a parte final de um tutorial que demonstra como modernizar um aplicativo de área de trabalho WPF de exemplo chamado contoso despesas. Para obter uma visão geral do tutorial, dos pré-requisitos e das instruções para baixar o aplicativo de exemplo [, consulte o tutorial: Modernizar um aplicativo](modernize-wpf-tutorial.md)do WPF. Este artigo pressupõe que você já concluiu a [parte 4](modernize-wpf-tutorial-4.md).
 
-Na [parte 4](modernize-wpf-tutorial-4.md) , você aprendeu que algumas APIs do WinRT, incluindo a API de notificações, exigem a identidade do pacote antes que elas possam ser usadas em um aplicativo. Você pode obter a identidade do pacote empacotando as despesas da contoso usando o [MSIX](https://docs.microsoft.com/windows/msix), o formato de empacotamento introduzido no Windows 10 para empacotar e implantar aplicativos do Windows. O MSIX fornece vantagens para a tabela para desenvolvedores e profissionais de ti, incluindo:
+Na [parte 4](modernize-wpf-tutorial-4.md) , você aprendeu que algumas APIs do WinRT, incluindo a API de notificações, exigem a identidade do pacote antes que elas possam ser usadas em um aplicativo. Você pode obter a identidade do pacote empacotando as despesas da contoso usando o [MSIX](https://docs.microsoft.com/windows/msix), o formato de empacotamento introduzido no Windows 10 para empacotar e implantar aplicativos do Windows. O MSIX fornece vantagens para os desenvolvedores e profissionais de ti, incluindo:
 
 - Uso otimizado de rede e espaço de armazenamento.
 - Conclua a desinstalação limpa, graças a um contêiner leve em que o aplicativo é executado. Nenhuma chave do registro e arquivos temporários são deixados no sistema.
 - Dissocia as atualizações do sistema operacional de atualizações e personalizações do aplicativo.
-- Simplifica o processo de instalação, atualização e desinstalação. 
+- Simplifica o processo de instalação, atualização e desinstalação.
 
 Nesta parte do tutorial, você aprenderá a empacotar o aplicativo de despesas da Contoso em um pacote MSIX.
 
@@ -48,17 +48,17 @@ O Visual Studio 2019 fornece uma maneira fácil de empacotar um aplicativo de á
 
 6. No projeto **ContosoExpenses. Package** , clique com o botão direito do mouse no nó **aplicativos** e escolha **Adicionar referência**. Esse nó especifica quais aplicativos em sua solução serão incluídos no pacote.
 
-7. Na lista de projetos, selecione **ContosoExpenses. Core** e clique em **OK**.
+6. Na lista de projetos, selecione **ContosoExpenses. Core** e clique em **OK**.
 
-8. Expanda o nó **aplicativos** e confirme se o projeto **ContosoExpense. Core** é referenciado e realçado em negrito. Isso significa que ele será usado como um ponto de partida para o pacote.
+7. Expanda o nó **aplicativos** e confirme se o projeto **ContosoExpense. Core** é referenciado e realçado em negrito. Isso significa que ele será usado como um ponto de partida para o pacote.
 
-9. Clique com o botão direito do mouse no projeto **ContosoExpenses. Package** e escolha **definir como projeto de inicialização**.
+8. Clique com o botão direito do mouse no projeto **ContosoExpenses. Package** e escolha **definir como projeto de inicialização**.
 
-10. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto **ContosoExpenses. Package** e selecione **Editar arquivo de projeto**.
+9. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto **ContosoExpenses. Package** e selecione **Editar arquivo de projeto**.
 
-11. Localize o elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` no arquivo.
+10. Localize o elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` no arquivo.
 
-12. Substitua este elemento pelo XML a seguir.
+11. Substitua este elemento pelo XML a seguir.
 
     ``` xml
     <ItemGroup>
@@ -82,9 +82,9 @@ O Visual Studio 2019 fornece uma maneira fácil de empacotar um aplicativo de á
     </Target>
     ```
 
-13. Salve o arquivo de projeto e feche-o.
+12. Salve o arquivo de projeto e feche-o.
 
-14. Pressione **F5** para iniciar o aplicativo empacotado no depurador.
+13. Pressione **F5** para iniciar o aplicativo empacotado no depurador.
 
 Neste ponto, você pode observar algumas alterações que indicam que o aplicativo agora está sendo executado como empacotado:
 
