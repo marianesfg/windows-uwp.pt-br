@@ -9,20 +9,25 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, serviço de notificações do Windows, notificação, Windows, firewall, solução de problemas, IP, tráfego, Enterprise, rede, IPv4, VIP, FQDN, endereço IP público
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f8a72eec46971fa27a4bd0dec112430f2eb3535
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 817dec616a88f0b374bc019cbbf23f56fad94484
+ms.sourcegitcommit: 820704a73174e81da3dc00cf0603c0c82471cdfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69908459"
 ---
-# <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>Permitindo o tráfego de notificação do Windows por meio de firewalls corporativos
+# <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configurações de proxy e firewall corporativo para dar suporte ao tráfego WNS
 
 ## <a name="background"></a>Informações preliminares
-Muitas empresas usam firewalls para bloquear o tráfego de rede indesejado; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas por meio do WNS serão descartadas. Para evitar isso, os administradores de rede podem adicionar a lista de canais WNS aprovados à lista de isenção para permitir que o tráfego WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar. 
+Muitas empresas usam firewalls para bloquear o tráfego de rede indesejado; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas pelo WNS serão descartadas em determinadas configurações de rede. Para evitar isso, os administradores de rede podem adicionar a lista de canais WNS aprovados à lista de isenção para permitir que o tráfego WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar, bem como suporte para tipos de proxy diferentes.
+
+## <a name="proxy-support"></a>Suporte a proxy
 
 > [!Note] 
-A partir de 6/24/2019, os clientes do Windows **não** oferecem suporte a proxies, a conexão com o WNS deve ser uma conexão direta.
+Os clientes do Windows **não** dão suporte a todos os proxies, a conexão com o WNS deve ser uma conexão direta.
+
+**Em breve!** Estamos investigando ativamente diferentes configurações de rede, proxies e firewalls. Atualizaremos esta página com mais detalhes sobre cenários empresariais comuns e suporte a WNS em breve.
+
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>Quais informações devem ser adicionadas àlist de permissões
 Abaixo está uma lista que contém os FQDNs, VIPs e os intervalos de endereços IP usados pelo serviço de notificação do Windows. 

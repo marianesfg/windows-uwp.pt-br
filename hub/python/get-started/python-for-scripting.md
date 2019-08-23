@@ -8,16 +8,19 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Python System Administration, Python File Automation, scripts Python no Windows, configurar o Python no Windows, ambiente de desenvolvedor Python no Windows, ambiente de desenvolvimento do Python no Windows, Python com PowerShell, scripts Python para tarefas do sistema de arquivos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 93fdea3347cc15aa6231ff90fb18eb2f7defb201
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: dbb7a60103c27f648ca8bf23f87dee06923f0cd9
+ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959075"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979333"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Comece a usar o Python no Windows para scripts e automação
 
 Veja a seguir um guia passo a passo para configurar seu ambiente de desenvolvedor e começar a usar o Python para criar scripts e automatizar operações do sistema de arquivos no Windows.
+
+> [!NOTE]
+> Este artigo abordará a configuração de seu ambiente para usar algumas das bibliotecas úteis do Python que podem automatizar tarefas entre plataformas, como pesquisar seu sistema de arquivos, acessar a Internet, analisar tipos de arquivo, etc., de uma abordagem centralizada no Windows. Para operações específicas do Windows, confira [ctypes](https://docs.python.org/3/library/ctypes.html), uma biblioteca de funções estrangeiras compatível com C para Python, [winreg](https://docs.python.org/3/library/winreg.html), funções expondo a API do registro do Windows para Python e [Python/WinRT](https://pypi.org/project/winrt/), habilitando o acesso Windows Runtime APIs de Python.
 
 ## <a name="set-up-your-development-environment"></a>Configurar seu ambiente de desenvolvimento
 

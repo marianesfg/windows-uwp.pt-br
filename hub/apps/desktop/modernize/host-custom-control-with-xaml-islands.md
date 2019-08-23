@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 9f8d9d56d8a05be7d22ea52c9b45908c246fc250
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: a22846c2b0499b990a27b1c445ad36f2ff1a0437
+ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979307"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML
 
@@ -226,8 +226,8 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
             <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
             <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
             <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-                <SourceProject>
-                </SourceProject>
+                <SourceProject></SourceProject>
+                <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
             </_FilteredNonWapProjProjectOutput>
             </ItemGroup>
         </Target>
