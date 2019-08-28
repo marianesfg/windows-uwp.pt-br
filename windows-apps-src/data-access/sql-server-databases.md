@@ -15,11 +15,11 @@ ms.locfileid: "67713773"
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN).
 
-Neste guia, mostraremos uma maneira de fazer isso. Se você instalar o banco de dados de exemplo [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) em sua instância do SQL Server e, então, usar esses trechos de código, terá uma interface do usuário básica que mostra os produtos do banco de dados de exemplo Northwind.
+Neste guia, mostraremos uma maneira de fazer isso. Se você instalar o banco de dados de exemplo [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) em sua instância do SQL Server e, então, usar esses snippets, terá uma interface do usuário básica que mostra os produtos do banco de dados de exemplo Northwind.
 
 ![Produtos Northwind](images/products-northwind.png)
 
-Os trechos de código que aparecem neste guia baseiam-se neste [exemplo mais completo](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).
+Os snippets que aparecem neste guia baseiam-se neste [exemplo mais completo](https://github.com/StefanWickDev/IgniteDemos/tree/master/NorthwindDemo).
 
 ## <a name="first-set-up-your-solution"></a>Primeiro, configure sua solução
 
@@ -158,7 +158,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
  Adicione o seguinte XAML ao arquivo **MainPage.xaml** do projeto UWP.
 
- Este XAML cria uma [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) para mostrar cada produto retornado no trecho de código anterior e associar os atributos de cada linha na [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) às propriedades que definimos na classe ``Product``.
+ Este XAML cria uma [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) para mostrar cada produto retornado no snippet anterior e associar os atributos de cada linha na [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) às propriedades que definimos na classe ``Product``.
 
 ```xml
 <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">

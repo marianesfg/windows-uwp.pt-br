@@ -35,7 +35,7 @@ Para implementar uma associação de dados, é necessário adicionar código à 
 * [**x:Bind**](../xaml-platform/x-bind-markup-extension.md) é fortemente tipada e gera código no tempo de compilação para melhorar o desempenho. x:Bind tem como padrão uma associação ocasional, que otimiza a exibição rápida de dados somente leitura que não mudam.
 * [**Binding**](../xaml-platform/binding-markup-extension.md) é fracamente tipada e montada no tempo de execução. Isso resulta em um desempenho inferior em comparação com x:Bind. Em quase todos os casos, você deve usar x:Bind em vez de Binding. No entanto, é provável que você a encontre em código mais antigo. Binding é padronizada para transferência de dados unidirecional, a qual é otimizada para dados somente leitura que podem mudar na origem.
 
-É recomendável usar **x:Bind** sempre que possível e mostraremos isso em trechos deste artigo. Para saber mais sobre as diferenças, consulte a [Comparação entre os recursos {x:Bind} e {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
+É recomendável usar **x:Bind** sempre que possível e mostraremos isso em snippets deste artigo. Para saber mais sobre as diferenças, consulte a [Comparação entre os recursos {x:Bind} e {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
 
 ## <a name="create-a-data-source"></a>Criar uma fonte de dados
 
@@ -108,7 +108,7 @@ Você exibiu clientes em uma lista, mas a associação de dados permite que voc�
 * *Unidirecional*: essa associação de dados atualizará a interface do usuário com todas as alterações feitas na fonte de dados.
 * *Bidirecional*: essa associação de dados atualizará a interface do usuário com todas as alterações feitas na fonte de dados e também atualizará os dados com todas as alterações feitas na interface do usuário.
 
-Se você seguiu os trechos de código anteriores, a associação feitas usa x:Bind e não especifica um modo, transformando-a em uma associação Ocasional. Se você desejar editar seus clientes diretamente na interface do usuário, será necessário alterá-la para uma associação Bidirecional para que as alterações dos dados sejam passadas para os objetos de cliente. Para saber mais, consulte [Associação de dados em detalhes](../data-binding/data-binding-in-depth.md).
+Se você seguiu os snippets de código anteriores, a associação feitas usa x:Bind e não especifica um modo, transformando-a em uma associação Ocasional. Se você desejar editar seus clientes diretamente na interface do usuário, será necessário alterá-la para uma associação Bidirecional para que as alterações dos dados sejam passadas para os objetos de cliente. Para saber mais, consulte [Associação de dados em detalhes](../data-binding/data-binding-in-depth.md).
 
 A associação bidirecional também atualizará a interface do usuário se a fonte de dados for alterada. Para que isso funcione, você deve implementar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) na origem e verificar se os setters de propriedade emitem o evento **PropertyChanged**. É prática comum que eles chamem um método auxiliar como o **OnPropertyChanged**, conforme mostrado abaixo:
 

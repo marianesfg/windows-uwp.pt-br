@@ -13,7 +13,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67713786"
 ---
 # <a name="use-a-mysql-database"></a>Usar um banco de dados do MySQL
-Este artigo contém as etapas necessárias para habilitar o trabalho com um banco de dados MySQL de um aplicativo UWP. Ele também contém um pequeno snippet de código que mostra como você pode interagir com o banco de dados no código.
+Este artigo contém as etapas necessárias para habilitar o trabalho com um banco de dados MySQL de um aplicativo UWP. Também contém um pequeno snippet de código que mostra como é possível interagir com o banco de dados no código.
 
 ## <a name="set-up-your-solution"></a>Configurar sua solução
 
