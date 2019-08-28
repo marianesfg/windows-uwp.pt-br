@@ -2,177 +2,177 @@
 Description: O Resumo de pagamentos mostra detalhes do dinheiro que você ganhou com os seus aplicativos e complementos. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 title: Resumo do pagamento
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
-ms.date: 10/31/2018
+ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: 90238360ecc48beb974546dc5b49ac09c01407eb
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.openlocfilehash: 777ee4201b435f17cdc4fc3650a2d33645ff56b9
+ms.sourcegitcommit: 769ec7811aaaa79fe521e3e984a2e1a2a9671caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495731"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057825"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
-O **resumo de pagamento** mostra detalhes sobre o dinheiro ganhou com a Microsoft. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
+O **Resumo do pagamento** mostra detalhes sobre o dinheiro que você ganhou com a Microsoft. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 
 Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/p/?LinkId=722436) e [Microsoft Azure Marketplace Publisher Agreement](https://go.microsoft.com/fwlink/p/?LinkID=699560 ).
 
 > [!NOTE]
-> Para se qualificar para o pagamento, sua receita deve atingir o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) de US $50. Para obter detalhes sobre o limite de pagamento, consulte esta página e examine o contrato de desenvolvedor do aplicativo.
+> Para ser elegível para pagamento, seus prosseguimentos devem alcançar o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) de $50. Para obter detalhes sobre o limite de pagamento, consulte esta página e examine o contrato de desenvolvedor do aplicativo.
 
-## <a name="access-the-payout-summary-pages"></a>Acessar as páginas de resumo de pagamento
+## <a name="access-the-payout-summary-pages"></a>Acessar as páginas de resumo do pagamento
 
-Para abrir uma das páginas de resumo de pagamento:
+Para abrir uma das páginas de resumo do pagamento:
 
 1. Selecione o ícone de dinheiro no canto superior direito.
-2. Selecione os pagamentos, histórico de transações, ou exportar dados.
+2. Selecione pagamentos, histórico de transações ou exportar dados.
 
 ## <a name="payments-page"></a>Página de pagamentos
 
-Os totais nesta página representam todos os programas que você participa. Você pode filtrar por ID de participante, o programa, o ID de pagamento e o tipo de Earning. Valores são fornecidos em dólares americanos. O valor pago também é exibido no pagamento em moeda.
+Os totais nessa página representam todos os programas que você participa. Você pode filtrar por ID de participante, programa, ID de pagamento e tipo de conquista. Os valores são fornecidos em dólares americanos. O valor pago também é exibido em pagar para moeda.
 
 | Área                   | Descrição                                                                                  |
 |------------------------|----------------------------------------------------------------------------------------------|
-| Total pago neste ano   | O total combinado paga para você neste ano, em dólares americanos, para todos os seus programas.       |
-| Próximo pagamento estimado | O único pagamento próxima chegando (mesmo se houver outras pessoas em breve), em dólares americanos. |
-| Último pagamento           | O valor (em dólares americanos), o nome do programa e o programa do pagamento mais recente.           |
-| Pagamentos por origem     | Quantidade de pagamentos em dólares americanos, representado pelo programa nos últimos 12 meses.           |
-| Pagamentos               | Selecione pago ou pendente e, em seguida, classificar como desejar. Para obter detalhes adicionais de um pagamento específico, selecione modo de exibição. Para baixar uma cópia da instrução de remessa de pagamento, selecione o Download. Observe que os dados de histórico de transação podem levar até 24 horas para serem exibidas, portanto, você não poderá ver os ganhos associados imediatamente. |
+| Total pago neste ano   | O total combinado pago a você neste ano, em dólares americanos, para todos os seus programas.       |
+| Próximo pagamento estimado | O próximo pagamento seguinte chegando a você (mesmo se houver outros em breve) em dólares americanos. |
+| Último pagamento           | O valor (em dólares americanos), nome do programa e programa do seu pagamento mais recente.           |
+| Pagamentos por origem     | Quantidade de pagamentos, em dólares americanos, representados por programa nos últimos 12 meses.           |
+| Pagamentos               | Selecione pago ou pendente e, em seguida, classifique como desejar. Para obter detalhes adicionais de um pagamento específico, selecione Exibir. Para baixar uma cópia da instrução de remessa de pagamento, selecione baixar. Observe que os dados do histórico de transações podem levar até 24 horas para serem exibidos, portanto, você pode não ver os ganhos associados imediatamente. |
 
-Para exportar os dados nessa página, selecione Exportar e, em seguida, siga instruções na página de dados de exportação.
+Para exportar qualquer um dos dados nessa página, selecione exportar e, em seguida, siga as instruções na página Exportar dados.
 
-## <a name="transaction-history-page"></a>Página de histórico de transação
+## <a name="transaction-history-page"></a>Página Histórico de transações
 
-Esta página exibe todos os seus ganhos individuais, incluindo a data, tipo e a obtenção de cada um. Você pode selecionar um período de tempo, e você também pode filtrar por ID de registro, programa, ID de pagamento, tipo Earning, alavanca e Status. Dados estão disponíveis para o ano fiscal atual (1º de julho – 30 de junho) e os dois anos fiscais anteriores.
+Esta página exibe todos os seus ganhos individuais, incluindo a data, o tipo e a conquista de cada um. Você pode selecionar um período de tempo para exibir e também pode filtrar por ID de registro, programa, ID de pagamento, tipo de conquista, alavanca e status. Os dados estão disponíveis para o ano fiscal atual (1º de julho a 30 de junho) e os dois anos fiscais anteriores.
 
-Para ver mais detalhes sobre um ganhar, selecione a seta para baixo no lado direito da página. Isso exibirá a alavanca, o valor de receita e o produto. Se por alguma razão, qualquer um dos dados não estão disponíveis, mas você precisa ter acesso a ele, entre em contato com [suporte](https://developer.microsoft.com/en-us/windows/support)]. Se a ganhar é o resultado de um ajuste e não uma transação, os campos de produto não serão exibidos.
+Para ver mais detalhes sobre uma conquista, selecione a seta para baixo no lado direito da página. Isso exibirá a alavanca, o valor da receita e o produto. Se, por algum motivo, qualquer um desses dados estiver indisponível, mas você precisar acessá-lo, contate o [suporte](https://developer.microsoft.com/en-us/windows/support)]. Se a conquista for o resultado de um ajuste, e não de uma transação, os campos de produto não serão exibidos.
 
-Para exportar os dados de transação nesta página, selecione Exportar e, em seguida, siga instruções na página de dados de exportação. Os arquivos exportados da página de histórico de transações mostram dados na moeda da transação, ganhos na moeda da transação e dólares americanos, e o valor pago em pagar para moeda.
+Para exportar qualquer um dos dados de transação nessa página, selecione exportar e, em seguida, siga as instruções na página Exportar dados. Os arquivos exportados da página Histórico de transações mostram os dados na moeda da transação, os ganhos na moeda da transação e nos dólares dos EUA e o valor pago em pagar para a moeda.
 
 ## <a name="payment-status"></a>Status do pagamento
 
-| A obtenção de status           | Reason                                                                                                                                      | Ação de parceiro necessária?                                   |
+| Ganhando status           | Reason                                                                                                                                      | Ação do parceiro necessária?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| Não processado              | A ganhar é elegível para pagamento. Ela permanece nesse estado por um período de resfriamento conforme definido na guia de programação para o programa de incentivo. | Não                                                         |
-| Futuros                 | Ordem de pagamento gerado pendentes revisões internas antes que o pagamento é processado.                                                               | Não                                                         |
-| Nota fiscal de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes que você pode ser pago |
-| Rejeitada durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
-| Failed (Falha)                   | O pagamento falhou devido a um erro de sistema do Microsoft.                                                                                         | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Não processados              | A conquista está qualificada para pagamento. Ele permanece nesse estado por um período de resfriamento, conforme definido no guia do programa do programa de incentivo. | Não                                                         |
+| Cerimônia                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
+| Fatura de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes de poder ser pago |
+| Rejeitado durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Failed (Falha)                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
 | Em andamento              | O pagamento está em andamento.                                                                                                                 | Não                                                         |
-| Pagamento incorreto        | O pagamento recouping está em andamento.                                                                                                       | Não                                                         |
-| enviado                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
-| Reprocessamento             | O pagamento encontrou um erro de sistema do Microsoft e está sendo reprocessado.                                                                  | Não                                                         |
-| Inversão                 | O pagamento foi revertido pelo banco e será enviado novamente no próximo ciclo de pagamento.                                                     | Não                                                         |
-| Nota fiscal de impostos rejeitada     | Sua fatura de imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes serão em espera até que a revisão de nota fiscal de imposto seja concluída.                 | Entre em contato com [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
-| Nota fiscal de impostos sob revisão | Sua fatura de imposto está sendo revisada. O pagamento será liberado após aprovação de nota fiscal de imposto.                                   | Não                                                         |
-| Rejeitado                 | O pagamento foi rejeitado pelo banco.                                                                                                      | Entre em contato com seu banco para obter detalhes.                             |
+| Pagamento incorreto        | A revitóriação de pagamento está em andamento.                                                                                                       | Não                                                         |
+| Enviados                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
+| Reprocessamento             | O pagamento encontrou um erro de sistema da Microsoft e está sendo reprocessado.                                                                  | Não                                                         |
+| Inversão                 | O pagamento foi revertido pelo seu banco e será enviado novamente no próximo ciclo de pagamento.                                                     | Não                                                         |
+| Fatura de imposto rejeitada     | A fatura do imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes estarão em espera até que a revisão da fatura fiscal seja concluída.                 | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Fatura de imposto em revisão | Sua fatura de imposto está sendo revisada. Seu pagamento será liberado depois que a nota fiscal do imposto tiver sido aprovada.                                   | Não                                                         |
+| Recusa                 | O pagamento foi rejeitado pelo seu banco.                                                                                                      | Entre em contato com seu banco para obter detalhes.                             |
 
-## <a name="export-data-page"></a>Página de dados de exportação
+## <a name="export-data-page"></a>Exportar página de dados
 
 Siga as instruções nesta página para exportar os dados desejados.
 
-Observações:
+Notas:
 
-- Quando você acessa esta página de ambos os pagamentos ou a página de histórico de transações, não carregam seus filtros por meio do. Você precisará refazê-los na página de dados de exportação.
-- A página de dados de exportação não atualiza por conta própria. Talvez você precise atualizar a página manualmente para ver os dados mais recentes.
-- O filtro pode resultar em erro de não dados disponível. Isso significa que provavelmente você Mantive o padrão de período de tempo selecionado em três meses e, em seguida, selecionado uma ID de pagamento de ganhos fora esse período. Expanda seu período de tempo e tente novamente.
+- Quando você acessa essa página na página de histórico de transações ou de pagamentos, seus filtros não são transferidos. Você precisará refazê-los na página Exportar dados.
+- A página Exportar dados não é atualizada por conta própria. Talvez seja necessário atualizar a página manualmente para ver os dados mais recentes.
+- O filtro pode resultar em um erro de nenhum dado disponível. Isso provavelmente significa que você saiu do período de tempo padrão selecionado em três meses e, em seguida, selecionou uma ID de pagamento de uma conquista que está fora desse período. Expanda seu período de tempo e tente novamente.
 
 ## <a name="payment-download-export"></a>Exportação de download de pagamento
 
-Essa opção fornece um download dos pagamentos recebidas em seu banco para determinado programa, o imposto associado e agregados quantidade ganhando. Esse relatório é usado para muitos programas do Partner Center, portanto, algumas colunas podem ser não aplicáveis ao seu relatório. Essas colunas são marcadas abaixo.
+Essa opção fornece um download dos pagamentos recebidos em seu banco para um determinado programa, o imposto associado e a quantidade de conquista agregada. Esse relatório é usado para vários programas do Partner Center, portanto, algumas colunas podem ser inaplicáveis ao seu relatório. Essas colunas são marcadas abaixo.
 
 | Nome da coluna              | Descrição                                                                                                                             |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| participantID            | A identidade primária do parceiro ganhar sob o programa                                                                           |
-| participantIDType        | Normalmente, id do programa para programas de incentivo e ID do vendedor para programas de Store                                                              |
-| participantName          | Nome do parceiro de rendimentos                                                                                                             |
-| programName              | Nome do programa de incentivo/armazenamento                                                                                                            |
-| acumulado                   | Valor acumulado na moeda de pagamento para esse programa/participantID                                                                     |
-| earnedUSD                | Valor acumulado para a ID do participante do programa, em dólares americanos                                                                                    |
-| withheldTax              | Valor do imposto retido na moeda de pagamento para o programa/participantID                                                             |
-| salesTax                 | Quantidade total de imposto sobre vendas a pagar para moeda para o programa/participantID                                                          |
-| totalPayment             | Pagamento total na moeda local, exceto a retenção de imposto e incluindo o imposto sobre vendas (se aplicável) para o programa/participantID |
-| currencyCode             | Pagar para o código de moeda                                                                                                                    |
-| paymentMethod            | O método usado para pagar o parceiro (transferência eletrônica bancária, nota de crédito)                                                              |
-| paymentID                | Identificador exclusivo para o pagamento. Esse número é normalmente visível no seu extrato bancário.                                               |
+| participante da            | A principal identidade do parceiro ganhando sob o programa                                                                           |
+| participantIDType        | Normalmente a ID do programa para programas de incentivo e ID do vendedor para programas da loja                                                              |
+| participantename          | Nome do parceiro de conquista                                                                                                             |
+| programName              | Nome do programa de incentivo/loja                                                                                                            |
+| obtidos                   | Valor obtido na moeda de pagamento para o programa/participanteid                                                                     |
+| earnedUSD                | Valor obtido para a ID do programa/participante, em USD                                                                                    |
+| withheldTax              | Quantidade de imposto retido na moeda de pagamento para o programa/participanteid                                                             |
+| salesTax                 | Valor total do imposto sobre vendas na moeda de pagamento para o programa/participanteid                                                          |
+| totalPayment             | Pagamento total na moeda local, excluindo a retenção de imposto e incluindo o imposto sobre vendas (se aplicável) para o programa/participanteid |
+| currencyCode             | Pagar para código de moeda                                                                                                                    |
+| paymentMethod            | O método usado para pagar o parceiro (transferência bancária eletrônica, nota de crédito)                                                              |
+| pagamento de                | Identificador exclusivo para o pagamento. Esse número geralmente é visível em seu extrato bancário.                                               |
 | paymentStatus            | Status do pagamento                                                                                                                          |
 | paymentStatusDescription | Descrição amigável do status de pagamento                                                                                                  |
-| paymentDate              | Data de pagamento foi enviado da Microsoft                                                                                                    |
+| paymentDate              | A data de pagamento foi enviada da Microsoft                                                                                                    |
 
-## <a name="transaction-history-download-export"></a>Exportação de download do histórico de transação
+## <a name="transaction-history-download-export"></a>Exportação de download de histórico de transações
 
-Essa opção fornece um download de cada item de linha de rendimentos que você vê na página de histórico de transação, a obtenção de tipo, data, o valor da transação associada, cliente, produto e outros detalhes transacionais aplicáveis aos seus programas.
+Essa opção fornece um download de cada item de linha de produção que você vê na página Histórico de transações, tipo de conquista, data, valor da transação associada, cliente, produto e outros detalhes transacionais aplicáveis aos seus programas.
 
 | Nome da coluna                    | Descrição                                                                                                                              |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| earningId                      | Identificador exclusivo para cada ganhar                                                                                                       |
-| participantId                  | A identidade primária do parceiro ganhar sob o programa                                                                            |
+| ganhandoid                      | Identificador exclusivo para cada conquista                                                                                                       |
+| participante da                  | A principal identidade do parceiro ganhando sob o programa                                                                            |
 | participantIdType              | ID do vendedor                                                                                                                                |
-| participantName                | Nome do parceiro de rendimentos                                                                                                              |
-| partnerCountryCode             | Local/país do parceiro rendimentos                                                                                                  |
-| programName                    | Nome do programa de incentivo/armazenamento                                                                                                             |
-| transactionId                  | Identificador exclusivo da transação                                                                                                    |
-| transactionCurrency            | Moeda na qual ocorreu a transação original do cliente                                                                             |
-| transactionDate                | Data da transação. Útil para programas onde muitas transações contribuem para a obtenção de um                                           |
-| transactionExchangeRate        | Data de taxa de câmbio usada para mostrar a quantidade USD correspondente                                                                             |
-| transactionAmount              | Valor da transação na moeda da transação original, com base na qual a obtenção de é gerada.                                              |
-| transactionAmountUSD           | Quantidade de transações em USD                                                                                                                |
-| Alavanca                          | Indica a regra de negócio para a ganhar                                                                                                  |
-| earningRate                    | Taxa de incentivo aplicada na quantidade de transações para gerar ganhos                                                                      |
-| quantity                       | Varia com base no programa. Indica a quantidade de cobrado para programas transacionais                                                            |
-| earningType                    | Indica se é taxas, descontos, coop, sell etc.                                                                                          |
-| earningAmount                  | A obtenção de valor na moeda da transação original                                                                                      |
-| earningAmountUSD               | A obtenção de valor em dólares americanos                                                                                                                    |
-| earningDate                    | Data da ganhar                                                                                                                      |
-| calculationDate                | Data que de ganhar foi calculada no sistema                                                                                            |
-| earningExchangeRate            | Taxa de câmbio usada para mostrar a quantidade USD correspondente                                                                                  |
-| exchangeRateDate               | Data de taxa de câmbio usada para calcular EarningAmount USD                                                                                   |
-| claimId                        | Sempre será em branco                                                                                                                     |
-| paymentId                      | Identificador exclusivo para o pagamento. Esse número é normalmente visível no seu extrato bancário                                                 |
+| participantename                | Nome do parceiro de conquista                                                                                                              |
+| partnerCountryCode             | Localização/país do parceiro de conquista                                                                                                  |
+| programName                    | Nome do programa de incentivo/loja                                                                                                             |
+| transactionId                  | Identificador exclusivo para a transação                                                                                                    |
+| transactionCurrency            | Moeda na qual a transação original do cliente ocorreu                                                                             |
+| transactionDate                | Data da transação. Útil para programas em que muitas transações contribuem para uma conquista                                           |
+| transactionExchangeRate        | Data da taxa de câmbio usada para mostrar o valor USD correspondente                                                                             |
+| transactionAmount              | Valor da transação na moeda da transação original com base na qual a conquista é gerada                                              |
+| transactionAmountUSD           | Valor da transação em USD                                                                                                                |
+| alavanca                          | Indica a regra de negócio para a conquista                                                                                                  |
+| earningRate                    | Taxa de incentivo aplicada ao valor da transação para gerar uma conquista                                                                      |
+| quantity                       | Varia de acordo com o programa. Indica a quantidade cobrada para programas transacionais                                                            |
+| ganhandotype                    | Indica se é Tarifa, desconto, Coop, venda etc.                                                                                          |
+| earningAmount                  | Conquistando valor na moeda da transação original                                                                                      |
+| earningAmountUSD               | Conquistando valor em USD                                                                                                                    |
+| earningDate                    | Data da conquista                                                                                                                      |
+| calculationDate                | Data em que a conquista foi calculada no sistema                                                                                            |
+| earningExchangeRate            | Taxa de câmbio usada para mostrar o valor USD correspondente                                                                                  |
+| exchangeRateDate               | Data da taxa de câmbio usada para calcular EarningAmount USD                                                                                   |
+| claimId                        | Estará sempre em branco                                                                                                                     |
+| pagamento de                      | Identificador exclusivo para o pagamento. Esse número geralmente é visível em seu extrato bancário                                                 |
 | paymentStatus                  | Status do pagamento                                                                                                                           |
 | paymentStatusDescription       | Descrição amigável do status de pagamento                                                                                                   |
-| customerId                     | Sempre será em branco                                                                                                                     |
-| customerName                   | Sempre será em branco                                                                                                                     |
-| partNumber                     | Sempre será em branco                                                                                                                     |
+| customerId                     | Estará sempre em branco                                                                                                                     |
+| Customer                   | Estará sempre em branco                                                                                                                     |
+| partNumber                     | Estará sempre em branco                                                                                                                     |
 | productName                    | Nome do produto vinculado à transação                                                                                                       |
 | productId                      | Identificador exclusivo do produto                                                                                                                |
 | parentProductId                | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto (Product ID). |
 | parentProductName              | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.   |
 | productType                    | Tipo de produto (por exemplo, app, complemento, jogo, etc.)                                                                                        |
-| invoiceNumber                  | Sempre será em branco                                                                                                                     |
-| subscriptionId                 | Sempre será em branco                                                                                                                     |
-| subscriptionStartDate          | Sempre será em branco                                                                                                                     |
-| subscriptionEndDate            | Sempre será em branco                                                                                                                     |
-| resellerId                     | Sempre será em branco                                                                                                                     |
-| resellerName                   | Sempre será em branco                                                                                                                     |
-| distributorId                  | Sempre será em branco                                                                                                                     |
-| distributorName                | Sempre será em branco                                                                                                                     |
-| agreementNumber                | Sempre será em branco                                                                                                                     |
-| agreementStartDate             | Sempre será em branco                                                                                                                     |
-| agreementEndDate               | Sempre será em branco                                                                                                                     |
-| Carga de trabalho                       | Sempre será em branco                                                                                                                     |
+| invoiceNumber                  | Estará sempre em branco                                                                                                                     |
+| subscriptionId                 | Estará sempre em branco                                                                                                                     |
+| subscriptionStartDate          | Estará sempre em branco                                                                                                                     |
+| subscriptionEndDate            | Estará sempre em branco                                                                                                                     |
+| revendedorid                     | Estará sempre em branco                                                                                                                     |
+| revendedorname                   | Estará sempre em branco                                                                                                                     |
+| distribuidorid                  | Estará sempre em branco                                                                                                                     |
+| distribuidorname                | Estará sempre em branco                                                                                                                     |
+| agreementNumber                | Estará sempre em branco                                                                                                                     |
+| agreementStartDate             | Estará sempre em branco                                                                                                                     |
+| agreementEndDate               | Estará sempre em branco                                                                                                                     |
+| pico                       | Estará sempre em branco                                                                                                                     |
 | transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               |
 | localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          |
 | taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   |
 | taxRemitModel                  | Parte responsável por remeter impostos (vendas, uso ou impostos IVA/GST).                                                                    |
-| storeFee                       | O valor mantido pela Microsoft como uma taxa por disponibilizar o aplicativo ou o complemento da Store.                                           |
+| storeFee                       | O valor retido pela Microsoft como uma taxa para tornar o aplicativo ou complemento disponível na loja.                                           |
 | transactionPaymentMethod       | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, PayPal, etc)                                |
-| tpan                           | Indica a rede de anúncios de produtos de terceiros                                                                                                     |
-| purchaseTypeCode               | Sempre será em branco                                                                                                                     |
-| purchaseOrderType              | Sempre será em branco                                                                                                                     |
-| purchaseOrderCoverageStartDate | Sempre será em branco                                                                                                                     |
-| purchaseOrderCoverageEndDate   | Sempre será em branco                                                                                                                     |
-| externalReferenceId            | Sempre será em branco                                                                                                                     |
-| externalReferenceIdLabel       | Sempre será em branco                                                                                                                     |
+| tpan                           | Indica a rede de terceiros do AD                                                                                                     |
+| purchaseTypeCode               | Estará sempre em branco                                                                                                                     |
+| purchaseOrderType              | Estará sempre em branco                                                                                                                     |
+| purchaseOrderCoverageStartDate | Estará sempre em branco                                                                                                                     |
+| purchaseOrderCoverageEndDate   | Estará sempre em branco                                                                                                                     |
+| externalReferenceId            | Estará sempre em branco                                                                                                                     |
+| externalReferenceIdLabel       | Estará sempre em branco                                                                                                                     |
 
-## <a name="payout-statement-download-export-legacy"></a>Exportação de download de instrução de pagamento (herdado)
+## <a name="payout-statement-download-export-legacy"></a>Exportação de download da instrução de pagamento (herdada)
 
-Por um período limitado na página de resumo de pagamento antigo, instruções de pagamento serão disponibilizado para download. Esse relatório contém os campos a seguir.
+Por um tempo limitado na página de resumo do pagamento antigo, as instruções de pagamento estarão disponíveis para download. Esse relatório contém os campos a seguir.
 
 > [!NOTE]
-> Histórico de transações herdadas tem uma coluna chamada "Reservados", que corresponde à coluna "Ganhos" no histórico de moderno, exceto que ele exclui todos os ganhos com status = "Pagamento enviado".
+> O histórico de transações herdadas tem uma coluna chamada "reservado" que corresponde à coluna "ganhos" no histórico moderno, exceto pelo fato de que ela exclui todos os ganhos com status = "pagamento enviado".
 
 | Nome do campo              | Descrição                                                                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
