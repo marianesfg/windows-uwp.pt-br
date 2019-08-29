@@ -8,39 +8,39 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc13b53450c97ffcd3d44b58d564c813344abf0a
-ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
+ms.openlocfilehash: 3958d69dc3142702eb2d2a41d6dba5ebeb9fa8ce
+ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253049"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076377"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
-*Dados de aplicativo* são dados mutáveis específicos a determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
+*Os dados de aplicativo* são dados mutáveis que são criados e gerenciados por um aplicativo específico. Ele inclui o estado do tempo de execução, as configurações do aplicativo, as preferências do usuário, o conteúdo de referência (como as definições de dicionário em um aplicativo de dicionário) e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
 
-**Observação importante sobre dados de aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
+**Observação importante sobre os dados do aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
 
 ## <a name="types-of-app-data"></a>Tipos de dados de aplicativo
 
-
 Existem dois tipos de dados de aplicativo: configurações e arquivos.
 
--   **Configurações**
+### <a name="settings"></a>Configurações
 
-    Use configurações para armazenar as preferências do usuário e informações de estado do aplicativo. A API de dados de aplicativo permite que você crie e recupere facilmente configurações (mostraremos alguns exemplos neste artigo).
+Use configurações para armazenar as preferências do usuário e informações de estado do aplicativo. A API de dados de aplicativo permite que você crie e recupere facilmente configurações (mostraremos alguns exemplos neste artigo).
 
-    Aqui estão os tipos de dados que você pode usar para as configurações do aplicativo:
+Aqui estão os tipos de dados que você pode usar para as configurações do aplicativo:
 
-    -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-    -   **valor booliano**
-    -   **Char16**, **String**
-    -   [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime), [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan)
-    -   **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
-    -   [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue): Um conjunto de configurações de aplicativo relacionado que deve ser serializado e desserializado atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
--   **Arquivos**
+- **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
+- **Booliano**
+- **Char16**, **String**
+- [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan)
+- **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
+- [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue): Um conjunto de configurações de aplicativo relacionadas que devem ser serializadas e desserializadas atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
 
-    Use arquivos para armazenar dados binários ou para permitir seus tipos serializado próprios e personalizados.
+### <a name="files"></a>Arquivos
+
+Use arquivos para armazenar dados binários ou para permitir seus tipos serializado próprios e personalizados.
 
 ## <a name="storing-app-data-in-the-app-data-stores"></a>Armazenando dados de aplicativo nos repositórios de dados do aplicativo
 
@@ -160,19 +160,19 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 
 ### <a name="roaming-data-dos-and-donts"></a>O que fazer e não fazer no roaming de dados
 
--   Use o roaming para preferências de usuário e personalizações, links e pequenos arquivos de dados. Por exemplo, use o roaming para preservar a preferência de cor de fundo de um usuário em todos os seus dispositivos.
--   Use o roaming para permitir que os usuários continuem uma tarefa entre dispositivos. Por exemplo, use roaming de dados do aplicativo como o conteúdo de um rascunho de email ou a página mais recentemente exibida em um aplicativo de leitura.
--   Manipule o evento [**DataChanged**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.datachanged) atualizando os dados do aplicativo. Esse evento ocorrerá quando os dados de aplicativos tiverem terminado de ser sincronizados da nuvem.
--   Use um perfil móvel para o conteúdo em vez de dados brutos. Por exemplo, faça roaming de uma URL em vez do conteúdo de um artigo online.
--   Para configurações importantes e urgentes, use a configuração *HighPriority* associada a [**RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings).
--   Não use roaming em dados de aplicativo específicos de um dispositivo. Algumas informações são pertinentes apenas localmente, como um nome de caminho para um recurso de arquivo local. Se você decidir usar um perfil móvel nas informações locais, certifique-se de que o aplicativo possa se recuperar se as informações não forem válidas no dispositivo secundário.
--   Não use perfis móveis em grandes conjuntos de dados de aplicativos. Há um limite na quantidade de dados à qual um aplicativo pode aplicar roaming; use a propriedade [**RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) para atingir essa quantidade máxima. Se um aplicativo atingir esse limite, o roaming não poderá ser usado em nenhum dado até que o tamanho do armazenamento de dados do aplicativo deixe de exceder o limite. Ao projetar seu aplicativo, considere como definir um limite para dados maiores, para que eles não ultrapassem o limite. Por exemplo, se para salvar o estado de um jogo for preciso 10 KB, o aplicativo deverá apenas permitir o armazenamento de até 10 jogos.
--   Não use o perfil móvel para dados que dependerem da sincronização instantânea. O Windows não garante uma sincronização instantânea; o uso de roaming poderá sofrer um atraso significativo se um usuário estiver offline em uma rede de alta latência. Assegure-se de que sua interface do usuário não dependa da sincronização instantânea.
--   Não use o roaming de dados com alterações frequentes. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
+- Use o roaming para preferências de usuário e personalizações, links e pequenos arquivos de dados. Por exemplo, use o roaming para preservar a preferência de cor de fundo de um usuário em todos os seus dispositivos.
+- Use o roaming para permitir que os usuários continuem uma tarefa entre dispositivos. Por exemplo, use roaming de dados do aplicativo como o conteúdo de um rascunho de email ou a página mais recentemente exibida em um aplicativo de leitura.
+- Manipule o evento [**DataChanged**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.datachanged) atualizando os dados do aplicativo. Esse evento ocorrerá quando os dados de aplicativos tiverem terminado de ser sincronizados da nuvem.
+- Use um perfil móvel para o conteúdo em vez de dados brutos. Por exemplo, faça roaming de uma URL em vez do conteúdo de um artigo online.
+- Para configurações importantes e urgentes, use a configuração *HighPriority* associada a [**RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings).
+- Não use roaming em dados de aplicativo específicos de um dispositivo. Algumas informações são pertinentes apenas localmente, como um nome de caminho para um recurso de arquivo local. Se você decidir usar um perfil móvel nas informações locais, certifique-se de que o aplicativo possa se recuperar se as informações não forem válidas no dispositivo secundário.
+- Não use perfis móveis em grandes conjuntos de dados de aplicativos. Há um limite na quantidade de dados à qual um aplicativo pode aplicar roaming; use a propriedade [**RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) para atingir essa quantidade máxima. Se um aplicativo atingir esse limite, o roaming não poderá ser usado em nenhum dado até que o tamanho do armazenamento de dados do aplicativo deixe de exceder o limite. Ao projetar seu aplicativo, considere como definir um limite para dados maiores, para que eles não ultrapassem o limite. Por exemplo, se para salvar o estado de um jogo for preciso 10 KB, o aplicativo deverá apenas permitir o armazenamento de até 10 jogos.
+- Não use o perfil móvel para dados que dependerem da sincronização instantânea. O Windows não garante uma sincronização instantânea; o uso de roaming poderá sofrer um atraso significativo se um usuário estiver offline em uma rede de alta latência. Assegure-se de que sua interface do usuário não dependa da sincronização instantânea.
+- Não use roaming para dados que mudam frequentemente. Por exemplo: se o aplicativo acompanhar informações que mudarem frequentemente, como a posição em um música por segundos, não armazene essas informações como dados de uso do perfil móvel do aplicativo. Em vez disso, escolha uma representação menos frequente que ainda represente uma boa experiência do usuário, como uma música que estiver tocando no momento.
 
 ### <a name="roaming-pre-requisites"></a>Pré-requisitos do uso do roaming
 
-Qualquer usuário pode se beneficiar com dados de aplicativo em roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar uma conta da Microsoft ou desabilita os recursos de dados móveis, ela ainda será possível usar seu aplicativo, mas os dados do aplicativo serão locais para cada dispositivo.
+Qualquer usuário pode se beneficiar com dados de aplicativo em roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar um conta Microsoft ou desabilitar os recursos de dados de roaming, ele ainda poderá usar seu aplicativo, mas os dados do aplicativo serão locais para cada dispositivo.
 
 Os dados armazenados no [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) serão transferidos somente se o usuário tiver definido o dispositivo como "confiável". Se um dispositivo não for confiável, os dados armazenados nesse cofre não estarão disponíveis para roaming.
 
@@ -198,9 +198,9 @@ Os dados de aplicativo só estarão disponíveis ao perfil móvel de aplicativos
 
 Os desenvolvedores podem bloquear o dispositivo para disparar uma sincronização de dados de aplicativo de roaming. Se não houver transferência de dados de aplicativo em determinado intervalo de tempo, verifique os itens a seguir:
 
--   Os dados de roaming não podem ultrapassar o limite de tamanho máximo (consulte [**RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) para obter detalhes).
--   Os arquivos foram fechados e desbloqueados corretamente.
--   Existem pelo menos dois dispositivos com a mesma versão do aplicativo.
+- Os dados de roaming não podem ultrapassar o limite de tamanho máximo (consulte [**RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) para obter detalhes).
+- Os arquivos foram fechados e desbloqueados corretamente.
+- Existem pelo menos dois dispositivos com a mesma versão do aplicativo.
 
 
 ### <a name="register-to-receive-notification-when-roaming-data-changes"></a>Registre-se para receber uma notificação quando os dados de roaming mudarem
@@ -434,8 +434,8 @@ Como opção, você pode converter os dados do aplicativo para seu aplicativo. I
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [**Windows.Storage.ApplicationData**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData)
-* [**Windows.Storage.ApplicationData.RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings)
-* [**Windows.Storage.ApplicationData.RoamingFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingfolder)
-* [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota)
-* [**Windows.Storage.ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue)
+* [**Windows. Storage. ApplicationData**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData)
+* [**Windows. Storage. ApplicationData. RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings)
+* [**Windows. Storage. ApplicationData. RoamingFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingfolder)
+* [**Windows. Storage. ApplicationData. RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota)
+* [**Windows. Storage. ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue)
