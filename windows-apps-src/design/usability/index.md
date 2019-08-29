@@ -5,36 +5,36 @@ title: Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Wind
 layout: LandingPage
 template: detail.hbs
 ms.date: 10/18/2017
-ms.topic: landing-page
+ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a6912932b7ad71fd3d04c038eab7e0aa4dd6cb11
+ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582021"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076389"
 ---
 # <a name="usability-for-uwp-apps"></a>Usabilidade para aplicativos UWP
-
-
 
 São os pequenos toques, uma atenção extra aos detalhes, que podem transformar uma boa experiência do usuário em uma experiência do usuário realmente inclusiva que atenda as necessidades dos usuários em todo o mundo.
 
 As instruções de design e codificação nesta seção podem tornar seu aplicativo UWP mais inclusivo adicionando recursos de acessibilidade, habilitando a globalização e localização, permitindo que os usuários personalizem sua experiência e fornecendo ajuda quando os usuários precisarem.
 
-
-## <a name="accessiblity"></a>Acessibilidade
+## <a name="accessibility"></a>Acessibilidade
 
 Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que possuem limitações que impeçam o uso de interfaces de usuário convencionais. Para algumas situações, os requisitos de acessibilidade são impostos por lei. No entanto, é uma boa ideia resolver os problemas de acessibilidade independentemente dos requisitos legais, para que seus aplicativos tenham a maior audiência possível.
 
+[Portal de acessibilidade](../accessibility/accessibility.md)
+
+<!--
 <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-overview.md">Visão geral de acessibilidade</a></b> <br/> Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos UWP.</p>
+<p><b><a href="../accessibility/accessibility-overview.md">Accessibility overview</a></b> <br/> This article is an overview of the concepts and technologies related to accessibility scenarios for UWP apps.</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/designing-inclusive-software.md">Projetando software inclusivo</a></b><br/>Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.</p>
+<p><b><a href="../accessibility/designing-inclusive-software.md">Designing inclusive software</a></b><br/>Learn about evolving inclusive design with Universal Windows Platform (UWP) apps for Windows 10.  Design and build inclusive software with accessibility in mind.</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/developing-inclusive-windows-apps.md">Desenvolvendo aplicativos inclusivos do Windows</a></b><br/> Este artigo é uma estratégia para desenvolver aplicativos UWP acessíveis.</p>
+<p><b><a href="../accessibility/developing-inclusive-windows-apps.md">Developing inclusive Windows apps</a></b><br/> This article is a roadmap for developing accessible UWP apps.</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-testing.md">Testes de acessibilidade</a> </b><br/>Procedimentos de teste a serem seguidos para garantir que seu aplicativo UWP seja acessível.</p>
+<p><b><a href="../accessibility/accessibility-testing.md">Accessibility testing</a> </b><br/>Testing procedures to follow to ensure that your UWP app is accessible.</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-in-the-store.md">Acessibilidade na Store</a></b><br/>Descreve os requisitos para declarar seu aplicativo UWP como acessível na Microsoft Store.</p>
+<p><b><a href="../accessibility/accessibility-in-the-store.md">Accessibility in the Store</a></b><br/>Describes the requirements for declaring your UWP app as accessible in the Microsoft Store.</p>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-checklist.md">Lista de verificação de acessibilidade</a></b><br/>Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo UWP seja acessível.</p>
+<p><b><a href="../accessibility/accessibility-checklist.md">Accessibility checklist</a></b><br/>Provides a checklist to help you ensure that your UWP app is accessible.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/basic-accessibility-information.md">Expor informações básicas de acessibilidade</a></b><br/>As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam.</p>
+<p><b><a href="../accessibility/basic-accessibility-information.md">Expose basic accessibility information</a></b><br/>Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need.</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/keyboard-accessibility.md">Acessibilidade do teclado</a></b><br/>Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo.</p>
+<p><b><a href="../accessibility/keyboard-accessibility.md">Keyboard accessibility</a></b><br/>If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.</p>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/high-contrast-themes.md">Temas de alto contraste</a></b><br/>Descreve as etapas necessárias para garantir que o seu aplicativo UWP seja utilizável quando um tema em alto contraste estiver ativo. </p>
+<p><b><a href="../accessibility/high-contrast-themes.md">High-contrast themes</a></b><br/>Describes the steps needed to ensure your UWP app is usable when a high-contrast theme is active. </p>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessible-text-requirements.md">Requisitos de texto acessível</a></b><br/>Este tópico descreve as práticas recomendadas para acessibilidade de texto em um aplicativo, garantindo que cores e telas de fundo satisfaçam o índice de contraste necessário. Este tópico também discute as funções de Automação da Interface do Usuário da Microsoft que os elementos de texto em um aplicativo UWP podem ter e as práticas recomendadas para texto em elementos gráficos.</p>                    
+<p><b><a href="../accessibility/accessible-text-requirements.md">Accessible text requirements</a></b><br/>This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio. This topic also discusses the Microsoft UI Automation roles that text elements in a UWP app can have, and best practices for text in graphics.</p>                    
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/practices-to-avoid.md">Práticas de acessibilidade a evitar</a></b><br/>Lista as práticas a serem evitadas se você quiser criar um aplicativo UWP acessível.</p>                    
+<p><b><a href="../accessibility/practices-to-avoid.md">Accessibility practices to avoid</a></b><br/>Lists the practices to avoid if you want to create an accessible UWP app.</p>                    
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/custom-automation-peers.md">Pares de automação personalizados</a></b><br/>Descreve o conceito de pares de automação para Automação da Interface do Usuário e como você pode fornecer suporte à automação para sua própria classe de interface do usuário personalizada.</p>                    
+<p><b><a href="../accessibility/custom-automation-peers.md">Custom automation peers</a></b><br/>Describes the concept of automation peers for UI Automation, and how you can provide automation support for your own custom UI class.</p>                    
                     </div>
                 </div>
             </div>
@@ -166,20 +166,14 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/control-patterns-and-interfaces.md">Padrões e interfaces de controle</a></b><br/>Lista os padrões de controle de Automação da Interface do Usuário da Microsoft, as classes que os clientes usam para acessá-los e as interfaces que os provedores usam para implementá-los.</p>                    
+<p><b><a href="../accessibility/control-patterns-and-interfaces.md">Control patterns and interfaces</a></b><br/>Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them.</p>                    
                     </div>
                 </div>
             </div>
         </div>
     </li>     
 </ul>
-
-
-## <a name="globalization-and-localization"></a>Globalização e localização
-
-O Windows é usado no mundo todo por públicos diversificados em termos de idioma, região e cultura. Seus usuários falam uma variedade de idiomas diferentes e em vários países e regiões diferentes. Alguns usuários falam mais de um idioma. Assim, seu aplicativo é executado em configurações que envolvem muitas permutações de configurações do sistema de idioma, região e cultura. Aumente o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando *globalização* e *localização*.
-
-<a href="../globalizing/globalizing-portal.md">Portal de globalização e localização</a>
+-->
 
 ## <a name="app-settings"></a>Configurações de aplicativo
 
@@ -210,6 +204,11 @@ As configurações do aplicativo permitem que o usuário personalize seu aplicat
     </li>
 </ul>
 
+## <a name="globalization-and-localization"></a>Globalização e localização
+
+O Windows é usado no mundo todo por públicos diversificados em termos de idioma, região e cultura. Seus usuários falam uma variedade de idiomas diferentes e em vários países e regiões diferentes. Alguns usuários falam mais de um idioma. Assim, seu aplicativo é executado em configurações que envolvem muitas permutações de configurações do sistema de idioma, região e cultura. Aumente o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando *globalização* e *localização*.
+
+<a href="../globalizing/globalizing-portal.md">Portal de globalização e localização</a>
 
 ## <a name="in-app-help"></a>Ajuda no aplicativo
 Não importa quão bem você projetou o aplicativo, alguns usuários precisarão de um pouco mais de ajuda.
