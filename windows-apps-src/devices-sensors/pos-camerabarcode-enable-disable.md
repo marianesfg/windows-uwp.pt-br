@@ -5,12 +5,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f4b11d6a360f09a9600961a3e50e3dd6701bf46
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 8394f79e9581101d6def0f1568cb000ffdee5987
+ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243310"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Habilitar ou desabilitar o decodificador de software que vem com o Windows
 
@@ -20,7 +20,7 @@ No Windows 10, versão 1803, o decodificador de software está instalado e habil
 
 O decodificador de software que vem com o Windows pode ser habilitado ou desabilitado por meio do registro do sistema adicionando a chave do registro *InboxDecoder* em *HKLM\Software\Microsoft\PointOfService\BarcodeScanner* e configurando o valor *Enable* conforme descrito abaixo.
 
-| Nome do valor  | Tipo de valor | Valor | Status |
+| Nome do valor  | Tipo do Valor | Valor | Status |
 | ----------- | --------- | -------|--------|
 | Habilitar      | DWORD     | 1 (padrão)<br/>0 |  Habilita o decodificador de software que vem com o Windows <br/> Desabilita o decodificador de software que vem com o Windows |
 
@@ -43,7 +43,13 @@ Windows Registry Editor Version 5.00
 ```  
 
 > [!Warning]
-> Problemas sérios podem ocorrer se você modificar o Registro incorretamente.  Para obter proteção adicional, faça backup do registro antes de modificá-lo.  Assim, será possível restaurá-lo se houver algum problema.  Para obter mais informações sobre como fazer backup do registro e restaurá-lo, clique no número do artigo a seguir para visualizar o artigo na Base de Dados de Conhecimento Microsoft: <br/><br/> [322756](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows) Como fazer o backup e a restauração do Registro no Windows.
+> Problemas sérios podem ocorrer se você modificar o registro incorretamente.  Para obter proteção adicional, faça backup do registro antes de modificá-lo.  Assim, será possível restaurá-lo se houver algum problema.  Para obter mais informações sobre como fazer backup do registro e restaurá-lo, clique no número do artigo a seguir para visualizar o artigo na Base de Dados de Conhecimento Microsoft: <br/><br/> [322756](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows) Como fazer o backup e a restauração do Registro no Windows.
 
 > [!NOTE]
 > O decodificador de software integrado ao Windows 10 é uma cortesia fornecida pela  [**Digimarc Corporation**](https://www.digimarc.com/).
+
+## <a name="see-also"></a>Consulte também
+
+### <a name="samples"></a>Exemplos
+
+- [Exemplo de scanner de código de barras](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
