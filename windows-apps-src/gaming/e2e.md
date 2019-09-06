@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a4e151851ef663055a4199b7ec9b8c1b168b578
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: db510c1dc084fd1af986d618716854ed09cfc618
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682615"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393607"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -560,9 +560,9 @@ Os aplicativos do Windows em JavaScript podem acessar os recursos avançados da 
 </table>
 
 
-#### <a name="use-windows-runtime-components-to-combine-languages"></a>Usar os componentes do Windows Runtime para combinar linguagens
+#### <a name="use-windows-runtime-components-to-combine-languages"></a>Usar componentes Windows Runtime para combinar idiomas
 
-Com a Plataforma Universal do Windows, é fácil combinar componentes criados em linguagens diferentes. Crie componentes do Windows Runtime em C++, C# ou Visual Basic, e os chame do JavaScript, C#, C++ ou Visual Basic. Essa é uma ótima maneira de programar partes do jogo na linguagem de sua escolha. O componentes também permitem o uso de bibliotecas externas disponíveis somente em uma determinada linguagem, além do código herdado que você já criou.
+Com a Plataforma Universal do Windows, é fácil combinar componentes criados em linguagens diferentes. Crie Windows Runtime componentes no C++, C#, ou Visual Basic e, em seguida, chame-os de C#JavaScript C++,, ou Visual Basic. Essa é uma ótima maneira de programar partes do jogo na linguagem de sua escolha. O componentes também permitem o uso de bibliotecas externas disponíveis somente em uma determinada linguagem, além do código herdado que você já criou.
 
 <table>
     <colgroup>
@@ -570,8 +570,8 @@ Com a Plataforma Universal do Windows, é fácil combinar componentes criados em
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Como criar componentes do Windows Runtime</td>
-        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Criando componentes de Windows Runtime</a></td>
+        <td>Como criar componentes de Windows Runtime</td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Windows Runtime componentes com C++o/CX</a></td>
     </tr>
 </table>
 
@@ -1018,7 +1018,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </colgroup>
     <tr>
         <td>Usar código C++ existente para desenvolvimento de jogos UWP</td>
-        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">Como Usar o C++ código existente em um aplicativo UWP</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app">Como: Usar o C++ código existente em um aplicativo UWP</a></td>
     </tr>
     <tr>
         <td>APIs UWP para APIs COM e Win32</td>

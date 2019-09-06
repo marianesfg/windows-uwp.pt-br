@@ -1,20 +1,20 @@
 ---
 title: Usando objetos do Windows Runtime em um ambiente multithread | Microsoft Docs
-description: Este artigo discute a maneira como o .NET Framework lida com chamadas de códigos C# e Visual Basic para objetos fornecidos pelo Windows Runtime ou pelo Componentes do Tempo de Execução do Windows.
+description: Este artigo discute a maneira como o .NET Framework manipula chamadas de C# Visual Basic código para objetos que são fornecidos pelo Windows Runtime ou por componentes de Windows Runtime.
 ms.date: 01/14/2017
 ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4fc4f704d8e9f53282ab09dbc61bc5e625d00da9
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371215"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393524"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
-Este artigo discute a maneira como o .NET Framework lida com chamadas de códigos C# e Visual Basic para objetos fornecidos pelo Windows Runtime ou pelo Componentes do Tempo de Execução do Windows.
+Este artigo discute a maneira como o .NET Framework manipula chamadas de C# Visual Basic código para objetos que são fornecidos pelo Windows Runtime ou por componentes de Windows Runtime.
 
 No .NET Framework, você pode acessar qualquer objeto de vários threads por padrão, sem tratamento especial. Tudo o que você precisa é uma referência ao objeto. No Windows Runtime, esses objetos são chamados de *ágil*. A maioria das classes do Windows Runtime são ágeis, mas algumas classes não são e até mesmo classes ágeis podem exigir um tratamento especial.
 
@@ -163,4 +163,4 @@ Para objetos que são executados no segmento da interface de usuário e lançam 
 ## <a name="see-also"></a>Consulte também
 [Guia de C#](/dotnet/csharp/)
 
-[Guia do Visual Basic](/dotnet/visual-basic/)
+[Guia de Visual Basic](/dotnet/visual-basic/)

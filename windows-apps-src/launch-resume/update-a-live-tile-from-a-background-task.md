@@ -5,14 +5,14 @@ Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.date: 01/11/2018
 ms.topic: article
-keywords: o Windows 10, uwp, tarefas em segundo plano
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 280f2253fda7de816ee753798dcab754d58ae847
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: df2fad68fd1aab9b3b056e962736f3d37f749e63
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370550"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393532"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
@@ -29,7 +29,7 @@ Veja um vídeo que mostra como adicionar blocos dinâmicos aos aplicativos.
 
 ## <a name="create-the-background-task-project"></a>Criar o projeto de tarefa em segundo plano  
 
-Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto Componente do Tempo de Execução do Windows à sua solução. Trata-se de um assembly separado, que o SO carrega e executa em segundo plano quando um usuário instala o aplicativo.
+Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto de componente Windows Runtime à sua solução. Trata-se de um assembly separado, que o SO carrega e executa em segundo plano quando um usuário instala o aplicativo.
 
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na solução, aponte para **Adicionar** e, em seguida, clique em **Novo Projeto**.
 2.  Na caixa de diálogo **Adicionar Novo Projeto**, selecione o modelo **Componente do Tempo de Execução do Windows** na seção **Instalado &gt; Outros idiomas &gt; Visual C# &gt; Windows Universal**.
@@ -152,7 +152,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 6.  Clique ou toque na guia **Interface de Usuário do Aplicativo**.
 7.  Defina **Notificações de tela de bloqueio** como **Notificação e Texto de Bloco**.
 8.  Defina um caminho como um ícone de 24 x 24 pixels no campo **Logotipo de notificação** .
-    **Importante**  esse ícone deve usar apenas os pixels monocromáticos e transparentes.
+    **Importante esse ícone**deveusarapenaspixelsmonocromáticosetransparentes  .
 9.  No campo **Logotipo pequeno**, defina um caminho como um ícone de 30 x 30 pixels.
 10. No campo **Logotipo largo** , defina um caminho como um ícone de 310 x 150 pixels.
 
@@ -161,7 +161,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 
 Crie um [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar a tarefa.
 
-> **Observação**  a partir do Windows 8.1, parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
+> **Observação a partir**do Windows 8.1, os parâmetros de registro da tarefa em segundo plano são validados no momento do registro.   Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
  
 
 Na página principal de seu aplicativo, adicione o método **RegisterBackgroundTask** e chame-o no manipulador de eventos **OnNavigatedTo**.
@@ -260,7 +260,7 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 * [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
 * [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
 * [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md)
-* [Diretrizes e lista de verificação de blocos e notificações](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
+* [Diretrizes e lista de verificação para blocos e notificações](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
 
  
 

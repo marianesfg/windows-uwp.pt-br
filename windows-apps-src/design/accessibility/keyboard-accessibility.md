@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0148e1a997cf97942fbbb80eff2b42b1c71d4e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fd8fa2b5264328619619df862d21f02f70f52e0
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393758"
 ---
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
@@ -103,7 +103,7 @@ Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecend
 
 É fundamental oferecer aos usuários que dependem de leitores de tela e outras tecnologias assistenciais uma maneira fácil de descobrir as teclas de atalho do seu aplicativo. Comunique as teclas de atalho usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de atalho devem ser bem documentadas no conteúdo de Ajuda do seu aplicativo.
 
-Você pode documentar as teclas de acesso pelos leitores de tela definindo a propriedade anexada [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para uma cadeia de caracteres que descreve a tecla de atalho. Há também uma propriedade anexada [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) para documentar teclas de atalho não mnemônicas, apesar de leitores de tela geralmente tratarem as duas propriedades da mesma forma. Tente documentar as teclas de atalho de várias formas, usando dicas de ferramentas, propriedades de automação e documentação de Ajuda escrita.
+Você pode documentar as teclas de acesso pelos leitores de tela definindo a propriedade anexada [**AutomationProperties.AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) para uma cadeia de caracteres que descreve a tecla de atalho. Há também uma propriedade anexada [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) para documentar teclas de atalho não mnemônicas, apesar de leitores de tela geralmente tratarem as duas propriedades da mesma forma. Tente documentar as teclas de atalho de várias formas, usando dicas de ferramentas, propriedades de automação e documentação de Ajuda escrita.
 
 O seguinte exemplo demonstra como documentar as teclas de atalho dos botões de reproduzir, pausar e parar mídia.
 
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> A definição de [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) ou [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ou [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) embutida se desejar mostrar texto sublinhado na interface do usuário.
+> A definição de [**AutomationProperties. AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) ou [**AutomationProperties. AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ou [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
 Para fins de simplicidade, o exemplo anterior omite o uso de recursos para cadeias de caracteres, como "Ctrl+A". Contudo, considere também as teclas de atalho durante o processo de localização. A localização de teclas de atalho é relevante porque a escolha da chave a ser usada como a chave de atalho normalmente depende do rótulo de texto visível para o elemento.
 
@@ -175,7 +175,7 @@ Geralmente, você implementa a manipulação de chave personalizada para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Um exemplo do estado visual de um indicador de foco  
 Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
 
-Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Também há aparências potencialmente diferentes dependendo do tema selecionado do usuário (especialmente se o usuário estiver usando um modo de alto contraste). Se você estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada adicional para obter os indicadores de foco visual em controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
+Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Também há uma aparência potencialmente diferente, dependendo do tema selecionado do usuário (especialmente se o usuário estiver usando um modo de alto contraste). Se você estiver usando os controles XAML em sua interface do usuário e não substituindo os modelos de controle, não precisará fazer nada extra para obter indicadores de foco visual em controles que se comportam e são exibidos corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
 
 Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
 
@@ -203,7 +203,7 @@ XAML
 </ControlTemplate>
 ```
 
-Até o momento, essa é apenas a composição. Para controlar a visibilidade do indicador do foco, defina os estados visuais que alternam a propriedade [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Para fazer isso, use a propriedade anexada [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8), conforme aplicada ao elemento raiz que define a composição.
+Até o momento, essa é apenas a composição. Para controlar a visibilidade do indicador do foco, defina os estados visuais que alternam a propriedade [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Isso é feito usando o [VisualStateManager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) e a propriedade anexada VisualStateManager. VisualStateGroups, conforme aplicado ao elemento raiz que define a composição.
 
 XAML
 ```xml
@@ -245,9 +245,9 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 
 <span id="related_topics"/>
 
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados
+
 * [Acessibilidade](accessibility.md)
 * [Interações de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
-
+* [Exemplo de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)

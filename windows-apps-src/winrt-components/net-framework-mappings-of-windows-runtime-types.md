@@ -1,86 +1,101 @@
 ---
-title: Mapeamentos do .NET Framework dos tipos do Windows Runtime
-description: A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos da Plataforma Universal do Windows (UWP) e os tipos do .NET Framework.
+title: Mapeamentos .NET de tipos de Windows Runtime
+description: A tabela a seguir lista os mapeamentos que o .NET faz entre tipos de Plataforma Universal do Windows (UWP) e tipos .NET.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc9d71f6f02ec62fdf96161c397f7d2d7363b506
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c035db58fc6aa484f9d47a9af61176a2b05d55ee
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393654"
 ---
-# <a name="net-framework-mappings-of-windows-runtime-types"></a>Mapeamentos do .NET Framework dos tipos do Windows Runtime
+# <a name="net-mappings-of-windows-runtime-types"></a>Mapeamentos .NET de tipos de Windows Runtime
 
+A tabela a seguir lista os mapeamentos que o .NET faz entre tipos de Plataforma Universal do Windows (UWP) e tipos .NET. Em um aplicativo universal do Windows escrito com código gerenciado, o Visual Studio IntelliSense mostra o tipo .NET em vez do tipo UWP. Por exemplo, se um método Windows runtime usa um parâmetro do tipo cadeia&lt;de&gt;caracteres IVector, o IntelliSense mostra um parâmetro do&lt;tipo&gt;cadeia de caracteres IList. Da mesma forma, em um componente Windows Runtime escrito com código gerenciado, você usa o tipo .NET em assinaturas de membro. Quando a [ferramenta de exportação de metadados Windows Runtime (Winmdexp. exe)](/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) gera seu componente Windows Runtime, o tipo .net é convertido no tipo UWP correspondente.
 
+A maioria dos tipos que têm o mesmo nome de namespace e nome de tipo no UWP e no .NET são estruturas (ou tipos associados a estruturas, como enumerações). No UWP, as estruturas não têm Membros além dos campos e exigem tipos auxiliares, que o .NET oculta. As versões do .NET dessas estruturas têm propriedades e métodos que fornecem a funcionalidade dos tipos auxiliares ocultos.
 
-A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos da Plataforma Universal do Windows (UWP) e os tipos do .NET Framework. Em um aplicativo Universal do Windows escrito com código gerenciado, o IntelliSense mostra o tipo do .NET Framework, em vez do tipo UWP. Por exemplo, caso um método do Windows Runtime utilize um parâmetro do tipo IVector&lt;string&gt;, o IntelliSense mostra um parâmetro do tipo IList&lt;string&gt;. Da mesma forma, em um componente do Tempo de Execução do Windows escrito com código gerenciado, você usa o tipo do .NET Framework em assinaturas de membro. Quando a [Ferramenta de Exportação de Metadados do Tempo de Execução do Windows (Winmdexp.exe)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) gera o componente do Tempo de Execução do Windows, o tipo do .NET Framework se torna o tipo UWP correspondente.
+## <a name="uwp-types-that-map-to-net-types-with-the-same-name-and-namespace"></a>Tipos UWP que são mapeados para tipos .NET com o mesmo nome e namespace
 
-## <a name="mapping-tables"></a>Tabelas de mapeamento
+### <a name="in-net-assembly-systemobjectmodeldll"></a>Em .NET assembly System. ObjectModel. dll
 
+| Namespace | Tipo |
+|-|-|
+| Windows.UI.Xaml.Input | ICommand |
 
-A maioria dos tipos com o mesmo nome de namespace e o mesmo nome de tipo na UWP e no .NET Framework é de estruturas (ou tipos associados a estruturas, como enumerações). Na UWP, as estruturas não têm membros que não sejam campos e exigem tipos auxiliares, que o .NET Framework oculta. As versões do .NET Framework dessas estruturas têm propriedades e métodos que oferecem a funcionalidade dos tipos de elemento oculto.
+### <a name="in-net-assembly-systemruntimewindowsruntimedll"></a>Em .NET assembly System. Runtime. WindowsRuntime. dll
 
-Tabela 1: Tipos de UWP que são mapeados para tipos do .NET Framework com um nome diferente e/ou namespace.
+| Namespace | Tipo |
+|-|-|
+| Windows.Foundation | Ponto |
+| Windows.Foundation | Rect |
+| Windows.Foundation | Size |
+| Windows.UI | Cor |
 
-| Tipo/namespace da UWP                                            | Tipo/namespace do .NET Framework                                          | Assembly do .NET Framework                           |
-|---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------|
-| AttributeUsageAttribute (Windows.Foundation.Metadata)         | AttributeUsageAttribute (System)                                       | System.Runtime.dll                                |
-| AttributeTargets (Windows.Foundation.Metadata)                | AttributeTargets (System)                                              | System.Runtime.dll                                |
-| DateTime (Windows.Foundation)                                 | DateTimeOffset (System)                                                | System.Runtime.dll                                |
-| EventHandler&lt;T&gt; (Windows.Foundation)                    | EventHandler&lt;T&gt; (System)                                         | System.Runtime.dll                                |
-| EventRegistrationToken (Windows.Foundation)                   | EventRegistrationToken (System.Runtime.InteropServices.WindowsRuntime) | System.Runtime.InteropServices.WindowsRuntime.dll |
-| HResult (Windows.Foundation)                                  | Exception (System)                                                     | System.Runtime.dll                                |
-| IReference&lt;T&gt; (Windows.Foundation)                      | Nullable&lt;T&gt; (System)                                             | System.Runtime.dll                                |
-| TimeSpan (Windows.Foundation)                                 | TimeSpan (System)                                                      | System.Runtime.dll                                |
-| Uri (Windows.Foundation)                                      | Uri (System)                                                           | System.Runtime.dll                                |
-| IClosable (Windows.Foundation)                                | IDisposable (System)                                                   | System.Runtime.dll                                |
-| IIterable&lt;T&gt; (Windows.Foundation.Collections)           | IEnumerable&lt;T&gt; (System.Collections.Generic)                      | System.Runtime.dll                                |
-| IVector&lt;T&gt; (Windows.Foundation.Collections)             | IList&lt;T&gt; (System.Collections.Generic)                            | System.Runtime.dll                                |
-| IVectorView&lt;T&gt; (Windows.Foundation.Collections)         | IReadOnlyList&lt;T&gt; (System.Collections.Generic)                    | System.Runtime.dll                                |
-| IMap&lt;K,V&gt; (Windows.Foundation.Collections)              | IDictionary&lt;TKey,TValue&gt; (System.Collections.Generic)            | System.Runtime.dll                                |
-| IMapView&lt;K,V&gt; (Windows.Foundation.Collections)          | IReadOnlyDictionary&lt;TKey,TValue&gt; (System.Collections.Generic)    | System.Runtime.dll                                |
-| IKeyValuePair&lt;K,V&gt; (Windows.Foundation.Collections)     | KeyValuePair&lt;TKey,TValue&gt; (System.Collections.Generic)           | System.Runtime.dll                                |
-| IBindableIterable (Windows.UI.Xaml.Interop)                   | IEnumerable (System.Collections)                                       | System.Runtime.dll                                |
-| IBindableVector (Windows.UI.Xaml.Interop)                     | IList (System.Collections)                                             | System.Runtime.dll                                |
-| INotifyCollectionChanged (Windows.UI.Xaml.Interop)            | INotifyCollectionChanged (System.Collections.Specialized)              | System.ObjectModel.dll                            |
-| NotifyCollectionChangedEventHandler (Windows.UI.Xaml.Interop) | NotifyCollectionChangedEventHandler (System.Collections.Specialized)   | System.ObjectModel.dll                            |
-| NotifyCollectionChangedEventArgs (Windows.UI.Xaml.Interop)    | NotifyCollectionChangedEventArgs (System.Collections.Specialized)      | System.ObjectModel.dll                            |
-| NotifyCollectionChangedAction (Windows.UI.Xaml.Interop)       | NotifyCollectionChangedAction (System.Collections.Specialized)         | System.ObjectModel.dll                            |
-| INotifyPropertyChanged (Windows.UI.Xaml.Data)                 | INotifyPropertyChanged (System.ComponentModel)                         | System.ObjectModel.dll                            |
-| PropertyChangedEventHandler (Windows.UI.Xaml.Data)            | PropertyChangedEventHandler (System.ComponentModel)                    | System.ObjectModel.dll                            |
-| PropertyChangedEventArgs (Windows.UI.Xaml.Data)               | PropertyChangedEventArgs (System.ComponentModel)                       | System.ObjectModel.dll                            |
-| TypeName (Windows.UI.Xaml.Interop)                            | Type (System)                                                          | System.Runtime.dll                                |
+### <a name="in-net-assembly-systemruntimewindowsruntimeuixamldll"></a>Em .NET assembly System. Runtime. WindowsRuntime. UI. XAML. dll
 
- 
+| Namespace | Tipo |
+|-|-|
+| Windows.UI.Xaml | CornerRadius |
+| Windows.UI.Xaml | Duração |
+| Windows.UI.Xaml | DurationType |
+| Windows.UI.Xaml | GridLength |
+| Windows.UI.Xaml | GridUnitType |
+| Windows.UI.Xaml | Espessura |
+| Windows.UI.Xaml.Controls.Primitives | GeneratorPosition |
+| Windows.UI.Xaml.Media | Matriz |
+| Windows.UI.Xaml.Media.Animation | KeyTime |
+| Windows.UI.Xaml.Media.Animation | RepeatBehavior |
+| Windows.UI.Xaml.Media.Animation | RepeatBehaviorType |
+| Windows.UI.Xaml.Media.Media3D | Matrix3D |
 
-Tabela 2: Tipos de UWP que são mapeados para tipos do .NET Framework com o mesmo nome e namespace.
+## <a name="uwp-types-that-map-to-net-types-with-a-different-name-andor-namespace"></a>Tipos UWP que são mapeados para tipos .NET com um nome e/ou namespace diferente
 
-| Namespace                           | Tipo               | Assembly do .NET Framework                   |
-|-------------------------------------|--------------------|-------------------------------------------|
-| Windows.UI                          | Cor              | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Point              | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Rect               | System.Runtime.WindowsRuntime.dll         |
-| Windows.Foundation                  | Tamanho               | System.Runtime.WindowsRuntime.dll         |
-| Windows.UI.Xaml.Input               | ICommand           | System.ObjectModel.dll                    |
-| Windows.UI.Xaml                     | CornerRadius       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | Duração           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | DurationType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | GridLength         | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | GridUnitType       | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml                     | Espessura          | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Controls.Primitives | GeneratorPosition  | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media               | Matrix             | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media.Animation     | KeyTime            | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media.Animation     | RepeatBehavior     | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media.Animation     | RepeatBehaviorType | System.Runtime.WindowsRuntime.UI.Xaml.dll |
-| Windows.UI.Xaml.Media.Media3D       | Matrix3D           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
+### <a name="in-net-assembly-systemobjectmodeldll"></a>Em .NET assembly System. ObjectModel. dll
 
- 
+| Tipo/namespace da UWP | Tipo/namespace do .NET |
+|-|-|
+| INotifyCollectionChanged (Windows.UI.Xaml.Interop) | INotifyCollectionChanged (System.Collections.Specialized) | 
+| NotifyCollectionChangedEventHandler (Windows.UI.Xaml.Interop) | NotifyCollectionChangedEventHandler (System.Collections.Specialized) | 
+| NotifyCollectionChangedEventArgs (Windows.UI.Xaml.Interop) | NotifyCollectionChangedEventArgs (System.Collections.Specialized) | 
+| NotifyCollectionChangedAction (Windows.UI.Xaml.Interop) | NotifyCollectionChangedAction (System.Collections.Specialized) | 
+| INotifyPropertyChanged (Windows.UI.Xaml.Data) | INotifyPropertyChanged (System.ComponentModel) | 
+| PropertyChangedEventHandler (Windows.UI.Xaml.Data) | PropertyChangedEventHandler (System.ComponentModel) | 
+| PropertyChangedEventArgs (Windows.UI.Xaml.Data) | PropertyChangedEventArgs (System.ComponentModel) | 
+
+### <a name="in-net-assembly-systemruntimedll"></a>Em .NET assembly System. Runtime. dll
+
+| Tipo/namespace da UWP | Tipo/namespace do .NET |
+|-|-|
+| AttributeUsageAttribute (Windows.Foundation.Metadata) | AttributeUsageAttribute (System) |
+| AttributeTargets (Windows.Foundation.Metadata) | AttributeTargets (System) |
+| DateTime (Windows.Foundation) | DateTimeOffset (System) |
+| EventHandler&lt;T&gt; (Windows.Foundation) | EventHandler&lt;T&gt; (System) |
+| HResult (Windows.Foundation) | Exception (System) |
+| IReference&lt;T&gt; (Windows.Foundation) | Nullable&lt;T&gt; (System) |
+| TimeSpan (Windows.Foundation) | TimeSpan (System) |
+| Uri (Windows.Foundation) | Uri (System) |
+| IClosable (Windows.Foundation) | IDisposable (System) |
+| IIterable&lt;T&gt; (Windows.Foundation.Collections) | IEnumerable&lt;T&gt; (System.Collections.Generic) |
+| IVector&lt;T&gt; (Windows.Foundation.Collections) | IList&lt;T&gt; (System.Collections.Generic) |
+| IVectorView&lt;T&gt; (Windows.Foundation.Collections) | IReadOnlyList&lt;T&gt; (System.Collections.Generic) |
+| IMap&lt;K,V&gt; (Windows.Foundation.Collections) | IDictionary&lt;TKey,TValue&gt; (System.Collections.Generic) |
+| IMapView&lt;K,V&gt; (Windows.Foundation.Collections) | IReadOnlyDictionary&lt;TKey,TValue&gt; (System.Collections.Generic) |
+| IKeyValuePair&lt;K,V&gt; (Windows.Foundation.Collections) | KeyValuePair&lt;TKey,TValue&gt; (System.Collections.Generic) |
+| IBindableIterable (Windows.UI.Xaml.Interop) | IEnumerable (System.Collections) |
+| IBindableVector (Windows.UI.Xaml.Interop) | IList (System.Collections) |
+| TypeName (Windows.UI.Xaml.Interop) | Type (System) |
+
+### <a name="in-net-assembly-systemruntimeinteropserviceswindowsruntimedll"></a>Em .NET assembly System. Runtime. InteropServices. WindowsRuntime. dll
+
+| Tipo/namespace da UWP | Tipo/namespace do .NET |
+|-|-|
+| EventRegistrationToken (Windows.Foundation) | EventRegistrationToken (System.Runtime.InteropServices.WindowsRuntime) |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criando componentes do Windows Runtime em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Windows Runtime componentes com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)

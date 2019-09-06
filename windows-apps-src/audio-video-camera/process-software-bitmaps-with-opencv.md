@@ -6,18 +6,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: a137a4bddd7f86e7aed91a63033c54583dc71f08
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ed8d6572fb280b2cfecf1cf035d68a739c5bc92d
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393518"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Processar bitmaps com OpenCV
 
 Este artigo explica como usar a classe **[SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** , que é usada por muitas APIs diferentes da UWP para representar imagens, com a Biblioteca de visão do computador de código-fonte aberto (OpenCV), uma biblioteca de código aberto nativa e livre com uma ampla variedade de algoritmos de processamento de imagem. 
 
-Os exemplos neste artigo explicam como criar um componente do Tempo de execução do Windows para código nativo, que pode ser usado a partir de um aplicativo UWP, incluindo os aplicativos criados usando C#. Esse componente auxiliar expõe um único método, **Desfocar**, que usará a função de processamento de imagem desfocada do OpenCV. O componente implementa métodos particulares que obtêm um ponteiro para o buffer de dados de imagem subjacente, o qual pode ser usado diretamente pela biblioteca do OpenCV, facilitando a extensão do componente auxiliar para implementar outros recursos de processamento de OpenCV. 
+Os exemplos neste artigo orientam você na criação de um código nativo Windows Runtime componente que pode ser usado em um aplicativo UWP, incluindo aplicativos que são criados C#usando o. Esse componente auxiliar expõe um único método, **Desfocar**, que usará a função de processamento de imagem desfocada do OpenCV. O componente implementa métodos particulares que obtêm um ponteiro para o buffer de dados de imagem subjacente, o qual pode ser usado diretamente pela biblioteca do OpenCV, facilitando a extensão do componente auxiliar para implementar outros recursos de processamento de OpenCV. 
 
 * Para ver as noções básicas de uso do **SoftwareBitmap**, consulte [Criar, editar e salvar imagens de bitmap](imaging.md). 
 * Para saber como usar a biblioteca OpenCV, acesse [https://opencv.org](https://opencv.org).
@@ -27,17 +27,17 @@ Os exemplos neste artigo explicam como criar um componente do Tempo de execuçã
 > [!NOTE] 
 > A técnica usada pelo componente OpenCVHelper, descrita em detalhes neste artigo, exige que os dados da imagem a ser processada estejam na memória da CPU em vez da GPU. Portanto, você deve especificar a memória da CPU para APIs que permitem a solicitação da localização das imagens na memória, como a classe **[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** .
 
-## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>Criar um componente auxiliar do Tempo de execução do Windows para interoperabilidade de OpenCV
+## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>Criar um componente auxiliar Windows Runtime para a interoperabilidade do OpenCV
 
-### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. Adicionar um novo projeto de componente de tempo de execução do Windows do código nativo para sua solução
+### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. Adicionar um novo código nativo Windows Runtime projeto de componente à sua solução
 
 1. Adicione um novo projeto à solução no Visual Studio ao clicar com o botão direito do mouse na sua solução no Gerenciador de Soluções e selecionar **Adicionar->Novo projeto**. 
 2. Na categoria **Visual++** , selecione **Componente do Tempo de Execução do Windows (Universal do Windows)** . Neste exemplo, digite um nome para o projeto "OpenCVBridge" e clique em **OK**. 
 3. Na caixa de diálogo **Novo projeto universal do Windows**, selecione a versão mínima e de destino do sistema operacional para seu aplicativo e clique em **OK**.
 4. Clique com botão direito do mouse no arquivo gerado automaticamente Class1.cpp no Gerenciador de Soluções e selecione **Remover**. Quando a caixa de diálogo de confirmação aparecer, escolha **Excluir**. Em seguida, exclua o arquivo de cabeçalho Class1.h.
-5. Clique com botão direito no ícone do projeto OpenCVBridge e selecione **Adicionar -> classe...** . No **Add Class** caixa de diálogo, "OpenCVHelper" entrada na **nome da classe** campo e, em seguida, clique em **Okey**. O código será adicionado aos arquivos da classe criada em uma etapa posterior.
+5. Clique com o botão direito do mouse no ícone do projeto OpenCVBridge e selecione **Adicionar-> classe...** . Na caixa de diálogo **Adicionar classe** , insira "OpenCVHelper" no campo **nome da classe** e clique em **OK**. O código será adicionado aos arquivos da classe criada em uma etapa posterior.
 
-### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Adicione os pacotes do OpenCV NuGet ao seu projeto de componente
+### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Adicionar os pacotes NuGet do OpenCV ao seu projeto de componente
 
 1. Clique com o botão direito do mouse no ícone do projeto OpenCVBridge no Explorador de Soluções e selecione **Gerenciar pacotes NuGet...**
 2. Quando a caixa de diálogo do Gerenciador de pacotes NuGet abrir, selecione a guia **Buscar** e digite "OpenCV.Win" na caixa de pesquisa.
@@ -63,7 +63,7 @@ Após as diretivas de inclusão, adicione as seguintes diretivas de **uso**.
 
 Em seguida, adicione o método **GetPointerToPixelData** a OpenCVHelper.cpp. Esse método aceita um **[SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** e, por meio de uma série de conversões, obtém uma representação da interface COM dos dados de pixel, por meio da qual podemos obter um ponteiro para o buffer de dados subjacente como uma matriz de **char**. 
 
-Primeiro um **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** contendo os dados de pixel é obtido ao chamar **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** , solicitando um buffer de leitura/gravação para que a biblioteca OpenCV possa modificar esses dados de pixel.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)**  é chamado para obter uma **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** objeto. Em seguida, a interface de **IMemoryBufferByteAccess** é convertida como um **IInspectable**, a interface base de todas as classes do Windows Runtime, e **[QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** é chamado para obter uma interface COM de **[IMemoryBufferByteAccess](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))** , que nos permite obter o buffer de dados de pixel como uma matriz de **char**. Por fim, preencha a matriz de **char** ao chamar **[IMemoryBufferByteAccess::GetBuffer](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** . Se ocorrer uma falha em qualquer uma das etapas de conversão neste método, ele retorna **false**, indicando que não é possível fazer mais processamentos.
+Primeiro um **[BitmapBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer)** contendo os dados de pixel é obtido ao chamar **[LockBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** , solicitando um buffer de leitura/gravação para que a biblioteca OpenCV possa modificar esses dados de pixel.  **[CreateReference](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)** é chamado para obter um objeto **[IMemoryBufferReference](https://docs.microsoft.com/uwp/api/windows.foundation.imemorybufferreference)** . Em seguida, a interface de **IMemoryBufferByteAccess** é convertida como um **IInspectable**, a interface base de todas as classes do Windows Runtime, e **[QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** é chamado para obter uma interface COM de **[IMemoryBufferByteAccess](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))** , que nos permite obter o buffer de dados de pixel como uma matriz de **char**. Por fim, preencha a matriz de **char** ao chamar **[IMemoryBufferByteAccess::GetBuffer](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** . Se ocorrer uma falha em qualquer uma das etapas de conversão neste método, ele retorna **false**, indicando que não é possível fazer mais processamentos.
 
 [!code-cpp[OpenCVHelperGetPointerToPixelData](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperGetPointerToPixelData)]
 
@@ -82,7 +82,7 @@ Por fim, essa classe auxiliar de exemplo implementa um método de processamento 
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>Um exemplo simples de SoftwareBitmap OpenCV usando o componente auxiliar
-Agora que o componente OpenCVBridge foi criado, podemos criar um aplicativo C# simples que usa o método **desfocar** de OpenCV para modificar um **SoftwareBitmap**. Para acessar o componente de tempo de execução do Windows do aplicativo UWP, primeiro você deve adicionar uma referência ao componente. No Gerenciador de soluções, clique com botão direito do **referências** nó no seu projeto de aplicativo UWP e selecione **adicionar referência...** . Na caixa de diálogo Gerenciador de referências, selecione **projetos -> a solução**. Marque a caixa ao lado do seu projeto OpenCVBridge e clique em **OK**.
+Agora que o componente OpenCVBridge foi criado, podemos criar um aplicativo C# simples que usa o método **desfocar** de OpenCV para modificar um **SoftwareBitmap**. Para acessar o componente de Windows Runtime de seu aplicativo UWP, você deve primeiro adicionar uma referência ao componente. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó **referências** em seu projeto de aplicativo UWP e selecione **Adicionar referência..** .. Na caixa de diálogo Gerenciador de referências, selecione **projetos – solução de >** . Marque a caixa ao lado do seu projeto OpenCVBridge e clique em **OK**.
 
 O código de exemplo abaixo permite que o usuário selecione um arquivo de imagem e, em seguida, usa **[BitmapDecoder](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)** para criar uma representação de **SoftwareBitmap** da imagem. Para obter mais informações sobre como trabalhar com **SoftwareBitmap**, consulte [Criar, editar e salvar imagens de bitmap](https://docs.microsoft.com/windows/uwp/audio-video-camera/imaging).
 
@@ -92,7 +92,7 @@ Em seguida, um **SoftwareBitmap** é criado para ser usado como o destino da ope
 
 Uma nova instância do **OpenCVHelper** é criada e o método **Desfocar** é chamado, passando os bitmaps de origem e destino. Por fim, um **SoftwareBitmapSource** é criado para atribuir a imagem de saída ao controle de **Imagem** XAML.
 
-Esse código de exemplo usa as APIs dos namespaces a seguir, além dos namespaces incluídos pelo modelo de projeto padrão.
+Este código de exemplo usa APIs dos seguintes namespaces, além dos namespaces incluídos pelo modelo de projeto padrão.
 
 [!code-cs[OpenCVMainPageUsing](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVMainPageUsing)]
 
@@ -100,8 +100,8 @@ Esse código de exemplo usa as APIs dos namespaces a seguir, além dos namespace
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Referência de opções BitmapEncoder](bitmapencoder-options-reference.md)
-* [Metadados de imagem](image-metadata.md)
+* [Referência de opções de BitmapEncoder](bitmapencoder-options-reference.md)
+* [Metadados da imagem](image-metadata.md)
  
 
  

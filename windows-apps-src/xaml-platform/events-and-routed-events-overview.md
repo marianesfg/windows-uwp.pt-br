@@ -6,12 +6,12 @@ ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9150fd34653e2beeeb8d8c1557cf9f77e95791e3
-ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
+ms.openlocfilehash: 0c5acc7d0d891785a7abd4f8976b0fb82bb3323b
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603442"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393624"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
@@ -176,7 +176,7 @@ Há alguns casos em que você quer remover manipuladores de eventos explicitamen
 - Eventos estáticos personalizados.
 - Manipuladores para navegações de página.
 
-[**FrameworkElement.** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.unloaded) Unloaded ou [**Page. NavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) são possíveis gatilhos de eventos que têm posições apropriadas no gerenciamento de estado e no tempo de vida do objeto, de modo que você pode usá-los para remover manipuladores de outros eventos.
+[**FrameworkElement. Unloaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.unloaded) ou [**Page. NavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) são possíveis gatilhos de eventos que têm posições apropriadas no gerenciamento de estado e no tempo de vida do objeto, de modo que você pode usá-los para remover manipuladores de outros eventos.
 
 Por exemplo, você pode remover um manipulador de eventos **chamado\_textBlock1 PointerEntered** do objeto de destino **textBlock1** usando este código.
 
@@ -299,7 +299,7 @@ Para fins de definir eventos personalizados, o modo de adicionar o evento e o qu
 - Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET, desde que não esteja usando acessadores personalizados(**add**/**remove**). Outras dicas:
     - Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>** ](https://docs.microsoft.com/dotnet/api/system.eventhandler-1?redirectedfrom=MSDN) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>** ](https://docs.microsoft.com/uwp/api/windows.foundation.eventhandler).
     - Não use como base de sua classe de dados de eventos o [**System.EventArgs**](https://docs.microsoft.com/dotnet/api/system.eventargs?redirectedfrom=MSDN) porque ele não é convertido para o Windows Runtime. Use uma classe de dados de eventos existente ou nenhuma classe base.
-    - Se estiver usando acessadores personalizados, veja [Eventos personalizados e acessadores de eventos nos Componentes de Tempo de Execução do Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh972883(v=vs.140)).
+    - Se você estiver usando acessadores personalizados, consulte [eventos personalizados e acessadores de eventos em componentes do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh972883(v=vs.140)).
     - Se não tiver certeza do que é o padrão de evento .NET padrão, veja [Definindo eventos para classes personalizadas do Silverlight](https://docs.microsoft.com/previous-versions/windows/). Esse tópico foi escrito para o Microsoft Silverlight mas ainda é uma ótima referência do código e dos conceitos para o padrão de evento .NET padrão.
 - Para C++/CX, veja [Eventos (C++/CX)](https://docs.microsoft.com/cpp/cppcx/events-c-cx).
     - Use referências nomeadas mesmo para seus próprios usos de eventos personalizados. Não use lambda para eventos personalizados, pois ele pode criar uma referência circular.
