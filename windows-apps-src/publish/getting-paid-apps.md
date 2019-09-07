@@ -1,23 +1,23 @@
 ---
-Description: Saiba mais sobre o recebimento de pagamentos para seus aplicativos, complementos (produtos no aplicativo) e o anúncio ganhos.
+Description: Saiba mais sobre como receber pagamentos para seus aplicativos, Complementos (produtos no aplicativo) e ganhos de publicidade.
 title: Sendo pago
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: f0e9439ee31c25657aac1f55dc277123f901209a
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 8a3c8bf0d2d203b650b2706c24dc4c20e88e2576
+ms.sourcegitcommit: 36f502e2449f49e82bd593d6aea0b71ac48d6bec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790986"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70750558"
 ---
 # <a name="getting-paid"></a>Sendo pago
-Eis algumas informações importantes sobre o recebimento de pagamento para seus aplicativos, complementos e ganhos de publicidade.
+Aqui estão algumas informações importantes sobre o recebimento de pagamentos para seus aplicativos, Complementos e anúncios de publicidade.
 
 > [!IMPORTANT]
-> Antes que você pode receber dinheiro de vendas de aplicativo em que a Microsoft Store, você precisará [configurar sua conta de pagamento e preencher os formulários de imposto necessário](setting-up-your-payout-account-and-tax-forms.md).
+> Antes de poder receber dinheiro das vendas de aplicativos na Microsoft Store, você precisa [configurar sua conta de pagamento e preencher os formulários de imposto necessários](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Taxa da loja
 
@@ -46,7 +46,7 @@ Lembre-se de que o preço selecionado pode incluir impostos sobre vendas ou valo
 
 ## <a name="payout-reporting"></a>Relatório de pagamento
 
-Você pode acessar os detalhes sobre suas informações de pagamento e baixe os relatórios no **resumo de pagamento** dos [Partner Center](https://partner.microsoft.com/dashboard). Para saber mais sobre as informações mostradas aqui, e como categorizar o dinheiro que você ganhar, consulte [Resumo de pagamento](payout-summary.md).
+Você pode acessar detalhes sobre suas informações de pagamento e baixar relatórios no **Resumo de pagamento** do [Partner Center](https://partner.microsoft.com/dashboard). Para saber mais sobre as informações mostradas aqui, e como categorizar o dinheiro que você ganhar, consulte [Resumo de pagamento](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pagamento
@@ -56,14 +56,14 @@ Os pagamentos são feitos mensalmente (desde que o limite de pagamento aplicáve
 
 ##  <a name="payout-hold-status"></a>Status de espera de pagamento
 
-Por padrão, enviaremos pagamentos mensalmente, conforme descrito anteriormente. No entanto, você tem a opção de colocar seus pagamentos em espera, o que evitará que enviemos pagamentos à sua conta. Se optar por colocar seus pagamentos em espera, continuaremos a registrar a receita que você ganha e fornecer os detalhes em seu **Resumo de pagamentos**. Porém, não enviaremos nenhum pagamento à sua conta até que você remova a espera. 
+Por padrão, enviaremos pagamentos mensalmente, conforme descrito anteriormente. No entanto, você tem a opção de colocar os pagamentos de um programa em espera, o que nos impedirá de enviar os pagamento para sua conta. Se optar por colocar seus pagamentos em espera, continuaremos a registrar a receita que você ganha e fornecer os detalhes em seu **Resumo de pagamentos**. Porém, não enviaremos nenhum pagamento à sua conta até que você remova a espera.
 
-Para colocar seus pagamentos em espera, acesse **Configurações da Conta**. Em **Detalhes financeiros**, na seção **Status de espera de pagamento**, alterne para **Ativado**. Você pode alterar seu status de espera de pagamento a qualquer momento, mas lembre-se de que sua decisão afetará o próximo pagamento mensal. Por exemplo, se você quiser colocar o pagamento de abril em espera, defina seu status de espera de pagamento para **Ativado** antes do final de março.
+Para posicionar seus pagamentos em espera, vá para **configurações do desenvolvedor**. Em **pagamento e imposto**, na seção **atribuição de perfil de pagamento e imposto** , localize o programa para o qual deseja que os pagamentos sejam mantidos. Clique na caixa de seleção **manter meu pagamento** para manter os pagamentos deste programa. Você pode alterar seu status de espera de pagamento a qualquer momento, mas lembre-se de que sua decisão afetará o próximo pagamento mensal. Por exemplo, se você quiser colocar o pagamento de abril em espera, defina seu status de espera de pagamento para **Ativado** antes do final de março.
 
-Depois de definir o status de espera de pagamento para **Ativado**, todos os pagamentos ficarão em espera até que você alterne novamente para **Desativado**. Quando fizer isso, você estará incluído no próximo ciclo de pagamento mensal (desde que tenham sido atingidos os limites de pagamento aplicáveis). Por exemplo, se você tem seus pagamentos em espera, mas gostaria de ter um pagamento gerado em junho, alterne o status de espera de pagamento para **Desativado** antes do final de maio.
+Depois de definir seu status de espera de pagamento como **ativado**, todos os pagamentos desse programa estarão em espera até que você alterne o controle deslizante de volta para **desativado**. Quando fizer isso, você estará incluído no próximo ciclo de pagamento mensal (desde que tenham sido atingidos os limites de pagamento aplicáveis). Por exemplo, se você tem seus pagamentos em espera, mas gostaria de ter um pagamento gerado em junho, alterne o status de espera de pagamento para **Desativado** antes do final de maio.
 
 > [!NOTE]
-> Sua **status de espera de pagamento** seleção se aplica à **todos os** fontes de receita que são pagos por meio do programa de desenvolvedor do Windows no Partner Center (Microsoft Store, publicidade, o Azure Marketplace, etc.). Você não pode selecionar um status de espera de pagamento diferente para cada fonte de receita.
+> O **status de retenção de pagamento** se aplica a cada programa individualmente (Microsoft Store, publicidade, Azure Marketplace, etc.). Se desejar manter os pagamentos em todos os seus programas, você deverá manter os pagamentos em cada programa individualmente.
 
 
  
