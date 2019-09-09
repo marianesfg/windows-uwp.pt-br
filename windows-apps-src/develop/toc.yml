@@ -351,7 +351,7 @@
               href: ../debug-test-perf/optimize-suspend-resume.md
             - name: Otimizar o acesso a arquivos
               href: ../debug-test-perf/optimize-file-access.md
-            - name: Componentes do Tempo de Execução do Windows e otimização de interoperabilidade
+            - name: Componentes do Windows Runtime e otimização de interoperabilidade
               href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
             - name: Ferramentas de criação de perfil e de desempenho
               href: ../debug-test-perf/tools-for-profiling-and-performance.md
@@ -933,11 +933,11 @@
     - name: Componentes do Tempo de Execução do Windows
       href: ../winrt-components/index.md
       items:
-        - name: Criando componentes do Windows Runtime em C++/CX
+        - name: Componentes do Windows Runtime com C++/CX
           href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-        - name: 'Passo a passo: Criando um componente do Tempo de Execução do Windows básico em C++/CX e chamando-o em JavaScript ou C#'
+        - name: Passo a passo de um componente do Windows Runtime em C++/CX
           href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-        - name: 'Criando componentes do Tempo de Execução do Windows em C# ou Visual Basic'
+        - name: 'Componentes do Windows Runtime com C# e Visual Basic'
           href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
           items:
             - name: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
@@ -948,9 +948,9 @@
               href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
             - name: Distribuição de um componente do Tempo de Execução do Windows gerenciado
               href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
-            - name: Mapeamentos do .NET Framework dos tipos do Windows Runtime
+            - name: Mapeamentos do .NET dos tipos do Windows Runtime
               href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-        - name: 'Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript'
+        - name: 'Passo a passo de um componente do Windows Runtime em C# ou Visual Basic'
           href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
         - name: Acionando eventos em componentes do Tempo de Execução do Windows
           href: ../winrt-components/raising-events-in-windows-runtime-components.md

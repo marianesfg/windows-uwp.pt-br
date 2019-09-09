@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: ba8576402165f2d36d048eb3d214cb1dad601d76
-ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
+ms.openlocfilehash: 7554b635f76f7d00901ecb7936fdd0351d8dee75
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393466"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -49,7 +49,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Criar APIs com C++/WinRT](author-apis.md) | Este tópico mostra como criar APIs de C++/WinRT usando a estrutura de base **winrt::implements**, direta ou indiretamente. |
 | [Tratamento de erro com C++/WinRT](error-handling.md) | Este tópico aborda as estratégias para processar erros ao programar com C++/WinRT. |
 | [Manejar eventos usando delegados](handle-events.md) | Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. |
-| [Criar eventos](author-events.md) | Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos. |
+| [Criar eventos](author-events.md) | Este tópico demonstra como criar um componente do Windows Runtime contendo uma classe de runtime que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos. |
 | [Coleções com C++/WinRT](collections.md) | C++/WinRT fornece funções e classes base que economizam muito tempo e esforço quando você deseja implementar e/ou passar coleções. |
 | [Simultaneidade e operações assíncronas](concurrency.md) | Este tópico mostra as maneiras nas quais você pode criar e consumir objetos assíncronos do Windows Runtime com C++/WinRT. |
 | [Simultaneidade e assincronia mais avançadas](concurrency-2.md) | Cenários mais avançados com simultaneidade e assincronia no C++/WinRT. |
