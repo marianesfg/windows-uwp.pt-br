@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: 197f53df200026541a15120dfc97c187e5aa2e5b
-ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
+ms.openlocfilehash: 4b6fd3f3085449c57dafdcedc60f63997e3ec807
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063790"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393423"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -93,7 +93,7 @@ Esse modelo demonstra a cadeia de ferramentas `midl.exe` > `cppwinrt.exe`, na qu
 
 Em um arquivo IDL, defina as classes de tempo de execução no componente, na interface padrão e em qualquer outra interface implementada por ele. Compile o projeto uma vez para gerar `module.g.cpp`, `module.h.cpp`, modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução no componente. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
-Agrupe o binário interno do componente do Tempo de Execução do Windows e seu `.winmd` com o aplicativo UWP que os utiliza.
+Agrupe o binário compilado do componente do Windows Runtime e seu `.winmd` com o aplicativo UWP os consumindo.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>Versões anteriores da extensão do VSIX
 É recomendável que você instale (ou atualizar para) a última versão da [extensão do VSIX](https://aka.ms/cppwinrt/vsix). Ela é configurada para se atualizar por padrão. Se você fizer isso e tiver projetos que foram criados com uma versão da extensão do VSIX anterior à 1.0.190128.4, esta seção conterá informações importantes sobre como atualizar os projetos para trabalhar com a nova versão. Se você não atualizar, ainda encontrará informações úteis nesta seção.

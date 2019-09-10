@@ -1,20 +1,20 @@
 ---
-description: Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos.
+description: Este tópico demonstra como criar um componente do Windows Runtime que contém uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos.
 title: Criar eventos em C++/WinRT
 ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 4499b2191734c6ae66131ce92aa2654188313d5e
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: e8bb86bd8d52ff96f010bf41758f1e4602330d52
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393474"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos em C++/WinRT
 
-Este tópico demonstra como criar um Componente do Tempo de Execução do Windows contendo uma classe de tempo de execução representando uma conta bancária, que gera um evento quando seu saldo entra em débito. Também demonstra um App Core que utiliza a classe de tempo de execução de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
+Este tópico demonstra como criar um componente do Windows Runtime que contém uma classe de tempo de execução representando uma conta bancária, que gera um evento quando seu saldo entra em débito. Também demonstra um App Core que utiliza a classe de tempo de execução de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
 
 > [!NOTE]
 > Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
@@ -22,9 +22,9 @@ Este tópico demonstra como criar um Componente do Tempo de Execução do Window
 > [!IMPORTANT]
 > Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de tempo de execução com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
-## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Tempo de Execução do Windows (BankAccountWRC)
+## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Windows Runtime (BankAccountWRC)
 
-Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto **Componente do Tempo de Execução do Windows (C++/WinRT)** e nomeie-o como *BankAccountWRC* (para "Componente do Tempo de Execução do Windows para conta bancária"). Não compile o projeto ainda.
+Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto de **Componente do Windows Runtime (C++/WinRT)** e dê a ele o nome *BankAccountWRC* (isto é, "Componente do Windows Runtime para conta bancária"). Não compile o projeto ainda.
 
 O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomeie esse arquivo `BankAccount.idl` (renomear o arquivo `.idl` também renomeia automaticamente os arquivos dependentes `.h` e `.cpp`). Substitua o conteúdo de `BankAccount.idl` pela listagem a seguir.
 
@@ -100,11 +100,11 @@ Você também pode ver acima que a implementação da função **AdjustBalance**
 
 Se um aviso impedir a compilação, resolva-o ou defina a propriedade de projeto **C/C++**  > **Geral** > **Tratar avisos como erros** como **Não (/WX-)** , e compile o projeto novamente.
 
-## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um App Core (BankAccountCoreApp) para testar o Componente do Tempo de Execução do Windows
+## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um App Core (BankAccountCoreApp) para testar o componente do Windows Runtime
 
 Agora crie um novo projeto (na sua solução `BankAccountWRC` ou em uma nova). Crie um projeto do **App Core (C++/WinRT)** e nomeie-o como *BankAccountCoreApp*.
 
-Adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e em **OK**. Agora compile o BankAccountCoreApp. Se houver um erro, o que é improvável, que o arquivo de carga `readme.txt` não existe, exclua esse arquivo do projeto do Componente do Tempo de Execução do Windows, compile-o novamente e recompile BankAccountCoreApp.
+Adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e em **OK**. Agora compile o BankAccountCoreApp. Se ocorrer o erro de que o arquivo de payload `readme.txt` não existe, o que é improvável, exclua esse arquivo do projeto do componente do Windows Runtime, compile-o novamente e, em seguida, recompile BankAccountCoreApp.
 
 Durante o processo de compilação, a ferramenta `cppwinrt.exe` é executada para processar o arquivo `.winmd` mencionado nos arquivos de código-fonte que contêm os tipos projetados para ajudá-lo a utilizar o componente. O cabeçalho dos tipos projetados para suas classes de tempo de execução do componente, denominado `BankAccountWRC.h`, é gerado na pasta `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\`.
 

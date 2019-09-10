@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 404a6985c95718363f3dbbc3b8f27a7793b28e86
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328847"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393457"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mover do C++/CX para C++/WinRT
 
@@ -18,12 +18,12 @@ Este tópico mostra como fazer a portabilidade do código em um projeto [C++/CX]
 
 ## <a name="porting-strategies"></a>Estratégias de portabilidade
 
-É possível fazer a portabilidade gradualmente do código C++/CX para C++/WinRT, caso você queira. Os códigos C++/CX e C++/WinRT podem coexistir no mesmo projeto, com exceção do suporte do compilador XAML e dos componentes do Tempo de Execução do Windows. Para essas duas exceções, é preciso definir se o escopo será o C++/CX ou C++/WinRT dentro do mesmo projeto.
+É possível fazer a portabilidade gradualmente do código C++/CX para C++/WinRT, caso você queira. Os códigos C++/CX e C++/WinRT podem coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e dos componentes do Windows Runtime. Para essas duas exceções, é preciso definir se o escopo será o C++/CX ou C++/WinRT dentro do mesmo projeto.
 
 > [!IMPORTANT]
 > Se seu projeto cria um aplicativo XAML, um fluxo de trabalho recomendável é primeiro criar um novo projeto no Visual Studio usando um dos modelos de projeto C++/WinRT (confira o [Suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Depois, comece a copiar o código-fonte e a marcação do projeto C++/CX. Você pode adicionar novas páginas XAML em **Projeto** \> **Adicionar Novo Item...** \>**Visual C++**  > **Página em Branco (C++/WinRT)** .
 >
-> Como alternativa, é possível usar um componente do Tempo de Execução do Windows para fatorar o código do projeto XAML C++/CX à medida que você faz a portabilidade. Mova o máximo do código C++/CX que conseguir para um componente e, em seguida, altere o projeto XAML para C++/WinRT. Ou deixe o projeto XAML como C++/CX, crie um novo componente C++/WinRT e comece a fazer a portabilidade do código C++/CX do projeto XAML para dentro do componente. Você também pode ter um projeto de componente C++/CX em conjunto com um projeto de componente C++/WinRT dentro da mesma solução, fazer referência a ambos no seu projeto de aplicativo e realizar a portabilidade gradual de um para o outro. Confira [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) para obter mais detalhes sobre como usar as duas projeções de linguagem no mesmo projeto.
+> Como alternativa, é possível usar um componente do Windows Runtime para fatorar o código do projeto XAML C++/CX à medida que você faz a portabilidade. Mova o máximo do código C++/CX que conseguir para um componente e, em seguida, altere o projeto XAML para C++/WinRT. Ou deixe o projeto XAML como C++/CX, crie um novo componente C++/WinRT e comece a fazer a portabilidade do código C++/CX do projeto XAML para dentro do componente. Você também pode ter um projeto de componente C++/CX em conjunto com um projeto de componente C++/WinRT dentro da mesma solução, fazer referência a ambos no seu projeto de aplicativo e realizar a portabilidade gradual de um para o outro. Confira [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) para obter mais detalhes sobre como usar as duas projeções de linguagem no mesmo projeto.
 
 > [!NOTE]
 > O [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) e o SDK do Windows declaram tipos no namespace raiz **Windows**. Um tipo do Windows projetado no C++/WinRT tem o mesmo nome totalmente qualificado como o tipo do Windows, mas ele é colocado no namespace C++ **winrt**. Esses namespaces distintos permitem que você faça a portabilidade do C++/CX para o C++/WinRT em seu próprio ritmo.
@@ -471,11 +471,11 @@ Além disso, o C++/CX permite desreferenciar uma **String^** nula, caso em que s
 | Operação | C++/CX | C++/WinRT|
 |-|-|-|
 | Categoria de tipo de cadeia de caracteres | Tipo de referência | Tipo de valor |
-| projetos **HSTRING** nulos como | `(String^)nullptr` | `hstring{ nullptr }` |
+| projetos **HSTRING** nulos como | `(String^)nullptr` | `hstring{}` |
 | São nulos e idênticos `""`? | Sim | Sim |
 | Validade de nulo | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = nullptr;`<br>`s.size() == 0` (válido) |
 | Fazer a conversão boxing de uma cadeia de caracteres | `o = s;` | `o = box_value(s);` |
-| Se `s` for `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{nullptr});`<br>`o != nullptr` |
+| Se `s` for `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
 | Se `s` for `""` | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
 | Fazer a conversão boxing de uma cadeia de caracteres preservando nulo | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
 | Fazer a conversão boxing forçada de uma cadeia de caracteres | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
@@ -514,7 +514,7 @@ O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos n
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagileref"></a>Fazer a portabilidade de **Platform::Agile\^** para **winrt::agile_ref**
+### <a name="port-platformagile-to-winrtagile_ref"></a>Fazer a portabilidade de **Platform::Agile\^** para **winrt::agile_ref**
 
 O tipo **Platform:: Agile\^** no C++/CX representa uma classe do Windows Runtime que pode ser acessada de qualquer thread. O equivalente do C++/WinRT é [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
 
@@ -534,7 +534,7 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 As opções incluem o uso de uma lista de inicializadores, um **std::array** ou um **std::vector**. Para obter mais informações e exemplos de código, confira [Listas de inicializadores padrão](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) e [Matrizes e vetores padrão](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors).
 
-### <a name="port-platformexception-to-winrthresulterror"></a>Fazer a portabilidade de **Platform::Exception\^** para **winrt::hresult_error**
+### <a name="port-platformexception-to-winrthresult_error"></a>Fazer a portabilidade de **Platform::Exception\^** para **winrt::hresult_error**
 
 O tipo **Platform::Exception\^** é produzido no C++/CX quando uma API do Tempo de Execução do Windows retorna um HRESULT diferente de S\_OK. O equivalente do C++/WinRT é [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
 

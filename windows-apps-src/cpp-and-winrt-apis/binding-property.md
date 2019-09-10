@@ -5,15 +5,15 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, associação, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ff15e9b86d90aa14fd56e4e7015e949e2742bf6
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 06934c1c3b23c244fb32ffa957cffb926ffd1bb0
+ms.sourcegitcommit: eb683734801c1de5977db70e626609cf7e5b7654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328884"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304517"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; associar a uma propriedade de C++/WinRT
-Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como associar controles de XAML a elas.
+Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como associar controles XAML a elas (para obter informações em segundo plano, confira [Vinculação de dados](/windows/uwp/data-binding)).
 
 > [!IMPORTANT]
 > Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de tempo de execução com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).

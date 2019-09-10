@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 760beb6b9baf63b23efb531567f4b5319f95845c
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
+ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979357"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212064"
 ---
 # <a name="app-icons-and-logos"></a>Ícones e logotipos de aplicativos 
 
@@ -59,14 +59,13 @@ Para garantir que esses ícones fiquem nítidos em qualquer tela, você pode cri
 O fator de escala determina o tamanho dos elementos da interface do usuário, como o texto. Os fatores de escala variam entre 100% e 400%. Valores maiores criam elementos de interface do usuário maiores, tornando a visualização desses elementos mais fácil nas exibições de alto DPI. 
 
 :::row:::
-    :::column:::
-        Windows automatically sets the scale factor for each display based on its DPI (dots-per-inch) and the viewing distance of the device. 
-
-        (Users can override the default value by going to the **Settings &gt; Display &gt; Scale and layout** page.)
-    :::column-end:::
-    :::column:::
-        ![](images/icons/display-settings-screen.png)
-    :::column-end:::
+   :::column:::
+      O Windows define automaticamente o fator de escala para cada tela com base em seu DPI (pontos por polegada) e na distância de exibição do dispositivo. 
+      (Os usuários podem substituir o valor padrão acessando a página **Configurações &gt; Tela &gt; Escala e layout**.)
+   :::column-end:::
+   :::column:::
+      ![](images/icons/display-settings-screen.png)
+   :::column-end:::
 :::row-end:::  
 
 

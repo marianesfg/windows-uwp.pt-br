@@ -5,16 +5,16 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, associação, coleção
 ms.localizationpriority: medium
-ms.openlocfilehash: 258ec5e0690753c8ad9c3b0648867666397039a5
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: a98056190d035910a8ed83d2f37799a98b685ce6
+ms.sourcegitcommit: eb683734801c1de5977db70e626609cf7e5b7654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270170"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304526"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de itens XAML; associar a uma coleção C++/WinRT
 
-Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como vincular controles de itens XAML a elas.
+Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Essa ideia baseia-se no padrão de design de software conhecido como o *padrão do observador*. Este tópico mostra como implementar coleções observáveis em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e como associar controles de itens XAML a elas (para obter informações em segundo plano, confira [Vinculação de dados](/windows/uwp/data-binding)).
 
 Se você deseja acompanhar este tópico, recomendamos que crie primeiro o projeto descrito em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md). Este tópico adiciona mais código e expande os conceitos explicados naquele tópico.
 

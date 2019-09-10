@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bac3fec34467f29d9cf2cc3f1ce4e3754187745
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: a8da69f0041c71ecfc7429cae2ed51eee0f87d5e
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393484"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -59,7 +59,7 @@ Se o símbolo não resolvido for uma função livre do Windows Runtime, como [Ro
 
 Nesse caso, o sintoma é que&mdash;ao construir uma classe de tempo de execução ou acessar um membro estático&mdash;você vê uma exceção acionada em tempo de execução com REGDB_E_CLASSNOTREGISTERED com um valor de REGDB.
 
-Uma das causas disso é que o Componente do Tempo de Execução do Windows não pode ser carregado. Verifique se o arquivo de metadados do componente de Tempo de Execução do Windows (`.winmd`) tem o mesmo nome do binário de componente (o `.dll`), que também é o nome do projeto e o nome do namespace raiz. Além disso, verifique se os metadados do Tempo de Execução do Windows e o binário foram copiados corretamente pelo processo de compilação para a pasta `Appx` do aplicativo de consumo. Confirme se o `AppxManifest.xml` do aplicativo de consumo (também na pasta `Appx`) contém um elemento **&lt;InProcessServer&gt;** que está declarando corretamente a classe ativável e o nome binário.
+Uma das causas disso é que o componente do Windows Runtime não pode ser carregado. Verifique se o arquivo de metadados do componente de Tempo de Execução do Windows (`.winmd`) tem o mesmo nome do binário de componente (o `.dll`), que também é o nome do projeto e o nome do namespace raiz. Além disso, verifique se os metadados do Tempo de Execução do Windows e o binário foram copiados corretamente pelo processo de compilação para a pasta `Appx` do aplicativo de consumo. Confirme se o `AppxManifest.xml` do aplicativo de consumo (também na pasta `Appx`) contém um elemento **&lt;InProcessServer&gt;** que está declarando corretamente a classe ativável e o nome binário.
 
 ### <a name="uniform-construction"></a>Construção uniforme
 
