@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0253bb85358e7385f1dbddc726a9179c78451eb7
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 1827f24e467c113034c5d0303aaebce0e603da2a
+ms.sourcegitcommit: 68121f21c899975f3634456a651ae8e1e53c19f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340824"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70841802"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
@@ -46,10 +46,19 @@ Você pode concluir e enviar seus formulários de impostos eletronicamente no Pa
 
 1. No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone **configurações de conta** no canto superior direito e, em seguida, selecione configurações do **desenvolvedor**.
 2. No menu de navegação à esquerda, selecione **pagamento e imposto**e, em seguida, selecione **pagamento e atribuições de impostos**.
+
+    ![Atribuição de perfil de pagamento e imposto](images/payout-tax-profile-assignment.png)
+
 3. Selecione a combinação programa e ID do vendedor para a qual você deseja configurar as informações do imposto.
+
+    ![Pagamento selecionar ID do vendedor](images/payout-select-seller-id.png)
+
 4. Se você quiser usar um perfil de imposto existente, selecione-o na lista suspensa. Caso contrário, selecione **criar novo perfil** e pressione **Enviar**. Você será levado para a página de perfis de impostos.
 5. Clique no botão **Editar** para editar suas informações de imposto.
 6. Selecione o botão de opção apropriado e selecione seu país, se solicitado. Esta etapa determina a entidade de negócios da Microsoft que será usada para fazer pagamentos em sua conta.
+
+    ![Selecionar pagamento do país do imposto](images/payout-select-tax-country.png)
+
 7. Dependendo de suas seleções na etapa 6, você será solicitado a fornecer informações de impostos necessárias para seu país.
 
 > [!NOTE]
@@ -76,13 +85,16 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
 ### <a name="create-a-payment-profile"></a>Criar um perfil de pagamento
 
 1. No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem **configurações** no canto superior direito e, em seguida, selecione **configurações do desenvolvedor**.
-2. Abaixo do *pagamento e* do cabeçalho do imposto, selecione **pagamento e atribuições de impostos**.
+2. Abaixo do *pagamento e* do cabeçalho do imposto, selecione **pagamento e atribuição de perfil de imposto**.
 
     > [!NOTE]
     > Como se tratam de informações confidenciais, talvez você seja solicitado a entrar novamente.
 
 3. Selecione o método de pagamento que você deseja configurar.
-4. Selecione um perfil de pagamento existente ou clique em **criar um novo** perfil de pagamento para criar um novo perfil.
+
+    ![Seleção do tipo de conta de pagamento](images/payout-account-type-selection.png)
+
+4. Selecione um perfil de pagamento existente ou clique em **criar um novo perfil de pagamento** para criar um novo perfil para o método de pagamento escolhido.
 
 ### <a name="create-a-bank-based-payment-profile"></a>Criar um perfil de pagamento baseado no banco
 
@@ -94,6 +106,8 @@ Se você optou por usar uma conta bancária para receber pagamentos, você concl
     > [!NOTE]
     > Os campos que você usa para inserir as informações da conta aceitam apenas caracteres alfanuméricos.
 
+    ![Informações bancárias de pagamento](images/payout-bank-info.png)
+
 3. Forneça os detalhes do beneficiário.
 4. De volta à página *atribuição de perfil* , selecione a moeda que você gostaria de usar ao emitir seus pagamentos.
 
@@ -101,10 +115,19 @@ Se você optou por usar uma conta bancária para receber pagamentos, você concl
     > Verifique se seu banco aceita a moeda de pagamento que você selecionou.
 
 5. Você precisará selecionar um perfil de pagamento para cada programa no qual você participa, embora possa usar o mesmo perfil para vários programas.
+
+    ![Perfil bancário de uso de pagamento](images/payout-use-bank-profile.png)
+
 6. Clique em enviar para salvar as alterações.
 
 > [!NOTE]
 > A Microsoft pode levar até 48 horas para validar as informações em seu perfil. Quando esse processo estiver concluído, o *status de verificação* mostrará **concluído**
+
+Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
+
+- O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ter exatamente o mesmo nome associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
+- Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda USD.
+- As informações bancárias inseridas no Partner Center em caracteres latinos são convertidas em caracteres cirílico.
 
 ### <a name="editing-existing-payment-profiles"></a>Editando perfis de pagamento existentes
 
@@ -122,14 +145,14 @@ Você pode editar os perfis de pagamento existentes se precisar fazer alteraçõ
 Em alguns países e regiões, você pode criar uma conta de pagamento inserindo suas informações do PayPal. No entanto, antes de escolher o PayPal como opção de conta de pagamento:
 
 - Verifique os [limites de pagamento, os métodos e os períodos de tempo](payment-thresholds-methods-and-timeframes.md) para confirmar se o Paypal é um método de pagamento com suporte em seu país ou região.
- Leia as perguntas frequentes a seguir. Dependendo da situação, o PayPal pode não ser a melhor opção de conta de pagamento para você e uma conta bancária pode ser preferencial.
+- Leia as perguntas frequentes a seguir. Dependendo da situação, o PayPal pode não ser a melhor opção de conta de pagamento para você e uma conta bancária pode ser preferencial.
 
 Perguntas comuns sobre como usar o PayPal como forma de pagamento:
 
 - **Quais configurações do PayPal preciso ter para receber pagamentos?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via eCheck. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](https://go.microsoft.com/fwlink/p/?linkid=513139) para saber mais.
 - **Há suporte para meu país/região?** Confira [limites de pagamento, métodos e períodos de tempo](payment-thresholds-methods-and-timeframes.md) para descobrir onde o Paypal é um método de pagamento com suporte.
-- **Minha conta do PayPal precisa ser registrada no mesmo país/região que minha conta do centro de parceiros?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
-- **É necessário aceitar os pagamentos do PayPal manualmente?** Não. As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
+- **Minha conta do PayPal precisa ser registrada no mesmo país/região que minha conta do centro de parceiros?** Nº Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
+- **É necessário aceitar os pagamentos do PayPal manualmente?** Nº As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
 - **A quais moedas o PayPal dá suporte?** Consulte a [página de suporte do PayPal](https://developer.paypal.com/docs/classic/api/currency-codes/#paypal) para a lista atual
 
 ### <a name="specific-requirements-for-certain-countriesregions"></a>Requisitos específicos para determinados países/regiões
@@ -168,8 +191,19 @@ Se você for um desenvolvedor que vive na Ucrânia, talvez precise fornecer uma 
 
 A Microsoft fornece os três documentos quando é feita a tentativa de efetuar seu primeiro pagamento. Para todos os pagamentos subsequentes, você só receberá o documento AC. Guarde os documentos ADA e AA no caso de precisar deles para receber pagamentos futuros do seu banco.
 
-Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
+### <a name="create-a-paypal-payment-profile"></a>Criar um perfil de pagamento do PayPal
 
-- O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ter exatamente o mesmo nome associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
-- Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda USD.
-- As informações bancárias inseridas no Partner Center em caracteres latinos são convertidas em caracteres cirílico.
+Se você optou por usar uma conta bancária para receber pagamentos, você concluirá o processo a seguir para configurar sua conta bancária.
+
+1. Na página *paypal* , forneça as informações necessárias sobre sua conta do PayPal.
+2. Forneça os detalhes da sua conta do PayPal.
+
+    > [!NOTE]
+    > Os campos que você usa para inserir as informações da conta aceitam apenas caracteres alfanuméricos.
+
+    ![Informações de pagamento do PayPal](images/payout-paypal-info.png)
+
+3. Forneça os detalhes do beneficiário.
+4. De volta à página *atribuição de perfil* , selecione a moeda que você gostaria de usar ao emitir seus pagamentos.
+5. Você precisará selecionar um perfil de pagamento para cada programa no qual você participa, embora possa usar o mesmo perfil para vários programas.
+6. Clique em enviar para salvar as alterações.
