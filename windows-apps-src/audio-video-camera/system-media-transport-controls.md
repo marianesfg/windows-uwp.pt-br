@@ -1,19 +1,19 @@
 ---
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
-title: Controle manual dos controles de transporte de mídia do sistema
+title: Controle manual dos Controles de Transporte de Mídia do Sistema
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e306cfe1ee03e9ef4a0688145c2db7b3addd68e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0a4163105b934f5c1e2970fab9f51b76d69d1bd8
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318502"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876225"
 ---
-# <a name="manual-control-of-the-system-media-transport-controls"></a>Controle manual dos controles de transporte de mídia do sistema
+# <a name="manual-control-of-the-system-media-transport-controls"></a>Controle manual dos Controles de Transporte de Mídia do Sistema
 
 
 A partir do Windows 10, versão 1607, os aplicativos UWP que usam a classe [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) para reproduzir mídia automaticamente são integrados com os controles de transporte do sistema mídia (SMTC) por padrão. Essa é a maneira recomendada de interagir com o SMTC para a maioria dos cenários. Para obter mais informações sobre como personalizar a integração padrão do SMTC com **MediaPlayer**, consulte [Integrar com Controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md).
@@ -66,6 +66,11 @@ Se seu cenário exigir, você poderá atualizar os metadados exibidos pelos cont
 
 [!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
 
+> [!Note]
+> Os aplicativos devem definir um valor para [a propriedade SystemMediaTransportControlsDisplayUpdater](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.type#Windows_Media_SystemMediaTransportControlsDisplayUpdater_Type
+) . Type mesmo que eles não forneçam outros metadados de mídia a serem exibidos pelos controles de transporte de mídia do sistema. Esse valor ajuda o sistema a lidar com o conteúdo de mídia corretamente, incluindo impedir que a proteção de tela seja ativada durante a reprodução.
+
+
 ## <a name="update-the-system-media-transport-controls-timeline-properties"></a>Atualizar as propriedades de linha do tempo dos controles de transporte de mídia do sistema
 
 Os controles de transporte do sistema exibem informações sobre a linha do tempo do item de mídia atualmente em execução, incluindo a posição de reprodução atual, a hora de início e a hora de término do item de mídia. Para atualizar as propriedades de linha do tempo dos controles de transporte do sistema, crie um novo objeto [**SystemMediaTransportControlsTimelineProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties). Configure as propriedades do objeto para refletir o estado atual do item de mídia em reprodução. Chame [**SystemMediaTransportControls.UpdateTimelineProperties**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.updatetimelineproperties) para fazer com que os controles atualizem a linha do tempo.
@@ -74,7 +79,7 @@ Os controles de transporte do sistema exibem informações sobre a linha do temp
 
 -   Você deve fornecer um valor para [**StartTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.starttime), [**EndTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.endtime) e [**Position**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested) para que os controles do sistema mostrem uma linha do tempo para o item em execução.
 
--   [**MinSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) e [ **MaxSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) permitem que você especifique o intervalo de dentro do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
+-   [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) e [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) permitem que você especifique o intervalo dentro da linha do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
 
     Você deve configurar [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) e [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) para que a [**PositionChangeRequest**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested) seja lançada.
 
@@ -84,9 +89,9 @@ Os controles de transporte do sistema exibem informações sobre a linha do temp
 
 Há um conjunto de propriedades de controles de transporte do sistema que se relacionam ao estado atual do player de mídia em si, em vez do estado do item de mídia em reprodução. Cada uma dessas propriedades é relacionada a um evento que é lançado quando o usuário ajusta o controle associado. Essas propriedades e eventos incluem:
 
-| Propriedade                                                                  | Evento                                                                                                   |
+| Propriedade                                                                  | evento                                                                                                   |
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**AutoRepeatMode**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.autorepeatmode) | [**AutoRepeatModeChangeRequested**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.autorepeatmodechangerequested) |
+| [**Repetir repetição**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.autorepeatmode) | [**AutoRepeatModeChangeRequested**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.autorepeatmodechangerequested) |
 | [**PlaybackRate**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackrate)     | [**PlaybackRateChangeRequested**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackratechangerequested)     |
 | [**ShuffleEnabled**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.shuffleenabled) | [**ShuffleEnabledChangeRequested**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.shuffleenabledchangerequested) |
 
@@ -111,8 +116,8 @@ Para obter informações sobre como reproduzir áudio em segundo plano, consulte
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Controles de transporte se integram com a mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
-* [Exemplo de Tranport de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+* [Integrar com os controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
+* [Exemplo de tranport de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 

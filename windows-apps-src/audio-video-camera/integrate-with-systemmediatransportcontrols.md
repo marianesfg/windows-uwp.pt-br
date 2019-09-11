@@ -1,19 +1,19 @@
 ---
 ms.assetid: eb690f2b-3bf8-4a65-99a4-2a3a8c7760b7
 description: Este artigo mostra como interagir com os controles de transporte de mídia do sistema.
-title: Integrar aos Controles de transporte de mídia do sistema
+title: Integrar aos controles de transporte de mídia do sistema
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 81065c214cc2b0583a99ac88cf1c3e4cd784658a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d2c8e05d2b01b110085ed82c19cecd251c9c6971
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361692"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876247"
 ---
-# <a name="integrate-with-the-system-media-transport-controls"></a>Integrar aos Controles de transporte de mídia do sistema
+# <a name="integrate-with-the-system-media-transport-controls"></a>Integrar aos controles de transporte de mídia do sistema
 
 Este artigo mostra como interagir com os controles de transporte de mídia do sistema (SMTC). O SMTC é um conjunto de controles que são comuns em todos os dispositivos Windows 10 e que oferecem aos usuários uma maneira consistente de controlar a reprodução de mídia para todos os aplicativos em execução que usam o [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) para reprodução.
 
@@ -34,6 +34,11 @@ Se quiser adicionar ou modificar os metadados que são exibidos para seus itens 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+
+
+> [!Note]
+> Os aplicativos devem definir um valor para a propriedade [**Type**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaitemdisplayproperties.type) mesmo se não estiverem fornecendo outros metadados de mídia a serem exibidos pelos controles de transporte de mídia do sistema. Esse valor ajuda o sistema a lidar com o conteúdo de mídia corretamente, incluindo impedir que a proteção de tela seja ativada durante a reprodução.
+
 
 ## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>Usar CommandManager para modificar ou substituir os comandos SMTC padrão
 Seu aplicativo pode modificar ou substituir completamente o comportamento dos controles SMTC com a classe [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager). Uma instância do gerenciador de comando pode ser obtida para cada instância da classe **MediaPlayer** acessando a propriedade [**CommandManager**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.commandmanager).
@@ -77,9 +82,9 @@ Como mencionado anteriormente neste artigo, o SMTC detectará e exibirá automat
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Reproduzir áudio e vídeo com o Media Player](play-audio-and-video-with-mediaplayer.md)
-* [Controle manual, o sistema de transporte de controles de mídia](system-media-transport-controls.md)
-* [Exemplo de controles de Tranport de mídia do sistema no github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
+* [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md)
+* [Exemplo de controles de tranport de mídia do sistema no github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  
