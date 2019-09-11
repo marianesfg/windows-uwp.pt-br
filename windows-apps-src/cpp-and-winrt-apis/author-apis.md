@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 18dc65198d476204cfd54bd241fbd3c9ac401155
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: ae8aca92d7eb7bc93ba4be99449d5e813238d744
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485172"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393492"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -34,7 +34,7 @@ O cenário mais simples é aquele em que você implementará uma interface do Wi
 > [!NOTE]
 > Para obter informações sobre como instalar e usar o C++/WinRT Visual Studio Extension (VSIX) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira as informações de [suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-No Visual Studio, o modelo de projeto do Aplicativo Core Windows Universal ** >  **do **Visual Studio C++**  >  **(C++/WinRT)** ilustra o padrão **CoreApplication**. O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+No Visual Studio, o modelo de projeto do Aplicativo Core **Windows Universal** >  do **Visual Studio C++**  >  **(C++/WinRT)** ilustra o padrão **CoreApplication**. O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -126,7 +126,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="if-youre-authoring-a-runtime-class-in-a-windows-runtime-component"></a>Se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime
 
-Se o tipo estiver empacotado em um componente do Windows Runtime para consumo a partir de um aplicativo, então, ele precisará ser uma classe de tempo de execução. Declare uma classe de tempo de execução em um arquivo de IDL (linguagem IDL da Microsoft) (.idl) (confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](#factoring-runtime-classes-into-midl-files-idl)).
+Se o tipo estiver empacotado em um componente do Windows Runtime para consumo de um aplicativo, então ele precisará ser uma classe de tempo de execução. Declare uma classe de tempo de execução em um arquivo de IDL (linguagem IDL da Microsoft) (.idl) (confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](#factoring-runtime-classes-into-midl-files-idl)).
 
 Cada arquivo IDL resulta em um arquivo `.winmd`, e o Visual Studio mescla todos eles em um único arquivo com o mesmo nome do namespace raiz. O arquivo `.winmd` final será aquele que os consumidores de seu componente consultarão.
 
@@ -184,7 +184,7 @@ Para obter mais detalhes, o código e um passo a passo das APIs de criação em 
 
 Se o tipo é referenciado por sua interface de usuário XAML, ele precisará ser uma classe de tempo de execução, mesmo que esteja no mesmo projeto que o XAML. Embora eles geralmente sejam ativados entre limites executáveis, uma classe de tempo de execução pode ser usada dentro da unidade de compilação que a implementa.
 
-Nesse cenário, você estará criando *e* consumindo as APIs. O procedimento para a implementação da classe de tempo de execução é basicamente o mesmo para um componente do Windows Runtime. Confira a seção anterior&mdash;[se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime](#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component). O único detalhe que difere é que, no IDL, a cadeia de ferramentas C++/WinRT gera não apenas um tipo de implementação, mas também um tipo projetado. É importante entender que dizer apenas "**MyRuntimeClass**", neste cenário, pode ser ambíguo. Há várias entidades com esse nome e de tipos diferentes.
+Nesse cenário, você estará criando *e* consumindo as APIs. O procedimento para a implementação da classe de tempo de execução é basicamente o mesmo para um componente do Windows Runtime. Portanto, confira a seção anterior&mdash;[Se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime](#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component). O único detalhe que difere é que, no IDL, a cadeia de ferramentas C++/WinRT gera não apenas um tipo de implementação, mas também um tipo projetado. É importante entender que dizer apenas "**MyRuntimeClass**", neste cenário, pode ser ambíguo. Há várias entidades com esse nome e de tipos diferentes.
 
 - **MyRuntimeClass** é o nome de uma classe de tempo de execução. Mas isso é uma abstração: que quer dizer declarado no IDL e implementado em alguma linguagem de programação.
 - **MyRuntimeClass** é o nome do struct do C++ **winrt::MyProject::implementation::MyRuntimeClass**, que é a implementação C++/WinRT da classe de tempo de execução. Como vimos, se houver projetos de implementação e consumo separados, então, esse struct existirá somente no projeto de implementação. Esse é *o tipo de implementação* ou *a implementação*. Esse tipo é gerado (pela ferramenta `cppwinrt.exe`) nos arquivos `\MyProject\MyProject\Generated Files\sources\MyRuntimeClass.h` e `MyRuntimeClass.cpp`.
