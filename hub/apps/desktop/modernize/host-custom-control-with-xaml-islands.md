@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: a22846c2b0499b990a27b1c445ad36f2ff1a0437
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: ab9bff69ac9ac0eaf1f02c943229829e726a0b9d
+ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979307"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911578"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML
 
-Este artigo demonstra como usar o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no kit de ferramentas da Comunidade do Windows para hospedar um controle UWP personalizado em um aplicativo do WPF direcionado ao .NET Core 3. O controle personalizado contém vários controles UWP de terceiros e associa uma propriedade em um dos controles UWP a uma cadeia de caracteres no aplicativo do WPF.
+Este artigo demonstra como usar o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no kit de ferramentas da Comunidade do Windows para hospedar um controle UWP personalizado em um aplicativo do WPF direcionado ao .NET Core 3. O controle personalizado contém vários controles UWP de terceiros da SDK do Windows e associa uma propriedade em um dos controles UWP a uma cadeia de caracteres no aplicativo do WPF. Este artigo também demonstra como hospedar também um controle UWP de primeira parte da [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Embora este artigo demonstre como fazer isso em um aplicativo do WPF, o processo é semelhante para um aplicativo Windows Forms. Para obter uma visão geral sobre como hospedar controles UWP no WPF e Windows Forms aplicativos, consulte [Este artigo](xaml-islands.md#wpf-and-windows-forms-applications).
 
@@ -100,13 +100,13 @@ Em seguida, adicione um projeto de aplicativo UWP à mesma solução que o seu p
 
 6. Exclua o arquivo **MainPage. XAML** do projeto de aplicativo UWP.
 7. Crie o projeto de aplicativo UWP.
-8. No projeto do WPF, clique com o botão direito do mouse no nó dependências e adicione uma referência ao seu projeto de aplicativo UWP.
+8. No projeto do WPF, clique com o botão direito do mouse no nó **dependências** e adicione uma referência ao seu projeto de aplicativo UWP.
 
 ## <a name="create-a-custom-uwp-control"></a>Criar um controle UWP personalizado
 
 Para hospedar um controle UWP personalizado em seu aplicativo do WPF, você deve ter o código-fonte do controle para que possa compilá-lo com seu aplicativo. Normalmente, os controles personalizados são definidos em um projeto de biblioteca de classes UWP para portabilidade fácil.
 
-Nesta seção, você definirá um controle de UWP personalizado simples em um novo projeto de biblioteca de classes. Como alternativa, você pode definir o controle UWP personalizado no projeto de aplicativo UWP criado na seção anterior. No entanto, essas etapas fazem isso em um projeto separado de biblioteca de classes para fins ilustrativos, pois normalmente é assim que os controles personalizados são implementados para portabilidade. 
+Nesta seção, você definirá um controle de UWP personalizado simples em um novo projeto de biblioteca de classes. Como alternativa, você pode definir o controle UWP personalizado no projeto de aplicativo UWP criado na seção anterior. No entanto, essas etapas fazem isso em um projeto separado de biblioteca de classes para fins ilustrativos, pois normalmente é assim que os controles personalizados são implementados para portabilidade.
 
 Se você já tiver um controle personalizado, poderá usá-lo em vez do controle mostrado aqui. No entanto, você ainda precisará configurar o projeto que contém o controle, conforme mostrado nestas etapas.
 
@@ -149,7 +149,7 @@ Se você já tiver um controle personalizado, poderá usá-lo em vez do controle
     ```
 
 9. Crie o projeto de biblioteca de classes UWP.
-10. No projeto do WPF, clique com o botão direito do mouse no nó dependências e adicione uma referência ao projeto de biblioteca de classes UWP.
+10. No projeto do WPF, clique com o botão direito do mouse no nó **dependências** e adicione uma referência ao projeto de biblioteca de classes UWP.
 11. No projeto de aplicativo UWP que você configurou anteriormente, clique com o botão direito do mouse no nó **referências** e adicione uma referência ao projeto de biblioteca de classes UWP.
 12. Reconstrua toda a solução e certifique-se de que todos os projetos sejam compilados com êxito.
 
@@ -196,13 +196,67 @@ Se você já tiver um controle personalizado, poderá usá-lo em vez do controle
 
 6. Compile e execute seu aplicativo e confirme se o controle de usuário UWP é exibido conforme o esperado.
 
+## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>Adicionar um controle da biblioteca WinUI ao controle personalizado
+
+Tradicionalmente, os controles UWP foram lançados como parte do sistema operacional Windows 10 e disponibilizados para os desenvolvedores por meio do SDK do Windows. A [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) é uma abordagem alternativa, em que versões atualizadas dos controles UWP de primeira parte da SDK do Windows são distribuídas em um pacote NuGet que não está vinculado a versões SDK do Windows. Essa biblioteca também inclui novos controles que não fazem parte do SDK do Windows e da plataforma UWP padrão. Consulte nosso [roteiro da biblioteca WinUI](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) para obter mais detalhes.
+
+Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu controle de usuário para que você possa hospedar esse controle em seu aplicativo WPF. 
+
+1. No projeto de aplicativo UWP, instale a versão de pré-lançamento mais recente do pacote NuGet [Microsoft. UI. XAML](https://www.nuget.org/packages/Microsoft.UI.Xaml) .
+    > [!NOTE]
+    > Certifique-se de instalar a versão de *pré-lançamento* mais recente. Atualmente, somente as versões de pré-lançamento desse pacote funcionarão se você optar por empacotar seu aplicativo em um [pacote MSIX](https://docs.microsoft.com/windows/msix) para implantação.
+
+2. No arquivo app. XAML neste projeto, adicione o elemento filho a seguir ao `<xaml:Application>` elemento.
+
+    ```xml
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
+    ```
+
+    Depois de adicionar esse elemento, o conteúdo desse arquivo agora deve ser semelhante a este.
+
+    ```xml
+    <xaml:XamlApplication
+        x:Class="MyUWPApp.App"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xaml="using:Microsoft.Toolkit.Win32.UI.XamlHost"
+        xmlns:local="using:MyUWPApp">
+        <Application.Resources>
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        </Application.Resources>
+    </xaml:XamlApplication>
+    ```
+
+3. No projeto de biblioteca de classes UWP, instale a versão de pré-lançamento mais recente do pacote NuGet [Microsoft. UI. XAML](https://www.nuget.org/packages/Microsoft.UI.Xaml) (a mesma versão que você instalou no projeto de aplicativo UWP).
+
+4. No mesmo projeto, abra o arquivo XAML para o controle de usuário e adicione a seguinte declaração de namespace ao `<UserControl>` elemento.
+
+    ```xml
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    ```
+
+5. No mesmo arquivo, adicione um `<winui:RatingControl />` elemento como um filho `<StackPanel>`do. Esse elemento adiciona uma instância da classe [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol?view=winui-2.2) da biblioteca WinUI. Depois de adicionar esse elemento, `<StackPanel>` o agora deve ser semelhante a este.
+
+    ```xml
+    <StackPanel Background="LightCoral">
+        <TextBlock>This is a simple custom UWP control</TextBlock>
+        <Rectangle Fill="Blue" Height="100" Width="100"/>
+        <TextBlock Text="{x:Bind XamlIslandMessage}" FontSize="50"></TextBlock>
+        <winui:RatingControl />
+    </StackPanel>
+    ```
+
+6. Compile e execute seu aplicativo e confirme se o novo controle de classificação é exibido conforme o esperado.
+
 ## <a name="package-the-app"></a>Empacotar o aplicativo
 
 Opcionalmente, você pode empacotar o aplicativo do WPF em um [pacote MSIX](https://docs.microsoft.com/windows/msix) para implantação. O MSIX é a tecnologia de empacotamento de aplicativos moderna para Windows e é baseado em uma combinação de tecnologias de instalação do MSI, APPX, App-V e ClickOnce.
 
-As instruções a seguir mostram como empacotar todos os componentes na solução em um pacote MSIX usando o projeto de empacotamento de [aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) no Visual Studio 2019. Essas etapas serão necessárias apenas se você quiser empacotar o aplicativo do WPF em um pacote MSIX. Observe que essas etapas atualmente incluem algumas soluções alternativas específicas para o cenário de Hospedagem de controles UWP personalizados.
+As instruções a seguir mostram como empacotar todos os componentes na solução em um pacote MSIX usando o [projeto de empacotamento de aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) no Visual Studio 2019. Essas etapas serão necessárias apenas se você quiser empacotar o aplicativo do WPF em um pacote MSIX. Observe que essas etapas atualmente incluem algumas soluções alternativas específicas para o cenário de Hospedagem de controles UWP personalizados.
 
-1. Adicione um novo [projeto](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) de empacotamento de aplicativos do Windows à sua solução. Ao criar o projeto, selecione **Windows 10, versão 1903 (10,0; Build 18362)** para a **versão de destino** e a **versão mínima**.
+1. Adicione um novo [projeto de empacotamento de aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) à sua solução. Ao criar o projeto, selecione **Windows 10, versão 1903 (10,0; Build 18362)** para a **versão de destino** e a **versão mínima**.
 
 2. No projeto de empacotamento, clique com o botão direito do mouse no nó **aplicativos** e escolha **Adicionar referência**. Na lista de projetos, selecione o projeto do WPF em sua solução e clique em **OK**.
 

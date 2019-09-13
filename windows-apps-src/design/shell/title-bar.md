@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 323b9b80a7d0087a07faf34d598f51d643e1324c
+ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648811"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70930342"
 ---
 # <a name="title-bar-customization"></a>Personalização da barra de título
 
@@ -20,7 +20,7 @@ ms.locfileid: "57648811"
 
 Quando seu aplicativo é executado em uma janela da área de trabalho, você pode personalizar as barras de título para corresponder a personalidade do seu aplicativo. Os APIs de personalização da barra de título permitem que você especifique cores para elementos da barra de título, ou estenda o conteúdo do seu aplicativo para a área da barra de título e assuma o controle total dele.
 
-> **APIs importantes**: [Propriedade ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [CoreApplicationViewTitleBar classe](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **APIs importantes**: [Propriedade ApplicationView. TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [classe CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>Quanto para personalizar a barra de título
 
@@ -130,10 +130,14 @@ public MainPage()
 
     var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
     coreTitleBar.ExtendViewIntoTitleBar = true;
-
+    coreTitleBar.LayoutMetricsChanged += CoreTitleBar_LayoutMetricsChanged;
     // Set XAML element as a draggable region.
-    AppTitleBar.Height = coreTitleBar.Height;
     Window.Current.SetTitleBar(AppTitleBar);
+}
+
+private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
+{
+    AppTitleBar.Height = sender.Height;
 }
 ```
 
@@ -166,7 +170,7 @@ Você pode desenhar conteúdo sob a área de controle de legenda definida por es
 
 Você pode manipular o evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a alterações no tamanho dos botões de legenda. Por exemplo, isso pode acontecer quando o botão Voltar do sistema é mostrado ou ocultado. Manipule esse evento para verificar e atualizar o posicionamento dos elementos de interface do usuário que dependem do tamanho da barra de título.
 
-Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn`, e `RightPaddingColumn` são declarados no XAML mostrado anteriormente.
+Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn` e`RightPaddingColumn` são declarados no XAML mostrado anteriormente.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -189,7 +193,7 @@ private void UpdateTitleBarLayout(CoreApplicationViewTitleBar coreTitleBar)
 
 ### <a name="interactive-content"></a>Conteúdo interativo
 
-Você pode colocar controles interativos, como botões, menus ou uma caixa de pesquisa, na parte superior do aplicativo para que pareçam estar na barra de título. No entanto, existem algumas regras que você deve seguir para garantir que seus elementos interativos recebem entrada do usuário.
+Você pode colocar controles interativos, como botões, menus ou uma caixa de pesquisa, na parte superior do aplicativo para que pareçam estar na barra de título. No entanto, há algumas regras que você deve seguir para garantir que seus elementos interativos recebam entrada do usuário.
 - Você deve chamar SetTitleBar para definir uma área como a região de barra de título arrastável. Se você não fizer isso, o sistema define a região arrastável padrão na parte superior da página. O sistema, em seguida, manipula todas as entradas de usuário nessa área e impede que a entrada alcance seus controles.
 - Coloque seus controles interativos sobre a parte superior da região arrastável definida pela chamada para SetTitleBar (com uma ordem de z superior). Não deixe seus controles interativos secundários do UIElement passado para SetTitleBar. Depois que você passa um elemento para SetTitleBar, o sistema trata isso como a barra de título do sistema e manipula todas as entradas de ponteiro para esse elemento.
 
@@ -275,7 +279,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. [_Modo Tablet_ ](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em um hardware com suporte, para que um usuário pode optar por executar qualquer aplicativo no modo tablet.
+>O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. O [_modo tablet_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em hardware com suporte, portanto, um usuário pode optar por executar qualquer aplicativo no modo tablet.
 
 ## <a name="full-customization-example"></a>Exemplo de personalização completa
 
@@ -375,11 +379,11 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
-- Tornar é óbvio quando a janela está ativo ou inativo. No mínimo, altere a cor dos botões na barra de título, ícones e texto.
+- Torne-o óbvio quando a janela estiver ativa ou inativa. No mínimo, altere a cor dos botões na barra de título, ícones e texto.
 - Defina uma região arrastável ao longo da borda superior da tela do aplicativo. O posicionamento das barras de título do sistema de correspondência torna mais fácil para os usuários o encontrarem.
 - Defina uma região arrastável que corresponde a barra de título visual (se houver) na tela do aplicativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Tinta acrílica](../style/acrylic.md)
+- [Acrílico](../style/acrylic.md)
 - [Cor](../style/color.md)
