@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e3465d108fc725c45999782eff80593832208b5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 31371c2b2a4826939de428fb6d7c082b78d05843
+ms.sourcegitcommit: 6951827b7d0948618e1fbb082c28794c7f23f83c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319509"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923150"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -32,7 +32,7 @@ Menus e menus de contexto exibem uma lista de comandos ou opções quando o usu�
 
 | **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
 | - | - |
-| [classe MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [classe MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propriedade ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propriedade FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Classe MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [classe MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [classe MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propriedade ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propriedade FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) | [Classe MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -90,7 +90,7 @@ Se você quiser adicionar comandos (como recortar, copiar e colar) a um elemento
 - Têm um único ponto de entrada (um menu Arquivo na parte superior da tela, por exemplo) que sempre é exibido.
 - Geralmente são ligados a um botão ou um item de menu pai.
 - São invocados por clique com o botão esquerdo (ou uma ação equivalente, como tocar com o dedo).
-- São associados a um elemento por meio das propriedades [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) ou [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) ou agrupados em uma barra de menus na parte superior da janela do aplicativo.
+- São associados a um elemento por meio das propriedades [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button.flyout) ou [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) ou agrupados em uma barra de menus na parte superior da janela do aplicativo.
 
 ### <a name="context-menus"></a>Menus de contexto
 
