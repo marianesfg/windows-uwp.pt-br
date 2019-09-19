@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: ef4810ec594173f3cc4da35d63143909f4859e3c
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
+ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340817"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71100824"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 
@@ -54,7 +54,7 @@ Com a opção de ativador COM, você pode usar os seguintes modelos de notifica�
 > [!NOTE]
 > Se você adicionar o ativador COM ao aplicativo Ponte de Desktop, primeiro/segundo plano e ativações de notificação herdada agora acionam o ativador COM em vez da linha de comando.
 
-Para saber como usar essa opção, consulte [Enviar uma notificação do sistema local pelas aplicativos C# da área de trabalho](send-local-toast-desktop.md) ou [Enviar uma notificação do sistema local dos aplicativos WRL C++ da área de trabalho](send-local-toast-desktop-cpp-wrl.md).
+Para saber como usar essa opção, consulte [Enviar uma notificação do sistema local de aplicativos C# da área de trabalho](send-local-toast-desktop.md) ou [Enviar uma notificação do C++ sistema local de aplicativos do desktop WRL](send-local-toast-desktop-cpp-wrl.md).
 
 
 ## <a name="alternative-option---no-com--stub-clsid"></a>Opção alternativa - sem CLSID COM/Stub
