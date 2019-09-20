@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bc591f66505fa6e7019cb37fed636700d8dec709
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 5905c494babfcbbe8dd93b85e30602ef490fcc81
+ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393596"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71141942"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -31,7 +31,10 @@ Há vários tipos de recursos.
 
 ## <a name="general-use-capabilities"></a>Funcionalidades de uso geral
 
-As funcionalidades de uso geral se aplicam à maioria dos cenários de aplicativo mais comuns.
+Os recursos de uso geral são especificados usando elementos de **funcionalidade** em seu manifesto de pacote de aplicativo. Esses recursos se aplicam aos cenários de aplicativo mais comuns.
+
+> [!NOTE]
+> Todos os elementos de **funcionalidade** devem vir antes de qualquer elemento [CustomCapability](#custom-capabilities) e [DeviceCapability](#device-capabilities) no nó **Capabilities** no manifesto do pacote.
 
 | Cenário da funcionalidade | Uso da funcionalidade |
 |---------------------|------------------|
@@ -59,10 +62,10 @@ As funcionalidades de uso geral se aplicam à maioria dos cenários de aplicativ
 
 ## <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
-As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos periféricos e internos. As funcionalidades de dispositivo são especificadas usando o elemento **DeviceCapability** no manifesto do pacote do aplicativo. Esse elemento pode exigir elementos filho adicionais e algumas funcionalidades de dispositivo precisam ser acrescentadas manualmente ao manifesto do pacote. Para obter mais informações, consulte [Como especificar as funcionalidades do dispositivo em um manifesto do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) e [**Referência de esquema DeviceCapability**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability).
+As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos periféricos e internos. Os recursos do dispositivo são especificados usando elementos **DeviceCapability** no manifesto do pacote do aplicativo. Esse elemento pode exigir elementos filho adicionais e algumas funcionalidades de dispositivo precisam ser acrescentadas manualmente ao manifesto do pacote. Para obter mais informações, consulte [Como especificar as funcionalidades do dispositivo em um manifesto do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) e [**Referência de esquema DeviceCapability**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability).
 
 > [!NOTE]
-> Você pode ter vários elementos **DeviceCapability** e **Capability** sob o elemento **Capabilities** , mas todos os elementos **DeviceCapability** devem vir após os elementos de **funcionalidade** .
+> Você pode ter vários elementos **DeviceCapability** sob o elemento **Capabilities** no manifesto do pacote. Todos os elementos **DeviceCapability** devem vir após qualquer **recurso** e elementos [CustomCapability](#custom-capabilities) .
 
 | Cenário da funcionalidade | Uso da funcionalidade |
 |---------------------|------------------|
@@ -107,6 +110,9 @@ Para declarar um recurso restrito, modifique o arquivo de origem do manifesto do
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> Todos os elementos de funcionalidade restrita devem vir antes de qualquer elemento [CustomCapability](#custom-capabilities) e [DeviceCapability](#device-capabilities) no nó **Capabilities** no manifesto do pacote.
 
 ### <a name="restricted-capability-approval-process"></a>Processo de aprovação de funcionalidade restrita
 
@@ -243,6 +249,9 @@ Para declarar um recurso personalizado, modifique o arquivo de origem do manifes
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> Todos os elementos **CustomCapability** devem vir após qualquer elemento de **funcionalidade** e antes de qualquer elemento [DeviceCapability](#device-capabilities) sob o nó **Capabilities** no manifesto do pacote.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
