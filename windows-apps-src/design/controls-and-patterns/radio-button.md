@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f623c18db5af8e503965c0c4518e35e263791a51
+ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63813667"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039152"
 ---
 # <a name="radio-buttons"></a>Botões de opção
 
@@ -187,14 +187,20 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 ![diretrizes de espaçamento para botões de opção](images/radiobutton-redlines.png)
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+
 ## <a name="related-topics"></a>Tópicos relacionados
 
-**Para designers**
+### <a name="for-designers"></a>Para designers
+
 - [Botões](buttons.md)
 - [Botões de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
 - [Listas e caixas de combinação](lists.md)
 - [Controles deslizantes](slider.md)
 
-**Para desenvolvedores (XAML)**
+### <a name="for-developers-xaml"></a>Para desenvolvedores (XAML)
+
 - [Classe RadioButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)

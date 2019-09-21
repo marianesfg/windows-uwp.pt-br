@@ -10,20 +10,18 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c5736e917d77415eeb6df53b3fd92f7ab584884
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 348d563322baf03aabc0e30fd9b39ee11673f271
+ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63787452"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039115"
 ---
 # <a name="rating-control"></a>Controle de classificação
 
 O controle de classificação permite que os usuários facilmente exibam e definam classificações que refletem o grau de satisfação com o conteúdo e os serviços. Os usuários podem interagir com o controle de classificação com toque, caneta, mouse, gamepad e teclado. As diretrizes a seguir mostram como usar os recursos do controle de classificação para oferecer flexibilidade e personalização.
 
 > **APIs importantes**: [Classe RatingControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
-
-![Exemplo de controle de classificação](images/rating_rs2_doc_ratings_intro.png)
 
 ## <a name="examples"></a>Exemplos
 
@@ -40,6 +38,8 @@ O controle de classificação permite que os usuários facilmente exibam e defin
 </td>
 </tr>
 </table>
+
+![Exemplo de controle de classificação](images/rating_rs2_doc_ratings_intro.png)
 
 ### <a name="editable-rating-with-placeholder-value"></a>Classificação editável com o valor de espaço reservado
 
