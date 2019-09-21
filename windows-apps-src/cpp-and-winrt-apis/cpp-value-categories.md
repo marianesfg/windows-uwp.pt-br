@@ -16,14 +16,14 @@ ms.locfileid: "68270212"
 # <a name="value-categories-and-references-to-them"></a>Categorias de valores e referências a eles
 Este tópico descreve as diversas categorias de valores (e referências a valores) que existem em C++. Sem dúvida você já ouviu falar de *lvalues* e *rvalues*, mas talvez não pense neles nos termos apresentados neste tópico. E também há outros tipos de valores.
 
-Todas as expressões em C++ geram um valor que pertence a uma das categorias discutidas neste tópico. Há aspectos, facilidades e regras da linguagem C++ que exigem um bom entendimento das categorias de valores e das referências a eles. Por exemplo, usar o endereço, copiar, mover e encaminhar um valor para outra função. Neste tópico, não abordaremos todos esses aspectos em profundidade, mas forneceremos informações básicas para promover um entendimento sólido.
+Todas as expressões em C++ geram um valor que pertence a uma das categorias discutidas neste tópico. Há aspectos, facilidades e regras da linguagem C++ que exigem um bom entendimento das categorias de valores e das referências a eles. Por exemplo, copiar, mover e encaminhar um valor para outra função ou levar apenas o endereço de um valor para outra função. Neste tópico, não abordaremos todos esses aspectos em profundidade, mas forneceremos informações básicas para promover um entendimento sólido.
 
 As informações deste tópico estão formuladas nos termos da análise de Stroustrup das categorias de valor por meio de duas propriedades independentes de identidade e mobilidade [Stroustrup, 2013].
 
 ## <a name="an-lvalue-has-identity"></a>Um lvalue tem uma identidade
-Para um valor, o que significa ter uma *identidade*? Se você tiver (ou puder obter) o endereço de memória de um valor e usá-lo com segurança, o valor terá uma identidade. Dessa maneira, é possível fazer mais que comparar o conteúdo dos valores: você pode comparar ou diferenciá-los pela identidade.
+Para um valor, o que significa ter uma *identidade*? Se você tiver (ou puder obter) o endereço de memória de um valor e usá-lo com segurança, o valor terá uma identidade. Assim, será possível não só comparar o conteúdo dos valores, mas também compará-los ou diferenciá-los por identidade.
 
-Um *lvalue* tem uma identidade. Agora, é somente uma questão de interesse histórico o fato de que o "l" em "lvalue" é uma abreviação de "left" (como no lado esquerdo de uma atribuição). Em C++, um lvalue pode aparecer à esquerda *ou* à direita de uma atribuição. Portanto, o "l" de "lvalues" não ajuda você a realmente compreender nem definir o que eles são. Você só precisa entender que o que chamamos de lvalue é um valor com uma identidade.
+Um *lvalue* tem uma identidade. Agora, é somente uma questão de interesse histórico o fato de que o "l" em "lvalue" é uma abreviação de "left" (como no lado esquerdo de uma atribuição). Em C++, um lvalue pode aparecer à esquerda *ou* à direita de uma atribuição. Portanto, o "l" de "lvalues" não ajuda você a realmente compreender nem definir o que eles são. Basta saber que Ivalue é um valor com identidade.
 
 Alguns exemplos de expressões lvalues: uma variável ou constante com nome ou uma função que retorna uma referência. Alguns exemplos de expressões que *não* são lvalues: um temporário ou uma função retornada por valor.
 
@@ -42,12 +42,12 @@ int main()
 }
 ```
 
-No entanto, não são só os lvalues que têm identidade. Os xvalues também. Falaremos mais sobre o que é um *xvalue* posteriormente neste tópico. Por enquanto, saiba que há uma categoria de valores chamada glvalue, para "lvalue generalizado". O superconjunto de glvalues contém tanto os lvalues (também conhecidos como *lvalues clássicos*) como os xvalues. Portanto, embora a afirmação "um lvalue tem identidade" seja verdadeira, o conjunto completo de itens com identidade é o conjunto de glvalues, conforme mostrado na ilustração.
+Além dos lvalues, os xvalues também têm identidade. Falaremos mais sobre o que é um *xvalue* posteriormente neste tópico. Por enquanto, basta saber que há uma categoria de valor chamada glvalue (lvalue generalizado). O superconjunto de glvalues contém tanto os lvalues (também conhecidos como *lvalues clássicos*) quanto os xvalues. Portanto, embora a afirmação "um lvalue tem identidade" seja verdadeira, o conjunto completo de itens com identidade é o conjunto de glvalues, conforme mostrado na ilustração.
 
 ![Um lvalue tem uma identidade](images/has-identity1.png)
 
 ## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>Um rvalue pode ser movido; um lvalue não
-Porém, há valores que não são glvalues. Consequentemente, *não* é possível obter o endereço de memória de alguns valores (ou você não pode confiar na validade dele). Vimos alguns valores desse tipo no código de exemplo acima. Parece uma desvantagem. Mas, na verdade, a vantagem de um valor desse tipo é que você pode *movê-lo* (o que geralmente é barato) em vez de copiá-lo (o que geralmente é caro). Mover um valor significa que ele não está mais em seu local de origem. Portanto, tentar acessá-lo no local antigo é algo que deve ser evitado. Não está no escopo deste tópico discutir quando e *como* mover um valor. Neste tópico, só precisamos saber que um valor móvel é conhecido como *rvalue* (ou *rvalue clássico*).
+Porém, há valores que não são glvalues. Consequentemente, *não* é possível obter o endereço de memória de alguns valores (ou você não pode confiar na validade dele). Vimos alguns valores desse tipo no código de exemplo acima. Isso parece uma desvantagem. Mas, na verdade, a vantagem de um valor desse tipo é que você pode *movê-lo* (o que geralmente é barato) em vez de copiá-lo (o que geralmente é caro). Mover um valor significa que ele não está mais em seu local de origem. Portanto, tentar acessá-lo no local antigo é algo que deve ser evitado. Não está no escopo deste tópico discutir quando e *como* mover um valor. Neste tópico, só precisamos saber que um valor móvel é conhecido como *rvalue* (ou *rvalue clássico*).
 
 O "r" em "rvalue" é uma abreviação de "right" (como no lado direito de uma atribuição). No entanto, é possível usar rvalues e referências a eles fora de atribuições. Portanto, o "r" em "rvalues" não é o foco. Você só precisa entender que o que chamamos de rvalue é um valor móvel.
 
@@ -83,9 +83,9 @@ template<typename T> T&& get_by_rvalue_ref() { ... } // Get by rvalue reference.
 struct A { A(A&& other) { ... } }; // A move constructor takes an rvalue reference.
 ```
 
-Uma referência rvalue pode ser associada a um rvalue. Na verdade, em termos de resolução de sobrecarga, um rvalue *prefere* estar associado a uma referência rvalue do que a uma referência const lvalue. No entanto, uma referência rvalue não pode ser associada a um lvalue porque, como dito, assume-se que uma referência rvalue se refere a um valor cujo conteúdo não precisa ser preservado (por exemplo, o parâmetro de um construtor de movimentação).
+Uma referência rvalue pode ser associada a um rvalue. Na prática, em termos de resolução de sobrecarga, é *preferível* associar um rvalue a uma referência rvalue, não a uma referência lvalue const. No entanto, uma referência rvalue não pode ser associada a um lvalue porque, como dito, uma referência rvalue se refere a um valor cujo conteúdo supostamente não precisa ser preservado (por exemplo, o parâmetro de um construtor de movimentação).
 
-Também é possível passar um rvalue em que se espera um argumento por valor, por meio de uma construção de cópia (ou uma construção de movimentação, se o rvalue for um xvalue).
+Também será possível passar um rvalue em que se espera um argumento por valor, por meio de uma construção de cópia (ou uma construção de movimentação, se o rvalue for um xvalue).
 
 ## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>Um glvalue tem identidade; um prvalue não
 Nesse estágio, sabemos o que tem identidade. E sabemos o que é móvel ou não. No entanto, ainda não nomeamos o conjunto de valores que *não* tem identidade. Esse conjunto é conhecido como *prvalue* ou *rvalue puro*.
