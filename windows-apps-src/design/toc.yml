@@ -169,6 +169,8 @@
           href: controls-and-patterns/navigationview.md
         - name: Pivô
           href: controls-and-patterns/pivot.md
+        - name: Modo de exibição de guia
+          href: controls-and-patterns/tab-view.md
     - name: People
       items:
         - name: Cartão de visita
