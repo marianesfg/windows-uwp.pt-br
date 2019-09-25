@@ -8,15 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cad33c0f1b72bbd379be9b8f13ed648231f1a1ca
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 799913688f04421cae6b47f0d4b7db2fb1074ed4
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319357"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061924"
 ---
 # <a name="web-view"></a>Modo de exibição da Web
- 
 
 Um controle de modo de exibição da Web incorpora um modo de exibição em seu aplicativo que renderiza o conteúdo da web usando o mecanismo de renderização do Microsoft Edge. Hiperlinks também podem aparecer e funcionar em um controle de modo de exibição da Web.
 
@@ -25,6 +24,22 @@ Um controle de modo de exibição da Web incorpora um modo de exibição em seu 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Utilize um controle de modo de exibição na Web para exibir o conteúdo HTML sofisticadamente formatado a partir de um servidor Web remoto, código gerado dinamicamente ou arquivos de conteúdo no pacote de seu aplicativo. Conteúdo sofisticado também pode conter código de script e comunicar-se entre o script e o código de seu aplicativo.
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/WebView">abri-lo e ver o WebView em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="create-a-web-view"></a>Criar um modo de exibição da Web
 
@@ -319,15 +334,10 @@ Um modo de exibição da Web que hospeda o conteúdo fora do thread de interface
 -   Os campos de entrada devem ser dimensionados adequadamente. Os usuários podem não perceber que é possível ampliá-los para inserir texto.
 -   Se um modo de exibição na Web não se parece com o resto de seu aplicativo, considere a possibilidade de utilizar controles ou meios alternativos para realizar tarefas relevantes. Se o modo de exibição na Web corresponder ao resto de seu aplicativo, os usuários o verão como uma experiência perfeita.
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Classe WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)
- 
-
- 
-
-
-
-
+- [Classe WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)

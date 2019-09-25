@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fdde696a0bc1dc7706f89ede5d525194e5d2830
-ms.sourcegitcommit: f0e539359b9766db0339ddbae3f7ccf0069011e8
+ms.openlocfilehash: 2f276c1a4abb57c5505a39afc538cc6f7319a23d
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885660"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061942"
 ---
 # <a name="pull-to-refresh"></a>Puxar para atualizar
 
@@ -32,6 +32,22 @@ A ação deslizar para atualizar permite a um usuário extrair uma lista de dado
 Use a ação deslizar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente e será provável que seu aplicativo seja executado em dispositivos móveis touch-first.
 
 Você também pode usar o [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer) para criar uma experiência consistente de atualização que é invocada de outras maneiras, como por um botão Atualizar.
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PullToRefresh">abri-lo e ver PullToRefresh em ação</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="refresh-controls"></a>Controles de atualização
 
@@ -332,6 +348,10 @@ public class ListItemData
     public string Body { get; set; }
 }
 ```
+
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

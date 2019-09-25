@@ -12,32 +12,47 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a574ff858f8eab3fa1984ecd883a786fa0e0f19c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8f45edc213d8abdfc43e834d023993b89249844d
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364720"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061950"
 ---
 # <a name="lists"></a>Listas
 
 Listas são exibidas e permitem interações com conteúdo baseado em coleção. Os quatro padrões de lista abordados neste artigo incluem:
 
--   Modos de exibição de lista, que são usados principalmente para exibir coleções de conteúdo com muito texto
--   Modos de exibição de grade, que são usados principalmente para exibir coleções de conteúdo com muitas imagens
--   Listas suspensas, que permitem que os usuários escolham um item em uma lista de expansão
--   Caixas de lista, que permitem que os usuários escolham um item ou vários itens em uma caixa que pode ser rolada
+- Modos de exibição de lista, que são usados principalmente para exibir coleções de conteúdo com muito texto
+- Modos de exibição de grade, que são usados principalmente para exibir coleções de conteúdo com muitas imagens
+- Listas suspensas, que permitem que os usuários escolham um item em uma lista de expansão
+- Caixas de lista, que permitem que os usuários escolham um item ou vários itens em uma caixa que pode ser rolada
 
 Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista.
 
 > **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [Classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [Classe ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update – alteração de comportamento</strong>
 > </div>
 > Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).
 > Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">classe ScrollViewer</a>.
+
+## <a name="examples"></a>Exemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, veja <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/ComboBox">ComboBox</a> e <a href="xamlcontrolsgallery:/item/ListBox">ListBox</a> em ação.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="list-views"></a>Modos de exibição de lista
 
@@ -47,9 +62,9 @@ Modos de exibição de lista permitem que você classifique itens e atribua cabe
 
 Use um modo de exibição de lista para:
 
--   Exiba uma coleção de conteúdos que consistem principalmente em texto.
--   Navegue em uma coleção de conteúdos única ou categorizada.
--   Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
+- Exiba uma coleção de conteúdos que consistem principalmente em texto.
+- Navegue em uma coleção de conteúdos única ou categorizada.
+- Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
 
 ### <a name="examples"></a>Exemplos
 
@@ -59,8 +74,8 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 
 ### <a name="recommendations"></a>Recomendações
 
--   Os itens em uma lista devem ter o mesmo comportamento.
--   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
+- Os itens em uma lista devem ter o mesmo comportamento.
+- Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
 
 ### <a name="list-view-articles"></a>Artigos sobre exibição de lista
 <table>
@@ -110,9 +125,9 @@ Modos de exibição de grade são adequados para organizar e navegar em coleçõ
 
 Use um modo de exibição de lista para:
 
--   Exiba uma coleção de conteúdos que consista principalmente em imagens.
--   Exiba bibliotecas de conteúdo.
--   Formate os dois modos de exibição de conteúdo associados ao [zoom semântico](semantic-zoom.md).
+- Exiba uma coleção de conteúdos que consista principalmente em imagens.
+- Exiba bibliotecas de conteúdo.
+- Formate os dois modos de exibição de conteúdo associados ao [zoom semântico](semantic-zoom.md).
 
 ### <a name="examples"></a>Exemplos
 
@@ -126,8 +141,8 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 
 ### <a name="recommendations"></a>Recomendações
 
--   Os itens em uma lista devem ter o mesmo comportamento.
--   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
+- Os itens em uma lista devem ter o mesmo comportamento.
+- Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
 
 ### <a name="grid-view-articles"></a>Artigos sobre exibição de grade
 <table>
@@ -167,10 +182,10 @@ Listas suspensas, também conhecidas como caixas de combinação, começam em um
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
--   Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
--   Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
--   Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
--   Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
+- Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
+- Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
+- Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
+- Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
 
 ### <a name="examples"></a>Exemplos
 
@@ -188,9 +203,9 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 ### <a name="recommendations"></a>Recomendações
 
--   Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
--   Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
--   Para fazer uma caixa de combinação com atualizações ao vivo enquanto o usuário estiver usando as teclas de seta (como um menu suspenso de seleção de fonte), defina SelectionChangedTrigger como "Always".  
+- Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
+- Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
+- Para fazer uma caixa de combinação com atualizações ao vivo enquanto o usuário estiver usando as teclas de seta (como um menu suspenso de seleção de fonte), defina SelectionChangedTrigger como "Always".  
 
 ### <a name="text-search"></a>Pesquisa de texto
 
@@ -203,25 +218,25 @@ Uma caixa de listagem permite que o usuário escolha um único item ou vários i
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
--   Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
--   Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
--   Evite usar uma caixa de listagem se:
-    -   Houver um número muito pequeno de itens para a lista. Uma caixa de listagem que tem sempre as mesmas duas opções pode ser melhor apresentada como [botões de opção](radio-button.md). Considere também a possibilidade de usar botões de opção quando há três ou quatro itens estáticos na lista.
-    -   A caixa de listagem é de seleção única e apresenta sempre as mesmas 2 opções, onde uma pode ser imposta como o contrário da outra, como “ligado” e “desligado”. Use uma única caixa de seleção ou um botão de alternância.
-    -   Há um número muito grande de itens. Exibição de grade e exibição de lista são escolhas melhores para listas longas. Para listas muito longas de dados agrupados, prefere-se a aplicação de zoom semântico.
-    -   Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
-    -   Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
+- Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
+- Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
+- Evite usar uma caixa de listagem se:
+    - Houver um número muito pequeno de itens para a lista. Uma caixa de listagem que tem sempre as mesmas duas opções pode ser melhor apresentada como [botões de opção](radio-button.md). Considere também a possibilidade de usar botões de opção quando há três ou quatro itens estáticos na lista.
+    - A caixa de listagem é de seleção única e apresenta sempre as mesmas 2 opções, onde uma pode ser imposta como o contrário da outra, como “ligado” e “desligado”. Use uma única caixa de seleção ou um botão de alternância.
+    - Há um número muito grande de itens. Exibição de grade e exibição de lista são escolhas melhores para listas longas. Para listas muito longas de dados agrupados, prefere-se a aplicação de zoom semântico.
+    - Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
+    - Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
 
 ### <a name="recommendations"></a>Recomendações
 
--   O intervalo ideal de itens em uma caixa de listagem é de 3 a 9.
--   Uma caixa de listagem funciona bem quando seus itens podem variar dinamicamente.
--   Se possível, defina o tamanho de uma caixa de listagem de modo que a lista de itens presente nela não precise de rolagem nem de aplicação de movimento panorâmico.
--   Verifique se está claro o propósito da caixa de listagem e quais itens estão selecionados atualmente.
--   Reserve efeitos visuais e animações para feedback referente a toque e para o estado selecionado dos itens.
--   Limite o conteúdo de texto do item da caixa de listagem a uma única linha. Se os itens forem elementos visuais, você poderá personalizar o tamanho. Se um item contém diversas linhas de texto ou imagens, utilize um modo de exibição de grade ou de lista em vez disso.
--   Use fonte padrão, a menos que as diretrizes da marca indiquem o contrário.
--   Não utilize uma caixa de listagem para executar comandos ou exibir ou ocultar dinamicamente outros controles.
+- O intervalo ideal de itens em uma caixa de listagem é de 3 a 9.
+- Uma caixa de listagem funciona bem quando seus itens podem variar dinamicamente.
+- Se possível, defina o tamanho de uma caixa de listagem de modo que a lista de itens presente nela não precise de rolagem nem de aplicação de movimento panorâmico.
+- Verifique se está claro o propósito da caixa de listagem e quais itens estão selecionados atualmente.
+- Reserve efeitos visuais e animações para feedback referente a toque e para o estado selecionado dos itens.
+- Limite o conteúdo de texto do item da caixa de listagem a uma única linha. Se os itens forem elementos visuais, você poderá personalizar o tamanho. Se um item contém diversas linhas de texto ou imagens, utilize um modo de exibição de grade ou de lista em vez disso.
+- Use fonte padrão, a menos que as diretrizes da marca indiquem o contrário.
+- Não utilize uma caixa de listagem para executar comandos ou exibir ou ocultar dinamicamente outros controles.
 
 ## <a name="selection-mode"></a>Modo de seleção
 
@@ -229,9 +244,9 @@ O modo de seleção permite que os usuários selecionem e executem ações em um
 
 Há três modos de seleção diferentes:
 
--   Único: o usuário pode selecionar apenas um item de cada vez.
--   Múltiplo: o usuário pode selecionar vários itens sem usar um modificador.
--   Estendido: o usuário pode selecionar diversos itens com um modificador, como ao segurar a tecla SHIFT.
+- Único: o usuário pode selecionar apenas um item de cada vez.
+- Múltiplo: o usuário pode selecionar vários itens sem usar um modificador.
+- Estendido: o usuário pode selecionar diversos itens com um modificador, como ao segurar a tecla SHIFT.
 
 Tocar em qualquer lugar em um item seleciona-o. Tocar na ação da barra de comandos afeta todos os itens selecionados. Se nenhum item estiver selecionado, as ações da barra de comandos devem estar inativas, com exceção de "Selecionar Tudo".
 
@@ -259,6 +274,9 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 </tr>
 </table>
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

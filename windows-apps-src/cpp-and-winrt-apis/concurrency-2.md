@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a275d5c91e03f9eb5b6348cda673d93e7132d7a
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: 1170b8e1291afd166f210feb291b644d1c7ed546
+ms.sourcegitcommit: e5a154c7b6c1b236943738febdb17a4815853de5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485140"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71164819"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidade e assincronia mais avançadas com o C++/WinRT
 
@@ -219,7 +219,7 @@ co_await static_cast<no_switch>(async);
 
 Em seguida, em vez de olhar para as três funções **await_xxx** que correspondem a **IAsyncXxx**, o compilador C++ procura funções que correspondem a **no_switch**.
 
-## <a name="a-deeper-dive-into-winrtresumeforeground"></a>Um aprofundamento no **winrt::resume_foreground**
+## <a name="a-deeper-dive-into-winrtresume_foreground"></a>Um aprofundamento no **winrt::resume_foreground**
 
 Do [C++/WinRT 2.0](/windows/uwp/cpp-and-winrt-apis/newsnews#news-and-changes-in-cwinrt-20) em diante, a função [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) será suspensa mesmo se for chamada do thread do dispatcher (em versões anteriores, ela poderia introduzir deadlocks em alguns cenários porque ela só era suspensa se ainda não estivesse no thread do dispatcher).
 
@@ -745,6 +745,9 @@ int main()
     }
 }
 ```
+
+> [!NOTE]
+> **wait_for** usa **std::chrono::duration** na interface, mas está limitado a algum intervalo menor do que o que **std::chrono::duration** oferece (aproximadamente 49,7 dias).
 
 O **wait_for** neste próximo exemplo aguarda cerca de cinco segundos e, depois, verifica a conclusão. Se a comparação for favorável, você saberá que o objeto async foi concluído com êxito e pronto. Se você estiver aguardando algum resultado, poderá simplesmente seguir isso com uma chamada para a função **get** para recuperar o resultado.
 
