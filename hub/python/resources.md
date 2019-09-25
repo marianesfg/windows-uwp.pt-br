@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Microsoft, Windows 10, tutoriais, cursos online, Blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 28a77b9e936acddb6158d865aef933f27444c5c9
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: 3320cef0d3aaf48a2f93d65d93bf8876f1f997d6
+ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959057"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249239"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para desenvolvimento com Python no Windows
 
@@ -45,8 +45,7 @@ Uma lista de links que recomendamos para desenvolvedores de Python que trabalham
 
 - [Python e Visual Studio Code](https://code.visualstudio.com/docs/languages/python): Uma visão geral do uso do Python com o VS Code.
 
-
-### <a name="online-courses"></a>Cursos online
+## <a name="online-courses"></a>Cursos online
 
 - [Introdução ao Python no Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): Experimente a plataforma de Microsoft Learn interativa e ganhe pontos de experiência para concluir este módulo cobrindo as noções básicas sobre como escrever código Python básico, declarar variáveis e trabalhar com entrada e saída do console. O ambiente de área restrita interativa torna esse um ótimo lugar para começar a pessoas que não têm seu ambiente de desenvolvimento do Python configurado ainda.
 
