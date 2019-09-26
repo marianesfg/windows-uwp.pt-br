@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1827f24e467c113034c5d0303aaebce0e603da2a
-ms.sourcegitcommit: 68121f21c899975f3634456a651ae8e1e53c19f7
+ms.openlocfilehash: 974d96f6ba2daf275ffd346f50571787d4eee925
+ms.sourcegitcommit: ad2940a12a7ee59ee7696cd23a03743eef84ca31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70841802"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71275747"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
@@ -95,6 +95,9 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
     ![Seleção do tipo de conta de pagamento](images/payout-account-type-selection.png)
 
 4. Selecione um perfil de pagamento existente ou clique em **criar um novo perfil de pagamento** para criar um novo perfil para o método de pagamento escolhido.
+
+> [!NOTE]
+> Se, por algum motivo, sua conta não estiver pronta para receber fundos da Microsoft, você poderá marcar a caixa de seleção **manter meu pagamento** . Você continuará a ganhar suas vendas, mas os pagamentos não serão distribuídos até que você desabilite **o meu pagamento.**
 
 ### <a name="create-a-bank-based-payment-profile"></a>Criar um perfil de pagamento baseado no banco
 
