@@ -4,14 +4,14 @@ description: Aprenda a depurar uma tarefa em segundo plano, incluindo ativação
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 ms.date: 02/08/2017
 ms.topic: article
-keywords: o Windows 10, uwp, tarefas em segundo plano
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 11ebd180ebc3bc08b418f3b22ebed190bf73c18d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad133a9b1eb22695e6ce5d8b3edba9ad3a138b68
+ms.sourcegitcommit: f1261aa6f7eeb62bf770a08b58ec4357bdc20c7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366201"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71224766"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -42,10 +42,13 @@ As tarefas em segundo plano podem ser ativadas manualmente por meio do Microsoft
 
 2.  Execute seu aplicativo no depurador e, em seguida, dispare a tarefa em segundo plano usando a barra de ferramentas **Eventos de Ciclo de Vida**. Esse menu suspenso mostra os nomes das tarefas em segundo plano que podem ser ativadas pelo Visual Studio.
 
-    Para que isso funcione, a tarefa em segundo plano já deve ter sido registrada e ainda deve estar aguardando ser acionada. Por exemplo, se a tarefa em segundo plano foi registrada com um TimeTrigger único e esse gatilho já tiver sido disparado, iniciar a tarefa através do Visual Studio não produzirá nenhum efeito.
+> [!NOTE]
+> As opções da barra de ferramentas eventos de ciclo de vida não são mostradas por padrão no Visual Studio. Para mostrar essas opções, clique com o botão direito do mouse na barra de ferramentas atual no Visual Studio e verifique se a opção **local de depuração** está habilitada.
+
+    For this to work, the background task must already be registered and it must still be waiting for the trigger. For example, if a background task was registered with a one-shot TimeTrigger and that trigger has already fired, launching the task through Visual Studio will have no effect.
 
 > [!Note]
-> Tarefas em segundo plano usando os seguintes gatilhos não podem ser ativadas dessa maneira: [**Gatilho de aplicativo**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger), [ **MediaProcessing gatilho**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [ **PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)e tarefas em segundo plano usando um [ **SystemTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) com o [  **SmsReceived** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) o tipo de disparador.  
+> As tarefas em segundo plano que usam os seguintes gatilhos não podem ser ativadas dessa maneira: [**Gatilho de aplicativo**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger), [**gatilho MediaProcessing**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)e tarefas em segundo plano usando um [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) com o tipo de gatilho [**SmsReceived**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) .  
 > O **Gatilho de aplicativo** e o **MediaProcessingTrigger** podem ser sinalizados manualmente no código com `trigger.RequestAsync()`.
 
 ![depurando tarefas em segundo plano](images/debugging-activation.png)
@@ -69,7 +72,7 @@ A ativação da tarefa em segundo plano depende de três coisas:
 
 2.  Use o designer de manifesto para conferir se a tarefa em segundo plano está declarada corretamente no manifesto do pacote:
 
-    -   Em C# e C++, o atributo de ponto de entrada deve corresponder ao namespace da tarefa em segundo plano, seguido do nome da classe. Por exemplo:  RuntimeComponent1.MyBackgroundTask.
+    -   Em C# e C++, o atributo de ponto de entrada deve corresponder ao namespace da tarefa em segundo plano, seguido do nome da classe. Por exemplo: RuntimeComponent1.MyBackgroundTask.
     -   Todo(s) o(s) tipo(s) de gatilho usado(s) com a tarefa também deve(m) ser especificado(s).
     -   O executável NÃO DEVE ser especificado, a não ser que você esteja usando [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) ou [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger).
 
@@ -78,8 +81,8 @@ A ativação da tarefa em segundo plano depende de três coisas:
     Se você seguir este procedimento, e o log de eventos mostrar o gatilho ou ponto de entrada incorreto para a tarefa em segundo plano, é sinal de que o seu aplicativo não está registrando essa tarefa corretamente. Para obter ajuda com essa tarefa, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
     1.  Abra o visualizador de eventos acessando a tela inicial e procurando eventvwr.exe.
-    2.  Vá para **Logs de aplicativos e serviços**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** no Visualizador de eventos.
-    3.  No painel de ações, selecione **modo de exibição**  - &gt; **Mostrar Logs analíticos e depuração** para habilitar o log de diagnóstico.
+    2.   - Vá para **logs de aplicativos e serviços** **Microsoft**  - &gt; **Windows** BackgroundTaskInfrastructurenoVisualizadordeeventos.&gt;  - &gt;
+    3.  No painel Ações, selecione **Exibir**  - &gt; **Mostrar logs analíticos e de depuração** para habilitar o log de diagnóstico.
     4.  Selecione o **Log de diagnósticos** e clique em **Habilitar Log**.
     5.  Agora, tente usar seu aplicativo para registrar e ativar a tarefa em segundo plano de novo.
     6.  Examine os logs de diagnósticos para obter detalhes dos erros. Essas informações incluirão o ponto de entrada registrada para a tarefa em segundo plano.
@@ -101,7 +104,7 @@ Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visua
 -   Se a tarefa em segundo plano exigir acesso à tela de bloqueio, coloque o aplicativo na tela de bloqueio antes de tentar depurar essa tarefa. Para obter informações sobre como especificar opções de manifesto para aplicativos compatíveis com a tela de bloqueio, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
 -   Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [como disparar suspender, continuar e eventos em aplicativos UWP em segundo plano](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015).
+Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano [, consulte como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -110,8 +113,8 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP em segundo plano](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
-* [Analisando a qualidade do código de aplicativos UWP com análise de código do Visual Studio](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [Analisando a qualidade de código dos aplicativos UWP com a análise de código do Visual Studio](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  
 
