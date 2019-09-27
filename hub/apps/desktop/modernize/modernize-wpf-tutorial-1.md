@@ -8,21 +8,18 @@ author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 97488a913605916c067861b5941d7aa127b00917
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: 6a52e12f9d60ee4abb4b1aed3043a69c25845267
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643407"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317102"
 ---
 # <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>Parte 1: Migrar o aplicativo Contoso Expenses para o .NET Core 3
 
 Esta é a primeira parte de um tutorial que demonstra como modernizar um aplicativo de área de trabalho WPF de exemplo chamado contoso despesas. Para obter uma visão geral do tutorial, dos pré-requisitos e das instruções para baixar o aplicativo de exemplo [, consulte o tutorial: Modernizar um aplicativo](modernize-wpf-tutorial.md)do WPF.
   
-Nesta parte do tutorial, você migrará todo o aplicativo de despesas da Contoso da .NET Framework 4.7.2 para o [.NET Core 3](modernize-wpf-tutorial.md#net-core-3). Antes de iniciar esta parte do tutorial, certifique-se de fazer o seguinte:
-
-* [Abra e crie o exemplo ContosoExpenses](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) no Visual Studio 2019.
-* Se você estiver usando uma versão de lançamento do Visual Studio 2019, habilite as versões de visualização do SDK do .NET Core. No Visual Studio, vá para **ferramentas > opções**, digite "visualização" na caixa de pesquisa e selecione **usar visualizações do SDK do .NET Core**. Se você estiver usando uma [versão prévia do Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/), não precisará selecionar essa opção porque as visualizações do .NET Core estão habilitadas por padrão.
+Nesta parte do tutorial, você migrará todo o aplicativo de despesas da Contoso da .NET Framework 4.7.2 para o [.NET Core 3](modernize-wpf-tutorial.md#net-core-3). Antes de iniciar esta parte do tutorial, [abra e crie o exemplo ContosoExpenses](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) no Visual Studio 2019.
 
 > [!NOTE]
 > Para obter mais informações sobre como migrar um aplicativo WPF do .NET Framework para o .NET Core 3, consulte [esta série de Blogs](https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/).
@@ -87,7 +84,7 @@ Para migrar o projeto **ContosoExpenses. Data** para .net Standard:
     </Project>
     ```
 
-4. Clique com o botão direito do mouse no projeto **ContosoExpenses. Data** e escolha recarregar **projeto**.
+4. Clique com o botão direito do mouse no projeto **ContosoExpenses. Data** e escolha **recarregar projeto**.
 
 ## <a name="configure-nuget-packages-and-dependencies"></a>Configurar os pacotes e dependências do NuGet
 
@@ -95,7 +92,7 @@ Ao migrar os projetos **ContosoExpenses. Core** e **ContosoExpenses. Data** nas 
 
 Para configurar os pacotes NuGet para o projeto **ContosoExpenses. Data** :
 
-1. No projeto **ContosoExpenses. Data** , expanda o nó dependências. Observe que a seção **NuGet** está ausente.
+1. No projeto **ContosoExpenses. Data** , expanda o nó **dependências** . Observe que a seção **NuGet** está ausente.
 
     ![Pacotes NuGet](images/wpf-modernize-tutorial/NuGetPackages.png)
 
@@ -115,7 +112,7 @@ Para configurar os pacotes NuGet para o projeto **ContosoExpenses. Data** :
 
 2. No projeto **ContosoExpenses. Data** , exclua o arquivo **Packages. config** .
 
-4. No projeto **ContosoExpenses. Data** , clique com o botão direito do mouse no nó dependências e escolha **gerenciar pacotes NuGet**.
+4. No projeto **ContosoExpenses. Data** , clique com o botão direito do mouse no nó **dependências** e escolha **gerenciar pacotes NuGet**.
 
   ![Gerenciar pacotes NuGet...](images/wpf-modernize-tutorial/ManageNugetNETCORE3.png)
 
@@ -167,7 +164,7 @@ Para configurar os pacotes NuGet para o projeto **ContosoExpenses. Core** :
 
     ![Pacote MvvmLightsLibs](images/wpf-modernize-tutorial/MvvmLightsLibsPackage.png)
 
-6. No projeto **ContosoExpenses. Core** , clique com o botão direito do mouse no nó dependências e escolha **Adicionar referência**.
+6. No projeto **ContosoExpenses. Core** , clique com o botão direito do mouse no nó **dependências** e escolha **Adicionar referência**.
 
 7. Na categoria **projetos > solução** , selecione **ContosoExpenses. Data** e clique em **OK**.
 
@@ -200,7 +197,7 @@ Esse problema está ocorrendo porque o novo formato. csproj introduzido com o .N
     </PropertyGroup>
     ```
 
-3. Clique com o botão direito do mouse no projeto **ContosoExpenses. Core** e escolha recarregar **projeto**.
+3. Clique com o botão direito do mouse no projeto **ContosoExpenses. Core** e escolha **recarregar projeto**.
 
 4. Clique com o botão direito do mouse no projeto **ContosoExpenses. Data** e escolha **descarregar projeto**. Clique com o botão direito do mouse no projeto novamente e escolha **Editar ContosoExpenses. Data. csproj**.
 
@@ -219,7 +216,7 @@ Esse problema está ocorrendo porque o novo formato. csproj introduzido com o .N
     </PropertyGroup>
     ```
 
-6. Clique com o botão direito do mouse no projeto **ContosoExpenses. Data** e escolha recarregar **projeto**.
+6. Clique com o botão direito do mouse no projeto **ContosoExpenses. Data** e escolha **recarregar projeto**.
 
 ## <a name="add-the-windows-compatibility-pack"></a>Adicionar o pacote de compatibilidade do Windows
 
@@ -269,7 +266,7 @@ Agora que os projetos estão sendo compiladas com êxito, você está pronto par
     </ItemGroup>
     ```
 
-6. Clique com o botão direito do mouse no projeto **ContosoExpenses. Core** e escolha recarregar **projeto**.
+6. Clique com o botão direito do mouse no projeto **ContosoExpenses. Core** e escolha **recarregar projeto**.
 
 7. Para atribuir o contoso. ico ao aplicativo, clique com o botão direito do mouse no projeto **ContosoExpenses. Core** e escolha **Propriedades**. Na página aberta, clique na lista suspensa em **ícone** e selecione `Images\contoso.ico`.
 
