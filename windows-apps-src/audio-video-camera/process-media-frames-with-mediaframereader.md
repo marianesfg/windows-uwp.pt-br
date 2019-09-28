@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f2442647d39c4142b50c0a2a9b1fbc2c0eb66ca
-ms.sourcegitcommit: be519a7ecff53696b853754c879db32be9a53289
+ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69544921"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339757"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -37,7 +37,7 @@ Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que s
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
-4.  Para acessar a biblioteca de Imagens e Vídeos, marque as caixas da **Biblioteca de imagens** e da **Biblioteca de vídeos**.
+4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
 
 O código de exemplo deste artigo usa APIs dos namespaces a seguir, além dos incluídos pelo modelo de projeto padrão.
 
@@ -48,7 +48,7 @@ Muitos aplicativos que processam quadros de mídia precisam obter quadros de vá
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Você também pode criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) usando [**DeviceInformation.** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) createassister e o valor retornado de [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para receber notificações quando os grupos de origem do quadro disponíveis no dispositivo alterações, como quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Você também pode criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) usando [**DeviceInformation. createassister**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) e o valor retornado de [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para receber notificações quando os grupos de origem do quadro disponíveis no dispositivo alterações, como quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Um [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tem uma coleção de objetos [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que descrevem as origens de quadro incluídas no grupo. Depois de recuperar os grupos de origens de quadro disponíveis no dispositivo, você pode selecionar o grupo que expõe as origens nas quais você está interessado.
 
@@ -129,7 +129,7 @@ Agora é hora de implementar o manipulador de eventos **FrameArrived**. Quando o
 
 O controle **Image** só pode exibir imagens em formato BRGA8 com um valor pré-multiplicado ou nenhum alfa. Se o quadro de chegada não estiver nesse formato, o método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) será usado para converter o bitmap de software no formato correto.
 
-Em seguida, o método [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange?redirectedfrom=MSDN#System_Threading_Interlocked_Exchange__1___0____0_) é usado para trocar a referência do bitmap de chegada pelo bitmap de buffer de fundo. Esse método troca essas referências em uma operação atômica thread-safe. Após a troca, a imagem antiga do buffer de fundo, agora na variável *softwareBitmap*, é descartada para limpar seus recursos.
+Em seguida, o método [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange#System_Threading_Interlocked_Exchange__1___0____0_) é usado para trocar a referência do bitmap de chegada pelo bitmap de buffer de fundo. Esse método troca essas referências em uma operação atômica thread-safe. Após a troca, a imagem antiga do buffer de fundo, agora na variável *softwareBitmap*, é descartada para limpar seus recursos.
 
 Em seguida, o [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) associado ao elemento **Image** é usado para criar uma tarefa que será executada no thread da interface do usuário chamando [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync). Como as tarefas assíncronas serão executadas dentro da tarefa, a expressão lambda transmitida para **RunAsync** é declarada com a palavra-chave *async*.
 
@@ -169,7 +169,7 @@ A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 ## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>Usar MultiSourceMediaFrameReader para obter quadros correlacionados no tempo de várias fontes
 A partir do Windows 10, versão 1607, é possível usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) para receber quadros correlacionados no tempo de várias fontes. Essa API facilita a realização do processamento que requer quadros de vários fontes que foram tomados em estreita proximidade temporal, como o uso da classe [**DepthCorrelatedCoordinateMapper**](https://docs.microsoft.com/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper). Uma limitação do uso desse novo método é que os eventos de chegada de quadros só são gerados na taxa de origem de captura mais lenta. Quadros adicionais de fontes mais rápidas serão eliminados. Além disso, como o sistema espera que os quadros venham de diferentes fontes em taxas diferentes, ele não reconhece automaticamente se uma fonte parou de gerar quadros completamente. O exemplo de código dessa seção mostra como usar um evento para criar sua própria lógica de tempo limite que é invocada se quadros correlacionados não chegarem dentro de um limite de tempo definido pelo aplicativo.
 
-As etapas para usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) são semelhantes às etapas para usar [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) descritas anteriormente neste artigo. Este exemplo usará uma fonte de cor e uma fonte de profundidade. Declare algumas variáveis de cadeia de caracteres para armazenar IDs de fonte de quadro de mídia que serão usadas para selecionar quadros de cada fonte. Em seguida, declare um [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim?view=netframework-4.7), um [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource?redirectedfrom=MSDN) e um [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler?redirectedfrom=MSDN) que serão usados para implementar a lógica de tempo limite do exemplo. 
+As etapas para usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) são semelhantes às etapas para usar [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) descritas anteriormente neste artigo. Este exemplo usará uma fonte de cor e uma fonte de profundidade. Declare algumas variáveis de cadeia de caracteres para armazenar IDs de fonte de quadro de mídia que serão usadas para selecionar quadros de cada fonte. Em seguida, declare um [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim), um [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource) e um [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler) que serão usados para implementar a lógica de tempo limite do exemplo. 
 
 [!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
 
@@ -187,7 +187,7 @@ Após inicializar o objeto **MediaCapture**, recupere os objetos [**MediaFrameSo
 
 Crie e inicialize o **MultiSourceMediaFrameReader** chamando [**CreateMultiSourceFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createmultisourceframereaderasync) e passando uma matriz de fontes de quadro que usará o leitor. Registre um manipulador de eventos para o evento [**FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.FrameArrived). Este exemplo cria uma instância da classe auxiliar **FrameRenderer**, descrita anteriormente neste artigo, para renderizar quadros para um controle **Image**. Inicie o leitor de quadros chamando [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.StartAsync).
 
-Registre um manipulador de eventos para o evento **CorellationFailed** declarado anteriormente no exemplo. Sinalizaremos esse evento se uma das fontes de quadro de mídia sendo utilizada parar de gerar quadros. Por fim, chame [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run?redirectedfrom=MSDN#System_Threading_Tasks_Task_Run_System_Action_) para chamar o método auxiliar de tempo limite, **NotifyAboutCorrelationFailure**, em uma conversa separada. A implementação desse método é mostrada posteriormente neste artigo.
+Registre um manipulador de eventos para o evento **CorellationFailed** declarado anteriormente no exemplo. Sinalizaremos esse evento se uma das fontes de quadro de mídia sendo utilizada parar de gerar quadros. Por fim, chame [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run#System_Threading_Tasks_Task_Run_System_Action_) para chamar o método auxiliar de tempo limite, **NotifyAboutCorrelationFailure**, em uma conversa separada. A implementação desse método é mostrada posteriormente neste artigo.
 
 [!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
 
@@ -195,7 +195,7 @@ O evento **FrameArrived** é acionado sempre que um novo quadro está disponíve
 
 Obtenha o [**MultiSourceMediaFrameReference**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference) associado ao evento chamando [**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.TryAcquireLatestFrame). Obtenha o **MediaFrameReference** associado a cada fonte de quadro de mídia chamando [**TryGetFrameReferenceBySourceId**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference.trygetframereferencebysourceid), passando as cadeias de caracteres de ID armazenadas quando o leitor de quadros foi inicializado.
 
-Chame o método [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set?redirectedfrom=MSDN#System_Threading_ManualResetEventSlim_Set) do objeto **ManualResetEventSlim** para sinalizar que os quadros chegaram. Verificaremos esse evento no método **NotifyCorrelationFailure** que está sendo executado em uma conversa separada. 
+Chame o método [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set#System_Threading_ManualResetEventSlim_Set) do objeto **ManualResetEventSlim** para sinalizar que os quadros chegaram. Verificaremos esse evento no método **NotifyCorrelationFailure** que está sendo executado em uma conversa separada. 
 
 Por fim, execute qualquer processamento nos quadros de mídia correlacionados no tempo. Este exemplo simplesmente exibe o quadro da fonte de profundidade.
 

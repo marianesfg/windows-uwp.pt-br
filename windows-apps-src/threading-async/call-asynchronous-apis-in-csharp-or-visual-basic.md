@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, assíncrona
 ms.localizationpriority: medium
-ms.openlocfilehash: db0e3064cc64e6ffbafa50d045ced020ad30b460
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 92cded952f1d4d80290a121d038c57c356e5e206
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371538"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340544"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Chamar APIs assíncronas no Visual Basic ou C#
 
@@ -38,7 +38,7 @@ O exemplo a seguir obtém as listas de postagens de um blog chamando o método a
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
 
-Neste tópico, não entraremos em muitos detalhes sobre o que o compilador faz com o operador de **espera**, mas examinemos o que seu aplicativo faz para permanecer assíncrono e responsivo. Considere o que acontece quando você usa o código síncrono. Por exemplo, suponha que exista um método chamado `SyndicationClient.RetrieveFeed` que seja síncrono. (Não há nenhum método desse tipo, mas imagine que há.) Se seu aplicativo inclua a linha `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, em vez de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, poderia interromper a execução do aplicativo até que o valor de retorno `RetrieveFeed` está disponível. Além disso, enquanto seu aplicativo aguarda a conclusão do método, ele não pode responder a nenhum outro evento, como outro evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Ou seja, seu aplicativo fica bloqueado até que `RetrieveFeed` seja retornado.
+Neste tópico, não entraremos em muitos detalhes sobre o que o compilador faz com o operador de **espera**, mas examinemos o que seu aplicativo faz para permanecer assíncrono e responsivo. Considere o que acontece quando você usa o código síncrono. Por exemplo, suponha que exista um método chamado `SyndicationClient.RetrieveFeed` que seja síncrono. (Esse método não existe, mas imagine que há.) Se seu aplicativo incluiu a linha `SyndicationFeed feed = client.RetrieveFeed(feedUri)`, em vez de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, a execução do aplicativo será interrompida até que o valor de retorno de `RetrieveFeed` esteja disponível. Além disso, enquanto seu aplicativo aguarda a conclusão do método, ele não pode responder a nenhum outro evento, como outro evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Ou seja, seu aplicativo fica bloqueado até que `RetrieveFeed` seja retornado.
 
 Mas, se você chamar `client.RetrieveFeedAsync`, o método iniciará a recuperação e será retornado imediatamente. Quando você usa **espera** com [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), o aplicativo sai temporariamente do manipulador de eventos. Dessa forma, ele pode processar outros eventos enquanto **RetrieveFeedAsync** é executado de maneira assíncrona. Isso mantém o aplicativo responsivo para o usuário. Quando **RetrieveFeedAsync** é finalizado e [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) está disponível, o aplicativo basicamente volta a entrar no manipulador de eventos de onde saiu, depois de `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)`, e conclui o restante do método.
 
@@ -51,10 +51,10 @@ Se você tiver seguido o link para [**RetrieveFeedAsync**](https://docs.microsof
 
 Ao usar um método assíncrono, você pode examinar a assinatura para ver o que receberá depois de aguardar o valor retornado pelo método. Todas as APIs assíncronas na UWP retornam um dos seguintes tipos:
 
--   [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)
--   [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)
+-   [**IAsyncOperation @ no__t-2TResult @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)
+-   [**IAsyncOperationWithProgress @ no__t-2TResult, TProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)
 -   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)
--   [**IAsyncActionWithProgress&lt;TProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)
+-   [**IAsyncActionWithProgress @ no__t-2TProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)
 
 O tipo de resultado de um método assíncrono é o mesmo que o parâmetro do tipo `      TResult`. Os tipos sem um `TResult` não têm um resultado. Você pode pensar no resultado como sendo **nulo**. No Visual Basic, um procedimento [Sub](https://docs.microsoft.com/dotnet/articles/visual-basic/programming-guide/language-features/procedures/sub-procedures) é equivalente a um método com um tipo de retorno **nulo**.
 
@@ -62,15 +62,15 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 
 | Método assíncrono                                                                           | Tipo de retorno                                                                                                                                        | Tipo de resultado                                       |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| [**SyndicationClient.RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)                                 | [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) |
-| [**FileOpenPicker.PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) | [**IAsyncOperation&lt;StorageFile&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                                                                                | [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)          |
-| [**XmlDocument.SaveToFileAsync**](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument.savetofileasync)                 | [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)                                                                                                           | **void**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.loadasync)               | [**IAsyncActionWithProgress&lt;UInt64&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)                                                                   | **void**                                          |
-| [**DataReader.LoadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.loadasync)                            | [**DataReaderLoadOperation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReaderLoadOperation), um personalizado resulta de classe que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                     |
+| [**SyndicationClient.RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)     | [**IAsyncOperationWithProgress @ no__t-2SyndicationFeed, RetrievalProgress @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)                                 | [**SyndicationFeed**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) |
+| [**FileOpenPicker. PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) | [**IAsyncOperation @ no__t-2StorageFile @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                                                                                | [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)          |
+| [**XmlDocument. SaveToFileAsync**](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument.savetofileasync)                 | [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction)                                                                                                           | **void**                                          |
+| [**InkStrokeContainer. LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.loadasync)               | [**IAsyncActionWithProgress @ no__t-2UInt64 @ no__t-3**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)                                                                   | **void**                                          |
+| [**DataReader. LoadAsync**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.loadasync)                            | [**DataReaderLoadOperation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReaderLoadOperation), uma classe de resultados personalizada que implementa **IAsyncOperation @ no__t-3UInt32 @ no__t-4** | [**UInt32**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)                     |
 
  
 
-Métodos assíncronos que são definidos em [ **.NET para aplicativos UWP**](https://dotnet.microsoft.com/apps/desktop) têm o tipo de retorno [**Tarefa**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task?redirectedfrom=MSDN) ou [**Task&lt;TResult&gt;** ](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1?redirectedfrom=MSDN). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+Métodos assíncronos que são definidos em [ **.NET para aplicativos UWP**](https://dotnet.microsoft.com/apps/desktop) têm o tipo de retorno [**Tarefa**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) ou [**Task&lt;TResult&gt;** ](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 ## <a name="handling-errors"></a>Tratando erros
 
@@ -79,7 +79,7 @@ Ao usar o operador de **espera** para recuperar seus resultados de um método as
 
 Quando métodos assíncronos chamam outros métodos assíncronos, qualquer método assíncrono que resulta numa exceção será propagado para os métodos externos. Isso significa que você pode colocar um bloco **tentativa/obtenção** no método mais externo para encontrar erros para os métodos assíncronos aninhados. Novamente, isso é semelhante à maneira como você obtém exceções para métodos síncronos. Porém, não é possível usar **espera** no bloco **obtenção**.
 
-**Dica**  começando com C# no Microsoft Visual Studio 2005, você pode usar **await** no **catch** bloco.
+**Tip**  Starting com C# no Microsoft Visual Studio 2005, você pode usar **Await** no bloco **Catch** .
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 

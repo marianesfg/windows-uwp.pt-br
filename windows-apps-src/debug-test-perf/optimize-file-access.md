@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc42fecf0a29784c8abe6e61a328d6e5024cc532
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 176791388bc0d0a5ac33659f6744852a2c857187
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362265"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339597"
 ---
 # <a name="optimize-file-access"></a>Otimizar o acesso a arquivos
 
@@ -133,7 +133,7 @@ Se você estiver realizando várias operações em objetos Windows.Storage, como
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Buffer entre fluxos UWP e .NET
 
-Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) ou [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream)) em fluxo .NET ([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream?redirectedfrom=MSDN)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornece métodos de extensão que permitem converter entre tipos de fluxo do .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN).
+Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) ou [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream)) em fluxo .NET ([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornecem métodos de extensão que permitem a conversão entre os tipos de fluxo .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions).
 
 Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de tempo de execução associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
 
@@ -194,9 +194,9 @@ Esse comportamento de buffer padrão é desejável na maioria dos cenários em q
 
 ### <a name="working-with-large-data-sets"></a>Trabalhando com grandes conjuntos de dados
 
-Quando estiver lendo ou gravando conjuntos de dados maiores, você talvez consiga aumentar o rendimento de sua leitura ou gravação fornecendo um tamanho de buffer maior para os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN). Isso dá ao adaptador de fluxo um tamanho de buffer interno maior. Por exemplo, na transferência do fluxo de um arquivo grande para um analisador XML, o analisador pode executar várias leituras pequenas e sequenciais do fluxo. Um buffer grande pode reduzir a quantidade de chamadas para o fluxo UWP subjacente e impulsionar o desempenho.
+Quando estiver lendo ou gravando conjuntos de dados maiores, você talvez consiga aumentar o rendimento de sua leitura ou gravação fornecendo um tamanho de buffer maior para os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0). Isso dá ao adaptador de fluxo um tamanho de buffer interno maior. Por exemplo, na transferência do fluxo de um arquivo grande para um analisador XML, o analisador pode executar várias leituras pequenas e sequenciais do fluxo. Um buffer grande pode reduzir a quantidade de chamadas para o fluxo UWP subjacente e impulsionar o desempenho.
 
-> **Observação**    você deve ter cuidado ao definir um tamanho de buffer que é maior do que aproximadamente 80 KB, pois isso pode causar fragmentação no heap do coletor de lixo (consulte [melhorar o desempenho de coleta de lixo](improve-garbage-collection-performance.md) ). O exemplo de código a seguir cria um adaptador de fluxo gerenciado com um buffer de 81.920 bytes.
+> **Observe**   você deve ter cuidado ao definir um tamanho de buffer maior que aproximadamente 80 KB, pois isso pode causar fragmentação no heap do coletor de lixo (consulte [melhorar o desempenho da coleta de lixo](improve-garbage-collection-performance.md)). O exemplo de código a seguir cria um adaptador de fluxo gerenciado com um buffer de 81.920 bytes.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -208,7 +208,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-Os métodos [**Stream.CopyTo**](https://docs.microsoft.com/dotnet/api/system.io.stream.copyto?redirectedfrom=MSDN#overloads) e [**CopyToAsync**](https://docs.microsoft.com/dotnet/api/system.io.stream.copytoasync?redirectedfrom=MSDN#overloads) também alocam um buffer local para copiar entre os fluxos. Como com o método de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), você pode ser capaz de obter melhor desempenho para copias de fluxo grandes anulando o tamanho de buffer padrão. O exemplo de código a seguir demonstra a alteração no tamanho de buffer padrão de uma chamada **CopyToAsync**.
+Os métodos [**Stream.CopyTo**](https://docs.microsoft.com/dotnet/api/system.io.stream.copyto) e [**CopyToAsync**](https://docs.microsoft.com/dotnet/api/system.io.stream.copytoasync) também alocam um buffer local para copiar entre os fluxos. Como com o método de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), você pode ser capaz de obter melhor desempenho para copias de fluxo grandes anulando o tamanho de buffer padrão. O exemplo de código a seguir demonstra a alteração no tamanho de buffer padrão de uma chamada **CopyToAsync**.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -236,6 +236,6 @@ Quando você está trabalhando com uma grande quantidade de fluxos simultaneamen
 
 Você também pode querer evitar o buffer se preferir leituras e gravações de baixa latência e não quiser ler em blocos grandes do fluxo UWP adjacente. Por exemplo, leituras e gravações de baixa latência podem ser desejáveis, se você está usando o fluxo para comunicações em rede.
 
-Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io?redirectedfrom=MSDN), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
+Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/en-us/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) e [**AsStream**](https://docs.microsoft.com/en-us/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
 
 

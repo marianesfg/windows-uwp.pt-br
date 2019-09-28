@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, dados, banco de dados, relacional, tabelas, sqlite
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ce2bbb1b72eaa33001e86c9aa81b334e338cb53
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 80cf97a7336fe912baf5cda151560dacfa12c2e2
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362606"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339719"
 ---
 # <a name="data-access"></a>Acesso a dados
 
@@ -20,7 +20,7 @@ Você pode armazenar dados no dispositivo do usuário utilizando um banco de dad
 | Tópico | Descrição|
 |-------|------------|
 | [Usar um banco de dados do SQLite em um aplicativo UWP](sqlite-databases.md) | Mostra como usar o SQLite para armazenar e recuperar dados em um banco de dados leve nos dispositivos dos usuários. SQLite é um mecanismo de banco de dados sem servidor inserido. |
-| [Usar um banco de dados do SQL Server em um aplicativo UWP](sql-server-databases.md) | Mostra como conectar-se diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN). Nenhuma camada de serviço é necessária. |
+| [Usar um banco de dados do SQL Server em um aplicativo UWP](sql-server-databases.md) | Mostra como conectar-se diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient). Nenhuma camada de serviço é necessária. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

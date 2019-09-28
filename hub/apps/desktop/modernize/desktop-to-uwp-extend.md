@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f1cc0e932a1dd413ed94e1fe5d9a3d1e6b0870c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 7359d28d968a2948e9f4049e2acc3c655edcfcb3
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393575"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339207"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Estenda seu aplicativo de desktop com componentes UWP modernos
 
@@ -175,7 +175,7 @@ Você também pode abrir o **package.appxmanifest** no designer, escolher a guia
 
 ### <a name="start-the-uwp-app"></a>Iniciar o aplicativo UWP
 
-Primeiro, em seu aplicativo da área de trabalho, crie um [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) que inclua o nome de protocolo e os parâmetros que você deseja transmitir para o aplicativo UWP. Em seguida, chame o método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
+Primeiro, em seu aplicativo da área de trabalho, crie um [Uri](https://docs.microsoft.com/dotnet/api/system.uri) que inclua o nome de protocolo e os parâmetros que você deseja transmitir para o aplicativo UWP. Em seguida, chame o método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
 
 ```csharp
 
@@ -220,7 +220,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-No code-behind da sua página XAML, substitua ``OnNavigatedTo`` o método para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
+No código por trás da sua página XAML, substitua o método ``OnNavigatedTo`` para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -297,7 +297,7 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
 
 Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Essa marcação pressupõe que o nome do executável para seu aplicativo UWP é `ShareTarget.exe`.
 
-Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app. Neste exemplo, estamos tornando o aplicativo de área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) um destino de compartilhamento para imagens de `Bitmap` bitmap, portanto, especificamos para o tipo de arquivo com suporte.
+Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app. Neste exemplo, estamos tornando o aplicativo de área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) um destino de compartilhamento para imagens de bitmap, portanto, especificamos `Bitmap` para o tipo de arquivo com suporte.
 
 <a id="override" />
 
@@ -366,7 +366,7 @@ Modifique seu aplicativo de área de trabalho para localizar e processar o arqui
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Para instâncias do aplicativo de área de trabalho que já estão abertas pelo usuário, podemos também manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) e passar o caminho para o local do arquivo. Dessa forma, qualquer instância aberta do aplicativo da área de trabalho mostrará a foto compartilhada.
+Para instâncias do aplicativo de área de trabalho que já estão abertas pelo usuário, podemos também manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) e passar o caminho para o local do arquivo. Dessa forma, qualquer instância aberta do aplicativo da área de trabalho mostrará a foto compartilhada.
 
 ```csharp
 ...

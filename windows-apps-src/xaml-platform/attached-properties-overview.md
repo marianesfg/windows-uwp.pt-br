@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: ffb71812e192c8ca77d8f117a98e032f9e9814c9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d3892857baa29e2275845cb077e5ad9ea3166ada
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366480"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340606"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -27,7 +27,7 @@ Consideramos que você entende o conceito básico das propriedades de dependênc
 
 ## <a name="attached-properties-in-xaml"></a>Propriedades anexadas em XAML
 
-Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyProvider.PropertyName_. Veja um exemplo de como é possível definir [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) em XAML.
+Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyProvider.PropertyName_. Veja um exemplo de como é possível definir [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) em XAML.
 
 ```xaml
 <Canvas>
@@ -36,13 +36,13 @@ Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyPr
 ```
 
 > [!NOTE]
-> Estamos simplesmente usando [ **Canvas. Left** ](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) como exemplo de um propriedade anexada sem totalmente explicando por que usá-lo. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) ou [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml).
+> Estamos apenas usando [**Canvas. Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) como uma propriedade anexada de exemplo sem explicar totalmente por que você a usaria. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) ou [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml).
 
 ## <a name="why-use-attached-properties"></a>Por que usar propriedades anexadas?
 
 As propriedades anexadas são uma maneira de evitar as convenções de codificação que podem impedir que objetos diferentes em um relacionamento transmitam informações entre si em tempo de execução. É certamente possível colocar as propriedades em uma classe base comum para que cada objeto possa simplesmente obter e definir essa propriedade. Mas por fim o grande número de cenários em que você pode querer fazer isso inchará suas classes base com propriedades compartilháveis. Isso pode inclusive introduzir casos em que talvez haja duas centenas de descendentes tentando usar uma propriedade. Isso não é um ótimo design de classe. Para resolver isso, o conceito de propriedade anexada habilita um objeto para atribuir um valor a uma propriedade cuja estrutura de classe não define. A classe de definição pode ler o valor de objetos filho em tempo de execução depois que vários objetos são criados em uma árvore de objetos.
 
-Por exemplo, elementos filho podem usar propriedades anexadas para informar o elemento pai sobre o modo como são apresentados na interface do usuário. Esse é o caso com a propriedade anexada [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8). **Canvas.Left** é criada como uma propriedade anexada porque ela define elementos contidos dentro de um elemento [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), em vez de dentro da **Canvas** propriamente dita. Qualquer elemento filho possível então usa **Canvas.Left** e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) para especificar seu deslocamento de layout dentro do pai do contêiner de layout **Canvas**. As propriedades anexadas possibilitam que isso funcione sem desorganizar o modelo de objeto do elemento base com muitas propriedades que se aplicam somente a um dos muitos contêineres de layout possíveis. Em vez disso, muitos contêineres de layout implementam seu próprio conjunto de propriedades anexadas.
+Por exemplo, elementos filho podem usar propriedades anexadas para informar o elemento pai sobre o modo como são apresentados na interface do usuário. Esse é o caso com a propriedade anexada [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left). **Canvas.Left** é criada como uma propriedade anexada porque ela define elementos contidos dentro de um elemento [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), em vez de dentro da **Canvas** propriamente dita. Qualquer elemento filho possível então usa **Canvas.Left** e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) para especificar seu deslocamento de layout dentro do pai do contêiner de layout **Canvas**. As propriedades anexadas possibilitam que isso funcione sem desorganizar o modelo de objeto do elemento base com muitas propriedades que se aplicam somente a um dos muitos contêineres de layout possíveis. Em vez disso, muitos contêineres de layout implementam seu próprio conjunto de propriedades anexadas.
 
 Para implementar a propriedade anexada, a classe [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) define um campo estático [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) chamado [**Canvas.LeftProperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.leftproperty). Em seguida, **Canvas** fornece os métodos [**SetLeft**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.setleft) e [**GetLeft**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas.getleft) como acessadores públicos para a propriedade anexada, para habilitar a configuração de XAML e o acesso do valor de tempo de execução. Para XAML e para o sistema de propriedades de dependência, esse conjunto de APIs satisfaz um padrão que habilita uma sintaxe XAML específica para propriedades anexadas e armazena o valor no repositório de propriedades de dependência.
 
@@ -120,18 +120,18 @@ Para obter exemplos de código sobre como definir propriedades anexadas personal
 
 O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de identificação. Ocorrem ambiguidades quando uma sintaxe ou situação considera que o ponto tem outro significado. Por exemplo, o ponto é considerado como a passagem de um modelo-objeto para um caminho de associação. Na maioria dos casos que envolvem essa ambiguidade, há uma sintaxe especial para uma propriedade anexada que habilita o ponto interno a ser analisado como o separador _proprietário_ **.** _propriedade_ de uma propriedade anexada.
 
-- Para especificar uma propriedade anexada como parte de um caminho de destino para uma animação, coloque o nome da propriedade anexada entre parênteses ("()") — por exemplo, "(Canvas.Left)". Para obter mais informações, consulte [Sintaxe de caminho e propriedade](property-path-syntax.md).
+- Para especificar uma propriedade anexada como parte de um caminho de destino para uma animação, coloque o nome da propriedade anexada entre parênteses ("()") — por exemplo, "(Canvas.Left)". Para obter mais informações, consulte [Sintaxe do Property-path](property-path-syntax.md).
 
 > [!WARNING]
-> Uma limitação existente da implementação do XAML de tempo de execução do Windows é que você não pode animar uma propriedade anexada personalizada.
+> Uma limitação existente da implementação Windows Runtime XAML é que você não pode animar uma propriedade anexa personalizada.
 
-- Para especificar uma propriedade anexada como a propriedade de destino para uma referência de recurso de um arquivo de recurso para **X:UID**, use uma sintaxe especial que injeta um estilo de código, totalmente qualificado **usando:** declaração dentro de os colchetes ("\[\]"), para criar uma quebra de escopo deliberada. Por exemplo, supondo que existe um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que tem como alvo o **Canvas. Top** valor naquela instância é "título.\[ Using:Windows.UI.XAML.Controls\]Canvas. Top ". Para obter mais informações sobre arquivos de recurso e XAML, consulte [guia de início rápido: Traduzir os recursos de interface do usuário](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
+- Para especificar uma propriedade anexada como a propriedade de destino para uma referência de recurso de um arquivo de recurso para **x:Uid**, use uma sintaxe especial que injeta um estilo de código, totalmente qualificado **usando:** declaração dentro de colchetes ("\[ @ no__t-3"), para Crie uma quebra de escopo deliberada. Por exemplo, supondo que exista um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que tem como alvo o valor **Canvas. Top** nessa instância é "Title. \[using: Windows.UI.XAML.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recursos e XAML, consulte [Quickstart: Convertendo recursos de interface do usuário @ no__t-0.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [Propriedades anexadas personalizadas](custom-attached-properties.md)
 - [Visão geral das propriedades de dependência](dependency-properties-overview.md)
 - [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-- [Guia de início rápido: Traduzir os recursos de interface do usuário](https://docs.microsoft.com/previous-versions/windows/apps/hh943060(v=win.10))
+- [Início Rápido: Convertendo recursos de interface do usuário @ no__t-0
 - [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)
 - [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)

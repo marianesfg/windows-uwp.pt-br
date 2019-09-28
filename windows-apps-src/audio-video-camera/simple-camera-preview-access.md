@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fba78a619f18d7da2e190758d73ac7a56b12fb9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1f35cbab511912bd9cf6616330f3e9e7737189fd
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360662"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339744"
 ---
 # <a name="display-the-camera-preview"></a>Exibir a visualização da câmera
 
@@ -40,7 +40,7 @@ Use um [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.C
 
 ## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar o MediaCapture para iniciar o fluxo de visualização
 
-O objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) é a interface do seu aplicativo para a câmera do dispositivo. Esta classe é um membro do namespace Windows.Media.Capture. O exemplo deste artigo também usa APIs dos namespaces [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) e [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks?redirectedfrom=MSDN), além daqueles incluídos pelo modelo de projeto padrão.
+O objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) é a interface do seu aplicativo para a câmera do dispositivo. Esta classe é um membro do namespace Windows.Media.Capture. O exemplo deste artigo também usa APIs dos namespaces [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) e [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks), além daqueles incluídos pelo modelo de projeto padrão.
 
 Adicione usando diretivas para incluir os seguintes namespaces no arquivo. cs da sua página.
 
@@ -99,5 +99,5 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Obtenha um quadro de visualização](get-a-preview-frame.md)
+* [Foto básica, vídeo e captura de áudio com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Obter um quadro de visualização](get-a-preview-frame.md)

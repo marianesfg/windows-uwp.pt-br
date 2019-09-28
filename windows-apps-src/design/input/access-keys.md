@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b27c5a0446bc9b329b09855f06d58a13723ece1c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f73bb15d2746dbac4403ca6daffb603588cf7a58
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317380"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340097"
 ---
 # <a name="access-keys"></a>Teclas de acesso
 
@@ -44,7 +44,7 @@ Os aplicativos do Microsoft Office oferecem suporte extensivo para as teclas de 
 
 ![Selos da Dica de Tecla para teclas de acesso no Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-_Notificações da dica de tecla para chaves de acesso no Microsoft Word_
+_Notificações KeyTip para chaves de acesso no Microsoft Word_
 
 Para adicionar uma tecla de acesso a um controle, use a **propriedade AccessKey**. O valor desta propriedade especifica a sequência de teclas de acesso, o atalho (caso seja um único alfanumérico) e a Dica de Tecla.
 
@@ -72,11 +72,9 @@ Por exemplo, o Microsoft Word fornece dois âmbitos para as teclas de acesso: um
 
 As imagens a seguir demonstram os dois âmbitos de teclas de acesso no Word. A primeira mostra as teclas de acesso primárias que permitem que um usuário selecione a aba e outros comandos de alto nível, e a segunda mostra as teclas de acesso secundárias para a aba Página Inicial.
 
-![Chaves de acesso primária no Microsoft Word](images/accesskeys/primary-access-keys-word.png)
-_chaves de acesso primária no Microsoft Word_
+chaves de acesso ![Primary nas chaves de acesso primário do Microsoft Word @ no__t-1_no Microsoft Word_
 
-![Chaves de acesso secundária no Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-_chaves de acesso secundária no Microsoft Word_
+chaves de acesso ![Secondary nas_chaves de acesso secundárias_ do Microsoft Word @ no__t-1 no Microsoft Word
 
 As teclas de acesso podem ser duplicadas para elementos de âmbitos diferentes. No exemplo anterior, "2" é a tecla de acesso para Desfazer no âmbito principal, e também para "Itálico" no âmbito secundário.
 
@@ -110,11 +108,11 @@ Aqui, mostramos como definir o escopo das teclas de acesso.
 
 ![Teclas de acesso primárias para o CommandBar](images/accesskeys/primary-access-keys-commandbar.png)
 
-_Escopo de CommandBar primário e chaves de acesso com suporte_
+_Escopo principal de CommandBar e chaves de acesso com suporte_
 
 ![Teclas de acesso secundárias para o CommandBar](images/accesskeys/secondary-access-keys-commandbar.png)
 
-_Escopo de CommandBar secundário e chaves de acesso com suporte_
+_Escopo secundário de CommandBar e chaves de acesso com suporte_
 
 ### <a name="windows-10-creators-update-and-older"></a>Atualização do Windows 10 para Criadores e anteriores
 
@@ -233,13 +231,13 @@ Recursos para cada idioma são adicionados às respectivas pastas de Caracteres 
 
 ![Pastas de caracteres dos recursos em inglês e espanhol](images/accesskeys/resource-string-folders.png)
 
-_Pastas de cadeia de caracteres de recurso em inglês e espanhol_
+_Pastas de cadeia de caracteres de recursos em inglês e espanhol_
 
 As teclas de acesso para diferentes regiões são especificadas no arquivo resources.resw do projeto:
 
 ![Especificar a propriedade AccessKey especificada no arquivo resources.resw](images/accesskeys/resource-resw-file.png)
 
-_Especifique a propriedade AccessKey especificada no arquivo resw_
+_Especifique a propriedade AccessKey especificada no arquivo Resources. resw_
 
 Para obter mais informações, consulte [Traduzindo recursos da interface de usuário ](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))
 
@@ -251,21 +249,21 @@ Normalmente, a localização padrão da Dica de Tecla é suficiente e oferece su
 
 ![Exemplo de posicionamento automático da Dica de Tecla](images/accesskeys/auto-keytip-position.png)
 
-_Exemplo de posicionamento automático de dica de tecla_
+_Exemplo de posicionamento de dica de chave automática_
 
 No entanto, caso precise de um controle maior sobre o posicionamento da Dica de Tecla, recomendamos o seguinte:
 
-1.  **O princípio de associação óbvia**: O usuário pode associar o controle com a dica de tecla facilmente.
+1.  **Princípio de associação óbvio**: O usuário pode associar o controle com a dica de chave facilmente.
 
     a.  A Dica de Tecla deve estar **próxima** ao elemento que possui a tecla de acesso (o proprietário).  
     b.  A Dica de Tecla deve **evitar cobrir elementos habilitados** que possuam teclas de acesso.   
     c.  Se uma Dica de Tecla não puder ser colocada perto do seu proprietário, ela deve sobrepô-lo. 
 
-2.  **Detectabilidade**: O usuário pode descobrir rapidamente o controle com a dica de tecla.
+2.  **Capacidade de descoberta**: O usuário pode descobrir o controle com a dica de chave rapidamente.
 
     a.  A Dica de Tecla nunca **sobrepõe** outras Dicas de Tecla.  
 
-3.  **Fácil de verificação:** O usuário pode ler as dicas de tecla facilmente.
+3.  **Digitalização fácil:** O usuário pode rapidamente obter as dicas-chave facilmente.
 
     a.  As Dicas de Tecla devem estar **alinhadas** entre si e com o elemento de interface do usuário.
     b.  As Dicas de Tecla devem ser **agrupadas** o máximo possível. 
@@ -274,7 +272,7 @@ No entanto, caso precise de um controle maior sobre o posicionamento da Dica de 
 
 Use a propriedade **KeyTipPlacementMode** para personalizar o posicionamento da Dica de Tecla por elemento ou por grupo.
 
-Os modos de posicionamento são: Superior, inferior, direita, esquerda, oculto, centro e automático.
+Os modos de posicionamento são: Superior, inferior, direita, esquerda, oculto, centralizado e automático.
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-postion-modes.png)
 
@@ -303,7 +301,7 @@ A propriedade KeyTipHorizontalOffset indica o quanto mover a Dica de Tecla para 
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-offsets.png)
 
-_Definir os deslocamentos horizontais e verticais para uma dica de tecla_
+_Definir deslocamentos verticais e horizontais para uma dica de chave_
 
 ``` xaml
 <Button
@@ -320,7 +318,7 @@ A localização de uma Dica de Tecla é ajustada automaticamente com base nas bo
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytips-screen-edge.png)
 
-_A dica de tecla reposicionar automaticamente em si faz com que a borda da tela_
+_A borda da tela faz com que a dica de chave seja automaticamente reposicionada_
 
 ## <a name="key-tip-style"></a>Estilo da Dica de Tecla
 
@@ -330,7 +328,7 @@ Caso precise especificar seus próprios estilos da Dica de Tecla, use recursos d
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-customization.png)
 
-_Opções de personalização de dica de tecla_
+_Opções de personalização da dica de chave_
 
 Este exemplo demonstra como alterar esses recursos do aplicativo:
 
@@ -353,7 +351,7 @@ Este exemplo demonstra como alterar esses recursos do aplicativo:
 
 A estrutura XAML expõe Propriedades de Automação que permitem que clientes da Automação da interface de usuário descubram informações sobre elementos da interface de usuário.
 
-Se você especificar a propriedade AccessKey em um controle de UIElement ou TextElement, você pode usar a propriedade [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para obter esse valor. Os clientes de acessibilidade, como o Narrador, lê o valor dessa propriedade cada vez que um elemento recebe o foco.
+Se você especificar a propriedade AccessKey em um controle de UIElement ou TextElement, você pode usar a propriedade [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) para obter esse valor. Os clientes de acessibilidade, como o Narrador, lê o valor dessa propriedade cada vez que um elemento recebe o foco.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

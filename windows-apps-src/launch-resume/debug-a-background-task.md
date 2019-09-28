@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: ad133a9b1eb22695e6ce5d8b3edba9ad3a138b68
-ms.sourcegitcommit: f1261aa6f7eeb62bf770a08b58ec4357bdc20c7e
+ms.openlocfilehash: c337de2a1fc349cfa3965402848fbead51e61e83
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71224766"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340476"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -36,7 +36,7 @@ Este tópico pressupõe que você já tenha um aplicativo com uma tarefa em segu
 
 As tarefas em segundo plano podem ser ativadas manualmente por meio do Microsoft Visual Studio. Em seguida, você pode percorrer o código e depurá-lo.
 
-1.  Em C#, insira um ponto de interrupção no método Run da classe em segundo plano (para tarefas em segundo plano no processo, coloque o ponto de interrupção em App.OnBackgroundActivated()) e/ou crie a saída de depuração usando [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=netframework-4.7.2).
+1.  Em C#, insira um ponto de interrupção no método Run da classe em segundo plano (para tarefas em segundo plano no processo, coloque o ponto de interrupção em App.OnBackgroundActivated()) e/ou crie a saída de depuração usando [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics).
 
     Em C++, insira um ponto de interrupção na função Run da classe em segundo plano (para tarefas em segundo plano no processo, coloque o ponto de interrupção em App.OnBackgroundActivated()) e/ou crie a saída de depuração usando [**OutputDebugString**](https://docs.microsoft.com/windows/desktop/api/debugapi/nf-debugapi-outputdebugstringw).
 

@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ca6471122ee1870a94ef0834a5eed8f83a4d4a7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cd6debb076aac4286c8cb9a33730ade4942b5030
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362615"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340405"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 
@@ -22,7 +22,7 @@ Graças à [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/de
 ![Captura de tela de blocos secundários](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requer a atualização dos criadores de outono**: Você deve ter como destino 16299 do SDK e estar executando a compilação 16299 ou posterior para fixar blocos secundários de aplicativos de ponte de Desktop.
+> **Requer atualização de criadores de outono**: Você deve direcionar o SDK 16299 e executar o Build 16299 ou posterior para fixar blocos secundários de aplicativos de ponte de área de trabalho.
 
 Adicionar um bloco secundário do aplicativo WPF ou WinForms é muito parecido com um aplicativo UWP puro. A única diferença é que você deve especificar o identificador da janela principal (HWND). Isso ocorre porque, ao fixar um bloco, o Windows exibe uma caixa de diálogo modal solicitando que o usuário confirme se deseja fixar o bloco. Se o aplicativo da área de trabalho não configurar o objeto SecondaryTile com a janela do proprietário, o Windows não saberá onde exibir a caixa de diálogo, e a operação falhará.
 
@@ -34,7 +34,7 @@ Se você não tiver empacotado o aplicativo com a Ponte de Desktop, [deverá faz
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>Habilitar acesso à interface IInitializeWithWindow
 
-Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface IInitializeWithWindow no código do aplicativo com o atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute?redirectedfrom=MSDN) e Guid conforme mostrado no exemplo em C# a seguir. Esse exemplo pressupõe que o arquivo de código tenha uma instrução using para o namespace System.Runtime.InteropServices
+Se o aplicativo estiver escrito em uma linguagem gerenciada, como C# ou Visual Basic, declare a interface IInitializeWithWindow no código do aplicativo com o atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) e Guid conforme mostrado no exemplo em C# a seguir. Esse exemplo pressupõe que o arquivo de código tenha uma instrução using para o namespace System.Runtime.InteropServices
 
 ```csharp
 [ComImport]
@@ -90,7 +90,7 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>Enviar notificações de bloco
 
 > [!IMPORTANT]
-> **Requer a versão 17134.81 ou posterior de abril de 2018**: Você deve estar executando compilação 17134.81 ou posterior para enviar notificações de bloco ou selo para blocos secundários de aplicativos de ponte de Desktop. Antes da atualização de serviço .81, uma exceção de 0x80070490 *Elemento não encontrado* não ocorreria ao enviar notificações de bloco para blocos secundários pelos aplicativos de Ponte de Desktop.
+> **Requer abril de 2018 versão 17134,81 ou posterior**: Você deve estar executando o Build 17134,81 ou posterior para enviar notificações de bloco ou de notificação para blocos secundários de aplicativos de ponte de área de trabalho. Antes da atualização de serviço .81, uma exceção de 0x80070490 *Elemento não encontrado* não ocorreria ao enviar notificações de bloco para blocos secundários pelos aplicativos de Ponte de Desktop.
 
 O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Consulte [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) para começar.
 
@@ -98,7 +98,7 @@ O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Cons
 ## <a name="resources"></a>Recursos
 
 * [Exemplo de código completo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
-* [Visão geral de blocos secundários](secondary-tiles.md)
-* [Blocos secundários do PIN (UWP)](secondary-tiles-pinning.md)
+* [Visão geral dos blocos secundários](secondary-tiles.md)
+* [Fixar blocos secundários (UWP)](secondary-tiles-pinning.md)
 * [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop)
 * [Exemplos de código de ponte de desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)

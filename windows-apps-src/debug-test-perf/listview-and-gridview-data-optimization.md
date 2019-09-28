@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d53ab5949972c3f58e2c4db27b76fa720fd4b95
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7d00a41c5a58935a4ecfe623c71a1264a2dc1132
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359942"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339616"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualização de dados de ListView e GridView
 
 
-**Observação**  para obter mais detalhes, consulte a sessão //build/ [drasticamente aumentar o desempenho quando os usuários interagem com grandes quantidades de dados em um GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Observação**  Para mais detalhes, consulte a sessão conferência//Build/ [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Melhore o desempenho e o tempo de inicialização de [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) por meio da virtualização de dados. Para a virtualização da interface do usuário, redução de elementos e atualização progressiva de itens, consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -27,7 +27,7 @@ Um método de virtualização de dados é necessário para um conjunto de dados 
 -   A fonte do conjunto de dados (disco local, rede ou nuvem)
 -   O consumo de memória geral do seu aplicativo
 
-**Observação**  Lembre-se de que um recurso é habilitado por padrão para o ListView e GridView que exibe os elementos visuais de espaço reservado temporário enquanto o usuário está rolando/movimento panorâmico rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
+**Observe**  Be ciente de que um recurso está habilitado por padrão para ListView e GridView que exibe elementos visuais de espaço reservado temporários enquanto o usuário está avançando/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aqui estão mais detalhes sobre as técnicas de virtualização de dados incremental e de acesso aleatório.
 
@@ -35,24 +35,24 @@ Aqui estão mais detalhes sobre as técnicas de virtualização de dados increme
 
 A virtualização de dados incremental carrega dados sequencialmente. Um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa virtualização de dados incremental pode ser usado para exibir uma coleção de um milhão de itens, mas apenas 50 itens são carregados inicialmente. Conforme o usuário faz um movimento panorâmico/rolagem, os próximos 50 são carregados. À medida que os itens são carregados, o tamanho do elevador da barra de rolagem diminui. Para esse tipo de virtualização de dados, você escreve uma classe de fonte de dados que implementa estas interfaces.
 
--   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN)
--   [**INotifyCollectionChanged** ](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN) (C#/VB) ou [ **IObservableVector&lt;T&gt;**  ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
+-   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISupportIncrementalLoading)
 
-Uma fonte de dados como essa é uma lista carregada na memória que pode ser estendida continuamente. O controle de itens solicitará itens usando o indexador [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN) padrão e as propriedades de contagem. A contagem deve representar o número de itens localmente, não o tamanho real do conjunto de dados.
+Uma fonte de dados como essa é uma lista carregada na memória que pode ser estendida continuamente. O controle de itens solicitará itens usando o indexador [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) padrão e as propriedades de contagem. A contagem deve representar o número de itens localmente, não o tamanho real do conjunto de dados.
 
-Quando o controle de itens se aproximar do fim dos dados existentes, ele chamará [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Se você retornar **true**, ele chamará [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passando um número aconselhado de itens para carregar. Dependendo de onde você estiver carregando dados (disco local, rede ou nuvem), você pode optar por carregar um número diferente de itens do que o aconselhado. Por exemplo, se seu serviço aceitar lotes de 50 itens, mas o controle de itens apenas solicitar 10, você poderá carregar 50. Carregue os dados do back-end, adicione-os à sua lista e gere uma notificação de alteração via [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN) ou [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) para que o controle de itens saiba sobre os novos itens. Retorne também uma contagem dos itens que você realmente carregou. Se você carregar menos itens do que o aconselhado, ou o controle de itens foi panoramizado/rolado ainda mais nesse ínterim, sua fonte de dados será chamada novamente para mais itens e o ciclo continuará. Você pode saber mais, baixando a [exemplo de associação de dados XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
+Quando o controle de itens se aproximar do fim dos dados existentes, ele chamará [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Se você retornar **true**, ele chamará [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passando um número aconselhado de itens para carregar. Dependendo de onde você estiver carregando dados (disco local, rede ou nuvem), você pode optar por carregar um número diferente de itens do que o aconselhado. Por exemplo, se seu serviço aceitar lotes de 50 itens, mas o controle de itens apenas solicitar 10, você poderá carregar 50. Carregue os dados do back-end, adicione-os à sua lista e gere uma notificação de alteração via [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) ou [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) para que o controle de itens saiba sobre os novos itens. Retorne também uma contagem dos itens que você realmente carregou. Se você carregar menos itens do que o aconselhado, ou o controle de itens foi panoramizado/rolado ainda mais nesse ínterim, sua fonte de dados será chamada novamente para mais itens e o ciclo continuará. Você pode aprender mais baixando o [exemplo de vinculação de dados XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 e reutilizar seu código-fonte em seu aplicativo do Windows 10.
 
 ## <a name="random-access-data-virtualization"></a>Virtualização de dados de acesso aleatório
 
 A virtualização de dados de acesso aleatório permite o carregamento de um ponto arbitrário do conjunto de dados. Um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa a virtualização de dados de acesso aleatório, usada para exibir uma coleção de um milhão de itens, pode carregar os itens 100.000 – 100.050. Se o usuário for para o início da lista, o controle carregará os itens 1 – 50. O elevador da barra de rolagem sempre indica que o **ListView** contém um milhão de itens. A posição do elevador da barra de rolagem é relativa a onde os itens visíveis estão localizados no conjunto de dados inteiro da coleção. Esse tipo de virtualização de dados pode reduzir significativamente os requisitos de memória e os tempos de carregamento da coleção. Para habilitá-lo, você precisa gravar uma classe de fonte de dados que busque dados sob demanda, gerencie um cache local e implemente estas interfaces.
 
--   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN)
--   [**INotifyCollectionChanged** ](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN) (C#/VB) ou [ **IObservableVector&lt;T&gt;**  ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
+-   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   (Opcionalmente) [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)
 -   (Opcionalmente) [**ISelectionInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISelectionInfo)
 
-[**IItemsRangeInfo** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo) fornece informações sobre quais itens o controle está usando ativamente. O controle de itens chamará esse método sempre que sua exibição mudar e incluirá esses dois conjuntos de intervalos.
+[**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo) fornece informações sobre quais itens o controle está usando ativamente. O controle de itens chamará esse método sempre que sua exibição mudar e incluirá esses dois conjuntos de intervalos.
 
 -   O conjunto de itens que estão no visor.
 -   Um conjunto de itens não virtualizados que o controle está usando e que talvez não estejam no visor.
@@ -67,7 +67,7 @@ Esta é a estratégia básica para sua fonte de dados de virtualização de dado
 -   Quando um item for solicitado
     -   Caso você o tenha disponível na memória, retorne-o.
     -   Caso você não o tenha, retorne um item nulo ou de espaço reservado.
-    -   Use a solicitação de um item (ou as informações do intervalo de [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)) para saber quais itens são necessários, além de buscar dados dos itens do back-end de maneira assíncrona. Depois de recuperar os dados, acione uma notificação de alteração via [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN) ou [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) de maneira que o controle de itens saiba mais sobre o novo item.
+    -   Use a solicitação de um item (ou as informações do intervalo de [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)) para saber quais itens são necessários, além de buscar dados dos itens do back-end de maneira assíncrona. Depois de recuperar os dados, acione uma notificação de alteração via [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) ou [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) de maneira que o controle de itens saiba mais sobre o novo item.
 -   (Opcionalmente) À medida que o visor do controle de itens muda, identifique quais itens da fonte de dados são necessários implementando [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo).
 
 Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu aplicativo. Algumas considerações gerais para lembrar:

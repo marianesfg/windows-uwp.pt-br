@@ -8,25 +8,25 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 646f4ad98e6c914c2318a164629d31ce7b67dab4
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ad23831372b638e6afb36355e3ea8ca322e5d91d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317304"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340276"
 ---
 # <a name="continuous-dictation"></a>Ditado contínuo
 
 Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo.
 
-> **APIs importantes**: [**SpeechContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession), [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession)
+> **APIs importantes**: [**SpeechContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession), [ **ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession)
 
 Em [Reconhecimento de fala](speech-recognition.md), você aprendeu como capturar e reconhecer entradas de fala relativamente curtas usando o método [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) ou o método [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync) de um objeto [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer), por exemplo, ao compor uma mensagem SMS curta ou fazer uma pergunta.
 
 Para sessões de reconhecimento de fala contínuas mais longas, como ditado ou email, use a propriedade [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession) de um [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) para obter um objeto [**SpeechContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession).
 
 > [!NOTE]
-> Suporte ao idioma de ditado depende de [dispositivo](https://docs.microsoft.com/windows/uwp/design/devices/) onde seu aplicativo está sendo executado. Para PCs e laptops, apenas en-US é reconhecido, enquanto o Xbox e telefones podem reconhecer todos os idiomas com suporte pelo reconhecimento de fala. Para obter mais informações, consulte [especificar o idioma de reconhecimento de fala](specify-the-speech-recognizer-language.md).
+> O suporte ao idioma do ditado depende do [dispositivo](https://docs.microsoft.com/windows/uwp/design/devices/) em que seu aplicativo está sendo executado. Para PCs e laptops, apenas en-US é reconhecido, enquanto o Xbox e os telefones podem reconhecer todos os idiomas com suporte no reconhecimento de fala. Para obter mais informações, consulte [especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md).
 
 ## <a name="set-up"></a>Configurar
 
@@ -55,7 +55,7 @@ private CoreDispatcher dispatcher;
 
 Para acompanhar o que o usuário está dizendo, você precisa tratar eventos de reconhecimento acionados pelo reconhecedor de fala. Esses eventos fornecem os resultados do reconhecimento de blocos de expressões do usuário.
 
-Aqui, usamos um objeto [**StringBuilder**](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?redirectedfrom=MSDN) para reter todos os resultados do reconhecimento obtidos durante a sessão. Novos resultados são acrescentados ao **StringBuilder** conforme eles são processados.
+Aqui, usamos um objeto [**StringBuilder**](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder) para reter todos os resultados do reconhecimento obtidos durante a sessão. Novos resultados são acrescentados ao **StringBuilder** conforme eles são processados.
 
 ```CSharp
 private StringBuilder dictatedTextBuilder;
@@ -68,12 +68,12 @@ Durante a inicialização do reconhecimento de fala contínua, você deve:
 - Buscar o dispatcher do thread de interface do usuário se você atualizar a interface do usuário do aplicativo nos manipuladores de eventos de reconhecimento contínuo.
 - Inicializar o reconhecedor de fala.
 - Compilar a gramática de ditado interna.
-    **Observação**    reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, uma gramática de ditado predefinida será usada. Consulte [Reconhecimento de fala](speech-recognition.md).
+    **Observe**que o reconhecimento de fala    requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, uma gramática de ditado predefinida será usada. Consulte [Reconhecimento de fala](speech-recognition.md).
 - Configure os ouvintes de eventos para eventos de reconhecimento.
 
 Nesse exemplo, inicializamos o reconhecimento de fala no evento de página [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto).
 
-1. Como os eventos acionados pelo reconhecedor de fala ocorrem em um thread em segundo plano, crie uma referência ao dispatcher para atualizações no thread de interface do usuário. [**OnNavigatedTo** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) sempre é invocado no thread da interface do usuário.
+1. Como os eventos acionados pelo reconhecedor de fala ocorrem em um thread em segundo plano, crie uma referência ao dispatcher para atualizações no thread de interface do usuário. [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) sempre é invocado no thread da interface do usuário.
 ```csharp
 this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 ```
@@ -106,14 +106,14 @@ Em seguida, usamos a propriedade [**ContinuousRecognitionSession**](https://docs
 Dois eventos em particular são essenciais:
 
 - [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated), que ocorre quando o reconhecedor gerou alguns resultados.
-- [**Concluída**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.completed), que ocorre quando a sessão de reconhecimento contínua foi encerrada.
+- [**Concluído**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.completed), que ocorre quando a sessão de reconhecimento contínuo terminou.
 
 O evento [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) é acionado conforme o usuário fala. O reconhecedor escuta o usuário de forma contínua e periodicamente aciona um evento que passa um bloco de entrada de fala. Você deve examinar a entrada de fala usando a propriedade [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result) do argumento do evento e executar a ação apropriada no manipulador de eventos, por exemplo, acrescentando o texto a um objeto StringBuilder.
 
 Como uma instância de [**SpeechRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResult), a propriedade [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result) é útil para determinar se você deseja aceitar a entrada de fala Um [**SpeechRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResult) fornece duas propriedades para isso:
 
-- [**Status** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.status) indica se o reconhecimento foi bem-sucedida. Pode haver falha no reconhecimento por vários motivos.
-- [**Confiança** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) indica a confiança relativa que o reconhecedor compreendidos as palavras corretas.
+- [**Status**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.status) indica se o reconhecimento foi bem-sucedido. Pode haver falha no reconhecimento por vários motivos.
+- [**Confiança**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) indica a confiança relativa que o reconhecedor entendeu as palavras corretas.
 
 Aqui estão as etapas básicas para dar suporte contínuo reconhecimento:  
 
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  Em seguida, verificamos a propriedade [**Confidence**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence). Se o valor de Confiança for [**Medium**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionConfidence) ou melhor, acrescentamos o texto ao StringBuilder. Também atualizamos a interface do usuário conforme coletamos entradas.
 
-    **Observação**  as [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) é gerado em um thread em segundo plano que não é possível atualizar a interface do usuário diretamente. Se precisar de um manipulador atualizar a interface do usuário (como o \[amostra de fala e TTS\] faz), você deve distribuir as atualizações para o thread de interface do usuário por meio do [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) método do dispatcher.
+    **Observe**que o evento   a [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) é gerado em um thread em segundo plano que não pode atualizar a interface do usuário diretamente. Se um manipulador precisar atualizar a interface do usuário (como o \[Speech e o exemplo de TTS @ no__t-1 faz), você deverá expedir as atualizações para o thread da interface do usuário por meio do método [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) do Dispatcher.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  O manipulador de eventos verifica a propriedade Status para determinar se o reconhecimento foi executado com êxito. Ele também trata o caso em que o usuário parou de falar. Frequentemente, [**TimeoutExceeded**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) é considerado um reconhecimento bem-sucedido porque significa que o usuário terminou de falar. Você deve tratar esse caso no seu código para obter uma boa experiência.
 
-    **Observação**  as [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) é gerado em um thread em segundo plano que não é possível atualizar a interface do usuário diretamente. Se precisar de um manipulador atualizar a interface do usuário (como o \[amostra de fala e TTS\] faz), você deve distribuir as atualizações para o thread de interface do usuário por meio do [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) método do dispatcher.
+    **Observe**que o evento   a [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) é gerado em um thread em segundo plano que não pode atualizar a interface do usuário diretamente. Se um manipulador precisar atualizar a interface do usuário (como o \[Speech e o exemplo de TTS @ no__t-1 faz), você deverá expedir as atualizações para o thread da interface do usuário por meio do método [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) do Dispatcher.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,
@@ -244,8 +244,8 @@ if (speechRecognizer.State == SpeechRecognizerState.Idle)
 
 O reconhecimento pode ser interrompido de duas maneiras:
 
--   [**StopAsync** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.stopasync) permite que qualquer pendente completa de eventos de reconhecimento ([**ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) continua a crescer até que todas as pendentes reconhecimento operações sejam concluídas).
--   [**CancelAsync** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) encerra imediatamente a sessão de reconhecimento e descarta qualquer resultado pendente.
+-   [**StopAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.stopasync) permite que quaisquer eventos de reconhecimento pendentes sejam concluídos (o[**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) continua a ser gerado até que todas as operações de reconhecimento pendentes sejam concluídas).
+-   [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) encerra a sessão de reconhecimento imediatamente e descarta todos os resultados pendentes.
 
 Depois de verificar o estado do reconhecedor de fala, interrompemos a sessão chamando o método [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) da propriedade [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession) do reconhecedor de fala.
 
@@ -269,7 +269,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 * [Interações de controle por voz](speech-interactions.md)
 
 **Exemplos**
-* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

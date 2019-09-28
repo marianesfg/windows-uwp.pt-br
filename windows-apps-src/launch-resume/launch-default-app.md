@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cf682a77f9010f71adc9d6709bb345ac02270e5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 48b4df662b990f64adcbfe2e7e03dc5303b2962e
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321814"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340428"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão para um URI
 
@@ -30,17 +30,17 @@ Este tópico descreve os seguintes esquemas de URI integrados ao Windows:
 
 | Esquema de URI | Inicia |
 | ----------:|----------|
-|[bingmaps: unidade ms para: e a movimentação da ms para: ](#maps-app-uri-schemes) | Aplicativo Mapas |
-|[http:](#http-uri-scheme) | Navegador da Web padrão |
-|[mailto:](#email-uri-scheme) | Aplicativo de email padrão |
-|[ms-call:](#call-app-uri-scheme) |  Aplicativo de chamada |
-|[ms-chat:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
-|[ms-people:](#people-app-uri-scheme) | Aplicativo Pessoas |
-|[ms-photos:](#photos-app-uri-scheme) | Aplicativo Fotos |
-|[ms-settings:](#settings-app-uri-scheme) | Aplicativo Configurações |
-|[ms-store:](#store-app-uri-scheme)  | Aplicativo da Loja |
-|[ms-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
-|[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
+|[BingMaps:, MS-drive-to: e MS-Walk-to:](#maps-app-uri-schemes) | Aplicativo Mapas |
+|[http](#http-uri-scheme) | Navegador da Web padrão |
+|[mailto](#email-uri-scheme) | Aplicativo de email padrão |
+|[MS-Call:](#call-app-uri-scheme) |  Aplicativo de chamada |
+|[MS-chat:](#messaging-app-uri-scheme) | Aplicativo de mensagens |
+|[MS-pessoas:](#people-app-uri-scheme) | Aplicativo Pessoas |
+|[MS-fotos:](#photos-app-uri-scheme) | Aplicativo Fotos |
+|[MS-configurações:](#settings-app-uri-scheme) | Aplicativo Configurações |
+|[MS-Store:](#store-app-uri-scheme)  | Aplicativo da Loja |
+|[MS-tonepicker:](#tone-picker-uri-scheme) | Seletor de tom |
+|[MS-Yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicativo Números nas Proximidades |
 |[msnweather:](#weather-app-uri-scheme) | Aplicativo meteorológico |
 
 <br>
@@ -56,7 +56,7 @@ Em geral, seu aplicativo não pode selecionar o aplicativo que foi iniciado. O u
 
 Use o método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) para iniciar um URI. Ao chamar esse método, seu aplicativo precisa estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de URI diretamente à interface do usuário do seu aplicativo. O usuário sempre deve executar alguma ação para iniciar uma inicialização de URI. Se você tentar iniciar um URI e seu aplicativo não estiver em primeiro plano, a inicialização falhará e o retorno de chamada de erro será invocado.
 
-Primeiro, crie um objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
+Primeiro, crie um objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -119,7 +119,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 Os aplicativos de origem que chamam [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) podem solicitar que eles permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta compartilhar todo o espaço disponível igualmente entre o aplicativo de origem e o aplicativo de destino que manipula o URI. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) para indicar ao sistema operacional que eles preferem que sua janela de aplicativo ocupe mais ou menos espaço disponível. O **DesiredRemainingView** também pode ser usado para indicar que o aplicativo de origem não precisa permanecer na tela depois da inicialização do URI e pode ser completamente substituído pelo aplicativo de destino. Esta propriedade especifica somente o tamanho da janela preferido do aplicativo de chamada. Ele não especifica o comportamento de outros aplicativos que podem acontecer de também estar na tela ao mesmo tempo.
 
-**Observação**  Windows leva em consideração vários fatores diferentes quando ele determina o tamanho de janela final do código-fonte do aplicativo, por exemplo, a preferência do aplicativo de origem, o número de aplicativos em tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview), você não garante um comportamento de janelas específico para o aplicativo de origem.
+**Observe**que   Windows leva em conta vários fatores diferentes quando determina o tamanho final da janela do aplicativo de origem, por exemplo, a preferência do aplicativo de origem, o número de aplicativos na tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview), você não garante um comportamento de janelas específico para o aplicativo de origem.
 
 ```cs
 // Set the desired remaining view.
@@ -136,7 +136,7 @@ Os diversos esquemas de URI descritos abaixo.
 
 ### <a name="call-app-uri-scheme"></a>Esquema do URI do aplicativo de Chamada
 
-Use o **chamada ms:** Esquema URI para iniciar o aplicativo de chamada.
+Usar o **MS-Call:** Esquema de URI para iniciar o aplicativo de chamada.
 
 | Esquema de URI       | Resultado                   |
 |------------------|--------------------------|
@@ -144,16 +144,16 @@ Use o **chamada ms:** Esquema URI para iniciar o aplicativo de chamada.
 
 ### <a name="email-uri-scheme"></a>Esquema do URI de email
 
-Use o **mailto:** Esquema URI para iniciar o aplicativo de email padrão.
+Use o **mailto:** Esquema de URI para iniciar o aplicativo de email padrão.
 
 | Esquema de URI |Resultados                          |
 |------------|---------------------------------|
 | mailto:    | Inicia o aplicativo de email padrão. |
-| mailto:\[endereço de email\] | Inicia o aplicativo de email e cria uma nova mensagem com o endereço de email especificado na linha Para. Observe que o email não é enviado até que o usuário toque em Enviar. |
+| mailto: @no__t-endereço de 0email-no__t-1 | Inicia o aplicativo de email e cria uma nova mensagem com o endereço de email especificado na linha Para. Observe que o email não é enviado até que o usuário toque em Enviar. |
 
 ### <a name="http-uri-scheme"></a>Esquema de URI HTTP
 
-Use o **http:** Esquema URI para iniciar o navegador da web padrão.
+Use o **http:** Esquema de URI para iniciar o navegador da Web padrão.
 
 | Esquema de URI | Resultados                           |
 |------------|-----------------------------------|
@@ -161,7 +161,7 @@ Use o **http:** Esquema URI para iniciar o navegador da web padrão.
 
 ### <a name="maps-app-uri-schemes"></a>Esquemas de URI do aplicativo Mapas
 
-Use o **bingmaps:** , **ms-unidade-to:** , e **movimentação da ms para:** Esquemas de URI para [inicie o aplicativo Windows mapeia](launch-maps-app.md) específicos mapas, direções e os resultados da pesquisa. Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
+Use o **BingMaps:** , **MS-drive-to:** e **MS-Walk-to:** Esquemas de URI para [iniciar o aplicativo do Windows Maps](launch-maps-app.md) para mapas, direções e resultados de pesquisa específicos. Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
 
 `bingmaps:?cp=40.726966~-74.006076`
 
@@ -171,19 +171,19 @@ Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](launch-maps-ap
 
 ### <a name="messaging-app-uri-scheme"></a>Esquema de URI do aplicativo de mensagens
 
-Use o **ms-bate-papo:** Esquema URI para iniciar o aplicativo de mensagens do Windows.
+Use o **MS-chat:** Esquema de URI para iniciar o aplicativo de mensagens do Windows.
 
 | Esquema de URI |Resultados |
 |------------|--------|
 | ms-chat:   | Inicia o aplicativo Mensagens. |
 | ms-chat:?ContactID={contacted}  |  Permite que o aplicativo de mensagens seja iniciado com informações de um contato específico.   |
 | ms-chat:?Body={body} | Permite que o aplicativo de mensagens seja iniciado com uma cadeia de caracteres para usar como o conteúdo da mensagem.|
-| ms-chat:?Addresses={address}&Body={body} | Permite que o aplicativo de mensagens seja iniciado com informações de um determinado endereço e com uma cadeia de caracteres para usar como o conteúdo da mensagem. Observação: Endereços podem ser concatenados. |
+| ms-chat:?Addresses={address}&Body={body} | Permite que o aplicativo de mensagens seja iniciado com informações de um determinado endereço e com uma cadeia de caracteres para usar como o conteúdo da mensagem. Observação: Os endereços podem ser concatenados. |
 | ms-chat:?TransportId={transportId}  | Permite que o aplicativo de mensagens seja iniciado com uma ID de transporte específica. |
 
 ### <a name="tone-picker-uri-scheme"></a>Esquema de URI de seletor de tom
 
-Use o **tonepicker ms:** Esquema URI para escolher a toques, alarmes e tons de sistema. Você também pode salvar novos toques e obter o nome de exibição de um tom.
+Use o **MS-tonepicker:** Esquema de URI para escolher toques, alarmes e tons do sistema. Você também pode salvar novos toques e obter o nome de exibição de um tom.
 
 | Esquema de URI | Resultados |
 |------------|---------|
@@ -193,20 +193,20 @@ Os parâmetros são transmitidos por meio de um [ValueSet](https://docs.microsof
 
 ### <a name="nearby-numbers-app-uri-scheme"></a>Esquema de URI do aplicativo Números nas Proximidades
 
-Use o **yellowpage ms:** Esquema URI para iniciar o aplicativo de números mais próximos.
+Use o **MS-Yellowpage:** Esquema de URI para iniciar o aplicativo de números próximos.
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| MS-yellowpage:? entrada =\[palavra-chave\]& método =\[T9 ou cadeia de caracteres\] | Inicia o aplicativo Números nas Proximidades.<br>`input` refere-se a palavra-chave que você deseja pesquisar.<br>`method` refere-se para o tipo de pesquisa (cadeia de caracteres ou pesquisa T9).<br>Se `method` for `T9` (um tipo de teclado), `keyword` deverá ser uma cadeia de caracteres numérica que mapeia para as letras de teclado T9 a serem pesquisadas.<br>Se `method` for `String`, `keyword` será a palavra-chave a ser pesquisada. |
+| MS-Yellowpage:? Input = \[keyword @ no__t-1 & método = \[String ou T9 @ no__t-3 | Inicia o aplicativo Números nas Proximidades.<br>`input` refere-se à palavra-chave que você deseja pesquisar.<br>`method` refere-se ao tipo de pesquisa (cadeia de caracteres ou pesquisa T9).<br>Se `method` for `T9` (um tipo de teclado), `keyword` deverá ser uma cadeia de caracteres numérica que mapeia para as letras de teclado T9 a serem pesquisadas.<br>Se `method` for `String`, `keyword` será a palavra-chave a ser pesquisada. |
 
 ### <a name="people-app-uri-scheme"></a>Esquema de URI do aplicativo Pessoas
 
-Use o **pessoas ms:** Esquema URI para iniciar o aplicativo de pessoas.
+Use o **MS-People:** Esquema de URI para iniciar o aplicativo People.
 Para obter mais informações, consulte [Iniciar o aplicativo Pessoas](launch-people-apps.md).
 
 ### <a name="photos-app-uri-scheme"></a>Esquema de URI do aplicativo Fotos
 
-Use o **fotos ms:** Esquema URI para iniciar o aplicativo de fotos para exibir uma imagem ou editar um vídeo. Por exemplo:  
+Usar o **MS-photos:** Esquema de URI para iniciar o aplicativo de fotos para exibir uma imagem ou editar um vídeo. Por exemplo:  
 Para exibir uma imagem: `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
 Ou para editar um vídeo: `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
@@ -217,12 +217,12 @@ Ou para editar um vídeo: `ms-photos:videoedit?InputToken=123abc&Action=Trim&Sta
 |------------|--------|
 | ms-photos:viewer?fileName={filename} | Inicia o aplicativo Fotos para exibir a imagem especificada onde {filename} é um nome de caminho totalmente qualificado. Por exemplo: `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-photos:videoedit?InputToken={input token} | Inicia o aplicativo Fotos no modo de edição de vídeo para o arquivo representado pelo token de arquivo. **InputToken** é necessária. Use o [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para obter um token para um arquivo. |
-| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo de fotos no modo de edição especificado vídeo onde {action} é um dos: **SlowMotion**, **FrameExtraction**, **Trim**, **View**, **Ink**. Se não especificado, usa o padrão **View** |
-| ms-photos:videoedit?StartTime={timespan} | Um parâmetro opcional que especifica o local iniciar a reprodução do vídeo. `{timespan}` deve estar no formato `"hh:mm:ss.ffff"`. Se não for especificado, assume como padrão `00:00:00.0000` |
+| ms-photos:videoedit?Action={action} | Um parâmetro opcional que abre o aplicativo photos no modo de edição de vídeo especificado em que {Action} é um de: **SlowMotion**, **FrameExtraction**, **Trim**, **Exibir**, **Ink**. Se não especificado, usa o padrão **View** |
+| ms-photos:videoedit?StartTime={timespan} | Um parâmetro opcional que especifica o local iniciar a reprodução do vídeo. `{timespan}` deve estar no formato `"hh:mm:ss.ffff"`. Se não for especificado, o padrão será `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>Esquema de URI do aplicativo Configurações
 
-Use o **ms-configurações:** Esquema de URI para [iniciar o aplicativo de configurações do Windows](launch-settings-app.md). A inicialização do aplicativo Configurações é uma parte importante da escrita de um aplicativo com detecção de privacidade. Se seu aplicativo não pode acessar um recurso confidencial, é recomendável fornecer ao usuário um link conveniente para as configurações de privacidade desse recurso. Por exemplo, o URI a seguir abre o aplicativo Configurações e exibe as configurações de privacidade da câmera.
+Use o **MS-Settings:** Esquema de URI para [iniciar o aplicativo de configurações do Windows](launch-settings-app.md). A inicialização do aplicativo Configurações é uma parte importante da escrita de um aplicativo com detecção de privacidade. Se seu aplicativo não pode acessar um recurso confidencial, é recomendável fornecer ao usuário um link conveniente para as configurações de privacidade desse recurso. Por exemplo, o URI a seguir abre o aplicativo Configurações e exibe as configurações de privacidade da câmera.
 
 `ms-settings:privacy-webcam`
 
@@ -232,16 +232,16 @@ Para obter mais informações, consulte [Iniciar o aplicativo Configurações do
 
 ### <a name="store-app-uri-scheme"></a>Esquema de URI do aplicativo da Loja
 
-Use o **ms-windows-store:** Esquema de URI para [inicie o aplicativo UWP](launch-store-app.md). Abra as páginas de detalhes do produto, páginas de revisão do produto e páginas de pesquisa, etc. Por exemplo, o URI a seguir abre o aplicativo UWP e inicia a home page do Store.
+Use o **MS-Windows-Store:** Esquema de URI para [iniciar o aplicativo UWP](launch-store-app.md). Abra páginas de detalhes do produto, páginas de revisão do produto e páginas de pesquisa, etc. Por exemplo, o URI a seguir abre o aplicativo UWP e inicia o home page da loja.
 
 `ms-windows-store://home/`
 
 Para mais informações, consulte [Iniciar o app UWP](launch-store-app.md).
 
-### <a name="weather-app-uri-scheme"></a>Esquema de URI do aplicativo de clima
+### <a name="weather-app-uri-scheme"></a>Esquema de URI de aplicativo meteorológico
 
-Use o **msnweather:** Esquema URI para iniciar o aplicativo de clima.
+Use o **msnweather:** Esquema de URI para iniciar o aplicativo meteorológico.
 
 | Esquema de URI | Resultados |
 |------------|---------|
-| msnweather://forecast?la=\[latitude\]&lo=\[longitude\] | Inicia o aplicativo de clima na página de previsão com base em um coordenadas da localização geográfica.<br>`latitude` refere-se a latitude da localização.<br> `longitude` refere-se a longitude do local.<br> |
+| msnweather://Forecast? la = \[latitude @ no__t-1 & lo = \[longitude @ no__t-3 | Inicia o aplicativo meteorológico na página previsão com base em coordenadas geográficas de localização.<br>`latitude` refere-se à latitude do local.<br> `longitude` refere-se à longitude do local.<br> |

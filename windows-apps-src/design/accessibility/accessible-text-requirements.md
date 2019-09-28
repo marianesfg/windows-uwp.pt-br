@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dda866c877eb166c38949cfff5cec504103fd30
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f5b87590736c4875214819f5c60a05edd47b1476
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359598"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339517"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto acessível  
 
@@ -28,7 +28,7 @@ Este tópico descreve as práticas recomendadas para acessibilidade de texto em 
 ## <a name="contrast-ratios"></a>Taxas de contraste  
 Embora os usuários sempre tenham a opção de alternar para um modo de alto contraste, o design do seu aplicativo para texto deve considerar essa possibilidade como último recurso. Uma prática muito melhor é assegurar que o texto do seu aplicativo siga algumas diretrizes estabelecidas para o nível de contraste entre o texto e a tela de fundo. A avaliação do nível de contraste é baseada em técnicas determinísticas que não consideram a tonalidade de cor. Por exemplo, se você tiver texto vermelho sobre fundo verde, esse texto poderá não ser legível por alguém com daltonismo. Verificar e corrigir a taxa de contraste pode evitar esses tipos de problemas de acessibilidade.
 
-As recomendações de contraste do texto documentado aqui se baseiam em uma acessibilidade da web padrão, [G18: Garantindo que uma taxa de contraste de pelo menos 4,5: 1 existe entre o texto (e imagens de texto) e o plano de fundo atrás do texto](https://go.microsoft.com/fwlink/p/?linkid=221823). Essa orientação está na especificação *W3C Techniques for WCAG 2.0*.
+As recomendações para o contraste de texto documentado aqui são baseadas em um padrão de acessibilidade da Web, [G18: Garantindo que uma taxa de contraste de pelo menos 4,5:1 exista entre o texto (e imagens de texto) e o plano de fundo por trás do texto @ no__t-0. Essa orientação está na especificação *W3C Techniques for WCAG 2.0*.
 
 Para ser considerado acessível, o texto visível precisa ter contraste de luminosidade mínimo de 4,5:1 em relação à tela de fundo. As exceções incluem logotipos e texto incidental (como o que faz parte de um componente de interface do usuário inativo).
 
@@ -46,10 +46,10 @@ Use as ferramentas de contraste de cores para verificar se a taxa de contraste d
 ## <a name="text-element-roles"></a>Funções de elementos de texto  
 Um aplicativo UWP pode usar esses elementos padrão (usualmente chamados de *text elements* or *textedit controls*):
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): função é [ **texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**Caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): função é [ **editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**RichTextBlock** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (e a classe de estouro [ **RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)): função é [ **texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): função é [ **editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): role é [ **texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**Caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): a função é [ **editada**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (e [**RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)da classe overflow): a função é [**texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): a função é [ **editada**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
 
 Quando um controle reporta sua função como [**Editar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType), tecnologias adaptativas supõem que haja formas de os usuários mudarem os valores. Então, se você colocar texto estático em um [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), reportando o papel e, portanto, a estrutura de forma errônea do aplicativo para o usuário de acessibilidade.
 
@@ -70,7 +70,7 @@ O Narrador foi atualizado para tornar esse tipo de experiência acessível por m
 * Poderá mover o foco do Narrador para a lista
 * Poderá navegar por uma sugestão com todos os outros modos de leitura
 
-![Lista de sugestões](images/autosuggest-list.png)<br/>
+lista de @no__t 0Suggestion @ no__t-1<br/>
 _Exemplo de uma lista de sugestões_
 
 <span id="Implementing_auto-suggest"/>
@@ -85,13 +85,13 @@ Em um nível alto, há dois tipos de experiências de sugestão automática.
 **Seleção padrão**  
 Se uma seleção padrão é feita na lista, o Narrador procura um evento [**UIA_SelectionItem_ElementSelectedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) em um aplicativo de desktop, ou o evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) para ser gerado em um aplicativo UWP. Sempre que a seleção é alterada, quando o usuário digita outra letra e as sugestões foram atualizadas ou quando um usuário navega pela lista, o evento **ElementSelected** deve ser disparado.
 
-![Lista com uma seleção padrão](images/autosuggest-default-selection.png)<br/>
+![List com uma seleção padrão @ no__t-1<br/>
 _Exemplo em que há uma seleção padrão_
 
 **Nenhuma seleção padrão**  
 Se não houver nenhuma seleção padrão, como na caixa de local do aplicativo Clima, o Narrador procurará o evento [**UIA_LayoutInvalidatedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) de área de trabalho ou o evento [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) UWP para ser disparado na lista sempre que a lista for atualizada.
 
-![Lista com nenhuma seleção padrão](images/autosuggest-no-default-selection.png)<br/>
+![List sem seleção padrão @ no__t-1<br/>
 _Exemplo em que não há nenhuma seleção padrão_
 
 ### <a name="xaml-implementation"></a>Implementação de XAML  
@@ -116,29 +116,29 @@ Se você estiver usando os controles intrínsecos em HTML, a implementação de 
 
 ## <a name="text-in-graphics"></a>Texto em elementos gráficos
 
-Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) ou usando [**Glyphs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Glyphs).
+Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) ou usando [**Glyphs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Glyphs).
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size-and-scale"></a>Escala e tamanho de fonte do texto
+## <a name="text-font-size-and-scale"></a>Tamanho e escala da fonte do texto
 
-Os usuários podem ter dificuldade para ler o texto em um aplicativo quando os usos de fontes são simplesmente muito pequeno, portanto, certifique-se de que qualquer texto em seu aplicativo é um tamanho razoável em primeiro lugar.
+Os usuários podem ter dificuldade de ler texto em um aplicativo quando as fontes usam são simplesmente muito pequenas, portanto, certifique-se de que qualquer texto em seu aplicativo seja um tamanho razoável em primeiro lugar.
 
-Depois de ter feito o óbvio, o Windows incluem várias ferramentas de acessibilidade e configurações que os usuários podem aproveitar e ajustar a suas próprias necessidades e preferências para a leitura de texto. Como por exemplo:
+Depois de ter feito o óbvio, o Windows inclui várias ferramentas e configurações de acessibilidade que os usuários podem aproveitar e ajustar às suas próprias necessidades e preferências para ler o texto. Elas incluem:
 
-* A ferramenta de Lente de aumento, que amplia uma área selecionada de interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não o torna difícil de usar a Lente de aumento para leitura.
-* Configurações globais de escala e a resolução no **Configurações -> sistema -> Exibir -> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar conforme isso depende dos recursos do dispositivo de vídeo.
-* As configurações de tamanho do texto no **Configurações -> a facilidade de acesso -> exibição**. Ajustar a **tornar o texto maior** configuração para especificar apenas o tamanho do texto para oferecer suporte a controles em todos os aplicativos e telas (suportam a todos os controles de texto UWP o dimensionamento experiência sem nenhuma personalização ou modelagem de texto). 
+* A ferramenta Lupa, que amplia uma área selecionada da interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não torna difícil usar a lupa para leitura.
+* Configurações globais de escala e resolução em **configurações – > sistema-> exibição-> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar, pois isso depende dos recursos do dispositivo de vídeo.
+* Configurações de tamanho de texto em **configurações-> facilidade de acesso-> exibição**. Ajuste a configuração **tornar texto maior** para especificar apenas o tamanho do texto em controles de suporte em todos os aplicativos e telas (todos os controles de texto UWP dão suporte à experiência de dimensionamento de texto sem qualquer personalização ou modelagem). 
 > [!NOTE]
-> O **tornar tudo maior** configuração permite que um usuário especificar o tamanho preferido para texto e aplicativos em geral, na tela principal somente.
+> A configuração **tornar tudo maior** permite que um usuário especifique seu tamanho preferido para texto e aplicativos em geral somente na tela principal.
 
-Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando **verdadeira**, o tamanho do texto no elemento pode ser dimensionado. O dimensionamento afeta o texto que tem um pequeno **FontSize** a um grau maior do que ele afeta o texto que tem um grande **FontSize**. Você pode desabilitar o redimensionamento automático definindo um elemento **IsTextScaleFactorEnabled** propriedade **falso**. 
+Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando **true**, o tamanho do texto nesse elemento pode ser dimensionado. O dimensionamento afeta o texto que tem um **FontSize** pequeno para um grau maior do que afeta o texto que tem um **FontSize**grande. Você pode desabilitar o redimensionamento automático definindo a propriedade **IsTextScaleFactorEnabled** de um elemento como **false**. 
 
-Ver [escala de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) para obter mais detalhes.
+Consulte [dimensionamento de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) para obter mais detalhes.
 
-Adicione a seguinte marcação para um aplicativo e executá-lo. Ajustar a **tamanho de texto** definindo e ver o que acontece a cada **TextBlock**.
+Adicione a marcação a seguir a um aplicativo e execute-o. Ajuste a configuração de **tamanho do texto** e veja o que acontece com cada **TextBlock**.
 
 XAML
 ```xml
@@ -149,7 +149,7 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-Não recomendamos que você desabilite o dimensionamento de texto como texto de interface do usuário de colocação em escala universalmente entre todos os aplicativos é uma experiência de importantes de acessibilidade para usuários.
+Não recomendamos que você desabilite o dimensionamento de texto como dimensionar o texto da interface do usuário universalmente em todos os aplicativos é uma experiência de acessibilidade importante para os usuários.
 
 Você também pode usar o evento [**TextScaleFactorChanged**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) e a propriedade [**TextScaleFactor**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactor) para descobrir mudanças na configuração do **Tamanho do texto** no telefone. Veja como:
 
@@ -169,23 +169,23 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-O valor de **TextScaleFactor** é um double no intervalo \[1,2.25\]. O menor texto está dimensionado para esse valor. Você pode usar o valor para dimensionar elementos gráficos para ajustar ao texto. Mas lembre-se de que nem todo texto é ampliado pelo mesmo fator. Em geral, quanto maior o texto for, menos ele é afetado pelo dimensionamento.
+O valor de **TextScaleFactor** é um duplo no intervalo \[1, 2,25 @ no__t-2. O menor texto está dimensionado para esse valor. Você pode usar o valor para dimensionar elementos gráficos para ajustar ao texto. Mas lembre-se de que nem todo texto é ampliado pelo mesmo fator. Em geral, quanto maior o texto for, menos ele é afetado pelo dimensionamento.
 
 Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:  
 * [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
-* [**Controle** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e as classes derivadas
+* [**Controle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e classes derivadas
 * [**FontIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FontIcon)
 * [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)
 * [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
-* [**TextElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) e as classes derivadas
+* [**TextElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) e classes derivadas
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 
-* [Escala de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
+* [Dimensionamento de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Acessibilidade](accessibility.md)
-* [Informações de acessibilidade básico](basic-accessibility-information.md)
+* [Informações básicas de acessibilidade](basic-accessibility-information.md)
 * [Exemplo de exibição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
 * [Exemplo de edição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Exemplo de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 

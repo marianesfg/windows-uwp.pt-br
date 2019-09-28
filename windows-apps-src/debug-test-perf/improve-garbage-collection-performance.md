@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 996cc797ff46bd7eb9a172d66ffbb1fd6fe621bc
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: fdb4e80d7f8da022e2ceb5496cbad592d7d22716
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317537"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339628"
 ---
 # <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
 
 Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/index).
 
-**Observação**  precise interferir no comportamento padrão do coletor de lixo é fortemente uma indicação geral de problemas de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tópico se aplica somente a C# e Visual Basic.
+**Observe**que   Needing para intervir no comportamento padrão do coletor de lixo é altamente um indício de problemas gerais de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tópico se aplica somente a C# e Visual Basic.
 
  
 
@@ -40,11 +40,11 @@ Uma referência a um objeto em seu aplicativo impede que o objeto, e todos os ob
 
 Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo e determinar que a indução de uma coleta melhorará esse desempenho.
 
-É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect?redirectedfrom=MSDN#System_GC_Collect_System_Int32_), em que n é a geração que você deseja coletar (0, 1 ou 2).
+É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_), em que n é a geração que você deseja coletar (0, 1 ou 2).
 
-**Observação**  é recomendável que você não forçar uma coleta de lixo em seu aplicativo porque o coletor de lixo usa muitos heurística para determinar o melhor momento para executar uma coleta e forçar uma coleta é em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
+**Observe**  we recomendam que você não force uma coleta de lixo em seu aplicativo porque o coletor de lixo usa muitos heurísticos para determinar o melhor momento para realizar uma coleta, e forçar uma coleta em muitos casos é um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
  
-Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode?redirectedfrom=MSDN) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
+Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
 ## <a name="reduce-garbage-collection-time"></a>Reduzir o tempo de coleta de lixo
 

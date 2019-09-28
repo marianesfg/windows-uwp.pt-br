@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57532c45bdf6c2b8feb2af1277be74a0f8b2c759
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 34f315628af0ea181756f2456d4d0dfe70bf8377
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320297"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340555"
 ---
 # <a name="property-path-syntax"></a>Sintaxe de Property-path
 
@@ -50,11 +50,11 @@ Em cada um dessas etapas, o valor é tratados como um objeto. O tipo do resultad
 
 ### <a name="indexers"></a>Indexadores
 
-Um caminho de propriedade para vinculação de dados pode incluir referências a propriedade indexadas. Isso habilita a associação a listas/vetores ordenados ou a dicionários/mapas. Use colchetes "\[\]" caracteres para indicar uma propriedade indexada. O conteúdo desses colchetes pode ser um inteiro (em uma lista ordenada) ou uma cadeia de caracteres sem aspas (em dicionários). Você também pode associar a um dicionário onde a chave é um inteiro. É possível usar diferentes propriedades indexadas no mesmo caminho com um ponto separando o objeto-propriedade.
+Um caminho de propriedade para vinculação de dados pode incluir referências a propriedade indexadas. Isso habilita a associação a listas/vetores ordenados ou a dicionários/mapas. Use colchetes "\[ @ no__t-1" caracteres para indicar uma propriedade indexada. O conteúdo desses colchetes pode ser um inteiro (em uma lista ordenada) ou uma cadeia de caracteres sem aspas (em dicionários). Você também pode associar a um dicionário onde a chave é um inteiro. É possível usar diferentes propriedades indexadas no mesmo caminho com um ponto separando o objeto-propriedade.
 
-Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um player específico da equipe a segunda é: "Teams\[1\].Players\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
+Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um caminho de propriedade de exemplo para um player específico na segunda equipe é: "Teams @ no__t-01 @ no__t-1. Players @ no__t-2Smith @ no__t-3 ". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
-**Observação**  suporte de indexação para fontes de dados do C++ é limitado, consulte [vinculação de dados em profundidade](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+**Observação**o suporte a @no__t- C++ 1Indexing para fontes de dados é limitado; consulte a [ligação de dados em profundidade](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 ### <a name="attached-properties"></a>Propriedades anexadas
 
@@ -70,7 +70,7 @@ Por um caminho de propriedade ser interpretado por um mecanismo de associação 
 
 ## <a name="property-path-for-animation-targeting"></a>Caminho de propriedade para direcionamento da animação
 
-As animações dependem do direcionamento de uma propriedade de dependência onde valores de storyboard são aplicados quando a animação é reproduzida. Para identificar o objeto no qual a propriedade que deve ser animada existe, a animação direciona um ele por nome ([atributo x:Name](x-name-attribute.md)). Costuma ser necessário definir um caminho de propriedade que inicia com o objeto identificado como [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8) e termina com o valor de propriedade de dependência particular em que a animação deve ser aplicada. Tal caminho de propriedade é usada como o valor de [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95)).
+As animações dependem do direcionamento de uma propriedade de dependência onde valores de storyboard são aplicados quando a animação é reproduzida. Para identificar o objeto no qual a propriedade que deve ser animada existe, a animação direciona um ele por nome ([atributo x:Name](x-name-attribute.md)). Costuma ser necessário definir um caminho de propriedade que inicia com o objeto identificado como [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname) e termina com o valor de propriedade de dependência particular em que a animação deve ser aplicada. Tal caminho de propriedade é usada como o valor de [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95)).
 
 Para saber mais sobre como definir animações em XAML, consulte [Animações de storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
 
@@ -84,19 +84,19 @@ Você pode animar uma propriedade que é subpropriedade do objeto de destino. Em
 
 ## <a name="specifying-a-particular-child-in-a-collection"></a>Especificando um filho em particular em uma coleção
 
-Para especificar um item filho em uma propriedade de coleção, você pode usar um indexador numérico. Use colchetes "\[\]" valor de índice de caracteres em torno de inteiro. Você pode fazer referência apenas a listas ordenadas, não a dicionários. Como uma coleção não é um valor que pode ser animado, o uso de um indexador nunca pode ser a propriedade final em um caminho de propriedade.
+Para especificar um item filho em uma propriedade de coleção, você pode usar um indexador numérico. Use colchetes "\[ @ no__t-1" em volta do valor de índice inteiro. Você pode fazer referência apenas a listas ordenadas, não a dicionários. Como uma coleção não é um valor que pode ser animado, o uso de um indexador nunca pode ser a propriedade final em um caminho de propriedade.
 
-Por exemplo, para especificar que você deseja animar a cor de primeiro parar cor em um [ **LinearGradientBrush** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LinearGradientBrush) que é aplicado a um controle [ **em segundo plano** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) propriedade, esse é o caminho da propriedade: "(Background). (GradientBrush.GradientStops) \[0\]. ( GradientStop.Color) ". Observe que o indexador não é a última etapa do caminho e que a última etapa deve fazer referência à propriedade [**GradientStop.Color**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.gradientstop.color) do item 0 da coleção para aplicar um valor animado [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) a ela.
+Por exemplo, para especificar que você deseja animar a primeira cor de parada de cor em um [**LinearGradientBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LinearGradientBrush) aplicado à propriedade de [**segundo plano**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background) de um controle, este é o caminho da propriedade: "(Control. Background). (GradientBrush. GradientStops) \[0 @ no__t-5. (GradientStop. Color) ". Observe que o indexador não é a última etapa do caminho e que a última etapa deve fazer referência à propriedade [**GradientStop.Color**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.gradientstop.color) do item 0 da coleção para aplicar um valor animado [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) a ela.
 
 ## <a name="animating-an-attached-property"></a>Animando uma propriedade anexada
 
-Não é comum, mas é possível animar uma propriedade anexada, desde que ela tenha um valor de propriedade que corresponda a um tipo de animação. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres para especificar que você quer animar a propriedade anexada [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) em um objeto, use o caminho de propriedade "(Grid.Row)".
+Não é comum, mas é possível animar uma propriedade anexada, desde que ela tenha um valor de propriedade que corresponda a um tipo de animação. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres para especificar que você quer animar a propriedade anexada [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) em um objeto, use o caminho de propriedade "(Grid.Row)".
 
-**Observação**  neste exemplo, o valor de [ **Row** ](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) é um **Int32** tipo de propriedade. então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) que tem componentes [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame), onde o [**ObjectKeyFrame.Value**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.value) é definido como um inteiro como "0" ou "1".
+**Observe**  Para este exemplo, o valor de [**Grid. Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) é um tipo de propriedade **Int32** . então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) que tem componentes [**DiscreteObjectKeyFrame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame), onde o [**ObjectKeyFrame.Value**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.objectkeyframe.value) é definido como um inteiro como "0" ou "1".
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Regras para as propriedades em um caminho de propriedade de direcionamento de animação
 
--   O suposto ponto de partida de um caminho de propriedade é o objeto identificado por um [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname?view=netframework-4.8).
+-   O suposto ponto de partida de um caminho de propriedade é o objeto identificado por um [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname).
 -   Todos os objetos e todas as propriedades referenciados ao longo do caminho de propriedade devem ser públicos.
 -   A propriedade final (a propriedade que é nomeada por último no caminho) deve ser pública, de leitura-gravação e ser uma propriedade de dependência.
 -   A propriedade final deve ter um tipo de propriedade capaz de ser animado por uma das amplas classes de tipos de animação, animações ([**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color), animações **Double**, animações [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)).
@@ -107,15 +107,15 @@ A classe [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.P
 
 Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) em XAML sem usar nenhum código. Mas, em alguns casos, pode ser que você queria definir um objeto **PropertyPath** usando um código e atribuí-lo a uma propriedade em tempo de execução.
 
-[**PropertyPath** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) tem um [ **PropertyPath(String)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) construtor e não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
+[**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) tem um construtor [**de PropertyPath (cadeia de caracteres)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.-ctor) e não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertypath.path), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
 * [Animações storyboarded](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
-* [Extensão de marcação {binding}](binding-markup-extension.md)
+* [{Binding} extensão de marcação](binding-markup-extension.md)
 * [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath)
-* [**Associação**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
+* [**Vinculação**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)
 * [**Construtor de associação**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.-ctor)
 * [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)
 

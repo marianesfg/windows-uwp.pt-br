@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ef2007648c21e015aa2ae692d28efa56c922bf5
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 89257a4ec64458f5734c2b04c1e654a7c0c44f27
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660193"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339906"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -50,7 +50,7 @@ Um manipulador de eventos de entrada implementa um delegado que fornece as segui
 
 -   O remetente do evento. O remetente relata o objeto ao qual o manipulador de eventos está anexado.
 -   Dados do evento. Para eventos do teclado, esses dados serão uma instância de [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs). O delegado para manipuladores é [**KeyEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyeventhandler). As propriedades mais relevantes de **KeyRoutedEventArgs** para a maioria dos cenários de manipulação são [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key) e possivelmente [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus).
--   [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource). Como eventos do teclado são eventos roteados, os dados dos eventos fornecem **OriginalSource**. Se você deliberadamente permite que eventos subam a árvore de um objeto, **OriginalSource** é, por vezes, o objeto em questão em vez do remetente. No entanto, isso depende do seu design. Para saber mais sobre como você pode usar **OriginalSource** em vez do remetente, consulte a seção "Eventos roteados do teclado" deste tópico, ou [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+-   [**Originalização**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource). Como eventos do teclado são eventos roteados, os dados dos eventos fornecem **OriginalSource**. Se você deliberadamente permite que eventos subam a árvore de um objeto, **OriginalSource** é, por vezes, o objeto em questão em vez do remetente. No entanto, isso depende do seu design. Para saber mais sobre como você pode usar **OriginalSource** em vez do remetente, consulte a seção "Eventos roteados do teclado" deste tópico, ou [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 ### <a name="attaching-a-keyboard-event-handler"></a>Anexando um manipulador de eventos do teclado
 
@@ -94,10 +94,10 @@ void MyProject::MainPage::Grid_KeyUp(
 
 Todos os eventos do teclado usam [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs) para dados de eventos, e **KeyRoutedEventArg** contém as seguintes propriedades:
 
--   [**Chave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
+-   [**Chaves**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
 -   [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)
--   [**Tratado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
--   [**OriginalSource** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) (herdado de [ **RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs))
+-   [**Cargo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
+-   [**Original**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) (Herdado de [**RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs))
 
 ### <a name="key"></a>Chave
 
@@ -277,7 +277,7 @@ End Sub
 ```
 
 > [!NOTE]
-> A configuração de [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) ou [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) no XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para chamar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário.
+> A configuração de [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey) ou [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) no XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para chamar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário.
 >
 > A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ou [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
@@ -319,7 +319,7 @@ O objetivo da propriedade [**Handled**](https://docs.microsoft.com/uwp/api/windo
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler e eventos do teclado já manipulados
 
-Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o [ **AddHandler** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) método para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica da linguagem para adicionar manipuladores, como + = em C\#.
+Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como + = em C @ no__t-2.
 
 Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Os eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) e [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent) e [**KeyUpEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent)) em [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Contudo, outros eventos, como [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
 
@@ -327,7 +327,7 @@ Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâ
 
 Você pode substituir eventos-chave para controles específicos (como [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)) para fornecer navegação de foco consistente para vários dispositivos de entrada, incluindo teclado e gamepad.
 
-No exemplo a seguir, podemos subclasse o controle e substituir o comportamento de KeyDown para mover o foco para o GridView de conteúdo quando qualquer tecla de seta é pressionada.
+No exemplo a seguir, criamos a subclasse do controle e substituo o comportamento de KeyDown para mover o foco para o conteúdo GridView quando qualquer tecla de seta é pressionada.
 
 ```csharp
   public class CustomGridView : GridView
@@ -386,22 +386,22 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 **Desenvolvedores**
 * [Interações de teclado](keyboard-interactions.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-* [Responder a presença de teclado de toque](respond-to-the-presence-of-the-touch-keyboard.md)
+* [Responder à presença do teclado de toque](respond-to-the-presence-of-the-touch-keyboard.md)
 
 **Designers**
 * [Diretrizes de design do teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 
 **Exemplos**
 * [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo-morto**
 * [Exemplo de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Exemplo de teclado de toque](https://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Respondendo à aparência do teclado na tela de exemplo](https://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Input: Exemplo de recursos do dispositivo @ no__t-0
+* [Input: Exemplo de teclado de toque @ no__t-0
+* [Respondendo à aparência do exemplo de teclado na tela](https://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Exemplo de edição de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 

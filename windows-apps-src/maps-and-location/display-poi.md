@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, pinos de pressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 2aca8f4daea39a190af4dd1007a6b961198994dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b8e14693dd6ef23714da53d652b9083f202cd62d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370541"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340434"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Exibir pontos de interesse em um mapa
 
 Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. Uma ponto de interesse é um ponto específico no mapa que representa algo de seu interesse. Por exemplo, o local de uma empresa, cidade ou amigo.
 
-Para saber mais sobre como exibir POI em seu aplicativo, baixe o exemplo a seguir da [repositório de exemplos do Windows-universal](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub: [Exemplo de mapa do Universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+Para saber mais sobre como exibir POI em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-Samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no github: [Exemplo de mapa de plataforma universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Exiba pinos, imagens e formas no mapa adicionando os objetos [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon) e [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline) a uma coleção **MapElements** de um objeto [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer). Em seguida, adicione esse objeto de camada à coleção **Layers** de um controle de mapa.
 
@@ -163,7 +163,7 @@ public void AddLandmarkPhoto()
 }
 ```
 
-Há três partes desse código que vale a pena examinar com mais: A imagem, a câmera de referência e o [ **NormalizedAnchorPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) propriedade.
+Há três partes desse código que vale a pena examinar um pouco mais de perto: A imagem, a câmera de referência e a propriedade [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) .
 
 ### <a name="image"></a>Image
 
@@ -352,7 +352,7 @@ Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsCo
 </maps:MapControl>
 ```
 
-A propriedade ``ItemsSource`` no exemplo acima está associada a uma propriedade do tipo [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist?view=netframework-4.70) no arquivo code-behind.
+A propriedade ``ItemsSource`` no exemplo acima está associada a uma propriedade do tipo [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) no arquivo code-behind.
 
 ```csharp
 public sealed partial class Scenario1 : Page

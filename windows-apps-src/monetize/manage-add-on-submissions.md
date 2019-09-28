@@ -1,30 +1,30 @@
 ---
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Use esses métodos na API de envio a Microsoft Store para gerenciar envios de complemento para aplicativos que são registrados em sua conta no Partner Center.
+description: Use esses métodos na API de envio de Microsoft Store para gerenciar envios de complemento para aplicativos registrados em sua conta do Partner Center.
 title: Gerenciar envios de complemento
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a287889f27712d1272dd0a2f8f3d068b376fefe
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6c725765eacfbf5a4148b8755530de74c3c0fd9a
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320200"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339950"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
 A API de envio da Microsoft Store oferece métodos que é possível usar para gerenciar envios de complemento (também conhecido como produto no aplicativo ou IAP) para os aplicativos. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Se você usar a API de envio da Microsoft Store para criar um envio para um complemento, certifique-se de fazer mais alterações para o envio apenas pelo uso da API, em vez de fazer alterações no Partner Center. Se você usar o Centro de parceiros para alterar um envio que você criou originalmente usando a API, você não poderá alterar ou confirmar esse envio por meio da API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> Se você usar a API de envio de Microsoft Store para criar um envio para um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez de fazer alterações no Partner Center. Se você usar o Partner Center para alterar um envio originalmente criado usando a API, não será mais possível alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Métodos para gerenciar envios de complementos
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de usar esses métodos, o complemento já deve existir na sua conta no Partner Center. Você pode criar um complemento no Partner Center por [definir seu tipo de produto e a ID do produto](../publish/set-your-add-on-product-id.md) ou usando os métodos de API de envio da Microsoft Store no descrito em [gerenciar complementos](manage-add-ons.md).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de poder usar esses métodos, o complemento já deve existir na sua conta do Partner Center. Você pode criar um complemento no Partner Center [definindo seu tipo de produto e a ID do produto](../publish/set-your-add-on-product-id.md) ou usando os métodos de API de envio Microsoft Store em descrito em [gerenciar](manage-add-ons.md)Complementos.
 
 <table>
 <colgroup>
@@ -43,7 +43,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <tr>
 <td align="left">OBTER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="get-an-add-on-submission.md">Obtenha um envio de complemento existente</a></td>
+<td align="left"><a href="get-an-add-on-submission.md">Obter um envio de complemento existente</a></td>
 </tr>
 <tr>
 <td align="left">OBTER</td>
@@ -58,12 +58,12 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="update-an-add-on-submission.md">Atualizar uma apresentação existente do complemento</a></td>
+<td align="left"><a href="update-an-add-on-submission.md">Atualizar um envio de complemento existente</a></td>
 </tr>
 <tr>
 <td align="left">POSTAR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-an-add-on-submission.md">Confirmar o envio de um complemento novos ou atualizados</a></td>
+<td align="left"><a href="commit-an-add-on-submission.md">Confirmar um envio de complemento novo ou atualizado</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
@@ -79,7 +79,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 
 Para criar um envio de um complemento, siga este processo.
 
-1. Se você não ainda tiver feito isso, concluído os pré-requisitos descritos em [criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associação de um aplicativo do AD do Azure com sua conta no Partner Center e como obter seu ID do cliente e a chave. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
+1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [criar e gerenciar envios usando Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluindo a associação de um aplicativo do Azure ad à sua conta do Partner Center e a obtenção da ID e da chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Microsoft Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
@@ -92,7 +92,7 @@ Para criar um envio de um complemento, siga este processo.
     O corpo da resposta contém um recurso [envio de complemento](#add-on-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os ícones de complemento para o envio para o armazenamento de Blobs do Azure e todos os dados do novo envio (como as listagens e as informações sobre preços).
 
     > [!NOTE]
-    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações sobre URIs de SAS e seu uso com o armazenamento de BLOBs do Azure, consulte [assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) e [assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de BLOBs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações básicas sobre URIs SAS e seu uso com o armazenamento de BLOBs do Azure, consulte assinaturas de acesso [Shared, parte 1: Noções básicas sobre o modelo SAS @ no__t-0 e as assinaturas de acesso [Shared, parte 2: Crie e use uma SAS com armazenamento de BLOBs @ no__t-0.
 
 4. Se você estiver adicionando novos ícones para o envio, [prepare os ícones](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions) e adicione-os a um arquivo ZIP.
 
@@ -107,10 +107,10 @@ Para criar um envio de um complemento, siga este processo.
 4. Se você estiver adicionando novos ícones para o envio, carregue o arquivo ZIP no [armazenamento do Blob do Azure](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando o URI SAS que foi fornecido no corpo da resposta do método POST chamado anteriormente. Existem bibliotecas do Azure diferentes que é possível usar para fazer isso em uma grande variedade de plataformas, inclusive:
 
     * [Biblioteca de cliente de armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Armazenamento do Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Armazenamento do Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [SDK do armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [SDK do armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
+    O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -119,7 +119,7 @@ Para criar um envio de um complemento, siga este processo.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Confirme o envio executando o método a seguir. Isso alertará o Partner Center que você concluiu o envio e que as atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
+5. Confirme o envio executando o método a seguir. Isso alertará o Partner Center de que você concluiu seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Para criar um envio de um complemento, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio por meio do método anterior, ou visitando o Centro de parceiros.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o Partner Center.
 
 <span/>
 
@@ -228,20 +228,20 @@ Esse recurso descreve um envio de complemento.
 
 Esse recurso tem os valores a seguir.
 
-| Valor      | Tipo   | Descrição        |
+| Valor      | type   | Descrição        |
 |------------|--------|----------------------|
-| id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL para a página de envio no Partner Center.  |
+| id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 | contentType           | cadeia de caracteres  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Isso pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
 | lifetime           | cadeia de caracteres  |  O tempo de vida do complemento. Isso pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
-| listings           | objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do complemento.  |
-| pricing           | objeto  | Um [recurso de preço](#pricing-object) que contém informações de preço para o complemento.   |
+| listings           | object  |  Um dicionário de pares de chave e valor, em que cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do complemento.  |
+| pricing           | object  | Um [recurso de preço](#pricing-object) que contém informações de preço para o complemento.   |
 | targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
 | tag           | cadeia de caracteres  |  Os [dados de desenvolvedor personalizados](../publish/enter-add-on-properties.md#custom-developer-data) do complemento (essas informações foram anteriormente chamadas de *marca*).   |
 | visibilidade  | cadeia de caracteres  |  A visibilidade do complemento. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | objeto  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
+| statusDetails           | object  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
 | fileUploadUrl           | cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
 | friendlyName  | cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.  |
 
@@ -254,7 +254,7 @@ Esse recurso contém [informações de listagem de um complemento](../publish/cr
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
 |  description               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
-|  ícone               |   objeto      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
+|  ícone               |   object      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
 |  title               |     cadeia de caracteres    |   O título da listagem do complemento.   |  
 
 <span id="icon-object" />
@@ -276,7 +276,7 @@ Esse recurso contém informações de preço do complemento. Esse recurso tem os
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
+|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
 |  sales               |   array      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
 |  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) do complemento.    |    
 |  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
@@ -290,8 +290,8 @@ Esse recurso contém informações de venda de um complemento.
 
 > [!IMPORTANT]
 > O recurso **Venda** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de complemento usando a API de envio da Microsoft Store. No futuro, atualizaremos a API de envio da Microsoft Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de complemento.
->    * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o Centro de parceiro para obter os dados de venda para o envio de complemento.
->    * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para alterar os dados de venda para o envio de complemento.
+>    * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o Partner Center para obter os dados de venda para seu envio de complemento.
+>    * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para alterar os dados de venda para o envio do complemento.
 
 Esse recurso tem os valores a seguir.
 
@@ -301,7 +301,7 @@ Esse recurso tem os valores a seguir.
 |  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
 |  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
 |  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
-|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
+|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 <span id="status-details-object" />
 
@@ -311,9 +311,9 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurs
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  errors               |    objeto     |   Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do erro para o envio.   |     
-|  warnings               |   objeto      | Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do aviso para o envio.     |
-|  certificationReports               |     objeto    |   Uma matriz de [recursos do relatório de certificação](#certification-report-object) que dão acesso aos dados do relatório de certificação para o envio. Será possível examinar esses relatórios para obter mais informações, se a certificação falhar.    |  
+|  errors               |    object     |   Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do erro para o envio.   |     
+|  warnings               |   object      | Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do aviso para o envio.     |
+|  certificationReports               |     object    |   Uma matriz de [recursos do relatório de certificação](#certification-report-object) que dão acesso aos dados do relatório de certificação para o envio. Será possível examinar esses relatórios para obter mais informações, se a certificação falhar.    |  
 
 <span id="status-detail-object" />
 
@@ -321,10 +321,10 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurs
 
 Esse recurso contém informações adicionais sobre todos os erros ou avisos relacionados a um envio. Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição    |
+| Valor           | type    | Descrição    |
 |-----------------|---------|------|
 |  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
-|  detalhes               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 <span id="certification-report-object" />
 
@@ -334,7 +334,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição               |
 |-----------------|---------|------|
-|     date            |    cadeia de caracteres     |  A data e hora que o relatório foi gerado, no formato ISO 8601.    |
+|     date            |    cadeia de caracteres     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
 
 ## <a name="enums"></a>Enums
@@ -352,7 +352,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o complemento.      |     
 |  NotAvailable              |   O complemento não está disponível na região especificada.    |     
 |  Grátis              |   O complemento é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa das camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado que estão associados a cada camada, vá para o **preços e disponibilidade** página para qualquer um dos seus envios de aplicativo no Centro de parceiro e clique no **tabela de exibição** link na **mercados e preços personalizados** seção (para algumas contas de desenvolvedor, esse link está no **preços** seção).     |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página de **preços e disponibilidade** de qualquer envio de aplicativo no Partner Center e Clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, esse link está na seção de **preços** ).     |
 
 <span id="submission-status-code" />
 
@@ -374,13 +374,13 @@ Os seguintes valores representam o código de status de um envio.
 | ListingOptOutWarning | O desenvolvedor removeu uma listagem de um envio anterior ou não incluiu informações de listagem que são compatíveis com o pacote. |
 | ListingOptInWarning  | O desenvolvedor adicionou uma listagem. |
 | UpdateOnlyWarning | O desenvolvedor está tentando inserir algo que só tem suporte para a atualização. |
-| Outro  | O envio está em um estado não reconhecido ou não categorizado. |
+| Outros  | O envio está em um estado não reconhecido ou não categorizado. |
 | PackageValidationWarning | O processo de validação do pacote resultou em um aviso. |
 
 <span/>
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Gerenciar complementos usando a API de envio da Microsoft Store](manage-add-ons.md)
+* [Criar e gerenciar envios usando serviços Microsoft Stores](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar Complementos usando a API de envio de Microsoft Store](manage-add-ons.md)
 * [Envios de complemento no Partner Center](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)

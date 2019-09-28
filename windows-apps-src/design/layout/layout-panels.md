@@ -5,12 +5,12 @@ ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fbda33e044880b263feafbcf88b041abdadc310
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061969"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340127"
 ---
 # <a name="layout-panels"></a>Painéis de layout
 
@@ -46,7 +46,7 @@ Antes de falarmos sobre cada painel, abordaremos algumas propriedades comuns que
 
 A maioria dos painéis de layout XAML usa propriedades anexadas para permitir que seus elementos filho informem ao painel pai como eles devem ser posicionados na interface do usuário. As propriedades anexadas usam a sintaxe *AttachedPropertyProvider.PropertyName*. Se você tiver painéis aninhados dentro de outros painéis, as propriedades anexadas em elementos de interface do usuário que especificam características de layout a um pai só serão interpretadas pelo painel pai mais imediato.
 
-Aqui está um exemplo de como você pode definir a propriedade anexada [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) em um controle Button em XAML. Isso informa ao Canvas pai que o Button deve ser posicionado a 50 pixels efetivos em relação à borda esquerda do Canvas.
+Aqui está um exemplo de como você pode definir a propriedade anexada [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) em um controle Button em XAML. Isso informa ao Canvas pai que o Button deve ser posicionado a 50 pixels efetivos em relação à borda esquerda do Canvas.
 
 ```xaml
 <Canvas>
@@ -147,9 +147,9 @@ Em um StackPanel, se o tamanho de um elemento filho não for definido explicitam
 
 O painel [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) oferece suporte a layouts fluidos e permite organizar controles em layouts com várias linhas e várias colunas. Você pode especificar linhas e colunas de um painel Grid usando as propriedades [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) e [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions).
 
-Para posicionar os objetos em células específicas do Grid, use as propriedades anexadas [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8) e [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8).
+Para posicionar os objetos em células específicas do Grid, use as propriedades anexadas [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column) e [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row).
 
-Para fazer o conteúdo abranger várias linhas e colunas, use as propriedades anexadas [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v=vs.95)) e [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan?view=netframework-4.8).
+Para fazer o conteúdo abranger várias linhas e colunas, use as propriedades anexadas [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v=vs.95)) e [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan).
 
 Este exemplo de XAML mostra como criar um Grid com duas linhas e duas colunas.
 
@@ -245,7 +245,7 @@ Neste exemplo, o número máximo de linhas em cada coluna é três. A primeira c
 
 ## <a name="canvas"></a>Canvas
 
-O painel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona seus elementos filho usando pontos de coordenada fixos e não oferece suporte a layouts fluidos. Especifique os pontos nos elementos filho individuais definindo as propriedades anexadas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) em cada elemento. O Canvas pai lê esses valores de propriedades anexadas de seus filhos durante o cálculo do layout [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
+O painel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona seus elementos filho usando pontos de coordenada fixos e não oferece suporte a layouts fluidos. Especifique os pontos nos elementos filho individuais definindo as propriedades anexadas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) em cada elemento. O Canvas pai lê esses valores de propriedades anexadas de seus filhos durante o cálculo do layout [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
 
 Objetos em um Canvas podem se sobrepor, quando um objeto é desenhado um sobre o outro. Por padrão, o Canvas renderiza os objetos filho na ordem em que estão declarados, logo, o último filho é renderizado na parte superior (cada elemento tem um padrão z-index igual a 0). Ele é o mesmo de outros painéis internos. No entanto, Canvas também dá suporte à propriedade anexada [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) que você pode definir em cada um dos elementos filho. Você pode definir essa propriedade no código para alterar a ordem de desenho dos elementos durante o tempo de execução. O elemento com o maior valor Canvas.ZIndex é desenhado por último e por isso é desenhado sobre quaisquer outros elementos que compartilhem o mesmo espaço ou se sobreponham de alguma maneira. Observe que o valor alfa (transparência) é respeitado, por isso mesmo se os elementos ficarem sobrepostos, o conteúdo mostrado em áreas sobrepostas poderá ser mesclado se o superior tiver um valor alfa que não seja máximo.
 

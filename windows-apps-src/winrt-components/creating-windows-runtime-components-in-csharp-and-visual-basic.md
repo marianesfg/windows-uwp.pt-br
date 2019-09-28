@@ -1,5 +1,5 @@
 ---
-title: Windows Runtime componentes com C# e Visual Basic
+title: Componentes do Windows Runtime com C# e Visual Basic
 description: A partir do .NET 4,5, você pode usar código gerenciado para criar seus próprios tipos de Windows Runtime, empacotados em um componente Windows Runtime.
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ms.date: 12/04/2018
@@ -9,16 +9,16 @@ dev_langs:
 - vb
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 351d59cbecd0941cdc6218d02672b2a679cf3fce
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: c402b8e4ba98f55267a42c1bce1c16e6f090e80c
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393722"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340372"
 ---
-# <a name="windows-runtime-components-with-c-and-visual-basic"></a>Windows Runtime componentes com C# e Visual Basic
+# <a name="windows-runtime-components-with-c-and-visual-basic"></a>Componentes do Windows Runtime com C# e Visual Basic
 
-Você pode usar código gerenciado para criar seus próprios tipos de Windows Runtime e empacotá-los em um componente Windows Runtime. Você pode usar seu componente em aplicativos Plataforma Universal do Windows (UWP) escritos em C++, JavaScript, Visual Basic ou. C# Este tópico descreve as regras para a criação de um componente e discute alguns aspectos do suporte do .NET para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
+Você pode usar código gerenciado para criar seus próprios tipos de Windows Runtime e empacotá-los em um componente Windows Runtime. Você pode usar seu componente em aplicativos Plataforma Universal do Windows (UWP) escritos em C++, JavaScript, Visual Basic ou. C# Este tópico descreve as regras para a criação de um componente e discute alguns aspectos do suporte do .NET ao Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
 
 Se você estiver criando um componente para uso somente em aplicativos UWP gravados em Visual Basic ou C#, e o componente não contiver controles UWP, então, em vez de usar o modelo de biblioteca de **classes** , e não o projeto de **componente Windows Runtime** modelo no Microsoft Visual Studio. Existem menos restrições em uma biblioteca de classes simples.
 
@@ -28,9 +28,9 @@ Internamente, os tipos de Windows Runtime em seu componente podem usar qualquer 
 
 Externamente, os membros de seus tipos podem expor apenas tipos Windows Runtime para seus parâmetros e valores de retorno. A lista a seguir descreve as limitações em tipos .NET que são expostas de um componente Windows Runtime.
 
-- Os campos, os parâmetros e os valores de retorno de todos os tipos públicos e membros no componente devem ser tipos do Windows Runtime. Essa restrição inclui os tipos de Windows Runtime que você cria, bem como os tipos que são fornecidos pelo Windows Runtime em si. Ele também inclui vários tipos .NET. A inclusão desses tipos faz parte do suporte que o .NET fornece para habilitar o uso natural do Windows Runtime em código&mdash;gerenciado, seu código parece usar tipos .net conhecidos em vez dos tipos de Windows Runtime subjacentes. Por exemplo, você pode usar tipos primitivos .net como **Int32** e **Double**, certos tipos fundamentais, como **DateTimeOffset** e **URI**, e alguns tipos de interface genérica comumente usados como **IEnumerable&lt;T&gt;** (IEnumerable (Of T) em Visual Basic) e **IDictionary&lt;TKey, TValue&gt;** . Observe que os argumentos de tipo desses tipos genéricos devem ser tipos Windows Runtime. Isso é discutido nas seções que [passam tipos de Windows Runtime para código gerenciado](#passing-windows-runtime-types-to-managed-code) e [passando tipos gerenciados para o Windows Runtime](#passing-managed-types-to-the-windows-runtime), mais adiante neste tópico.
+- Os campos, os parâmetros e os valores de retorno de todos os tipos públicos e membros no componente devem ser tipos do Windows Runtime. Essa restrição inclui os tipos de Windows Runtime que você cria, bem como os tipos que são fornecidos pelo Windows Runtime em si. Ele também inclui vários tipos .NET. A inclusão desses tipos faz parte do suporte que o .NET fornece para habilitar o uso natural do Windows Runtime no código gerenciado @ no__t-0your parece usar tipos .NET conhecidos em vez dos tipos de Windows Runtime subjacentes. Por exemplo, você pode usar tipos primitivos .NET como **Int32** e **Double**, certos tipos fundamentais, como **DateTimeOffset** e **URI**, e alguns tipos de interface genérica comumente usados, como **IEnumerable @ no__t-5T @ no__t-6** (IEnumerable (Of T) em Visual Basic) e **IDictionary @ No__t-8TKey, TValue @ no__t-9**. Observe que os argumentos de tipo desses tipos genéricos devem ser tipos Windows Runtime. Isso é discutido nas seções que [passam tipos de Windows Runtime para código gerenciado](#passing-windows-runtime-types-to-managed-code) e [passando tipos gerenciados para o Windows Runtime](#passing-managed-types-to-the-windows-runtime), mais adiante neste tópico.
 
-- Classes públicas e interfaces podem conter métodos, propriedades e eventos. Você pode declarar delegados para seus eventos ou usar o delegado **T&lt;&gt; EventHandler** . Uma classe ou interface pública não pode:
+- Classes públicas e interfaces podem conter métodos, propriedades e eventos. Você pode declarar delegados para seus eventos ou usar o delegado **EventHandler @ no__t-1T @ no__t-2** . Uma classe ou interface pública não pode:
     - Ser genérica.
     - Implementar uma interface que não seja uma interface Windows Runtime (no entanto, você pode criar suas próprias interfaces de Windows Runtime e implementá-las).
     - Derive de tipos que não estão no Windows Runtime, como **System. Exception** e **System. EventArgs**.
@@ -80,28 +80,28 @@ Para alguns tipos de coleção usados com frequência, o mapeamento é entre as 
 
 A tabela a seguir lista os tipos de interface genérica mais comuns, além de outros mapeamentos de classe e interface comuns. Para obter uma lista completa de tipos de Windows Runtime que o .NET mapeia, consulte [mapeamentos do .net de tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
 
-| Tempo de Execução do Windows                                  | .NET                                    |
+| Tempo de execução do Windows                                  | .NET                                    |
 |-|-|
-| IIterable&lt;T&gt;                               | IEnumerable&lt;T&gt;                              |
-| IVector&lt;T&gt;                                 | IList&lt;T&gt;                                    |
-| IVectorView&lt;T&gt;                             | IReadOnlyList&lt;T&gt;                            |
-| IMap&lt;K, V&gt;                                 | IDictionary&lt;TKey, TValue&gt;                   |
-| IMapView&lt;K, V&gt;                             | IReadOnlyDictionary&lt;TKey, TValue&gt;           |
-| IKeyValuePair&lt;K, V&gt;                        | KeyValuePair&lt;TKey, TValue&gt;                  |
+| IIterable @ no__t-0T @ no__t-1                               | IEnumerable @ no__t-0T @ no__t-1                              |
+| IVector @ no__t-0T @ no__t-1                                 | IList @ no__t-0T @ no__t-1                                    |
+| IVectorView @ no__t-0T @ no__t-1                             | IReadOnlyList @ no__t-0T @ no__t-1                            |
+| IMap @ no__t-0K, V @ no__t-1                                 | IDictionary @ no__t-0TKey, TValue @ no__t-1                   |
+| IMapView @ no__t-0K, V @ no__t-1                             | IReadOnlyDictionary @ no__t-0TKey, TValue @ no__t-1           |
+| IKeyValuePair @ no__t-0K, V @ no__t-1                        | KeyValuePair @ no__t-0TKey, TValue @ no__t-1                  |
 | IBindableIterable                                | IEnumerable                                       |
 | IBindableVector                                  | IList                                             |
 | Windows.UI.Xaml.Data.INotifyPropertyChanged      | System.ComponentModel.INotifyPropertyChanged      |
 | Windows.UI.Xaml.Data.PropertyChangedEventHandler | System.ComponentModel.PropertyChangedEventHandler |
 | Windows.UI.Xaml.Data.PropertyChangedEventArgs    | System.ComponentModel.PropertyChangedEventArgs    |
 
-Quando um tipo implementa mais de uma interface, é possível usar qualquer uma das interfaces implementadas como um tipo de parâmetro ou um tipo de retorno de um membro. Por exemplo, você pode passar ou retornar um **inteiro&lt;de dicionário,&gt; cadeia de caracteres** (**dicionário (Of Integer, String)** em Visual Basic) como **&lt;IDictionary&gt;int, String**, **IReadOnlyDictionary int,String&gt;ou IEnumerable System. Collections. Generic. KeyValuePair TKey, TValue. &lt;** **&gt;&gt;&lt;&lt;**
+Quando um tipo implementa mais de uma interface, é possível usar qualquer uma das interfaces implementadas como um tipo de parâmetro ou um tipo de retorno de um membro. Por exemplo, você pode passar ou retornar um **dicionário @ no__t-1int, String @ no__t-2** (**Dictionary (Of Integer, string)** em Visual Basic) como **IDictionary @ no__t-5int, String @ no__t-6**, **IReadOnlyDictionary @ no__t-8int, String @ no__t-9** , ou **IEnumerable @ No__t-11System. Collections. Generic. KeyValuePair @ No__t-12TKey, TValue @ no__t-13 @ no__t-14**.
 
 > [!IMPORTANT]
-> O JavaScript usa a interface que aparece primeiro na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar **Dictionary&lt;int, String&gt;**  para código JavaScript, ele aparecerá **como&lt;IDictionary int,&gt; String,** não importa qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
+> O JavaScript usa a interface que aparece primeiro na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar **Dictionary @ no__t-1int, String @ no__t-2** para código JavaScript, ele aparecerá como **IDictionary @ no__t-4int, String @ no__t-5,** independentemente da interface que você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
 
-No Windows Runtime, **IMap&lt;k, v&gt;**  e **IMapView&lt;K, v&gt;**  são iterados usando IKeyValuePair. Quando você os passa para código gerenciado, eles aparecem como **IDictionary&lt;TKey, TValue&gt;**  e **IReadOnlyDictionary&lt;TKey, TValue&gt;** , portanto, naturalmente, você usa **System. Collections. Generic. KeyValuePair&lt;TKey, TValue&gt;** para enumerá-los.
+No Windows Runtime, o **IMap @ no__t-1K, v @ no__t-2** e **IMapView @ no__t-4K, v @ no__t-5** são iterados usando IKeyValuePair. Quando você os passa para código gerenciado, eles aparecem como **IDictionary @ no__t-1TKey, TValue @ no__t-2** e **IReadOnlyDictionary @ no__t-4TKey, TValue @ no__t-5**, portanto, naturalmente, você usa **System. Collections. Generic. KeyValuePair @ no__t-7TKey, TValue @ no__t-8** para enumerá-los.
 
-A forma como as interfaces aparecem no código gerenciado afeta a forma como aparecem os tipos que implementam essas interfaces. Por exemplo, a classe **PropertySet** implementa **IMap&lt;K, V&gt;** , que aparece em código gerenciado como **IDictionary&lt;TKey, TValue&gt;** . **PropertySet** aparece como se ele implementasse **IDictionary&lt;TKey,&gt; TValue** em vez de **IMap&lt;K&gt;, V**, portanto, em código gerenciado, parece ter um método **Add** , que se comporta como o método **Add** em dicionários .net. Parece que não há um método **Insert** . Você pode ver este exemplo no tópico [Walkthrough, criando C# um ou Visual Basic Windows Runtime componente e chamando-o a partir do JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
+A maneira como as interfaces são exibidas em código gerenciado afeta o modo como os tipos que implementam essas interfaces são exibidos. Por exemplo, a classe **PropertySet** implementa o **IMap @ no__t-2K, V @ no__t-3**, que aparece em código gerenciado como **IDictionary @ no__t-5TKey, TValue @ no__t-6**. **PropertySet** aparece como se ele implementasse **IDictionary @ no__t-2TKey, TValue @ no__t-3** em vez de **IMap @ no__t-5k, V @ no__t-6**, portanto, em código gerenciado, ele parece ter um método **Add** , que se comporta como o método **Add** em. Dicionários de rede. Parece que não há um método **Insert** . Você pode ver este exemplo no tópico [Walkthrough, criando C# um ou Visual Basic Windows Runtime componente e chamando-o a partir do JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
 ## <a name="passing-managed-types-to-the-windows-runtime"></a>Passagem de tipos gerenciados para o Windows Runtime
 
@@ -177,13 +177,13 @@ A partir do Windows 8.1, o Windows Runtime inclui uma interface **isastringable*
 
 ## <a name="asynchronous-operations"></a>Operações assíncronas
 
-Para implementar um método assíncrono em seu componente, adicione "Async" ao final do nome do método e retorne uma das interfaces de Windows Runtime que representam ações ou operações assíncronas: **IAsyncAction**, **IAsyncActionWithProgress&lt;TProgress&gt;** , **IAsyncOperation&lt;TResultou&gt;** **IAsyncOperationWithProgressTResult,&lt;TProgress &gt;** .
+Para implementar um método assíncrono em seu componente, adicione "Async" ao final do nome do método e retorne uma das interfaces de Windows Runtime que representam ações ou operações assíncronas: **IAsyncAction**, **IAsyncActionWithProgress @ no__t-2TProgress @ no__t-3**, **IAsyncOperation @ no__t-5TResult @ no__t-6**ou **IAsyncOperationWithProgress @ no__t-8TResult, TProgress @ no__t-9**.
 
-Você pode usar tarefas do .net (a classe de [**tarefa**](/dotnet/api/system.threading.tasks.task) e a classe [**TResult&lt;&gt; da tarefa**](/dotnet/api/system.threading.tasks.task-1) genérica) para implementar o método assíncrono. Você deve retornar uma tarefa que representa uma operação em andamento, como uma tarefa retornada por um método assíncrono gravado no C# ou Visual Basic, ou uma tarefa retornada pelo método [Task. Run](/dotnet/api/system.threading.tasks.task.run) . Caso use um construtor para criar a tarefa, você deve chamar o método [Task.Start](/dotnet/api/system.threading.tasks.task.start) antes de devolvê-lo.
+Você pode usar tarefas do .NET (a classe [**Task**](/dotnet/api/system.threading.tasks.task) e a [**tarefa genérica @ no__t-4TResult @ no__t-5**](/dotnet/api/system.threading.tasks.task-1) Class) para implementar o método assíncrono. Você deve retornar uma tarefa que representa uma operação em andamento, como uma tarefa retornada por um método assíncrono gravado no C# ou Visual Basic, ou uma tarefa retornada pelo método [Task. Run](/dotnet/api/system.threading.tasks.task.run) . Caso use um construtor para criar a tarefa, você deve chamar o método [Task.Start](/dotnet/api/system.threading.tasks.task.start) antes de devolvê-lo.
 
-Um método que usa `await` (`Await` em Visual Basic) requer a `async` palavra-`Async` chave (em Visual Basic). Se você expor tal método de um componente Windows Runtime, aplique a `async` palavra-chave ao delegado que você passa para o método **Run** .
+Um método que usa `await` (`Await` em Visual Basic) requer a palavra-chave `async` (`Async` em Visual Basic). Se você expor tal método de um componente Windows Runtime, aplique a palavra-chave `async` ao delegado que você passa para o método **Run** .
 
-Para ações e operações assíncronas que não dão suporte ao cancelamento ou aos relatórios de progresso, é possível usar o método de extensão [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system?redirectedfrom=MSDN) ou [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system?redirectedfrom=MSDN) para encapsular a tarefa na interface apropriada. Por exemplo, o código a seguir implementa um método assíncrono usando a **tarefa. executar&lt;o&gt; método TResult** para iniciar uma tarefa. O método de extensão de **&lt;TResult&gt; de asasyncoperation** retorna a tarefa como uma Windows Runtime operação assíncrona.
+Para ações e operações assíncronas que não dão suporte ao cancelamento ou aos relatórios de progresso, é possível usar o método de extensão [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system) ou [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system) para encapsular a tarefa na interface apropriada. Por exemplo, o código a seguir implementa um método assíncrono usando a **tarefa. Execute o método @ no__t-1TResult @ no__t-2** para iniciar uma tarefa. O método de extensão **asasyncoperation @ no__t-1TResult @ no__t-2** retorna a tarefa como uma Windows Runtime operação assíncrona.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -222,7 +222,7 @@ function asyncExample(id) {
 
 Para ações assíncronas e operações que dão suporte ao cancelamento ou relatório de andamento, use a classe [**AsyncInfo**](/dotnet/api/system.runtime.interopservices.windowsruntime) para gerar uma tarefa iniciada e para conectar os recursos de cancelamento e relatório de andamento da tarefa com o cancelamento e o progresso recursos de relatório da interface de Windows Runtime apropriada. Para obter um exemplo que ofereça suporte ao cancelamento e ao relatório de progresso, consulte [passo a passos de criando um ou Visual Basic componente Windows Runtime e chamando-o C# do JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-Observe que você pode usar os métodos da classe **AsyncInfo** mesmo que seu método assíncrono não ofereça suporte a relatórios de cancelamento ou progresso. Se você usar uma função lambda Visual Basic ou um C# método anônimo, não forneça parâmetros para o token e a interface [IProgress&lt;t&gt; ](https://docs.microsoft.com/dotnet/api/system.iprogress-1?redirectedfrom=MSDN) . Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o método TResult&lt;&gt; de asasyncoperation, é semelhante ao uso de [**AsyncInfo. Execute&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult)sobrecargadométodo.&gt;&gt;** ](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN)
+Observe que você pode usar os métodos da classe **AsyncInfo** mesmo que seu método assíncrono não ofereça suporte a relatórios de cancelamento ou progresso. Se você usar uma função lambda Visual Basic ou um C# método anônimo, não forneça parâmetros para o token e a interface [IProgress @ no__t-3T @ no__t-4](https://docs.microsoft.com/dotnet/api/system.iprogress-1) . Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o método asasyncoperation @ no__t-0TResult @ no__t-1, tem a seguinte aparência quando você usa o [**AsyncInfo. Execute o método @ no__t-4TResult @ no__t-5 (Func @ no__t-6CancellationToken, Task @ no__t-7TResult @ no__t-8 @ no__t-9**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime)) sobrecarga em vez disso.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -247,7 +247,7 @@ Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 End Function
 ```
 
-Se você criar um método assíncrono que opcionalmente dá suporte ao cancelamento ou ao relatório de progresso, considere adicionar sobrecargas que não têm parâmetros para um token de cancelamento ou a interface **IProgress&lt;t&gt;**  .
+Se você criar um método assíncrono que opcionalmente dá suporte ao cancelamento ou ao relatório de progresso, considere adicionar sobrecargas que não têm parâmetros para um token de cancelamento ou a interface **IProgress @ no__t-1T @ no__t-2** .
 
 ## <a name="throwing-exceptions"></a>Acionamento de exceções
 
@@ -269,7 +269,7 @@ Ao acionar uma exceção no componente, você pode facilitar para um chamador Ja
 
 ## <a name="declaring-and-raising-events"></a>Declaração e acionamento de eventos
 
-Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [**EventHandler&lt;TEventArgs&gt;** ](https://docs.microsoft.com/dotnet/api/system.eventhandler-1?redirectedfrom=MSDN) como o tipo do evento e use o tipo de argumento de evento como o argumento de tipo genérico. Gere o evento exatamente como você faria em um aplicativo .NET.
+Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [**EventHandler @ no__t-2TEventArgs @ no__t-3**](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) como o tipo do evento e use o tipo de argumento de evento como o argumento de tipo genérico. Gere o evento exatamente como você faria em um aplicativo .NET.
 
 Quando o componente do Tempo de Execução do Windows é usado em JavaScript ou C++, o evento segue o padrão de evento do Windows Runtime que essas linguagens esperam. Quando você usa o componente do C# ou Visual Basic, o evento aparece como um evento comum do .net. Um exemplo é fornecido em [passo a passos de C# criação de um componente do ou Visual Basic Windows Runtime e sua chamada a partir do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript).
 
@@ -283,4 +283,4 @@ Para obter mais informações sobre os C# recursos de Visual Basic e linguagem e
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [.NET para aplicativos UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
-* [Walkthrough-criando um C# componente ou Visual Basic Windows Runtime e chamando-o do JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
+* [Passo a passo para criar um componente do Windows Runtime em C# ou Visual Basic e chamá-lo do JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

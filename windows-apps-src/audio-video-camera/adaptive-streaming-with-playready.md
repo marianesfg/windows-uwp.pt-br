@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f87ecf0c3c90976295d85c1a995f1de091491974
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e0f6ef206dc836e48bfc904767ff8c8c7bdca9db
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359174"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340046"
 ---
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptável com PlayReady
 
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>Inicializando o AdaptiveMediaSource
 
-Por fim, você precisará de uma função para inicializar o [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), criada de um determinado [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) e [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). O **Uri** deve ser o link para o arquivo de mídia (HLS ou DASH); o **MediaElement** deve ser definido em seu XAML.
+Por fim, você precisará de uma função para inicializar o [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), criada de um determinado [Uri](https://docs.microsoft.com/dotnet/api/system.uri) e [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). O **Uri** deve ser o link para o arquivo de mídia (HLS ou DASH); o **MediaElement** deve ser definido em seu XAML.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -296,7 +296,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 Você pode chamar essa função em qualquer evento que manipular o início do streaming adaptável; por exemplo, em um evento de clique de um botão.
 
 ## <a name="see-also"></a>Consulte também
-- [PlayReady DRM](playready-client-sdk.md)
+- [DRM do PlayReady](playready-client-sdk.md)
 
 
 

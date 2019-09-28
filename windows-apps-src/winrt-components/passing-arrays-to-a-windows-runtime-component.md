@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac91b3ea1c8396a89a2ec91c43cdcd6f52bbbbcd
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 49fb5ac5fbba5fad8123eb0167a2e00037725487
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393669"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340511"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Passagem de matrizes para um componente do Tempo de Execução do Windows
 
@@ -20,12 +20,12 @@ ms.locfileid: "70393669"
 
 Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída. Caso o conteúdo da matriz seja de entrada, o método lê da matriz, mas não grava nela. Caso o conteúdo da matriz seja de saída, o método grava na matriz, mas não lê dela. Isso apresenta um problema para parâmetros de matriz, porque as matrizes no .NET são tipos de referência e o conteúdo de uma matriz é mutável mesmo quando a referência de matriz é passada por valor (**ByVal** no Visual Basic). A [Ferramenta de Exportação de Metadados do Windows Runtime (Winmdexp.exe)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) exige que você especifique o uso pretendido da matriz, se não for claro pelo contexto, aplicando o atributo ReadOnlyArrayAttribute ou WriteOnlyArrayAttribute para o parâmetro. O uso da matriz é determinado conforme o seguinte:
 
--   Para o valor de retorno ou para um parâmetro out (um parâmetro **ByRef** com o atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute?redirectedfrom=MSDN) no Visual Basic), a matriz é sempre apenas de saída. Não aplique o atributo ReadOnlyArrayAttribute. O atributo WriteOnlyArrayAttribute é permitido em parâmetros de saída, mas é redundante.
+-   Para o valor de retorno ou para um parâmetro out (um parâmetro **ByRef** com o atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) no Visual Basic), a matriz é sempre apenas de saída. Não aplique o atributo ReadOnlyArrayAttribute. O atributo WriteOnlyArrayAttribute é permitido em parâmetros de saída, mas é redundante.
 
-    > **Cuidado o Visual Basic**compiladornãoimpõeregrassomentedesaída  . Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
+    > **Cuidado**  a Visual Basic compilador não impõe regras somente de saída. Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
  
 -   Os parâmetros que tiverem o modificador **ref** (**ByRef** no Visual Basic) não são permitidos. Winmdexp.exe gera um erro.
--   Para um parâmetro passado por valor, você deve especificar se o conteúdo da matriz é de entrada ou saída aplicando o atributo [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute?redirectedfrom=MSDN) ou [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute?redirectedfrom=MSDN). Especificar ambos os atributos é um erro.
+-   Para um parâmetro passado por valor, você deve especificar se o conteúdo da matriz é de entrada ou saída aplicando o atributo [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute) ou [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute). Especificar ambos os atributos é um erro.
 
 Caso um método deva aceitar uma matriz de entrada, modifique o conteúdo da matriz e devolva a matriz ao chamador, use um parâmetro somente leitura para a entrada e um parâmetro somente gravação (ou o valor de retorno) para a saída. O seguinte código mostra uma maneira de implementar esse padrão:
 
@@ -62,6 +62,6 @@ Se o chamador for um código gerenciado, a matriz original estará disponível p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute?redirectedfrom=MSDN)
-* [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute?redirectedfrom=MSDN)
-* [Windows Runtime componentes com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute)
+* [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute)
+* [Componentes do Windows Runtime com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
