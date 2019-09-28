@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c980acc3b9887dac68712bd65de96e8f3a327a5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1e489aa8cbf8b63885f039847b291404393444e9
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319058"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339381"
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
@@ -114,12 +114,12 @@ O controle seletor de hora dá suporte a todos os sistemas de relógio especific
 ### <a name="datetime-and-calendar-values"></a>Valores DateTime e Calendar
 
 Os objetos de data usados nos controles de data e hora de XAML têm uma representação diferente, dependendo de sua linguagem de programação. 
-- C# e Visual Basic usam a estrutura [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) que faz parte do .NET. 
+- C# e Visual Basic usam a estrutura [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) que faz parte do .NET. 
 - C++/CX usa a estrutura [Windows::Foundation::DateTime](https://docs.microsoft.com/windows/desktop/api/windows.foundation/ns-windows-foundation-datetime). 
 
-Um conceito relacionado é a classe Calendar, que influencia como as datas são interpretadas em contexto. Todos os aplicativos do Windows Runtime podem usar a classe [Windows.Globalization.Calendar](https://docs.microsoft.com/uwp/api/Windows.Globalization.Calendar). Aplicativos C# e Visual Basic também podem usar a classe [System.Globalization.Calendar](https://docs.microsoft.com/dotnet/api/system.globalization.calendar?redirectedfrom=MSDN), que tem funcionalidade muito semelhante. (Os aplicativos Windows Runtime podem usar a classe base do calendário do .NET, mas não as implementações específicas; por exemplo, GregorianCalendar.)
+Um conceito relacionado é a classe Calendar, que influencia como as datas são interpretadas em contexto. Todos os aplicativos do Windows Runtime podem usar a classe [Windows.Globalization.Calendar](https://docs.microsoft.com/uwp/api/Windows.Globalization.Calendar). Aplicativos C# e Visual Basic também podem usar a classe [System.Globalization.Calendar](https://docs.microsoft.com/dotnet/api/system.globalization.calendar), que tem funcionalidade muito semelhante. (Os aplicativos Windows Runtime podem usar a classe base do calendário do .NET, mas não as implementações específicas; por exemplo, GregorianCalendar.)
 
-O .NET também dá suporte a um tipo chamado [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN), que é implicitamente conversível para um [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN). Portanto, você pode ver um tipo de "DateTime"usado em código .NET que é usado para definir valores que são realmente DateTimeOffset. Para obter mais informações sobre a diferença entre DateTime e DateTimeOffset, confira Comentários na classe [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN).
+O .NET também dá suporte a um tipo chamado [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime), que é implicitamente conversível para um [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset). Portanto, você pode ver um tipo de "DateTime"usado em código .NET que é usado para definir valores que são realmente DateTimeOffset. Para obter mais informações sobre a diferença entre DateTime e DateTimeOffset, confira Comentários na classe [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset).
 
 > **Observação**&nbsp;&nbsp;propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão da [extensão de marcação \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
 

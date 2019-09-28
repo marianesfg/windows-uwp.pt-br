@@ -6,12 +6,12 @@ ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06f5ce8ad7576114137adb862f89720e27d3802b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e78fddf1a0dae39d4479a4a1786a36687337c75e
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364287"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340237"
 ---
 # <a name="draw-shapes"></a>Desenhar formas
 
@@ -147,7 +147,7 @@ Veja a seguir o [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) renderiza
 
 Uma [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) é simplesmente uma linha desenhada entre dois pontos no espaço coordenado. Uma **Line** ignora todos os valores fornecidos para [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill), pois não possui espaço interno. Para uma **Line**, especifique os valores para as propriedades [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) e [**StrokeThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.strokethickness); caso contrário, a **Line** não será renderizada.
 
-Não use os valores [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) para especificar uma forma de [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line), em vez disso, use valores [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) discretos para [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) e [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2). Isso permite a marcação mínima para as linhas horizontais ou verticais. Por exemplo, `<Line Stroke="Red" X2="400"/>` define uma linha horizontal com comprimento de 400 pixels. Por padrão, as outras propriedades X,Y são 0, portanto, em termos de pontos, este XAML desenha uma linha de `(0,0)` a `(400,0)`. Você pode então usar [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) para mover **Line** na íntegra, caso queira começar em um ponto que não seja (0,0).
+Não use os valores [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) para especificar uma forma de [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line), em vez disso, use valores [**Double**](https://docs.microsoft.com/dotnet/api/system.double) discretos para [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) e [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2). Isso permite a marcação mínima para as linhas horizontais ou verticais. Por exemplo, `<Line Stroke="Red" X2="400"/>` define uma linha horizontal com comprimento de 400 pixels. Por padrão, as outras propriedades X,Y são 0, portanto, em termos de pontos, este XAML desenha uma linha de `(0,0)` a `(400,0)`. Você pode então usar [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) para mover **Line** na íntegra, caso queira começar em um ponto que não seja (0,0).
 
 ```xaml
 <Line Stroke="Red" X2="400"/>
@@ -165,7 +165,7 @@ line1.X2 = 400;
 layoutRoot.Children.Add(line1);
 ```
 
-## <a name="span-idpolylinespanspan-idpolylinespanspan-idpolylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polyline
+## <a name="span-id_polylinespanspan-id_polylinespanspan-id_polylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polyline
 
 Uma [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) é semelhante a um [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) por ser delimitada por um conjunto de pontos. A única diferença é que o último ponto de uma **Polyline** não está conectado ao primeiro ponto.
 

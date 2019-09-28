@@ -5,15 +5,15 @@ ms.date: 03/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, banco de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 487497fd3b715f6d497eb76b8da6a3e60903772a
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 05579affd127fd951e233d1492d23e2dad0f4b53
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713773"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340031"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
-Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN).
+Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient).
 
 Neste guia, mostraremos uma maneira de fazer isso. Se você instalar o banco de dados de exemplo [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) em sua instância do SQL Server e, então, usar esses snippets, terá uma interface do usuário básica que mostra os produtos do banco de dados de exemplo Northwind.
 
@@ -50,7 +50,7 @@ Nesta seção, faremos o seguinte:
 :five: Preencher a interface do usuário com produtos.
 
 >[!NOTE]
-> Esta seção ilustra uma maneira de organizar seu código de acesso a dados. Ele deve apenas fornecer um exemplo de como é possível usar o [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) para armazenar e recuperar dados de um banco de dados do SQL Server. Você pode organizar seu código de qualquer maneira que faça mais sentido para o design do seu aplicativo.
+> Esta seção ilustra uma maneira de organizar seu código de acesso a dados. Ele deve apenas fornecer um exemplo de como é possível usar o [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) para armazenar e recuperar dados de um banco de dados do SQL Server. Você pode organizar seu código de qualquer maneira que faça mais sentido para o design do seu aplicativo.
 
 ### <a name="add-a-connection-string"></a>Adicionar uma cadeia de caracteres de conexão
 
@@ -77,7 +77,7 @@ sealed partial class App : Application
 
 ### <a name="create-a-class-to-hold-product-data"></a>Criar uma classe para armazenar dados do produto
 
-Vamos criar uma classe que implementa o evento [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) para que possamos associar os atributos em nossa interface do usuário XAML às propriedades nessa classe.
+Vamos criar uma classe que implementa o evento [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) para que possamos associar os atributos em nossa interface do usuário XAML às propriedades nessa classe.
 
 ```csharp
 public class Product : INotifyPropertyChanged
@@ -106,7 +106,7 @@ public class Product : INotifyPropertyChanged
 
 ### <a name="retrieve-products-from-the-sql-server-database"></a>Recuperar produtos do banco de dados do SQL Server
 
-Crie um método que obtenha produtos do banco de dados Northwind e, em seguida, os devolva como uma coleção [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN) de instâncias de ``Product``.
+Crie um método que obtenha produtos do banco de dados Northwind e, em seguida, os devolva como uma coleção [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1) de instâncias de ``Product``.
 
 ```csharp
 public ObservableCollection<Product> GetProducts(string connectionString)
@@ -208,7 +208,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
 ### <a name="show-products-in-the-listview"></a>Mostrar produtos na ListView
 
-Abra o arquivo **MainPage.xaml.cs** e adicione o código ao construtor da classe ``MainPage`` que define a propriedade **ItemSource** da [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) como a [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN) das instâncias de ``Product``.
+Abra o arquivo **MainPage.xaml.cs** e adicione o código ao construtor da classe ``MainPage`` que define a propriedade **ItemSource** da [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) como a [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1) das instâncias de ``Product``.
 
 ```csharp
 public MainPage()
@@ -222,7 +222,7 @@ Inicie o projeto e veja os produtos do banco de dados de exemplo Northwind apare
 
 ![Produtos Northwind](images/products-northwind.png)
 
-Explore o namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN) para ver o que mais você pode fazer com os dados em seu banco de dados do SQL Server.
+Explore o namespace [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) para ver o que mais você pode fazer com os dados em seu banco de dados do SQL Server.
 
 ## <a name="trouble-connecting-to-your-database"></a>Problemas para se conectar ao seu banco de dados?
 

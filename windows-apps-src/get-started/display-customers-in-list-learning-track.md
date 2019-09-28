@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, associação de dados, lista
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a63bcc73be0146a9f580ae3afe3684f85e51d00e
-ms.sourcegitcommit: 88431e67d282d9a2a4fe4afcb254310f90c7cd7e
+ms.openlocfilehash: 3cebf51bdf9fa9942a0b88ed7b4cf66204671781
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127446"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340330"
 ---
 # <a name="display-customers-in-a-list"></a>Exibir clientes em uma lista
 
@@ -110,7 +110,7 @@ Você exibiu clientes em uma lista, mas a associação de dados permite que voc�
 
 Se você seguiu os snippets de código anteriores, a associação feitas usa x:Bind e não especifica um modo, transformando-a em uma associação Ocasional. Se você desejar editar seus clientes diretamente na interface do usuário, será necessário alterá-la para uma associação Bidirecional para que as alterações dos dados sejam passadas para os objetos de cliente. Para saber mais, consulte [Associação de dados em detalhes](../data-binding/data-binding-in-depth.md).
 
-A associação bidirecional também atualizará a interface do usuário se a fonte de dados for alterada. Para que isso funcione, você deve implementar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) na origem e verificar se os setters de propriedade emitem o evento **PropertyChanged**. É prática comum que eles chamem um método auxiliar como o **OnPropertyChanged**, conforme mostrado abaixo:
+A associação bidirecional também atualizará a interface do usuário se a fonte de dados for alterada. Para que isso funcione, você deve implementar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) na origem e verificar se os setters de propriedade emitem o evento **PropertyChanged**. É prática comum que eles chamem um método auxiliar como o **OnPropertyChanged**, conforme mostrado abaixo:
 
 ```csharp
 public class Customer : INotifyPropertyChanged
@@ -170,7 +170,7 @@ Veja a seguir um resumo rápido de APIs e outras documentações úteis que ajud
 | [Binding](../xaml-platform/binding-markup-extension.md) | Documentação sobre a extensão de marcação de Associação antiga. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Um controle da interface do usuário que exibe itens de dados em uma pilha vertical. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Um controle de texto básico para exibir os dados de texto editáveis na interface do usuário. |
-| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) | A interface para tornar dados observáveis, fornecendo-os a uma associação de dados. |
+| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) | A interface para tornar dados observáveis, fornecendo-os a uma associação de dados. |
 | [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | A propriedade **ItemsSource** dessa classe permite que um ListView associe-se a uma fonte de dados. |
 
 ### <a name="useful-docs"></a>Documentos úteis
