@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
 ms.openlocfilehash: ead8012c6d4b9243e70dcc09f7ef174a3d907356
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 09/30/2019
 ms.locfileid: "68349212"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
@@ -157,7 +157,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome&nbsp;da permissão</th>
+    <th align="left">Nome da&nbsp;permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -178,7 +178,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome&nbsp;da permissão</th>
+    <th align="left">Nome da&nbsp;permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -194,12 +194,12 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </tbody>
     </table>
 
-### <a name="publishing"></a>Publicando 
+### <a name="publishing"></a>Publicação 
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome&nbsp;da permissão</th>
+    <th align="left">Nome da&nbsp;permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -227,7 +227,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome&nbsp;da permissão</th>
+    <th align="left">Nome da&nbsp;permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -239,7 +239,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     <tr><td align="left">    <b>Serviços de parceiros</b>&nbsp;*</td><td>    Pode exibir a página de serviços Web de uma conta.  </td><td>    Pode exibir e editar a página de serviços Web de uma conta.      </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Contas de teste do Xbox</b>&nbsp;*</td><td>    Pode exibir a página de contas de teste do Xbox de uma conta.  </td><td>    Pode exibir e editar a página de contas de teste do Xbox de uma conta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Contas de teste do Xbox por área restrita</b>&nbsp;*</td><td>    Pode exibir a página de contas de teste do Xbox somente para as áreas restritas especificadas de uma conta.  </td><td>    Pode exibir e editar o teste do Xbox.   <tr><td align="left">    <b>Página de contas somente para as áreas restritas especificadas de uma conta    </td><td>    N/D    </td><td>    N/D                      </td></tr>
-    <tr><td align="left">    <b>Dispositivos Xbox</b>&nbsp;*</td><td>    Pode exibir a página de consoles de desenvolvimento do Xbox One de uma conta.  </td><td>    Pode exibir e editar a página de consoles de desenvolvimento do Xbox One de uma conta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
+    <tr>Dispositivos <td align="left"><b>Xbox</b>&nbsp; @ no__t-3</td><td>    Pode exibir a página de consoles de desenvolvimento do Xbox One de uma conta.  </td><td>    Pode exibir e editar a página de consoles de desenvolvimento do Xbox One de uma conta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Dispositivos Xbox por área restrita</b>&nbsp;*</td><td>    Pode exibir a página de consoles de desenvolvimento do Xbox One para apenas as áreas restritas especificadas de uma conta.  </td><td>    Pode exibir e editar a página de consoles de desenvolvimento do Xbox One somente para as áreas restritas especificadas de uma conta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Canais de aplicativos</b>&nbsp;*</td><td>    N/D  </td><td>    Pode publicar canais de vídeo promocionais para o console do Xbox para exibição por meio do OneGuide.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Configuração do serviço</b>&nbsp;*</td><td>    Pode exibir a página de configuração do serviço Xbox Live de um produto.  </td><td>    Pode exibir e editar a página de configuração do serviço Xbox Live de um produto.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
