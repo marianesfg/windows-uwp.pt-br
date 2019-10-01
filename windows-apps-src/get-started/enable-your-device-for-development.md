@@ -6,12 +6,12 @@ keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de de
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 1a4c1f90c0fa8304f95b1dc958fe5a75e74301dd
+ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867609"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205933"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -47,7 +47,7 @@ Veja a seguir a página de configurações na família de dispositivos de deskto
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>Qual configuração devo escolher: sideload de aplicativos ou Modo de Desenvolvedor?
 
 > [!NOTE]
-> A partir do Build 18956 do Windows Insider, a opção de sideload foi removida e o modo de desenvolvedor agora é uma alternância. Veja mais sobre sideload na próxima seção. 
+> A partir do Build 18956 do Windows Insider, a opção de sideload foi removida e o modo de desenvolvedor agora é uma alternância. Veja mais sobre sideload na próxima seção.
 
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
@@ -60,7 +60,7 @@ Por padrão, você só pode instalar aplicativos UWP (Plataforma Universal do Wi
 ### <a name="sideload-apps"></a>Fazer o sideload de aplicativos
 
 > [!NOTE]
-> A partir do Build 18956 do Windows Insider, o sideload é habilitado por padrão. Agora você pode implantar um pacote MSIX assinado em um dispositivo sem uma configuração especial. 
+> A partir do Build 18956 do Windows Insider, o sideload é habilitado por padrão. Agora você pode implantar um pacote MSIX assinado em um dispositivo sem uma configuração especial.
 
 A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store, ou por alguém que precisa executar aplicativos de outras fontes, que não a Microsoft. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introdução à implantação de aplicativo no Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
@@ -100,7 +100,7 @@ Para saber mais sobre o Portal de Dispositivos, consulte [Visão geral do Portal
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
 - [Portal de Dispositivos para Desktop](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de Dispositivos para HoloLens](https://developer.microsoft.com/mixed-reality)
+- [Portal de Dispositivos para HoloLens](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)
 - [Portal de Dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal de Dispositivos para celulares](../debug-test-perf/device-portal-mobile.md)
 - [Portal de Dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
@@ -207,26 +207,26 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
 1.  Execute **regedit**.
 2.  Para habilitar o sideload, defina o valor deste DWORD como 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps`
 
     - OU -
 
     Para habilitar o modo de desenvolvedor, defina os valores deste DWORD como 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense`
 
 **Usar o PowerShell para habilitar seu dispositivo**
 
 1.  Execute o PowerShell com privilégios de administrador.
 2.  Para habilitar o sideload, execute este comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"`
 
     - OU -
 
     Para habilitar o modo de desenvolvedor, execute este comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"`
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Atualizar seu dispositivo do Windows 8.1 para Windows 10
 
@@ -235,7 +235,7 @@ Ao criar ou fazer sideload de aplicativos em seu dispositivo Windows 8.1, você 
 **Para cancelar o registro de uma licença de desenvolvedor**
 
 1.  Execute o PowerShell com privilégios de administrador.
-2.  Execute este comando: **unregister-windowsdeveloperlicense**.
+2.  Execute este comando: `unregister-windowsdeveloperlicense`.
 
 Depois disso, você precisa habilitar seu dispositivo para o desenvolvimento, conforme descrito neste tópico, para que possa continuar a desenvolver nele. Se não fizer isso, poderá ocorrer um erro quando você depurar seu aplicativo ou tentar criar um pacote para ele. Aqui está um exemplo desse erro:
 

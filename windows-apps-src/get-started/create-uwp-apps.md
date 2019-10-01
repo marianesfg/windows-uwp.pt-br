@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a5cec4c53d05e14537c5cc965b795a5eab8382f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d3d52429d4d91aa646f19aad5444f895f71504de
+ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564451"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205919"
 ---
 # <a name="start-coding"></a>Comece a codificar
 
@@ -44,12 +44,12 @@ Se você deseja um passo a passo mais detalhado sobre as noções básicas de co
 **Documentos:**
 
 * [Introdução ao C#](https://docs.microsoft.com/dotnet/csharp/getting-started/)
-* [Guia de início rápido do C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/index)
+* [Guia de início rápido do C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/)
 * [Introdução ao Visual Studio](https://docs.microsoft.com/visualstudio/ide/)
 
-**Vídeos:**
+**Tutoriais:**
 
-* [LinkedIn Learning](https://www.linkedin.com/learning/learning-universal-windows-app-development/welcome)
+* [Windows no Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module)
 
 ## <a name="using-the-docs"></a>Uso dos documentos
 

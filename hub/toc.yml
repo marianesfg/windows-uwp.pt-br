@@ -68,6 +68,8 @@
       href: apps/accessibility.md
     - name: Recursos e tecnologias
       href: apps/features-and-technologies.md
+    - name: Atualizações mais recentes do documento
+      href: apps/whats-new/latest-doc-updates.md
 - name: Criar com o Windows
   items:
     - name: Desenvolva com o Python
@@ -80,7 +82,7 @@
           href: python/get-started/python-for-web.md
         - name: Introdução à automação
           href: python/get-started/python-for-scripting.md
-        - name: Perguntas Frequentes
+        - name: Perguntas frequentes
           href: python/faqs.md
         - name: Recursos
           href: python/resources.md

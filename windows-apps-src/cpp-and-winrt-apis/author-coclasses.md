@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, COM, componente
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8da62908d33c053cee4ba3f55645be9dbdcaada9
-ms.sourcegitcommit: b9268ca84af56ee1c4f4ac0314e2452193369f01
+ms.openlocfilehash: 5ff3677c3624974759d1f6ff21d6e53cf9d33144
+ms.sourcegitcommit: c5699e74b60c5c7a88658b4ebe30c1475eef5c27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293369"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71344513"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Criar componentes COM com C++/WinRT
 
@@ -63,7 +63,7 @@ Você pode fazer isso explicitamente ou indiretamente incluindo alguns outros ar
 
 ## <a name="a-simple-example-of-a-com-component"></a>Um exemplo simples de um componente COM
 
-Este é um exemplo simples de um componente COM escrito usando C++/WinRT. Esta é uma lista completa de um miniaplicativo, de modo que você pode testar o código colando-o em `pch.h` e em `main.cpp` de um novo projeto do **Aplicativo de Console do Windows (C++/WinRT)** .
+Este é um exemplo simples de um componente COM escrito usando C++/WinRT. Esta é uma lista completa de um miniaplicativo, de modo que você pode experimentar o código colando-o em `pch.h` e em `main.cpp` de um novo projeto do **Aplicativo de Console do Windows (C++/WinRT)** .
 
 ```cppwinrt
 // pch.h

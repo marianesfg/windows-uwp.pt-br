@@ -1,20 +1,24 @@
 ---
-description: O C++O/WinRT 2.0 permite adiar a destruição de seus tipos de implementação e consultar com segurança durante a destruição. Este tópico descreve esses recursos e explica quando usá-los.
-title: Detalhes sobre destruidores
-ms.date: 07/19/2019
+description: Esses pontos de extensão no C++/WinRT 2.0 permitem adiar a destruição dos tipos de implementação, para consultar com segurança durante a destruição e para conectar a entrada e a saída dos métodos projetados.
+title: Pontos de extensão para seus tipos de implementação
+ms.date: 09/26/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projeção, destruição adiada, consultas seguras
 ms.localizationpriority: medium
-ms.openlocfilehash: 9806ea54665b24c246f2023714a14d94ec3bcc8e
-ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
+ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
+ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387793"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71329567"
 ---
-# <a name="details-about-destructors"></a>Detalhes sobre destruidores
+# <a name="extension-points-for-your-implementation-types"></a>Pontos de extensão para seus tipos de implementação
 
-O C++O/WinRT 2.0 permite adiar a destruição de seus tipos de implementação e consultar com segurança durante a destruição. Este tópico descreve esses recursos e explica quando usá-los.
+O [modelo de struct winrt::implements](/uwp/cpp-ref-for-winrt/implements) é a base da qual suas próprias implementações de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) (de classes de runtime e fábricas de ativação) derivam direta ou indiretamente.
+
+Este tópico aborda os pontos de extensão **winrt::implements** no C++/WinRT 2.0. Você pode optar por implementar esses pontos de extensão em seus tipos de implementação, a fim de personalizar o comportamento padrão de objetos inspecionáveis (*inspecionável* no sentido da interface [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable)).
+
+Esses pontos de extensão permitem adiar a destruição dos tipos de implementação, para consultar com segurança durante a destruição e para conectar a entrada e a saída dos métodos projetados. Este tópico descreve esses recursos e explica mais sobre quando e como usá-los.
 
 ## <a name="deferred-destruction"></a>Destruição adiada
 
@@ -89,7 +93,11 @@ struct Sample : implements<Sample, IStringable>
 };
 ```
 
-Considere isso como um coletor de lixo determinístico. Talvez de maneira mais prática e avançada, você pode transformar a função **final_release** em uma corrotina e manipular sua eventual destruição em um lugar, além de suspender e alternar threads, conforme necessário.
+Considere isso como um coletor de lixo determinístico.
+
+Normalmente, o objeto é destruído quando **std::unique_ptr** é destruído, mas você pode acelerar sua destruição chamando **std::unique_ptr::reset** ou pode adiar salvando **std::unique_ptr** em algum lugar.
+
+Talvez de maneira mais prática e avançada, você pode transformar a função **final_release** em uma corrotina e manipular sua eventual destruição em um lugar, além de suspender e alternar threads, conforme necessário.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -111,7 +119,7 @@ Uma suspensão apontará as causas de o thread de chamada&mdash;que originalment
 
 A criação da noção de destruição adiada é a capacidade de consultar interfaces com segurança durante a destruição.
 
-O COM clássico baseia-se em dois conceitos centrais. O primeiro é a contagem de referências e o segundo é a consulta de interfaces. Além de **AddRef** e **Release**, a interface **IUnknown** fornece [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void). Esse método é muito usado por determinadas estruturas de interface do usuário&mdash;como XAML, para atravessar a hierarquia XAML enquanto simula seu sistema de tipos combináveis. Considere um exemplo simples.
+O COM clássico baseia-se em dois conceitos centrais. O primeiro é a contagem de referências e o segundo é a consulta de interfaces. Além de **AddRef** e **Release**, a interface **IUnknown** fornece [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)). Esse método é muito usado por determinadas estruturas de interface do usuário&mdash;como XAML, para atravessar a hierarquia XAML enquanto simula seu sistema de tipos combináveis. Considere um exemplo simples.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -172,3 +180,59 @@ Primeiro, a função **final_release** é chamada, notificando a implementação
 Dentro do destruidor, limpamos o contexto de dados, que, como sabemos, requer uma consulta para a classe base **FrameworkElement**.
 
 Tudo isso é possível devido ao ressalto da contagem de referência (ou estabilização da contagem de referência) fornecido pelo C++/WinRT 2.0.
+
+## <a name="method-entry-and-exit-hooks"></a>Entrada do método e ganchos de saída
+
+Um ponto de extensão menos usado é o struct **abi_guard** e as funções **abi_enter** e **abi_exit**.
+
+Se o seu tipo de implementação definir uma função **abi_enter**, essa função será chamada na entrada de todos os métodos de interface projetados (sem contar os métodos de [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable)).
+
+Da mesma forma, se você definir **abi_exit**, ele será chamado na saída de cada método, mas não será chamado caso seu **abi_enter** gere uma exceção. Ele ainda *será* chamado se uma exceção for lançada pelo próprio método da interface projetada.
+
+Como exemplo, você pode usar **abi_enter** para gerar uma exceção **invalid_state_error** hipotética caso um cliente tente usar um objeto após o objeto ter sido colocado em um estado inutilizável, talvez após uma chamada de método **Shut­Down** ou **Disconnect**.  As classes de iterador C++/ WinRT usam esse recurso para lançar uma exceção de estado inválida na função **abi_enter** caso a coleção subjacente tenha sido alterada.
+
+Além das funções simples **abi_enter** e **abi_exit**, é possível definir um tipo aninhado chamado **abi_guard**. Nesse caso, uma instância de **abi_guard** é criada na entrada para cada um dos métodos de interface projetados (não **IInspectable**), com uma referência ao objeto como seu parâmetro construtor. O **abi_guard** então é destruído na saída do método. Você pode colocar qualquer estado extra que desejar em seu tipo de **abi_guard**.
+
+Caso você não defina seu próprio **abi_guard**, existe um padrão que chama **abi_enter** na construção e **abi_exit** na destruição.
+
+Essas proteções são usadas somente quando um método é invocado *por meio da interface projetada*. Caso você invoque métodos diretamente no objeto de implementação, essas chamadas vão diretamente para a implementação, sem nenhuma proteção.
+
+Este é um exemplo de código.
+
+```cppwinrt
+struct Sample : SampleT<Sample, IClosable>
+{
+    void abi_enter();
+    void abi_exit();
+
+    void Close();
+};
+
+void example1()
+{
+    auto sampleObj1{ winrt::make<Sample>() };
+    sampleObj1.Close(); // Calls abi_enter and abi_exit.
+}
+
+void example2()
+{
+    auto sampleObj2{ winrt::make_self<Sample>() };
+    sampleObj2->Close(); // Doesn't call abi_enter nor abi_exit.
+}
+
+// A guard is used only for the duration of the method call.
+// If the method is a coroutine, then the guard applies only until
+// the IAsyncXxx is returned; not until the coroutine completes.
+
+IAsyncAction CloseAsync()
+{
+    // Guard is active here.
+    DoWork();
+
+    // Guard becomes inactive once DoOtherWorkAsync
+    // returns an IAsyncAction.
+    co_await DoOtherWorkAsync();
+
+    // Guard is not active here.
+}
+```
