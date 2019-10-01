@@ -9,18 +9,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7cc27df92329157f2987d8d02eb59039534d166
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c69e8618aaba58fd3b8de163ce990371bbf3c945
+ms.sourcegitcommit: ce7610916fd662d4bb95d4bfe5c4cf0e45303014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370101"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71681990"
 ---
 # <a name="generate-a-3mf-package"></a>Gerar um pacote 3MF
 
 **APIs importantes**
 
--   [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d)
+-   [**Windows. Graphics. Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d)
 
 Este guia descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e como ele pode ser criado e manipulado com a API [**Windows.Graphics.Printing3D**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d).
 
@@ -28,7 +28,7 @@ Este guia descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e 
 
 O Formato de Manufatura 3D é um conjunto de convenções para usar XML para descrever a aparência e a estrutura de modelos 3D para fins de fabricação (impressão em 3D). Ele define um conjunto de partes (algumas necessárias e outras opcionais) e suas relações, com o objetivo de fornecer todas as informações necessárias a um dispositivo de fabricação 3D. Um conjunto de dados que segue o Formato de Manufatura 3D pode ser salvo como um arquivo com a extensão .3mf.
 
-No Windows 10, o [ **Printing3D3MFPackage** ](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3d3mfpackage) classe os **Windows.Graphics.Printing3D** namespace é análogo a um arquivo único .3mf e outros classes são mapeados para o determinados elementos XML no arquivo. Este guia descreve como cada uma das partes principais de um documento 3MF pode ser criada e definida de forma programática, como a Extensão de Materiais 3MF pode ser utilizada e como um objeto **Printing3D3MFPackage** pode ser convertido e salvo como um arquivo .3mf. Para saber mais sobre os padrões de 3MF ou a Extensão de Materiais 3MF, consulte a [Especificação 3MF](https://3mf.io/what-is-3mf/3mf-specification/).
+No Windows 10, a classe [**Printing3D3MFPackage**](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3d3mfpackage) no namespace **Windows. Graphics. Printing3D** é análoga a um único arquivo. 3mf e outras classes são mapeadas para os elementos XML específicos no arquivo. Este guia descreve como cada uma das partes principais de um documento 3MF pode ser criada e definida de forma programática, como a Extensão de Materiais 3MF pode ser utilizada e como um objeto **Printing3D3MFPackage** pode ser convertido e salvo como um arquivo .3mf. Para saber mais sobre os padrões de 3MF ou a Extensão de Materiais 3MF, consulte a [Especificação 3MF](https://3mf.io/what-is-3mf/3mf-specification/).
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
@@ -83,7 +83,7 @@ O tipo de material padrão é **Material de base**, que tem tanto um valor de **
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
-> O dispositivo de fabricação 3D determinará quais mapa materiais físicos disponíveis para o qual os elementos de material virtuais armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
+>o dispositivo de fabricação 3D @no__t 0The determinará quais materiais físicos disponíveis são mapeados para quais elementos de material virtual armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
 
 ### <a name="color-materials"></a>Materiais de cor
 
@@ -131,6 +131,10 @@ Agora que temos um modelo, com materiais definidos e componentes, podemos salvá
 
 [!code-cs[SavePackage](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSavePackage)]
 
+Essa função garante que a textura seja especificada corretamente.
+
+[!code-cs[FixTexture](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetFixTexture)]
+
 Daqui, podemos iniciar um trabalho de impressão dentro do aplicativo (veja [Impressão 3D a do seu aplicativo](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)) ou salvar esse **Printing3D3MFPackage** como um arquivo .3mf.
 
 O método a seguir pega um **Printing3D3MFPackage** concluído e salva os dados em um arquivo .3mf.
@@ -139,8 +143,8 @@ O método a seguir pega um **Printing3D3MFPackage** concluído e salva os dados 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Impressão 3D do seu aplicativo](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
-[Exemplo UWP de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
+[impressão 3D de seu aplicativo](https://docs.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
+[exemplo de UWP de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  
