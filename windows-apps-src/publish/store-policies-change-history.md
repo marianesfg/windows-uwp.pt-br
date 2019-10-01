@@ -7,12 +7,12 @@ ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
-ms.openlocfilehash: a846b48565a6029656ecfdd21763931df74b5375
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 879a400d22b3032bb4ee3f3f378a85f04ad73355
+ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826453"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705563"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Histórico de alterações das Políticas da Microsoft Store
 
@@ -31,6 +31,18 @@ ms.locfileid: "66826453"
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>1º de outubro de 2019</td>
+<td>7.12</td>
+<td><p>Adição da nova política 10.2.6 que proíbe aplicativos que mineram criptomoeda no dispositivo.</p>
+<p>Atualização da versão 10.8.4 para adicionar o requisito de divulgação de chances para produtos que oferecem "caixas de loot" ou outros itens virtuais aleatórios.</p>
+<p>Atualização da versão 10.8.7 para adicionar requisitos considerando regulamentações de preços.</p>
+<p>Atualização da versão 10.10.1 para adicionar requisitos relacionados à verdade na publicidade.</p>
+<p>Atualização da versão 10.13.1 para esclarecer que produtos de jogos incluem produtos que oferecem principalmente a funcionalidade de controle ou reprodução remota do jogo.</p>
+<p>Remoção do requisito da conta da empresa para determinados tipos de aplicativos da versão 10.14. </p>
+<p>Adição da versão 11.12 com requisitos de conteúdo gerado pelo usuário.</p>
+</td>
+</tr>
 <tr class="even">
 <td>5 de março de 2019</td>
 <td>7.11</td>
