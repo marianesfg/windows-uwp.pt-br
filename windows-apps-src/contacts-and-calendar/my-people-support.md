@@ -5,14 +5,17 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f54cb261f6ef94545d656d5bd4f624622cc6dfff
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820222"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982226"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
+
+> [!Note]
+> A partir do Windows 10 de maio de 2019 atualização (versão 1903), as novas instalações do Windows 10 não mostrarão mais "pessoas na barra de tarefas" por padrão. Os clientes podem habilitar o recurso clicando com o botão direito do mouse na barra de tarefas e pressionando "mostrar pessoas na barra de tarefas". Os desenvolvedores são desencorajados de adicionar o suporte de minhas pessoas aos seus aplicativos e devem visitar o [blog do Windows Developer](https://blogs.windows.com/windowsdeveloper/) para obter mais informações sobre como otimizar aplicativos para o Windows 10.
 
 O recurso Minhas Pessoas permite que os usuários fixem contatos de um aplicativo diretamente à sua barra de tarefas, que cria um novo objeto de contato com o qual eles possam interagir de várias maneiras. Este artigo mostra como você pode adicionar suporte para esse recurso, permitindo que os usuários fixem contatos diretamente de seu app. Quando os contatos são fixados, novos tipos de interação do usuário se tornam disponíveis, como [compartilhamento](my-people-sharing.md) e [notificações do Minhas Pessoas](my-people-notifications.md).
 
@@ -27,8 +30,8 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos de um aplicativ
 
 Há três coisas que você precisa fazer para permitir que seu aplicativo use o recurso Minhas Pessoas:
 
-1. [Declare suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anote os contatos que os usuários podem compartilhar a usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare o suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote os contatos que os usuários podem compartilhar para usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  Dê suporte a várias instâncias do seu aplicativo em execução ao mesmo tempo. Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto o usam em um painel de contato.  Eles podem até usá-lo em vários painéis de contato ao mesmo tempo.  Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido no painel de contato para os contatos anotados.
@@ -185,7 +188,7 @@ Se você deseja fixar contatos na barra de tarefas para marcação quando chegam
 
 Para marcar um contato, o nó de nível superior da notificação do sistema deve incluir o parâmetro hint-people para indicar o envio ou o contato relacionado. Esse parâmetro pode ter qualquer um dos seguintes valores:
 + **Endereço de email** 
-    + Ex. [https://support.microsoft.com/en-us/help/172983/explanation-of-the-three-way-handshake-via-tcp-ip](mailto:johndoe@mydomain.com)
+    + Ex. mailto:johndoe@mydomain.com
 + **Número de telefone** 
     + Ex. tel:888-888-8888
 + **ID remota** 
@@ -250,9 +253,9 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 ## <a name="see-also"></a>Consulte também
 + [Compartilhamento de Minhas Pessoas](my-people-sharing.md)
-+ [Minhas notificações de por pessoas](my-people-notifications.md)
-+ [Vídeo do canal 9 sobre como adicionar pessoas meu dão suporte a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Meu exemplo de integração de pessoas](https://aka.ms/mypeoplebuild2017)
-+ [Entre em contato com o exemplo do cartão](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
++ [Minhas pessoas notificatons](my-people-notifications.md)
++ [Vídeo do Channel 9 sobre como adicionar suporte de pessoas a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [Exemplo de integração de minhas pessoas](https://aka.ms/mypeoplebuild2017)
++ [Exemplo de cartão de visita](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentação da classe PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [Conectar seu aplicativo a ações em um cartão de visita](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

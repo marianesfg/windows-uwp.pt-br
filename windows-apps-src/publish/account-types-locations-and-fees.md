@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: 92f657386c3a5d1ca6815b9b0a9e56b4d6f2578b
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495742"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982239"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
-Os Windows programar em [Partner Center](https://partner.microsoft.com/dashboard) oferece dois individual e da empresa contas em muitos [países e regiões](#developer-account-and-app-submission-markets). Um dos tipos de conta fornece acesso para publicar aplicativos para a Store e para participar em programas adicionais da Microsoft.
+O programa do Windows no [Partner Center](https://partner.microsoft.com/dashboard) oferece contas individuais e da empresa em vários [países e regiões](#developer-account-and-app-submission-markets). Qualquer tipo de conta fornece acesso para publicar aplicativos na loja e participar de programas adicionais da Microsoft.
 
 > [!NOTE]
-> Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
+> Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com o conta Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
 
 Quando você [começar o processo de inscrição](https://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
 
@@ -33,30 +33,19 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pela [Store políticas](store-policies.md#1014-account-type), informações de conta de aplicativos com algumas funcionalidades, como aqueles que acessam financeiros ou que exigem a autenticação para acessar a funcionalidade principal (sem usar um terceiro dedicado e seguro provedor de autenticação), só podem ser publicados por contas da empresa.
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. De acordo com as [políticas de armazenamento](store-policies.md#1014-account-type), os aplicativos com determinadas funcionalidades, como as que acessam informações de conta financeira ou que exigem autenticação para acessar a funcionalidade primária (sem usar um provedor de autenticação de terceiros dedicado seguro), Só pode ser publicado por contas da empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não pode enviar aplicativos de uma conta da empresa até que ele é verificado, mas enquanto você aguarda, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e trabalha em Preparando seus envios.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não pode enviar aplicativos de uma conta da empresa até que ela seja verificada, mas enquanto estiver aguardando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continue criando e testando aplicativos e trabalhando para preparar seus envios.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
-
 
 ## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de aplicativos
 
 Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativos se morar ou tiver uma empresa em um país ou região listado a seguir.
 
 Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua conta de desenvolvedor. Essa é uma taxa única e não há cobrança pela renovação. Observe que os preços abaixo estão sujeitos a alterações.
-
-> [!NOTE]
-> Adicionaremos todas as taxas e tarifas à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
-
-A coluna **Pagamento** descreve como [pagaremos a você](getting-paid-apps.md) o dinheiro que você ganha nos seus apps. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) em que depositaremos o dinheiro.
-
-> [!NOTE]
-> Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Apenas aplicativos grátis podem ser enviados para esses mercados.
-
-A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte que pode ser usado para sua [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) (e, exceto onde observado, para sua taxa de registro na conta de desenvolvedor).
 
 | País/região                    | Taxa de reg. individual | Taxa de reg. empresarial |
 |-----------------------------------|---------------------|------------------|
@@ -98,7 +87,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 | China                             | 116 CNY             | 600 CNY          |  
 | Colômbia                          | 36.543 COP           | 180.000 COP       |  
 | Ilhas Comores                           | 19 USD              | 99 USD           |  
-| República do Congo                             | 19 USD              | 99 USD           |  
+| Congo                             | 19 USD              | 99 USD           |  
 | Congo (República Democrática)                       | 19 USD              | 99 USD           |  
 | Costa Rica                        | 9578 CRC            | 49725 CRC        |  
 | Côte d’Ivoire                     | 19 USD              | 99 USD           |  
@@ -116,7 +105,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 | Eritreia                           | 19 USD              | 99 USD           |  
 | Estônia                           | 14 EUR              | 75 EUR           |  
 | Etiópia                          | 19 USD              | 99 USD           |  
-| Ilhas Faroe                     | 19 USD              | 99 USD           |  
+| Ilhas Faroés                     | 19 USD              | 99 USD           |  
 | Fiji                              | 19 USD              | 99 USD           |  
 | Finlândia                           | 14 EUR              | 75 EUR           |  
 | França                            | 14 EUR              | 75 EUR           |  
