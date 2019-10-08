@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 08ad21d3ddc73499bb2b97b300e635fe0a6c148d
-ms.sourcegitcommit: 698a86640b365dc1ca772fb6f53ca556dc284ed6
+ms.openlocfilehash: b7d38464a26af0df03c1aa381b16fbddf1de55cc
+ms.sourcegitcommit: e0644abf76a2535ea24758d1904ff00dfcd86a51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68935774"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008048"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -19,7 +19,7 @@ Você pode usar Azure Pipelines para criar compilações automatizadas para proj
 
 ## <a name="create-a-new-azure-pipeline"></a>Criar um novo pipeline do Azure
 
-Comece inscrevendo-se [para Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) se ainda não tiver feito isso.
+Comece [inscrevendo-se para Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) se ainda não tiver feito isso.
 
 Em seguida, crie um pipeline que você pode usar para criar seu código-fonte. Para obter um tutorial sobre como criar um pipeline para criar um repositório GitHub, consulte [criar seu primeiro pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml). Azure Pipelines dá suporte aos tipos de repositório listados [neste artigo](https://docs.microsoft.com/azure/devops/pipelines/repos).
 
@@ -38,7 +38,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'VS2017-Win2016'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -62,7 +62,7 @@ steps:
 
 ```
 
-O modelo padrão tenta assinar o pacote com o certificado especificado no arquivo. csproj. Se você quiser assinar o pacote durante a compilação, deverá ter acesso à chave privada. Caso contrário, você pode desabilitar a assinatura adicionando o `/p:AppxPackageSigningEnabled=false` parâmetro `msbuildArgs` à seção no arquivo YAML.
+O modelo padrão tenta assinar o pacote com o certificado especificado no arquivo. csproj. Se você quiser assinar o pacote durante a compilação, deverá ter acesso à chave privada. Caso contrário, você pode desabilitar a assinatura adicionando o parâmetro `/p:AppxPackageSigningEnabled=false` à seção `msbuildArgs` no arquivo YAML.
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Adicionar o certificado do projeto à biblioteca de arquivos seguros
 
@@ -144,15 +144,15 @@ Em seguida, atualize a tarefa VSBuild para fazer referência ao certificado de a
 ```
 
 > [!NOTE]
-> O argumento PackageCertificateThumbprint é intencionalmente definido como uma cadeia de caracteres vazia como precaução. Se a impressão digital estiver definida no projeto, mas não corresponder ao certificado de autenticação, a compilação falhará com o erro `Certificate does not match supplied signing thumbprint`:.
+> O argumento PackageCertificateThumbprint é intencionalmente definido como uma cadeia de caracteres vazia como precaução. Se a impressão digital estiver definida no projeto, mas não corresponder ao certificado de autenticação, a compilação falhará com o erro: `Certificate does not match supplied signing thumbprint`.
 
 ### <a name="review-parameters"></a>Examinar parâmetros
 
-Os parâmetros definidos com a `$()` sintaxe são variáveis definidas na definição da compilação e serão alterados em outros sistemas de compilação.
+Os parâmetros definidos com a sintaxe `$()` são variáveis definidas na definição da compilação e serão alterados em outros sistemas de compilação.
 
 ![variáveis padrão](images/building-screen5.png)
 
-Para exibir todas as variáveis predefinidas, consulte [variáveis de compilação](https://docs.microsoft.com/azure/devops/pipelines/build/variables)predefinidas.
+Para exibir todas as variáveis predefinidas, consulte [variáveis de compilação predefinidas](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="configure-the-publish-build-artifacts-task"></a>Configurar a tarefa publicar artefatos de compilação
 
@@ -172,11 +172,11 @@ O pipeline UWP padrão não salva os artefatos gerados. Para adicionar os recurs
     PathtoPublish: '$(build.artifactstagingdirectory)'
 ```
 
-Você pode ver os artefatos gerados na opção artefatos da página compilar resultados.
+Você pode ver os artefatos gerados na opção **artefatos** da página compilar resultados.
 
 ![artifacts](images/building-screen6.png)
 
-Como definimos o `UapAppxPackageBuildMode` argumento como `StoreUpload`, a pasta artefatos inclui o pacote para envio para o repositório (. msixupload/. appxupload). Observe que você também pode enviar um pacote de aplicativo regular (. msix/. AppX) ou um pacote de aplicativo (. msixbundle/. appxbundle/) para o repositório. Para os fins deste artigo, vamos usar o arquivo .appxupload.
+Como definimos o argumento `UapAppxPackageBuildMode` como `StoreUpload`, a pasta artefatos inclui o pacote para envio para o repositório (. msixupload/. appxupload). Observe que você também pode enviar um pacote de aplicativo regular (. msix/. AppX) ou um pacote de aplicativo (. msixbundle/. appxbundle/) para o repositório. Para os fins deste artigo, vamos usar o arquivo .appxupload.
 
 ## <a name="address-bundle-errors"></a>Erros de pacote de endereços
 
@@ -184,14 +184,14 @@ Se você adicionar mais de um projeto UWP à sua solução e, em seguida, tentar
 
   `MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "AppOne.UnitTests_0.1.2595.0_x86.appx" and package full name "8ef641d1-4557-4e33-957f-6895b122f1e6_0.1.2595.0_x86__scrj5wvaadcy6" is not valid in the bundle because it has a different package family name than other packages in the bundle`
 
-Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote. Para resolver esse problema, abra cada arquivo de projeto e adicione as propriedades a seguir ao final do primeiro `<PropertyGroup>` elemento.
+Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote. Para resolver esse problema, abra cada arquivo de projeto e adicione as propriedades a seguir ao final do primeiro elemento `<PropertyGroup>`.
 
 |**Projeto**|**Propriedades**|
 |-------|----------|
 |Aplicativo|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
 
-Em seguida, remova `AppxBundle` o argumento MSBuild da etapa de compilação.
+Em seguida, remova o argumento `AppxBundle` do MSBuild da etapa de compilação.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
