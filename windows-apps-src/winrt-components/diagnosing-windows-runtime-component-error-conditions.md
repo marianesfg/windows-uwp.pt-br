@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 330cbaab4a1c8313fb0b298dea55176eb66d4803
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 55bf6360f09ba4ab6c7878543ecfa0c80c4558e3
+ms.sourcegitcommit: 74c674c70b86bafeac7c8c749b1662fae838c428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340524"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252314"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
@@ -69,7 +69,7 @@ Na UWP, os métodos sobrecarregados só podem ter o mesmo número de parâmetros
 
 Na Plataforma Universal do Windows, todos os tipos públicos em um arquivo de metadados do Windows (. winmd) devem estar em um namespace que compartilha o nome do arquivo .winmd ou em subnamespaces do nome do arquivo. Por exemplo, caso o projeto do Visual Studio se chame A.B (ou seja, o componente do Tempo de Execução do Windows é A.B.winmd), ele pode conter classes públicas A.B.Class1 e A.B.C.Class2, mas não A.Class3 (WME0006) ou D.Class4 (WME1044).
 
-> **Observe**que as restrições   These se aplicam somente a tipos públicos, não a tipos privados usados em sua implementação.
+> **Observação**  Essas restrições só se aplicam a tipos públicos, e não a tipos privados usados na implementação.
 
 No caso de A.Class3, é possível mover Class3 para outro namespace ou alterar o nome do componente do Tempo de Execução do Windows para A.winmd. Embora WME0006 seja um aviso, você deve tratá-lo como um erro. No exemplo anterior, o código que chama A.B.winmd não conseguirá localizar A.Class3.
 
@@ -81,7 +81,7 @@ O componente deve conter pelo menos um tipo **public sealed** (**Public NotInher
 
 Um tipo em um componente do Tempo de Execução do Windows não pode ter um nome que seja igual ao de um namespace (WME1068).
 
-> **Cuidado**  If você chama Winmdexp. exe diretamente e não usa a opção/out para especificar um nome para o componente Windows Runtime, o Winmdexp. exe tenta gerar um nome que inclui todos os namespaces no componente. Renomear namespaces pode alterar o nome do componente.
+> **Cuidado**  Caso você chame Winmdexp.exe diretamente e não use a opção /out para especificar um nome para o componente do Tempo de Execução do Windows, Winmdexp.exe tenta gerar um nome que inclua todos os namespaces no componente. Renomear namespaces pode alterar o nome do componente.
 
  
 
@@ -102,9 +102,9 @@ Muitos desses mapeamentos são interfaces. Por exemplo, [IList&lt;T&gt;](https:/
 
 Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, para Dictionary&lt;int, string&gt;, a melhor opção é mais provavelmente IDictionary&lt;int, string&gt;.
 
-> **Importante**  JavaScript usa a interface que aparece primeiro na lista de interfaces que um tipo gerenciado implementa. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
+> **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
 
-> Tenha **cuidado**  Avoid usando as interfaces [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) e [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) não genéricas se seu componente for usado pelo JavaScript. Essas interfaces são mapeadas para [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) e [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Elas dão suporte à associação de controles XAML e permanecem invisíveis para JavaScript. O JavaScript emite o erro de tempo de execução "A função 'X' tem uma assinatura inválida e não pode ser chamada".
+> **Cuidado**  Evite usar as interfaces [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) e [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) não genéricas se o componente for usado pelo JavaScript. Essas interfaces são mapeadas para [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) e [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Elas dão suporte à associação de controles XAML e permanecem invisíveis para JavaScript. O JavaScript emite o erro de tempo de execução "A função 'X' tem uma assinatura inválida e não pode ser chamada".
 
  
 
@@ -131,7 +131,7 @@ Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, pa
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>O método ' {0} ' tem um parâmetro do tipo ' {1} ' em sua assinatura. Embora esse tipo genérico não seja um tipo de Tempo de Execução do Windows válido, o tipo ou os parâmetros genéricos implementam interfaces que são tipos de Tempo de Execução do Windows válidos. {2}</p>
-> **Note @ no__t-1 @ no__t-2For {2}, Winmdexp. exe acrescenta uma lista de alternativas, como "considere alterar o tipo ' System. Collections. Generic. List @ no__t-4T suporta @ no__t-5 ' na assinatura do método para um dos seguintes tipos em vez disso: ' System. Collections. Generic. IList @ no__t-0T @ no__t-1, System. Collections. Generic. IReadOnlyList @ no__t-2T @ no__t-3, System. Collections. Generic. IEnumerable @ no__t-4T suporta @ no__t-5 '. "
+> **Note @ no__t-1 para {2}, Winmdexp. exe acrescenta uma lista de alternativas, como "considere alterar o tipo ' System. Collections. Generic. List @ no__t-3T @ no__t-4 ' na assinatura do método para um dos seguintes tipos em vez disso: ' System. Collections. Generic. IList @ no__t-0T @ no__t-1, System. Collections. Generic. IReadOnlyList @ no__t-2T @ no__t-3, System. Collections. Generic. IEnumerable @ no__t-4T suporta @ no__t-5 '. "
 </td>
 </tr>
 <tr class="even">
@@ -210,7 +210,7 @@ Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Observação**  If você altera o nome do valor de retorno e o novo nome entra em conflito com o nome de outro parâmetro, você receberá o erro WME1091.
+> **Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091.
 
 O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno. Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute).
 
@@ -219,7 +219,7 @@ O código JavaScript pode acessar os parâmetros de saída de um método por nom
 | WME1091 | O método ' \{0} ' tem o valor de retorno denominado ' \{1} ', que é o mesmo que um nome de parâmetro. Os parâmetros de método de Tempo de Execução do Windows e o valor de retorno devem ter nomes exclusivos. |
 | WME1092 | O método ' \{0} ' tem um parâmetro denominado ' \{1} ', que é o mesmo que o nome do valor de retorno padrão. Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno. |
 
-**Observação**  a nome padrão é "ReturnValue" para acessadores de propriedade e "valor" para todos os outros métodos.
+**Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -6,12 +6,12 @@ ms.date: 07/10/2018
 ms.topic: article
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
-ms.openlocfilehash: b568531ce0807ebc5be0d27a78b94547e8473ae6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f6ff6ea5a5daac1a6412c26c76dad899ca1f5881
+ms.sourcegitcommit: 74c674c70b86bafeac7c8c749b1662fae838c428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651621"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252328"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obter assinaturas para um usuário
 
@@ -36,16 +36,16 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Método | URI da solicitação                                            |
 |--------|--------------------------------------------------------|
-| POST   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
+| POSTAR   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
 
 
 ### <a name="request-header"></a>Cabeçalho da solicitação
 
-| Cabeçalho         | Tipo   | Descrição      |
+| Cabeçalho         | type   | Descrição      |
 |----------------|--------|-------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formato **portador** &lt; *token*&gt;.                           |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do AD do Azure no formulário **portador** &lt;*token*&gt;.                           |
 | Host           | cadeia de caracteres | Deve ser definido como o valor **purchase.mp.microsoft.com**.                                            |
-| Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
+| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
 
@@ -102,9 +102,9 @@ Este método retorna um corpo de resposta JSON que contém uma coleção de obje
 
 O corpo de resposta contém os seguintes dados.
 
-| Valor        | Tipo   | Descrição            |
+| Valor        | type   | Descrição            |
 |---------------|--------|---------------------|
-| itens | matriz | Uma série de objetos que contêm dados sobre cada complemento de inscrição que o usuário especificado tem o direito de usar. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.  |
+| items | array | Uma série de objetos que contêm dados sobre cada complemento de inscrição que o usuário especificado tem o direito de usar. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.  |
 
 
 Cada objeto na matriz *itens* contém os seguintes valores.
@@ -114,7 +114,7 @@ Cada objeto na matriz *itens* contém os seguintes valores.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia de caracteres |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia de caracteres | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
-| expirationTimeWithGrace | cadeia de caracteres | A data e hora que a assinatura for expirar, incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perderá o acesso à assinatura após a assinatura tem com falha renovar automaticamente.    |
+| expirationTimeWithGrace | cadeia de caracteres | A data e a hora em que a assinatura irá expirar, incluindo o período de carência, no formato ISO 8601. Esse valor indica quando o usuário perderá o acesso à assinatura depois que a assinatura não for renovada automaticamente.    |
 | id | cadeia de caracteres |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia de caracteres |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |
@@ -131,5 +131,5 @@ Cada objeto na matriz *itens* contém os seguintes valores.
 * [Gerenciar direitos de produto de um serviço](view-and-grant-products-from-a-service.md)
 * [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Consulta de produtos](query-for-products.md)
-* [Produtos de consumo de relatório como atendida](report-consumable-products-as-fulfilled.md)
-* [Renovar uma chave de ID do Microsoft Store](renew-a-windows-store-id-key.md)
+* [Relatar produtos consumíveis como atendidos](report-consumable-products-as-fulfilled.md)
+* [Renovar uma chave de ID de Microsoft Store](renew-a-windows-store-id-key.md)

@@ -86,7 +86,7 @@
           href: controls-and-patterns/buttons.md
         - name: Caixa de seleção
           href: controls-and-patterns/checkbox.md
-        - name: Caixa de combinação
+        - name: Caixas de combinação e caixas de listagem
           href: controls-and-patterns/combo-box.md
         - name: Hiperlinks
           href: controls-and-patterns/hyperlinks.md
@@ -102,16 +102,15 @@
       items:
         - name: Visão geral
           href: controls-and-patterns/lists.md
-        - name: Comando de coleção
-          href: controls-and-patterns/collection-commanding.md
-        - name: Exibições de coleção personalizadas
-          href: controls-and-patterns/items-repeater.md
-        - name: Exibição de inversão
-          href: controls-and-patterns/flipview.md
-        - name: Listas invertidas
-          href: controls-and-patterns/inverted-lists.md
         - name: Exibição de lista e exibição de grade
           href: controls-and-patterns/listview-and-gridview.md
+        - name: Exibição de inversão
+          href: controls-and-patterns/flipview.md
+        - name: Modo de exibição em árvore
+          href: controls-and-patterns/tree-view.md
+        - name: ItemsRepeater
+          href: controls-and-patterns/items-repeater.md
+        - name: Contêineres e modelos de itens
           items:
             - name: Contêineres e modelos de itens
               href: controls-and-patterns/item-containers-templates.md
@@ -119,14 +118,22 @@
               href: controls-and-patterns/item-templates-listview.md
             - name: Modelos de item para exibição de grade
               href: controls-and-patterns/item-templates-gridview.md
-        - name: Interface do usuário aninhada
-          href: controls-and-patterns/nested-ui.md
-        - name: Puxar para atualizar
-          href: controls-and-patterns/pull-to-refresh.md
-        - name: Passar o dedo
-          href: controls-and-patterns/swipe.md
-        - name: Modo de exibição em árvore
-          href: controls-and-patterns/tree-view.md
+        - name: Seleção e interação
+          items:
+            - name: Comando de coleção
+              href: controls-and-patterns/collection-commanding.md
+            - name: Visão geral do modo de seleção
+              href: controls-and-patterns/selection-modes.md
+            - name: Passar o dedo
+              href: controls-and-patterns/swipe.md
+            - name: Puxar para atualizar
+              href: controls-and-patterns/pull-to-refresh.md
+        - name: Opções de coleta e personalizações adicionais
+          items:
+            - name: Listas invertidas
+              href: controls-and-patterns/inverted-lists.md
+            - name: Interface do usuário aninhada
+              href: controls-and-patterns/nested-ui.md
     - name: Caixas de diálogo e submenus
       items:
         - name: Visão geral

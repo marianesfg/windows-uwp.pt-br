@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72da3d17f3584d0c295926880b949591b83b47a7
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076394"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163709"
 ---
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
@@ -82,7 +82,7 @@ Celular:
 ## <a name="color-mode-settings"></a>Configurações de "Modo de cor"
 
 
-Se seu aplicativo permite que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/lists.md#drop-down-lists) com o cabeçalho "Escolher um modo de aplicativo". Leia as opções
+Se seu aplicativo permite que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/combo-box.md) com o cabeçalho "Escolher um modo de aplicativo". Leia as opções
 - Claro
 - Escuro
 - Padrão do Windows

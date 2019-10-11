@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1664da65beed21dededb481aadd56f793af20f01
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2ff5d0831e918c0399bccb1dac9bb4fca8a6d408
+ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364683"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71939649"
 ---
 # <a name="list-view-and-grid-view"></a>Exibição de lista e exibição de grade
 
@@ -25,19 +25,35 @@ A maioria dos aplicativos manipula e exibe conjuntos de dados, como uma galeria 
 
 > **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Propriedade ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [Propriedade Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
 
-Os controles ListView e GridView são derivados da classe ListViewBase, portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre ListView, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo "List" poderá ser substituído por "Grid" para o equivalente a grade correspondente (GridView ou GridViewItem). 
+> [!NOTE]
+> Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* para o equivalente a grade correspondente (GridView ou GridViewItem). 
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+ListView e GridView fornecem muitos benefícios para trabalhar com coleções. Ambos são fáceis de serem implementados e oferecem uma interface do usuário básica; interação; e rolagem e ainda são facilmente personalizáveis. O ListView e o GridView podem ser associados a fontes de dados dinâmicos existentes ou dados embutidos em código fornecidos no próprio XAML/code-behind. 
 
-O ListView exibe dados empilhados verticalmente em uma única coluna. Ele é frequentemente usado para mostrar uma lista ordenada de itens, como uma lista de emails ou resultados de pesquisa. 
+Esses dois controles são flexíveis para muitos casos de uso, mas, de maneira geral, funcionam melhor com coleções nas quais todos os itens devem ter a mesma estrutura e aparência básicas, assim como o mesmo comportamento de interação – por exemplo, todos eles devem desempenhar a mesma ação quando clicados (abrir um link, navegar, etc.).
 
-![Uma exibição de lista com dados agrupados](images/simple-list-view-phone.png)
 
-O controle GridView apresenta uma coleção de itens em linhas e colunas, que podem ser roladas verticalmente. Os dados são empilhados horizontalmente até preencherem as colunas e, em seguida, passam para a próxima linha. Ele é frequentemente usado quando você precisa mostrar uma visualização rica de cada item que ocupa mais espaço, como uma galeria de fotos. 
+## <a name="differences-between-listview-and-gridview"></a>Diferenças entre ListView e GridView
 
-![Exemplo de uma biblioteca de conteúdo](images/controls_list_contentlibrary.png)
+### <a name="listview"></a>ListView
+O ListView exibe dados empilhados verticalmente em uma única coluna. O ListView funciona melhor para itens que têm texto como ponto focal e para coleções que devem ser lidas de cima para baixo (ou seja, em ordem alfabética). Alguns casos de uso comuns para o ListView incluem listas de mensagens e resultados da pesquisa.
 
-Para obter uma comparação mais detalhada e orientação sobre qual controle usar, consulte [Listas](lists.md).
+![Uma exibição de lista com dados agrupados](images/listview-grouped-example-resized-final.png)
+
+### <a name="gridview"></a>GridView
+O controle GridView apresenta uma coleção de itens em linhas e colunas, que podem ser roladas verticalmente. Os dados são empilhados horizontalmente até preencherem as colunas e, em seguida, passam para a próxima linha. O GridView funciona melhor para itens que têm imagens como ponto focal e para coleções que podem ser lidas lado a lado ou que não estão classificadas em uma ordem específica. Um caso de uso comum para o GridView é uma galeria de fotos ou produtos.
+
+![Exemplo de uma biblioteca de conteúdo](images/gridview-simple-example-final.png)
+
+## <a name="which-collection-control-should-you-use-a-comparison-with-itemsrepeater"></a>Qual controle de coleção você deve usar? Uma comparação com ItemsRepeater
+
+ListView e GridView são controles que funcionam de maneira imediata para exibir qualquer coleção, com sua própria experiência do usuário e interface do usuário interna. O controle [ItemsRepeater](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/items-repeater) também é usado para exibir coleções, mas foi criado como um bloco de construção para criar um controle personalizado que atende às necessidades exatas de interface do usuário. As diferenças mais importantes que devem afetar qual controle você acaba usando são listadas abaixo:
+
+-   ListView e GridView são controles ricos em recursos que exigem pouca personalização, mas que têm muito a oferecer. O ItemsRepeater é um bloco de construção para criar seu próprio controle de layout e não tem os mesmos recursos e funcionalidades internos – ele exige que você implemente recursos ou interações necessários.
+-   ItemsRepeater deverá ser usado se você tiver uma interface do usuário altamente personalizada que não possa ser criada usando ListView ou GridView ou se você tiver uma fonte de dados que requeira um comportamento altamente diferente para cada item.
+
+
+Saiba mais sobre o ItemsRepeater lendo suas páginas [Diretrizes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/items-repeater) e [Documentação da API](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2).
 
 ## <a name="examples"></a>Exemplos
 
@@ -55,154 +71,223 @@ Para obter uma comparação mais detalhada e orientação sobre qual controle us
 </tr>
 </table>
 
-## <a name="create-a-list-view"></a>Criar um modo de exibição de lista
+## <a name="create-a-listview-or-gridview"></a>Criar um ListView ou GridView
 
-Modo de exibição de lista é um [ItemsControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol) e, por isso, pode conter uma coleção de itens de qualquer tipo. Ele deve ter itens em sua coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) para que possa mostrar algo na tela. Para preencher a exibição, você pode adicionar os itens diretamente à coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou definir a propriedade [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. 
+Tanto o ListView quanto o GridView são tipos [ItemsControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol) para que possam obter uma coleção de itens de qualquer tipo. Um ListView ou um GridView deve ter itens em sua coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) antes que possa mostrar qualquer coisa na tela. Para preencher a exibição, você pode adicionar os itens diretamente à coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou definir a propriedade [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. 
 
-**Importante**&nbsp;&nbsp;Você pode usar o Items ou ItemsSource para preencher a lista, mas não pode usar os dois ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item em XAML, o item adicionado será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
+> [!IMPORTANT]
+> Você pode usar Items ou ItemsSource para popular a lista, mas não pode usar os dois ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item em XAML, o item adicionado será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
-> **Observação**&nbsp;&nbsp;Em muitos exemplos deste artigo, a coleção **Items** foi diretamente preenchida para simplificar. No entanto, é mais comum que os itens de uma lista sejam provenientes de uma fonte dinâmica, como uma lista de livros de um banco de dados online. Você usa a propriedade **ItemsSource** para essa finalidade. 
+Em muitos exemplos deste artigo, a coleção `Items` é preenchida diretamente para simplificar. No entanto, é mais comum que os itens de uma lista sejam provenientes de uma fonte dinâmica, como uma lista de livros de um banco de dados online. Use a propriedade `ItemsSource` para essa finalidade. 
 
-### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção Items
+### <a name="add-items-to-a-listview-or-gridview"></a>Adicionar Items a um ListView ou GridView
 
-Você pode adicionar itens à coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou ao gerar os itens em código no tempo de execução. 
+Você pode adicionar itens à coleção [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) do ListView ou GridView usando o XAML ou código para produzir o mesmo resultado. Normalmente, você adicionará itens por meio de XAML se tiver um pequeno número de itens que não mudam e são facilmente definidos ou se gerar os itens em código no tempo de execução. 
 
-Veja a seguir uma exibição de lista com itens definidos embutidos em XAML. Quando você define os itens em XAML, eles também são adicionados automaticamente à coleção Items.
+<u>Método 1: Adicionar itens à coleção Items</u>
+#### <a name="option-1-add-items-through-xaml"></a>Opção 1: Adicionar itens por meio de XAML
+```xml
+<!-- No corresponding C# code is needed for this example. -->
 
-**XAML**
-```xaml
-<ListView x:Name="listView1"> 
-   <x:String>Item 1</x:String> 
-   <x:String>Item 2</x:String> 
-   <x:String>Item 3</x:String> 
-   <x:String>Item 4</x:String> 
-   <x:String>Item 5</x:String> 
+<ListView x:Name="Fruits"> 
+   <x:String>Apricot</x:String> 
+   <x:String>Banana</x:String> 
+   <x:String>Cherry</x:String> 
+   <x:String>Orange</x:String> 
+   <x:String>Strawberry</x:String> 
 </ListView>  
 ```
 
-Veja a seguir a exibição de lista criada em código. A lista resultante é igual à criada anteriormente em XAML.
 
-**C#**
+#### <a name="option-2-add-items-through-c"></a>Opção 2: Adicionar itens por meio de C#
+
+##### <a name="c-code"></a>Código em C#:
 ```csharp
 // Create a new ListView and add content. 
-ListView listView1 = new ListView(); 
-listView1.Items.Add("Item 1"); 
-listView1.Items.Add("Item 2"); 
-listView1.Items.Add("Item 3"); 
-listView1.Items.Add("Item 4"); 
-listView1.Items.Add("Item 5");
+ListView Fruits = new ListView(); 
+Fruits.Items.Add("Apricot"); 
+Fruits.Items.Add("Banana"); 
+Fruits.Items.Add("Cherry"); 
+Fruits.Items.Add("Orange"); 
+Fruits.Items.Add("Strawberry");
  
-// Add the ListView to a parent container in the visual tree. 
-stackPanel1.Children.Add(listView1); 
+// Add the ListView to a parent container in the visual tree (that you created in the corresponding XAML file).
+FruitsPanel.Children.Add(Fruits); 
 ```
 
-O ListView tem a aparência a seguir.
+##### <a name="corresponding-xaml-code"></a>Código XAML correspondente:
+```xml
+<StackPanel Name="FruitsPanel"></StackPanel>
+```
+As duas opções acima resultarão no mesmo ListView, mostrado abaixo:
 
-![Uma exibição de lista simples](images/listview-simple.png)
+![Uma exibição de lista simples](images/listview-basic-code-example2.png)
+<br/>
+<u> Método 2: Adicionar itens definindo ItemsSource</u>
 
-### <a name="set-the-items-source"></a>Definir a origem de itens
+Geralmente, você usa um ListView ou GridView para exibir dados de uma fonte, como um banco de dados ou a Internet. Para popular um ListView/GridView de uma fonte de dados, defina sua propriedade [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma coleção de itens de dados. Esse método funcionará melhor se ListView ou GridView armazenar objetos de classe personalizados, conforme mostrado nos exemplos abaixo.
 
-Geralmente, você usa uma exibição de lista para exibir dados de uma fonte, como um banco de dados ou a Internet. Para preencher uma exibição de lista com base em uma fonte de dados, defina a propriedade [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma coleção de itens de dados.
+#### <a name="option-1-set-itemssource-in-c"></a>Opção 1: Definir ItemsSource em C#
+Aqui, o ItemsSource da exibição de lista está definido em código diretamente como uma instância de uma coleção. 
 
-Aqui, o ItemsSource da exibição de lista está definido em código diretamente como uma instância de uma coleção.
-
-**C#**
+##### <a name="c-code"></a>Código em C#:
 ```csharp 
-// Instead of hard coded items, the data could be pulled 
-// asynchronously from a database or the internet.
-ObservableCollection<string> listItems = new ObservableCollection<string>();
-listItems.Add("Item 1");
-listItems.Add("Item 2");
-listItems.Add("Item 3");
-listItems.Add("Item 4");
-listItems.Add("Item 5");
+// Class defintion should be provided within the namespace being used, outside of any other classes.
 
-// Create a new list view, add content, 
-ListView itemListView = new ListView();
-itemListView.ItemsSource = listItems;
+this.InitializeComponent();
 
-// Add the list view to a parent container in the visual tree.
-stackPanel1.Children.Add(itemListView);
+// Instead of adding hard coded items to an ObservableCollection as shown below, 
+//the data could be pulled asynchronously from a database or the internet.
+ObservableCollection<Contact> Contacts = new ObservableCollection<Contact>();
+
+// Contact objects are created by providing a first name, last name, and company for the Contact constructor.
+// They are then added to the ObservableCollection Contacts.
+Contacts.Add(new Contact("John", "Doe", "ABC Printers"));
+Contacts.Add(new Contact("Jane", "Doe", "XYZ Refridgerators"));
+Contacts.Add(new Contact("Santa", "Claus", "North Pole Toy Factory Inc."));
+
+// Create a new ListView (or GridView) for the UI, add content by setting ItemsSource
+ListView ContactsLV = new ListView();
+ContactsLV.ItemsSource = Contacts;
+
+// Add the ListView to a parent container in the visual tree (that you created in the corresponding XAML file)
+ContactPanel.Children.Add(ContactsLV);
 ```
 
-Você também pode associar a propriedade ItemsSource a uma coleção em XAML. Para saber mais sobre vinculação de dados, consulte [Visão geral de vinculação de dados](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart).
+##### <a name="xaml-code"></a>Código XAML:
+```xml
+<StackPanel x:Name="ContactPanel"></StackPanel>
+```
 
-Aqui, o ItemsSource está associado a uma propriedade pública denominada `Items` que expõe a coleção de dados privados da página.
+#### <a name="option-2-set-itemssource-in-xaml"></a>Opção 2: Definir ItemsSource em XAML
+Você também pode associar a propriedade ItemsSource a uma coleção no XAML. Aqui, o ItemsSource está associado a uma propriedade pública denominada `Contacts` que expõe a coleção de dados privados da página, `_contacts`.
 
 **XAML**
-```xaml
-<ListView x:Name="itemListView" ItemsSource="{x:Bind Items}"/>
+```xml
+<ListView x:Name="ContactsLV" ItemsSource="{x:Bind Contacts}"/>
 ```
 
 **C#**
 ```csharp
-private ObservableCollection<string> _items = new ObservableCollection<string>();
+// Class defintion should be provided within the namespace being used, outside of any other classes.
+// These two declarations belong outside of the main page class.
+private ObservableCollection<Contact> _contacts = new ObservableCollection<Contact>();
 
-public ObservableCollection<string> Items
+public ObservableCollection<Contact> Contacts
 {
-    get { return this._items; }
+    get { return this._contacts; }
 }
 
+// This method should be defined within your main page class.
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
     base.OnNavigatedTo(e);
 
     // Instead of hard coded items, the data could be pulled 
     // asynchronously from a database or the internet.
-    Items.Add("Item 1");
-    Items.Add("Item 2");
-    Items.Add("Item 3");
-    Items.Add("Item 4");
-    Items.Add("Item 5");
+    Contacts.Add(new Contact("John", "Doe", "ABC Printers"));
+    Contacts.Add(new Contact("Jane", "Doe", "XYZ Refridgerators"));
+    Contacts.Add(new Contact("Santa", "Claus", "North Pole Toy Factory Inc."));
 }
 ```
 
-Se precisar mostrar dados agrupados na exibição de lista, é necessário associar-se a um [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource). O CollectionViewSource age como um proxy para a classe da coleção em XAML e habilita o suporte a agrupamento. Para saber mais, consulte a [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
+As duas opções acima resultarão no mesmo ListView, mostrado abaixo. O ListView mostra apenas a representação de cadeia de caracteres de cada item porque não fornecemos um modelo de dados.
 
-## <a name="data-template"></a>Modelo de dados
+![Uma exibição de lista simples com ItemsSource definido](images/listview-basic-code-example-final.png)
 
-Um modelo de dados de um item define como os dados são visualizados. Por padrão, o item de dados aparece na exibição de lista como a representação em cadeia de caracteres do objeto de dados ao qual ele está associado. É possível mostrar a representação de cadeia de caracteres de uma propriedade específica do item de dados definindo [DisplayMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath) como essa propriedade.
+> [!IMPORTANT]
+> Sem nenhum modelo de dados definido, os objetos de classe personalizados só serão exibidos no ListView com seu valor de cadeia de caracteres se tiverem um método [ToString()](https://docs.microsoft.com/uwp/api/windows.foundation.istringable.tostring) definido.
 
-No entanto, você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens aparecem na exibição de lista, crie um [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo estático definido embutido. Atribua o DataTemplate à propriedade [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) do controle da lista.
+ A próxima seção detalhará como apresentar visualmente itens de classe simples e personalizados corretamente em um ListView ou GridView.
 
-Neste exemplo, o item de dados é uma cadeia de caracteres simples. Use o DataTemplate para adicionar uma imagem à esquerda da cadeia de caracteres e mostrar a cadeia em azul.
+Para saber mais sobre vinculação de dados, consulte [Visão geral de vinculação de dados](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart).
 
-> **Observação**&nbsp;&nbsp;Ao usar a [extensão de marcação x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) em um DataTemplate, é preciso especificar o DataType (`x:DataType`) no DataTemplate.
+> [!NOTE]
+> Se você precisar mostrar dados agrupados em seu ListView, deverá associar-se a um [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource). O CollectionViewSource age como um proxy para a classe da coleção em XAML e habilita o suporte a agrupamento. Para saber mais, consulte a [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
+
+## <a name="customizing-the-look-of-items-with-a-datatemplate"></a>Personalizar a aparência de itens com um DataTemplate
+
+Um modelo de dados em um ListView ou GridView define como os itens/dados são visualizados. Por padrão, um item de dados é exibido no ListView como a representação de cadeia de caracteres do objeto de dados ao qual ele está associado. É possível mostrar a representação de cadeia de caracteres de uma propriedade específica do item de dados definindo [DisplayMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath) como essa propriedade.
+
+No entanto, você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens no ListView/GridView são exibidos, crie um [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo estático definido embutido. 
+
+> [!NOTE]
+> Ao usar a [extensão de marcação x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) em um DataTemplate, você precisa especificar o DataType (`x:DataType`) no DataTemplate.
+
+#### <a name="simple-listview-data-template"></a>Modelo de dados ListView simples
+Neste exemplo, o item de dados é uma cadeia de caracteres simples. Um DataTemplate é definido embutido dentro da definição do ListView para adicionar uma imagem à esquerda da cadeia de caracteres e mostrar a cadeia de caracteres em azul petróleo. Este é o mesmo ListView criado usando o Método 1 e a Opção 1 mostrados acima.
 
 **XAML**
-```XAML
-<ListView x:Name="listView1">
+```XML
+<!--No corresponding C# code is needed for this example.-->
+<ListView x:Name="FruitsList">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="47"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Assets/placeholder.png" Width="32" Height="32"
+                                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Bind}" Foreground="Teal" FontSize="14" 
+                                Grid.Column="1" VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <x:String>Apricot</x:String>
+                <x:String>Banana</x:String>
+                <x:String>Cherry</x:String>
+                <x:String>Orange</x:String>
+                <x:String>Strawberry</x:String>
+            </ListView>
+
+```
+
+Veja qual é a aparência dos itens de dados quando são exibidos com esse modelo de dados em um ListView:
+
+![Itens ListView com um modelo de dados](images/listview-w-datatemplate1-final.png)
+
+#### <a name="listview-data-template-for-custom-class-objects"></a>Modelo de dados ListView para objetos de classe personalizados
+Neste exemplo, o item de dados é um objeto Contact. Um DataTemplate é definido embutido dentro da definição do ListView para adicionar uma imagem de contato à esquerda do Nome do contato e da empresa. Esse ListView foi criado usando o Método 2 e a Opção 2 mencionados acima.
+```xml
+<ListView x:Name="ContactsLV" ItemsSource="{x:Bind Contacts}">
     <ListView.ItemTemplate>
-        <DataTemplate x:DataType="x:String">
+        <DataTemplate x:DataType="local:Contact">
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="47"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="Assets/placeholder.png" Width="32" Height="32" 
-                       HorizontalAlignment="Left"/>
-                <TextBlock Text="{x:Bind}" Foreground="Teal" 
-                           FontSize="14" Grid.Column="1"/>
-            </Grid> 
+                <Image Grid.Column="0" Grid.RowSpan="2" Source="Assets/grey-placeholder.png" Width="32"
+                    Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+                <TextBlock Grid.Column="1" Text="{x:Bind Name}" Margin="12,6,0,0" 
+                    Style="{ThemeResource BaseTextBlockStyle}"/>
+                <TextBlock  Grid.Column="1" Grid.Row="1" Text="{x:Bind Company}" Margin="12,0,0,6" 
+                    Style="{ThemeResource BodyTextBlockStyle}"/>
+            </Grid>
         </DataTemplate>
     </ListView.ItemTemplate>
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
-    <x:String>Item 4</x:String>
-    <x:String>Item 5</x:String>
 </ListView>
 ```
 
-Veja a seguir a aparência dos itens de dados quando exibidos com este modelo de dados.
+Veja qual é a aparência dos itens de dados quando são exibidos usando esse modelo de dados em um ListView:
 
-![Itens de exibição de lista com um modelo de dados](images/listview-itemstemplate.png)
+![Itens de classe personalizados ListView com um modelo de dados](images/listview-customclass-datatemplate-final.png)
 
-Os modelos de dados são a principal maneira de definir a aparência de sua exibição de lista. Eles também poderão causar um impacto significativo no desempenho se sua lista exibir um grande número de itens. Neste artigo, vamos usar dados de cadeia de caracteres simples na maioria dos exemplos e não especificar um modelo de dados. Para saber mais e exemplos de como usar modelos de dados e contêineres de itens para definir a aparência dos itens em sua lista ou grade, confira os [contêineres de e modelos de item](item-containers-templates.md). 
+Os modelos de dados são a principal maneira de definir a aparência do seu ListView. Eles também poderão causar um impacto significativo no desempenho se a lista armazenar um grande número de itens.  
+
+Seu modelo de dados pode ser definido embutido dentro da definição ListView/GridView (mostrado acima) ou separadamente em uma seção Recursos. Se definido fora do próprio ListView/GridView, o DataTemplate deverá receber um atributo [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute) e ser atribuído à propriedade [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) do ListView/GridView usando essa chave.
+
+Para saber mais e exemplos de como usar modelos de dados e contêineres de itens para definir a aparência dos itens em sua lista ou grade, confira os [contêineres de e modelos de item](item-containers-templates.md). 
 
 ## <a name="change-the-layout-of-items"></a>Alterar o layout dos itens
 
-Quando você adiciona itens a uma exibição de lista ou grade, o controle encapsula automaticamente cada item de um contêiner de itens e, em seguida, dispõe todos os contêineres. A forma como esses contêineres de itens são dispostos depende do [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) do controle.  
+Quando você adiciona itens a um ListView ou GridView, o controle encapsula automaticamente cada item de um contêiner de itens e, em seguida, dispõe todos os contêineres. A forma como esses contêineres de itens são dispostos depende do [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) do controle.  
 - Por padrão, a **ListView** usa um [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), que gera uma lista vertical, como esta.
 
 ![Uma exibição de lista simples](images/listview-simple.png)
@@ -213,7 +298,8 @@ Quando você adiciona itens a uma exibição de lista ou grade, o controle encap
 
 Você pode modificar o layout dos itens ajustando as propriedades no painel de itens ou substituir o painel padrão por outro painel.
 
-> Observação&nbsp;&nbsp;Tenha cuidado para não desabilitar a virtualização se alterar o ItemsPanel. O **ItemsStackPanel** e o **ItemsWrapGrid** dão suporte à virtualização, portanto, é seguro usá-los. Ao usar qualquer outro painel, talvez você desabilite a virtualização e degrade o desempenho da exibição de lista. Para obter mais informações, consulte os artigos sobre exibição de lista em [Desempenho](https://docs.microsoft.com/windows/uwp/debug-test-perf/performance-and-xaml-ui). 
+> [!NOTE]
+> Tenha cuidado para não desabilitar a virtualização se alterar o ItemsPanel. O **ItemsStackPanel** e o **ItemsWrapGrid** dão suporte à virtualização, portanto, é seguro usá-los. Ao usar qualquer outro painel, talvez você desabilite a virtualização e degrade o desempenho da exibição de lista. Para obter mais informações, consulte os artigos sobre exibição de lista em [Desempenho](https://docs.microsoft.com/windows/uwp/debug-test-perf/performance-and-xaml-ui). 
 
 Este exemplo mostra como fazer o **ListView** dispor seus contêineres de itens em uma lista horizontal alterando a propriedade [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.orientation) do **ItemsStackPanel**.
 Como a exibição de lista rola verticalmente por padrão, você também precisa ajustar algumas propriedades no [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) interno da exibição de lista para fazê-la rolar horizontalmente.
@@ -222,10 +308,11 @@ Como a exibição de lista rola verticalmente por padrão, você também precisa
 - [ScrollViewer.VerticalScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) para **Desabilitado** 
 - [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility) para **Oculto** 
 
-> **Observação**&nbsp;&nbsp;Estes exemplos são mostrados com a largura da exibição de lista irrestrita, portanto as barras de rolagem horizontais não são mostradas. Se você executar esse código, poderá definir `Width="180"` no ListView para mostrar as barras de rolagem.
+> [!IMPORTANT]
+> Esses exemplos são mostrados com a largura da exibição de lista irrestrita, para que as barras de rolagem horizontais não sejam mostradas. Se você executar esse código, poderá definir `Width="180"` no ListView para mostrar as barras de rolagem.
 
 **XAML**
-```xaml
+```xml
 <ListView Height="60" 
           ScrollViewer.HorizontalScrollMode="Enabled" 
           ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -236,24 +323,25 @@ Como a exibição de lista rola verticalmente por padrão, você também precisa
             <ItemsStackPanel Orientation="Horizontal"/>
         </ItemsPanelTemplate>
     </ListView.ItemsPanel>
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
-    <x:String>Item 4</x:String>
-    <x:String>Item 5</x:String>
+    <x:String>Apricot</x:String>
+    <x:String>Banana</x:String>
+    <x:String>Cherry</x:String>
+    <x:String>Orange</x:String>
+    <x:String>Strawberry</x:String>
 </ListView>
 ```
 
 A lista resultante tem esta aparência.
 
-![Uma exibição de lista horizontal](images/listview-horizontal.png)
+![Uma exibição de lista horizontal](images/listview-horizontal2-final.png)
 
  No próximo exemplo, o **ListView** dispõe os itens em uma lista de encapsulamento vertical usando um **ItemsWrapGrid** em vez de um **ItemsStackPanel**. 
  
-> **Observação**&nbsp;&nbsp;A altura da exibição de lista deve ser restrita para forçar o controle a encapsular os contêineres.
+> [!IMPORTANT]
+> A altura da exibição de lista deve ser restrita para forçar o controle a encapsular os contêineres.
 
 **XAML**
-```xaml
+```xml
 <ListView Height="100"
           ScrollViewer.HorizontalScrollMode="Enabled" 
           ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -264,17 +352,17 @@ A lista resultante tem esta aparência.
             <ItemsWrapGrid/>
         </ItemsPanelTemplate>
     </ListView.ItemsPanel>
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
-    <x:String>Item 4</x:String>
-    <x:String>Item 5</x:String>
+    <x:String>Apricot</x:String>
+    <x:String>Banana</x:String>
+    <x:String>Cherry</x:String>
+    <x:String>Orange</x:String>
+    <x:String>Strawberry</x:String>
 </ListView>
 ```
 
 A lista resultante tem esta aparência.
 
-![Uma exibição de lista com layout de grade](images/listview-itemswrapgrid.png)
+![Uma exibição de lista com layout de grade](images/listview-itemswrapgrid2-final.png)
 
 Se você mostrar os dados agrupados em sua exibição de lista, o ItemsPanel determinará como os grupos de itens, e não os itens individuais, estão dispostos. Por exemplo, se o ItemsStackPanel horizontal mostrado anteriormente for usado para mostrar os dados agrupados, os grupos serão organizados horizontalmente, mas os itens em cada grupo ainda serão empilhados verticalmente, conforme mostrado aqui.
 
@@ -364,15 +452,15 @@ Para responder às alterações de seleção em uma exibição de lista, manipul
 Este exemplo mostra como manipular o evento **SelectionChanged** e acessar as diversas coleções de itens.
 
 **XAML**
-```xaml
+```xml
 <StackPanel HorizontalAlignment="Right">
     <ListView x:Name="listView1" SelectionMode="Multiple" 
               SelectionChanged="ListView1_SelectionChanged">
-        <x:String>Item 1</x:String>
-        <x:String>Item 2</x:String>
-        <x:String>Item 3</x:String>
-        <x:String>Item 4</x:String>
-        <x:String>Item 5</x:String>
+        <x:String>Apricot</x:String>
+        <x:String>Banana</x:String>
+        <x:String>Cherry</x:String>
+        <x:String>Orange</x:String>
+        <x:String>Strawberry</x:String>
     </ListView>
     <TextBlock x:Name="selectedItem"/>
     <TextBlock x:Name="selectedIndex"/>
@@ -417,7 +505,7 @@ Você pode alterar a exibição de lista para que um usuário clique em itens co
 Veja a seguir uma exibição de lista com itens clicáveis. O código no manipulador de eventos ItemClick navega para uma nova página.
 
 **XAML**
-```xaml
+```xml
 <ListView SelectionMode="None"
           IsItemClickEnabled="True" 
           ItemClick="ListView1_ItemClick">
@@ -467,25 +555,26 @@ private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 
 Os métodos [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectall), [SelectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectrange) e [DeselectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.deselectrange) proporcionam uma forma mais eficiente de modificar a seleção do que a propriedade SelectedItems. Esses métodos selecionam ou desmarcam usando intervalos de índices de itens. Os itens virtualizados permanecem virtualizados, pois somente o índice é usado. Todos os itens do intervalo especificado são selecionados (ou desmarcados), independentemente do estado de seleção original. O evento SelectionChanged ocorre somente uma vez para cada chamada desses métodos.
 
-> **Importante**&nbsp;&nbsp;Você deve chamar esses métodos apenas quando a propriedade SelectionMode for definida como Múltiplo ou Estendido. Se você chamar SelectRange quando SelectionMode for Único ou Nenhum, uma exceção será gerada.
+> [!IMPORTANT]
+> Você deverá chamar esses métodos apenas quando a propriedade SelectionMode for definida como Múltiplo ou Estendido. Se você chamar SelectRange quando SelectionMode for Único ou Nenhum, uma exceção será gerada.
 
 Quando você selecionar itens usando intervalos de índice, use a propriedade [SelectedRanges](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectedranges) para obter todos os intervalos selecionados na lista.
 
 Se o ItemsSource implementar [IItemsRangeInfo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.iitemsrangeinfo), e você usar esses métodos para modificar a seleção, as propriedades **AddedItems** e **RemovedItems** não serão definidas no SelectionChangedEventArgs. Definir essas propriedades requer a desvirtualização do objeto de item. Use a propriedade **SelectedRanges** para obter os itens.
 
-Você pode selecionar todos os itens de uma coleção chamando o método SelectAll. No entanto, não há nenhum método correspondente para desmarcar todos os itens. Você pode desmarcar todos os itens chamando DeselectRange e transmitindo um [ItemIndexRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange) com um valor [FirstIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.firstindex) de 0 e um valor [Length](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.length) equivalente ao número de itens da coleção. 
+Você pode selecionar todos os itens de uma coleção chamando o método SelectAll. No entanto, não há nenhum método correspondente para desmarcar todos os itens. Você pode desmarcar todos os itens chamando DeselectRange e transmitindo um [ItemIndexRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange) com um valor [FirstIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.firstindex) de 0 e um valor [Length](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.length) equivalente ao número de itens da coleção. Isso é mostrado no exemplo abaixo, junto com uma opção para selecionar todos os itens.
 
 **XAML**
-```xaml
+```xml
 <StackPanel Width="160">
     <Button Content="Select all" Click="SelectAllButton_Click"/>
     <Button Content="Deselect all" Click="DeselectAllButton_Click"/>
     <ListView x:Name="listView1" SelectionMode="Multiple">
-        <x:String>Item 1</x:String>
-        <x:String>Item 2</x:String>
-        <x:String>Item 3</x:String>
-        <x:String>Item 4</x:String>
-        <x:String>Item 5</x:String>
+        <x:String>Apricot</x:String>
+        <x:String>Banana</x:String>
+        <x:String>Cherry</x:String>
+        <x:String>Orange</x:String>
+        <x:String>Strawberry</x:String>
     </ListView>
 </StackPanel>
 ```

@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 1170b8e1291afd166f210feb291b644d1c7ed546
-ms.sourcegitcommit: e5a154c7b6c1b236943738febdb17a4815853de5
+ms.openlocfilehash: 9484b61aae91ae426efb1963cd37ebf276ef7c6c
+ms.sourcegitcommit: f8634aad3a3675c2f0eac62f56df3def4285a7b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71164819"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720441"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidade e assincronia mais avançadas com o C++/WinRT
 
@@ -787,6 +787,51 @@ case AsyncStatus::Started:
 - **AsyncStatus::Canceled** significa que o objeto async foi cancelado. Um cancelamento normalmente é solicitado pelo chamador; portanto, seria raro lidar com esse estado. Normalmente, um objeto async cancelado é simplesmente descartado.
 - **AsyncStatus::Error** significa que o objeto async falhou de alguma maneira. Você poderá chamar **get** para gerar novamente a exceção se desejar.
 - **AsyncStatus::Started** significa que o objeto async ainda está em execução. O padrão assíncrono do Windows Runtime não permite várias esperas nem waiters. Isso significa que você não pode chamar **wait_for** em um loop. Se a espera tiver atingido efetivamente o tempo limite, restarão algumas opções para você. Você pode abandonar o objeto ou pode sondar seu status antes de chamar **get** para recuperar qualquer resultado. Mas é melhor descartar o objeto nesse momento.
+
+## <a name="returning-an-array-asynchronously"></a>Retornar uma matriz de forma assíncrona
+
+Veja abaixo um exemplo de [MIDL 3.0](/uwp/midl-3/) que produz o *erro MIDL2025: [msg]erro de sintaxe [contexto]: esperando > ou próximo de "["* .
+
+```idl
+Windows.Foundation.IAsyncOperation<Int32[]> RetrieveArrayAsync();
+```
+
+O motivo é que é inválido usar uma matriz como um argumento de tipo de parâmetro para uma interface com parâmetros. Portanto, é necessária uma maneira menos óbvia para atingir o objetivo de passar assincronamente uma matriz de volta de um método de classe de runtime. 
+
+Você pode retornar a matriz demarcada em um objeto [PropertyValue](/uwp/api/windows.foundation.propertyvalue). O código de chamada cancela sua demarcação. Veja um exemplo de código, que você pode experimentar adicionando a classe de tempo de execução **SampleComponent** a um projeto do **Componente do Windows Runtime (C++/WinRT)** e, em seguida, consumindo (por exemplo) um projeto do **Aplicativo de Núcleo (C++/WinRT)** .
+
+```cppwinrt
+// SampleComponent.idl
+namespace MyComponentProject
+{
+    runtimeclass SampleComponent
+    {
+        Windows.Foundation.IAsyncOperation<IInspectable> RetrieveCollectionAsync();
+    };
+}
+
+// SampleComponent.h
+...
+struct SampleComponent : SampleComponentT<SampleComponent>
+{
+    ...
+    Windows::Foundation::IAsyncOperation<Windows::Foundation::IInspectable> RetrieveCollectionAsync()
+    {
+        co_return Windows::Foundation::PropertyValue::CreateInt32Array({ 99, 101 }); // Box an array into a PropertyValue.
+    }
+}
+...
+
+// SampleCoreApp.cpp
+...
+MyComponentProject::SampleComponent m_sample_component;
+...
+auto boxed_array{ co_await m_sample_component.RetrieveCollectionAsync() };
+auto property_value{ boxed_array.as<winrt::Windows::Foundation::IPropertyValue>() };
+winrt::com_array<int32_t> my_array;
+property_value.GetInt32Array(my_array); // Unbox back into an array.
+...
+```
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Interface IAsyncAction](/uwp/api/windows.foundation.iasyncaction)

@@ -5,22 +5,22 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: Windows 10 s, sempre conectado, ARM, ARM64, emulação x86
 ms.localizationpriority: medium
-ms.openlocfilehash: 740956480323d7c201e81071a444026b8d155462
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 7450b469f77fec4288ad6dff01ee7673affc8dd9
+ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682738"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237529"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 em execução no ARM
-Originalmente, o Windows 10 (diferente do Windows 10 Mobile) pode ser executado somente em computadores que foram equipados com processadores x86 e x64. Agora, a área de trabalho do Windows 10 (edições Pro e S) pode ser executada em computadores com processadores ARM64 e a Fall Creators Update. A natureza de economia de energia da arquitetura de CPU do ARM permite que esses computadores tenham bateria o dia todo e ofereçam suporte para redes de dados móveis. Esses computadores fornecerão ótima compatibilidade de aplicativos e permitirão que você execute aplicativos win32 x86 existentes sem modificação. Ex. Adobe Reader. Para obter mais informações ou demonstração, veja o [vídeo do Channel 9 para o computador sempre conectado](https://channel9.msdn.com/Events/Build/2017/P4171).
+Originalmente, o Windows 10 (diferente do Windows 10 Mobile) pode ser executado somente em computadores que foram equipados com processadores x86 e x64. Agora, o Windows 10 desktop pode ser executado em computadores que são alimentados por processadores ARM64 com a atualização de criadores de outono ou mais recente. A natureza de economia de energia da arquitetura de CPU do ARM permite que esses computadores tenham bateria o dia todo e ofereçam suporte para redes de dados móveis. Esses computadores fornecerão ótima compatibilidade de aplicativos e permitirão que você execute aplicativos win32 x86 existentes sem modificação. Para obter mais informações ou uma demonstração, consulte o [vídeo do canal 9 para o PC sempre conectado](https://channel9.msdn.com/Events/Build/2017/P4171).
 
 Usamos o termo *ARM* aqui como um atalho para computadores que executam a versão da área de trabalho do Windows 10 em processadores ARM64 (também conhecida como *AArch64*).  Usamos o termo *ARM32* aqui como um atalho para a arquitetura de 32 bits do ARM (mais conhecida como *ARM* em outras documentações).
 
 ## <a name="apps-and-experiences-on-arm"></a>Aplicativos e experiências no ARM
 
 ### <a name="built-in-windows-10-experiences-apps-and-drivers"></a>Experiências integradas do Windows 10, aplicativos e drivers
-As experiências integradas do Windows 10 como Microsoft Edge, Cortana, menu Iniciar e Explorador são nativas e executadas como ARM64 (ou ARM32). Isso também inclui todos os drivers de dispositivo, como elementos gráficos, rede ou disco rígido. Isso garante que você obtenha a melhor experiência do usuário e duração da bateria do seu dispositivo em execução na velocidade nativa total do processador Qualcomm Snapdragon
+As experiências internas do Windows 10, como Edge, Cortana, start menu e Explorer, são todas nativas e executadas como ARM64. Isso também inclui todos os drivers de dispositivo, como gráficos, rede ou disco rígido. Isso garante que você obtenha a melhor experiência do usuário e a vida útil da bateria do dispositivo em execução na velocidade nativa completa do processador Qualcomm Snapdragon.
 
 ### <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da Plataforma Universal do Windows (UWP)
 O Windows 10 no ARM executa todos os [aplicativos UWP](../get-started/universal-application-platform-guide.md) x86, ARM32 e ARM64 da Microsoft Store. Os aplicativos ARM32 e ARM64 são executados nativamente sem qualquer emulação, enquanto aplicativos x86 são executados sob emulação. Se você for um desenvolvedor de UWP, certifique-se de enviar um pacote ARM para seu aplicativo, pois isso fornecerá a melhor experiência de usuário para o dispositivo. Para obter mais informações, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
@@ -33,7 +33,7 @@ O Windows 10 no ARM executa todos os [aplicativos UWP](../get-started/universal-
 > Quando um usuário baixar um aplicativo UWP na Microsoft Store, a versão ARM32 será instalada em um dispositivo ARM64, a menos que somente a versão x86 esteja disponível. Para obter mais informações sobre arquiteturas, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
 
 ### <a name="win32-apps"></a>Aplicativos Win32
-Além dos aplicativos UWP, o Windows 10 no ARM também pode executar seus aplicativos Win32 x86 (como o Adobe Reader) sem modificações, com bom desempenho e experiência de usuário perfeito, assim como qualquer PC. Esses aplicativos Win32 x86 não precisam ser recompilados para o ARM e nem mesmo percebem que estão em execução no processador ARM. Observe que aplicativos Win32 x64 de 64 bits não têm suporte, mas a maioria dos aplicativos têm versões x86 dos aplicativos. Portanto, da perspectiva do usuário, basta escolher o instalador x86 de 32 bits para executar no computador Windows no ARM.
+Além dos aplicativos UWP, o Windows 10 no ARM também pode executar seus aplicativos Win32 x86 sem modificações, com bom desempenho e uma experiência de usuário tranqüila, assim como qualquer PC. Esses aplicativos Win32 x86 não precisam ser recompilados para o ARM e nem mesmo percebem que estão em execução em um processador ARM. Observe que os aplicativos do Win32 de 64 bits x64 não têm suporte, mas a grande maioria dos aplicativos tem versões x86 disponíveis.  Quando for dada a opção de arquitetura do aplicativo, basta escolher a versão x86 de 32 bits para executar o aplicativo em um PC com Windows 10 no ARM.
 
 ## <a name="in-this-section"></a>Nesta seção
 |Tópico | Descrição |

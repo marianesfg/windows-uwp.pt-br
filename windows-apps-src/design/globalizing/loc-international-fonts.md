@@ -1,21 +1,21 @@
 ---
-Description: Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em idiomas diferentes dos EUA Inglês.
+Description: Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em outros idiomas que não sejam os EUA Inglês.
 title: Fontes internacionais
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 06284481ccecbc3c9cd7d7a78d83ccd6e97a49a7
+ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601131"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237522"
 ---
 # <a name="international-fonts"></a>Fontes internacionais
 
-Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em idiomas diferentes dos EUA Inglês.
+Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em outros idiomas que não sejam os EUA Inglês.
 
 Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language tag](https://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Para ver uma lista das marcas de idioma específicas com suporte pela Microsoft Store, consulte [Idiomas com suporte](../../publish/supported-languages.md).
 
@@ -23,7 +23,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | --------- | ----------- | -------------------- |
 | Africâner | af-ZA | Segoe UI |
 | Albanês | sq-AL | Segoe UI |
-| Amhari | am-ET | Ebrima |
+| Amárico | am-ET | Ebrima |
 | Árabe | ar-SA | Segoe UI |
 | armênio | hy-AM | Segoe UI |
 | assamês | as-IN | Nirmala UI |
@@ -37,9 +37,9 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Catalão | ca-ES | Segoe UI |
 | curdo central (árabe) | ku-ARAB-IQ | Segoe UI |
 | cheroqui (cheroqui) | chr-CHER-US | Gadugi |
-| Chinês simplificado | zh-CN | MS YaHei UI |
-| Chinês tradicional (Hong Kong) | zh-HK | MS JhengHei UI |
-| Chinês tradicional (Taiwan) | zh-TW | MS JhengHei UI |
+| Chinês simplificado | zh-CN | Microsoft YaHei UI |
+| Chinês tradicional (Hong Kong) | zh-HK | Microsoft JhengHei UI |
+| Chinês tradicional (Taiwan) | zh-TW | Microsoft JhengHei UI |
 | Croata | hr-HR | Segoe UI |
 | Tcheco | cs-CZ | Segoe UI |
 | Dinamarquês | da-DK | Segoe UI |
@@ -66,14 +66,14 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | isiXhosa | xh-ZA | Segoe UI |
 | isiZulu | zu-ZA | Segoe UI |
 | Italiano | it-IT | Segoe UI |
-| Japonês | ja-JP | Meiryo UI (veja as observações abaixo) |
+| Japonês | ja-JP | Interface do usuário Yu Gothic |
 | kannada | kn-IN | Nirmala UI |
 | Cazaque | kk-KZ | Segoe UI |
 | Khmer | km-KH | Leelawadee UI |
 | quiché | qut-GT | Segoe UI |
 | quiniaruanda | rw-RW | Segoe UI |
 | quissuaíle | sw-KE | Segoe UI |
-| concani | kok-IN | Nirmala UI |
+| Konkani | kok-IN | Nirmala UI |
 | Coreano | ko-KR | Malgun Gothic |
 | quirguiz | ky-KG | Segoe UI |
 | Letão | lv-LV | Segoe UI |
@@ -120,7 +120,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Turco | tr-TR | Segoe UI |
 | turcomeno | tk-TM | Segoe UI |
 | Ucraniano | uk-UA | Segoe UI |
-| urdu | ur-PK | Segoe UI |
+| Urdu | ur-PK | Segoe UI |
 | uigur | ug-CN | Segoe UI |
 | Uzbeque (Latino) | uz-Latn-UZ | Segoe UI |
 | valenciano | ca-ES-valencia | Segoe UI |
@@ -129,11 +129,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | uólofe | wo-SN | Segoe UI |
 | Ioruba | yo-NG | Segoe UI |
 
-## <a name="japanese-fonts"></a>Fontes em japonês
-
-A fonte Meiryo UI é usada no Windows. O Windows inclui Yu Gothic e Yu Mincho, duas famílias de fontes que dão suporte à visualização e edição de documentos em japonês. Yu Gothic não é recomendado para interface do usuário do aplicativo.
-
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-marca de idioma 47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Idiomas com suporte](../../publish/supported-languages.md)
