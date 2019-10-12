@@ -1,74 +1,74 @@
 ---
-title: Prioridades de notificação de WNS
-description: Descrição das várias prioridades que podem ser definidas em uma notificação
+title: Prioridades de notificação do WNS
+description: Descrição das várias prioridades que você pode definir em uma notificação
 ms.date: 01/10/2017
 ms.topic: article
-keywords: Windows 10, uwp, API do WinRT, WNS
+keywords: Windows 10, UWP, API do WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: f5c4b9f1db58a091dc4f9389888ad3739c4439e5
-ms.sourcegitcommit: b0edd3c09f931b9b62f9c2d17037fb58d826174f
+ms.openlocfilehash: 3310b34b2748bd684e46e04775c973680f8e03a9
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67349867"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282246"
 ---
-# <a name="wns-notification-priorities"></a>Prioridades de notificação de WNS
-Ao definir a prioridade de uma notificação com um cabeçalho simple como WNS postar mensagens, você pode controlar como as notificações são entregues em situações confidenciais de bateria.
+# <a name="wns-notification-priorities"></a>Prioridades de notificação do WNS
+Ao definir a prioridade de uma notificação com um cabeçalho simples para mensagens de POSTAgem do WNS, você pode controlar como as notificações são entregues em situações sensíveis à bateria.
 
 ## <a name="power-on-windows"></a>Ligar o Windows
-Como mais usuários estão trabalhando somente em dispositivos alimentado por bateria, minimizar o consumo de energia tornou-se um requisito padrão para todos os aplicativos. Se aplicativos consomem mais energia do que o valor que eles fornecem, os usuários podem desinstalar os aplicativos. Enquanto o sistema operacional Windows reduz o consumo de energia da bateria sempre que possível, é responsabilidade do aplicativo para trabalhar com eficiência. 
+À medida que mais usuários estiverem trabalhando somente em dispositivos com bateria, minimizar o consumo de energia se tornará um requisito padrão para todos os aplicativos. Se os aplicativos consumirem mais energia do que o valor que eles fornecem, os usuários poderão desinstalar os aplicativos. Embora o sistema operacional Windows reduza o consumo de energia na bateria sempre que possível, é responsabilidade do aplicativo trabalhar com eficiência. 
 
-As prioridades de WNS é uma maneira de mover o trabalho não críticas desativar a bateria. As prioridades WNS informam ao sistema quais notificações devem ser entregues imediatamente e que pode aguardar até que o dispositivo está conectado a uma fonte de alimentação. Com essas dicas, o sistema pode entregar as notificações a hora exata em que eles são mais importantes para o usuário e o aplicativo. 
+As prioridades do WNS são uma maneira de mover o trabalho não crítico para fora da bateria. As prioridades do WNS dizem ao sistema que as notificações devem ser entregues instantaneamente e que podem esperar até que o dispositivo seja conectado a uma fonte de energia. Com essas dicas, o sistema pode entregar as notificações no momento exato em que elas são as mais valiosas para o usuário e o aplicativo. 
 
 ## <a name="power-modes-on-the-device"></a>Modos de energia no dispositivo
-Todos os dispositivos Windows funciona por meio de uma variedade de modos de energia (bateria, economia de bateria e carga) e os usuários esperam comportamentos diferentes de aplicativos em modos de energia diferente. Quando o dispositivo está ativado, todas as notificações devem ser entregues. No modo de proteção da bateria, apenas as notificações mais importante devem ser entregue. Enquanto o dispositivo está conectado, sincronização ou operações críticas de tempo não podem ser concluídas.
+Cada dispositivo do Windows opera por meio de uma variedade de modos de energia (bateria, economia de bateria e cobrança), e os usuários esperam comportamentos diferentes de aplicativos em modos de energia diferentes. Quando o dispositivo estiver ativado, todas as notificações deverão ser entregues. No modo de economia de bateria, somente as notificações mais importantes devem ser entregues. Enquanto o dispositivo está conectado, as operações de sincronização ou não críticas podem ser concluídas.
 
-Windows não sabe quais notificações são importantes para qualquer usuário ou aplicativo, portanto, o sistema depende totalmente de aplicativos para definir a prioridade certa para suas notificações. 
+O Windows não sabe quais notificações são importantes para qualquer usuário ou aplicativo, portanto, o sistema depende totalmente dos aplicativos para definir a prioridade certa para suas notificações. 
 
-## <a name="priorities"></a>Prioridades
-Há quatro prioridades disponíveis para um aplicativo usar ao enviar notificações por push. A prioridade é definida em notificações individuais, permitindo que você escolha quais notificações precisam ser entregue instantaneamente (por exemplo, uma mensagem de mensagens Instantâneas) e quais delas podem esperar (por exemplo, entre em contato com as atualizações de fotos).
+## <a name="priorities"></a>Suas
+Há quatro prioridades disponíveis para um aplicativo usar ao enviar notificações por push. A prioridade é definida em notificações individuais, permitindo que você escolha quais notificações precisam ser entregues instantaneamente (por exemplo, uma mensagem de mensagens instantâneas) e quais podem esperar (por exemplo, contatar atualizações de fotos).
 
 As prioridades são: 
 
 |    Priority    |    Substituição do usuário    |    Descrição    |    Exemplo    |
 |----------------|---------------------|-------------------|---------------|
-|    Alto    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo que está sendo limitadas no modo de economia de bateria.    |    As notificações mais importantes que devem ser entregues imediatamente em nenhuma circunstância quando o dispositivo pode receber notificações. Coisas como chamadas VoIP ou alertas críticos que devem ativar o dispositivo se enquadram nessa categoria.    |    Chamadas VoIP, hora - alertas críticos    |
-|    Médio    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo que está sendo limitadas no modo de economia de bateria.    |    Essas são coisas que não são tão importantes, coisas que não precisam acontecer imediatamente, mas os usuários seriam bom senso ficaria irritados se eles não estão em execução em segundo plano.    |    Sincronização de conta de Email secundária, atualizações de bloco dinâmico.    |
-|    Baixo    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo que está sendo limitadas no modo de economia de bateria.    |    Notificações que só fazem sentido quando o usuário está usando o dispositivo ou quando a atividade em segundo plano faz sentido. Esses são armazenados em cache e não processados até que o usuário se autentica em ou plugs no seu dispositivo.    |    Entre em contato com o status (online/offline)    |
-|    Muito baixo     |    Não – ele não pode impedir que as notificações de prioridade muito baixa do que está sendo limitadas no modo de economia de bateria.    |    Isso é quase o mesmo como baixa prioridade, exceto que os usuários não é possível substituir a política de proteção da bateria. Essas notificações nunca serão entregue em economia de bateria.    |    Sincronização de arquivos para um serviço de sincronização.    |
+|    Alto    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo seja limitado no modo de economia de bateria.    |    As notificações mais importantes que devem ser entregues imediatamente em qualquer circunstância quando o dispositivo puder receber notificações. Coisas como chamadas de VoIP ou alertas críticos que devem ativar o dispositivo se enquadram nessa categoria.    |    Chamadas VoIP, alertas críticos para o tempo    |
+|    Média    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo seja limitado no modo de economia de bateria.    |    Essas são as coisas que não são tão importantes, coisas que não precisam acontecer imediatamente, mas os usuários seriam incomodar se não estiverem em execução em segundo plano.    |    Sincronização de conta de email secundária, atualizações de bloco dinâmico.    |
+|    Baixa    |    Sim – o usuário pode bloquear todas as notificações de um aplicativo ou pode impedir que um aplicativo seja limitado no modo de economia de bateria.    |    Notificações que fazem sentido apenas quando o usuário está usando o dispositivo ou quando a atividade em segundo plano faz sentido. Eles são armazenados em cache e não processados até que o usuário entre ou conecte seu dispositivo.    |    Status do contato (online/offline)    |
+|    Muito baixo     |    Não, não é possível impedir que notificações de prioridade muito baixa sejam limitadas no modo de economia de bateria.    |    Isso é quase o mesmo que a baixa prioridade, exceto que os usuários não podem substituir a política de economia de bateria. Essas notificações nunca serão entregues na economia de bateria.    |    Sincronizando arquivos para um serviço de sincronização.    |
 
-Observe que muitos aplicativos terão as notificações de prioridade diferente em todo seu ciclo de vida. Uma vez que a prioridade é definida em uma base por notificação, isso não é um problema. Um aplicativo de VoIP pode enviar uma notificação de alta prioridade para uma chamada de entrada e, em seguida, acompanhamento-lo com uma prioridade baixa um quando um contato online. 
+Observe que muitos aplicativos terão notificações de prioridade diferente em todo o ciclo de vida. Como a prioridade é definida em uma base por notificação, isso não é um problema. Um aplicativo VoIP pode enviar uma notificação de alta prioridade para uma chamada de entrada e, em seguida, acompanhá-la com uma prioridade baixa quando um contato ficar online. 
 
-## <a name="setting-the-priority"></a>Definir a prioridade
+## <a name="setting-the-priority"></a>Definindo a prioridade
 
-Definir a prioridade na solicitação de notificação é feito por meio de um cabeçalho adicional na solicitação POST, `X-WNS-PRIORITY`. Isso é um valor inteiro entre 1 e 4, que é mapeada para uma prioridade: 
+A definição da prioridade na solicitação de notificação é feita por meio de um cabeçalho adicional na solicitação POST, `X-WNS-PRIORITY`. Este é um valor inteiro entre 1 e 4 que é mapeado para uma prioridade: 
 
-| Nome da prioridade | Valor de X-WNS-prioridade | Padrão para: |
+| Nome da prioridade | X-WNS-valor de prioridade | Padrão para: |
 |---------------|----------------------|------------------|
 | Alto | 1 | Notificações do sistema |
-| Meduim | 2 | Blocos e notificações |
-| Baixo | 3 | Bruta |
+| Severidade | 2 | Blocos e notificações |
+| Baixa | 3 | Bruta |
 | Muito baixo | 4 |  |
 
-Para ser com versões anteriores compatíveis, definir uma prioridade não é necessária. No caso de um aplicativo não define a prioridade de suas notificações, o sistema fornecerá uma prioridade padrão. Os padrões são mostrados no gráfico acima e corresponder ao comportamento das versões existentes do Windows. 
+Para ser compatível com versões anteriores, não é necessário definir uma prioridade. Caso um aplicativo não defina a prioridade de suas notificações, o sistema fornecerá uma prioridade padrão. Os padrões são mostrados no gráfico acima e correspondem ao comportamento das versões existentes do Windows. 
 
 ## <a name="detailed-listing-of-desktop-behavior"></a>Listagem detalhada do comportamento da área de trabalho 
 
-Se você estiver enviando seu aplicativo em várias SKUs diferentes do Windows, é normalmente é melhor seguir o gráfico na seção acima. 
+Se você estiver enviando seu aplicativo por vários SKUs diferentes do Windows, normalmente será melhor seguir o gráfico na seção acima. 
 
-Comportamentos de recomendada mais específicos para cada prioridade estão listados abaixo. Isso não é uma garantia de que cada dispositivo funcionará exatamente de acordo com o gráfico. OEMs são livres para configurar o comportamento de forma diferente, mas a maioria está próximas este gráfico. 
+Os comportamentos recomendados mais específicos para cada prioridade são listados abaixo. Isso não é uma garantia de que cada dispositivo funcionará exatamente de acordo com o gráfico. Os OEMs são livres para configurar o comportamento de forma diferente, mas a maioria está perto deste gráfico. 
 
-| Status do dispositivo    | PRIORIDADE: Alto    |    PRIORIDADE: Médio        | PRIORIDADE: Baixo    |    PRIORIDADE: Muito baixo    |
+| Status do dispositivo    | PRIORIDADE Alto    |    PRIORIDADE Média        | PRIORIDADE Baixa    |    PRIORIDADE Muito baixo    |
 |-------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|--------------------------|
-|    Tela ou na tomada    |    Entregar    |    Entregar    |    Entregar    |    Entregar    |
-|    Tela dentro e fora da bateria    |    Entregar    |    Se o usuário isento: entregar Else: em lotes     |    Se o usuário isento: entregar Else: cache *    |    Cache    |
-|    Economia de bateria habilitado    |    Se o usuário isento: entregar Else: cache    |    Se o usuário isento: entregar Else: cache    |    Se o usuário isento: entregar Else: cache    |    Cache     |
-|    Na bateria + economia de bateria habilitado + tela    |    Se o usuário isento: entregar Else: cache    |    Se o usuário isento: entregar Else: cache    |    Se o usuário isento: entregar Else: cache    |    Cache    |
+|    Tela ligada ou conectada    |    Enviá    |    Enviá    |    Enviá    |    Enviá    |
+|    Tela desligada e bateria    |    Enviá    |    Se o usuário tiver isentado: enviar mais: lote     |    Se o usuário tiver isentado: entregar else: cache *    |    Cache    |
+|    Economia de bateria habilitada    |    Se o usuário tiver isentado: entregar else: cache    |    Se o usuário tiver isentado: entregar else: cache    |    Se o usuário tiver isentado: entregar else: cache    |    Cache     |
+|    Na bateria + economia de bateria habilitada + tela desativada    |    Se o usuário tiver isentado: entregar else: cache    |    Se o usuário tiver isentado: entregar else: cache    |    Se o usuário tiver isentado: entregar else: cache    |    Cache    |
 
-Observe que notificações de baixa prioridade serão entregues por padrão para a tela off e bateria somente para Windows Phone com base em dispositivos. Isso é para compatibilidade maintian com a política preexistente do MPNS. Observe também que a quarta e quinta linhas são os mesmos, basta chamar diferentes cenários.
+Observe que as notificações de baixa prioridade serão entregues por padrão para desativar a tela e a bateria somente para dispositivos com base Windows Phone. Isso é para a compatibilidade maintian com a política MPNS pré-existente. Observe também que as quarta e quinta linhas são as mesmas, apenas chamando cenários diferentes.
 
-Para isolar um aplicativo em economia de bateria, os usuários devem ir para o "bateria uso pelo aplicativo" nas configurações e selecione "Permitir que o aplicativo para executar tarefas em segundo plano." Essa seleção de usuário isenta o aplicativo de economia de bateria para alto, médio e notificações de baixa prioridade. Você também pode chamar [BackgroundExecutionManager API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_) programaticamente solicitará a permissão do usuário.  
+Para isentar um aplicativo na economia de bateria, os usuários devem acessar o "uso da bateria por aplicativo" em configurações e selecionar "permitir que o aplicativo Execute tarefas em segundo plano". Essa seleção de usuário isenta o aplicativo da economia de bateria para notificações de prioridade alta, média e baixa. Você também pode chamar a [API BackgroundExecutionManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_) para solicitar programaticamente a permissão do usuário.  
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
-- [Solicitando permissão para executar em segundo plano](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)
+- [Solicitando permissão para execução em segundo plano](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)

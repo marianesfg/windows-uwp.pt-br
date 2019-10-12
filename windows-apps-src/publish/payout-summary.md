@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: 68a7de0692d05ffe8d1b489e75a58c16b3c826df
-ms.sourcegitcommit: 9779be4a1075e924dca7585808722d95cda99aff
+ms.openlocfilehash: 89cb689f0dce4f7dbaec96e9ce109e60d4292f92
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118064"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282482"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
@@ -95,7 +95,7 @@ Essa opção fornece um download dos pagamentos recebidos em seu banco para um d
 | serviceFeeTax            | Quantidade total de serviceFeeTax em pagamento a moeda para o programa/participanteid (aplicável somente a programas da loja e do Azure Marketplace) |
 | totalPayment             | Pagamento total na moeda local, excluindo a retenção de imposto e incluindo o imposto sobre vendas (se aplicável) para o programa/participanteid   |
 | currencyCode             | Pagar para código de moeda                                                                                                                      |
-| paymentMethod            | O método usado para pagar o parceiro, por exemplo, transferência bancária eletrônica, nota de crédito                                                             |
+| paymentMethod            | O método usado para pagar o parceiro por exemplo, transferência bancária eletrônica, nota de crédito                                                             |
 | pagamento de                | Identificador exclusivo para o pagamento. Esse número geralmente é visível em seu extrato bancário. (aplicável somente a pagamentos SAP)              |
 | paymentStatus            | Status do pagamento                                                                                                                            |
 | paymentStatusDescription | Descrição amigável do status de pagamento                                                                                                    |
@@ -122,7 +122,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | alavanca                          | Indica a regra de negócio para a conquista                                                                                                  | Todas                                                            |
 | earningRate                    | Taxa de incentivo aplicada ao valor da transação para gerar uma conquista                                                                      | Todas                                                            |
 | quantity                       | Varia de acordo com o programa. Indica a quantidade cobrada para programas transacionais                                                            | Todas                                                            |
-| quanttype                   | Indica o tipo de quantidade, por exemplo, a quantidade cobrada, MAU                                                                                     | Todas                                                            |
+| quanttype                   | Indica o tipo de quantidade, por exemplo, quantidade cobrada, MAU                                                                                     | Todas                                                            |
 | ganhandotype                    | Indica se é Tarifa, desconto, Coop, venda etc.                                                                                          | Todas                                                            |
 | earningAmount                  | Conquistando valor na moeda da transação original                                                                                      | Todas                                                            |
 | earningAmountUSD               | Conquistando valor em USD                                                                                                                    | Todas                                                            |
@@ -157,7 +157,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | agreementNumber                | Número do contrato                                                                                                                         | Incentivo-apenas alguns programas                                 |
 | agreementStartDate             | Data de início do contrato                                                                                                                     | Incentivo-apenas alguns programas                                 |
 | agreementEndDate               | Data de término do contrato                                                                                                                       | Incentivo-apenas alguns programas                                 |
-| pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
+| Pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
 | transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               | Store e Azure Marketplace                                    |
 | localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          | Somente armazenar                                                     |
 | taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   | Store e Azure Marketplace                                    |

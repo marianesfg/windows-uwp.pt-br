@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 98251ecba05dd27cbe3112a94b6cfcd36440d380
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6d15173471b7f1ef3f1c6b042671eb85b7a53dc4
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371237"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282345"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Criar um serviço de logon do Windows Hello
 
@@ -535,7 +535,7 @@ Neste exercício, você começará com o app Windows Hello criado no primeiro la
     }
     ```
 
-## <a name="exercise-2-client-side-logic"></a>Exercício 2: Lógica de cliente
+## <a name="exercise-2-client-side-logic"></a>Exercício 2: Lógica do lado do cliente
 
 Neste exercício, você alterará os modos de exibição e as classes auxiliares do lado do cliente do primeiro laboratório para usar a classe AuthService. No mundo real, a classe AuthService seria o servidor de autenticação e você precisaria usar a API da Web para enviar e receber dados do servidor. Neste laboratório prático, o cliente e o servidor são locais para simplificar. O objetivo é aprender a usar as APIs do Windows Hello.
 
@@ -661,7 +661,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
             //If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             //would check the signed challenge. If it is correct it would allow the user access to the backend.
             //You would likely make a new method called RequestSignAsync to handle all this
-            //e.g. RequestSignAsync(openKeyResult);
+            //for example, RequestSignAsync(openKeyResult);
             //Refer to the second Windows Hello sample for information on how to do this.
 
             //For this sample there is not concept of a server implemented so just return true.
@@ -804,7 +804,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Como você usará o AuthService ao remover uma conta a referência para o AccountHelper no botão\_esquecer\_usuário\_Clique método pode ser removido. O método agora deve ter a aparência abaixo.
+-   Como você usará o AuthService ao remover uma conta, a referência para o AccountHelper no Método Button @ no__t-0Forget @ no__t-1User @ no__t-2Click pode ser removida. O método agora deve ter a aparência abaixo.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -1139,7 +1139,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
             //If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             //would check the signed challenge. If it is correct it would allow the user access to the backend.
             //You would likely make a new method called RequestSignAsync to handle all this
-            //e.g. RequestSignAsync(openKeyResult);
+            //for example, RequestSignAsync(openKeyResult);
             //Refer to the second Windows Hello sample for information on how to do this.
 
             return await RequestSignAsync(account.UserId, openKeyResult);
@@ -1174,4 +1174,4 @@ Deixamos para você como um exercício os detalhes de como implementar a autenti
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Windows Hello](microsoft-passport.md)
-* [Aplicativo de logon Windows Hello](microsoft-passport-login.md)
+* [Aplicativo de logon do Windows Hello](microsoft-passport-login.md)

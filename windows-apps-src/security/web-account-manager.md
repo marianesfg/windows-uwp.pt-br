@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: f567637f3d38ce80c320bfe92fff392efadeda8d
-ms.sourcegitcommit: 7803f11ba4c9194c350217cc06069a4707f15ed6
+ms.openlocfilehash: 557f5c03bda68d11507ba3b3b3b12823dbe6fd9f
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69017431"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282405"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -80,7 +80,7 @@ O painel está vazio porque o sistema fornece somente um shell de interface do u
 
 ## <a name="register-for-accountcommandsrequested"></a>Registro para AccountCommandsRequested
 
-Para adicionar comandos ao painel, começamos o registro para o manipulador de eventos AccountCommandsRequested. Isso diz para o sistema executar nossa lógica de compilação quando o usuário pedir para ver o painel (p. ex.: clica no botão XAML). 
+Para adicionar comandos ao painel, começamos o registro para o manipulador de eventos AccountCommandsRequested. Isso diz ao sistema para executar nossa lógica de Build quando o usuário solicita que o painel Veja o (por exemplo, clica em nosso botão XAML). 
 
 No code-behind, substitua os eventos OnNavigatedTo e OnNavigatedFrom e adicione o seguinte código: 
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https\://login.Microsoft.com". 
+Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https @ no__t-0//login. Microsoft. com". 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,

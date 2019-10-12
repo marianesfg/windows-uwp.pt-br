@@ -5,12 +5,12 @@ keywords: extensão de aplicativo, serviço de aplicativo, segundo plano
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd6d3fb875e95f251e02f07e7af563c95a400a6
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682784"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282388"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -19,7 +19,7 @@ Este artigo mostra como criar uma extensão de aplicativo UWP e hospedá-la em u
 Este artigo é acompanhado por um exemplo de código:
 - Baixe e descompacte [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
 - No Visual Studio 2019, abra MathExtensionSample. sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
-- Implantar a solução:Compilar > **solução de implantação**.
+- Implantar a solução: **Compilar** > **implantar solução**.
 
 ## <a name="introduction-to-app-extensions"></a>Introdução a extensões de aplicativo
 
@@ -74,7 +74,7 @@ _Package. appxmanifest no projeto MathExtensionHost_
 
 Observe o `xmlns:uap3="http://..."` e a presença de `uap3` em `IgnorableNamespaces`. Elas são necessárias porque estamos usando o namespace uap3.
 
-`<uap3:Extension Category="windows.appExtensionHost">`identifica este aplicativo como um host de extensão.
+`<uap3:Extension Category="windows.appExtensionHost">` identifica esse aplicativo como um host de extensão.
 
 O elemento do **Nome** em `<uap3:AppExtensionHost>` é o nome do _contrato de extensão_. Quando uma extensão especifica o mesmo nome de contrato de extensão, o host poderá encontrá-la. Por convenção, é recomendável criar o nome do contrato de extensão usando seu aplicativo ou o nome do fornecedor para evitar possíveis conflitos com outros nomes de contrato de extensão.
 
@@ -116,19 +116,19 @@ _Package. appxmanifest no projeto MathExtension:_
 
 Novamente, observe a linha `xmlns:uap3="http://..."` e a presença de `uap3` em `IgnorableNamespaces`. Estes são necessários porque estamos usando o namespace `uap3`.
 
-`<uap3:Extension Category="windows.appExtension">`identifica este aplicativo como uma extensão.
+`<uap3:Extension Category="windows.appExtension">` identifica esse aplicativo como uma extensão.
 
 O significado dos atributos `<uap3:AppExtension>` é o seguinte:
 
 |Atributo|Descrição|Obrigatório|
 |---------|-----------|:------:|
 |**Name**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
-|**SESSÃO**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
+|**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
 |**DisplayName**| Pode ser usado em seu próprio aplicativo host para identificar a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**Descrição** | Pode ser usado em seu próprio aplicativo host para descrever a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**PublicFolder**|O nome de uma pasta, relativo à raiz do pacote, onde você pode compartilhar conteúdo com o host de extensão. Por convenção, o nome é "Public", mas você pode usar qualquer nome que corresponde a uma pasta na sua extensão.| :heavy_check_mark: |
 
-`<uap3:Properties>`é um elemento opcional que contém metadados personalizados que os hosts podem ler em tempo de execução. No exemplo de código, a extensão é implementada como um serviço de aplicativo, assim o host precisa de uma maneira de obter o nome desse serviço de aplicativo para que ele possa chamá-lo. O nome do serviço de aplicativo é definido no elemento <Service>, que definimos (nós poderíamos ter chamado de qualquer nome que gostaríamos). O host no exemplo de código procura por essa propriedade em tempo de execução para saber o nome do serviço de aplicativo.
+`<uap3:Properties>` é um elemento opcional que contém metadados personalizados que os hosts podem ler em tempo de execução. No exemplo de código, a extensão é implementada como um serviço de aplicativo, assim o host precisa de uma maneira de obter o nome desse serviço de aplicativo para que ele possa chamá-lo. O nome do serviço de aplicativo é definido no elemento <Service>, que definimos (nós poderíamos ter chamado de qualquer nome que gostaríamos). O host no exemplo de código procura por essa propriedade em tempo de execução para saber o nome do serviço de aplicativo.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>Decida como implementar a extensão.
 
@@ -211,7 +211,7 @@ Você pode definir seu próprio XML no elemento `<uap3:Properties>`. Nesse caso,
 
 Quando o host carrega uma extensão, um código como este extrai o nome do serviço das propriedades definidas no Package.appxmanifest da extensão:
 
-_`Update()`no ExtensionManager.cs, no projeto MathExtensionHost_
+_`Update()` em ExtensionManager.cs, no projeto MathExtensionHost_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,13 +233,13 @@ if (_properties != null)
 
 Com o nome do serviço de aplicativo armazenado em `_serviceName`, o host pode usá-lo para invocar o serviço de aplicativo.
 
-Chamar um serviço de aplicativo também exige o nome da família do pacote que contém o serviço de aplicativo. Felizmente, a API de extensão de aplicativo fornece essas informações que são obtidas na linha:`connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
+Chamar um serviço de aplicativo também exige o nome da família do pacote que contém o serviço de aplicativo. Felizmente, a API de extensão de aplicativo fornece essas informações que são obtidas na linha: `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>Defina como o host e a extensão se comunicarão
 
 Os serviços de aplicativo usam [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) para trocar informações. Como o autor do host, você precisa inventar um protocolo para comunicação com extensões que são flexíveis. No exemplo de código, isso significa que contabilidade para extensões pode levar 1, 2 ou mais argumentos no futuro.
 
-Para este exemplo, o protocolo para os argumentos é um **ValueSet** que contém os pares de valor chave denominados 'Arg' + o número de argumento, por exemplo, `Arg1` e `Arg2`. O host passa em todos os argumentos no **ValueSet**, e a extensão faz uso daqueles que ela precisa. Se a extensão é capaz de calcular um resultado, o host espera que o **ValueSet** retornado da extensão tenha uma chave denominada `Result`, que contém o valor do cálculo. Se essa chave não estiver presente, o host presume que a extensão não pôde concluir o cálculo.
+Para este exemplo, o protocolo para os argumentos é um **valor** que contém os pares de chave-valor nomeado ' arg ' + o número do argumento, por exemplo, `Arg1` e `Arg2`. O host passa em todos os argumentos no **ValueSet**, e a extensão faz uso daqueles que ela precisa. Se a extensão é capaz de calcular um resultado, o host espera que o **ValueSet** retornado da extensão tenha uma chave denominada `Result`, que contém o valor do cálculo. Se essa chave não estiver presente, o host presume que a extensão não pôde concluir o cálculo.
 
 ### <a name="extension-app-service-code"></a>Código de serviço do aplicativo de extensão
 
@@ -395,7 +395,7 @@ Quando você compila um host de extensão e está pronto para testar o quanto el
 - Executa o host e, em seguida, implanta um aplicativo de extensão que tem conteúdo ou propriedades inválido
     - O host detecta o conteúdo inválido e o manipula corretamente?
 
-## <a name="design-considerations"></a>Considerações de design
+## <a name="design-considerations"></a>Considerações sobre o design
 
 - Forneça a interface do usuário que mostra ao usuário quais extensões estão disponíveis e permite que eles o habilitem/desabilitem. Você também pode considerar a adição de glifos de extensões que não ficam disponíveis como um pacote que fica offline, etc.
 - Encaminha o usuário para onde ele pode baixar extensões. Talvez a sua página de extensão possa fornecer uma consulta de pesquisa do Microsoft Store que exibe uma lista de extensões que podem ser usadas com seu aplicativo.

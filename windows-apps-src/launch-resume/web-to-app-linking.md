@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d8550d346833559ccea1e8aea4ae73a8c6d4e7c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5807cdc19e4b38c8cc8fa4ca45c4ef47e79b7742
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318657"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282253"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitir aplicativos para sites que usam manipuladores de URI do aplicativo
 
@@ -23,7 +23,7 @@ Para habilitar a vinculação de aplicativos à Web, você precisará:
 - Manipule a ativação no aplicativo.
 
 > [!Note]
-> Começando com o Windows 10 Creators update, com suporte links clicado no Microsoft Edge iniciará o aplicativo correspondente. Os links com suporte ao clicar em outros navegadores (por exemplo, o Internet Explorer etc.) mantêm a experiência de navegação.
+> Começando com a atualização do Windows 10 para criadores, os links com suporte clicados no Microsoft Edge inicializarão o aplicativo correspondente. Os links com suporte clicados em outros navegadores (por exemplo, Internet Explorer etc.), manterão você na experiência de navegação.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registre-se para manipular links http e https no manifesto do aplicativo
 
@@ -46,7 +46,7 @@ Por exemplo, se o endereço do site for "msn.com", faça a seguinte entrada no m
 </Applications>
 ```
 
-A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se o site tiver vários endereços (por exemplo: m.example.com, www\.exemplo.com e example.com), em seguida, adicione um separado `<uap3:Host Name=... />` entrada dentro do `<uap3:AppUriHandler>` para cada endereço.
+A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se o seu site tiver vários endereços (por exemplo: m.example.com, www\.example.com e example.com), adicione uma entrada `<uap3:Host Name=... />` separada dentro do `<uap3:AppUriHandler>` para cada endereço.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>Associar seu aplicativo e o site com um arquivo JSON
 
@@ -71,12 +71,12 @@ O Windows estabelecerá uma conexão https com seu site e procurará o arquivo J
 
 O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permitem que você dê suporte a uma ampla variedade de links com menos linhas de código. A vinculação de aplicativos à Web dá suporte a dois tipos de curingas no arquivo JSON:
 
-| **Wildcard** | **Descrição**               |
+| **Amplia** | **Descrição**               |
 |--------------|-------------------------------|
 | **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
 
-Por exemplo, o `"excludePaths" : [ "/news/*", "/blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **MSN.com/Weather.HTML** terá suporte, mas não **msn.com/news/topnews.html**.
+Por exemplo, dado `"excludePaths" : [ "/news/*", "/blog/*" ]` no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **MSN.com/Weather.html** terá suporte, mas não **MSN.com/News/topnews.html**.
 
 ### <a name="multiple-apps"></a>Vários aplicativos
 
@@ -89,14 +89,14 @@ Se você tiver dois aplicativos que gostaria de vincular ao seu site, indique os
   "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
-  "packageFamilyName": "Your second app's package family name, e.g. MyApp2_8jmtgj2pbbz6e",
+  "packageFamilyName": "Your second app's package family name, for example, MyApp2_8jmtgj2pbbz6e",
   "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
 Para proporcionar a melhor experiência para seus usuários, use caminhos excluídos para garantir que o conteúdo somente online seja excluído dos caminhos com suporte em seu arquivo JSON.
 
-Caminhos excluídos são verificados primeiro e se houver uma correspondência, a página correspondente será aberta com o navegador em vez do aplicativo designado. No exemplo acima, ' /news/\*' inclui quaisquer páginas sob esse caminho ao ' / notícias\*' ('notícias' não trilhas de nenhuma barra invertida) inclui todos os caminhos sob ' notícias\*' como ' newslocal /', ' newsinternational /' e assim por diante.
+Caminhos excluídos são verificados primeiro e se houver uma correspondência, a página correspondente será aberta com o navegador em vez do aplicativo designado. No exemplo acima, "/News/\*" inclui todas as páginas sob esse caminho enquanto "/News @ no__t-1" (nenhuma barra "notícias") inclui todos os caminhos em "News @ no__t-2", como "newslocal/", "newsinternational/" e assim por diante.
 
 ## <a name="handle-links-on-activation-to-link-to-content"></a>Manipular links na ativação para vincular ao conteúdo
 
@@ -150,19 +150,19 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **Importante** Certifique-se de substituir a lógica `if (rootFrame.Content == null)` final por `rootFrame.Navigate(deepLinkPageType, e);` conforme mostrado no exemplo acima.
 
-## <a name="test-it-out-local-validation-tool"></a>Testá-lo: Ferramenta de validação de local
+## <a name="test-it-out-local-validation-tool"></a>Teste: Ferramenta de validação local
 
 Você pode testar a configuração do seu aplicativo e do site executando a ferramenta de verificação de registro de host de aplicativo que está disponível em:
 
-%windir%\\system32\\**AppHostRegistrationVerifier.exe**
+% WINDIR% \\system32 @ no__t-1**AppHostRegistrationVerifier. exe**
 
 Teste a configuração do seu aplicativo e do site executando essa ferramenta com os seguintes parâmetros:
 
-**AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*
+**AppHostRegistrationVerifier. exe** *nome do host packagefamilyname FilePath*
 
--   Hostname: Seu site (por exemplo, microsoft.com)
--   Nome de família de pacotes (PFN): PFN do seu aplicativo
--   Caminho do arquivo: O arquivo JSON para validação de local (por exemplo, c:\\SomeFolder\\windows-aplicativo-web-link)
+-   Nome do host: Seu site (por exemplo, microsoft.com)
+-   Nome da família de pacotes (PFN): PFN do seu aplicativo
+-   Caminho do arquivo: O arquivo JSON para validação local (por exemplo, C: \\SomeFolder @ no__t-1Windows-app-web-link)
 
 Se a ferramenta não retornar qualquer coisa, a validação funcionará nesse arquivo quando for carregado. Se houver um código de erro, ele não funcionará.
 
@@ -171,11 +171,11 @@ Você pode habilitar a seguinte chave do registro para forçar o caminho corresp
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-KeyName: `ForceValidation` Valor: `1`
+KeyName Valor de `ForceValidation`: `1`
 
-## <a name="test-it-web-validation"></a>Testá-lo: Validação da Web
+## <a name="test-it-web-validation"></a>Teste: Validação da Web
 
-Feche o aplicativo para verificar se ele é ativado quando você clica em um link. Em seguida, copie o endereço de um dos caminhos com suporte no seu site. Por exemplo, se o endereço do seu site é "msn.com" e um dos caminhos de suporte é "path1", você usaria `http://msn.com/path1`
+Feche o aplicativo para verificar se ele é ativado quando você clica em um link. Em seguida, copie o endereço de um dos caminhos com suporte no seu site. Por exemplo, se o endereço do seu site for "msn.com" e um dos caminhos de suporte for "caminho1", você usará `http://msn.com/path1`
 
 Verifique se seu aplicativo é fechado. Pressione a **tecla Windows + R** para abrir a caixa de diálogo **Executar** e cole o link na janela. Seu aplicativo deve ser iniciado em vez do navegador da Web.
 
@@ -186,7 +186,7 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 ## <a name="appurihandlers-tips"></a>Dicas sobre AppUriHandlers:
 
 - Certifique-se de especificar somente links que seu aplicativo possa manipular.
-- Liste todos os hosts aos quais você dará suporte.  Observe que www\.exemplo.com e exemplo.com são hosts diferentes.
+- Liste todos os hosts aos quais você dará suporte.  Observe que www\.example.com e example.com são hosts diferentes.
 - Os usuários podem escolher qual aplicativo preferem para lidar com sites em Configurações.
 - Seu arquivo JSON deve ser carregado para um servidor https.
 - Se você precisar alterar os caminhos aos quais deseja dar suporte, você pode republicar seu arquivo JSON sem precisar republicar seu aplicativo. Os usuários verão as alterações em 1 a 8 dias.

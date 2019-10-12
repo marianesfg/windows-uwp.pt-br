@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
-ms.openlocfilehash: 038f78182095546219152298b043fe876c2c18c8
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: a72b175e672b44d0dace0b4bf04956792edfadd0
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682714"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282513"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu app com serviços, extensões e pacotes
 
@@ -21,7 +21,7 @@ Há muitas tecnologias no Windows 10 para estender e modelar seu aplicativo. Est
 | Plug-ins de código de terceiros            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
 | Plug-ins de código em processamento              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |
 | Ativos de experiência do usuário (cadeias de caracteres/imagens)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Conteúdo sob demanda <br/> (por exemplo, Níveis adicionais) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Conteúdo sob demanda <br/> (por exemplo, níveis adicionais) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
 | Licenciamento e aquisição separados |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
 | Aquisição no aplicativo                 |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |
 | Otimizar o tempo de instalação              | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
@@ -88,7 +88,7 @@ Se um aplicativo oferece suporte a extensões, qualquer desenvolvedor pode envia
 
 Os aplicativos não podem carregar o código a partir das extensões. Se você precisar de execução de código, considere os Serviços de aplicativo.
 
-**Serviço de aplicativo**
+**Serviço de Aplicativo**
 
 Os serviços de aplicativos do Windows permitem a comunicação entre aplicativos, permitindo que seu aplicativo UWP forneça serviços para outro aplicativo universal do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
 

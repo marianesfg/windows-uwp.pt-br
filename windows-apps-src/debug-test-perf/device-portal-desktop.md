@@ -4,14 +4,14 @@ title: Portal de Dispositivos para desktop Windows
 description: Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows.
 ms.date: 02/06/2019
 ms.topic: article
-keywords: Windows 10, uwp, o portal do dispositivo
+keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 00cf497d5d57f5a3cdc5c52ecfeead7885ff7d56
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 0f25e882f53bb4f673aa5003495f37d553208721
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713805"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281998"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
@@ -62,7 +62,7 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Explorador de Arquivos
 - Processos em execução
 - Desempenho
-- Depuração
+- Depurar
 - Rastreamento de Eventos para Windows (ETW)
 - Rastreamento de desempenho
 - Gerenciador de dispositivos
@@ -81,21 +81,21 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
 
 - Em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
-    - `UseDynamicPorts`: Um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - `HttpPort`: Um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
-    - `HttpsPort`: Um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
+    - `UseDynamicPorts`: Uma DWORD necessária. Defina como 0 para manter os números de porta que você escolheu.
+    - `HttpPort`: Uma DWORD necessária. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
+    - `HttpsPort`: Uma DWORD necessária. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
     
 No mesmo caminho da chave do registro, você também pode desativar o requisito de autenticação:
-- `UseDefaultAuthorizer` - `0` para desabilitado, `1` para habilitado.  
+- `UseDefaultAuthorizer` @ no__t-1 @ no__t-2 para Disabled, `1` para habilitado.  
     - Isso controla o requisito de autenticação básica para cada conexão e o redirecionamento de HTTP para HTTPS.  
     
 ### <a name="command-line-options-for-device-portal"></a>Opções de linha de comando para o Portal de Dispositivos
-Em um prompt de comando administrativo, você pode ativar e configurar partes do Portal de Dispositivos. Para ver o último conjunto de comandos com suporte em sua compilação, você pode executar `webmanagement /?`
+Em um prompt de comando administrativo, você pode ativar e configurar partes do Portal de Dispositivos. Para ver o conjunto mais recente de comandos com suporte na sua compilação, você pode executar `webmanagement /?`
 
 - `sc start webmanagement` ou `sc stop webmanagement` 
     - Ativar ou desativar o serviço. Isso ainda requer que o modo de desenvolvedor esteja habilitado. 
 - `-Credentials <username> <password>` 
-    - Defina um nome de usuário e senha para o Portal de Dispositivos. O nome de usuário deve estar em conformidade com padrões de autenticação básicos, não podendo conter dois pontos (:), e deve ser criado a partir de caracteres ASCII padrão, por exemplo, [a-zA-Z0-9], pois os navegadores não analisam o conjunto de caracteres completo de uma maneira padrão.  
+    - Defina um nome de usuário e senha para o Portal de Dispositivos. O nome de usuário deve estar em conformidade com os padrões de autenticação básica, portanto não pode conter dois-pontos (:) e devem ser criados fora de caracteres ASCII padrão, por exemplo, [a-zA-Z0-9], pois os navegadores não analisam o conjunto de caracteres completo de forma padrão.  
 - `-DeleteSSL` 
     - Isso redefine o cache de certificado SSL usado para conexões HTTPS. Se você encontrar erros de conexão de TLS que não podem ser ignorados (em vez do aviso de certificado esperado), essa opção pode corrigir o problema para você. 
 - `-SetCert <pfxPath> <pfxPassword>`
@@ -107,29 +107,29 @@ Em um prompt de comando administrativo, você pode ativar e configurar partes do
 
 ## <a name="common-errors-and-issues"></a>Erros e problemas comuns
 
-Abaixo estão alguns erros comuns que você pode encontrar ao configurar o Portal do dispositivo.
+Abaixo estão alguns erros comuns que você pode encontrar ao configurar o portal do dispositivo.
 
-### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbseinvalidwindowsupdatecount"></a>WindowsUpdateSearch retorna o número de atualizações inválido (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
+### <a name="windowsupdatesearch-returns-invalid-number-of-updates-0x800f0950-cbs_e_invalid_windows_update_count"></a>WindowsUpdateSearch retorna um número inválido de atualizações (0x800f0950 CBS_E_INVALID_WINDOWS_UPDATE_COUNT)
 
-Você pode obter esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes de recursos sob demanda (FoD) são hospedados no Windows Update e baixá-los em compilações de pré-lançamento exige que você opte nas flighting. Se a instalação não aceitada flighting para a combinação de anel e compilação certa, a carga não será para download. Verifique o seguinte:
+Você pode receber esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes FoD (recurso sob demanda) são hospedados em Windows Update e o download deles em compilações de pré-lançamento exige que você opte pelo lançamento. Se a instalação não for aceita em voo para a combinação correta de Build e anel, a carga não poderá ser baixada. Verifique duas vezes o seguinte:
 
-1. Navegue até **Configurações > atualização e segurança > Windows Insider Program** e confirme se o **conta de Windows Insider** seção tem suas informações de conta correta. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirmar que ele aparece sob o **conta do Windows Insider** título (talvez você precise selecionar **Vincular uma conta do Windows Insider** um segundo tempo para o link, na verdade, uma conta adicionada recentemente).
+1. Navegue até **configurações > atualização & segurança > programa Windows Insider** e confirme se a seção **conta do Windows Insider** tem suas informações de conta corretas. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicionar sua conta de email e confirmar que ela aparece no título da **conta do Windows Insider** (talvez seja necessário selecionar **vincular uma conta do Windows Insider** uma segunda vez para na verdade, vincule uma conta recém-adicionada).
  
-2. Sob **que tipo de conteúdo você gostaria de receber?** , verifique se **desenvolvimento ativo do Windows** está selecionado.
+2. Em **que tipo de conteúdo você gostaria de receber?** , verifique se o **desenvolvimento ativo do Windows** está selecionado.
  
-3. Sob **o ritmo você deseja obter novas compilações?** , verifique se **Windows Insider Fast** está selecionado.
+3. Em **que ritmo você deseja obter novas compilações?** , verifique se o **Windows Insider rápido** está selecionado.
  
-4. Agora, você poderá instalar o FoDs. Se você confirmou que você está no Windows Insider rápida e ainda não é possível instalar o FoDs, por favor, fornecer comentários e anexar os arquivos de log em **c:\Windows\Logs\CBS**.
+4. Agora você deve ser capaz de instalar o FoDs. Se você confirmou que está no Windows Insider rápido e ainda não consegue instalar o FoDs, forneça comentários e anexe os arquivos de log em **C:\Windows\Logs\CBS**.
 
-### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] StartService: OpenService falha 1060: O serviço especificado não existe como um serviço instalado
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>SC StartService OpenService com falha 1060: O serviço especificado não existe como um serviço instalado
 
-Você pode obter esse erro se os pacotes de desenvolvedor não estão instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da web. Tente instalar os pacotes de desenvolvedor novamente.
+Você poderá receber esse erro se os pacotes do desenvolvedor não estiverem instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da Web. Tente instalar os pacotes de desenvolvedor novamente.
 
-### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbsemeterednetwork"></a>CBS não é possível iniciar o download porque o sistema está na rede limitada (CBS_E_METERED_NETWORK)
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbs_e_metered_network"></a>O CBS não pode iniciar o download porque o sistema está na rede limitada (CBS_E_METERED_NETWORK)
 
-Você pode obter esse erro se você estiver em uma conexão de internet limitada. Você não conseguirá baixar os pacotes de desenvolvedor em uma conexão limitada.
+Você poderá receber esse erro se você estiver em uma conexão de Internet limitada. Você não poderá baixar os pacotes do desenvolvedor em uma conexão limitada.
 
 ## <a name="see-also"></a>Consulte também
 
-* [Visão geral do Windows Device Portal](device-portal.md)
-* [Núcleo do Portal de dispositivo referência de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do portal de dispositivos Windows](device-portal.md)
+* [Referência da API principal do portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

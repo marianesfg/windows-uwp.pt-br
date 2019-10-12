@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ab2ed7bea6a353ae30bb3c245e00c77365fb5af
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: b70a3f9f9fad2d81716c22ab2f383e72ea363341
+ms.sourcegitcommit: cbd900f350569a3901086a44b2d5007bb6fb7bed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339910"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276297"
 ---
 # <a name="xaml-syntax-guide"></a>Guia de sintaxe do XAML
 
@@ -105,7 +105,7 @@ Algumas propriedades de objetos não podem ser definidas em XAML de maneira algu
 
 Uma propriedade somente leitura não pode ser definida em XAML. Mesmo em código, o tipo proprietário teria de dar suporte a alguma outra maneira de defini-lo, como uma sobrecarga de construtor, um método auxiliar ou um suporte de propriedade calculada. Uma propriedade calculada depende dos valores de outras propriedades configuráveis, bem como possivelmente um evento com manipulação interna; esses recursos ficam disponíveis no sistema de propriedades de dependência. Para saber mais sobre como as propriedades de dependência são úteis para o suporte de propriedade calculada, consulte [Visão geral das propriedades de dependência](dependency-properties-overview.md).
 
-A sintaxe de coleção em XAML faz parecer que você está configurando uma propriedade somente leitura, mas isso não é verdade. Consulte mais adiante a seção "Definição de uma propriedade usando uma sintaxe de coleção" neste tópico.
+A sintaxe de coleção em XAML faz parecer que você está configurando uma propriedade somente leitura, mas isso não é verdade. Consulte "[sintaxe da coleção](#collection-syntax)", mais adiante neste tópico.
 
 ### <a name="setting-a-property-by-using-attribute-syntax"></a>Definição de uma propriedade usando a sintaxe de atributo
 

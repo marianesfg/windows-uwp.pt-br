@@ -1,6 +1,6 @@
 ---
 author: knicholasa
-description: Profundidade Z ou relativo profundidade e sombra são duas maneiras de incorporar a profundidade em seu aplicativo para ajudar os usuários foquem forma natural e eficiente.
+description: A profundidade Z, ou a profundidade relativa, e a sombra são duas maneiras de incorporar a profundidade em seu aplicativo para ajudar os usuários a se concentrarem naturalmente e com eficiência.
 title: Profundidade Z e sombra para aplicativos UWP
 template: detail.hbs
 ms.author: nichola
@@ -10,73 +10,73 @@ ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: ab49f13d3938e55750ce523f9e0d4ae241304763
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 5e9197be38d1edfdad41a434132f318cdf3f45ea
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63817743"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282419"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidade Z e sombra
 
-![Um gif mostrando quatro retângulos cinza que são empilhados na diagonal, um sobre o outro. Gif é animado para que sombras aparecem e desaparecem.](images/elevation-shadow/shadow.gif)
+![Um gif que mostra quatro retângulos cinzas que são empilhados diagonalmente, um no topo do outro. O GIF é animado para que as sombras apareçam e desapareçam.](images/elevation-shadow/shadow.gif)
 
-Criando uma hierarquia visual de elementos em sua interface do usuário facilita a interface do usuário verificar e transmite o que é importante ter em mente. Elevação de privilégio, o ato de colocar selecionar elementos de interface do usuário para a frente, geralmente é usada para atingir tal uma hierarquia em software. Este artigo discute como criar elevação em um aplicativo UWP usando a profundidade z e TI sombra.
+Criar uma hierarquia visual de elementos em sua interface do usuário torna a interface do usuário fácil de verificar e transmite o que é importante para se concentrar. Elevação, o ato de trazer os elementos selecionados da interface do usuário para a frente, é geralmente usado para atingir tal hierarquia no software. Este artigo discute como criar a elevação em um aplicativo UWP usando a profundidade z e sombra.
 
-Profundidade Z é um termo usado entre os criadores de aplicativos 3D para denotar a distância entre duas superfícies ao longo do eixo z. Ele ilustra como fechar um objeto é o visualizador. Pense nisso como um conceito semelhante a x / y coordenadas, mas na direção z.
+A profundidade Z é um termo usado entre os criadores de aplicativos 3D para denotar a distância entre duas superfícies ao longo do eixo z. Ele ilustra como fechar um objeto é para o visualizador. Imagine-o como um conceito semelhante às coordenadas x/y, mas na direção z.
 
 ## <a name="why-use-z-depth"></a>Por que usar profundidade z?
 
-No mundo físico, tendemos a nos concentrar em objetos que estão mais próximos para nós. Podemos aplicar esse instinto espacial para o digital da interface do usuário também. Por exemplo, se você colocar um elemento mais próximo ao usuário, em seguida, o usuário instintivamente se concentrará no elemento. Pela colocação de elementos de interface do usuário móvel mais próximo no eixo z, você pode estabelecer uma hierarquia visual entre objetos, ajudando os usuários a concluir tarefas de forma natural e eficiente em seu aplicativo.
+No mundo físico, temos a tendência de se concentrar em objetos que estão mais próximos de nós. Também podemos aplicar esse instinto espacial à interface do usuário digital. Por exemplo, se você colocar um elemento mais próximo do usuário, o usuário instintivamenterá o foco no elemento. Ao mover elementos da interface do usuário mais próximo no eixo z, você pode estabelecer a hierarquia visual entre objetos, ajudando os usuários a concluir tarefas de forma natural e eficiente em seu aplicativo.
 
-## <a name="what-is-shadow"></a>O que é a sombra?
+## <a name="what-is-shadow"></a>O que é sombra?
 
-Sombra é uma maneira de um usuário percebe que a elevação. Luz acima de um objeto com privilégios elevados cria uma sombra na superfície de abaixo. Quanto maior o objeto, o maior e mais suave se torna a sombra. Objetos com privilégios elevados em sua interface do usuário não precisam ter sombras, mas eles ajudam a criar a aparência de elevação.
+Sombra é uma maneira que um usuário percebe a elevação. A luz acima de um objeto elevado cria uma sombra na superfície abaixo. Quanto maior o objeto, maior e mais flexível a sombra se torna. Objetos com privilégios elevados na interface do usuário não precisam ter sombras, mas ajudam a criar a aparência da elevação.
 
-Em aplicativos UWP, sombras devem ser usadas de forma proposital em vez de estética. Usar um número excessivo de sombras diminuir ou eliminar a capacidade de se concentrar o usuário da sombra.
+Em aplicativos UWP, as sombras devem ser usadas de forma proposital, em vez de estética. Usar muitas sombras diminuirá ou eliminará a capacidade da sombra de concentrar o usuário.
 
-Se você usar controles padrão, sombras ThemeShadow serão incorporadas automaticamente sua interface do usuário. No entanto, você pode incluir sombras manualmente em sua interface do usuário usando o ThemeShadow ou as APIs de DropShadow. 
+Se você usar controles padrão, as sombras ThemeShadow serão incorporadas automaticamente à sua interface do usuário. No entanto, você pode incluir manualmente as sombras em sua interface do usuário usando as APIs ThemeShadow ou DropShadow. 
 
 ## <a name="themeshadow"></a>ThemeShadow
 
-O tipo pode ser aplicado a qualquer elemento XAML para desenhar de ThemeShadow sombreia adequadamente com base em x, y, z coordenadas. ThemeShadow também ajusta automaticamente para outras especificações ambientais:
+O tipo ThemeShadow pode ser aplicado a qualquer elemento XAML para desenhar sombras adequadamente com base em coordenadas x, y, z. O ThemeShadow também se ajusta automaticamente para outras especificações ambientais:
 
-- Se adapta às alterações na iluminação, tema do usuário, ambiente de aplicativo e shell.
-- Aplica-se sombras aos elementos automaticamente com base em sua profundidade z. 
-- Mantém os elementos em sincronização conforme eles se movam e alterar a elevação.
-- Sombras mantém consistente em toda aplicativos.
+- Adapta-se às alterações na iluminação, tema do usuário, ambiente de aplicativo e Shell.
+- Aplica sombras aos elementos automaticamente com base em sua profundidade z. 
+- Mantém os elementos em sincronia à medida que eles se movem e alteram a elevação.
+- Mantém as sombras consistentes em todos os aplicativos.
 
-Aqui está como ThemeShadow foi implementado em uma MenuFlyout. MenuFlyout possui um interno na experiência que a principal superfície é elevada para 32px e cada menu em cascata adicional é aberto + 8px acima do menu, que ele abre do.
+Aqui está como o ThemeShadow foi implementado em um MenuFlyout. O MenuFlyout tem uma experiência interna em que a superfície principal é elevada para 32px e cada menu em cascata adicional é aberto + 8px acima do menu em que ele é aberto.
 
-![Uma captura de tela de ThemeShadow aplicado a um MenuFlyout com três menus aninhados, abertos. O primeiro menu é 32px com privilégios elevados e cada menu subsequente que é aberta no menu anterior é elevado 8px mais, de modo que ela deixa uma sombra distinta no plano de fundo.](images/elevation-shadow/themeshadow-menuflyout.png)
+![Uma captura de tela de ThemeShadow aplicada a um MenuFlyout com três menus abertos e aninhados. O primeiro menu é 32px elevado e cada menu subsequente que é aberto no menu anterior é elevado 8px, de modo que ele deixa uma sombra distinta no plano de fundo.](images/elevation-shadow/themeshadow-menuflyout.png)
 
-### <a name="themeshadow-in-common-controls"></a>ThemeShadow controla em comum
+### <a name="themeshadow-in-common-controls"></a>ThemeShadow em controles comuns
 
-Os seguintes controles comuns automaticamente usará ThemeShadow converter sombras de 32px profundidade, a menos que especificado o contrário:
+Os seguintes controles comuns usarão automaticamente o ThemeShadow para converter sombras de profundidade de 32px, a menos que especificado de outra forma:
 
-- [Menu de contexto](../controls-and-patterns/menus.md), [barra de comandos](../controls-and-patterns/app-bars.md), [submenu da barra de comandos](../controls-and-patterns/command-bar-flyout.md), [barra de menus](../controls-and-patterns/menus.md#create-a-menu-bar)
-- [Caixas de diálogo e submenus](../controls-and-patterns/dialogs.md) (caixa de diálogo 64px)
+- [Menu de contexto](../controls-and-patterns/menus.md), [barra de comandos](../controls-and-patterns/app-bars.md), [submenu de barras de comandos, barra](../controls-and-patterns/command-bar-flyout.md)de [menus](../controls-and-patterns/menus.md#create-a-menu-bar)
+- [Caixas de diálogo e submenus](../controls-and-patterns/dialogs.md) (caixa de diálogo em 64px)
 - [NavigationView](../controls-and-patterns/navigationview.md)
 - [ComboBox](../controls-and-patterns/combo-box.md), [DropDownButton, SplitButton, ToggleSplitButton](../controls-and-patterns/buttons.md)
 - [TeachingTip](../controls-and-patterns/dialogs-and-flyouts/teaching-tip.md)
 - [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md) 
 - [Seletores de calendário/data/hora](../controls-and-patterns/date-and-time.md)
-- [Tooltip](../controls-and-patterns/tooltips.md) (16px)
+- [Dica de ferramenta](../controls-and-patterns/tooltips.md) (16px)
 - [Controle de transporte de mídia](../controls-and-patterns/media-playback.md#media-transport-controls), [InkToolbar](../controls-and-patterns/inking-controls.md)
 - [Animação conectada](../motion/connected-animation.md)
 
-Observação: Submenus serão aplicadas somente ThemeShadow quando compilado no Windows 10 versão 1903 ou um SDK mais recente.
+Observação: Os submenus só aplicarão ThemeShadow quando compilados no Windows 10 versão 1903 ou em um SDK mais recente.
 
-### <a name="themeshadow-in-popups"></a>ThemeShadow no pop-ups
+### <a name="themeshadow-in-popups"></a>ThemeShadow em pop-ups
 
-Geralmente é o caso que interface do usuário do seu aplicativo usa um pop-up para cenários em que você precisa de atenção do usuário e a ação rápida. Estes são exemplos de ótimos quando sombra deve ser usada para ajudar a criar a hierarquia na interface de usuário do seu aplicativo.
+Geralmente, é o caso de a interface do usuário do seu aplicativo usar um pop-up para cenários em que você precisa de atenção e ação rápida do usuário. Esses são ótimos exemplos quando a sombra deve ser usada para ajudar a criar hierarquia na interface do usuário do seu aplicativo.
 
-ThemeShadow converte automaticamente sombras quando aplicado a qualquer elemento XAML em um [pop-up](/uwp/api/windows.ui.xaml.controls.primitives.popup). Ela será convertida sombras sobre o conteúdo do plano de fundo do aplicativo por trás de ele e quaisquer outros abrir pop-ups abaixo dele.
+O ThemeShadow automaticamente converte sombras quando aplicado a qualquer elemento XAML em um [pop-up](/uwp/api/windows.ui.xaml.controls.primitives.popup). Ele converterá sombras no conteúdo de segundo plano do aplicativo por trás dele e qualquer outro Popup aberto abaixo dele.
 
-Para usar ThemeShadow com pop-ups, use o `Shadow` propriedade para aplicar um ThemeShadow a um elemento XAML. Em seguida, elevar o elemento de outros elementos por trás dela, por exemplo, usando o componente z do `Translation` propriedade.
-Para a maioria dos pop-up da interface do usuário, a elevação padrão recomendado relativa ao conteúdo de tela de fundo do aplicativo é 32 pixels relevantes.
+Para usar ThemeShadow com pop-ups, use a propriedade `Shadow` para aplicar um ThemeShadow a um elemento XAML. Em seguida, eleve o elemento de outros elementos por trás dele, por exemplo, usando o componente z da propriedade `Translation`.
+Para a maioria das interfaces do usuário pop-up, a elevação padrão recomendada relativa ao conteúdo de segundo plano do aplicativo é de 32 pixels efetivos.
 
-Este exemplo mostra um retângulo em um pop-up Projetando uma sombra sobre o conteúdo de tela de fundo do aplicativo e qualquer outros pop-ups por trás dele:
+Este exemplo mostra um retângulo em um pop-up que converte uma sombra no conteúdo de segundo plano do aplicativo e quaisquer outros pop-ups por trás dele:
 
 ```xaml
 <Popup>
@@ -93,13 +93,13 @@ Este exemplo mostra um retângulo em um pop-up Projetando uma sombra sobre o con
 PopupRectangle.Translation += new Vector3(0, 0, 32);
 ```
 
-![Um único retangular pop-up com uma sombra.](images/elevation-shadow/PopupRectangle.png)
+![Um pop-up retangular único com uma sombra.](images/elevation-shadow/PopupRectangle.png)
 
-### <a name="disabling-default-themeshadow-on-custom-flyout-controls"></a>Desabilitando padrão controla a ThemeShadow no submenu personalizado
+### <a name="disabling-default-themeshadow-on-custom-flyout-controls"></a>Desabilitando ThemeShadow padrão em controles de submenu personalizados
 
-Controles com base em [submenu](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.flyout), [DatePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepickerflyout), [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.menuflyout) ou [TimePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepickerflyout) automaticamente usar ThemeShadow para converter um sombra.
+Os controles com base em [submenu](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.flyout), [DatePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepickerflyout), [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.menuflyout) ou [TimePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepickerflyout) usam automaticamente ThemeShadow para converter uma sombra.
 
-Se a sombra padrão não parece correta em seu conteúdo do controle, em seguida, você pode desabilitá-lo definindo a [IsDefaultShadowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) propriedade `false` sobre o FlyoutPresenter associado:
+Se a sombra padrão não parecer correta no conteúdo do controle, você poderá desabilitá-la definindo a propriedade [IsDefaultShadowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) como `false` no FlyoutPresenter associado:
 
 ```xaml
 <Flyout>
@@ -113,11 +113,11 @@ Se a sombra padrão não parece correta em seu conteúdo do controle, em seguida
 
 ### <a name="themeshadow-in-other-elements"></a>ThemeShadow em outros elementos
 
-Em geral incentivamos você a pensar cuidadosamente sobre o uso de sombra e limitar seu uso para casos em que ele apresenta significativa hierarquia visual. No entanto, fornecemos uma maneira de converter uma sombra de qualquer elemento de interface do usuário no caso de você ter cenários avançados que exigem a ele.
+Em geral, incentivamos você a pensar cuidadosamente sobre o uso de sombra e limitar seu uso a casos em que ele introduz uma hierarquia visual significativa. No entanto, fornecemos uma maneira de converter uma sombra de qualquer elemento da interface do usuário caso você tenha cenários avançados que precisem dela.
 
-Para converter uma sombra de um elemento XAML que não esteja em um pop-up, você deve especificar explicitamente os outros elementos que podem receber a sombra no `ThemeShadow.Receivers` coleção. Receptores não podem ser um ancestral do caster na árvore visual.
+Para converter uma sombra de um elemento XAML que não está em um popup, você deve especificar explicitamente os outros elementos que podem receber a sombra na coleção `ThemeShadow.Receivers`. Os receptores não podem ser um ancestral do elenco na árvore visual.
 
-Este exemplo mostra dois retângulos que convertido sombras para uma grade por trás delas:
+Este exemplo mostra dois retângulos que convertem sombras em uma grade por trás deles:
 
 ```xaml
 <Grid>
@@ -141,33 +141,33 @@ Rectangle1.Translation += new Vector3(0, 0, 16);
 Rectangle2.Translation += new Vector3(120, 0, 32);
 ```
 
-![Dois retângulos turquesa próximos um do outro, ambos com sombras.](images/elevation-shadow/SharedShadow.png)
+![Dois retângulos turquesa ao lado um do outro, ambos com sombras.](images/elevation-shadow/SharedShadow.png)
 
 ### <a name="performance-best-practices-for-themeshadow"></a>Práticas recomendadas de desempenho para ThemeShadow
 
-1. O sistema define um limite de pares de receptor caster 5 e será desligado sombra se isto for excedido. Continuar com o limite imposto pelo sistema de pares de receptor caster 5.
+1. O sistema define um limite de cinco pares de receptores de coerção e desativará a sombra se isso for excedido. Aderir ao limite imposto pelo sistema de cinco pares de receptores de coerção.
 
-2. Limite o número de elementos receptora personalizada ao mínimo necessário.
+2. Limitar o número de elementos do receptor personalizado ao mínimo necessário.
 
-3. Se vários elementos de receptor estão no mesma elevação, tente combiná-los direcionando um elemento pai único em vez disso.
+3. Se vários elementos de receptor estiverem na mesma elevação, tente combiná-los direcionando um único elemento pai em vez disso.
 
-4. Se vários elementos irá converter o mesmo tipo de sombra para os mesmos elementos do receptor, em seguida, adicione a sombra como um recurso compartilhado e reutilizá-lo.
+4. Se vários elementos converterem o mesmo tipo de sombra nos mesmos elementos do destinatário, adicione a sombra como um recurso compartilhado e reutilize-a.
 
 ## <a name="drop-shadow"></a>Sombra
 
-DropShadow não está respondendo automaticamente a seu ambiente e não usa fontes de luz. Por exemplo implementações, consulte o [DropShadow classe](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow).
+O DropShadow não responde automaticamente ao seu ambiente e não usa fontes de luz. Por exemplo, implementações, consulte a [classe DropShadow](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow).
 
-## <a name="which-shadow-should-i-use"></a>Quais sombra devo usar?
+## <a name="which-shadow-should-i-use"></a>Qual sombra devo usar?
 
 | Propriedade | ThemeShadow | DropShadow |
 | - | - | - | - |
-| **Min SDK** | Windows 10 versão 1903 | 14393 |
-| **Capacidade de adaptação** | Sim | Não |
-| **Personalização** | Não | Sim |
-| **Fonte de luz** | Automático (global por padrão, mas pode ser substituído por aplicativo) | Nenhuma |
-| **Tem suporte em ambientes 3D** | Sim | Não |
+| **Mínimo de SDK** | Windows 10 versão 1903 | 14393 |
+| **Adaptação** | Sim | Não |
+| **Customization** | Não | Sim |
+| **Fonte de luz** | Automático (global por padrão, mas pode substituir por aplicativo) | Nenhuma |
+| **Com suporte em ambientes 3D** | Sim | Não |
 
-- Tenha em mente que a finalidade de sombra é fornecer hierarquia significativa, não como um tratamento visual simple.
-- Em geral, é recomendável usar ThemeShadow, que se adapta automaticamente a seu ambiente.
-- Para questões de desempenho, limitar o número de sombras, usar outro tratamento visual ou use DropShadow.
-- Se você tiver cenários mais avançados para alcançar a hierarquia visual, considere usar outro tratamento visual (por exemplo, cor). Se a sombra é necessária, use DropShadow.
+- Tenha em mente que a finalidade da sombra é fornecer uma hierarquia significativa, não como um simples tratamento Visual.
+- Em geral, é recomendável usar ThemeShadow, que se adapta automaticamente ao seu ambiente.
+- Para se preocupar com o desempenho, limite o número de sombras, use outro tratamento Visual ou use DropShadow.
+- Se você tiver cenários mais avançados para obter a hierarquia visual, considere usar outro tratamento Visual (por exemplo, cor). Se a sombra for necessária, use DropShadow.

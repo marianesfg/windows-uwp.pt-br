@@ -6,34 +6,34 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: 8248e17a342563a0746e3c54c3a69a52f027d072
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399628"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282428"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
 Esta é a Parte 1 de um guia passo a passo completo sobre como criar um app UWP (Plataforma Universal do Windows) do Windows 10 que usa o Windows Hello como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha. O app usa um nome de usuário para entrar e criar uma Chave de Hello para cada conta. Essas contas serão protegidas pelo PIN definido nas Configurações do Windows na configuração do Windows Hello.
 
-Este guia passo a passo é dividido em duas partes: a criação do aplicativo e a conexão ao serviço back-end. Quando tiver terminado com este artigo, continue com parte 2: [Serviço de logon Windows Hello](microsoft-passport-login-auth-service.md).
+Este guia passo a passo é dividido em duas partes: a criação do aplicativo e a conexão ao serviço back-end. Quando tiver concluído este artigo, continue na parte 2: [Serviço de logon do Windows Hello](microsoft-passport-login-auth-service.md).
 
 Antes de começar, você deve ler a visão geral do [Windows Hello](microsoft-passport.md) para ter uma compreensão geral de como funciona o Windows Hello.
 
 ## <a name="get-started"></a>Introdução
 
 
-Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisará estar usando o Visual Studio 2015 (Community Edition ou superior), ou uma versão posterior do Visual Studio, em um computador Windows 10. Enquanto o Visual Studio 2015 é a versão mínima necessária, recomendamos que você use a versão mais recente do Visual Studio para as atualizações mais recentes do desenvolvedor e segurança.
+Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisará usar o Visual Studio 2015 (Community Edition ou superior), ou uma versão posterior do Visual Studio, em um computador com Windows 10. Embora o Visual Studio 2015 seja a versão mínima necessária, recomendamos que você use a versão mais recente do Visual Studio para as atualizações mais recentes de desenvolvedor e segurança.
 
--   Abra o Visual Studio e selecione Arquivo > Novo > projeto.
+-   Abra o Visual Studio e selecione Arquivo > novo projeto de >.
 -   Isso abrirá uma janela "New Project". Navegação para Templates > Visual C#.
 -   Escolha o aplicativo em branco (Windows Universal) e nomeie seu aplicativo "PassportLogin".
 -   Compile e execute o novo aplicativo (F5); você deve ver uma janela em branco na tela. Feche o aplicativo.
 
 ![Novo projeto do Windows Hello](images/passport-login-1.png)
 
-## <a name="exercise-1-login-with-microsoft-passport"></a>Exercício 1: Logon com o Microsoft Passport
+## <a name="exercise-1-login-with-microsoft-passport"></a>Exercício 1: Fazer logon com Microsoft Passport
 
 
 Neste exercício, você aprenderá como verificar se o Windows Hello está configurado no computador e como entrar em uma conta usando o Windows Hello.
@@ -490,7 +490,7 @@ Neste exercício, você aprenderá como verificar se o Windows Hello está confi
 
     ![Prompt de pin de logon do Windows Hello](images/passport-login-8.png)
 
-## <a name="exercise-2-welcome-and-user-selection-pages"></a>Exercício 2: Bem-vindo e páginas de seleção do usuário
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Exercício 2: Páginas de boas-vindas e seleção de usuário
 
 
 Neste exercício, você continuará do exercício anterior. Quando um usuário faz logon com êxito, ele é levado para uma página de boas-vindas, onde ele pode se desconectar ou excluir a conta. Como o Windows Hello cria uma chave para cada computador, é possível criar uma tela de seleção do usuário, o que exibe todos os usuários que entraram nesse computador. Um usuário pode, em seguida, selecionar uma dessas contas e ir diretamente para a tela de boas-vindas sem precisar inserir uma senha novamente, já que ele já foi autenticado para acessar o computador.
@@ -577,7 +577,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
         if (keyOpenResult.Status == KeyCredentialStatus.Success)
         {
             // In the real world you would send key information to server to unregister
-            //e.g. RemovePassportAccountOnServer(account);
+            //for example, RemovePassportAccountOnServer(account);
         }
 
         // Then delete the account from the machines list of Passport Accounts
@@ -815,7 +815,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
             // If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             // would check the signed challenge. If it is correct it would allow the user access to the backend.
             // You would likely make a new method called RequestSignAsync to handle all this
-            // e.g. RequestSignAsync(openKeyResult);
+            // for example, RequestSignAsync(openKeyResult);
             // Refer to the second Microsoft Passport sample for information on how to do this.
 
             // For this sample there is not concept of a server implemented so just return true.
@@ -876,7 +876,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
 
     ![Lista de usuários selecionados do Windows Hello](images/passport-login-10.png)
 
-## <a name="exercise-3-registering-a-new-windows-hello-user"></a>Exercício 3: Registrar um novo Windows Hello usuário
+## <a name="exercise-3-registering-a-new-windows-hello-user"></a>Exercício 3: Registrando um novo usuário do Windows Hello
 
 
 Neste exercício, você criará uma nova página que criará uma nova conta com o Windows Hello. Isso funciona da mesma forma que a página de logon. A página de logon é implementada para um usuário existente que está migrando para o Windows Hello. Uma página PassportRegister criará o registro do Windows Hello para um novo usuário.
@@ -970,4 +970,4 @@ Neste laboratório, você aprendeu as habilidades essenciais de que precisa para
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Windows Hello](microsoft-passport.md)
-* [Serviço de logon Windows Hello](microsoft-passport-login-auth-service.md)
+* [Serviço de logon do Windows Hello](microsoft-passport-login-auth-service.md)

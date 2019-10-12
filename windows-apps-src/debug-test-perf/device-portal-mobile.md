@@ -4,14 +4,14 @@ title: Device Portal para celulares
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, o portal do dispositivo
+keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597221"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281896"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para celulares
 
@@ -31,9 +31,9 @@ Na primeira vez que você se conectar ao Device Portal, será solicitado a forne
 
 ![Configurações da descoberta de dispositivos do Modo de desenvolvedor](images/device-portal/mob-dev-mode-pairing.png)
 
-Você pode escolher entre 3 maneiras de se conectar ao Portal de dispositivo: USB, o host local e pela rede local (incluindo VPN e compartilhamento).
+Você pode escolher entre três maneiras de se conectar ao portal do dispositivo: USB, host local e pela rede local (incluindo VPN e compartilhamento de Internet).
 
-**Para se conectar ao Portal do dispositivo**
+**Para se conectar ao portal do dispositivo**
 
 1. Em seu navegador, insira o endereço mostrado aqui para o tipo de conexão que você está usando.
 
@@ -49,7 +49,7 @@ Você pode escolher entre 3 maneiras de se conectar ao Portal de dispositivo: US
 
     Use esse endereço para se conectar por uma rede local.
 
-    O endereço IP do telefone é mostrado nas configurações do Device Portal no telefone. O HTTPS é necessário para autenticação e comunicação segura. O nome do host (editável em Configurações > Sistema > Sobre) também pode ser usado para acessar o Portal de Dispositivos na rede local (por exemplo, http://Phone360), o que é útil para dispositivos que possam alterar redes ou endereços IP com frequência, ou que precisem ser compartilhados. 
+    O endereço IP do telefone é mostrado nas configurações do Device Portal no telefone. O HTTPS é necessário para autenticação e comunicação segura. O nome do host (editável em Configurações > > do sistema) também pode ser usado para acessar o portal do dispositivo na rede local (por exemplo, http://Phone360), que é útil para dispositivos que podem alterar redes ou endereços IP com frequência ou devem ser compartilhados. 
 
 2. Pressione o botão Emparelhar no seu telefone para gerar e exibir o código de segurança necessário.
 
@@ -83,5 +83,5 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 
 ## <a name="see-also"></a>Consulte também
 
-* [Visão geral do Windows Device Portal](device-portal.md)
-* [Núcleo do Portal de dispositivo referência de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do portal de dispositivos Windows](device-portal.md)
+* [Referência da API principal do portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

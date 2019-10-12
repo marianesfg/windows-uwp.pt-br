@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb4e80d7f8da022e2ceb5496cbad592d7d22716
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339628"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282194"
 ---
 # <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
@@ -74,7 +74,7 @@ Qualquer objeto com 85 KB ou mais é alocado na pilha de objetos grandes (LOH) e
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos com muitas referências
 
-O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos com muitas referências em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
+O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos de referência avançados em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
 
 Substituir referências de objeto por índices pode ser uma alteração prejudicial e complicada para seu aplicativo e é mais eficiente para objetos grandes com um grande número de referências. Faça isso somente se estiver observando tempos muito grandes de coleta de lixo em seu aplicativo com relação a objetos com muitas referências.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: df1660f16127c2bc33a893a6e411b12e432272a1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b350aa58d7fed0bb78965dcd4742d759b8e9d988
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372631"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282452"
 ---
 # <a name="authentication-and-user-identity"></a>Autenticação e identidade do usuário
 
@@ -21,7 +21,7 @@ Aplicativos da Plataforma Universal do Windows (UWP) têm várias opções para 
 
 Para conexões de aplicativos regulares a serviços de provedor de identidade de terceiros, como Facebook, Twitter, Flickr etc., use o [agente de autenticação Web](web-authentication-broker.md). Para mais comodidade, use o [Cofre de Credenciais](credential-locker.md) para salvar e transferir as informações de logon do usuário.
 
-As empresas usando o Windows 10 devem considerar seriamente o uso [Microsoft Passport e o Windows Hello](microsoft-passport.md), que permite a autenticação de dois fatores altamente segura. Se não for possível usar o Microsoft Passport, os [cartões inteligentes](smart-cards.md) e a [biometria de impressão digital](fingerprint-biometrics.md) podem acrescentar uma camada adicional de segurança.
+As empresas que usam o Windows 10 devem considerar fortemente o uso do [Microsoft Passport e do Windows Hello](microsoft-passport.md), o que permite uma autenticação de dois fatores altamente segura. Se não for possível usar o Microsoft Passport, os [cartões inteligentes](smart-cards.md) e a [biometria de impressão digital](fingerprint-biometrics.md) podem acrescentar uma camada adicional de segurança.
 
 <table>
 <tr><th>Tópico</th><th>Descrição</th></tr>
@@ -33,8 +33,8 @@ As empresas usando o Windows 10 devem considerar seriamente o uso [Microsoft Pas
 <tr><td><a href="microsoft-passport-login-auth-service.md">Criar um serviço de logon do Microsoft Passport</a></td><td>Parte 2 de um guia passo a passo completo sobre como usar o Microsoft Passport como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha em aplicativos Windows 10 UWP (Plataforma Universal do Windows).</td></tr>
 <tr><td><a href="smart-cards.md">Cartões inteligentes</a></td><td>Este tópico explica como os aplicativos podem usar cartões inteligentes para conectar usuários a serviços de rede seguros, inclusive como acessar leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, comunicar-se usando cartões inteligentes, autenticar usuários, redefinir PINs de usuário e remover ou desconectar cartões inteligentes.</td></tr>
 <tr><td><a href="share-certificates.md">Compartilhar certificados entre aplicativos</a></td><td>Os aplicativos UWP que requerem autenticação segura além de uma combinação de ID de usuário e senha podem usar certificados na autenticação. A autenticação de certificado oferece um elevado nível de confiança ao autenticar um usuário. Em alguns casos, um grupo de serviços desejará autenticar um usuário para vários aplicativos. Este artigo mostra como você pode autenticar vários aplicativos usando o mesmo certificado e fornecer código prático para que um usuário importe um certificado que foi fornecido para acessar serviços Web seguros.</td></tr>
-<tr><td><a href="companion-device-unlock.md">Desbloqueio do Windows com dispositivos IoT complementares</a></td><td>Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).</td></tr>
-<tr><td><a href="web-account-manager.md">Gerente de conta da Web</a></td><td>Este artigo descreve como mostrar o AccountsSettingsPane e conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá a solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos no OneDrive). </td></tr>
+<tr><td><a href="companion-device-unlock.md">Desbloqueio do Windows com dispositivos IoT complementares</a></td><td>Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a estrutura de dispositivos complementares, um dispositivo complementar pode fornecer uma experiência rica para Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tem uma câmera para autenticação facial ou dispositivo de leitor de impressão digital, para exemplo).</td></tr>
+<tr><td><a href="web-account-manager.md">Gerenciador de contas da Web</a></td><td>Este artigo descreve como mostrar o AccountsSettingsPane e conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá a solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos no OneDrive). </td></tr>
 <tr><td><a href="web-authentication-broker.md">Agente de autenticação na Web</a></td><td>Este artigo explica como conectar o aplicativo a um provedor de identidade online que usa protocolos de autenticação, como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram etc. O método <a href="https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync">AuthenticateAsync</a> envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.</td></tr>
 </table>
 

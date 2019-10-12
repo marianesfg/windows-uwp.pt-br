@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, compromissos, calendário
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4eeaf486738996ce5a860f567fc18a7d41cca2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fd4fc62a393e6439458ddc38f37bbb0680fb9b1
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361248"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282228"
 ---
 # <a name="manage-appointments"></a>Gerenciar compromissos
 
@@ -156,7 +156,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
         }
         else
         {
-            // Organizer Address (e.g. Email Address)
+            // Organizer Address (for example, Email Address)
             organizer.Address = OrganizerAddressTextBox.Text;
 
             if (organizer.Address.Length > 321)
@@ -192,7 +192,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
         }
         else
         {
-            // Invitee Address (e.g. Email Address)
+            // Invitee Address (for example, Email Address)
             invitee.Address = InviteeAddressTextBox.Text;
 
             if (invitee.Address.Length > 321)
@@ -282,7 +282,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  aplicativos para Windows Phone Store, [ **ShowAddAppointment** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como qualquer [ **ShowEditNewAppointment** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) em que a caixa de diálogo exibida para adicionar o compromisso é editável.
+**Observe**  Para Windows Phone aplicativos da loja, o [**ShowAddAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona exatamente como o [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) , pois a caixa de diálogo exibida para adicionar o compromisso é editável.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Substituir um compromisso no calendário do usuário
 
@@ -507,7 +507,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## <a name="add-a-new-editable-appointment"></a>Adicionar um novo compromisso editável
 
-[**ShowEditNewAppointmentAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona da mesma forma [ **ShowAddAppointmentAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) , exceto que a caixa de diálogo para adicionar o compromisso é editável para que o usuário pode modificar os dados de compromisso antes de salvá-lo.
+[**ShowEditNewAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona exatamente como [**ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) , exceto pelo fato de que a caixa de diálogo para adicionar o compromisso é editável para que o usuário possa modificar os dados do compromisso antes de salvá-lo.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -542,7 +542,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## <a name="show-appointment-details"></a>Mostrar detalhes do compromisso
 
-[**ShowAppointmentDetailsAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostrar os detalhes do compromisso especificado. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
+[**ShowAppointmentDetailsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes para o compromisso especificado. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)

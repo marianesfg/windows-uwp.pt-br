@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 316682ba136b5b3249d26abd0a5c5a877abbcf12
-ms.sourcegitcommit: 76357092f90b70bdb21ee43a5a416fe1fbfd9b89
+ms.openlocfilehash: c99d05a701f41e24663d116773b000017b805d81
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72257933"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281799"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre seu aplicativo de área de trabalho empacotado com Windows 10 e UWP
 
@@ -247,7 +247,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Verb |O nome que aparece no menu de contexto do Explorador de arquivos. Essa sequência é localizável usando ```ms-resource```.|
 |Id |A Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, ele será passado para seu aplicativo como parte de seus args de evento de ativação para que possa manipular a seleção do usuário adequadamente. Se seu aplicativo for um aplicativo empacotado com confiança total, ele receberá parâmetros em vez disso (consulte o próximo marcador). |
 |Parâmetros |A lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo empacotado com confiança total, esses parâmetros serão passados para o aplicativo como args de evento quando o aplicativo for ativado. Você pode personalizar o comportamento do seu aplicativo com base em verbos de ativação diferentes. Se uma variável pode conter um caminho de arquivo, envolva o valor do parâmetro entre aspas. Isso evitará quaisquer problemas que aconteçam nos casos em que o caminho inclua espaços. Se seu aplicativo for um aplicativo UWP, você não poderá passar parâmetros. O aplicativo recebe o Id em vez disso (veja a bala anterior).|
-|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor **False** (por exemplo, mostrar sempre o verbo) se não listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre **False**).|
+|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor de **false** (por exemplo, sempre mostrar o verbo) se não estiver listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre **False**).|
 
 #### <a name="example"></a>Exemplo
 
