@@ -12,12 +12,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fdde8c5af2120786f215480cc7e7ae422d77c5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365054"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340162"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, um exemplo de painel personalizado
 
@@ -25,7 +25,7 @@ ms.locfileid: "66365054"
 
 Aprenda a escrever códigos para uma classe personalizada [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), implementando os métodos [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride) e [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) e usando a propriedade [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children). 
 
-> **APIs importantes**: [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
+> **APIs importantes**: [**Painel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
 
 O exemplo de código mostra uma implementação de painel personalizado, mas não vamos perder muito tempo explicando os conceitos de layout que influenciam como você pode personalizar cenários de layouts diferentes. Se quiser mais informações sobre esses conceitos de layout e como eles se aplicam ao seu cenário de layout específico, consulte [Visão geral de painéis personalizados XAML](custom-panels-overview.md).
 
@@ -134,7 +134,7 @@ Então, o que o cálculo da medida faz? Ele define um valor para a propriedade a
 É possível que esse painel seja usado quando o componente altura do *availableSize* for ilimitado. Se for verdade, o painel não precisa ter uma altura conhecida para ser dividida. Nesse caso, a lógica para o cálculo da medida informa cada filho que ele ainda não tem uma altura ilimitada. Ele o faz passando [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) para a chamada [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) para os filhos cujo [**Size.Height**](https://docs.microsoft.com/uwp/api/windows.foundation.size.height) é infinito. Isso é legal. Quando o **Measure** for chamado, a lógica é que o [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize) seja definido como o mínimo disso: o que foi passado para **Measure**, ou o tamanho natural do elemento de fatores como [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) e [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) explicitamente definidos.
 
 > [!NOTE]
-> A lógica interna do [ **StackPanel** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) também tem esse comportamento: **StackPanel** transmite um valor de dimensão infinito para [ **medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) em filhos, indicando que não há nenhuma restrição em filhos na dimensão de orientação. **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
+> A lógica interna de [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) também tem esse comportamento: **StackPanel** passa um valor de dimensão infinito para [**medir**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) em filhos, indicando que não há restrição em filhos na dimensão de orientação. **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
 
 Entretanto, o painel em si não pode devolver um [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) com um valor infinito de [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride); o que se torna uma exceção durante o layout. Então, parte da lógica é descobrir a altura máxima que qualquer filho solicitar e usar tal altura como a altura da célula no caso de isso não vir nas próprias restrições de tamanho do painel. Aqui está a função auxiliar `LimitUnboundedSize` que foi referenciada no código anterior, que pega a altura máxima da célula e a usa para dar ao painel uma altura finita em retorno, além de assegurar que `cellheight` seja um número finito antes de o cálculo de organização ser iniciado:
 
@@ -182,7 +182,7 @@ Esse painel é organizado pelo conceito de linhas e colunas. O número de linhas
 
 Às vezes, painéis precisam recortar seu conteúdo. Se o fizeram, o tamanho recortado é o tamanho presente em [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize), porque a lógica [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) o define como o mínimo do que foi passado para **Measure** ou outros fatores de tamanho natural. Então não é comum precisar verificar o recorte durante [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange); o recorte acontece com base no **DesiredSize** ser passado em cada chamada **Arrange**.
 
-Nem sempre você precisa de uma contagem enquanto passa pelo loop se todas as informações necessárias para definir a posição de renderização são conhecidas por outros meios. Por exemplo, na lógica de layout [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), a posição da coleção [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) não importa. Todas as informações necessárias em um **Canvas** é conhecida pela leitura dos valores [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) de filhos como parte da lógica de organização. Acontece que a lógica do `BoxPanel` precisa de uma contagem para comparar o *colcount* para que se saiba quando começar uma nova linha e deslocar o valor *y*.
+Nem sempre você precisa de uma contagem enquanto passa pelo loop se todas as informações necessárias para definir a posição de renderização são conhecidas por outros meios. Por exemplo, na lógica de layout [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), a posição da coleção [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) não importa. Todas as informações necessárias em um **Canvas** é conhecida pela leitura dos valores [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) de filhos como parte da lógica de organização. Acontece que a lógica do `BoxPanel` precisa de uma contagem para comparar o *colcount* para que se saiba quando começar uma nova linha e deslocar o valor *y*.
 
 É comum que a entrada *finalSize* e o [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) que você retorna de uma implementação [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride) sejam os mesmos. Para saber o porquê, consulte a seção "**ArrangeOverride**" de [XAML custom panels overview](custom-panels-overview.md).
 
@@ -209,7 +209,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 ## <a name="the-scenario-for-boxpanel"></a>O cenário para BoxPanel
 
-O cenário específico para `BoxPanel` é que ele é um painel em que um dos principais determinantes da forma de dividir o espaço é conhecer o número de itens filhos e dividir o espaço conhecido disponível do painel. Os painéis têm naturalmente formas retangulares. Muitos painéis operam dividindo o espaço retangular em vários retângulos, ou seja, o que o [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) faz para suas células. No caso de **Grid**'o tamanho das células é definido pelos valores [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) e [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition), e os elementos declaram a célula exata onde entram com as propriedades anexadas [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) e [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8). Obter um layout bom de um **Grid** costuma exigir o conhecimento do número de elementos filhos antes, para que haja células suficientes e cada elemento filho define suas propriedades anexadas para caber em sua própria célula.
+O cenário específico para `BoxPanel` é que ele é um painel em que um dos principais determinantes da forma de dividir o espaço é conhecer o número de itens filhos e dividir o espaço conhecido disponível do painel. Os painéis têm naturalmente formas retangulares. Muitos painéis operam dividindo o espaço retangular em vários retângulos, ou seja, o que o [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) faz para suas células. No caso de **Grid**'o tamanho das células é definido pelos valores [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) e [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition), e os elementos declaram a célula exata onde entram com as propriedades anexadas [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) e [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column). Obter um layout bom de um **Grid** costuma exigir o conhecimento do número de elementos filhos antes, para que haja células suficientes e cada elemento filho define suas propriedades anexadas para caber em sua própria célula.
 
 Mas e se o número de filhos for dinâmico? Isso certamente é possível; o seu código de aplicativo pode adicionar itens às coleções, em resposta a qualquer condição dinâmica de tempo de execução que você considere importante o suficiente para valer a atualização de sua interface do usuário. Se você estiver usando vinculação de dados para dar suporte a coleções/objetos de negócios, o recebimento dessas atualizações e a atualização da interface do usuário serão feitos automaticamente, e muitas vezes essa é a técnica preferida de dados (veja [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)).
 
@@ -223,8 +223,8 @@ Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois
 
 **Referência**
 
-* [**FrameworkElement.ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
-* [**FrameworkElement.MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
+* [**FrameworkElement. ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
+* [**FrameworkElement. MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
 * [**Painel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
 
 **Conceitos**
