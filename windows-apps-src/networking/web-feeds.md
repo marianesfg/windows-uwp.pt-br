@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc422f57cdc268ea517aff729a9c3e57c80acf69
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6ac962476ace10e08ef92ed4fff9fb9bf48f0006
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320618"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282263"
 ---
 # <a name="rssatom-feeds"></a>Feeds RSS/Atom
 
@@ -199,7 +199,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) diferirá dependendo do padrão de feed (RSS ou Atom) empregado para publicar o feed. Por exemplo, um feed Atom é capaz de fornecer uma lista de [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors), mas um feed RSS não é. No entanto, elementos de extensão incluídos em um feed que não são aceitos por nenhum padrão (por exemplo, elementos de extensão Dublin Core) podem ser acessados com a propriedade [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions) e, depois, exibidos como demonstrado no seguinte exemplo de código.
+Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**SyndicationItem**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationItem) diferirá dependendo do padrão de feed (RSS ou Atom) empregado para publicar o feed. Por exemplo, um feed Atom é capaz de fornecer uma lista de [**Contributors**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.contributors), mas um feed RSS não é. No entanto, elementos de extensão incluídos em um item de feed para os quais nenhum padrão dá suporte (por exemplo, elementos de extensão Dublin Core) podem ser acessados com a propriedade [**SyndicationItem.ElementExtensions**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationitem.elementextensions) e, depois, exibidos como demonstrado no seguinte exemplo de código.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
