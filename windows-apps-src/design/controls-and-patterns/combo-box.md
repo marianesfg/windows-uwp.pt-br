@@ -1,7 +1,7 @@
 ---
 Description: Uma caixa de entrada de texto que fornece sugestões à medida que o usuário digita.
-title: Caixa de combinação (lista suspensa)
-label: Combo box
+title: Caixa de combinação e caixa de listagem
+label: Combo box and list box
 template: detail.hbs
 ms.date: 10/02/2018
 ms.topic: article
@@ -10,16 +10,16 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f053be1aeb88454b94d7c04ba2627818ea43736
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 351e234577b1a07b33bdcdbb92642c3697342503
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339408"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163695"
 ---
-# <a name="combo-box"></a>Caixa de combinação
+# <a name="combo-box-and-list-box"></a>Caixa de combinação e caixa de listagem
 
-Use uma caixa de combinação (também conhecida como lista suspensa) para apresentar uma lista de itens que o usuário pode selecionar. Uma caixa de combinação começa em um estado compacto e se expande para mostrar uma lista de itens selecionáveis.
+Use uma caixa de combinação (também conhecida como lista suspensa) para apresentar uma lista de itens que o usuário pode selecionar. Uma caixa de combinação começa em um estado compacto e se expande para mostrar uma lista de itens selecionáveis. Uma caixa de listagem é semelhante a uma caixa de combinação, mas não é recolhível/não tem um estado de compactação. É possível saber mais sobre as caixas de listagem ao final deste artigo.
 
 Quando a caixa de combinação é fechada, ela exibe a seleção atual ou fica vazia se não há nenhum item selecionado. Quando o usuário expande a caixa de combinação, ela exibe a lista de itens selecionáveis.
 
@@ -294,6 +294,32 @@ bool IsValid(string Text)
 
 - Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
 - Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
+
+## <a name="list-boxes"></a>Caixas de listagem
+
+Uma caixa de listagem permite que o usuário escolha um único item ou vários itens de uma coleção. Caixas de listagem são semelhantes a listas suspensas, exceto que as caixas de listagem ficam sempre abertas: não há estado compacto (não expandido) para uma caixa de listagem. Pode-se fazer a rolagem pelos itens em uma lista se não houver espaço para mostrar tudo.
+
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
+
+- Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
+- Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
+- Evite usar uma caixa de listagem se:
+    - Houver um número muito pequeno de itens para a lista. Uma caixa de listagem que tem sempre as mesmas duas opções pode ser melhor apresentada como [botões de opção](radio-button.md). Considere também a possibilidade de usar botões de opção quando há três ou quatro itens estáticos na lista.
+    - A caixa de listagem é de seleção única e apresenta sempre as mesmas 2 opções, onde uma pode ser imposta como o contrário da outra, como “ligado” e “desligado”. Use uma única caixa de seleção ou um botão de alternância.
+    - Há um número muito grande de itens. Exibição de grade e exibição de lista são escolhas melhores para listas longas. Para listas muito longas de dados agrupados, prefere-se a aplicação de zoom semântico.
+    - Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
+    - Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
+
+### <a name="recommendations"></a>Recomendações
+
+- O intervalo ideal de itens em uma caixa de listagem é de 3 a 9.
+- Uma caixa de listagem funciona bem quando seus itens podem variar dinamicamente.
+- Se possível, defina o tamanho de uma caixa de listagem de modo que a lista de itens presente nela não precise de rolagem nem de aplicação de movimento panorâmico.
+- Verifique se está claro o propósito da caixa de listagem e quais itens estão selecionados atualmente.
+- Reserve efeitos visuais e animações para feedback referente a toque e para o estado selecionado dos itens.
+- Limite o conteúdo de texto do item da caixa de listagem a uma única linha. Se os itens forem elementos visuais, você poderá personalizar o tamanho. Se um item contém diversas linhas de texto ou imagens, utilize um modo de exibição de grade ou de lista em vez disso.
+- Use fonte padrão, a menos que as diretrizes da marca indiquem o contrário.
+- Não utilize uma caixa de listagem para executar comandos ou exibir ou ocultar dinamicamente outros controles.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 

@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d06d91d2195c483f5453aeadbc5523a8935003c
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: d8a4c354eff34edb0c97e9d95828d4287f9c4b99
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340577"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282494"
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede. A API de transferência em segundo plano fornece recursos avançados de upload e download que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
@@ -53,7 +53,7 @@ A tabela a seguir indica quando as transferências em segundo plano são permiti
 | Conexão limitada, acima do limite de dados. Esse estado ocorre somente quando o usuário habilita a opção "Restringir dados em segundo plano na interface do usuário de Data Sense". | Negar             | Negar    | Negar   |
 
 ## <a name="uploading-files"></a>Carregando arquivos
-Quando a transferência em segundo plano é usada, um carregamento existe como uma [**UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation) que expõe uma quantidade de métodos de controle usados para reiniciar ou cancelar a operação. Eventos de aplicativo (ex.: suspensão ou finalização) e alterações de conectividade são manipulados automaticamente pelo sistema por **UploadOperation**. Os uploads continuarão durante os períodos de suspensão ou pausas do aplicativo e prosseguirão depois da finalização do aplicativo. Além disso, a configuração da propriedade [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) indicará se seu aplicativo iniciará uploads quando uma rede limitada estiver sendo usada para conectividade com a Internet ou não.
+Quando a transferência em segundo plano é usada, um carregamento existe como uma [**UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation) que expõe uma quantidade de métodos de controle usados para reiniciar ou cancelar a operação. Eventos de aplicativo (por exemplo, suspensão ou finalização) e alterações de conectividade são manipulados automaticamente pelo sistema por **UploadOperation**. Os uploads continuarão durante os períodos de suspensão ou pausa do aplicativo e prosseguirão depois da finalização do aplicativo. Além disso, a configuração da propriedade [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) indicará se seu aplicativo iniciará uploads quando uma rede limitada estiver sendo usada para conectividade com a Internet ou não.
 
 Os exemplos a seguir orientarão você na criação e inicialização de um upload básico e mostrarão como enumerar e reintroduzir operações que persistiram desde a sessão anterior do aplicativo.
 
@@ -161,7 +161,7 @@ Quaisquer recursos de sistema associados são liberados na conclusão ou no canc
     [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Enumerate persisted operations")]
 
 ## <a name="downloading-files"></a>Baixando arquivos
-Quando a transferência em segundo plano é usada, cada download existe como uma [**DownloadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation) que expõe uma quantidade de métodos de controle usados para pausar, retomar, reiniciar e cancelar a operação. Eventos de aplicativo (ex.: suspensão ou finalização) e alterações de conectividade são manipulados automaticamente pelo sistema por **DownloadOperation**. Os downloads continuarão durante os períodos de suspensão ou pausas do aplicativo e prosseguirão depois da finalização do aplicativo. Para situações de rede móvel, a configuração da propriedade [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) indicará se seu aplicativo iniciará ou continuará downloads quando uma rede limitada estiver sendo usada para conectividade com a Internet ou não.
+Quando a transferência em segundo plano é usada, cada download existe como uma [**DownloadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation) que expõe uma quantidade de métodos de controle usados para pausar, retomar, reiniciar e cancelar a operação. Eventos de aplicativo (por exemplo, suspensão ou finalização) e alterações de conectividade são manipulados automaticamente pelo sistema por **DownloadOperation**. Os downloads continuarão durante os períodos de suspensão ou pausa do aplicativo e prosseguirão depois da finalização do aplicativo. Para situações de rede móvel, a configuração da propriedade [**CostPolicy**](https://docs.microsoft.com/uwp/api/windows.networking.backgroundtransfer.backgrounddownloader.costpolicy) indicará se seu aplicativo iniciará ou continuará downloads quando uma rede limitada estiver sendo usada para conectividade com a Internet ou não.
 
 Se você for baixar recursos pequenos que, provavelmente, serão completos com rapidez, é melhor usar as APIs [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) ao invés da transferência em segundo plano.
 

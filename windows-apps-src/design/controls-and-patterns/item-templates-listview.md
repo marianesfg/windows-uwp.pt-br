@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluente
-ms.openlocfilehash: 0a772c0ec6aad2c0d6a099b54eb4c6faa413cc7b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 491489c0a6462c1bcbee2015027403ae359c47a2
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793895"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282273"
 ---
 # <a name="item-templates-for-list-view"></a>Modelos de item para exibição de lista
 
@@ -19,7 +19,7 @@ Esta seção contém modelos de item que você pode usar com um controle [**List
 Para demonstrar associação de dados, esses modelos associam **ListViewItems** à classe Recording de exemplo da [visão geral da associação de dados](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente de .ToString () no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, confira [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
+> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente do método .ToString() no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, confira [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
 
 ## <a name="single-line-list-item"></a>Item de lista de linha única
 Use esse modelo para exibir uma lista de itens com uma imagem e uma única linha de texto.

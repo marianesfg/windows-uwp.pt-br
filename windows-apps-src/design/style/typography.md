@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1d162fcf9a0f1023c58792e8c9f7a0e22fac4440
-ms.sourcegitcommit: f7ef7e894d7b7fc24483b4485605686abf8f2e93
+ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "68867753"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282408"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -144,7 +144,7 @@ Quando a quantidade de texto se estende para além do espaço disponível, recom
     :::column-end:::
 :::row-end:::
 
-**Observação**: se os contêineres não estão bem definidos (por exemplo, não há uma cor de tela de fundo para diferenciar) ou quando há um link para ver mais texto, use as reticências.
+**Observação**: se os contêineres não estão bem definidos (por exemplo, sem cor de diferenciação da tela de fundo) ou quando há um link para ver mais texto, use as reticências.
 
 ## <a name="languages"></a>Idiomas 
 

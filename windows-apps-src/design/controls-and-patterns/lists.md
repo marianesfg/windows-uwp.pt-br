@@ -1,36 +1,42 @@
 ---
 Description: Listas são exibidas e permitem a interação com conteúdo baseado em coleção.
-title: Listas
+title: Coleções e listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Lists
+label: Collections and Lists
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp
-pm-contact: predavid
+pm-contact: anawish
 design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f45edc213d8abdfc43e834d023993b89249844d
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71061950"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163747"
 ---
-# <a name="lists"></a>Listas
+# <a name="collections-and-lists"></a>Coleções e listas
 
-Listas são exibidas e permitem interações com conteúdo baseado em coleção. Os quatro padrões de lista abordados neste artigo incluem:
+As coleções e as listas referem-se à representação de vários itens de dados relacionados que aparecem juntos. As coleções podem ser representadas de várias maneiras, por diferentes controles de coleção (e também podem ser chamadas de exibições de coleção). Os controles de coleção exibem e habilitam interações com conteúdo baseado em coleção, como uma lista de contatos, uma lista de datas, uma coleção de imagens e assim por diante.  Os controles abordados neste artigo incluem:
 
 - Modos de exibição de lista, que são usados principalmente para exibir coleções de conteúdo com muito texto
 - Modos de exibição de grade, que são usados principalmente para exibir coleções de conteúdo com muitas imagens
-- Listas suspensas, que permitem que os usuários escolham um item em uma lista de expansão
-- Caixas de lista, que permitem que os usuários escolham um item ou vários itens em uma caixa que pode ser rolada
+- Modos de exibição invertida, que são usados principalmente para exibir coleções de conteúdo com muitas imagens e que exigem o foco em exatamente um item de cada vez
+- Modos de exibição de árvore, que são usados principalmente para exibir coleções de conteúdo com muito texto em uma hierarquia específica
+- ItemsRepeater, que é um bloco de construção personalizável para criar controles de coleção personalizados
 
-Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista.
 
-> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [Classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [Classe ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+Diretrizes de design, recursos e exemplos são fornecidos abaixo para cada controle.
+
+Cada um desses controles (com exceção do ItemsRepeater) proporciona estilos e interação internos. No entanto, para personalizar ainda mais a aparência visual da exibição de coleção e os itens dentro dela, é usado um [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). Informações detalhadas sobre os modelos de dados e a personalização da aparência de uma exibição de coleção podem ser encontradas na página [Contêineres e modelos do item](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates).
+
+Cada um desses controles (com exceção do ItemsRepeater) também tem o comportamento interno de permitir a seleção de um ou vários itens. Consulte a [Visão geral dos modos de seleção](selection-modes.md) para saber mais.
+
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [classe FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [classe TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview) e [classe ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update – alteração de comportamento</strong>
@@ -45,7 +51,7 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, veja <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/ComboBox">ComboBox</a> e <a href="xamlcontrolsgallery:/item/ListBox">ListBox</a> em ação.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, veja as classes <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/FlipView">FlipView</a>, <a href="xamlcontrolsgallery:/item/TreeView">TreeView</a> e <a href="xamlcontrolsgalley:/item/ItemsRepeater">ItemsRepeater</a> em ação.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -56,28 +62,31 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 
 ## <a name="list-views"></a>Modos de exibição de lista
 
-Modos de exibição de lista permitem que você classifique itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens.
+Os modos de exibição em lista representam itens com muito texto, normalmente em layout de coluna única e empilhado verticalmente. Eles permitem que você classifique itens, atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdos e reordene itens.
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um modo de exibição de lista para:
 
-- Exiba uma coleção de conteúdos que consistem principalmente em texto.
-- Navegue em uma coleção de conteúdos única ou categorizada.
-- Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
+- Exibir uma coleção que consiste principalmente em itens baseados em texto, na qual todos os itens devem ter o mesmo comportamento visual e de interação.
+- Representar uma coleção de conteúdo única ou categorizada.
+- Acomodar uma série de casos de uso, incluindo os seguintes tipos comuns:
+    - Crie uma lista de mensagens ou um log de mensagens.
+    - Crie uma lista de contatos.
+    - Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
+    
 
 ### <a name="examples"></a>Exemplos
 
-Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
+Aqui está um modo de exibição de lista simples que mostra uma lista de contatos e agrupa os itens de dados em ordem alfabética. Os cabeçalhos de grupo (cada letra do alfabeto, neste exemplo) também podem ser personalizados para permanecerem "fixados", ficando sempre visíveis na parte superior do ListView durante a rolagem.
 
-![Uma exibição de lista com dados agrupados](images/simple-list-view-phone.png)
+![Uma exibição de lista com dados agrupados](images/listview-grouped-example-resized-final.png)
 
-### <a name="recommendations"></a>Recomendações
+Este é um ListView que foi invertido para exibir um log de mensagens, com as mensagens mais recentes aparecendo na parte inferior. Com um ListView invertido, os itens aparecem na parte inferior da tela com uma animação interna.
 
-- Os itens em uma lista devem ter o mesmo comportamento.
-- Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
+![Modo de exibição em lista invertido](images/listview-inverted-2.png)
 
-### <a name="list-view-articles"></a>Artigos sobre exibição de lista
+### <a name="related-articles"></a>Artigos relacionados
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,7 +105,7 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">Contêineres e modelos de itens</a></p></td>
-<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
+<td align="left"><p>Os itens exibidos em uma exibição em lista ou de grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Faça com que seu aplicativo fique ótimo personalizando a aparência dos itens de coleção por meio da modificação dos modelos de controle e de dados.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-listview.md">Modelos de item para exibição de lista</a></p></td>
@@ -104,11 +113,11 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="inverted-lists.md">Listas invertidas</a></p></td>
-<td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um aplicativo de chat. Siga estas orientações para usar uma lista invertida em seu aplicativo.</p></td>
+<td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um aplicativo de chat. Siga as orientações deste artigo para usar uma lista invertida em seu aplicativo.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="pull-to-refresh.md">Deslizar para atualizar</a></p></td>
-<td align="left"><p>O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. Use estas orientações para implementar esse padrão em sua exibição de lista.</p></td>
+<td align="left"><p>O mecanismo deslizar para atualizar permite que o usuário explore uma lista de dados usando o toque para recuperar mais dados. Use este artigo para implementar o recurso de deslizar para atualizar em sua exibição em lista.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">Interface do usuário aninhada</a></p></td>
@@ -119,15 +128,18 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 
 ## <a name="grid-views"></a>Exibições em grade
 
-Modos de exibição de grade são adequados para organizar e navegar em coleções de conteúdos baseadas em imagens. Um layout de modo de exibição de grade rola verticalmente e faz movimento panorâmico na horizontal. Os itens são dispostos na ordem de leitura da esquerda para a direita, depois de cima para baixo.
+Modos de exibição de grade são adequados para organizar e navegar em coleções de conteúdos baseadas em imagens. Um layout de modo de exibição de grade rola verticalmente e faz movimento panorâmico na horizontal. Os itens estão em um layout encapsulado, à medida que aparecem no sentido de leitura da esquerda para a direita e de cima para baixo.
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use um modo de exibição de lista para:
+Use um modo de exibição de grade para:
 
-- Exiba uma coleção de conteúdos que consista principalmente em imagens.
+- exibir uma coleção de conteúdo na qual o ponto focal de cada item seja uma imagem e cada item deva ter o mesmo comportamento visual e de interação.
 - Exiba bibliotecas de conteúdo.
 - Formate os dois modos de exibição de conteúdo associados ao [zoom semântico](semantic-zoom.md).
+- Acomodar uma série de casos de uso, incluindo os seguintes tipos comuns:
+    - Interface do usuário do tipo vitrine (ou seja, pesquisando aplicativos, músicas, produtos etc.)
+    - Bibliotecas de fotos interativas
 
 ### <a name="examples"></a>Exemplos
 
@@ -137,14 +149,9 @@ Este exemplo mostra um layout de modo de exibição de grade típico, neste caso
 
 Um modo de exibição de grade é a solução ideal para uma biblioteca de conteúdo, que geralmente é usada para apresentar mídia, como fotos e vídeos. Em uma biblioteca de conteúdo, os usuários esperam tocar em um item para invocar uma ação.
 
-![Exemplo de uma biblioteca de conteúdo](images/controls_list_contentlibrary.png)
+![Exemplo de uma biblioteca de conteúdo](images/gridview-simple-example-final.png)
 
-### <a name="recommendations"></a>Recomendações
-
-- Os itens em uma lista devem ter o mesmo comportamento.
-- Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
-
-### <a name="grid-view-articles"></a>Artigos sobre exibição de grade
+### <a name="related-articles"></a>Artigos relacionados
 <table>
 <colgroup>
 <col width="50%" />
@@ -163,7 +170,7 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">Contêineres e modelos de itens</a></p></td>
-<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
+<td align="left"><p>Os itens exibidos em uma exibição em lista ou de grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Faça com que seu aplicativo fique ótimo personalizando a aparência dos itens de coleção por meio da modificação dos modelos de controle e de dados.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-gridview.md">Modelos de item para exibição de grade</a></p></td>
@@ -171,94 +178,131 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">Interface do usuário aninhada</a></p></td>
-<td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de lista que contém um botão e o usuário pode selecionar o item de lista ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
+<td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de grade que contém um botão e o usuário pode selecionar o item de grade ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="drop-down-lists"></a>Listas suspensas
+## <a name="flip-views"></a>Exibições de inversão
 
-Listas suspensas, também conhecidas como caixas de combinação, começam em um estado compacto e se expandem para mostrar uma lista de itens selecionáveis. O item selecionado fica sempre visível, e os itens não visíveis podem ser exibidos quando o usuário toca na caixa de combinação para expandi-la.
+As exibições de inversão são adequadas para navegar por coleções de conteúdo baseadas em imagem, especificamente aquelas em a experiência desejada é que apenas uma imagem fique visível de cada vez. Uma exibição de inversão permite que o usuário "percorra" os itens da coleção (vertical ou horizontalmente), fazendo com que cada item seja exibido, um de cada vez, após a interação do usuário.
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-- Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
-- Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
-- Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
-- Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
+Use a exibição de inversão para:
+
+- Exibir uma coleção pequena ou média (com menos de 25 itens), que seja composta por imagens com pouco ou nenhum metadado.
+- Exibir os itens, um de cada vez, e permitir que o usuário final percorra os itens em seu próprio ritmo.
+- Acomodar uma série de casos de uso, incluindo os seguintes tipos comuns:
+    - Galerias de fotos
+    - Galerias de produtos ou demonstrações
 
 ### <a name="examples"></a>Exemplos
 
-Uma caixa de combinação no estado compacto pode mostrar um cabeçalho.
+Os dois exemplos a seguir mostram um FlipView que é invertido horizontal e verticalmente, respectivamente.
 
-![Exemplo de uma lista suspensa no estado compacto](images/combo_box_collapsed.png)
+![Exibição de inversão horizontal](images/controls_flipview_horizonal.jpg)
 
-Embora caixas de combinação se expandam para dar suporte a tamanhos maiores de cadeia de caracteres, evite cadeias de caracteres excessivamente longas que são difíceis de ler.
+![Exibição de inversão vertical](images/controls_flipview_vertical.jpg)
 
-![Exemplo de uma lista suspensa com a cadeia de caracteres de texto longo](images/combo_box_listitemstate.png)
+### <a name="related-articles"></a>Artigos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="flipview.md">Exibição de inversão</a></p></td>
+<td align="left"><p>Aprenda os conceitos básicos de como usar uma exibição de inversão em seu aplicativo, além de como personalizar a aparência dos itens em uma exibição de inversão.</p></td>
+</tr>
+</tbody>
+</table>
 
-Se a coleção em uma caixa de combinação for grande o suficiente, será exibida uma barra de rolagem para acomodá-la. Agrupe itens logicamente na lista.
+## <a name="tree-views"></a>Modos de exibição de árvore
 
-![Exemplo de uma barra de rolagem em uma lista suspensa](images/combo_box_scroll.png)
-
-### <a name="recommendations"></a>Recomendações
-
-- Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
-- Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
-- Para fazer uma caixa de combinação com atualizações ao vivo enquanto o usuário estiver usando as teclas de seta (como um menu suspenso de seleção de fonte), defina SelectionChangedTrigger como "Always".  
-
-### <a name="text-search"></a>Pesquisa de texto
-
-As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida.
-
-
-## <a name="list-boxes"></a>Caixas de listagem
-
-Uma caixa de listagem permite que o usuário escolha um único item ou vários itens de uma coleção. Caixas de listagem são semelhantes a listas suspensas, exceto que as caixas de listagem ficam sempre abertas: não há estado compacto (não expandido) para uma caixa de listagem. Pode-se fazer a rolagem pelos itens em uma lista se não houver espaço para mostrar tudo.
+Os modos de exibição de árvore são adequados para a exibição de coleções baseadas em texto que têm uma hierarquia importante que precisa ser demonstrada. Os itens do modo de exibição de árvore são recolhíveis/expansíveis, são mostrados em uma hierarquia visual, podem ser complementados com ícones e transferidos entre modos de exibição de árvore por meio do recurso arrastar e soltar. Os modos de exibição de árvore permitem o aninhamento de N níveis.
 
 ### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-- Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
-- Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
-- Evite usar uma caixa de listagem se:
-    - Houver um número muito pequeno de itens para a lista. Uma caixa de listagem que tem sempre as mesmas duas opções pode ser melhor apresentada como [botões de opção](radio-button.md). Considere também a possibilidade de usar botões de opção quando há três ou quatro itens estáticos na lista.
-    - A caixa de listagem é de seleção única e apresenta sempre as mesmas 2 opções, onde uma pode ser imposta como o contrário da outra, como “ligado” e “desligado”. Use uma única caixa de seleção ou um botão de alternância.
-    - Há um número muito grande de itens. Exibição de grade e exibição de lista são escolhas melhores para listas longas. Para listas muito longas de dados agrupados, prefere-se a aplicação de zoom semântico.
-    - Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
-    - Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
+Use um modo de exibição de árvore para:
 
-### <a name="recommendations"></a>Recomendações
+- Exibir uma coleção de itens aninhados cujo contexto e significado dependam de uma hierarquia ou cadeia organizacional específica.
+- Acomodar uma série de casos de uso, incluindo os seguintes tipos comuns:
+    - Navegador de arquivos
+    - Organograma da empresa
 
-- O intervalo ideal de itens em uma caixa de listagem é de 3 a 9.
-- Uma caixa de listagem funciona bem quando seus itens podem variar dinamicamente.
-- Se possível, defina o tamanho de uma caixa de listagem de modo que a lista de itens presente nela não precise de rolagem nem de aplicação de movimento panorâmico.
-- Verifique se está claro o propósito da caixa de listagem e quais itens estão selecionados atualmente.
-- Reserve efeitos visuais e animações para feedback referente a toque e para o estado selecionado dos itens.
-- Limite o conteúdo de texto do item da caixa de listagem a uma única linha. Se os itens forem elementos visuais, você poderá personalizar o tamanho. Se um item contém diversas linhas de texto ou imagens, utilize um modo de exibição de grade ou de lista em vez disso.
-- Use fonte padrão, a menos que as diretrizes da marca indiquem o contrário.
-- Não utilize uma caixa de listagem para executar comandos ou exibir ou ocultar dinamicamente outros controles.
+### <a name="examples"></a>Exemplos
 
-## <a name="selection-mode"></a>Modo de seleção
+Aqui está um exemplo de um modo de exibição de árvore que representa um explorador de arquivos e exibe vários itens aninhados diferentes, complementados por ícones.
 
-O modo de seleção permite que os usuários selecionem e executem ações em um item ou em vários itens. Ele pode ser invocado por meio de um menu de contexto usando CTRL+clique ou SHIFT+clique em um item ou rolando um destino em um item em um modo de exibição de galeria. Quando o modo de seleção está ativo, as caixas de seleção aparecem ao lado de cada item da lista, e as ações podem aparecer na parte superior ou inferior da tela.
+![Modo de exibição de árvore com ícones](images/treeview-icons.png)
 
-Há três modos de seleção diferentes:
+### <a name="related-articles"></a>Artigos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="tree-view.md">Modo de exibição de árvore</a></p></td>
+<td align="left"><p>Aprenda os conceitos básicos de como usar um modo de exibição de árvore em seu aplicativo, além de como personalizar a aparência e o comportamento de interação dos itens de um modo de exibição de árvore.</p></td>
+</tr>
+</tbody>
+</table>
 
-- Único: o usuário pode selecionar apenas um item de cada vez.
-- Múltiplo: o usuário pode selecionar vários itens sem usar um modificador.
-- Estendido: o usuário pode selecionar diversos itens com um modificador, como ao segurar a tecla SHIFT.
+## <a name="itemsrepeater"></a>ItemsRepeater
 
-Tocar em qualquer lugar em um item seleciona-o. Tocar na ação da barra de comandos afeta todos os itens selecionados. Se nenhum item estiver selecionado, as ações da barra de comandos devem estar inativas, com exceção de "Selecionar Tudo".
+O ItemsRepeater é diferente do restante dos controles de coleção mostrados nesta página porque ele não oferece nenhum tipo de estilo ou interação prontos para o uso, ou seja, quando é simplesmente colocado em uma página sem definir nenhuma propriedade. O ItemsRepeater é, em vez disso, um bloco de construção que você pode usar, caso seja um desenvolvedor, para criar seu próprio controle de coleções personalizado – mais especificamente, um controle que não pode ser obtido usando os demais controles deste artigo. O ItemsRepeater é um painel controlado por dados e de alto desempenho que pode ser adaptado de acordo com suas necessidades específicas.
 
-O modo de seleção não tem um modelo light dismiss; tocar fora do quadro no qual o modo de seleção está ativo não cancelará o modo. Isso é para evitar a desativação acidental do modo. Clicar no botão Voltar ignora o modo de seleção múltipla.
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Mostre uma confirmação visual quando uma ação for selecionada. Considere exibir uma caixa de diálogo de confirmação para determinadas ações, especialmente ações destrutivas, como excluir.
+Use um ItemsRepeater se:
 
-O modo de seleção está limitado à página na qual ele está ativo e não pode afetar os itens fora da página.
+- Você tiver em mente ideias específicas de interface do usuário e experiência do usuário, que não poderão ser criadas usando os controles de coleção existentes.
+- Você já tiver uma fonte de dados para seus itens (como dados extraídos da Internet, de um banco de dados ou de uma coleção preexistente em seu code-behind).
 
-O ponto de entrada para o modo de seleção deve estar justaposto em relação ao conteúdo que ele afeta.
+### <a name="examples"></a>Exemplos
 
-Veja recomendações sobre a barra de comandos em [Diretrizes de barras de comandos](app-bars.md).
+Os três exemplos a seguir são todos controles ItemsRepeater associados à mesma fonte de dados (uma coleção de números). A coleção de números é representada de três maneiras distintas, com cada um dos ItemsRepeaters abaixo, usando um [Layout](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.layout) personalizado diferente e um [ItemTemplate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2) personalizado diferente para cada representação.
+
+![ItemsRepeater com barras horizontais](images/itemsrepeater-1.png)
+![ItemsRepeater com barras verticais](images/itemsrepeater-2.png)
+![ItemsRepeater com representação circular](images/itemsrepeater-3.png)
+
+### <a name="related-articles"></a>Artigos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="items-repeater.md">ItemsRepeater</a></p></td>
+<td align="left"><p>Aprenda conceitos básicos de como usar um ItemsRepeater em seu aplicativo, além de como implementar toda a interação e os componentes visuais necessários para a exibição de coleção.</p></td>
+</tr>
+</tbody>
+</table>
+
 
 ## <a name="globalization-and-localization-checklist"></a>Lista de verificação de globalização e localização
 
@@ -267,10 +311,10 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 <th>Disposição</th><td>Deixe duas linhas para o rótulo de lista.</td>
 </tr>
 <tr>
-<th>Expansão horizontal</th><td>Verifique se os campos podem acomodar a expansão de texto e são roláveis.</td>
+<th>Expansão horizontal</th><td>Verifique se os campos podem acomodar a expansão do texto e se eles são roláveis.</td>
 </tr>
 <tr>
-<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente.</td>
+<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical a fim de garantir que os scripts não latinos sejam exibidos corretamente.</td>
 </tr>
 </table>
 
@@ -280,13 +324,14 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 ## <a name="related-articles"></a>Artigos relacionados
 
+**Diretrizes de design e UX**
 - [Mestre/detalhes](master-details.md)
 - [Painel de navegação](navigationview.md)
 - [Zoom semântico](semantic-zoom.md)
 - [Arrastar e soltar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [Imagens em miniatura](../../files/thumbnails.md)
 
-**Para desenvolvedores**
+**Referência de API**
 - [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [Classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Classe ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)

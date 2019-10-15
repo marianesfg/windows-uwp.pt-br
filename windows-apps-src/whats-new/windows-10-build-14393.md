@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: 037963109fd6f70a60c17dc1b6c1b4eef82fb080
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: b4b887ad49cfdbdea89397105809db0fe6a5ab57
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821101"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282329"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>Novidades no Windows 10 para desenvolvedores, build 14393
 
@@ -60,5 +60,5 @@ Web para vinculação de aplicativo | Associe seu aplicativo a um site. Quando o
 WebSockets | Suporte adicionado a [**MessageWebSockets**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.messagewebsocket) e [**StreamWebSockets**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamwebsocket) para exibir o certificado do servidor, exibir certificados intermediários enviados pelo servidor durante a negociação SSL, realizar a validação personalizada de certificado do servidor e especificar se determinados erros de certificado de servidor devem ser ignorados.
 APIs de Windows Information Protection (WIP) | [**WIP**](https://docs.microsoft.com/windows/uwp/enterprise/wip-hub) é um conjunto de recursos em desktops, notebooks, tablets e telefones para o MDM (Gerenciamento de Dispositivo Móvel). A WIP dá às empresas maior controle sobre como seus dados são manipulados em dispositivos empresariais gerenciados. <br/><br/>Você pode usar APIs de WIP para criar aplicativos que respeitam as políticas de dados enquanto separa os dados pessoais de um funcionário para que não sejam afetados por essas políticas. Os administradores de política confiarão em seu aplicativo para consumir os dados da organização. E os funcionários vão adorar saber que os dados pessoais deles ficarão intactos no dispositivo mesmo se eles cancelarem a inscrição do gerenciamento de dispositivo móvel (MDM) da organização ou saírem completamente da organização.
 Windows IOT Core | O Windows IoT Core agora oferece suporte total ao Raspberry Pi 3 e a uma experiência de exibição remota, permitindo que os usuários exibam remotamente e controlem aplicativos UWP executados em um dispositivo IoT Core.
-Desbloqueio do Windows com dispositivos complementares (IoT) | Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a [Estrutura de Dispositivo Complementar](https://docs.microsoft.com/windows/uwp/security/companion-device-unlock), um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
+Desbloqueio do Windows com dispositivos complementares (IoT) | Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a [Estrutura de Dispositivo Complementar](https://docs.microsoft.com/windows/uwp/security/companion-device-unlock), um dispositivo complementar pode fornecer uma experiência avançada do Microsoft Passport, mesmo quando o Windows Hello não está disponível (por exemplo, caso a área de trabalho do Windows 10 não tenha uma câmera para autenticação facial ou um dispositivo leitor de impressão digital).
 Winsock | Soquetes TCP agora podem ser configurados com [Winsock](https://tools.ietf.org/html/rfc7413) para usar TCP Fast Open [RFC 7413](https://tools.ietf.org/html/rfc7413) ao definir a opção de soquete TCP_FASTOPEN.

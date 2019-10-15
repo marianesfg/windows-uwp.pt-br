@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b6fd3f3085449c57dafdcedc60f63997e3ec807
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 1a9bb432ce7c856a6c54305f657f06a23dab14f1
+ms.sourcegitcommit: 805420bb7ec6850ec3576b21193a3681054c9754
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393423"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71976331"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -71,7 +71,7 @@ Veja os modelos de projeto do Visual Studio fornecidos pela extensão do VSIX.
 ### <a name="blank-app-cwinrt"></a>Aplicativo em Branco (C++/WinRT)
 Um modelo de projeto para um aplicativo UWP (Plataforma Universal do Windows) que tem uma interface do usuário XAML.
 
-O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de tempo de execução local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução local. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
+O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de tempo de execução local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo stub como referência ao implementar suas classes de tempo de execução local. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 O suporte de superfície de design do XAML no Visual Studio de 2019 para C++/WinRT está perto da paridade com o C#. No Visual Studio de 2019, você pode usar a guia **Eventos** da janela **Propriedades** para adicionar manipuladores de eventos dentro de um projeto do C++/WinRT. Você também pode adicionar manipuladores de eventos ao seu código manualmente&mdash;. Confira [Processar eventos usando delegados em C++/WinRT](handle-events.md) para obter mais informações.
 

@@ -72,17 +72,65 @@
       href: apps/whats-new/latest-doc-updates.md
 - name: Criar com o Windows
   items:
+    - name: Visão geral
+      href: dev-environment/index.yml
     - name: Desenvolva com o Python
       items:
         - name: Visão geral
           href: python/index.yml
         - name: Introdução para iniciantes
-          href: python/get-started/python-for-education.md
+          href: python/beginners.md
         - name: Introdução ao desenvolvimento para a Web
-          href: python/get-started/python-for-web.md
+          href: python/web-frameworks.md
         - name: Introdução à automação
-          href: python/get-started/python-for-scripting.md
+          href: python/scripting.md
+        - name: Introdução aos bancos de dados
+          href: python/databases.md
         - name: Perguntas frequentes
           href: python/faqs.md
         - name: Recursos
           href: python/resources.md
+    - name: Desenvolver com o Node.js
+      items:
+        - name: Visão geral
+          href: nodejs/index.yml
+        - name: Configurar seu ambiente de desenvolvimento
+          href: nodejs/setup-on-wsl2.md
+        - name: Introdução para iniciantes
+          href: nodejs/beginners.md
+        - name: Introdução às estruturas da Web
+          href: nodejs/web-frameworks.md
+        - name: Introdução aos bancos de dados
+          href: nodejs/databases.md
+        - name: Introdução aos contêineres
+          href: nodejs/containers.md
+    - name: Guia do Mac para Windows
+      items:
+        - name: Alterar seu ambiente de desenvolvimento
+          href: dev-environment/mac-to-windows.md
+        - name: Atalhos de teclado
+          href: 'dev-environment/mac-to-windows.md#keyboard-shortcuts'
+        - name: Atalhos do trackpad
+          href: 'dev-environment/mac-to-windows.md#trackpad-shortcuts'
+        - name: Terminal e Shell
+          href: 'dev-environment/mac-to-windows.md#terminal-and-shell'
+        - name: Aplicativos e utilitários
+          href: 'dev-environment/mac-to-windows.md#apps-and-utilities'
+    - name: Subsistema do Windows para Linux
+      items:
+        - name: Sobre o WSL
+          href: 'https://docs.microsoft.com/windows/wsl/about?context=/windows/dev-environment/dev-environment-context'
+        - name: Sobre o WSL 2
+          href: 'https://docs.microsoft.com/windows/wsl/wsl2-about?context=/windows/dev-environment/dev-environment-context'
+        - name: WSL 1 versus WSL 2
+          href: 'https://docs.microsoft.com/windows/wsl/wsl2-ux-changes?context=/windows/dev-environment/dev-environment-context'
+        - name: Usar contas e permissões
+          href: 'https://docs.microsoft.com/windows/wsl/user-support?context=/windows/dev-environment/dev-environment-context'
+    - name: Terminal do Windows
+      items:
+        - name: Visão geral
+          href: 'https://github.com/microsoft/terminal#terminal--console-overview'
+        - name: Guia do usuário
+          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md'
+        - name: Configurações personalizadas
+          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md'

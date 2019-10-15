@@ -7,12 +7,12 @@ ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 26c7a7a123d8892bf1c3584685db49f2d86c654a
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: ba99abd906bd84a91fae5da1505ac8845dd5b99c
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705551"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282476"
 ---
 # <a name="microsoft-store-policies"></a>Políticas da Microsoft Store
 
@@ -222,7 +222,7 @@ Se incluir compra realizada em produto, assinaturas, moeda virtual, funcionalida
 
 Você deve usar a API de compra realizada em produto da Microsoft Store para vender os itens ou os serviços digitais consumidos ou usados em seu produto. Seu produto pode permitir que os usuários consumam serviços ou conteúdo digital comprados anteriormente, mas não pode direcioná-los para um mecanismo de compra que não seja a API de compra realizada em produto da Microsoft Store.
 
-As ofertas no produto vendidas em seu produto não podem ser convertidas em nenhuma moeda legalmente válida (por exemplo, dólares, euros etc.) nem em bens materiais ou serviços.
+As ofertas em produto vendidas no seu produto não podem ser convertidas em nenhuma moeda legalmente válida (por exemplo, dólares, euros etc.) nem em bens materiais ou serviços.
 
 **10.8.2**
 
@@ -383,7 +383,7 @@ Os produtos que emulam um sistema de jogo não são permitidos em qualquer famí
 Os seguintes requisitos de privacidade se aplicam aos dados de usuário do Xbox Live:
 - Os serviços e dados do usuário devem ser usadas apenas em seu jogo por você. Não venda, licencie ou compartilhe os dados fornecidos por nós ou nossos serviços. Se você receber dados pessoais de usuários finais por meio do Xbox Live, você será um controlador independente de tais dados e deverá ter uma política de privacidade em vigor com os usuários finais que regule o uso que você faz de dados pessoais, conforme exigido pelo Contrato de Desenvolvedor de Aplicativos. Recomendamos que você inclua um link para sua política de privacidade em seu site e nas páginas de seus jogos na Microsoft Store.
 - Os serviços e dados do usuário devem ser usados adequadamente nos jogos. Esses dados incluem (sem limitação) dados de uso, identificadores de conta e quaisquer outros dados de identificação pessoal, estatísticas, pontuações, classificações, avaliações, conexões com outros usuários e outros dados relacionados a atividades sociais do usuário.
-- Não armazene dados de gráficos sociais do Xbox Live (por exemplo, listas de amigos), com exceção de identificadores de conta para usuários que vincularem suas contas do Xbox Live ao seu jogo.
+- Não armazene dados de gráficos sociais do Xbox Live (por exemplo, listas de amigos), com exceção de identificadores de conta para usuários que vincularam suas contas do Xbox Live ao jogo.
 - Exclua todos os identificadores de conta quando você remover seu jogo do nosso serviço ou quando um usuário desvincular a conta dele do Xbox Live de seu jogo. Não compartilhe serviços ou dados do usuário (mesmo que sejam dados anônimos, agregados ou derivados) com qualquer rede de publicidade, agente de dados ou outro serviço de publicidade ou relacionados à monetização.
 - Quando a Microsoft receber solicitações de usuários finais para excluir seus respectivos dados pessoais, avisaremos você sobre essas solicitações e forneceremos uma lista de identificadores de usuários finais. Você deve verificar a lista, no mínimo, a cada 30 dias para garantir o recebimento de todas as solicitações de exclusão e deve usar as informações fornecidas na lista somente para atender às solicitações de exclusão de usuários finais. Você pode encontrar detalhes sobre esse processo em [Ferramentas da lista de contas excluídas](https://aka.ms/xbox-deleted).
 
