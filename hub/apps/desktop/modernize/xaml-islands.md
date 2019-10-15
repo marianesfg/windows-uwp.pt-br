@@ -6,14 +6,14 @@ ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML
 ms.author: mcleans
 author: mcleanbyron
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: bd49417d110759dc9fec4ff4c9003e842bf1d7bb
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
-ms.translationtype: MT
+ms.openlocfilehash: 52287576dbc395af60e15b5f4b4a403db7e92900
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643354"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313445"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Hospedar controles XAML UWP em aplicativos de área de trabalho (Ilhas XAML)
 
@@ -29,7 +29,7 @@ Fundamentalmente, as ilhas XAML são criadas usando a *API de hospedagem XAML do
 A maneira como você usa as ilhas XAML depende do tipo de aplicativo e dos tipos de controles UWP que você deseja hospedar.
 
 > [!NOTE]
-> Se você tiver comentários sobre as ilhas XAML, crie um novo problema no [repositório Microsoft. Toolkit. Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) e deixe seus comentários lá. Se preferir enviar seus comentários de forma privada, você poderá enviá-los para XamlIslandsFeedback@microsoft.como. Suas ideias e cenários são extremamente importantes para nós.
+> Se você tiver comentários sobre as ilhas XAML, crie um novo problema no [repositório Microsoft. Toolkit. Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) e deixe seus comentários lá. Se preferir enviar seus comentários de forma privada, você poderá enviá-los para XamlIslandsFeedback@microsoft.com. Suas ideias e cenários são extremamente importantes para nós.
 
 ## <a name="wpf-and-windows-forms-applications"></a>Aplicativos do WPF e Windows Forms
 
@@ -81,7 +81,7 @@ Lembre-se dos seguintes detalhes:
 
 * Se você estiver hospedando um controle UWP personalizado, seu projeto do WPF ou Windows Forms deverá ter como destino o .NET Core 3. Não há suporte para a hospedagem de controles UWP personalizados em aplicativos direcionados ao .NET Framework. Você também precisará executar algumas etapas adicionais para fazer referência ao controle personalizado. Para obter mais informações, consulte [hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML](host-custom-control-with-xaml-islands.md).
 
-* As versões anteriores dessas instruções tinham que adicionar o `maxversiontested` elemento a um manifesto do aplicativo em seu WPF ou Windows Forms projeto. Contanto que você esteja usando as versões de visualização mais recentes dos pacotes NuGet listados acima, você não precisa mais adicionar esse elemento ao seu manifesto.
+* As versões anteriores dessas instruções tinham que adicionar o elemento `maxversiontested` a um manifesto do aplicativo em seu projeto do WPF ou Windows Forms. Contanto que você esteja usando as versões de visualização mais recentes dos pacotes NuGet listados acima, você não precisa mais adicionar esse elemento ao seu manifesto.
 
 ### <a name="architecture-of-xaml-island-net-controls"></a>Arquitetura dos controles .NET da ilha XAML
 
