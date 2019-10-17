@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node. js, Windows 10, nativo do Windows, diretamente no Windows
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: eaeee6e2d55bcb9221d88bd87ebeafc7c45d0a5d
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 18a8d07f790c391a6e10577ff512347106e1cf21
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315080"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517834"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Configurar o ambiente de desenvolvimento do node. js diretamente no Windows
 
@@ -70,30 +70,19 @@ Para saber mais sobre como usar voltar para instalar várias versões do node. j
 
 ## <a name="install-your-favorite-code-editor"></a>Instalar seu editor de código favorito
 
-Recomendamos que você [instale vs Code](https://code.visualstudio.com), bem como o [pacote de extensão do node. js](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack), para o desenvolvimento com node. js no Windows.
-
-O pacote de extensão do node. js inclui:
-
-- S fiapo-uma ferramenta para "AB" "seu código. O refiapoing analisa seu código e avisa sobre possíveis erros.
-- NPM-execute scripts NPM na paleta de comandos e valide os módulos instalados definidos em Package. JSON.
-- Trechos de JavaScript (ES6) – adiciona trechos de código para o desenvolvimento de JavaScript na sintaxe ES6.
-- Pesquisar node_modules-procurar rapidamente módulos de nó em seu projeto.
-- NPM IntelliSense – adiciona IntelliSense para módulos NPM em seu código.
-- Caminho IntelliSense-completa automaticamente os nomes de texto em seu código.
-
-Instale todos ou escolha e escolha o que parece mais útil para você.
+Recomendamos que você [instale vs Code](https://code.visualstudio.com), bem como o [pacote de extensão do node. js](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack), para o desenvolvimento com node. js no Windows. Instale todos ou escolha e escolha o que parece mais útil para você.
 
 Para instalar o pacote de extensão do node. js:
 
 1. Abra a janela **extensões** (Ctrl + Shift + X) em vs Code.
-2. Na caixa de pesquisa na parte superior da janela extensões, digite: "Pacote de extensão de nó" (ou o nome de qualquer extensão que você esteja procurando).
+2. Na caixa de pesquisa na parte superior da janela extensões, digite: "pacote de extensão de nó" (ou o nome de qualquer extensão que você esteja procurando).
 3. Selecione **instalar**. Uma vez instalado, sua extensão será exibida na pasta "habilitado" da janela **extensões** . Você pode desabilitar, desinstalar ou definir as configurações selecionando o ícone de engrenagem ao lado da descrição de sua nova extensão.
 
 Algumas extensões adicionais que talvez você queira considerar incluem:
 
-- [Depurador para Chrome](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): Depois de concluir o desenvolvimento no lado do servidor com o Node. js, você precisará desenvolver e testar o lado do cliente. Essa extensão integra seu editor de VS Code com o serviço de depuração do navegador Chrome, tornando as coisas um pouco mais eficientes.
-- [Mapas de mapa de outros editores](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): Essas extensões podem ajudar seu ambiente a se sentir em casa, se você estiver fazendo a transição de outro editor de texto (como Atom, sublime, vim, eMacs, notepad + +, etc.).
-- [Sincronização de configurações](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Permite que você sincronize suas configurações de VS Code em diferentes instalações usando o GitHub. Se você trabalha em computadores diferentes, isso ajuda a manter seu ambiente consistente entre eles.
+- [Depurador para Chrome](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): depois de concluir o desenvolvimento no lado do servidor com o Node. js, você precisará desenvolver e testar o lado do cliente. Essa extensão integra seu editor de VS Code com o serviço de depuração do navegador Chrome, tornando as coisas um pouco mais eficientes.
+- [Keymaps de outros editores](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): essas extensões podem ajudar seu ambiente a se sentir em casa, se você estiver fazendo a transição de outro editor de texto (como Atom, sublime, vim, Emacs, notepad + +, etc.).
+- [Sincronização de configurações](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): permite que você sincronize suas configurações de vs Code em diferentes instalações usando o github. Se você trabalha em computadores diferentes, isso ajuda a manter seu ambiente consistente entre eles.
 
 ## <a name="install-git-optional"></a>Instalar o Git (opcional)
 
