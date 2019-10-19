@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff5d0831e918c0399bccb1dac9bb4fca8a6d408
-ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
+ms.openlocfilehash: a85edf0caa429d95d376af6fbc93bc7e8134340c
+ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939649"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72548452"
 ---
 # <a name="list-view-and-grid-view"></a>Exibição de lista e exibição de grade
 
@@ -604,7 +604,7 @@ Para saber mais sobre como alterar a aparência dos itens selecionados, confira 
 
 ### <a name="drag-and-drop"></a>Arrastar e soltar
 
-Os controles ListView e GridView permitem arrastar e soltar itens dentro deles mesmos e entre si e outros controles ListView e GridView. Para obter mais informações sobre como implementar o padrão arrastar e soltar, consulte [Arrastar e soltar](https://docs.microsoft.com/windows/uwp/design/input/drag-and-drop). 
+Os controles ListView e GridView permitem arrastar e soltar itens dentro deles mesmos e entre si e outros controles ListView e GridView. Para obter mais informações sobre como implementar o padrão arrastar e soltar, consulte [Arrastar e soltar](../input/drag-and-drop.md).
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
@@ -616,4 +616,4 @@ Os controles ListView e GridView permitem arrastar e soltar itens dentro deles m
 
 - [Listas](lists.md)
 - [Contêineres e modelos de itens](item-containers-templates.md)
-- [Arrastar e soltar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [Arrastar e soltar](../input/drag-and-drop.md)

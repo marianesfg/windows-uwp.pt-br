@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 3bc377e87d01106a1a2e7157dbe08f1ab022f52a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
+ms.sourcegitcommit: e0f6150c8f45b69a3e114d0556c2c3d5aed7238f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361062"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72560804"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
@@ -43,7 +43,7 @@ Saiba como usar um quadro e páginas para habilitar a navegação básica ponto 
 
 Em seguida, adicione duas páginas ao projeto.
 
-1.  Em **Gerenciador de soluções**, clique com o botão direito no nó de projeto **BlankApp** para abrir o menu de atalho.
+1.  Em **Gerenciador de soluções**, clique com botão direito no nó de projeto **BlankApp** para abrir o menu de atalho.
 2.  Escolha **Adicionar** > **Novo Item** no menu de atalho.
 3.  Na caixa de diálogo **Adicionar novo item**, selecione **Página em branco** no painel do meio.
 4.  Na caixa **Nome**, insira **Page1** (ou **Page2**) e pressione o botão **Adicionar**.
@@ -452,5 +452,5 @@ Page1::Page1()
 
 ## <a name="related-articles"></a>Artigos relacionados
 * [Noções básicas de design de navegação para aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
-* [Diretrizes para guias e pivôs](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot)
-* [Diretrizes para painéis de navegação](https://docs.microsoft.com/windows/uwp/controls-and-patterns/nav-pane)
+* [Pivô](../controls-and-patterns/pivot.md)
+* [Modo de exibição de navegação](../controls-and-patterns/navigationview.md)
