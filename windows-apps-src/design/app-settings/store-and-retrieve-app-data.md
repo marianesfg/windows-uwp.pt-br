@@ -8,18 +8,18 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3958d69dc3142702eb2d2a41d6dba5ebeb9fa8ce
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: 0eb7ef49d0ce1876635dc36e84f43432c13e1791
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076377"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690364"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
 *Os dados de aplicativo* são dados mutáveis que são criados e gerenciados por um aplicativo específico. Ele inclui o estado do tempo de execução, as configurações do aplicativo, as preferências do usuário, o conteúdo de referência (como as definições de dicionário em um aplicativo de dicionário) e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
 
-**Observação importante sobre os dados do aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
+**Observação importante sobre os dados de aplicativo:** O tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
 
 ## <a name="types-of-app-data"></a>Tipos de dados de aplicativo
 
@@ -32,11 +32,12 @@ Use configurações para armazenar as preferências do usuário e informações 
 Aqui estão os tipos de dados que você pode usar para as configurações do aplicativo:
 
 - **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-- **Booliano**
+- **Boolean**
 - **Char16**, **String**
-- [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan)
+- [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
+    - Para C#/.net, use: [**System. DateTimeOffset**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), [**System. TimeSpan**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0)
 - **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
-- [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue): Um conjunto de configurações de aplicativo relacionadas que devem ser serializadas e desserializadas atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
+- [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): um conjunto de configurações de aplicativo relacionadas que devem ser serializadas e desserializadas atomicamente. Use configurações compostas para lidar com facilidade com atualizações atômicas ou configurações interdependentes. O sistema assegura a integridade das configurações compostas durante o acesso e o roaming. As configurações compostas são otimizadas para pequenas quantidades de dados e o desempenho pode ser ruim se você as utilizar para conjuntos grandes de dados.
 
 ### <a name="files"></a>Arquivos
 
@@ -172,7 +173,7 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 
 ### <a name="roaming-pre-requisites"></a>Pré-requisitos do uso do roaming
 
-Qualquer usuário pode se beneficiar com dados de aplicativo em roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar um conta Microsoft ou desabilitar os recursos de dados de roaming, ele ainda poderá usar seu aplicativo, mas os dados do aplicativo serão locais para cada dispositivo.
+Qualquer usuário pode se beneficiar de roaming, desde que esteja usando uma conta da Microsoft para fazer logon no dispositivo. No entanto, usuários e administradores de política de grupo podem desligar o dados de uso do perfil móvel do aplicativo a qualquer momento. Se um usuário optar por não usar um conta Microsoft ou desabilitar os recursos de dados de roaming, ele ainda poderá usar seu aplicativo, mas os dados do aplicativo serão locais para cada dispositivo.
 
 Os dados armazenados no [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) serão transferidos somente se o usuário tiver definido o dispositivo como "confiável". Se um dispositivo não for confiável, os dados armazenados nesse cofre não estarão disponíveis para roaming.
 
@@ -317,7 +318,7 @@ async void ReadTimestamp()
 ## <a name="temporary-app-data"></a>Dados temporários de aplicativo
 
 
-O armazenamento de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder).
+O repositório de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.temporaryfolder).
 
 ### <a name="retrieve-the-temporary-data-container"></a>Recuperar o contêiner de dados temporários
 
@@ -430,7 +431,7 @@ localSettings.DeleteContainer("exampleContainer");
 ## <a name="versioning-your-app-data"></a>Controlar a versão de seus dados de aplicativo
 
 
-Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) e o método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync).
+Como opção, você pode converter os dados do aplicativo para seu aplicativo. Isso permite que você crie uma versão futura de seu aplicativo que altere o formato de seus dados de aplicativo sem causar problemas de compatibilidade com a versão anterior do aplicativo. O aplicativo verifica a versão dos dados de aplicativo no armazenamento de dados e, caso a versão seja inferior à versão esperada, o aplicativo deverá atualizar os dados do aplicativo para o novo formato e atualizar a versão. Para obter mais informações, consulte a propriedade [ **Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) e o método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

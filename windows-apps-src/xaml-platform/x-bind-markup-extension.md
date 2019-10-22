@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eeb56dce1984afd67e7a44bbfce1453a1d9f531a
-ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
+ms.openlocfilehash: a25797f50ee76542b8f9543cb76453d2916368ac
+ms.sourcegitcommit: 82d202478ab4d3011c5ddd2e852958c34336830d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70296993"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72715862"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
-Observação  para obter informações gerais sobre como usar a associação de dados em seu aplicativo com **{x:bind}** (e para uma comparação completa entre **{x:bind}** e **{Binding}** ), consulte [ligação de dados em profundidade](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+**Observação**  For informações gerais sobre como usar a associação de dados em seu aplicativo com **{x:bind}** (e para uma comparação completa entre **{x:bind}** e **{Binding}** ), consulte a [ligação de dados em profundidade](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 A **{x:bind}** Markup Extension – New for Windows 10 — é uma alternativa para **{Binding}** . **{x:bind}** é executado em menos tempo e menos memória que **{Binding}** e dá suporte à depuração melhor.
 
@@ -50,7 +50,7 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 |------|-------------|
 | _propertyPath_ | Uma cadeia de caracteres que especifica o caminho de propriedade para a associação. Mais informações estão na seção [caminho de propriedade](#property-path) abaixo. |
 | _bindingproperties_ |
-| valor propName, valorpropName=\[=\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
+| _propname_ =_valor_ \[, _propname_ =_valor_ \] * | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
 | _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-that-you-can-set-with-xbind) a seguir. |
 
@@ -83,31 +83,31 @@ Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate*
 
 Por exemplo: em uma página, **Text="{x:Bind Employee.FirstName}"** procurará por um membro **Funcionário** na página e, em seguida, um membro **FirstName** no objeto retornado por **Funcionário**. Se você estiver associando o controle de um item a uma propriedade que contém dependentes de um funcionário, o seu caminho de propriedade pode ser "Employee.Dependents", o modelo de item do controle do item exibiria os itens em "Dependents".
 
-Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propriedades no modelo de página ou dados – você precisará ter uma propriedade pública para que seja associável. A área de superfície para associação precisa ser exposta como classes/interfaces CX para que possamos obter os metadados relevantes. **O\[atributo\] acoplável** não deve ser necessário.
+Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propriedades no modelo de página ou dados – você precisará ter uma propriedade pública para que seja associável. A área de superfície para associação precisa ser exposta como classes/interfaces CX para que possamos obter os metadados relevantes. O atributo de **\] \[Bindable** não deve ser necessário.
 
 Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação porque os elementos nomeados se tornam campos dentro da página ou controle de usuário que representa a origem da Associação raiz. 
 
 
 ### <a name="collections"></a>Coleções
 
-Se a fonte de dados for uma coleção, um caminho de propriedade pode especificar itens na coleção pela posição ou índice. Por exemplo, "\[Teams\]0. Players ", em que o\[literal"\]"inclui o" 0 "que solicita o primeiro item em uma coleção de índices zero.
+Se a fonte de dados for uma colação, um caminho de propriedade pode especificar itens na coleção pela posição ou índice. Por exemplo, "equipes \[0 \]. Players", em que o literal "\[ \]" inclui o "0" que solicita o primeiro item em uma coleção de índices zero.
 
-Para usar um indexador, o modelo precisa implementar **IList&lt;T&gt;** ou **IVector&lt;T&gt;** no tipo de propriedade que vai ser indexada. (Observe que IReadOnlyList&lt;t&gt; e IVectorView&lt;T&gt; não dão suporte à sintaxe do indexador.) Se o tipo da propriedade indexada der suporte a **INotifyCollectionChanged** ou **IObservableVector** e a associação for OneWay ou TwoWay, então registrará e escutará notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
+Para usar um indexador, o modelo precisa implementar **IList&lt;T&gt;** ou **IVector&lt;T&gt;** no tipo de propriedade que vai ser indexada. (Observe que IReadOnlyList &lt;T &gt; e IVectorView &lt;T &gt; não dão suporte à sintaxe do indexador.) Se o tipo da propriedade indexada oferecer suporte a **INotifyCollectionChanged** ou **IObservableVector** e a associação for OneWay ou TwoWay, ele será registrado e escutará as notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
 
-Se a fonte de dados for um dicionário ou um mapa, um caminho de propriedade poderá especificar itens na coleção pelo nome da cadeia de caracteres. Por exemplo  **&lt;, TextBlock Text = "{x:bind\[Players ' John\]Smith '&gt; "/** procurará um item no dicionário chamado "John Smith". O nome precisa estar entre aspas, e aspas simples ou duplas podem ser usadas. O acento circunflexo (^) pode ser usado no escape de citações em cadeias de caracteres. Normalmente é mais fácil usar aspas alternativas do que as usadas para o atributo XAML. (Observe que IReadOnlyDictionary&lt;t&gt; e IMapView&lt;T&gt; não dão suporte à sintaxe do indexador.)
+Se a fonte de dados for um dicionário ou um mapa, um caminho de propriedade poderá especificar itens na coleção pelo nome da cadeia de caracteres. Por exemplo, **&lt;TextBlock Text = "{X:bind players \[ ' John Smith ' \]"/&gt;** procurará um item no dicionário chamado "John Smith". O nome precisa estar entre aspas, e aspas simples ou duplas podem ser usadas. O acento circunflexo (^) pode ser usado no escape de citações em cadeias de caracteres. Normalmente é mais fácil usar aspas alternativas do que as usadas para o atributo XAML. (Observe que IReadOnlyDictionary &lt;T &gt; e IMapView &lt;T &gt; não dão suporte à sintaxe do indexador.)
 
 Para usar um indexador da cadeia de caracteres, o modelo precisa implementar **IDictionary&lt;string, T&gt;** ou **IMap&lt;string, T&gt;** no tipo da propriedade que será indexada. Se o tipo da propriedade indexada suportar **IObservableMap** e a associação for OneWay ou TwoWay, então registrará e escutará notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
 
-### <a name="attached-properties"></a>Propriedades anexadas
+### <a name="attached-properties"></a>Propriedades Anexadas
 
 Para associar a [Propriedades anexadas](./attached-properties-overview.md), você precisa colocar o nome da classe e da propriedade entre parênteses após o ponto. Por exemplo **Text="{x:Bind Button22.(Grid.Row)}"** . Se a propriedade não é declarada em um namespace Xaml, você precisará prefixá-la com um namespace xml, que você deve mapear para um namespace de código no head do documento.
 
-### <a name="casting"></a>Conversão
+### <a name="casting"></a>Transmissão
 
 Associações compiladas são fortemente tipadas e resolverão o tipo de cada etapa em um caminho. Se o tipo retornado não tiver o membro, falhará no momento da compilação. Você pode especificar uma conversão para informar o tipo real do objeto de associação. No caso a seguir, **obj** é uma propriedade do objeto de tipo, mas que contém uma caixa de texto, para que possamos usar **Text="{x:Bind ((TextBox)obj).Text}"** ou **Text="{x:Bind obj.(TextBox.Text)}"** .
-O campo **groups3** em **text = "{x:Bind ((data: SampleDataGroup) groups3\[0\]). Title} "** é um dicionário de objetos, portanto, você deve convertê-lo em **dados: SampleDataGroup**. Observe o uso do prefixo de namespace xml **data:** para mapear o tipo de objeto para um namespace de código que não seja parte do namespace XAML padrão.
+O campo **groups3** em **text = "{x:Bind ((data: SampleDataGroup) groups3 \[0 \]). Title} "** é um dicionário de objetos, portanto, você deve convertê-lo em **dados: SampleDataGroup**. Observe o uso do prefixo de namespace xml **data:** para mapear o tipo de objeto para um namespace de código que não seja parte do namespace XAML padrão.
 
-_Observação: A C#sintaxe de conversão-Style é mais flexível do que a sintaxe de propriedade anexada e é a sintaxe recomendada no futuro._
+_Observação: a C#sintaxe de conversão-Style é mais flexível do que a sintaxe de propriedade anexada e é a sintaxe recomendada no futuro._
 
 ## <a name="functions-in-binding-paths"></a>Funções em caminhos de associação
 
@@ -115,7 +115,7 @@ Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma funç�
 
 ## <a name="event-binding"></a>Associação de evento
 
-Associação de evento é um recurso exclusivo para associação compilada. Permite que você especifique o manipulador para um evento usando uma associação, em vez de ele ter de ser um método no code-behind. Por exemplo: **Clique em = "{X:bind rootFrame. GoForward}"** .
+Associação de evento é um recurso exclusivo para associação compilada. Permite que você especifique o manipulador para um evento usando uma associação, em vez de ele ter de ser um método no code-behind. Por exemplo: **Click="{x:Bind rootFrame.GoForward}"** .
 
 Para eventos, o método de destino não deve ser sobrecarregado e também deve:
 
@@ -137,18 +137,17 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 |----------|-------------|
 | **Multi-Path** | Consulte a seção [Caminho de propriedade](#property-path) acima. |
 | **Convertido** | Especifica o objeto de conversor que é chamado pelo mecanismo de associação. O conversor pode ser definido em XAML, mas somente se você se referir a uma instância de objeto atribuída em uma referência [{StaticResource} markup extension](staticresource-markup-extension.md) ao objeto no dicionário de recursos. |
-| **ConverterLanguage** | Especifica a cultura a ser usada pelo conversor. (Se você estiver configurando **ConverterLanguage** , você também deverá definir o **conversor**.) A cultura é definida como um identificador baseado em padrões. Para saber mais, veja [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage). |
-| **ConverterParameter** | Especifica o parâmetro do conversor que pode ser usado na lógica de conversão. (Se você estiver configurando **ConverterParameter** , você também deverá definir o **conversor**.) A maioria dos conversores usa uma lógica simples que obtém todas as informações necessárias do valor passado para converter e não precisa de um valor **ConverterParameter** . O parâmetro **ConverterParameter** é para implementações moderadamente avançadas que têm mais de uma lógica que controla o que for passado em **ConverterParameter**. Você também pode escrever um conversor que usa valores diferentes de cadeias de caracteres, mas isso é incomum; veja Comentários em [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter) para saber mais. |
-| **FallbackValue** | Especifica um valor a ser exibido quando a fonte ou o caminho não podem ser resolvidos. |
-| **Modo** | Especifica o modo de associação, como uma destas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}** , que é "OneWay" na maioria dos casos. |
+| **ConverterLanguage** | Especifica a cultura a ser usada pelo conversor. (Se você estiver configurando **ConverterLanguage** também deverá configurar **Converter**.) A cultura é definida como um identificador baseado em padrões. Para saber mais, veja [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage). |
+| **ConverterParameter** | Especifica o parâmetro do conversor que pode ser usado na lógica de conversão. (Se estiver definindo **ConverterParameter**, você também deve definir **Converter**). A maioria dos conversores usam lógica simples que obtém todas as informações que precisam do valor calculado para converter, e não precisam de um valor **ConverterParameter**. O parâmetro **ConverterParameter** é para implementações moderadamente avançadas que têm mais de uma lógica que controla o que for passado em **ConverterParameter**. Você também pode escrever um conversor que usa valores diferentes de cadeias de caracteres, mas isso é incomum; veja Comentários em [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter) para saber mais. |
+| **FallbackValue** | Especifica um valor a ser exibido quando a fonte ou caminho não podem ser resolvidos. |
+| **Modo** | Especifica o mode de associação como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}** , que é "OneWay" na maioria dos casos. |
 | **TargetNullValue** | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | **BindBack** | Especifica uma função a ser usada na direção inversa de uma associação bidirecional. |
 | **UpdateSourceTrigger** | Especifica quando enviar as alterações de volta a partir do controle para o modelo na associações de TwoWay. O padrão para todas as propriedades, exceto TextBox. Text, é PropertyChanged; TextBox. Text é LostFocus.|
 
 > [!NOTE]
 > Se você estiver convertendo a marcação de **{Binding}** em **{x:Bind}** , examine as diferenças nos valores padrão da propriedade **Mode**.
- 
-> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) pode ser usado para alterar o modo padrão para X:BIND para um segmento específico da árvore de marcação. O modo selecionado aplicará qualquer expressão x:Bind nesse elemento e seus filhos, que não especificam explicitamente um modo como parte da vinculação. OneTime é mais eficiente do que OneWay, uma vez que usar OneWay fará com que mais código seja gerado para conectar e manipular a detecção de alteração.
+> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) pode ser usado para alterar o modo padrão de x:BIND para um segmento específico da árvore de marcação. O modo selecionado aplicará qualquer expressão x:Bind nesse elemento e seus filhos, que não especificam explicitamente um modo como parte da vinculação. OneTime é mais eficiente do que OneWay, uma vez que usar OneWay fará com que mais código seja gerado para conectar e manipular a detecção de alteração.
 
 ## <a name="remarks"></a>Comentários
 
@@ -165,9 +164,9 @@ Páginas e controles de usuário que incluem associações compiladas terão uma
 - **StopTracking()** - Ela desconectará todos os ouvintes criados para associações uni e bidirecionais. Elas podem ser reinicializadas usando-se o método Update().
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Observe que isso não é um recurso de associação de função e sim de associação de propriedade. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Observe que isso não é um recurso de associação de função e sim de associação de propriedade. Para usar o conversor integrado, a versão do SDK de destino mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-**Dica**   se você precisar especificar uma chave única para um valor, como em [**path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) ou [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter), preceda-a com uma barra invertida: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
+@No__t_1 **Tip** se você precisar especificar uma chave única para um valor, como em [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) ou [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter), preceda-a com uma barra invertida: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
 
 O [**conversor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter), [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage) e **ConverterLanguage** estão todos relacionados ao cenário de conversão de um valor ou tipo da origem da associação em um tipo ou valor que é compatível com a propriedade de destino de associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
