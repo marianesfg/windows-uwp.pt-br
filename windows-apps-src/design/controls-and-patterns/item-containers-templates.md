@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2402be26a14d2e57a482a68cf8d5b587f4e65dd1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 761cd9e6d1fc92b4919f701fdd9f8f62078faedf
+ms.sourcegitcommit: b8a4b0d5a65da297290b93d73c641df3c135a086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364949"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72531664"
 ---
 # <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
@@ -25,13 +25,20 @@ ms.locfileid: "66364949"
 
 Os controles **ListView** e **GridView** gerenciam como seus itens são organizados (horizontal, vertical, quebra automática, etc...) e como o usuário interage com os itens, mas não como os itens individuais são mostrados na tela. A visualização dos itens é gerenciada por contêineres de itens. Quando você adiciona itens a um recurso exibição de lista, eles são colocados automaticamente em um contêiner. O contêiner de itens padrão de ListView é [ListViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem); de GridView, é [GridViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
 
-> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [Propriedade ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Classe ListViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listviewitem), [Classe GridViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.gridviewitem), [Propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [Propriedade ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
 
 
 > [!NOTE]
 > Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* para o equivalente a grade correspondente (GridView ou GridViewItem). 
 
-Esses controles de contêiner consistem em duas partes importantes que se combinam para criar os elementos visuais finais mostrados para um item: o *modelo de dados* e o *modelo de controle*.
+## <a name="listview-items-and-gridview-items"></a>Itens ListView e itens GridView
+Conforme mencionado acima, os itens ListView são colocados automaticamente no contêiner ListViewItem e os itens GridView são colocados no contêiner GridViewItem. Esses contêineres de item são controles que têm seu próprio estilo e interação internos, mas também podem ser altamente personalizados. No entanto, antes da personalização, familiarize-se com as diretrizes e o estilo recomendados para o ListViewItem e o GridViewItem:
+
+- **ListViewItems** – os itens são basicamente focados em texto e prolongados em forma. Os ícones ou as imagens podem ser exibidos à esquerda do texto.
+- **GridViewItems** – geralmente os itens têm forma quadrada ou pelo menos uma forma de retângulo alongado. Os itens têm foco na imagem e podem exibir um texto ao seu redor ou sobreposto na imagem. 
+
+## <a name="introduction-to-customization"></a>Introdução à personalização
+Os controles de contêiner (como o ListViewItem e o GridViewItem) são compostos por duas partes importantes que são combinadas para criar os elementos visuais finais mostrados para um item: *modelo de dados* e o *modelo de controle*.
 
 - **Modelo de dados** – atribua um [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) à propriedade [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) da exibição de lista para especificar como itens de dados individuais são mostrados.
 - **Modelo de controle** – O modelo de controle fornece a parte da visualização do item pela qual a estrutura é responsável, como estados visuais. Você pode usar a propriedade [ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para modificar o modelo de controle. Normalmente, você faz isso para modificar as cores da exibição de lista para combinar com sua marca ou para alterar a forma como os itens selecionados são mostrados.
@@ -72,6 +79,9 @@ Este é o XAML que cria este item. Vamos explicar os modelos mais tarde.
     <x:String>Item 5</x:String>
 </ListView>
 ```
+
+> [!IMPORTANT]
+> Modelos de dados e de controle são usados para personalizar o estilo de muitos controles diferentes do ListView e do GridView. Eles incluem controles com seu próprio estilo interno, como FlipView, e controles de criação personalizada, como o ItemsRepeater. Embora o exemplo abaixo seja específico do ListView/GridView, os conceitos podem ser aplicados a muitos outros controles. 
  
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -177,7 +187,7 @@ Aqui, você define um DataTemplate que mostra um elemento [Rectangle](https://do
 > Ao usar a [extensão de marcação x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) em um DataTemplate, você precisa especificar o DataType (`x:DataType`) no DataTemplate.
 
 **XAML**
-```XAML
+```xaml
 <ListView x:Name="colorsListView">
     <ListView.ItemTemplate>
         <DataTemplate x:DataType="local:NamedColor">
@@ -207,6 +217,19 @@ Aqui, você define um DataTemplate que mostra um elemento [Rectangle](https://do
 Veja a seguir a aparência dos itens de dados quando são exibidos com este modelo de dados.
 
 ![Itens de exibição de lista com um modelo de dados](images/listview-data-template-0.png)
+
+> [!IMPORTANT]
+> Por padrão, o ListViewItems têm seu conteúdo alinhado à esquerda. O [HorizontalContentAlignmentProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment#Windows_UI_Xaml_Controls_Control_HorizontalContentAlignment) dele, por exemplo, é definido como Left. Se você tiver vários elementos horizontalmente adjacentes dentro de um ListViewItem, como elementos empilhados horizontalmente ou colocados na mesma linha de grade, todos eles serão alinhados à esquerda e serão separados apenas por sua margem definida. 
+<br/><br/> Para ter elementos espalhados que preencham todo o corpo de um ListItem, é necessário definir o HorizontalContentAlignmentProperty como [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.horizontalalignment) usando um [Setter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter) dentro do seu ListView:
+
+```xaml
+<ListView.ItemContainerStyle>
+    <Style TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+</ListView.ItemContainerStyle>
+```
+
 
 Você pode querer mostrar os dados em uma GridView. Este é outro modelo de dados que mostra os dados de maneira mais adequada para um layout de grade. Desta vez, o modelo de dados é definido como um recurso em vez de ser embutido com o XAML da GridView.
 
@@ -281,6 +304,9 @@ Uma instância de cada elemento XAML em um modelo de dados é criada para cada i
  - Primeiro, o layout usa um único Grid. Você pode ter um Grid de uma coluna e colocar estes 3 TextBlocks em um StackPanel, mas em um modelo de dados que é criado muitas vezes, é preciso procurar formas de evitar a inserção de painéis de layout dentro de outros painéis de layout.
  - Segundo, você pode usar um controle Border para renderizar uma tela de fundo sem colocar de fato itens dentro do elemento Border. Um elemento Border pode ter apenas um elemento filho. Então, você precisa adicionar um painel de layout para hospedar os 3 elementos TextBlock dentro do elemento Border no XAML. Ao não tornar os TextBlocks filhos do elemento Border, você elimina a necessidade de um painel para conter os TextBlocks.
  - Por fim, você poderia colocar os TextBlocks dentro de um StackPanel e definir as propriedades da borda no StackPanel em vez de usar um elemento Border explícito. No entanto, o elemento Border é um controle mais leve do que um StackPanel. Então, ele tem menos impacto no desempenho quando renderizado muitas vezes.
+
+### <a name="using-different-layouts-for-different-items"></a>Usar diferentes layouts para diferentes itens
+
 
 ## <a name="control-template"></a>Modelo de controle
 O modelo de controle de um item contém os elementos visuais que exibem o estado, como seleção, posição do ponteiro e foco. Esses elementos visuais são renderizados acima ou abaixo do modelo de dados. Alguns dos elementos visuais padrão comuns desenhados pelo modelo de controle ListView são mostrados aqui.

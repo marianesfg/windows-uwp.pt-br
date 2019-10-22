@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 935d7f787d0cc23965c0fd51747b7687adb80a3f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4e92afd112ce7600bcfa650e0bb3bbeffabd7bd0
+ms.sourcegitcommit: f120968069702a7210756b508dabc4a1a8c20d53
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66468318"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72438221"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>Novidades no Windows 10 para desenvolvedores, build 18362
 
@@ -25,12 +25,12 @@ Recurso | Descrição
 :------ | :------
 AnimatedVisualPlayer | A API do [AnimatedVisualPlayer](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.animatedvisualplayer) hospeda e controla a reprodução de visuais animados em seu aplicativo. Essa API é usada para controlar e exibir o conteúdo, como visuais [Lottie](https://docs.microsoft.com/windows/communitytoolkit/animations/lottie), que permitem que você renderize animações de efeitos do Adobe AfterEffects nativamente em seus aplicativos.
 CompactDensity | Habilitar [modo compacto](../design/style/spacing.md) em seu aplicativo habilita grupos de controles densos e com informações relevantes. Isso pode ajudar com a navegação de grandes quantidades de conteúdo, maximizando o conteúdo visível em uma página, ou auxiliar na navegação e interação quando o usuário está usando entrada por ponteiro.
-ItemsRepeater | Um controle [ItemsRepeater](../design/controls-and-patterns/items-repeater.md) pode criar uma experiência personalizada para exibir coleções a seus usuários. O ItemsRepeater não fornece uma experiência abrangente de usuário final nem uma interface do usuário padrão. Em vez disso, ele é um bloco de construção que você pode usar para criar suas próprias experiências baseadas em coleção e controles personalizados exclusivas.
+ItemsRepeater | Um controle [ItemsRepeater](../design/controls-and-patterns/items-repeater.md) pode criar uma experiência personalizada para exibir coleções aos seus usuários. O ItemsRepeater não fornece uma experiência abrangente de usuário final nem uma interface do usuário padrão. Em vez disso, ele é um bloco de construção que você pode usar para criar suas próprias experiências baseadas em coleção e controles personalizados exclusivas.
 Dica de ensino | Uma [dica de ensino](../design/controls-and-patterns/dialogs-and-flyouts/teaching-tip.md) é um submenu semipersistente e rico em conteúdo que fornece informações contextuais. Você pode usar esse controle para informar, lembrando e ensinando os usuários sobre recursos novos e importantes.
 Comandos de interface do usuário | Com [comandos em aplicativos UWP](../design/controls-and-patterns/commanding.md), use as classes [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) e [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) (juntamente com a interface ICommand) para compartilhar e gerenciar os comandos entre vários tipos de controles, independentemente do tipo de entrada e do dispositivo que está sendo usado.
 Biblioteca de Interface do Usuário do Windows | A versão mais recente oficial da biblioteca de interface do usuário do Windows – [WinUI 2.1](https://docs.microsoft.com/uwp/toolkits/winui/release-notes/winui-2.1) – fornece novos controles XAML vibrantes para seu aplicativo do Windows. As APIs da biblioteca WinUI eram executadas em versões anteriores do Windows 10, portanto você não precisa incluir verificações de versão ou de XAML condicional para dar suporte a usuários que não estejam no sistema operacional mais recente.
 Camada visual em aplicativos da área de trabalho | Agora você pode [usar as APIs de camada Visual da UWP em aplicativos da área de trabalho](../composition/visual-layer-in-desktop-apps.md). Essas APIs fornecem uma API de modo retido para elementos gráficos, efeitos e animações de alto desempenho e são a base para todas as interfaces do usuário em dispositivos Windows.
-Profundidade Z e sombra | Use [profundidade Z e sombra](../design/layout/depth-shadow.md) para criar elevação em seu aplicativo UWP. Esses novos recursos permitem que você torne a interface do usuário do seu aplicativo mais fácil de verificar, além de transmitir melhor aos seus usuários em que eles devem manter seu foco.
+Profundidade Z e sombra | Use [profundidade Z e sombra](../design/layout/depth-shadow.md) para criar elevação em seu aplicativo UWP. Esses novos recursos permitem que você torne a interface do usuário do seu aplicativo mais fácil de verificar, além de direcionar os seus usuários para o que eles devem se concentrar.
 
 ## <a name="develop-windows-apps"></a>Desenvolver aplicativos do Windows
 

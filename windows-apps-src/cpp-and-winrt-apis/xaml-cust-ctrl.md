@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, personalização, modelo, controle
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c0b2d8fb17b90bc55834f6bf2200b22af9352ef6
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 6acbd62a8fa75eefb39598dd5bbb6ec1270388c4
+ms.sourcegitcommit: cc9f5a16386be78c12821a975e43497a0693abba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270074"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578169"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles personalizados XAML (modelos) com C++/WinRT
 
@@ -22,6 +22,9 @@ Um dos recursos mais poderosos da Plataforma Universal do Windows (UWP) é a fle
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Criar um aplicativo em branco (BgLabelControlApp)
 Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto **Aplicativo em Branco (C++/WinRT)** e nomeie-o como *BgLabelControlApp*. Em uma seção posterior deste tópico, você será direcionado para compilar seu projeto (não compile até lá).
+
+> [!NOTE]
+> Para saber mais sobre como configurar o Visual Studio para desenvolvimento em C++/WinRT, incluindo instalação e uso da VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 Vamos criar uma nova classe para representar um controle personalizado (modelo). Criaremos e utilizaremos a classe dentro da mesma unidade de compilação. Entretanto, queremos poder instanciar essa classe pela marcação do XAML e, por isso, ela será uma classe de tempo de execução. E usaremos o C++/WinRT para criar e usar.
 
@@ -116,7 +119,7 @@ Neste passo a passo, nós não utilizaremos **OnLabelChanged**. Entretanto, ele 
 
 Em seu construtor, **BgLabelControl** define uma chave de estilo padrão para si mesmo. O que *é* um estilo padrão? Um controle personalizado (modelo) precisa ter um estilo padrão (com um modelo de controle padrão), que pode ser usado para renderizar a si mesmo no caso do consumidor do controle não definir um estilo e/ou modelo. Nesta seção, adicionaremos um arquivo de marcação ao projeto que contém nosso estilo padrão.
 
-No nó do projeto, crie uma nova pasta e nomeie-a como "Temas". Em `Themes`, adicione um novo item do tipo **Visual C++**   >  **XAML** > **Exibição XAML** e nomeie-o como "Generic.xaml". Os nomes de pasta e arquivo precisam ser dessa maneira para que a estrutura XAML localize o estilo padrão para um controle personalizado. Exclua o conteúdo padrão do `Generic.xaml` e cole na marcação abaixo.
+No nó do projeto, crie uma pasta (não um filtro, mas uma pasta) e dê a ela o nome "Temas". Em `Themes`, adicione um novo item do tipo **Visual C++**   >  **XAML** > **Exibição XAML** e nomeie-o como "Generic.xaml". Os nomes de pasta e arquivo precisam ser dessa maneira para que a estrutura XAML localize o estilo padrão para um controle personalizado. Exclua o conteúdo padrão do `Generic.xaml` e cole na marcação abaixo.
 
 ```xaml
 <!-- \Themes\Generic.xaml -->
