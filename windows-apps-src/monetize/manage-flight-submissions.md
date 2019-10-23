@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 813b1375b3bdba42f0568cb7d961f8108d5828a1
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 50596fdadae2ac4a0625687e7c8acaf985ccfaa7
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340418"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690373"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
@@ -41,17 +41,17 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 </thead>
 <tbody>
 <tr>
-<td align="left">OBTER</td>
+<td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="get-a-flight-submission.md">Obter um envio de vôo de pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">OBTER</td>
+<td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-a-flight-submission.md">Obter o status de um envio de vôo de pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
 <td align="left"><a href="create-a-flight-submission.md">Criar um novo envio de vôo de pacote</a></td>
 </tr>
@@ -61,7 +61,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="update-a-flight-submission.md">Atualizar um envio de vôo de pacote existente</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-a-flight-submission.md">Confirmar um envio de vôo de pacote novo ou atualizado</a></td>
 </tr>
@@ -86,13 +86,13 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 3. [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) executando o seguinte método na API de envio da Microsoft Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
     ```json
-    POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions
     ```
 
     O corpo da resposta contém um recurso [envio de versão de pré-lançamento](#flight-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os pacotes para o envio para o armazenamento de Blobs do Azure e os dados do novo envio (inclusive todas as listagens e informações de preço).
 
     > [!NOTE]
-    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações básicas sobre URIs SAS e seu uso com o armazenamento de BLOBs do Azure, consulte assinaturas de acesso [Shared, parte 1: Noções básicas sobre o modelo SAS @ no__t-0 e as assinaturas de acesso [Shared, parte 2: Crie e use uma SAS com armazenamento de BLOBs @ no__t-0.
+    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações contextuais sobre URIs SAS e o uso com o armazenamento do Blob do Azure, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) e [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Se você estiver adicionando novos pacotes para o envio, [prepare os pacotes](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
 
@@ -180,22 +180,22 @@ Depois que uma distribuição de pacote gradual for habilitada para um envio de 
 </thead>
 <tbody>
 <tr>
-<td align="left">OBTER</td>
+<td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
 <td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obter as informações de distribuição gradual de um envio de vôo de pacote</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Atualizar o percentual de distribuição gradual para um envio de vôo de pacote</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Interromper a distribuição gradual de um envio de vôo de pacote</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalizar a distribuição gradual de um envio de vôo de pacote</a></td>
 </tr>
@@ -255,18 +255,18 @@ Esse recurso descreve um envio do pacote de pré-lançamento.
 
 Esse recurso tem os valores a seguir.
 
-| Valor      | Tipo   | Descrição              |
+| Valor      | Digite   | Descrição              |
 |------------|--------|------------------------------|
-| id            | cadeia de caracteres  | A ID do envio.  |
-| flightId           | cadeia de caracteres  |  A ID do pacote de pré-lançamento ao qual o envio está associado.  |  
-| status           | cadeia de caracteres  | O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| id            | sequência  | A ID do envio.  |
+| flightId           | sequência  |  A ID do pacote de pré-lançamento ao qual o envio está associado.  |  
+| status           | sequência  | O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.  |
-| flightPackages           | array  | Contém [recursos do pacote da versão de pré-lançamento](#flight-package-object) que fornecem detalhes sobre cada pacote no envio.   |
+| flightPackages           | matriz  | Contém [recursos do pacote da versão de pré-lançamento](#flight-package-object) que fornecem detalhes sobre cada pacote no envio.   |
 | packageDeliveryOptions    | object  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.   |
-| fileUploadUrl           | cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](#create-a-package-flight-submission).  |
-| targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
-| notesForCertification           | cadeia de caracteres  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| fileUploadUrl           | sequência  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](#create-a-package-flight-submission).  |
+| targetPublishMode           | sequência  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | sequência  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
+| notesForCertification           | sequência  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
 <span id="status-details-object" />
 
@@ -274,7 +274,7 @@ Esse recurso tem os valores a seguir.
 
 Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição                   |
+| Valor           | Digite    | Descrição                   |
 |-----------------|---------|------|
 |  errors               |    object     |   Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do erro para o envio.   |     
 |  warnings               |   object      | Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do aviso para o envio.     |
@@ -287,10 +287,10 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurs
 
 Esse recurso contém informações adicionais sobre todos os erros ou avisos relacionados a um envio. Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição       |
+| Valor           | Digite    | Descrição       |
 |-----------------|---------|------|
-|  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso. |  
-|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  code               |    sequência     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso. |  
+|  details               |     sequência    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="certification-report-object" />
@@ -299,10 +299,10 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 
 Esse recurso dá acesso aos dados do relatório de certificação para um envio. Esse recurso tem os valores a seguir.
 
-| Valor           | type    | Descrição         |
+| Valor           | Digite    | Descrição         |
 |-----------------|---------|------|
-|     date            |    cadeia de caracteres     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
-|     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
+|     date            |    sequência     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     reportUrl            |    sequência     |  A URL na qual é possível acessar o relatório.    |
 
 
 <span id="flight-package-object" />
@@ -333,17 +333,17 @@ Esse recurso tem os valores a seguir.
 > [!NOTE]
 > Durante a chamada do método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md) somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Partner Center.
 
-| Valor           | type    | Descrição              |
+| Valor           | Digite    | Descrição              |
 |-----------------|---------|------|
-| fileName   |   cadeia de caracteres      |  O nome do pacote.    |  
-| fileStatus    | cadeia de caracteres    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  cadeia de caracteres   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Partner Center.   |     
-| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  cadeia de caracteres   |  A arquitetura do pacote de aplicativo (por exemplo, ARM).   |     
-| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  cadeia de caracteres   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | cadeia de caracteres    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |    
+| fileName   |   sequência      |  O nome do pacote.    |  
+| fileStatus    | sequência    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  sequência   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Partner Center.   |     
+| versão    |  sequência   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| architecture    |  sequência   |  A arquitetura do pacote de aplicativo (por exemplo, ARM).   |     
+| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| minimumDirectXVersion    |  sequência   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | sequência    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |    
 
 
 <span id="package-delivery-options-object" />
@@ -369,10 +369,10 @@ Esse recurso contém configurações da distribuição de pacote gradual e da at
 
 Esse recurso tem os valores a seguir.
 
-| Valor           | type    | Descrição        |
+| Valor           | Digite    | Descrição        |
 |-----------------|---------|------|
 | packageRollout   |   object      |   Um [recurso de distribuição de pacote](#package-rollout-object) que contém configurações da distribuição de pacote gradual para o envio.    |  
-| isMandatoryUpdate    | boolean    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
+| isMandatoryUpdate    | booliano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente atualizações de aplicativo. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  date   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, em formato ISO 8601 e fuso horário UTC.   |        
 
 <span id="package-rollout-object" />
@@ -381,19 +381,19 @@ Esse recurso tem os valores a seguir.
 
 Esse recurso contém [configurações de distribuição de pacote](#manage-gradual-package-rollout) gradual para o envio. Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição        |
+| Valor           | Digite    | Descrição        |
 |-----------------|---------|------|
-| isPackageRollout   |   boolean      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
-| packageRolloutPercentage    | float    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
-| packageRolloutStatus    |  cadeia de caracteres   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  cadeia de caracteres   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+| isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
+| packageRolloutStatus    |  sequência   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  sequência   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
 > [!NOTE]
 > Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Partner Center e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
 
 <span/>
 
-## <a name="enums"></a>Enums
+## <a name="enums"></a>Enumerações
 
 Esses métodos usam as enumerações a seguir.
 
@@ -417,7 +417,7 @@ Os códigos a seguir representam o status de um envio.
 | ListingOptOutWarning | O desenvolvedor removeu uma listagem de um envio anterior ou não incluiu informações de listagem que são compatíveis com o pacote. |
 | ListingOptInWarning  | O desenvolvedor adicionou uma listagem. |
 | UpdateOnlyWarning | O desenvolvedor está tentando inserir algo que só tem suporte para a atualização. |
-| Outros  | O envio está em um estado não reconhecido ou não categorizado. |
+| Outro  | O envio está em um estado não reconhecido ou não categorizado. |
 | PackageValidationWarning | O processo de validação do pacote resultou em um aviso. |
 
 <span/>
