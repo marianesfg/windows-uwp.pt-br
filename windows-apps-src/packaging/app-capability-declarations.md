@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: f12a83a2ad31972f344d95aa9dcfe1914eeb2b3b
-ms.sourcegitcommit: 82d202478ab4d3011c5ddd2e852958c34336830d
-ms.translationtype: HT
+ms.openlocfilehash: 167b388130ea02cc0613dc9638e93f0cde38eb46
+ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/22/2019
-ms.locfileid: "72715882"
+ms.locfileid: "72777274"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -59,6 +59,7 @@ Os recursos de uso geral são especificados usando elementos de **funcionalidade
 | **Reprodução de mídia em segundo plano** | A funcionalidade **backgroundMediaPlayback** altera o comportamento das APIs específicas para mídia como as classes [**MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer) e [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph) para habilitar a reprodução de mídia enquanto seu aplicativo está em segundo plano. Todos os streams de áudio ativos não serão silenciados, mas continuarão sendo audíveis quando houver a transição de um aplicativo para o segundo plano. Além disso, o tempo de vida do aplicativo será estendido automaticamente enquanto ocorre a reprodução.
 | **Sistema remoto** | A funcionalidade **remoteSystem** permite que os aplicativos tenham acesso a uma lista de dispositivos associados à Conta da Microsoft do usuário. O acesso à lista de dispositivos é necessário para realizar operações que persistem em dispositivos. Essa funcionalidade é necessária para acessar todos os membros a seguir.<ul><li>Namespace [Windows. System. RemoteSystems](https://docs.microsoft.com/uwp/api/windows.system.remotesystems)</li><li>Classe [Windows. System. RemoteLauncher](https://docs.microsoft.com/uwp/api/Windows.System.RemoteLauncher)</li><li>Método [AppServiceConnection. OpenRemoteAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection.openremoteasync)</li></ul> |
 | **Percepção espacial** | A funcionalidade **spatialPerception** dá acesso de forma programática aos dados de mapeamento espacial, fornecendo a aplicativos de realidade misturada informações sobre superfícies do espaço próximo ao usuário em regiões especificadas de aplicativos.  Declare a funcionalidade spatialPerception somente quando seu app usar essas malhas de superfície explicitamente, pois a funcionalidade não é necessária para que aplicativos de realidade misturada realizem uma renderização holográfica baseada na pose da cabeça do usuário. |
+| **Controle de mídia global** | O recurso **globalMediaControl** permite que os aplicativos acessem sessões de reprodução em todo o sistema que se integrou ao [**SystemMediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls) para fornecer informações de reprodução e permitir o controle remoto. Esse recurso é necessário para usar algumas APIs no namespace [**Windows. Media. Control**](https://docs.microsoft.com/uwp/api/windows.media.control) . Esse recurso é definido no elemento [uap7: Capability](/uwp/schemas/appxpackage/uapmanifestschema/element-uap7-capability) .  |
 
 ## <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
@@ -84,7 +85,7 @@ As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos 
 | **Comunicação serial** | A funcionalidade **serialcommunication** do dispositivo fornece acesso a APIs no namespace Windows.Devices.SerialCommunication, que permite que um aplicativo do Windows para se comunicar com um dispositivo que expõe uma porta serial ou alguma abstração de uma porta serial. Essa funcionalidade é necessária para usar as APIs no namespace [**Windows.Devices.SerialCommnication**](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication). |
 | **Rastreador ocular** | A funcionalidade **gazeInput** permite que os aplicativos detectem onde o usuário está olhando dentro dos limites do aplicativo quando um dispositivo de rastreamento ocular compatível está conectado. Esse recurso é necessário para usar algumas APIs no namespace [**Windows. Devices. Input. Preview**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview) . |
 | **GPIO, I2C, SPI e PWM** | A funcionalidade de dispositivo **lowLevel** fornece acesso a dispositivos GPIO, I2C, SPI e PWM. Esse recurso é necessário para usar as APIs nos seguintes namespaces: [**Windows. Devices. GPIO**](https://docs.microsoft.com/uwp/api/windows.devices.gpio), [**Windows. Devices. I2C**](https://docs.microsoft.com/uwp/api/windows.devices.i2c), [**Windows. Devices. SPI**](https://docs.microsoft.com/uwp/api/windows.devices.spi),[**Windows. Devices. PWM**](https://docs.microsoft.com/uwp/api/windows.devices.pwm).<br /><br />```<Capabilities><DeviceCapability Name="lowLevel"/></Capabilities>``` |
-| **Controle de mídia global** | O recurso **globalMediaControl** permite que os aplicativos acessem sessões de reprodução em todo o sistema que se integrou ao [**SystemMediaTransportControls**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls) para fornecer informações de reprodução e permitir o controle remoto. Esse recurso é necessário para usar algumas APIs no namespace [**Windows. Media. Control**](https://docs.microsoft.com/uwp/api/windows.media.control) . |
+
 
 <span id="special-and-restricted-capabilities" />
 
