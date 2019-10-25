@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: ed8d6572fb280b2cfecf1cf035d68a739c5bc92d
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 349326ba458999b2b1e299e8260d52d608d5af1f
+ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393518"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811643"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Processar bitmaps com OpenCV
 
@@ -29,25 +29,25 @@ Os exemplos neste artigo orientam você na criação de um código nativo Window
 
 ## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>Criar um componente auxiliar Windows Runtime para a interoperabilidade do OpenCV
 
-### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. Adicionar um novo código nativo Windows Runtime projeto de componente à sua solução
+### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. adicionar um novo código nativo Windows Runtime projeto de componente à sua solução
 
 1. Adicione um novo projeto à solução no Visual Studio ao clicar com o botão direito do mouse na sua solução no Gerenciador de Soluções e selecionar **Adicionar->Novo projeto**. 
 2. Na categoria **Visual++** , selecione **Componente do Tempo de Execução do Windows (Universal do Windows)** . Neste exemplo, digite um nome para o projeto "OpenCVBridge" e clique em **OK**. 
 3. Na caixa de diálogo **Novo projeto universal do Windows**, selecione a versão mínima e de destino do sistema operacional para seu aplicativo e clique em **OK**.
 4. Clique com botão direito do mouse no arquivo gerado automaticamente Class1.cpp no Gerenciador de Soluções e selecione **Remover**. Quando a caixa de diálogo de confirmação aparecer, escolha **Excluir**. Em seguida, exclua o arquivo de cabeçalho Class1.h.
-5. Clique com o botão direito do mouse no ícone do projeto OpenCVBridge e selecione **Adicionar-> classe...** . Na caixa de diálogo **Adicionar classe** , insira "OpenCVHelper" no campo **nome da classe** e clique em **OK**. O código será adicionado aos arquivos da classe criada em uma etapa posterior.
+5. Clique com botão direito dou mouse no ícone de projeto OpenCVBridge e selecione **Adicionar->Classe...** . Na caixa de diálogo **Adicionar classe**, digite "OpenCVHelper" no campo **Nome da classe** e, em seguida, clique em **OK**. O código será adicionado aos arquivos da classe criada em uma etapa posterior.
 
-### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Adicionar os pacotes NuGet do OpenCV ao seu projeto de componente
+### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Adicione os pacotes NuGet do OpenCV ao projeto do componente
 
 1. Clique com o botão direito do mouse no ícone do projeto OpenCVBridge no Explorador de Soluções e selecione **Gerenciar pacotes NuGet...**
 2. Quando a caixa de diálogo do Gerenciador de pacotes NuGet abrir, selecione a guia **Buscar** e digite "OpenCV.Win" na caixa de pesquisa.
 3. Selecione "OpenCV.Win.Core" e clique em **Instalar**. Na caixa de diálogo **Visualização**, clique em **OK**.
 4. Use o mesmo procedimento para instalar o pacote "OpenCV.Win.ImgProc".
 
-> [!NOTE]
-> OpenCV.Win.Core e OpenCV.Win. ImgProc não são atualizadas regularmente, mas ainda são recomendados para a criação de um OpenCVHelper conforme descrito nesta página.
+>[!NOTE]
+>OpenCV. win. Core e OpenCV. win. ImgProc não são atualizados regularmente e não passam pelas verificações de conformidade do repositório, portanto, esses pacotes são destinados apenas à experimentação.
 
-### <a name="3-implement-the-opencvhelper-class"></a>3. Implementar a classe OpenCVHelper
+### <a name="3-implement-the-opencvhelper-class"></a>3. Implemente a classe OpenCVHelper
 
 Cole o seguinte código no arquivo de cabeçalho OpenCVHelper.h. Esse código inclui arquivos de cabeçalho OpenCV para os pacotes *Core* e *ImgProc* instalados e declara três métodos que serão mostrados nas etapas a seguir.
 
@@ -82,7 +82,7 @@ Por fim, essa classe auxiliar de exemplo implementa um método de processamento 
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>Um exemplo simples de SoftwareBitmap OpenCV usando o componente auxiliar
-Agora que o componente OpenCVBridge foi criado, podemos criar um aplicativo C# simples que usa o método **desfocar** de OpenCV para modificar um **SoftwareBitmap**. Para acessar o componente de Windows Runtime de seu aplicativo UWP, você deve primeiro adicionar uma referência ao componente. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó **referências** em seu projeto de aplicativo UWP e selecione **Adicionar referência..** .. Na caixa de diálogo Gerenciador de referências, selecione **projetos – solução de >** . Marque a caixa ao lado do seu projeto OpenCVBridge e clique em **OK**.
+Agora que o componente OpenCVBridge foi criado, podemos criar um aplicativo C# simples que usa o método **desfocar** de OpenCV para modificar um **SoftwareBitmap**. Para acessar o componente de Windows Runtime de seu aplicativo UWP, você deve primeiro adicionar uma referência ao componente. No Gerenciador de Soluções, clique com botão direito do mouse no nó **Referências** em seu projeto de aplicativo UWP e selecione **Adicionar referência...** . Na caixa de diálogo Gerenciador de referências, selecione **Projetos -> Solução**. Marque a caixa ao lado do seu projeto OpenCVBridge e clique em **OK**.
 
 O código de exemplo abaixo permite que o usuário selecione um arquivo de imagem e, em seguida, usa **[BitmapDecoder](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)** para criar uma representação de **SoftwareBitmap** da imagem. Para obter mais informações sobre como trabalhar com **SoftwareBitmap**, consulte [Criar, editar e salvar imagens de bitmap](https://docs.microsoft.com/windows/uwp/audio-video-camera/imaging).
 

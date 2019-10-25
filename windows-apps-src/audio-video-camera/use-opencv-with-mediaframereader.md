@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: e5a1993ea4808cabf9f82640f03f0187d431f3d2
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: e8f4fd041eae30269e8b876c108151e4aae45d91
+ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393504"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811650"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Use a Biblioteca de visão do computador do código-fonte aberto (OpenCV) com MediaFrameReader
 
 Este artigo mostra como usar a Biblioteca de visão do computador do código-fonte aberto (OpenCV), uma biblioteca de código nativo que fornece diversos algoritmos de processamento de imagem, com a classe [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) que pode ler diversos quadros de mídia de várias fontes simultaneamente. O código de exemplo neste artigo orienta você pelas etapas de criação de um aplicativo simples que obtém os quadros de um sensor de cor, desfoca cada quadro usando a biblioteca OpenCV e depois exibe a imagem processada em um controle de **imagem** XAML. 
 
 >[!NOTE]
->OpenCV.Win.Core e OpenCV.Win. ImgProc não são atualizadas regularmente, mas ainda são recomendados para a criação de um OpenCVHelper conforme descrito nesta página.
+>OpenCV. win. Core e OpenCV. win. ImgProc não são atualizados regularmente e não passam pelas verificações de conformidade do repositório, portanto, esses pacotes são destinados apenas à experimentação.
 
 Este artigo se baseia no conteúdo de dois outros artigos:
 
