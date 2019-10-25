@@ -6,28 +6,25 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, interoperabilidade com xaml
 ms.localizationpriority: medium
-ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 174cb7f2608c1da89ebacc21e5032d03f7701f15
+ms.sourcegitcommit: 0179e2ccb59a14abc1676da0662e2def54af24ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321296"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796228"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidade entre DirectX e XAML
-
-
 
 Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos no seu jogo ou aplicativo UWP (Plataforma Universal do Windows). A combinação da XAML e do DirectX permite que você crie estruturas de interface de usuário flexíveis que interoperem com o seu conteúdo renderizado em DirectX e é particularmente útil para aplicativos com muitos gráficos. Este tópico explica a estrutura de um aplicativo UWP que usa DirectX e identifica os tipos importantes a serem usados na criação do seu aplicativo UWP para funcionar com o DirectX.
 
 Se seu app se concentrar principalmente na renderização 2D, convém usar biblioteca [Win2D](https://github.com/microsoft/win2d) do Windows Runtime. Essa biblioteca é mantida pela Microsoft e criada com base nas tecnologias principais de Direct2D. Ela simplifica bastante o padrão de uso para implementar os gráficos 2D e inclui abstrações úteis para algumas das técnicas descritas neste documento. Consulte a página de projeto para obter mais detalhes. Esse documento aborda orientações para desenvolvedores de aplicativos que optam por *não* usar Win2D.
 
-> **Observação**  APIs do DirectX não são definidas como tipos de tempo de execução do Windows, portanto, você normalmente usa o Visual C++ extensões de componentes (C++/CX) para desenvolver componentes UWP XAML que interoperam com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
-
- 
+> [!NOTE]
+> As APIs do DirectX não são definidas como tipos de Windows Runtime, mas você normalmente pode usar [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) para desenvolver componentes de UWP do XAML que interoperem com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
 
 ## <a name="xaml-and-directx"></a>XAML e DirectX
 
-DirectX fornece duas bibliotecas eficientes para gráficos 2D e 3D: Direct2D e Microsoft Direct3D. Embora a XAML dê suporte para primitivos e efeitos básicos 2D, muitos aplicativos, como de modelagem e jogos, precisam de suporte gráfico mais complexo. Para esses, você pode usar o Direct2D e o Direct3D para renderizar parte dos gráficos, ou todos eles, e usar a XAML para todo o resto.
+O DirectX fornece duas bibliotecas poderosas para gráficos 2D e 3D: Direct2D e Microsoft Direct3D. Embora a XAML dê suporte para primitivos e efeitos básicos 2D, muitos aplicativos, como de modelagem e jogos, precisam de suporte gráfico mais complexo. Para esses, você pode usar o Direct2D e o Direct3D para renderizar parte dos gráficos, ou todos eles, e usar a XAML para todo o resto.
 
 Se estiver implementando interoperabilidade personalizada entre XAML e DirectX, você precisa conhecer estes dois conceitos:
 
@@ -45,7 +42,6 @@ Depois de determinar como pretende usar o DirectX, você pode usar um destes tip
 -   Se você estiver usando o DirectX para apresentar gráficos atualizados em tempo real ou em uma situação na qual as atualizações devem vir em intervalos regulares de baixa latência, use a classe [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) para que você possa atualizar os gráficos sem sincronizar com o timer de atualização da estrutura da XAML. Esse tipo permite acessar diretamente a cadeia de troca do dispositivo gráfico ([IDXGISwapChain1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)) e a camada XAML sobre o destino da renderização. Esse tipo funciona muito bem para jogos e aplicativos do DirectX em tela inteira que necessitam de uma interface de usuário baseada em XAML. É necessário conhecer bem o DirectX para usar essa abordagem, incluindo as tecnologias Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D e Direct3D. Para saber mais, consulte [Guia de programação para Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews).
 
 ## <a name="surfaceimagesource"></a>SurfaceImageSource
-
 
 [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) fornece superfícies compartilhadas do Microsoft DirectX para desenhar e depois compõe os bits no conteúdo do aplicativo.
 
@@ -369,9 +365,8 @@ Veja a seguir o processo básico para criar e atualizar um objeto [VirtualSurfac
 Para assegurar um bom desempenho, há algumas limitações para o tipo [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel):
 
 -   Há, no máximo, quatro instâncias de [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) por app.
--   Você deve definir a cadeia de troca de DirectX altura e largura (em [DXGI\_PERMUTA\_cadeia\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) para as dimensões atuais do elemento de cadeia de troca. Se você não fizer isso, o conteúdo de exibição será dimensionado (usando **DXGI\_SCALING\_STRETCH**) para se ajustar.
--   Você deve definir o modo de dimensionamento da cadeia de troca do DirectX (na [DXGI\_PERMUTA\_cadeia\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) para **DXGI\_SCALING\_STRETCH**.
--   Não é possível definir o modo de alfa da cadeia de troca do DirectX (na [DXGI\_PERMUTA\_cadeia\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) para **DXGI\_alfa\_modo\_ PRÉ-MULTIPLICADOS**.
+-   Você deve definir a altura e a largura da cadeia de permuta do DirectX (em [DXGI\_trocar cadeia de\_\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) com as dimensões atuais do elemento da cadeia de permuta. Se você não fizer isso, o conteúdo de exibição será dimensionado (usando **DXGI\_dimensionamento de\_Stretch**) para caber.
+-   Você deve definir o modo de dimensionamento da cadeia de permuta do DirectX (em [dxgi\_trocar cadeia de\_\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) em **dxgi\_dimensionamento\_Stretch**.
 -   Você deve criar a cadeia de troca do DirectX chamando [IDXGIFactory2::CreateSwapChainForComposition](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition).
 
 Atualize o [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) com base nas necessidades do seu aplicativo, e não as atualizações da estrutura do XAML. Se você precisar sincronizar as atualizações de **SwapChainPanel** com as da estrutura da XAML, registre-se no evento [Windows::UI::Xaml::Media::CompositionTarget::Rendering](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositiontarget.rendering). Caso contrário, será necessário levar em consideração todos os problemas entre threads se você tentar atualizar os elementos XAML de um thread diferente daquele que atualiza **SwapChainPanel**.
@@ -465,12 +460,4 @@ Veja a seguir um processo básico para criar e atualizar um objeto [SwapChainPan
 * [VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource)
 * [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)
 * [ISwapChainPanelNative](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative)
-* [Guia de programação para o Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
-
- 
-
- 
-
-
-
-
+* [Guia de programação do Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
