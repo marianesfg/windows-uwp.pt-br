@@ -384,7 +384,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
   <tr>
     <td>Turquia *</td>
     <td>Turcomenistão</td>
-    <td>Ilhas Turcos e Caicos</td>
+    <td>Ilhas Turcas e Caicos</td>
     <td>Tuvalu</td>
   </tr>
   <tr>
@@ -709,7 +709,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Tokelau</td>
     <td>Tonga</td>
     <td>Turcomenistão</td>
-    <td>Ilhas Turcos e Caicos</td>
+    <td>Ilhas Turcas e Caicos</td>
   </tr>
   <tr>
     <td>Tuvalu</td>

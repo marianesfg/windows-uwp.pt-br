@@ -2,16 +2,16 @@
 title: Executar em segundo plano indefinidamente
 description: Use a funcionalidade extendedExecutionUnconstrained para executar uma tarefa em segundo plano ou a sessão de execução estendida em segundo plano indefinidamente.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: tarefa em segundo plano, estendido de execução, recursos, limites, tarefa em segundo plano
+keywords: tarefa em segundo plano, execução estendida, recursos, limites, tarefa em segundo plano
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: faac1d8d47ddcff4e5ec32d35f2e46bab7a3f4aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dee95e02e43f3a541bd332f5150765ca76bb0955
+ms.sourcegitcommit: 234dce5fb67e435ae14eb0052d94ab01611ac5e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630241"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72822449"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Executar em segundo plano indefinidamente
 
@@ -27,34 +27,34 @@ Se você estiver desenvolvendo um aplicativo que não se destina a ser enviado p
 
 A funcionalidade `extendedExecutionUnconstrained` é adicionada como um recurso restrito no manifesto do aplicativo. Consulte [Declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para obter mais informações sobre recursos restritos.
 
-_Package. appxmanifest_
+_Package.appxmanifest_
 ```xml
 <Package ...>
 ...
-  <Capabilities>  
-    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
-  </Capabilities>  
+  <Capabilities>
+    <rescap:Capability Name="extendedExecutionUnconstrained"/>
+  </Capabilities>
 </Package>
 ```
 
 Quando você usar as funcionalidades `extendedExecutionUnconstrained`, [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) e [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason) são usadas em vez de [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) e [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason). O mesmo padrão para criar a sessão, definir membros e solicitar a extensão de forma assíncrona ainda se aplica: 
 
 ```cs
-var newSession = new ExtendedExecutionForegroundSession();  
-newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
-newSession.Description = "Long Running Processing";  
-newSession.Revoked += SessionRevoked;  
-ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
-switch (result)  
-{  
-    case ExtendedExecutionResult.Allowed:  
-        DoLongRunningWork();  
-        break;  
+var newSession = new ExtendedExecutionForegroundSession();
+newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;
+newSession.Description = "Long Running Processing";
+newSession.Revoked += SessionRevoked;
+ExtendedExecutionResult result = await newSession.RequestExtensionAsync();
+switch (result)
+{
+    case ExtendedExecutionResult.Allowed:
+        DoLongRunningWork();
+        break;
 
-    default:  
-    case ExtendedExecutionResult.Denied:  
-        DoShortRunningWork();  
-        break;  
+    default:
+    case ExtendedExecutionResult.Denied:
+        DoShortRunningWork();
+        break;
 }
 ```
 
@@ -66,16 +66,16 @@ Registrar-se para o evento **Revoked** permitirá que seu aplicativo realize qua
 
 Na Plataforma Universal do Windows, tarefas em segundo plano são processos executados em segundo plano sem qualquer forma de interface do usuário. Tarefas em segundo plano geralmente podem ser executadas por um máximo de 25 segundos antes de serem canceladas. Algumas das tarefas de execução mais longas também têm uma verificação para garantir que a tarefa em segundo plano não está inutilizada ou usando memória. Na Atualização do Windows para Criadores (versão 1703), a funcionalidade restrita [extendedBackgroundTaskTime](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) foi introduzida para remover esses limites. A funcionalidade **extendedBackgroundTaskTime** é adicionada como um recurso restrito no arquivo do manifesto do aplicativo:
 
-_Package. appxmanifest_
+_Package.appxmanifest_
 ```xml
 <Package ...>
-   <Capabilities>  
-       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
-   </Capabilities>  
+  <Capabilities>
+    <rescap:Capability Name="extendedBackgroundTaskTime"/>
+  </Capabilities>
 </Package>
 ```
 
-Essa funcionalidade remove as limitações de tempo de execução e o watchdog de tarefa ociosa. Após o início de uma tarefa em segundo plano por um gatilho ou uma chamada de serviço de aplicativo, depois de receber um adiamento [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) fornecido pelo método **Executar**, ele pode ser executado indefinidamente. Se o aplicativo for definido como **Gerenciado pelo Windows**, em seguida, ele ainda pode ter uma cota de energia aplicada a si e a suas tarefas em segundo plano não serão ativadas quando a economia de bateria estiver ativa. Isso pode ser alterado com as configurações do sistema operacional. Mais informações estão disponíveis em [Otimizando atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
+Essa funcionalidade remove as limitações de tempo de execução e o watchdog de tarefa ociosa. Após o início de uma tarefa em segundo plano por um gatilho ou uma chamada de serviço de aplicativo, depois de receber um adiamento [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) fornecido pelo método **Executar**, ele pode ser executado indefinidamente. Se o aplicativo for definido como **Gerenciado pelo Windows**, em seguida, ele ainda pode ter uma cota de energia aplicada a si e a suas tarefas em segundo plano não serão ativadas quando a economia de bateria estiver ativa. Isso pode ser alterado com as configurações do so. Mais informações estão disponíveis em [Otimizando atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity).
 
 A Plataforma Universal do Windows monitora a execução de tarefas em segundo plano para garantir uma experiência de aplicativo em primeiro plano suave e com boa duração da bateria. No entanto, aplicativos pessoais e aplicativos de linha de negócios corporativos podem usar execução estendida e a funcionalidade **extendedBackgroundTaskTime** de criar aplicativos que serão executados, conforme necessário, independentemente da disponibilidade de recursos do dispositivo.
 
@@ -83,4 +83,4 @@ Lembre-se de que as funcionalidades **extendedExecutionUnconstrained** e **exten
 
 ## <a name="see-also"></a>Consulte também
 
-[Remover as restrições de recurso de tarefa em segundo plano](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
+[Remover restrições de recursos de tarefa em segundo plano](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)

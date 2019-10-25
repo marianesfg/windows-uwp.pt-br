@@ -8,7 +8,7 @@ keywords: windows 10, uwp, globalização, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: f4b7e914684d2e4d3d9c4c1f0cdc7e88d7b5b8fe
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57610041"
@@ -57,7 +57,7 @@ Esses são os valores para **NumeralSystem** suportados no Windows.
 | MymrShan | Shan Birmanês | U+1090, U+1091, U+1092, U+1093, U+1094, U+1095, U+1096, U+1097, U+1098, U+1099 |
 | Nkoo | Nko | U+07C0, U+07C1, U+07C2, U+07C3, U+07C4, U+07C5, U+07C6, U+07C7, U+07C8, U+07C9 |
 | Olck | Ol Chiki | U+1C50, U+1C51, U+1C52, U+1C53, U+1C54, U+1C55, U+1C56, U+1C57, U+1C58, U+1C59 |
-| Orya | odia | U+0B66, U+0B67, U+0B68, U+0B69, U+0B6A, U+0B6B, U+0B6C, U+0B6D, U+0B6E, U+0B6F |
+| Orya | Oriá | U+0B66, U+0B67, U+0B68, U+0B69, U+0B6A, U+0B6B, U+0B6C, U+0B6D, U+0B6E, U+0B6F |
 | Saur | Saurashtra | U+A8D0, U+A8D1, U+A8D2, U+A8D3, U+A8D4, U+A8D5, U+A8D6, U+A8D7, U+A8D8, U+A8D9 |
 | Sund | Sundanês | U+1BB0, U+1BB1, U+1BB2, U+1BB3, U+1BB4, U+1BB5, U+1BB6, U+1BB7, U+1BB8, U+1BB9 |
 | Talu | Tai Lue Novo | U+19D0, U+19D1, U+19D2, U+19D3, U+19D4, U+19D5, U+19D6, U+19D7, U+19D8, U+19D9 |

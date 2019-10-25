@@ -89,7 +89,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | nepalês | ne-NP | Nirmala UI |
 | Norueguês (Bokmal) | nb-NO | Segoe UI |
 | norueguês (Nynorsk) | nn-NO | Segoe UI |
-| odia | or-IN | Nirmala UI |
+| Oriá | or-IN | Nirmala UI |
 | Persa | fa-IR | Segoe UI |
 | Polonês | pl-PL | Segoe UI |
 | Português (Brasil) | pt-BR | Segoe UI |

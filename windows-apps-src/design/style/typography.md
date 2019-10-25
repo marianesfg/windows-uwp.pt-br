@@ -203,7 +203,7 @@ Use as [APIs de mapeamento de fonte LanguageFont](https://docs.microsoft.com/uwp
 <tr class="even">
 <td align="left" style="font-family: Nirmala UI;">Nirmala UI</td>
 <td align="left">Regular, semileve, negrito</td>
-<td align="left">Fonte de interface do usuário para scripts do Sul Asiático (bengali, devanágari, gujarati, gurmukhi, kannada, malaiala, odia, ol chiki, cingalês, sora sompeng, tâmil, télugo)</td>
+<td align="left">Fonte de interface do usuário para scripts do Sul Asiático (bengali, devanágari, gujarati, gurmukhi, kannada, malaiala, oriá, ol chiki, cingalês, sora sompeng, tâmil, télugo)</td>
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: SimSun;">SimSun</td>
