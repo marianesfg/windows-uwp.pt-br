@@ -46,7 +46,7 @@ Os objetos de associação criados por **{x:bind}** e **{Binding}** são amplame
 <object property="{x:Bind pathToFunction.functionName(functionParameter1, functionParameter2, ...), bindingProperties}" .../>
 ```
 
-| Prazo | DESCRIÇÃO |
+| Termo | DESCRIÇÃO |
 |------|-------------|
 | _propertyPath_ | Uma cadeia de caracteres que especifica o caminho da propriedade para a associação. Mais informações estão na seção [caminho da propriedade](#property-path) abaixo. |
 | _bindingproperties_ |
