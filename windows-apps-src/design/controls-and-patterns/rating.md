@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 348d563322baf03aabc0e30fd9b39ee11673f271
-ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
+ms.openlocfilehash: bb6cc29260f5891cda74879618b59bb3762b7f18
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039115"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690417"
 ---
 # <a name="rating-control"></a>Controle de classificação
 
@@ -86,7 +86,7 @@ Para fazer isso, proceda da seguinte maneira:
 
 ## <a name="additional-functionality"></a>Funcionalidade adicional
 
-O controle de classificações tem muitos recursos adicionais que podem ser usados. Detalhes para usar esses recursos podem ser encontrados em nossa documentação de referência do MSDN.
+O controle de classificações tem muitos recursos adicionais que podem ser usados. Detalhes para usar esses recursos podem ser encontrados em nossa documentação de referência.
 Esta é uma lista não abrangente de funcionalidade adicional:
 -   Ótimo desempenho da longa lista
 -   Dimensionamento compacto para cenários de interface do usuário restritos

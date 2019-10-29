@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dd6ac2760189578932fc22db89c7091f2e527ab
-ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
+ms.openlocfilehash: 06fadae3e33da3289726f45e7222617d51843015
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428632"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816684"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -27,7 +27,7 @@ Qualquer API do Windows Runtime que tem o potencial de demorar mais de 50 miliss
 - [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) e
 - [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
 
-Cada um desses tipos de operação assíncrona é projetado para um tipo correspondente no namespace C++/WinRT do **winrt::Windows::Foundation**. C++/WinRT também contém um struct de adaptador de espera interno. Você não o usa diretamente, mas, graças a esse struct, você pode escrever uma instrução `co_await` para aguardar de maneira cooperativa o resultado de qualquer função que retorna um desses tipos de operação assíncrona. Você pode criar suas próprias rotinas concomitantes que retornam esses tipos.
+Cada um desses tipos de operação assíncrona é projetado para um tipo correspondente no namespace C++/WinRT do **winrt::Windows::Foundation**. C++/WinRT também contém um struct de adaptador de espera interno. Você não o usa diretamente, mas, graças a esse struct, é possível escrever uma instrução `co_await` para aguardar de maneira cooperativa o resultado de qualquer função que retorne um desses tipos de operação assíncrona. Você pode criar suas próprias rotinas concomitantes que retornam esses tipos.
 
 Um exemplo de uma função do Windows assíncrona é [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que retorna um objeto de operação assíncrono do tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Vejamos algumas maneiras de&mdash;primeiro bloquear, depois desbloquear&mdash;usando o C++/WinRT para chamar uma API assim.
 
@@ -112,7 +112,7 @@ Você pode agregar uma corrotina em outras. Ou você pode chamar **get** para bl
 
 Pelo uso de delegados, também é possível manipular os eventos de progresso e/ou concluídos de ações assíncronas e operações. Para obter detalhes e exemplos de código, consulte [Tipos de delegado para ações assíncronas e operações](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
 
-## <a name="asychronously-return-a-windows-runtime-type"></a>O modo assíncrono retorna um tipo do Windows Runtime
+## <a name="asynchronously-return-a-windows-runtime-type"></a>O modo assíncrono retorna um tipo do Windows Runtime
 
 Neste exemplo, nós encapsulamos uma chamada para **RetrieveFeedAsync**, para um URI específico, para nos dar uma função **RetrieveBlogFeedAsync** que retorna de forma assíncrona um [**SyndicationFeed**](/uwp/api/windows.web.syndication.syndicationfeed).
 
@@ -153,7 +153,7 @@ int main()
 
 No exemplo acima, **RetrieveBlogFeedAsync** retorna um **IAsyncOperationWithProgress**, que tem progresso e valor retornado. Podemos realizar outros trabalhos enquanto **RetrieveBlogFeedAsync** está fazendo sua parte e recuperando o feed. Em seguida, chamamos **get** nesse objeto de operação assíncrona para bloquear, aguardamos sua conclusão e, em seguida, obtemos os resultados da operação.
 
-Se estiver retornando assincronamente um tipo Windows Runtime, será possível retornar um [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) ou [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Qualquer classe de tempo de execução primária ou de terceiros está qualificada, ou qualquer tipo que possa ser passado de ou para uma função do Windows Runtime (por exemplo, `int` ou **winrt::hstring**). O compilador ajudará com um erro "*precisa ser tipo WinRT*" se você tentar usar um desses tipos de operação assíncrona com um tipo que não for do Windows Runtime.
+Se estiver retornando assincronamente um tipo Windows Runtime, será possível retornar um [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) ou [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Qualquer classe de tempo de execução primária ou de terceiros está qualificada, ou qualquer tipo que possa ser passado de ou para uma função do Windows Runtime (por exemplo, `int` ou **winrt::hstring**). O compilador ajudará com um erro "*precisa ser tipo WinRT*" se você tentar usar um desses tipos de operação assíncrona com um tipo que não seja do Windows Runtime.
 
 Se uma corrotina não tiver então pelo menos uma declaração `co_await`, para se qualificar como corrotina, ela precisará ter pelo menos uma declaração `co_return` ou `co_yield`. Há casos em que a corrotina pode retornar um valor sem apresentar nenhuma assincronia e, portanto, sem bloquear nem alternar o contexto. Aqui está um exemplo que faz isso (a segunda vez e as vezes subsequentes em que é chamado) armazenando um valor em cache.
 
@@ -170,7 +170,7 @@ IAsyncOperation<winrt::hstring> ReadAsync()
 }
 ``` 
 
-## <a name="asychronously-return-a-non-windows-runtime-type"></a>Retorna um tipo não Windows Runtime assincronamente
+## <a name="asynchronously-return-a-non-windows-runtime-type"></a>O modo assíncrono não retorna um tipo do Windows Runtime
 
 Se estiver retornando assincronamente um tipo que *não* é um tipo do Windows Runtime, você deverá retornar uma PPL (biblioteca de padrões paralelos) [**concurrency::task**](/cpp/parallel/concrt/reference/task-class). Recomendamos **concurrency::task** porque ela oferece melhor desempenho (e melhor compatibilidade no futuro) que **std::future**.
 

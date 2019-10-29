@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 9484b61aae91ae426efb1963cd37ebf276ef7c6c
-ms.sourcegitcommit: f8634aad3a3675c2f0eac62f56df3def4285a7b0
+ms.openlocfilehash: 4a671a319be49e07d3a8fcdacb569c4ae76e299b
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720441"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816674"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidade e assincronia mais avançadas com o C++/WinRT
 
@@ -359,7 +359,7 @@ A expressão `co_await` retorna `true`, indicando que a retomada ocorrerá no th
 
 Portanto, você tem muita potência a seu alcance quando combina o C++/WinRT com corrotinas e, principalmente, ao realizar um desenvolvimento de aplicativo de desktop no estilo Petzold tradicional.
 
-## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>Cancelar uma operação assíncrona e retornos de chamada de cancelamento
+## <a name="canceling-an-asynchronous-operation-and-cancellation-callbacks"></a>Retornos de chamada de cancelamento e cancelar uma operação assíncrona
 
 Recursos do Windows Runtime para a programação assíncrona permitem que você cancele uma operação ou ação assíncrona em andamento. Aqui está um exemplo que chama [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para recuperar uma coleção potencialmente grande de arquivos e armazena o objeto da operação assíncrona resultante em um membro de dados. O usuário tem a opção de cancelar a operação.
 

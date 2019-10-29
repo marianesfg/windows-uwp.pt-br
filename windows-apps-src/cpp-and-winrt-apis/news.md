@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, novidades, o que há, de novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fb869f4705210ab1fec28186b377ad68068b5877
-ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+ms.openlocfilehash: 525110a09c56f48f9f9ce3d2521c98e2297a8372
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71329579"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816707"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -283,7 +283,7 @@ A tabela a seguir contém as novidades e as alterações ao C++/WinRT no SDK do 
 | O formato de sistema de projeto do Visual Studio foi alterado. | Confira [Como redirecionar seu projeto do C++/WinRT para uma versão posterior do SDK do Windows](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk) abaixo. |
 | Há novas funções e classes base para ajudá-lo a passar um objeto de coleção para uma função do Windows Runtime ou para implementar seus próprios tipos de coleção e propriedades de coleção. | Veja [Coleções com C++/WinRT](collections.md). |
 | Você pode usar a extensão de marcação [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) com suas classes de tempo de execução C++/WinRT. | Para mais informações e exemplos de código, veja [Visão geral de associação de dados](/windows/uwp/data-binding/data-binding-quickstart). |
-| O suporte ao cancelamento de uma rotina combinada permite que você registre um retorno de chamada de cancelamento. | Para obter mais informações e exemplos de código, veja [Como cancelar uma operação assíncrona e retornos de chamada de cancelamento](concurrency-2.md#canceling-an-asychronous-operation-and-cancellation-callbacks). |
+| O suporte ao cancelamento de uma rotina combinada permite que você registre um retorno de chamada de cancelamento. | Para obter mais informações e exemplos de código, confira [Retornos de chamada de cancelamento e cancelar uma operação assíncrona](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks). |
 | Ao criar um delegado que aponta para uma função de membro, você pode estabelecer uma referência forte ou fraca ao objeto atual (em vez de um ponteiro *this* bruto) no ponto em que o manipulador é registrado. | Para obter mais informações e exemplos de código, veja a subseção **Se você usar uma função de membro como delegado** na seção [Acessar com segurança o ponteiro *this* com um delegado de manipulação de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
 | Foram corrigidos os bugs revelados pela conformidade aprimorada do Visual Studio com o padrão C++. A cadeia de ferramentas do LLVM e Clang também é mais bem utilizada para validar a conformidade com os padrões C++/WinRT. | Você não encontrará o problema descrito em [Por que meu novo projeto não é compilado? Estou usando o Visual Studio 2017 (versão 15.8.0 ou superior) e a versão 17134 do SDK](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
 
