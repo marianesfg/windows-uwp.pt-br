@@ -5,12 +5,12 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: aba44cec7081d05f66e90b2540f0e9609b87ab83
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a2fa7e107d890a5be7c8d27af03289b839ec3c09
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596871"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73052007"
 ---
 # <a name="pointofservice-device-objects"></a>Objetos de dispositivo do PointOfService
 
@@ -41,10 +41,10 @@ Antes do Windows 8, os aplicativos tinham um ciclo de vida simples. Os aplicativ
 
 O Windows 8 introduziu um novo modelo de aplicativo com os aplicativos UWP. Em um nível alto, um novo estado suspenso foi adicionado. Um aplicativo UWP é suspenso assim que o usuário minimiza ou alterna para outro aplicativo. Isso significa que os threads do aplicativo param, o aplicativo é deixado na memória exceto quando o sistema operacional precisa solicitar recursos, e qualquer objeto de dispositivo representando periféricos do PointOfService é fechado automaticamente para permitir que outros aplicativos acessem os periféricos. Quando o usuário alterna para o aplicativo, é possível restaurá-lo rapidamente para um estado de execução e restaurar conexões de periféricos do PointOfService desde que ainda estão disponíveis ao retomar.
 
-Você pode detectar quando um objeto é fechado por qualquer motivo com um identificador de evento <DeviceObject>.Closed e, em seguida, anotar a ID do dispositivo para restabelecer a conexão no futuro.   Como alternativa, você pode escolher processar isso em uma notificação de suspensão do aplicativo para salvar a ID do dispositivo para estabelecer novamente as conexões do dispositivo em uma notificação de Retomada do aplicativo.  Certifique-se de não duplicar os identificadores de eventos e ações para o objeto de dispositivo em <DeviceObject>.Closed e Suspensão do aplicativo.
+Você pode detectar quando um objeto é fechado por qualquer motivo com um \<deviceobject\>. Manipulador de eventos fechado anote a ID do dispositivo para restabelecer a conexão no futuro.   Como alternativa, você pode escolher processar isso em uma notificação de suspensão do aplicativo para salvar a ID do dispositivo para estabelecer novamente as conexões do dispositivo em uma notificação de Retomada do aplicativo.  Certifique-se de não dobrar os manipuladores de eventos e as ações duplicadas para o objeto de dispositivo na\>\<deviceobject. Fechado e suspensão de aplicativo.
 
 > [!TIP]
 > Consulte os tópicos a seguir para obter mais informações sobre o ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10:
-> - [Ciclo de vida de aplicativo Windows 10 Universal Windows Platform (UWP)](../launch-resume/app-lifecycle.md)
-> - [Lidar com a suspensão de aplicativos](../launch-resume/suspend-an-app.md)
+> - [Ciclo de vida do aplicativo Windows 10 Plataforma Universal do Windows (UWP)](../launch-resume/app-lifecycle.md)
+> - [Lidar com a suspensão do aplicativo](../launch-resume/suspend-an-app.md)
 > - [Tratar a retomada do aplicativo](../launch-resume/resume-an-app.md)

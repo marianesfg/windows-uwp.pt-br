@@ -8,24 +8,24 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 778aa04861fa7704f4235763a429bb77f92a8b65
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1aa57af7e51fd7d6ef151909eccc444da2c44707
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062051"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
 
 
 Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala.
 
-> **APIs importantes**: [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages), [ **SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages), [ **idioma**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language)
+> **APIs importantes**: [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages), [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages), [**Language**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language)
 
 
 Aqui, enumeramos os idiomas instalados em um sistema, identificamos qual é o idioma padrão e selecionamos um idioma diferente para o reconhecimento.
 
-**Pré-requisitos:**
+**Pré-requisitos**
 
 Este tópico complementa [Reconhecimento de fala](speech-recognition.md).
 
@@ -56,15 +56,15 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
 
-**Observação**  uma reinicialização é necessária depois que um novo pacote de idiomas está instalado. Uma exceção com código de erro SPERR\_não\_encontrado (0x8004503a) é gerado se o idioma especificado não tem suporte ou não terminou de instalar.
+**Observação**  uma reinicialização é necessária após A instalação de um novo pacote de idiomas. Uma exceção com o código de erro SPERR\_não\_encontrada (0x8004503a) será gerada se o idioma especificado não tiver suporte ou se a instalação não tiver sido concluída.
 
  
 
 Determine os idiomas com suporte em um dispositivo verificando uma das duas propriedades estáticas da classe [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer):
 
--   [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages)— a coleção de [ **idioma** ](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) objetos usados com o ditado predefinido e gramáticas de pesquisa da web.
+-   [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages)— a coleção de objetos de [**linguagem**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) usada com ditado predefinido e gramáticas de pesquisa na Web.
 
--   [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages)— a coleção de [ **idioma** ](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) objetos usados com uma restrição de lista ou um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
+-   [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages)— a coleção de objetos de [**linguagem**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) usada com uma restrição de lista ou um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
 
 ## <a name="specify-a-language"></a>Especificar um idioma
 
@@ -75,7 +75,7 @@ Aqui, especificamos "en-US" como o idioma de reconhecimento.
 
 
 ```CSharp
-var language = new Windows.Globalization.Language(“en-US”); 
+var language = new Windows.Globalization.Language("en-US"); 
 var recognizer = new SpeechRecognizer(language); 
 ```
 
@@ -86,7 +86,7 @@ Uma restrição de tópico pode ser configurada adicionando uma [**SpeechRecogni
 
 Uma restrição de lista é configurada adicionando uma [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) à coleção [**Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) do [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) e chamando [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync). Você não pode especificar o idioma de uma lista personalizada diretamente. Em vez disso, a lista será processada usando o idioma do reconhecedor.
 
-Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. [**CompileConstraintsAsync** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync) falha com um [ **SpeechRecognitionResultStatus** ](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** se o reconhecedor não foi inicializado para o mesmo idioma que a marcação SRGS.
+Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync) falhará com um [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** se o reconhecedor não for inicializado para o mesmo idioma da marcação SRGS.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -100,7 +100,7 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 **Exemplos**
 
-* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

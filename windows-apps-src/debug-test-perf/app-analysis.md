@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 138bb762b9b1d424ac8f9c2148b43f230f096458
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362424"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062759"
 ---
 # <a name="app-analysis-overview"></a>Visão geral da análise de aplicativo
 
@@ -38,7 +38,7 @@ O aplicativo está usando SetSource() em vez de SetSourceAsync(). Você sempre d
 
 O BitmapImage está conectado à árvore XAML ativa após a configuração do conteúdo com SetSourceAsync ou UriSource. Você sempre deve anexar uma [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) à árvore ativa antes de definir a origem. Sempre que um elemento de imagem ou um pincel for especificado na marcação, esse será automaticamente o caso. Exemplos são fornecidos abaixo. 
 
-**Exemplos de árvore em tempo real**
+**Exemplos de árvore ao vivo**
 
 Exemplo 1 (bom) - Uniform Resource Identifier (URI) especificado em marcação.
 
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Exemplo 2 de lógica (ruim) — definindo o UriSource de BitmapImage antes de conectar-se à árvore.
+Exemplo 2 code-behind (inadequado) — definindo o UriSource da BitmapImage antes de conectá-lo à árvore.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -119,7 +119,7 @@ Defina um tamanho de decodificação explícito para criar uma versão da imagem
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos recolhidos em tempo de carregamento
 
-Um padrão comum em aplicativos é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
+Um padrão comum em apps é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
 
 Isso inclui os casos em que um booleano para conversor de visibilidade é usado para ocultar itens até um momento posterior.
 
@@ -209,7 +209,7 @@ Use X:Key em vez de X:Name quando não estiver fazendo referência a recursos a 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>O controle de coletas está usando um painel sem virtualização
 
-Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos do ListView são gerados somente quando usar um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
+Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos ListView serão gerados somente quando você estiver usando um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
 
 A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer para melhorar o desempenho da coleta. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. ListView e GridView (e outros controles derivados de ItemsControl padrão) executam a virtualização de interface do usuário para você. Quando os itens estão quase sendo rolados para a exibição (a algumas páginas distância), a estrutura gera a interface do usuário para os itens e os armazena em cache. Quando torna-se improvável que os itens sejam mostrados novamente, a estrutura recupera a memória.
 
@@ -227,7 +227,7 @@ Você está usando um painel que não oferece suporte à virtualização.
 
 Use um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel.
 
-## <a name="accessibility-uia-elements-with-no-name"></a>Acessibilidade: Elementos UIA sem nome
+## <a name="accessibility-uia-elements-with-no-name"></a>Acessibilidade: elementos UIA sem nome
 
 Em XAML, você pode fornecer um nome, definindo AutomationProperties.Name. Vários pares de automação fornecem um nome padrão para UIA se AutomationProperties.Name está definido. 
 
@@ -243,9 +243,9 @@ O nome UIA do elemento é nulo ou está em branco. Esta regra verifica o que o U
 
 Defina a propriedade AutomationProperties.Name no XAML do controle para uma cadeia de caracteres localizada apropriada.
 
-Às vezes, a correção de aplicativo não é fornecer um nome, e sim remover o elemento UIA de tudo, com exceção das árvores brutas. Você pode fazer isso no XAML, definindo AutomationProperties.AccessibilityView = “Raw”.
+Às vezes, a correção de aplicativo não é fornecer um nome, e sim remover o elemento UIA de tudo, com exceção das árvores brutas. Você pode fazer isso em XAML definindo `AutomationProperties.AccessibilityView = "Raw"`.
 
-## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Acessibilidade: Elementos UIA com o mesmo Controltype não devem ter o mesmo nome
+## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Acessibilidade: elementos UIA com o mesmo Controltype não devem ter o mesmo nome
 
 Dois elementos UIA com o mesmo pai UIA não devem ter o mesmo Nome e ControlType. Há problema em ter dois controles com o mesmo Nome que tenham ControlTypes diferentes. 
 

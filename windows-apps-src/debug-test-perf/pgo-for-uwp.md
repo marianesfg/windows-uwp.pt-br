@@ -1,15 +1,15 @@
 ---
 title: Execução da otimização guiada por perfil (PGO) em aplicativos da Plataforma Universal do Windows (UWP)
-description: Um guia passo a passo para a aplicação de Otimização Guiada por perfil (PGO) para aplicativos da plataforma Universal do Windows (UWP).
+description: Um guia passo a passo para a aplicação de PGO (otimização guiada por perfil) a aplicativos de Plataforma Universal do Windows (UWP).
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
-ms.openlocfilehash: 8c19ea1701c6b5e82e66a54223620dace57de4b6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c784812d2e070aba0857cb84e5729b1426717b8d
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062374"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>Execução da otimização guiada por perfil em aplicativos da Plataforma Universal do Windows 
  
@@ -17,7 +17,7 @@ Este tópico apresenta um guia passo a passo para aplicar a otimização guiada 
 
 Este é um passo a passo básico da aplicação de PGO ao modelo de aplicativo (UWP) DirectX 11 padrão usando-se o Visual Studio 2015 Update 3.
  
-As capturas de tela em todo este guia baseiam-se o novo projeto a seguir: ![Caixa de diálogo Nova projeto](images/pgo-001.png)
+As capturas de tela em todo este guia são baseadas no novo projeto a seguir: ![caixa de diálogo novo projeto](images/pgo-001.png)
 
 Para aplicar PGO ao modelo de aplicativo DirectX 11:
 
@@ -25,11 +25,11 @@ Para aplicar PGO ao modelo de aplicativo DirectX 11:
  
  ![Janela App1](images/pgo-002.png)
  
-2. Verifique, nas propriedades do projeto (**Propriedades** > **C/C++** > **Otimização**), se você está compilando com o sinalizador /GL definido como **Otimização do Programa Inteiro** (isso talvez já esteja definido pela configuração).
+2. Verifique, nas propriedades do projeto (**Propriedades** > **C/C++**  > **Otimização**), se você está compilando com o sinalizador /GL definido como **Otimização do Programa Inteiro** (isso talvez já esteja definido pela configuração).
 
  ![Otimização do Programa Inteiro](images/pgo-003.png)
 
-3. Vá até as propriedades do vinculador (**Propriedades** > **Vinculador** > **Otimização**) e defina **Geração de Código Durante o Tempo de Vinculação** como **Otimização Guiada por Perfil - Instrumento (LTCG:PGInstrument)**.
+3. Vá até as propriedades do vinculador (**Propriedades** > **Vinculador** > **Otimização**) e defina **Geração de Código Durante o Tempo de Vinculação** como **Otimização Guiada por Perfil - Instrumento (LTCG:PGInstrument)** .
  
  ![Geração de Código Durante o Tempo de Vinculação](images/pgo-004.png)
 
@@ -64,15 +64,15 @@ Para aplicar PGO ao modelo de aplicativo DirectX 11:
   É uma boa ideia colocar os arquivos .pgc no local da compilação onde o .pgd está localizado e nomear os arquivos como `<PGDName>!<RunIdentifier>.pgc`. Para esse exemplo, isso significava:
  
   ```
-  pgosweep.exe App1.exe “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc”
+  pgosweep.exe App1.exe "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc"
   ```
  
-  Também poderia ser ainda mais coletando `App1!CoreScenario.pgc`, `App1!UseCase5.pgc`, etc. Se os arquivos. PGC forem nomeados dessa forma e o local de saída da compilação junto com o PGD, eles serão automaticamente mesclados ao vincular na etapa 9.
+  Uma coleta adicional também pode ser `App1!CoreScenario.pgc`, `App1!UseCase5.pgc` etc. Se os arquivos .pgc forem nomeados dessa maneira e, no local de saída da compilação com o .pgd, eles serão automaticamente mesclados durante o vínculo na etapa 9.
  
-8. OPCIONAL: Por padrão, todos os arquivos. PGC nomeados como especificado na etapa 7 e colocado ao lado de PGD serão mesclados quando vinculação e igualmente ponderados, mas você também pode ter maior controle em particular como execuções são ponderadas. Para isso, você usará a ferramenta **pgomgr.exe** também localizada na mesma pasta onde encontrou inicialmente a cópia de `pgort140.dll`. Por exemplo, para mesclar a execução `CoreScenario` com 3 vezes a prioridade de outras execuções, posso usar o seguinte comando:
+8. OPCIONAL: Por padrão, todos os arquivos .pgc nomeados conforme especificado na etapa 7 e colocados ao lado do .pgd serão mesclados durante a vinculação e ponderados igualmente, mas você também pode ter mais controle sobre como determinadas execuções são ponderadas. Para isso, você usará a ferramenta **pgomgr.exe** também localizada na mesma pasta onde encontrou inicialmente a cópia de `pgort140.dll`. Por exemplo, para mesclar a execução `CoreScenario` com 3 vezes a prioridade de outras execuções, posso usar o seguinte comando:
  
  ```
- pgomgr.exe -merge:3 “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!CoreScenario.pgc” “C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1.pgd”
+ pgomgr.exe -merge:3 "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!CoreScenario.pgc" "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1.pgd"
  ```
  
 9. Depois que você tiver gerado um ou mais arquivos .pgc e os colocado com o .pgd ou os mesclado manualmente (etapa 8), poderemos usar vinculador para criar a compilação otimizada final. Volte para as propriedades do vinculador (**Propriedades** > **Vinculador** > **Otimização**) e defina **Geração de Código Durante o Tempo de Vinculação** como **Otimização Guiada Por Perfil - Otimização (LTCG:PGOptimize)** e verifique se **Banco de Dados Guiado por Perfil** está apontando para o .pgd que você deseja usar (se você não tiver alterado isso, tudo estará em ordem).

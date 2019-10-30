@@ -1,21 +1,21 @@
 ---
-Description: Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app.
+Description: Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do aplicativo.
 title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f199d70fc9194f211533820a7b23e20de929752d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7564060e28d3e78608c6f30b1400179087db2b86
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061847"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
-Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app. Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
+Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do aplicativo. Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
 
 ## <a name="common-features-of-the-uri-schemes"></a>Recursos comuns dos esquemas de URI
 
@@ -112,7 +112,7 @@ O URI acima é realmente capaz de recuperar um arquivo no conjunto de aplicativo
 
 O componente de caminho de `ms-appx(-web)` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, quando o sistema de arquivos subjacente pelo qual o recurso é acessado não faz diferenciação de maiúsculas e minúsculas, como para NTFS, a recuperação do recurso é feita sem diferenciar maiúsculas de minúsculas.
 
-O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma, para recuperar um arquivo denominado Hello#World.html, use essa URI.
+O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e "" "(o caractere de aspas duplas) devem ser codificados por percentual em um caminho para representar dados como nomes de arquivos ou pastas. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma, para recuperar um arquivo denominado Hello#World.html, use essa URI.
 
 ```xml
 ms-appx:///Hello%23World.html
@@ -185,7 +185,7 @@ ms-appdata:///roaming/
 
 O componente de caminho de `ms-appdata` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, quando o sistema de arquivos subjacente pelo qual o recurso é acessado não faz diferenciação de maiúsculas e minúsculas, como para NTFS, a recuperação do recurso é feita sem diferenciar maiúsculas de minúsculas.
 
-O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma, para recuperar um arquivo local denominado Hello#World.html, use essa URI.
+O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e "" "(o caractere de aspas duplas) devem ser codificados por percentual em um caminho para representar dados como nomes de arquivos ou pastas. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma, para recuperar um arquivo local denominado Hello#World.html, use essa URI.
 
 ```xml
 ms-appdata://local/Hello%23World.html
@@ -255,7 +255,7 @@ Para obter exemplos e mais informações, consulte [Localizar cadeias de caracte
 
 O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, a recuperação subjacente faz um [CompareStringOrdinal](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) com *ignoreCase* definido como `true`.
 
-O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Portanto, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos chamado `Hello#World.resw`, usar este URI.
+O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e "" "(o caractere de aspas duplas) devem ser codificados por percentual em um caminho para representar dados como nomes de arquivos ou pastas. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Portanto, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos chamado `Hello#World.resw`, use esse URI.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -269,10 +269,10 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Uniform Resource Identifier (URI): Sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Uniform Resource Identifier (URI): sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empacotando aplicativos](../packaging/index.md)
-* [Fazer referência a uma imagem ou outros ativos de código e marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
+* [Fazer referência a uma imagem ou a outro ativo da marcação XAML e do código](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Armazene e recupere configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
 * [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
 * [Sistema de Gerenciamento de Recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))
-* [Suporte à notificação de bloco e notificação do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [Suporte à notificação de bloco e do sistema para idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

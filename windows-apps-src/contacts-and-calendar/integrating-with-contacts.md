@@ -1,20 +1,20 @@
 ---
 description: Mostra como adicionar seu aplicativo ao lado de ações em um cartão de contato
 MSHAttr: PreferredLib:/library/windows/apps
-title: Conectar seu app a ações em um cartão de contato
+title: Conectar seu app a ações em um cartão de visita
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, contatos, cartão de contato, anotação
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 506f0d2c778a934c3f8861493f4a512a39fe66fc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8310b7c5b629d8d3a35a05b1124b140ebf35cf17
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061868"
 ---
-# <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar seu app a ações em um cartão de contato
+# <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar seu app a ações em um cartão de visita
 
 Seu aplicativo pode aparecer ao lado de ações em um cartão de contato ou um minicartão de contato. Os usuários podem escolher seu aplicativo para executar uma ação, como abrir uma página de perfil, fazer uma chamada ou enviar uma mensagem.
 
@@ -185,7 +185,7 @@ Substitua o método [Application.OnActivated](https://docs.microsoft.com/uwp/api
 
 No arquivo code-behind da página, substitua o método [Page.OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto). O cartão de contato passa o nome da operação e a ID do usuário para esse método.
 
-Para iniciar uma chamada de áudio ou vídeo, consulte este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls).
+Para iniciar uma chamada de vídeo ou áudio, veja este exemplo: [Exemplo de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Você encontrará a API completa no namespace [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls).
 
 Para facilitar a troca de mensagens, veja o namespace [Windows.ApplicationModel.Chat](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat).
 
@@ -204,7 +204,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
         var options = new Windows.System.LauncherOptions();
         options.DisplayApplicationPicker = true;
 
-        options.TargetApplicationPackageFamilyName = “ContosoApp”;
+        options.TargetApplicationPackageFamilyName = "ContosoApp";
 
         string launchString = args.uri.Scheme + ":" + args.uri.Query;
         var launchUri = new Uri(launchString);

@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd9071eaaea0dd88a3dad06de78eff82b29725ec
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 41f1c19f62482dc28bc067adb2e60b2c6fafa509
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820236"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061891"
 ---
 # <a name="my-people-notifications"></a>Notificações de Minhas Pessoas
 
@@ -21,7 +21,7 @@ As notificações de Minhas Pessoas oferecem uma nova maneira para os usuários 
 ## <a name="requirements"></a>Requisitos
 
 + Windows 10 e Microsoft Visual Studio 2019. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Conhecimento básico de C# ou de uma linguagem de programação similar orientada a objeto. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="how-it-works"></a>Como funciona
 
@@ -42,24 +42,24 @@ Como uma alternativa para as notificações genéricas do sistema, agora você p
 As notificações de Minhas Pessoas usam a estrutura de [notificação do sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md), mas exigem um nó de associação adicional no conteúdo da notificação do sistema. Essa segunda associação deve incluir o seguinte parâmetro:
 
 ```xml
-experienceType=”shoulderTap”
+experienceType="shoulderTap"
 ```
 
 Isso indica que a notificação do sistema deve ser tratada como uma notificação de Minhas Pessoas.
 
 O nó da imagem na associação deve incluir os seguintes parâmetros:
 
-+ **src**
++ **orig**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local.
 + **spritesheet-src**
     + O URI do ativo. Isso pode ser um URI HTTP/HTTPS da Web, um URI msappx ou um caminho para um arquivo local. Só é necessário para animações em spritesheet.
-+ **spritesheet-height**
++ **spritesheet-altura**
     + A altura do quadro (em pixels). Só é necessário para animações em spritesheet.
 + **spritesheet-fps**
     + Quadros por segundo (FPS). Só é necessário para animações em spritesheet. Somente valores de 1 a 120 têm suporte.
 + **spritesheet-startingFrame**
     + O número do quadro para iniciar a animação. Somente usado para animações em spritesheet, e o padrão será 0 se não especificado.
-+ **alt**
++ **pressionando**
     + Cadeia de texto usada para narração do leitor de tela.
 
 > [!NOTE]
@@ -134,7 +134,7 @@ XmlDocument xmlContent = new XmlDocument();
 xmlContent.LoadXml(xmlText);
 ```
 
-Depois, você pode usar esse código para criar e enviar a notificação do sistema:
+Depois, você pode usar este código para criar e enviar a notificação do sistema:
 
 ```CSharp
 ToastNotification notification = new ToastNotification(xmlContent);
@@ -151,7 +151,7 @@ Haverá casos em que uma notificação de Minhas Pessoas será exibida como uma 
 Se uma notificação de Minhas Pessoas fizer fallback para a notificação do sistema, a segunda associação específica de Minhas Pessoas será ignorada, e somente a primeira associação será usada para exibir a notificação do sistema. É por isso que é fundamental fornecer um conteúdo de fallback na primeira associação de notificação do sistema.
 
 ## <a name="see-also"></a>Consulte também
-+ [Meu exemplo de notificações de pessoas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
-+ [Adicionar pessoas Meu suporte](my-people-support.md)
-+ [Notificações do sistema adaptável](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
++ [Exemplo de notificações de minhas pessoas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
++ [Adicionando suporte a minhas pessoas](my-people-support.md)
++ [Notificações de sistema adaptável](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
 + [Classe ToastNotification](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)
