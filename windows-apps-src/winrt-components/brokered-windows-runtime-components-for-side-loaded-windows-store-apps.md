@@ -40,7 +40,7 @@ Este recurso foi criado em torno da arquitetura de aplicativo geral conhecida co
 
 **Componente da área de trabalho**
 
-O componente de desktop neste recurso é um novo tipo de aplicativo sendo apresentado como parte deste recurso. Este componente da área de trabalho só pode ser escrito em C \# e deve ter como destino o .NET 4,6 ou superior para Windows 10. O tipo de projeto é um híbrido entre o CLR que segmenta UWP porque o formato de comunicação entre processos é composto de tipos e classes UWP, e o componente da área de trabalho tem permissão para chamar todas as partes da biblioteca de classes do tempo de execução do .NET. O impacto sobre o projeto do Visual Studio será descrito em detalhes mais tarde. Essa configuração híbrida permite marshaling de tipos UWP entre o aplicativo criado nos componentes de desktop, além de permitir que o código CLR de desktop seja chamado dentro da implementação do componente de desktop.
+O componente de desktop neste recurso é um novo tipo de aplicativo sendo apresentado como parte deste recurso. Este componente da área de trabalho só pode ser escrito em C \# e deve ter como destino o .NET 4,6 ou superior para Windows 10. O tipo de projeto é um híbrido entre o CLR que segmenta UWP porque o formato de comunicação entre processos é composto de tipos e classes UWP, e o componente da área de trabalho tem permissão para chamar todas as partes da biblioteca de classes de runtime do .NET. O impacto sobre o projeto do Visual Studio será descrito em detalhes mais tarde. Essa configuração híbrida permite marshaling de tipos UWP entre o aplicativo criado nos componentes de desktop, além de permitir que o código CLR de desktop seja chamado dentro da implementação do componente de desktop.
 
 **Contrato**
 
@@ -193,7 +193,7 @@ As duas seções anteriores descrevem a declaração da classe e a mecânica do 
 Normalmente, um projeto do Visual Studio usando .NET utiliza um dos dois "perfis".
 Um é para o desktop (".NetFramework") e outro tem como objetivo a porção do aplicativo UWP do CLR (".NetCore"). Um componente de desktop neste recurso é um híbrido entre esses dois. Como resultado, a seção de referências é cuidadosamente construída para misturar esses dois perfis.
 
-Um projeto normal de aplicativo UWP não contém nenhuma referência explícita de projeto, porque toda a superfície da API do Tempo de Execução do Windows está implicitamente incluída.
+Um projeto normal de aplicativo UWP não contém nenhuma referência explícita de projeto, porque toda a superfície da API do Windows Runtime está implicitamente incluída.
 Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele começa a vida como um projeto "biblioteca de \\Class de área de trabalho clássica" e, portanto, é um projeto de desktop. Portanto, é preciso fazer referências explícitas à API do Tempo de Execução do Windows (através de referências aos arquivos **winmd**). Adicione referências adequadas conforme mostrado abaixo.
 
 ```XML
@@ -407,13 +407,13 @@ Normalmente, só outras referências entre projetos são feitas. No entanto, um 
 As referências acima são uma mistura cuidadosa de referências que são essenciais para o bom funcionamento desse servidor híbrido. O protocolo é abrir o arquivo .csproj (conforme descrito em como editar o projeto OutputType) e adicionar essas referências conforme necessário.
 
 Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico [práticas recomendadas para interoperabilidade com componentes de Windows Runtime (aplicativos UWP usandoC++ C \#/vb/e XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10)).
-A tarefa é criar uma dll de componente do Tempo de Execução do Windows que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Tempo de Execução do Windows:
+A tarefa é criar uma dll de componente do Windows Runtime que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Windows Runtime:
 
 -   Chamadas de método
 
--   Fontes de eventos do Tempo de Execução do Windows pelo componente de desktop
+-   Fontes de eventos do Windows Runtime pelo componente de desktop
 
--   Operações assíncronas do Tempo de Execução do Windows
+-   Operações assíncronas do Windows Runtime
 
 -   Retorno de matrizes de tipos básicos
 
@@ -424,7 +424,7 @@ Se exceções forem observadas devido a esse erro de configuração, elas podem 
 
 **Considerações de implementação do servidor**
 
-O servidor do Tempo de Execução do Windows de desktop pode ser pensado como com base em "tarefa" ou "trabalhador". Cada chamada para o servidor opera em um thread que não é da interface do usuário e todo o código deve ter reconhecimento de vários threads e ser seguro. Qual parte do aplicativo de sideload está chamando a funcionalidade do servidor também é importante. É fundamental evitar sempre a chamada de códigos de execução longa de qualquer thread de IU no aplicativo de sideload. Existem duas maneiras principais para realizar essa tarefa:
+O servidor do Windows Runtime de desktop pode ser pensado como com base em "tarefa" ou "trabalhador". Cada chamada para o servidor opera em um thread que não é da interface do usuário e todo o código deve ter reconhecimento de vários threads e ser seguro. Qual parte do aplicativo de sideload está chamando a funcionalidade do servidor também é importante. É fundamental evitar sempre a chamada de códigos de execução longa de qualquer thread de IU no aplicativo de sideload. Existem duas maneiras principais para realizar essa tarefa:
 
 1.  Se for uma chamada de funcionalidade do servidor a partir de um thread de IU, sempre use um padrão assíncrono na implementação e área de superfície pública do servidor.
 
@@ -435,13 +435,13 @@ O servidor do Tempo de Execução do Windows de desktop pode ser pensado como co
 Por causa da natureza de processo cruzado do modelo de aplicativo, chamadas para o servidor têm mais sobrecarga do que o código que é executado exclusivamente no processo. Normalmente é seguro chamar uma propriedade simples que retorna um valor na memória porque ele executará isso de forma rápida o suficiente e o bloqueio do thread de IU não é uma preocupação. No entanto, qualquer chamada que envolva E/S de qualquer tipo (incluindo todas as recuperações de banco de dados e manipulação de arquivos) potencialmente pode bloquear o thread de IU de chamada e fazer com que o aplicativo seja finalizado devido à ausência de resposta. Além disso, chamadas de propriedade em objetos são desencorajadas nesta arquitetura de aplicativo por motivos de desempenho.
 Isso é abordado de forma mais detalhada na seção a seguir.
 
-Um servidor corretamente implementado normalmente implementará chamadas feitas diretamente a partir de threads de interface do usuário pelo padrão assíncrono do Tempo de Execução do Windows. Isso pode ser implementado seguindo este padrão. Primeiro, a declaração (novamente, a partir do exemplo exibido):
+Um servidor corretamente implementado normalmente implementará chamadas feitas diretamente a partir de threads de interface do usuário pelo padrão assíncrono do Windows Runtime. Isso pode ser implementado seguindo este padrão. Primeiro, a declaração (novamente, a partir do exemplo exibido):
 
 ```csharp
 public IAsyncOperation<int> FindElementAsync(int input)
 ```
 
-Isso declara uma operação assíncrona do Tempo de Execução do Windows que retorna um número inteiro.
+Isso declara uma operação assíncrona do Windows Runtime que retorna um número inteiro.
 A implementação da operação assíncrona normalmente assume a forma:
 
 ```csharp
@@ -470,9 +470,9 @@ Os clientes desse método assíncrono podem aguardar essa operação como qualqu
 
 Como é normal que o cliente e o servidor sejam escritos pela mesma organização, uma prática de programação pode ser adotada para que todas as chamadas para o servidor sejam feitas por um thread de segundo plano no aplicativo de sideload. Uma chamada direta que coleta um ou mais lotes de dados do servidor pode ser feita a partir de um thread de segundo plano. Quando os resultados estão completamente recuperados, o lote de dados que está na memória no processo do aplicativo geralmente pode ser obtido diretamente do thread de IU. Os objetos C \# são naturalmente ágeis entre threads de segundo plano e threads de interface do usuário, portanto, são especialmente úteis para esse tipo de padrão de chamada.
 
-## <a name="creating-and-deploying-the-windows-runtime-proxy"></a>Criação e implantação do proxy do Tempo de Execução do Windows
+## <a name="creating-and-deploying-the-windows-runtime-proxy"></a>Criação e implantação do proxy do Windows Runtime
 
-Como a abordagem IPC envolve marshaling de interfaces do Tempo de Execução do Windows entre dois processos, um proxy e stub do Tempo de Execução do Windows registrado globalmente deve ser usado.
+Como a abordagem IPC envolve marshaling de interfaces do Windows Runtime entre dois processos, um proxy e stub do Windows Runtime registrado globalmente deve ser usado.
 
 **Criando o proxy no Visual Studio**
 

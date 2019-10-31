@@ -451,7 +451,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [SwapChainPan
     HRESULT hr = m_swapChain->Present(1, 0);
     ```
 
-    Os elementos XAML são atualizados quando o Tempo de execução Windows organiza/renderiza sinais lógicos de uma atualização.
+    Os elementos XAML são atualizados quando o Windows Runtime organiza/renderiza sinais lógicos de uma atualização.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

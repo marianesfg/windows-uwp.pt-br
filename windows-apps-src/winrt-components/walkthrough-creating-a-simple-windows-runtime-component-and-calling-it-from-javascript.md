@@ -24,7 +24,7 @@ Internamente, seus tipos de Windows Runtime podem usar qualquer funcionalidade .
 > [!NOTE]
 > Para obter mais informações, consulte a visão geral dos [componentes Windows Runtime com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [.net para UWP](/dotnet/api/index?view=dotnet-uwp-10.0).
 
-Externamente, os membros do seu tipo podem expor somente Windows Runtime tipos para seus parâmetros e valores de retorno. Quando você cria sua solução, o Visual Studio cria seu projeto .NET WRC e executa uma etapa de compilação que cria um arquivo de metadados do Windows (. winmd). Trata-se do componente do Tempo de Execução do Windows, que inclui o Visual Studio no aplicativo.
+Externamente, os membros do seu tipo podem expor somente Windows Runtime tipos para seus parâmetros e valores de retorno. Quando você cria sua solução, o Visual Studio cria seu projeto .NET WRC e executa uma etapa de compilação que cria um arquivo de metadados do Windows (. winmd). Trata-se do componente do Windows Runtime, que inclui o Visual Studio no aplicativo.
 
 > [!NOTE]
 > O .NET mapeia automaticamente alguns tipos .NET comumente usados, como tipos de dados primitivos e tipos de coleção, para seus equivalentes Windows Runtime. Esses tipos .NET podem ser usados na interface pública de um componente Windows Runtime e aparecerão para os usuários do componente como os tipos de Windows Runtime correspondentes. Consulte [Windows Runtime componentes com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -34,7 +34,7 @@ Externamente, os membros do seu tipo podem expor somente Windows Runtime tipos p
 - Windows 10
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
-## <a name="creating-a-simple-windows-runtime-class"></a>Criação de uma classe de Tempo de Execução do Windows simples
+## <a name="creating-a-simple-windows-runtime-class"></a>Criação de uma classe simples de Windows Runtime
 
 Esta seção cria um aplicativo UWP JavaScript e adiciona à solução um Visual Basic ou C# Windows Runtime projeto de componente. Ele mostra como definir um tipo de Windows Runtime, criar uma instância do tipo a partir do JavaScript e chamar membros estáticos e de instância. A exibição visual do aplicativo de exemplo é deliberadamente de baixa chave para manter o foco no componente.
 
@@ -73,7 +73,7 @@ Esta seção cria um aplicativo UWP JavaScript e adiciona à solução um Visual
 
 ## <a name="call-the-component-from-javascript"></a>Chamar o componente em JavaScript
 
-Para usar o tipo de Tempo de Execução do Windows em JavaScript, adicione o código a seguir na função anônima no arquivo default.js (na pasta js do projeto) que é fornecido pelo modelo do Visual Studio. Ele deve ficar depois do manipulador de eventos app.oncheckpoint e antes da chamada para app.start.
+Para usar o tipo de Windows Runtime em JavaScript, adicione o código a seguir na função anônima no arquivo default.js (na pasta js do projeto) que é fornecido pelo modelo do Visual Studio. Ele deve ficar depois do manipulador de eventos app.oncheckpoint e antes da chamada para app.start.
 
 ```javascript
 var ex;
@@ -96,7 +96,7 @@ function basics2() {
 }
 ```
 
-A primeira letra do nome de cada membro é alterada de maiúsculas para minúsculas. Essa transformação faz parte do suporte que o JavaScript oferece para habilitar o uso natural do Tempo de Execução do Windows. Namespaces e nomes de classe estão em Pascal. Os nomes de membro estão em camel, exceto nomes de evento, que estão todos em minúsculas. Consulte [Como usar o Tempo de Execução do Windows em JavaScript](/scripting/jswinrt/using-the-windows-runtime-in-javascript). As regras de uso de maiúsculas camel podem ser confusas. Uma série de letras maiúsculas iniciais normalmente é exibida em minúsculas, mas caso três letras maiúsculas sejam seguidas de uma letra minúscula, somente as duas primeiras letras são exibidas em minúsculas: por exemplo, um membro chamado IDStringKind é exibido como idStringKind. No Visual Studio, é possível compilar o projeto do componente do Tempo de Execução do Windows e usar IntelliSense no projeto de JavaScript para saber o uso de maiúsculas correto.
+A primeira letra do nome de cada membro é alterada de maiúsculas para minúsculas. Essa transformação faz parte do suporte que o JavaScript oferece para habilitar o uso natural do Windows Runtime. Namespaces e nomes de classe estão em Pascal. Os nomes de membro estão em camel, exceto nomes de evento, que estão todos em minúsculas. Consulte [Como usar o Tempo de Execução do Windows em JavaScript](/scripting/jswinrt/using-the-windows-runtime-in-javascript). As regras de uso de maiúsculas camel podem ser confusas. Uma série de letras maiúsculas iniciais normalmente é exibida em minúsculas, mas caso três letras maiúsculas sejam seguidas de uma letra minúscula, somente as duas primeiras letras são exibidas em minúsculas: por exemplo, um membro chamado IDStringKind é exibido como idStringKind. No Visual Studio, é possível compilar o projeto do componente do Windows Runtime e usar IntelliSense no projeto de JavaScript para saber o uso de maiúsculas correto.
 
 De maneira semelhante, o .NET oferece suporte para habilitar o uso natural do Windows Runtime em código gerenciado. Isso é discutido nas próximas seções deste artigo e nos artigos [Windows Runtime componentes com C# o Visual Basic e](creating-windows-runtime-components-in-csharp-and-visual-basic.md) [o suporte do .net para aplicativos UWP e o Windows Runtime](/dotnet/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime).
 
@@ -169,7 +169,7 @@ Antes de compilar, altere a plataforma de destino de todos os projetos para ARM,
 
 Para compilar e executar a solução, escolha a tecla F5. (Caso você receba uma mensagem de erro de tempo de execução informando que SampleComponent está indefinido, a referência para o projeto de biblioteca de classes não foi encontrada.)
 
-O Visual Studio primeiro compila a biblioteca de classes e, em seguida, executa uma tarefa MSBuild que executa [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) para criar o componente do Tempo de Execução do Windows. O componente está incluído em um arquivo .winmd que contém o código gerenciado e os metadados do Windows que descrevem o código. WinMdExp.exe gera mensagens de erro de compilação quando você escreve um código que é inválido em um componente do Tempo de Execução do Windows e as mensagens de erro são exibidas no Visual Studio IDE. O Visual Studio adiciona seu componente ao pacote do aplicativo (arquivo. AppX) para seu aplicativo UWP e gera o manifesto apropriado.
+O Visual Studio primeiro compila a biblioteca de classes e, em seguida, executa uma tarefa MSBuild que executa [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool) para criar o componente do Tempo de Execução do Windows. O componente está incluído em um arquivo .winmd que contém o código gerenciado e os metadados do Windows que descrevem o código. WinMdExp.exe gera mensagens de erro de compilação quando você escreve um código que é inválido em um componente do Windows Runtime e as mensagens de erro são exibidas no Visual Studio IDE. O Visual Studio adiciona seu componente ao pacote do aplicativo (arquivo. AppX) para seu aplicativo UWP e gera o manifesto apropriado.
 
 Escolha o botão Básico 1 para atribuir o valor de retorno do método GetAnswer estático à área de saída, criar uma instância da classe Example e exibir o valor da propriedade SampleProperty na área de saída. A saída é mostrada aqui:
 
@@ -184,9 +184,9 @@ Escolha o botão Básico 2 para incrementar o valor da propriedade SamplePropert
 
 Para interromper a depuração e fechar o aplicativo, alterne do aplicativo para o Visual Studio e escolha Shift+F5.
 
-## <a name="using-the-windows-runtime-from-javascript-and-managed-code"></a>Como usar o Tempo de Execução do Windows em JavaScript e código gerenciado
+## <a name="using-the-windows-runtime-from-javascript-and-managed-code"></a>Como usar o Windows Runtime em JavaScript e código gerenciado
 
-O Tempo de Execução do Windows pode ser chamado no JavaScript ou no código gerenciado. Os objetos do Tempo de Execução do Windows podem ser passados para a frente e para trás entre os dois, e os eventos podem ser manipulados de ambos os lados. No entanto, as maneiras de usar Windows Runtime tipos nos dois ambientes diferem em alguns detalhes, pois o JavaScript e o .NET dão suporte à Windows Runtime de maneira diferente. O exemplo a seguir demonstra essas diferenças usando a classe [Windows.Foundation.Collections.PropertySet](/uwp/api/windows.foundation.collections.propertyset). Neste exemplo, você cria uma instância da coleção PropertySet em código gerenciado e registra um manipulador de eventos para controlar alterações na coleção. Em seguida, você adiciona código JavaScript que obtém a coleção, registra o próprio manipulador de eventos e usa a coleção. Por fim, você adiciona um método que faz alterações na coleção do código gerenciado e mostra JavaScript manipulando uma exceção gerenciada.
+O Windows Runtime pode ser chamado no JavaScript ou no código gerenciado. Os objetos do Windows Runtime podem ser passados para a frente e para trás entre os dois, e os eventos podem ser manipulados de ambos os lados. No entanto, as maneiras de usar Windows Runtime tipos nos dois ambientes diferem em alguns detalhes, pois o JavaScript e o .NET dão suporte à Windows Runtime de maneira diferente. O exemplo a seguir demonstra essas diferenças usando a classe [Windows.Foundation.Collections.PropertySet](/uwp/api/windows.foundation.collections.propertyset). Neste exemplo, você cria uma instância da coleção PropertySet em código gerenciado e registra um manipulador de eventos para controlar alterações na coleção. Em seguida, você adiciona código JavaScript que obtém a coleção, registra o próprio manipulador de eventos e usa a coleção. Por fim, você adiciona um método que faz alterações na coleção do código gerenciado e mostra JavaScript manipulando uma exceção gerenciada.
 
 > **Importante**   In este exemplo, o evento está sendo acionado no thread da interface do usuário. Se disparar o evento em um thread em segundo plano, por exemplo, em uma chamada assíncrona, você precisará fazer um trabalho extra para JavaScript para manipular o evento. Para obter mais informações, consulte [gerando eventos em componentes Windows Runtime](raising-events-in-windows-runtime-components.md).
 
@@ -314,7 +314,7 @@ function onMapChanged(change) {
 }
 ```
 
-A maneira como você manipula eventos de Tempo de Execução do Windows em JavaScript é muito diferente da maneira como os manipula no código do .NET Framework. O manipulador de eventos JavaScript utiliza apenas um argumento. Quando você exibe esse objeto no depurador do Visual Studio, a primeira propriedade é o remetente. Os membros da interface de argumento do evento também são exibidos diretamente nesse objeto.
+A maneira como você manipula eventos de Windows Runtime em JavaScript é muito diferente da maneira como os manipula no código do .NET Framework. O manipulador de eventos JavaScript utiliza apenas um argumento. Quando você exibe esse objeto no depurador do Visual Studio, a primeira propriedade é o remetente. Os membros da interface de argumento do evento também são exibidos diretamente nesse objeto.
 
 Para executar o aplicativo, escolha a tecla F5. Caso a classe não seja selada, você receber a mensagem de erro, "Exporting unsealed type 'SampleComponent.Example' is not currently supported. Please mark it as sealed".
 
@@ -337,7 +337,7 @@ Para adicionar mais dois itens à coleção PropertySet do código gerenciado, a
 > End Sub
 > ```
 
-Esse código realça outra diferença na maneira como você usa tipos de Tempo de Execução do Windows nos dois ambientes. Se digitar esse código, você notará que o IntelliSense não mostra o método insert usado no código JavaScript. Em vez disso, ele mostra o método Add normalmente visto em coleções no .NET. Isso ocorre porque algumas interfaces de coleção comumente usadas têm nomes diferentes, mas funcionalidade semelhante no Windows Runtime e no .NET. Quando você usa essas interfaces em código gerenciado, elas são exibidas como os equivalentes do .NET Framework. Isso é discutido em [Windows Runtime componentes com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md). Quando você usa as mesmas interfaces em JavaScript, a única alteração em relação ao Tempo de Execução do Windows é que letras maiúsculas no início dos nomes de membro se tornam minúsculas.
+Esse código realça outra diferença na maneira como você usa tipos de Windows Runtime nos dois ambientes. Se digitar esse código, você notará que o IntelliSense não mostra o método insert usado no código JavaScript. Em vez disso, ele mostra o método Add normalmente visto em coleções no .NET. Isso ocorre porque algumas interfaces de coleção comumente usadas têm nomes diferentes, mas funcionalidade semelhante no Windows Runtime e no .NET. Quando você usa essas interfaces em código gerenciado, elas são exibidas como os equivalentes do .NET Framework. Isso é discutido em [Windows Runtime componentes com C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md). Quando você usa as mesmas interfaces em JavaScript, a única alteração em relação ao Windows Runtime é que letras maiúsculas no início dos nomes de membro se tornam minúsculas.
 
 Por fim, para chamar o método AddMore com o tratamento de exceções, adicione a função runtime2 a default.js.
 
@@ -373,9 +373,9 @@ Por outro lado, quando JavaScript chamou o método insert usando uma chave dupli
 
 ## <a name="returning-managed-types-from-your-component"></a>Retorno de tipos gerenciados do componente
 
-Conforme abordado anteriormente, é possível passar tipos de Tempo de Execução do Windows nativos para trás e para frente livremente entre o código JavaScript e o código C# ou Visual Basic. Na maioria das vezes, os nomes de tipo e membro serão iguais em ambos os casos (exceto pelos nomes de membro começarem com letras minúsculas em JavaScript). No entanto, na seção anterior, a classe PropertySet aparenta ter membros diferentes em código gerenciado. (Por exemplo, em JavaScript, você chamou o método Insert e, no código .NET, você chamou o método Add.) Esta seção explora a maneira como essas diferenças afetam .NET Framework tipos passados para o JavaScript.
+Conforme abordado anteriormente, é possível passar tipos de Windows Runtime nativos para trás e para frente livremente entre o código JavaScript e o código C# ou Visual Basic. Na maioria das vezes, os nomes de tipo e membro serão iguais em ambos os casos (exceto pelos nomes de membro começarem com letras minúsculas em JavaScript). No entanto, na seção anterior, a classe PropertySet aparenta ter membros diferentes em código gerenciado. (Por exemplo, em JavaScript, você chamou o método Insert e, no código .NET, você chamou o método Add.) Esta seção explora a maneira como essas diferenças afetam .NET Framework tipos passados para o JavaScript.
 
-Além de retornar tipos de Tempo de Execução do Windows que você criou no componente ou passou para o componente em JavaScript, é possível retornar um tipo gerenciado, criado em código gerenciado, para JavaScript como se fosse o tipo de Tempo de Execução do Windows correspondente. Mesmo no primeiro exemplo simples de uma classe de tempo de execução, os parâmetros e os tipos de retorno dos membros eram tipos primitivos Visual Basic ou C#, que são tipos do .NET Framework. Para demonstrar isso para coleções, adicione o seguinte código à classe Example para criar um método que retorna um dicionário genérico de cadeias de caracteres, indexados por inteiros:
+Além de retornar tipos de Windows Runtime que você criou no componente ou passou para o componente em JavaScript, é possível retornar um tipo gerenciado, criado em código gerenciado, para JavaScript como se fosse o tipo de Windows Runtime correspondente. Mesmo no primeiro exemplo simples de uma classe de runtime, os parâmetros e os tipos de retorno dos membros eram tipos primitivos Visual Basic ou C#, que são tipos do .NET Framework. Para demonstrar isso para coleções, adicione o seguinte código à classe Example para criar um método que retorna um dicionário genérico de cadeias de caracteres, indexados por inteiros:
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -534,7 +534,7 @@ Você pode declarar eventos usando o padrão de eventos do .NET Framework ou out
 > End Class
 > ```
 
-Quando você expõe um evento em Tempo de Execução do Windows, a classe de argumento do evento é herdada de System.Object. Ele não herda de System. EventArgs, como faria no .NET, porque EventArgs não é um tipo de Windows Runtime.
+Quando você expõe um evento em Windows Runtime, a classe de argumento do evento é herdada de System.Object. Ele não herda de System. EventArgs, como faria no .NET, porque EventArgs não é um tipo de Windows Runtime.
 
 Caso declare acessadores de eventos personalizados para o evento (palavra-chave **Custom** no Visual Basic), você deve usar o padrão de evento de Windows Runtime. Consulte [eventos personalizados e acessadores de eventos em componentes do Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md).
 

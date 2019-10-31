@@ -8,7 +8,7 @@ keywords: windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e3c48e69dd1ad991a2a04017d4e262e45430504
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57608531"

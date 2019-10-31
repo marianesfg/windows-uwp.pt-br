@@ -8,7 +8,7 @@ keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: c0b8389d2319a670dd314417726b24e98378cd49
 ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/21/2019
 ms.locfileid: "58334464"

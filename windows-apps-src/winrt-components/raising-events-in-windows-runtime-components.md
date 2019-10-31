@@ -1,5 +1,5 @@
 ---
-title: Acionando eventos em componentes do Tempo de Execução do Windows
+title: Acionando eventos em componentes do Windows Runtime
 ms.assetid: 3F7744E8-8A3C-4203-A1CE-B18584E89000
 description: Como acionar um evento de um tipo de representante definido pelo usuário em um thread em segundo plano para que o JavaScript seja capaz de receber o evento.
 ms.date: 07/19/2018
@@ -13,11 +13,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73052015"
 ---
-# <a name="raising-events-in-windows-runtime-components"></a>Acionando eventos em componentes do Tempo de Execução do Windows
+# <a name="raising-events-in-windows-runtime-components"></a>Acionando eventos em componentes do Windows Runtime
 > [!NOTE]
 > Para saber como gerar eventos em um [ C++](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) componente de Windows Runtime do/WinRT, consulte [criar eventos C++em/WinRT](../cpp-and-winrt-apis/author-events.md).
 
-Caso o componente do Tempo de Execução do Windows acione um evento de um tipo representante definido pelo usuário em um thread em segundo plano (thread de trabalho) e você deseje que o JavaScript seja capaz de receber o evento, é possível implementar e/ou acioná-lo destas formas:
+Caso o componente do Windows Runtime acione um evento de um tipo representante definido pelo usuário em um thread em segundo plano (thread de trabalho) e você deseje que o JavaScript seja capaz de receber o evento, é possível implementar e/ou acioná-lo destas formas:
 
 -   (Opção 1) Acione o evento por meio do [Windows.UI.Core.CoreDispatcher](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher) para realizar marshaling do evento para o contexto do thread JavaScript. Embora normalmente essa seja a melhor opção, em alguns cenários ela talvez não ofereça o desempenho mais rápido.
 -   (Opção 2) Usar [Windows.Foundation.EventHandler](https://docs.microsoft.com/uwp/api/windows.foundation.eventhandler)&lt;Object&gt;, mas perder informações sobre o tipo (mas perder as informações sobre o tipo de evento). Caso a Opção 1 não seja viável ou o desempenho não seja adequado, essa é uma boa segunda opção caso a perda de informações sobre o tipo seja aceitável.
@@ -27,7 +27,7 @@ Se você simplesmente acionar um evento em um thread em segundo plano sem usar u
 
 ## <a name="background"></a>Histórico
 
-Todos os componentes do Tempo de Execução do Windows e aplicativos são fundamentalmente objetos COM, independentemente da linguagem que você usa para criá-los. Na API do Windows, a maioria dos componentes é de objetos COM Agile que podem se comunicar igualmente bem com objetos no thread em segundo plano e no thread da interface do usuário. Caso um objeto COM não possa ser Agile, isso requer que objetos auxiliares conhecidos como proxies e stubs se comuniquem com outros objetos COM em todo o limite de thread em segundo plano do thread de interface do usuário. (Em termos de COM, isso é conhecido como comunicação entre apartments de thread.)
+Todos os componentes do Windows Runtime e aplicativos são fundamentalmente objetos COM, independentemente da linguagem que você usa para criá-los. Na API do Windows, a maioria dos componentes é de objetos COM Agile que podem se comunicar igualmente bem com objetos no thread em segundo plano e no thread da interface do usuário. Caso um objeto COM não possa ser Agile, isso requer que objetos auxiliares conhecidos como proxies e stubs se comuniquem com outros objetos COM em todo o limite de thread em segundo plano do thread de interface do usuário. (Em termos de COM, isso é conhecido como comunicação entre apartments de thread.)
 
 A maioria dos objetos na API do Windows é Agile ou tem proxies e stubs integrados. No entanto, proxies e stubs não podem ser criados para tipos genéricos, como Windows.Foundation.[TypedEventHandler&lt;TSender, TResult&gt;](https://docs.microsoft.com/uwp/api/windows.foundation.typedeventhandler) porque eles só serão tipos completos quando você fornecer o argumento de tipo. É apenas com clientes JavaScript que a falta de proxies ou stubs se torna um problema, mas caso queira que o componente seja utilizável em JavaScript, bem como em C++ ou em uma linguagem .NET, você deve usar uma das três opções a seguir.
 
@@ -124,13 +124,13 @@ O restante deste artigo mostra como usar C# para criar um componente do Tempo de
 
 Este procedimento passo a passo tem estas partes:
 
--   Aqui, você criará duas classes de Tempo de Execução do Windows básicas. Uma classe expõe um evento do tipo [Windows.Foundation.TypedEventHandler&lt;TSender, TResult&gt;](https://docs.microsoft.com/uwp/api/windows.foundation.typedeventhandler) e a outra classe é o tipo retornado para o JavaScript como o argumento de TValue. Essas classes não podem se comunicar com JavaScript até você concluir as etapas posteriores.
--   Este aplicativo ativa o objeto de classe principal, chama um método e manipula um evento acionado pelo componente do Tempo de Execução do Windows.
+-   Aqui, você criará duas classes de Windows Runtime básicas. Uma classe expõe um evento do tipo [Windows.Foundation.TypedEventHandler&lt;TSender, TResult&gt;](https://docs.microsoft.com/uwp/api/windows.foundation.typedeventhandler) e a outra classe é o tipo retornado para o JavaScript como o argumento de TValue. Essas classes não podem se comunicar com JavaScript até você concluir as etapas posteriores.
+-   Este aplicativo ativa o objeto de classe principal, chama um método e manipula um evento acionado pelo componente do Windows Runtime.
 -   Elas são exigidas pelas ferramentas para gerar as classes de proxy e stub.
 -   Em seguida, você usa o arquivo IDL para gerar o código-fonte C para o proxy e o stub.
--   Registre os objetos proxy-stub de maneira que o tempo de execução COM possa encontrá-los e faça referência à DLL proxy-stub no projeto do aplicativo.
+-   Registre os objetos proxy-stub de maneira que o runtime COM possa encontrá-los e faça referência à DLL proxy-stub no projeto do aplicativo.
 
-## <a name="to-create-the-windows-runtime-component"></a>Para criar o componente do Tempo de Execução do Windows
+## <a name="to-create-the-windows-runtime-component"></a>Para criar o componente do Windows Runtime
 
 No Visual Studio, na barra de menus, selecione **Arquivo &gt; Novo Projeto**. Na caixa de diálogo **Novo Projeto**, expanda **JavaScript &gt; Universal Windows** e selecione **Aplicativo em Branco**. Nomeie o projeto ToasterApplication e escolha o botão **OK**.
 

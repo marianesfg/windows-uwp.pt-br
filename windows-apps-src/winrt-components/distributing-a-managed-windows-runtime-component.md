@@ -1,6 +1,6 @@
 ---
-title: Distribuição de um componente do Tempo de Execução do Windows gerenciado
-description: É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo.
+title: Distribuição de um componente do Windows Runtime gerenciado
+description: É possível distribuir o componente do Windows Runtime por cópia de arquivo.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.date: 02/08/2017
 ms.topic: article
@@ -13,11 +13,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72690381"
 ---
-# <a name="distributing-a-managed-windows-runtime-component"></a>Distribuição de um componente do Tempo de Execução do Windows gerenciado
+# <a name="distributing-a-managed-windows-runtime-component"></a>Distribuição de um componente do Windows Runtime gerenciado
 
-É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo. No entanto, caso o componente consista em muitos arquivos, a instalação pode ser entediante para os usuários. Além disso, erros na colocação de arquivos ou falha na definição de referências podem causar problemas para eles. É possível empacotar um componente complexo como um SDK de extensão do Visual Studio para facilitar a instalação e o uso. Os usuários só precisam definir uma referência para todo o pacote. Eles podem facilmente localizar e instalar seu componente usando a caixa de diálogo **extensões e atualizações** , conforme descrito em [localizando e usando extensões do Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2015).
+É possível distribuir o componente do Windows Runtime por cópia de arquivo. No entanto, caso o componente consista em muitos arquivos, a instalação pode ser entediante para os usuários. Além disso, erros na colocação de arquivos ou falha na definição de referências podem causar problemas para eles. É possível empacotar um componente complexo como um SDK de extensão do Visual Studio para facilitar a instalação e o uso. Os usuários só precisam definir uma referência para todo o pacote. Eles podem facilmente localizar e instalar seu componente usando a caixa de diálogo **extensões e atualizações** , conforme descrito em [localizando e usando extensões do Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2015).
 
-## <a name="planning-a-distributable-windows-runtime-component"></a>Planejamento de um componente do Tempo de Execução do Windows distribuível
+## <a name="planning-a-distributable-windows-runtime-component"></a>Planejamento de um componente do Windows Runtime distribuível
 
 Escolha nomes exclusivos para arquivos binários, como os arquivos .winmd. Recomendamos o seguinte formato para garantir a exclusividade:
 
