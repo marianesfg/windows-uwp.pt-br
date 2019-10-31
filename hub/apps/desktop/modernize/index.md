@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b8ad9726397671bcb2b641d6769f014721a27a72
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: 7403c0a3fd9f822ee24411aa88d8fd91994748dd
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142523"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -54,11 +54,14 @@ Agora você pode usar as APIs UWP em aplicativos de área de trabalho não UWP p
 
 Para obter mais informações, consulte [Modernize seu aplicativo da área de trabalho usando a camada Visual](visual-layer-in-desktop-apps.md).
 
-## <a name="additional-features-available-to-packaged-apps"></a>Recursos adicionais disponíveis para aplicativos empacotados
+## <a name="additional-features-available-to-apps-with-package-identity"></a>Recursos adicionais disponíveis para aplicativos com identidade de pacote
 
-Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplicativos da área de trabalho que são empacotados em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). Se empacotar seu aplicativo da área de trabalho em um pacote MSIX, você poderá usar APIs UWP que exigem a identidade do pacote, extensões do pacote e componentes da UWP em seu aplicativo empacotado.
+Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplicativos da área de trabalho com [identidade de pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Esses recursos incluem certas APIs UWP, extensões de pacote e componentes UWP. Para obter mais informações, consulte [recursos que exigem a identidade do pacote](modernize-packaged-apps.md).
 
-Para obter mais informações, consulte [recursos que exigem a identidade do pacote](modernize-packaged-apps.md).
+Há várias maneiras de conceder identidade a um aplicativo da área de trabalho:
+
+* Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote de aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
+* Se não for possível adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, do Build 10.0.19000.0 do Windows 10 Insider Preview em diante você poderá conceder a identidade do pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
 
 <a id="desktop-uwp-controls"/>
 
