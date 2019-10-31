@@ -9,52 +9,49 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3deb89a8eba60e5c4f67b18091d78d24d9179aa3
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 481b326c3f4b3608d0d3f5f7a8cec943f1d6c437
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142528"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>APIs UWP disponíveis para aplicativos da área de trabalho
 
 Os aplicativos da área de trabalho podem usar uma grande variedade de APIs de Plataforma Universal do Windows (UWP), mesmo que elas não tenham sido completamente transferidas para um aplicativo UWP. Este artigo lista as classes disponíveis que seu aplicativo de área de trabalho pode usar.
 
-> [!NOTE]
-> Muitas APIs UWP exigem que a [identidade do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) seja usada em um aplicativo de desktop. A identidade do pacote está disponível quando o aplicativo da área de trabalho é empacotado em um [pacote MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Neste artigo, esses aplicativos são chamados de *aplicativos empacotados*.
-
-A maioria das APIs UWP funciona bem em aplicativos empacotados. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada.
+Muitas APIs UWP exigem que a [identidade do pacote](modernize-packaged-apps.md) seja usada em um aplicativo de desktop. A maioria das APIs UWP funciona bem com aplicativos que têm identidade de pacote. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada.
 
 | Área do recurso | Detalhes |
 |--------------|---------|
-| Emails, contatos e compromissos | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Autenticação e identidade do usuário | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Tarefas em segundo plano | Embora os aplicativos empacotados possam registrar tarefas em segundo plano, apenas os aplicativos totalmente UWP podem ser executados <i>como</i> uma tarefa em segundo plano. Para obter mais informações, consulte o [Exemplo de tarefa em segundo plano no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample). |
-| Bluetooth | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Chamadas e chat | Os aplicativos empacotados não podem ser executados em dispositivos móveis até que eles sejam totalmente portados para UWP. |
+| Emails, contatos e compromissos | Não há suporte para todas as APIs no momento. |
+| Autenticação e identidade do usuário | Não há suporte para todas as APIs no momento. |
+| Tarefas em segundo plano | Embora os aplicativos de desktop possam registrar tarefas em segundo plano, apenas aplicativos totalmente UWP podem ser executados <i>como</i> uma tarefa em segundo plano. Para obter mais informações, consulte o [Exemplo de tarefa em segundo plano no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample). |
+| Bluetooth | Não há suporte para todas as APIs no momento. |
+| Chamadas e chat | Os aplicativos da área de trabalho não podem ser executados em dispositivos móveis até que eles sejam totalmente portados para UWP. |
 | Ativação por contrato | Somente aplicativos UWP completos podem ser ativados por um contrato. |
-| Criptografia | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Geolocalização | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Seletores de arquivos e pastas | Os aplicativos empacotados têm acesso ao sistema de arquivos completo e não precisam de seletores UWP. |
-| Mídia | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Ponto de serviço | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Cartões inteligentes | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| PlayReady | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| VPN | Nem todas as APIs têm suporte para aplicativos empacotados. |
-| Carteira | Os aplicativos empacotados não podem ser executados em dispositivos móveis até que eles sejam totalmente portados para UWP. |
+| Criptografia | Não há suporte para todas as APIs no momento. |
+| Geolocalização | Não há suporte para todas as APIs no momento. |
+| Seletores de arquivos e pastas | Aplicativos com identidade têm acesso total ao sistema de arquivos e não precisam de seletores UWP. |
+| Mídia | Não há suporte para todas as APIs no momento. |
+| Ponto de serviço | Não há suporte para todas as APIs no momento. |
+| Cartões inteligentes | Não há suporte para todas as APIs no momento. |
+| PlayReady | Não há suporte para todas as APIs no momento. |
+| VPN | Não há suporte para todas as APIs no momento. |
+| Carteira | Os aplicativos da área de trabalho não podem ser executados em dispositivos móveis até que eles sejam totalmente portados para UWP. |
 | IU XAML | O Windows 10, versão 1809 e versões anteriores não dão suporte à Hospedagem de conteúdo do UWP XAML em aplicativos da área de trabalho. A partir do Windows 10, versão 1903, você pode usar as [ilhas XAML](xaml-islands.md) para hospedar o conteúdo do UWP XAML.  |
 
 Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No entanto, se uma API não estiver listada explicitamente como compatível, evite usá-la, pois seu uso poderá surtir efeitos colaterais ou comportamento não intencionais. O suporte para essas APIs pode se tornar disponível em versões futuras. Por enquanto, seu aplicativo deve usar APIS Win32 ou .NET correspondentes.
 
 ## <a name="list-of-apis"></a>Lista de APIs
 
-A seguir está uma lista completa de APIs UWP com suporte nos aplicativos da área de trabalho. Você pode exibir [APIs com suporte apenas em aplicativos empacotados](#new) ou [APIs com suporte em](#both)aplicativos de aplicativo e de área de trabalho empacotados.
+A seguir está uma lista completa de APIs UWP com suporte nos aplicativos da área de trabalho. Você pode exibir [APIs com suporte somente em aplicativos com identidade de pacote](#new) ou [APIs com suporte em todos os aplicativos da área de trabalho](#both).
 
 Para obter exemplos de como usar APIs UWP, consulte os exemplos de aplicativo de [exemplos de ponte de desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [plataforma universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no github. Você também pode consultar a postagem do blog Compilação de aplicativos para Windows [Como chamar APIs do Windows 10 de um aplicativo da área de trabalho](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
 
 <a id="new" />
 
-### <a name="apis-supported-only-in-packaged-apps"></a>APIs com suporte apenas em aplicativos empacotados
+### <a name="apis-supported-only-in-apps-with-package-identity"></a>APIs com suporte apenas em aplicativos com identidade de pacote
 
 * [Windows. ApplicationModel. DataTransfer. DataProviderHandler](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dataproviderhandler)
 * [Windows. ApplicationModel. DataTransfer. datarequest](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -123,72 +120,72 @@ Para obter exemplos de como usar APIs UWP, consulte os exemplos de aplicativo de
 * [Windows. Devices. PointOfService. MagneticStripeReaderEncryptionAlgorithms](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms)
 * [Windows. Devices. PointOfService. MagneticStripeReaderErrorOccurredEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs)
 * [Windows. Devices. PointOfService. MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderReport)
-* [Windows. Devices. PointOfService. MagneticStripeReaderStatusUpdatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs)
-* [Windows. Devices. PointOfService. MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderTrackData)
-* [Windows. Devices. PointOfService. MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs)
-* [Windows. Devices. Portable. o Device](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.ServiceDevice)
-* [Windows. Devices. Portable. StorageDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)
-* [Windows. Devices. Printers. Print3DDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Printers.Print3DDevice)
-* [Windows. Devices. Printers. dischema](https://docs.microsoft.com/uwp/api/Windows.Devices.Printers.PrintSchema)
-* [Windows. Devices. cartão inteligente. SmartCard](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCard)
-* [Windows. Devices. Smarts. SmartCardConnection](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection)
-* [Windows. Devices. Smarts. SmartCardReader](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardReader)
-* [Windows. Foundation. AsyncActionCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.asyncactioncompletedhandler)
-* [Windows. Foundation. AsyncActionProgressHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
-* [Windows. Foundation. AsyncActionWithProgressCompletedHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
-* [Windows. Foundation. AsyncOperationCompletedHandler<TResult>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
-* [Windows. Foundation. Collections. VectorChangedEventHandler<T>](https://docs.microsoft.com/uwp/api/windows.foundation.collections.vectorchangedeventhandler)
-* [Windows. Foundation. DeferralCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.deferralcompletedhandler)
-* [Windows. Foundation. Diagnostics. FileLoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession)
-* [Windows. Foundation. Diagnostics. LogFileGeneratedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs)
-* [Windows. Foundation. Diagnostics. LoggingActivity](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingActivity)
-* [Windows. Foundation. Diagnostics. LoggingChannel](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)
-* [Windows. Foundation. Diagnostics. LoggingChannelOptions](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingChannelOptions)
-* [Windows. Foundation. Diagnostics. LoggingFields](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingFields)
-* [Windows. Foundation. Diagnostics. LoggingOptions](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingOptions)
-* [Windows. Foundation. Diagnostics. LoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingSession)
-* [Windows. Foundation. EventHandler<T>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
-* [Windows. Foundation. Memorybuffer já](https://docs.microsoft.com/uwp/api/Windows.Foundation.MemoryBuffer)
-* [Windows. Globalization. ApplicationLanguages](https://docs.microsoft.com/uwp/api/Windows.Globalization.ApplicationLanguages)
-* [Windows. Globalization. JapanesePhoneme](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneme)
-* [Windows. Globalization. JapanesePhoneticAnalyzer](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneticAnalyzer)
+* [Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs)
+* [Windows.Devices.PointOfService.MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderTrackData)
+* [Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs)
+* [Windows.Devices.Portable.ServiceDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.ServiceDevice)
+* [Windows.Devices.Portable.StorageDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)
+* [Windows.Devices.Printers.Print3DDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Printers.Print3DDevice)
+* [Windows.Devices.Printers.PrintSchema](https://docs.microsoft.com/uwp/api/Windows.Devices.Printers.PrintSchema)
+* [Windows.Devices.SmartCards.SmartCard](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCard)
+* [Windows.Devices.SmartCards.SmartCardConnection](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection)
+* [Windows.Devices.SmartCards.SmartCardReader](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardReader)
+* [Windows.Foundation.AsyncActionCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.asyncactioncompletedhandler)
+* [Windows.Foundation.AsyncActionProgressHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
+* [Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
+* [Windows.Foundation.AsyncOperationCompletedHandler<TResult>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
+* [Windows.Foundation.Collections.VectorChangedEventHandler<T>](https://docs.microsoft.com/uwp/api/windows.foundation.collections.vectorchangedeventhandler)
+* [Windows.Foundation.DeferralCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.deferralcompletedhandler)
+* [Windows.Foundation.Diagnostics.FileLoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession)
+* [Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs)
+* [Windows.Foundation.Diagnostics.LoggingActivity](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingActivity)
+* [Windows.Foundation.Diagnostics.LoggingChannel](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)
+* [Windows.Foundation.Diagnostics.LoggingChannelOptions](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingChannelOptions)
+* [Windows.Foundation.Diagnostics.LoggingFields](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingFields)
+* [Windows.Foundation.Diagnostics.LoggingOptions](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingOptions)
+* [Windows.Foundation.Diagnostics.LoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingSession)
+* [Windows.Foundation.EventHandler<T>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
+* [Windows.Foundation.MemoryBuffer](https://docs.microsoft.com/uwp/api/Windows.Foundation.MemoryBuffer)
+* [Windows.Globalization.ApplicationLanguages](https://docs.microsoft.com/uwp/api/Windows.Globalization.ApplicationLanguages)
+* [Windows.Globalization.JapanesePhoneme](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneme)
+* [Windows.Globalization.JapanesePhoneticAnalyzer](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneticAnalyzer)
 * [Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter](https://docs.microsoft.com/uwp/api/Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter)
 * [Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo](https://docs.microsoft.com/uwp/api/Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo)
-* [Windows. Graphics. Imaging. BitmapBuffer](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer)
-* [Windows. Graphics. Imaging. BitmapCodecInformation](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapCodecInformation)
-* [Windows. Graphics. Imaging. BitmapDecoder](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapDecoder)
-* [Windows. Graphics. Imaging. BitmapEncoder](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapEncoder)
-* [Windows. Graphics. Imaging. BitmapFrame](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapFrame)
-* [Windows. Graphics. Imaging. Bitmapproperties](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapProperties)
-* [Windows. Graphics. Imaging. BitmapPropertiesView](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapPropertiesView)
-* [Windows. Graphics. Imaging. BitmapPropertySet](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapPropertySet)
-* [Windows. Graphics. Imaging. BitmapTransform](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapTransform)
-* [Windows. Graphics. Imaging. BitmapTypedValue](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapTypedValue)
-* [Windows. Graphics. Imaging. ImageStream](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.ImageStream)
-* [Windows. Graphics. Imaging. PixelDataProvider](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.PixelDataProvider)
-* [Windows. Graphics. Imaging. SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)
-* [Windows. Graphics. Printing3D. Print3DTaskRequestedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs)
-* [Windows. Graphics. Printing3D. Print3DTaskSourceRequestedHandler](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.print3dtasksourcerequestedhandler)
-* [Windows. Graphics. Printing3D. Printing3D3MFPackage](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3D3MFPackage)
-* [Windows. Graphics. Printing3D. Printing3DBaseMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DBaseMaterial)
-* [Windows. Graphics. Printing3D. Printing3DBaseMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup)
-* [Windows. Graphics. Printing3D. Printing3DColorMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DColorMaterial)
-* [Windows. Graphics. Printing3D. Printing3DColorMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DColorMaterialGroup)
-* [Windows. Graphics. Printing3D. Printing3DComponent](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DComponent)
-* [Windows. Graphics. Printing3D. Printing3DComponentWithMatrix](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DComponentWithMatrix)
-* [Windows. Graphics. Printing3D. Printing3DCompositeMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DCompositeMaterial)
-* [Windows. Graphics. Printing3D. Printing3DCompositeMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup)
+* [Windows.Graphics.Imaging.BitmapBuffer](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer)
+* [Windows.Graphics.Imaging.BitmapCodecInformation](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapCodecInformation)
+* [Windows.Graphics.Imaging.BitmapDecoder](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapDecoder)
+* [Windows.Graphics.Imaging.BitmapEncoder](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapEncoder)
+* [Windows.Graphics.Imaging.BitmapFrame](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapFrame)
+* [Windows.Graphics.Imaging.BitmapProperties](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapProperties)
+* [Windows.Graphics.Imaging.BitmapPropertiesView](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapPropertiesView)
+* [Windows.Graphics.Imaging.BitmapPropertySet](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapPropertySet)
+* [Windows.Graphics.Imaging.BitmapTransform](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapTransform)
+* [Windows.Graphics.Imaging.BitmapTypedValue](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapTypedValue)
+* [Windows.Graphics.Imaging.ImageStream](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.ImageStream)
+* [Windows.Graphics.Imaging.PixelDataProvider](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.PixelDataProvider)
+* [Windows.Graphics.Imaging.SoftwareBitmap](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)
+* [Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs)
+* [Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.print3dtasksourcerequestedhandler)
+* [Windows.Graphics.Printing3D.Printing3D3MFPackage](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3D3MFPackage)
+* [Windows.Graphics.Printing3D.Printing3DBaseMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DBaseMaterial)
+* [Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup)
+* [Windows.Graphics.Printing3D.Printing3DColorMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DColorMaterial)
+* [Windows.Graphics.Printing3D.Printing3DColorMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DColorMaterialGroup)
+* [Windows.Graphics.Printing3D.Printing3DComponent](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DComponent)
+* [Windows.Graphics.Printing3D.Printing3DComponentWithMatrix](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DComponentWithMatrix)
+* [Windows.Graphics.Printing3D.Printing3DCompositeMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DCompositeMaterial)
+* [Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup)
 * [Windows.Graphics.Printing3D.Printing3DFaceReductionOptions](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)
-* [Windows. Graphics. Printing3D. Printing3DMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMaterial)
-* [Windows. Graphics. Printing3D. Printing3DMesh](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMesh)
-* [Windows. Graphics. Printing3D. Printing3DMeshVerificationResult](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMeshVerificationResult)
-* [Windows. Graphics. Printing3D. Printing3DModel](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DModel)
-* [Windows. Graphics. Printing3D. Printing3DModelTexture](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DModelTexture)
-* [Windows. Graphics. Printing3D. Printing3DMultiplePropertyMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial)
-* [Windows. Graphics. Printing3D. Printing3DMultiplePropertyMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup)
-* [Windows. Graphics. Printing3D. Printing3DTexture2CoordMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial)
-* [Windows. Graphics. Printing3D. Printing3DTexture2CoordMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup)
-* [Windows. Graphics. Printing3D. Printing3DTextureResource](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTextureResource)
+* [Windows.Graphics.Printing3D.Printing3DMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMaterial)
+* [Windows.Graphics.Printing3D.Printing3DMesh](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMesh)
+* [Windows.Graphics.Printing3D.Printing3DMeshVerificationResult](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMeshVerificationResult)
+* [Windows.Graphics.Printing3D.Printing3DModel](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DModel)
+* [Windows.Graphics.Printing3D.Printing3DModelTexture](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DModelTexture)
+* [Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial)
+* [Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup)
+* [Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial)
+* [Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup)
+* [Windows.Graphics.Printing3D.Printing3DTextureResource](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing3D.Printing3DTextureResource)
 * [Windows. Management. Core. ApplicationDataManager](https://docs.microsoft.com/uwp/api/Windows.Management.Core.ApplicationDataManager)
 * [Windows. Management. Deployment. DeploymentResult](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.DeploymentResult)
 * [Windows. Management. Deployment. PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager)
@@ -380,9 +377,9 @@ Para obter exemplos de como usar APIs UWP, consulte os exemplos de aplicativo de
 
 <a id="both" />
 
-### <a name="apis-supported-in-both-packaged-apps-and-desktop-applications"></a>APIs com suporte em aplicativos empacotados e aplicativos da área de trabalho
+### <a name="apis-supported-in-all-desktop-applications"></a>APIs com suporte em todos os aplicativos de área de trabalho
 
-As APIs que têm o [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) têm suporte em aplicativos empacotados e em aplicativo de área de trabalho não empacotado. Para determinar se uma API que você deseja chamar de seu aplicativo de área de trabalho tem suporte, encontre o artigo de referência para a classe ou o membro que você está interessado na [documentação de referência para namespaces do WinRT](https://docs.microsoft.com/uwp/api/). Em seguida, verifique se a seção **atributos** no artigo de referência inclui o atributo [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) .
+As APIs que têm o [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) têm suporte em todos os aplicativos da área de trabalho, incluindo aqueles com a identidade do pacote e aqueles sem a identidade do pacote. Para determinar se uma API que você deseja chamar de seu aplicativo de área de trabalho tem suporte, encontre o artigo de referência para a classe ou o membro que você está interessado na [documentação de referência para namespaces do WinRT](https://docs.microsoft.com/uwp/api/). Em seguida, verifique se a seção **atributos** no artigo de referência inclui o atributo [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) .
 
 ## <a name="next-steps"></a>Próximas etapas
 

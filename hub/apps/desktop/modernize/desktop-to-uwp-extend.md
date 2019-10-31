@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 7359d28d968a2948e9f4049e2acc3c655edcfcb3
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0a404f2d9f58fc283cf47f47860362c0f5bc8164
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142549"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Estenda seu aplicativo de desktop com componentes UWP modernos
 
@@ -21,7 +21,7 @@ Algumas experiências do Windows 10 (por exemplo, uma página da interface do us
 Em muitos casos, você pode chamar Windows Runtime APIs diretamente do seu aplicativo de área de trabalho, portanto, antes de examinar este guia, consulte [aprimorar para o Windows 10](desktop-to-uwp-enhance.md).
 
 > [!NOTE]
-> Os recursos descritos neste artigo exigem que você crie um pacote de aplicativo do Windows para seu aplicativo de área de trabalho. Se você ainda não fez isso, consulte [pacote de aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root).
+> Os recursos descritos neste artigo exigem que seu aplicativo de desktop tenha [identidade de pacote](modernize-packaged-apps.md), seja [empacotando seu aplicativo de área de trabalho em um pacote MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) ou [concedendo a identidade do aplicativo usando um pacote esparso](grant-identity-to-nonpackaged-apps.md).
 
 Se você estiver pronto, vamos começar.
 
@@ -100,15 +100,15 @@ Esta imagem mostra um aplicativo Windows Forms que abre uma interface do usuári
 
 Para mostrar uma interface do usuário baseada em XAML, faça o seguinte:
 
-:one: [Configurar sua solução](#solution-setup)
+:um: [Configurar a solução](#solution-setup)
 
-:two: [Criar uma interface do usuário XAML](#xaml-UI)
+:dois: [Criar uma interface do usuário XAML](#xaml-UI)
 
-:three: [Adicionar uma extensão de protocolo ao projeto UWP](#add-a-protocol-extension)
+:três: [Adicione uma extensão de protocolo ao projeto UWP](#add-a-protocol-extension)
 
-:four: [Iniciar o aplicativo UWP do seu aplicativo de desktop](#start)
+:quatro: [Inicie o aplicativo UWP do seu aplicativo da área de trabalho](#start)
 
-:five: [No projeto UWP, mostre a página que você deseja](#parse)
+:cinco: [No projeto UWP, mostre a página desejada](#parse)
 
 <a id="solution-setup" />
 
@@ -220,7 +220,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-No código por trás da sua página XAML, substitua o método ``OnNavigatedTo`` para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
+No code-behind da sua página XAML, substitua o método ``OnNavigatedTo`` para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -261,15 +261,15 @@ Veja o exemplo completo [aqui](https://github.com/Microsoft/Windows-Packaging-Sa
 
 Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
-:one: [Adicionar uma extensão de destino de compartilhamento](#share-extension)
+:one: [Adicione uma extensão de destino de compartilhamento](#share-extension)
 
-:two: [Substituir o manipulador de eventos OnShareTargetActivated](#override)
+: dois: [substituir o manipulador de eventos OnShareTargetActivated](#override)
 
-:three: [Adicionar extensões de área de trabalho ao projeto UWP](#desktop-extensions)
+: três: [adicionar extensões de área de trabalho ao projeto UWP](#desktop-extensions)
 
-:four: [Adicionar a extensão de processo de confiança total](#full-trust)
+: quatro: [Adicionar a extensão de processo de confiança total](#full-trust)
 
-:five: [Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
+: cinco: [Modificar o aplicativo de área de trabalho para obter o arquivo compartilhado](#modify-desktop)
 
 <a id="share-extension" />
 

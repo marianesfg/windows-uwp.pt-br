@@ -8,23 +8,23 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c99d05a701f41e24663d116773b000017b805d81
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: f51fc081c5cc18132a386197feb2ae76a22d2088
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142495"
 ---
-# <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre seu aplicativo de área de trabalho empacotado com Windows 10 e UWP
+# <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>Integre seu aplicativo de desktop com o Windows 10 e o UWP
 
-Se você [empacotar seu aplicativo de área de trabalho em um contêiner MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root), poderá usar extensões para integrar o aplicativo de área de trabalho empacotado ao Windows 10 usando extensões predefinidas no [manifesto do pacote de aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
+Se seu aplicativo de área de trabalho tiver uma [identidade de pacote](modernize-packaged-apps.md), você poderá usar extensões para integrar seu aplicativo com o Windows 10 usando extensões predefinidas no [manifesto do pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 
-Por exemplo, use uma extensão para criar uma exceção de firewall, torne seu aplicativo o aplicativo padrão para um tipo de arquivo, ou aponte para os blocos de início para a versão empacotada do seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
+Por exemplo, use uma extensão para criar uma exceção de firewall, torne seu aplicativo o aplicativo padrão para um tipo de arquivo ou aponte para os blocos de início para seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
 
 Este artigo descreve essas extensões e as tarefas que você pode executar usando-as.
 
 > [!NOTE]
-> Os recursos descritos neste artigo exigem que você crie um pacote de aplicativo do Windows para seu aplicativo de área de trabalho. Se você ainda não fez isso, consulte [pacote de aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root).
+> Os recursos descritos neste artigo exigem que seu aplicativo de desktop tenha [identidade de pacote](modernize-packaged-apps.md), seja [empacotando seu aplicativo de área de trabalho em um pacote MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) ou [concedendo a identidade do aplicativo usando um pacote esparso](grant-identity-to-nonpackaged-apps.md).
 
 ## <a name="transition-users-to-your-app"></a>Transição de usuários para o seu aplicativo
 
@@ -44,7 +44,7 @@ Seus usuários podem ter colocado seu aplicativo desktop na barra de tarefas ou 
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+`http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -103,8 +103,8 @@ Para fazer isso, você especifica o [identificador programático (ProgID)](https
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -160,10 +160,10 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Você pode associar o aplicativo empacotado a extensões de tipo de arquivo. Se um usuário clicar com o botão direito do mouse em um arquivo e selecionar a opção **abrir com** , seu aplicativo aparecerá na lista de sugestões.
 
-#### <a name="xml-namespace"></a>Namespace XML
+#### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -222,9 +222,9 @@ Você pode adicionar opções de menu. Essas opções oferecem aos usuários out
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -247,7 +247,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Verb |O nome que aparece no menu de contexto do Explorador de arquivos. Essa sequência é localizável usando ```ms-resource```.|
 |Id |A Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, ele será passado para seu aplicativo como parte de seus args de evento de ativação para que possa manipular a seleção do usuário adequadamente. Se seu aplicativo for um aplicativo empacotado com confiança total, ele receberá parâmetros em vez disso (consulte o próximo marcador). |
 |Parâmetros |A lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo empacotado com confiança total, esses parâmetros serão passados para o aplicativo como args de evento quando o aplicativo for ativado. Você pode personalizar o comportamento do seu aplicativo com base em verbos de ativação diferentes. Se uma variável pode conter um caminho de arquivo, envolva o valor do parâmetro entre aspas. Isso evitará quaisquer problemas que aconteçam nos casos em que o caminho inclua espaços. Se seu aplicativo for um aplicativo UWP, você não poderá passar parâmetros. O aplicativo recebe o Id em vez disso (veja a bala anterior).|
-|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor de **false** (por exemplo, sempre mostrar o verbo) se não estiver listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre **False**).|
+|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor de **false** (por exemplo, sempre mostrar o verbo) se não estiver listado. Você especifica esse comportamento individualmente para cada verbo (exceto para "Abrir", que sempre será **False**).|
 
 #### <a name="example"></a>Exemplo
 
@@ -287,8 +287,8 @@ Você pode garantir que os usuários abram o novo aplicativo empacotado por padr
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http: \//schemas. Microsoft. com/Appx/manifest/UAP/windows10
-* http: \//schemas. Microsoft. com/Appx/manifest/UAP/windows10/3 "
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -349,7 +349,7 @@ Se seu aplicativo exigir comunicação por meio de uma porta, você poderá adic
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -374,7 +374,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |-------|-------------|
 |Categoria |Sempre ``windows.firewallRules``|
 |Executável |O nome do arquivo executável que deseja adicionar à lista de exceções de firewall |
-|Direction |Indica se a regra é uma regra de entrada ou de saída |
+|Direção |Indica se a regra é uma regra de entrada ou de saída |
 |IPProtocol |O protocolo de comunicação |
 |LocalPortMin |O número da porta inferior em uma variedade de números de porta locais. |
 |LocalPortMax |O número de porta mais alto de uma variedade de números de porta local. |
@@ -415,7 +415,7 @@ Cada pacote pode conter apenas uma dessas extensões. Isso significa que você p
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/uap/windows10/6
+`http://schemas.microsoft.com/appx/manifest/uap/windows10/6`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -475,9 +475,9 @@ Especifique como seu aplicativo se comporta quando um usuário abre vários arqu
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -506,9 +506,9 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Os aplicativos da área de trabalho empacotados têm as mesmas três opções do que os aplicativos da área de trabalho comuns.
 
-* ``Player``: Seu aplicativo é ativado uma vez. Todos os arquivos selecionados são passados para seu aplicativo como parâmetros de argumento.
-* ``Single``: Seu aplicativo é ativado uma vez para o primeiro arquivo selecionado. Outros arquivos são ignorados.
-* ``Document``: Uma nova instância separada do seu aplicativo é ativada para cada arquivo selecionado.
+* ``Player``: seu aplicativo é ativado uma vez. Todos os arquivos selecionados são passados para seu aplicativo como parâmetros de argumento.
+* ``Single``: seu aplicativo é ativado uma vez para o primeiro arquivo selecionado. Outros arquivos são ignorados.
+* ``Document``: uma nova instância separada do seu aplicativo é ativada para cada arquivo selecionado.
 
  Você pode definir preferências diferentes para diferentes tipos de arquivo e ações. Por exemplo, você pode abrir *Documentos* no modo *Documento* e *Imagens* no modo *Player*.
 
@@ -549,10 +549,10 @@ Permita que os usuários vejam uma imagem em miniatura do conteúdo do arquivo q
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -612,10 +612,10 @@ Permita que os usuários visualizem os conteúdos de um arquivo no painel de vis
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -677,8 +677,8 @@ Para obter mais informações sobre o campo **Tipo** e os valores que você pode
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -739,9 +739,9 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -798,8 +798,8 @@ Se seu aplicativo de área de trabalho definir um [manipulador de menu de contex
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/4
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/4`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -896,7 +896,7 @@ Registre os manipuladores implementados em seu aplicativo. Você também pode ad
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -969,7 +969,7 @@ As associações de protocolos podem habilitar outros programas e componentes do
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+`http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1020,8 +1020,8 @@ Os usuários e outros processos podem usar um alias para iniciar seu aplicativo 
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1040,7 +1040,7 @@ Os usuários e outros processos podem usar um alias para iniciar seu aplicativo 
 |-------|-------------|
 |Categoria |Sempre ``windows.appExecutionAlias``.
 |Executável |O caminho relativo para o executável para iniciar quando o alias é invocado. |
-|Alias |O nome abreviado para o seu aplicativo. Sempre deve terminar com a extensão ".exe". Você só pode especificar um único alias de execução de aplicativo para cada aplicativo no pacote. Se vários aplicativos se registrarem para o mesmo alias, o sistema irá chamar o último que foi registrado. Portanto, escolha um alias exclusivo que outros aplicativos provavelmente não substituirão.
+|Alias |O nome abreviado para o seu aplicativo. Deve sempre terminar com a extensão ".exe". Você só pode especificar um único alias de execução de aplicativo para cada aplicativo no pacote. Se vários aplicativos se registrarem para o mesmo alias, o sistema irá chamar o último que foi registrado. Portanto, escolha um alias exclusivo que outros aplicativos provavelmente não substituirão.
 |
 
 #### <a name="example"></a>Exemplo
@@ -1083,7 +1083,7 @@ Os usuários podem desativar manualmente tarefas de inicialização do seu aplic
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1104,7 +1104,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 |Categoria |Sempre ``windows.startupTask``.|
 |Executável |O caminho relativo para o arquivo executável para começar. |
 |TaskId |Um identificador exclusivo para sua tarefa. Usando esse identificador, seu aplicativo pode chamar as APIs na classe [Windows. ApplicationModel. StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) para habilitar ou desabilitar programaticamente uma tarefa de inicialização. |
-|Enabled |Indica se a tarefa inicialmente é iniciada ou desabilitada. As tarefas habilitadas serão executadas na próxima vez em que o usuário fizer logon (a menos que o usuário as tenha desabilitado). |
+|Habilitado |Indica se a tarefa inicialmente é iniciada ou desabilitada. As tarefas habilitadas serão executadas na próxima vez que o usuário efetuar o login (a menos que o usuário o desabilite). |
 |DisplayName |O nome da tarefa que aparece no Gerenciador de tarefas. Você pode localizar essa cadeia de caracteres usando ```ms-resource```. |
 
 #### <a name="example"></a>Exemplo
@@ -1139,7 +1139,7 @@ A reprodução automática pode apresentar seu aplicativo como uma opção quand
 
 #### <a name="xml-namespace"></a>Namespace XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1157,7 +1157,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |Nome |Descrição |
 |-------|-------------|
 |Categoria |Sempre ``windows.autoPlayHandler``.
-|ActionDisplayName |Uma cadeia de caracteres que representa a ação que os usuários podem executar com um dispositivo que eles conectam a um computador (por exemplo: "Importar arquivos" ou "reproduzir vídeo"). |
+|ActionDisplayName |Uma cadeia de caracteres que representa a ação que os usuários podem realizar com um dispositivo que conectam a um computador (por exemplo: "Importar arquivos" ou "Reproduzir vídeo"). |
 |ProviderDisplayName | Uma cadeia de caracteres que representa seu aplicativo ou serviço (por exemplo: "Player de vídeo da Contoso"). |
 |ContentEvent |O nome de um evento de conteúdo que faz com que os usuários sejam avisados com ``ActionDisplayName`` e ``ProviderDisplayName``. Um evento de conteúdo é gerado quando um dispositivo de volume, como um cartão de memória de câmera, um pen drive ou um DVD, for inserido no computador. Você pode encontrar a lista completa desses eventos [aqui](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
 |Verb |A configuração de verbo identifica um valor que é passado para o seu aplicativo para a opção selecionada. Você pode especificar várias ações de inicialização para um evento de Reprodução Automática e usar a configuração Verbo para determinar qual opção u usuário selecionou para seu aplicativo. Você pode descobrir a opção selecionada pelo usuário verificando a propriedade verb dos argumentos do evento de inicialização passados para seu aplicativo. Também pode usar qualquer valor para a configuração Verbo exceto open, que está reservado. |
@@ -1227,7 +1227,7 @@ Você precisará modificar seu aplicativo para que ele receba dados de impressã
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1277,7 +1277,7 @@ Compartilhe suas fontes personalizadas com outros aplicativos do Windows.
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 
@@ -1325,7 +1325,7 @@ Inicie um processo do Win32 que é executado em confiança total.
 
 #### <a name="xml-namespaces"></a>Namespaces do XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos e atributos da extensão
 

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 44ea01bbc2200c1b028ed41e7c6a2845c7a1568b
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: bcdeafc3f30f5b385c6feeddee78cf31635177a0
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643357"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142540"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Chamar APIs UWP em aplicativos da área de trabalho
 
@@ -21,7 +21,7 @@ Você pode usar APIs Plataforma Universal do Windows (UWP) para adicionar experi
 
 Primeiro, configure seu projeto com as referências necessárias. Em seguida, chame as APIs UWP do seu código para adicionar experiências do Windows 10 ao seu aplicativo de desktop. Você pode compilar separadamente para usuários do Windows 10 ou distribuir os mesmos binários para todos os usuários, independentemente da versão do Windows que eles executam.
 
-Algumas APIs UWP têm suporte apenas em aplicativos de área de trabalho que são empacotados em um [pacote MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para obter mais informações, consulte [APIs UWP disponíveis](desktop-to-uwp-supported-api.md).
+Algumas APIs UWP têm suporte apenas em aplicativos de área de trabalho que têm a [identidade do pacote](modernize-packaged-apps.md). Para obter mais informações, consulte [APIs UWP disponíveis](desktop-to-uwp-supported-api.md).
 
 ## <a name="set-up-your-project"></a>Configurar seu projeto
 
@@ -45,11 +45,11 @@ Há duas opções para projetos .NET:
 
 3. Na janela **Gerenciador de pacotes NuGet** , certifique-se de que **incluir pré-lançamento** está selecionado. Em seguida, selecione a guia **procurar** e procure `Microsoft.Windows.SDK.Contracts`.
 
-4. Depois que `Microsoft.Windows.SDK.Contracts` o pacote for encontrado, no painel direito da janela do **Gerenciador de pacotes NuGet** , selecione a **versão** do pacote que você deseja instalar com base na versão do Windows 10 que você deseja direcionar:
+4. Depois que o pacote de `Microsoft.Windows.SDK.Contracts` for encontrado, no painel direito da janela do **Gerenciador de pacotes NuGet** , selecione a **versão** do pacote que você deseja instalar com base na versão do Windows 10 que você deseja direcionar:
 
-    * **10.0.18362. xxxx-Preview**: Escolha esta para o Windows 10, versão 1903.
-    * **10.0.17763. xxxx-Preview**: Escolha esta para o Windows 10, versão 1809.
-    * **10.0.17134. xxxx-Preview**: Escolha esta para o Windows 10, versão 1803.
+    * **10.0.18362. xxxx-Preview**: escolha esta para o Windows 10, versão 1903.
+    * **10.0.17763. xxxx-Preview**: escolha esta para o Windows 10, versão 1809.
+    * **10.0.17134. xxxx-Preview**: escolha esta para o Windows 10, versão 1803.
 
 5. Clique em **Instalar**.
 
@@ -66,9 +66,9 @@ Há duas opções para projetos .NET:
     |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
     |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
     |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |Windows. winmd|C:\Arquivos de programas (x86) \Windows\\Kits\10\UnionMetadata<*SDK versão*> \Facade|
-    |Windows.Foundation.UniversalApiContract.winmd|C:\Arquivos de programas (x86) \Windows\\<Kits\10\References*SDK versão*>\<\Windows.Foundation.UniversalApiContract*versão*>|
-    |Windows.Foundation.FoundationContract.winmd|C:\Arquivos de programas (x86) \Windows\\<Kits\10\References*SDK versão*>\<\Windows.Foundation.FoundationContract*versão*>|
+    |Windows. winmd|C:\Arquivos de programas (x86) \Windows Kits\10\UnionMetadata\\<*SDK versão*> \Facade|
+    |Windows.Foundation.UniversalApiContract.winmd|C:\Arquivos de programas (x86) \Windows Kits\10\References\\<*SDK versão*> \Windows.Foundation.UniversalApiContract\<*versão*>|
+    |Windows.Foundation.FoundationContract.winmd|C:\Arquivos de programas (x86) \Windows Kits\10\References\\<*SDK versão*> \Windows.Foundation.FoundationContract\<*versão*>|
 
 3. Na janela **Propriedades**, defina o campo **Cópia Local** de cada arquivo *.winmd* como **False**.
 
@@ -99,9 +99,9 @@ Mesmo que os usuários ignorem a mensagem, eles poderão vê-la novamente na cen
 
 Visite a [documentação do UWP](/windows/uwp/get-started/) para obter mais ideias.
 
-:white_check_mark: **Decida se deseja aprimorar ou estender**
+:white_check_mark: **Decida se irá aprimorar ou estender**
 
-Em geral, você nos ouvirá usar os termos aprimorados e *estender*, portanto, demoraremos um pouco para explicar exatamente o que cada um desses termos significam.
+Em geral, você nos ouvirá usar os termos *aprimorados* e *estender*, portanto, demoraremos um pouco para explicar exatamente o que cada um desses termos significam.
 
 Usamos o termo *aprimorar* para descrever Windows Runtime APIs que você pode chamar diretamente do seu aplicativo de desktop (independentemente de você ter optado por empacotar seu aplicativo em um pacote MSIX). Quando você tiver escolhido uma experiência com o Windows 10, identifique as APIs de que precisa para criá-las e, em seguida, veja se essa API aparece na [lista](desktop-to-uwp-supported-api.md). Esta é uma lista de APIs que você pode chamar diretamente do seu aplicativo de desktop. Se sua API não aparece nessa lista, isso ocorre porque a funcionalidade associada a essa API só pode ser executada em um processo UWP. Muitas vezes, elas incluem APIs que processam o XAML UWP, como um controle de mapa UWP ou um prompt de segurança do Windows Hello.
 
@@ -243,7 +243,7 @@ O compilador só cria esse código se essa constante for definida em sua configu
 
 Você pode compilar um conjunto de binários para todos os usuários do Windows, independentemente da versão do Windows executada. Seu aplicativo chama Windows Runtime APIs somente se o usuário executa seu aplicativo como um aplicativo empacotado no Windows 10.
 
-A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar este pacote NuGet: [Auxiliares de ponte de desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, ``IsRunningAsUWP()`` em seguida, usam o método para retirar todo o código que chama Windows Runtime APIs. consulte esta postagem de blog para obter mais detalhes: [Ponte de desktop – identifique o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar este pacote NuGet: [auxiliares de ponte de desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, em seguida, usar o método ``IsRunningAsUWP()`` para retirar todo o código que chama Windows Runtime APIs. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-samples"></a>Exemplos relacionados
 
