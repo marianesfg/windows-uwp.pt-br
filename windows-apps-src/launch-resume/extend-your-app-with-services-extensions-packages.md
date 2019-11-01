@@ -1,18 +1,18 @@
 ---
-title: Estender seu app com serviços, extensões e pacotes
+title: Estender seu aplicativo com serviços, extensões e pacotes
 description: Descreve como criar uma tarefa em segundo plano que é executada quando seu aplicativo da loja Plataforma Universal do Windows (UWP) é atualizado.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
-ms.openlocfilehash: a72b175e672b44d0dace0b4bf04956792edfadd0
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
+ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282513"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329510"
 ---
-# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu app com serviços, extensões e pacotes
+# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços, extensões e pacotes
 
 Há muitas tecnologias no Windows 10 para estender e modelar seu aplicativo. Esta tabela deve ajudá-lo a determinar qual tecnologia você deve usar dependendo dos requisitos. Ela é seguida por uma breve descrição dos cenários e tecnologias.
 
@@ -37,7 +37,7 @@ Código que você pode baixar da loja e executar no seu aplicativo. Por exemplo,
 
 **Plug-ins de código em processo**  
 
-Código que é executado em processo com seu aplicativo. Há suporte somente para C++. Também pode incluir o conteúdo. Como o código é executado no processo, é considerado um nível mais alto de confiança. Você pode optar por não expor esse tipo de extensibilidade a terceiros.
+Código que é executado em processo com seu aplicativo. Também pode incluir o conteúdo. Como o código é executado no processo, é considerado um nível mais alto de confiança. Você pode optar por não expor esse tipo de extensibilidade a terceiros.
 
 **Ativos de UX (cadeias de caracteres/imagens)**  
 
@@ -88,7 +88,7 @@ Se um aplicativo oferece suporte a extensões, qualquer desenvolvedor pode envia
 
 Os aplicativos não podem carregar o código a partir das extensões. Se você precisar de execução de código, considere os Serviços de aplicativo.
 
-**Serviço de Aplicativo**
+**Serviço de aplicativo**
 
 Os serviços de aplicativos do Windows permitem a comunicação entre aplicativos, permitindo que seu aplicativo UWP forneça serviços para outro aplicativo universal do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
 

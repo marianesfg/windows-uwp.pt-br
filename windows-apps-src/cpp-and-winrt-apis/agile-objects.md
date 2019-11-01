@@ -87,7 +87,7 @@ Não importa onde o struct de marcador apareça no pacote de parâmetros variadi
 
 Recusando agilidade ou não, você poderá implementar **IMarshal** por conta própria. Por exemplo, você pode usar o marcador **winrt::non_agile** para evitar a implementação de agilidade padrão e implementar **IMarshal** por conta própria&mdash; para, talvez, oferecer suporte à semântica de marshal-por-valor.
 
-## <a name="agile-references-winrtagileref"></a>Referências ágeis (winrt::agile_ref)
+## <a name="agile-references-winrtagile_ref"></a>Referências ágeis (winrt::agile_ref)
 
 Se você estiver consumindo um objeto que não seja ágil, mas precisa passá-lo em algum contexto potencialmente ágil, uma opção será usar o modelo de struct [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) a fim de obter uma referência ágil para uma instância de tipo não ágil, ou para a interface de um objeto não ágil.
 
