@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 662f23c5ab201a44669b2e4e4a454aa73ebd3b43
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 31b4a02f3307909f325b71cdc0540d44054adf4c
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061979"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referências de recursos de ResourceDictionary e XAML
 
@@ -77,7 +77,7 @@ Aqui, um pincel e uma cadeia de caracteres são declarados como recursos e usado
 </Page>
 ```
 
-Todos os recursos precisam ter uma chave. Normalmente, essa chave é uma cadeia de caracteres definida com `x:Key=”myString”`. Entretanto, há outras maneiras de especificar uma chave:
+Todos os recursos precisam ter uma chave. Normalmente, essa chave é uma cadeia de caracteres definida com `x:Key="myString"`. Entretanto, há outras maneiras de especificar uma chave:
 
 -   [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) e [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) exigem um **TargetType** e usarão o **TargetType** como a chave se [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute) não for especificado. Nesse caso, a chave é o objeto Type mesmo, não uma cadeia de caracteres. (Consulte exemplos abaixo.)
 -   Os recursos [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) com um **TargetType** usarão o **TargetType** como a chave se [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute) não for especificado. Nesse caso, a chave é o objeto Type mesmo, não uma cadeia de caracteres.
@@ -389,7 +389,7 @@ Para saber mais e obter uma lista dos recursos do sistema e dos recursos especí
 
 O comportamento de pesquisa para referências de recursos XAML começa com o objeto em que o uso real foi aplicado e sua respectiva propriedade [Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources). Se houver um [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) nesse local, esse **ResourceDictionary** será verificado para obter um item que tenha a chave solicitada. Esse primeiro nível de pesquisa raramente é relevante porque, em geral, você não define e depois referencia um recurso no mesmo objeto. Na verdade, não existe aqui uma propriedade **Resources**. É possível fazer referências a recursos XAML praticamente de qualquer lugar do XAML; você não está limitado às propriedades de subclasses [FrameworkElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement).
 
-A sequência de pesquisa verifica o próximo objeto pai na árvore de objetos do tempo de execução do aplicativo. Se [FrameworkElement.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources) existir e contiver um [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), o item de dicionário com a cadeia de caracteres da chave especificada será solicitado. Se o recurso for encontrado, a sequência de pesquisa será interrompida e o objeto será fornecido ao local onde a referência foi feita. Caso contrário, o comportamento de pesquisa avançará para o próximo nível pai, em direção da raiz da árvore de objetos. A pesquisa continuará recursivamente para cima até que o elemento raiz da XAML seja alcançado, esgotando a pesquisa de todos os possíveis locais de recursos imediatos.
+A sequência de pesquisa verifica o próximo objeto pai na árvore de objetos do runtime do aplicativo. Se [FrameworkElement.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources) existir e contiver um [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), o item de dicionário com a cadeia de caracteres da chave especificada será solicitado. Se o recurso for encontrado, a sequência de pesquisa será interrompida e o objeto será fornecido ao local onde a referência foi feita. Caso contrário, o comportamento de pesquisa avançará para o próximo nível pai, em direção da raiz da árvore de objetos. A pesquisa continuará recursivamente para cima até que o elemento raiz da XAML seja alcançado, esgotando a pesquisa de todos os possíveis locais de recursos imediatos.
 
 > **Observação**&nbsp;&nbsp;É prática comum definir todos os recursos imediatos no nível da raiz de uma página, tanto para obter as vantagens desse comportamento de pesquisa de recursos como também como uma convenção do estilo de marcação XAML.
 
@@ -399,7 +399,7 @@ Se o recurso solicitado não for encontrado nos recursos imediatos, a próxima e
 
 Os modelos de controles têm outro possível local na pesquisa de referência: os dicionários de temas. Um dicionário de temas é um único arquivo XAML que tem o elemento [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) como raiz. O dicionário de temas pode ser um dicionário mesclado de [Application.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources). O dicionário de temas também pode ser o dicionário de temas específico de um controle modelo personalizado.
 
-Por fim, há uma pesquisa baseada nos recursos de plataforma. Os recursos de plataforma incluem os modelos de controle definidos para cada um dos temas da interface do usuário do sistema e que definem a aparência padrão de todos os controles usados na interface do usuário de um aplicativo do Tempo de Execução do Windows. Os recursos da plataforma também incluem um conjunto de recursos nomeados que se relacionam à aparência e aos temas em todo o sistema. Esses recursos são tecnicamente um item [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries) e estão disponíveis para pesquisa de XAML ou código depois que o aplicativo é carregado. Por exemplo, os recursos de tema do sistema incluem um recurso chamado "SystemColorWindowTextColor" que oferece uma definição de [Color](https://docs.microsoft.com/uwp/api/Windows.UI.Color) para combinar a cor do texto do aplicativo com a cor do texto da janela do sistema que vem do sistema operacional e das preferências do usuário. Outros estilos XAML em seu aplicativo podem mencionar esse estilo, ou o seu código pode obter um valor da pesquisa de recurso (e convertê-lo em **Color** no caso do exemplo).
+Por fim, há uma pesquisa baseada nos recursos de plataforma. Os recursos de plataforma incluem os modelos de controle definidos para cada um dos temas da interface do usuário do sistema e que definem a aparência padrão de todos os controles usados na interface do usuário de um aplicativo do Windows Runtime. Os recursos da plataforma também incluem um conjunto de recursos nomeados que se relacionam à aparência e aos temas em todo o sistema. Esses recursos são tecnicamente um item [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries) e estão disponíveis para pesquisa de XAML ou código depois que o aplicativo é carregado. Por exemplo, os recursos de tema do sistema incluem um recurso chamado "SystemColorWindowTextColor" que oferece uma definição de [Color](https://docs.microsoft.com/uwp/api/Windows.UI.Color) para combinar a cor do texto do aplicativo com a cor do texto da janela do sistema que vem do sistema operacional e das preferências do usuário. Outros estilos XAML em seu aplicativo podem mencionar esse estilo, ou o seu código pode obter um valor da pesquisa de recurso (e convertê-lo em **Color** no caso do exemplo).
 
 Para saber mais e obter uma lista dos recursos do sistema e dos recursos específicos de temas que estão disponíveis para um aplicativo UWP em XAML, confira [Recursos de temas XAML](xaml-theme-resources.md).
 
@@ -432,9 +432,9 @@ Um [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Resou
 -   Determinadas estruturas relacionadas à interface do usuário, como [Thickness](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Thickness) e [CornerRadius](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.CornerRadius)
 -   [Tipos de dados XAML intrínsecos](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-intrinsic-data-types)
 
-Também é possível usar tipos personalizados como um recurso compartilhável, se você seguir os padrões de implementação necessários. Você define essas classes em seu código de suporte (ou em componentes de tempo de execução que você inclui) e, depois, instancia essas classes na XAML como um recurso. Exemplos: fontes de dados de objeto e implementações [IValueConverter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IValueConverter) para vinculação de dados.
+Também é possível usar tipos personalizados como um recurso compartilhável, se você seguir os padrões de implementação necessários. Você define essas classes em seu código de suporte (ou em componentes de runtime que você inclui) e, depois, instancia essas classes na XAML como um recurso. Exemplos: fontes de dados de objeto e implementações [IValueConverter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IValueConverter) para vinculação de dados.
 
-Tipos personalizados devem ter um construtor padrão, porque é isso que um analisador XAML usa para instanciar uma classe. Os tipos personalizados usados ​​como recursos não podem ter a classe [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) em sua herança, pois o **UIElement** nunca pode ser compartilhável (é sempre destinado a representar exatamente um elemento da interface do usuário que existe em uma posição no gráfico de objeto do aplicativo em tempo de execução).
+Tipos personalizados devem ter um construtor padrão, porque é isso que um analisador XAML usa para instanciar uma classe. Os tipos personalizados usados ​​como recursos não podem ter a classe [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) em sua herança, pois o **UIElement** nunca pode ser compartilhável (é sempre destinado a representar exatamente um elemento da interface do usuário que existe em uma posição no gráfico de objeto do aplicativo em runtime).
 
 ## <a name="usercontrol-usage-scope"></a>Escopo de uso de UserControl
 
