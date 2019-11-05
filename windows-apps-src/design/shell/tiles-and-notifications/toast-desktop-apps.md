@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 31501d2dc3ac255897e374ca81b05558be7bc2fc
+ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100824"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560653"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 
@@ -28,7 +28,7 @@ Neste artigo, listamos as opções que você tem para enviar uma notificação d
 
 A tabela a seguir ilustra as opções para oferecer suporte a notificações do sistema no aplicativo da área de trabalho e os recursos com suporte correspondentes. Você pode usar a tabela para selecionar a melhor opção para seu cenário.<br/><br/>
 
-| Opção | Elementos visuais | Ações | Entradas | Ativas no processo |
+| Opção | Elementos visuais | Actions | Entradas | Ativas no processo |
 | -- | -- | -- | -- | -- |
 | [COM Activator](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [Nenhum CLSID de COM/stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
@@ -38,7 +38,7 @@ A tabela a seguir ilustra as opções para oferecer suporte a notificações do 
 
 Essa é a opção preferencial que funciona para a Ponte de Desktop e Win32 clássico, além de oferecer suporte a todos os recursos de notificação. Não tenha medo do "ativador COM;" temos uma biblioteca [para C#](send-local-toast-desktop.md) e [aplicativos C++](send-local-toast-desktop-cpp-wrl.md) que torna isso muito simples, mesmo se você nunca tiver criado um servidor COM antes.<br/><br/>
 
-| Elementos visuais | Ações | Entradas | Ativas no processo |
+| Elementos visuais | Actions | Entradas | Ativas no processo |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ Para saber como usar essa opção, consulte [Enviar uma notificação do sistema
 
 Esta é uma opção alternativa, se você não puder implementar um ativador COM. No entanto, você sacrifica alguns recursos, como suporte de entrada (caixas de texto em notificações do sistema) e ativa no processo.<br/><br/>
 
-| Elementos visuais | Ações | Entradas | Ativas no processo |
+| Elementos visuais | Actions | Entradas | Ativas no processo |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 
@@ -81,6 +81,6 @@ Para aplicativos clássicos do Win32, configure a AUMID para que você pode envi
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar uma notificação do sistema local de C# aplicativos Destkop](send-local-toast-desktop.md)
-* [Enviar uma notificação do sistema local de C++ aplicativos Destkop WRL](send-local-toast-desktop-cpp-wrl.md)
+* [Enviar uma notificação do sistema local de C# aplicativos da área de trabalho](send-local-toast-desktop.md)
+* [Enviar uma notificação do sistema local de C++ aplicativos da área de trabalho WRL](send-local-toast-desktop-cpp-wrl.md)
 * [Documentação do conteúdo do sistema](adaptive-interactive-toasts.md)
