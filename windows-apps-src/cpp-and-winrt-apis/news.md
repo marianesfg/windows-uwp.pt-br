@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, novidades, o que há, de novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 525110a09c56f48f9f9ce3d2521c98e2297a8372
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 24abdb26cf884367d9a9521d30b09b443d2e4e00
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816707"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998620"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -154,7 +154,7 @@ Essa otimização evita as dependências #include no `module.g.cpp`, de modo que
 
 #### <a name="smarter-and-more-efficient-modulegcpp-for-large-projects-with-multiple-libs"></a>`module.g.cpp` mais inteligente e eficiente para projetos grandes com várias bibliotecas
 
-O arquivo `module.g.cpp` agora também contém dois auxiliares combináveis adicionais chamados **winrt_can_unload_now** e **winrt_get_activation_factory**. Eles foram criados para projetos maiores em que uma DLL é composta por várias bibliotecas, cada uma com as próprias classes de tempo de execução. Nessa situação, você precisa unir manualmente as DLLs **DllGetActivationFactory** e **DllCanUnloadNow**. Esses auxiliares tornam muito mais fácil fazer isso, evitando erros de empréstimos artificiais. O sinalizador `-lib` da ferramenta `cppwinrt.exe` também pode ser usado para fornecer seu próprio preâmbulo a cada lib individual (em vez de `winrt_xxx`) para que as funções de cada biblioteca possam ser nomeadas individualmente e, portanto, combinadas de maneira não ambígua.
+O arquivo `module.g.cpp` agora também contém dois auxiliares combináveis adicionais chamados **winrt_can_unload_now** e **winrt_get_activation_factory**. Eles foram criados para projetos maiores em que uma DLL é composta por várias bibliotecas, cada uma com as próprias classes de runtime. Nessa situação, você precisa unir manualmente as DLLs **DllGetActivationFactory** e **DllCanUnloadNow**. Esses auxiliares tornam muito mais fácil fazer isso, evitando erros de empréstimos artificiais. O sinalizador `-lib` da ferramenta `cppwinrt.exe` também pode ser usado para fornecer seu próprio preâmbulo a cada lib individual (em vez de `winrt_xxx`) para que as funções de cada biblioteca possam ser nomeadas individualmente e, portanto, combinadas de maneira não ambígua.
 
 #### <a name="coroutine-support"></a>Suporte a rotina combinada
 
@@ -196,7 +196,7 @@ Essa atualização também adiciona suporte para [**get_strong**](/uwp/cpp-ref-f
 
 #### <a name="support-for-deferred-destruction-and-safe-qi-during-destruction"></a>Suporte para destruição adiada e QI segura durante a destruição
 
-Não é incomum no destruidor de um objeto de classe de tempo de execução chamar um método que eleva temporariamente a contagem de referência. Quando a contagem de referência volta a ser zero, o objeto é destruído uma segunda vez. Em um aplicativo XAML, você pode precisar executar uma QI ([**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))) em um destruidor para chamar uma implementação de limpeza acima ou abaixo na hierarquia. Mas a contagem de referência do objeto já atingiu zero, de modo que essa QI também constitui um salto na contagem.
+Não é incomum no destruidor de um objeto de classe de runtime chamar um método que eleva temporariamente a contagem de referência. Quando a contagem de referência volta a ser zero, o objeto é destruído uma segunda vez. Em um aplicativo XAML, você pode precisar executar uma QI ([**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))) em um destruidor para chamar uma implementação de limpeza acima ou abaixo na hierarquia. Mas a contagem de referência do objeto já atingiu zero, de modo que essa QI também constitui um salto na contagem.
 
 Essa atualização adiciona suporte para eliminar o salto da contagem de referência, garantindo que, após atingir zero, ele nunca mais possa ser reativado, enquanto ainda permite QI para qualquer temporário necessário durante a destruição. Esse procedimento é inevitável em certos controles/aplicativos em XAML, e C++/WinRT agora é resiliente a ele.
 
@@ -269,9 +269,9 @@ Pode ser difícil trabalhar com parâmetros `out`, particularmente matrizes do W
 
 A implementação [**winrt::event**](/uwp/cpp-ref-for-winrt/event) agora manipula normalmente o caso em que o método **remove** é chamado com um valor inválido de token (um valor que não está presente na matriz).
 
-#### <a name="coroutine-locals-are-now-destroyed-before-the-coroutine-returns"></a>Locais de rotina combinada agora são destruídos antes que a rotina combinada retorne
+#### <a name="coroutine-local-variables-are-now-destroyed-before-the-coroutine-returns"></a>As variáveis locais de corrotina agora são destruídas antes que a corrotina retorne
 
-A maneira tradicional de implementar um tipo de rotina combinada pode permitir que locais dentro da rotina combinada sejam destruídos *após* ela retornar/ser concluída (em vez de antes da suspensão final). A retomada de qualquer waiter agora é adiada até o modo de suspensão final para evitar esse problema e acumular outros benefícios.
+A maneira tradicional de implementar um tipo de corrotina pode permitir que variáveis locais dentro da corrotina sejam destruídas *após* ela retornar/ser concluída (em vez de antes da suspensão final). A retomada de qualquer waiter agora é adiada até o modo de suspensão final para evitar esse problema e acumular outros benefícios.
 
 ## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>Novidades e alterações no Windows SDK versão 10.0.17763.0 (Windows 10, versão 1809)
 
@@ -282,7 +282,7 @@ A tabela a seguir contém as novidades e as alterações ao C++/WinRT no SDK do 
 | **Alteração da falha**. Para que ele seja compilado, C++/WinRT não depende de cabeçalhos do SDK do Windows. | Veja [Isolamento de arquivos de cabeçalho do SDK do Windows](#isolation-from-windows-sdk-header-files) abaixo. |
 | O formato de sistema de projeto do Visual Studio foi alterado. | Confira [Como redirecionar seu projeto do C++/WinRT para uma versão posterior do SDK do Windows](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk) abaixo. |
 | Há novas funções e classes base para ajudá-lo a passar um objeto de coleção para uma função do Windows Runtime ou para implementar seus próprios tipos de coleção e propriedades de coleção. | Veja [Coleções com C++/WinRT](collections.md). |
-| Você pode usar a extensão de marcação [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) com suas classes de tempo de execução C++/WinRT. | Para mais informações e exemplos de código, veja [Visão geral de associação de dados](/windows/uwp/data-binding/data-binding-quickstart). |
+| Você pode usar a extensão de marcação [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) com suas classes de runtime C++/WinRT. | Para mais informações e exemplos de código, veja [Visão geral de associação de dados](/windows/uwp/data-binding/data-binding-quickstart). |
 | O suporte ao cancelamento de uma rotina combinada permite que você registre um retorno de chamada de cancelamento. | Para obter mais informações e exemplos de código, confira [Retornos de chamada de cancelamento e cancelar uma operação assíncrona](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks). |
 | Ao criar um delegado que aponta para uma função de membro, você pode estabelecer uma referência forte ou fraca ao objeto atual (em vez de um ponteiro *this* bruto) no ponto em que o manipulador é registrado. | Para obter mais informações e exemplos de código, veja a subseção **Se você usar uma função de membro como delegado** na seção [Acessar com segurança o ponteiro *this* com um delegado de manipulação de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
 | Foram corrigidos os bugs revelados pela conformidade aprimorada do Visual Studio com o padrão C++. A cadeia de ferramentas do LLVM e Clang também é mais bem utilizada para validar a conformidade com os padrões C++/WinRT. | Você não encontrará o problema descrito em [Por que meu novo projeto não é compilado? Estou usando o Visual Studio 2017 (versão 15.8.0 ou superior) e a versão 17134 do SDK](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
@@ -296,7 +296,7 @@ Outras alterações.
 - **Alteração da falha**. O [**winrt::handle_type construtor**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) foi reforçado tornando-o explícito (agora é mais difícil escrever um código incorreto com ele). Se você precisar atribuir um valor de identificador bruto, chame a [**função handle_type::attach**](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) em vez disso.
 - **Alteração da falha**. As assinaturas de **WINRT_CanUnloadNow** e **WINRT_GetActivationFactory** foram alteradas. Você não deve declarar essas funções de modo algum. Em vez disso, inclua `winrt/base.h` (que será incluído automaticamente se você incluir qualquer arquivos de cabeçalho de namespace do Windows C++/WinRT) para incluir as declarações de uma dessas funções.
 - Para [**winrt::clock struct**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** foram preteridos em prol do **from_file_time/to_file_time**.
-- As APIs que esperam **parâmetros IBuffer** são simplificadas. Embora a maioria das APIs prefira coleções ou matrizes, APIs suficientes dependem de **IBuffer**, assim, precisava ser mais fácil usar essas APIs de C++. Essa atualização fornece acesso direto aos dados por trás de uma implementação **IBuffer**, usando a mesma convenção de nomenclatura de dados usada pelos contêineres da Biblioteca Padrão C++. Isso também evita o conflito com nomes de metadados que convencionalmente começam com uma letra maiúscula.
+- APIs simplificadas que esperam parâmetros **IBuffer**. A maioria das APIs prefere coleções ou matrizes. Mas sentimos que devemos tornar mais fácil a chamada de APIs que dependem de **IBuffer**. Essa atualização fornece acesso direto aos dados por trás de uma implementação de **IBuffer**. Ela usa a mesma convenção de nomenclatura de dados que a usada pelos contêineres da Biblioteca Padrão do C++. Essa convenção também evita conflitos com nomes de metadados que convencionalmente começam com uma letra maiúscula.
 - Geração de código aprimorada: várias melhorias para reduzir o tamanho do código, melhorar o inlining e otimizar o cache de alocador.
 - Removida a recursão desnecessária. Quando a linha de comando refere-se a uma pasta, em vez de a um determinado `.winmd`, a ferramenta `cppwinrt.exe` não pesquisa recursivamente arquivos `.winmd`. A ferramenta `cppwinrt.exe` agora também lida com duplicatas de modo mais inteligente, tornando-a mais resiliente a erros do usuário e a arquivos `.winmd` mal-formados.
 - Ponteiros inteligentes reforçados. Anteriormente, os revogadores de evento falhavam em revogar quando movidos-recebiam um novo valor. Isso ajudou a descobrir um problema em que classes de ponteiro inteligente não estavam manipulando de modo confiável a autoatribuição; como raiz no [**modelo de struct winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **WinRT::com_ptr** foi corrigido e os revogadores de evento foram corrigidos para tratar a semântica de movimentação corretamente para revogarem após a atribuição.
