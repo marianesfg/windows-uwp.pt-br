@@ -114,6 +114,8 @@
           items:
             - name: Contêineres e modelos de itens
               href: controls-and-patterns/item-containers-templates.md
+            - name: Seleção de modelo de dados
+              href: controls-and-patterns/data-template-selector.md
             - name: Modelos de item para exibição de lista
               href: controls-and-patterns/item-templates-listview.md
             - name: Modelos de item para exibição de grade
