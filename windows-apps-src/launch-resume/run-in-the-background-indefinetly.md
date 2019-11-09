@@ -6,12 +6,12 @@ keywords: tarefa em segundo plano, execução estendida, recursos, limites, tare
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dee95e02e43f3a541bd332f5150765ca76bb0955
-ms.sourcegitcommit: 234dce5fb67e435ae14eb0052d94ab01611ac5e4
+ms.openlocfilehash: 55025d0348abdf311ebf020c70ccf9029bf7ec5a
+ms.sourcegitcommit: ebd35887b00d94f1e76f7d26fa0d138ec4abe567
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72822449"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73888663"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Executar em segundo plano indefinidamente
 
@@ -27,17 +27,22 @@ Se você estiver desenvolvendo um aplicativo que não se destina a ser enviado p
 
 A funcionalidade `extendedExecutionUnconstrained` é adicionada como um recurso restrito no manifesto do aplicativo. Consulte [Declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para obter mais informações sobre recursos restritos.
 
+> **Observação:** Adicione a declaração de namespace XML *xmlns: rescap* e use o prefixo *rescap* para declarar a funcionalidade.
+
 _Package.appxmanifest_
 ```xml
-<Package ...>
-...
+<Package
+    ...
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="uap mp rescap">
+  ...
   <Capabilities>
     <rescap:Capability Name="extendedExecutionUnconstrained"/>
   </Capabilities>
 </Package>
 ```
 
-Quando você usar as funcionalidades `extendedExecutionUnconstrained`, [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) e [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason) são usadas em vez de [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) e [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason). O mesmo padrão para criar a sessão, definir membros e solicitar a extensão de forma assíncrona ainda se aplica: 
+Quando você usar as funcionalidades `extendedExecutionUnconstrained`, [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) e [ExtendedExecutionForegroundReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason) são usadas em vez de [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) e [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason). O mesmo padrão para criar a sessão, definir membros e solicitar a extensão de forma assíncrona ainda se aplica: 
 
 ```cs
 var newSession = new ExtendedExecutionForegroundSession();
@@ -66,9 +71,15 @@ Registrar-se para o evento **Revoked** permitirá que seu aplicativo realize qua
 
 Na Plataforma Universal do Windows, tarefas em segundo plano são processos executados em segundo plano sem qualquer forma de interface do usuário. Tarefas em segundo plano geralmente podem ser executadas por um máximo de 25 segundos antes de serem canceladas. Algumas das tarefas de execução mais longas também têm uma verificação para garantir que a tarefa em segundo plano não está inutilizada ou usando memória. Na Atualização do Windows para Criadores (versão 1703), a funcionalidade restrita [extendedBackgroundTaskTime](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) foi introduzida para remover esses limites. A funcionalidade **extendedBackgroundTaskTime** é adicionada como um recurso restrito no arquivo do manifesto do aplicativo:
 
+> **Observação:** Adicione a declaração de namespace XML *xmlns: rescap* e use o prefixo *rescap* para declarar a funcionalidade.
+
 _Package.appxmanifest_
 ```xml
-<Package ...>
+<Package
+    ... 
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="uap mp rescap">
+...
   <Capabilities>
     <rescap:Capability Name="extendedBackgroundTaskTime"/>
   </Capabilities>

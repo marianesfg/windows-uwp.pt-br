@@ -1,23 +1,26 @@
 ---
-Description: Use a codificação de caracteres UTF-8 para compatibilidade ideal entre aplicativos Web e outras plataformas baseadas em * Nix (Unix, Linux e variantes), minimize os bugs de localização e reduza a sobrecarga de testes.
+Description: Use a codificação de caracteres UTF-8 para compatibilidade ideal entre aplicativos Web e outras plataformas baseadas em \*Nix (Unix, Linux e variantes), minimize os bugs de localização e reduza a sobrecarga de testes.
 title: Use a página de código do Windows UTF-8
 template: detail.hbs
 ms.date: 06/12/2019
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: be3aade0289911f878d960fb62bde49b8ef840a8
-ms.sourcegitcommit: 3a06cf3f8bd00e5e6eac3b38ee7e3c7cf4bc5197
+ms.openlocfilehash: 4b4050dfea1589fbe79db08061bcc56e392173f1
+ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888741"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73847594"
 ---
 # <a name="use-the-utf-8-code-page"></a>Use a página de código UTF-8
 
-Use a codificação de caracteres [UTF-8](http://www.utf-8.com/) para compatibilidade ideal entre aplicativos Web e outras plataformas baseadas em * Nix (Unix, Linux e variantes), minimize os bugs de localização e reduza a sobrecarga de testes.
+Use a codificação de caracteres [UTF-8](http://www.utf-8.com/) para compatibilidade ideal entre aplicativos Web e outras plataformas baseadas em \*Nix (Unix, Linux e variantes), minimize os bugs de localização e reduza a sobrecarga de testes.
 
-UTF-8 é a página de código universal para internacionalização e dá suporte a todos os pontos de código Unicode usando a codificação de largura variável de 1-6 bytes. Ele é usado de acordo com a Web e é o padrão para plataformas baseadas no * Nix.
+UTF-8 é a página de código universal para internacionalização e é capaz de codificar todo o conjunto de caracteres Unicode. Ele é usado de acordo com a Web e é o padrão para plataformas baseadas no * Nix.
+
+> [!NOTE]
+> Um caractere codificado leva entre 1 e 4 bytes. A codificação UTF-8 dá suporte a sequências de byte mais longas, até 6 bytes, mas o maior ponto de código do Unicode 6,0 (U + 10FFFF) leva apenas 4 bytes.
 
 ## <a name="-a-vs--w-apis"></a>-As APIs vs.-W
   
@@ -80,7 +83,8 @@ Como o Windows Opera nativamente no UTF-16 (`WCHAR`), talvez seja necessário co
 [MultiByteToWideChar](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) e [WideCharToMultiByte](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) permitem que você converta entre UTF-8 e UTF-16 (`WCHAR`) (e outras páginas de código). Isso é particularmente útil quando uma API do Win32 herdada só pode entender `WCHAR`. Essas funções permitem que você converta a entrada UTF-8 em `WCHAR` para passar para uma API-W e, em seguida, converter os resultados de volta, se necessário.
 Ao usar essas funções com `CodePage` definido como `CP_UTF8`, use `dwFlags` de `0` ou `MB_ERR_INVALID_CHARS`, caso contrário, ocorrerá uma `ERROR_INVALID_FLAGS`.
 
-Observação: `CP_ACP` é igual a `CP_UTF8` somente se estiver executando no Windows versão 1903 (maio de 2019 atualização) ou acima e a propriedade ActiveCodePage descrita acima estiver definida como UTF-8. Caso contrário, ela honra a página de código do sistema herdada. É recomendável usar `CP_UTF8` explicitamente.
+> [!NOTE]
+> `CP_ACP` é igual a `CP_UTF8` somente se estiver executando no Windows versão 1903 (maio de 2019 atualização) ou acima e a propriedade ActiveCodePage descrita acima estiver definida como UTF-8. Caso contrário, ela honra a página de código do sistema herdada. É recomendável usar `CP_UTF8` explicitamente.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
