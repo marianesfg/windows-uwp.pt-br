@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro aplicativo, olá mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: b0d2ad6f0370867159054d77c7e68201d4799037
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
+ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062882"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73847609"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um aplicativo "Hello, world" (XAML)
 
@@ -123,7 +123,7 @@ Vamos adicionar um botão à nossa página. Neste tutorial, você trabalhará ap
     Se você olhar para a janela de código XAML, verá que o botão foi adicionado lá também:
 
  ```XAML
-<Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
+<Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
  ```
 
 4.  Altere o texto do botão.
@@ -131,7 +131,7 @@ Vamos adicionar um botão à nossa página. Neste tutorial, você trabalhará ap
     Clique no modo de exibição de código XAML e altere o conteúdo de "Botão" para "Hello, world!".
 
 ```XAML
-<Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
+<Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
 Observe como o botão é exibido nas atualizações de telas de design para exibir o novo texto.
