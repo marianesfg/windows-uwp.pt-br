@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: d309ce7e18a8dc62a24bc0e7f51f0015042a5f84
+ms.sourcegitcommit: 3bb982f35c057e30c742ab9f1eea119bae627a5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163747"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74086861"
 ---
 # <a name="collections-and-lists"></a>Coleções e listas
 
@@ -38,11 +38,11 @@ Cada um desses controles (com exceção do ItemsRepeater) também tem o comporta
 
 > **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [classe FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [classe TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview) e [classe ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
-> <div id="main">
-> <strong>Windows 10 Fall Creators Update – alteração de comportamento</strong>
-> </div>
-> Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).
-> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">classe ScrollViewer</a>.
+> <div id="main">  
+> <strong>Windows 10 Fall Creators Update – alteração de comportamento</strong>  
+> </div>  
+> Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).  
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Classe ScrollViewer</a>.  
 
 ## <a name="examples"></a>Exemplos
 
