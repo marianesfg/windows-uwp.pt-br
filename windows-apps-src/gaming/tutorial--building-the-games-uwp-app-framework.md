@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 940de8c00dc2639785ae82e87d63f4994b1b6b2e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
+ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367745"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74153698"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP
 
@@ -22,11 +22,11 @@ Para configurar essa estrutura, primeiro obtenha um provedor de exibição para 
 O objeto de provedor de exibição implementa a interface __IFrameworkView__, que consiste em uma série de métodos que precisam ser configurados para criar esse jogo de exemplo.
 
 Você precisará implementar esses cinco métodos que o singleton do aplicativo chama:
-* [__inicializar__](#initialize-the-view-provider)
+* [__Inicializar__](#initialize-the-view-provider)
 * [__SetWindow__](#configure-the-window-and-display-behaviors)
-* [__Carga__](#load-method-of-the-view-provider)
-* [__Run__](#run-method-of-the-view-provider)
-* [__Uninitialize__](#uninitialize-method-of-the-view-provider)
+* [__Carrega__](#load-method-of-the-view-provider)
+* [__Funcionam__](#run-method-of-the-view-provider)
+* [__Cancelar__](#uninitialize-method-of-the-view-provider)
 
 O método __Initialize__ é chamado na inicialização do aplicativo. O método __SetWindow__ é chamado após __Initialize__. E depois o método __Load__ é chamado. O método __Run__ é chamado quando o jogo está sendo executado. Quando o jogo chega ao fim, o método __Uninitialize__ é chamado. Para obter mais informações, consulte a [Referência de API __IFrameworkView__](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview). 
 
@@ -186,10 +186,10 @@ void App::Load(
 
 ### <a name="gamemain-constructor"></a>Construtor GameMain
 
-* Crie e inicialize o renderizador do jogo. Para obter mais informações, consulte [framework de renderização i: Introdução à renderização](tutorial--assembling-the-rendering-pipeline.md).
+* Crie e inicialize o renderizador do jogo. Para obter mais informações, consulte [Estrutura de renderização I: introdução à renderização](tutorial--assembling-the-rendering-pipeline.md).
 * Crie e inicialize o objeto Simple3Dgame. Para obter mais informações, consulte [Definir o objeto principal do jogo](tutorial--defining-the-main-game-loop.md).    
 * Crie o objeto de controle de interface de usuário do jogo e exiba a sobreposição de informações do jogo para mostrar uma barra de progresso à medida que os arquivos de recurso são carregados. Para saber mais, consulte [Adicionando uma interface do usuário](tutorial--adding-a-user-interface.md).
-* Crie o controlador para que possa ler entradas do controlador (toque, mouse, controle sem fio do XBox). Para obter mais informações, consulte [Adicionando controles](tutorial--adding-controls.md).
+* Crie o controlador para que ele possa ler a entrada do controlador (toque, mouse ou controlador sem fio Xbox). Para obter mais informações, consulte [Adicionando controles](tutorial--adding-controls.md).
 * Depois que o controlador é inicializado, definimos duas áreas retangulares nos cantos inferiores esquerdo e direito da tela para os controles de movimento e de toque da câmera, respectivamente. O jogador usa o retângulo inferior esquerdo, definido pela chamada para **SetMoveRect**, como um painel de controle virtual para mover a câmera para frente e para trás, de um lado para outro. O retângulo inferior direito, definido pelo método **SetFireRect** é usado como um botão virtual para disparar a munição.
 * Use __create_task__ e __create_task::then__ para dividir o carregamento de recursos em dois estágios separados. Como o acesso ao contexto de dispositivo do Direct3D 11 é restrito ao thread em que o contexto de dispositivo foi criado enquanto o acesso ao dispositivo Direct3D 11 para criação de objetos é livre de threads, isso significa que a tarefa **CreateGameDeviceResourcesAsync** pode ser executada em um thread separado da tarefa de conclusão (*FinalizeCreateGameDeviceResources*), que é executada no thread original. Usamos um padrão semelhante para carregar os recursos de nível com o **LoadLevelAsync** e **FinalizeLoadLevel**.
 
@@ -298,19 +298,19 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="run-method-of-the-view-provider"></a>Método Run do provedor de visualização
 
-Os três métodos anteriores: __Inicializar__, __SetWindow__, e __carga__ tiver definido o estágio. Agora o jogo pode avançar para o método **Run**, dando início à diversão! Os eventos que ele usa para passar de um estado do jogo para outro são enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo.
+Os três métodos anteriores: __Initialize__, __SetWindow__ e __Load__ prepararam o estágio. Agora o jogo pode avançar para o método **Run**, dando início à diversão! Os eventos que ele usa para passar de um estado do jogo para outro são enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo.
 
 ### <a name="apprun"></a>App::Run
 
 Inicie um loop __while__ que termina quando o jogador fecha a janela do jogo.
 
 O código de exemplo transita para um dos dois estados na máquina de estado do mecanismo do jogo:
-    * __Desativado__: A janela do jogo é desativada ou (perde o foco) ou ajustada. Quando isso acontece, o jogo suspende o processamento de eventos e aguarda a janela focar ou desajustar.
-    * __TooSmall__: O jogo atualiza seu próprio estado e renderiza os elementos gráficos para exibição.
+    * __Deactivated__: a janela do jogo é desativada ou (perde o foco) ou ajustada. Quando isso acontece, o jogo suspende o processamento de eventos e aguarda a janela focar ou desajustar.
+    * __TooSmall__: o jogo atualiza seu próprio estado e renderiza os gráficos para exibição.
 
 Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que podem fazer com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
 
-Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) , em seguida, retorna imediatamente depois que a fila foi processada.
+Quando o jogo não estiver visível, suspenso ou encaixado, você não quer que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Nesse caso, o jogo precisa usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. Em seguida, [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) retorna imediatamente depois que a fila é processada.
 
 ```cpp
 void App::Run()
@@ -384,9 +384,9 @@ void GameMain::Run()
 
 Quando o usuário encerra, por fim, a sessão de jogo, é necessário limpar tudo. Esta é a origem da propriedade **Uninitialize**.
 
-No Windows 10, fechando a janela do aplicativo não matar o processo do aplicativo, mas em vez disso, ele grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
+No Windows 10, fechar a janela do aplicativo não interrompe o processo do aplicativo, mas, em vez disso, grava o estado do singleton do aplicativo na memória. Se for necessário que ocorra algo especial quando o sistema precisar usar essa memória, incluindo algum tipo de limpeza especial de recursos, insira o código da limpeza nesse método.
 
-### <a name="app-uninitialize"></a>Aplicativo:: Uninitialize
+### <a name="app-uninitialize"></a>App:: Uninitialize
 
 ```cpp
 void App::Uninitialize()
