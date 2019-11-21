@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f9a253d8470407141c9ae56367d123d638d12c6
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: d23d33eb98f5ed01cf48eebd63a46aba2f923c65
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339828"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257109"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostos em imagens ou vídeos
 
 
 
-as informações de @no__t 0Some estão relacionadas ao produto de pré-lançamento que pode ser substancialmente modificado antes de ser lançado comercialmente. A Microsoft não oferece nenhuma garantia, expressa ou implícita, em relação às informações fornecidas aqui. \]
+\[algumas informações estão relacionadas ao produto de pré-lançamento que pode ser substancialmente modificado antes de ser lançado comercialmente. A Microsoft não oferece nenhuma garantia, expressa ou implícita, em relação às informações fornecidas aqui.\]
 
 Este tópico mostra como usar [**FaceDetector**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceDetector) para detectar rostos em uma imagem. [  **FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo.
 
 Para um método alternativo de acompanhamento facial que usa [**FaceDetectionEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffect), consulte [Análise de cena para captura de mídia](scene-analysis-for-media-capture.md).
 
-O código neste artigo foi adaptado dos exemplos [Detecção básica de rostos](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) e [Acompanhamento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409). Você pode baixar esses exemplos para ver o código usado em contexto ou usar o exemplo como ponto de partida para seu próprio aplicativo.
+O código neste artigo foi adaptado dos exemplos [Detecção básica de rostos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceDetection) e [Acompanhamento facial básico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceTracking). Você pode baixar esses exemplos para ver o código usado em contexto ou usar o exemplo como ponto de partida para seu próprio aplicativo.
 
 ## <a name="detect-faces-in-a-single-image"></a>Detectar rostos em uma única imagem
 
@@ -45,7 +45,7 @@ Use a classe [**BitmapDecoder**](https://docs.microsoft.com/uwp/api/Windows.Grap
 
 [!code-cs[Decode](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
 
-Na versão atual, a classe **FaceDetector** dá suporte somente a imagens em Gray8 ou Nv12. A classe **SoftwareBitmap** fornece o método [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert), que converte um bitmap de um formato em outro. Este exemplo converterá a imagem de origem no formato de pixel Gray8 caso ainda não esteja nesse formato. Se você quiser, poderá usar os métodos [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) e [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) para determinar, em tempo de execução, se há suporte para um formato de pixel, caso o conjunto de formatos com suporte seja expandido em futuras versões.
+Na versão atual, a classe **FaceDetector** dá suporte somente a imagens em Gray8 ou Nv12. A classe **SoftwareBitmap** fornece o método [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert), que converte um bitmap de um formato em outro. Este exemplo converterá a imagem de origem no formato de pixel Gray8 caso ainda não esteja nesse formato. Se você quiser, poderá usar os métodos [**GetSupportedBitmapPixelFormats**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.getsupportedbitmappixelformats) e [**IsBitmapPixelFormatSupported**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facedetector.isbitmappixelformatsupported) para determinar, em runtime, se há suporte para um formato de pixel, caso o conjunto de formatos com suporte seja expandido em futuras versões.
 
 [!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
@@ -98,8 +98,8 @@ Chame [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.med
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Análise de cena para captura de mídia](scene-analysis-for-media-capture.md)
-* [Exemplo de Detecção Facial básica](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Exemplo de acompanhamento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Exemplo de Detecção Facial básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceDetection)
+* [Exemplo de acompanhamento facial básico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceTracking)
 * [Câmera](camera.md)
 * [Foto básica, vídeo e captura de áudio com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reprodução de mídia](media-playback.md)

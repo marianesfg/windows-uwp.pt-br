@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ff067729e71ed4d4a49a082adf9fc754804836a6
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 17ca27e9f9c10ba59edbe0af84118a1bee0a44a3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317597"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254346"
 ---
 # <a name="audio-graphs"></a>Gráficos de áudio
 
@@ -32,7 +32,7 @@ Depois que todos os nós forem criados e as conexões entre eles forem configura
 Cenários adicionais são habilitados com a adição de efeitos de áudio ao gráfico de áudio. Cada nó em um gráfico de áudio pode ser preenchido com zeros ou mais efeitos de áudio que executam o processamento de áudio no áudio que passa pelo nó. Há vários efeitos internos como eco, equalizador, limitação e reverberação que podem ser anexados a um nó de áudio com apenas algumas linhas de código. Você também pode criar seus próprios efeitos de áudio que funcionem exatamente como os efeitos internos.
 
 > [!NOTE]
-> A [amostra AudioGraph UWP](https://go.microsoft.com/fwlink/?LinkId=619481) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
+> A [amostra AudioGraph UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AudioCreation) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Escolhendo AudioGraph ou XAudio2 do Windows Runtime
 
@@ -54,8 +54,8 @@ A classe [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio
 
 [!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
 
--   Todos os tipos de nó de áudio são criados usando Create\* métodos do **AudioGraph** classe.
--   O método [**AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) faz com que o gráfico de áudio comece a processar dados de áudio. O método [**AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) para o processamento do áudio. Cada nó no gráfico pode ser iniciado e interrompido independentemente enquanto o gráfico está sendo executado, mas nenhum nó está ativo quando o gráfico é interrompido. [**ResetAllNodes** ](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) faz com que todos os nós no gráfico para descartar qualquer dado atualmente em seus buffers de áudio.
+-   Todos os tipos de nó de áudio são criados usando os métodos Create\* da classe **AudioGraph** .
+-   O método [**AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) faz com que o gráfico de áudio comece a processar dados de áudio. O método [**AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) para o processamento do áudio. Cada nó no gráfico pode ser iniciado e interrompido independentemente enquanto o gráfico está sendo executado, mas nenhum nó está ativo quando o gráfico é interrompido. [**ResetAllNodes**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) faz com que todos os nós no grafo descartem todos os dados atualmente em seus buffers de áudio.
 -   O evento [**QuantumStarted**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumstarted) ocorre quando o gráfico está iniciando o processamento de um novo quantum de dados de áudio. O evento [**QuantumProcessed**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumprocessed) ocorre quando o processamento de um quantum é concluído.
 
 -   A única propriedade [**AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) necessária é [**AudioRenderCategory**](https://docs.microsoft.com/uwp/api/Windows.Media.Render.AudioRenderCategory). A especificação desse valor permite que o sistema otimize o pipeline de áudio para a categoria especificada.
@@ -80,7 +80,7 @@ Um nó de entrada de dispositivo passa áudio para o gráfico a partir de um dis
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Se você quiser especificar um dispositivo de captura de áudio específica para o nó de entrada do dispositivo, você pode usar o [ **Windows.Devices.Enumeration.DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) classe para obter uma lista de áudio de disponíveis do sistema dispositivos de captura, chamando [ **FindAllAsync** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) e passando no seletor de dispositivo de processamento de áudio retornado pela [  **Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync).
+Se você quiser especificar um dispositivo de captura de áudio específico para o nó de entrada do dispositivo, poderá usar a classe [**Windows. Devices. Enumeration. DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para obter uma lista dos dispositivos de captura de áudio disponíveis do sistema chamando [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) e passando o seletor de dispositivo de renderização de áudio retornado por [**Windows. Media. Devices. MediaDevice. GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync).
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -254,11 +254,11 @@ O [**AudioDeviceOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.A
 
 [!code-cs[Listener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetListener)]
 
-Você pode atualizar a localização, a velocidade e a direção dos emissores no tempo de execução para simular o movimento de uma fonte de áudio pelo espaço 3D.
+Você pode atualizar a localização, a velocidade e a direção dos emissores no runtime para simular o movimento de uma fonte de áudio pelo espaço 3D.
 
 [!code-cs[UpdateEmitter](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateEmitter)]
 
-Você também pode atualizar a localização, a velocidade e a orientação do objeto ouvinte no tempo de execução para simular o movimento do usuário pelo espaço 3D.
+Você também pode atualizar a localização, a velocidade e a orientação do objeto ouvinte no runtime para simular o movimento do usuário pelo espaço 3D.
 
 [!code-cs[UpdateListener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateListener)]
 

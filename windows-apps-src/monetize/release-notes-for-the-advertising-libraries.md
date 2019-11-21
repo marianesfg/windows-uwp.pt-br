@@ -6,24 +6,24 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
-ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 04d3554620cde44fc9907845a7765d023e1ed03e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601221"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260202"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de versão para as bibliotecas de anúncio
 
 
 
 
-Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas de suportam a aplicativos XAML e HTML/JavaScript para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
+Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas dão suporte a aplicativos XAML e JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8,1 e Windows Phone 8.
 
 ## <a name="installation"></a>Instalação
 
 
-As bibliotecas de publicidade da Microsoft estão disponíveis como parte do [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Para obter mais informações sobre como instalar o SDK do Windows, consulte [Instalar o SDK do Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
+As bibliotecas de publicidade da Microsoft estão disponíveis como parte do [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Para obter mais informações sobre como instalar o SDK do Windows, consulte [Instalar o SDK do Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="uninstall-previous-versions"></a>Desinstalar as versões anteriores
 
@@ -31,7 +31,7 @@ Antes de instalar o SDK do Microsoft Advertising mais recente, é altamente reco
 
 ## <a name="target-architecture-specific-build-outputs"></a>Direcionar saídas de compilação específicas da arquitetura
 
-Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar **nenhuma CPU** em seu projeto. Se o seu projeto for direcionado para **qualquer plataforma de CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
+Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar para **Any CPU** em seu projeto. Se o seu projeto for direcionado para **qualquer plataforma de CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
 
 ## <a name="c-support"></a>Suporte a C++
 
@@ -39,7 +39,7 @@ As bibliotecas do Microsoft Advertising (que incluem as classes **AdControl** e 
 
 ## <a name="no-toolbox-control"></a>Nenhum controle de caixa de ferramentas
 
-A versão atual das bibliotecas do Microsoft Advertising no [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp), não há nenhum controle de caixa de ferramentas para arrastar um **AdControl** ou **InterstitialAd** para um Design Surface em seu aplicativo. Para obter instruções sobre como adicionar esses controles ao seu código e marcação, consulte os [guias passo a passo do desenvolvedor](developer-walkthroughs.md).
+A versão atual das bibliotecas do Microsoft Advertising no [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK), não há nenhum controle de caixa de ferramentas para arrastar um **AdControl** ou **InterstitialAd** para um Design Surface em seu aplicativo. Para obter instruções sobre como adicionar esses controles ao seu código e marcação, consulte os [guias passo a passo do desenvolvedor](developer-walkthroughs.md).
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>Propriedades de latitude e longitude não estão mais disponíveis
 

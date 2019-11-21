@@ -1,19 +1,19 @@
 ---
-title: Declarar tarefas em segundo plano no manifesto do aplicativo
+title: Declarar tarefas em segundo plano no manifesto do app
 description: Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: cf114ed3d2ffce95f9e9aba6ceb222029d23819c
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: 53fb8c0b213705a5a79680356bb4f1773594dcdc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73052024"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260483"
 ---
-# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
+# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do app
 
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "73052024"
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
 > [!Important]
->  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo não são declaradas no manifesto.
+>  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo =não são declaradas no manifesto.
 
 As tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo ou ele não será capaz de registrá-las (uma exceção será gerada). Além disso, as tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo para passar certificação.
 
@@ -37,7 +37,7 @@ Este tópico considera que você criou uma ou mais classes de tarefa em segundo 
 
 Abra o manifesto do aplicativo (Package.appxmanifest) e vá para o elemento Application. Crie um elemento Extensions (caso não haja um).
 
-O seguinte trecho foi retirado do [exemplo de tarefa de segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666):
+O seguinte trecho foi retirado do [exemplo de tarefa de segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask):
 
 ```xml
 <Application Id="App"
@@ -159,7 +159,7 @@ Você pode especificar onde as tarefas em segundo plano são executadas:
 
 ### <a name="run-in-the-same-process-as-your-foreground-application"></a>Execute no mesmo processo do aplicativo em primeiro plano.
 
-Aqui está o XML de exemplo que declara uma tarefa em segundo plano, a qual é executada no mesmo processo como o aplicativo em primeiro plano.
+Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada no mesmo processo como o aplicativo em primeiro plano.
 
 ```xml
 <Extensions>

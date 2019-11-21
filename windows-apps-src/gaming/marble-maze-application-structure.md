@@ -6,12 +6,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, estrutura
 ms.localizationpriority: medium
-ms.openlocfilehash: a04e6714772d9b17c281f81ad93582d1fb691c9b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d248d8737f32d35cf0a25f4ad0c9138a1d334365
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368498"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258495"
 ---
 # <a name="marble-maze-application-structure"></a>Estrutura do aplicativo Marble Maze
 
@@ -21,7 +21,7 @@ ms.locfileid: "66368498"
 A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional. Em vez de funcionar com tipos de identificador como [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types) e funções como [CreateWindow](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowa), o Windows Runtime oferece interfaces como [Windows::UI::Core::ICoreWindow](https://docs.microsoft.com/uwp/api/Windows.UI.Core.ICoreWindow) para que seja possível desenvolver aplicativos UWP de uma maneira mais moderna orientada a objetos. Esta seção da documentação mostra como o código do app Marble Maze está estruturado.
 
 > [!NOTE]
-> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://go.microsoft.com/fwlink/?LinkId=624011).
+> O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](https://github.com/microsoft/Windows-appsample-marble-maze).
 
  
 ## 
@@ -81,7 +81,7 @@ Por motivos didáticos, o projeto Marble Maze inclui tanto o formato de tempo de
 
 O Marble Maze segue o ciclo de vida de um aplicativo UWP típico. Para saber mais sobre o ciclo de vida um aplicativo UWP, consulte [Ciclo de vida do aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle).
 
-Quando um jogo UWP é inicializado, ele normalmente inicializa componentes de tempo de execução, como o Direct3D, o Direct2D e qualquer biblioteca de entrada, áudio ou física que precisa usar. Ele também carrega recursos específicos que são necessários antes de o jogo começar. Essa inicialização ocorre uma única vez durante uma sessão do jogo.
+Quando um jogo UWP é inicializado, ele normalmente inicializa componentes de runtime, como o Direct3D, o Direct2D e qualquer biblioteca de entrada, áudio ou física que precisa usar. Ele também carrega recursos específicos que são necessários antes de o jogo começar. Essa inicialização ocorre uma única vez durante uma sessão do jogo.
 
 Após a inicialização, os jogos geralmente executam o *loop de jogo*. Nesse loop, os jogos normalmente realizam quatro ações: processam eventos do Windows, coleta a entrada, atualizam objetos de cena e renderizam a cena. Quando o jogo atualiza a cena, ele pode aplicar o estado de entrada atual aos objetos de cena e simular eventos físicos, como colisões de objetos. O jogo também pode realizar outras atividades, como reproduzir efeitos sonoros ou enviar dados através da rede. Quando o jogo renderiza a cena, ele captura o estado atual da cena e a desenha no dispositivo de vídeo. As seguintes seções descrevem essas atividades com mais detalhes.
 
@@ -123,7 +123,7 @@ O carregamento assíncrono de ativos começa com o método **App::Load**. Esse m
     });
 ```
 
-O **MarbleMazeMain** classe define o *m\_deferredResourcesReady* sinalizador para indicar que o carregamento assíncrono é concluído. O método **MarbleMazeMain::LoadDeferredResources** carrega os recursos do jogo e, em seguida, define esse sinalizador. As fases de atualização (**MarbleMazeMain::Update**) e renderização (**MarbleMazeMain::Render**) do app verificam esse sinalizador. Quando esse sinalizador está definido, o jogo continua normalmente. Se o sinalizador ainda não estiver definido, o jogo mostrará a tela de carregamento.
+A classe **MarbleMazeMain** define o sinalizador *m\_deferredResourcesReady* para indicar que o carregamento assíncrono foi concluído. O método **MarbleMazeMain::LoadDeferredResources** carrega os recursos do jogo e, em seguida, define esse sinalizador. As fases de atualização (**MarbleMazeMain::Update**) e renderização (**MarbleMazeMain::Render**) do app verificam esse sinalizador. Quando esse sinalizador está definido, o jogo continua normalmente. Se o sinalizador ainda não estiver definido, o jogo mostrará a tela de carregamento.
 
 Para saber mais sobre programação assíncrona para aplicativos UWP, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
@@ -195,7 +195,7 @@ enum class GameState
 };
 ```
 
-O estado **MainMenu**, por exemplo, define que o menu principal está visível e que o jogo não está ativo. De forma contrária, o estado **InGameActive** define que o jogo está ativo e que o menu não está visível. O **MarbleMazeMain** classe define o **m\_gameState** variável de membro para manter o estado do jogo Active Directory.
+O estado **MainMenu**, por exemplo, define que o menu principal está visível e que o jogo não está ativo. De forma contrária, o estado **InGameActive** define que o jogo está ativo e que o menu não está visível. A classe **MarbleMazeMain** define a variável de membro **m\_GameState** para manter o estado ativo do jogo.
 
 Os métodos **MarbleMazeMain::Update** e **MarbleMazeMain::Render** usam instruções "switch" para realizar a lógica do estado atual. O exemplo a seguir mostra a possível aparência dessa instrução "switch" para o método **MarbleMazeMain::Update** (os detalhes foram removidos para ilustrar a estrutura).
 
@@ -339,7 +339,7 @@ void MarbleMazeMain::SaveState()
 
 Quando o jogo recomeça, ele só precisa retomar o áudio. Ele não precisa carregar o estado a partir do armazenamento persistente porque esse estado já está carregado na memória.
 
-A forma como o jogo suspende e retoma o áudio é explicada no documento [Adicionando áudio à amostra do Marble Maze](adding-audio-to-the-marble-maze-sample.md).
+A forma como o jogo suspende e retoma o áudio é explicada no documento [Adicionando áudio a exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md).
 
 Para dar suporte à reinicialização, o construtor **MarbleMazeMain**, que é chamado durante a inicialização, chama o método **MarbleMazeMain::LoadState**. O método **MarbleMazeMain::LoadState** lê e aplica o estado aos objetos do jogo. Esse método também define o estado atual do jogo como pausado se o jogo estava pausado ou ativo no momento em que foi suspenso. Pausamos o jogo para que o usuário não se surpreenda com atividades inesperadas. Além disso, o método move para o menu principal se o jogo não estava em estado de interação com o usuário no momento em que foi suspenso.
 
@@ -423,9 +423,9 @@ Leia [Adicionando conteúdo visual à amostra do Marble Maze](adding-visual-cont
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Adicionando conteúdo visual ao exemplo Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
-* [Conceitos básicos de exemplo Marble Maze](marble-maze-sample-fundamentals.md)
-* [Desenvolvendo o Marble Maze, um jogo UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Adicionando conteúdo visual ao exemplo de labirinto de mármore](adding-visual-content-to-the-marble-maze-sample.md)
+* [Conceitos básicos de exemplo de labirinto de mármore](marble-maze-sample-fundamentals.md)
+* [Desenvolvendo o labirinto de mármore, um jogo C++ UWP no e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

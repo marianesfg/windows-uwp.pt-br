@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612921"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258187"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
-Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Windows 10, que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela entre o ecossistema do Windows 10, em vez de otimizar sua interface do usuário para cada dispositivo, recomendamos a criação de algumas categorias de largura de chave (também chamado de "pontos de interrupção"): 
+Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Windows 10, que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela no ecossistema do Windows 10, em vez de otimizar sua interface do usuário para cada dispositivo, recomendamos projetar para algumas categorias de largura de chave (também chamadas de "pontos de interrupção"): 
 - Pequena (menor que 640 px)
 - Média (641 px a 1007 px)
 - Grande (1008 px e maior)
@@ -41,7 +41,7 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 <tbody>
 <tr class="even">
 <td style="vertical-align:top;">Pequeno</td>
-<td style="vertical-align:top;">640px ou menos</td>
+<td style="vertical-align:top;">640 px ou menos</td>
 <td style="vertical-align:top;">4&quot; a 6&quot;; 20&quot; a 65&quot;</td>
 <td style="vertical-align:top;">Telefones e TVs</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
@@ -90,7 +90,7 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Use até duas colunas/regiões.
 - Mostre a caixa de pesquisa.
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.
-- Considere fazer mais adaptações para [experiências de TV](https://go.microsoft.com/fwlink/?LinkId=760736).
+- Considere fazer mais adaptações para [experiências de TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
 ### <a name="large"></a>Grande
 - Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
@@ -100,6 +100,6 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo encaixado para que ele sempre apareça.
 
 >[!TIP] 
-> Com o [ **Continuum para telefones**](https://go.microsoft.com/fwlink/p/?LinkID=699431), usuários podem se conectar a dispositivos móveis compatíveis do Windows 10 para um monitor, mouse e teclado para tornar seus telefones funcionam como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
+> Com o [**Continuum para telefones**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), os usuários podem conectar dispositivos Windows 10 Mobile compatíveis a um monitor, mouse e teclado para que seus telefones funcionem como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
 
 

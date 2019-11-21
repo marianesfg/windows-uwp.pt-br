@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 044d759d2e62dedf9660f2536eca9064dbf8315b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 031f3f8f5b15f839348c05c1fd26b7711856d659
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361397"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256239"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Definir o formato, a resolução e a taxa de quadros para o MediaCapture
 
@@ -21,7 +21,7 @@ Este artigo mostra como usar a interface [**IMediaEncodingProperties**](https://
 
 Perfis de câmera oferecem uma maneira mais avançada de descobrir e definir as propriedades de fluxo da câmera, mas eles não têm suporte em todos os dispositivos. Para obter mais informações, consulte [Perfis de câmera](camera-profiles.md).
 
-O código neste artigo foi adaptado da [amostra CameraResolution](https://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409). Você pode baixar o exemplo para ver o código usado no contexto ou utilizá-lo como ponto de partida para seu próprio app.
+O código neste artigo foi adaptado da [amostra CameraResolution](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraResolution). Você pode baixar o exemplo para ver o código usado no contexto ou utilizá-lo como ponto de partida para seu próprio app.
 
 > [!NOTE] 
 > Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
@@ -30,7 +30,7 @@ O código neste artigo foi adaptado da [amostra CameraResolution](https://go.mic
 
 Criar uma classe auxiliar simples para encapsular a funcionalidade da interface [**IMediaEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.IMediaEncodingProperties) torna mais fácil selecionar um conjunto de propriedades de codificação que atendem aos critérios específicos. Essa classe auxiliar é particularmente útil devido ao seguinte comportamento do recurso de propriedades de codificação:
 
-**Aviso**    as [ **VideoDeviceController.GetAvailableMediaStreamProperties** ](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) método usa um membro do [ **MediaStreamType**  ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) enumeração, como **VideoRecord** ou **foto**e retorna uma lista deles [ **ImageEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) ou [ **VideoEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) objetos que transmitem o fluxo de configurações de codificação, como a resolução do capturada foto ou vídeo. Os resultados da chamada a **GetAvailableMediaStreamProperties** podem incluir **ImageEncodingProperties** ou **VideoEncodingProperties**, independentemente do valor de **MediaStreamType** especificado. Por esse motivo, você sempre deve verificar o tipo de cada valor retornado e convertê-lo para o tipo apropriado antes de tentar acessar qualquer um dos valores de propriedade.
+**Aviso**   o [**método VideoDeviceController. GetAvailableMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) usa um membro da enumeração [**MediaStreamType**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) , como **VideoRecord** ou **Photo**, e retorna uma lista de objetos [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) ou [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) que transmitem as configurações de codificação de fluxo, como a resolução da foto ou vídeo capturado. Os resultados da chamada a **GetAvailableMediaStreamProperties** podem incluir **ImageEncodingProperties** ou **VideoEncodingProperties**, independentemente do valor de **MediaStreamType** especificado. Por esse motivo, você sempre deve verificar o tipo de cada valor retornado e convertê-lo para o tipo apropriado antes de tentar acessar qualquer um dos valores de propriedade.
 
 A classe auxiliar definida a seguir manipula a verificação e a conversão de tipo para [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) ou [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties), para que o código do aplicativo não precise distinguir entre os dois tipos. Além disso, a classe auxiliar expõe propriedades para a taxa de proporção das propriedades, a taxa de quadros (somente para propriedades de codificação de vídeo) e um nome amigável que facilita a exibição das propriedades de codificação na interface do usuário do aplicativo.
 
@@ -74,7 +74,7 @@ Um aplicativo de câmera típico fornecerá a interface do usuário para o usuá
 
 -   Selecione a resolução da visualização mais próxima ao tamanho do [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement), para que não passem mais pixels do que o necessário pelo pipeline de fluxo de visualização.
 
-**Importante**    é possível, em alguns dispositivos, para definir a taxa de proporção diferente para o fluxo de visualização da câmera e capturar o fluxo. O corte de quadro causado por essa incompatibilidade pode resultar em conteúdo presente na mídia capturada que não estava visível na visualização, o que pode resultar em uma experiência de usuário negativa. É altamente recomendável que você use a mesma taxa de proporção, dentro de uma pequena janela de tolerância, para os fluxos de visualização e captura. Não há problemas em ter resoluções totalmente diferentes habilitadas para captura e visualização, desde que a taxa de proporção tenha correspondência aproximada.
+**Importante**   é possível, em alguns dispositivos, definir uma taxa de proporção diferente para o fluxo de visualização da câmera e o fluxo de captura. O corte de quadro causado por essa incompatibilidade pode resultar em conteúdo presente na mídia capturada que não estava visível na visualização, o que pode resultar em uma experiência de usuário negativa. É altamente recomendável que você use a mesma taxa de proporção, dentro de uma pequena janela de tolerância, para os fluxos de visualização e captura. Não há problemas em ter resoluções totalmente diferentes habilitadas para captura e visualização, desde que a taxa de proporção tenha correspondência aproximada.
 
 
 Para garantir que os fluxos de captura de foto ou de vídeo correspondam à taxa de proporção do fluxo de visualização, este exemplo chama [**VideoDeviceController.GetMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) e transmite o valor de enumeração **VideoPreview** para solicitar as propriedades de fluxo atuais para o fluxo de visualização. Em seguida, uma pequena janela de tolerância de taxa de proporção é definida para que possamos incluir taxas de proporção que não sejam exatamente iguais ao fluxo de visualização, desde que sejam aproximadas. Em seguida, um método de extensão Linq é usado para selecionar apenas os objetos **StreamPropertiesHelper** em que a taxa de proporção esteja dentro do intervalo de tolerância definido do fluxo de visualização.

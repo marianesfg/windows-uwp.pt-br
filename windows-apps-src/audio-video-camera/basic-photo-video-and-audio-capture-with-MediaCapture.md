@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47134c951fe0351966a34b4a58fe657a6aeeb602
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 28974fea7861022c383efa5bf61565c4f18b5f8d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317576"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254332"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Captura básica de fotos, áudio e vídeo com MediaCapture
 
@@ -20,13 +20,13 @@ Este artigo mostra a maneira mais simples para capturar fotos e vídeos usando a
 
 Se você simplesmente deseja tirar uma foto ou fazer um vídeo e não pretende adicionar recursos de captura de mídias adicionais, ou se não quer criar sua própria interface do usuário da câmera, talvez você prefira usar a classe [**CameraCaptureUI**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI), que permite simplesmente iniciar o aplicativo integrado de câmera do Windows e receber o arquivo de foto ou vídeo que foi capturado. Para saber mais, consulte [**Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows**](capture-photos-and-video-with-cameracaptureui.md)
 
-O código neste artigo foi adaptado do exemplo [**Kit inicial de câmera**](https://go.microsoft.com/fwlink/?linkid=619479). Você pode baixar o exemplo para ver o código usado no contexto ou utilizá-lo como ponto de partida para seu próprio app.
+O código neste artigo foi adaptado do exemplo [**Kit inicial de câmera**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraStarterKit). Você pode baixar o exemplo para ver o código usado no contexto ou utilizá-lo como ponto de partida para seu próprio app.
 
 ## <a name="add-capability-declarations-to-the-app-manifest"></a>Adicionar declarações de funcionalidades ao manifesto do aplicativo
 
 Para que seu app acesse a câmera do dispositivo, você deve declarar que o app usa as funcionalidades de *webcam* e *microphone* do dispositivo. Se quiser salvar as fotos e os vídeos capturados na biblioteca de imagens ou de vídeos do usuário, você deverá declarar também as funcionalidades *picturesLibrary* e *videosLibrary*.
 
-**Para adicionar recursos para o manifesto do aplicativo**
+**Para adicionar recursos ao manifesto do aplicativo**
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
@@ -35,7 +35,7 @@ Para que seu app acesse a câmera do dispositivo, você deve declarar que o app 
 
 
 ## <a name="initialize-the-mediacapture-object"></a>Inicializar o objeto MediaCapture
-Todos os métodos de captura descritos neste artigo requerem a primeira etapa de inicialização do objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) chamando o construtor e, em seguida, chamando [**InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync). Uma vez que o objeto **MediaCapture** será acessado de vários lugares no seu aplicativo, declare uma variável de classe para armazenar o objeto.  Implemente um manipulador para o evento [**Failed**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.failed) do objeto **MediaCapture** para ser notificado se houver falha em uma operação de captura.
+Todos os métodos de captura descritos neste artigo requerem a primeira etapa de inicialização do objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) chamando o construtor e, em seguida, chamando [**InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync). Uma vez que o objeto **MediaCapture** será acessado de vários lugares no seu aplicativo, declare uma variável de classe para armazenar o objeto.  Implemente um manipulador para o eventoFailed[**do objeto**MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.failed) para ser notificado se houver falha em uma operação de captura.
 
 [!code-cs[DeclareMediaCapture](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
@@ -47,7 +47,7 @@ Todos os métodos de captura descritos neste artigo requerem a primeira etapa de
 ## <a name="capture-a-photo-to-a-softwarebitmap"></a>Capturar uma foto para um SoftwareBitmap
 A classe [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) foi introduzida no Windows 10 para fornecer uma representação comum de imagens em vários recursos. Se deseja capturar uma foto e usar imediatamente a imagem capturada em seu aplicativo, como exibi-la em XAML, em vez de capturar para um arquivo, você deve capturar para um **SoftwareBitmap**. Você ainda tem a opção de salvar a imagem em disco posteriormente.
 
-Após inicializar o objeto **MediaCapture**, você pode capturar uma foto para um **SoftwareBitmap** usando a classe [**LowLagPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.LowLagPhotoCapture). Obtenha uma instância dessa classe chamando [**PrepareLowLagPhotoCaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.preparelowlagphotocaptureasync), passando um objeto [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) e especificando o formato de imagem desejado. [**CreateUncompressed** ](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.imageencodingproperties.createuncompressed) cria uma codificação não compactado com o formato de pixel especificado. Capture uma foto chamando [**CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagphotocapture.captureasync), que retorna um objeto [**CapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedPhoto). Obtenha um **SoftwareBitmap** acessando a propriedade [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedphoto.frame) e, em seguida, a propriedade [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.softwarebitmap).
+Após inicializar o objeto **MediaCapture**, você pode capturar uma foto para um **SoftwareBitmap** usando a classe [**LowLagPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.LowLagPhotoCapture). Obtenha uma instância dessa classe chamando [**PrepareLowLagPhotoCaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.preparelowlagphotocaptureasync), passando um objeto [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) e especificando o formato de imagem desejado. [**CreateUncompressed**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.imageencodingproperties.createuncompressed) cria uma codificação descompactada com o formato de pixel especificado. Capture uma foto chamando [**CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagphotocapture.captureasync), que retorna um objeto [**CapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedPhoto). Obtenha um **SoftwareBitmap** acessando a propriedade [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedphoto.frame) e, em seguida, a propriedade [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.softwarebitmap).
 
 Se quiser, você pode capturar várias fotos chamando **CaptureAsync** repetidamente. Quando terminar a captura, chame [**FinishAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.finishasync) para encerrar a sessão **LowLagPhotoCapture** e liberar os recursos associados. Depois de chamar **FinishAsync**, para iniciar a captura de fotos novamente, você precisará chamar [**PrepareLowLagPhotoCaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.preparelowlagphotocaptureasync) novamente para reinicializar a sessão de captura, antes de chamar [**CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagphotocapture.captureasync).
 
@@ -64,7 +64,7 @@ A partir do Windows 10, versão 1803, você pode obter os metadados, como inform
 ## <a name="capture-a-photo-to-a-file"></a>Capturar uma foto para um arquivo
 Um aplicativo típico de fotografia salvará uma foto capturada em disco ou em um armazenamento em nuvem e será necessário adicionar os metadados, como a orientação da foto, ao arquivo. O exemplo a seguir mostra como capturar uma foto para um arquivo. Você ainda tem a opção de criar um **SoftwareBitmap** do arquivo de imagem posteriormente. 
 
-A técnica mostrada neste exemplo captura a foto para um fluxo de memória e transcodifica a foto do fluxo para um arquivo no disco. Este exemplo usa [**GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync) para obter a biblioteca de imagens do usuário e a propriedade [**SaveFolder**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.savefolder) para obter uma pasta padrão de salvamento de referência. Lembre-se de adicionar a funcionalidade **Pictures Library** ao manifesto do aplicativo para acessar essa pasta. [**CreateFileAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfileasync) cria uma nova [ **StorageFile** ](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para que a foto será salvo.
+A técnica mostrada neste exemplo captura a foto para um fluxo de memória e transcodifica a foto do fluxo para um arquivo no disco. Este exemplo usa [**GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync) para obter a biblioteca de imagens do usuário e a propriedade [**SaveFolder**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.savefolder) para obter uma pasta padrão de salvamento de referência. Lembre-se de adicionar a funcionalidade **Pictures Library** ao manifesto do aplicativo para acessar essa pasta. O [**CreateFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfileasync) cria um novo [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) no qual a foto será salva.
 
 Crie um [**InMemoryRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.InMemoryRandomAccessStream) e chame [**CapturePhotoToStreamAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.capturephototostreamasync) para capturar uma foto para o fluxo, passando o fluxo e um objeto [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) que especifique o formato de imagem a ser usado. Você pode criar propriedades de codificação personalizadas inicializando o objeto por conta própria, mas a classe fornece métodos estáticos, como [**ImageEncodingProperties.CreateJpeg**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.imageencodingproperties.createjpeg) para formatos de codificação comuns. Em seguida, crie um fluxo de arquivo para o arquivo de saída chamando [**OpenAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync). Crie um [**BitmapDecoder**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapDecoder) para decodificar a imagem a partir do fluxo de memória e crie um [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapEncoder) para codificar a imagem para o arquivo. Basta chamar [**CreateForTranscodingAsync**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder.createfortranscodingasync).
 
@@ -162,8 +162,8 @@ O exemplo de código a seguir ilustra uma implementação do manipulador **Sound
 [!code-cs[RenderSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRenderSoundLevelChanged)]
 
 
-* [A captura de fotos e vídeos com câmera interna do Windows da interface do usuário](capture-photos-and-video-with-cameracaptureui.md)
-* [Lidar com a orientação do dispositivo com MediaCapture](handle-device-orientation-with-mediacapture.md)
+* [Capture fotos e vídeos com a interface do usuário da câmera interna do Windows](capture-photos-and-video-with-cameracaptureui.md)
+* [Manipular a orientação do dispositivo com MediaCapture](handle-device-orientation-with-mediacapture.md)
 * [Criar, editar e salvar imagens de bitmap](imaging.md)
 * [Arquivos, pastas e bibliotecas](https://docs.microsoft.com/windows/uwp/files/index)
 

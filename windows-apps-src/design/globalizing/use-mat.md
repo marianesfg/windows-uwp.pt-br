@@ -1,21 +1,21 @@
 ---
-Description: O Multilingual App Toolkit (MAT) 4.0 se integra ao Microsoft Visual Studio 2019 para fornecer aplicativos UWP com o suporte a tradução, gerenciamento de arquivos de tradução e ferramentas do editor.
+Description: O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com Microsoft Visual Studio 2019 para fornecer aplicativos UWP com suporte à tradução, gerenciamento de arquivos de tradução e ferramentas de editor.
 title: Use o Kit de Ferramentas de Aplicativo Multilíngue
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 428238f9d8a3468ab308841850ac13e8da22961f
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 802a7a925a08dde94ab59d79e01df94fbbcf495d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820580"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258032"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
-O Multilingual App Toolkit (MAT) 4.0 se integra ao Microsoft Visual Studio 2019 para fornecer aplicativos UWP com o suporte a tradução, gerenciamento de arquivos de tradução e ferramentas do editor. Aqui estão algumas das propostas de valor do kit de ferramentas.
+O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com Microsoft Visual Studio 2019 para fornecer aplicativos UWP com suporte à tradução, gerenciamento de arquivos de tradução e ferramentas de editor. Aqui estão algumas das propostas de valor do kit de ferramentas.
 
 - Ajuda você a gerenciar as alterações de recursos e o status da tradução durante o desenvolvimento.
 - Fornece uma IU para escolha de idiomas com base nos provedores de tradução configurados.
@@ -38,10 +38,10 @@ Consulte também [Diretrizes de globalização](guidelines-and-checklist-for-glo
 
 Há duas partes do Kit de Ferramentas de Aplicativo Multilíngue 4.0 (MAT 4.0), cada uma com seu próprio instalador.
 
-- [Multilíngue Toolkit 4.0 da extensão do aplicativo para o Visual Studio 2017 e posterior](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). Isso contém a extensão de MAT 4.0 para 2019 Visual do Studio, na forma de um instalador. VSIX.
+- [Extensão do kit de ferramentas de aplicativo multilíngue 4,0 para Visual Studio 2017 e posterior](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). Ela contém a extensão de passe-partout 4,0 para o Visual Studio 2019, na forma de um instalador. vsix.
 - [Editor do Kit de Ferramentas de Aplicativo Multilíngue 4.0](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit). Ele contém a ferramenta Editor Multilíngue autônomo MAT 4.0, na forma de instalador .msi. Ele também inclui a extensão MAT 4.0 para o Visual Studio 2015 e para o Visual Studio 2013.
 
-Se você usar o Visual Studio 2017 ou Visual Studio de 2019, em seguida, baixe e execute ambos os instaladores, um após o outro. Se você usa o Visual Studio 2015 ou o Visual Studio 2013, baixe e execute o instalador .msi.
+Se você usar o Visual Studio 2017 ou o Visual Studio 2019, baixe e execute ambos os instaladores, um após o outro. Se você usa o Visual Studio 2015 ou o Visual Studio 2013, baixe e execute o instalador .msi.
 
 ### <a name="step-3-enable-the-multilingual-app-toolkit-for-your-project"></a>Etapa 3. Habilite o Kit de Ferramentas de Aplicativo Multilíngue para o seu projeto
 
@@ -63,13 +63,13 @@ Siga estas etapas para adicionar idiomas ao seu projeto.
 
 O kit de ferramentas faz isso em resposta.
 
-- Para cada idioma que você adicionou, uma nova pasta é criada nomeada de acordo com a [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Dentro dessa pasta, novos Arquivos de Recursos (.resw) são criados para corresponder àqueles que contêm as cadeias de caracteres no idioma padrão.
+- Para cada idioma que você adicionou, uma nova pasta é criada nomeada de acordo com a [marca de idioma BCP-47](https://tools.ietf.org/html/bcp47) do idioma. Dentro dessa pasta, novos Arquivos de Recursos (.resw) são criados para corresponder àqueles que contêm as cadeias de caracteres no idioma padrão.
 - Se esta for a primeira vez que você adicionou um idioma, uma nova pasta chamada `MultilingualResources` será adicionada ao projeto. Dentro dessa pasta, um arquivo .xlf será adicionado a cada idioma. Os arquivos .xlf contêm uma unidade de conversão para cada cadeia de caracteres em cada Arquivo de Recursos (.resw) do seu projeto.
 - A janela de Saída confirma a inclusão do(s) idioma(s) que você adicionou.
 
 Sempre que você adicionar/remover um Arquivo de Recursos (.resw) no idioma padrão ou adicionar/remover uma cadeia de caracteres em um Arquivo de Recursos (.resw) no idioma padrão, faça a compilação do projeto novamente para ressincronizar os arquivos .xlf. Isso garante que os arquivos .xlf contenham a união das cadeias de caracteres no idioma padrão.
 
-Os provedores de tradução instalados&mdash; como os serviços do [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) e [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)&mdash; podem ser usados para traduzir os recursos do seu app. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
+Os provedores de tradução instalados&mdash; como os serviços do [Portal de Idiomas Microsoft](https://www.microsoft.com/Language/) e [Microsoft Translator](https://www.microsofttranslator.com/)&mdash; podem ser usados para traduzir os recursos do seu app. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
 
 Na caixa de diálogo Idiomas de Tradução, todo idioma baseado em .xlf existente detectável pelo kit de ferramentas terá a caixa de seleção pré-marcada para indicar que o idioma já está incluído no projeto.
 
@@ -117,9 +117,9 @@ Você também pode iniciar o Editor Multilíngue da seguinte forma. Ir até o In
 
 Para terceirizar o trabalho de tradução e edição aos tradutores, selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Exportar traduções...** .
 
-Selecione **saída: Destinatário do email** na caixa de diálogo de recursos de cadeia de caracteres exportação e em Okey e seus arquivos serão ser compactado e anexado a um novo email. Selecione **saída: Local da pasta do arquivo**navegador para uma pasta e clique em Okey, opcionalmente escolha para os arquivos a ser compactado, Okey novamente e em seus arquivos serão (compactado e) salvo no local que você escolheu, dentro de uma nova pasta chamada para o seu projeto.
+Selecione **Saída: Destinatário do e-mail** na caixa de diálogo Exportar recursos de sequência e clique em OK. Seus arquivos serão zipados e anexados a um novo email. Selecione **Saída: Local da pasta de arquivos**, navegue pela pasta e clique em OK, opcionalmente escolha a compactação (zip) dos arquivos, clique em OK novamente e seus arquivos serão (zipados e) salvos no local que você escolheu, dentro de uma nova pasta com o nome do seu projeto.
 
-Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos de XLF desejada no Gerenciador de soluções, clique com botão direito-los e clique em **Multilingual App Toolkit** > **Import/reciclagem traduções...** . Clique em **Add**, navegue até os arquivos XLF ou. zip e clique em **importação**.
+Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Importar/reciclar traduções...** . Clique em **Adicionar**, navegue até os arquivos .xlf ou .zip e clique em **Importar**.
 
 **Observação** O processo de importação executa uma validação básica antes da importação. Isso garante que as informações da cultura de destino nos arquivos que estão sendo importados correspondam aos arquivos .xlf existentes.
 
@@ -147,10 +147,10 @@ O Editor Multilíngue fornece o mesmo suporte para tradução e também a adiç�
 
 Dois provedores são enviados com o Kit de Ferramentas de Aplicativo Multilíngue.
 
-- O provedor do [Portal de Idiomas Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295) permite o suporte para correspondência de terminologias e reciclagem de tradução com base nas traduções de textos da interface do usuário para os produtos e serviços da Microsoft.
-- O provedor do [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220) permite serviços de tradução de máquina a pedido.
+- O provedor do [Portal de Idiomas Microsoft](https://www.microsoft.com/Language/) permite o suporte para correspondência de terminologias e reciclagem de tradução com base nas traduções de textos da interface do usuário para os produtos e serviços da Microsoft.
+- O provedor do [Microsoft Translator](https://www.microsofttranslator.com/) permite serviços de tradução de máquina a pedido.
 
-Você e o(s) tradutor(es) pode(m) gerenciar as traduções no Editor Multilíngue para examinar as traduções posteriormente. Você pode definir o status de cada cadeia de caracteres a **propriedades** guia. Valores de status são: **Novos**, **precisa de revisão**, **traduzido**, **Final**, e **aprovou**. O indicador à esquerda da linha mostra o status. Quando todas as linhas são exibidas em verde no Editor Multilíngue, o trabalho de tradução é feito.
+Você e o(s) tradutor(es) pode(m) gerenciar as traduções no Editor Multilíngue para examinar as traduções posteriormente. Você pode definir o status de cada cadeia de caracteres na guia **Propriedades**. Os valores de status são: **Novo**, **Precisa de revisão**, **Traduzido**, **Final**, e **Desconectado**. O indicador à esquerda da linha mostra o status. Quando todas as linhas são exibidas em verde no Editor Multilíngue, o trabalho de tradução é feito.
 
 Faça a compilação do seu projeto novamente para que as cadeias de caracteres traduzidas sejam copiadas para o(s) Arquivo(s) de Recursos (.resw) que corresponde(m) ao(s) arquivo(s) .xlf que você acabou de editar.
 
@@ -164,14 +164,14 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 * [Globalização e localização](globalizing-portal.md)
 * [Diretrizes para globalização](guidelines-and-checklist-for-globalizing-your-app.md)
 * [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)
-* [Marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-marca de idioma 47](https://tools.ietf.org/html/bcp47)
 
 ## <a name="downloads"></a>Downloads
 
-* [Instalador. VSIX Multilingual App Toolkit 4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [Multilingual App Toolkit 4.0. msi installer](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [Kit de ferramentas de aplicativo multilíngue 4,0. instalador VSIX](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
+* [Instalador do kit de ferramentas de aplicativo multilíngue 4,0. msi](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>Serviços de tradução
 
-* [Portal de idiomas do Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=330295)
-* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
+* [Portal de linguagem da Microsoft](https://www.microsoft.com/Language/)
+* [Microsoft Translator](https://www.microsofttranslator.com/)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: b28df646bb505889626ced8591c5ef9e6ece3f44
-ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
+ms.openlocfilehash: 77993256752f081c5abc4f56164d0846c2b61060
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690345"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258764"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes de Windows Runtime orientados para um aplicativo UWP carregado por um lado
 
@@ -19,20 +19,20 @@ Este artigo discute um recurso direcionado para a empresa com suporte do Windows
 
 ## <a name="introduction"></a>Introdução
 
->**Observação**  The código de exemplo que acompanha este documento pode ser baixado para o [Visual Studio 2015 & 2017](https://aka.ms/brokeredsample). O modelo do Microsoft Visual Studio para compilar os Componentes do Tempo de Execução do Windows agenciados pode ser baixado aqui: [Modelo do Visual Studio 2015 segmentado para Aplicativos Universais do Windows para Windows 10](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
+>**Observação**  o código de exemplo que acompanha este documento pode ser baixado para o [Visual Studio 2015 & 2017](https://github.com/Microsoft/Brokered-WinRT-Components). O modelo do Microsoft Visual Studio para compilar os Componentes do Tempo de Execução do Windows agenciados pode ser baixado aqui: [Modelo do Visual Studio 2015 segmentado para Aplicativos Universais do Windows para Windows 10](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
-O Windows inclui um novo recurso chamado *componentes do Tempo de Execução do Windows intermediado para aplicativos de sideload*. Usamos o termo IPC (comunicação entre processos) para descrever a capacidade de executar ativos de software de desktop existentes em um processo (componente de desktop) ao interagir com esse código em um aplicativo UWP. Este é um modelo familiar aos desenvolvedores corporativos, já que aplicativos de banco de dados e aplicativos que utilizam serviços NT no Windows compartilham uma arquitetura de vários processos semelhante.
+O Windows inclui um novo recurso chamado *componentes do Windows Runtime intermediado para aplicativos de sideload*. Usamos o termo IPC (comunicação entre processos) para descrever a capacidade de executar ativos de software de desktop existentes em um processo (componente de desktop) ao interagir com esse código em um aplicativo UWP. Este é um modelo familiar aos desenvolvedores corporativos, já que aplicativos de banco de dados e aplicativos que utilizam serviços NT no Windows compartilham uma arquitetura de vários processos semelhante.
 
 O sideload do aplicativo é um componente essencial desse recurso.
 Aplicativos específicos para empresas não têm lugar na Microsoft Store para consumidores em geral e as corporações têm exigências muito específicas em relação à segurança, privacidade, distribuição, instalação e manutenção. Dessa forma, o modelo de sideload é uma exigência daqueles que usariam esse recurso e um detalhe de implementação essencial.
 
 Aplicativos centrados em dados são um alvo fundamental para essa arquitetura de aplicativo. Prevê-se que as regras de negócios existentes inseridas, por exemplo, no SQL Server, serão uma parte comum do componente de desktop. Isso certamente não é o único tipo de funcionalidade que pode ser oferecida pelo componente de desktop, mas uma grande parte da demanda por esse recurso está relacionada à lógica de negócios e dados existente.
 
-Por fim, considerando a incrível penetração do tempo de execução do .NET e a linguagem C \# no desenvolvimento empresarial, esse recurso foi desenvolvido com ênfase no uso do .NET para o aplicativo UWP e para os componentes do componente da área de trabalho. Embora existam outras linguagens e tempos de execução possíveis para o aplicativo UWP, o exemplo a seguir ilustra apenas o C \# e é restrito ao tempo de execução do .NET exclusivamente.
+Por fim, considerando a incrível penetração do tempo de execução do .NET e a linguagem C\# no desenvolvimento empresarial, esse recurso foi desenvolvido com ênfase no uso do .NET para o aplicativo UWP e para os componentes do componente da área de trabalho. Embora existam outras linguagens e tempos de execução possíveis para o aplicativo UWP, o exemplo a seguir ilustra apenas o C\#e é restrito ao tempo de execução do .NET exclusivamente.
 
 ## <a name="application-components"></a>Componentes de aplicativo
 
->**Observe**  This recurso é exclusivamente para o uso do .net. O aplicativo cliente e o componente da área de trabalho precisam ser criados usando-se o .NET.
+>**Observe**  esse recurso é exclusivamente para o uso do .net. O aplicativo cliente e o componente da área de trabalho precisam ser criados usando-se o .NET.
 
 **Modelo de aplicativo**
 
@@ -40,13 +40,13 @@ Este recurso foi criado em torno da arquitetura de aplicativo geral conhecida co
 
 **Componente da área de trabalho**
 
-O componente de desktop neste recurso é um novo tipo de aplicativo sendo apresentado como parte deste recurso. Este componente da área de trabalho só pode ser escrito em C \# e deve ter como destino o .NET 4,6 ou superior para Windows 10. O tipo de projeto é um híbrido entre o CLR que segmenta UWP porque o formato de comunicação entre processos é composto de tipos e classes UWP, e o componente da área de trabalho tem permissão para chamar todas as partes da biblioteca de classes de runtime do .NET. O impacto sobre o projeto do Visual Studio será descrito em detalhes mais tarde. Essa configuração híbrida permite marshaling de tipos UWP entre o aplicativo criado nos componentes de desktop, além de permitir que o código CLR de desktop seja chamado dentro da implementação do componente de desktop.
+O componente de desktop neste recurso é um novo tipo de aplicativo sendo apresentado como parte deste recurso. Este componente da área de trabalho só pode ser escrito em C\# e deve ter como destino o .NET 4,6 ou superior para Windows 10. O tipo de projeto é um híbrido entre o CLR que segmenta UWP porque o formato de comunicação entre processos é composto de tipos e classes UWP, e o componente da área de trabalho tem permissão para chamar todas as partes da biblioteca de classes de runtime do .NET. O impacto sobre o projeto do Visual Studio será descrito em detalhes mais tarde. Essa configuração híbrida permite marshaling de tipos UWP entre o aplicativo criado nos componentes de desktop, além de permitir que o código CLR de desktop seja chamado dentro da implementação do componente de desktop.
 
 **Contrato**
 
-O contrato entre o aplicativo de sideload e o componente de desktop é descrito em termos do sistema de tipo de UWP. Isso envolve a declaração de uma ou mais classes C \# que podem representar um UWP. Consulte o tópico do MSDN [criando Windows Runtime componentes em c \# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)) para um requisito específico de criação de Windows Runtime classe usando o c \#.
+O contrato entre o aplicativo de sideload e o componente de desktop é descrito em termos do sistema de tipo de UWP. Isso envolve a declaração de uma ou mais classes C\# que podem representar um UWP. Consulte o tópico do MSDN [criando Windows Runtime componentes em c\# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)) para um requisito específico de criação de Windows Runtime classe usando o c\#.
 
->**Observação** não há suporte para  Enums no contrato de componentes de Windows Runtime entre o componente de área de trabalho e o aplicativo carregado no momento.
+>**Observação**  enumerações não têm suporte no contrato de componentes de Windows Runtime entre o componente da área de trabalho e o aplicativo carregado no momento.
 
 **Aplicativo carregado no lado**
 
@@ -55,7 +55,7 @@ O aplicativo de sideload é um aplicativo UWP normal em todos os aspectos, excet
 >**Observação** O sideload pode ser ativado em Configurações-&gt; Atualização e segurança -&gt;Para desenvolvedores.
 
 Um ponto importante a salientar é que o mecanismo de Agente de aplicativo enviado como parte do Windows 10 é somente de 32 bits. O componente da área de trabalho deve ser 32 bits.
-Aplicativos de sideload podem ser de 64 bits (desde que haja proxies de 64 bits e 32 bits registrados), mas isso será atípico. Criar o aplicativo de carregamento lado em C \# usando a configuração normal "neutra" e o padrão "preferir 32 bits" cria naturalmente aplicativos carregados no lado de 32 bits.
+Aplicativos de sideload podem ser de 64 bits (desde que haja proxies de 64 bits e 32 bits registrados), mas isso será atípico. Criar o aplicativo de carregamento lado em C\# usando a configuração normal "neutra" e o padrão "preferir 32 bits" cria naturalmente aplicativos carregados no lado de 32 bits.
 
 **Instanciação e AppDomains de servidor**
 
@@ -66,7 +66,7 @@ A implementação do código de servidor pode ser compartilhada entre várias in
 ## <a name="defining-the-contract"></a>Definição do contrato
 
 A primeira etapa na criação de um aplicativo usando este recurso é criar o contrato entre o aplicativo de sideload e o componente de desktop. Isso deve ser feito exclusivamente usando-se tipos do Windows Runtime.
-Felizmente, eles são fáceis de declarar usando classes C \#. Porém, existem considerações de desempenho importantes durante a definição dessas conversas, algo abordado em uma seção posterior.
+Felizmente, eles são fáceis de declarar usando classes C\#. Porém, existem considerações de desempenho importantes durante a definição dessas conversas, algo abordado em uma seção posterior.
 
 A sequência para definir o contrato é apresentada da seguinte maneira:
 
@@ -106,7 +106,7 @@ Isso define uma classe "EnterpriseServer" que pode ser instanciada pelo aplicati
 
 Para fazer isso no Visual Studio, clique com o botão direito do mouse no projeto recém-criado e selecione "Descarregar Projeto"; em seguida, clique com o botão direito do mouse novamente e selecione "Editar EnterpriseServer.csproj" para abrir o arquivo de projeto, um arquivo XML, para edição.
 
-No arquivo aberto, procure a marca \<OutputType \> e altere seu valor para "winmdobj".
+No arquivo aberto, pesquise a marca \<OutputType\> e altere seu valor para "winmdobj".
 
 **Etapa 3:** Crie uma regra de compilação que cria um arquivo de metadados do Windows de "referência" (arquivo .winmd). ou seja, não tem implementação.
 
@@ -181,11 +181,11 @@ A categoria é inProcessServer porque existem várias entradas na categoria outO
 
 A seção <ActivatableClass> é a mesma de uma RuntimeClass verdadeiramente em processo preferida por um componente do Tempo de Execução do Windows no pacote do aplicativo. <ActivatableClassAttribute> é um novo elemento e os atributos Name = "DesktopApplicationPath" e Type = "String" são obrigatórios e invariáveis. O atributo Value aponta para o local onde o winmd de implementação do componente de desktop reside (mais detalhes sobre isso na próxima seção). Cada RuntimeClass preferida pelo componente de desktop deve ter sua própria árvore de elemento <ActivatableClass>. A ActivatableClassId deve coincidir com o nome totalmente qualificado de namespace da RuntimeClass.
 
-Como mencionado na seção "Definição do contrato", uma referência de projeto deve ser feita para o winmd de referência do componente de desktop. Normalmente, o sistema de projeto do Visual Studio cria uma estrutura de diretório de dois níveis com o mesmo nome. No exemplo, é EnterpriseIPCApplication \\EnterpriseIPCApplication. O **winmd** de referência é copiado manualmente para esse diretório de segundo nível e, então, a caixa de diálogo Referências de Projeto é usada (clique no botão **Procurar..** ) para localizar e fazer referência a esse **winmd**. Depois disso, o namespace de nível superior do componente da área de trabalho (por exemplo, fabrikam) deve aparecer como um nó de nível superior na parte de referências do projeto.
+Como mencionado na seção "Definição do contrato", uma referência de projeto deve ser feita para o winmd de referência do componente de desktop. Normalmente, o sistema de projeto do Visual Studio cria uma estrutura de diretório de dois níveis com o mesmo nome. No exemplo, é EnterpriseIPCApplication\\EnterpriseIPCApplication. O **winmd** de referência é copiado manualmente para esse diretório de segundo nível e, então, a caixa de diálogo Referências de Projeto é usada (clique no botão **Procurar..** ) para localizar e fazer referência a esse **winmd**. Depois disso, o namespace de nível superior do componente da área de trabalho (por exemplo, fabrikam) deve aparecer como um nó de nível superior na parte de referências do projeto.
 
 >**Observação** É muito importante usar o **reference winmd** no aplicativo de sideload. Se você transportar acidentalmente o **implementation winmd** ao diretório do aplicativo de sideload e referenciá-lo, provavelmente receberá um erro relacionado a "não foi possível encontrar IStringable". Esse é um sinal claro de que o **winmd** errado foi referenciado. As regras de pós-compilação no aplicativo do servidor de IPC (detalhadas na próxima seção) separam cuidadosamente esses dois **winmd** em diretórios separados.
 
-Variáveis de ambiente (especialmente% ProgramFiles%) pode ser usado em <ActivatableClassAttribute Value="path">. Conforme observado anteriormente, o agente de aplicativo só dá suporte a 32 bits, portanto% ProgramFiles% resolverá os arquivos C: \\Program (x86) se o aplicativo for executado em um sistema operacional de 64 bits.
+Variáveis de ambiente (especialmente% ProgramFiles%) pode ser usado em <ActivatableClassAttribute Value="path">. Conforme observado anteriormente, o agente de aplicativo só dá suporte a 32 bits, portanto% ProgramFiles% resolverá para C:\\arquivos de programas (x86) se o aplicativo for executado em um sistema operacional de 64 bits.
 
 ## <a name="desktop-ipc-server-detail"></a>Detalhe de servidor de IPC de desktop
 
@@ -194,7 +194,7 @@ Normalmente, um projeto do Visual Studio usando .NET utiliza um dos dois "perfis
 Um é para o desktop (".NetFramework") e outro tem como objetivo a porção do aplicativo UWP do CLR (".NetCore"). Um componente de desktop neste recurso é um híbrido entre esses dois. Como resultado, a seção de referências é cuidadosamente construída para misturar esses dois perfis.
 
 Um projeto normal de aplicativo UWP não contém nenhuma referência explícita de projeto, porque toda a superfície da API do Windows Runtime está implicitamente incluída.
-Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele começa a vida como um projeto "biblioteca de \\Class de área de trabalho clássica" e, portanto, é um projeto de desktop. Portanto, é preciso fazer referências explícitas à API do Tempo de Execução do Windows (através de referências aos arquivos **winmd**). Adicione referências adequadas conforme mostrado abaixo.
+Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele começa a vida como um projeto "biblioteca de classes clássicas de\\de trabalho" e, portanto, é um projeto de desktop. Portanto, é preciso fazer referências explícitas à API do Windows Runtime (através de referências aos arquivos **winmd**). Adicione referências adequadas conforme mostrado abaixo.
 
 ```XML
 <ItemGroup>
@@ -406,7 +406,7 @@ Normalmente, só outras referências entre projetos são feitas. No entanto, um 
 
 As referências acima são uma mistura cuidadosa de referências que são essenciais para o bom funcionamento desse servidor híbrido. O protocolo é abrir o arquivo .csproj (conforme descrito em como editar o projeto OutputType) e adicionar essas referências conforme necessário.
 
-Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico [práticas recomendadas para interoperabilidade com componentes de Windows Runtime (aplicativos UWP usandoC++ C \#/vb/e XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10)).
+Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico [práticas recomendadas para interoperabilidade com componentes de Windows Runtime (aplicativos UWP usandoC++ C\#/vb/e XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10)).
 A tarefa é criar uma dll de componente do Windows Runtime que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Windows Runtime:
 
 -   Chamadas de método
@@ -468,7 +468,7 @@ Os clientes desse método assíncrono podem aguardar essa operação como qualqu
 
 **Chamar a funcionalidade do servidor de um thread em segundo plano do aplicativo**
 
-Como é normal que o cliente e o servidor sejam escritos pela mesma organização, uma prática de programação pode ser adotada para que todas as chamadas para o servidor sejam feitas por um thread de segundo plano no aplicativo de sideload. Uma chamada direta que coleta um ou mais lotes de dados do servidor pode ser feita a partir de um thread de segundo plano. Quando os resultados estão completamente recuperados, o lote de dados que está na memória no processo do aplicativo geralmente pode ser obtido diretamente do thread de IU. Os objetos C \# são naturalmente ágeis entre threads de segundo plano e threads de interface do usuário, portanto, são especialmente úteis para esse tipo de padrão de chamada.
+Como é normal que o cliente e o servidor sejam escritos pela mesma organização, uma prática de programação pode ser adotada para que todas as chamadas para o servidor sejam feitas por um thread de segundo plano no aplicativo de sideload. Uma chamada direta que coleta um ou mais lotes de dados do servidor pode ser feita a partir de um thread de segundo plano. Quando os resultados estão completamente recuperados, o lote de dados que está na memória no processo do aplicativo geralmente pode ser obtido diretamente do thread de IU. Os objetos C\# são naturalmente ágeis entre threads de segundo plano e threads de interface do usuário, portanto, são especialmente úteis para esse tipo de padrão de chamada.
 
 ## <a name="creating-and-deploying-the-windows-runtime-proxy"></a>Criação e implantação do proxy do Windows Runtime
 
@@ -493,9 +493,9 @@ a) Dlldata.c
 
 b) um arquivo de cabeçalho (por exemplo, MyWinRTComponent. h)
 
-c) um \* \_i arquivo. c (por exemplo, MyWinRTComponent \_i. c)
+c) um \*\_arquivo i. c (por exemplo, MyWinRTComponent\_i. c)
 
-d) um \* \_p arquivo. c (por exemplo, MyWinRTComponent \_p. c)
+d) um \*\_arquivo p. c (por exemplo, MyWinRTComponent\_p. c)
 
 **Etapa 5:** Adicione esses quatro arquivos gerados ao projeto "MyWinRTProxy".
 
@@ -521,7 +521,7 @@ MyWinRTComponent.Proxies
 
 **Definições deC++ pré-processador C/> > Adicionar**
 
-Win32 \_WINDOWS; REGISTRAR \_PROXY \_DLL "
+Win32\_o WINDOWS; REGISTRAR\_o PROXY\_DLL "
 
 **Cabeçalho pré-compiladoC++ C/>: selecione "não usar o cabeçalho pré-compilado"**
 
@@ -565,7 +565,7 @@ struct PersonStruct
 }
 ```
 
-Em seguida, retorne * PersonStruct \[ \] * em vez da *lista &lt;PersonObject &gt;* .
+Em seguida, retorne * PersonStruct\[\]* em vez da *lista&lt;personobject&gt;* .
 Isso leva todos os dados por um "salto" de processo cruzado
 
 Tal como acontece com todas as considerações de desempenho, medição e testes são fundamentais. O ideal é que uma telemetria seja inserida nas diversas operações para determinar quanto tempo elas levam. É importante fazer a medição através de uma escala: por exemplo, quanto tempo realmente leva para consumir todos os objetos *People* para uma consulta particular no aplicativo de sideload?
@@ -592,13 +592,13 @@ A lista de módulos para um servidor do agente deve listar *clrhost.dll* em sua 
 
 -   [Modelos de projeto de componente WinRT orientado para Windows 10 e VS 2015](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
--   [Exemplo de componente do NorthwindRT com agente do WinRT](https://go.microsoft.com/fwlink/p/?LinkID=397349)
+-   [Exemplo de componente do NorthwindRT com agente do WinRT](https://code.msdn.microsoft.com/Northwind-Brokered-WinRTC-5143a67c)
 
--   [Entregando aplicativos Microsoft Store confiáveis e confiáveis](https://go.microsoft.com/fwlink/p/?LinkID=393644)
+-   [Entregando aplicativos Microsoft Store confiáveis e confiáveis](https://blogs.msdn.com/b/b8/archive/2012/05/17/delivering-reliable-and-trustworthy-metro-style-apps.aspx)
 
 -   [Contratos de aplicativo e extensões (aplicativos da Windows Store)](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))
 
 -   [Como Sideload aplicativos no Windows 10](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
 
--   [Implantando aplicativos UWP para empresas](https://go.microsoft.com/fwlink/p/?LinkID=264770)
+-   [Implantando aplicativos UWP para empresas](https://blogs.msdn.com/b/windowsstore/archive/2012/04/25/deploying-metro-style-apps-to-businesses.aspx)
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b68e736cc6d413196205f84467b7e159c53cb98e
-ms.sourcegitcommit: e7589fa25d8de86c36b6ce6d90d360337718ef93
+ms.openlocfilehash: 0d54ab79926ef20bb54a83346c12df2ea383167d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71311238"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258349"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
@@ -59,7 +59,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
 <td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de aplicativos com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong></strong>Observação  clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos de interface do usuário apropriados Mas a nossa recomendação é que você use a barra de aplicativos para os comportamentos de todos os comandos.
+<strong>Observação</strong>  clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos apropriados da interface do usuário. Mas a nossa recomendação é que você use a barra de aplicativos para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 
 ## <a name="mouse-input-events"></a>Eventos de entrada do mouse
 
-A maioria das entradas do mouse pode ser tratada por meio dos eventos de entrada roteados comuns com suporte de todos os objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Elas incluem:
+A maioria das entradas do mouse pode ser tratada por meio dos eventos de entrada roteados comuns com suporte de todos os objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Como por exemplo:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -127,7 +127,7 @@ A maioria das entradas do mouse pode ser tratada por meio dos eventos de entrada
 
 No entanto, você pode aproveitar os recursos específicos de cada dispositivo (como eventos de roda do mouse) usando os eventos de ponteiro, gesto e manipulação em [Windows. UI. Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-**Amostras** Veja nosso [exemplo de BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
+**Exemplos:** Veja nosso [exemplo de BasicInput](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput), para.
 
 ## <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
@@ -162,7 +162,7 @@ Se você precisa personalizar o cursor do mouse:
 
 ### <a name="samples"></a>Exemplos
 
-- [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)

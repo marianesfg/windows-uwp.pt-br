@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c11a812aaa62e9fa4d27fddc1d55739fe491bd20
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 1d6c1b4c477bfe5c4f584227491ef5a94e375fa2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340840"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255666"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Usando a Camada Visual com XAML
 
@@ -47,10 +47,10 @@ Para obter exemplos de código, veja a página de referência de [**XamlLight**]
 
 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) é uma classe estática que fornece a funcionalidade de interoperabilidade de camada visual e XAML. Para obter uma visão geral da Camada Visual e sua funcionalidade, consulte [Camada Visual](https://docs.microsoft.com/windows/uwp/graphics/visual-layer). A classe **ElementCompositionPreview** fornece os seguintes métodos:
 
--   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obter um Visual "folheto" que é usado para processar este elemento
--   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): Define um Visual "hande" como o último filho da árvore visual deste elemento. Esse elemento visual será desenhado sobre o restante do elemento. 
--   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Recuperar o conjunto Visual usando **SetElementChildVisual**
--   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obter um objeto que pode ser usado para criar animações 60fps com base no deslocamento de rolagem em um **ScrollViewer**
+-   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obter um Visual "folheto" que é usado para processar este elemento
+-   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): define um Visual "hande" como o último filho da árvore visual deste elemento. Esse elemento visual será desenhado sobre o restante do elemento. 
+-   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): recuperar o conjunto Visual usando **SetElementChildVisual**
+-   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obter um objeto que pode ser usado para criar animações 60fps com base no deslocamento de rolagem em um **ScrollViewer**
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>Comentários sobre ElementCompositionPreview.GetElementVisual
 
@@ -199,7 +199,7 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-As duas listas a seguir mostram os equivalente de [C++/WinRT](https://aka.ms/cppwinrt) e [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) do código C&#35; anterior usando a mesma estrutura XAML.
+As duas listas a seguir mostram os equivalente de [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) e [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) do código C&#35; anterior usando a mesma estrutura XAML.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Composition.h>

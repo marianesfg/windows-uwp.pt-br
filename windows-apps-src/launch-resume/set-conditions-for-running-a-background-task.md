@@ -4,18 +4,18 @@ description: Saiba como definir condições que controlam quando a sua tarefa em
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 ms.date: 07/06/2018
 ms.topic: article
-keywords: o Windows 10, uwp, tarefas em segundo plano
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 88836ac0363001e86c17486e1527b96a4eac0faa
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 618c8891551d851c27414968be76fb465eb89bf0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371840"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260414"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -105,9 +105,9 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 Para adicionar várias condições, seu aplicativo faz várias chamadas ao método [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) . Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
 
 > [!NOTE]
-> Tome cuidado para não adicionar condições conflitantes para uma tarefa em segundo plano.
+> Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano.
 
-O trecho a seguir mostra várias condições no contexto de criando e registrando uma tarefa em segundo plano.
+O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano.
 
 ```csharp
 // Set up the background task.
@@ -178,7 +178,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Escolha as condições para a tarefa em segundo plano para que seja executada apenas quando necessário e não é executado quando ele não deve. Confira [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) para ver descrições das diferentes condições de tarefas em tela de fundo.
+> Escolha as condições da tarefa em segundo plano para que ela seja executada apenas quando for necessária e não seja executada quando ela não deveria. Confira [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) para ver descrições das diferentes condições de tarefas em tela de fundo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -194,4 +194,4 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

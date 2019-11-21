@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 617b5d013c8452733fae2a1fa7c16180d37fbe57
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360939"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259716"
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
  
@@ -25,7 +25,7 @@ Notificações periódicas, que são chamadas também de notificações de sonda
 
 As notificações periódicas permitem que seu aplicativo obtenha atualizações de bloco em tempo real com serviço de nuvem mínimo e pouco investimento do cliente. As notificações periódicas são um método de entrega excelente para distribuir o mesmo conteúdo a uma ampla audiência.
 
-**Observação**    você pode saber mais, baixando o [Push e exemplo de notificações periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
+**Observação**   você pode aprender mais baixando o [exemplo de notificações por push e periódicas](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
  
 
@@ -48,9 +48,9 @@ A resposta do servidor de nuvem inclui o conteúdo baixado. O conteúdo retornad
 
 Chame um destes métodos para começar a sondagem:
 
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (lado a lado)
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (notificação)
--   [**StartPeriodicUpdateBatch** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (lado a lado)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (bloco)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (notificação)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (bloco)
 
 Quando você chama um destes métodos, o URI é imediatamente sondado e o bloco ou a notificação será atualizada com o conteúdo recebido. Após essa sondagem inicial, o Windows continua fornecendo as atualizações no intervalo solicitado. A sondagem continua até você parar explicitamente (com [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), seu aplicativo ser desinstalado ou, no caso de um bloco secundário, o bloco ser removido. Caso contrário, o Windows continua a sondar atualizações para seu bloco ou notificação mesmo que seu aplicativo não seja mais iniciado.
 
@@ -77,7 +77,7 @@ Se você lançar uma atualização de aplicativo que altere seu URI de sondagem,
 
 Por padrão, as notificações periódicas de bloco e de selo expiram três dias depois que são baixadas. Quando uma notificação expira, o conteúdo é removido do selo, do bloco ou da fila e não é mais mostrado para o usuário. É recomendável definir um horário de expiração explícito em todas as notificações de bloco e de selo periódicas usando um tempo que faça sentido para o aplicativo ou notificação, para garantir que o conteúdo do bloco não continue além do tempo relevante. Um tempo de expiração explícito é essencial para conteúdo com tempo de vida definido. Isso também garante a remoção de conteúdo obsoleto se seu serviço de nuvem se tornar inacessível ou se o usuário se desconectar da rede por um período de tempo prolongado.
 
-Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](https://go.microsoft.com/fwlink/p/?linkid=253706). Para saber mais, veja [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) ou [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
+Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1). Para saber mais, veja [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) ou [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
 
 Por exemplo, durante um dia de negociação ativo do mercado de ações, você pode definir a expiração de uma atualização de preços de ações para duas vezes mais do que seu intervalo de sondagem (por exemplo, uma hora após o recebimento, se estiver sondando a cada meia hora). Outro exemplo é um aplicativo de notícias que pode determinar que um dia é um período de expiração adequado para a atualização de blocos de notícias diárias.
 
@@ -104,6 +104,6 @@ Você deve fornecer um URI exclusivo para cada notificação que quiser que o Wi
 
 
 * [Diretrizes para notificações periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
-* [Como configurar notificações periódicas para notificações](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Como configurar notificações periódicas para crachás](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
 * [Como configurar notificações periódicas para blocos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

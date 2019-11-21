@@ -1,43 +1,43 @@
 ---
 title: Oferecendo suporte à orientação de tela (DirectX e C++)
-description: Aqui, discutiremos as práticas recomendadas para tratamento de rotação de tela em seu aplicativo DirectX da UWP, para que o hardware de gráficos de um dispositivo Windows 10 são usados com eficiência e eficácia.
+description: Aqui, discutiremos as práticas recomendadas para lidar com a rotação de tela em seu aplicativo de DirectX do UWP, para que o hardware gráfico do dispositivo Windows 10 seja usado com eficiência e eficácia.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, orientação da tela, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 84dc81734d945e32d222bdc3e1fe9c7468f078bb
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5f6f50abeae643cccca2a23a4b3c20dc698d200e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321151"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258512"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 
 
 
-Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged). Aqui, discutiremos as práticas recomendadas para tratamento de rotação de tela em seu aplicativo DirectX da UWP, para que o hardware de gráficos de um dispositivo Windows 10 são usados com eficiência e eficácia.
+Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged). Aqui, discutiremos as práticas recomendadas para lidar com a rotação de tela em seu aplicativo de DirectX do UWP, para que o hardware gráfico do dispositivo Windows 10 seja usado com eficiência e eficácia.
 
-Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor, ou com uma alternância de software) e permitir que usuários alterem as configurações de exibição. Por isso, o Windows 10 em si lida com a rotação das imagens para garantir que eles sejam "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 gira a imagem para exibição final imediatamente. Para três as quatro orientações de tela específica (discutidas posteriormente), o Windows 10 usa recursos adicionais de gráficos e computação para exibir a imagem final.
+Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permitir que os usuários alterem as configurações de exibição. Por isso, o próprio Windows 10 lida com a rotação das imagens para garantir que elas sejam "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 gira imediatamente a imagem para exibição final. Para três das quatro orientações de tela específicas (discutidas posteriormente), o Windows 10 usa recursos gráficos adicionais e computação para exibir a imagem final.
 
 Para aplicativos UWP DirectX, o objeto [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation) inclui os dados básicos de orientação de exibição que seu aplicativo pode consultar. A orientação padrão é *paisagem*, em que a largura em pixels da exibição é maior que a altura; a orientação alternativa é *retrato*, onde a exibição é girada a 90 graus nas duas direções e a largura torna-se menor que a altura.
 
-Windows 10 define quatro modos de orientação de vídeo específico:
+O Windows 10 define quatro modos de orientação de exibição específicos:
 
--   Paisagem — o padrão orientação para Windows 10 da exibição e é considerado o ângulo de base ou a identidade de rotação (graus 0).
+-   Paisagem — a orientação de exibição padrão para o Windows 10 e é considerada o ângulo de base ou de identidade para rotação (0 graus).
 -   Retrato - o vídeo tem que ser girado no sentido horário 90 graus (ou sentido anti-horário 270 graus).
 -   Paisagem, invertida - o tela foi girada 180 graus (virada de cabeça para baixo).
 -   Retrato invertido - o vídeo foi girado no sentido horário a 270 graus (ou no sentido anti-horário a 90 graus).
 
-Quando a tela gira de uma orientação para outro, Windows 10 internamente executa uma operação de rotação para alinhar a imagem desenhada com a nova orientação, e o usuário vê uma imagem vertical na tela.
+Quando a exibição gira de uma orientação para outra, o Windows 10 internamente executa uma operação de rotação para alinhar a imagem desenhada com a nova orientação e o usuário vê uma imagem vertical na tela.
 
-Além disso, o Windows 10 exibe as animações de transição automática para criar uma experiência do usuário uniforme ao deslocar-se de uma orientação para outro. À medida que a orientação do vídeo muda, o usuário vê essas mudanças como uma animação de rotação e zoom fixo da imagem da tela exibida. Tempo é alocado pelo Windows 10 para o aplicativo para o layout na nova orientação.
+Além disso, o Windows 10 exibe animações de transição automática para criar uma experiência de usuário tranqüila ao mudar de uma orientação para outra. À medida que a orientação do vídeo muda, o usuário vê essas mudanças como uma animação de rotação e zoom fixo da imagem da tela exibida. O tempo é alocado pelo Windows 10 para o aplicativo para layout na nova orientação.
 
 Em geral, este é o processo para lidar com as alterações na orientação de tela:
 
 1.  Use uma combinação dos valores de limites de janela e os dados de orientação de exibição para manter a cadeia de troca alinhada com a orientação de exibição nativa do dispositivo.
-2.  Notificar o Windows 10 da orientação da cadeia de troca usando [ **IDXGISwapChain1::SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation).
+2.  Notifique o Windows 10 da orientação da cadeia de permuta usando [**IDXGISwapChain1:: SetRotation**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation).
 3.  Mude o código de renderização para gerar imagens alinhadas com a orientação do dispositivo do usuário.
 
 ## <a name="resizing-the-swap-chain-and-pre-rotating-its-contents"></a>Redimensionar a cadeia de troca e girar previamente o conteúdo
@@ -330,7 +330,7 @@ Depois de salvar os valores de altura e largura atuais da janela para a próxima
 
 Adicione o 0.5f para assegurar o arredondamento para o valor inteiro mais próximo.
 
-Fazendo um aparte, as coordenadas do [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) são sempre definidas em DIPs. Para Windows 10 e versões anteriores do Windows, um DIP é definido como 1/96 de uma polegada e alinhados à definição do sistema operacional do *backup*. Quando a orientação de exibição gira para o modo retrato, o aplicativo inverte a largura e a altura do **CoreWindow**, e o tamanho de destino da renderização (limites) deve mudar de acordo com isso. Como as coordenadas do Direct3D são sempre em pixels físicos, você deve converter os valores de DIP do **CoreWindow** para valores inteiros de pixels antes de passar esses valores para o Direct3D configurar a cadeia de troca.
+Fazendo um aparte, as coordenadas do [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) são sempre definidas em DIPs. Para o Windows 10 e versões anteriores do Windows, um DIP é definido como 1/1/96 de uma polegada e alinhado à definição de *up*do sistema operacional. Quando a orientação de exibição gira para o modo retrato, o aplicativo inverte a largura e a altura do **CoreWindow**, e o tamanho de destino da renderização (limites) deve mudar de acordo com isso. Como as coordenadas do Direct3D são sempre em pixels físicos, você deve converter os valores de DIP do **CoreWindow** para valores inteiros de pixels antes de passar esses valores para o Direct3D configurar a cadeia de troca.
 
 Nesse processo, você está trabalhando um pouco mais do que trabalharia se simplesmente redimensionasse a cadeia de permuta: você está efetivamente girando os componentes do Direct2D e Direct3D de sua imagem antes de compô-las para a apresentação e está informando a cadeia de permuta que renderizou os resultados em uma nova orientação. Veja a seguir mais detalhes sobre esse processo, conforme mostrado no exemplo de código para **DX::DeviceResources::CreateWindowSizeDependentResources**:
 
@@ -340,14 +340,14 @@ Nesse processo, você está trabalhando um pouco mais do que trabalharia se simp
 
 -   Depois disso, defina a transformação de matriz 2D ou 3D adequada para aplicar aos pixels ou aos vértices (respectivamente) no pipeline de elemento gráfico ao renderizá-los para a cadeia de troca. Temos 4 métricas de rotação possíveis:
 
-    -   Paisagem (DXGI\_modo\_ROTAÇÃO\_identidade)
-    -   Retrato (DXGI\_modo\_ROTAÇÃO\_ROTATE270)
-    -   Paisagem, invertida (DXGI\_modo\_ROTAÇÃO\_ROTATE180)
-    -   retrato, invertido (DXGI\_modo\_ROTAÇÃO\_girar90)
+    -   paisagem (modo de\_DXGI\_rotação\_identidade)
+    -   retrato (modo de\_DXGI\_rotação\_ROTATE270)
+    -   paisagem, invertido (modo de\_DXGI\_rotação\_ROTATE180)
+    -   retrato, invertido (modo de\_DXGI\_rotação\_ROTATE90)
 
-    A matriz correta está selecionada com base nos dados fornecidos pelo Windows 10 (como os resultados de [ **DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)) para determinar a exibição orientação e ele estará multiplicado pelas coordenadas de cada pixel (Direct2D) ou o vértice (Direct3D) na cena, girando efetivamente-los para se alinhar à orientação da tela. (Note que no Direct2D, a origem da tela é definida como o canto superior esquerdo, enquanto em Direct3D a origem é definida como o centro lógico da janela.)
+    A matriz correta é selecionada com base nos dados fornecidos pelo Windows 10 (como os resultados de [**DisplayInformation:: OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged)) para determinar a orientação da exibição e ela será multiplicada pelas coordenadas de cada pixel (Direct2D) ou Vertex (Direct3D) na cena, girando-as efetivamente para ficarem alinhadas à orientação da tela. (Note que no Direct2D, a origem da tela é definida como o canto superior esquerdo, enquanto em Direct3D a origem é definida como o centro lógico da janela.)
 
-> **Observação**    para obter mais informações sobre as transformações 2D usada para rotação e como defini-las, consulte [definindo matrizes para rotação de tela (2D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Para obter mais informações sobre as transformações 3-D usadas para rotação, veja [Definindo as matrizes para a rotação da tela (3-D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
+> **Observação**   para obter mais informações sobre as transformações 2D usadas para rotação e como defini-las, consulte [definindo matrizes para rotação de tela (2-D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Para obter mais informações sobre as transformações 3-D usadas para rotação, veja [Definindo as matrizes para a rotação da tela (3-D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
 
  
 
@@ -366,7 +366,7 @@ Agora, apresente a cadeia de permuta.
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>Reduzir o atraso de rotação usando CoreWindowResizeManager
 
 
-Por padrão, o Windows 10 fornece uma janela curta, mas perceptível, de tempo para qualquer aplicativo, independentemente do modelo de aplicativo ou linguagem, para concluir a rotação da imagem. Entretanto, há chances de que quando seu aplicativo executa o cálculo de rotação usando uma das técnicas descritas aqui, ele será feito bem antes desse período ser encerrado. Você gostaria de recuperar o tempo e concluir a animação, certo? É nesse ponto que o [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager) entra.
+Por padrão, o Windows 10 fornece uma janela de tempo breve, mas perceptível, para qualquer aplicativo, independentemente do modelo ou linguagem de aplicativo, para concluir a rotação da imagem. Entretanto, há chances de que quando seu aplicativo executa o cálculo de rotação usando uma das técnicas descritas aqui, ele será feito bem antes desse período ser encerrado. Você gostaria de recuperar o tempo e concluir a animação, certo? É nesse ponto que o [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager) entra.
 
 Veja como usar o [**CoreWindowResizeManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindowResizeManager): quando um evento [**DisplayInformation::OrientationChanged**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.orientationchanged) é acionado, chame o [**CoreWindowResizeManager::GetForCurrentView**](https://docs.microsoft.com/previous-versions/hh404170(v=vs.85)) no manipulador para o evento obter uma instância do **CoreWindowResizeManager** e, quando o layout da nova orientação for concluído e apresentado, chame [**NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted) para permitir que o Windows saiba que ele pode concluir a animação de rotação e exiba a tela do aplicativo.
 
@@ -380,18 +380,18 @@ CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeMana
 resizeManager->NotifyLayoutCompleted();
 ```
 
-Quando o usuário gira a orientação da tela, Windows 10 mostra uma animação independente do seu aplicativo como comentários ao usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
+Quando um usuário gira a orientação da exibição, o Windows 10 mostra uma animação independente do seu aplicativo como comentários para o usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
 
--   Windows 10 reduz a imagem original.
--   Windows 10 contém a imagem para o tempo necessário para reconstruir o novo layout. Esse é o período que você gostaria de reduzir, porque seu aplicativo provavelmente não precisará dele inteiro.
+-   O Windows 10 reduz a imagem original.
+-   O Windows 10 mantém a imagem para o tempo necessário para recriar o novo layout. Esse é o período que você gostaria de reduzir, porque seu aplicativo provavelmente não precisará dele inteiro.
 -   Quando a janela do layout expira, ou quando uma notificação da conclusão de layout e recebida, o Windows gira a imagem e efetua fading cruzado de zooms para nova orientação.
 
-Como sugerido no terceiro marcador, quando um aplicativo chama [ **NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted), Windows 10 para a janela de tempo limite, conclui a animação de rotação e retorna o controle para seu aplicativo, que agora está desenhando na nova orientação da exibição. O efeito geral é que seu aplicativo agora está um pouco mais fluido, responsivo e eficiente!
+Como sugerido no terceiro marcador, quando um aplicativo chama [**NotifyLayoutCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindowresizemanager.notifylayoutcompleted), o Windows 10 interrompe a janela de tempo limite, conclui a animação de rotação e retorna o controle ao seu aplicativo, que agora está desenhando na nova orientação de exibição. O efeito geral é que seu aplicativo agora está um pouco mais fluido, responsivo e eficiente!
 
-## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>Apêndice a: Aplicação de matrizes para rotação de tela (2D)
+## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>Apêndice A: Aplicando métricas para rotação da tela (2-D)
 
 
-No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de troca DXGI](https://go.microsoft.com/fwlink/p/?linkid=257600)), você pode ter percebido que tínhamos matrizes de rotação separadas para a saída de Direct2D e Direct3D. Vamos examinar as matrizes 2-D, primeiro.
+No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de troca DXGI](https://code.msdn.microsoft.com/windowsapps/DXGI-swap-chain-rotation-21d13d71)), você pode ter percebido que tínhamos matrizes de rotação separadas para a saída de Direct2D e Direct3D. Vamos examinar as matrizes 2-D, primeiro.
 
 Há dois motivos pelos quais não podemos aplicar as mesmas matrizes de rotação ao conteúdo do Direct2D e Direct3D:
 
@@ -449,7 +449,7 @@ default:
 
 Depois que você tiver a matriz e a origem de rotação corretas para a imagem 2D, a defina com uma chamada para [**ID2D1DeviceContext::SetTransform**](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-settransform) entre suas chamadas para [**ID2D1DeviceContext::BeginDraw**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) e [**ID2D1DeviceContext::EndDraw**](https://docs.microsoft.com/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw).
 
-**Aviso**    Direct2D não tem uma pilha de transformação. Se o seu aplicativo também estiver usando o [**ID2D1DeviceContext::SetTransform**](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-settransform) como parte de seu código de desenho, essa matriz precisa ser multiplicada posteriormente em qualquer outra transformação que você tenha aplicado.
+**Aviso**   Direct2D não tem uma pilha de transformação. Se o seu aplicativo também estiver usando o [**ID2D1DeviceContext::SetTransform**](https://docs.microsoft.com/windows/desktop/Direct2D/id2d1rendertarget-settransform) como parte de seu código de desenho, essa matriz precisa ser multiplicada posteriormente em qualquer outra transformação que você tenha aplicado.
 
  
 
@@ -485,12 +485,12 @@ Depois que você tiver a matriz e a origem de rotação corretas para a imagem 2
 
 Na próxima vez que você apresentar a cadeia de troca, sua imagem 2D será girada para corresponder à nova orientação de exibição.
 
-## <a name="appendix-b-applying-matrices-for-screen-rotation-3-d"></a>Apêndice B: Aplicação de matrizes para rotação de tela (3D)
+## <a name="appendix-b-applying-matrices-for-screen-rotation-3-d"></a>Apêndice B: Aplicando métricas para rotação da tela (3D)
 
 
-No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de permuta DXGI](https://go.microsoft.com/fwlink/p/?linkid=257600)), definimos uma matriz de transformação específica para cada orientação de tela possível. Agora, vamos examinar as matrizes para girar cenas 3D. Como antes, crie um conjunto de matrizes para cada uma das 4 orientações possíveis. Para evitar erros de arredondamento e, portanto, artefatos visuais secundários, declare explicitamente as matrizes em seu código.
+No código de exemplo em [Redimensionando a cadeia de troca e fazendo a pré-rotação de seu conteúdo](#resizing-the-swap-chain-and-pre-rotating-its-contents) (e no [Exemplo de rotação de cadeia de permuta DXGI](https://code.msdn.microsoft.com/windowsapps/DXGI-swap-chain-rotation-21d13d71)), definimos uma matriz de transformação específica para cada orientação de tela possível. Agora, vamos examinar as matrizes para girar cenas 3D. Como antes, crie um conjunto de matrizes para cada uma das 4 orientações possíveis. Para evitar erros de arredondamento e, portanto, artefatos visuais secundários, declare explicitamente as matrizes em seu código.
 
-Configure essas matrizes de rotação 3D como a seguir. As matrizes exibidas no seguinte exemplo de código são matrizes de rotação padrão para rotações de 0, 90, 180 e 270 graus das vértices que definem pontos no espaço da cena 3D da câmera. Cada vértice \[x, y, z\] valor da coordenada na cena é multiplicada por essa matriz de rotação quando a projeção de 2D da cena é computada.
+Configure essas matrizes de rotação 3D como a seguir. As matrizes exibidas no seguinte exemplo de código são matrizes de rotação padrão para rotações de 0, 90, 180 e 270 graus das vértices que definem pontos no espaço da cena 3D da câmera. O valor da coordenada \[x, y, z\] na cena é multiplicado por essa matriz de rotação quando a projeção 2D da cena é computada.
 
 ```cpp
    
@@ -549,7 +549,7 @@ ConstantBuffer  m_constantBufferData;          // Constant buffer resource data
 m_constantBufferData.projection = mul(m_constantBufferData.projection, m_rotationTransform3D);
 ```
 
-Agora, quando você chama o método render, ele multiplica a matriz de rotação atual (conforme especificado pela variável de classe **m\_orientationTransform3D**) com a matriz de projeção atual e atribui os resultados de que operação como a nova matriz de projeção para seu renderizador. Apresente a cadeia de troca para ver a cena na orientação de exibição atualizada.
+Agora, quando você chama o método Render, ele multiplica a matriz de rotação atual (conforme especificado pela variável de classe **m\_orientationTransform3D**) pela matriz de projeção atual e atribui os resultados dessa operação como a nova matriz de projeção do renderizador. Apresente a cadeia de troca para ver a cena na orientação de exibição atualizada.
 
  
 

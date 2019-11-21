@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bb24002e3738213ba3e784e6b91ff55d970a26a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5b94c946222f510c7f1b1f7619b67ee83e6c2256
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363625"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258010"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
@@ -27,10 +27,10 @@ O reconhecimento de fala requer pelo menos uma restrição para definir um vocab
 
 Use a propriedade [**SpeechRecognizer.Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) para adicionar restrições a um reconhecedor de fala.
 
-Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. (Para restrições de comando de voz Cortana, consulte [inicie um aplicativo de primeiro plano com comandos de voz na Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
+Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. (Para restrições de comando de voz da Cortana, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz no Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
 
-- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)— uma restrição com base em uma gramática predefinida (pesquisa de ditado ou web).
-- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)— uma restrição com base em uma lista de palavras ou frases.
+- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)— uma restrição baseada em uma gramática predefinida (ditado ou pesquisa na Web).
+- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)— uma restrição baseada em uma lista de palavras ou frases.
 - [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)— uma restrição definida em um arquivo de especificação de gramática de reconhecimento de fala (SRGS).
 
 Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas combinações de restrições são válidas:
@@ -137,7 +137,7 @@ As gramáticas da SRGS fornecem um conjunto completo de recursos para ajudar voc
 - Use a semântica para definir o reconhecimento de fala por meio de seu aplicativo.
 - Especifique as pronúncias, quer em linha com uma gramática ou por meio de um link de um léxico.
 
-Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](https://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](https://go.microsoft.com/fwlink/p/?LinkID=269887).
+Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](https://msdn.microsoft.com/library/hh361653). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](https://msdn.microsoft.com/library/hh361658).
 
 Lembre-se bem do seguinte:
 
@@ -171,7 +171,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar em conformidade com o World Wide Web Consortium (W3C) [interpretação de semântica de conversão de fala reconhecimento (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) especificação.
+Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. As gramáticas devem estar em conformidade com a [SISR (interpretação semântica) da especificação de reconhecimento de fala (World Wide Web Consortium) 1,0](https://www.w3.org/TR/semantic-interpretation/) (W3C).
 
 Aqui, escutamos as variantes de "sim" e "não".
 
@@ -228,4 +228,4 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 ### <a name="samples"></a>Exemplos
 
-- [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+- [Exemplo de reconhecimento de fala e síntese de fala](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

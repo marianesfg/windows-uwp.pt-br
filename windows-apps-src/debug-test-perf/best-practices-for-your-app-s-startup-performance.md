@@ -1,24 +1,24 @@
 ---
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
-title: Práticas recomendadas para o desempenho inicial de seu aplicativo
+title: Práticas recomendadas para o desempenho inicial de seu app
 description: Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ecb325566733e57c1ae9d1a13c68b25794e9e87
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360034"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254681"
 ---
-# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
+# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
 
-## <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
+## <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
 
 Em parte, os usuários percebem se seu aplicativo é rápido ou lento com base no tempo que leva para ele iniciar. Para os fins deste tópico, o tempo de inicialização de um aplicativo começa quando o usuário inicia o aplicativo e termina quando o usuário pode interagir com o aplicativo de alguma forma significativa. Esta seção oferece sugestões de como obter um desempenho melhor de seu aplicativo quando ele é iniciado.
 
@@ -26,13 +26,13 @@ Em parte, os usuários percebem se seu aplicativo é rápido ou lento com base n
 
 Inicie seu aplicativo algumas vezes antes de realmente medir o tempo de inicialização dele. Isso lhe dá uma linha de base para a medição e garante que você esteja medindo um tempo de inicialização mais curto possível, razoavelmente.
 
-Quando seu aplicativo UWP chegar aos computadores de seus clientes, seu aplicativo estará compilado com a cadeia de ferramentas .NET Native. .NET Native é uma tecnologia de pré-compilação que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL. Os aplicativos criados com o .NET Native vinculam estaticamente um tempo de execução personalizado e o novo .NET Core convergido que pode ser executado em todos os dispositivos, para que não dependam da implementação nativa do .NET. Por padrão, seu aplicativo usa .NET Native, se você estiver criando em modo "Versão", e usa CoreCLR, se você estiver criando em modo "depuração", na sua máquina de desenvolvimento. Você pode configurar isso no Visual Studio usando a página Compilar em "Propriedades" C#) ou Compilar -> Avançado em "Meu Projeto" (VB). Procure uma caixa de seleção que diz "Compilar com a cadeia de ferramentas nativa do .NET".
+Quando seu aplicativo UWP chegar aos computadores de seus clientes, seu aplicativo estará compilado com a cadeia de ferramentas .NET Native. .NET Native é uma tecnologia de pré-compilação que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL. Os aplicativos criados com o .NET Native vinculam estaticamente um runtime personalizado e o novo .NET Core convergido que pode ser executado em todos os dispositivos, para que não dependam da implementação nativa do .NET. Por padrão, seu aplicativo usa .NET Native, se você estiver criando em modo "Versão", e usa CoreCLR, se você estiver criando em modo "depuração", na sua máquina de desenvolvimento. Você pode configurar isso no Visual Studio usando a página Compilar em "Propriedades" C#) ou Compilar -> Avançado em "Meu Projeto" (VB). Procure uma caixa de seleção que diz "Compilar com a cadeia de ferramentas nativa do .NET".
 
 Obviamente, você deve adotar medidas que representem o que o usuário final experimentará. Portanto, se você não tiver certeza de que está compilando seu aplicativo para código nativo em sua máquina de desenvolvimento, pode executar a ferramenta Native Image Generator (Ngen.exe) para pré-compilar seu aplicativo antes de medir o tempo de inicialização.
 
 O procedimento a seguir descreve como executar Ngen.exe para pré-compilar seu aplicativo.
 
-**Para executar Ngen.exe**
+**Para executar NGen. exe**
 
 1.  Execute seu aplicativo uma vez, no mínimo, para garantir que Ngen.exe o detecte.
 2.  Abra o **Agendador de Tarefas** seguindo um destes procedimentos:
@@ -54,7 +54,7 @@ Quando você recompila seu aplicativo, a imagem nativa não é mais usada. Em ve
 
 ### <a name="defer-work-as-long-as-possible"></a>Adie o trabalho tanto quanto possível
 
-Para melhorar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O tempo de execução de linguagem comum carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
+Para melhorar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O Common Language runtime carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
 
 ### <a name="do-long-running-work-independently"></a>Faça trabalhos longos de forma independente
 
@@ -323,7 +323,7 @@ Os aplicativos que exibem uma página de carregamento no manipulador de carregam
 > End Class
 > ```
 
-Para ver um exemplo do uso de telas iniciais prolongadas, consulte [Exemplo de tela inicial](https://go.microsoft.com/fwlink/p/?linkid=234889).
+Para ver um exemplo do uso de telas iniciais prolongadas, consulte [Exemplo de tela inicial](https://code.msdn.microsoft.com/windowsapps/Splash-screen-sample-89c1dc78).
 
 ### <a name="phase-3"></a>Fase 3
 
@@ -339,7 +339,7 @@ Como exatamente o aplicativo vai reagir a cada fase da inicialização é você 
 
 Os códigos reutilizáveis costumam vir na forma da inclusão de módulos (dlls) inclusos em um projeto. O carregamento desses módulos requer acesso ao disco e, como você pode imaginar, o custo de fazê-lo pode aumentar. Isso tem mais impacto na inicialização a frio, mas pode ter impacto na inicialização a quente, também. No caso do C# e do Visual Basic, o CLR tenta adiar esse custo o máximo possível carregando assemblies sob demanda. Ou seja, o CLR não carrega um módulo até que um método executado faça referência a ele. Portanto, faça referência apenas a assemblies necessários para a inicialização do aplicativo no código de inicialização, para que o CLR não carregue módulos desnecessários. Se tiver caminhos de código não utilizados em seu caminho de inicialização com referências desnecessárias, você poderá migrar esses caminhos de código para outros métodos, a fim de evitar as cargas desnecessárias.
 
-Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-) para descobrir quais módulos são carregados na inicialização.
+Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) ou o [Windows Performance Analyzer (WPA)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-) para descobrir quais módulos são carregados na inicialização.
 
 ### <a name="make-smart-web-requests"></a>Faça solicitações da Web inteligentes
 

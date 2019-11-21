@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 557f5c03bda68d11507ba3b3b3b12823dbe6fd9f
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: c90a3257f8a54202e7ac50395e7e73f0538a484a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282405"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259873"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
 Este artigo descreve como usar o **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá a solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos na conta do OneDrive). As etapas são semelhantes para obter permissão do usuário e acesso com qualquer provedor de identidade que ofereça suporte ao Gerenciador de Contas da Web.
 
 > [!NOTE]
-> Para obter um exemplo de código completo, consulte o [exemplo de WebAccountManagement no GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620621).
+> Para obter um exemplo de código completo, consulte o [exemplo de WebAccountManagement no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement).
 
 ## <a name="get-set-up"></a>Prepare-se para começar
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https @ no__t-0//login. Microsoft. com". 
+Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https\://login.microsoft.com". 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -398,7 +398,7 @@ Não exagere com texto de cabeçalho; seja conciso e direto. Se o processo de lo
 
 Você pode adicionar comandos personalizados ao AccountsSettingsPane, que aparecem como links abaixo de seu WebAccountProviders com suporte. Comandos personalizados são ótimos para tarefas simples relacionadas a contas de usuário, como exibir uma política de privacidade ou iniciar uma página de suporte para os usuários que estão com problemas. 
 
-Veja um exemplo: 
+Aqui está um exemplo: 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCommandsRequestedEventArgs e)
@@ -430,6 +430,6 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 [Agente de autenticação na Web](web-authentication-broker.md)
 
-[Exemplo de gerenciamento de contas da Web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
+[Exemplo de gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
 
 [Aplicativo Agendador de almoço](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)

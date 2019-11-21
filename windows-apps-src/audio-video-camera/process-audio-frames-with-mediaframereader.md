@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 60abc29ad4f9e16dc9d37e99f94c9f30039c0087
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f8d357dfbceafb6cc366b2880956ab3db231047d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360697"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256659"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
@@ -21,7 +21,7 @@ Este artigo mostra como usar um [**MediaFrameReader**](https://docs.microsoft.co
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1803.
 
 > [!NOTE] 
-> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230).
+> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames).
 
 ## <a name="setting-up-your-project"></a>Configurando seu projeto
 O processo de aquisição dos quadros de áudio é basicamente o mesmo para outros tipos de quadros de mídia. Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
@@ -76,10 +76,10 @@ Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/wi
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Quadros de processos de mídia com MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Processar quadros de mídia com MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Câmera](camera.md)
-* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Foto básica, vídeo e captura de áudio com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Exemplo de quadros de câmera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
 * [Gráficos de áudio](audio-graphs.md)
  
 

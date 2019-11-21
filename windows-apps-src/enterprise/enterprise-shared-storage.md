@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f9e1f285f53f2f4c9f160b573141666609560c00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 05a646979977bca5c19be2efe3f8bec12994cb19
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633651"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259630"
 ---
 # <a name="enterprise-shared-storage"></a>Armazenamento compartilhado corporativo
 
-O armazenamento compartilhado consiste em duas localizações nas quais aplicativos com a funcionalidade restrita **enterpriseDeviceLockdown** e um certificado corporativo têm total acesso de leitura e gravação. Observe que a funcionalidade **enterpriseDeviceLockdown** permite que os aplicativos usem a API de bloqueio do dispositivo e acessem as pastas de armazenamento compartilhado corporativo. Para saber mais sobre a API, consulte o namespace [**Windows.Embedded.DeviceLockdown**](https://go.microsoft.com/fwlink/?LinkId=699331).  
+O armazenamento compartilhado consiste em duas localizações nas quais aplicativos com a funcionalidade restrita **enterpriseDeviceLockdown** e um certificado corporativo têm total acesso de leitura e gravação. Observe que a funcionalidade **enterpriseDeviceLockdown** permite que os aplicativos usem a API de bloqueio do dispositivo e acessem as pastas de armazenamento compartilhado corporativo. Para saber mais sobre a API, consulte o namespace [**Windows.Embedded.DeviceLockdown**](https://docs.microsoft.com/uwp/api/Windows.Embedded.DeviceLockdown?redirectedfrom=MSDN).  
 
 Essas localizações são definidas na unidade local:
 - \Data\SharedData\Enterprise\Persistent
@@ -27,7 +27,7 @@ O armazenamento compartilhado corporativo dá suporte aos cenários a seguir.
 
 - Você pode compartilhar dados em uma instância de um aplicativo, entre instâncias do mesmo aplicativo ou até mesmo entre aplicativos pressupondo que eles tenham a funcionalidade e o certificado apropriados.
 - Você pode armazenar dados no disco rígido local, na pasta \Data\SharedData\Enterprise\Persistent, e eles manterão a persistência mesmo após a redefinição do dispositivo.
-- Manipule arquivos, incluindo a leitura, a gravação e a exclusão de arquivos, em um dispositivo por meio do serviço MDM (Gerenciamento de Dispositivo Móvel). Para saber mais sobre como usar o armazenamento compartilhado corporativo por meio do serviço MDM, consulte [EnterpriseExtFileSystem CSP](https://go.microsoft.com/fwlink/?LinkId=699333).
+- Manipule arquivos, incluindo a leitura, a gravação e a exclusão de arquivos, em um dispositivo por meio do serviço MDM (Gerenciamento de Dispositivo Móvel). Para saber mais sobre como usar o armazenamento compartilhado corporativo por meio do serviço MDM, consulte [EnterpriseExtFileSystem CSP](https://docs.microsoft.com/windows/client-management/mdm/enterpriseextfilessystem-csp?redirectedfrom=MSDN).
 
 ## <a name="access-enterprise-shared-storage"></a>Acessar o armazenamento compartilhado corporativo
 

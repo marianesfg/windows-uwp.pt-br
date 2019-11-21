@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: c0b8389d2319a670dd314417726b24e98378cd49
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
-ms.translationtype: HT
+ms.openlocfilehash: 0c9f29cacd740392e3cfd4b5b4b63d1f7ce9c5cd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334464"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260273"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tratamento de erros no passo a passo do XAML/C#
 
@@ -44,7 +44,7 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
       ErrorOccurred="OnAdError"/>
     ```
 
-3.  Para gerar um erro em tempo de execução, crie um segundo **AdControl** com uma ID de aplicativo diferente. Como todos os objetos **AdControl** em um aplicativo devem usar a mesma ID de aplicativo, criar um **AdControl** adicional com uma id de aplicativo diferente causará um erro.
+3.  Para gerar um erro em runtime, crie um segundo **AdControl** com uma ID de aplicativo diferente. Como todos os objetos **AdControl** em um aplicativo devem usar a mesma ID de aplicativo, criar um **AdControl** adicional com uma id de aplicativo diferente causará um erro.
 
     Defina um segundo **AdControl** no MainPage.xaml logo após o primeiro **AdControl**, e defina a propriedade [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) como zero (“0”).
     ``` xml
@@ -75,4 +75,4 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostras de publicidade no GitHub](https://aka.ms/githubads)
+* [Amostras de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)

@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 480029fd98a302fcc166067cbb383d7e9f8d1829
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 738190034f7418658958847172ded47bcbdc1b09
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820541"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258164"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -22,12 +22,12 @@ A base de um layout dinâmico é o uso apropriado de propriedades e painéis de 
 
 O sistema de layout XAML dá suporte a layouts estáticos e fluidos. Em um layout estático, você pode dar posições e tamanhos de pixel explícitos aos controles. Quando o usuário altera a resolução ou a orientação de seu dispositivo, a interface do usuário não é alterada. Layouts estáticos podem ser recortados em diferentes fatores forma e tamanhos de tela. Por outro lado, os layouts fluidos reduzem, crescem e refluem para responderem ao espaço visual disponível em um dispositivo. 
 
-Na prática, você usa uma combinação de elementos estáticos e fluidos para criar sua interface do usuário. Você ainda use elementos estáticos e os valores em alguns locais, mas certifique-se de que a interface do usuário geral está respondendo a resoluções diferentes, tamanhos de tela e modos de exibição.
+Na prática, você usa uma combinação de elementos estáticos e fluidos para criar sua interface do usuário. Você ainda usa elementos estáticos e valores em alguns locais, mas certifique-se de que a interface do usuário geral seja responsiva a diferentes resoluções, tamanhos de tela e exibições.
 
 Discutiremos aqui como usar painéis de layout e propriedades XAML para criar um layout fluido.
 
 ### <a name="layout-properties"></a>Propriedades do layout
-As propriedade de layout controlam o tamanho e a posição de um elemento. Para criar um layout fluido, use o dimensionamento automático ou proporcional para elementos e permitir que os painéis de layout posicionar seus filhos, conforme necessário. 
+As propriedade de layout controlam o tamanho e a posição de um elemento. Para criar um layout fluido, use o dimensionamento automático ou proporcional para elementos e permita que os painéis de layout Posicionem seus filhos conforme necessário. 
 
 Aqui estão algumas propriedades de layout comuns e como usá-las para criar layouts fluidos.
 
@@ -40,7 +40,7 @@ O dimensionamento automático redimensiona os elementos de interface do usuário
 > [!NOTE]
 > Um elemento ser redimensionado para seu conteúdo ou seu contêiner depende de como o contêiner pai manipula o dimensionamento dos filhos. Para obter mais informações, consulte [Painéis de layout](#layout-panels) posteriormente neste artigo.
 
-O dimensionamento proporcional, também chamado de *dimensionamento em estrela*, distribui o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas. No XAML, os valores de estrela são expressos como \* (ou *n* \* para dimensionamento em estrela ponderado). Por exemplo, para especificar que uma coluna é 5 vezes mais ampla do que a segunda coluna em um layout de coluna 2, use "5\*"e"\*" para o [ **largura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) propriedades no [ **ColumnDefinition** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) elementos.
+O dimensionamento proporcional, também chamado de *dimensionamento em estrela*, distribui o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas. Em XAML, os valores de estrela são expressos como \* (ou *n*\* para o dimensionamento em estrela ponderado). Por exemplo, para especificar que uma coluna é 5 vezes mais larga do que a segunda coluna em um layout de duas colunas, use "5\*" e "\*" para as propriedades de [**largura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) nos elementos [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) .
 
 Esse exemplo integra dimensionamentos fixo, automático e proporcional em um [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) com quatro colunas.
 
@@ -77,7 +77,7 @@ Ao usar o dimensionamento automático na interface do usuário, você talvez ain
 
 Em um Grid, MinWidth/MaxWidth também pode ser usado com definições de coluna, e MinHeight/MaxHeight pode ser usado com definições de linha.
 
-**Alinhamento**
+**Sintonia**
 
 Use as propriedades [**HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) e [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) para especificar como um elemento deve ser posicionado no contêiner pai.
 - Os valores para **HorizontalAlignment** são **Left**, **Center**, **Right** e **Stretch**.
@@ -88,14 +88,14 @@ Qualquer elemento que possa ter elementos filho pode tratar o valor Stretch das 
 
 Para obter mais informações, consulte o artigo [Alinhamento, margem e preenchimento](alignment-margin-padding.md) e as páginas de referência [**HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) e [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment).
 
-**Visibilidade**
+**Visualizar**
 
-Você pode revelar ou ocultar um elemento definindo sua [ **visibilidade** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) propriedade com um dos [ **visibilidade** enumeração](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility) valores: **Visível** ou **recolhido**. Quando um elemento é Collapsed, ele não ocupa nenhum espaço no layout da interface do usuário.
+Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) como um dos valores de enumeração [**Visibility**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility): **Visible** ou **Collapsed**. Quando um elemento é Collapsed, ele não ocupa nenhum espaço no layout da interface do usuário.
 
 Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro.
 
 > [!Tip]
-> Quando você tiver elementos em sua interface do usuário que são **recolhido** por padrão, os objetos ainda são criados na inicialização, mesmo que eles não são visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Quando você tem elementos na interface do usuário que são **recolhidos** por padrão, os objetos ainda são criados na inicialização, mesmo que não estejam visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -111,13 +111,13 @@ Eis uma comparação dos principais recursos dos controles de painel fornecidos 
 
 Controle do painel | Descrição
 --------------|------------
-[**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) | **Canvas** não dá suporte à interface do usuário fluida; você controla todos os aspectos do posicionamento e do dimensionamento dos elementos filho. Você normalmente o usa em casos especiais, como a criação de elementos gráficos, ou para definir pequenas áreas estáticas de uma interface do usuário adaptável maior. Você pode usar o código ou os estados visuais para reposicionar elementos em tempo de execução.<li>Os elementos são posicionados de maneira absoluta usando-se as propriedades anexadas Canvas.Top e Canvas.Left.</li><li>A disposição em camadas pode ser especificada explicitamente usando-se a propriedade anexada Canvas.ZIndex.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados. Caso o tamanho do elemento não seja definido explicitamente, ele é dimensionado segundo seu conteúdo.</li><li>O conteúdo filho não será recortado visualmente se for maior do que o painel. </li><li>O conteúdo filho não é restringido pelos limites do painel.</li>
+[**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) | **Canvas** não dá suporte à interface do usuário fluida; você controla todos os aspectos do posicionamento e do dimensionamento dos elementos filho. Você normalmente o usa em casos especiais, como a criação de elementos gráficos, ou para definir pequenas áreas estáticas de uma interface do usuário adaptável maior. Você pode usar o código ou os estados visuais para reposicionar elementos em runtime.<li>Os elementos são posicionados de maneira absoluta usando-se as propriedades anexadas Canvas.Top e Canvas.Left.</li><li>A disposição em camadas pode ser especificada explicitamente usando-se a propriedade anexada Canvas.ZIndex.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados. Caso o tamanho do elemento não seja definido explicitamente, ele é dimensionado segundo seu conteúdo.</li><li>O conteúdo filho não será recortado visualmente se for maior do que o painel. </li><li>O conteúdo filho não é restringido pelos limites do painel.</li>
 [**Grade**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | **Grid** dá suporte ao redimensionamento fluido de elementos filho. Você pode usar o código ou os estados visuais para reposicionar e refluir elementos.<li>Os elementos são organizados em linhas e colunas usando-se as propriedades anexadas Grid.Row e Grid.Column.</li><li>Os elementos podem abranger várias linhas e colunas usando-se as propriedades anexadas Grid.RowSpan e Grid.ColumnSpan.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são respeitados. Se o tamanho de um elemento não for definido explicitamente, ele se ampliará para preencher o espaço disponível na célula da grade.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário.</li>
 [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | <li>Os elementos são organizados em relação à borda ou ao centro do painel e em relação uns aos outros.</li><li>Os elementos são posicionados usando-se uma variedade de propriedades anexadas que controlam o alinhamento do painel, o alinhamento do irmão e a posição do irmão. </li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados, a menos que as propriedades anexadas RelativePanel do alinhamento causem o alongamento (por exemplo, um elemento está alinhado com as bordas direita e esquerda do painel). Caso o tamanho de um elemento não seja definido explicitamente e não seja ampliado, ele é dimensionado segundo seu conteúdo.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário.</li>
 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) |<li>Os elementos são empilhados em uma única linha vertical ou horizontalmente.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são respeitados na direção oposta à da propriedade Orientation. Caso o tamanho de um elemento não seja definido explicitamente, ele se amplia para preencher a largura disponível (ou a altura caso o Orientation seja Horizontal). Na direção especificada pela propriedade Orientation, um elemento é dimensionado segundo seu conteúdo.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo não é restringido pelos limites do painel na direção especificada pela propriedade Orientation, o conteúdo rolável se amplia além dos limites do painel e não mostra barras de rolagem. Você deve restringir explicitamente a altura (ou a largura) do conteúdo filho para fazer suas barras de rolagem serem mostradas.</li>
 [**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid) |<li>Os elementos são organizados em linhas ou colunas que se ajustam automaticamente em uma nova linha ou coluna quando o valor MaximumRowsOrColumns é atingido.</li><li>A propriedade Orientation especifica se os elementos devem ser organizados em linhas ou colunas.</li><li>Os elementos podem abranger várias linhas e colunas usando-se as propriedades anexadas VariableSizedWrapGrid.RowSpan e VariableSizedWrapGrid.ColumnSpan.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados. Os elementos são dimensionados conforme especificados pelas propriedades ItemHeight e ItemWidth. Caso essas propriedades não sejam definidas, o item na primeira célula é dimensionado segundo seu conteúdo, e todas as outras células herdam esse tamanho.</li><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário.</li>
 
-Para obter informações detalhadas e exemplos desses painéis, consulte [Painéis de layout](layout-panels.md). Consulte também a [Amostra de técnicas dinâmicas](https://go.microsoft.com/fwlink/p/?LinkId=620024).
+Para obter informações detalhadas e exemplos desses painéis, consulte [Painéis de layout](layout-panels.md). Consulte também a [Amostra de técnicas dinâmicas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlResponsiveTechniques).
 
 Os painéis de layout permitem organizar sua interface do usuário em grupos lógicos de controles. Ao usá-los com as configurações de propriedade apropriadas, você tem certo suporte para redimensionamento automático, reposicionamento e refluxo de elementos da interface do usuário. No entanto, a maioria dos layouts de interface do usuário ainda precisa de mais modificações quando ocorrem alterações significativas no tamanho da janela. Para isso, você pode usar estados visuais.
 
@@ -232,7 +232,7 @@ Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplif
 ```
 
 > [!Important]
-> No exemplo anterior, a propriedade anexa VisualStateManager é ativada a **grade** elemento. Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
+> No exemplo anterior, a propriedade anexada VisualStateManager. VisualStateGroups é definida no elemento **Grid** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
 ### <a name="attached-property-syntax"></a>Sintaxe da propriedade anexada
 
@@ -254,13 +254,13 @@ Este exemplo mostra como definir a propriedade anexada [**RelativePanel.AlignHor
 
 ### <a name="custom-state-triggers"></a>Gatilhos de estado personalizados
 
-Você pode estender a classe [**StateTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.StateTrigger) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
+Você pode estender a classe [**StateTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.StateTrigger) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers).
 
 ### <a name="visual-states-and-styles"></a>Estilos e estados visuais
 
 Você pode usar recursos Style em estados visuais para aplicar um conjunto de alterações de propriedade a vários controles. Para obter mais informações sobre como usar estilos, consulte [Definindo o estilo de controles](../controls-and-patterns/xaml-styles.md).
 
-Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é aplicado a um Button para ajustar o tamanho e as margens da entrada por mouse ou toque. Para obter o código completo e a definição do gatilho de estado personalizado, consulte [Amostra de gatilhos de estado](https://go.microsoft.com/fwlink/p/?LinkId=620025).
+Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é aplicado a um Button para ajustar o tamanho e as margens da entrada por mouse ou toque. Para obter o código completo e a definição do gatilho de estado personalizado, consulte [Amostra de gatilhos de estado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers).
 
 ```xaml
 <Page ... >
@@ -334,7 +334,7 @@ Ao fazer alterações significativas no layout da interface do usuário em dispo
 
 Use modos de exibição XAML para criar definições de interface do usuário diferentes que compartilhem o mesmo code-behind. Você pode fornecer uma definição de interface do usuário exclusiva para cada família de dispositivos. Siga estas etapas para adicionar um modo de exibição XAML a seu aplicativo.
 
-**Para adicionar um modo de exibição XAML para um aplicativo**
+**Para adicionar uma exibição XAML a um aplicativo**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
     > **Dica**&nbsp;&nbsp;Verifique se uma pasta ou o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
@@ -354,9 +354,9 @@ Consultemos um exemplo de um arquivo chamado MainPage.xaml. Para criar um modo d
 
 ![Modos de exibição XAML com nomes de arquivo qualificados](images/xaml-layout-view-ex-1.png)
 
-**Use o nome da pasta**
+**Usar nome da pasta**
 
-Para organizar os modos de exibição no projeto do Visual Studio usando pastas, você pode usar o nome de qualificador com a pasta. Para fazer isso, nomeie a pasta como este: DeviceFamily- *[qualifierString]* . Neste caso, cada arquivo do modo de exibição XAML tem o mesmo nome. Não inclua o qualificador no nome do arquivo.
+Para organizar os modos de exibição no projeto do Visual Studio usando pastas, você pode usar o nome de qualificador com a pasta. Para isso, nomeie a pasta assim: DeviceFamily- *[qualifierString]* . Neste caso, cada arquivo do modo de exibição XAML tem o mesmo nome. Não inclua o qualificador no nome do arquivo.
 
 Aqui está um exemplo, novamente para um arquivo chamado MainPage.xaml. Para criar um modo de exibição para dispositivos de tablet, crie uma pasta chamada "DeviceFamily-Tablet" e coloque um modo de exibição XAML chamado MainPage.xaml nela. Para criar um modo de exibição para dispositivos de computador, crie uma pasta chamada "DeviceFamily-Desktop" e coloque outro modo de exibição XAML chamado MainPage.xaml nela. Aqui está como a solução fica no Visual Studio.
 
@@ -368,7 +368,7 @@ Em ambos os casos, um modo de exibição exclusivo é usado para dispositivos de
 
 Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar arquivos Page separados (XAML e código) e depois navegar até a página apropriada quando a página for necessária.
 
-**Para adicionar uma página XAML para um aplicativo**
+**Para adicionar uma página XAML a um aplicativo**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
     > **Dica**&nbsp;&nbsp;Verifique se o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
@@ -376,7 +376,7 @@ Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar 
 4. Insira o nome da página. Por exemplo, "MainPage_Tablet". Um MainPage_Tablet.xaml e o arquivo de código MainPage_Tablet.xaml.cs/vb/cpp são criados.
 5. Clique em Adicionar. O arquivo é adicionado ao projeto.
 
-Em tempo de execução, verifique a família de dispositivos em que o aplicativo está em execução e navegue até a página correta.
+Em runtime, verifique a família de dispositivos em que o aplicativo está em execução e navegue até a página correta.
 
 ```csharp
 if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Tablet")
@@ -389,10 +389,10 @@ else
 }
 ```
 
-Você também pode usar critérios diferentes para determinar para qual página navegar. Para obter mais exemplos, consulte o [exemplo Vários modos de exibição personalizados](https://go.microsoft.com/fwlink/p/?LinkId=620636), que usa a função [**GetIntegratedDisplaySize**](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getintegrateddisplaysize) para verificar o tamanho físico de um visor integrado.
+Você também pode usar critérios diferentes para determinar para qual página navegar. Para obter mais exemplos, consulte o [exemplo Vários modos de exibição personalizados](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews), que usa a função [**GetIntegratedDisplaySize**](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getintegrateddisplaysize) para verificar o tamanho físico de um visor integrado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Tutorial: Criar layouts adaptáveis](../basics/xaml-basics-adaptive-layout.md)
+- [Tutorial: criar layouts adaptáveis](../basics/xaml-basics-adaptive-layout.md)
 - [Exemplo de técnicas de capacidade de resposta (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlResponsiveTechniques)
 - [Exemplo de gatilhos de estado (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers)
-- [Adaptados várias exibições de exemplo (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews)
+- [Exemplo de várias exibições personalizadas (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews)

@@ -1,27 +1,27 @@
 ---
-title: Planeje a compatibilização do DirectX
+title: Planejar a portabilidade do DirectX
 description: Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP) - atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, directx, compatibilização
 ms.localizationpriority: medium
-ms.openlocfilehash: 247c7cb05027520cb7a39e04ff65579297b66dc9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 032eeaf2a17ef244287e25e6d9ff32a12c61e137
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368299"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258462"
 ---
-# <a name="plan-your-directx-port"></a>Planeje a compatibilização do DirectX
+# <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
 
 
 
 **Resumo**
 
--   Planeje a compatibilização do DirectX
+-   Planejar a portabilidade do DirectX
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
--   [Mapeamento de recurso](feature-mapping.md)
+-   [Mapeamento de recursos](feature-mapping.md)
 
 
 Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
@@ -35,11 +35,11 @@ A atualização do Direct3D 9 para o Direct3D 11 é mais do que uma alteração 
 
 Você deve substituir as livrarias auxiliares D3DX e DXUT pelas suas ou por ferramentas da comunidade. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
-> **Observação**    você pode usar o [Kit de ferramentas do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir algumas funcionalidades que anteriormente foi fornecida por D3DX e DXUT.
+> **Observação**   você pode usar o [DirectX Tool Kit](https://github.com/Microsoft/DirectXTK) ou [DirectXTex](https://github.com/Microsoft/DirectXTex) para substituir algumas funcionalidades que foram fornecidas anteriormente por D3DX e DXUT.
 
  
 
-Sombreadores escritos na linguagem de assembly devem ser atualizados para HLSL usando o nível de modelo 4 de sombreador 9\_1 ou 9\_3 funcionalidade e sombreadores escritos para a biblioteca de efeitos precisará ser atualizado para uma versão mais recente da sintaxe do HLSL. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
+Os sombreadores escritos na linguagem do assembly devem ser atualizados para HLSL usando a funcionalidade do Shader Model 4 nível 9\_1 ou 9\_3, e os sombreadores escritos para a biblioteca de efeitos precisarão ser atualizados para uma versão mais recente da sintaxe HLSL. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
 Conheça os diferentes [níveis de recursos do Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro). Os níveis de recursos classificam uma ampla gama de hardware de vídeo, definindo conjuntos de funcionalidades conhecidas. Cada conjunto corresponde aproximadamente às versões do Direct3D, de 9.1 a 11.2. Todos os níveis de recursos usam a API do DirectX 11.
 
@@ -58,7 +58,7 @@ Nossos modelos e exemplos de códigos usam recursos C++ com os quais você pode 
 
 Há dois conceitos que você usará com frequência:
 
--   Referências gerenciadas ([ **^ operator**](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)) and [**managed classes**](https://docs.microsoft.com/cpp/windows/classes-and-structs-cpp-component-extensions) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Tempo de Execução do Windows, por exemplo [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) (você verá mais sobre isso no passo a passo).
+-   Referências gerenciadas ([ **^ operator**](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)) and [**managed classes**](https://docs.microsoft.com/cpp/windows/classes-and-structs-cpp-component-extensions) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Windows Runtime, por exemplo [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) (você verá mais sobre isso no passo a passo).
 -   Ao trabalhar com interfaces do Direct3D 11 COM, use o tipo de modelo [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class) para deixar ponteiros COM mais fáceis de usar.
 
  

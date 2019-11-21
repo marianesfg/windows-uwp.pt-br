@@ -6,29 +6,29 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: 84818561e2f49827a1a76d446fa6a7cfcf2f9896
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 844aaf8ff1e85836683bf752d301c1254066ea5a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820382"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258734"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar seu ambiente de desenvolvimento da UWP no Xbox
 
 A Plataforma Universal do Windows (UWP) no ambiente de desenvolvimento do Xbox consiste em um computador de desenvolvimento conectado a um console Xbox One por meio de uma rede local.
-O computador de desenvolvimento requer o Visual Studio 2015 atualização 3, Visual Studio 2017 ou Visual Studio de 2019.
-O computador de desenvolvimento também requer o Windows 10, o build do SDK do Windows 10 14393 ou posterior e uma variedade de ferramentas de suporte.
+O PC de desenvolvimento requer o Visual Studio 2015 atualização 3, o Visual Studio 2017 ou o Visual Studio 2019.
+O PC de desenvolvimento também requer o Windows 10, o Windows 10 SDK Build 14393 ou posterior e uma variedade de ferramentas de suporte.
 
 Este artigo discute as etapas para configurar e testar seu ambiente de desenvolvimento.
 
 ## <a name="visual-studio-setup"></a>Instalação do Visual Studio
 
-1. Instale o Visual Studio 2015 atualização 3, Visual Studio 2017 ou Visual Studio de 2019. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). É recomendável que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
+1. Instale o Visual Studio 2015 atualização 3, o Visual Studio 2017 ou o Visual Studio 2019. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). Recomendamos que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
 
 
-2. Se você estiver instalando o Visual Studio 2017 ou Visual Studio de 2019, certifique-se de que você escolha o **desenvolvimento da plataforma Universal do Windows** carga de trabalho. Se você for um desenvolvedor de C++, marque também a caixa de seleção **Ferramentas C++ da Plataforma Universal do Windows** no painel **Resumo** à direita, em **Desenvolvimento da Plataforma Universal do Windows**. Não faz parte da instalação padrão.
+2. Se você estiver instalando o Visual Studio 2017 ou o Visual Studio 2019, certifique-se de escolher a carga de trabalho de **desenvolvimento plataforma universal do Windows** . Se você for um desenvolvedor de C++, marque também a caixa de seleção **Ferramentas C++ da Plataforma Universal do Windows** no painel **Resumo** à direita, em **Desenvolvimento da Plataforma Universal do Windows**. Não faz parte da instalação padrão.
 
-    ![Instalar o Visual Studio de 2019](images/development-environment-setup-1.png)
+    ![Instalar o Visual Studio 2019](images/development-environment-setup-1.png)
 
     Se estiver instalando o Visual Studio 2015 Atualização 3, certifique-se de que a caixa de seleção **Ferramentas de Desenvolvimento de Aplicativos Universais do Windows** esteja marcada.
 
@@ -124,6 +124,6 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 ## <a name="see-also"></a>Consulte também
 - [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)  
 - [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads)  
-- [Programa Windows Insider](https://go.microsoft.com/fwlink/?LinkId=780552)  
-- [Introdução às ferramentas Xbox One](introduction-to-xbox-tools.md) 
+- [Programa Windows Insider](https://insider.windows.com/)  
+- [Introdução ao Xbox One Tools](introduction-to-xbox-tools.md) 
 - [UWP no Xbox One](index.md)

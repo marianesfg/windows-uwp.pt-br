@@ -6,18 +6,18 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: 89cb689f0dce4f7dbaec96e9ce109e60d4292f92
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d609af268cfe304b34797cea4bf91e36d1475c29
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282482"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259002"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
 O **Resumo do pagamento** mostra detalhes sobre o dinheiro que você ganhou com a Microsoft. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 
-Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](https://go.microsoft.com/fwlink/p/?LinkId=722436) e [Microsoft Azure Marketplace Publisher Agreement](https://go.microsoft.com/fwlink/p/?LinkID=699560 ).
+Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](https://docs.microsoft.com/legal/marketplace/participation-policy) e [Microsoft Azure Marketplace Publisher Agreement](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt).
 
 > [!NOTE]
 > Para ser elegível para pagamento, seus prosseguimentos devem alcançar o [limite de pagamento](payment-thresholds-methods-and-timeframes.md) de $50. Para obter detalhes sobre o limite de pagamento, consulte esta página e examine o contrato de desenvolvedor do aplicativo.
@@ -53,7 +53,7 @@ Para exportar qualquer um dos dados de transação nessa página, selecione expo
 
 ## <a name="payment-status"></a>Status do pagamento
 
-| Ganhando status           | Reason                                                                                                                                      | Ação do parceiro necessária?                                   |
+| Ganhando status           | Motivo                                                                                                                                      | Ação do parceiro necessária?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | Não processados              | A conquista está qualificada para pagamento. Ele permanece nesse estado por um período de resfriamento, conforme definido no guia do programa do programa de incentivo. | Não                                                         |
 | Cerimônia                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
@@ -138,8 +138,8 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | pagamento de                      | Identificador exclusivo para o pagamento. Esse número geralmente é visível em seu extrato bancário                                                 | Somente pagamentos do SAP                                              |
 | paymentStatus                  | Status do pagamento                                                                                                                           | Todas                                                            |
 | paymentStatusDescription       | Descrição amigável do status de pagamento                                                                                                   | Todas                                                            |
-| customerId                     | Estará sempre em branco                                                                                                                     | Somente programas de incentivo (exceção: OEM) e Azure Marketplace |
-| Customer                   | Estará sempre em branco                                                                                                                     | Somente programas de incentivo (exceção: OEM) e Azure Marketplace |
+| customerId                     | Estará sempre em branco                                                                                                                     | Apenas programas de incentivo (exceção: OEM) e Azure Marketplace |
+| Customer                   | Estará sempre em branco                                                                                                                     | Apenas programas de incentivo (exceção: OEM) e Azure Marketplace |
 | partNumber                     | Estará sempre em branco                                                                                                                     | Alguns programas de incentivo e de loja e o Azure Marketplace        |
 | productName                    | Nome do produto vinculado à transação                                                                                                       | Todas                                                            |
 | productId                      | Identificador exclusivo do produto                                                                                                                | Store e Azure Marketplace                                    |
@@ -157,7 +157,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | agreementNumber                | Número do contrato                                                                                                                         | Incentivo-apenas alguns programas                                 |
 | agreementStartDate             | Data de início do contrato                                                                                                                     | Incentivo-apenas alguns programas                                 |
 | agreementEndDate               | Data de término do contrato                                                                                                                       | Incentivo-apenas alguns programas                                 |
-| Pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
+| pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
 | transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               | Store e Azure Marketplace                                    |
 | localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          | Somente armazenar                                                     |
 | taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   | Store e Azure Marketplace                                    |

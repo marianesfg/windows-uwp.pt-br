@@ -1,31 +1,31 @@
 ---
-Description: Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface IBasicAudioEffect para permitir que você crie efeitos personalizados para fluxos de áudio.
+Description: Este artigo descreve como criar um componente do Windows Runtime que implemente a interface IBasicAudioEffect para permitir que você crie efeitos personalizados para fluxos de áudio.
 title: Efeitos de áudio personalizados
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bebf9533ab045822902d44f87f68eec55c11074
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e4bcd5294031e64aa9f21371fa389978b5e708ab
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318570"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257416"
 ---
 # <a name="custom-audio-effects"></a>Efeitos de áudio personalizados
 
-Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) para criar efeitos personalizados para fluxos de áudio. Efeitos personalizados podem ser usados com várias APIs diferentes do Windows Runtime, incluindo [MediaCapture](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture), que fornece acesso à câmera do dispositivo, [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition), que permite que você crie composições complexas de clipes de mídia, e [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph), que permite que você monte rapidamente um gráfico de vários nós de entrada, saída e submixagem de áudio.
+Este artigo descreve como criar um componente do Windows Runtime que implemente a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) para criar efeitos personalizados para fluxos de áudio. Efeitos personalizados podem ser usados com várias APIs diferentes do Windows Runtime, incluindo [MediaCapture](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture), que fornece acesso à câmera do dispositivo, [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition), que permite que você crie composições complexas de clipes de mídia, e [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph), que permite que você monte rapidamente um gráfico de vários nós de entrada, saída e submixagem de áudio.
 
 ## <a name="add-a-custom-effect-to-your-app"></a>Adicionar um efeito personalizado ao seu aplicativo
 
 
-Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de áudio.
+Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Windows Runtime para hospedar sua classe de efeito de áudio.
 
-**Adicionar um componente de tempo de execução do Windows para o efeito de áudio**
+**Adicionar um componente Windows Runtime para seu efeito de áudio**
 
 1.  No Microsoft Visual Studio, com sua solução aberta, vá para o menu **Arquivo** e selecione **Adicionar-&gt;Novo Projeto**.
-2.  Selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Windows Universal)** .
+2.  Selecione o tipo de projeto **componente do Windows Runtime (Windows Universal)** .
 3.  Para este exemplo, chame o projeto de *AudioEffectComponent*. Esse nome será referenciado no código posteriormente.
 4.  Clique em **OK**.
 5.  O modelo de projeto cria uma classe chamada Class1.cs. No **Gerenciador de Soluções**, clique com botão direito do mouse no ícone de Class1.cs e selecione **Renomear**.
@@ -93,7 +93,7 @@ Agora que os buffers de dados foram obtidos, você pode ler o buffer de entrada 
 
 ### <a name="close-method"></a>Método Close
 
-O sistema irá chamar o [ **feche** ](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [ **fechar** ](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) método em sua classe quando o efeito deve ser desligado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação necessário.
+O sistema chamará o método [**fechar**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [**fechar**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) em sua classe quando o efeito for desligado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação necessário.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
@@ -123,7 +123,7 @@ Para usar o efeito de áudio do seu aplicativo, você deve adicionar uma referê
 
 1.  No Gerenciador de Soluções, no projeto do seu aplicativo, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência**.
 2.  Expanda a guia **Projetos**, selecione **Solução** e marque a caixa de seleção com o nome do projeto do efeito. Neste exemplo, o nome é *AudioEffectComponent*.
-3.  Clique em **OK**.
+3.  Clique em **OK**
 
 Se sua classe de efeito de áudio declarada for um namespace diferente, inclua esse namespace no seu arquivo de código.
 
@@ -145,9 +145,9 @@ O snippet de código a seguir demonstra como adicionar o efeito de áudio person
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Acesso de visualização da câmera simples](simple-camera-preview-access.md)
+* [Acesso simples à visualização da câmera](simple-camera-preview-access.md)
 * [Composições de mídia e edição](media-compositions-and-editing.md)
-* [Documentação de Win2D](https://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Documentação do Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [Reprodução de mídia](media-playback.md)
 
  

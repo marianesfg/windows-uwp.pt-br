@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 349326ba458999b2b1e299e8260d52d608d5af1f
-ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
+ms.openlocfilehash: 68d5ba1c12a3c7dc5531934835f47af35c269b57
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811643"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256704"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Processar bitmaps com OpenCV
 
@@ -22,7 +22,7 @@ Os exemplos neste artigo orientam você na criação de um código nativo Window
 * Para ver as noções básicas de uso do **SoftwareBitmap**, consulte [Criar, editar e salvar imagens de bitmap](imaging.md). 
 * Para saber como usar a biblioteca OpenCV, acesse [https://opencv.org](https://opencv.org).
 * Para ver como usar o componente auxiliar do OpenCV mostrado neste artigo com **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** a fim de implementar o processamento de quadros de imagens em tempo real de uma câmera, consulte [Usar o OpenCV com MediaFrameReader](use-opencv-with-mediaframereader.md).
-* Para obter um exemplo de código completo que implementa alguns efeitos diferentes, consulte [Quadros de câmera + Amostra do OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) no repositório do GitHub de amostras universais do Windows.
+* Para obter um exemplo de código completo que implementa alguns efeitos diferentes, consulte [Quadros de câmera + Amostra do OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) no repositório do GitHub de amostras universais do Windows.
 
 > [!NOTE] 
 > A técnica usada pelo componente OpenCVHelper, descrita em detalhes neste artigo, exige que os dados da imagem a ser processada estejam na memória da CPU em vez da GPU. Portanto, você deve especificar a memória da CPU para APIs que permitem a solicitação da localização das imagens na memória, como a classe **[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** .

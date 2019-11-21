@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 7564060e28d3e78608c6f30b1400179087db2b86
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 8627bd7f9f405509cb1bff40d94f10552241f4ce
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061847"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254592"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -19,9 +19,9 @@ Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar pa
 
 ## <a name="common-features-of-the-uri-schemes"></a>Recursos comuns dos esquemas de URI
 
-Todos os esquemas descritos neste tópico seguem as regras típicas de esquema URI para normalização e recursos de recuperação. Consulte [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) para obter a sintaxe genérica de uma URI.
+Todos os esquemas descritos neste tópico seguem as regras típicas de esquema URI para normalização e recursos de recuperação. Consulte [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) para obter a sintaxe genérica de uma URI.
 
-Todos os esquemas de URI definem a parte hierárquica por [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) como os componentes de autoridade e de caminho do URI.
+Todos os esquemas de URI definem a parte hierárquica por [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) como os componentes de autoridade e de caminho do URI.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -269,7 +269,7 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Uniform Resource Identifier (URI): sintaxe genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Uniform Resource Identifier (URI): sintaxe genérica](https://www.ietf.org/rfc/rfc3986.txt)
 * [Empacotando aplicativos](../packaging/index.md)
 * [Fazer referência a uma imagem ou a outro ativo da marcação XAML e do código](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Armazene e recupere configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)

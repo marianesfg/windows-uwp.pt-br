@@ -6,33 +6,33 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78974903d52cf34c2e91e460efbfb1c054afd8fa
-ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.openlocfilehash: d00fcee11b8cf813144a6f8ea021dc40829056d2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487818"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259957"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
 Este artigo descreve como registrar-se para uma conta de desenvolvedor do Windows no [Partner Center](https://partner.microsoft.com/dashboard).
 
 > [!NOTE]
-> Ao se inscrever em uma conta de desenvolvedor, usaremos o endereço de email que você fornece em suas informações de contato para enviar mensagens relacionadas à sua conta. Às vezes, eles podem incluir informações sobre nossos programas. Se você optar por [recusar](https://go.microsoft.com/fwlink/p/?LinkId=533280) esses emails informativos, lembre-se de que ainda enviaremos mensagens transacionais (por exemplo, para informá-lo de que seu aplicativo passou na certificação ou que um pagamento está a caminho). Esses emails transacionais são uma parte necessária da sua conta e, a menos que você feche sua conta, você continuará a recebê-los.
+> Ao se inscrever em uma conta de desenvolvedor, usaremos o endereço de email que você fornece em suas informações de contato para enviar mensagens relacionadas à sua conta. Às vezes, eles podem incluir informações sobre nossos programas. Se você optar por [recusar](https://account.microsoft.com/account/Account?ru=https%3A%2F%2Faccount.microsoft.com%2Fprofile%2Fcontact-info&destrt=profile-landing) esses emails informativos, lembre-se de que ainda enviaremos mensagens transacionais (por exemplo, para informá-lo de que seu aplicativo passou na certificação ou que um pagamento está a caminho). Esses emails transacionais são uma parte necessária da sua conta e, a menos que você feche sua conta, você continuará a recebê-los.
 
 ## <a name="the-account-signup-process"></a>O processo de inscrição de conta
 
 > [!NOTE]
 > Em alguns casos, as telas e os campos que você vê ao se registrar para uma conta de desenvolvedor podem variar um pouco do que é descrito nas etapas a seguir. Mas as informações básicas e o processo corresponderão ao que essas etapas descrevem.
 
-1.  Acesse a [página de registro](https://go.microsoft.com/fwlink/p/?LinkId=615100) e selecione **inscrever-se**.
+1.  Acesse a [página de registro](https://developer.microsoft.com/store/register) e selecione **inscrever-se**.
 2.  Se você ainda não estiver conectado com uma conta da Microsoft, entre agora ou crie uma nova conta da Microsoft. O conta Microsoft usado aqui é o que você usará para entrar em sua conta de desenvolvedor.
 3.  Selecione o [país/região](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) onde você mora ou onde sua empresa está localizada. Não será possível alterar isso posteriormente.
 4.  Selecione seu [tipo de conta de desenvolvedor](account-types-locations-and-fees.md) (individual ou empresa). Você não poderá alterar isso depois, por isso, esteja atento para escolher o tipo de conta correto.
 5.  Insira o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome. Para contas de empresa, certifique-se de usar o nome comercial ou registrado da sua organização. Se você inserir um nome que outra pessoa já tenha selecionado ou se outra pessoa tiver direitos para usar esse nome, não lhe permitirá usá-lo.
 
     > [!NOTE]
-    > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte [contrato de desenvolvedor de aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para obter mais informações. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=233777).    
+    > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte [contrato de desenvolvedor de aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para obter mais informações. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](https://www.microsoft.com/info/cpyrtInfrg.html).    
 
 6.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 
@@ -59,13 +59,13 @@ Depois de se inscrever, sua conta passará por verificação. Para contas indivi
 
 Se você quiser permitir que várias pessoas acessem a conta da empresa entrando com o conta Microsoft que a abriu (em vez de como usuários individuais adicionados à conta), consulte as seguintes diretrizes:
 
--   Crie o conta Microsoft usando um endereço de email que ainda não pertença a você ou a outro indivíduo, MyCompany_PartnerCenter@outlook.comcomo. Não use um endereço de email no domínio da sua empresa, especialmente se sua empresa já usa o Azure AD. Conforme observado anteriormente, você pode adicionar outros usuários do serviço Azure AD da sua empresa posteriormente.
+-   Crie o conta Microsoft usando um endereço de email que ainda não pertença a você ou a outro indivíduo, como MyCompany_PartnerCenter@outlook.com. Não use um endereço de email no domínio da sua empresa, especialmente se sua empresa já usa o Azure AD. Conforme observado anteriormente, você pode adicionar outros usuários do serviço Azure AD da sua empresa posteriormente.
 -   Limite o acesso a esse conta Microsoft ao menor número de usuários possível.
 -   Configure uma lista de distribuição de email corporativa que inclua todos que precisem acessar a conta de desenvolvedor. Adicione este endereço de email às [informações de segurança associadas ao conta Microsoft](https://account.microsoft.com/security). Essa abordagem permite que todos os funcionários da lista recebam códigos de segurança que são enviados para esse alias. Se a configuração de uma lista de distribuição não for viável, você poderá adicionar o endereço de email de um indivíduo às suas informações de segurança. Mas, o proprietário desse endereço de email será a única pessoa que pode acessar e compartilhar o código de segurança quando solicitado (por exemplo, quando novas informações de segurança são adicionadas à conta ou quando a conta é acessada de um novo dispositivo).
 -   Adicione um número de telefone da empresa às informações de segurança do conta Microsoft. Tente usar um número que não exija uma extensão e que esteja acessível aos principais membros da equipe.
 -   Incentive os desenvolvedores a usarem [dispositivos confiáveis](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para entrar na conta de desenvolvedor da sua empresa. Todos os membros principais da equipe devem ter acesso a esses dispositivos confiáveis. Esse arranjo reduz a necessidade de que os códigos de segurança sejam enviados quando os membros da equipe acessam a conta. Há um limite para o número de códigos que podem ser gerados por conta por semana.
 -   Se você precisar permitir acesso à conta a partir de um computador não confiável, limite esse acesso a no máximo cinco desenvolvedores. Idealmente, esses desenvolvedores devem acessar a conta de computadores que compartilham o mesmo local geográfico e de rede.
--   Com frequência, revise as informações de https://account.microsoft.com/security segurança da sua empresa em para garantir que tudo esteja atualizado.
+-   Frequentemente, examine as informações de segurança da sua empresa em https://account.microsoft.com/security para garantir que tudo esteja atualizado.
 
 
 ## <a name="microsoft-account-security"></a>Segurança de conta Microsoft

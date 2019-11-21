@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2919a2f61f3185d85b91bdf6fd6be22402eb77d0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365353"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258264"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 
@@ -29,7 +29,7 @@ Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desseriali
 
 Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-**Baixar esse exemplo no [salvar e carregar os traços de tinta de um arquivo de formato tinta serializada (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Baixe este exemplo de [salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  Primeiro, definimos a interface do usuário.
 
@@ -161,7 +161,7 @@ public MainPage()
 
 Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-**Baixar esse exemplo no [salvar e carregar os traços de tinta de um arquivo de formato tinta serializada (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Baixe este exemplo de [salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  Primeiro, definimos a interface do usuário.
 
@@ -262,7 +262,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 > [!NOTE]
 > O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
 
-| Formatar                    | Descrição |
+| Formato                    | Descrição |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | Especifica dados à tinta persistentes usando ISF. Essa é a representação mais compacta e persistente de tinta. Ela pode ser inserida em um formato de documento binário ou colocada diretamente na Área de Transferência.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | Especifica dados à tinta persistentes codificando o ISF como um fluxo base64. Esse formato é oferecido para que dados à tinta possam ser codificados diretamente em um arquivo XML ou HTML.                                                                                                                                                                                                                                                |
@@ -277,7 +277,7 @@ Para dar suporte à funcionalidade de área de transferência, os comandos recor
 
 Para este exemplo, habilitamos a seleção de traço quando a entrada é modificada com um botão da caneta (ou o botão direito do mouse). Para obter um exemplo completo de como implementar a seleção de traço, consulte Entrada de passagem para processamento avançado em [Interações por caneta](pen-and-stylus-interactions.md).
 
-**Baixar esse exemplo no [salvar e carregar os traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
+**Baixe este exemplo de [salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
 
 1.  Primeiro, definimos a interface do usuário.
 
@@ -436,17 +436,17 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 * [Interações por caneta](pen-and-stylus-interactions.md)
 
-**Exemplos do tópico**
-* [Salvar e carregar os traços de tinta de um arquivo de formato tinta serializada (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
-* [Salvar e carregar os traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+**Exemplos de tópico**
+* [Salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [Salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
 **Outros exemplos**
-* [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Exemplo de tinta complexo (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta simplesC#(C++/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Amostra de tinta complexaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
 * [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de Introdução: Suporte a tinta no seu aplicativo UWP](https://aka.ms/appsample-ink)
-* [Exemplo do livro de cores](https://aka.ms/cpubsample-coloringbook)
-* [Exemplo de anotações de família](https://aka.ms/cpubsample-familynotessample)
+* [Tutorial de introdução: suporte à tinta em seu aplicativo UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Exemplo de notas da família](https://github.com/Microsoft/Windows-appsample-familynotes)
 
 
 

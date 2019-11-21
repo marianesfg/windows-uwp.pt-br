@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: cf970c1812b4200cea4e4902ad883ef8b0b5e141
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: accf4e8dbc19e5858148bcf0cf62d0e1cc95ab82
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319996"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260010"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir os aplicativos LOB para empresas
 
@@ -22,7 +22,7 @@ Você pode publicar aplicativos LOB (linha de negócios) diretamente para empres
 > No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente para empresas por meio da Microsoft Store para Empresas ou da Microsoft Store para Educação. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa. 
 
 > [!IMPORTANT]
-> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios para aplicativos LOB devem ser publicados por meio do Partner Center.
+> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios de aplicativos LOB devem ser publicados por meio do Partner Center.
 
 
 ## <a name="set-up-the-enterprise-association"></a>Configurar a associação empresarial
@@ -30,7 +30,7 @@ Você pode publicar aplicativos LOB (linha de negócios) diretamente para empres
 A primeira etapa na publicação de aplicativos LOB exclusivamente para uma empresa é estabelecer a associação entre sua conta e o repositório particular da empresa.
 
 > [!IMPORTANT]
-> Esse processo de associação deve ser iniciado pela empresa e deve usar o endereço de email associado à conta da Microsoft utilizada para criar a conta de desenvolvedor. Para saber mais, consulte [Trabalhando com aplicativos de linha de negócios](https://go.microsoft.com/fwlink/p/?LinkId=698846).
+> Esse processo de associação deve ser iniciado pela empresa e deve usar o endereço de email associado à conta da Microsoft utilizada para criar a conta de desenvolvedor. Para saber mais, consulte [Trabalhando com aplicativos de linha de negócios](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps).
 
 Quando uma empresa optar por convidá-lo a publicar aplicativos para seu uso exclusivo, você receberá um email que inclui um link para confirmar a associação. Você também pode confirmar essas associações acessando a seção **Associações empresariais** de suas **Configurações de conta** (contanto que você esteja conectado à conta da Microsoft que foi usada para abrir a conta de desenvolvedor).
 
@@ -73,7 +73,7 @@ Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de c
 > [!NOTE]
 > Para obter o aplicativo LOB, a organização deve estar localizada em um [mercado com suporte](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets), e você não deve ter [excluído esse mercado](define-pricing-and-market-selection.md) ao enviar o aplicativo. 
 
-Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](https://go.microsoft.com/fwlink/p/?LinkId=698846) e [Distribuir aplicativos usando seu repositório particular](https://go.microsoft.com/fwlink/p/?LinkId=698847).
+Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps) e [Distribuir aplicativos usando seu repositório particular](https://docs.microsoft.com/microsoft-store/distribute-apps-from-your-private-store).
 
 
 ## <a name="update-lob-apps"></a>Atualizar aplicativos LOB
@@ -92,9 +92,9 @@ Depois que o envio passar pelo processo de certificação, o aplicativo não est
 
 A disponibilização de aplicativos para uma empresa pela Microsoft Store para Empresas ou Microsoft Store para Educação garante que o aplicativo foi assinado pela Store e está em conformidade com as Políticas da Store padrão.
 
-Em alguns casos, as empresas podem não querer seus aplicativos LOB para ser enviado por meio do Partner Center (por exemplo, questões de conformidade ou para aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
+Em alguns casos, as empresas talvez não queiram que seus aplicativos LOB sejam enviados por meio do Partner Center (por exemplo, por motivos de conformidade ou para aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
 
-Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](https://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](https://docs.microsoft.com/windows/application-management/sideload-apps-in-windows-10).
 
  
 

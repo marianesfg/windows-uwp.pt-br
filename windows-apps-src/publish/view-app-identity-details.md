@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd9f61aa32c7e4b78603af37947b39a44e705015
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 07c2d3308d204d37e246a9a56c0a7203a1340dc0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682638"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259885"
 ---
 # <a name="view-app-identity-details"></a>Exibir detalhes de identidade do aplicativo
 
@@ -38,15 +38,15 @@ Juntos, esses elementos declaram a identidade do seu aplicativo, estabelecendo a
 
 Os valores seguintes são valores adicionais que se referem à família de pacote do seu aplicativo, mas que não estão incluídos em seu manifesto.
 
--   **Nome da família de pacotes (PFN)** : Esse valor é usado com certas APIs do Windows.
--   **SID do pacote**: Você precisará desse valor para enviar notificações WNS para seu aplicativo. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
+-   **Nome da Família de Pacotes (PFN)** : esse valor é usado com determinadas APIs do Windows.
+-   **SID de pacote**: você precisará desse valor para enviar notificações do WNS para seu aplicativo. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 
 ## <a name="link-to-your-apps-listing"></a>Link com os detalhes do seu aplicativo
 
 O link direto para a página do seu aplicativo pode ser compartilhado para ajudar os clientes a encontrar o aplicativo na Loja. Este link está no formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`** . Quando um cliente clicar nesse link, ele abre a página de listagem baseada na Web do aplicativo. Em dispositivos Windows, o aplicativo da Loja também inicia e exiba a listagem do aplicativo.
 
-O **ID da Loja** de seu aplicativo também é mostrado nesta seção. Esse ID da Loja pode ser usado para [gerar notificações da Loja](https://go.microsoft.com/fwlink/p/?LinkId=534236) ou identificar seu aplicativo de outra forma.
+O **ID da Loja** de seu aplicativo também é mostrado nesta seção. Esse ID da Loja pode ser usado para [gerar notificações da Loja](https://developer.microsoft.com/store/badges) ou identificar seu aplicativo de outra forma.
 
 O **link de protocolo da Loja** pode ser usado para vincular diretamente ao seu aplicativo na Loja sem abrir um navegador, como quando você vincula em um aplicativo. Para saber mais, consulte [Link para o aplicativo](link-to-your-app.md).
 

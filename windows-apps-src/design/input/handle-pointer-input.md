@@ -1,5 +1,5 @@
 ---
-Description: Receber, processo e gerenciar dados de entrada de dispositivos apontadores como mouse, toque, caneta/e touchpad, em seus aplicativos de plataforma Universal do Windows (UWP).
+Description: Receba, processe e gerencie dados de entrada de dispositivos apontadores, como Touch, mouse, caneta/caneta e Touchpad, em seus aplicativos Plataforma Universal do Windows (UWP).
 title: Manusear entrada do ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,12 +8,12 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7f3d5480c0fa12366afe02cc31cdb994fdd4a842
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619361"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257897"
 ---
 # <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
 
@@ -73,9 +73,9 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
-<td align="left"><p>Ocorre quando outro elemento da interface do usuário captura o ponteiro, o ponteiro foi liberado ou outro ponteiro foi capturado programaticamente.</p>
+<td align="left"><p>Ocorre quando outro elemento da interface do usuário captura o ponteiro, o ponteiro é liberado ou outro ponteiro é capturado programaticamente.</p>
 <div class="alert">
-<strong>Observação</strong>  não há nenhum evento correspondente de captura do ponteiro.
+<strong>Observe</strong>  não há nenhum evento de captura de ponteiro correspondente.
 </div>
 <div>
  
@@ -131,7 +131,7 @@ Aqui estão alguns trechos de código de um aplicativo de rastreamento de pontei
 
 ![Interface do usuário do aplicativo de ponteiro](images/pointers/pointers1.gif)
 
-**Baixar esse exemplo no [ponteiro de entrada de exemplo (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)**
+**Baixar este exemplo de [exemplo de entrada de ponteiro (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)**
 
 ### <a name="create-the-ui"></a>Criar a interface do usuário
 
@@ -196,7 +196,7 @@ Este é o Extensible Application Markup Language (XAML) da interface do usuário
 
 Na maioria dos casos, recomendamos que você obtenha informações do ponteiro por meio do [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) do manipulador de eventos.
 
-Se o argumento do evento não expõe os detalhes de ponteiro necessários, você pode obter acesso estendido [ **PointerPoint** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) informações expostas por meio do [ **GetCurrentPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos [ **PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
+Caso o argumento do evento não exponha os detalhes necessários do evento, você pode acessar informações estendidas de [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) expostas por meio dos métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 O código a seguir configura o objeto de dicionário global para rastrear cada ponteiro ativo e identifica os diversos ouvintes de eventos de ponteiro para o objeto de destino.
 
@@ -243,7 +243,7 @@ Em seguida, usamos comentários da interface do usuário para demonstrar manipul
 -   Esse manipulador gerencia o evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). Adicionamos o evento ao log de eventos, o ponteiro ao dicionário de ponteiros ativos e exibimos os detalhes do ponteiro.
 
     > [!NOTE]
-    > [**PointerPressed** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) e [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) eventos não ocorrem sempre em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) e [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
+    > Os eventos [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) e [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) e [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
 
 ```csharp
 /// <summary>
@@ -531,7 +531,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   Esse manipulador gerencia o evento [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
     > [!NOTE]
-    > [**PointerCaptureLost** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) pode ocorrer em vez de [ **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
+    > [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) pode ocorrer em vez de [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
 
 ```csharp
 /// <summary>
@@ -572,7 +572,7 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Obter as propriedades do ponteiro
 
-Conforme mencionado anteriormente, você deve obter mais informações estendidas em ponteiro de uma [ **Windows.UI.Input.PointerPoint** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) objeto obtido por meio do [ **GetCurrentPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos [ **PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Os trechos de código a seguir mostram como.
+Conforme mencionado anteriormente, você deve obter as informações do ponteiro mais estendido de um objeto [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) obtidas por meio dos métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) e [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Os trechos de código a seguir mostram como.
 
 -   Em primeiro lugar, criamos um novo [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada ponteiro.
 
@@ -696,11 +696,11 @@ Este aplicativo específico usa cor e animação para realçar o ponteiro princi
 
 ![Aplicativo de ponteiro com feedback visual animado](images/pointers/pointers-usercontrol-animation.gif)
 
-**Baixar esse exemplo no [exemplo de entrada de ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
+**Baixar este exemplo de [amostra de entrada de ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
 
 ### <a name="visual-feedback"></a>Feedback visual
 
-Definimos um **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)**, com base em um objeto XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)**, que destaca onde cada ponteiro está na tela e usa um **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar a elipse que corresponde ao ponteiro principal.
+Definimos um **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** , com base em um objeto XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** , que destaca onde cada ponteiro está na tela e usa um **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar a elipse que corresponde ao ponteiro principal.
 
 **Aqui está o XAML:**
 
@@ -949,20 +949,20 @@ Por fim, definimos os manipuladores de eventos de ponteiro básicos no code-behi
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-**Exemplos do tópico**
-* [Exemplo de entrada de ponteiro (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
-* [Exemplo de entrada de ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
+**Exemplos de tópico**
+* [Amostra de entrada do ponteiro (básica)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
+* [Amostra de entrada do ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **Outros exemplos**
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Amostras de arquivo-morto**
-* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)

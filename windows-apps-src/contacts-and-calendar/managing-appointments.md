@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, compromissos, calendário
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd4fc62a393e6439458ddc38f37bbb0680fb9b1
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 52200d7896c9edea727bf31c69c04c4c1bd02bb2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282228"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255491"
 ---
 # <a name="manage-appointments"></a>Gerenciar compromissos
 
@@ -282,7 +282,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observe**  Para Windows Phone aplicativos da loja, o [**ShowAddAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona exatamente como o [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) , pois a caixa de diálogo exibida para adicionar o compromisso é editável.
+**Observação**  para aplicativos da loja Windows Phone, o [**ShowAddAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona exatamente como [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) , pois a caixa de diálogo exibida para adicionar o compromisso é editável.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Substituir um compromisso no calendário do usuário
 
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos Universais do Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como gerenciar compromissos.
+Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos Universais do Windows](https://github.com/Microsoft/Windows-universal-samples) do GitHub para ver mais exemplos de como gerenciar compromissos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra da API de compromissos](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Amostra da API de compromissos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Appointments)
  
 
  

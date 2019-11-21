@@ -1,19 +1,19 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: Esta seção descreve como modificar seu aplicativo Web PlayReady para dar suporte às alterações feitas da versão de Windows 8.1 anterior para a versão do Windows 10.
-title: Extensão de mídia criptografada do PlayReady
+title: Extensão de Mídia Criptografada do PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4d72050ca30271a0ad2c6c2c39c857e2c10550
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: b673122d707e152d24c49d3bacf71ed52cdb0ae5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061943"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256817"
 ---
-# <a name="playready-encrypted-media-extension"></a>Extensão de mídia criptografada do PlayReady
+# <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
 
 
@@ -27,14 +27,14 @@ Esta seção fornece uma lista das alterações feitas na EME (extensão de míd
 
 A lista a seguir descreve os novos recursos e as alterações feitas na extensão de mídia criptografada do PlayReady para Windows 10:
 
--   Inclusão do gerenciamento de direitos digitais (DRM) de hardware
+-   Inclusão do gerenciamento de direitos digitais (DRM) de hardware.
 
     Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 
 -   Fornece aquisição proativa de licenças não persistentes.
 -   Fornece a aquisição de várias licenças em uma mensagem.
 
-    Você pode usar um objeto PlayReady com vários identificadores de chave (KeyIDs) como em Windows 8.1 ou usar [os dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com vários KeyIDs.
+    Você pode usar um objeto PlayReady com vários identificadores de chave (KeyIDs) como em Windows 8.1 ou usar [os dados de modelo de descriptografia de conteúdo (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) com vários KeyIDs.
 
     > [!NOTE]
     > No Windows 10, há suporte para vários identificadores de chave em &lt;KeyID&gt; no CDMData.
@@ -268,7 +268,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 Esta seção lista as considerações de programação que você deve levar em conta ao criar seu aplicativo Web habilitado para PlayReady para Windows 10.
 
-Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, o exemplo a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como variáveis globais, que são atribuídas aos objetos **msMediaKeys** e **MSMediaKeySession** no funcionamento.
+Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, o exemplo a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como variáveis globais, que são atribuídas aos objetos **msMediaKeys** e **MSMediaKeySession** na função.
 
 ``` syntax
 var g_msMediaKeys;

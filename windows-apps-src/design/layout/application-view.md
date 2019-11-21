@@ -5,18 +5,18 @@ ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc01894311badd9bb6e88f05c0f8b49c5824736b
-ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
+ms.openlocfilehash: 1a89596979f84c1ec4d698d14deacf8f852a7fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68730524"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258192"
 ---
 # <a name="show-multiple-views-with-applicationview"></a>Mostrar várias exibições com ApplicationView
 
 Ajude os usuários a serem mais produtivos permitindo que eles exibam partes independentes do aplicativo em janelas separadas. Quando você cria várias janelas para um aplicativo, cada janela se comporta de maneira independente. A barra de tarefas mostra cada janela separadamente. Os usuários podem mover, redimensionar, mostrar e ocultar janelas do aplicativo de maneira independente e alternar janelas do aplicativo como se elas fossem aplicativos separados. Cada janela funciona no próprio thread.
 
-> **APIs importantes**: [**ApplicationViewSwitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [ **CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+> **APIs importantes**: [**ApplicationViewSwitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [**CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
 
 ## <a name="what-is-a-view"></a>O que é um modo de exibição?
 
@@ -63,7 +63,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  Acompanhe a [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) do novo modo de exibição. Você pode usá-la para mostrar o modo de exibição mais tarde.
 
-    Convém considerar a criação de uma infraestrutura no aplicativo para ajudar no controle dos modos de exibição criados. Consulte a classe `ViewLifetimeControl` na [Amostra MultipleViews](https://go.microsoft.com/fwlink/p/?LinkId=620574) para obter um exemplo.
+    Convém considerar a criação de uma infraestrutura no aplicativo para ajudar no controle dos modos de exibição criados. Consulte a classe `ViewLifetimeControl` na [Amostra MultipleViews](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MultipleViews) para obter um exemplo.
 
     ```csharp
     int newViewId = 0;
@@ -71,11 +71,11 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  No novo thread, preencha a janela.
 
-    Você usa o método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para agendar o trabalho no thread da interface do usuário para o novo modo de exibição. Você usa uma [expressão lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para passar uma função como um argumento para o método **RunAsync**. O trabalho feito na função lambda acontece no thread do novo modo de exibição.
+    Você usa o método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para agendar o trabalho no thread da interface do usuário para o novo modo de exibição. Você usa uma [expressão lambda](https://msdn.microsoft.com/library/bb397687.aspx) para passar uma função como um argumento para o método **RunAsync**. O trabalho feito na função lambda acontece no thread do novo modo de exibição.
 
-    Em XAML, você normalmente adiciona um [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) à propriedade [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) de [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) e passa o **Frame** para um XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) em que você definiu o conteúdo do aplicativo. Para obter mais informações sobre quadros e páginas, consulte [navegação ponto a ponto entre duas páginas](../basics/navigate-between-two-pages.md).
+    Em XAML, você normalmente adiciona um [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) à propriedade [**Content**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) de [**Window**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) e passa o **Frame** para um XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) em que você definiu o conteúdo do aplicativo. Para obter mais informações sobre quadros e páginas, consulte [navegação ponto a ponto entre duas páginas](../basics/navigate-between-two-pages.md).
 
-    Depois que o novo [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) for preenchido, você deverá chamar o método [**Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) de **Window** para mostrar o **Window** mais tarde. Esse trabalho acontece no thread do novo modo de exibição, logo, o novo **Window** é ativado.
+    Depois que o novo [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) for preenchido, você deverá chamar o métodoActivate[**de**Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) para mostrar o **Window** mais tarde. Esse trabalho acontece no thread do novo modo de exibição, logo, o novo **Window** é ativado.
 
     Por fim, obtenha a [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) do novo modo de exibição que você usa para mostrar o modo de exibição mais tarde. Mais uma vez, esse trabalho é feito no thread do novo modo de exibição, logo, [**ApplicationView.GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) obtém a **Id** do novo modo de exibição.
 
@@ -105,7 +105,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 O primeiro modo de exibição criado quando o aplicativo é iniciado é chamado de *modo de exibição principal*. Esse modo de exibição é armazenado na propriedade [**CoreApplication.MainView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.mainview), e a propriedade [**IsMain**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.ismain) é verdadeira. Você não cria esse modo de exibição; ele é criado pelo aplicativo. O thread do modo de exibição principal funciona como o gerenciador para o aplicativo, e todos os eventos de ativação do aplicativo são fornecidos nesse thread.
 
-Caso os modos de exibição secundários estejam abertos, a janela do modo de exibição principal pode permanecer oculta – por exemplo, clicando-se no botão de fechamento (x) na barra de título da janela –, mas o thread permanece ativo. Chamar [**Close**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close) no [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) do modo de exibição principal causa a ocorrência de **InvalidOperationException**. (Use [**Application. Exit**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit) para fechar seu aplicativo.) Se o thread da exibição principal for encerrado, o aplicativo será fechado.
+Caso os modos de exibição secundários estejam abertos, a janela do modo de exibição principal pode permanecer oculta – por exemplo, clicando-se no botão de fechamento (x) na barra de título da janela –, mas o thread permanece ativo. Chamar [**Close**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close) no [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) do modo de exibição principal causa a ocorrência de **InvalidOperationException**. (Use [**Application.Exit**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit) para fechar seu aplicativo.) Se o thread do modo de exibição principal for encerrado, o aplicativo será fechado.
 
 ## <a name="secondary-views"></a>Modos de exibição secundários
 

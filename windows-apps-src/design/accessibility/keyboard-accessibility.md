@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd8fa2b5264328619619df862d21f02f70f52e0
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 1fd0f00d74d62816ff347265936f6b066a0316b0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393758"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257748"
 ---
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
@@ -94,7 +94,7 @@ XAML
 <span id="KEYBOARD_SHORTCUTS"/>
 
 ## <a name="keyboard-shortcuts"></a>Atalhos de teclado  
-Além de implementar a navegação pelo teclado e ativação para o seu aplicativo, é recomendável implementar atalhos para a funcionalidade do seu aplicativo. A navegação por tabulação fornece um bom nível básico de suporte ao teclado, mas com formulários complexos, você poderia desejar adicionar suporte às teclas de atalho também. Isso pode tornar o seu aplicativo mais eficiente para usar, mesmo para as pessoas que usam dispositivos de teclado e de ponteiro.
+Além de implementar a navegação e ativação por teclado em seu aplicativo, é recomendável implementar atalhos para as funcionalidades do seu aplicativo. A navegação por tabulação fornece um bom nível básico de suporte ao teclado, mas com formulários complexos, você poderia desejar adicionar suporte às teclas de atalho também. Isso pode tornar o seu aplicativo mais eficiente para usar, mesmo para as pessoas que usam dispositivos de teclado e de ponteiro.
 
 Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecendo uma maneira eficiente de o usuário acessar a funcionalidade do aplicativo. Existem dois tipos de atalho:
 
@@ -148,7 +148,7 @@ XAML
 
 Para fins de simplicidade, o exemplo anterior omite o uso de recursos para cadeias de caracteres, como "Ctrl+A". Contudo, considere também as teclas de atalho durante o processo de localização. A localização de teclas de atalho é relevante porque a escolha da chave a ser usada como a chave de atalho normalmente depende do rótulo de texto visível para o elemento.
 
-Para saber mais sobre as diretrizes de implementação de teclas de atalho, consulte [Teclas de atalho](https://go.microsoft.com/fwlink/p/?linkid=221825) nas Diretrizes de interação com a experiência do usuário do Windows.
+Para saber mais sobre as diretrizes de implementação de teclas de atalho, consulte [Teclas de atalho](https://docs.microsoft.com/windows/win32/uxguide/inter-keyboard?redirectedfrom=MSDN) nas Diretrizes de interação com a experiência do usuário do Windows.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -175,7 +175,7 @@ Geralmente, você implementa a manipulação de chave personalizada para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Um exemplo do estado visual de um indicador de foco  
 Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
 
-Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Também há uma aparência potencialmente diferente, dependendo do tema selecionado do usuário (especialmente se o usuário estiver usando um modo de alto contraste). Se você estiver usando os controles XAML em sua interface do usuário e não substituindo os modelos de controle, não precisará fazer nada extra para obter indicadores de foco visual em controles que se comportam e são exibidos corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
+Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Há também aparências potencialmente diferentes dependendo do tema escolhido do usuário (principalmente se o usuário estiver usando um modo de alto contraste.) Se estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada mais para obter os indicadores de foco visual nos controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
 
 Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
 
@@ -250,4 +250,4 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 * [Acessibilidade](accessibility.md)
 * [Interações de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Exemplo de acessibilidade XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Exemplo de acessibilidade XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)

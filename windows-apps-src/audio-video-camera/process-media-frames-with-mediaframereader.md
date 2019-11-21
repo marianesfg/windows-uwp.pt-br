@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2a13f0779414f60784ac1703fa32ac1ef5c89635
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339757"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256546"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -23,7 +23,7 @@ Se o seu interesse for simplesmente capturar vídeo ou fotos, como um aplicativo
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1607.
 
 > [!NOTE] 
-> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230).
+> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames).
 
 > [!NOTE] 
 > Um novo conjunto de APIs para usar **MediaFrameReader** com dados de áudio foi introduzido no Windows 10, versão 1803. Para obter mais informações, consulte [Processar quadros de áudio com o MediaFrameReader](process-audio-frames-with-mediaframereader.md).
@@ -48,7 +48,7 @@ Muitos aplicativos que processam quadros de mídia precisam obter quadros de vá
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Você também pode criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) usando [**DeviceInformation. createassister**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) e o valor retornado de [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para receber notificações quando os grupos de origem do quadro disponíveis no dispositivo alterações, como quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Você também pode criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) usando [**DeviceInformation. createassister**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) e o valor retornado de [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para receber notificações quando os grupos de origem do quadro disponíveis no dispositivo forem alterados, como quando uma câmera externa é conectada. Para obter mais informações, consulte [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Um [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tem uma coleção de objetos [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que descrevem as origens de quadro incluídas no grupo. Depois de recuperar os grupos de origens de quadro disponíveis no dispositivo, você pode selecionar o grupo que expõe as origens nas quais você está interessado.
 
@@ -151,7 +151,7 @@ Ao terminar a leitura dos quadros, certifique-se de parar o leitor de quadros de
 Para obter mais informações sobre a limpeza de objetos de captura de mídia quando seu aplicativo é suspenso, consulte [**Exibir a visualização de câmera**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>A classe auxiliar FrameRenderer
-O Universal Windows [Quadros de câmera de exemplo](https://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
+O Universal Windows [Quadros de câmera de exemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
 
 A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
@@ -235,7 +235,7 @@ Inicialize o objeto **MediaCapture** para usar o **MediaFrameSourceGroup** selec
 
 [!code-cs[MediaSourceInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceInitMediaCapture)]
 
-Por fim, chame **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** a fim de criar um **MediaSource** para cada origem de quadro usando a propriedade **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** do objeto **MediaFrameSourceInfo** associado para selecionar uma das origens de quadro na coleção **[FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** objeto de **MediaCapture**. Inicialize um novo objeto **MediaPlayer** e atribua-o a um **MediaPlayerElement** chamando **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Em seguida, configure a propriedade **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** para o objeto **MediaSource** recém-criado.
+Por fim, chame **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** a fim de criar um **MediaSource** para cada origem de quadro usando a propriedade **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** do objeto **MediaFrameSourceInfo** associado para selecionar uma das origens de quadro na coleçãoFrameSources **[ objeto de ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)MediaCapture**. Inicialize um novo objeto **MediaPlayer** e atribua-o a um **MediaPlayerElement** chamando **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Em seguida, configure a propriedade **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** para o objeto **MediaSource** recém-criado.
 
 [!code-cs[MediaSourceMediaPlayer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceMediaPlayer)]
 
@@ -253,7 +253,7 @@ Para obter mais informações sobre como usar perfis de câmera, consulte [Perfi
 
 * [Câmera](camera.md)
 * [Foto básica, vídeo e captura de áudio com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Exemplo de quadros de câmera](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Exemplo de quadros de câmera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
  
 
  

@@ -4,18 +4,18 @@ description: Saiba como criar uma tarefa em segundo plano que responda a eventos
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 ms.date: 07/06/2018
 ms.topic: article
-keywords: o Windows 10, uwp, tarefas em segundo plano
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: b19d5056e924c58f4896804756b0637ead934ee0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4b704a83fbcf948f2c9377334831ca8948fc0e1a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371491"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260444"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos do sistema com tarefas em segundo plano
 
@@ -79,7 +79,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 ```
 
 > [!NOTE]
-> Aplicativos da plataforma Windows universal devem chamar [ **RequestAccessAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
+> Plataforma Universal do Windows aplicativos devem chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
 
 Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) e, em seguida, chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
@@ -88,7 +88,7 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
  
 ## <a name="remarks"></a>Comentários
 
-Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666).
+Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask).
 
 Tarefas em segundo plano podem ser executadas em resposta aos eventos de [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) e [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) sem entrar na tela de bloqueio, mas ainda será necessário [declarar as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md). Você também deve chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer tipo de tarefa em segundo plano.
 
@@ -108,4 +108,4 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

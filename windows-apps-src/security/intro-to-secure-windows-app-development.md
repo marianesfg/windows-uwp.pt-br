@@ -1,24 +1,24 @@
 ---
 title: Introdução ao desenvolvimento de aplicativos seguros do Windows
-description: Este artigo introdutório ajuda arquitetos de aplicativo e os desenvolvedores compreendam melhor as várias funcionalidades de plataforma do Windows 10 que aceleram a criação de aplicativos seguros da plataforma Universal do Windows (UWP).
+description: Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a entender melhor os diversos recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows seguros).
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b4060fbd2e59a545451c9c8ebe103c9bb527a0
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 98ef721c2068927733648d494a086160f23baab9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320600"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258943"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 
 
 
 
-Este artigo introdutório ajuda arquitetos de aplicativo e os desenvolvedores compreendam melhor as várias funcionalidades de plataforma do Windows 10 que aceleram a criação de aplicativos seguros da plataforma Universal do Windows (UWP). Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
+Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a entender melhor os diversos recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows seguros). Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
 
 ## <a name="1-introduction"></a>1 Introdução
 
@@ -75,7 +75,7 @@ Apesar de todas as desvantagens, a autenticação de fator único oferece ao usu
 ## <a name="211-web-authentication-broker"></a>2.1.1 Agente de autenticação na Web
 
 
-Conforme discutido anteriormente, um dos desafios com autenticação de senha para um departamento de TI é a sobrecarga de gerenciar a base de nomes de usuário/senha, redefinição de mecanismos, etc. Uma opção de cada vez mais popular é contar com provedores de identidade de terceiros que oferecem a autenticação por meio do OAuth, um padrão aberto para autenticação.
+Conforme discutido anteriormente, um dos desafios na autenticação de senhas para um departamento de TI é a sobrecarga adicional de gerenciar a base de nomes de usuários/senhas, mecanismos de redefinição etc. Uma opção cada vez mais procurada é o uso de provedores de identidade de terceiros que oferecem autenticação por meio do OAuth, um padrão aberto para autenticação.
 
 Usando o OAuth, os departamentos de TI podem efetivamente "terceirizar" a complexidade de manter um banco de dados com nomes de usuário e senhas, redefinir a funcionalidade de senha etc. para um provedor de identidade de terceiros, como o Facebook, o Twitter ou a Microsoft.
 
@@ -96,7 +96,7 @@ Aqui está o fluxo de trabalho geral usado para chamar a API [**WebAuthenticatio
 
 Caso a comunicação seja bem-sucedida, processe a cadeia de caracteres de resposta retornada pelo provedor de identidade. Caso isso seja malsucedido, processe o erro.
 
-O código de amostra em C# para esse processo está abaixo. Para obter informações e um passo a passo detalhado, consulte [WebAuthenticationBroker](web-authentication-broker.md). Para obter uma amostra de código completo, confira a [Amostra de WebAuthenticationBroker em GitHub](https://go.microsoft.com/fwlink/p/?LinkId=620622).
+O código de amostra em C# para esse processo está abaixo. Para obter informações e um passo a passo detalhado, consulte [WebAuthenticationBroker](web-authentication-broker.md). Para obter uma amostra de código completo, confira a [Amostra de WebAuthenticationBroker em GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker).
 
 ```cs
 string startURL = "https://<providerendpoint>?client_id=<clientid>";
@@ -192,9 +192,9 @@ Existem dois cenários gerais em que a comunicação ocorre com um sistema de co
 
 Os requisitos de segurança para a comunicação do serviço Web são mais altos do que aqueles ligados diretamente a cenários, pois os dados não são apenas uma parte da rede se segurança e a probabilidade de invasores mal intencionados tentarem interceptar dados também é maior. Como vários tipos de dispositivos acessarão o serviço, eles provavelmente serão compilados como serviços RESTful, em vez de WCF, por exemplo, o que significa que a autenticação e a autorização para o serviço também introduzem novos desafios. Vamos discutir dois requisitos para a comunicação segura do sistema remoto.
 
-O primeiro requisito é a confidencialidade da mensagem: As informações transmitidas entre o cliente e os serviços da web (por exemplo, a identidade do usuário e outras informações pessoais) não devem ser lidas por terceiros em trânsito. Isso normalmente é realizado criptografando-se a conexão por meio da qual as mensagens são enviadas e criptografando-se a mensagem propriamente dita. Na criptografia de chaves pública/privada, a chave pública está disponível para qualquer pessoa e é usada para criptografar as mensagens a serem enviadas para um receptor específico. A chave privada só é mantida pelo receptor e é usada para descriptografar a mensagem.
+O primeiro requisito é a confidencialidade da mensagem: as informações passadas entre o cliente e os serviços Web (por exemplo, a identidade do usuário e outras informações pessoais) não devem ser legíveis por terceiros em trânsito. Isso normalmente é realizado criptografando-se a conexão por meio da qual as mensagens são enviadas e criptografando-se a mensagem propriamente dita. Na criptografia de chaves pública/privada, a chave pública está disponível para qualquer pessoa e é usada para criptografar as mensagens a serem enviadas para um receptor específico. A chave privada só é mantida pelo receptor e é usada para descriptografar a mensagem.
 
-O segundo requisito é a integridade da mensagem: O cliente e o serviço web devem ser capazes de verificar se as mensagens recebidas são aqueles que se destina a ser enviada por outra parte, e que a mensagem não foi alterada em trânsito. Isso é realizado assinando-se mensagens com assinaturas digitais e usando-se a autenticação de certificado.
+O segundo requisito é a integridade da mensagem: o cliente e o serviço Web devem ser capazes de verificar se as mensagens que eles recebem são aquelas a serem enviadas pela outra parte e se a mensagem não foi alterada em trânsito. Isso é realizado assinando-se mensagens com assinaturas digitais e usando-se a autenticação de certificado.
 
 ## <a name="32-ssl-connections"></a>3.2 Conexões SSL
 
@@ -284,9 +284,9 @@ Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em re
 ## <a name="41-windows-app-model"></a>4.1 Modelo de aplicativo do Windows
 
 
-Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
+Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de runtime, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
 
-Executar aplicativos do Windows 10 em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
+Os aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
 
 Observe que esse modelo de aplicativo atua como uma "jaula" para aplicativos, o que significa que eles não podem sair, mas não e um “castelo” que não possa ser acessado do lado de fora (obviamente, os aplicativos com privilégios de administrador ainda podem acessá-los). O Device Guard no Windows 10, que permite que as organizações/TI especifiquem quais aplicativos (Win32) podem ser executados, podem ajudar a limitar esse acesso ainda mais.
 
@@ -294,7 +294,7 @@ O modelo de aplicativo também gerencia o ciclo de vida do aplicativo. Ele limit
 
 Quando faltam recursos de memória no dispositivo, o Windows libera espaço na memória encerrando aplicativos. Esse modelo do ciclo de vida força aplicativos a fechar dados sempre que são suspensos, porque não há mais tempo disponível entre a suspensão e o encerramento.
 
-Para obter mais informações, consulte [é Universal: Noções básicas sobre o ciclo de vida de um aplicativo do Windows 10](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx).
+Para obter mais informações, consulte [É universal: Noções básicas sobre o ciclo de vida de um aplicativo do Windows 10](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx).
 
 ## <a name="42-stored-credential-protection"></a>4.2 Proteção de credencial armazenada
 
@@ -465,7 +465,7 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 -   [Windows Hello](microsoft-passport.md)
 -   [Cofre de credenciais](credential-locker.md)
 -   [Agente de autenticação na Web](web-authentication-broker.md)
--   [Biometria de impressões digitais](fingerprint-biometrics.md)
+-   [Biometria de impressão digital](fingerprint-biometrics.md)
 -   [Cartões inteligentes](smart-cards.md)
 -   [Certificados compartilhados](share-certificates.md)
 -   [Criptografia](cryptography.md)
@@ -479,26 +479,26 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 ### <a name="62-code-samples"></a>6.2 Exemplos de código
 
 -   [Cofre de credenciais](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PasswordVault)
--   [Seletor de credencial](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
--   [Bloqueio de dispositivo com o logon do Azure](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
--   [Proteção de dados corporativos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
--   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
+-   [Selecionador de credenciais](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
+-   [Bloqueio de dispositivo com logon do Azure](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
+-   [Proteção de dados empresariais](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+-   [Keycredentialmanager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
 -   [Cartões inteligentes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SmartCard)
 -   [Gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
 -   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 
 ### <a name="63-api-reference"></a>6.3 Referência de API
 
--   [**Windows.Security.Authentication.OnlineId**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.OnlineId)
--   [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web)
--   [**Windows.Security.Authentication.Web.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)
--   [**Windows.Security.Authentication.Web.Provider**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider)
--   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
--   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
--   [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI)
--   [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography)
--   [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates)
--   [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core)
--   [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection)
--   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Security.ExchangeActiveSyncProvisioning)
--   [**Windows.Security.EnterpriseData**](https://docs.microsoft.com/uwp/api/Windows.Security.EnterpriseData)
+-   [**Windows. Security. Authentication. onlineid**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.OnlineId)
+-   [**Windows. Security. Authentication. Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web)
+-   [**Windows. Security. Authentication. Web. Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)
+-   [**Windows. Security. Authentication. Web. Provider**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider)
+-   [**Windows. Security. Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows. Security. Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows. Security. Credentials. UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI)
+-   [**Windows. Security. Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography)
+-   [**Windows. Security. Cryptography. Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates)
+-   [**Windows. Security. Cryptography. Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core)
+-   [**Windows. Security. Cryptography. dataprotection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection)
+-   [**Windows. Security. ExchangeActiveSyncProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Security.ExchangeActiveSyncProvisioning)
+-   [**Windows. Security. EnterpriseData**](https://docs.microsoft.com/uwp/api/Windows.Security.EnterpriseData)

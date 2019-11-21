@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19b3aa80bee643087a0aa92f714349004f6ec1c1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fb43e5b7006c7c81875651a926e87eb8f76621fe
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359156"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254306"
 ---
 # <a name="play-media-in-the-background"></a>Reproduzir mídia em segundo plano
-Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou navegar para fora do aplicativo de alguma outra forma, seu aplicativo poderá continuar a reproduzir o áudio. 
+Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou sair do aplicativo de alguma outra forma, o aplicativo poderá continuar a reproduzir o áudio. 
 
 Os cenários de reprodução de áudio em segundo plano incluem:
 
--   **Listas de reprodução de longa execução:** O usuário abre rapidamente um aplicativo de primeiro plano para selecionar e iniciar uma lista de reprodução, após o qual o usuário espera que a lista de reprodução para continuar a execução em segundo plano.
+-   **Playlists de longa duração:** o usuário ativa brevemente o aplicativo em primeiro plano para selecionar e iniciar uma playlist, esperando que depois disso a playlist continue sendo reproduzida em segundo plano.
 
--   **Usando o alternador de tarefas:** O usuário brevemente abre um aplicativo em primeiro plano para iniciar a reprodução de áudio, em seguida, alterna para outro aplicativo abrir usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
+-   **Usando alternador de tarefas:** o usuário traz brevemente um aplicativo em primeiro plano para iniciar a reprodução de áudio, depois alterna para outro aplicativo aberto usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
 
 A implementação de áudio em segundo plano descrita neste artigo permitirá que seu aplicativo seja executado universalmente em todos os dispositivos Windows, incluindo dispositivos móveis, desktop e Xbox.
 
 > [!NOTE]
-> O código neste artigo foi adaptado da [Amostra de áudio em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=800141) da UWP.
+> O código neste artigo foi adaptado da [Amostra de áudio em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback) da UWP.
 
 ## <a name="explanation-of-one-process-model"></a>Explicação do modelo de um processo
 Com o Windows 10, versão 1607, foi introduzido um novo modelo de processo único que simplifica significativamente o processo para habilitar áudio em segundo plano. Anteriormente, era necessário que o aplicativo gerenciasse um processo em segundo plano além do aplicativo em primeiro plano e comunicasse manualmente as mudanças de estado entre os dois processos. Com o novo modelo, você simplesmente adiciona a funcionalidade de áudio em segundo plano ao manifesto do aplicativo e ele continuará reproduzindo áudio automaticamente quando for movido para o segundo plano. Dois novos eventos de ciclo de vida do aplicativo, [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) e [**LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) permitem que o aplicativo saiba quando ele entra em segundo plano e sai dele. Quando o aplicativo move para as transições de ou para o segundo plano, as restrições de memória impostas pelo sistema podem mudar, portanto, você pode usar esses eventos para verificar o consumo de memória atual e liberar recursos para ficar abaixo do limite.
@@ -42,7 +42,7 @@ O aplicativo deve atender aos seguintes requisitos para reprodução de áudio e
 ## <a name="background-media-playback-manifest-capability"></a>Recurso do manifesto de reprodução de mídia em segundo plano
 Para habilitar o áudio em segundo plano, você deve adicionar o recurso de reprodução de mídia em segundo plano ao arquivo de manifesto do aplicativo, Package.appxmanifest. 
 
-**Para adicionar recursos para o manifesto de aplicativo usando o designer de manifesto**
+**Para adicionar recursos ao manifesto do aplicativo usando o designer de manifesto**
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
@@ -86,15 +86,15 @@ No manipulador de eventos [**LeavingBackground**](https://docs.microsoft.com/uwp
 A parte mais importante de manipulação da transição entre primeiro e segundo plano é o gerenciamento da memória que seu aplicativo usa. Como a execução em segundo plano reduz os recursos de memória que seu aplicativo tem permissão para reter pelo sistema, você também deve ser registrado para os eventos [**AppMemoryUsageIncreased**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusageincreased) e [**AppMemoryUsageLimitChanging**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging). Quando esses eventos são gerados, você deve verificar o uso atual da memória e o limite atual do seu aplicativo e, em seguida, reduzir o uso de memória, se necessário. Para obter informações sobre como reduzir o uso da memória durante a execução em segundo plano, consulte [Liberar memória quando seu aplicativo é movido para o segundo plano](../launch-resume/reduce-memory-usage.md).
 
 ## <a name="network-availability-for-background-media-apps"></a>Disponibilidade da rede para aplicativos de mídia em segundo plano
-Todas as fontes de mídia com reconhecimento de rede, aquelas que não são criadas de um fluxo ou de um arquivo, manterão a conexão de rede ativa enquanto recuperam conteúdo remoto, e a liberarão quando não estiverem recuperando conteúdo remoto. [**MediaStreamSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource), mais especificamente, se baseia no aplicativo para relatar corretamente o intervalo em buffer correto para a plataforma usando [ **SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange). Depois que todo o conteúdo for armazenado totalmente em buffer, a rede não será mais reservada em nome do aplicativo.
+Todas as fontes de mídia com reconhecimento de rede, aquelas que não são criadas de um fluxo ou de um arquivo, manterão a conexão de rede ativa enquanto recuperam conteúdo remoto, e a liberarão quando não estiverem recuperando conteúdo remoto. [**MediaStreamSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource), especificamente, depende do aplicativo para relatar corretamente o intervalo de buffer correto para a plataforma usando o [**SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange). Depois que todo o conteúdo for armazenado totalmente em buffer, a rede não será mais reservada em nome do aplicativo.
 
 Se você precisar fazer chamadas de rede que ocorrem em segundo plano quando a mídia não estiver sendo baixada, elas deverão ser encapsuladas em uma tarefa apropriada como [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) ou [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger). Para obter mais informações, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Reproduzir áudio e vídeo com o Media Player](play-audio-and-video-with-mediaplayer.md)
-* [Controles de transporte se integram com a mídia do sistema](integrate-with-systemmediatransportcontrols.md)
-* [Amostra de áudio em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
+* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
+* [Integrar com os controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md)
+* [Exemplo de áudio em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 
  
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8a9a4e5b79950cb15b5d364598c72b8a190d8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1da466cf12a8a5f959af7e863f7a300f3c713961
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366642"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258721"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Namespaces XAML e mapeamento de namespace
 
@@ -20,9 +20,9 @@ Este tópico explica os mapeamentos de namespace XML/XAML (**xmlns**) conforme e
 
 ## <a name="how-xaml-namespaces-relate-to-code-definition-and-type-libraries"></a>Como os namespaces XAML se relacionam a definição de código e bibliotecas de tipos
 
-Em termos de finalidade geral e aplicação na programação de aplicativos do Tempo de Execução do Windows, o XAML é usado para declarar objetos, propriedades desses objetos e relações entre objeto e propriedade expressas como hierarquias. Os objetos declarados no XAML são auxiliados pelas bibliotecas de tipos ou outras representações definidas por outras técnicas e linguagens de programação. Essas bibliotecas podem ser:
+Em termos de finalidade geral e aplicação na programação de aplicativos do Windows Runtime, o XAML é usado para declarar objetos, propriedades desses objetos e relações entre objeto e propriedade expressas como hierarquias. Os objetos declarados no XAML são auxiliados pelas bibliotecas de tipos ou outras representações definidas por outras técnicas e linguagens de programação. Essas bibliotecas podem ser:
 
--   O conjunto de objetos interno do Tempo de Execução do Windows. Trata-se de um conjunto fixo de objetos, e o acesso a esses objetos a partir do XAML usa a lógica de ativação e o mapeamento de tipos interno.
+-   O conjunto de objetos interno do Windows Runtime. Trata-se de um conjunto fixo de objetos, e o acesso a esses objetos a partir do XAML usa a lógica de ativação e o mapeamento de tipos interno.
 -   Bibliotecas distribuídas que são fornecidas pela Microsoft ou por terceiros.
 -   Bibliotecas que representam a definição de um controle de terceiros que o seu aplicativo incorpora e o pacote redistribui.
 -   Sua própria biblioteca, que faz parte de seu projeto e contém algumas ou todas as definições de seu código de usuário.
@@ -39,7 +39,7 @@ Um arquivo XAML nem sempre declara um namespace XAML padrão no elemento raiz. O
 
 No elemento raiz da maioria dos arquivos XAML, há duas declarações de **xmlns**. A primeira declaração mapeia um namespace XAML como o padrão: `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
 
-Este é o mesmo identificador de namespace XAML usado em várias tecnologias Microsoft predecessoras, que também usam XAML como um formato de marcação de definição de interface do usuário. O uso do mesmo identificador é proposital, além de ser útil quando você migra a interface do usuário definida anteriormente para um aplicativo do Tempo de Execução do Windows em C++, C# ou Visual Basic.
+Este é o mesmo identificador de namespace XAML usado em várias tecnologias Microsoft predecessoras, que também usam XAML como um formato de marcação de definição de interface do usuário. O uso do mesmo identificador é proposital, além de ser útil quando você migra a interface do usuário definida anteriormente para um aplicativo do Windows Runtime em C++, C# ou Visual Basic.
 
 A segunda declaração mapeia um namespace XAML separado para os elementos de linguagem definidos por XAML, geralmente mapeando-os para o prefixo "x:": `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
 
@@ -47,34 +47,34 @@ Esse valor de **xmlns** e o prefixo "x:" para o qual ele é mapeado também são
 
 A relação entre essas declarações é que o XAML é uma definição de linguagem e o Windows Runtime é uma implementação que usa o XAML como uma linguagem e define um vocabulário específico, no qual os tipos são referenciados em XAML.
 
-A linguagem XAML especifica determinados elementos de linguagem e cada um deles deve ser acessível às implementações de processador XAML que estão trabalhando com base no namespace XAML. A convenção de mapeamento "x:" do namespace XAML da linguagem XAML é cumprida pelos modelos de projeto, exemplos de código e pela documentação de recursos da linguagem. O namespace da linguagem XAML define vários recursos de uso comum, que são necessários até mesmo aos aplicativos básicos do Tempo de Execução do Windows em C++, C# ou Visual Basic. Por exemplo, para adicionar qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você tem que nomear essa classe como o [atributo x:Class](x-class-attribute.md) no elemento raiz do arquivo XAML relevante. Ou então, qualquer elemento definido em uma página XAML como um recurso inserido em um [ResourceDictionary e referências de recursos XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references) deve ter o [atributo x:Key](x-key-attribute.md) definido no elemento de objeto em questão.
+A linguagem XAML especifica determinados elementos de linguagem e cada um deles deve ser acessível às implementações de processador XAML que estão trabalhando com base no namespace XAML. A convenção de mapeamento "x:" do namespace XAML da linguagem XAML é cumprida pelos modelos de projeto, exemplos de código e pela documentação de recursos da linguagem. O namespace da linguagem XAML define vários recursos de uso comum, que são necessários até mesmo aos aplicativos básicos do Windows Runtime em C++, C# ou Visual Basic. Por exemplo, para adicionar qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você tem que nomear essa classe como o [atributo x:Class](x-class-attribute.md) no elemento raiz do arquivo XAML relevante. Ou então, qualquer elemento definido em uma página XAML como um recurso inserido em um [ResourceDictionary e referências de recursos XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references) deve ter o [atributo x:Key](x-key-attribute.md) definido no elemento de objeto em questão.
 
-## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>Namespaces de código que são mapeados para o namespace XAML padrão
+## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>Namespaces de código que mapeiam para o namespace padrão XAML
 
-A seguir está uma lista de namespaces de código que são mapeadas no momento para o namespace XAML padrão.
+O seguir é uma lista de namespaces de código que estão atualmente mapeados para o namespace XAML padrão.
 
 * Windows.UI
 * Windows.UI.Xaml
 * Windows.UI.Xaml.Automation
-* Windows.UI.Xaml.Automation.Peers
-* Windows.UI.Xaml.Automation.Provider
-* Windows.UI.Xaml.Automation.Text
-* Windows.UI.Xaml.Controls
+* Windows. UI. XAML. Automation. Peers
+* Windows. UI. XAML. Automation. Provider
+* Windows. UI. XAML. Automation. Text
+* Windows. UI. XAML. Controls
 * Windows.UI.Xaml.Controls.Primitives
-* Windows.UI.Xaml.Data
-* Windows.UI.Xaml.Documents
+* Windows. UI. XAML. Data
+* Windows. UI. XAML. Documents
 * Windows.UI.Xaml.Input
-* Windows.UI.Xaml.Interop
-* Windows.UI.Xaml.Markup
+* Windows. UI. XAML. Interop
+* Windows. UI. XAML. Markup
 * Windows.UI.Xaml.Media
 * Windows.UI.Xaml.Media.Animation
-* Windows.UI.Xaml.Media.Imaging
+* Windows. UI. XAML. Media. Imaging
 * Windows.UI.Xaml.Media.Media3D
 * Windows.UI.Xaml.Navigation
-* Windows.UI.Xaml.Resources
+* Windows. UI. XAML. Resources
 * Windows.UI.Xaml.Shapes
-* Windows.UI.Xaml.Threading
-* Windows.UI.Text
+* Windows. UI. XAML. Threading
+* Windows. UI. Text
 
 <span id="other-XAML-namespaces"/>
 
@@ -84,17 +84,17 @@ Além do namespace padrão e do namespace XAML da linguagem XAML "x:", você tam
 
 ### <a name="d-httpschemasmicrosoftcomexpressionblend2008"></a>**d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
-O "d": Namespace XAML destina-se ao suporte do designer, suporte do designer especificamente em superfícies de design XAML do Microsoft Visual Studio. A"unidade d:" Namespace XAML permite que o designer ou atributos de tempo de design em elementos do XAML. Esses atributos de designer afetam apenas os aspectos de design referentes ao comportamento do XAML. Os atributos de designer são ignorados quando o mesmo XAML é carregado pelo analisador XAML do Tempo de Execução do Windows, durante a execução de um aplicativo. Os atributos de designer geralmente são válidos em qualquer elemento XAML, mas, na prática, há apenas alguns cenários em que a aplicação do atributo de designer é adequada. Em especial, muitos dos atributos de designer são projetados para fornecer uma experiência melhor de interação com os contextos e as fontes de dados, quando você desenvolve XAML e código que usam a vinculação de dados.
+O namespace XAML "d:" foi projetado para auxiliar o designer, especificamente nas áreas de design XAML do Microsoft Visual Studio. O namespace XAML "d:" permite atributos de designer ou de tempo de design em elementos XAML. Esses atributos de designer afetam apenas os aspectos de design referentes ao comportamento do XAML. Os atributos de designer são ignorados quando o mesmo XAML é carregado pelo analisador XAML do Windows Runtime, durante a execução de um aplicativo. Os atributos de designer geralmente são válidos em qualquer elemento XAML, mas, na prática, há apenas alguns cenários em que a aplicação do atributo de designer é adequada. Em especial, muitos dos atributos de designer são projetados para fornecer uma experiência melhor de interação com os contextos e as fontes de dados, quando você desenvolve XAML e código que usam a vinculação de dados.
 
--   **atributos d:DesignHeight e d:DesignWidth:** Às vezes, esses atributos são aplicados para a raiz de um arquivo XAML que o Visual Studio ou outra superfície do designer XAML cria para você. Por exemplo, esses atributos são definidos na raiz do [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) do XAML que é criado se você adiciona um novo **UserControl** ao seu projeto de aplicativo. Esses atributos facilitam a criação da composição do conteúdo XAML, por isso você tem alguma previsão das restrições de layout que podem existir depois que o conteúdo XAML é usado para uma instância de controle ou outra parte de uma página de interface do usuário maior.
+-   **Atributos d:DesignHeight e d:DesignWidth:** Esses atributos são, às vezes, aplicados na raiz de um arquivo XAML que o Visual Studio ou outra superfície do designer do XAML cria para você. Por exemplo, esses atributos são definidos na raiz do [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) do XAML que é criado se você adiciona um novo **UserControl** ao seu projeto de aplicativo. Esses atributos facilitam a criação da composição do conteúdo XAML, por isso você tem alguma previsão das restrições de layout que podem existir depois que o conteúdo XAML é usado para uma instância de controle ou outra parte de uma página de interface do usuário maior.
 
-   **Observação**  se você estiver migrando o XAML do Microsoft Silverlight pode ter esses atributos em elementos de raiz que representam uma página inteira da interface do usuário. Talvez você queira remover os atributos nesse caso. Outros recursos dos designers de XAML, como o simulador, provavelmente são mais úteis na criação de layouts de página que manipulem dimensionamento e estados de exibição do que um layout de página de tamanho fixo que usa **d:DesignHeight** e **d:DesignWidth**.
+   **Observação**  se você estiver migrando XAML do Microsoft Silverlight, você pode ter esses atributos em elementos raiz que representam uma página de interface do usuário inteira. Talvez você queira remover os atributos nesse caso. Outros recursos dos designers de XAML, como o simulador, provavelmente são mais úteis na criação de layouts de página que manipulem dimensionamento e estados de exibição do que um layout de página de tamanho fixo que usa **d:DesignHeight** e **d:DesignWidth**.
 
--   **atributo d:DataContext:** Você pode definir esse atributo em uma raiz da página ou um controle para substituir qualquer explícita ou herdada [ **DataContext** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) tem esse objeto caso contrário.
--   **atributo d:DesignSource:** Especifica uma fonte de dados de tempo de design para um [ **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), substituindo [ **origem**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source).
--   **extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usados para fornecer os recursos de dados de tempo de design para qualquer um **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer).
+-   **d:DataContext attribute:** Você pode definir este atributo em uma raiz de página ou um controle para substituir qualquer [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) explícita ou herdada que o objeto tenha.
+-   **Atributo d:DesignSource:** Especifica uma fonte de dados de tempo de design para um [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), substituindo [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source).
+-   **Extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usadas para fornecer os recursos de dados de tempo de design para **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer).
 
-### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
+### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**MC: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica e dá suporte ao modo de compatibilidade de marcação para leitura de XAML. Normalmente, o prefixo "d:" prefix é associado ao atributo **mc:Ignorable**. Essa técnica permite que os analisadores XAML de tempo de execução ignorem os atributos de design em "d:".
 
@@ -102,15 +102,15 @@ O "d": Namespace XAML destina-se ao suporte do designer, suporte do designer esp
 
 "local:" é um prefixo que geralmente é mapeado para você nas páginas XAML para um projeto modelo de aplicativo UWP. Ele é mapeado para se referir ao mesmo namespace que é criado para conter o [x:Class attribute](x-class-attribute.md) e o código para todos os arquivos XAML, inclusive app.xaml. Contanto que defina as classes personalizadas que deseja usar no XAML nesse mesmo namespace, você pode usar o prefixo **local:** para se referir aos seus tipos personalizados em XAML. Um prefixo relacionado proveniente de um projeto modelo de aplicativo UWP é **common:** . Esse prefixo se refere a um namespace "Common" aninhado que contém classes de utilitários, como conversores e comandos, e você pode encontrar as definições na pasta Common no modo de exibição do **Gerenciador de Soluções**.
 
-### <a name="vsm"></a>**vsm:**
+### <a name="vsm"></a>**VSM**
 
-Não use. "vsm:" é um prefixo que, às vezes, é visto em modelos XAML antigos importados de outras tecnologias Microsoft. Originalmente, o namespace tratava de um problema de ferramenta de namespace herdado. Exclua definições de namespace XAML para "vsm:" em qualquer XAML que usar para o Windows Runtime e mude todos os usos de prefixo de [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) e objetos relacionados para usar o namespace XAML padrão. Para saber mais sobre migração de XAML, veja [Migrando XAML/código do Silverlight ou WPF para um aplicativo do Tempo de Execução do Windows](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10)).
+Não use. "vsm:" é um prefixo que, às vezes, é visto em modelos XAML antigos importados de outras tecnologias Microsoft. Originalmente, o namespace tratava de um problema de ferramenta de namespace herdado. Exclua definições de namespace XAML para "vsm:" em qualquer XAML que usar para o Windows Runtime e mude todos os usos de prefixo de [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) e objetos relacionados para usar o namespace XAML padrão. Para saber mais sobre migração de XAML, veja [Migrando XAML/código do Silverlight ou WPF para um aplicativo do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10)).
 
 ## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>Mapeando tipos personalizados para namespaces XAML e prefixos
 
 Você pode mapear um namespace XAML para poder usar o XAML para acessar seus próprios tipos personalizados. Em outras palavras, você mapeia um namespace de código, da forma como ele aparece em uma representação de código que define o tipo personalizado, e o atribui a um namespace XAML juntamente com um prefixo para utilização. Tipos personalizados de XAML podem ser definidos em uma linguagem do Microsoft .NET (C# ou Microsoft Visual Basic) ou em C++. O mapeamento é feito pela definição de um prefixo **xmlns**. Por exemplo, `xmlns:myTypes` define um novo namespace XAML que é acessado por meio da prefixação de todos os usos com o token `myTypes:`.
 
-Uma definição de **xmlns** inclui um valor e também a nomeação do prefixo. O valor é uma cadeia de caracteres colocada entre aspas, seguida de um sinal de igual. Uma convenção XML comum é associar o namespace XML a um URI (Uniform Resource Identifier), e há uma convenção de exclusividade e identificação. Você também vê essa convenção no namespace XAML padrão, no namespace XAML da linguagem XAML e em alguns namespaces XAML usados com menos frequência, que são utilizados pelo XAML do Tempo de Execução do Windows. Entretanto, para um namespace XAML que mapeia tipos personalizados, em vez de especificar um URI, comece a definição do prefixo com o token "using:". Em seguida ao token "using:", dê um nome ao namespace de código.
+Uma definição de **xmlns** inclui um valor e também a nomeação do prefixo. O valor é uma cadeia de caracteres colocada entre aspas, seguida de um sinal de igual. Uma convenção XML comum é associar o namespace XML a um URI (Uniform Resource Identifier), e há uma convenção de exclusividade e identificação. Você também vê essa convenção no namespace XAML padrão, no namespace XAML da linguagem XAML e em alguns namespaces XAML usados com menos frequência, que são utilizados pelo XAML do Windows Runtime. Entretanto, para um namespace XAML que mapeia tipos personalizados, em vez de especificar um URI, comece a definição do prefixo com o token "using:". Em seguida ao token "using:", dê um nome ao namespace de código.
 
 Por exemplo, para mapear um prefixo "custom1" que permite referenciar um namespace "CustomClasses" e usar classes desse namespace ou assembly como elementos de objeto no XAML, a página XAML deve incluir o seguinte mapeamento no elemento raiz: `xmlns:custom1="using:CustomClasses"`
 
@@ -126,7 +126,7 @@ Não use tipos aninhados (como aninhar uma enumeração dentro de uma classe) ao
 
 ## <a name="custom-types-and-assemblies"></a>Tipos personalizados e assemblies
 
-O nome do assembly que define os tipos de suporte de um namespace XAML não é especificado no mapeamento. A lógica em que assemblies estão disponíveis é controlada no nível da definição do aplicativo e faz parte dos princípios básicos de desenvolvimento e segurança do aplicativo. Declare qualquer assembly a ser incluído como fonte de definição de código do XAML como um assembly dependente nas configurações do projeto. Para saber mais, veja [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140)).
+O nome do assembly que define os tipos de suporte de um namespace XAML não é especificado no mapeamento. A lógica em que assemblies estão disponíveis é controlada no nível da definição do aplicativo e faz parte dos princípios básicos de desenvolvimento e segurança do aplicativo. Declare qualquer assembly a ser incluído como fonte de definição de código do XAML como um assembly dependente nas configurações do projeto. Para saber mais, veja [Criando componentes do Windows Runtime em C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140)).
 
 Se estiver referenciando tipos personalizados na definição do aplicativo principal ou nas definições de páginas, esses tipos serão disponibilizados sem outras configurações de assembly dependente, mas ainda será preciso mapear o namespace de código que contém esses tipos. Uma convenção comum é mapear o prefixo "local" para o namespace de código padrão de qualquer página XAML fornecida. Essa convenção é frequentemente incluída nos modelos de projeto iniciais para projetos XAML.
 
@@ -138,8 +138,8 @@ Se você estiver fazendo referência a propriedades anexadas, a parte do tipo de
 
 * [Visão geral do XAML](xaml-overview.md)
 * [Guia de sintaxe XAML](xaml-syntax-guide.md)
-* [Criando componentes de tempo de execução do Windows em C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
-* [C#, VB e C++ modelos de projeto para aplicativos do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
-* [Migrando do Silverlight ou WPF XAML/código para um aplicativo de tempo de execução do Windows](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
+* [Criando Windows Runtime componentes no C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [C#, VB e C++ modelos de projeto para Windows Runtime aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [Migrando XAML/código do Silverlight ou WPF para um aplicativo Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
  
 

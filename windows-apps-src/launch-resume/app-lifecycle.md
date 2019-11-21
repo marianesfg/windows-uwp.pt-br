@@ -6,12 +6,12 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4d5d667abcca02d3668c3c266c68584aec26abb
-ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
+ms.openlocfilehash: 9f13bab2cc6e98a929f36908136c57031206e31f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68308416"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259482"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>O ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10
 
@@ -30,7 +30,7 @@ Por padrão, os aplicativos que não estão em primeiro plano são suspensos, o 
 
 Como desenvolvedor, o estado suspenso representa um novo desafio para você, porque o sistema operacional poderá optar por encerrar um aplicativo suspenso a fim de liberar recursos. O aplicativo encerrado ainda aparecerá na barra de tarefas. Quando o usuário clicar nele, o aplicativo deverá ser restaurado ao estado em que estava antes de ser encerrado, pois o usuário não saberá que o aplicativo foi fechado pelo sistema. Ele terá a impressão de que o aplicativo estava aguardando em segundo plano enquanto fazia outras coisas e espera que o aplicativo esteja no mesmo estado que se encontrava quando saiu dele. Neste tópico veremos como fazer isso.
 
-O Windows 10, versão 1607, apresenta mais dois Estados de modelo de aplicativo: **Executando em primeiro plano** e em **execução em segundo plano**. Também examinaremos esses novos estados nas seções que seguem.
+O Windows 10, versão 1607, apresenta mais dois estados de modelo de aplicativo: **Running in foreground** e **Running in background**. Também examinaremos esses novos estados nas seções que seguem.
 
 ## <a name="app-execution-state"></a>Estado de execução do aplicativo
 
@@ -64,7 +64,7 @@ Por causa da pré-inicialização, o método **OnLaunched ()** do aplicativo pod
 
 O Windows exibe a tela inicial do aplicativo quando ele é iniciado. Para configurar a tela inicial, consulte [Adicionando uma tela inicial](https://docs.microsoft.com/previous-versions/windows/apps/hh465331(v=win.10)).
 
-Enquanto a tela inicial é exibida, o aplicativo deve registrar manipuladores de eventos e configurar qualquer interface do usuário personalizada necessária para a página inicial. Note que essas tarefas em execução no construtor do aplicativo e no **OnLaunched ()** devem ser concluídas dentro de alguns segundos ou o sistema pode achar que seu aplicativo não está respondendo e encerrá-lo. Se um aplicativo precisa solicitar dados da rede ou recuperar grandes quantidades de dados do disco, essas atividades deverão ser concluídas fora da inicialização. Um aplicativo pode usar sua própria interface do usuário de carregamento personalizada ou uma tela inicial estendida enquanto aguarda a conclusão dessas operações de longa duração. Consulte [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) e [Exemplo de tela inicial](https://go.microsoft.com/fwlink/p/?linkid=234889) para saber mais.
+Enquanto a tela inicial é exibida, o aplicativo deve registrar manipuladores de eventos e configurar qualquer interface do usuário personalizada necessária para a página inicial. Note que essas tarefas em execução no construtor do aplicativo e no **OnLaunched ()** devem ser concluídas dentro de alguns segundos ou o sistema pode achar que seu aplicativo não está respondendo e encerrá-lo. Se um aplicativo precisa solicitar dados da rede ou recuperar grandes quantidades de dados do disco, essas atividades deverão ser concluídas fora da inicialização. Um aplicativo pode usar sua própria interface do usuário de carregamento personalizada ou uma tela inicial estendida enquanto aguarda a conclusão dessas operações de longa duração. Consulte [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) e [Exemplo de tela inicial](https://code.msdn.microsoft.com/windowsapps/Splash-screen-sample-89c1dc78) para saber mais.
 
 Depois que o aplicativo conclui a inicialização, ele entra no estado **Running** e a tela inicial desaparece e todos os recursos e objetos são limpos.
 
@@ -77,13 +77,13 @@ A classe [**Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Wi
 
 [**OnCachedFileUpdaterActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.oncachedfileupdateractivated)  
 [**OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)  
-[**OnFileOpenPickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated) [ **OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated)  
+[**OnFileOpenPickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileopenpickeractivated)  [**OnFileSavePickerActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfilesavepickeractivated)  
 [**OnSearchActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsearchactivated)  
 [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated)
 
 Os dados de evento para esses métodos incluem a mesma propriedade [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) vista acima, que informa em qual estado o aplicativo estava antes de ser ativado. Interprete o estado e o que você deve fazer da mesma maneira descrita acima na seção [Inicialização do aplicativo](#app-launch).
 
-**Observação Se você**fizer logon usando a conta de administrador do computador, não poderá ativar os aplicativos UWP. 
+**Observe** se você fizer logon usando a conta de administrador do computador, não poderá ativar os aplicativos UWP.
 
 ## <a name="running-in-the-background"></a>Executando em segundo plano ##
 
@@ -129,7 +129,7 @@ Lembre-se de que se seu aplicativo tiver atividade em segundo plano em andamento
 
 ### <a name="asynchronous-work-and-deferrals"></a>Trabalho assíncrono e adiamentos
 
-Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.suspendingoperation.getdeferral) no objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) no objeto [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) retornado.
+Se você fizer uma chamada assíncrona no manipulador, o controle será retornado imediatamente daquela chamada assíncrona. Isso significa que a execução pode retornar do manipulador de eventos e o aplicativo mudará para o próximo estado, mesmo que a chamada assíncrona ainda não tenha sido concluída. Use o método [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.suspendingoperation.getdeferral) no objeto [**EnteredBackgroundEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) que é passado para o manipulador de eventos para atrasar a suspensão até depois que você chamar o método [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) no objeto [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) retornado.
 
 Um adiamento não aumenta a quantidade de código que precisa ser executado antes que o aplicativo seja encerrado. Ele somente atrasa o encerramento até que o método *Complete* do adiamento seja chamado ou o prazo termine, *o que ocorrer primeiro*.
 
@@ -157,7 +157,7 @@ O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está 
 
 Quando o aplicativo determina que foi ativado depois de ter sido encerrado, ele deve carregar os dados que foram salvos para que o aplicativo fique no mesmo estado que estava antes do encerramento. Quando o usuário retorna a um aplicativo suspenso que tenha sido encerrado, o aplicativo deve restaurar seus dados no método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched). O sistema não notifica um aplicativo quando ele é encerrado, por isso o aplicativo deve salvar seus dados de aplicativo e liberar identificadores de arquivo e recursos exclusivos antes de ser suspenso e restaurá-los quando for ativado após o encerramento.
 
-**Uma observação sobre A depuração usando o Visual Studio:** O Visual Studio impede que o Windows suspenda um aplicativo que está anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução. Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio. Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone **Suspender**.
+**Observação sobre a depuração com Visual Studio:** o Visual Studio impede que o Windows suspenda um aplicativo que esteja anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução. Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio. Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone **Suspender**.
 
 ## <a name="app-resume"></a>Retomada do aplicativo
 
@@ -183,7 +183,7 @@ Em geral, os usuários não precisam fechar os aplicativos; eles podem deixar qu
 
 Não há um evento para indicar que o usuário fechou o aplicativo. Quando um aplicativo é fechado pelo usuário, ele é primeiramente suspenso para oferecer a você a oportunidade de salvar seu estado. No Windows 8.1 e posterior, depois que um aplicativo tiver sido fechado pelo usuário, o aplicativo será removido da tela e da lista de comutador, mas não encerrado explicitamente.
 
-**Comportamento de fechado por usuário:**   se seu aplicativo precisar fazer algo diferente quando for fechado pelo usuário do que quando ele for fechado pelo Windows, você poderá usar o manipulador de eventos de ativação para determinar se o aplicativo foi encerrado pelo usuário ou pelo Windows. Consulte as descrições dos estados **ClosedByUser** e **Terminated** na referência da enumeração [**ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState).
+**Comportamento fechado por usuário:**   se seu aplicativo precisar fazer algo diferente quando for fechado pelo usuário do que quando ele for fechado pelo Windows, você poderá usar o manipulador de eventos de ativação para determinar se o aplicativo foi encerrado pelo usuário ou pelo Windows. Consulte as descrições dos estados **ClosedByUser** e **Terminated** na referência da enumeração [**ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState).
 
 Recomendamos que os aplicativos não sejam fechados programaticamente a menos que isso seja absolutamente necessário. Por exemplo, se um aplicativo detectar um vazamento de memória, ele poderá se fechar para garantir a segurança dos dados pessoais do usuário.
 
@@ -191,7 +191,7 @@ Recomendamos que os aplicativos não sejam fechados programaticamente a menos qu
 
 A experiência de falha do sistema foi projetada para que os usuários voltem ao que eles estavam fazendo o mais rápido possível. Você não deve fornecer uma caixa de diálogo de aviso ou outra notificação porque isso atrasará o usuário.
 
-Se o aplicativo falhar, parar de responder ou gerar uma exceção, um relatório do problema será enviado para a Microsoft segundo as [configurações de comentários e diagnóstico](https://go.microsoft.com/fwlink/p/?LinkID=614828). A Microsoft fornece um subconjunto dos dados de erro no relatório de problema para você para que você possa usá-lo para melhorar o aplicativo. Você pode ver esses dados na página Qualidade do aplicativo no Painel.
+Se o aplicativo falhar, parar de responder ou gerar uma exceção, um relatório do problema será enviado para a Microsoft segundo as [configurações de comentários e diagnóstico](https://support.microsoft.com/help/4468236/diagnostics-feedback-and-privacy-in-windows-10-microsoft-privacy). A Microsoft fornece um subconjunto dos dados de erro no relatório de problema para você para que você possa usá-lo para melhorar o aplicativo. Você pode ver esses dados na página Qualidade do aplicativo no Painel.
 
 Quando o usuário ativa um aplicativo após um travamento, o manipulador de eventos de ativação recebe em [**ApplicationExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ApplicationExecutionState) o valor **NotRunning**, e deve exibir os dados e a interface do usuário iniciais. Após um travamento, não use sistematicamente os dados do aplicativo que usaria para **Resuming** com **Suspended** porque esses dados podem estar corrompidos; consulte [Guidelines for app suspend and resume](https://docs.microsoft.com/windows/uwp/launch-resume/index).
 

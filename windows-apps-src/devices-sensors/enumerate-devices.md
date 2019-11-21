@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cddd7fbcff62f070fa4c4e181e012ec871f1c0c2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b562dd139705e983bc8a8ad10962d923cff55559
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370158"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259674"
 ---
 # <a name="enumerate-devices"></a>Enumerar dispositivos
 
@@ -26,7 +26,7 @@ async void enumerateSnapshot(){
 }
 ```
 
-Para baixar uma amostra dos usos mais avançados das APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), clique [aqui](https://go.microsoft.com/fwlink/?LinkID=620536).
+Para baixar uma amostra dos usos mais avançados das APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), clique [aqui](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing).
 
 ## <a name="enumeration-apis"></a>APIs de enumeração
 
@@ -42,13 +42,13 @@ Essas APIs podem enumerar dispositivos sobre qualquer um dos seguintes protocolo
 -   Barramentos fisicamente conectados. Isso inclui PCI e USB. Por exemplo, tudo que você pode ver no **Gerenciador de Dispositivos**.
 -   [UPnP](https://docs.microsoft.com/windows/desktop/UPnP/universal-plug-and-play-start-page)
 -   Digital Living Network Alliance (DLNA)
--   [**Descoberta e inicie (DISCAGEM)** ](https://docs.microsoft.com/uwp/api/Windows.Media.DialProtocol)
--   [**Descoberta de serviço DNS (SD DNS)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd)
+-   [**Descoberta e inicialização (DIAL)** ](https://docs.microsoft.com/uwp/api/Windows.Media.DialProtocol)
+-   [**Descoberta de serviço DNS (DNS-SD)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd)
 -   [Serviços Web em dispositivos (WSD)](https://docs.microsoft.com/windows/desktop/WsdApi/wsd-portal)
 -   [Bluetooth](https://docs.microsoft.com/windows/desktop/Bluetooth/bluetooth-start-page)
 -   [**Wi-Fi Direct**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect)
 -   WiGig
--   [**Point of Service**](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService)
+-   [**Ponto de serviço**](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService)
 
 Em muitos casos, você não precisa se preocupar em usar as APIs de enumeração. Isso ocorre porque muitas APIs que usam dispositivos selecionarão automaticamente o dispositivo padrão apropriado ou fornecerão uma API de enumeração mais simplificada. Por exemplo, [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) usará automaticamente o dispositivo renderizador de áudio padrão. Contanto que seu aplicativo possa usar o dispositivo padrão, não é necessário usar as APIs de enumeração em seu aplicativo. As APIs de enumeração fornecem uma maneira geral e flexível para você descobrir e se conectar aos dispositivos disponíveis. Este tópico fornece informações sobre como enumerar dispositivos e descreve as quatro maneiras comuns de enumerar dispositivos.
 
@@ -65,8 +65,8 @@ Trabalhar com as APIs de enumeração, você frequentemente precisa usar objetos
 | Propriedade                         | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **DeviceInformation.Id**         | Esse é o identificador exclusivo do dispositivo e é fornecido como uma variável de cadeia de caracteres. Na maioria dos casos, esse é um valor opaco que você apenas passará de um método para outro para indicar o dispositivo específico que lhe interessa. Você também pode usar essa propriedade e a propriedade **DeviceInformation.Kind** depois de fechar seu aplicativo e reabri-lo. Isso garante que você possa recuperar e reutilizar o mesmo objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation). |
-| **DeviceInformation.Kind**       | Isso indica o tipo de objeto de dispositivo representado pelo objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation). Essa não é a categoria de dispositivo ou o tipo de dispositivo. Um único dispositivo pode ser representado por vários objetos **DeviceInformation** diferentes de tipos diferentes. Os valores possíveis para esta propriedade são listados em [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind), bem como a relação entre eles.                           |
-| **DeviceInformation.Properties** | Esse recipiente de propriedades contém informações solicitadas para o objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation). As propriedades mais comuns são referenciadas facilmente como propriedades do objeto **DeviceInformation**, como com [**DeviceInformation.Name**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name). Para saber mais, consulte [Propriedades de informações do dispositivo](device-information-properties.md).                                                                |
+| **DeviceInformation. Kind**       | Isso indica o tipo de objeto de dispositivo representado pelo objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation). Essa não é a categoria de dispositivo ou o tipo de dispositivo. Um único dispositivo pode ser representado por vários objetos **DeviceInformation** diferentes de tipos diferentes. Os valores possíveis para esta propriedade são listados em [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind), bem como a relação entre eles.                           |
+| **DeviceInformation. Properties** | Esse recipiente de propriedades contém informações solicitadas para o objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation). As propriedades mais comuns são referenciadas facilmente como propriedades do objeto **DeviceInformation**, como com [**DeviceInformation.Name**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name). Para saber mais, consulte [Propriedades de informações do dispositivo](device-information-properties.md).                                                                |
 
  
 
@@ -82,7 +82,7 @@ O [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumerat
 
 Enquanto o [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker) estiver sendo exibido, o conteúdo da interface do usuário será atualizado automaticamente se dispositivos forem adicionados, removidos ou atualizados.
 
-**Observação**  não é possível especificar o [ **DeviceInformationKind** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) usando o [ **DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker). Se quiser ter dispositivos de determinado **DeviceInformationKind**, você precisará criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) e fornecer sua própria interface do usuário.
+**Observação**  você não pode especificar o [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) usando o [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker). Se quiser ter dispositivos de determinado **DeviceInformationKind**, você precisará criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) e fornecer sua própria interface do usuário.
 
  
 
@@ -123,7 +123,7 @@ Para criar um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Dev
 
 Inspecionar dispositivos como uma tarefa em segundo plano é muito semelhante à criação de um [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) conforme descrito anteriormente. Na verdade, você ainda precisa criar um objeto **DeviceWatcher** normal primeiro conforme descrito na seção anterior. Depois de criá-lo, você chama [**GetBackgroundTrigger**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.enumerationcompleted), em vez de [**DeviceWatcher.Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start). Ao chamar **GetBackgroundTrigger**, você deve especificar quais notificações são de seu interesse: adição, remoção ou atualização. Você não pode solicitar atualização ou remoção sem solicitar adição também. Depois de registrar o gatilho, a execução do **DeviceWatcher** será iniciada imediatamente em segundo plano. Desse ponto em diante, sempre que ele receber uma nova notificação para seu aplicativo que corresponder aos critérios, a tarefa em segundo plano será disparada e fornecerá as últimas alterações desde o último disparo de seu aplicativo.
 
-**Importante**  na primeira vez que um [ **DeviceWatcherTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceWatcherTrigger) gatilhos que seu aplicativo será quando o Inspetor de atinge o **EnumerationCompleted**  estado. Isso significa que ele conterá todos os resultados iniciais. Nas próximas vezes que seu aplicativo for disparado, ele conterá apenas notificações de adição, atualização e remoção que ocorreram desde o último disparo. Isso é um pouco diferente de um objeto [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) de primeiro plano porque os resultados iniciais não vêm um de cada vez e só são fornecidos em um pacote depois que o **EnumerationCompleted** é atingido.
+**Importante**  a primeira vez que um [**DeviceWatcherTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceWatcherTrigger) dispara seu aplicativo será quando o observador atingir o estado **EnumerationCompleted** . Isso significa que ele conterá todos os resultados iniciais. Nas próximas vezes que seu aplicativo for disparado, ele conterá apenas notificações de adição, atualização e remoção que ocorreram desde o último disparo. Isso é um pouco diferente de um objeto [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) de primeiro plano porque os resultados iniciais não vêm um de cada vez e só são fornecidos em um pacote depois que o **EnumerationCompleted** é atingido.
 
  
 
@@ -153,7 +153,7 @@ Ao enumerar objetos **AssociationEndpoint**, **AssociationEndpointContainer** ou
 ## <a name="save-a-device-for-later-use"></a>Salvar um dispositivo para uso posterior
 
 
-Qualquer [ **DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) objeto é identificado exclusivamente por uma combinação de duas informações: [**DeviceInformation.Id** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) e [ **DeviceInformation.Kind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.kind). Se você mantiver essas duas informações, poderá recriar um objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createfromidasync). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
+Qualquer objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) exclusivamente identificado por uma combinação de duas informações: [**DeviceInformation.Id**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) e [**DeviceInformation.Kind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.kind). Se você mantiver essas duas informações, poderá recriar um objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createfromidasync). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
 
 
  

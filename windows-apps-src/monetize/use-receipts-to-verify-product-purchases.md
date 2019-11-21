@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cae88e57a61e6d4e982f1eac7e65582861ef5d2
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a26d98de58c954f1bec588b335483de08404862b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335004"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259229"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
@@ -108,7 +108,7 @@ O elemento raiz desse arquivo é o elemento **Receipt**, que contém informaçõ
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    Não        |  0 ou 1  |  Contém informações de compra para o app atual.            |
 |  [ProductReceipt](#productreceipt)  |     Não       |  0 ou mais    |   Contém informações sobre uma compra realizada em aplicativo para o app atual.     |
-|  Assinatura  |      Sim      |  1   |   Esse elemento é um padrão [constructo XML-DSIG](https://go.microsoft.com/fwlink/p/?linkid=251093). Ele contém um elemento **SignatureValue**, que contém a assinatura que você pode usar para validar o recebimento, e um elemento **SignedInfo**.      |
+|  Assinatura  |      Sim      |  1   |   Esse elemento é um padrão [constructo XML-DSIG](https://www.w3.org/TR/xmldsig-core/). Ele contém um elemento **SignatureValue**, que contém a assinatura que você pode usar para validar o recebimento, e um elemento **SignedInfo**.      |
 
 **Receipt** tem os atributos a seguir.
 
@@ -132,7 +132,7 @@ Este elemento contém informações de compra para o app atual.
 |  **Id**  |    Identifica a compra.           |
 |  **AppId**  |     O valor do Nome da Família de Pacotes que o sistema operacional usa para o app.           |
 |  **LicenseType**  |    **Full**, se o usuário tiver adquirido a versão completa do app. **Trial**, se o usuário baixou uma versão de avaliação do app.           |  
-|  **PurchaseDate**  |    A data de aquisição do app.          |  |
+|  **Adquirido**  |    A data de aquisição do app.          |  |
 
 <span id="productreceipt" />
 
@@ -148,7 +148,7 @@ Esse elemento contém informações sobre uma compra realizada em aplicativo par
 |  **AppId**  |     Identifica o app por meio do qual o usuário fez a compra.           |
 |  **ProductId**  |     Identifica o produto adquirido.           |
 |  **ProductType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
-|  **PurchaseDate**  |    A data em que ocorreu a compra.          |  |
+|  **Adquirido**  |    A data em que ocorreu a compra.          |  |
 
  
 

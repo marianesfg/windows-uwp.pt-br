@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: b2816f7bf23b57b7ff0878a4b4e561a3a70ad432
-ms.sourcegitcommit: eedbefe1841f42a83737f639ca2d70fb23670438
+ms.openlocfilehash: ec5d23a502c5517193956da6c57efe1eb668e0f0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69871801"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260016"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
@@ -35,9 +35,9 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 4.  Selecione o aplicativo que você deseja promover com essa campanha. Observe que o aplicativo já deve estar disponível na Loja.
 5.  Examine o nome fornecido para a campanha no campo **Nome da campanha** e faça as alterações, se desejado.
 6.  Em **Tipo de campanha**, escolha uma destas opções:
-    * **Anúncio pago**: Esses anúncios serão executados em qualquer aplicativo que corresponda ao dispositivo e à categoria do seu aplicativo. Para novas campanhas criadas após 9 de janeiro de 2017, esses anúncios também serão exibidos no MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Campanhas de promoção de aplicativos destinados a propriedades premium da Microsoft e são conhecidas como campanhas *universais*.
-    * **Anúncio da Comunidade (gratuito)** : Esses anúncios serão executados em aplicativos publicados por outros desenvolvedores que também criam campanhas do AD da Comunidade. Antes de poder selecionar essa opção, você deve optar por mostrar anúncios da comunidade na página **Monetizar** -> **Anúncios no app**. Para saber mais, consulte [Sobre anúncios da comunidade](about-community-ads.md).
-    * **Anúncio da casa (gratuito)** : Esses anúncios só serão executados em seus aplicativos que correspondam ao tipo de dispositivo do aplicativo anunciado. Anúncios domésticos são gratuitos. Para saber mais, veja [Sobre anúncios domésticos](about-house-ads.md).
+    * **Anúncios pagos**: esses anúncios serão veiculados em qualquer aplicativo que corresponda ao dispositivo e à categoria do seu aplicativo. Para novas campanhas criadas após 9 de janeiro de 2017, esses anúncios também serão exibidos no MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Campanhas de promoção de aplicativos destinados a propriedades premium da Microsoft e são conhecidas como campanhas *universais*.
+    * **Anúncios da comunidade (gratuitos)** : esses anúncios serão veiculados em aplicativos publicados por outros desenvolvedores que também criam campanhas publicitárias da comunidade. Antes de poder selecionar essa opção, você deve optar por mostrar anúncios da comunidade na página **Monetizar** -> **Anúncios no app**. Para saber mais, consulte [Sobre anúncios da comunidade](about-community-ads.md).
+    * **Anúncio interno (gratuito)** : os anúncios serão veiculados somente em seus apps que correspondem ao tipo de dispositivo do app anunciado. Anúncios domésticos são gratuitos. Para saber mais, veja [Sobre anúncios domésticos](about-house-ads.md).
 
 7.  Para campanhas publicitárias pagas, confirme a **Duração de campanha** (o período de tempo em que seu orçamento da campanha será gasto). A opção padrão é **Mensal**, ou seja, o orçamento da campanha será gasto por mês de forma recorrente até você parar a campanha. Como alternativa, se você tiver uma conta premium, selecione **Personalizado** para especificar um intervalo de data e hora personalizado durante o qual o orçamento da campanha será gasto. Para obter mais informações sobre contas premium, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
@@ -53,17 +53,17 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
     Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios de casa, pois elas são executadas somente em seus próprios aplicativos.
 
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
-    * **Países/regiões**: Escolha até cinco países ou regiões em que você deseja que seu anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
+    * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
 
-    * **Dispositivos**: Escolha os tipos de dispositivo em que você quer que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu aplicativo são mostrados.
+    * **Dispositivos**: escolha os tipos de dispositivo em que você deseja que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu aplicativo são mostrados.
 
-    * **Superfície**: Escolha **Universal** para permitir que seu anúncio apareça em aplicativos, além de MSN.com, Outlook.com, Skype e outras propriedades do Microsoft Premium. Escolha **Aplicativo** se você deseja que o anúncio apareça somente em aplicativos.
+    * **Surface**: selecione **Universal** para permitir que o anúncio aparece nos aplicativos, além de MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Escolha **Aplicativo** se você deseja que o anúncio apareça somente em aplicativos.
 
-    * **Sistema operacional**: Escolha os sistemas operacionais nos quais seu anúncio deve aparecer. Somente os sistemas operacionais com suporte pelo seu aplicativo são mostrados.
+    * **Sistema operacional**: escolha os sistemas operacionais nos quais seu anúncio deve aparecer. Somente os sistemas operacionais com suporte pelo seu aplicativo são mostrados.
 
-    * **Gênero**: Escolha se deseja restringir o público para o seu anúncio por gênero.
+    * **Gênero**: optar por restringir a audiência do anúncio por gênero.
 
-    * **Faixa etária**: Selecione os intervalos de idade para o público desejado.
+    * **Faixa etária**: escolha a faixa etária do público-alvo desejado.
 
     Esta seção também exibe um gráfico **Alcance estimado**. Esse gráfico mostra o público-alvo que você pode esperar alcançar com suas seleções de direcionamento atuais como um percentual de todos os usuários do aplicativo habilitado por anúncio do Windows nos mercados selecionados.
 
@@ -74,7 +74,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
         * Na lista suspensa **Idioma**, selecione o idioma do anúncio. O texto para o selo da Microsoft Store será exibido no idioma selecionado.
         * Para adicionar uma linha extra de texto ao anúncio, digite o texto no campo **Slogan personalizado**.
             > [!NOTE]
-            > O texto que você insere aqui deve estar traduzido no idioma selecionado. O slogan personalizado será rejeitado se o texto não estiver de acordo com as [Políticas do Bing Ads](https://go.microsoft.com/fwlink/?LinkId=398341). Consulte esta página para obter orientação sobre estilo e conteúdo não permitido.
+            > O texto que você insere aqui deve estar traduzido no idioma selecionado. O slogan personalizado será rejeitado se o texto não estiver de acordo com as [Políticas do Bing Ads](https://advertise.bingads.microsoft.com/bing-ads-policies). Consulte esta página para obter orientação sobre estilo e conteúdo não permitido.
         * Para personalizar mais o anúncio, expanda **Personalizar design de anúncios/Ver todos os tamanhos de anúncio** e escolha um dos seguintes itens:
             * **Cor da tela de fundo**. Escolha entre as opções disponíveis.
             * **Imagens**. Escolha uma das imagens disponíveis (tiradas da listagem da Loja do aplicativo).
@@ -84,7 +84,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     * **Personalizado**. Escolha essa opção para usar seus próprios designs de anúncios. Observe que, se você selecionou um segmento de cliente anteriormente, deverá usar criativos personalizados. Você pode carregar arquivos diferentes para cada um dos tamanhos de anúncios disponíveis. Os arquivos devem cumprir os requisitos e as diretrizes a seguir:
         * Cada arquivo deve ser um .png ou .jpg com 40 KB ou menos.
-        * Seus designs de anúncios devem atender aos requisitos especificados na [Política de Aceitação de Criatividade da Microsoft](https://go.microsoft.com/fwlink/?LinkId=532595).
+        * Seus designs de anúncios devem atender aos requisitos especificados na [Política de Aceitação de Criatividade da Microsoft](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies).
         * O conteúdo em seus designs de anúncios deve ser relevante para o aplicativo que você está promovendo. Designs de anúncios não relacionadas ao aplicativo não serão distribuídos a anúncios em outros aplicativos.
         * Todo o conteúdo em seus designs de anúncios deve ser claramente legível. Por exemplo, o conteúdo não deve ser desfocado, pixelado ou ampliado.
 

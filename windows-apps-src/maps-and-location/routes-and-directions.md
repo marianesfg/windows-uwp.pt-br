@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, rota, mapa, localização, direções
 ms.localizationpriority: medium
-ms.openlocfilehash: 196cb4801436e8094dae4ead363ff86cc746034e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e9e464f9a3b49d3a94edbc8593df58e1e7c24515
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371688"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259334"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Exibir rotas e trajetos em um mapa
 
@@ -20,7 +20,7 @@ ms.locfileid: "66371688"
 Solicite rotas e trajeto e os exiba no aplicativo.
 
 >[!Note]
->Para saber mais sobre como usar mapas em seu app, baixe a [amostra de mapa da Plataforma Universal do Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+>Para saber mais sobre como usar mapas em seu app, baixe a [amostra de mapa da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
 >Caso o mapeamento não seja um dos principais recursos do app, considere iniciar o app Mapas do Windows em vez disso. Você pode usar os esquemas de URI `bingmaps:`, `ms-drive-to:` e `ms-walk-to:` para iniciar o aplicativo Mapas do Windows para mapas específicos e trajetos curva a curva. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app).
 
  
@@ -242,7 +242,7 @@ private async void ShowRouteOnMap()
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Amostra de mapa UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo de Build 2015: aproveitando mapas e local em telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo de tráfego UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

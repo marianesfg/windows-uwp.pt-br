@@ -8,41 +8,41 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 34f8d15b971cc9ed286471010a21d1b44b84af13
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b1cac04405f18aaf3c8f39f9bfce2b965577807
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363467"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257935"
 ---
 # <a name="guidelines-for-touch-targets"></a>Diretrizes para destinos de toque
 
-Todos os elementos de interface do usuário interativos em seu aplicativo da plataforma Universal do Windows (UWP) devem ser grandes o suficiente para os usuários acessem com precisão e usar, independentemente do método de entrada ou de tipo de dispositivo.
+Todos os elementos interativos da interface do usuário no seu aplicativo de Plataforma Universal do Windows (UWP) devem ser grandes o suficiente para que os usuários acessem e usem com precisão, independentemente do tipo de dispositivo ou do método de entrada.
 
-Suporte a entrada de toque (e a natureza relativamente imprecisa da área de contato de toque) requer a otimização adicional em relação ao layout de tamanho e o controle de destino como o conjunto de maior e mais complexo de relatado pelo digitalizador do toque de dados de entrada é usado para determinar o destino do usuário pretendida (ou mais provável).
+Dar suporte à entrada por toque (e a natureza relativamente precisa da área de contato de toque) requer mais otimização em relação ao tamanho de destino e ao layout de controle, pois o conjunto maior, mais complexo de dados de entrada relatados pelo digitalizador de toque é usado para determinar o destino pretendido (ou mais provável) do usuário.
 
-Todos os controles UWP foram projetados com tamanhos padrão de destino de toque e layouts que permitem criar aplicativos visualmente equilibrados e atraentes que são fáceis de usar, confortável e transmitir confiança.
+Todos os controles UWP foram projetados com tamanhos e layouts de destino por toque padrão que permitem que você crie aplicativos visualmente equilibrados e atraentes que são confortáveis, fáceis de usar e inspira confiança.
 
-Neste tópico, descreveremos esses comportamentos padrão, portanto, você pode projetar seu aplicativo para facilitar o uso máximo usando controles de plataforma e controles personalizados (deve seu aplicativo exigi-los).
+Neste tópico, descrevemos esses comportamentos padrão para que você possa projetar seu aplicativo para a usabilidade máxima usando controles de plataforma e controles personalizados (caso seu aplicativo precise deles).
 
 > **APIs importantes**: [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
-## <a name="fluent-standard-sizing"></a>Dimensionamento padrão Fluent
+## <a name="fluent-standard-sizing"></a>Dimensionamento Fluent padrão
 
-*Dimensionamento padrão Fluent* foi criado para fornecer um equilíbrio entre o conforto de densidade e o usuário de informações. Na verdade, todos os itens na tela alinham a um destino efetivo de 40 x 40 pixels (epx), que permite que elementos de interface do usuário se alinham com uma grade e dimensionada de forma adequada com base em dimensionamento do nível do sistema.
+O *Dimensionamento Fluent padrão* foi criado para fornecer um equilíbrio entre densidade de informações e conforto do usuário. Na verdade, todos os itens na tela se alinham a um alvo de 40 px x 40 px efetivos (epx), o que permite que os elementos da interface do usuário se alinhem com uma grade e sejam dimensionados de forma adequada com base no nível do sistema.
 
 > [!NOTE]
->Para obter mais informações sobre pixels relevantes e dimensionamento, consulte [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>Para saber mais sobre dimensionamento e pixels efetivos, confira [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
 >
-> Para obter mais informações sobre o dimensionamento de nível de sistema, consulte [alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
+> Para saber mais sobre o dimensionamento no nível de sistema, confira [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
 
-## <a name="fluent-compact-sizing"></a>Dimensionamento Compact Fluent
+## <a name="fluent-compact-sizing"></a>Dimensionamento Fluent compacto
 
-Aplicativos podem exibir um nível mais alto de densidade de informações com *dimensionamento Fluent Compact*. Dimensionamento Compact alinha os elementos de interface do usuário para um destino de 32 x 32 epx, que permite que os elementos de interface do usuário para alinhar-se para uma grade mais rigorosa e uma escala adequadamente com base na escala de nível de sistema.
+Os aplicativos podem exibir um nível mais alto de densidade de informações com *dimensionamento compacto fluente*. O dimensionamento compacto alinha os elementos da interface do usuário com um destino EPX de 32x32, que permite que os elementos da interface do usuário se alinhem a uma grade mais rígida e dimensionam adequadamente com base no dimensionamento no nível do sistema
 
 ### <a name="examples"></a>Exemplos
 
-Compact dimensionamento pode ser aplicado no nível de página ou grade.
+O dimensionamento compacto pode ser aplicado no nível da página ou da grade.
 
 ### <a name="page-level"></a>Nível de página
 
@@ -62,39 +62,39 @@ Compact dimensionamento pode ser aplicado no nível de página ou grade.
 </Grid>
 ```
 
-## <a name="target-size"></a>Tamanho de destino
+## <a name="target-size"></a>Tamanho do destino
 
-Em geral, defina seu tamanho de destino de toque ao intervalo de quadrados de 7,5 mm (40 x 40 pixels em uma exibição PPI 135 em um 1.0 x dimensionamento sammamish). Normalmente, os controles UWP alinham com o destino de toque de 7,5 mm (Isso pode variar com base no controle específico e padrões comuns de uso). Ver [controlar o tamanho e densidade](../style/spacing.md) para obter mais detalhes.
+Em geral, defina seu tamanho de destino de toque como o intervalo quadrado de 7,5 mm (40x40 pixels em uma exibição de 135 PPI em um limite de dimensionamento 1.0 x). Normalmente, os controles UWP se alinham com o destino de toque de 7,5 mm (isso pode variar com base no controle específico e em qualquer padrão de uso comum). Consulte [tamanho e densidade do controle](../style/spacing.md) para obter mais detalhes.
 
-Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Aqui estão algumas coisas a considerar:
+Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Aqui estão algumas coisas a serem consideradas:
 
-- Frequência de toques - Considere tornar destinos que são frequentemente ou repetidamente pressionados maiores do que o tamanho mínimo.
-- Erro consequência - destinos que têm sérias consequências se tocadas em erro deve ter o preenchimento maior e ser colocada mais longe da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
+- Frequência de toques – considere a possibilidade de tornar os destinos que são pressionados repetidamente ou frequentemente maiores que o tamanho mínimo.
+- Conseqüência de erros-destinos que têm consequências graves se tocadas em erro devem ter um preenchimento maior e serem colocados além da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
 - Posição na área de conteúdo.
-- Tamanho da tela e fatores de formulário.
+- Fator de forma e tamanho da tela.
 - Postura de dedo.
 - Visualizações de toque.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md)
-- [Controle de tamanho e densidade](../style/spacing.md)
+- [Tamanho e densidade do controle](../style/spacing.md)
 - [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md)
 
 ### <a name="samples"></a>Exemplos
 
-- [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 ### <a name="archive-samples"></a>Exemplos de arquivo
 
-- [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-- [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-- [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-- [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
-- [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
-- [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-- [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-- [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+- [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+- [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+- [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+- [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+- [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+- [Entrada: exemplo de gestos do Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+- [Exemplo de entrada do DirectX Touch](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)

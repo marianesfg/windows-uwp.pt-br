@@ -6,22 +6,22 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7ee2cac1ae53ca59b8ec60d917e39a737a049ad
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a5898d4157b216175c77356e5a27b4c58d049d9a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369637"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259635"
 ---
 # <a name="use-the-gyrometer"></a>Usar o girômetro
 
 
 **APIs importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer)
+-   [**Windows. Devices. sensores**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Girômetro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer)
 
-**Exemplo**
+**Nova**
 
 -   Para obter uma implementação completa, consulte o [exemplo de girômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).
 
@@ -31,7 +31,7 @@ Os girômetros complementam os acelerômetros como controladores de jogos. O ace
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com o Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
+Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft Visual C#e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para um girômetro.
 
@@ -180,4 +180,4 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
  ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de Girômetro](https://go.microsoft.com/fwlink/p/?linkid=241379)
+* [Exemplo de girômetro](https://code.msdn.microsoft.com/windowsapps/Gyrometer-Sensor-Sample-4fe891d9)

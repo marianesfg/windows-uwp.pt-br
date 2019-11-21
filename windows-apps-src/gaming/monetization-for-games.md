@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c84c42da0e2653f0e5958583ad0ee9b9babe3bc
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 132f8c1d0ff314b794cc8464ec69cdf84f6a5f3b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318948"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258477"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -20,14 +20,14 @@ Como desenvolvedor de jogos, você precisa saber as opções de monetização pa
 Antigamente, bastaria dar um preço para o jogo e esperar que as pessoas o comprassem em uma loja. Porém, existem opções atualmente. É possível optar por distribuir um jogo para lojas de "tijolo e cimento", vendê-lo online (cópias físicas ou virtuais) ou permitir que as pessoas joguem-no gratuitamente, mas incorporando algum tipo de anúncio ou item no jogo que possam ser comprado. Jogos também não são mais apenas produtos autônomos. Eles normalmente acompanham conteúdo extra que pode ser comprado além do jogo principal.
 
 É possível promover e monetizar um jogo UWP em uma ou mais das seguintes maneiras:
-* Coloque seu jogo em que a Microsoft Store, que é um seguro, oferta da loja online [distribuição mundial](#worldwide-distribution-channel). Jogadores em todo o mundo podem comprar o jogo online ao [preço que você definir](#set-a-price-for-your-game).
+* Coloque seu jogo na Microsoft Store, que é uma loja online segura que oferece [distribuição mundial](#worldwide-distribution-channel). Jogadores em todo o mundo podem comprar o jogo online ao [preço que você definir](#set-a-price-for-your-game).
 * Use APIs no SDK do Windows para criar [compras no jogo](#in-game-purchases). Os jogadores podem comprar itens dentro do jogo, ou comprar conteúdo adicional, como equipamentos extras, capas, mapas ou níveis de jogo.
-* Use APIs no [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) para exibir anúncios de redes de publicidade. É possível [exibir anúncios no jogo](#display-ads-in-your-game) e oferecer a opção para os jogadores assistirem a anúncios em vídeo em troca de premiações no jogo.
+* Use APIs no [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) para exibir anúncios de redes de publicidade. É possível [exibir anúncios no jogo](#display-ads-in-your-game) e oferecer a opção para os jogadores assistirem a anúncios em vídeo em troca de premiações no jogo.
 * [Maximize o potencial do jogo por meio de campanhas publicitárias](#maximize-your-games-potential-through-ad-campaigns). Promova o jogo usando campanhas publicitárias pagas, comunitárias (gratuitas) ou domésticas (gratuitas) para ampliar a base de usuários.
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribuição em todo o mundo
 
-A Microsoft Store pode tornar seu jogo disponíveis para download em mais de 200 países e regiões em todo o mundo, com suporte para cobrança por meio de várias formas de pagamento, incluindo Visa, Mastercard e PayPal. Para obter uma lista completa de países e regiões, consulte [seleção de colocação no mercado de definir](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+O Microsoft Store pode disponibilizar seu jogo para download em mais de 200 países e regiões em todo o mundo, com suporte para cobrança por meio de várias formas de pagamento, incluindo Visa, MasterCard e PayPal. Para obter uma lista completa de países e regiões, consulte [definir seleção de mercado](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Defina um preço para o jogo
 
@@ -37,7 +37,7 @@ Aqui estão alguns conceitos importantes a respeito do preço do jogo na Loja.
 
 ### <a name="base-price"></a>Preço base
 
-O preço base do jogo é o que determina se o jogo é categorizado como _pago_ ou _gratuito_. Você pode usar [Partner Center](https://partner.microsoft.com/dashboard) para configurar o preço base com base no país e região.
+O preço base do jogo é o que determina se o jogo é categorizado como _pago_ ou _gratuito_. Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para configurar o preço base com base no país e na região.
 O processo de determinação do preço pode incluir as [responsabilidades tributárias na venda para países diferentes](https://docs.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) e [considerações sobre custo para mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Também é possível [definir preços personalizados para mercados específicos](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets).
 
 ### <a name="sale-price"></a>Preço de venda
@@ -47,18 +47,18 @@ Uma maneira de promover o jogo é reduzir o preço por um tempo limitado. També
 
 ## <a name="in-game-purchases"></a>Compras no jogo
 
-Compras no jogo são produtos comprados dentro de um jogo. Eles também são genericamente conhecidos como _compras realizadas em aplicativo_. Na Microsoft Store, esses produtos são chamados _complementos_. [Complementos são publicados](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions) por meio do Partner Center. Você também precisará habilitar os complementos no código do jogo.
+Compras no jogo são produtos comprados dentro de um jogo. Eles também são genericamente conhecidos como _compras realizadas em aplicativo_. No Microsoft Store, esses produtos são chamados _de_Complementos. Os complementos [são publicados](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions) por meio do Partner Center. Você também precisará habilitar os complementos no código do jogo.
 
 ### <a name="types-of-add-ons"></a>Tipos de complementos
 
 É possível criar dois tipos de complementos na loja: _duráveis_ ou _consumíveis_. Duráveis são itens que persistem por um período especificado e que só podem ser comprados uma vez até expirarem. Consumíveis são itens que podem ser comprados e usados reiteradas vezes.
 
-Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um produto de consumo gerenciados pelo desenvolvedor, você é responsável por manter o controle de saldo do item para o jogador; com um produto de consumo Store gerenciados, a Microsoft Store mantém o controle de saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases).
+Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um consumo gerenciado por desenvolvedor, você é responsável por acompanhar o saldo do item para o jogador; com um consumo gerenciado por loja, o Microsoft Store controla o saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases).
 
 ### <a name="create-in-game-purchases"></a>Criar compras no jogo
 
 As compras realizadas em aplicativo e as APIs de informações de licença mais recentes fazem parte do namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) no SDK do Windows (a partir do Windows 10, versão 1607). Se você estiver desenvolvendo um novo jogo segmentado para a versão 1607 ou posterior, recomendaremos usar o namespace __Windows.Services.Store__ porque ele dá suporte aos tipos de complemento mais recentes e tem um desempenho melhor.
-Ele também foi projetado para ser compatível com tipos futuros de produtos e recursos com suporte do Partner Center e o Store. Ao desenvolver para versões anteriores do Windows 10, use o namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) em vez disso.
+Ele também foi projetado para ser compatível com os tipos futuros de produtos e recursos com suporte no Partner Center e na loja. Ao desenvolver para versões anteriores do Windows 10, use o namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) em vez disso.
 
 Para obter mais informações, vá até [Compras no aplicativo e avaliações](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials).
 
@@ -78,9 +78,9 @@ Como um complemento deve ser criado em associação a um jogo, o jogo deve ser p
 
 Para criar complementos enquanto o jogo ainda estiver em desenvolvimento:
 1. [Criar um pacote](#create-a-package)
-2. [Publique o jogo como oculto](#publish-the-game-as-hidden)
-3. [Associar sua solução de jogos no Visual Studio com a Store](#associate-your-game-solution-with-the-store)
-4. [Criar um complemento na Store](#create-an-add-on-in-the-store)
+2. [Publicar o jogo como oculto](#publish-the-game-as-hidden)
+3. [Associar sua solução de jogos no Visual Studio à loja](#associate-your-game-solution-with-the-store)
+4. [Criar um complemento na loja](#create-an-add-on-in-the-store)
 
 #### <a name="create-a-package"></a>Crie um pacote
 
@@ -90,19 +90,19 @@ Para criar um pacote que possa ser carregado na Loja:
 
 1. Abra a solução do jogo no Visual Studio.
 2. Dentro do Visual Studio, vá até __Projeto__ > __Loja__ > __Criar Pacotes de Aplicativos...__
-3. Para o __você deseja compilar pacotes para carregar o Microsoft Store?__ opção, selecione __Sim__.
-4. Entrar no seu [Partner Center](https://partner.microsoft.com/dashboard) conta de desenvolvedor. Ou [registre-se](https://developer.microsoft.com/store/register) para obter uma conta de desenvolvedor, se ainda não tiver uma.
+3. Para a opção deseja __criar pacotes para carregar na Microsoft Store?__ , selecione __Sim__.
+4. Entre em sua conta de desenvolvedor do [Partner Center](https://partner.microsoft.com/dashboard) . Ou [registre-se](https://developer.microsoft.com/store/register) para obter uma conta de desenvolvedor, se ainda não tiver uma.
 5. Selecione um aplicativo cujo pacote de carregamento você deseja criar. Se você ainda não tiver criado um envio de aplicativo, dê um novo nome de aplicativo para criar um novo envio. Para obter mais informações, consulte [Crie seu aplicativo reservando um nome](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Depois que o pacote tiver sido criado com êxito, clique em __Iniciar o Kit de Certificação de Aplicativos Windows__ para iniciar o processo de teste.
 7. Corrija todos os erros para criar um pacote de jogo.
 
 #### <a name="publish-the-game-as-hidden"></a>Publique o jogo como oculto
 
-1. Vá para [Partner Center](https://partner.microsoft.com/dashboard) e entre.
+1. Acesse o [Partner Center](https://partner.microsoft.com/dashboard) e entre.
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo com o qual você deseja trabalhar. Se você ainda não tiver criado um envio de aplicativo, clique em __Criar um novo aplicativo__ e reserve um nome.
 3. Na página __Visão geral do aplicativo__, clique em __Iniciar seu envio__.
 4. Configure esse novo envio. Na página de envio:
-    * Clique em __Preço e disponibilidade__. No __visibilidade__ , escolha '__Ocultar este aplicativo e impedir que a aquisição de...__ ' para garantir que apenas o desenvolvimento de equipe tem acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).
+    * Clique em __Preço e disponibilidade__. Na seção __visibilidade__ , escolha '__ocultar este aplicativo e impedir a aquisição...__ ' para garantir que apenas sua equipe de desenvolvimento tenha acesso ao jogo. Para saber mais detalhes, vá até [Distribuição e visibilidade](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).
     * Clique em __Propriedades__. Na seção __Categoria e subcategoria__, escolha __Jogos__ e uma subcategoria indicada para o jogo.
     * Clique em __Age ratings__. Preencha o questionário com precisão.
     * Clique em __Pacotes__. Carregue o pacote do jogo criado na etapa anterior.
@@ -118,7 +118,7 @@ Depois de ser enviado para a Loja, o jogo entrará no [processo de certificaçã
 Com a solução do jogo aberta no Visual Studio:
 
 1. Vá até __Projeto__ > __Loja__ > __Associar o aplicativo à Loja...__
-2. Entrar sua conta de desenvolvedor do Partner Center e selecione o nome do aplicativo a ser associado a essa solução com.
+2. Entre em sua conta de desenvolvedor do Partner Center e selecione o nome do aplicativo com o qual associar essa solução.
 3. Clique duas vezes no arquivo __Package.appxmanifest.xml__ e vá até a guia __Empacotamento__ para verificar se o jogo está associado corretamente.
 
 Se você tiver associado a solução a um jogo publicado que seja dinâmico e esteja listado na Loja, a solução terá uma licença ativa e você estará uma etapa mais próxima da criação de complementos para o jogo. Para obter mais informações, consulte [Empacotando aplicativos](https://docs.microsoft.com/windows/uwp/packaging/index).
@@ -127,7 +127,7 @@ Se você tiver associado a solução a um jogo publicado que seja dinâmico e es
 
 À medida que você cria complementos, certifique-se de que eles estejam associados ao envio de jogo certo. Para saber mais detalhes sobre como configurar todas as diversas informações associadas a um complemento, consulte [Envios de complemento](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-1. Vá para [Partner Center](https://partner.microsoft.com/dashboard) e entre.
+1. Acesse o [Partner Center](https://partner.microsoft.com/dashboard) e entre.
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo para o qual você deseja criar o complemento.
 3. Na página __Visão geral do aplicativo__, na seção __Complementos__, selecione __Criar um novo complemento__.
 4. Selecione o tipo de produto do complemento: __consumível gerenciado pelo desenvolvedor__, __consumível gerenciado pela loja__ ou __durável__.
@@ -136,9 +136,9 @@ Se você tiver associado a solução a um jogo publicado que seja dinâmico e es
 Entre outras configurações de complementos estão:
 * [Propriedades](https://docs.microsoft.com/windows/uwp/publish/enter-add-on-properties)
 * [Preços e disponibilidade](https://docs.microsoft.com/windows/uwp/publish/set-add-on-pricing-and-availability)
-* [Listagem de Store](https://docs.microsoft.com/windows/uwp/publish/create-add-on-store-listings)
+* [Listagem de repositório](https://docs.microsoft.com/windows/uwp/publish/create-add-on-store-listings)
 
-Se o seu jogo tem muitos complementos, você pode criá-los programaticamente usando o __API de envio da Microsoft Store__. Para obter mais informações, consulte [criar e gerenciar envios usando os serviços da Microsoft Store](https://docs.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+Se o seu jogo tiver muitos Complementos, você poderá criá-los programaticamente usando a __API de envio Microsoft Store__. Para obter mais informações, consulte [criar e gerenciar envios usando Microsoft Store Services](https://docs.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="display-ads-in-your-game"></a>Exiba anúncios no jogo
 
@@ -165,22 +165,22 @@ Para obter a lista completa de países e regiões que dão suporte a anúncios, 
 
 As classes [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol), [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e [NativeAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativead) no SDK do Microsoft Advertising são usadas para ajudar na exibição de anúncios em jogos.
 
-Para começar, baixe e instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) com o Visual Studio 2015 ou uma versão posterior. Para obter mais informações, consulte [Instalar o SDK do Microsoft Advertising](../monetize/install-the-microsoft-advertising-libraries.md).
+Para começar, baixe e instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) com o Visual Studio 2015 ou uma versão posterior. Para obter mais informações, consulte [Instalar o SDK do Microsoft Advertising](../monetize/install-the-microsoft-advertising-libraries.md).
 
 #### <a name="implementation-guides"></a>Guias de implementação
 
 Estas instruções passo a passo mostram como implementar anúncios usando __AdControl__, __InterstitialAd__ e __NativeAd__:
 
-* [Criar anúncios em XAML e o .NET](https://docs.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
-* [Criar anúncios em HTML5 e JavaScript](https://docs.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
-* [Criar anúncios intersticiais](https://docs.microsoft.com/windows/uwp/monetize/interstitial-ads)
+* [Criar anúncios de faixa em XAML e .NET](https://docs.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
+* [Criar anúncios em faixa em HTML5 e JavaScript](https://docs.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
+* [Criar anúncios do intersticial](https://docs.microsoft.com/windows/uwp/monetize/interstitial-ads)
 * [Criar anúncios nativos](https://docs.microsoft.com/windows/uwp/monetize/native-ads)
 
 Durante o desenvolvimento, é possível usar os [valores de unidade publicitária de teste](../monetize/test-mode-values.md) para ver como os anúncios são renderizados. Esses valores de unidade publicitária de teste também são usados nas instruções passo a passo acima.
 
 Aqui estão algumas práticas recomendadas para ajudar no processo de design e implementação.
 
-* [Práticas recomendadas para anúncios](https://docs.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
+* [Práticas recomendadas para anúncios em faixa](https://docs.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
 * [Práticas recomendadas para anúncios intersticiais](https://docs.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
 
 Para obter soluções para problemas de desenvolvimento comuns, como anúncios não exibidos, caixa preta piscando e desaparecendo ou anúncios não atualizados, consulte [Guia de solução de problemas](https://docs.microsoft.com/windows/uwp/monetize/troubleshooting-guides).
@@ -206,8 +206,8 @@ A Smaato permite que os anúncios em faixa sejam incorporados a aplicativos UWP 
 É possível usar o AdDuplex para implementar anúncios em faixa ou anúncios intersticiais no jogo.
 
 Para saber mais sobre a integração do AdDuplex diretamente a um projeto XAML do Windows 10, vá até o site do AdDuplex:
-* Anúncios: [Windows 10 SDK para XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
-* Anúncios intersticiais: [Uso e a instalação do Windows 10 XAML AdDuplex Ad intersticial](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
+* Anúncios em faixa: [SDK do Windows 10 para XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
+* Anúncios intersticiais: [Instalação e uso do anúncio intersticial do AdDuplex XAML do Windows 10](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
 
 Para obter informações sobre como integrar o SDK do AdDuplex a jogos UWP do Windows 10 criados usando-se o Unity, consulte [Instalação e uso de aplicativos do SDK do Windows para Unity](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage).
 
@@ -226,8 +226,8 @@ Escolha dentre vários tipos de campanhas que possam ajudar a aumentar a base de
 ## <a name="related-links"></a>Links relacionados
 
 * [Recebendo pagamentos](https://docs.microsoft.com/windows/uwp/publish/getting-paid-apps)
-* [Tipos de conta, locais e tarifas](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)
+* [Tipos de conta, locais e taxas](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)
 * [Análise](https://docs.microsoft.com/windows/uwp/publish/analytics)
 * [Globalização e localização](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
 * [Implementar uma versão de avaliação do seu aplicativo](https://docs.microsoft.com/windows/uwp/monetize/implement-a-trial-version-of-your-app)
-* [Executar testes de aplicativo com um teste a / B](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing)
+* [Executar experimentos de aplicativos com testes A/B](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing)

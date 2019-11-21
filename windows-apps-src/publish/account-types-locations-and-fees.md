@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
-ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
+ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71982239"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260059"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -20,7 +20,7 @@ O programa do Windows no [Partner Center](https://partner.microsoft.com/dashboar
 > [!NOTE]
 > Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com o conta Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
 
-Quando você [começar o processo de inscrição](https://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
+Quando você [começar o processo de inscrição](https://developer.microsoft.com/store/register), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
 
 Contas de empresa são projetadas para organizações e empresas. Para contas empresariais, exigimos uma [verificação](#account-verification) maior para confirmar se você está autorizado a configurar a conta para sua empresa. As contas individuais são geralmente apropriadas para desenvolvedores autônomos que trabalham por conta própria, embora você tenha a opção de adicionar mais usuários da conta a qualquer tipo de conta.
 
@@ -33,7 +33,7 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. De acordo com as [políticas de armazenamento](store-policies.md#1014-account-type), os aplicativos com determinadas funcionalidades, como as que acessam informações de conta financeira ou que exigem autenticação para acessar a funcionalidade primária (sem usar um provedor de autenticação de terceiros dedicado seguro), Só pode ser publicado por contas da empresa.
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. De acordo com as [políticas de armazenamento](store-policies.md#1014-account-type), os aplicativos com determinadas funcionalidades, como as que acessam informações de conta financeira ou que exigem autenticação para acessar a funcionalidade primária (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas da empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 
@@ -88,7 +88,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Colômbia                          | 36.543 COP           | 180.000 COP       |  
 | Ilhas Comores                           | 19 USD              | 99 USD           |  
 | Congo                             | 19 USD              | 99 USD           |  
-| Congo (República Democrática)                       | 19 USD              | 99 USD           |  
+| Congo (RDC)                       | 19 USD              | 99 USD           |  
 | Costa Rica                        | 9578 CRC            | 49725 CRC        |  
 | Côte d’Ivoire                     | 19 USD              | 99 USD           |  
 | Croácia                           | 107 HRK             | 500 HRK          |  

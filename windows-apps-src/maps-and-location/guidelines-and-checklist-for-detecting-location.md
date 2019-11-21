@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, localização, mapa, localização geográfica
 ms.localizationpriority: medium
-ms.openlocfilehash: b92d74332bb13a11adc25cb33c0d026e14a5b9e9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8ab8e91c773990bafd414af1ae3d071ac6142088
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371659"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259360"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Diretrizes de aplicativos com reconhecimento de local
 
@@ -20,7 +20,7 @@ ms.locfileid: "66371659"
 
 **APIs importantes**
 
--   [**Geolocation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation)
+-   [**Localização**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation)
 -   [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
 
 Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário.
@@ -30,7 +30,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
 -   Comece a usar o objeto de local somente quando o aplicativo exigir os dados de localização.
 
-    Chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) antes de acessar o local do usuário. Nesse momento, seu aplicativo deve estar em primeiro plano e **RequestAccessAsync** deve ser chamado do thread da interface do usuário. Até que o usuário conceda permissão para a localização a seu aplicativo, o aplicativo não pode acessar os dados de localização.
+    Chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) antes de acessar o local do usuário. Nesse momento, seu aplicativo deve estar em primeiro plano, e **RequestAccessAsync** deve ser chamado do thread da interface do usuário. Até que o usuário conceda permissão para a localização a seu aplicativo, o aplicativo não pode acessar os dados de localização.
 
 -   Se a localização não for essencial para o seu aplicativo, não a acesse até o usuário tentar concluir uma tarefa que a exige. Por exemplo, se um aplicativo de rede social tiver um botão para "Fazer check-in com a minha localização", o aplicativo não deverá acessar a localização até o usuário clicar no botão. Não há problema em acessar a localização imediatamente se isso for necessário para a função principal de seu aplicativo.
 
@@ -45,9 +45,9 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
 -   Limpe os dados de localização armazenados em cache e libere o [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) quando o usuário desabilitar o acesso às informações de localização.
 
-    Libere o objeto [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) se o usuário desativar o acesso às informações de localização por meio de Configurações. O aplicativo receberá **acesso\_negado** resultados de quaisquer chamadas de API de localização. No caso de o aplicativo salvar ou armazenar dados de localização em cache, limpe todos os dados do cache quando o usuário revogar o acesso às informações de localização. Ofereça um jeito alternativo de inserir manualmente as informações de localização quando os dados da localização não estiverem disponíveis via serviços de localização.
+    Libere o objeto [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) se o usuário desativar o acesso às informações de localização por meio de Configurações. O aplicativo receberá **acesso\_resultados negados** para qualquer chamada à API de localização. No caso de o aplicativo salvar ou armazenar dados de localização em cache, limpe todos os dados do cache quando o usuário revogar o acesso às informações de localização. Ofereça um jeito alternativo de inserir manualmente as informações de localização quando os dados da localização não estiverem disponíveis via serviços de localização.
 
--   Forneça a interface do usuário para reabilitar os serviços de localização. Por exemplo, fornecer um botão de atualização que reinstancia a [ **Geolocator** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) objeto e tenta obter informações de local novamente.
+-   Forneça a interface do usuário para reabilitar os serviços de localização. Por exemplo, forneça um botão Atualizar que recrie a instância do objeto [**geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) e tente obter informações de localização novamente.
 
     Forneça em seu aplicativo a interface do usuário para reabilitar os serviços de localização—
 
@@ -75,7 +75,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
         Dispositivos que fornecem dados de localização podem monitorar o intervalo de relatórios solicitado por diferentes aplicativos e fornecer relatórios de dados no menor intervalo solicitado. Dessa forma, o aplicativo com a maior necessidade de precisão recebe os dados necessários. Portanto, é possível que o provedor de localização gere atualizações com uma frequência mais alta do que a solicitada pelo aplicativo, caso outro aplicativo solicite atualizações mais frequentes.
 
-        **Observação**  não é garantia de que o local de origem atenda a solicitação para o intervalo de relatório específico. Nem todos os dispositivos de provedores de localização rastreiam o intervalo de relatório, mas você deve fornecê-lo para os que o fazem.
+        **Observe**  não é garantido que a origem do local honrará a solicitação para o intervalo de relatório especificado. Nem todos os dispositivos de provedores de localização rastreiam o intervalo de relatório, mas você deve fornecê-lo para os que o fazem.
 
     -   Para ajudar a economizar energia, defina a propriedade [**desiredAccuracy**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.desiredaccuracy) para indicar a plataforma de localização, independentemente de seu aplicativo precisar ou não de dados da maior exatidão possível. Quando nenhum aplicativo exige dados de alta precisão, o sistema pode economizar energia não habilitando os provedores de GPS.
 
@@ -84,10 +84,10 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
         Se seu aplicativo tiver necessidades específicas quanto à precisão, você poderá considerar conveniente usar a propriedade [**DesiredAccuracyInMeters**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.desiredaccuracyinmeters) em vez de usar [**DesiredAccuracy**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.desiredaccuracy). Isso é particularmente útil no Windows Phone, onde a posição geralmente pode ser obtida com base em sinalizadores de celulares, sinalizadores de Wi-Fi e satélites. Escolher um valor de precisão mais específico ajudará o sistema a identificar as tecnologias certas para usar com o menor custo de energia ao fornecer uma posição.
 
-        Por exemplo: 
+        Por exemplo:
 
         -   Se o seu aplicativo está obtendo localização para ajuste de anúncios, notícias, tempo, etc, uma precisão de 5000 metros geralmente é suficiente.
-        -   Se seu aplicativo estiver exibindo nas proximidades de ofertas na vizinhança, uma precisão de medidor de 300 é geralmente bom para fornecer resultados.
+        -   Se seu aplicativo estiver exibindo acordos próximos na vizinhança, uma precisão do medidor de 300 geralmente é boa para fornecer resultados.
         -   Se o usuário está à procura de recomendações de restaurantes nas proximidades, provavelmente queremos obter uma posição dentro de um quarteirão; portanto, uma precisão de 100 metros é suficiente.
         -   Se o usuário estiver tentando compartilhar sua posição, o aplicativo deverá solicitar uma precisão de cerca de 10 metros.
     -   Use a propriedade [**Geocoordinate.accuracy**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geocoordinate.accuracy) se seu aplicativo tiver requisitos de precisão específicos. Por exemplo, aplicativos de navegação devem utilizar a propriedade **Geocoordinate.accuracy** para determinar se os dados de localização disponíveis atendem aos requisitos do aplicativo.
@@ -101,9 +101,9 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
     -   Os sensores raw incluem o acelerômetro, o girômetro e o magnetômetro.
     -   Os sensores fusion incluem o de orientação, o inclinômetro e a bússola. Os sensores fusion obtêm seus dados de combinações dos sensores brutos.
 
-    As APIs do Windows Runtime podem acessar todos esses sensores, exceto o magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://docs.microsoft.com/windows/uwp/devices-sensors/sensors).
+    As APIs de Windows Runtime podem acessar todos esses sensores, exceto o magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://docs.microsoft.com/windows/uwp/devices-sensors/sensors).
 
-**Modo de espera conectado**
+**Em espera conectada**
 - Quando o computador está conectado no modo de espera, objetos [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) sempre podem ser instanciados. No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.statuschanged) serão chamados uma vez com o status **NoData**.
 
 ## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
@@ -115,7 +115,7 @@ O usuário pode desativar a funcionalidade de localização usando as **configur
 
 -   Para saber quando o usuário desabilita ou reabilita os serviços de localização:
     -   Trate o evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.statuschanged). A propriedade [**Status**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.statuschangedeventargs.status) do argumento para o evento **StatusChanged** tem o valor **Disabled** quando o usuário desabilita os serviços de localização.
-    -   Verifique os códigos de erro retornados de [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync). Se o usuário desabilitou os serviços de localização, chamadas para **GetGeopositionAsync** falhar com um **ACCESS\_negado** erro e o [ **LocationStatus** ](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.locationstatus) propriedade tem o valor **desabilitado**.
+    -   Verifique os códigos de erro retornados de [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync). Se o usuário tiver desabilitado os serviços de localização, as chamadas para **GetGeopositionAsync** falharão com um erro de **\_de acesso negado** e a propriedade [**LocationStatus**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.locationstatus) terá o valor **desabilitado**.
 -   Se você tiver um aplicativo cujos dados de localização são essenciais, por exemplo, um aplicativo de mapa, faça o seguinte:
     -   Trate o evento [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) para obter atualizações se houver mudança na localização do usuário.
     -   Trate o evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.statuschanged), conforme descrito anteriormente, para detectar mudanças nas configurações de localização.
@@ -165,7 +165,7 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 * [Obter a localização atual](https://docs.microsoft.com/windows/uwp/maps-and-location/get-location)
 * [Exibir mapas com modos de exibição 2D, 3D e Streetside](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [Exemplo de localização UWP (localização geográfica)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Exemplo de localização de UWP (geolocalização)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
  
 
  

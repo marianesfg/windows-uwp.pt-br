@@ -8,17 +8,17 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 427d359676bd064e577ab4f13f7b0a17f61d7e3e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 031ac1ebc8d164c99240969ce77813f36a311858
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317164"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258295"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em aplicativos UWP
 
-![Caneta Surface](images/ink/hero-small.png)  
-*Caneta Surface* (disponível para compra na [Microsoft Store](https://aka.ms/purchasesurfacepen)).
+](images/ink/hero-small.png) da caneta da superfície do ![  
+*Caneta Surface* (disponível para compra na [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
 ## <a name="overview"></a>Visão geral
 
@@ -30,7 +30,7 @@ Otimize seu aplicativo da Plataforma Universal do Windows (UWP) para entrada de 
 | Vídeos |   |
 | --- | --- |
 | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *Uso de tinta no seu aplicativo UWP* | *Usar o Windows caneta e tinta para criar aplicativos mais atraentes do enterprise* |
+| *Usando a tinta em seu aplicativo UWP* | *Use a caneta do Windows e a tinta para criar aplicativos empresariais mais atrativos* |
 
 A plataforma Windows Ink, juntamente com um dispositivo de caneta, oferece uma maneira natural de criar anotações manuscritas digitais, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, gerenciamento e geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída e conversão de tinta em texto por meio do reconhecimento de manuscrito.
 
@@ -47,10 +47,10 @@ Para obter diretrizes sobre a experiência do usuário com o Windows Ink, consul
 
 | Componente | Descrição |
 | --- | --- |
-| [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) | Um controle de plataforma XAML UI que, por padrão, recebe e exibe toda a entrada de uma caneta como um traço de tinta ou um apagamento de traço.<br/>Para obter mais informações sobre como usar o InkCanvas, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
+| [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) | Um controle de plataforma de interface do usuário XAML que, por padrão, recebe e exibe todas as entradas de uma caneta como um traço de tinta ou um traço de apagamento.<br/>Para obter mais informações sobre como usar o InkCanvas, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
 | [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | Objeto code-behind, instanciado juntamente com um controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (exposto por meio da propriedade [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)). Esse objeto fornece todas as funcionalidades de escrita à tinta expostas pelo **InkCanvas**, juntamente com um conjunto que compreende APIs de customização e personalização adicional.<br/>Para obter mais informações sobre como usar o InkPresenter, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
-| [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) | Um controle de plataforma XAML UI que contém uma coleção personalizável e extensível de botões que ativam recursos relacionados à tinta em um associado [ **InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
-| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer) | Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo Universal do Windows, em vez do controle padrão [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). Isso permite a personalização completa da experiência de escrita à tinta.<br/>Para obter mais informações, consulte o [Exemplo de tinta complexa](https://go.microsoft.com/fwlink/p/?LinkID=620314). |
+| [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) | Um controle de plataforma de interface do usuário XAML que contém uma coleção personalizável e extensível de botões que ativam recursos relacionados à tinta em um [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)associado.<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
+| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer) | Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo Universal do Windows, em vez do controle padrão [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). Isso permite a personalização completa da experiência de escrita à tinta.<br/>Para obter mais informações, consulte o [Exemplo de tinta complexa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Escrita à tinta básica com InkCanvas
 
@@ -64,7 +64,7 @@ Por padrão, o [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xam
 Neste exemplo, um [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) sobrepõe uma imagem em segundo plano.
 
 > [!NOTE]
-> Um InkCanvas possui padrão [ **altura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [ **largura** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) propriedades de zero, a menos que ele seja o filho de um elemento que automaticamente dimensiona seus elementos filho, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel) ou [grade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) controles.
+> Um InkCanvas tem propriedades de [**altura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) e [**largura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) padrão de zero, a menos que seja o filho de um elemento que redimensiona automaticamente seus elementos filho, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel) ou controles de [grade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) .
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -454,7 +454,7 @@ Chamar [**ActivateCustomDrying**](https://docs.microsoft.com/uwp/api/windows.ui.
 
 Você também pode secar a tinta de forma personalizada para um [SwapChainPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swapchainpanel), mas não há garantia de sincronização com o thread de interface do usuário e pode haver um atraso entre o momento em que a tinta é renderizada para o seu SwapChainPanel e o momento em que ela é removida do InkCanvas.
 
-Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta complexa](https://go.microsoft.com/fwlink/p/?LinkID=620314).
+Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta complexa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk).
 
 > [!NOTE]
 > Secagem personalizada e o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)  
@@ -465,35 +465,35 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 | Tópico | Descrição |
 | --- | --- |
 | [Reconhecer traços de tinta](convert-ink-to-text.md) | Converta traços de tinta em texto usando o reconhecimento de manuscrito ou em formas usando o reconhecimento personalizado. |
-| [Store e recuperar os traços de tinta](save-and-load-ink.md) | Armazene dados de traço de tinta em um arquivo Graphics Interchange Format (GIF) usando metadados incorporados Ink Serialized Format (ISF). |
-| [Adicionar um InkToolbar a um aplicativo de escrita de UWP](ink-toolbar.md) | Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada. |
+| [Armazenar e recuperar traços de tinta](save-and-load-ink.md) | Armazene dados de traço de tinta em um arquivo Graphics Interchange Format (GIF) usando metadados incorporados Ink Serialized Format (ISF). |
+| [Adicionar um InkToolbar a um aplicativo de tinta UWP](ink-toolbar.md) | Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada. |
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Introdução: Suporte a tinta no seu aplicativo UWP](../../get-started/ink-walkthrough.md)
+* [Introdução: suporte à tinta em seu aplicativo UWP](../../get-started/ink-walkthrough.md)
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 
-**APIs**
+**API**
 
-* [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
-* [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
-* [**Windows.UI.Input.Inking.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.Core)
+* [**Windows. Devices. entrada**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
+* [**Windows. UI. Input. teleking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
+* [**Windows. UI. Input. teleking. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.Core)
 
 **Exemplos**
-* [Tutorial de Introdução: Suporte a tinta no seu aplicativo UWP](https://aka.ms/appsample-ink)
-* [Exemplo de tinta simples (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Exemplo de tinta complexo (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Tutorial de introdução: suporte à tinta em seu aplicativo UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Exemplo de tinta simplesC#(C++/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Amostra de tinta complexaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
 * [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Exemplo do livro de cores](https://aka.ms/cpubsample-coloringbook)
-* [Exemplo de anotações de família](https://aka.ms/cpubsample-familynotessample)
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Exemplo de notas da família](https://github.com/Microsoft/Windows-appsample-familynotes)
+* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Exemplos de arquivo-morto**
-* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Gestos e manipulações com GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: gestos e manipulações com GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)

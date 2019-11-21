@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: d3dcd162e0a139328ef5885ac26edec04a279134
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322023"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259803"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos do Windows 8.x, consulte o [arquivo morto](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8. x, consulte o [arquivo morto](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) \]
 
 <b>APIs importantes</b>
 
@@ -31,7 +31,7 @@ Crie um item de trabalho chamando [**RunAsync**](https://docs.microsoft.com/uwp/
 Três versões de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+>Use [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar o thread da interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -350,7 +350,7 @@ Observe que o manipulador de conclusão verifica se o item de trabalho foi cance
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Você pode saber mais, baixando o código neste início rápido na [exemplo de item de criação de um trabalho de ThreadPool](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows 8.1 e reutilização de código-fonte em uma vitória\_aplicativo unap Windows 10.
+Você pode saber mais baixando o código deste guia de início rápido no [exemplo criando um item de trabalho do ThreadPool](https://code.msdn.microsoft.com/windowsapps/Creating-a-ThreadPool-work-9665cdff) escrito para Windows 8.1 e reutilizando o código-fonte em um aplicativo UNAP do Windows 10 de ganho\_.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

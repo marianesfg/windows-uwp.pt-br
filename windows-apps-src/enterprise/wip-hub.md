@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, proteção de informações do Windows, dados corporativos, proteção de dados corporativos, edp, aplicativos habilitados
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f6e3839ac2c15c1f976a9135b121ffea26174d41
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321389"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259615"
 ---
 # <a name="windows-information-protection-wip"></a>Proteção de Informações do Windows (WIP)
 
@@ -42,8 +42,8 @@ Se os usuários cancelarem o registro de seus dispositivos no sistema MDM da org
 ![Ciclo de vida do Wip](images/wip-lifecycle.png)
 
 > **Leia mais sobre WIP** <br>
-* [Apresentando a proteção de informações do Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
-* [Proteger seus dados empresariais usando a proteção de informações do Windows (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
+* [Introdução à proteção de informações do Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [Proteger seus dados corporativos usando a WIP (proteção de informações do Windows)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 Se seu aplicativo estiver na lista de permissões, todos os dados produzidos por seu aplicativo estarão sujeitos às restrições de política. Isso significa que, se os administradores revogarem o acesso do usuário aos dados corporativos, esses usuários perderão acesso a todos os dados produzidos por seu aplicativo.
 
@@ -61,13 +61,13 @@ Por exemplo, se a política permitir que os usuários colem dados corporativos e
 
 Se você estiver pronto para capacitar seu aplicativo, consulte um destes procedimentos:
 
-**Para aplicativos de plataforma Universal do Windows (UWP) que você cria usandoC#**
+**Para aplicativos Plataforma Universal do Windows (UWP) que você cria usando oC#**
 
 [Guia do desenvolvedor de Proteção de Informações do Windows (WIP)](wip-dev-guide.md).
 
-**Para aplicativos da área de trabalho que você cria usando o C++**
+**Para aplicativos de área de trabalho que você cria usando oC++**
 
-[Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
+[Guia do desenvolvedor de Proteção de Informações do Windows (WIP) (C++)](https://docs.microsoft.com/previous-versions/windows/desktop/EDP/wip-developer-guide?redirectedfrom=MSDN).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Criar um aplicativo corporativo não habilitado

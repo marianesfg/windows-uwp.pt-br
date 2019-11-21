@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9bc305834381fcdddac6e4eacf12144fd9f189c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645071"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259949"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder ao feedback dos clientes
 
 Você pode usar o [Relatório de comentários](feedback-report.md) para analisar os comentários que os clientes do Windows 10 deixaram sobre o aplicativo no Hub de Feedback e, em seguida, responder diretamente a esse comentário. Você pode postar as respostas no Hub de Feedback para que todos possam ver (como comentários individuais, ou atualizando o status de uma parte dos comentários e adicionando uma descrição) para informar aos clientes sobre novos recursos ou correções de bugs, ou para solicitar comentários mais específicos sobre como melhorar o aplicativo. Você também pode enviar a resposta como um email diretamente para o cliente que deixou os comentários.
 
 > [!TIP]
-> Você pode encorajar os clientes a deixarem comentários utilizando a API de Feedback no [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para adicionar um controle que permite aos clientes [iniciar o Hub de Feedback diretamente do aplicativo UWP](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele diretamente por meio do aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo que não tenha solicitado comentários especificamente dentro de seu aplicativo.
+> Você pode encorajar os clientes a deixarem comentários utilizando a API de Feedback no [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) para adicionar um controle que permite aos clientes [iniciar o Hub de Feedback diretamente do aplicativo UWP](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele diretamente por meio do aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo que não tenha solicitado comentários especificamente dentro de seu aplicativo.
 
 Para dar uma resposta a qualquer comentário, clique no link **Respond to feedback** exibido no comentário no **Relatório de comentários**.
 
-[Partner Center](https://partner.microsoft.com/dashboard) dá suporte a três opções para responder aos clientes que fornecem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
+O [Partner Center](https://partner.microsoft.com/dashboard) dá suporte a três opções para responder aos clientes que fornecem comentários sobre seu aplicativo. Independentemente da opção que você escolher, tenha em mente que há um limite de 1.000 caracteres para cada resposta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentários públicos no Hub de Feedback
 
@@ -44,8 +44,8 @@ Uma terceira opção para uma resposta pública é definir o status em comentár
 
 Para usar essa opção, selecione o botão de opção **Atualizar status**. Em seguida, selecione uma das seguintes opções:
 
-- **Investigando**: Você está ciente de um problema e você estiver procurando para ele.
-- **Estamos trabalhando nisso**: Você está no processo de correção de um problema ou adicionando um recurso solicitado.
+- **Investigando**: Você está ciente de um problema e o está examinando.
+- **Trabalhando nele**: Você está em meio ao processo de correção de um problema ou adição de um recurso solicitado.
 - **Concluído**: Você publicou uma atualização para corrigir o problema ou adicionar o recurso solicitado.
 
 Com a atualização do status, você pode inserir um comentário para fornecer mais informações, como uma estimativa de quando acha que um problema será corrigido ou obter mais informações sobre as alterações mais recentes. Esta descrição será exibida na parte superior da lista de comentários (e o Relatório de comentários exibirá o status e a descrição atuais).
@@ -66,4 +66,4 @@ Não importa qual método usa para responder aos comentários do cliente, você 
 > [!NOTE]
 > Os clientes pode relatar um desenvolvedor para a Microsoft caso recebam uma resposta de feedback inapropriada. Eles também podem recusar receber respostas de comentários por email.
 
-Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se você acha que o conteúdo de um comentário do cliente ao seu produto seja inapropriada, envie um [tíquete de suporte](https://go.microsoft.com/fwlink/p/?LinkID=401178).
+Sua relação com seus clientes cabe a você. A Microsoft não se envolve em controvérsias entre desenvolvedores e clientes. No entanto, se você acha que o conteúdo de um comentário do cliente ao seu produto seja inapropriada, envie um [tíquete de suporte](https://developer.microsoft.com/windows/support).

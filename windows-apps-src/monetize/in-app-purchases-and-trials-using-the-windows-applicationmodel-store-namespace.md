@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a0b81d966dedb9cebaca747eb68cb8815088b6f6
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 03bd2740022864008e87b448682c1025c46d2f2d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816704"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260284"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
@@ -20,13 +20,13 @@ Você pode usar membros no namespace [Windows.ApplicationModel.Store](https://do
 Os artigos nesta seção fornecem orientações detalhadas e exemplos de código para usar os membros no namespace **Windows.ApplicationModel.Store** para vários cenários comuns. Para uma visão geral dos conceitos básicos relacionados a compras realizadas em aplicativo em aplicativos UWP, consulte [Compras realizadas em aplicativo e avaliações](in-app-purchases-and-trials.md). Para obter um exemplo completo que demonstra como implementar avaliações e compras no aplicativo usando o namespace **Windows.ApplicationModel.Store**, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> O namespace **Windows.ApplicationModel.Store** não está mais sendo atualizado com os novos recursos. Se o seu projeto se destina ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior no Visual Studio (ou seja, você tem como destino o Windows 10, versão 1607 ou posterior), recomendamos que você use o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Para obter mais informações, consulte [Compras no aplicativo e avaliações](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). Não há suporte para o namespace **Windows. ApplicationModel. Store** em aplicativos de área de trabalho do Windows que usam a [ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso de qualquer jogo que integra-se ao Xbox Live). Estes produtos devem usar o namespace **Windows.Services.Store** para implementar compras no aplicativo e avaliações.
+> O namespace **Windows.ApplicationModel.Store** não está mais sendo atualizado com os novos recursos. Se o seu projeto se destina ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior no Visual Studio (ou seja, você tem como destino o Windows 10, versão 1607 ou posterior), recomendamos que você use o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Para obter mais informações, consulte [Compras no aplicativo e avaliações](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). Não há suporte para o namespace **Windows. ApplicationModel. Store** em aplicativos de área de trabalho do Windows que usam a [ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso de qualquer jogo que se integre com o Xbox Live). Estes produtos devem usar o namespace **Windows.Services.Store** para implementar compras no aplicativo e avaliações.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introdução às classes CurrentApp e CurrentAppSimulator
 
 O ponto de entrada principal para o namespace **Windows.ApplicationModel.Store** é a classe [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp). Essa classe fornece métodos e propriedades estáticos que você pode usar para obter informações do aplicativo atual e seus complementos disponíveis, obter informações de licença do aplicativo atual ou seus complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas.
 
-A classe [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) obtém seus dados da Microsoft Store, portanto você deve ter uma conta de desenvolvedor e o app deve ser publicado na Store para que você possa usar com êxito esta classe em seu app. Antes de enviar seu app para a Store, você pode testar o código com uma versão simulada dessa classe chamada [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator). Depois de testar o app e antes de enviá-lo para a Microsoft Store, você deve substituir as instâncias de **CurrentAppSimulator** por **CurrentApp**. O app será reprovado na certificação se ele usar **CurrentAppSimulator**.
+A classe [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) obtém seus dados da Microsoft Store, portanto você deve ter uma conta de desenvolvedor e o app deve ser publicado na Store para que você possa usar com êxito esta classe em seu app. Antes de enviar seu app para a Loja, você pode testar o código com uma versão simulada dessa classe chamada [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator). Depois de testar o app e antes de enviá-lo para a Microsoft Store, você deve substituir as instâncias de **CurrentAppSimulator** por **CurrentApp**. O app será reprovado na certificação se ele usar **CurrentAppSimulator**.
 
 Quando **CurrentAppSimulator** é usado, o estado inicial do licenciamento e dos produtos no aplicativo é descrito em um arquivo local no computador de desenvolvimento chamado WindowsStoreProxy.xml. Para obter mais informações sobre esse arquivo, consulte [Usando o arquivo WindowsStoreProxy.xml com CurrentAppSimulator](#proxy).
 
@@ -35,7 +35,7 @@ Para obter mais informações sobre tarefas comuns que você pode realizar usand
 | Tópico       | Descrição                 |
 |----------------------------|-----------------------------|
 | [Excluir ou limitar recursos em uma versão de avaliação](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. |
-| [Habilitar compras de produtos no aplicativo](enable-in-app-product-purchases.md)      |  Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Consulte a seguir como habilitar esses produtos em seu aplicativo.  |
+| [Habilitar compras de produtos no aplicativo](enable-in-app-product-purchases.md)      |  Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo.  |
 | [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md)      | Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos. |
 | [Gerenciar um grande catálogo de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)      |   Se o seu app oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo.    |
 | [Usar recibos para verificar as compras de produtos](use-receipts-to-verify-product-purchases.md)      |   Cada transação da Microsoft Store que resulta em uma compra do produto bem-sucedida pode retornar um recibo de transação que fornece informações sobre o produto listado e o custo monetário ao cliente. Ter acesso a essas informações dá suporte a cenários nos quais seu app precisa confirmar que um usuário adquiriu seu app ou fez compras de produtos no aplicativo da Microsoft Store. |
@@ -155,7 +155,7 @@ Esta seção lista o arquivo XSD que define a estrutura do arquivo WindowsStoreP
 5. Alterne para o arquivo WindowsStoreProxy.xml no Visual Studio.
 6. No menu **XML**, clique em **Esquemas** e localize a linha na lista para o arquivo WindowsStoreProxy.xsd. Se o local do arquivo não for aquele que você deseja (por exemplo, se o arquivo temporário ainda for exibido), clique em **Adicionar**. Navegue até o arquivo correto e clique em **OK**. Agora você deve ver o arquivo na lista. Verifique se uma marca de seleção aparece na coluna **Uso** para o esquema.
 
-Depois de ter feito isso, as edições realizadas no WindowsStoreProxy.xml estarão sujeitas ao esquema. Para obter mais informações, consulte [Instruções: selecionar os esquemas XML a serem usados](https://go.microsoft.com/fwlink/p/?LinkId=403014).
+Depois de ter feito isso, as edições realizadas no WindowsStoreProxy.xml estarão sujeitas ao esquema. Para obter mais informações, consulte [Instruções: selecionar os esquemas XML a serem usados](https://msdn.microsoft.com/library/ms255816).
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -355,7 +355,7 @@ Esta seção descreve os elementos e atributos no arquivo WindowsStoreProxy.xml.
 
 O elemento raiz desse arquivo é o elemento **CurrentApp**, que representa o app atual. Este elemento contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  |  Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  |  Descrição   |
 |-------------|------------|--------|--------|
 |  [ListingInformation](#listinginformation)  |    Sim        |  1  |  Contém dados dos detalhes do aplicativo.            |
 |  [LicenseInformation](#licenseinformation)  |     Sim       |   1    |   Descreve as licenças disponíveis para esse app e seus complementos duráveis.     |
@@ -370,7 +370,7 @@ Este elemento contém dados dos detalhes do aplicativo. **ListingInformation** �
 
 **ListingInformation** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  |  Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  |  Descrição   |
 |-------------|------------|--------|--------|
 |  [Aplicação](#app-child-of-listinginformation)  |    Sim   |  1   |    Fornece dados sobre o app.         |
 |  [Produto](#product-child-of-listinginformation)  |    Não  |  0 ou mais   |      Descreve um complemento para o app.     |     |
@@ -383,7 +383,7 @@ Este elemento descreve a licença do app. **App** é um filho obrigatório do el
 
 **App** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **AppId**  |    Sim   |  1   |   O GUID que identifica o app na Loja. Pode ser qualquer GUID para testes.        |
 |  **LinkUri**  |    Sim  |  1   |    O URI da página de listagem na loja. Pode ser qualquer URI válido para testes.         |
@@ -399,7 +399,7 @@ Este elemento fornece informações sobre o app para um determinado país/regiã
 
 **MarketData** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **Nome**  |    Sim   |  1   |   O nome do app nesse país/região.        |
 |  **Descrição**  |    Sim  |  1   |      A descrição do app para esse país/região.       |
@@ -411,7 +411,7 @@ Este elemento fornece informações sobre o app para um determinado país/regiã
 
 |  Atributo  |  Obrigatório  |  Descrição   |
 |-------------|------------|----------------|
-|  **XML: lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
+|  **xml:lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -435,7 +435,7 @@ Este elemento fornece informações sobre o complemento para um determinado paí
 
 **MarketData** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **Nome**  |    Sim   |  1   |   O nome do complemento nesse país/região.        |
 |  **Preço**  |    Sim  |  1   |     O preço do complemento nesse país/região.        |
@@ -450,7 +450,7 @@ Este elemento fornece informações sobre o complemento para um determinado paí
 
 |  Atributo  |  Obrigatório  |  Descrição   |
 |-------------|------------|----------------|
-|  **XML: lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
+|  **xml:lang**  |    Sim        |     Especifica o país/região ao qual as informações de dados do mercado se aplicam.          |  |
 
 <span id="licenseinformation"/>
 
@@ -460,7 +460,7 @@ Este elemento descreve as licenças disponíveis para esse app e seus produtos d
 
 **LicenseInformation** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  [Aplicação](#app-child-of-licenseinformation)  |    Sim   |  1   |    Descreve a licença do app.         |
 |  [Produto](#product-child-of-licenseinformation)  |    Não  |  0 ou mais   |      Descreve o status da licença de um complemento durável no app.         |   |
@@ -469,9 +469,9 @@ A tabela a seguir mostra como simular algumas condições comuns combinando valo
 
 |  Condição para simulação  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
-|  Totalmente licenciado  |    true   |  false  |    Ausente. Na verdade, ele pode estar presente e especificar uma data futura, mas é recomendável omitir o elemento do arquivo XML. Se estiver presente e especificar uma data no passado, **IsActive** será ignorado e considerado como false.          |
-|  Em período de avaliação  |    true  |  true   |      &lt;uma data/hora no futuro&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quanto tempo no futuro deve ser definido para obter o período de avaliação restante desejado.         |
-|  Avaliação expirada  |    false  |  true   |      &lt;uma data/hora no passado&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quando "o passado" está no UTC.         |
+|  Totalmente licenciado  |    verdadeiro   |  false  |    Ausente. Na verdade, ele pode estar presente e especificar uma data futura, mas é recomendável omitir o elemento do arquivo XML. Se estiver presente e especificar uma data no passado, **IsActive** será ignorado e considerado como false.          |
+|  Em período de avaliação  |    verdadeiro  |  verdadeiro   |      &lt;uma data/hora no futuro&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quanto tempo no futuro deve ser definido para obter o período de avaliação restante desejado.         |
+|  Avaliação expirada  |    false  |  verdadeiro   |      &lt;uma data/hora no passado&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quando "o passado" está no UTC.         |
 |  Inválido  |    false  | false       |     &lt;qualquer valor ou omitido&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
@@ -482,7 +482,7 @@ Este elemento descreve a licença do app. **App** é um filho obrigatório do el
 
 **App** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sim   |  1   |    Descreve o estado atual da licença do app. O valor **true** indica que a licença é válida; **false** indica uma licença inválida. Normalmente, esse valor é **true**, não importa se o app tem um modo de avaliação ou não.  Defina esse valor como **false** para testar o comportamento do app quando ele tem uma licença inválida.           |
 |  **Isdemo**  |    Sim  |  1   |      Descreve o estado atual da avaliação do app. O valor **true** indica que o app está sendo usado durante o período de avaliação; **false** indica que o app não está em uma avaliação, porque foi comprado ou o período de avaliação expirou.         |
@@ -496,7 +496,7 @@ Este elemento descreve o status da licença de um complemento durável no app. *
 
 **Product** contém os elementos filho a seguir.
 
-|  Elemento  |  Obrigatório  |  Quantity  | Descrição   |
+|  Elemento  |  Obrigatório  |  Quantidade  | Descrição   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sim   |  1     |    Descreve o estado atual da licença do complemento. O valor **true** indica que o complemento pode ser usado; **false** indica que o complemento não pode ser usado ou não foi comprado           |
 |  **ExpirationDate**  |    Não   |  0 ou 1     |     A data em que o complemento expira, no Tempo Universal Coordenado (UTC). A data deve ser expressa como: yyyy-mm-ddThh:mm:ss.ssZ. Por exemplo, 05:00 em 19 de janeiro de 2015 deve ser especificada como 2015-01-19T05:00:00.00Z. Se esse elemento estiver presente, o complemento tem uma data de expiração. Se não estiver presente, o complemento não expira.  |  

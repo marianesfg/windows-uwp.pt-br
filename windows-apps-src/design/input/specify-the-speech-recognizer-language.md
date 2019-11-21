@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1aa57af7e51fd7d6ef151909eccc444da2c44707
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 200fe265390d10a12a8e1b3a1abf7cd8164238d6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062051"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258236"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
 
@@ -100,7 +100,7 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 **Exemplos**
 
-* [Exemplo de reconhecimento de fala e síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e síntese de fala](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

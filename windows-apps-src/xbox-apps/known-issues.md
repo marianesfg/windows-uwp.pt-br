@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 34425a0e754d62a1d9d7716bca3576463aec3ba5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626631"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259724"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox
 
 Este tópico descreve problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One. Para saber mais sobre esse programa, consulte [UWP no Xbox](index.md). 
 
-\[Se você aqui veio de um link em um tópico de referência de API e está procurando informações de API de famílias de dispositivo Universal, consulte [recursos UWP que ainda não são suportados no Xbox](https://go.microsoft.com/fwlink/?LinkID=760755).\]
+\[se você veio aqui de um link em um tópico de referência de API e está procurando informações de API da família de dispositivos universais, consulte os [recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
 
 A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora essa não seja uma lista completa. 
 
@@ -60,7 +60,7 @@ Os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos do Xbox 
 
 ## <a name="uwp-api-coverage"></a>Cobertura de API UWP
 
-Nem todas as APIs UWP têm suporte no Xbox. Para obter a lista de APIs que sabemos que não funcionam, consulte [Recursos da UWP que ainda não têm suporte no Xbox](https://go.microsoft.com/fwlink/p/?LinkId=760755). Se você encontrar problemas com outras APIs, informe-os nos fóruns. 
+Nem todas as APIs UWP têm suporte no Xbox. Para obter a lista de APIs que sabemos que não funcionam, consulte [Recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN). Se você encontrar problemas com outras APIs, informe-os nos fóruns. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navegar para o WDP provoca um aviso de certificado

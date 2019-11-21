@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a214288c778505d16707fd64391a9b8cedbbb32
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603841"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260355"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anúncios em conteúdo de vídeo
 
@@ -26,7 +26,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Instale o [SDK do Microsoft Advertising](https://aka.ms/ads-sdk-uwp) com o Visual Studio 2015 ou uma versão posterior.
+* Instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) com o Visual Studio 2015 ou uma versão posterior.
 
 * Seu projeto deve usar o controle do [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) para servir o conteúdo de vídeo no qual os anúncios serão agendados. Esse controle está disponível na coleção de bibliotecas do [TVHelpers](https://github.com/Microsoft/TVHelpers) disponibilizado pela Microsoft no GitHub.
 
@@ -142,7 +142,7 @@ Ao retomar conteúdo que contenha publicidade, defina **playSkippedMedia** como 
 
 ### <a name="requesttimeout"></a>requestTimeout
 
-Esta propriedade obtém ou define o número de milissegundos para aguardar uma resposta de solicitação de anúncio antes do tempo limite. O valor 0 informa o sistema para nunca atingir o tempo limite. O padrão é 30000 ms (30 segundos).
+Essa propriedade obtém ou define o número de milissegundos para aguardar uma resposta de solicitação de anúncio antes do tempo limite. O valor 0 informa o sistema para nunca atingir o tempo limite. O padrão é 30000 ms (30 segundos).
 
 ### <a name="schedule"></a>programa
 
@@ -152,9 +152,9 @@ Essa propriedade obtém os dados de agendamento recuperados do servidor de anún
 
 Esse evento é acionado quando a reprodução do anúncio atinge pontos de verificação de quartil. O segundo parâmetro do manipulador de eventos (*eventInfo*) é um objeto JSON com os membros a seguir:
 
-* **progresso**: O status de reprodução do ad (um dos **MediaProgress** valores de enumeração definidos no AdScheduler.js).
-* **Clip**: O clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
-* **adPackage**: Um objeto que representa a parte da carga do ad que corresponde ao ad que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
+* **progress**: o status de reprodução do anúncio (um dos valores da enumeração **MediaProgress** definidos em AdScheduler.js).
+* **clip**: o clipe de vídeo que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
+* **adPackage**: um objeto que representa a parte da carga do anúncio que corresponde ao anúncio que está sendo reproduzido. Essa objeto não deve ser utilizado em seu código.
 
 ### <a name="onallcomplete"></a>onAllComplete  
 
@@ -168,8 +168,8 @@ Esse evento é gerado quando o **AdScheduler** encontra um erro. Para obter mais
 
 Esse evento é gerado quando um anúncio está sendo reproduzido e indica o tempo restante no pod atual. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **remainingAdTime**: O número de segundos é deixada para o ad atual.
-* **remainingPodTime**: O número de segundos é deixada para o pod atual.
+* **remainingAdTime**: o número de segundos restantes para o anúncio atual.
+* **remainingPodTime**: o número de segundos restantes para o pod atual.
 
 > [!NOTE]
 > Uma pod é um grupo de anúncios reproduzido em uma sequência, como um grupo de anúncios que é reproduzido durante um intervalo comercial. Para obter mais detalhes, consulte a especificação VAST (Digital Video Ad Serving Template) do IAB.
@@ -178,12 +178,12 @@ Esse evento é gerado quando um anúncio está sendo reproduzido e indica o temp
 
 Esse evento é gerado quando um pod de anúncios termina. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **startTime**: Hora de início do pod, em segundos.
-* **pod**: Um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
+* **startTime**: a hora de início do pod, em segundos.
+* **pod**: um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
 
 ### <a name="onpodstart"></a>onPodStart
 
 Esse evento é gerado quando um pod de anúncios inicia. O segundo parâmetro do manipulador de eventos (*eventData*) é um objeto JSON com os membros a seguir:
 
-* **startTime**: Hora de início do pod, em segundos.
-* **pod**: Um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.
+* **startTime**: a hora de início do pod, em segundos.
+* **pod**: um objeto que representa o pod. Essa objeto não deve ser utilizado em seu código.

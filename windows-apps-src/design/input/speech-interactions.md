@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
-ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
+ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253066"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258243"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
@@ -58,7 +58,7 @@ Pare o reconhecimento se for detectada entrada de um dispositivo que não seja o
 
 Especifique o período de tempo durante o qual a ausência de entrada de fala indica que o reconhecimento terminou. Não reinicie automaticamente o reconhecimento após esse período de tempo, pois ele geralmente indica que o usuário parou de interagir com seu aplicativo.
 
-Desabilite todas as interfaces do usuário de reconhecimento contínuo e encerre a sessão de reconhecimento se uma conexão de rede não estiver disponível. Reconhecimento contínuo requer uma conexão de rede.
+Desabilite todas as interfaces do usuário de reconhecimento contínuo e encerre a sessão de reconhecimento se uma conexão de rede não estiver disponível. O reconhecimento contínuo requer uma conexão de rede.
 
 ## <a name="commanding"></a>Execução de comandos
 
@@ -157,7 +157,7 @@ Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos
 Uma gramática personalizada é projetada e criada por você e instalada com o seu aplicativo. O reconhecimento de fala usando uma restrição personalizada é realizado no dispositivo.
 
 -   Restrições de lista programática fornecem uma abordagem leve para criar gramáticas simples usando uma lista de palavras ou frases. Uma lista de restrições funciona bem para o reconhecimento de frases curtas e distintas. Especificar explicitamente todas as palavras em uma gramática também melhora a precisão do reconhecimento, porque o mecanismo de reconhecimento de fala deve processar somente a fala para confirmar uma correspondência. A lista também pode ser atualizada programaticamente.
--   Uma gramática SRGS é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
+-   Uma gramática SRGS é um documento estático que, ao contrário de uma restrição de lista programática, usa o formato XML definido pela [SRGS Versão 1.0](https://www.w3.org/TR/speech-grammar/). Uma gramática SRGS oferece maior controle sobre a experiência de reconhecimento de fala, permitindo a você capturar diversos significados semânticos em um único reconhecimento.
 
     Veja algumas dicas para criar gramáticas SRGS:
 
@@ -179,7 +179,7 @@ Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases u
 
 Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obter mais informações.
 
-## <a name="testing"></a>Testes
+## <a name="testing"></a>Testando
 
 Teste a precisão do reconhecimento de fala e qualquer interface do usuário de suporte com o público-alvo do seu aplicativo. Esta é a melhor maneira de determinar a eficiência da experiência de interação de fala no seu aplicativo. Por exemplo, os usuários estão obtendo resultados de reconhecimento insatisfatórios porque seu aplicativo não está ouvindo uma frase comum?
 
@@ -200,17 +200,17 @@ Você deve ouvir todas as cadeias de caracteres da TTS para garantir que sejam i
 -   Encadear uma sequência incomum de palavras ou falar números de peças ou pontuação podem tornar uma frase inteligível.
 -   A fala pode parecer artificial quando a prosódia ou a cadência é diferente de como um falante nativo diria a frase.
 
-Os dois problemas podem ser tratados usando SSML em vez de texto sem formatação como entrada para o sintetizador de fala. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) e [Referência da linguagem de marcação da sintetização de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
+Ambos os problemas podem ser resolvidos usando SSML em vez de texto sem formatação como entrada para o sintetizador de fala. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) e [Referência da linguagem de marcação da sintetização de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Outros artigos nesta seção 
 
 | Tópico | Descrição |
 | --- | --- |
 | [Reconhecimento de fala](speech-recognition.md) | Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas. |
-| [Especifique o idioma de reconhecimento de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
+| [Especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
 | [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md) | Saiba como definir e usar restrições personalizadas para reconhecimento de fala. |
 | [Habilitar o ditado contínuo](enable-continuous-dictation.md) |Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo. |
-| [Gerenciar problemas com a entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
+| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
 | [Definir tempos limite de reconhecimento de fala](set-speech-recognition-timeouts.md) | Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala. |
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -220,7 +220,7 @@ Os dois problemas podem ser tratados usando SSML em vez de texto sem formataçã
 
  **Exemplos**
 
-* [Reconhecimento de fala e amostra de síntese de fala](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e síntese de fala](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dec80e4b79a93fc5b6f1e2990ad89570d62c5f1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 406af54cfaae8710cea2d989278a16f28c8dd619
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361443"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256212"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efeitos para análise de quadros de câmera
 
@@ -97,7 +97,7 @@ Se você deseja executar algumas ações quando rostos forem detectados, como de
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-No manipulador do evento, você pode obter uma lista de todos os rostos detectados em um quadro acessando a propriedade [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) do [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs). A propriedade [**FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) é uma estrutura [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) que descreve o retângulo contendo o rosto detectado em unidades relativas às dimensões do fluxo de visualização. Para ver o código de amostra que transforma as coordenadas do fluxo de visualização em coordenadas de tela, consulte o [amostra UWP de detecção de rosto](https://go.microsoft.com/fwlink/?LinkId=619486).
+No manipulador do evento, você pode obter uma lista de todos os rostos detectados em um quadro acessando a propriedade [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) do [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs). A propriedade [**FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) é uma estrutura [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) que descreve o retângulo contendo o rosto detectado em unidades relativas às dimensões do fluxo de visualização. Para ver o código de amostra que transforma as coordenadas do fluxo de visualização em coordenadas de tela, consulte o [amostra UWP de detecção de rosto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFaceDetection).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
@@ -116,7 +116,7 @@ Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Foto básica, vídeo e captura de áudio com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

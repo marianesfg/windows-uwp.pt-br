@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificação de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: d6be00fdbfc7ef5950f6cc35ba35d4afd0dc2791
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 4772edb9c99426396b7fa3a8734e2f45391c3a0f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682449"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257832"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 
 
-Para fazer com que o Windows do aplicativo seja [certificado](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação no Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), você deve validá-lo e testá-lo no local primeiro. Este tópico mostra como instalar e executar o kit de [certificação de aplicativos do Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo seja seguro e eficiente.
+Para fazer com que o Windows do aplicativo seja [certificado](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação no Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), você deve validá-lo e testá-lo no local primeiro. Este tópico mostra como instalar e executar o kit de [certificação de aplicativos do Windows](https://msdn.microsoft.com/en-US/windows/apps/bg127575) para garantir que seu aplicativo seja seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -36,7 +36,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 1.  No menu **Iniciar**, procure por **Aplicativos**, localize **Kits do Windows** e clique em **Kit de Certificação de Aplicativos Windows**.
 
-2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo:  Se você estiver validando um aplicativo do Windows, selecione **validar um aplicativo do Windows**.
+2.  No Kit de Certificação de Aplicativos Windows, selecione a categoria de validação que você deseja executar. Por exemplo: se você estiver validando um aplicativo do Windows, selecione **Validar um aplicativo do Windows**.
 
     Você pode navegar diretamente para o aplicativo em teste ou escolher o aplicativo em uma lista na interface do usuário. Quando o Kit de Certificação de Aplicativos Windows é executado pela primeira vez, a interface do usuário lista todos os aplicativos do Windows instalados no computador. Nas execuções subsequentes, a interface do usuário exibirá os aplicativos do Windows que você validou. Se o aplicativo que você deseja testar não estiver listado, clique em **Meu aplicativo não está na lista** para obter uma lista completa de todos os aplicativos instalados no sistema.
 
@@ -64,7 +64,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 1.  Na janela de comando, navegue até o diretório que contém o Kit de Certificação de Aplicativos Windows.
 
-    **Observe** \\\\\\\\que o caminho padrão é C\\: Program Files Windows kits 10 App Certification Kit.  
+    **Observação**   o caminho padrão é C:\\arquivos de programas\\kits do Windows\\10\\kit de certificação de aplicativos\\.
 
 2.  Insira os seguintes comandos nesta ordem para testar um aplicativo que já está instalado no computador de teste:
 
@@ -80,15 +80,15 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( https://go.
 
 3.  Quando o teste for concluído, abra o arquivo de relatório denominado `[report file name]` e examine os resultados.
 
-**Observação o kit**de certificação de aplicativos para Windows pode ser executado de um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado no Session0.  
+**Observação**  o kit de certificação de aplicativos para Windows pode ser executado de um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado no Session0.
 
-**Observação para obter** mais informações sobre a linha de comando do kit de certificação de aplicativos do Windows, digite o comando  `appcert.exe /?`
+**Observação**   para obter mais informações sobre a linha de comando do kit de certificação de aplicativos do Windows, digite o comando `appcert.exe /?`
 
 ## <a name="testing-with-a-low-power-computer"></a>Testando com um computador com baixo consumo de energia
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
-As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [políticas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador Intel Atom com uma resolução de tela de 1366x768 (ou superior) e um disco rígido rotacional (em oposição a um disco rígido de estado sólido).
+As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [políticas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), recomendamos que você teste seu aplicativo em um computador de baixa energia, como um computador baseado no processador Intel Atom com uma resolução de tela de 1366x768 (ou superior) e um disco rígido rotativo (em oposição a um disco rígido de estado sólido).
 
 As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as [políticas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) mais atuais e teste seu aplicativo com a versão mais atual do kit de certificação de aplicativos do Windows para garantir que seu aplicativo esteja em conformidade com os requisitos de desempenho mais recentes.
 

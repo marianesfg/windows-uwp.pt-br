@@ -4,14 +4,14 @@ description: Aprenda a criar uma função que pode ser reutilizada para registra
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 ms.date: 02/08/2017
 ms.topic: article
-keywords: o Windows 10, uwp, tarefas em segundo plano
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 087f60ae3a16ad4cd38137d692fe079ce6c58bf4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c80419a5353386872356eee7a677f10d616a9f6a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371739"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259430"
 ---
 # <a name="register-a-background-task"></a>Registrar uma tarefa em segundo plano
 
@@ -39,7 +39,7 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de tarefa em segundo plano pré-construído e (opcionalmente) uma [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) para a tarefa em segundo plano. Este método retorna um objeto [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).
 
 > [!Important]
-> `taskEntryPoint` -para tarefas em segundo plano que são executados em fora do processo, isso deve ser construído como o nome do namespace '.' e o nome da classe que contém sua classe de plano de fundo. A cadeia de caracteres diferencia maiúsculas de minúsculas.  Por exemplo, se você tivesse um namespace "MyBackgroundTasks" e uma classe "BackgroundTask1" contendo o código da classe em segundo plano, a cadeia de caracteres para `taskEntryPoint` seria "MyBackgroundTasks.BackgroundTask1".
+> `taskEntryPoint`-para tarefas em segundo plano que são executadas fora do processo, isso deve ser construído como o nome do namespace, '. ' e o nome da classe que contém sua classe de segundo plano. A cadeia de caracteres diferencia maiúsculas de minúsculas.  Por exemplo, se você tivesse um namespace "MyBackgroundTasks" e uma classe "BackgroundTask1" contendo o código da classe em segundo plano, a cadeia de caracteres para `taskEntryPoint` seria "MyBackgroundTasks.BackgroundTask1".
 > Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano dentro do processo) `taskEntryPoint` não deverá ser definido.
 
 > [!div class="tabbedCodeSnippets"]
@@ -74,7 +74,7 @@ Verifique se a tarefa já está registrada. É importante verificar isso porque,
 
 Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) e iterando no resultado. Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa.
 
-> **Observação**  usar nomes de tarefas em segundo plano que são exclusivos para seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
+> **Observe**  usar nomes de tarefas em segundo plano que são exclusivos para seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
 O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) que criamos na última etapa:
 
@@ -147,7 +147,7 @@ Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo
 
 Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) retornada pela função [**BackgroundTaskBuilder.Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register).
 
-> **Observação**  parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+> **Observe**  os parâmetros de registro da tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 > **Observação** Se você registrar uma tarefa em segundo plano executada no mesmo processo do aplicativo, envie `String.Empty` ou `null` para o parâmetro `taskEntryPoint`.
 
 O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a tarefa em segundo plano (incluindo a condição de sistema opcional, se presente):
@@ -387,4 +387,4 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

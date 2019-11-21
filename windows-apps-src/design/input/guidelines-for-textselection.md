@@ -1,5 +1,5 @@
 ---
-Description: Este tópico descreve a nova interface do Windows para selecionar e manipular texto, imagens e controles e fornece diretrizes de experiência do usuário que devem ser consideradas ao usar esses mecanismos de manipulação e nova seleção no seu aplicativo da UWP.
+Description: Este tópico descreve a nova interface do usuário do Windows para selecionar e manipular texto, imagens e controles e fornece diretrizes de experiência do usuário que devem ser consideradas ao usar esses novos mecanismos de seleção e manipulação em seu aplicativo UWP.
 title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
@@ -8,12 +8,12 @@ keywords: teclado, texto, entrada, interações do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dab8d26436d312601b749bed7e97048ed5805bb
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 56f09f2c903354159c63fa7226007cd65e57e69e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317282"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257923"
 ---
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 
@@ -47,20 +47,20 @@ A seleção e a manipulação de texto são particularmente suscetíveis aos des
 
 **Considerações e recomendações**
 
-Use os controles internos expostos por meio de estruturas de linguagem no Windows para criar aplicativos que fornecem a experiência de interação de usuário de plataforma completo, incluindo comportamentos de seleção e a manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
+Use os controles internos expostos por meio das estruturas de linguagem no Windows para criar aplicativos que fornecem a experiência de interação do usuário de plataforma completa, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
 
 Ao usar controles de texto da UWP padrão, os comportamentos de seleção e os recursos visuais descritos neste tópico não podem ser personalizados.
 
 **Seleção de texto**
 
-Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, é recomendável que você siga os comportamentos de seleção do Windows descritos aqui.
+Se seu aplicativo exigir uma interface do usuário personalizada que dê suporte à seleção de texto, recomendamos que você siga os comportamentos de seleção do Windows descritos aqui.
 
-**Conteúdo editável e não editáveis**
+**Conteúdo editável e não editável**
 
 
-Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Como com outros Windows touch interações, interações cronometradas estão limitadas à imprensa e mantenha o gesto para exibir a informação da interface do usuário. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
+Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como acontece com outras interações com o Windows Touch, as interações temporais são limitadas ao gesto de pressionar e manter para exibir a interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
 
-Windows reconhece dois estados possíveis para interações de seleção, editáveis e não editáveis e também se ajusta a seleção da interface do usuário, comentários e funcionalidade.
+O Windows reconhece dois Estados possíveis para interações de seleção, editável e não editável, e ajusta a interface de usuário de seleção, os comentários e a funcionalidade de acordo.
 
 **Conteúdo editável**
 
@@ -98,11 +98,11 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 ![media player com garra de progresso](images/gripper-mediaplayer.png)
 
-*Player de mídia com a barra de progresso ajustáveis.*
+*Player de mídia com barra de progresso ajustável.*
 
 ![Imagem com garras de corte](images/gripper-imagemanip.png)
 
-*Editor de imagens com as garras de corte.*
+*Editor de imagem com garras de corte.*
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -112,20 +112,20 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 * [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **Exemplos**
-* [Exemplo de entrada básico](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Amostras de arquivo-morto**
-* [Entrada: Exemplo de eventos de entrada do usuário XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Exemplo de recursos do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Exemplo de teste de hit de toque](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML de rolagem, movimento panorâmico e zoom de exemplo](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Exemplo simplificado de tinta](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: Exemplo de gestos do Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: Manipulações e exemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Exemplo de entrada de toque do DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Entrada: exemplo de gestos do Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Exemplo de entrada do DirectX Touch](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  
