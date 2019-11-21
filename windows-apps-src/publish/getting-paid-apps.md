@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a3c8bf0d2d203b650b2706c24dc4c20e88e2576
-ms.sourcegitcommit: 36f502e2449f49e82bd593d6aea0b71ac48d6bec
+ms.openlocfilehash: 853554a0a3a0507f1a8b9d8994618d16aa44bccc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70750558"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260000"
 ---
 # <a name="getting-paid"></a>Sendo pago
 Aqui estão algumas informações importantes sobre o recebimento de pagamentos para seus aplicativos, Complementos e anúncios de publicidade.
@@ -21,7 +21,7 @@ Aqui estão algumas informações importantes sobre o recebimento de pagamentos 
 
 ## <a name="store-fee"></a>Taxa da loja
 
-Ao [se inscrever para uma conta de desenvolvedor](https://go.microsoft.com/fwlink/p/?LinkID=615100), você aceita o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Esse contrato explica o relacionamento entre você e a Microsoft em relação à venda de apps na Microsoft Store, incluindo a taxa da Store cobrada pela Microsoft por cada venda feita.
+Ao [se inscrever para uma conta de desenvolvedor](https://developer.microsoft.com/store/register), você aceita o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Esse contrato explica o relacionamento entre você e a Microsoft em relação à venda de apps na Microsoft Store, incluindo a taxa da Store cobrada pela Microsoft por cada venda feita.
 
 As taxas estão oficialmente definidas no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Sempre que tiver alguma dúvida, leia esse documento.
 

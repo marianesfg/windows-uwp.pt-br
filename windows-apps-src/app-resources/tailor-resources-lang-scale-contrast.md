@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 0d6af9d532ecabe517983e8b56cdf8e1b2a2d812
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820212"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254518"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 
@@ -191,13 +191,13 @@ Dificilmente você precisará do nome de qualificador `dxfeaturelevel`. Ele foi 
 
 ## <a name="homeregion"></a>HomeRegion
 
-O qualificador `homeregion` corresponde à configuração do usuário referente ao país ou à região. Ele representa o local de residência do usuário. Os valores incluem qualquer [marca de região BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) válida. Ou seja, qualquer código de região de duas letras **ISO 3166-1 alpha-2**, além do conjunto de códigos geográficos de três dígitos **ISO 3166-1 numeric** para regiões compostas (consulte [composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)). Códigos para "Indicadores econômicos selecionados e outros agrupamentos" não são válidos.
+O qualificador `homeregion` corresponde à configuração do usuário referente ao país ou à região. Ele representa o local de residência do usuário. Os valores incluem qualquer [marca de região BCP-47](https://tools.ietf.org/html/bcp47) válida. Ou seja, qualquer código de região de duas letras **ISO 3166-1 alpha-2**, além do conjunto de códigos geográficos de três dígitos **ISO 3166-1 numeric** para regiões compostas (consulte [composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](https://unstats.un.org/unsd/methods/m49/m49regin.htm)). Códigos para "Indicadores econômicos selecionados e outros agrupamentos" não são válidos.
 
 ## <a name="language"></a>Idioma
 
-O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
+O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](https://tools.ietf.org/html/bcp47) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](https://www.iana.org/assignments/language-subtag-registry).
 
-Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e você tiver literais de cadeia de caracteres no código ou na marcação XAML, retire essas cadeias de caracteres do código/marcação e insira-as em um arquivo de recursos (`.resw`). Em seguida, você poderá fazer uma cópia traduzida desse arquivo de recursos para cada idioma ao qual o app ofereça suporte.
+Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e você tiver literais de cadeia de caracteres no código ou na marcação XAML, retire essas cadeias de caracteres do código/marcação e insira-as em um arquivo de recursos (`.resw`). Em seguida, você poderá fazer uma cópia traduzida desse arquivo de recursos para cada idioma ao qual o aplicativo dê suporte.
 
 Você normalmente usa um qualificador `language` para nomear as pastas que contêm os arquivos de recursos (`.resw`).
 
@@ -256,22 +256,22 @@ Você pode definir os ativos que representam os vários tamanhos do valor de qua
 
 Para obter informações sobre qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para tamanho alvo](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
-## <a name="theme"></a>{1&gt;Tema&lt;1}
+## <a name="theme"></a>Tema
 
 O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 
-## <a name="shell-light-theme-and-unplated-resources"></a>Tema claro do shell e recursos unplated
-O *atualização do Windows 10 podem 2019* introduziu um novo tema "light" para o Shell do Windows. Como resultado, alguns ativos de aplicativo que foram mostrados anteriormente em um plano de fundo escuro agora aparecerá na tela de fundo clara. Para aplicativos que aplicativos que fornecida altform unplated ativos para as barra de tarefas e a janela alternadores (Alt + Tab, modo de exibição de tarefas, etc.), você deve verificar se eles têm contraste aceitável no plano de fundo claro.
+## <a name="shell-light-theme-and-unplated-resources"></a>Tema claro do Shell e recursos não-folheados
+A *atualização do Windows 10 de maio de 2019* introduziu um novo tema "leve" para o Shell do Windows. Como resultado, alguns ativos de aplicativo que foram mostrados anteriormente em um plano de fundo escuro agora serão mostrados em um plano de fundo claro. Para aplicativos que forneciam ativos altforms para os comutadores da barra de tarefas e da janela (Alt + Tab, modo de exibição de tarefa etc.), você deve verificar se eles têm um contraste aceitável em um plano de fundo leve.
 
-### <a name="providing-light-theme-specific-assets"></a>Fornecendo ativos específicos do tema claro
-Aplicativos que desejam fornecer um recurso sob medido para o tema claro do shell pode usar um novo qualificador de recurso de forma alternativa: `altform-lightunplated`. Este qualificador espelha o qualificador altform unplated existente. 
+### <a name="providing-light-theme-specific-assets"></a>Fornecendo ativos específicos de tema claro
+Os aplicativos que desejam fornecer um recurso personalizado para o tema de shell Light podem usar um novo qualificador de recurso de formulário alternativo: `altform-lightunplated`. Este qualificador espelha o qualificador altform existente. 
 
 ### <a name="downlevel-considerations"></a>Considerações de nível inferior
-Aplicativos não devem usar o `theme-light` qualificador com a `altform-unplated` qualificador. Isso causará um comportamento imprevisível em RS5 e versões anteriores do Windows devido a recursos de forma são carregadas para a barra de tarefas. Em versões anteriores do windows, a versão do tema claro pode ser usada incorretamente. O `altform-lightunplated` qualificador evita esse problema. 
+Os aplicativos não devem usar o qualificador `theme-light` com o qualificador de `altform-unplated`. Isso causará um comportamento imprevisível no RS5 e em versões anteriores do Windows devido à maneira como os recursos são carregados para a barra de tarefas. Em versões anteriores do Windows, a versão de tema-Light pode ser usada incorretamente. O qualificador de `altform-lightunplated` evita esse problema. 
 
 ### <a name="compatibility-behavior"></a>Comportamento de compatibilidade
-Para versões anteriores compatibilidade, o Windows inclui lógica para detectar uma ícones monocromática e verificar se ela contrasta com a tela de fundo pretendida. Se o ícone de não atender aos requisitos de contraste, o Windows procurará uma versão de branco de contraste do ativo. Se não estiver disponível, Windows fará o fallback para usar a versão folheada do ativo.
+Para compatibilidade com versões anteriores, o Windows inclui a lógica para detectar ícones monodesvios e verificar se ele contrasta com o plano de fundo pretendido. Se o ícone não atender aos requisitos de contraste, o Windows procurará uma versão em branco do ativo. Se isso não estiver disponível, o Windows voltará a usar a versão folheada do ativo.
 
 
 
@@ -282,13 +282,13 @@ Para versões anteriores compatibilidade, o Windows inclui lógica para detectar
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Pixels efetivos e o fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Pixels efetivos e fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de Gerenciamento de Recursos](resource-management-system.md)
 * [Como se preparar para localização](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
-* [Detectar a plataforma de seu aplicativo está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Visão geral de famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-* [Localizar suas cadeias de caracteres da interface do usuário](localize-strings-ui-manifest.md)
-* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Composição das Nações Unidas M49 de divisão de estatística de códigos de região](https://go.microsoft.com/fwlink/p/?linkid=247929)
-* [Registro de submarca de idioma IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [Detectando a plataforma em que seu aplicativo está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Localize suas cadeias de caracteres de interface](localize-strings-ui-manifest.md)
+* [BCP-47](https://tools.ietf.org/html/bcp47)
+* [Composição de M49 de divisão de estatística das Nações Unidas de códigos de região](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
+* [Registro Subtag da linguagem IANA](https://www.iana.org/assignments/language-subtag-registry)
 * [Ajustar layout e fontes e fornecer suporte para RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

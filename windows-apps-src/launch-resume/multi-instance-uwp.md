@@ -5,12 +5,12 @@ keywords: uwp de várias instâncias
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 175ef3a3199440bf4ed6b3ee0dc91726b52e5043
-ms.sourcegitcommit: 38884ab90d5ad775c97cd880e1933b73a68750a5
+ms.openlocfilehash: 9be9b5eec70bc98bc2c44beaf1dcfbba00876f20
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544206"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259432"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
@@ -23,11 +23,11 @@ Do Windows 10, versão 1803 (10,0; Build 17134) em diante, seu aplicativo UWP po
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Aceitar o comportamento de várias instâncias
 
-Se você estiver criando um novo aplicativo de várias instâncias, você pode instalar o [Templates.VSIX de projeto de aplicativo de várias instâncias](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.MultiInstanceApps), disponível no [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Depois de instalar os modelos, eles estarão disponíveis na caixa de diálogo **Novo Projeto** em **Visual C# > Universal do Windows** (ou **Outras linguagens > Visual C++ > Universal do Windows**).
+Se você estiver criando um novo aplicativo de várias instâncias, você pode instalar o [Templates.VSIX de projeto de aplicativo de várias instâncias](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.MultiInstanceApps), disponível no [Visual Studio Marketplace ](https://marketplace.visualstudio.com/). Depois de instalar os modelos, eles estarão disponíveis na caixa de diálogo **Novo Projeto** em **Visual C# > Universal do Windows** (ou **Outras linguagens > Visual C++ > Universal do Windows**).
 
-Dois modelos estão instalados: **Aplicativo UWP de várias instâncias**, que fornece o modelo para criar um aplicativo de várias instâncias e um **aplicativo UWP**de redirecionamento de várias instâncias, que fornece uma lógica adicional que pode ser criada para iniciar uma nova instância ou Ativar seletivamente um instância que já foi iniciada. Por exemplo, talvez você queira apenas uma instância por vez editando o mesmo documento, de modo que você traga a instância que tem esse arquivo aberto para o primeiro plano em vez de iniciar uma nova instância.
+Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você queira apenas uma instância por vez editando o mesmo documento, de modo que você traga a instância que tem esse arquivo aberto para o primeiro plano em vez de iniciar uma nova instância.
 
-Ambos os modelos `SupportsMultipleInstances` são adicionados `package.appxmanifest` ao arquivo. Observe o prefixo `desktop4` do namespace `iot2`e: somente projetos direcionados aos projetos da área de trabalho, ou Internet das coisas (IOT), oferecem suporte a várias instâncias.
+Ambos os modelos adicionam `SupportsMultipleInstances` ao arquivo de `package.appxmanifest`. Observe o prefixo do namespace `desktop4` e `iot2`: somente projetos direcionados aos projetos da área de trabalho ou Internet das Coisas (IoT) oferecem suporte a várias instâncias.
 
 ```xml
 <Package
@@ -108,9 +108,9 @@ public static class Program
 }
 ```
 
-`Main()`é a primeira coisa que o executa. Ele é executado antes de [**onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_)  e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
+`Main()` é a primeira coisa que é executada. Ele é executado antes de [**onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_)  e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
 
-O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Essa é a ideia por trás do código:`var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
+O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Essa é a ideia por trás do código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
 Se uma instância registrada com a chave for encontrada, essa instância é ativada. Se a chave não for encontrado, em seguida, a instância atual (a instância que está sendo executado `Main`) cria seu objeto de aplicativo e começa a ser executado.
 
@@ -132,7 +132,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 
 ## <a name="sample"></a>Amostra
 
-Consulte [exemplo de várias instâncias](https://aka.ms/Kcrqst) para obter um exemplo de redirecionamento de ativação de várias instâncias.
+Consulte [exemplo de várias instâncias](https://github.com/Microsoft/AppModelSamples/tree/master/Samples/BananaEdit) para obter um exemplo de redirecionamento de ativação de várias instâncias.
 
 ## <a name="see-also"></a>Consulte também
 

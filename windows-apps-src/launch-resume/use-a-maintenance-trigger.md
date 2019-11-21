@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d59d5cd7a2ffbc55b36f0169939859bf1b6b9db5
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c155a2b80826669693c3250282076d8a1b27ee83
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370562"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259401"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
@@ -36,9 +36,9 @@ Mais informações sobre como escrever uma classe de tarefa em segundo plano est
 Crie um novo objeto [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
 > [!NOTE]
-> Se *FreshnessTime* for definido como menor que 15 minutos, uma exceção é lançada ao tentar registrar a tarefa em segundo plano.
+> Se *FreshnessTime* for definido para menos de 15 minutos, uma exceção será lançada ao tentar registrar a tarefa em segundo plano.
 
-Esse código de exemplo cria um gatilho que é executado uma vez por hora.
+Este código de exemplo cria um gatilho que é executado uma vez por hora.
 
 ```csharp
 uint waitIntervalMinutes = 60;
@@ -108,7 +108,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 > Para todas as famílias de dispositivos, exceto desktop, caso haja pouca memória, as tarefas em segundo plano podem ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
 > [!NOTE]
-> Aplicativos da plataforma Windows universal devem chamar [ **RequestAccessAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
+> Plataforma Universal do Windows aplicativos devem chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer um dos tipos de gatilho em segundo plano.
 
 Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização para o aplicativo, chame [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) e, em seguida, chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
@@ -129,4 +129,4 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 89257a4ec64458f5734c2b04c1e654a7c0c44f27
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2800db96177f77648d2d2a98f5cd87c930f6840a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339906"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258332"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -319,7 +319,7 @@ O objetivo da propriedade [**Handled**](https://docs.microsoft.com/uwp/api/windo
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler e eventos do teclado já manipulados
 
-Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como + = em C @ no__t-2.
+Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como + = em C\#.
 
 Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Os eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) e [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent) e [**KeyUpEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent)) em [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Contudo, outros eventos, como [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
 
@@ -393,16 +393,16 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 
 **Exemplos**
 * [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Amostra de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Exemplos de arquivo-morto**
-* [Exemplo de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Input: Exemplo de recursos do dispositivo @ no__t-0
-* [Input: Exemplo de teclado de toque @ no__t-0
-* [Respondendo à aparência do exemplo de teclado na tela](https://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Exemplo de edição de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Exemplo de entrada](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: exemplo de teclado de toque](https://code.msdn.microsoft.com/windowsapps/Touch-keyboard-sample-43532fda)
+* [Respondendo à aparência do exemplo de teclado na tela](https://code.msdn.microsoft.com/windowsapps/keyboard-events-sample-866ba41c)
+* [Exemplo de edição de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
  
 
  

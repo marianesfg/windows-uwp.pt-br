@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5ff5d8e1a63522a70b37c3226b01a2fc680c368
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 30f361aad321feb44240e66c03003646c560a4f5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318969"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257809"
 ---
 # <a name="accessibility-overview"></a>Visão geral de acessibilidade  
 
@@ -188,11 +188,11 @@ Quando você cria um controle personalizado, recomendamos que também implemente
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Suporte a tecnologia adaptativa em aplicativos que dão suporte à interoperabilidade de XAML/Microsoft DirectX  
-O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (usando [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) or [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)) não é acessível por padrão. [XAML SwapChainPanel DirectX interop sample](https://go.microsoft.com/fwlink/p/?LinkID=309155) mostra como criar pares de Automação da Interface do Usuário para o conteúdo DirectX hospedado. Essa técnica deixa o conteúdo hospedado acessível na Automação da Interface do Usuário.
+O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (usando [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) or [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)) não é acessível por padrão. [XAML SwapChainPanel DirectX interop sample](https://code.msdn.microsoft.com/windowsapps/XAML-SwapChainPanel-00cb688b) mostra como criar pares de Automação da Interface do Usuário para o conteúdo DirectX hospedado. Essa técnica deixa o conteúdo hospedado acessível na Automação da Interface do Usuário.
 
 ## <a name="related-topics"></a>Tópicos relacionados  
-* [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
+* [**Windows. UI. XAML. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
 * [Design para acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
-* [Exemplo de acessibilidade do XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Exemplo de acessibilidade XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [Acessibilidade](accessibility.md)
-* [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)
+* [Introdução ao narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

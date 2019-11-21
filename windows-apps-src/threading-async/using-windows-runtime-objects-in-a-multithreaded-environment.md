@@ -6,25 +6,25 @@ ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fc4f704d8e9f53282ab09dbc61bc5e625d00da9
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 948b16c4e093f7b638ba9abc5bf18e30da8047a2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393524"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259796"
 ---
-# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
+# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente de vários threads
 Este artigo discute a maneira como o .NET Framework manipula chamadas de C# Visual Basic código para objetos que são fornecidos pelo Windows Runtime ou por componentes de Windows Runtime.
 
 No .NET Framework, você pode acessar qualquer objeto de vários threads por padrão, sem tratamento especial. Tudo o que você precisa é uma referência ao objeto. No Windows Runtime, esses objetos são chamados de *ágil*. A maioria das classes do Windows Runtime são ágeis, mas algumas classes não são e até mesmo classes ágeis podem exigir um tratamento especial.
 
 Sempre que possível, o common language runtime (CLR) lida com objetos de outras fontes, como o Windows Runtime, como se fossem objetos do .NET Framework:
 
-- Se o objeto implementa a interface [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject), ou possui o atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) com [MarshalingType.Agile](https://go.microsoft.com/fwlink/p/?LinkId=256023), o CLR o trata como ágil.
+- Se o objeto implementa a interface [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject), ou possui o atributo [MarshalingBehaviorAttribute](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingbehaviorattribute.aspx) com [MarshalingType.Agile](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingtype.aspx), o CLR o trata como ágil.
 
 - Se o CLR puder fazer uma chamada do thread onde foi feita para o contexto de threading do objeto alvo, ele faz isso de forma transparente.
 
-- Se o objeto possui o atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) com [MarshalingType.None](https://go.microsoft.com/fwlink/p/?LinkId=256023), a classe não fornece informações de integração. O CLR não pode marcar a chamada, então ele cria uma exceção [InvalidCastException](/dotnet/api/system.invalidcastexception) com uma mensagem indicando que o objeto pode ser usado apenas no contexto de threading onde foi criado.
+- Se o objeto possui o atributo [MarshalingBehaviorAttribute](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingbehaviorattribute.aspx) com [MarshalingType.None](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingtype.aspx), a classe não fornece informações de integração. O CLR não pode marcar a chamada, então ele cria uma exceção [InvalidCastException](/dotnet/api/system.invalidcastexception) com uma mensagem indicando que o objeto pode ser usado apenas no contexto de threading onde foi criado.
 
 As seções a seguir descrevem os efeitos desse comportamento em objetos de várias fontes.
 
@@ -37,7 +37,7 @@ Todos os tipos no componente que podem ser ativados são ágeis por padrão.
 Quando você autoriza um componente do Tempo de Execução do Windows, você pode substituir o padrão. Consulte as interfaces [ICustomQueryInterface](/dotnet/api/system.runtime.interopservices.icustomqueryinterface) e [IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject).
 
 ## <a name="objects-from-the-windows-runtime"></a>Objeto do Windows Runtime
-A maioria das classes no Windows Runtime são ágeis, e o CLR as trata como ágil. A documentação para essas classes lista "MarshalingBehaviorAttribute(Agile)" entre os atributos da classe. No entanto, os membros de algumas dessas classes ágeis, como os controles XAML, lançam exceções se não forem chamados no segmento da interface de usuário. Por exemplo, o código a seguir tenta usar uma linha de fundo para definir uma propriedade do botão que foi clicado. A propriedade [Conteúdo](https://go.microsoft.com/fwlink/p/?LinkId=256025) do botão lança uma exceção.
+A maioria das classes no Windows Runtime são ágeis, e o CLR as trata como ágil. A documentação para essas classes lista "MarshalingBehaviorAttribute(Agile)" entre os atributos da classe. No entanto, os membros de algumas dessas classes ágeis, como os controles XAML, lançam exceções se não forem chamados no segmento da interface de usuário. Por exemplo, o código a seguir tenta usar uma linha de fundo para definir uma propriedade do botão que foi clicado. A propriedade [Conteúdo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx) do botão lança uma exceção.
 
 ```csharp
 private async void Button_Click_2(object sender, RoutedEventArgs e)
@@ -58,7 +58,7 @@ Private Async Sub Button_Click_2(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-Você pode acessar o botão com segurança usando sua propriedade [Expedidor](https://go.microsoft.com/fwlink/p/?LinkId=256026), ou a propriedade `Dispatcher` de qualquer objeto que exista no contexto do segmento da interface de usuário (como a página em que o botão está). O código a seguir usa, do objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029), o método [RunAsync](https://go.microsoft.com/fwlink/p/?LinkId=256030) para enviar a chamada no segmento da interface de usuário.
+Você pode acessar o botão com segurança usando sua propriedade [Expedidor](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.dispatcher.aspx), ou a propriedade `Dispatcher` de qualquer objeto que exista no contexto do segmento da interface de usuário (como a página em que o botão está). O código a seguir usa, do objeto [CoreDispatcher](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.aspx), o método [RunAsync](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para enviar a chamada no segmento da interface de usuário.
 
 ```csharp
 private async void Button_Click_2(object sender, RoutedEventArgs e)
@@ -92,9 +92,9 @@ O tempo de vida de um objeto do Windows Runtime que é criado no segmento da int
 Se você criar seu próprio controle ao herdar um controle XAML ou ao compor um conjunto de controles XAML, seu controle é ágil porque é um objeto do .NET Framework. No entanto, se ele chama membros da sua classe base ou de classes constituintes, ou se você chama membros herdados, esses membros lançarão exceções quando forem chamados de qualquer segmento, exceto o segmento da interface de usuário.
 
 ### <a name="classes-that-cant-be-marshaled"></a>Classes que não podem ser integradas
-Classes do Windows Runtime que não fornecem informações de integração possuem o atributo [MarshalingBehaviorAttribute](https://go.microsoft.com/fwlink/p/?LinkId=256022) com [MarshalingType.None](https://go.microsoft.com/fwlink/p/?LinkId=256023). A documentação para tal classe lista "MarshalingBehaviorAttribute(None)" entre seus atributos.
+Classes do Windows Runtime que não fornecem informações de integração possuem o atributo [MarshalingBehaviorAttribute](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingbehaviorattribute.aspx) com [MarshalingType.None](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.marshalingtype.aspx). A documentação para tal classe lista "MarshalingBehaviorAttribute(None)" entre seus atributos.
 
-O código a seguir cria um objeto [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027) no segmento da interface de usuário, e então tenta definir uma propriedade do objeto a partir de um segmento do grupo de threads. O CLR não consegue fazer a chamada, e cria uma exceção [InvalidCastException](/dotnet/api/system.invalidcastexception) com uma mensagem indicando que o objeto pode ser usado apenas no contexto de threading onde foi criado.
+O código a seguir cria um objeto [CameraCaptureUI](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.cameracaptureui.aspx) no segmento da interface de usuário, e então tenta definir uma propriedade do objeto a partir de um segmento do grupo de threads. O CLR não consegue fazer a chamada, e cria uma exceção [InvalidCastException](/dotnet/api/system.invalidcastexception) com uma mensagem indicando que o objeto pode ser usado apenas no contexto de threading onde foi criado.
 
 ```csharp
 Windows.Media.Capture.CameraCaptureUI ccui;
@@ -122,9 +122,9 @@ Private Async Sub Button_Click_1(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-A documentação do [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027) também lista "ThreadingAttribute(STA)" entre os atributos da classe, porque ela deve ser criada em um contexto de segmento único, como o segmento da interface de usuário.
+A documentação do [CameraCaptureUI](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.cameracaptureui.aspx) também lista "ThreadingAttribute(STA)" entre os atributos da classe, porque ela deve ser criada em um contexto de segmento único, como o segmento da interface de usuário.
 
-Se você quiser acessar o objeto [CameraCaptureUI](https://go.microsoft.com/fwlink/p/?LinkId=256027) a partir de outro segmento você pode armazenar o objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) em cache para o segmento da interface de usuário, e usá-lo mais tarde para despachar a chamada nesse tópico. Ou você pode obter o expedidor de um objeto XAML, como a página, conforme mostrado no código a seguir.
+Se você quiser acessar o objeto [CameraCaptureUI](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.cameracaptureui.aspx) a partir de outro segmento você pode armazenar o objeto [CoreDispatcher](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.aspx) em cache para o segmento da interface de usuário, e usá-lo mais tarde para despachar a chamada nesse tópico. Ou você pode obter o expedidor de um objeto XAML, como a página, conforme mostrado no código a seguir.
 
 ```csharp
 Windows.Media.Capture.CameraCaptureUI ccui;
@@ -158,7 +158,7 @@ End Sub
 ## <a name="objects-from-a-windows-runtime-component-that-is-written-in-c"></a>Objetos de um componente do Tempo de Execução do Windows que está escrito em C ++
 Por padrão, as classes no componente que podem ser ativadas são ágeis. No entanto, o C ++ permite uma quantidade significativa de controle sobre os modelos de threading e sobre o comportamento de integração. Conforme descrito anteriormente neste artigo, o CLR reconhece classes ágeis, tenta ordenar chamadas quando as classes não são ágeis, e gera uma exceção [System. InvalidCastException](/dotnet/api/system.invalidcastexception) quando uma classe não tem nenhuma informação de integração.
 
-Para objetos que são executados no segmento da interface de usuário e lançam exceções quando são chamados de um segmento diferente do segmento da interface de usuário, você pode usar o objeto [CoreDispatcher](https://go.microsoft.com/fwlink/p/?LinkId=256029) do segmento da interface de usuário para despachar a chamada.
+Para objetos que são executados no segmento da interface de usuário e lançam exceções quando são chamados de um segmento diferente do segmento da interface de usuário, você pode usar o objeto [CoreDispatcher](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.aspx) do segmento da interface de usuário para despachar a chamada.
 
 ## <a name="see-also"></a>Consulte também
 [Guia de C#](/dotnet/csharp/)

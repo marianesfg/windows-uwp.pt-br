@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, cerca geográfica
 ms.localizationpriority: medium
-ms.openlocfilehash: 4580662bf4caf5124caeb34883023121db7ce30f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6b1f328d45e626e1c7eb633165aad3671f1645e5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370674"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260388"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Diretrizes de aplicativos com cerca geográfica
 
@@ -20,8 +20,8 @@ ms.locfileid: "66370674"
 
 **APIs importantes**
 
--   [**Classe do limite geográfico (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
--   [**Classe Geolocator (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
+-   [**Classe de limite geográfico (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
+-   [**Classe geolocator (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
 
 Siga estas práticas recomendadas para [**cerca geográfica**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing) em seu aplicativo.
 
@@ -129,7 +129,7 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 
 * [Configurar uma cerca geográfica](https://docs.microsoft.com/windows/uwp/maps-and-location/set-up-a-geofence)
 * [Obter a localização atual](https://docs.microsoft.com/windows/uwp/maps-and-location/get-location)
-* [Exemplo de localização UWP (localização geográfica)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Exemplo de localização de UWP (geolocalização)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
  
 
  

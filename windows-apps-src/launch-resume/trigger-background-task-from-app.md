@@ -3,20 +3,20 @@ title: Ativar uma tarefa em segundo plano no seu aplicativo
 description: Descreve como disparar uma tarefa em segundo plano em um aplicativo
 ms.date: 07/06/2018
 ms.topic: article
-keywords: disparador de tarefa em segundo plano, tarefa em segundo plano
+keywords: gatilho de tarefa em segundo plano, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d163d36b51e414a403986d1fdd73db7925cc0b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d8917c6ed181607459d6126aa295d270cfea838
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371891"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259403"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Ativar uma tarefa em segundo plano no seu aplicativo
 
 Saiba como usar o [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para ativar uma tarefa em segundo plano de dentro de seu aplicativo.
 
-Para obter um exemplo de como criar um gatilho de aplicativo, consulte [exemplo](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs).
+Para obter um exemplo de como criar um gatilho de aplicativo, consulte este [exemplo](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs).
 
 Este tópico pressupõe que você tenha uma tarefa em segundo plano que deseja ativar a partir do seu aplicativo. Se você ainda não tiver uma tarefa em segundo plano, há um exemplo de tarefa em segundo plano em [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs). Ou siga as etapas em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md) para criar uma.
 
@@ -56,7 +56,7 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 Você pode criar uma condição de tarefa em segundo plano para controlar quando a tarefa será executada. Uma condição impede que a tarefa em segundo plano seja executada até a condição ser atendida. Para obter mais informações, consulte [Definir condições para a execução de uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
-Neste exemplo, a condição é definida como **InternetAvailable** para que, uma vez disparado, a tarefa é executada somente depois que o acesso à internet está disponível. Para obter uma lista das possíveis condições, consulte [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
+Neste exemplo, a condição é definida como **InternetAvailable** para que, uma vez disparada, a tarefa seja executada somente quando o acesso à Internet estiver disponível. Para obter uma lista das possíveis condições, consulte [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -134,14 +134,14 @@ var result = await _AppTrigger.RequestAsync();
 
 Use [Backgroundexecutionmanager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager) para determinar se o usuário decidiu que a atividade em segundo plano do aplicativo deve ser limitada. Lembre-se do uso da bateria e só execute em segundo plano quando for necessário concluir uma ação desejada pelo usuário. Consulte [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obter mais informações sobre as formas como os usuários podem controlar as configurações de atividade em segundo plano.  
 
-- Memória: Ajuste o uso de memória e de energia do aplicativo é fundamental para garantir que o sistema operacional permitirá a ser executado pela tarefa em segundo plano. Use as [APIs de gerenciamento de memória](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) para saber quanta memória a tarefa em segundo plano está usando. Quanto mais memória a tarefa em segundo plano usar, mais difícil fica para o sistema operacional manter o aplicativo em execução quando outro aplicativo está em primeiro plano. O usuário acaba ficando no controle de toda a atividade em segundo plano que o aplicativo pode realizar e tem visibilidade do impacto que o aplicativo tem sobre o uso da bateria.  
-- Tempo de CPU: Tarefas em segundo plano são limitadas pela quantidade de tempo de uso do relógio que eles obterem com base no tipo de gatilho. As tarefas em segundo plano disparadas pelo gatilho Application são limitadas a cerca de dez minutos.
+- Memória: o ajuste do uso de memória e energia do aplicativo é fundamental para garantir que o sistema operacional permita a execução da tarefa em segundo plano. Use as [APIs de gerenciamento de memória](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) para saber quanta memória a tarefa em segundo plano está usando. Quanto mais memória a tarefa em segundo plano usar, mais difícil fica para o sistema operacional manter o aplicativo em execução quando outro aplicativo está em primeiro plano. O usuário acaba ficando no controle de toda a atividade em segundo plano que o aplicativo pode realizar e tem visibilidade do impacto que o aplicativo tem sobre o uso da bateria.  
+- Tempo da CPU: as tarefas em segundo plano são limitadas pela quantidade de tempo de uso que elas obtêm com base no tipo de gatilho. As tarefas em segundo plano disparadas pelo gatilho Application são limitadas a cerca de dez minutos.
 
 Consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md) para conhecer as restrições de recursos que se aplicam às tarefas em segundo plano.
 
 ## <a name="remarks"></a>Comentários
 
-Começando com o Windows 10, não é necessário para o usuário adicionar seu aplicativo para a tela de bloqueio para utilizar as tarefas em segundo plano.
+A partir do Windows 10, não é mais necessário que o usuário adicione seu aplicativo à tela de bloqueio para utilizar tarefas em segundo plano.
 
 Uma tarefa em segundo plano será executada somente usando um **ApplicationTrigger** se você tiver chamado [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) primeiro.
 
@@ -155,7 +155,7 @@ Uma tarefa em segundo plano será executada somente usando um **ApplicationTrigg
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Liberar memória quando seu aplicativo é movido para o segundo plano](reduce-memory-usage.md)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Como disparar suspender, continuar e eventos em aplicativos UWP do plano de fundo (durante a depuração)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Adiar a suspensão do aplicativo com execução estendida](run-minimized-with-extended-execution.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)

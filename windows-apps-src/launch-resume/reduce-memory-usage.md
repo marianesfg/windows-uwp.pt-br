@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a660512abe5f18f7b1955853dc5389dc902fd2e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0b5e0ea6deef7dfe3531c8d0406e08bfae80f0e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371271"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260454"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memória quando seu app é movido para o segundo plano
 
@@ -103,5 +103,5 @@ Quando for movido do segundo para o primeiro plano, o aplicativo receberá prime
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de reprodução de mídia em segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=800141) – mostra como liberar memória quando o aplicativo é movido para o estado em segundo plano.
+* [Amostra de reprodução de mídia em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback) – mostra como liberar memória quando o aplicativo é movido para o estado em segundo plano.
 * [Ferramentas de Diagnóstico](https://devblogs.microsoft.com/devops/diagnostic-tools-debugger-window-in-visual-studio-2015/) – use as ferramentas de diagnóstico para observar eventos de coleta de lixo e validar se o aplicativo está liberando memória da maneira esperada.

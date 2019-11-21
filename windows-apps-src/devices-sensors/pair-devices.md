@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 84835449c7c259c45423a93716b4fbc85fa0a7ab
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 85d42e69b376e2f3f455e44eb1dce3d41e890971
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369948"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258645"
 ---
 # <a name="pair-devices"></a>Emparelhar dispositivos
 
@@ -20,7 +20,7 @@ ms.locfileid: "66369948"
 
 **APIs importantes**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) dá suporte a três maneiras diferentes de emparelhar dispositivos.
 
@@ -28,7 +28,7 @@ Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace
 -   Emparelhamento básico
 -   Emparelhamento personalizado
 
-**Dica**  alguns dispositivos não precisam ser emparelhado para ser usado. Isso é abordado na seção sobre emparelhamento automático.
+**Dica**  alguns dispositivos não precisam ser emparelhados para serem usados. Isso é abordado na seção sobre emparelhamento automático.
 
  
 
@@ -59,7 +59,7 @@ Para dar suporte ao emparelhamento personalizado, você precisará criar um mani
 
 É importante estar ciente de que o emparelhamento personalizado é sempre uma operação a nível de sistema. Por isso, quando você estiver operando em um desktop ou Windows Phone, um diálogo de sistema sempre será exibido para o usuário quando o emparelhamento for acontecer. Isso ocorre porque ambas as plataformas possuem uma experiência de usuário que requer o consentimento do usuário. Como esse diálogo é gerado automaticamente, você não precisará criar seu próprio diálogo quando for optar por um [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds) de **ConfirmOnly** quando estiver operando nessas plataformas. Para os outros **DevicePairingKinds**, você precisará realizar algumas interações especiais, dependendo do valor **DevicePairingKinds** específico. Veja os exemplos de amostra de como manipular o emparelhamento personalizado para valores **DevicePairingKinds**.
 
-Começando com o Windows 10, versão 1903, uma nova **DevicePairingKinds** há suporte para **ProvidePasswordCredential**. Esse valor significa que o aplicativo deve solicitar um nome de usuário e senha do usuário para autenticar com o dispositivo emparelhado. Para lidar com isso, chame o [ **AcceptWithPasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) os args de evento do método a **PairingRequested** manipulador de eventos para aceitar o emparelhamento. Passe um [ **PasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) objeto que encapsula o nome de usuário e senha como um parâmetro. Observe que o nome de usuário e a senha para o dispositivo remoto são diferentes do e geralmente não o mesmo que as credenciais para o usuário conectado localmente.
+A partir do Windows 10, versão 1903, há suporte para um novo **DevicePairingKinds** , **ProvidePasswordCredential**. Esse valor significa que o aplicativo deve solicitar um nome de usuário e senha do usuário para autenticar com o dispositivo emparelhado. Para lidar com esse caso, chame o método [**AcceptWithPasswordCredential**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) dos args de evento do manipulador de eventos **PairingRequested** para aceitar o emparelhamento. Passe um objeto [**PasswordCredential**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) que encapsula o nome de usuário e a senha como um parâmetro. Observe que o nome de usuário e a senha do dispositivo remoto são distintos e, muitas vezes, não são iguais às credenciais do usuário conectado localmente.
 
 ## <a name="unpairing"></a>Desemparelhando
 
@@ -68,10 +68,10 @@ Desemparelhar um dispositivo só é relevante nas situações de emparelhamento 
 
 O primeiro passo para desemparelhar um dispositivo é obter o objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para o dispositivo que você quer desemparelhar. Em seguida, você precisa recuperar a propriedade [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) e chamar [**DeviceInformationPairing.UnpairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.unpairasync). Assim como com o emparelhamento, é bom **esperar** o resultado. O resultado da ação de desemparelhamento será retornado e, desde que nenhum erro seja retornado, o dispositivo será desemparelhado.
 
-## <a name="sample"></a>Exemplo
+## <a name="sample"></a>Amostra
 
 
-Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), clique [aqui](https://go.microsoft.com/fwlink/?LinkID=620536).
+Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), clique [aqui](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing).
 
  
 

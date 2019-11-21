@@ -1,23 +1,23 @@
 ---
-Description: Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em outros idiomas que não sejam os EUA Inglês.
+Description: Este tópico lista as fontes disponíveis para os aplicativos UWP que são traduzidos para outros idiomas.
 title: Fontes internacionais
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 06284481ccecbc3c9cd7d7a78d83ccd6e97a49a7
-ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
+ms.openlocfilehash: eb12ea0bb7966813413d29908c4974a7c4c97486
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237522"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258075"
 ---
 # <a name="international-fonts"></a>Fontes internacionais
 
-Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em outros idiomas que não sejam os EUA Inglês.
+Este tópico lista as fontes disponíveis para os aplicativos UWP que são traduzidos para outros idiomas.
 
-Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language tag](https://go.microsoft.com/fwlink/p/?linkid=227302) do idioma. Para ver uma lista das marcas de idioma específicas com suporte pela Microsoft Store, consulte [Idiomas com suporte](../../publish/supported-languages.md).
+Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language tag](https://tools.ietf.org/html/bcp47) do idioma. Para ver uma lista das marcas de idioma específicas com suporte pela Microsoft Store, consulte [Idiomas com suporte](../../publish/supported-languages.md).
 
 | Idioma | Marca de idioma | Fonte usada no Windows |
 | --------- | ----------- | -------------------- |
@@ -29,8 +29,8 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | assamês | as-IN | Nirmala UI |
 | Azerbaidjano (Latino) | az-Latn-AZ | Segoe UI |
 | bangla (Bangladesh) | bn-BD | Nirmala UI |
-| bangla (Índia) | bn-IN | Nirmala UI |
-| basco (basco) | eu-ES | Segoe UI |
+| Bangla (Índia) | bn-IN | Nirmala UI |
+| basco (País Basco) | eu-ES | Segoe UI |
 | Bielorrusso | be-BY | Segoe UI |
 | bósnio (latino) | bs-Latn-BA | Segoe UI |
 | Búlgaro | bg-BG | Segoe UI |
@@ -43,15 +43,15 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Croata | hr-HR | Segoe UI |
 | Tcheco | cs-CZ | Segoe UI |
 | Dinamarquês | da-DK | Segoe UI |
-| dari | prs-AF | Segoe UI |
+| Dari | prs-AF | Segoe UI |
 | Holandês | nl-NL | Segoe UI |
-| inglês (Reino Unido) | en-GB | Segoe UI |
+| Inglês (Reino Unido) | en-GB | Segoe UI |
 | Estoniano | et-EE | Segoe UI |
 | Filipino | fil-PH | Segoe UI |
 | Finlandês | fi-FI | Segoe UI |
 | Francês | fr-FR | Segoe UI |
 | Galego | gl-ES | Segoe UI |
-| georgiano | ka-GE | Segoe UI |
+| Georgiano | ka-GE | Segoe UI |
 | Alemão | de-DE | Segoe UI |
 | Grego | el-GR | Segoe UI |
 | gujarati | gu-IN | Nirmala UI |
@@ -73,7 +73,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | quiché | qut-GT | Segoe UI |
 | quiniaruanda | rw-RW | Segoe UI |
 | quissuaíle | sw-KE | Segoe UI |
-| Konkani | kok-IN | Nirmala UI |
+| concani | kok-IN | Nirmala UI |
 | Coreano | ko-KR | Malgun Gothic |
 | quirguiz | ky-KG | Segoe UI |
 | Letão | lv-LV | Segoe UI |
@@ -99,7 +99,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | quíchua | quz-PE | Segoe UI |
 | Romeno | ro-RO | Segoe UI |
 | Russo | ru-RU | Segoe UI |
-| gaélico escocês | gd-GB | Segoe UI |
+| Gaélico escocês | gd-GB | Segoe UI |
 | Sérvio (Cirílico, Bósnia e Herzegovina) | sr-Cyrl-BA | Segoe UI |
 | sérvio (cirílico, Sérvia) | sr-Cyrl-CS | Segoe UI |
 | Sérvio (Latino) | sr-Latn-CS | Segoe UI |
@@ -120,7 +120,7 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Turco | tr-TR | Segoe UI |
 | turcomeno | tk-TM | Segoe UI |
 | Ucraniano | uk-UA | Segoe UI |
-| Urdu | ur-PK | Segoe UI |
+| urdu | ur-PK | Segoe UI |
 | uigur | ug-CN | Segoe UI |
 | Uzbeque (Latino) | uz-Latn-UZ | Segoe UI |
 | valenciano | ca-ES-valencia | Segoe UI |
@@ -131,5 +131,5 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [BCP-marca de idioma 47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-marca de idioma 47](https://tools.ietf.org/html/bcp47)
 * [Idiomas com suporte](../../publish/supported-languages.md)

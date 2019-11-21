@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
-ms.openlocfilehash: e9b4d439958e6cfbf0845aaf5bcd31644ff39432
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 501e28f88d07a85c1ded3ae880d1e679169ac36a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371680"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260381"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
 Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 
-**Dica** Para saber mais sobre como usar mapas em seu app, baixe o [exemplo de mapa da Plataforma Universal do Windows (UWP) (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) do Github.
+**Dica** Para saber mais sobre como usar mapas em seu app, baixe o [exemplo de mapa da Plataforma Universal do Windows (UWP) (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) do Github.
 
 <a id="tileintro" />
 
@@ -25,7 +25,7 @@ Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fo
 
 Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
-**Importante**    quando você usa fontes de bloco, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
+   **importantes** ao usar fontes de bloco, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
 
 Aqui está um exemplo da propriedade [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) para um [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 (As coordenadas X e Y representam a localização do bloco individual dentro do mapa do mundo no nível de detalhe especificado. O sistema de numeração de bloco começa em {0, 0} no canto superior esquerdo do mapa. Por exemplo, o bloco em {1, 2} está na segunda coluna da terceira linha da grade de blocos).
 
-Para obter mais informações sobre o sistema de blocos usado pelos serviços de mapeamento, consulte [Sistema lado a lado do Bing Mapas](https://go.microsoft.com/fwlink/p/?LinkId=626692).
+Para obter mais informações sobre o sistema de blocos usado pelos serviços de mapeamento, consulte [Sistema lado a lado do Bing Mapas](https://docs.microsoft.com/bingmaps/articles/bing-maps-tile-system?redirectedfrom=MSDN).
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Sobreponha blocos de uma fonte de blocos
 
@@ -421,7 +421,7 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Amostra de mapa UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo de Build 2015: aproveitando mapas e local em telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo de aplicativo de tráfego UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

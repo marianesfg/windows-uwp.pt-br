@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c725765eacfbf5a4148b8755530de74c3c0fd9a
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: c8204382a4e341083ce825a9424181cdd75771e1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339950"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260233"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -51,7 +51,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="get-status-for-an-add-on-submission.md">Obter o status de um envio de complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
 <td align="left"><a href="create-an-add-on-submission.md">Criar um novo envio de complemento</a></td>
 </tr>
@@ -61,7 +61,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <td align="left"><a href="update-an-add-on-submission.md">Atualizar um envio de complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">POSTAR</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-add-on-submission.md">Confirmar um envio de complemento novo ou atualizado</a></td>
 </tr>
@@ -92,7 +92,7 @@ Para criar um envio de um complemento, siga este processo.
     O corpo da resposta contém um recurso [envio de complemento](#add-on-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os ícones de complemento para o envio para o armazenamento de Blobs do Azure e todos os dados do novo envio (como as listagens e as informações sobre preços).
 
     > [!NOTE]
-    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações básicas sobre URIs SAS e seu uso com o armazenamento de BLOBs do Azure, consulte assinaturas de acesso [Shared, parte 1: Noções básicas sobre o modelo SAS @ no__t-0 e as assinaturas de acesso [Shared, parte 2: Crie e use uma SAS com armazenamento de BLOBs @ no__t-0.
+    > Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações contextuais sobre URIs SAS e o uso com o armazenamento do Blob do Azure, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) e [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Se você estiver adicionando novos ícones para o envio, [prepare os ícones](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions) e adicione-os a um arquivo ZIP.
 
@@ -147,9 +147,9 @@ Os artigos a seguir apresentam exemplos detalhados de código que demonstram com
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://github.com/Microsoft/StoreBroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
-Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
+Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://github.com/Microsoft/StoreBroker).
 
 <span/>
 
@@ -228,11 +228,11 @@ Esse recurso descreve um envio de complemento.
 
 Esse recurso tem os valores a seguir.
 
-| Valor      | type   | Descrição        |
+| Valor      | Tipo   | Descrição        |
 |------------|--------|----------------------|
 | id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 | contentType           | cadeia de caracteres  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Isso pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
+| keywords           | matriz  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
 | lifetime           | cadeia de caracteres  |  O tempo de vida do complemento. Isso pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  Um dicionário de pares de chave e valor, em que cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do complemento.  |
 | pricing           | object  | Um [recurso de preço](#pricing-object) que contém informações de preço para o complemento.   |
@@ -277,9 +277,9 @@ Esse recurso contém informações de preço do complemento. Esse recurso tem os
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
-|  sales               |   array      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
+|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
 |  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) do complemento.    |    
-|  isAdvancedPricingModel               |   boolean      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
+|  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
 <span id="sale-object" />
@@ -321,7 +321,7 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurs
 
 Esse recurso contém informações adicionais sobre todos os erros ou avisos relacionados a um envio. Esse recurso tem os valores a seguir.
 
-| Valor           | type    | Descrição    |
+| Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
 |  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
 |  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
@@ -337,7 +337,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 |     date            |    cadeia de caracteres     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
 
-## <a name="enums"></a>Enums
+## <a name="enums"></a>Enumerações
 
 Esses métodos usam as enumerações a seguir.
 
@@ -352,7 +352,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o complemento.      |     
 |  NotAvailable              |   O complemento não está disponível na região especificada.    |     
 |  Grátis              |   O complemento é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página de **preços e disponibilidade** de qualquer envio de aplicativo no Partner Center e Clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, esse link está na seção de **preços** ).     |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página de **preços e disponibilidade** de qualquer envio de aplicativo no Partner Center e clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, esse link está na seção de **preços** ).     |
 
 <span id="submission-status-code" />
 
@@ -374,7 +374,7 @@ Os seguintes valores representam o código de status de um envio.
 | ListingOptOutWarning | O desenvolvedor removeu uma listagem de um envio anterior ou não incluiu informações de listagem que são compatíveis com o pacote. |
 | ListingOptInWarning  | O desenvolvedor adicionou uma listagem. |
 | UpdateOnlyWarning | O desenvolvedor está tentando inserir algo que só tem suporte para a atualização. |
-| Outros  | O envio está em um estado não reconhecido ou não categorizado. |
+| Outro  | O envio está em um estado não reconhecido ou não categorizado. |
 | PackageValidationWarning | O processo de validação do pacote resultou em um aviso. |
 
 <span/>
