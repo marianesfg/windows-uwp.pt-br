@@ -7,12 +7,12 @@ ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: ba99abd906bd84a91fae5da1505ac8845dd5b99c
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 5086353adbc07e265f02e12f998ae655cd512d48
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282476"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258975"
 ---
 # <a name="microsoft-store-policies"></a>Políticas da Microsoft Store
 
@@ -36,7 +36,7 @@ A adesão a estas políticas deve ajudá-lo a fazer escolhas que aprimoram o ape
 
 Os produtos são essenciais para a experiência de centenas de milhões de clientes. Estamos ansiosos para ver o que você cria e estamos muito felizes em ajudar a fornecer seus produtos para o mundo.
 
-Em caso de comentários sobre as políticas, entre em contato conosco através de [nosso fórum](http://go.microsoft.com/fwlink/p/?LinkId=224196). Levaremos todos os comentários em consideração.
+Em caso de comentários sobre as políticas, entre em contato conosco através de [nosso fórum](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=windowsstore). Levaremos todos os comentários em consideração.
 
 
 ## <a name="table-of-contents"></a>Sumário
@@ -114,7 +114,7 @@ Seu produto não deve tentar mudar nem ampliar a funcionalidade descrita por mei
 
 **10.2.3**
 
-Seu produto não deve conter nem habilitar malware conforme definido pelos critérios da Microsoft para [Softwares Mal-intencionados e Indesejados](http://go.microsoft.com/fwlink/?LinkId=821298).
+Seu produto não deve conter nem habilitar malware conforme definido pelos critérios da Microsoft para [Softwares Mal-intencionados e Indesejados](https://docs.microsoft.com/windows/security/threat-protection/intelligence/criteria).
 
 **10.2.4**
 
@@ -291,11 +291,11 @@ Os requisitos a seguir aplicam-se a todas as atividades relativas a publicidade:
 
 **10.10.2**
 
-Se você comprar ou criar campanhas publicitárias promocionais para promover seus produtos usando a funcionalidade de campanha publicitária no Partner Center, todos os materiais publicitários fornecidos à Microsoft, incluindo quaisquer páginas de aterrissagem associadas, deverão estar em conformidade com a [Política de Especificações de Criatividade](http://go.microsoft.com/fwlink/p/?LinkId=532593) e [Política de Aceitação de Criatividade](http://go.microsoft.com/fwlink/p/?LinkId=532595) da Microsoft.
+Se você comprar ou criar campanhas publicitárias promocionais para promover seus produtos usando a funcionalidade de campanha publicitária no Partner Center, todos os materiais publicitários fornecidos à Microsoft, incluindo quaisquer páginas de aterrissagem associadas, deverão estar em conformidade com a [Política de Especificações de Criatividade](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-specs) e [Política de Aceitação de Criatividade](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies) da Microsoft.
 
 **10.10.3**
 
-Qualquer conteúdo de publicidade exibido por seu produto deve cumprir a [Política de Aceitação de Criatividade](http://go.microsoft.com/fwlink/p/?LinkId=532595) da Microsoft.
+Qualquer conteúdo de publicidade exibido por seu produto deve cumprir a [Política de Aceitação de Criatividade](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies) da Microsoft.
 
 Se seu produto exibir anúncios, todo o conteúdo exibido deverá atender aos requisitos de publicidade do [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), inclusive os requisitos a seguir:
 
@@ -309,7 +309,7 @@ Sua política de privacidade ou os termos de uso devem permitir que os usuários
 
 **10.10.6**
 
-Se seu produto for voltado para crianças com idade inferior a 13 anos (conforme define o [Children's Online Privacy Protection Act](http://go.microsoft.com/fwlink/p/?LinkID=623015)), você deve notificar esse fato à Microsoft no Partner Center e assegurar-se de que o conteúdo de todos os anúncios exibidos no seu produto seja próprio para crianças com idade inferior a 13 anos.
+Se seu produto for voltado para crianças com idade inferior a 13 anos (conforme define o [Children's Online Privacy Protection Act](https://www.ftc.gov/tips-advice/business-center/privacy-and-security/children%27s-privacy)), você deve notificar esse fato à Microsoft no Partner Center e assegurar-se de que o conteúdo de todos os anúncios exibidos no seu produto seja próprio para crianças com idade inferior a 13 anos.
 
 ### <a name="1011-mobile-voice-plans"></a>10.11 Planos de Voz Móvel
 
@@ -330,11 +330,11 @@ Para produtos que envolvem principalmente experiências de jogos ou são voltado
 
 **10.13.1**
 
-Produtos de jogos, incluindo produtos que oferecem principalmente a funcionalidade de controle ou reprodução remota do jogo em execução em outros dispositivos ou plataformas, que direcionam o Xbox One, devem usar serviços do Xbox Live por meio do programa [Criadores do Xbox Live](https://go.microsoft.com/fwlink/?linkid=844722) ou [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742).
+Produtos de jogos, incluindo produtos que oferecem principalmente a funcionalidade de controle ou reprodução remota do jogo em execução em outros dispositivos ou plataformas, que direcionam o Xbox One, devem usar serviços do Xbox Live por meio do programa [Criadores do Xbox Live](https://go.microsoft.com/fwlink/?linkid=844722) ou [ID@Xbox](https://www.xbox.com/Developers/id).
 
 **10.13.2**
 
-Os produtos de jogos que permitem a comunicação entre jogadores ou jogo em rede síncrona em dispositivos Xbox One devem usar o Xbox Live e ser aprovados pelo programa [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742).
+Os produtos de jogos que permitem a comunicação entre jogadores ou jogo em rede síncrona em dispositivos Xbox One devem usar o Xbox Live e ser aprovados pelo programa [ID@Xbox](https://www.xbox.com/Developers/id).
 
 **10.13.3**
 
@@ -356,7 +356,7 @@ Os produtos de jogos que usam o Xbox Live devem:
 
 Produtos de jogos que usam o Xbox Live e oferecem jogos multijogadores, conteúdo gerado pelo usuário ou comunicação entre usuários:
 - Não devem permitir o início do jogo até que o usuário entre no Xbox Live.
-- Devem respeitar os [controles dos pais e serviços](https://go.microsoft.com/fwlink/?linkid=860295).
+- Devem respeitar os [controles dos pais e serviços](https://docs.microsoft.com/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity).
 
 **10.13.7**
 
@@ -385,7 +385,7 @@ Os seguintes requisitos de privacidade se aplicam aos dados de usuário do Xbox 
 - Os serviços e dados do usuário devem ser usados adequadamente nos jogos. Esses dados incluem (sem limitação) dados de uso, identificadores de conta e quaisquer outros dados de identificação pessoal, estatísticas, pontuações, classificações, avaliações, conexões com outros usuários e outros dados relacionados a atividades sociais do usuário.
 - Não armazene dados de gráficos sociais do Xbox Live (por exemplo, listas de amigos), com exceção de identificadores de conta para usuários que vincularam suas contas do Xbox Live ao jogo.
 - Exclua todos os identificadores de conta quando você remover seu jogo do nosso serviço ou quando um usuário desvincular a conta dele do Xbox Live de seu jogo. Não compartilhe serviços ou dados do usuário (mesmo que sejam dados anônimos, agregados ou derivados) com qualquer rede de publicidade, agente de dados ou outro serviço de publicidade ou relacionados à monetização.
-- Quando a Microsoft receber solicitações de usuários finais para excluir seus respectivos dados pessoais, avisaremos você sobre essas solicitações e forneceremos uma lista de identificadores de usuários finais. Você deve verificar a lista, no mínimo, a cada 30 dias para garantir o recebimento de todas as solicitações de exclusão e deve usar as informações fornecidas na lista somente para atender às solicitações de exclusão de usuários finais. Você pode encontrar detalhes sobre esse processo em [Ferramentas da lista de contas excluídas](https://aka.ms/xbox-deleted).
+- Quando a Microsoft receber solicitações de usuários finais para excluir seus respectivos dados pessoais, avisaremos você sobre essas solicitações e forneceremos uma lista de identificadores de usuários finais. Você deve verificar a lista, no mínimo, a cada 30 dias para garantir o recebimento de todas as solicitações de exclusão e deve usar as informações fornecidas na lista somente para atender às solicitações de exclusão de usuários finais. Você pode encontrar detalhes sobre esse processo em [Ferramentas da lista de contas excluídas](https://forums.xboxlive.com/users/login.html).
 
 ### <a name="1014-account-type"></a>10.14 Tipo de conta
 
