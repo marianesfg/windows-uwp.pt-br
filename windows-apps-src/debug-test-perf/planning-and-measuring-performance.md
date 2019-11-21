@@ -1,23 +1,23 @@
 ---
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planejando para o desempenho
-description: Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria.
+description: Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não usem muito a bateria.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6177e565e98c725326122fefad7c7ee23948b49
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 59397f12ec66bfa2864d830eaf80a9dcaaf06592
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359785"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257877"
 ---
 # <a name="planning-for-performance"></a>Planejando para o desempenho
 
 
 
-Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas.
+Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não usem muito a bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas.
 
 ## <a name="specifying-goals"></a>Especificando metas
 
@@ -27,16 +27,16 @@ Outras métricas têm um impacto menos óbvio na experiência do usuário, como 
 
 É melhor definir uma meta inicial e revisá-la mais tarde do que não ter meta alguma. As metas de desempenho do seu aplicativo devem ser específicas e mensuráveis e se enquadrar em três categorias: quanto tempo os usuários ou o aplicativo levam para concluir tarefas, a taxa e continuidade com que o aplicativo redesenha a si em resposta à interação do usuário (fluidez) e como o aplicativo se sai ao conservar recursos de sistema, incluindo a carga da bateria (eficiência).
 
-## <a name="time"></a>Time
+## <a name="time"></a>Tempo
 
 Pense nos intervalos aceitáveis de tempo decorrido (*classes de interação*) que leva para os usuários concluírem suas tarefas em seu aplicativo. Para cada classe de interação, atribua um rótulo, um sentimento na percepção do usuário e as durações ideal e máxima. A seguir estão algumas sugestões.
 
 | Rótulo da classe de interação | Percepção do usuário                 | Ideal            | Máximo          | Exemplos                                                                     |
 |-------------------------|---------------------------------|------------------|------------------|------------------------------------------------------------------------------|
-| Rápido                    | Atraso minimamente perceptível      | 100 milissegundos | 200 milissegundos | Ativar a barra de aplicativos; pressionar um botão (primeira resposta)                        |
+| Modo Rápido                    | Atraso minimamente perceptível      | 100 milissegundos | 200 milissegundos | Ativar a barra de aplicativos; pressionar um botão (primeira resposta)                        |
 | Típico                 | Ágil, mas não rápido             | 300 milissegundos | 500 milissegundos | Redimensionar; zoom semântico                                                        |
 | Responsivo              | Não rápido, mas perceptivelmente responsivo | 500 milissegundos | 1 segundo         | Navegar até uma página diferente; retomar o aplicativo de um estado suspenso          |
-| Inicializar                  | Experiência competitiva          | 1 segundo         | 3 segundos        | Iniciar o aplicativo pela primeira vez ou depois que ele foi encerrado anteriormente |
+| Iniciar                  | Experiência competitiva          | 1 segundo         | 3 segundos        | Iniciar o aplicativo pela primeira vez ou depois que ele foi encerrado anteriormente |
 | Contínuo              | Não há mais a percepção de resposta      | 500 milissegundos | 5 segundos        | Baixar um arquivo da Internet                                            |
 | Cativo                 | Longo tempo; o usuário pode alternar para outro aplicativo    | 500 milissegundos | 10 segundos       | Instalar vários aplicativos da Loja                                         |
 
@@ -47,7 +47,7 @@ Agora você pode atribuir classes de interação aos cenários de desempenho de 
 
 <!-- DHALE: used HTML table here b/c WDCML src used rowspans -->
 <table>
-<tr><th>Cenário</th><th>Ponto no tempo</th><th>Experiência de usuário</th><th>Classe de interação</th></tr>
+<tr><th>Cenário</th><th>Ponto no tempo</th><th>Experiência do usuário</th><th>Classe de interação</th></tr>
 <tr><td rowspan="3">Navegar até uma página de receita </td><td>Primeira resposta</td><td>Animação de transição de página iniciada</td><td>Rápido (100 a 200 milissegundos)</td></tr>
 <tr><td>Responsivo</td><td>Lista de ingredientes carregada; sem imagens</td><td>Responsivo (500 milissegundos a 1 segundo)</td></tr>
 <tr><td>Visibilidade completa</td><td>Todo o conteúdo carregado; imagens exibidas</td><td>Contínuo (500 milissegundos a 5 segundos)</td></tr>
@@ -88,7 +88,7 @@ Agora você pode usar suas metas de desempenho para influenciar o design de seu 
 -   Prefira as transições de tema e animações às animações de storyboard. Para obter mais informações, consulte [Visão geral das animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview). Lembre-se de que as animações de storyboard requerem atualizações constantes na tela e mantêm ativo o pipeline de CPU e elementos gráficos. Para preservar a bateria, não deixe animações em execução se o usuário não estiver interagindo com o aplicativo.
 -   As imagens que você carregar devem ser carregadas em um tamanho apropriado ao modo de exibição de apresentação, usando o método [**GetThumbnailAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync).
 
-**CPU, memória e potência**
+**CPU, memory, and power**
 
 -   Agende o trabalho de prioridade mais baixa para execução em threads e/ou núcleos de prioridade mais baixa. Consulte [Programação assíncrona](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps), a propriedade [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.dispatcher) e a classe [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher).
 -   Minimize o consumo de memória do aplicativo liberando recursos caros (como mídia) em suspensão.
@@ -102,12 +102,12 @@ Agora você pode usar suas metas de desempenho para influenciar o design de seu 
 -   Se possível, armazene em cache conteúdo que seja caro para acessar. Consulte as propriedades [**LocalFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder) e [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings).
 -   Para erros de cache, mostre o mais rápido possível uma interface do usuário de espaço reservado que indique que o aplicativo ainda está carregando conteúdo. Faça a transição do espaço reservado para o conteúdo dinâmico de uma forma que não seja chocante para o usuário. Por exemplo, não mude a posição do conteúdo ao carregar conteúdo dinâmico enquanto o usuário estiver interagindo por toque ou com o mouse.
 
-**Retomar e inicialização de aplicativo**
+**App launch and resume**
 
--   Adie a tela inicial do aplicativo e só a estenda se for necessário. Para obter detalhes, consulte [Criando uma experiência rápida e fluida de inicialização de aplicativos](https://go.microsoft.com/fwlink/p/?LinkId=317595) e [Exibir uma tela inicial por mais tempo](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen).
+-   Adie a tela inicial do aplicativo e só a estenda se for necessário. Para obter detalhes, consulte [Criando uma experiência rápida e fluida de inicialização de aplicativos](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/21/creating-a-fast-and-fluid-app-launch-experience.aspx) e [Exibir uma tela inicial por mais tempo](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen).
 -   Desabilite animações que aparecem logo depois que a tela inicial é ignorada, pois elas geram unicamente uma percepção de atraso no tempo de inicialização do aplicativo.
 
-**Interface do usuário adaptável e orientação**
+**Adaptive UI, and orientation**
 
 -   Use a classe [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager).
 -   Conclua imediatamente apenas o trabalho exigido, adiando o trabalho de aplicativo intensivo — seu aplicativo tem entre 200 e 800 milissegundos para concluir o trabalho antes de o usuário ver a IU do aplicativo em um estado recortado.
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-Consulte também o [Exemplo de registro em log](https://go.microsoft.com/fwlink/p/?LinkId=529576).
+Consulte também o [Exemplo de registro em log](https://github.com/Microsoft/Windows-universal-samples).
 
 Com o seu aplicativo instrumentado, você pode testar e medir o seu desempenho.
 
@@ -165,19 +165,19 @@ Use essas técnicas e ferramentas para testar como seu aplicativo se compara às
 -   Faça testes com base em várias configurações de hardware, incluindo PCs de desktop e multifuncionais, laptops e ultrabooks e tablets, entre outros dispositivos móveis.
 -   Faça testes com base em uma ampla variedade de tamanhos de tela. Embora tamanhos de tela mais amplos possam mostrar muito mais conteúdo, trazer todo esse conteúdo extra pode prejudicar o desempenho.
 -   Elimine o máximo possível das variáveis de teste.
-    -   Desative aplicativos em segundo plano no dispositivo de teste. Para fazer isso, no Windows, selecione **as configurações** no menu Iniciar &gt; **personalização** &gt; **tela de bloqueio**. Selecione cada aplicativo ativo e selecione **Nenhum**.
+    -   Desative aplicativos em segundo plano no dispositivo de teste. To do this, in Windows, select **Settings** from the Start menu &gt; **Personalization** &gt; **Lock screen**. Selecione cada aplicativo ativo e selecione **Nenhum**.
     -   Compile seu aplicativo no código nativo o criando na configuração da versão antes de implantá-lo no dispositivo de teste.
     -   Para garantir que a manutenção automática não afete o desempenho do dispositivo de teste, dispare-o manualmente e aguarde a conclusão. No Windows, no menu Iniciar, procure **Segurança e Manutenção**. Na área de **Manutenção**, em **Manutenção Automática**, selecione **Iniciar manutenção** e aguarde o status sair de **Manutenção em progresso**.
     -   Execute o aplicativo várias vezes para ajudar a eliminar variáveis de teste aleatórias e a garantir medições consistentes.
 -   Teste a disponibilidade de redução de energia. O dispositivo de seus usuários pode ter significativamente menos energia de que seu computador de desenvolvimento. O Windows foi projetado para dispositivos de baixo consumo de energia, como dispositivos móveis. Os aplicativos que são executados na plataforma devem garantir um bom desempenho nesses dispositivos. Como aprendizado, espere que um dispositivo de baixa energia execute em cerca de um quarto da velocidade de um computador desktop e defina suas metas de acordo.
 -   Use uma combinação de ferramentas, como o Microsoft Visual Studio e o Windows Performance Analyzer, para medir o desempenho do aplicativo. O Visual Studio foi projetado para fornecer análises centradas no aplicativo, como vinculação de código-fonte. O Windows Performance Analyzer foi projetado para fornecer análises centradas no sistema, como o fornecimento de informações do sistema, informações sobre eventos de manipulação de toque e informações sobre E/S (entrada e saída) de disco e custo da GPU (unidade de processamento gráfico). Ambas as ferramentas oferecem captura e exportação de rastreamento e podem reabrir rastreamentos compartilhados e post-mortem.
--   Antes de enviar seu aplicativo para a Store para a certificação, certifique-se de incorporar em seus planos de teste os casos de teste relacionados ao desempenho, conforme descrito na seção "Testes de desempenho" [Kit de certificação de aplicativos do Windows testa](windows-app-certification-kit-tests.md) e, em a seção "Desempenho e estabilidade" de [casos de teste do aplicativo UWP](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10)).
+-   Before you submit your app to the Store for certification, be sure to incorporate into your test plans the performance-related test cases as described in the "Performance tests" section of [Windows App Certification Kit tests](windows-app-certification-kit-tests.md) and in the "Performance and stability" section of [UWP app test cases](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10)).
 
 Para obter mais informações, consulte esses recursos e ferramentas de criação de perfil.
 
--   [Analisador de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
+-   [Windows Performance Analyzer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
 -   [Kit de Ferramentas de Desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))
--   [Analisar o desempenho usando ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
+-   [Analyze performance using Visual Studio diagnostic tools](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
 -   A sessão //build/ [Desempenho do XAML](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   A sessão //build/ [Novas ferramentas XAML no Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 

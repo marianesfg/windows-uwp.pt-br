@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 38b5144d9b70e6e2825ef11a64be8873ec5b7d63
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e134e64c441aececdc50b1ac868efeb2b31bd5e5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614551"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259824"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
-As coisas não estão funcionando da forma esperada? Procure nesta página de perguntas frequentes. Confira também o tópico [Problemas conhecidos](known-issues.md) e o fórum [Desenvolvendo aplicativos Universal do Windows](https://go.microsoft.com/fwlink/?linkid=839446). 
+As coisas não estão funcionando da forma esperada? Procure nesta página de perguntas frequentes. Confira também o tópico [Problemas conhecidos](known-issues.md) e o fórum [Desenvolvendo aplicativos Universal do Windows](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
 
 ### <a name="why-arent-my-games-and-apps-working"></a>Por que meus jogos e aplicativos não estão funcionando?
 
@@ -23,7 +23,7 @@ Se seus jogos e aplicativos não estiverem funcionando ou se você não tiver ac
 
 ### <a name="why-cant-i-connect-to-my-xbox-one-using-visual-studio"></a>Por que não consigo me conectar ao Xbox One usando o Visual Studio?
 
-Comece verificando se você está executando no modo de desenvolvedor e não no modo de varejo. Você não pode se conectar ao Xbox One quando está no modo de varejo. Para descobrir qual modo você está no momento, pressione o botão **Home** no controlador. Se você ver o conteúdo Gold/Live em vez de Dev Home, você está no modo de varejo e você precisa executar o aplicativo de ativação do modo Dev para mudar para o modo de desenvolvedor.
+Comece verificando se você está executando no modo de desenvolvedor e não no modo de varejo. Você não pode se conectar ao seu Xbox One quando estiver no modo de varejo. Para descobrir qual modo você está no momento, pressione o botão **Home** no controlador. Se você ver o conteúdo Gold/Live em vez de Dev Home, você está no modo de varejo e você precisa executar o aplicativo de ativação do modo Dev para mudar para o modo de desenvolvedor.
 
 > [!NOTE]
 > Você deve ter um usuário conectado para implantar um aplicativo.
@@ -59,15 +59,15 @@ Veja o tópico [Desativação do modo de desenvolvedor do Xbox One](devkit-deact
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Eu vendi meu Xbox One e o deixei no modo de desenvolvedor. Como posso desativar o modo de desenvolvedor?
 
-Se você não tem mais acesso ao seu Xbox One, você pode desativá-la no Centro de parceiros do Windows. Para obter detalhes, consulte o **desativar seu console usando o Centro de parceiro** seção o [Xbox uma desativação de modo de desenvolvedor](devkit-deactivation.md#deactivate-your-console-using-partner-center) tópico. 
+If you no longer have access to your Xbox One, you can deactivate it in Windows Partner Center. For details, see the **Deactivate your console using Partner Center** section in the [Xbox One Developer Mode Deactivation](devkit-deactivation.md#deactivate-your-console-using-partner-center) topic. 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Eu deixei o programa de desenvolvedor usando o Partner Center, mas estou no modo de desenvolvedor ainda. O que devo fazer?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>I left the Developer Program using Partner Center but I'm in still Developer Mode. O que devo fazer?
 
-Inicie o Dev Home e selecione o botão **Sair do modo de desenvolvedor**. Isso reiniciará o seu console no modo de varejo. 
+Inicie o Dev Home e selecione o botão **Sair do modo de desenvolvedor**. Isso reiniciará o console no Modo de varejo. 
 
 ### <a name="can-i-publish-my-app"></a>Posso publicar meu aplicativo?
 
-Você pode [publicar aplicativos](../publish/index.md) por meio do Partner Center se você tiver um [conta de desenvolvedor](https://developer.microsoft.com/store/register). Os aplicativos UWP criados e testados em um console do Xbox One de varejo irão passar pelo mesmo processo de ingestão, revisão e publicação que o Windows realiza atualmente, com análises adicionais para atender aos padrões atuais do Xbox One.
+You can [publish apps](../publish/index.md) through Partner Center if you have a [developer account](https://developer.microsoft.com/store/register). Os aplicativos UWP criados e testados em um console do Xbox One de varejo irão passar pelo mesmo processo de ingestão, revisão e publicação que o Windows realiza atualmente, com análises adicionais para atender aos padrões atuais do Xbox One.
 
 ### <a name="can-i-publish-my-game"></a>Posso publicar meu jogo?
 
@@ -107,16 +107,16 @@ Se o Visual Studio não puder se conectar ao Xbox One:
   > [!NOTE]
   > Para obter o melhor desempenho de implantação, recomendamos que você use uma conexão com fio com seu console.
 
-5. Verifique se você está usando o Universal (protocolo não criptografado) na lista suspensa Autenticação na guia **Depurar**. Para obter mais detalhes, veja [Configuração do ambiente de desenvolvimento](development-environment-setup.md).
+5. Verifique se você está usando o Universal (protocolo não criptografado) na lista suspensa Autenticação na guia **Depurar**. Para obter mais detalhes, consulte [Configuração do ambiente de desenvolvimento](development-environment-setup.md).
 
 
 ### <a name="if-im-building-an-app-using-htmljavascript-how-do-i-enable-gamepad-navigation"></a>Se eu estiver criando um aplicativo usando HTML/JavaScript, como habilito a navegação Gamepad?
 
 TVHelpers é um conjunto de amostras e bibliotecas de JavaScript e XAML/C# para ajudar você a criar excelentes experiências de TV e do Xbox One em JavaScript e C#. TVJS é uma biblioteca que ajuda você a criar aplicativos UWP especiais para o Xbox One. TVJS inclui suporte para navegação de controladores automáticos, reprodução de mídia avançada, pesquisa e muito mais. Você pode usar TVJS com o seu aplicativo Web hospedado de maneira tão fácil quanto com um aplicativo UWP Web empacotado, com total acesso às APIs do Windows Runtime.
 
-Para obter mais informações, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVHelpers) e o [wiki](https://github.com/Microsoft/TVHelpers/wiki) do projeto.
+Para saber mais, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVHelpers) e o [wiki](https://github.com/Microsoft/TVHelpers/wiki) do projeto.
 
 ## <a name="see-also"></a>Consulte também
-- [Problemas conhecidos com UWP no Xbox One](known-issues.md)
+- [Known issues with UWP on Xbox One](known-issues.md)
 - [UWP no Xbox One](index.md)
 - [UWP no Xbox One](index.md)

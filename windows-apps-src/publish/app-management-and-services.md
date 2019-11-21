@@ -1,23 +1,23 @@
 ---
-Description: Exibir detalhes relacionados a cada um dos seus aplicativos no Partner Center e configurar os serviços como A / B, teste e é mapeado.
-title: Gerenciamento de aplicativos e serviços
+Description: Manage and view details related to each of your apps in Partner Center, and configure services such as A/B testing and maps.
+title: Gerenciamento de apps e serviços
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9567e06f80035bbcf811b5aaeaf8058ffee41a3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 30610cdacbd9d2be10205958688376371f0387f6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320025"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260034"
 ---
-# <a name="app-management-and-services"></a>Gerenciamento de aplicativos e serviços
+# <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
-Você pode gerenciar e exibir os detalhes relacionados a cada um dos seus aplicativos no [Partner Center](https://partner.microsoft.com/dashboard)e configurar os serviços, como notificações, A / B, teste e é mapeado.
+You can manage and view details related to each of your apps in [Partner Center](https://partner.microsoft.com/dashboard), and configure services such as notifications, A/B testing, and maps.
 
-Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação à esquerda **Services** e **gerenciamento de aplicativo**. Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
+When working with an app in Partner Center, you'll see sections in the left navigation menu for **Services** and **App management**. Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
 ## <a name="services"></a>Serviços
 
@@ -25,9 +25,9 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Se você estiver publicando um jogo, você pode habilitar o [programa de criadores do Xbox Live](https://www.xbox.com/developers/creators-program) nesta página. Isso permite começar a configurar e testar recursos do Xbox Live e eventualmente publicar seu jogo do programa de criadores do Xbox Live.
+If you are publishing a game, you can enable the [Xbox Live Creators Program](https://www.xbox.com/developers/creators-program) on this page. This lets you start configuring and testing Xbox Live features, and eventually publish your Xbox Live Creators Program game.
 
-Para obter mais informações, consulte [começar com o programa de criadores do Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) e [criar um novo título do programa de criadores do Xbox Live e publicar no ambiente de teste](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title).
+For more info, see [Get started with the Xbox Live Creators Program](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) and [Create a new Xbox Live Creators Program title and publish to the test environment](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title).
 
 ## <a name="experimentation"></a>Experimentação
 
@@ -37,21 +37,21 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 ## <a name="maps"></a>Mapas
 
-Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](https://go.microsoft.com/fwlink/p/?LinkId=614880). Para obter informações sobre como solicitar uma chave de autenticação de mapas do Bing Maps Developer Center e adicioná-lo ao seu aplicativo, consulte [solicitar uma chave de autenticação de mapas](../maps-and-location/authentication-key.md) para obter mais informações. 
+Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/). For info about how to request a maps authentication key from the Bing Maps Developer Center and add it to your app, see [Request a maps authentication key](../maps-and-location/authentication-key.md) for more info. 
 
-Use o **mapas** página apenas para aplicativos publicados anteriormente para Windows Phone 8.1 e versões anteriores. Para usar os serviços de mapa nesses aplicativos, você precisará solicitar uma ID de aplicativo do serviço de mapa e um token para incluir no código do seu aplicativo. Quando você clica em **obter um token**, vamos gerar um ID do aplicativo de serviço do mapa (**ApplicationID**) e o Token de autenticação do serviço de mapa (**AuthenticationToken**) para seu aplicativo. Certifique-se de adicionar esses valores ao seu código antes de você empacota e enviar seu aplicativo. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](https://go.microsoft.com/fwlink/p/?LinkId=614882).
+Use the **Maps** page only for previously-published apps for Windows Phone 8.1 and earlier. To use map services in these apps, you'll need to request a map service application ID and a token to include in your app's code. When you click **Get token**, we'll generate a Map service Application ID (**ApplicationID**) and Map service Authentication Token (**AuthenticationToken**) for your app. Be sure to add these values to your code before you package and submit your app. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](https://docs.microsoft.com/previous-versions/windows/apps/jj207033(v=vs.105)?redirectedfrom=MSDN).
 
 ## <a name="product-collections-and-purchases"></a>Compras e coleções de produtos
 
-Para usar o Microsoft Store API de coleta e a API de compra do Microsoft Store para acessar as informações de propriedade de aplicativos e complementos, você precisa inserir associado do Azure AD IDs de cliente aqui. Observe que essas alterações podem levar até 16 horas para entrar em vigor.
+To use the Microsoft Store collection API and the Microsoft Store purchase API to access ownership information for apps and add-ons, you need to enter the associated Azure AD client IDs here. Observe que essas alterações podem levar até 16 horas para entrar em vigor.
 
 Para obter mais informações, consulte [Gerenciar direitos a produtos de um serviço](../monetize/view-and-grant-products-from-a-service.md).
 
-## <a name="administrator-consent"></a>Consentimento do administrador
+## <a name="administrator-consent"></a>Administrator consent
 
-Se o seu produto se integra ao AD do Azure e chama as APIs que solicitam uma [permissões de aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que exigem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquirem o aplicativo para a organização conceder consentimento para o seu produto atuar em nome de todos os usuários no locatário.
+If your product integrates with Azure AD and calls APIs that request either [application permissions or delegated permissions](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) that require administrator consent, enter your Azure AD Client ID here. This lets administrators who acquire the app for their organization grant consent for your product to act on behalf of all users in the tenant.
 
-Para obter mais informações, consulte [solicitar o consentimento para um locatário inteiro](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant).
+For more info, see [Requesting consent for an entire tenant](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant).
 
 ## <a name="app-management"></a>Gerenciamento de aplicativo
 
@@ -82,18 +82,18 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-O **WNS/MPNS** seção fornece opções para ajudá-lo a criar e enviar notificações aos clientes do seu aplicativo. 
+The **WNS/MPNS** section provides options to help you create and send notifications to your app's customers. 
 
 > [!TIP]
-> Para aplicativos UWP, é recomendável usar o **notificações** recurso no Partner Center. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto de destino de seus clientes do Windows 10 que atendem aos critérios que você definiu em uma [segmento de clientes](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
+> For UWP apps, we suggest using the **Notifications** feature in Partner Center. This feature lets you send notifications to all of your app's customers, or to a targeted subset of your Windows 10 customers who meet the criteria you’ve defined in a [customer segment](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
-Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você também pode usar uma das seguintes opções: 
+Depending on your app's package type and its specific requirements, you can also use one of the following options: 
 
--   **Serviço de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
+-   **Serviços de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
--   **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](https://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](https://docs.microsoft.com/azure/app-service-mobile/).
 
--   **Serviços de notificações por Push da Microsoft (MPNS)** pode ser usado com pacotes XAP publicada anteriormente para Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. Se você estiver usando o MPNS, você precisará carregar um certificado para o campo fornecido na **WNS/MPNS** página. Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](https://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   **Microsoft Push Notifications Service (MPNS)** can be used with previously published .xap packages for Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. If you're using MPNS, you'll need to upload a certificate to the field provided on the **WNS/MPNS** page. Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/ff941099(v=vs.105)?redirectedfrom=MSDN).
  
 
  

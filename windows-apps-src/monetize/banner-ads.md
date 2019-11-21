@@ -5,12 +5,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cd3e57ebf5a7f7770adf2a8defcd92e66ad1e3a0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627241"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260333"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 
@@ -24,12 +24,12 @@ Os anúncios em faixa são anúncios de exibição estática que utilizam uma pa
 
 |  Tópico    | Descrição |               
 |----------|-------|
-| [AdControl em XAML e o .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
-| [AdControl em 5 de HTML e Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
-| [Tamanhos de ad de faixa com suporte](supported-ad-sizes-for-banner-ads.md)    |  Consulte os tamanhos de anúncios em faixa aceitos em aplicativos UWP.        |
+| [AdControl in XAML and .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
+| [AdControl in HTML 5 and Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
+| [Supported banner ad sizes](supported-ad-sizes-for-banner-ads.md)    |  Consulte os tamanhos de anúncios em faixa aceitos em aplicativos UWP.        |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostras de publicidade no GitHub](https://aka.ms/githubads)
-* [Configurar unidades de ad para seu aplicativo](set-up-ad-units-in-your-app.md)
+* [Amostras de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Set up ad units for your app](set-up-ad-units-in-your-app.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 99ffa0dcae3412d49aef9da5bc3dfea255173ecb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7344e5004e6ac398673734cb03ddbdde93b3bd0d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358943"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254312"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuais da câmera para a captura de fotos e vídeos
 
@@ -21,10 +21,10 @@ Este artigo mostra como usar controles de dispositivo manuais para habilitar cen
 
 Os controles discutidos neste artigo são todos adicionados ao seu aplicativo usando o mesmo padrão. Primeiro, verifique se o controle tem suporte no dispositivo atual em que seu aplicativo está sendo executado. Se o controle tiver suporte, defina o modo desejado para o controle. Normalmente, se um determinado controle não tiver suporte no dispositivo atual, você deverá desabilitar ou ocultar o elemento da interface do usuário que permite ao usuário habilitar o recurso.
 
-O código neste artigo foi adaptado da [amostra do SDK de Controles Manuais de Câmera](https://go.microsoft.com/fwlink/?linkid=845228). Você pode baixar o exemplo para ver o código usado no contexto ou utilizá-lo como ponto de partida para seu próprio app.
+O código neste artigo foi adaptado da [amostra do SDK de Controles Manuais de Câmera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraManualControls). Você pode baixar a amostra para ver o código usado no contexto ou usar a amostra como ponto de partida para seu próprio aplicativo.
 
 > [!NOTE]
-> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
 Todas as APIs de controle de dispositivo discutidas neste artigo são membros do namespace [**Windows.Media.Devices**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices).
 
@@ -149,13 +149,13 @@ Este exemplo foca em uma região quando o usuário toca na tela e, em seguida, r
 
 A próxima etapa é escutar o evento quando o usuário tocar na tela, manipulando o evento [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped) do [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) que está exibindo atualmente o fluxo de visualização da captura. Se a câmera não estiver atualmente em visualização, ou se o modo de toque para foco estiver desabilitado, retorne a partir do manipulador sem fazer nada.
 
-Se a variável de controle  *\_isFocused* seja alternado para false, e se a câmera não estiver atualmente no processo de foco (determinado pelo [ **FocusState** ](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusstate) propriedade do **FocusControl**), iniciar o processo de foco de toque. Obtenha a posição de toque do usuário dos argumentos de evento passados para o manipulador. Este exemplo também aproveita a oportunidade para selecionar o tamanho da região que será focalizada. Neste caso, o tamanho é 1/4 da menor dimensão do elemento de captura. Passe a posição do toque e o tamanho da região para o método auxiliar **TapToFocus** que é definido na próxima seção.
+If the tracking variable *\_isFocused* is toggled to false, and if the camera isn't currently in the process of focus (determined by the [**FocusState**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusstate) property of the **FocusControl**), begin the tap-to-focus process. Obtenha a posição de toque do usuário dos argumentos de evento passados para o manipulador. Este exemplo também aproveita a oportunidade para selecionar o tamanho da região que será focalizada. Neste caso, o tamanho é 1/4 da menor dimensão do elemento de captura. Passe a posição do toque e o tamanho da região para o método auxiliar **TapToFocus** que é definido na próxima seção.
 
-Se o  *\_isFocused* alternância está definida como true, o usuário toque deve limpar o foco da região anterior. Isso é feito no método auxiliar **TapUnfocus**, mostrado abaixo.
+If the *\_isFocused* toggle is set to true, the user tap should clear the focus from the previous region. Isso é feito no método auxiliar **TapUnfocus**, mostrado abaixo.
 
 [!code-cs[TapFocusPreviewControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusPreviewControl)]
 
-No **TapToFocus** método auxiliar, defina primeiro o  *\_isFocused* alternância como true para que o toque de tela próxima liberará o foco da região tocado.
+In the **TapToFocus** helper method, first set the *\_isFocused* toggle to true so that the next screen tap will release the focus from the tapped region.
 
 A próxima tarefa nesse método auxiliar é determinar o retângulo dentro do fluxo de visualização será atribuído ao controle de foco. Isso exige duas etapas. A primeira etapa é determinar o retângulo que o fluxo de visualização ocupa dentro do controle [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement). Isso depende das dimensões do fluxo de visualização e da orientação do dispositivo. O método auxiliar **GetPreviewStreamRectInControl**, mostrado no final desta seção, executa essa tarefa e retorna o retângulo que contém o fluxo de visualização.
 
@@ -265,7 +265,7 @@ Habilite ou desabilite a OIS definindo o [**OpticalImageStabilizationControl.Mod
 ## <a name="powerline-frequency"></a>Frequência de Powerline
 Alguns dispositivos de câmera oferecem suporte ao processamento anticintilação que depende de saber a frequência de CA de powerlines no ambiente atual. Alguns dispositivos oferecem suporte à determinação automática da frequência de powerline, enquanto outras exigem que a frequência seja definida manualmente. O exemplo de código a seguir mostra como determinar o suporte à frequência de powerline no dispositivo e, se necessário, como definir a frequência manualmente. 
 
-Primeiro, chame o método **VideoDeviceController**[**TryGetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency), passando um parâmetro de saída do tipo [**PowerlineFrequency**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.PowerlineFrequency); se essa chamada falhar, o controle de frequência de powerline não terá suporte no dispositivo atual. Se houver suporte para o recurso, você poderá determinar se o modo automático está disponível no dispositivo tentando definir o modo automático. Faça isso chamando [**TrySetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) e passando o valor **Automático**. Se a chamada tiver êxito, significa que sua frequência de powerline automática é compatível. Se o controlador de frequência de powerline for compatível com o dispositivo, mas a detecção automática de frequência não for, você ainda poderá definir a frequência manualmente usando **TrySetPowerlineFrequency**. Neste exemplo, **MyCustomFrequencyLookup** é um método personalizado que você implementa para determinar a frequência correta para o local atual do dispositivo. 
+Primeiro, chame o método **VideoDeviceController**[**TryGetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency), passando um parâmetro de saída do tipo [**PowerlineFrequency**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.PowerlineFrequency); se essa chamada falhar, o controle de frequência de powerline não terá suporte no dispositivo atual. Se houver suporte para o recurso, você poderá determinar se o modo automático está disponível no dispositivo tentando definir o modo automático. Do this by calling [**TrySetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) and passing in the value **Auto**. If the call succeeds, that means that your auto powerline frequency is supported. Se o controlador de frequência de powerline for compatível com o dispositivo, mas a detecção automática de frequência não for, você ainda poderá definir a frequência manualmente usando **TrySetPowerlineFrequency**. Neste exemplo, **MyCustomFrequencyLookup** é um método personalizado que você implementa para determinar a frequência correta para o local atual do dispositivo. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
@@ -335,7 +335,7 @@ Em um dispositivo habilitado para multitoque, um cenário típico é ajustar o f
 
 No manipulador para o evento **ManipulationDelta**, atualize o fator de zoom com base na alteração do gesto de pinçagem do usuário. O valor [**ManipulationDelta.Scale**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.ManipulationDelta) representa a mudança de escala do gesto de pinçagem, de forma que um pequeno aumento no tamanho da pinçagem seja um número um pouco maior que 1,0 e uma pequena queda no tamanho seja um número um pouco menor que 1,0. Neste exemplo, o valor atual do controle de zoom é multiplicado pelo delta da escala.
 
-Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max). Por fim, certifique-se de que o fator de zoom é um múltiplo do tamanho de etapa do zoom com suporte pelo dispositivo, conforme indicado pelo [ **etapa** ](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step) propriedade. Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
+Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max). Finally, you must make sure that the zoom factor is a multiple of the zoom step size supported by the device as indicated by the [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step) property. Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
 
 Defina o nível de zoom no dispositivo de captura criando um novo objeto [**ZoomSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomSettings). Defina a propriedade [**Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.mode) como [**ZoomTransitionMode.Smooth**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomTransitionMode) e a propriedade [**Value**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.value) como o fator de zoom desejado. Por fim, chame [**ZoomControl.Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.configure) para definir o novo valor de zoom no dispositivo. O dispositivo fará a transição suavemente para o novo valor de zoom.
 
@@ -344,4 +344,4 @@ Defina o nível de zoom no dispositivo de captura criando um novo objeto [**Zoom
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Básica de fotos, vídeo e áudio capturar com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

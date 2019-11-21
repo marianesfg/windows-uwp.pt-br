@@ -1,5 +1,5 @@
 ---
-Description: Use a API de Windows.Globalization.DateTimeFormatting com padrões e modelos personalizados para exibir datas e horas exatamente no formato que desejar.
+Description: Use the Windows.Globalization.DateTimeFormatting API with custom templates and patterns to display dates and times in exactly the format you wish.
 title: Usar padrões para formatar datas e horas
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 3849ccf0f129b65dc44f549a37859fe38ac71562
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 183fa684f81f1e3289e9e197020ce7c6cba5ebdf
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615391"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258124"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar modelos e padrões para formatar datas e horas
 
@@ -25,7 +25,7 @@ A classe [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 No entanto, quando quiser ainda mais controle sobre a ordem e o formato dos componentes do objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que deseja exibir, você pode passar um padrão de formato para o argumento *formatTemplate* do construtor. Um padrão de formato usa uma sintaxe especial que permite a você obter componentes individuais de um objeto **DateTime**&mdash;como o nome do mês ou o ano,&mdash; a fim de exibi-los em qualquer formato personalizado que você escolher. Além disso, o padrão pode ser traduzido para se adaptar a outros idiomas e países/regiões.
 
-**Observação**  isso é apenas uma visão geral dos padrões de formato. Para saber mais sobre modelos e padrões de formato, consulte a seção Comentários da classe [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Note**  This is only an overview of format patterns. Para saber mais sobre modelos e padrões de formato, consulte a seção Comentários da classe [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>A diferença entre modelos de formato e padrões de formato
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 Isso cria um formatador com base no valor do idioma ou da região do contexto atual. A ordem dos componentes em um modelo de formato não importa; o formatador exibe-os na ordem certa para o idioma corrente. Assim, ele exibe "January 1" para inglês (Estados Unidos), mas "1 janvier" para francês (França), e "1月1日" para japonês.
 
-Por outro lado, um padrão de formato é específico a cada cultura. Vamos acessar o padrão de formato para nosso modelo de formato.
+Por outro lado, um padrão de formato é específico a cada cultura. Let's access the format pattern for our format template.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;
@@ -59,7 +59,7 @@ No exemplo acima, nós inseridos uma cadeia de caracteres de formato independent
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-O formatador acima retorna os valores específicos de cultura para os componentes individuais dentro de colchetes {}. No entanto, a ordem dos componentes no padrão de formato é invariável. Você obtém exatamente o que deseja, o que pode ou não ser apropriado em termos de cultura. Este formatador é válido para inglês (Estados Unidos), mas não para francês (França), nem para japonês.
+The formatter above returns culture-specific values for the individual components inside the brackets {}. No entanto, a ordem dos componentes no padrão de formato é invariável. Você obtém exatamente o que deseja, o que pode ou não ser apropriado em termos de cultura. Este formatador é válido para inglês (Estados Unidos), mas não para francês (França), nem para japonês.
 
 ``` syntax
 En-US: January 1
@@ -76,14 +76,14 @@ Além disso, um padrão que está correto hoje talvez não esteja correto futura
 
 Veja a seguir um resumo da distinção entre modelos de formato e padrões de formato.
 
-**Modelos de formato, como "dia do mês"**
+**Format templates, such as "month day"**
 
 -   Representação abstrata de um formato de [DateTime](/uwp/api/windows.foundation.datetime?branch=live) que inclui valores para o mês, dia, etc., em qualquer ordem.
 -   Garante retornar um formato padrão válido em todos os valores da região de idioma com suporte do Windows.
 -   Garante fornecer uma cadeia de caracteres formatada culturalmente de forma adequada para a região de idioma determinada.
 -   Nem todas as combinações de componentes são válidas. Por exemplo, "dayofweek day" não é válido.
 
-**Padrões de formato, como "{month.full} {day.integer}"**
+**Format patterns, such as "{month.full} {day.integer}"**
 
 -   Cadeia de caracteres ordenada explicitamente que expressa o nome completo do mês, seguido por um espaço, seguido pelo número inteiro de dias, nessa ordem, ou qualquer padrão de formato específico que você estipular.
 -   Pode não corresponder a um formato padrão válido para qualquer par de idioma-região.
@@ -98,7 +98,7 @@ Suponha que você queira mostrar o mês e o dia atuais juntamente com a hora atu
 June 25 | 1:38 PM
 ```
 
-A parte da data corresponde ao modelo de formato "month day", e a parte da hora corresponde ao modelo de formato "hour minute". Portanto, você pode construir formatadores para os modelos de formato de hora e data relevante e, em seguida, concatenar sua saída usando uma cadeia de caracteres de formato localizável.
+A parte da data corresponde ao modelo de formato "month day", e a parte da hora corresponde ao modelo de formato "hour minute". So, you can construct formatters for the relevant date and time format templates, and then concatenate their output together using a localizable format string.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;
@@ -113,7 +113,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` um identificador de recurso se refere a um recurso localizável em um arquivo de recursos (. resw). Para um idioma padrão do inglês (Estados Unidos), isso seria definido como um valor de "{0} | {1}", juntamente com um comentário indicando que"{0}"é a data e"{1}"é o tempo. Dessa forma, os tradutores podem ajustar os itens de formato conforme necessário. Por exemplo, eles podem mudar a ordem dos itens, caso pareça mais natural em algum idioma ou região que a hora preceda a data. Ou eles podem substituir "|" por algum outro caractere separador.
+`CustomDateTimeFormatString` is a resource identifier referring to a localizable resource in a Resources File (.resw). For a default language of English (United States), this would be set to a value of "{0} | {1}" along with a comment indicating that "{0}" is the date and "{1}" is the time. Dessa forma, os tradutores podem ajustar os itens de formato conforme necessário. Por exemplo, eles podem mudar a ordem dos itens, caso pareça mais natural em algum idioma ou região que a hora preceda a data. Ou eles podem substituir "|" por algum outro caractere separador.
 
 Outra maneira de implementar esse exemplo é consultar os dois formatadores com relação aos padrões de formato, concatenar juntos e, em seguida, construir um terceiro formatador a partir do padrão de formato resultante.
 
@@ -133,12 +133,12 @@ var patternFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeForm
 string output = patternFormatter.Format(System.DateTime.Now);
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 
 * [Windows.Globalization.DateTimeFormatting](/uwp/api/windows.globalization.datetimeformatting?branch=live)
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)
-* [Data e hora](/uwp/api/windows.foundation.datetime?branch=live)
+* [DateTime](/uwp/api/windows.foundation.datetime?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Exemplo de formatação data e hora](https://go.microsoft.com/fwlink/p/?LinkId=231618)
+* [Date and time formatting sample](https://code.msdn.microsoft.com/windowsapps/Date-and-time-formatting-2361f348)

@@ -1,41 +1,41 @@
 ---
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
-description: Use os exemplos de código nesta seção para saber mais sobre como usar a API de envio da Microsoft Store.
+description: Use the code examples in this section to learn more about using the Microsoft Store submission API.
 title: Exemplos de código para a API de envio
 ms.date: 07/10/2017
 ms.topic: article
-keywords: exemplos de código do Windows 10, uwp, API de envio da Microsoft Store,
+keywords: windows 10, uwp, Microsoft Store submission API, code examples
 ms.localizationpriority: medium
-ms.openlocfilehash: f60668ba81bbaefe2c190f7212618684797366bf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 296d0b081773ec8fb3770f39e79bea00dc60d596
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617731"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258701"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Exemplos de código para a API de envio
 
-Esta seção fornece exemplos de código para usar o [API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) em vários diferentes linguagens de programação.
+This section provides code examples for using the [Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md) in several different programming languages.
 
 > [!NOTE]
-> Além dos exemplos de código listados abaixo, também fornecemos um módulo de PowerShell do código-fonte aberto que implementa uma interface de linha de comando sobre a API de envio da Microsoft Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
+> In addition to the code examples listed below, we also provide an open-source PowerShell module which implements a command-line interface on top of the Microsoft Store submission API. Esse módulo é chamado [StoreBroker](https://github.com/Microsoft/StoreBroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://github.com/Microsoft/StoreBroker).
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>Envios de aplicativo, envios de complemento e envios de versão de pré-lançamento do pacote
 
 Os artigos a seguir fornecem exemplos de código para usar o API de envio para criar envios de aplicativo, envios de complemento e envios de versão de pré-lançamento do pacote.
 
-* [C#exemplo: envios de voos, aplicativos e complementos](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplo de Java: envios de voos, aplicativos e complementos](java-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplo de Python: envios de voos, aplicativos e complementos](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# sample: submissions for apps, add-ons, and flights](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java sample: submissions for apps, add-ons, and flights](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python sample: submissions for apps, add-ons, and flights](python-code-examples-for-the-windows-store-submission-api.md)
 
 ## <a name="game-options-and-trailers"></a>Opções de jogo e trailers
 
 Os artigos a seguir fornecem exemplos de código para usar a API de envio para definir opções específicas do jogo e para enviar trailers de vídeo para apps.
 
-* [C#exemplo: envio de aplicativo com opções de jogo e trailers](csharp-code-examples-for-submissions-game-options-and-trailers.md)
-* [Exemplo de Java: envio de aplicativo com opções de jogo e trailers](java-code-examples-for-submissions-game-options-and-trailers.md)
-* [Exemplo de Python: envio de aplicativo com opções de jogo e trailers](python-code-examples-for-submissions-game-options-and-trailers.md)
+* [C# sample: app submission with game options and trailers](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Java sample: app submission with game options and trailers](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Python sample: app submission with game options and trailers](python-code-examples-for-submissions-game-options-and-trailers.md)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md)

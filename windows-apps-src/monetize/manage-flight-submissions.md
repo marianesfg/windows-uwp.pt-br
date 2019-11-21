@@ -1,30 +1,30 @@
 ---
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Use esses métodos na API de envio de Microsoft Store para gerenciar envios de vôo de pacote para aplicativos registrados em sua conta do Partner Center.
+description: Use these methods in the Microsoft Store submission API to manage package flight submissions for apps that are registered to your Partner Center account.
 title: Gerenciar envios de pacote de pré-lançamento
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 50596fdadae2ac4a0625687e7c8acaf985ccfaa7
-ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
+ms.openlocfilehash: 4e96f6d2495583fcee4d16e54a5c8a5e208fec27
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690373"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259260"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
 A API de envio da Microsoft Store oferece métodos que é possível usar para gerenciar envios de pacote de pré-lançamento dos aplicativos, inclusive distribuições de pacote graduais. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Se você usar a API de envio de Microsoft Store para criar um envio para um vôo de pacote, certifique-se de fazer outras alterações no envio somente usando a API, em vez do Partner Center. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> If you use the Microsoft Store submission API to create a submission for a package flight, be sure to make further changes to the submission only by using the API, rather than Partner Center. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 <span id="methods-for-package-flight-submissions" />
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para gerenciar envios do pacote de pré-lançamento
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de pacote de pré-lançamento. Antes de poder usar esses métodos, o vôo do pacote já deve existir no Partner Center. Você pode criar um vôo de pacote [no Partner Center](https://docs.microsoft.com/windows/uwp/publish/package-flights) ou usando os métodos de API de envio Microsoft Store em descrito em [gerenciar vôos de pacote](manage-flights.md).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de pacote de pré-lançamento. Before you can use these methods, the package flight must already exist in Partner Center. You can create a package flight [in Partner Center](https://docs.microsoft.com/windows/uwp/publish/package-flights) or by using the Microsoft Store submission API methods in described in [Manage package flights](manage-flights.md).
 
 <table>
 <colgroup>
@@ -43,32 +43,32 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="get-a-flight-submission.md">Obter um envio de vôo de pacote existente</a></td>
+<td align="left"><a href="get-a-flight-submission.md">Get an existing package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-a-flight-submission.md">Obter o status de um envio de vôo de pacote existente</a></td>
+<td align="left"><a href="get-status-for-a-flight-submission.md">Get the status of an existing package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
-<td align="left"><a href="create-a-flight-submission.md">Criar um novo envio de vôo de pacote</a></td>
+<td align="left"><a href="create-a-flight-submission.md">Create a new package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="update-a-flight-submission.md">Atualizar um envio de vôo de pacote existente</a></td>
+<td align="left"><a href="update-a-flight-submission.md">Update an existing package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-a-flight-submission.md">Confirmar um envio de vôo de pacote novo ou atualizado</a></td>
+<td align="left"><a href="commit-a-flight-submission.md">Commit a new or updated package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="delete-a-flight-submission.md">Excluir um envio de vôo de pacote</a></td>
+<td align="left"><a href="delete-a-flight-submission.md">Delete a package flight submission</a></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 
 Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
-1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [criar e gerenciar envios usando Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluindo a associação de um aplicativo do Azure ad à sua conta do Partner Center e a obtenção da ID e da chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
+1. If you have not yet done so, complete the prerequisites described in [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md), including associating an Azure AD application with your Partner Center account and obtaining your client ID and key. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Microsoft Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
@@ -106,9 +106,9 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 4. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP no [armazenamento do Blob do Azure](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando o URI SAS que foi fornecido no corpo da resposta do método POST chamado anteriormente. Existem bibliotecas do Azure diferentes que é possível usar para fazer isso em uma grande variedade de plataformas, inclusive:
 
-    * [Biblioteca de cliente de armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [SDK do armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [SDK do armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [Azure Storage Client Library for .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Azure Storage SDK for Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Azure Storage SDK for Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
     O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
@@ -119,7 +119,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. [Confirme o envio do pacote de pré-lançamento](commit-a-flight-submission.md) realizando o método a seguir. Isso alertará o Partner Center de que você concluiu seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
+5. [Confirme o envio do pacote de pré-lançamento](commit-a-flight-submission.md) realizando o método a seguir. This will alert Partner Center that you are done with your submission and that your updates should now be applied to your account.
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o Partner Center.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. You can continue to monitor the submission progress by using the previous method, or by visiting Partner Center.
 
 <span/>
 
@@ -141,21 +141,21 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 Os artigos a seguir dão exemplos de código detalhados que demonstram como criar um envio de pacote de pré-lançamento em diversas linguagens de programação diferentes:
 
-* [C#exemplos de código](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplos de código Java](java-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplos de código do Python](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# code examples](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java code examples](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python code examples](python-code-examples-for-the-windows-store-submission-api.md)
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://github.com/Microsoft/StoreBroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
-Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
+Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://github.com/Microsoft/StoreBroker).
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>Gerenciar uma distribuição de pacote gradual para um envio de pacote de pré-lançamento
 
-Você pode distribuir gradualmente os pacotes atualizados em um envio de pacote de pré-lançamento para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, incluindo instruções sobre como habilitar e gerenciar uma distribuição gradual de pacotes no Partner Center, consulte [Este artigo](../publish/gradual-package-rollout.md).
+Você pode distribuir gradualmente os pacotes atualizados em um envio de pacote de pré-lançamento para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. For more details, including instructions for how to enable and manage a gradual package rollout in Partner Center, see [this article](../publish/gradual-package-rollout.md).
 
 Para habilitar programaticamente uma distribuição de pacote gradual para um envio de pacote de pré-lançamento, siga esse processo usando métodos na API de envio da Microsoft Store:
 
@@ -182,22 +182,22 @@ Depois que uma distribuição de pacote gradual for habilitada para um envio de 
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
-<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obter as informações de distribuição gradual de um envio de vôo de pacote</a></td>
+<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Get the gradual rollout info for a package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
-<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Atualizar o percentual de distribuição gradual para um envio de vôo de pacote</a></td>
+<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Update the gradual rollout percentage for a package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
-<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Interromper a distribuição gradual de um envio de vôo de pacote</a></td>
+<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Halt the gradual rollout for a package flight submission</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
-<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalizar a distribuição gradual de um envio de vôo de pacote</a></td>
+<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalize the gradual rollout for a package flight submission</a></td>
 </tr>
 </tbody>
 </table>
@@ -301,7 +301,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Digite    | Descrição         |
 |-----------------|---------|------|
-|     date            |    sequência     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     date            |    sequência     |  The date and time the report was generated, in ISO 8601 format.    |
 |     reportUrl            |    sequência     |  A URL na qual é possível acessar o relatório.    |
 
 
@@ -331,13 +331,13 @@ Esse recurso fornece detalhes sobre um pacote em um envio.
 Esse recurso tem os valores a seguir.
 
 > [!NOTE]
-> Durante a chamada do método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md) somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Partner Center.
+> Durante a chamada do método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md) somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. The other values are populated by Partner Center.
 
 | Valor           | Digite    | Descrição              |
 |-----------------|---------|------|
 | fileName   |   sequência      |  O nome do pacote.    |  
 | fileStatus    | sequência    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  sequência   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Partner Center.   |     
+| id    |  sequência   |  Uma ID que identifica exclusivamente o pacote. This value is used by Partner Center.   |     
 | versão    |  sequência   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  sequência   |  A arquitetura do pacote de aplicativo (por exemplo, ARM).   |     
 | languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
@@ -389,7 +389,7 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | fallbackSubmissionId    |  sequência   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
 > [!NOTE]
-> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Partner Center e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
+> The *packageRolloutStatus* and *fallbackSubmissionId* values are assigned by Partner Center, and are not intended to be set by the developer. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
 
 <span/>
 
@@ -424,11 +424,11 @@ Os códigos a seguir representam o status de um envio.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços Microsoft Stores](create-and-manage-submissions-using-windows-store-services.md)
-* [Gerenciar vôos de pacote usando a API de envio de Microsoft Store](manage-flights.md)
-* [Obter um envio de vôo de pacote](get-a-flight-submission.md)
-* [Criar um envio de vôo de pacote](create-a-flight-submission.md)
-* [Atualizar um envio de vôo de pacote](update-a-flight-submission.md)
-* [Confirmar envio de vôo de pacote](commit-a-flight-submission.md)
-* [Excluir um envio de vôo de pacote](delete-a-flight-submission.md)
-* [Obter o status de um envio de vôo de pacote](get-status-for-a-flight-submission.md)
+* [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Manage package flights using the Microsoft Store submission API](manage-flights.md)
+* [Get a package flight submission](get-a-flight-submission.md)
+* [Create a package flight submission](create-a-flight-submission.md)
+* [Update a package flight submission](update-a-flight-submission.md)
+* [Commit a package flight submission](commit-a-flight-submission.md)
+* [Delete a package flight submission](delete-a-flight-submission.md)
+* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)

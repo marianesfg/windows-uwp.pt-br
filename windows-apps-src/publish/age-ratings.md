@@ -6,16 +6,16 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
-ms.openlocfilehash: 55592f2d16807e2ad359a21977bd483db0b2e089
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: bab98b50b1d53451708b7631f74d15947c60d4c8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826180"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260049"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
-A página **Classificações etárias** do [processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](https://go.microsoft.com/fwlink/p/?LinkId=716854). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
+A página **Classificações etárias** do [processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](https://www.globalratings.com/). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
 
 ## <a name="answering-the-age-ratings-questionnaire"></a>Respondendo ao questionário de classificação etária
 
@@ -24,9 +24,9 @@ Na primeira vez que você enviar um aplicativo (ou na primeira vez que você atu
 > [!IMPORTANT]
 > Se você já preencheu ao questionário do aplicativo em outra vitrine e tem uma ID de classificação da IARC, é possível selecionar a opção para nos informar sua ID de classificação. Usaremos sua ID para associar as classificações existentes ao seu app na Microsoft Store.
 
-Você precisa responder às perguntas com precisão. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
+É necessário que você responda às perguntas de forma precisa. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
 
-A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Para obter mais detalhes que podem ajudá-lo a entender como responder a qualquer pergunta, clique no ícone de informações ao lado dessa pergunta. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
+A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. To get more details that may help you understand how to answer any question, click the info icon next to that question. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
 
 Quando tiver terminado de responder às perguntas, clique em **Salvar e gerar**. Você verá todas as classificações atribuídas do aplicativo e poderá continuar com o envio. Você também pode clicar em **Editar** para corrigir qualquer uma das suas respostas ao questionário.
 
@@ -35,10 +35,10 @@ Na próxima vez que atualizar o seu aplicativo, você verá todas as classifica�
 <span id="boards" />
 
 > [!NOTE]
-> A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](https://go.microsoft.com/fwlink/p/?LinkId=228256) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
+> A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](https://www.grb.or.kr/Default.aspx) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
 
 > [!NOTE]
-> Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://go.microsoft.com/fwlink/?linkid=867281). 
+> Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://www.gamerating.org.tw/company_login.php). 
 
 <span id="appeal" />
 
