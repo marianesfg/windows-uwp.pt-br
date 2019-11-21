@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 59678dc5eca7dec0857cadd9249dd19e25b3430b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: a07fc5c669d3c9cd374a4a031fba2ee6ef6d5756
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319043"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257284"
 ---
 # <a name="images-and-image-brushes"></a>Imagens e pincéis de imagem
 
@@ -143,7 +143,7 @@ Um [WriteableBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Im
 
 ### <a name="rendertargetbitmap"></a>RenderTargetBitmap
 
-A classe [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap) pode capturar a árvore da interface do usuário XAML de um aplicativo em execução e representar a origem de uma imagem de bitmap. Após a captura, a origem dessa imagem poderá ser aplicada a outras partes do aplicativo, salva como recurso ou dados de aplicativo pelo usuário ou utilizada em outros cenários. Um cenário especificamente útil é a criação de uma miniatura em tempo de execução de uma página XAML para um esquema de navegação, como incluir o link da imagem de um controle [Hub](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub). **O RenderTargetBitmap** tem algumas limitações sobre o conteúdo que vai aparecer na imagem capturada. Para saber mais, confira o tópico de referência da API [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap).
+A classe [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap) pode capturar a árvore da interface do usuário XAML de um aplicativo em execução e representar a origem de uma imagem de bitmap. Após a captura, a origem dessa imagem poderá ser aplicada a outras partes do aplicativo, salva como recurso ou dados de aplicativo pelo usuário ou utilizada em outros cenários. Um cenário especificamente útil é a criação de uma miniatura em runtime de uma página XAML para um esquema de navegação, como incluir o link da imagem de um controle [Hub](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub). **O RenderTargetBitmap** tem algumas limitações sobre o conteúdo que vai aparecer na imagem capturada. Para saber mais, confira o tópico de referência da API [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap).
 
 ### <a name="image-sources-and-scaling"></a>Origens de imagens e dimensionamento
 
@@ -155,7 +155,7 @@ Para obter mais informações sobre como desenvolver para dimensionamento, consu
 
 É comum especificar os elementos Image e ImageBrush usando XAML em vez de código. Isso ocorre porque esses elementos costumam ser a saída das ferramentas de design como parte de uma definição da interface do usuário do XAML.
 
-Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) ou [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). As propriedades da origem exigem um [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para iniciar o valor. Se sua origem for um URI que inclui conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que usa um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, em que você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](https://go.microsoft.com/fwlink/p/?linkid=238575).
+Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) ou [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). As propriedades da origem exigem um [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para iniciar o valor. Se sua origem for um URI que inclui conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que usa um URI. Você também pode considerar a manipulação do evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, em que você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Consulte um código de amostra em [Amostra de imagens XAML](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9).
 
 > [!NOTE]
 > Se definir as imagens usando código, use a manipulação automática para acessar recursos não qualificados com os qualificadores atuais de escala e cultura ou use [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) e [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap) com qualificadores de escala e cultura para obter esses recursos diretamente. Para saber mais, veja [Sistema de gerenciamento de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)).

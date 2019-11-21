@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e05880dc8b0a983f4f8005b40939e5ffe0cbe4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 67c729455c6eb2d8f5e8b07db5e1be7ac13f59b8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340398"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258172"
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -215,7 +215,7 @@ Colar | a área de transferência contém texto.
 Selecionar tudo | a TextBox contém texto.
 Desfazer | texto foi alterado.
 
-Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](https://go.microsoft.com/fwlink/p/?linkid=234891). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
+Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](https://code.msdn.microsoft.com/windowsapps/Context-menu-sample-40840351). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
 
 ### <a name="select-copy-and-paste"></a>Selecionar, copiar e colar
 

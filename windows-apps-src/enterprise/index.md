@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eec1de013efce7b23cd89e81f659a5cc530638c4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 152a1bf2a751c2d2c78818b85868bfea3be911ac
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339962"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259651"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -146,7 +146,7 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 | Tópico | Descrição |
 |-------|-------------|
 | [Guia para aplicativos UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) | Neste guia introdutório, você vai se familiarizar com a Plataforma Universal do Windows 10. Entre outras coisas, ele define família de dispositivos e orienta como decidir para qual direcionar, apresenta novos painéis e controles de interface do usuário, que permitem que você adapte a sua interface do usuário a diferentes fatores forma de dispositivo diferentes, e explica como entender e controlar a superfície de API que está disponível para seu aplicativo. |
-| [Exemplo de código de interface do usuário XAML adaptável](https://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
+| [Exemplo de código de interface do usuário XAML adaptável](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
 | [Tópico do Xamarin](/xamarin/) | Xamarin para direcionar para telefone |
 
 ## <a name="deployment"></a>Implantação

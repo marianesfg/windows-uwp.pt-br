@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, local, serviços de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: b35fcca29089e366817889757254531ff243159f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6a27eeeb9aa7349e532dcd76e5b7a7176ac20c08
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371707"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259346"
 ---
 # <a name="maps-and-location-overview"></a>Visão geral de mapas e local
 
@@ -21,9 +21,9 @@ ms.locfileid: "66371707"
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 
 > [!TIP]
-> Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [repositório Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
--   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977)
--   [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+> Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [repositório Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples) no GitHub:
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
+-   [Amostra de geolocalização da UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
 
  
 
@@ -51,7 +51,7 @@ Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando API
 | [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Exibir rotas e trajeto](routes-and-directions.md) | Solicite rotas e trajeto e os exiba no aplicativo. |
 | [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapLocationFinder) no namespace [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). |
-| [Localize e baixe pacotes de mapas para uso offline](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| No passado, o aplicativo precisava direcionar os usuários para o aplicativo de configurações para baixar Mapas offline. Agora, você pode usar classes no namespace [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para localizar os pacotes baixados em uma determinada área (com base em [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox) etc.). <br> Você pode também verificar e escutar o status de download de pacotes de mapa, bem como iniciar um download sem exigir que o usuário saia do aplicativo. <br> Você encontrará exemplos de como fazer isso no conteúdo de referência e a [amostra de mapa da UWP (Plataforma Universal do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+| [Localize e baixe pacotes de mapas para uso offline](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| No passado, o aplicativo precisava direcionar os usuários para o aplicativo de configurações para baixar Mapas offline. Agora, você pode usar classes no namespace [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para localizar os pacotes baixados em uma determinada área (com base em [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox) etc.). <br> Você pode também verificar e escutar o status de download de pacotes de mapa, bem como iniciar um download sem exigir que o usuário saia do aplicativo. <br> Você encontrará exemplos de como fazer isso no conteúdo de referência e a [amostra de mapa da UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
 
 ## <a name="get-the-users-location"></a>Obter a localização do usuário
 
@@ -74,12 +74,12 @@ O aplicativo pode iniciar o aplicativo Mapas do Windows conforme mostrado aqui p
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Amostra de mapa UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Amostra de geolocalização da UWP](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de mapa UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
+* [Amostra de geolocalização da UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Obter a localização atual](get-location.md)
 * [Diretrizes de design para aplicativos com detecção de localização](guidelines-and-checklist-for-detecting-location.md)
 * [Diretrizes de design para mapas](controls-map.md)
 * [Diretrizes de design para aplicativos com detecção de privacidade](https://docs.microsoft.com/windows/uwp/security/index)
 * [Vídeo da Build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo de aplicativo de tráfego UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Exemplo de aplicativo de tráfego UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

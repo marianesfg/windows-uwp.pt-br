@@ -6,12 +6,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 460179f7f57e17f78fdb3fd3bd289e761a8a7b4f
-ms.sourcegitcommit: 2dba9b4e81151d14ca90d36341274a3b59926197
+ms.openlocfilehash: 7beee974bceceab02984ae6499a9c5db0b0281b9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057515"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259297"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Store
 
@@ -72,7 +72,7 @@ Não importa se cobra um preço pelo aplicativo ou o oferece gratuitamente, voc�
 Damos suporte a uma grande variedade de experiências de anúncios para atender à maioria das necessidades, inclusive anúncios em faixa, anúncios intersticiais (banners e vídeo), anúncios em vídeo lineares, anúncios executáveis e anúncios nativos. Nossa plataforma é compatível com os padrões OpenRTB, VAST 2.x, MRAID 2 e VPAID 3, além de aceitar MOAT e IAS.
 
 [Explorar as opções de anúncio](../publish/create-an-ad-campaign-for-your-app.md)
-[Instalar SDK de anúncio](https://aka.ms/ads-sdk-uwp)
+[Instalar SDK de anúncio](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
     :::column-end:::
 :::row-end:::
 
@@ -85,7 +85,7 @@ Damos suporte a uma grande variedade de experiências de anúncios para atender 
 
 Maximize a receita de anúncios nos seus aplicativos usando o serviço de controle de anúncios da Microsoft para exibir anúncios de várias redes conhecidas. É possível definir as configurações de controle no Partner Center sem tocar em uma linha de código. Se você nos permitir configurar o controle, nossos algoritmos de aprendizado de máquina ajudarão você a maximizar a receita de anúncios em todos os mercados compatíveis com o aplicativo.
 
-[Usar o serviço de anúncios](https://aka.ms/admediationblog)
+[Usar o serviço de anúncios](https://blogs.windows.com/windowsdeveloper/2017/05/08/announcing-microsofts-ad-mediation-service/)
     :::column-end:::
 :::row-end:::
 
@@ -110,8 +110,8 @@ Os relatórios de análise detalhados permitem que você veja como os anúncios 
 
  Tópico                | Descrição                 |
 |--------------------|-----------------------------|
-| [Programa de afiliados da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=617665) | Ganhe comissões vinculando produtos da Microsoft ao seu aplicativo, blog, página da Web ou outras comunicações. É possível criar vínculos com aplicativos, jogos, músicas, filmes, hardware, acessórios e outros produtos vendidos na Microsoft Store.
-| [Experimentação de A/B](https://go.microsoft.com/fwlink/p/?LinkId=722784) | Execute testes A/B nos seus aplicativos para mensurar a eficácia das alterações de recursos em alguns clientes antes de habilitar essas alterações para todos os usuários.
+| [Programa de afiliados da Microsoft](https://www.microsoftaffiliates.com/) | Ganhe comissões vinculando produtos da Microsoft ao seu aplicativo, blog, página da Web ou outras comunicações. É possível criar vínculos com aplicativos, jogos, músicas, filmes, hardware, acessórios e outros produtos vendidos na Microsoft Store.
+| [Experimentação de A/B](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing) | Execute testes A/B nos seus aplicativos para mensurar a eficácia das alterações de recursos em alguns clientes antes de habilitar essas alterações para todos os usuários.
 | [Envolver os clientes com o Microsoft Store Services SDK](microsoft-store-services-sdk.md) | O Microsoft Store Services SDK fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que o ajudam a se envolver com seus clientes. Esses recursos incluem notificações específicas, testes A/B e lançamento do Hub de Comentários do seu aplicativo.
 | [Inicie o Hub de Feedback em seu aplicativo](launch-feedback-hub-from-your-app.md) | Adicione código aos seus aplicativos UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários em [Relatório de comentários](../publish/feedback-report.md) no Partner Center. Esse recurso requer o Microsoft Store Services SDK. 
 | [Configurar seu aplicativo para receber notificações por push do Partner Center](configure-your-app-to-receive-dev-center-notifications.md) | Registre um canal de notificação para seu aplicativo UWP para que ele possa receber as [notificações por push do Partner Center](../publish/send-push-notifications-to-your-apps-customers.md) e controle a taxa de inicializações do aplicativo resultantes das notificações por push. Esse recurso requer o Microsoft Store Services SDK.

@@ -6,12 +6,12 @@ keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de de
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4c1f90c0fa8304f95b1dc958fe5a75e74301dd
-ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
+ms.openlocfilehash: a2d1719379302dd8e996c37e05d7ddaf35a0cf18
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205933"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258414"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -74,7 +74,7 @@ Informações específicas à família de dispositivos
 **O sideload de aplicativos** é uma opção mais segura que o Modo de Desenvolvedor, pois você não pode instalar aplicativos no dispositivo sem um certificado confiável.
 
 > [!NOTE]
-> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um aplicativo de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do aplicativo e que é o único responsável por qualquer dano resultante da instalação e da execução do aplicativo. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](https://go.microsoft.com/fwlink/?LinkId=521839).
+> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um aplicativo de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do aplicativo e que é o único responsável por qualquer dano resultante da instalação e da execução do aplicativo. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](https://privacy.microsoft.com/privacystatement).
 
 
 ### <a name="developer-mode"></a>Modo de Desenvolvedor

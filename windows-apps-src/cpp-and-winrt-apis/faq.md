@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bb19e406df98a24a6d65fc774a29e44ef267272
-ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
+ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939583"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254991"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -37,21 +37,21 @@ O suporte ao build do C++/WinRT (propriedades/destinos) está documentado no [le
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsix"></a>Quais são os requisitos para as Extensões do Visual Studio (VSIX) no C++/WinRT?
 Para a versão 1.0.190128.4 e posteriores da extensão VSIX, confira [Suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package). Para outras versões, confira [Versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
 
-## <a name="whats-a-runtime-class"></a>O que é uma *classe de tempo de execução*?
-Uma classe de tempo de execução é um tipo que pode ser ativado e consumido por meio de interfaces COM modernas, normalmente entre limites executáveis. No entanto, uma classe de tempo de execução também pode ser usada dentro da unidade de compilação que a implementa. Você declara uma classe de tempo de execução na linguagem IDL e pode implementá-la em C++ padrão usando C++/WinRT.
+## <a name="whats-a-runtime-class"></a>O que é uma *classe de runtime*?
+Uma classe de runtime é um tipo que pode ser ativado e consumido por meio de interfaces COM modernas, normalmente entre limites executáveis. No entanto, uma classe de runtime também pode ser usada dentro da unidade de compilação que a implementa. Você declara uma classe de runtime na linguagem IDL e pode implementá-la em C++ padrão usando C++/WinRT.
 
 ## <a name="what-do-the-projected-type-and-the-implementation-type-mean"></a>Qual o significado de *tipo projetado* e *tipo de implementação*?
 Se estiver *consumindo* apenas uma classe do Windows Runtime (classe do tempo de execução), você estará lidando exclusivamente com *tipos projetados*. C++/WinRT é uma *projeção de linguagem*, de modo que os tipos projetados fazem parte da superfície do Windows Runtime que é *projetada* em C++ com C++/WinRT. Para obter mais detalhes, confira [Consumir APIs com C++/WinRT](consume-apis.md).
 
-O *tipo de implementação* contém a implementação de uma classe de tempo de execução, portanto, ele só está disponível no projeto que implementa a classe de tempo de execução. Quando você estiver trabalhando em um projeto que implementa classes de tempo de execução (um projeto do componente do Tempo de Execução do Windows ou um projeto que usa interface do usuário XAML), é importante estar familiarizado com a distinção entre o tipo de implementação de uma classe de tempo de execução e o tipo projetado que representa a classe de tempo de execução projetada em C++/WinRT. Para obter mais detalhes, confira [Criar APIs com C++/WinRT](author-apis.md).
+O *tipo de implementação* contém a implementação de uma classe de runtime, portanto, ele só está disponível no projeto que implementa a classe de runtime. Quando você estiver trabalhando em um projeto que implementa classes de runtime (um projeto do componente do Windows runtime ou um projeto que usa interface do usuário XAML), é importante estar familiarizado com a distinção entre o tipo de implementação de uma classe de runtime e o tipo projetado que representa a classe de runtime projetada em C++/WinRT. Para obter mais detalhes, confira [Criar APIs com C++/WinRT](author-apis.md).
 
-## <a name="do-i-need-to-declare-a-constructor-in-my-runtime-classs-idl"></a>É necessário declarar um construtor em minha IDL da classe do tempo de execução?
-Somente se a classe de tempo de execução for projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime). Para obter detalhes completos sobre a finalidade e as consequências da declaração de construtores na IDL, confira [Construtores de classe de tempo de execução](author-apis.md#runtime-class-constructors).
+## <a name="do-i-need-to-declare-a-constructor-in-my-runtime-classs-idl"></a>É necessário declarar um construtor em minha IDL da classe de runtime?
+Somente se a classe de tempo de execução for projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime). Para obter detalhes completos sobre a finalidade e as consequências da declaração de construtores na IDL, confira [Construtores de classe de runtime](author-apis.md#runtime-class-constructors).
 
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>Por que o vinculador fornece um erro "LNK2019: Símbolo externo não resolvido"?
 Se o símbolo não resolvido for uma API dos cabeçalhos de namespace do Windows para a projeção do C++/WinRT (no namespace **winrt**), a API será declarada por encaminhamento em um cabeçalho que você incluiu, mas sua definição estará em um cabeçalho ainda não incluído. Inclua o cabeçalho nomeado para o namespace da API e compile-o novamente. Para saber mais, confira [Cabeçalhos de projeção do C++/WinRT](consume-apis.md#cwinrt-projection-headers).
 
-Se o símbolo não resolvido for uma função livre do Windows Runtime, como [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize), você precisará vincular explicitamente a biblioteca [WindowsApp.lib](/uwp/win32-and-com/win32-apis) em seu projeto. A projeção de C++/WinRT depende de algumas dessas funções livres (não membro) e de pontos de entrada. Se você usar um dos modelos de projeto da [Extensão do Visual Studio (VSIX) para C++/WinRT](https://aka.ms/cppwinrt/vsix) em seu aplicativo, `WindowsApp.lib` será vinculado automaticamente. Caso contrário, você poderá usar as configurações de vínculo do projeto para inclui-lo ou fazer isso no código-fonte.
+Se o símbolo não resolvido for uma função livre do Windows Runtime, como [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize), você precisará vincular explicitamente a biblioteca [WindowsApp.lib](/uwp/win32-and-com/win32-apis) em seu projeto. A projeção de C++/WinRT depende de algumas dessas funções livres (não membro) e de pontos de entrada. Se você usar um dos modelos de projeto da [Extensão do Visual Studio (VSIX) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) em seu aplicativo, `WindowsApp.lib` será vinculado automaticamente. Caso contrário, você poderá usar as configurações de vínculo do projeto para inclui-lo ou fazer isso no código-fonte.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
@@ -61,20 +61,20 @@ Se o símbolo não resolvido for uma função livre do Windows Runtime, como [Ro
 
 ## <a name="why-am-i-getting-a-class-not-registered-exception"></a>Por que estou recebendo uma exceção de "classe não registrada"?
 
-Nesse caso, o sintoma é que&mdash;ao construir uma classe de tempo de execução ou acessar um membro estático&mdash;você vê uma exceção acionada em tempo de execução com REGDB_E_CLASSNOTREGISTERED com um valor de REGDB.
+Nesse caso, o sintoma é que&mdash;ao construir uma classe de runtime ou acessar um membro estático&mdash;você vê uma exceção acionada no runtime com REGDB_E_CLASSNOTREGISTERED com um valor de REGDB.
 
-Uma das causas disso é que o componente do Windows Runtime não pode ser carregado. Verifique se o arquivo de metadados do componente de Tempo de Execução do Windows (`.winmd`) tem o mesmo nome do binário de componente (o `.dll`), que também é o nome do projeto e o nome do namespace raiz. Além disso, verifique se os metadados do Tempo de Execução do Windows e o binário foram copiados corretamente pelo processo de compilação para a pasta `Appx` do aplicativo de consumo. Confirme se o `AppxManifest.xml` do aplicativo de consumo (também na pasta `Appx`) contém um elemento **&lt;InProcessServer&gt;** que está declarando corretamente a classe ativável e o nome binário.
+Uma das causas disso é que o componente do Windows Runtime não pode ser carregado. Verifique se o arquivo de metadados do componente de Windows Runtime (`.winmd`) tem o mesmo nome do binário de componente (o `.dll`), que também é o nome do projeto e o nome do namespace raiz. Além disso, verifique se os metadados do Windows Runtime e o binário foram copiados corretamente pelo processo de compilação para a pasta `Appx` do aplicativo de consumo. Confirme se o `AppxManifest.xml` do aplicativo de consumo (também na pasta `Appx`) contém um elemento **&lt;InProcessServer&gt;** que está declarando corretamente a classe ativável e o nome binário.
 
 ### <a name="uniform-construction"></a>Construção uniforme
 
-Esse erro também poderá ocorrer se você tentar criar uma instância de uma classe de tempo de execução implementada localmente por meio de qualquer um dos construtores do tipo projetado (diferente de seu construtor **std::nullptr_t**). Para fazer isso, você precisará do recurso de C++/WinRT 2.0 que costuma ser chamado de construção uniforme. Se desejar aceitar esse recurso, então, para saber mais e obter exemplos de código, confira [Aceitar a construção uniforme e o acesso direto de implementação](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access).
+Esse erro também poderá ocorrer se você tentar criar uma instância de uma classe de runtime implementada localmente por meio de qualquer um dos construtores do tipo projetado (diferente de seu construtor **std::nullptr_t**). Para fazer isso, você precisará do recurso de C++/WinRT 2.0 que costuma ser chamado de construção uniforme. Se desejar aceitar esse recurso, então, para saber mais e obter exemplos de código, confira [Aceitar a construção uniforme e o acesso direto de implementação](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access).
 
-Para saber como criar uma instância de suas classes de tempo de execução implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
+Para saber como criar uma instância de suas classes de runtime implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime), é recomendável implementar também **IClosable** para dar suporte ao consumo de sua classe de tempo de execução por linguagens que carecem de finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close), ou ambos forem chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.
 
-## <a name="do-i-need-to-call-iclosablecloseuwpapiwindowsfoundationiclosableclose-on-runtime-classes-that-i-consume"></a>É necessário chamar [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) nas classes de tempo de execução que eu consumo?
+## <a name="do-i-need-to-call-iclosablecloseuwpapiwindowsfoundationiclosableclose-on-runtime-classes-that-i-consume"></a>É necessário chamar [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) nas classes de runtime que eu consumo?
 **IClosable** existe para dar suporte a linguagens que não têm finalização determinística. Portanto, você não deve chamar **IClosable::Close** de C++/WinRT, exceto em casos bem raros, envolvendo corridas de desligamento ou adoções semifatais. Se estiver usando tipos **Windows.UI.Composition**, por exemplo, você poderá se deparar com casos em que queira descartar objetos em uma sequência definida, como uma alternativa para permitir que a destruição do wrapper de C++/WinRT faça o trabalho para você.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>É possível usar LLVM/Clang para compilar com C++/WinRT?

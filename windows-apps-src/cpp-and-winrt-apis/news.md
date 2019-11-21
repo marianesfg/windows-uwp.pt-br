@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, novidades, o que há, de novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 24abdb26cf884367d9a9521d30b09b443d2e4e00
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: d5a2c3d10f2cbfcc608d212a9465ca738e1ca15e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72998620"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255040"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -19,7 +19,7 @@ Conforme as versões subsequentes do C++/WinRT são lançadas, este tópico desc
 
 ## <a name="news-and-changes-in-cwinrt-20"></a>Novidades e alterações em C++/WinRT 2.0
 
-Para obter mais informações sobre a [Extensão de C++WinRT Visual Studio VSIX](https://aka.ms/cppwinrt/vsix), o [pacote do NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e a ferramenta `cppwinrt.exe`,&mdash;incluindo como adquirir e instalá-los&mdash;, veja o[suporte do Visual Studio para C++/WinRT, XAML, a extensão do VSIX e o pacote do NuGet](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+Para obter mais informações sobre a [Extensão de C++WinRT Visual Studio VSIX](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264), o [pacote do NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e a ferramenta `cppwinrt.exe`,&mdash;incluindo como adquirir e instalá-los&mdash;, veja o[suporte do Visual Studio para C++/WinRT, XAML, a extensão do VSIX e o pacote do NuGet](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ### <a name="changes-to-the-cwinrt-visual-studio-extension-vsix-for-version-20"></a>Alterações à VSIX (Extensão C++WinRT Visual Studio) para a versão 2.0
 
@@ -302,7 +302,7 @@ Outras alterações.
 - Ponteiros inteligentes reforçados. Anteriormente, os revogadores de evento falhavam em revogar quando movidos-recebiam um novo valor. Isso ajudou a descobrir um problema em que classes de ponteiro inteligente não estavam manipulando de modo confiável a autoatribuição; como raiz no [**modelo de struct winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **WinRT::com_ptr** foi corrigido e os revogadores de evento foram corrigidos para tratar a semântica de movimentação corretamente para revogarem após a atribuição.
 
 > [!IMPORTANT]
-> Alterações importantes foram feitas à [VSIX (Extensão do Visual Studio em C++/WinRT)](https://aka.ms/cppwinrt/vsix), ambas na versão 1.0.181002.2 e depois na versão 1.0.190128.4. Para obter detalhes sobre essas alterações e como elas afetam seus projetos existentes, veja [Suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) e [Versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
+> Alterações importantes foram feitas à [VSIX (Extensão do Visual Studio em C++/WinRT)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264), ambas na versão 1.0.181002.2 e depois na versão 1.0.190128.4. Para obter detalhes sobre essas alterações e como elas afetam seus projetos existentes, veja [Suporte para Visual Studio C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) e [Versões anteriores da extensão VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
 
 ### <a name="isolation-from-windows-sdk-header-files"></a>Isolamento de arquivos de cabeçalho do SDK do Windows
 

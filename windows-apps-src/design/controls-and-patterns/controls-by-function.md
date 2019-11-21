@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6de5e9d8899a7f270d30438a0563b879ccdab898
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 57639fc370ed7e10a427af4808e2a8a6de91b554
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363135"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257702"
 ---
 # <a name="controls-by-function"></a>Controles por função
 
 A estrutura da IU XAML para Windows fornece uma biblioteca extensiva de controles que dão suporte ao desenvolvimento da interface do usuário. Alguns desses controles têm uma representação visual, outros funcionam como contêineres de outros controles ou conteúdos, como imagens e mídias. 
 
-Você também pode ver vários controles da IU do Windows em ação baixando a [Amostra de noções básicas de interface do usuário XAML](https://go.microsoft.com/fwlink/p/?LinkId=619992).
+Você também pode ver vários controles da IU do Windows em ação baixando a [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics).
 
 <table>
 <th align="left">XAML Controls Gallery<th>
@@ -54,21 +54,21 @@ Referência: [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.C
 
 Design e instruções: [Guia de controle da barra de aplicativos e barra de comandos](app-bars.md) 
 
-Código de exemplo: [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de exemplo: [Exemplo de execução de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="app-bar-separator"></a>Separador da barra de aplicativos
 Visualmente separa grupos de comandos em uma barra de comandos.
 
 Referência: [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 
 
-Código de exemplo: [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de exemplo: [Exemplo de execução de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="app-bar-toggle-button"></a>Botão de alternância da barra de aplicativos
 Um botão para alternar comandos em uma barra de comandos.
 
 Referência: [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 
 
-Código de exemplo: [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de exemplo: [Exemplo de execução de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ### <a name="command-bar"></a>Barra de comandos
 Uma barra de aplicativos especializada que lida com o redimensionamento de elementos de botão da barra de aplicativos.
@@ -86,7 +86,7 @@ Referência: [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Con
 
 Design e instruções: [Guia de controle da barra de aplicativos e barra de comandos](app-bars.md)
 
-Código de exemplo: [Exemplo de execução de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+Código de exemplo: [Exemplo de execução de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ## <a name="buttons"></a>Botões
 
@@ -166,7 +166,7 @@ Referência: [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contr
 
 Design e instruções: [Listas](lists.md) 
 
-Código de exemplo: [Exemplo de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+Código de exemplo: [Exemplo de ListView](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 
 ### <a name="items-control"></a>Controle de itens
 Um controle que apresenta um conjunto de itens em uma interface do usuário especificada, por modelo de dados. 
@@ -191,7 +191,7 @@ Referência: [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contr
 
 Design e instruções: [Listas](lists.md) 
 
-Código de exemplo: [Exemplo de ListView](https://go.microsoft.com/fwlink/p/?LinkId=619900)
+Código de exemplo: [Exemplo de ListView](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
 
 ## <a name="date-and-time-controls"></a>Controles de data e hora
 
@@ -288,7 +288,7 @@ Referência: [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Con
 
 Design e instruções: [Menus e menus de contexto](menus.md) 
 
-Código de exemplo: [Exemplo do menu de contexto XAML](https://go.microsoft.com/fwlink/p/?LinkId=620021)
+Código de exemplo: [Exemplo do menu de contexto XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ### <a name="popup-menu"></a>Menu pop-up
 Um menu personalizado que apresenta os comandos especificados por você.
@@ -324,7 +324,7 @@ Referência: [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls
 
 Design e instruções: [Image e ImageBrush](images-imagebrushes.md) 
 
-Código de exemplo: [Amostra de imagens XAML](https://go.microsoft.com/fwlink/p/?linkid=226867)
+Código de exemplo: [Amostra de imagens XAML](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9)
 
 ## <a name="graphics-and-ink"></a>Tinta e elementos gráficos
 
@@ -353,7 +353,7 @@ Referência: [Formas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes.
 
 Como: [Desenhando formas](../../graphics/drawing-shapes.md) 
 
-Código de exemplo: [Amostra de desenho baseado em vetor em XAML](https://go.microsoft.com/fwlink/p/?linkid=226866)
+Código de exemplo: [Amostra de desenho baseado em vetor em XAML](https://code.msdn.microsoft.com/windowsapps/Drawing-bfc39296)
 
 ## <a name="layout-controls"></a>Controles de layout
 
@@ -453,7 +453,7 @@ Referência: [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.C
 
 Design e instruções: [Guia de controles de rolagem e movimento panorâmico](scroll-controls.md) 
 
-Código de exemplo: [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://go.microsoft.com/fwlink/p/?linkid=238577)
+Código de exemplo: [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
 
 ### <a name="stack-panel"></a>Painel da pilha
 Um painel de layout que organiza os elementos filho em uma única linha que pode ser orientada horizontal ou verticalmente.
@@ -542,7 +542,7 @@ Referência: [MediaTransportControls](https://docs.microsoft.com/uwp/api/Windows
 
 Design e instruções: [Guia de controle do elemento de mídia](media-playback.md) 
 
-Código de exemplo: [Amostra de Controles de transporte de mídia](https://go.microsoft.com/fwlink/p/?LinkId=620023)
+Código de exemplo: [Amostra de Controles de transporte de mídia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls)
 
 ### <a name="video"></a>Vídeo
 Veja Elemento de mídia.
@@ -591,7 +591,7 @@ Referência: [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contro
 
 Design e instruções: Diretrizes para exibições da Web 
 
-Código de exemplo: [Amostra do controle XAML WebView](https://go.microsoft.com/fwlink/p/?linkid=238582)
+Código de exemplo: [Amostra do controle XAML WebView](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7)
 
 ### <a name="semantic-zoom"></a>Zoom Semântico
 
@@ -612,7 +612,7 @@ Referência: [SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.C
 
 Design e instruções: [Guia do controle de zoom semântico](semantic-zoom.md)
 
-Código de exemplo: [Amostra de SemanticZoom e agrupamento de GridView em XAML](https://go.microsoft.com/fwlink/p/?linkid=226564)
+Código de exemplo: [Amostra de SemanticZoom e agrupamento de GridView em XAML](https://code.msdn.microsoft.com/windowsapps/groupedgridview-77c59e8e)
 
 ## <a name="progress-controls"></a>Controles de progresso
 
@@ -663,7 +663,7 @@ Referência: [AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml
 
 Design e instruções: [Controles de texto](text-controls.md), [Guia do controle de caixa de sugestão automática](auto-suggest-box.md)
 
-Código de exemplo: [Amostra de migração de AutoSuggestBox](https://go.microsoft.com/fwlink/p/?LinkId=619996)
+Código de exemplo: [Amostra de migração de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
 
 ### <a name="multi-line-text-box"></a>Caixa de texto com várias linhas
 Consulte Caixa de texto.
@@ -682,7 +682,7 @@ Referência: [PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 Design e instruções: [Controles de texto](text-controls.md), [Guia de controle de caixa de senha](password-box.md) 
 
-Código de exemplo: [Amostra de exibição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579), [Amostra de edição de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
+Código de exemplo: [Amostra de exibição de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a), [Amostra de edição de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
 
 ### <a name="rich-edit-box"></a>Caixa de edição com formato
 Um controle que permite que um usuário edite documentos rich text com conteúdo como texto formatado, hiperlinks e imagens.
@@ -695,7 +695,7 @@ Referência: [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 Design e instruções: [Controles de texto](text-controls.md), [Guia de controle de caixa de edição avançada](rich-edit-box.md)
 
-Código de exemplo: [Amostra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de exemplo: [Amostra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ### <a name="search-box"></a>Caixa de pesquisa
 Consulte a Caixa de sugestão automática.
@@ -719,7 +719,7 @@ Referência: [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Cont
 
 Design e instruções: [Controles de texto](text-controls.md), [Guia do controle TextBlock](text-block.md), [Guia de controle do bloco de rich text](rich-text-block.md)
 
-Código de exemplo: [Amostra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de exemplo: [Amostra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ### <a name="text-box"></a>Caixa de texto
 Um campo de texto sem formatação com uma única linha ou com várias linhas.
@@ -735,7 +735,7 @@ Referência: [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contro
 
 Design e instruções: [controles de texto](text-controls.md), [Guia de controle de caixa de texto](text-box.md) 
 
-Código de exemplo: [Amostra de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238578)
+Código de exemplo: [Amostra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
 ## <a name="selection-controls"></a>Controles de seleção
 

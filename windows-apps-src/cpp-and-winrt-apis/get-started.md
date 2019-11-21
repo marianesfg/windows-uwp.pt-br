@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto de partida
 ms.localizationpriority: medium
-ms.openlocfilehash: ab582d0528d6af8c9a8ae97e43fda2714f8e2fe6
-ms.sourcegitcommit: 2442a5f5b0c4275204063162f0f379fa90ff13b4
+ms.openlocfilehash: c058a727e09f00e01664c314d8c198f3f25e841e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72292778"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255128"
 ---
 # <a name="get-started-with-cwinrt"></a>Introdução ao C++/WinRT
 
@@ -71,7 +71,7 @@ Com as configurações de projeto padrão, os cabeçalhos incluídos são origin
 Os cabeçalhos contêm APIs do Windows projetadas em C++/WinRT. Em outras palavras, para cada tipo de Windows, o C++/WinRT define um equivalente amigável de C++ (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace **winrt** de C++. Colocar essas inclusões no cabeçalho pré-compilado reduz os tempos incrementais da compilação.
 
 > [!IMPORTANT]
-> Sempre que desejar usar um tipo de um namespace do Windows, inclua o arquivo de cabeçalho do namespace do Windows para C++/WinRT correspondente, como mostrado acima. O cabeçalho *correspondente* é aquele com o mesmo nome do namespace do tipo. Por exemplo, para usar a projeção de C++/WinRT para a classe de tempo de execução [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), `#include <winrt/Windows.Foundation.Collections.h>`. Se você incluir `winrt/Windows.Foundation.Collections.h`, *também* não será preciso incluir `winrt/Windows.Foundation.h`. Cada cabeçalho de projeção de C++/WinRT inclui automaticamente o arquivo de cabeçalho do namespace pai para que você não *precise* inclui-lo explicitamente. Embora, se você o fizer, não existirá erro.
+> Sempre que desejar usar um tipo de um namespace do Windows, inclua o arquivo de cabeçalho do namespace do Windows para C++/WinRT correspondente, como mostrado acima. O cabeçalho *correspondente* é aquele com o mesmo nome do namespace do tipo. Por exemplo, para usar a projeção de C++/WinRT para a classe de runtime [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), `#include <winrt/Windows.Foundation.Collections.h>`. Se você incluir `winrt/Windows.Foundation.Collections.h`, *também* não será preciso incluir `winrt/Windows.Foundation.h`. Cada cabeçalho de projeção de C++/WinRT inclui automaticamente o arquivo de cabeçalho do namespace pai para que você não *precise* inclui-lo explicitamente. Embora, se você o fizer, não existirá erro.
 
 ```cppwinrt
 using namespace winrt;
@@ -121,7 +121,7 @@ Nem tampouco é necessário processar os códigos de retorno de HRESULT. O C++/W
 
 Esta seção mostra como é possível adicionar suporte ao C++/WinRT a um projeto de aplicativo de Área de Trabalho do Windows que você possa ter. Se você não tiver um projeto de aplicativo de Área de Trabalho do Windows existente, siga estas etapas para criar um. Por exemplo, abra o Visual Studio e crie um projeto **Visual C++** \> **Área de Trabalho do Windows** \> **Aplicativo de Área de Trabalho do Windows**.
 
-Se desejar, você pode instalar a [VSIX (Extensão do Visual Studio) para C++/WinRT](https://aka.ms/cppwinrt/vsix) e o pacote NuGet. Para obter detalhes, confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+Se desejar, você pode instalar a [VSIX (Extensão do Visual Studio) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) e o pacote NuGet. Para obter detalhes, confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ### <a name="set-project-properties"></a>Definir propriedades do projeto
 

@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dd1fce4e8a5c18af93df32b12ce8b20c8bc69f9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 57927ff77f060a1ea1bd7720d8831f31c5355264
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340561"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259205"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -39,7 +39,7 @@ As classes do namespace [**Windows.Web.Http**](https://docs.microsoft.com/uwp/ap
 
 -   Informações de progresso da Solicitação HTTP disponíveis em métodos assíncronos.
 
-A classe [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) representa uma mensagem de solicitação HTTP enviada por [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient). A classe [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) representa uma mensagem de resposta HTTP recebida de uma solicitação HTTP. As mensagens HTTP são definidas na [RFC 2616](https://go.microsoft.com/fwlink/p/?linkid=241642) pela IETF.
+A classe [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) representa uma mensagem de solicitação HTTP enviada por [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient). A classe [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) representa uma mensagem de resposta HTTP recebida de uma solicitação HTTP. As mensagens HTTP são definidas na [RFC 2616](https://tools.ietf.org/html/rfc2616) pela IETF.
 
 O namespace [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) representa conteúdo HTTP como o corpo e os cabeçalhos da entidade HTTP, incluindo cookies. O conteúdo HTTP pode ser associado a uma solicitação HTTP ou a uma resposta HTTP. O namespace **Windows.Web.Http** fornece várias classes diferentes para representar o conteúdo HTTP.
 

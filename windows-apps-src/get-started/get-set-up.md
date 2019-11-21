@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30ffec0f2a5e771e649eda6240d9e7ef90f50890
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7c95d915c8906e2052243fee509e260fc8864454
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318791"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258364"
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
 
@@ -28,7 +28,7 @@ O Microsoft Visual Studio 2019 ajuda você a projetar, codificar, testar e depur
 
 Se ainda não tem o Visual Studio 2019, você pode instalar o Microsoft Visual Studio Community 2019 gratuitamente. Este download inclui simuladores de dispositivos para testar seus aplicativos:
 
--   [Baixar ferramentas de desenvolvedor do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189)
+-   [Baixar ferramentas de desenvolvedor do Windows 10](https://developer.microsoft.com/windows/downloads)
 
 Quando você instalar o Visual Studio, selecione a opção de Ferramentas de Desenvolvimento de Aplicativo Universal do Windows, conforme mostrado aqui:
 
@@ -67,7 +67,7 @@ Se você quiser personalizar o dispositivo e instalar outros recursos ou pacotes
 
 ## <a name="want-more-tools-and-downloads"></a>Deseja mais ferramentas e downloads?
 
-Para obter a lista completa de ferramentas e downloads, consulte [Downloads](https://go.microsoft.com/fwlink/p/?linkid=285935).
+Para obter a lista completa de ferramentas e downloads, consulte [Downloads](https://developer.microsoft.com/windows/downloads).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65436d7efd1de6e9c3649ad27b29b925bc632d95
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 13e6f4ac59a99463cd891e936f51449baf4ea7c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820653"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259535"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Criar um aplicativo "Olá, Mundo" em C++/CX
 
@@ -25,7 +25,7 @@ Com o Microsoft Visual Studio, você pode usar C++/CX para desenvolver um aplica
 
 ## <a name="before-you-start"></a>Antes de começar
 
--   Para concluir este tutorial, você deve usar o Visual Studio Community, ou uma das versões que não seja Community do Visual Studio, em um computador que esteja executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](https://go.microsoft.com/fwlink/p/?LinkId=532666).
+-   Para concluir este tutorial, você deve usar o Visual Studio Community, ou uma das versões que não seja Community do Visual Studio, em um computador que esteja executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](https://visualstudio.microsoft.com/downloads/).
 -   Pressupomos que você tenha uma compreensão básica de C++/CX, XAML e dos conceitos na [Visão geral de XAML](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview).
 -   Pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Para redefinir o layout padrão, na barra de menus, escolha **Janela** > **Redefinir Layout da Janela**.
 
@@ -43,7 +43,7 @@ Se você tiver experiência em programação de área de trabalho do Windows em 
 
 -   Você continuará usando o depurador e o criador de perfil do Visual Studio e outras ferramentas de desenvolvimento.
 
--   Você continuará criando aplicativos compilados para código de máquina nativo pelo compilador do Visual C++. Os aplicativos UWP em C++/CX não são executados em um ambiente de tempo de execução gerenciado.
+-   Você continuará criando aplicativos compilados para código de máquina nativo pelo compilador do Visual C++. Os aplicativos UWP em C++/CX não são executados em um ambiente de runtime gerenciado.
 
 ### <a name="whats-new"></a>Quais são as novidades?
 
@@ -126,7 +126,7 @@ namespace HelloWorld
 }
 ```    
 
-Todos os tipos do Windows Runtime devem ser declarados dentro de um namespace e ao contrário do ISO C++, os tipos por eles próprios têm um modificador de acessibilidade. O modificador **public** torna visível a classe para componentes do Tempo de Execução do Windows fora do namespace. A palavra-chave **sealed** significa que a classe não pode servir como uma classe base. Quase todas as classes ref são seladas. A herança de classe não é amplamente usada, pois o Javascript não entende isso.
+Todos os tipos do Windows Runtime devem ser declarados dentro de um namespace e ao contrário do ISO C++, os tipos por eles próprios têm um modificador de acessibilidade. O modificador **public** torna visível a classe para componentes do Windows Runtime fora do namespace. A palavra-chave **sealed** significa que a classe não pode servir como uma classe base. Quase todas as classes ref são seladas. A herança de classe não é amplamente usada, pois o Javascript não entende isso.
 
 **ref new** e **^ (hats)**
 
@@ -231,7 +231,7 @@ Parabéns! Você criou seu primeiro aplicativo da Plataforma Universal do Window
 
 Para interromper a depuração e encerrar o aplicativo, retorne ao Visual Studio e pressione Shift+F5.
 
-Para mais informações, consulte [Executar um aplicativo da Loja por meio do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=619619).
+Para mais informações, consulte [Executar um aplicativo da Loja por meio do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/Hh441477(v=VS.140).aspx).
 
 No aplicativo, você pode digitar no [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), mas clicar no [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) não fará nada. Nas etapas seguintes, você criará um manipulador de eventos para o evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) do botão para exibir uma saudação personalizada.
 
@@ -397,6 +397,6 @@ Parabéns! Você concluiu o primeiro tutorial. Ele mostrou como adicionar conte�
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você tiver um projeto de Aplicativo Universal do Windows destinado ao Windows 8.1 e/ou Windows Phone 8.1, será possível fazer a portabilidade para o Windows 10. Não há processo automático para isso, mas é possível fazê-lo manualmente. Comece com um novo projeto universal do Windows para obter a estrutura de sistema e os arquivos de manifesto mais recentes do projeto, copie seus arquivos de código para a estrutura de diretório do projeto, adicione os itens ao seu projeto e reescreva o XAML usando o [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) de acordo com as orientações neste tópico. Para obter mais informações, consulte [Portabilidade de um projeto do Windows Runtime 8 para um projeto da Plataforma Universal do Windows (UWP)](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) e [Portabilidade para a Plataforma Universal do Windows (C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525).
+Se você tiver um projeto de Aplicativo Universal do Windows destinado ao Windows 8.1 e/ou Windows Phone 8.1, será possível fazer a portabilidade para o Windows 10. Não há processo automático para isso, mas é possível fazê-lo manualmente. Comece com um novo projeto universal do Windows para obter a estrutura de sistema e os arquivos de manifesto mais recentes do projeto, copie seus arquivos de código para a estrutura de diretório do projeto, adicione os itens ao seu projeto e reescreva o XAML usando o [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) de acordo com as orientações neste tópico. Para obter mais informações, consulte [Portabilidade de um projeto do Windows Runtime 8 para um projeto da Plataforma Universal do Windows (UWP)](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) e [Portabilidade para a Plataforma Universal do Windows (C++)](https://msdn.microsoft.com/library/mt186164.aspx).
 
-Se você tiver um código C++ existente que deseja integrar a um aplicativo UWP, como para criar uma nova interface da UWP para um aplicativo existente, consulte [Como usar código C++ existente em um projeto Universal do Windows](https://go.microsoft.com/fwlink/p/?LinkId=619623).
+Se você tiver um código C++ existente que deseja integrar a um aplicativo UWP, como para criar uma nova interface da UWP para um aplicativo existente, consulte [Como usar código C++ existente em um projeto Universal do Windows](https://msdn.microsoft.com/library/mt186162.aspx).

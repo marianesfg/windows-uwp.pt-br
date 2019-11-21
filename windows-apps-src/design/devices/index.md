@@ -8,12 +8,12 @@ keywords: dispositivo, entrada, interação
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6333345a79d92394539d337f1f2390118cff1153
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065342"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258117"
 ---
 #  <a name="ui-considerations-for-uwp-devices"></a>Considerações sobre UI para dispositivos UWP
 
@@ -131,7 +131,7 @@ Recursos típicos do dispositivo
 
 O mais usado de todos os dispositivos de computação, o telefone pode fazer muito com o tamanho da tela limitado e entradas básicas. Os telefones estão disponíveis em uma variedade de tamanhos; telefones maiores são chamados de phablets. As experiências de aplicativo nos phablets são semelhantes às dos telefones, mas o espaço maior da tela dos phablets permite algumas mudanças importantes no consumo de conteúdo.
 
-Com o Continuum para Telefones, uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e um teclado para fazer seus telefones funcionarem como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](https://go.microsoft.com/fwlink/p/?LinkID=699431).)
+Com o Continuum para Telefones, uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e um teclado para fazer seus telefones funcionarem como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN).)
 
 Tamanhos de tela
 -   De 4 a 5 polegadas para telefone

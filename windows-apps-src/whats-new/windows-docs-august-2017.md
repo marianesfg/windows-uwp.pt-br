@@ -5,24 +5,24 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 52b929f2b6f95c2be2feb68a6221a606ca3715e5
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: b4cc5f10ba23c942851f34ef64afd887d265dba1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821137"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259775"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades nos documentos de desenvolvedor do Windows de agosto de 2017
 
 A Documentação do Desenvolvedor do Windows recebe atualizações constantes com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados e contêm informações novas e atualizadas para desenvolvedores do Windows.
 
-[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Use a nova extensão do [Windows Template Studio](https://aka.ms/wtsinstall) para Visual Studio 2019 para criar rapidamente um aplicativo UWP com as páginas, a estrutura e os recursos desejados. Essa experiência baseada em assistente implementa padrões comprovados e práticas recomendadas para economizar seu tempo e evitar problemas ao adicionar recursos ao seu aplicativo.
+Use a nova extensão do [Windows Template Studio](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio) para Visual Studio 2019 para criar rapidamente um aplicativo UWP com as páginas, a estrutura e os recursos desejados. Essa experiência baseada em assistente implementa padrões comprovados e práticas recomendadas para economizar seu tempo e evitar problemas ao adicionar recursos ao seu aplicativo.
 
 ![Windows Template Studio](images/template-studio.png)
 
@@ -81,4 +81,4 @@ Talvez você já saiba que é possível usar o [Narrador](https://support.micros
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Veja [neste vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio) uma visão geral mais detalhada do Windows Template Studio. Quando estiver pronto, [instale a extensão](https://aka.ms/wtsinstall) ou [confira a documentação e o código-fonte](https://aka.ms/wtsinstall).
+Veja [neste vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio) uma visão geral mais detalhada do Windows Template Studio. Quando estiver pronto, [instale a extensão](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio) ou [confira a documentação e o código-fonte](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio).

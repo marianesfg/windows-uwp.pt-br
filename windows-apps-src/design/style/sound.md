@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ce81088495716e43a32dab94d1d47d399dd6a309
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: 31f527cff7588ccf6da2594566cfa3cf13a214f1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061915"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258676"
 ---
 # <a name="sound"></a>Som
 
@@ -69,7 +69,7 @@ Para saber mais sobre o áudio espacial e como o XAML processa isso, veja [Audio
 ### <a name="sound-for-tv-and-xbox"></a>Som de TV e Xbox
 
 O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
-Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](https://go.microsoft.com/fwlink/?LinkId=760736).
+Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
 ## <a name="sound-volume-override"></a>Substituição de volume do som
 

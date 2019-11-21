@@ -5,18 +5,18 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0876b2d9b65143cde2387a42e221460cc617cf0b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 85e41a26343c9e4c6eb239cbfdd74dc946d5b657
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63800486"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258811"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
 A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores e os vídeos a seguir foram disponibilizados em setembro.
 
-[Instale as ferramentas e o SDK](https://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -32,7 +32,7 @@ A Documentação do Desenvolvedor Windows recebe atualizações constantes com i
 
 ### <a name="windows-ui-library"></a>Biblioteca de Interface do Usuário do Windows
 
-[A biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10 para que seu aplicativo funcione mesmo que os usuários não tenham a versão do sistema operacional mais recente.
+[A biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10 para que seu aplicativo funcione mesmo que os usuários não tenham a versão do sistema operacional mais recente.
 
 Para obter mais informações sobre a biblioteca de interface do usuário do Windows, consulte [esta lista de namespaces de API inclusos no pacote do NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
 

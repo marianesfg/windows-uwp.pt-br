@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97407ec48eaac3415980b9313092b21e9532250a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321110"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260560"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criar um aplicativo complexo da UWP (Plataforma Universal do Windows)
 
@@ -65,7 +65,7 @@ O termo "funil" vem de sua forma. Na extremidade ampla do funil, muitas ideias e
 
 Quando você estiver feliz com o seu conceito, estará preparado para o próximo estágio—criar o plano gráfico do seu aplicativo. A arquitetura da informação (AI) dá ao seu conteúdo a integridade estrutural de que ele precisa. Ela ajuda a definir o modelo navegacional do seu aplicativo e, consequentemente, a identidade dele. Planejando como o seu conteúdo será organizado—e como os seus usuários descobrirão tal conteúdo—você pode ter uma ideia melhor de como vai ser a experiência dos usuários em relação com seu aplicativo.
 
-Uma boa IA não só facilita cenários de usuários, mas ajuda você a imaginar as telas principais para começar. O aplicativo [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089) por exemplo, lança diretamente em um hub que permite o acesso à biblioteca, loja, notícias e estatísticas do usuário. A experiência é focada, para que os usuários possam obter e desfrutar de audiobooks rapidamente. Níveis mais profundos do aplicativo focam em tarefas mais específicas.
+Uma boa IA não só facilita cenários de usuários, mas ajuda você a imaginar as telas principais para começar. O aplicativo [Audible](https://www.windowsphone.com/store/app/audible-for-windows-phone/bdc813dd-c20b-41f8-8646-de72fa0b365d) por exemplo, lança diretamente em um hub que permite o acesso à biblioteca, loja, notícias e estatísticas do usuário. A experiência é focada, para que os usuários possam obter e desfrutar de audiobooks rapidamente. Níveis mais profundos do aplicativo focam em tarefas mais específicas.
 
 Para obter diretrizes relacionadas, veja [Noções básicas de design de navegação](../design/basics/navigation-basics.md).
 

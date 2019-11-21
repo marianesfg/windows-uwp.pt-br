@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c42a058398539701cc1df003717eec99d1b2cd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 74735b15ec53cf04e33dcb850c6cb174082ac438
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362862"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257266"
 ---
 # <a name="create-custom-transport-controls"></a>Criar controles personalizados de transporte
 
@@ -26,7 +26,7 @@ MediaPlayerElement tem controles de transporte XAML personalizáveis para gerenc
 Antes de começar, você deve estar familiarizado com as classes MediaPlayerElement e MediaTransportControls. Para obter mais informações, consulte o Guia do controle MediaPlayerElement.
 
 > [!TIP]
-> Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](https://go.microsoft.com/fwlink/p/?LinkId=620023). Você pode baixar a amostra para exibir e executar o código completo.
+> Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls). Você pode baixar a amostra para exibir e executar o código completo.
 
 > [!NOTE]
 > O **MediaPlayerElement** só está disponível no Windows 10, versão 1607, e posterior. Se estiver desenvolvendo um aplicativo para uma versão anterior do Windows 10, você precisará usar [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). Todos os exemplos nesta página também funcionam com o **MediaElement**.
@@ -95,7 +95,7 @@ Para obter mais informações sobre como modificar estilos e modelos, consulte [
 
 ### <a name="create-a-derived-control"></a>Criar um controle derivado
 
-Para adicionar ou modificar a funcionalidade dos controles de transporte, você deve criar uma nova classe que seja derivada de MediaTransportControls. Uma classe derivada chamada `CustomMediaTransportControls` é mostrada na [Amostra de controles de transporte de mídia](https://go.microsoft.com/fwlink/p/?LinkId=620023) e os demais exemplos nesta página.
+Para adicionar ou modificar a funcionalidade dos controles de transporte, você deve criar uma nova classe que seja derivada de MediaTransportControls. Uma classe derivada chamada `CustomMediaTransportControls` é mostrada na [Amostra de controles de transporte de mídia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls) e os demais exemplos nesta página.
 
 **Para criar uma nova classe derivada de MediaTransportControls**
 1. Adicione um novo arquivo de classe ao projeto.
@@ -202,7 +202,7 @@ Como o menu de estouro é composto de botões de texto, você deve adicionar um 
 
 ### <a name="adding-a-custom-button"></a>Adicionando um botão personalizado
 
-Uma razão pela qual você talvez queira personalizar MediaTransportControls é adicionar um comando personalizado ao controle. Se você adicioná-lo como um comando principal ou um comando secundário, o procedimento para criar o botão de comando e modificar seu comportamento será o mesmo. Na [Amostra de controles de transporte de mídia](https://go.microsoft.com/fwlink/p/?LinkId=620023), um botão "rating" é adicionado aos comandos principais.
+Uma razão pela qual você talvez queira personalizar MediaTransportControls é adicionar um comando personalizado ao controle. Se você adicioná-lo como um comando principal ou um comando secundário, o procedimento para criar o botão de comando e modificar seu comportamento será o mesmo. Na [Amostra de controles de transporte de mídia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls), um botão "rating" é adicionado aos comandos principais.
 
 **Para adicionar um botão de comando personalizado**
 1. Crie um objeto AppBarButton e o adicione ao CommandBar no modelo de controle.

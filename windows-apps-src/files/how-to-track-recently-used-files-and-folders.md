@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 318c58b393a33916df7bab51a4ef2690494d14fb
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369445"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259603"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Rastrear arquivos e pastas usados recentemente
 
@@ -25,7 +25,7 @@ Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à li
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem), portanto, os objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) (que representam arquivos) e [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
 > [!NOTE]
-> Para exemplos completos, consulte o [Exemplo de seletor de arquivos](https://go.microsoft.com/fwlink/p/?linkid=619994) e o [Exemplo de acesso a arquivos](https://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para exemplos completos, consulte o [Exemplo de seletor de arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker) e o [Exemplo de acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

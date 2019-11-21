@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1897eded4d18a00a3c11cf1926adb1ebec6ae69a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c276b232e76afb98d778ef65c7e0e363285c4794
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63791715"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258204"
 ---
 # <a name="person-picture-control"></a>Controle de imagem da pessoa
 
@@ -185,9 +185,9 @@ Se não houver uma imagem, o controle exibirá o nome ou as iniciais do contato.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Contatos e calendário](../../contacts-and-calendar/index.md)
-* [Amostra de cartões de visita](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+* [Amostra de cartões de visita](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)

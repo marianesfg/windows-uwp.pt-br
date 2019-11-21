@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cb91b37b1d2a6924a80bbe666129343ad778d8e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: f416db0266c4ab2ec959c926c0bf0b676b66dd95
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370473"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258703"
 ---
 # <a name="reveal-focus"></a>Foco de Revelação
 
@@ -163,7 +163,7 @@ Se desejar usar apenas o brilho sem o visual do foco principal ou secundário, b
 
 ## <a name="use-your-own-focus-visuals"></a>Use seus próprios visuais de foco
 
-Outra maneira de personalizar o Foco de Revelação é recusar os visuais de foco fornecidos pelo sistema desenhando os seus próprios usando os estados visuais. Para saber mais, confira a [amostra de visuais do foco](https://go.microsoft.com/fwlink/p/?LinkID=619895).
+Outra maneira de personalizar o Foco de Revelação é recusar os visuais de foco fornecidos pelo sistema desenhando os seus próprios usando os estados visuais. Para saber mais, confira a [amostra de visuais do foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Foco de Revelação e o Sistema de Design Fluente
@@ -175,7 +175,7 @@ O Foco de Revelação é um componente do Sistema de Design Fluente que adiciona
 - [Realce de Revelação](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Projetando para TV e Xbox](/windows/uwp/design/devices/designing-for-tv)
 - [Interações de gamepad e de controle remoto](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
-- [Amostra de elementos visuais de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 - [Efeitos de composição](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Ciência no sistema: Design Fluente e profundidade](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciência no sistema: Design Fluente e iluminação](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

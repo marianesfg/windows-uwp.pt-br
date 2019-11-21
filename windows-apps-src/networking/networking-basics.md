@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c1c23bc205c5f9e2ad24e201e9583e19f2d6ec35
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8d6bafc9a21e3950974615078af24989aab7da9e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320668"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259188"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
@@ -33,7 +33,7 @@ Há outros recursos que podem ser necessários para o seu aplicativo, em determi
 |------------|-------------|
 | **enterpriseAuthentication** | Permite que um aplicativo se conecte a recursos de rede que exigem credenciais de domínio. Por exemplo, um aplicativo que recupera dados de servidores do SharePoint em uma intranet privada. Com esse recurso, suas credenciais podem ser usadas para acessar os recursos de rede em uma rede que exige credenciais. Um aplicativo com esse recurso pode representá-lo na rede. Você não precisa dessa funcionalidade para que seu aplicativo acesse a Internet por meio de um proxy de autenticação.<br/><br/>Para obter mais detalhes, consulte a documentação do cenário do recurso *Enterprise* em [Recursos restritos](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities). |
 | **proximity** | Obrigatório para comunicação por proximidade a curta distância com dispositivos próximos ao computador. A proximidade a curta distância pode ser usada para enviar para ou se conectar a um aplicativo em um dispositivo próximo. <br/><br/> Essa funcionalidade permite que um aplicativo acesse a rede para conectar-se a um dispositivo em proximidade a curta distância, com o consentimento do usuário para enviar ou aceitar um convite. |
-| **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/><br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
+| **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no runtime, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/><br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicando-se quando seu aplicativo não está em primeiro plano
 [Dar suporte a seu aplicativo com tarefas em segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o aplicativo não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o aplicativo em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de Canal de Controle com essa finalidade no Windows 8, e ainda há suporte para eles no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Uma nova tecnologia no Windows 10 oferece uma funcionalidade melhor com menos sobrecarga para alguns cenários, como soquetes de fluxo habilitados por push: os gatilhos de agente de soquete e atividade de soquete.
@@ -45,7 +45,7 @@ O agente de soquete destina-se a substituir gatilhos de canal de controle, onde 
 ### <a name="choosing-a-network-trigger"></a>Escolhendo um gatilho de rede
 Existem alguns cenários onde qualquer tipo de gatilho seria adequado. Ao escolher o tipo de gatilho para usar em seu aplicativo, considere o seguinte aviso.
 
--   Se estiver usando [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) ou [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
+-   Se estiver usando [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) ou [System.Net.Http.HttpClientHandler](https://msdn.microsoft.com/library/system.net.http.httpclienthandler(VS.110).aspx), você deverá usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
 -   Se você está usando **StreamSockets** habilitados por push, pode usar gatilhos de canal de controle, mas prefira [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger). Esta última opção permite que o sistema libere memória e reduza os requisitos de energia quando a conexão não está sendo usada ativamente.
 -   Se você deseja minimizar o volume de memória de seu aplicativo quando ele não está atendendo ativamente as solicitações de rede, prefira [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) quando possível.
 -   Se você deseja que seu aplicativo seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger).

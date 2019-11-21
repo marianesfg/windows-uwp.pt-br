@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1f6e0e04cdf81512918e0cd3e33ec0f93e2245
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5b0d226a9492a2218edf20e68b8216ea513ca12a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321007"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260535"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
@@ -45,7 +45,7 @@ Se você estiver direcionado as APIs universais, o aplicativo poderá ser execut
 
 Os SDKs de extensão permitem que você chame as APIs especializadas para diferentes dispositivos. Por exemplo, se o aplicativo UWP direcionar um dispositivo IoT, você poderá adicionar o SDK de extensão de IoT a seu projeto para direcionar recursos específicos para os dispositivos IoT. Para obter mais informações sobre como adicionar os SDKs de extensão, confira a seção **SDKs de extensão** em [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#extension-sdks).
 
-Você pode escrever o aplicativo para que seja executado somente em um tipo específico de dispositivo e depois limitar sua distribuição no Microsoft Store a apenas esse tipo de dispositivo. Outra opção é testar condicionalmente a presença de uma API em tempo de execução e adaptar o comportamento do aplicativo de acordo. Para obter mais informações, confira a seção **Escrever código** em [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code).<br>
+Você pode escrever o aplicativo para que seja executado somente em um tipo específico de dispositivo e depois limitar sua distribuição no Microsoft Store a apenas esse tipo de dispositivo. Outra opção é testar condicionalmente a presença de uma API em runtime e adaptar o comportamento do aplicativo de acordo. Para obter mais informações, confira a seção **Escrever código** em [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code).<br>
 
 O vídeo a seguir apresenta uma breve visão geral das famílias de dispositivos e codificação adaptável:
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
@@ -115,7 +115,7 @@ Confira [Preparar-se](get-set-up.md) para baixar as ferramentas necessárias par
 
 O sistema de design da Microsoft chama-se Fluente. O Sistema de Design Fluente é um conjunto de recursos UWP combinado a práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows. As experiências do Fluente adaptam-se a e funcionam normalmente em dispositivos de tablets a notebooks e de computadores a televisores, além de em dispositivos de realidade virtual. Confira [O Sistema de Design Fluente para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/fluent-design-system) para obter uma introdução ao Design Fluente.
 
-Um bom [projeto](https://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, como será sua aparência e como ele funcionará. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. As [Noções básicas de design](https://developer.microsoft.com/en-us/windows/apps/design) apresentam o design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](http://design.windows.com/) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, como será sua aparência e como ele funcionará. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. As [Noções básicas de design](https://developer.microsoft.com/en-us/windows/apps/design) apresentam o design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
 Além da interação em diferentes dispositivos, [planeje seu aplicativo](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app) para adotar os benefícios de trabalhar em vários dispositivos. Por exemplo:
 
@@ -125,7 +125,7 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 ### <a name="add-services"></a>Adicionar serviços
 
-- Use [serviços de nuvem](https://go.microsoft.com/fwlink/?LinkId=526377) para sincronização entre dispositivos.
+- Use [serviços de nuvem](https://azure.microsoft.com/documentation/services/cloud-services) para sincronização entre dispositivos.
 - Saiba como [conectar-se a serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10)) para melhorar a experiência do aplicativo.
 - Inclua [Notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) e [compras no aplicativo](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.
 

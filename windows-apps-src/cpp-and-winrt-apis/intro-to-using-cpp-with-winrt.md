@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a9bb432ce7c856a6c54305f657f06a23dab14f1
-ms.sourcegitcommit: 805420bb7ec6850ec3576b21193a3681054c9754
+ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71976331"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255106"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -37,7 +37,7 @@ Para obter suporte do Visual Studio, você precisará do Visual Studio 2019 ou V
 
 Embora seja recomendável que você desenvolva com as versões mais recentes do Visual Studio e o SDK do Windows, se você estiver usando uma versão do C++/WinRT fornecida com o SDK do Windows antes de 10.0.17763.0 (Windows 10, versão 1809), para usar os cabeçalhos de namespaces do Windows mencionados acima, será necessária uma versão de destino mínima do SDK do Windows em seu projeto do 10.0.17134.0 (Windows 10, versão 1803).
 
-Convém baixar e instalar a última versão do [C++/WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) do [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+Convém baixar e instalar a última versão do [C++/WinRT Visual Studio Extension (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) do [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 - A extensão do VSIX oferece modelos de projeto e item do C++/WinRT no Visual Studio, para que você possa começar com o desenvolvimento C++/WinRT.
 - Além disso, ele também oferece visualização de depuração nativa do Visual Studio (natvis) dos tipos projetados do C++/WinRT, fornecendo uma experiência semelhante à depuração de C#. Natvis é automático para builds de depuração. Você pode escolher builds de versão definindo o símbolo WINRT_NATVIS.
@@ -60,7 +60,7 @@ Com o sistema definido conforme descrito acima, você poderá criar e compilar o
 
 Da 2.0 em diante, o pacote NuGet **Microsoft.Windows.CppWinRT** inclui a ferramenta `cppwinrt.exe`. Você pode apontar para a ferramenta `cppwinrt.exe` em um metadados do Windows Runtime (`.winmd`) a fim de gerar uma biblioteca C++ padrão com base em cabeçalho e arquivo que *projeta* as APIs descritas nos metadados para consumo pelo código do C++/WinRT. Os arquivos de metadados (`.winmd`) do Windows Runtime fornecem uma maneira canônica de descrever uma superfície de API do Windows Runtime. Ao apontar `cppwinrt.exe` nos metadados, você pode gerar uma biblioteca para uso com qualquer classe de tempo de execução implementada em um componente secundário ou de terceiros do Windows Runtime ou implementar em seu próprio aplicativo. Para saber mais, confira [Consumir APIs com C++/WinRT](consume-apis.md).
 
-Com o C++/WinRT, você também pode implementar suas próprias classes de tempo de execução usando o C++ padrão, sem precisar recorrer à programação de estilo COM. Para uma classe de tempo de execução, você descreve apenas os tipos em um arquivo IDL e `midl.exe` e `cppwinrt.exe` geram os arquivos de código-fonte clichê de implementação para você. Você também pode implementar apenas interfaces derivando uma classe base do C++/WinRT. Para obter mais informações, confira [Criar APIs com C++/WinRT](author-apis.md).
+Com o C++/WinRT, você também pode implementar suas próprias classes de runtime usando o C++ padrão, sem precisar recorrer à programação de estilo COM. Para uma classe de runtime, você descreve apenas os tipos em um arquivo IDL e `midl.exe` e `cppwinrt.exe` geram os arquivos de código-fonte clichê de implementação para você. Você também pode implementar apenas interfaces derivando uma classe base do C++/WinRT. Para obter mais informações, confira [Criar APIs com C++/WinRT](author-apis.md).
 
 Para obter uma lista de opções de personalização para o conjunto de ferramentas `cppwinrt.exe` por meio das propriedades do projeto, confira o [arquivo Leiame](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
 
@@ -71,7 +71,7 @@ Veja os modelos de projeto do Visual Studio fornecidos pela extensão do VSIX.
 ### <a name="blank-app-cwinrt"></a>Aplicativo em Branco (C++/WinRT)
 Um modelo de projeto para um aplicativo UWP (Plataforma Universal do Windows) que tem uma interface do usuário XAML.
 
-O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de tempo de execução local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo stub como referência ao implementar suas classes de tempo de execução local. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
+O Visual Studio fornece suporte ao compilador XAML para gerar stubs de implementação e cabeçalho do arquivo da linguagem IDL (`.idl`) que são a base de cada arquivo de marcação XAML. Em um arquivo IDL, defina qualquer classe de runtime local que você deseja referenciar nas páginas XAML do seu aplicativo e crie o projeto uma vez para gerar modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo stub como referência ao implementar suas classes de tempo de execução local. Confira [Como fatorar classes de runtime em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 O suporte de superfície de design do XAML no Visual Studio de 2019 para C++/WinRT está perto da paridade com o C#. No Visual Studio de 2019, você pode usar a guia **Eventos** da janela **Propriedades** para adicionar manipuladores de eventos dentro de um projeto do C++/WinRT. Você também pode adicionar manipuladores de eventos ao seu código manualmente&mdash;. Confira [Processar eventos usando delegados em C++/WinRT](handle-events.md) para obter mais informações.
 
@@ -86,17 +86,17 @@ Um modelo de projeto para um aplicativo cliente do C++/WinRT para Área de Traba
 ### <a name="windows-desktop-application-cwinrt"></a>Aplicativos da área de trabalho do Windows (C++/WinRT)
 Um modelo de projeto para um aplicativo cliente do C++/WinRT para a Área de Trabalho do Windows, que exibe um Windows Runtime [Windows.Foundation.Uri](/uwp/api/windows.foundation.uri) dentro de um Win32 **MessageBox**.
 
-### <a name="windows-runtime-component-cwinrt"></a>Componente do Tempo de Execução do Windows (C++/WinRT)
+### <a name="windows-runtime-component-cwinrt"></a>componente do Windows Runtime (C++/WinRT)
 Um modelo de projeto para um componente; normalmente para consumo de uma UWP (Plataforma Universal do Windows).
 
 Esse modelo demonstra a cadeia de ferramentas `midl.exe` > `cppwinrt.exe`, na qual os metadados do Windows Runtime (`.winmd`) são gerados com base na IDL. Depois, os stubs de implementação e de cabeçalho são gerados com base nesses metadados.
 
-Em um arquivo IDL, defina as classes de tempo de execução no componente, na interface padrão e em qualquer outra interface implementada por ele. Compile o projeto uma vez para gerar `module.g.cpp`, `module.h.cpp`, modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de tempo de execução no componente. Confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
+Em um arquivo IDL, defina as classes de runtime no componente, na interface padrão e em qualquer outra interface implementada por ele. Compile o projeto uma vez para gerar `module.g.cpp`, `module.h.cpp`, modelos de implementação em `Generated Files` e definições de tipo de stub em `Generated Files\sources`. Em seguida, use essas definições de tipo de stub para referência ao implementar as classes de runtime no componente. Confira [Como fatorar classes de runtime em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 Agrupe o binário compilado do componente do Windows Runtime e seu `.winmd` com o aplicativo UWP os consumindo.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>Versões anteriores da extensão do VSIX
-É recomendável que você instale (ou atualizar para) a última versão da [extensão do VSIX](https://aka.ms/cppwinrt/vsix). Ela é configurada para se atualizar por padrão. Se você fizer isso e tiver projetos que foram criados com uma versão da extensão do VSIX anterior à 1.0.190128.4, esta seção conterá informações importantes sobre como atualizar os projetos para trabalhar com a nova versão. Se você não atualizar, ainda encontrará informações úteis nesta seção.
+É recomendável que você instale (ou atualizar para) a última versão da [extensão do VSIX](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264). Ela é configurada para se atualizar por padrão. Se você fizer isso e tiver projetos que foram criados com uma versão da extensão do VSIX anterior à 1.0.190128.4, esta seção conterá informações importantes sobre como atualizar os projetos para trabalhar com a nova versão. Se você não atualizar, ainda encontrará informações úteis nesta seção.
 
 Em termos de versões compatíveis do SDK do Windows e do Visual Studio e de configuração do Visual Studio, as informações na seção [Suporte do Visual Studio para C++/WinRT, XAML, a extensão do VSIX e o pacote NuGet](#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) acima aplica-se a versões anteriores da extensão do VSIX. As informações abaixo descrevem as diferenças importantes em relação ao comportamento e à configuração de projetos criados com (ou atualizado para trabalhar com) versões anteriores.
 
@@ -147,7 +147,7 @@ Na programação do C++/WinRT, você pode usar os recursos de linguagem C++ padr
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [Extensão do Visual Studio Extension (VSIX) para C++/WinRT](https://aka.ms/cppwinrt/vsix)
+* [Extensão do Visual Studio Extension (VSIX) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)
 * [Introdução ao C++/WinRT](get-started.md)
 * [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md)
 * [Processamento da cadeia de caracteres em C++/WinRT](strings.md)
