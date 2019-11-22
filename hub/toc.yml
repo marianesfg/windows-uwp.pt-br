@@ -1,7 +1,7 @@
 - name: Criar aplicativos para Windows
   items:
     - name: Visão geral
-      href: apps/index.md
+      href: apps/index.yml
     - name: Criar aplicativos da área de trabalho
       items:
         - name: Visão geral
