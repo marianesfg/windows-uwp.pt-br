@@ -62,7 +62,7 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Explorador de Arquivos
 - Processos em execução
 - Desempenho
-- Depurar
+- Depuração
 - Rastreamento de Eventos para Windows (ETW)
 - Rastreamento de desempenho
 - Gerenciador de dispositivos
@@ -81,12 +81,12 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
 
 - Em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
-    - `UseDynamicPorts`: Uma DWORD necessária. Defina como 0 para manter os números de porta que você escolheu.
-    - `HttpPort`: Uma DWORD necessária. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
-    - `HttpsPort`: Uma DWORD necessária. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
+    - `UseDynamicPorts`: um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
+    - `HttpPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
+    - `HttpsPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
     
 No mesmo caminho da chave do registro, você também pode desativar o requisito de autenticação:
-- `UseDefaultAuthorizer` @ no__t-1 @ no__t-2 para Disabled, `1` para habilitado.  
+- `UseDefaultAuthorizer` - `0` desabilitada, `1` habilitada.  
     - Isso controla o requisito de autenticação básica para cada conexão e o redirecionamento de HTTP para HTTPS.  
     
 ### <a name="command-line-options-for-device-portal"></a>Opções de linha de comando para o Portal de Dispositivos
@@ -113,7 +113,7 @@ Abaixo estão alguns erros comuns que você pode encontrar ao configurar o porta
 
 Você pode receber esse erro ao tentar instalar os pacotes de desenvolvedor em uma compilação de pré-lançamento do Windows 10. Esses pacotes FoD (recurso sob demanda) são hospedados em Windows Update e o download deles em compilações de pré-lançamento exige que você opte pelo lançamento. Se a instalação não for aceita em voo para a combinação correta de Build e anel, a carga não poderá ser baixada. Verifique duas vezes o seguinte:
 
-1. Navegue até **configurações > atualização & segurança > programa Windows Insider** e confirme se a seção **conta do Windows Insider** tem suas informações de conta corretas. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicionar sua conta de email e confirmar que ela aparece no título da **conta do Windows Insider** (talvez seja necessário selecionar **vincular uma conta do Windows Insider** uma segunda vez para na verdade, vincule uma conta recém-adicionada).
+1. Navegue até **configurações > atualização & segurança > programa Windows Insider** e confirme se a seção **conta do Windows Insider** tem suas informações de conta corretas. Se você não vir essa seção, selecione **vincular uma conta do Windows Insider**, adicione sua conta de email e confirme que ela aparece no título da **conta do Windows Insider** (talvez seja necessário selecionar **vincular uma conta do Windows Insider** uma segunda vez para vincular uma conta recém-adicionada).
  
 2. Em **que tipo de conteúdo você gostaria de receber?** , verifique se o **desenvolvimento ativo do Windows** está selecionado.
  
@@ -121,11 +121,11 @@ Você pode receber esse erro ao tentar instalar os pacotes de desenvolvedor em u
  
 4. Agora você deve ser capaz de instalar o FoDs. Se você confirmou que está no Windows Insider rápido e ainda não consegue instalar o FoDs, forneça comentários e anexe os arquivos de log em **C:\Windows\Logs\CBS**.
 
-### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>SC StartService OpenService com falha 1060: O serviço especificado não existe como um serviço instalado
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>SC StartService: OpenService com falha 1060: o serviço especificado não existe como um serviço instalado
 
 Você poderá receber esse erro se os pacotes do desenvolvedor não estiverem instalados. Sem os pacotes de desenvolvedor, não há nenhum serviço de gerenciamento da Web. Tente instalar os pacotes de desenvolvedor novamente.
 
-### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbs_e_metered_network"></a>O CBS não pode iniciar o download porque o sistema está na rede limitada (CBS_E_METERED_NETWORK)
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbs_e_metered_network"></a>O CBS não pode iniciar o download porque o sistema está em uma rede limitada (CBS_E_METERED_NETWORK)
 
 Você poderá receber esse erro se você estiver em uma conexão de Internet limitada. Você não poderá baixar os pacotes do desenvolvedor em uma conexão limitada.
 

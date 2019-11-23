@@ -1,5 +1,5 @@
 ---
-title: Estender seu aplicativo com serviços, extensões e pacotes
+title: Estender seu app com serviços, extensões e pacotes
 description: Descreve como criar uma tarefa em segundo plano que é executada quando seu aplicativo da loja Plataforma Universal do Windows (UWP) é atualizado.
 ms.date: 05/07/2018
 ms.topic: article
@@ -12,7 +12,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73329510"
 ---
-# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços, extensões e pacotes
+# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu app com serviços, extensões e pacotes
 
 Há muitas tecnologias no Windows 10 para estender e modelar seu aplicativo. Esta tabela deve ajudá-lo a determinar qual tecnologia você deve usar dependendo dos requisitos. Ela é seguida por uma breve descrição dos cenários e tecnologias.
 
@@ -88,7 +88,7 @@ Se um aplicativo oferece suporte a extensões, qualquer desenvolvedor pode envia
 
 Os aplicativos não podem carregar o código a partir das extensões. Se você precisar de execução de código, considere os Serviços de aplicativo.
 
-**Serviço de aplicativo**
+**Serviço de Aplicativo**
 
 Os serviços de aplicativos do Windows permitem a comunicação entre aplicativos, permitindo que seu aplicativo UWP forneça serviços para outro aplicativo universal do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
 

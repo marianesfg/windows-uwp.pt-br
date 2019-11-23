@@ -22,7 +22,7 @@ Seu aplicativo é controlado por eventos, o que significa que seu código execut
 
 Você precisa usar o thread de interface do usuário para fazer quase todas as alterações no thread de interface do usuário, inclusive criar tipos de interface do usuário e acessar seus membros. Você não pode atualizar a interface do usuário de um thread em segundo plano, mas você pode postar uma mensagem para ele com [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para fazer com que o código seja executado ali.
 
-> **Observe**que   a uma exceção é que há um thread de renderização separado que pode aplicar alterações na interface do usuário que não afetarão como a entrada é tratada ou o layout básico. Por exemplo, muitas animações e transições que não afetam o layout podem ser executadas nesse thread de renderização.
+> **Observe**  a única exceção é que há um thread de renderização separado que pode aplicar alterações de interface do usuário que não afetarão como a entrada é tratada ou o layout básico. Por exemplo, muitas animações e transições que não afetam o layout podem ser executadas nesse thread de renderização.
 
 ## <a name="delay-element-instantiation"></a>Atrasar a instanciação de elementos
 
@@ -41,7 +41,7 @@ Para ajudar a manter a capacidade de resposta de seu aplicativo, a plataforma fo
 
 Escreva manipuladores de eventos para retornarem rapidamente. Em casos em que uma quantidade de trabalho incomum tenha de ser executada, agende isso em um thread em segundo plano e retorne.
 
-Você pode agendar o trabalho assíncrono usando o operador **await** no C#, o operador **Await** no Visual Basic ou representantes no C++. Mas isso não garante que o trabalho que você agendar será executado em um thread de segundo plano. Muitas APIs da Plataforma Universal do Windows (UWP) trabalham no thread de segundo plano, mas se você chamar o código do aplicativo usando apenas **await** ou um representante, executará esse representante ou método no thread de interface do usuário. É preciso informar explicitamente quando você quer executar o código do aplicativo em um thread de segundo plano. No C# e Visual Basic você pode fazer isso passando o código para [Task. Run](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run).
+Você pode agendar o trabalho assíncrono usando o operador **await** no C#, o operador **Await** no Visual Basic ou representantes no C++. Mas isso não garante que o trabalho que você agendar será executado em um thread de segundo plano. Muitas APIs da Plataforma Universal do Windows (UWP) trabalham no thread de segundo plano, mas se você chamar o código do aplicativo usando apenas **await** ou um representante, executará esse representante ou método no thread de interface do usuário. É preciso informar explicitamente quando você quer executar o código do aplicativo em um thread de segundo plano. No C# e Visual Basic você pode fazer isso passando o código para [**Task. Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run).
 
 Lembre-se de que os elementos de interface do usuário só podem ser acessados no thread de interface do usuário. Use o thread de interface do usuário para acessar elementos de interface do usuário antes de iniciar o trabalho em segundo plano e/ou use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) ou [**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync) no thread em segundo plano.
 
@@ -101,7 +101,7 @@ public class AsyncExample
 
 Neste exemplo, o manipulador `NextMove_Click` retornará em **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
 
-> **Observe**  There's também uma API de [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) e [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) para a UWP, que pode ser usada para cenários semelhantes. Para obter mais informações, consulte [Programação threading e assíncrona](https://docs.microsoft.com/windows/uwp/threading-async/index).
+> **Observe**  também há uma API [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) e [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) para a UWP, que pode ser usada para cenários semelhantes. Para obter mais informações, consulte [Programação threading e assíncrona](https://docs.microsoft.com/windows/uwp/threading-async/index).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

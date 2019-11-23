@@ -43,7 +43,7 @@ Acompanhe o foco, a atenção e a presença do usuário com base na localizaçã
 
 ### <a name="more-info"></a>Mais informações
 
-[Gaze interactions and eye tracking](gaze-interactions.md)
+[Interações de olhar e acompanhamento de olho](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
@@ -60,11 +60,11 @@ Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial desti
 
 ### <a name="more-info"></a>Mais informações
 
-[Surface Dial design guidelines](windows-wheel-interactions.md)
+[Diretrizes de design de discagem de superfície](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-In Windows 10, **Cortana** extensibility lets you handle voice commands from a user and launch your application to carry out a single action.
+No Windows 10, a extensibilidade da **Cortana** permite que você manipule comandos de voz de um usuário e inicie seu aplicativo para realizar uma única ação.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -113,7 +113,7 @@ A conversão de texto em fala (também conhecida como TTS ou sintetização de v
 
 Há três modos de interação de fala:
 
-**Natural language**
+**Idioma natural**
 
 A linguagem natural é como interagimos verbalmente com as pessoas em geral. Nossa fala varia de acordo com a pessoa e a situação, e é geralmente entendida. Quando não é, geralmente usamos palavras e uma ordem de palavras diferentes para comunicar a mesma ideia.
 
@@ -121,13 +121,13 @@ As interações em linguagem natural com um aplicativo são semelhantes: falamos
 
 A linguagem natural é o modo mais avançado de interação de fala, e pode ser implementada e exposta pela **Cortana**.
 
-**Command and control**
+**Comando e controle**
 
 Comando e controle é o uso de comandos verbais para ativar controles e funcionalidades, como clicar em um botão ou selecionar um item de menu.
 
 Como o comando e controle é essencial para uma experiência de usuário bem-sucedida, um único tipo de entrada geralmente não é recomendado. O controle por voz geralmente é uma das várias opções de entrada para um usuário com base em suas preferências ou recursos de hardware.
 
-**Dictation**
+**Comandos**
 
 O método de entrada de fala mais básico. Cada expressão é convertida em texto.
 
@@ -142,7 +142,7 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
-**Note**  There are two types of pen devices: active and passive.
+**Observação**  há dois tipos de dispositivos de caneta: ativo e passivo.
   -   As canetas passivas não são eletrônicas, e emulam efetivamente a entrada touch de um dedo. Elas exigem uma exibição básica do dispositivo, que reconhece a entrada com base na pressão do contato. Como os usuários geralmente repousam a mão enquanto escrevem na superfície de entrada, os dados de entrada podem ficar poluídos devido a rejeição da palma da mão bem-sucedida.
   -   As canetas ativas são eletrônicas e podem funcionar com telas de dispositivos complexas para fornecer dados de entrada muito mais extensos (incluindo passagem do mouse ou dados de proximidade) ao sistema e seu aplicativo. A rejeição da palma da mão é muito mais robusta.
 
@@ -160,7 +160,7 @@ Quando nos referimos a dispositivos de caneta aqui, estamos fazendo referência 
 
 ### <a name="typical-usage"></a>Uso típico
 
-A plataforma de tinta do Windows, juntamente com uma caneta, oferece uma maneira natural de criar anotações manuscritas, desenhos e anotações. A plataforma dá suporte a captura de dados de tinta por entrada da digitalizador, geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída, gerenciamento dos dados de tinta e reconhecimento de manuscrito. Além de capturar os movimentos espaciais da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode coletar informações como pressão, forma, cor e opacidade, para oferecer experiências ao usuário que se aproximam bastante do ato de desenhar em papel com caneta esferográfica, lápis ou pincel.
+A plataforma de tinta do Windows, juntamente com uma caneta, oferece uma maneira natural de criar anotações manuscritas, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída, gerenciamento dos dados de tinta e reconhecimento de manuscrito. Além de capturar os movimentos espaciais da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode coletar informações como pressão, forma, cor e opacidade, para oferecer experiências ao usuário que se aproximam bastante do ato de desenhar em papel com caneta esferográfica, lápis ou pincel.
 
 A caneta e o touch apresentam divergências quando o assunto é a capacidade do touch de emular a manipulação direta de elementos da interface do usuário na tela usando gestos físicos executados nesses objetos (por exemplo, passar o dedo, deslizar o dedo, arrastar, girar etc.).
 
@@ -168,7 +168,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes para design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
+[Diretrizes de design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
 
 ## <a name="touch"></a>Touch
@@ -234,7 +234,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
-With [Continuum for Phone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), a new experience for compatible Windows 10 mobile devices, users can connect their phones to a mouse and keyboard to make their phones work like a laptop.
+Com o [Continuum para telefone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), uma nova experiência para dispositivos compatíveis com Windows 10 Mobile, os usuários podem conectar seus telefones a um mouse e teclado para fazer com que seus telefones funcionem como um laptop.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -256,7 +256,7 @@ O OSK é um teclado de software visual que você pode usar em vez do teclado fí
 
 O teclado virtual é um teclado de software visual usado para entrada de texto por touch. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
 
-**Note**  The OSK has priority over the touch keyboard, which won't be shown if the OSK is present.
+**Observação**  o OSK tem prioridade sobre o teclado de toque, que não será mostrado se o OSK estiver presente.
 
 Em geral, um teclado é:
 

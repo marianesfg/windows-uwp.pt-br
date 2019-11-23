@@ -125,13 +125,13 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 > [!WARNING]
 > Uma limitação existente da implementação Windows Runtime XAML é que você não pode animar uma propriedade anexa personalizada.
 
-- Para especificar uma propriedade anexada como a propriedade de destino para uma referência de recurso de um arquivo de recurso para **x:Uid**, use uma sintaxe especial que injeta um estilo de código, totalmente qualificado **usando:** declaração dentro de colchetes ("\[ @ no__t-3"), para Crie uma quebra de escopo deliberada. Por exemplo, supondo que exista um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que tem como alvo o valor **Canvas. Top** nessa instância é "Title. \[using: Windows.UI.XAML.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recursos e XAML, consulte [Quickstart: Convertendo recursos de interface do usuário @ no__t-0.
+- Para especificar uma propriedade anexada como a propriedade de destino para uma referência de recurso de um arquivo de recurso para **x:Uid**, use uma sintaxe especial que injeta um estilo de código, totalmente qualificado **usando:** declaração dentro de colchetes ("\[\]"), para criar uma quebra de escopo deliberada. Por exemplo, supondo que exista um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que tem como alvo o valor **Canvas. Top** nessa instância é "title.\[usando: Windows. UI. XAML. Controls\]Canvas. Top ". Para obter mais informações sobre arquivos de recurso e XAML, consulte [Início rápido: Traduzindo recursos da interface do usuário](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [Propriedades anexadas personalizadas](custom-attached-properties.md)
 - [Visão geral das propriedades de dependência](dependency-properties-overview.md)
 - [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-- [Início Rápido: Convertendo recursos de interface do usuário @ no__t-0
+- [Início rápido: convertendo recursos de interface do usuário](https://docs.microsoft.com/previous-versions/windows/apps/hh943060(v=win.10))
 - [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)
 - [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)

@@ -55,11 +55,11 @@ Os usuários podem definir muito mais gestos de touchpad de precisão e comporta
 
 ![configurações de touchpad padrão](images/mouse-touchpad-settings-standard.png)
 
-<sup>Standard\\ touchpad\\ settings</sup>
+<sup>Configurações de\\ padrão do\\ Touchpad</sup>
 
 ![configurações do windows precision touchpad](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Windows\\ Precision\\ Touchpad\\ settings</sup>
+<sup>Configurações do Windows\\ Precision\\ Touchpad\\</sup>
 
 Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar tarefas comuns.
 
@@ -128,7 +128,7 @@ Para saber mais sobre como consultar os recursos do dispositivo, veja [Identific
 
 -   Quando o cursor do touchpad for detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o cursor do touchpad não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do touchpad desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 -   Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja a seção Cursores, a seguir).
--   Não exiba comentários sobre elementos visuais quando o elemento não der suporte a interação (como um texto estático).
+-   Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
 -   Não use retângulos de foco nas interações por touchpad; Reserve-os para as interações por teclado.
 -   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 
@@ -155,15 +155,15 @@ Se você precisa personalizar o cursor do mouse:
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Exemplos**
-* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 * [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 * [Exemplo de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 **Exemplos de arquivo morto**
-* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Input: Gestures and manipulations with GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: gestos e manipulações com GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
  
 
 

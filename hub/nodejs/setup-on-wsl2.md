@@ -44,7 +44,7 @@ Veja a seguir um guia passo a passo para ajudá-lo a obter o ambiente de desenvo
 
 1. Enquanto ainda estiver nas **configurações do Windows**, procure ativar **ou desativar recursos do Windows**.
 2. Depois que a lista de **recursos do Windows** for exibida, role para localizar **plataforma de máquina virtual** e **subsistema do Windows para Linux**, verifique se a caixa está marcada para habilitar ambas e selecione **OK**.
-3. Reinicie o computador quando solicitado.
+3. Reinicie seu computador quando solicitado.
 
     ![Habilitar recursos do Windows](../images/windows-feature-settings.png)
 
@@ -67,7 +67,7 @@ Você pode verificar a distribuição do Linux que você está usando no momento
 WSL 2 é uma [nova versão da arquitetura](https://docs.microsoft.com/windows/wsl/wsl2-about) no WSL que muda a forma como o Linux distribuições interage com o Windows, melhorando o desempenho e adicionando compatibilidade total com a chamada do sistema.
 
 1. No PowerShell, digite o comando: `wsl -l` para exibir a lista de distribuições WSL que você instalou em seu computador. Agora você deve ver Ubuntu-18, 4 nesta lista.
-2. Agora, digite o comando: `wsl --set-version Ubuntu-18.04 2` para definir a instalação do Ubuntu para usar o WSL 2.
+2. Agora, digite o comando: `wsl --set-version Ubuntu-18.04 2` para definir sua instalação do Ubuntu para usar o WSL 2.
 3. Verifique se a versão do WSL de cada uma das distribuições instaladas está usando com: `wsl --list --verbose` (ou `wsl -l -v`).
 
     ![Versão de conjunto do subsistema do Windows para Linux](../images/wsl-versions.png)
@@ -83,21 +83,21 @@ Há várias maneiras de instalar o Node. js. É recomendável usar um Gerenciado
 > É sempre recomendável remover todas as instalações existentes do node. js ou do NPM do seu sistema operacional antes de instalar um Gerenciador de versão, pois os diferentes tipos de instalação podem levar a conflitos estranhos e confusos. Por exemplo, a versão do nó que pode ser instalada com o comando `apt-get` do Ubuntu está desatualizada no momento. Para obter ajuda com a remoção de instalações anteriores, consulte [como remover o NodeJS do Ubuntu](https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04).)
 
 1. Abra a linha de comando do Ubuntu 18, 4.
-2. Instalação da ondulação (uma ferramenta usada para baixar conteúdo da Internet na linha de comando) com: `sudo apt-get install curl`
+2. Instalação de ondulação (uma ferramenta usada para baixar conteúdo da Internet na linha de comando) com: `sudo apt-get install curl`
 3. Instale o NVM, com: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
 4. Para verificar a instalação, digite: `command -v nvm`... Isso deve retornar ' NVM ', se você receber ' comando não encontrado ' ou nenhuma resposta, feche o terminal atual, reabra-o e tente novamente. [Saiba mais no repositório GitHub do NVM](https://github.com/nvm-sh/nvm).
 5. Lista quais versões do nó estão instaladas no momento (não deve ser nenhuma neste ponto): `nvm ls`
 
     ![Lista de NVM mostrando nenhuma versão de nó](../images/nvm-no-node.png)
 
-6. Instale a versão atual do node. js (para testar as melhorias de recursos mais recentes, mas com mais probabilidade de ter problemas): `nvm install node`
+6. Instale a versão atual do node. js (para testar as melhorias de recursos mais recentes, mas tem mais probabilidade de ter problemas): `nvm install node`
 7. Instale a versão mais recente do LTS estável do node. js (recomendado): `nvm install --lts`
 8. Lista de quais versões do nó estão instaladas: `nvm ls`... Agora você deve ver as duas versões que acabou de instalar listadas.
 
     ![Lista de NVM mostrando as versões de LTS e nó atual](../images/nvm-node-installed.png)
 
-9. Verifique se o Node. js está instalado e a versão padrão atualmente com: `node --version`. Em seguida, verifique se você tem o NPM também, com: `npm --version` (você também pode usar `which node` ou `which npm` para ver o caminho usado para as versões padrão).
-10. Para alterar a versão do node. js que você deseja usar para um projeto, crie um novo diretório do projeto `mkdir NodeTest` e insira o diretório `cd NodeTest`, em seguida, digite `nvm use node` para alternar para a versão atual ou `nvm use --lts` para alternar para a versão LTS. Você também pode usar o número específico para qualquer versão adicional instalada, como `nvm use v8.2.1`. (Para listar todas as versões do node. js disponíveis, use o comando: `nvm ls-remote`).
+9. Verifique se o Node. js está instalado e a versão padrão atual com: `node --version`. Em seguida, verifique se você tem o NPM também, com: `npm --version` (você também pode usar `which node` ou `which npm` para ver o caminho usado para as versões padrão).
+10. Para alterar a versão do node. js que você deseja usar para um projeto, crie um novo diretório do projeto `mkdir NodeTest`e insira o diretório `cd NodeTest`, em seguida, digite `nvm use node` para alternar para a versão atual ou `nvm use --lts` para alternar para a versão LTS. Você também pode usar o número específico para qualquer versão adicional instalada, como `nvm use v8.2.1`. (Para listar todas as versões do node. js disponíveis, use o comando: `nvm ls-remote`).
 
 > [!TIP]
 > Se você estiver usando o NVM para instalar o Node. js e o NPM, não será necessário usar o comando SUDO para instalar novos pacotes.
@@ -110,11 +110,11 @@ A instalação da versão mais recente do NVM usando a ondulação substituirá 
 
 Embora NVM seja atualmente o Gerenciador de versão mais popular para o nó, há algumas alternativas a serem consideradas:
 
-- [n](https://www.npmjs.com/package/n#installation) é uma alternativa `nvm` de longo prazo que realiza a mesma coisa com comandos ligeiramente diferentes e é instalada por meio de `npm` em vez de um script bash.
+- [n](https://www.npmjs.com/package/n#installation) é uma alternativa de `nvm` de longa duração que realiza a mesma coisa com comandos ligeiramente diferentes e é instalada por meio de `npm` em vez de um script bash.
 - [FNM](https://github.com/Schniz/fnm#using-a-script) é um Gerenciador de versão mais recente, alegando ser muito mais rápido do que `nvm`. (Ele também usa [Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops).)
 - [Voltar](https://github.com/volta-cli/volta#installing-volta) é um novo Gerenciador de versões da equipe do LinkedIn que alega uma velocidade aprimorada e suporte de plataforma cruzada.
 - [asdf-VM](https://asdf-vm.com/#/core-manage-asdf-vm) é uma única CLI para vários idiomas, como Ike GVM, NVM, rbenv & pyenv (e mais) em um.
-- [NVS](https://github.com/jasongin/nvs) (alternador de versão do nó) é uma alternativa `nvm` de plataforma cruzada com a capacidade de [integrar com vs Code](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md).
+- [NVS](https://github.com/jasongin/nvs) (alternador de versão do nó) é uma plataforma cruzada `nvm` alternativa com a capacidade de [integrar com vs Code](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md).
 
 ## <a name="install-your-favorite-code-editor"></a>Instalar seu editor de código favorito
 
@@ -127,7 +127,7 @@ Embora NVM seja atualmente o Gerenciador de versão mais popular para o nó, há
 Os editores de texto baseados em terminal (vim, Emacs, Nano) também são úteis para fazer alterações rápidas diretamente dentro do seu console. ([Este artigo](https://medium.com/linode-cube/emacs-nano-or-vim-choose-your-terminal-based-text-editor-wisely-8f3826c92a68) faz um bom trabalho explicando a diferença e um pouco sobre como usar cada um deles.)
 
 > [!NOTE]
-> Alguns editores de GUI (Atom, Sublime Text, Eclipse) podem ter problemas para acessar o local de rede compartilhada WSL (\\wsl $ \Ubuntu\home @ no__t-1 e tentará criar seus arquivos do Linux usando as ferramentas do Windows, que podem não ser o que você deseja. A extensão WSL remota no VS Code tratará dessa compatibilidade para você.
+> Alguns editores de GUI (Atom, Sublime Text, Eclipse) podem ter problemas para acessar o local de rede compartilhada WSL (\\WSL $ \Ubuntu\home\) e tentará criar seus arquivos do Linux usando as ferramentas do Windows, que podem não ser as que você deseja. A extensão WSL remota no VS Code tratará dessa compatibilidade para você.
 
 Para instalar VS Code e a extensão WSL remota:
 
@@ -165,11 +165,11 @@ Algumas extensões adicionais que talvez você queira considerar incluem:
 
 ## <a name="install-windows-terminal-optional"></a>Instalar o terminal do Windows (opcional)
 
-O novo terminal do Windows permite várias guias (alternar rapidamente entre o prompt de comando, o PowerShell ou várias distribuições do Linux), associações de chave personalizadas (crie suas próprias teclas de atalho para abrir ou fechar guias, copiar + colar, etc.), emojis ☺ e temas personalizados ( esquemas de cores, estilos e tamanhos de fontes, imagem de plano de fundo/desfoque/transparência). [Saiba mais](https://devblogs.microsoft.com/commandline/).
+O novo terminal do Windows permite várias guias (alternar rapidamente entre o prompt de comando, o PowerShell ou várias distribuições do Linux), associações de chave personalizadas (crie suas próprias teclas de atalho para abrir ou fechar guias, copiar + colar, etc.), emojis ☺ e temas personalizados (esquemas de cores, estilos e tamanhos de fonte, imagem de plano de fundo/desfoque [Saiba mais](https://devblogs.microsoft.com/commandline/).
 
 1. Obter [o terminal do Windows (versão prévia) no Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): ao instalar por meio da loja, as atualizações são manipuladas automaticamente.
 
-2. Depois de instalado, abra Terminal do Windows e selecione **configurações** para personalizar o terminal usando o arquivo `profile.json`. [Saiba mais sobre como editar as configurações de terminal do Windows](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
+2. Depois de instalado, abra Terminal do Windows e selecione **configurações** para personalizar o terminal usando o arquivo de `profile.json`. [Saiba mais sobre como editar as configurações de terminal do Windows](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
 
     ![Configurações de terminal do Windows](../images/windows-terminal-settings.png)
 
@@ -177,7 +177,7 @@ O novo terminal do Windows permite várias guias (alternar rapidamente entre o p
 
 Se você planeja colaborar com outras pessoas ou hospedar seu projeto em um site de software livre (como o GitHub), VS Code dá suporte ao [controle de versão com o Git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). A guia controle do código-fonte no VS Code rastreia todas as suas alterações e tem comandos git comuns (adicionar, confirmar, enviar por push, pull) criados diretamente na interface do usuário.
 
-1. O Git vem instalado com o subsistema do Windows para Linux distribuições, no entanto, você precisará configurar o arquivo de configuração do git. Para fazer isso, em seu terminal, digite: `git config --global user.name "Your Name"` e, em seguida, `git config --global user.email "youremail@domain.com"`. Se você ainda não tiver uma conta do git, poderá [se inscrever para uma no GitHub](https://github.com/join). Se você nunca trabalhou com o Git antes, os [guias do GitHub](https://guides.github.com/) podem ajudá-lo a começar. Se você precisar editar a configuração do git, poderá fazer isso com um editor de texto interno como nano: `nano ~/.gitconfig`.
+1. O Git vem instalado com o subsistema do Windows para Linux distribuições, no entanto, você precisará configurar o arquivo de configuração do git. Para fazer isso, em seu terminal, digite: `git config --global user.name "Your Name"` e, em seguida, `git config --global user.email "youremail@domain.com"`. Se você ainda não tiver uma conta do git, poderá [se inscrever para uma no GitHub](https://github.com/join). Se você nunca trabalhou com o Git antes, os [guias do GitHub](https://guides.github.com/) podem ajudá-lo a começar. Se você precisar editar a configuração do git, poderá fazer isso com um editor de texto interno como o nano: `nano ~/.gitconfig`.
 
 2. É recomendável adicionar um [arquivo. gitignore](https://help.github.com/en/articles/ignoring-files) aos seus projetos de nó. Aqui está o [modelo de gitignore padrão do GitHub para node. js](https://github.com/github/gitignore/blob/master/Node.gitignore). Se você optar por [criar um novo repositório usando o site do GitHub](https://help.github.com/articles/create-a-repo), há caixas de seleção disponíveis para inicializar o repositório com um arquivo Leiame, arquivo. gitignore configurado para projetos do node. js e opções para adicionar uma licença se precisar de uma.
 

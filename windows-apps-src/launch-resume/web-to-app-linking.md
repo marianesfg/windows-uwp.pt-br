@@ -46,7 +46,7 @@ Por exemplo, se o endereço do site for "msn.com", faça a seguinte entrada no m
 </Applications>
 ```
 
-A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se o seu site tiver vários endereços (por exemplo: m.example.com, www\.example.com e example.com), adicione uma entrada `<uap3:Host Name=... />` separada dentro do `<uap3:AppUriHandler>` para cada endereço.
+A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se seu site tiver vários endereços (por exemplo: m.example.com, www\.example.com e example.com), adicione uma entrada de `<uap3:Host Name=... />` separada dentro do `<uap3:AppUriHandler>` para cada endereço.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>Associar seu aplicativo e o site com um arquivo JSON
 
@@ -96,7 +96,7 @@ Se você tiver dois aplicativos que gostaria de vincular ao seu site, indique os
 
 Para proporcionar a melhor experiência para seus usuários, use caminhos excluídos para garantir que o conteúdo somente online seja excluído dos caminhos com suporte em seu arquivo JSON.
 
-Caminhos excluídos são verificados primeiro e se houver uma correspondência, a página correspondente será aberta com o navegador em vez do aplicativo designado. No exemplo acima, "/News/\*" inclui todas as páginas sob esse caminho enquanto "/News @ no__t-1" (nenhuma barra "notícias") inclui todos os caminhos em "News @ no__t-2", como "newslocal/", "newsinternational/" e assim por diante.
+Caminhos excluídos são verificados primeiro e se houver uma correspondência, a página correspondente será aberta com o navegador em vez do aplicativo designado. No exemplo acima, '/News/\*' inclui todas as páginas sob esse caminho enquanto '/News\*' (nenhuma barra invertida ' News ') inclui todos os caminhos em ' News\*', como ' newslocal/', ' newsinternational/' e assim por diante.
 
 ## <a name="handle-links-on-activation-to-link-to-content"></a>Manipular links na ativação para vincular ao conteúdo
 
@@ -150,19 +150,19 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **Importante** Certifique-se de substituir a lógica `if (rootFrame.Content == null)` final por `rootFrame.Navigate(deepLinkPageType, e);` conforme mostrado no exemplo acima.
 
-## <a name="test-it-out-local-validation-tool"></a>Teste: Ferramenta de validação local
+## <a name="test-it-out-local-validation-tool"></a>Teste: ferramenta de validação de local
 
 Você pode testar a configuração do seu aplicativo e do site executando a ferramenta de verificação de registro de host de aplicativo que está disponível em:
 
-% WINDIR% \\system32 @ no__t-1**AppHostRegistrationVerifier. exe**
+% WINDIR%\\system32\\**AppHostRegistrationVerifier. exe**
 
 Teste a configuração do seu aplicativo e do site executando essa ferramenta com os seguintes parâmetros:
 
 **AppHostRegistrationVerifier. exe** *nome do host packagefamilyname FilePath*
 
--   Nome do host: Seu site (por exemplo, microsoft.com)
--   Nome da família de pacotes (PFN): PFN do seu aplicativo
--   Caminho do arquivo: O arquivo JSON para validação local (por exemplo, C: \\SomeFolder @ no__t-1Windows-app-web-link)
+-   Nome do host: seu site (por exemplo, microsoft.com)
+-   Nome da Família de Pacotes (PFN): o PFN do seu aplicativo
+-   Caminho do arquivo: o arquivo JSON para validação local (por exemplo, C:\\SomeFolder\\Windows-app-web-link)
 
 Se a ferramenta não retornar qualquer coisa, a validação funcionará nesse arquivo quando for carregado. Se houver um código de erro, ele não funcionará.
 
@@ -171,11 +171,11 @@ Você pode habilitar a seguinte chave do registro para forçar o caminho corresp
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-KeyName Valor de `ForceValidation`: `1`
+KeyName: valor de `ForceValidation`: `1`
 
-## <a name="test-it-web-validation"></a>Teste: Validação da Web
+## <a name="test-it-web-validation"></a>Teste: validação Web
 
-Feche o aplicativo para verificar se ele é ativado quando você clica em um link. Em seguida, copie o endereço de um dos caminhos com suporte no seu site. Por exemplo, se o endereço do seu site for "msn.com" e um dos caminhos de suporte for "caminho1", você usará `http://msn.com/path1`
+Feche o aplicativo para verificar se ele é ativado quando você clica em um link. Em seguida, copie o endereço de um dos caminhos com suporte no seu site. Por exemplo, se o endereço do seu site for "msn.com" e um dos caminhos de suporte for "caminho1", você usaria `http://msn.com/path1`
 
 Verifique se seu aplicativo é fechado. Pressione a **tecla Windows + R** para abrir a caixa de diálogo **Executar** e cole o link na janela. Seu aplicativo deve ser iniciado em vez do navegador da Web.
 

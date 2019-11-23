@@ -18,11 +18,11 @@ ms.locfileid: "74260151"
 
 ## <a name="common-controls-list"></a>Lista de controles comuns
 
-Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. There are, of course, many more controls that are available to you. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
+Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. Há, é claro, muitos outros controles que estão disponíveis para você. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
 
 O que há de mais inteligente com relação aos controles UWP é que eles podem perceber em qual tipo de dispositivo estão sendo executados e mudar a aparência e a funcionalidade deles de acordo. Por exemplo, se seu projeto usa o controle [**DatePicker**](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)), é bastante inteligente ele se otimizar para ter aparência e comportamento diferentes em um desktop e em um telefone. Você não precisa fazer nada: os controles se ajustam no tempo de execução.
 
-| Controle iOS (classe/protocolo) | Equivalent UWP control |
+| Controle iOS (classe/protocolo) | Controle UWP equivalente |
 |------------------------------|--------------------------------------|
 | Indicador de atividade (**UIActivityIndicatorView**) | [**ProgressRing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) <br/> Consulte também [Guia de início rápido: adicionando controles de progresso](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) |
 | Visualização da barra de notificação de anúncio (**ADBannerView**) e representante de visualização da barra de notificação de anúncio (**ADBannerViewDelegate**) | [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) <br/> Consulte também [exibir anúncios em seu aplicativo](../monetize/display-ads-in-your-app.md) |
@@ -30,7 +30,7 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 | Seletor de data (UIDatePicker) | [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) |
 | Visualização de imagem (UIImageView) | [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) <br/> Consulte também [Image and ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes) |
 | Rótulo (UILabel) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/> Consulte também [Guia de início rápido: exibindo texto](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) |
-| Visualização de mapa (MKMapView) e representante de visualização de mapa (MKMapViewDelegate) | See [Bing Maps for UWP apps](https://msdn.microsoft.com/library/hh846481) |
+| Visualização de mapa (MKMapView) e representante de visualização de mapa (MKMapViewDelegate) | Consulte [Bing Maps para aplicativos UWP](https://msdn.microsoft.com/library/hh846481) |
 | Controlador de navegação (UINavigationController) e representante de controlador de navegação (UINavigationControllerDelegate) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/> Consulte também [Navegação](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
 | Controle de página (UIPageControl) | [Page](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/> Consulte também [Navegação](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
 | Visualização de seletor (UIPickerView) e representante de visualização de seletor (UIPickerViewDelegate) | [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) <br/> Consulte também [Adicionando caixas de combinação e caixas de listagem](https://docs.microsoft.com/previous-versions/windows/apps/hh780616(v=win.10)) |
@@ -51,14 +51,14 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 
 Para ainda mais controles, consulte [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/).
 
-**Note**  For a list of controls for UWP apps using JavaScript and HTML, see [Controls list](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10)).
+**Observação**  para obter uma lista de controles para aplicativos UWP usando JavaScript e HTML, consulte [lista de controles](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10)).
 
 ### <a name="next-step"></a>Próximas etapas
 
-[Getting Started: Navigation](getting-started-navigation.md)
+[Introdução: navegação](getting-started-navigation.md)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [build 2014: What about XAML UI and Controls?](https://channel9.msdn.com/Events/Build/2014/2-516)
-* [build 2014: Developing Apps using the Common XAML UI Framework](https://channel9.msdn.com/Events/Build/2014/2-507)
-* [build 2014: Using Visual Studio to Build XAML Converged Apps](https://channel9.msdn.com/Events/Build/2014/3-591)
+* [Build 2014: e a interface do usuário e os controles XAML?](https://channel9.msdn.com/Events/Build/2014/2-516)
+* [Build 2014: desenvolvendo aplicativos usando a estrutura de interface do usuário XAML comum](https://channel9.msdn.com/Events/Build/2014/2-507)
+* [Build 2014: usando o Visual Studio para criar aplicativos convergidos XAML](https://channel9.msdn.com/Events/Build/2014/3-591)

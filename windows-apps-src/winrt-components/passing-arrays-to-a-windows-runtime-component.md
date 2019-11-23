@@ -1,5 +1,5 @@
 ---
-title: Passagem de matrizes para um componente do Tempo de Execução do Windows
+title: Passagem de matrizes para um componente do Windows Runtime
 description: Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 ms.date: 02/08/2017
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71340511"
 ---
-# <a name="passing-arrays-to-a-windows-runtime-component"></a>Passagem de matrizes para um componente do Tempo de Execução do Windows
+# <a name="passing-arrays-to-a-windows-runtime-component"></a>Passagem de matrizes para um componente do Windows Runtime
 
 
 
@@ -22,7 +22,7 @@ Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de s
 
 -   Para o valor de retorno ou para um parâmetro out (um parâmetro **ByRef** com o atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) no Visual Basic), a matriz é sempre apenas de saída. Não aplique o atributo ReadOnlyArrayAttribute. O atributo WriteOnlyArrayAttribute é permitido em parâmetros de saída, mas é redundante.
 
-    > **Cuidado**  a Visual Basic compilador não impõe regras somente de saída. Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
+    > **Cuidado**  o compilador de Visual Basic não impõe regras somente de saída. Nunca se deve ler a partir de um parâmetro de saída; ele pode conter **Nada**. Sempre atribua uma nova matriz.
  
 -   Os parâmetros que tiverem o modificador **ref** (**ByRef** no Visual Basic) não são permitidos. Winmdexp.exe gera um erro.
 -   Para um parâmetro passado por valor, você deve especificar se o conteúdo da matriz é de entrada ou saída aplicando o atributo [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute) ou [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute). Especificar ambos os atributos é um erro.
@@ -55,10 +55,10 @@ Recomendamos criar uma cópia da matriz de entrada imediatamente e manipular a c
 
 Parâmetros que tenham o atributo ReadOnlyArrayAttribute ou o atributo WriteOnlyArrayAttribute se comportam de maneira diferente dependendo do chamador estar gravado em código gerenciado ou nativo. Caso o chamador seja um código nativo (extensões de componente Visual C++ ou JavaScript), o conteúdo da matriz é tratado da seguinte maneira:
 
--   ReadOnlyArrayAttribute: A matriz é copiada quando a chamada cruza o limite da ABI (interface binária do aplicativo). Os elementos são convertidos caso necessário. Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador.
--   WriteOnlyArrayAttribute: O método chamado não pode fazer suposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão. O método é esperado para definir os valores de todos os elementos na matriz.
+-   ReadOnlyArrayAttribute: a matriz é copiada quando a chamada atravessa o limite da interface binária do aplicativo (ABI). Os elementos são convertidos caso necessário. Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador.
+-   WriteOnlyArrayAttribute: o método chamado não pode fazer pressuposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão. O método é esperado para definir os valores de todos os elementos na matriz.
 
-Se o chamador for um código gerenciado, a matriz original estará disponível para o método chamado, como seria em qualquer chamada de método no .NET. Os conteúdos da matriz são mutáveis no código .NET, portanto, qualquer alteração que o método faz para a matriz é visível para o chamador. É importante lembrar isso porque ele afeta testes de unidade escritos para um componente do Tempo de Execução do Windows. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.
+Se o chamador for um código gerenciado, a matriz original estará disponível para o método chamado, como seria em qualquer chamada de método no .NET. Os conteúdos da matriz são mutáveis no código .NET, portanto, qualquer alteração que o método faz para a matriz é visível para o chamador. É importante lembrar isso porque ele afeta testes de unidade escritos para um componente do Windows Runtime. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

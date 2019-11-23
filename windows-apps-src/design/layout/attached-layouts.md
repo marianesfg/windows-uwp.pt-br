@@ -121,7 +121,7 @@ Em cenários com base na rolagem, como uma lista, determinar _quando necessário
 > [!NOTE]
 > Embora não seja abordado neste documento, os mesmos recursos que habilitam a virtualização da interface do usuário em cenários de rolagem podem ser aplicados em cenários sem rolagem.  Por exemplo, um controle de barra de ferramentas controlado por dados que gerencia o tempo de vida dos comandos que ele apresenta e responde a alterações no espaço disponível por meio da reciclagem/movimentação de elementos entre uma área visível e um menu de estouro.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 
 Primeiro, decida se o layout que você precisa criar deve dar suporte à virtualização da interface do usuário.
 
@@ -154,7 +154,7 @@ A abordagem para criar um layout de não virtualização deve se familiarizar co
 5. Substitua o [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride) e chame o método [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) em todos os filhos.
 6. *(**Novo**/optional)* Limpe qualquer estado salvo como parte do [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
 
-### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Exemplo: Um layout de pilha simples (itens de tamanho variável)
+### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Exemplo: um layout de pilha simples (itens de tamanho variável)
 
 ![MyStackLayout](images/xaml-attached-layout-mystacklayout.png)
 
@@ -261,7 +261,7 @@ O [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizingla
 
 A solicitação de um elemento para um determinado índice fará com que esse elemento seja marcado como "em uso" para essa passagem do layout. Se o elemento ainda não existir, ele será percebido e automaticamente preparado para uso (por exemplo, inplanando a árvore de interface do usuário definida em um DataTemplate, processando qualquer ligação de dados, etc.).  Caso contrário, ele será recuperado de um pool de instâncias existentes.
 
-No final de cada passagem de medida, qualquer elemento existente e realizado que não tenha sido marcado como "em uso" será automaticamente considerado disponível para reutilização, a menos que a opção para [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) tenha sido usada quando o elemento foi recuperado por meio do [ Método GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) . A estrutura a move automaticamente para um pool de reciclagem e a disponibiliza. Em seguida, ele pode ser puxado para uso por um contêiner diferente. A estrutura tenta evitar isso quando possível, já que há algum custo associado ao novo pai de um elemento.
+No final de cada passagem de medida, qualquer elemento existente e realizado que não tenha sido marcado como "em uso" será automaticamente considerado disponível para reutilização, a menos que a opção para [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) tenha sido usada quando o elemento foi recuperado por meio do método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) . A estrutura a move automaticamente para um pool de reciclagem e a disponibiliza. Em seguida, ele pode ser puxado para uso por um contêiner diferente. A estrutura tenta evitar isso quando possível, já que há algum custo associado ao novo pai de um elemento.
 
 Se um layout de virtualização souber no início de cada medida quais elementos não ficarão mais dentro do Rect de realização, ele poderá otimizar sua reutilização. Em vez de depender do comportamento padrão da estrutura. O layout pode, de forma preventiva, mover elementos para o pool de reciclagem usando [o método](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recycleelement) reciclaelement.  Chamar esse método antes de solicitar novos elementos faz com que esses elementos existentes estejam disponíveis quando o layout mais tarde emite uma solicitação [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) para um índice que ainda não está associado a um elemento.
 
@@ -289,7 +289,7 @@ A abordagem geral é para o layout:
 > [!TIP]
 > Se você estiver criando um controle personalizado para uma biblioteca de controle que será usada por outras pessoas em uma ampla variedade de situações, um layout de dados poderá não ser uma opção para você.
 
-### <a name="example-xbox-activity-feed-layout"></a>Exemplo: Layout do feed de atividades do Xbox
+### <a name="example-xbox-activity-feed-layout"></a>Exemplo: layout do feed de atividades do Xbox
 
 A interface do usuário do feed de atividades do Xbox usa um padrão repetitivo em que cada linha tem um bloco largo, seguido por dois blocos estreitos que são invertidos na linha subsequente. Nesse layout, o tamanho de cada item é uma função da posição do item no conjunto de dados e o tamanho conhecido para os blocos (largo vs estreito).
 
@@ -586,7 +586,7 @@ internal class ActivityFeedLayoutState
 
 Por padrão, o [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) mantém um mapeamento entre os elementos realizados e o índice na fonte de dados que eles representam.  Um layout pode optar por gerenciar esse mapeamento sempre solicitando a opção de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) ao recuperar um elemento por meio do método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) , que impede o comportamento de reciclagem automática padrão.  Um layout pode optar por fazer isso, por exemplo, se ele só será usado quando a rolagem for restrita a uma direção e os itens que ele considerar forem sempre contíguos (ou seja, saber que o índice do primeiro e último elemento é suficiente para saber todos os elementos que devem ser reados lized).
 
-#### <a name="example-xbox-activity-feed-measure"></a>Exemplo: Medida do feed de atividades do Xbox
+#### <a name="example-xbox-activity-feed-measure"></a>Exemplo: medida do feed de atividades do Xbox
 
 O trecho de código abaixo mostra a lógica adicional que pode ser adicionada ao MeasureOverride no exemplo anterior para gerenciar o mapeamento.
 
@@ -703,7 +703,7 @@ Se um usuário arrastar o polegar muito rapidamente, é possível que o visor, d
 Quando o layout descobre que sua estimativa está incorreta e/ou vê um turno de visor inesperado, ele precisa reorientar sua posição inicial.  Os layouts de virtualização que são fornecidos como parte dos controles XAML são desenvolvidos como layouts dependentes de conteúdo, pois eles colocam menos restrições na natureza do conteúdo que será mostrado.
 
 
-### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Exemplo: Layout de pilha de virtualização simples para itens de tamanho variável
+### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Exemplo: simples virtualização de layout de pilha para itens de tamanho variável
 
 O exemplo a seguir demonstra um layout de pilha simples para itens de tamanho variável que:
 
@@ -712,7 +712,7 @@ O exemplo a seguir demonstra um layout de pilha simples para itens de tamanho va
 * está ciente de possíveis turnos de visor descontínuos e
 * aplica correções de layout para considerar esses turnos.
 
-**Usage: Marcação @ no__t-0
+**Uso: marcação**
 
 ```xaml
 <ScrollViewer>
@@ -741,7 +741,7 @@ O exemplo a seguir demonstra um layout de pilha simples para itens de tamanho va
 </ScrollViewer>
 ```
 
-**Codebehind: Main. cs @ no__t-0
+**Codebehind: Main.cs**
 
 ```csharp
 string _lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus.";
@@ -757,7 +757,7 @@ var data = new ObservableCollection<Recipe>(Enumerable.Range(0, 300).Select(k =>
 repeater.ItemsSource = data;
 ```
 
-**Code: VirtualizingStackLayout. cs @ no__t-0
+**Código: VirtualizingStackLayout.cs**
 
 ```csharp
 // This is a sample layout that stacks elements one after

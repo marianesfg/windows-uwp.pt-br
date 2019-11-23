@@ -20,7 +20,7 @@ ms.locfileid: "72302256"
 
 O Windows é usado no mundo todo por públicos diversificados em termos de idioma, região e cultura. Seus usuários falam uma variedade de idiomas diferentes e em vários países e regiões diferentes. Alguns usuários falam mais de um idioma. Assim, seu aplicativo é executado em configurações que envolvem muitas permutações de configurações do sistema para idioma, região e cultura. Você pode aumentar o mercado potencial para seu app desenvolvendo-o para ser prontamente adaptável, usando *globalização* e *localização*.
 
-Este vídeo fornece uma breve introdução sobre como preparar seu aplicativo para o mundo: [Introdução à globalização e à localização](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
+Este vídeo apresenta uma breve introdução sobre como preparar seu app para o mundo: [Introdução à globalização e à localização](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
 **Globalização** é o processo de projetar e desenvolver seu app de forma que ele funcione adequadamente em diferentes mercados globais (em sistemas com diferentes configurações de idioma e cultura) sem exigir alterações específicas de cultura ou personalização.
 
@@ -38,7 +38,7 @@ Seu código precisa funcionar igualmente bem em qualquer uma das culturas que vo
 - Regras de classificação
 
 >[!NOTE]
-> Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de marca de idioma da tabela em [Appendix A: Comportamento do produto @ no__t-0 na [referência do identificador de código de idioma do Windows (LCID)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
+> Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de marca de idioma da tabela no [Apêndice a: comportamento do produto](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) na [referência do identificador de código de idioma do Windows (LCID)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
 
 **Localizabilidade** é o processo de preparar um app globalizado para a localização e/ou verificar se o app está pronto para a localização. Tornar um app corretamente localizável significa que o processo de localização posterior não revelará nenhum defeito funcional no app. A propriedade mais essencial de um app localizável é que seu código executável tenha sido separado cuidadosamente dos recursos localizáveis do app.
 
@@ -64,7 +64,7 @@ A maioria das equipes de localização usa ferramentas especiais para ajudar no 
 | [Ajustar layout e fontes e fornecer suporte para RTL](adjust-layout-and-fonts--and-support-rtl.md) | Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda). |
 | [Valores de NumeralSystem](glob-numeralsystem-values.md) | Este tópico lista os valores disponíveis para a propriedade **NumeralSystem** de várias classes no namespace [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live). |
 | [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md) | Um app localizado é aquele que pode ser localizado em outros mercados, idiomas ou regiões sem revelar defeitos funcionais no app. A propriedade mais essencial de um aplicativo localizável é que seu código executável tenha sido separado cuidadosamente de seus recursos localizáveis. |
-| [Fontes internacionais](loc-international-fonts.md) | Este tópico lista as fontes disponíveis para aplicativos UWP que são localizados em outros idiomas que não sejam os EUA Inglês. |
+| [Fontes internacionais](loc-international-fonts.md) | Este tópico lista as fontes disponíveis para os aplicativos UWP que são traduzidos para outros idiomas. |
 | [Criar seu aplicativo para texto bidirecional](design-for-bidi-text.md) | Projete seu app de modo a fornecer suporte bidirecional a texto (BiDi) para que você possa combinar o script de sistemas de escrita da esquerda para a direita e da direita para a esquerda. |
 | [Use o kit de ferramentas de aplicativo multilíngue 4,0](use-mat.md) | O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com Microsoft Visual Studio 2017 e posterior para fornecer aos aplicativos UWP suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de editor. |
 | [Perguntas frequentes sobre o kit de ferramentas de aplicativo multilíngue 4,0 & solução de problemas](mat-faq-troubleshooting.md) | Este tópico fornece respostas a perguntas frequentes e problemas relacionados ao Kit de Ferramentas de Aplicativo Multilíngue (MAT) 4.0. |

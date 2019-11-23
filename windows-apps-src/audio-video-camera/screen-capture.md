@@ -113,7 +113,7 @@ Await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>Criar um pool de quadro de captura e uma sessão de captura
 
-Usando o **GraphicsCaptureItem**, você criará um [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) com o dispositivo D3D, formato de pixel com suporte (**dxgi @ no__t-3FORMAT @ no__t-4B8G8R8A8 @ no__t-5UNORM**), número de quadros desejados (que pode ser qualquer número inteiro ) e o tamanho do quadro. A propriedade **ContentSize** da classe **GraphicsCaptureItem** pode ser usada como tamanho do quadro:
+Usando o **GraphicsCaptureItem**, você criará um [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) com o dispositivo D3D, formato de pixel com suporte (**DXGI\_Format\_B8G8R8A8\_UNORM**), o número de quadros desejados (que pode ser qualquer número inteiro) e o tamanho do quadro. A propriedade **ContentSize** da classe **GraphicsCaptureItem** pode ser usada como tamanho do quadro:
 
 ```cs
 private GraphicsCaptureItem _item;
@@ -259,7 +259,7 @@ Quando **Recreate** é chamado, todos os quadros existentes são descartados. Is
 
 ## <a name="putting-it-all-together"></a>Reunindo tudo
 
-O trecho de código a seguir é um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos dois botões no front-end: um chama **Button_ClickAsync**e o outro chama **ScreenshotButton_ClickAsync**.
+O trecho de código a seguir é um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos dois botões no front-end: um chama **Button_ClickAsync**e as outras chamadas **ScreenshotButton_ClickAsync**.
 
 > [!NOTE]
 > Esse trecho de código usa [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte sua documentação para obter informações sobre como configurá-lo para seu projeto.

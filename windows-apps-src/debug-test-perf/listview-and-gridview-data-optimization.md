@@ -16,7 +16,7 @@ ms.locfileid: "71339616"
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualização de dados de ListView e GridView
 
 
-**Observação**  Para mais detalhes, consulte a sessão conferência//Build/ [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Observe**  para obter mais detalhes, consulte a sessão conferência//Build/ [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Melhore o desempenho e o tempo de inicialização de [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) por meio da virtualização de dados. Para a virtualização da interface do usuário, redução de elementos e atualização progressiva de itens, consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -27,7 +27,7 @@ Um método de virtualização de dados é necessário para um conjunto de dados 
 -   A fonte do conjunto de dados (disco local, rede ou nuvem)
 -   O consumo de memória geral do seu aplicativo
 
-**Observe**  Be ciente de que um recurso está habilitado por padrão para ListView e GridView que exibe elementos visuais de espaço reservado temporários enquanto o usuário está avançando/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
+**Observe**  estar ciente de que um recurso está habilitado por padrão para ListView e GridView que exibe elementos visuais de espaço reservado temporários enquanto o usuário está avançando/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aqui estão mais detalhes sobre as técnicas de virtualização de dados incremental e de acesso aleatório.
 
@@ -36,7 +36,7 @@ Aqui estão mais detalhes sobre as técnicas de virtualização de dados increme
 A virtualização de dados incremental carrega dados sequencialmente. Um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa virtualização de dados incremental pode ser usado para exibir uma coleção de um milhão de itens, mas apenas 50 itens são carregados inicialmente. Conforme o usuário faz um movimento panorâmico/rolagem, os próximos 50 são carregados. À medida que os itens são carregados, o tamanho do elevador da barra de rolagem diminui. Para esse tipo de virtualização de dados, você escreve uma classe de fonte de dados que implementa estas interfaces.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISupportIncrementalLoading)
 
 Uma fonte de dados como essa é uma lista carregada na memória que pode ser estendida continuamente. O controle de itens solicitará itens usando o indexador [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) padrão e as propriedades de contagem. A contagem deve representar o número de itens localmente, não o tamanho real do conjunto de dados.
@@ -48,7 +48,7 @@ Quando o controle de itens se aproximar do fim dos dados existentes, ele chamar�
 A virtualização de dados de acesso aleatório permite o carregamento de um ponto arbitrário do conjunto de dados. Um [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa a virtualização de dados de acesso aleatório, usada para exibir uma coleção de um milhão de itens, pode carregar os itens 100.000 – 100.050. Se o usuário for para o início da lista, o controle carregará os itens 1 – 50. O elevador da barra de rolagem sempre indica que o **ListView** contém um milhão de itens. A posição do elevador da barra de rolagem é relativa a onde os itens visíveis estão localizados no conjunto de dados inteiro da coleção. Esse tipo de virtualização de dados pode reduzir significativamente os requisitos de memória e os tempos de carregamento da coleção. Para habilitá-lo, você precisa gravar uma classe de fonte de dados que busque dados sob demanda, gerencie um cache local e implemente estas interfaces.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) ou [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   (Opcionalmente) [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)
 -   (Opcionalmente) [**ISelectionInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISelectionInfo)
 

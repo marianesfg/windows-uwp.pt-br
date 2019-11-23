@@ -72,9 +72,11 @@ Por exemplo, o Microsoft Word fornece dois âmbitos para as teclas de acesso: um
 
 As imagens a seguir demonstram os dois âmbitos de teclas de acesso no Word. A primeira mostra as teclas de acesso primárias que permitem que um usuário selecione a aba e outros comandos de alto nível, e a segunda mostra as teclas de acesso secundárias para a aba Página Inicial.
 
-chaves de acesso ![Primary nas chaves de acesso primário do Microsoft Word @ no__t-1_no Microsoft Word_
+![chaves de acesso primárias no Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+_chaves de acesso primário no Microsoft Word_
 
-chaves de acesso ![Secondary nas_chaves de acesso secundárias_ do Microsoft Word @ no__t-1 no Microsoft Word
+![chaves de acesso secundárias no Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+_chaves de acesso secundárias no Microsoft Word_
 
 As teclas de acesso podem ser duplicadas para elementos de âmbitos diferentes. No exemplo anterior, "2" é a tecla de acesso para Desfazer no âmbito principal, e também para "Itálico" no âmbito secundário.
 
@@ -253,17 +255,17 @@ _Exemplo de posicionamento de dica de chave automática_
 
 No entanto, caso precise de um controle maior sobre o posicionamento da Dica de Tecla, recomendamos o seguinte:
 
-1.  **Princípio de associação óbvio**: O usuário pode associar o controle com a dica de chave facilmente.
+1.  **Princípio da associação óbvia**: O usuário pode facilmente associar o controle à Dica de Tecla.
 
     a.  A Dica de Tecla deve estar **próxima** ao elemento que possui a tecla de acesso (o proprietário).  
     b.  A Dica de Tecla deve **evitar cobrir elementos habilitados** que possuam teclas de acesso.   
     c.  Se uma Dica de Tecla não puder ser colocada perto do seu proprietário, ela deve sobrepô-lo. 
 
-2.  **Capacidade de descoberta**: O usuário pode descobrir o controle com a dica de chave rapidamente.
+2.  **Detectabilidade**: O usuário pode descobrir o controle rapidamente com a Dica de Tecla.
 
     a.  A Dica de Tecla nunca **sobrepõe** outras Dicas de Tecla.  
 
-3.  **Digitalização fácil:** O usuário pode rapidamente obter as dicas-chave facilmente.
+3.  **Verificação fácil:** O usuário pode ler as Dicas de Tecla facilmente.
 
     a.  As Dicas de Tecla devem estar **alinhadas** entre si e com o elemento de interface do usuário.
     b.  As Dicas de Tecla devem ser **agrupadas** o máximo possível. 
@@ -272,7 +274,7 @@ No entanto, caso precise de um controle maior sobre o posicionamento da Dica de 
 
 Use a propriedade **KeyTipPlacementMode** para personalizar o posicionamento da Dica de Tecla por elemento ou por grupo.
 
-Os modos de posicionamento são: Superior, inferior, direita, esquerda, oculto, centralizado e automático.
+Os modos de posicionamento são: Superior, Inferior, Direito, Esquerdo, Oculto, Central e Automático.
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-postion-modes.png)
 

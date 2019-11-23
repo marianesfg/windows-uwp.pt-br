@@ -30,11 +30,11 @@ Na marcação XAML, especifica um valor **null** para uma propriedade.
 
 O valor inicial padrão pode variar entre as propriedades de dependência, e não é necessariamente **null**. Além disso, muitas propriedades de dependência não aceitarão **null** como um valor (seja por marcação ou código) em função da implementação interna. Nesses casos, a definição de um valor de atributo XAML com **{x:Null}** pode resultar em uma exceção do analisador.
 
-Alguns tipos do Windows Runtime são anuláveis. Quando um tipo que permite valor nulo ainda não tem **null** como o padrão, você pode usar **{x:Null}** no XAML para definir como o valor **null**. Se você estiver C++ usando extensões deC++componente Visual (/CX), os tipos anuláveis serão representados como [Platform:: iBox @ no__t-4](https://docs.microsoft.com/cpp/cppcx/platform-ibox-interface). Ao usar linguagens Microsoft .NET, os tipos que permitem valor nulo são representados como [**Nullable<T>** ](https://docs.microsoft.com/dotnet/api/system.nullable-1).
+Alguns tipos do Windows Runtime são anuláveis. Quando um tipo que permite valor nulo ainda não tem **null** como o padrão, você pode usar **{x:Null}** no XAML para definir como o valor **null**. Se você estiver C++ usando extensões deC++componente Visual (/CX), os tipos anuláveis serão representados como [**Platform:: iBox<T>** ](https://docs.microsoft.com/cpp/cppcx/platform-ibox-interface). Ao usar linguagens Microsoft .NET, os tipos que permitem valor nulo são representados como [**Nullable<T>** ](https://docs.microsoft.com/dotnet/api/system.nullable-1).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [**Nullable @ no__t-2**](https://docs.microsoft.com/dotnet/api/system.nullable-1)
-* [**IReference @ no__t-2**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_)
+* [ **<T> anulável**](https://docs.microsoft.com/dotnet/api/system.nullable-1)
+* [ **<T> IReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_)
  
 

@@ -83,7 +83,7 @@ O tipo de material padrão é **Material de base**, que tem tanto um valor de **
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
->o dispositivo de fabricação 3D @no__t 0The determinará quais materiais físicos disponíveis são mapeados para quais elementos de material virtual armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
+> o dispositivo de fabricação 3D determinará quais materiais físicos disponíveis são mapeados para quais elementos de material virtual armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
 
 ### <a name="color-materials"></a>Materiais de cor
 

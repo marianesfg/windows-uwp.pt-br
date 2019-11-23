@@ -18,8 +18,8 @@ ms.locfileid: "74258925"
 
 <b>APIs importantes</b>
 
--   [**Windows.UI.Core namespace**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
--   [**Windows.System.Threading namespace**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+-   [**Namespace Windows. UI. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+-   [**Namespace do Windows. System. Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
 
 Saiba como criar um item de trabalho que seja executado após um temporizador.
 
@@ -27,7 +27,7 @@ Saiba como criar um item de trabalho que seja executado após um temporizador.
 
 Use o método [**CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) para criar um temporizador para o item de trabalho. Forneça um lambda que realiza o trabalho e use o parâmetro *delay* para especificar por quanto tempo o pool de threads deve aguardar antes de atribuir o item de trabalho a um thread disponível. O atraso é especificado usando uma estrutura [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan).
 
-> **Note**  You can use [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) to access the UI and show progress from the work item.
+> **Observação**  você pode usar [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado em três minutos:
 
@@ -205,7 +205,7 @@ O seguinte exemplo cria um timer que envia o item de trabalho e chama um método
 >         }));
 > ```
 
-## <a name="cancel-the-timer"></a>Cancelar o temporizador
+## <a name="cancel-the-timer"></a>Cancelar o timer
 
 Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho não for mais necessário, chame [**Cancelar**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel). O temporizador é cancelado e o item de trabalho não é enviado para o pool de threads.
 
@@ -221,7 +221,7 @@ Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho n
 
 Os aplicativos UWP (Plataforma Universal do Windows) não podem usar **Thread.Sleep** porque esse método pode bloquear o thread da interface do usuário. Em vez disso, você pode usar um [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) para criar um item de trabalho. Isso atrasará a tarefa realizada pelo item de trabalho sem bloquear o thread da interface do usuário.
 
-Veja o [exemplo do pool de threads](https://code.msdn.microsoft.com/windowsapps/Pool-Sample-5aa60454) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. The code sample was originally written for Windows 8.1 but the code can be re-used in Windows 10.
+Veja o [exemplo do pool de threads](https://code.msdn.microsoft.com/windowsapps/Pool-Sample-5aa60454) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi escrito originalmente para Windows 8.1, mas o código pode ser reutilizado no Windows 10.
 
 Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho periódico](create-a-periodic-work-item.md).
 

@@ -66,7 +66,7 @@ Adicionar um manipulador para [**CompositionTarget.Rendering**](https://docs.mic
 
 O namespace [**Windows.UI.Xaml.Media.Animation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation) inclui uma biblioteca de animações suaves de alto desempenho que têm aspecto consistente com outras animações do Windows. As classes relevantes têm "Theme" no nome e estão descritas em [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview). Esta biblioteca é compatível com vários cenários de animação comuns, como a animação da primeira exibição do aplicativo e a criação de transições de estado e conteúdo. É recomendável usar essa biblioteca de animação sempre que possível, para aumentar o desempenho e a consistência para a interface do usuário do UWP.
 
-> **Observação**   a biblioteca de animações não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
+> **Observe**   a biblioteca de animações não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Animar propriedades CompositeTransform3D independentemente

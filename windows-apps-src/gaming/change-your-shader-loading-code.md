@@ -36,16 +36,16 @@ O pipeline de elementos gráficos do Direct3D 11 é gerenciado por instâncias d
 -   [Estágio do assembler de entrada](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage). O estágio do assembler de entrada fornece dados (triângulos, linhas e pontos) ao pipeline. Os métodos [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) que dão suporte a esse estágio são prefixados com "ia".
 -   [Estágio do sombreador de vértice](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) – Esse estágio processa vértices, normalmente realizando operações como transformações, aplicação de capas e iluminação. Um sombreador de vértice sempre usa um único vértice de entrada para produzir um vértice de saída. Os métodos [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) que dão suporte a esse estágio são prefixados com "vs".
 -   [Estágio de saída de fluxo](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-stream-stage) – Nesse estágio, os dados são transmitidos do pipeline para a memória em seu caminho para o rasterizador. Os dados podem ser transmitidos para fora do rasterizador e/ou passados para ele. Os dados transmitidos para a memória podem ser reenviados para o pipeline como dados de entrada ou lidos pela CPU. Os métodos [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) que dão suporte a esse estágio são prefixados com "assim".
--   [Estágio do rasterizador](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage) – O rasterizador recorta primitivas, prepara-as para o sombreador de pixel e determina como invocar os sombreadores de pixel. Você pode desabilitar a rasterização dizendo ao pipeline que não há um sombreador de pixel (defina o estágio pixel shader como NULL com [**ID3D11DeviceContext::P ssetshader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)) e desabilitando a profundidade e o teste de estêncil (defina DepthEnable e STENCILENABLE como false em [ **D3D11 @ no__t-4DEPTH @ no__t-5STENCIL @ no__t-6DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). Enquanto estão desabilitados, os contadores do pipeline relacionados à rasterização não serão atualizados.
+-   [Estágio do rasterizador](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage) – O rasterizador recorta primitivas, prepara-as para o sombreador de pixel e determina como invocar os sombreadores de pixel. Você pode desabilitar a rasterização informando ao pipeline que não há um sombreador de pixel (defina o estágio do sombreador de pixel como nulo com [**ID3D11DeviceContext::P ssetshader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)) e desabilitando o teste de profundidade e de estêncil (defina DepthEnable e STENCILENABLE como false em [**D3D11\_profundidade\_estêncil\_desc**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). Enquanto estão desabilitados, os contadores do pipeline relacionados à rasterização não serão atualizados.
 -   [Estágio do sombreador de pixel](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) – Esse estágio recebe dados interpolados para uma primitiva e gera dados por pixel, como cor. Os métodos [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) que dão suporte a esse estágio são prefixados com "PS".
 -   [Estágio de fusão de saída](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage) – Esse estágio combina vários tipos de dados de saída (valores de sombreador de pixel, informações de profundidade e estêncil) com o conteúdo do destino de renderização e buffers de profundidade/estêncil para gerar o resultado do pipeline final. Os métodos [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) que dão suporte a esse estágio são prefixados com "Om".
 
-Também há estágios para sombreadores de geometria, sombreadores hull, tesselators e sombreadores de domínio, mas como eles não têm elementos semelhantes no OpenGL ES 2.0, não falaremos sobre eles aqui. Consulte uma lista completa de métodos desses estágios nas páginas de referência [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) e [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). O **ID3D11DeviceContext1** se estende **ID3D11DeviceContext** para o Direct3D 11.
+(Também há estágios para sombreadores de geometria, sombreadores hull, tesselators e sombreadores de domínio, mas como eles não têm elementos semelhantes no OpenGL ES 2.0, não falaremos sobre eles aqui). Para obter uma lista completa de métodos desses estágios, consulte as páginas de referência [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) e [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). O **ID3D11DeviceContext1** se estende **ID3D11DeviceContext** para o Direct3D 11.
 
 ## <a name="creating-a-shader"></a>Criando um sombreador
 
 
-Em Direct3D, os recursos de sombreador não são criados antes da compilação e carregamento deles; o recurso é criado quando o HLSL é carregado. Portanto, não há nenhuma função análoga diretamente para glCreateShader, que cria um recurso de sombreador inicializado de um tipo específico (como GL @ no__t-0VERTEX @ no__t-1SHADER ou GL @ no__t-2FRAGMENT @ no__t-3SHADER). Em vez disso, os sombreadores são criados após o carregamento de HLSL com funções específicas como [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) e [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader), que consideram o tipo e o HLSL compilado como parâmetros.
+Em Direct3D, os recursos de sombreador não são criados antes da compilação e carregamento deles; o recurso é criado quando o HLSL é carregado. Portanto, não há nenhuma função análoga diretamente para glCreateShader, que cria um recurso de sombreador inicializado de um tipo específico (como GL\_vértice\_SHADER ou GL\_fragmento\_SHADER). Em vez disso, os sombreadores são criados após o carregamento de HLSL com funções específicas como [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) e [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader), que consideram o tipo e o HLSL compilado como parâmetros.
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                                             |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ Em Direct3D, os recursos de sombreador não são criados antes da compilação e
 ## <a name="compiling-a-shader"></a>Compilando um sombreador
 
 
-Os sombreadores de Direct3D devem ser pré-compilados como arquivos de objeto sombreador compilado (. CSO) em aplicativos Plataforma Universal do Windows (UWP) e carregados usando uma das APIs de arquivo Windows Runtime. (Os aplicativos da área de trabalho podem compilar os sombreadores de arquivos de texto ou cadeia de caracteres em tempo de execução.) Os arquivos de CSO são criados a partir de quaisquer arquivos. HLSL que fazem parte de seu projeto Microsoft Visual Studio e mantêm os mesmos nomes, somente com uma extensão de arquivo. cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
+Os sombreadores de Direct3D devem ser pré-compilados como arquivos de objeto sombreador compilado (. CSO) em aplicativos Plataforma Universal do Windows (UWP) e carregados usando uma das APIs de arquivo Windows Runtime. (Os aplicativos da área de trabalho podem compilar os sombreadores a partir de arquivos de texto ou de cadeias de caracteres em tempo de execução). Os arquivos CSO são criados a partir de qualquer arquivo .hlsl que faça parte do projeto do Microsoft Visual Studio e mantêm os mesmos nomes, mas com a extensão de arquivo .cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
 
 | OpenGL ES 2.0                          | Direct3D 11                                                                                                                                                                   |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -115,9 +115,9 @@ D3D11CreateDevice(
 ## <a name="setting-the-viewports"></a>Configurando os visores
 
 
-O processo de configuração de um visor no Direct3D 11 é muito parecido com o processo no OpenGL ES 2.0. No Direct3D 11, chame [**ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) com um [**CD3D11 @ no__t-4VIEWPORT**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85))configurado.
+O processo de configuração de um visor no Direct3D 11 é muito parecido com o processo no OpenGL ES 2.0. No Direct3D 11, chame [**ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) com um [**CD3D11 de\_** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85))configurado.
 
-Direct3D 11: Definindo um visor.
+Direct3D 11: configurando um visor.
 
 ``` syntax
 CD3D11_VIEWPORT viewport(
@@ -131,7 +131,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11 @ no__t-2VIEWPORT**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)), [ **ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) |
+| glViewport    | [**CD3D11\_viewport**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)), [ **ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) |
 
  
 
@@ -168,7 +168,7 @@ Quando o pipeline é concluído, desenhe os resultados dos estágios do sombread
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                         |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glDrawElements | [**ID3D11DeviceContext1::D RAW**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw), [**ID3D11DeviceContext1::D rawindexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) (ou outros métodos Draw @ No__t-4 em [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)). |
+| glDrawElements | [**ID3D11DeviceContext1::D RAW**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw), [**ID3D11DeviceContext1::D rawindexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) (ou outros métodos de\* de desenho em [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)). |
 | eglSwapBuffers | [**IDXGISwapChain1::P resent1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)                                                                                                                                                                              |
 
  
@@ -181,7 +181,7 @@ Com exceção do suporte a tipos complexos e de alguns aspectos da sintaxe geral
 | Linguagem do sombreador           | Versão de recursos do GLSL                                                                                                                                                                                                      | Modelo de sombreador do Direct3D |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | HLSL do Direct3D 11          | Até 4.30.                                                                                                                                                                                                                    | SM 5.0                |
-| GLSL ES para OpenGL ES 2.0 | 1.40. As implementações mais antigas de GLSL ES para OpenGL ES 2.0 podem usar as versões de 1.10 a 1.30. Verifique seu código original com glGetString (GL @ no__t-0SHADING @ no__t-1LANGUAGE @ no__t-2VERSION) ou glGetString (SOMBREAmento @ no__t-3LANGUAGE @ no__t-4VERSION) para determinar isso. | Até SM 2.0               |
+| GLSL ES para OpenGL ES 2.0 | 1.40. As implementações mais antigas de GLSL ES para OpenGL ES 2.0 podem usar as versões de 1.10 a 1.30. Verifique seu código original com glGetString (GL\_SOMBREAmento\_linguagem\_versão) ou glGetString (SOMBREAmento\_versão\_LANGUAGE) para determinar. | Até SM 2.0               |
 
  
 
@@ -192,19 +192,19 @@ Leia a [referência de GLSL para HLSL](glsl-to-hlsl-reference.md) e conheça mel
 
 A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um aplicativo para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
 
-A semântica que é prefixada com "SV @ no__t-0" são semânticas de valor do sistema que são gravadas no seu programa sombreador; seu próprio aplicativo (em execução na CPU) não pode modificá-los. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
+A semântica que é prefixada com "VA\_" são semânticas de valor do sistema que são gravadas pelo seu programa sombreador; seu próprio aplicativo (em execução na CPU) não pode modificá-los. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
 
-Além disso, a semântica VA @ no__t-0 tem comportamentos diferentes quando eles são usados para especificar a entrada ou a saída de um estágio do sombreador. Por exemplo, VA @ no__t-0POSITION (saída) contém os dados de vértice transformados durante o estágio de sombreador de vértice e VA @ no__t-1POSITION (entrada) contém os valores de posição de pixel interpolados durante a rasterização.
+Além disso, a semântica de\_ da VA tem comportamentos diferentes quando são usadas para especificar a entrada ou a saída de um estágio do sombreador. Por exemplo, a posição de\_da VA (saída) contém os dados de vértice transformados durante o estágio do sombreador de vértice e a posição de\_de VA (entrada) contém os valores de posição de pixel interpolados durante a rasterização.
 
 Veja algumas correlações com intrínsecos de sombreador comuns do OpenGL ES 2.0:
 
 | Valor de sistema no OpenGL | Use esta semântica HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GL @ no__t-0Position        | POSITION(n) dos dados do buffer de vértice. A VA @ no__t-0POSITION fornece uma posição de pixel para o sombreador de pixel e não pode ser gravada pelo seu aplicativo.                                        |
-| GL @ no__t-0Normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
-| GL @ no__t-0TexCoord @ no__t-1N @ no__t-2   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
-| GL @ no__t-0FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
-| GL @ no__t-0FragData @ no__t-1N @ no__t-2   | VA @ no__t-0Target @ no__t-1N @ no__t-2 para gravar de um sombreador de pixel em uma textura de destino ou outro buffer de pixel.                                                                               |
+| Posição de\_GL        | POSITION(n) dos dados do buffer de vértice. A posição de\_de VA fornece uma posição de pixel para o sombreador de pixel e não pode ser gravada pelo seu aplicativo.                                        |
+| GL\_normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
+| GL\_TexCoord\[n\]   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
+| GL\_FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
+| GL\_FragData\[n\]   | VA\_destino\[n\] para gravar de um sombreador de pixel em uma textura de destino ou outro buffer de pixel.                                                                               |
 
  
 
@@ -239,7 +239,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-Nesse caso, a VA @ no__t-0TARGET é o local do destino de renderização que a cor de pixel (definida como um vetor com quatro valores float) é gravada quando o sombreador conclui a execução.
+Nesse caso, a VA\_destino é o local do destino de renderização que a cor de pixel (definida como um vetor com quatro valores float) é gravada quando o sombreador conclui a execução.
 
 Para saber mais sobre o uso de semântica com Direct3D, leia [Semântica HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics).
 
