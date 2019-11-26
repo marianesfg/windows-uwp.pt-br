@@ -33,7 +33,7 @@ O **XamlCompositionBrush** fornece uma classe base para os pincéis XAML que pin
 
 Veja a seção [**Pincéis**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) para saber mais sobre o uso de pincéis com a interface do usuário XAML.
 
-Para obter exemplos de código, consulte a página de referência de [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Para obter exemplos de código, confira a página de referências do [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 ## <a name="the-xamllight-class"></a>A classe XamlLight
 
