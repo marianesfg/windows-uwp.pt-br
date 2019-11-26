@@ -34,7 +34,7 @@ Para ser considerado acessível, o texto visível precisa ter contraste de lumin
 
 Texto decorativo e que não expressa informações é excluído. Por exemplo, quando são usadas palavras aleatórias para criar uma tela de fundo, e as palavras podem ser reorganizadas ou substituídas sem alteração de significado, elas são consideradas decorativas e não precisam atender a esse critério.
 
-Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar as taxas de contraste.
+Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar taxas de contraste.
 
 > [!NOTE]
 > Algumas das ferramentas listadas pelas Técnicas para WCAG 2.0 G18 não podem ser usadas de forma interativa com um aplicativo UWP. Talvez seja necessário inserir valores de cores da tela de fundo e de primeiro plano manualmente na ferramenta, ou fazer capturas de tela da interface do usuário do aplicativo e depois executar a ferramenta de índice de contraste na imagem de captura de tela.
@@ -126,7 +126,7 @@ Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, 
 
 Os usuários podem ter dificuldade de ler texto em um aplicativo quando as fontes usam são simplesmente muito pequenas, portanto, certifique-se de que qualquer texto em seu aplicativo seja um tamanho razoável em primeiro lugar.
 
-Depois de ter feito o óbvio, o Windows inclui várias ferramentas e configurações de acessibilidade que os usuários podem aproveitar e ajustar às suas próprias necessidades e preferências para ler o texto. Como por exemplo:
+Depois de ter feito o óbvio, o Windows inclui várias ferramentas e configurações de acessibilidade que os usuários podem aproveitar e ajustar às suas próprias necessidades e preferências para ler o texto. São elas:
 
 * A ferramenta Lupa, que amplia uma área selecionada da interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não torna difícil usar a lupa para leitura.
 * Configurações globais de escala e resolução em **configurações – > sistema-> exibição-> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar, pois isso depende dos recursos do dispositivo de vídeo.

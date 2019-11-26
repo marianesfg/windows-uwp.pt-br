@@ -44,7 +44,7 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | Classe **System.ComponentModel.Annotations**  | Nenhuma equivalência direta |
 | Classe **System.ComponentModel.BackgroundWorker** | Classe [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) |
 | Classe **System.ComponentModel.DesignerProperties** | Classe [**DesignMode**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DesignMode) |
-| **Classes System.Threading.Thread**, **System.Threading.ThreadPool** | Classe [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) |
+| Classes **System.Threading.Thread**, **System.Threading.ThreadPool** | Classe [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) |
 | (ST = **System.Threading**) <br/> Método **ST.Thread.MemoryBarrier** | (ST = **System.Threading**) <br/> Método **ST.Interlocked.MemoryBarrier** |
 | (ST = **System.Threading**) <br/> Propriedade **ST.Thread.ManagedThreadId** | (S = **System**) <br/> Propriedade **S.Environment.ManagedThreadId** |
 | Classe **System.Threading.Timer** | Classe [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) |
@@ -179,7 +179,7 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Classe **MPNN.WebRequestExtensions** | Nenhuma equivalência direta |
 | Namespace **Microsoft.Phone.Networking.Voip** | Nenhuma equivalência direta |
 | Classe **System.Net.CookieCollection** | Ainda há suporte, mas algumas propriedades estão ausentes (por exemplo, IsReadOnly) |
-| Classe **System.Net.DownloadProgressChangedEventArgs** e classes semelhantes relacionadas a **System.Net.WebClient** | Classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Derivar de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir o progresso. |
+| Classe **System.Net.DownloadProgressChangedEventArgs**, e classes semelhantes relacionadas a **System.Net.WebClient** | Classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Derivar de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir o progresso. |
 | Classes **System.Net.DnsEndPoint**, **IPAddress** | Essas classes ainda têm suporte, mas algumas propriedades estão ausentes. Como alternativa, porte para a classe [**HostName**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName). |
 | Classe **System.Net.HttpUtility** | Classe [**HtmlFormatHelper**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.HtmlFormatHelper) |
 | Classe **System.Net.HttpWebRequest** | Suporte parcial, mas a alternativa recomendada e prospectiva é a classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Essas APIs usam [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118)) para representar uma solicitação HTTP. |

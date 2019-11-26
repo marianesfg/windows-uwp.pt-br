@@ -1,6 +1,6 @@
 ---
 title: Solicitar uma chave de autenticação de mapas
-description: Seu aplicativo Universal do Windows deve ser autenticado para que possa usar o MapControl e os serviços de mapa no namespace Windows.Services.Maps.
+description: Seu aplicativo universal do Windows deve ser autenticado para que possa usar o MapControl e os serviços de mapa no namespace Windows.Services.Maps.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 ms.date: 02/08/2017
 ms.topic: article

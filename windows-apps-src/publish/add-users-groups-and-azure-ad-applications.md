@@ -67,7 +67,7 @@ Se você estiver conectado com uma conta de gerente que também tem permissões 
 
 1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e, em seguida, escolha **criar novos usuários**.
 2.  Insira o nome, o sobrenome e o nome de usuário do novo usuário.
-3.  Se quiser que o novo usuário tenha uma [Conta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) no diretório da organização, marque a caixa rotulada **Tornar esse usuário um Administrador Global no Azure AD, com controle total sobre todos os recursos de diretório**. Isso dará ao usuário acesso completo a todos os recursos administrativos no Azure AD de sua empresa. Eles poderão adicionar e gerenciar usuários no diretório da sua organização (embora não no Partner Center, a menos que você conceda à conta as [permissões/funções](set-custom-permissions-for-account-users.md)apropriadas). Se você marcar essa caixa, você precisará fornecer um **Email de recuperação de senha** para o usuário.
+3.  Se quiser que o novo usuário tenha uma [Conta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) no diretório da organização, marque a caixa rotulada **Tornar esse usuário um Administrador Global no Azure AD, com controle total sobre todos os recursos de diretório**. Isso dará ao usuário acesso completo a todos os recursos administrativos no Azure AD de sua empresa. Eles poderão adicionar e gerenciar usuários no diretório da sua organização (embora não no Partner Center, a menos que você conceda à conta as [permissões/funções](set-custom-permissions-for-account-users.md)apropriadas). Se você marcar essa caixa, será necessário fornecer um **Email de recuperação de senha** para o usuário.
 4.  Se você marcou a caixa **Tornar este usuário um administrador Global em seu Azure AD**, insira um email que o usuário pode usar caso precise recuperar a senha.
 5.  Na seção **Associação de grupo**, selecione qualquer grupo ao qual o novo usuário deve pertencer.
 6.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o usuário.
@@ -83,19 +83,19 @@ Se você estiver conectado com uma conta de gerente que também tem permissões 
 > Você deve estar conectado com uma conta de administrador global no seu locatário do Azure AD para convidar usuários externos.
 
 1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e, em seguida, escolha **convidar usuários por email**.
-1.  Insira um ou mais endereços de email (até dez), separados por vírgulas ou ponto e vírgulas.
+1.  Insira um ou mais endereços de email (até dez), separados por vírgulas ou pontos e vírgulas.
 2.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o usuário.
 3.  Clique em **Salvar**.
 
 Os usuários que você convidou receberão um convite por email para participar da sua conta, e uma nova conta de [usuário convidado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) será criada para eles no seu locatário do Azure AD. Cada usuário precisará aceitar o convite antes que possa acessar sua conta.
 
-Se você precisar enviar um convite novamente, localize o usuário na página **Usuários** e selecione o endereço de email desse usuário (ou o texto que diz **Convite pendente**). Em seguida, na parte inferior da página, clique em **Reenviar convite**.
+Se você precisar enviar um convite novamente, localize o usuário na página **Usuários** e selecione o endereço de email desse usuário (ou o texto que diz **Convite pendente**). Em seguida, na parte inferior da página, clique em **Reenviar o convite**.
 
 > [!IMPORTANT]
 > Usuários externos que você convidar para ingressar na sua conta do Partner Center podem receber as mesmas funções e permissões que outros usuários. No entanto, os usuários externos não poderão executar determinadas tarefas no Visual Studio, como associar um app à Store ou criar pacotes para carregar na Store. Se um usuário precisar executar essas tarefas, escolha **Criar novos usuários** em vez de **Convidar usuários externos**. (Se você não quiser adicionar esses usuários ao seu locatário do Azure AD existente, poderá [criar um novo locatário](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) e então criar novas contas de usuário para eles no locatário). 
 
 
-### <a name="changing-a-users-directory-password"></a>Alterando a senha do diretório de um usuário
+### <a name="changing-a-users-directory-password"></a>Como alterar a senha do diretório de um usuário
 
 Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se você tiver fornecido um **Email de recuperação de senha** ao criar a conta de usuário. Você também pode atualizar a senha do usuário seguindo as etapas a seguir (se você estiver conectado com uma conta de administrador global no seu locatário do Azure AD para alterar a senha do usuário). Observe que isso alterará a senha do usuário em seu locatário do Azure AD, juntamente com a senha que eles usam para acessar o Partner Center. 
 
@@ -112,7 +112,7 @@ Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se voc
 
 Você pode adicionar um grupo do diretório da sua organização à sua conta do Partner Center. Quando você fizer isso, cada usuário que é um membro desse grupo poderá acessá-lo com as permissões associadas à função atribuída do grupo.
 
-### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
+### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório de sua organização
 
 1.  Selecione o ícone de engrenagem (próximo ao canto superior direito da central de parceiros) e, em seguida, selecione **configurações do desenvolvedor**. No menu **configurações** , selecione **usuários**.
 2. Na página **usuários** , selecione **Adicionar grupos**.

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: Efeitos de composição
-description: O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
+description: As APIs de efeito permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp

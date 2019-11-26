@@ -1,7 +1,7 @@
 ---
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Saiba como detectar erros de AdControl em seu aplicativo.
-title: Tratamento de erros no Guia passo a passo do JavaScript
+title: Processamento de erros no guia passo a passo do JavaScript
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, java script
@@ -13,11 +13,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260296"
 ---
-# <a name="error-handling-in-javascript-walkthrough"></a>Tratamento de erros no Guia passo a passo do JavaScript
+# <a name="error-handling-in-javascript-walkthrough"></a>Processamento de erros no guia passo a passo do JavaScript
 
 Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo JavaScript. O passo a passo usa um [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
 
-Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
+Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios em um aplicativo JavaScript/HTML, consulte os [exemplos de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 1.  No arquivo default.html, adicione um valor para o evento **onErrorOccurred**, onde você define **data-win-options** no **div** do **AdControl**. Encontre o código a seguir no arquivo default.html.
     ``` HTML
@@ -42,7 +42,7 @@ Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém 
     </div>
     ```
 
-3.  Crie um **AdControl** que disparará um evento de erro. Pode haver somente uma id de aplicativo para todos os objetos **AdControl** em um aplicativo. Portanto, criar uma id adicional com uma id de aplicativo diferente disparará um erro em runtime. Para fazer isso, após as seções **div** anteriores que você adicionou, adicione o código a seguir ao corpo da página default.html.
+3.  Crie um **AdControl** que disparará um evento de erro. Pode haver somente uma id de aplicativo para todos os objetos **AdControl** em um aplicativo. Portanto, criar uma id adicional com uma id de aplicativo diferente disparará um erro em tempo de execução. Para fazer isso, após as seções **div** anteriores que você adicionou, adicione o código a seguir ao corpo da página default.html.
     ``` HTML
     <!-- Because only one applicationId can be used, the following ad control will fire an error event. -->
     <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"

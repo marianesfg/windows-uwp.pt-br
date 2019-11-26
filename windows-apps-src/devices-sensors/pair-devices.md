@@ -68,7 +68,7 @@ Desemparelhar um dispositivo só é relevante nas situações de emparelhamento 
 
 O primeiro passo para desemparelhar um dispositivo é obter o objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para o dispositivo que você quer desemparelhar. Em seguida, você precisa recuperar a propriedade [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) e chamar [**DeviceInformationPairing.UnpairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.unpairasync). Assim como com o emparelhamento, é bom **esperar** o resultado. O resultado da ação de desemparelhamento será retornado e, desde que nenhum erro seja retornado, o dispositivo será desemparelhado.
 
-## <a name="sample"></a>Amostra
+## <a name="sample"></a>Exemplo
 
 
 Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), clique [aqui](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing).

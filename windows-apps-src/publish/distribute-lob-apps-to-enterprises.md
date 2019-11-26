@@ -1,6 +1,6 @@
 ---
 Description: Você pode publicar aplicativos LOB (linha de negócios) diretamente para empresas para aquisição de grande volume pela Microsoft Store para Empresas ou Microsoft Store para Educação, sem tornar os aplicativos amplamente disponíveis na Loja.
-title: Distribuir os aplicativos LOB para empresas
+title: Distribuir aplicativos LOB para empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.date: 10/31/2018
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260010"
 ---
-# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir os aplicativos LOB para empresas
+# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
 
 
 Você pode publicar aplicativos LOB (linha de negócios) diretamente para empresas para aquisição de grande volume pela Microsoft Store para Empresas ou Microsoft Store para Educação, sem tornar os aplicativos amplamente disponíveis na Store.
@@ -54,7 +54,7 @@ Você deve selecionar pelo menos uma empresa para publicar um aplicativo como li
 
 ### <a name="organizational-licensing"></a>Licenciamento para organizações
 
-Por padrão, a caixa para **licenciamento por volume gerenciado pela Loja (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
+Por padrão, a caixa para **licenciamento por volume gerenciado pela Store (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
 
 Se você quiser disponibilizar o aplicativo para a empresa por meio de licenciamento desconectado (offline), poderá marcar também a caixa **Licenciamento desconectado (offline)** .
 
@@ -68,7 +68,7 @@ Para aplicativos LOB, a etapa de [classificação etária](age-ratings.md) do pr
 
 ## <a name="enterprise-deployment-of-lob-apps"></a>Implantação empresarial de aplicativos LOB
 
-Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Microsoft Store para Empresas ou Microsoft Store para Educação. A empresa poderá então implantar o aplicativo para seus usuários.
+Depois de clicar em **Enviar à Store**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Microsoft Store para Empresas ou Microsoft Store para Educação. A empresa poderá então implantar o aplicativo para seus usuários.
 
 > [!NOTE]
 > Para obter o aplicativo LOB, a organização deve estar localizada em um [mercado com suporte](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets), e você não deve ter [excluído esse mercado](define-pricing-and-market-selection.md) ao enviar o aplicativo. 
@@ -78,7 +78,7 @@ Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](https:
 
 ## <a name="update-lob-apps"></a>Atualizar aplicativos LOB
 
-Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Loja** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Visibilidade**, a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente.
+Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Store** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Visibilidade**, a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente.
 
 Se quiser parar de oferecer um aplicativo publicado anteriormente como linha de negócios, e impedir novas aquisições, você deverá criar um novo envio. Primeiro, você precisará alterar sua seleção em **Visibilidade** de **Distribuição de linha de negócios (LOB)** para **Distribuição comercial**. Em seguida,na seção [Detectabilidade](choose-visibility-options.md#discoverability), selecione **Disponibilizar este produto mas não torná-lo detectável na Store** com a opção **Parar aquisição**.
 

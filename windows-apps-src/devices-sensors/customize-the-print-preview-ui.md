@@ -25,7 +25,7 @@ ms.locfileid: "74258659"
 
 Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. Para obter mais informações sobre a impressão, consulte [Imprimir no aplicativo](print-from-your-app.md).
 
-**Dica**  a maioria dos exemplos neste tópico baseia-se na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing) do [repositório de amostras universais do Windows](https://github.com/Microsoft/Windows-universal-samples) no GitHub.
+**Dica**  a maioria dos exemplos neste tópico baseia-se na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing) do [repositório de amostras universais do Windows](https://github.com/Microsoft/Windows-universal-samples) no GitHub.
 
  
 

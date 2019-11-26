@@ -26,7 +26,7 @@ Este artigo descreve a nova IU do Windows para rotação. Também fornece diretr
 
 -   Use a rotação para ajudar os usuários a girarem os elementos da interface diretamente.
 
-## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
 
 
 **Visão geral da rotação**

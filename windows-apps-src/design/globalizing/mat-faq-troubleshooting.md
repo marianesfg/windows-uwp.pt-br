@@ -177,6 +177,6 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Use the Multilingual App Toolkit 4.0](use-mat.md)
+* [Use o kit de ferramentas de aplicativo multilíngue 4,0](use-mat.md)
 * [Microsoft Translator](https://www.microsofttranslator.com/)
-* [MakePri.exe command-line options](../../app-resources/makepri-exe-command-options.md)
+* [Opções de linha de comando do MakePri. exe](../../app-resources/makepri-exe-command-options.md)

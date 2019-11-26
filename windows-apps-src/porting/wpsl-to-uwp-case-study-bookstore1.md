@@ -57,7 +57,7 @@ Edite o código-fonte e os arquivos de marcação que você acabou de copiar e a
 No MainPage.xaml, são necessárias estas alterações de portabilidade:
 
 -   Altere `phone:PhoneApplicationPage` para `Page` (não se esqueça das ocorrências na sintaxe do elemento de propriedade).
--   Exclua as declarações de prefixo de namespace `phone` e `shell` .
+-   Exclua as declarações de prefixo de namespace `phone` e `shell`.
 -   Mude "clr-namespace" para "using" na declaração de prefixo de namespace restante.
 
 Podemos optar por corrigir erros de compilação de marcação de maneira bem barata caso queiramos ver os resultados o mais cedo possível, mesmo que isso signifique remover temporariamente a marcação. Porém, vamos manter um registro do débito que acumulamos fazendo isso. Aqui está ele neste caso.

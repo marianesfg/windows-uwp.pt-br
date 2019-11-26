@@ -22,7 +22,7 @@ Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um
 
 > **APIs importantes**: [**Windows.Media.SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
 
-O reconhecimento de fala é realizado em um runtime de fala, APIs de reconhecimento para programação do runtime, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
+O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de reconhecimento para programação do tempo de execução, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
 
 ## <a name="configure-speech-recognition"></a>Configurar o reconhecimento de fala
 

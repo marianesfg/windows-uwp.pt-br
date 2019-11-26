@@ -22,7 +22,7 @@ O iOS oferece a classe **UINavigationController** para auxiliar a navegação no
 
 Por outro lado, um aplicativo do Windows 10 que contém várias exibições leva mais uma abordagem de site da Web para navegação. Você pode imaginar os usuários percorrendo as páginas conforme clicam nos controles para trabalhar de sua maneira pelo aplicativo. Para obter mais informações, consulte [Noções básicas de design de navegação](https://docs.microsoft.com/windows/uwp/layout/navigation-basics).
 
-Uma das maneiras de gerenciar essa navegação em um aplicativo do Windows 10 é usar a classe [**frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) . O passo a passo a seguir mostra como experimentar isso.
+Uma das maneiras de gerenciar essa navegação em um aplicativo do Windows 10 é usar a classe [**frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) . O guia passo a passo a seguir mostra como você pode tentar fazer isso.
 
 Continuando com a solução que você começou antes, abra o arquivo **MainPage. XAML** e adicione um botão na exibição **Design**. Altere a propriedade **Content** do botão de "Botão" para "Ir para Página". Então, crie um manipulador para o evento **Click** do botão, conforme a imagem a seguir. Se você não se lembra de como fazer isso, consulte o passo a passo da seção anterior (Dica: clique duas vezes no botão na exibição **Design**).
 

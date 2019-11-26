@@ -57,9 +57,9 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tr>
 <tr class="even">
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
-<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de aplicativos com os comandos contextuais relacionados ao elemento selecionado.</p>
+<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observação</strong>  clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos apropriados da interface do usuário. Mas a nossa recomendação é que você use a barra de aplicativos para os comportamentos de todos os comandos.
+<strong>Observação</strong>  clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos apropriados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 
 ## <a name="mouse-input-events"></a>Eventos de entrada do mouse
 
-A maioria das entradas do mouse pode ser tratada por meio dos eventos de entrada roteados comuns com suporte de todos os objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Como por exemplo:
+A maioria das entradas do mouse pode ser tratada por meio dos eventos de entrada roteados comuns com suporte de todos os objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . São elas:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -133,7 +133,7 @@ No entanto, você pode aproveitar os recursos específicos de cada dispositivo (
 
 - Quando o mouse é detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o mouse não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do mouse desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 - Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja Cursores, a seguir).
-- Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
+- Não exiba comentários sobre elementos visuais quando o elemento não der suporte a interação (como um texto estático).
 - Não use retângulos de foco nas manipulações por mouse. Reserve-os para as interações por teclado.
 - Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 - Inclua botões (como + e -) para emular manipulações baseadas em toque, como movimento panorâmico, giro, zoom, etc.

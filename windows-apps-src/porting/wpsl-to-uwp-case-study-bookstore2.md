@@ -54,7 +54,7 @@ Edite o código-fonte e os arquivos de marcação que você acabou de copiar e a
 No MainPage.xaml, estas alterações iniciais de portabilidade são necessárias.
 
 -   Altere `phone:PhoneApplicationPage` para `Page` (incluindo as ocorrências na sintaxe do elemento de propriedade).
--   Exclua as declarações de prefixo de namespace `phone` e `shell` .
+-   Exclua as declarações de prefixo de namespace `phone` e `shell`.
 -   Mude "clr-namespace" para "using" na declaração de prefixo de namespace restante.
 -   Exclua `SupportedOrientations="Portrait"`e `Orientation="Portrait"`, e configure **Retrato** no manifesto do pacote do aplicativo no novo projeto.
 -   Exclua `shell:SystemTray.IsVisible="True"`.

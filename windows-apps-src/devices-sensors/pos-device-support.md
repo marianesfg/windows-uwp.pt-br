@@ -15,7 +15,7 @@ ms.locfileid: "74259653"
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de ponto de serviço compatíveis
 
 ## <a name="barcode-scanner"></a>Scanner de código de barras
-| Conectividade | Suporte |
+| Connectivity | Suporte |
 | -------------|-------------|
 | USB          | <p>O Windows contém um driver de classe nativo para scanners de código de barras conectados por USB, que se baseia na especificação da Tabela de Uso de Scanner HID POS (8c) definida pela [USB.org](https://www.usb.org/hid). Consulte a tabela abaixo para obter uma lista dos dispositivos compatíveis conhecidos.  Consulte o manual do scanner de código de barras ou entre em contato com o fabricante para determinar como configurar o scanner no modo **Scanner USB.HID.POS** </p><p>O Windows também é compatível com a implementação de drivers específicos do fornecedor para dar suporte a scanners de código de barras adicionais que não dão suporte ao padrão de Scanner USB.HID.POS. Entre em contato com o fabricante do scanner de código de barras para ver a disponibilidade de drivers específicos do fornecedor.</p><p>Fabricantes de scanner de código de barras, consultem o [Guia de design de driver de scanner de código de barras](https://docs.microsoft.com/windows-hardware/drivers/ddi/_pos/index) para obter informações sobre como criar um driver de scanner de código de barras personalizado</p> |
 | Bluetooth    | <p>O Windows oferece suporte ao protocolo SPP SSI com base em scanners de código de barras Bluetooth. Veja a tabela abaixo para obter uma lista de dispositivos compatíveis conhecidos. Consulte o manual do scanner de código de barras ou entre em contato com o fabricante para determinar como configurar o scanner no modo **SPP-SSI**</p> |
@@ -23,7 +23,7 @@ ms.locfileid: "74259653"
 |
 
 
-| Fabricante  | Modelo                          | Capacidade | Conexão    | Tipo         | Modo                      |
+| Fabricante  | Modelo                          | Funcionalidade | Conexão    | Tipo         | Modo                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
 | Código          | Leitor™ 950                    | 2D         | USB          | Aparelhos     | Scanner de PDV HID           |
 | Código          | Leitor™ 1021                   | 2D         | USB          | Aparelhos     | Scanner de PDV HID           |
@@ -98,7 +98,7 @@ ms.locfileid: "74259653"
 
 
 ## <a name="cash-drawer"></a>Caixa registradora
-| Conectividade | Suporte |
+| Connectivity | Suporte |
 | -------------|-------------|
 | Rede/Bluetooth | <p> A conexão diretamente para a registradora pode ser feita pela rede ou por meio de Bluetooth, dependendo dos recursos da unidade registradora. </p><p>Registradora APG: NetPRO, BluePRO</p> |
 | Porta DK | <p> As caixas registradoras que não têm recursos de rede ou Bluetooth podem ser conectadas por meio da porta DK a uma impressora de recibo compatível ou do acessório Star Micronics DK-AirCash. </p>
@@ -121,7 +121,7 @@ O Windows oferece suporte aos seguintes leitores de tarja magnética da Magtek e
  O Windows oferece suporte à implementação de drivers adicionais específicos do fornecedor para dar suporte a leitores de tarja magnética adicionais. Verifique a disponibilidade do leitor de tarja magnética junto ao fabricante. Fabricantes de leitor de tarja magnética, consulte o [Guia de design do driver leitor de tarja magnética](https://docs.microsoft.com/windows-hardware/drivers/ddi/_pos/index) para obter informações sobre como criar um driver de leitor de tarja magnética personalizado.
 
 ## <a name="receipt-printer-posprinter"></a>Impressora de recibo (POSPrinter)
-| Conectividade | Suporte |
+| Connectivity | Suporte |
 | -------------|-------------|
 | Rede e Bluetooth | <p>O Windows oferece suporte às impressoras de recibo conectadas em rede ou via Bluetooth usando a linguagem de controle de impressora Epson ESC/POS.  As impressoras listadas abaixo são descobertas automaticamente por meio de APIs POSPrinter. Impressoras de recibo adicionais que fornecem uma emulação de ESC/POS também podem funcionar, mas precisam ser associados usando um processo de [emparelhamento fora da faixa](https://docs.microsoft.com/windows/uwp/devices-sensors/point-of-service#out-of-band-pairing).</p><p>Observação: as estação de lista de separação e as estações de diário não são compatíveis com este método.</p> |
 | OPOS    | <p> Oferece suporte a qualquer impressoras de recibo compatível com OPOS via objetos de serviço OPOS. Instale os drivers OPOS de acordo com as instruções de instalação dos fabricantes de dispositivo. </p> |

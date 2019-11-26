@@ -318,14 +318,14 @@ As ferramentas internas e os comandos no menu do Surface Dial seguem estas diret
 
 |   |   |   |
 | --- | --- | --- |
-| Esquerda<br/>Para cima<br/>Fora | ![Imagem do Surface Dial](images/windows-wheel/surface-dial-rotate.png) | Direita<br/>Para baixo<br/>Dentro |
+| Left<br/>Para cima<br/>Saída | ![Imagem do Surface Dial](images/windows-wheel/surface-dial-rotate.png) | Right<br/>Para baixo<br/>Entrada |
 |   |   |   |
 
 | Direção conceitual | Mapeamento para o Surface Dial | Rotação no sentido horário | Rotação no sentido anti-horário |
 | --- | --- | --- | --- |
-| Horizontal | Mapeamento esquerdo e direito com base na parte superior do Surface Dial | Direita | Esquerda |
+| Horizontal | Mapeamento esquerdo e direito com base na parte superior do Surface Dial | Right | Left |
 | Vertical | Mapeamento para cima e para baixo com base no lado esquerdo do Surface Dial | Para baixo | Para cima |
-| Eixo Z | Dentro (ou mais próximo) mapeado para cima/direita<br/>Fora (ou mais) mapeado para baixo/esquerda | Dentro | Fora |
+| Eixo Z | Dentro (ou mais próximo) mapeado para cima/direita<br/>Fora (ou mais) mapeado para baixo/esquerda | Entrada | Saída |
 
 #### <a name="developer-guidance"></a>Diretrizes do desenvolvedor
 
@@ -366,7 +366,7 @@ private void MyController_ButtonClicked(RadialController sender,
 }
 ```
 
-### <a name="click"></a>Clique
+### <a name="click"></a>Clique em
 
 Clicar no Surface Dial é semelhante a clicar no botão esquerdo do mouse (o estado de rotação do dispositivo não tem efeito sobre essa ação).
 
@@ -667,11 +667,11 @@ Envie suas perguntas, sugestões e comentários para [radialcontroller@microsoft
 
 ### <a name="samples"></a>Exemplos
 
-#### <a name="topic-samples"></a>Amostras de tópico
+#### <a name="topic-samples"></a>Exemplos de tópico
 
 [Personalização de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>Outras amostras
+#### <a name="other-samples"></a>Outros exemplos
 
 [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
 

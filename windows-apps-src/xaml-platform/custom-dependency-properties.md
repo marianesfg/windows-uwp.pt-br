@@ -44,7 +44,7 @@ Se implementar você mesmo uma propriedade de dependência personalizada e quise
 
 Sempre que você implementa uma propriedade pública de leitura/gravação em uma classe, assim que a classe é derivada do [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject), você pode fazer com que a propriedade funcione como uma propriedade de dependência. Às vezes, a técnica clássica de apoiar sua propriedade com um campo particular é adequada. A definição da propriedade personalizada como uma propriedade de dependência nem sempre é necessária ou adequada. A escolha vai depender dos cenários aos quais sua propriedade dará suporte.
 
-Considere implementar sua propriedade como uma propriedade de dependência para que ela permita um ou mais desses recursos do Windows Runtime ou dos aplicativos do mesmo:
+Considere implementar sua propriedade como uma propriedade de dependência para que ela permita um ou mais desses recursos do Tempo de Execução do Windows ou dos aplicativos do mesmo:
 
 - Definir a propriedade por meio de um [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)
 - Agir como uma propriedade de destino válida para vinculação de dados com [ **{Binding}** ](binding-markup-extension.md)
@@ -427,7 +427,7 @@ Tenha em mente as seguintes considerações de práticas recomendadas ao definir
 
 ### <a name="dependencyobject-and-threading"></a>DependencyObject e threading
 
-Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Windows Runtime. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads chamando [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher).
+Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Tempo de Execução do Windows. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads chamando [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher).
 
 Os aspectos de threading de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) são relevantes porque em geral isso significa que somente o código que é executado no thread da interface do usuário pode mudar ou até mesmo ler o valor de uma propriedade de dependência. Em geral, é possível evitar os problemas com threading em códigos de interface do usuário típicos que usam corretamente padrões **async** e threads de trabalho em segundo plano. Normalmente, você tem problemas de threading relacionados a **DependencyObject** somente quando define seus próprios tipos de **DependencyObject** e tenta usá-los para fontes de dados ou outros cenários em que um **DependencyObject** não é necessariamente apropriado.
 
@@ -464,7 +464,7 @@ Declare as propriedades de dependência como propriedades públicas. Declare os 
 
 As propriedades de wrapper existem apenas por conveniência. Os mecanismos de segurança aplicados aos wrappers podem ser ignorados com a chamada de [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) ou de [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue). Assim, mantenha as propriedades de wrapper públicas, caso contrário, chamadores legítimos terão muita dificuldade para usá-las e você não fornecerá qualquer benefício real de segurança.
 
-O Windows Runtime não fornece um modo para registrar uma propriedade de dependência personalizada como somente leitura.
+O Tempo de Execução do Windows não fornece um modo para registrar uma propriedade de dependência personalizada como somente leitura.
 
 ### <a name="dependency-properties-and-class-constructors"></a>Propriedades de dependência e construtores de classe
 

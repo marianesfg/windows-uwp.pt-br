@@ -37,7 +37,7 @@ Você pode oferecer seu aplicativo gratuitamente ou pode especificar o preço qu
 > [!NOTE] 
 > Essas faixas de preço também se aplicam a qualquer complemento que você ofereça no aplicativo.
 
-Cada faixa de preço tem um valor correspondente em cada uma das moedas oferecidas pela Loja. Nós usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Porém, devido a alterações cambiais, o valor exato das vendas pode sofrer uma pequena variação de uma moeda para a outra.
+Cada faixa de preço tem um valor correspondente em cada uma das moedas oferecidas pela Loja. Usamos esses valores para ajudar você a vender seus aplicativos por um preço proporcional em todo o mundo. No entanto, devido a alterações em taxas cambiais, o valor exato das vendas pode sofrer uma pequena variação de uma moeda para a outra.
 
 Você também tem a opção de inserir um preço livre de sua escolha na moeda local de um mercado específico. Ao fazer isso, o preço não será ajustado (mesmo que as taxas de conversão mudem), a não ser que você envie uma atualização com um novo preço. 
 

@@ -50,7 +50,7 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     </colgroup>
     <tr>
         <td>Portal principal do Centro de Desenvolvimento do Windows</td>
-        <td><a href="https://developer.microsoft.com/windows">Centro de Desenvolvedores do Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows">Centro de desenvolvimento do Windows</a></td>
     </tr>
     <tr>
         <td>Desenvolvendo aplicativos do Windows</td>
@@ -1388,7 +1388,7 @@ Um complemento (produto no aplicativo) é um item suplementar que os jogadores p
 
 Para otimizar o desempenho, aproveite o Modo de Jogo no Windows 10 para fornecer aos jogadores a melhor experiência de jogo possível utilizando totalmente a capacidade de hardware atual.
 
-O Windows Performance Toolkit (WPT) consiste em ferramentas que produzem perfis de desempenho detalhadas de sistemas operacionais Windows e aplicativos de monitoramento de desempenho. Isso é especialmente útil para monitorar o uso da memória e melhorar o desempenho do jogo. O Windows Performance Toolkit está incluído no SDK do Windows 10 e Windows ADK. Esse kit de ferramentas consiste em duas ferramentas independentes: Windows Performance Recorder (WPR) e Windows Performance Analyzer (WPA). O ProcDump, que faz parte do [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default), é um utilitário de linha de comando que monitora picos de CPU e gera arquivos de despejo durante falhas de jogos. 
+O Windows Performance Toolkit (WPT) consiste em ferramentas que monitoram o desempenho e produzem perfis de desempenho detalhados de sistemas operacionais Windows e aplicativos. Isso é especialmente útil para monitorar o uso da memória e melhorar o desempenho do jogo. O Windows Performance Toolkit está incluído no SDK do Windows 10 e Windows ADK. Esse kit de ferramentas consiste em duas ferramentas independentes: Windows Performance Recorder (WPR) e Windows Performance Analyzer (WPA). O ProcDump, que faz parte do [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default), é um utilitário de linha de comando que monitora picos de CPU e gera arquivos de despejo durante falhas de jogos. 
 
 <table>
     <colgroup>
@@ -1616,7 +1616,7 @@ Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aq
 </table>
  
 
-### <a name="store-manifest-storemanifestxml"></a>Manifesto da Loja (StoreManifest.xml)
+### <a name="store-manifest-storemanifestxml"></a>Manifesto da Store (StoreManifest.xml)
 
 O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional que pode ser incluído no pacote do aplicativo. O manifesto da loja fornece recursos adicionais que não fazem parte do arquivo AppxManifest.xml. Por exemplo, você pode usar o manifesto da loja para bloquear a instalação de seu jogo se um dispositivo de destino não tiver o nível de recurso mínimo especificado do DirectX ou o mínimo especificado para a memória do sistema.
 
@@ -1653,7 +1653,7 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
         <td><a href="../publish/xbox-analytics-report.md">Relatório do Xbox Analytics</a></td>
     </tr>
     <tr>
-        <td>Respondendo às críticas dos clientes</td>
+        <td>Respondendo às análises dos clientes</td>
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/respond-to-customer-reviews">Responder às opiniões de clientes</a></td>
     </tr>
     <tr>

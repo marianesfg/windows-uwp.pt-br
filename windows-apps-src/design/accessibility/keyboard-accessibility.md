@@ -98,8 +98,8 @@ Além de implementar a navegação e ativação por teclado em seu aplicativo, �
 
 Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecendo uma maneira eficiente de o usuário acessar a funcionalidade do aplicativo. Existem dois tipos de atalho:
 
-* Uma *tecla de acesso* é um atalho para um elemento da interface do usuário no seu aplicativo. Teclas de acesso consistem na tecla Alt mais uma tecla de letra.
-* Uma *tecla aceleradora* é um atalho para um comando do aplicativo. Seu aplicativo pode ter uma interface do usuário que corresponde exatamente ao comando. Teclas aceleradoras consistem na tecla Ctrl mais uma tecla de letra.
+* Uma *tecla de acesso* é um atalho para um elemento da interface de usuário no seu aplicativo. As teclas de acesso consistem na tecla Alt, mais uma tecla de letra.
+* Uma *tecla aceleradora* é um atalho para um comando do aplicativo. Seu aplicativo pode ter uma interface do usuário que corresponde exatamente ao comando. As teclas aceleradoras consistem na tecla Ctrl, mais uma tecla de letra.
 
 É fundamental oferecer aos usuários que dependem de leitores de tela e outras tecnologias assistenciais uma maneira fácil de descobrir as teclas de atalho do seu aplicativo. Comunique as teclas de atalho usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de atalho devem ser bem documentadas no conteúdo de Ajuda do seu aplicativo.
 

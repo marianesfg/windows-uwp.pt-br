@@ -24,12 +24,12 @@ Os anúncios em faixa são anúncios de exibição estática que utilizam uma pa
 
 |  Tópico    | Descrição |               
 |----------|-------|
-| [AdControl in XAML and .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
-| [AdControl in HTML 5 and Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
-| [Supported banner ad sizes](supported-ad-sizes-for-banner-ads.md)    |  Consulte os tamanhos de anúncios em faixa aceitos em aplicativos UWP.        |
+| [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
+| [AdControl em HTML 5 e JavaScript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
+| [Tamanhos de anúncio em faixa com suporte](supported-ad-sizes-for-banner-ads.md)    |  Consulte os tamanhos de anúncios em faixa aceitos em aplicativos UWP.        |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Amostras de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
-* [Set up ad units for your app](set-up-ad-units-in-your-app.md)
+* [Configurar unidades do AD para seu aplicativo](set-up-ad-units-in-your-app.md)

@@ -52,7 +52,7 @@ A imagem a seguir mostra a ferramenta [**Inspect**](https://docs.microsoft.com/w
 <span id="UI_ACCESSIBILITY_CHECKER"/>
 
 ### <a name="ui-accessibility-checker"></a>**UI Accessibility Checker**  
-O **UI Accessibility Checker (AccChecker)** ajuda você a descobrir problemas de acessibilidade durante o tempo de execução. Quando a sua interface do usuário estiver completa e funcional, use o **AccChecker** para testar diferentes situações, verificar a exatidão da acessibilidade do runtime e descobrir problemas no runtime. Você pode executar o **AccChecker** em interface do usuário ou comandar o modo de linha. Para executar a ferramenta do modo de interface do usuário, abra o diretório do **AccChecker** no diretório bin do SDK do Windows, execute acccheckui.exe e clique no menu **Ajuda**.
+O **UI Accessibility Checker (AccChecker)** ajuda você a descobrir problemas de acessibilidade durante o tempo de execução. Quando a sua interface do usuário estiver completa e funcional, use o **AccChecker** para testar diferentes situações, verificar a exatidão da acessibilidade do tempo de execução e descobrir problemas no tempo de execução. Você pode executar o **AccChecker** em interface do usuário ou comandar o modo de linha. Para executar a ferramenta do modo de interface do usuário, abra o diretório do **AccChecker** no diretório bin do SDK do Windows, execute acccheckui.exe e clique no menu **Ajuda**.
 
 <span id="ui_automation_verify"/>
 <span id="UI_AUTOMATION_VERIFY"/>
@@ -79,7 +79,7 @@ A melhor maneira de testar a acessibilidade do seu teclado é desconectar o mous
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>Verificar o contraste do texto visível  
-Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar as taxas de contraste.
+Use as ferramentas de contraste de cores para verificar se a taxa de contraste de texto visível é aceitável. As exceções incluem elementos da interface do usuário inativos e logotipos ou texto decorativo que não transmita informações e possa ser rearranjado sem alterar o significado. Consulte [Requisitos de texto acessível](accessible-text-requirements.md) para obter mais informações sobre a taxa de contraste e as exceções. Consulte [Técnicas para WCAG 2.0 G18 (seção Recursos)](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) sobre as ferramentas que podem testar taxas de contraste.
 
 > [!NOTE]
 > Algumas das ferramentas listadas pelas Técnicas para WCAG 2.0 G18 não podem ser usadas de forma interativa com um aplicativo UWP. Talvez você precise inserir valores de cor da tela de fundo e de primeiro plano manualmente na ferramenta, fazer capturas de tela da interface do usuário do aplicativo e depois executar a ferramenta de taxa de contraste na imagem da captura de tela. Ou então executar a ferramenta enquanto você abre arquivos de bitmap de origem em um programa de edição de imagens, não enquanto a imagem é carregada pelo aplicativo.

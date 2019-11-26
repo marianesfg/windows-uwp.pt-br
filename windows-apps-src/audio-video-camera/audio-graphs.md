@@ -230,7 +230,7 @@ A API do gráfico de áudio permite que você adicione efeitos de áudio a cada 
 [!code-cs[AddEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddEffect)]
 
 -   Todos os efeitos de áudio implementam [**IAudioEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IAudioEffectDefinition). Cada nó expõe uma propriedade **EffectDefinitions** que representa a lista de efeitos aplicados ao nó. Adicione um efeito adicionando seu objeto de definição à lista.
--   Várias classes de definição de efeito são fornecidas no namespace **Windows.Media.Audio**. Como por exemplo:
+-   Várias classes de definição de efeito são fornecidas no namespace **Windows.Media.Audio**. São elas:
     -   [**EchoEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.EchoEffectDefinition)
     -   [**EqualizerEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.EqualizerEffectDefinition)
     -   [**LimiterEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.LimiterEffectDefinition)
@@ -254,7 +254,7 @@ O [**AudioDeviceOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.A
 
 [!code-cs[Listener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetListener)]
 
-Você pode atualizar a localização, a velocidade e a direção dos emissores no runtime para simular o movimento de uma fonte de áudio pelo espaço 3D.
+Você pode atualizar a localização, a velocidade e a direção dos emissores no tempo de execução para simular o movimento de uma fonte de áudio pelo espaço 3D.
 
 [!code-cs[UpdateEmitter](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateEmitter)]
 

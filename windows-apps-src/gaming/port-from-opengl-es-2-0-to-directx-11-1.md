@@ -1,5 +1,5 @@
 ---
-title: Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
+title: Fazer portabilidade de OpenGL ES 2.0 para Direct3D 11
 description: Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
 ms.date: 02/08/2017
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258461"
 ---
-# <a name="port-from-opengl-es-20-to-direct3d-11"></a>Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
+# <a name="port-from-opengl-es-20-to-direct3d-11"></a>Fazer portabilidade de OpenGL ES 2.0 para Direct3D 11
 
 
 
@@ -37,7 +37,7 @@ Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="map-concepts-and-infrastructure.md">Mapear OpenGL ES 2,0 para o Direct3D 11,1</a></p></td>
-<td align="left"><p>Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de portabilidade e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.</p></td>
+<td align="left"><p>Ao iniciar o processo de portabilidade da arquitetura gráfica do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as principais diferenças entre APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de portabilidade e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md">Como: porta um processador OpenGL ES 2,0 simples para o Direct3D 11,1</a></p></td>

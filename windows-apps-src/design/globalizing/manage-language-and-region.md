@@ -150,35 +150,35 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 <tr>
 <td align="left">Inglês (GB) (padrão); Alemão (Alemanha)</td>
 <td align="left">Inglês (GB)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Inglês (GB)</td>
 <td align="left">UI: Inglês (GB)<br>Datas/horas/números: Inglês (GB)</td>
 </tr>
 <tr>
 <td align="left">Alemão (Alemanha) (padrão); Francês (França); Italiano (Itália)</td>
 <td align="left">Francês (Áustria)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Francês (Áustria)</td>
 <td align="left">Interface do usuário: Francês (França) (fallback do francês (Áustria))<br>Datas/horas/números: Francês (Áustria)</td>
 </tr>
 <tr>
 <td align="left">Inglês (EUA) (padrão); Francês (França); Inglês (Reino Unido)</td>
 <td align="left">Inglês (Canadá); Francês (Canadá)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Inglês (Canadá); Francês (Canadá)</td>
 <td align="left">Interface do usuário: Inglês (EUA) (fallback do inglês (Canadá))<br>Datas/horas/números: Inglês (Canadá)</td>
 </tr>
 <tr>
 <td align="left">Espanhol (Espanha) (padrão); Espanhol (México); Espanhol (América Latina); Português (Brasil)</td>
 <td align="left">Inglês (EUA)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Espanhol (Espanha)</td>
 <td align="left">Interface do usuário: Espanhol (Espanha) (usa o padrão visto que nenhum fallback está disponível para inglês)<br>Datas/horas/números: Espanhol (Espanha)</td>
 </tr>
 <tr>
 <td align="left">Catalão (padrão); Espanhol (Espanha); Francês (França)</td>
 <td align="left">Catalão; Francês (França)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Catalão; Francês (França)</td>
 <td align="left">Interface do usuário: principalmente o catalão e algum francês (França), porque nem todas as cadeias de caracteres estão em catalão<br>Datas/horas/números: catalão</td>
 </tr>
@@ -187,7 +187,7 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 <td align="left">Alemão (Alemanha); Inglês (Reino Unido)</td>
 <td align="left">Inglês (Reino Unido) (escolhido pelo usuário na interface do usuário do aplicativo)</td>
 <td align="left">Inglês (Reino Unido); Alemão (Alemanha)</td>
-<td align="left">Interface do usuário: Inglês (GB) (substituição de idioma)<br>Datas/horas/números: Inglês (GB)</td>
+<td align="left">Interface do usuário: Inglês (GB) (substituição de idioma)<br>Datas/Horas/Números: Inglês (GB)</td>
 </tr>
 </tbody>
 </table>

@@ -28,13 +28,13 @@ Fornece um valor para qualquer atributo XAML analisando uma referência a um rec
 
 | Termo | Descrição |
 |------|-------------|
-| key | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
+| chave | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
 
 ## <a name="remarks"></a>Comentários
 
 **StaticResource** é uma técnica para obtenção de valores referentes a um atributo XAML definidos em outro lugar em um dicionário de recursos XAML. Os valores podem ser colocados em um dicionário de recursos porque sua finalidade de uso é a de serem compartilhados por diversos valores de propriedades, ou porque um dicionário de recursos XAML é usado como uma técnica de empacotamento ou fatoramento XAML. Um exemplo de técnica de empacotamento XAML é o dicionário temático de um controle. Outro exemplo são os dicionários de recursos mesclados usados para fallback de recursos.
 
-**StaticResource** obtém um argumento, que especifica a chave para o recurso solicitado. Uma chave de recurso sempre é uma cadeia de caracteres no XAML de Windows Runtime. Para obter mais informações sobre como a chave de recurso é especificada inicialmente, consulte [atributo x:Key](x-key-attribute.md).
+**StaticResource** obtém um argumento, que especifica a chave para o recurso solicitado. Uma chave de recurso sempre é uma cadeia de caracteres no XAML de Tempo de Execução do Windows. Para obter mais informações sobre como a chave de recurso é especificada inicialmente, consulte [atributo x:Key](x-key-attribute.md).
 
 As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para obter mais informações sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references).
 

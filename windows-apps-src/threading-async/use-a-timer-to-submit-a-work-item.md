@@ -205,7 +205,7 @@ O seguinte exemplo cria um timer que envia o item de trabalho e chama um método
 >         }));
 > ```
 
-## <a name="cancel-the-timer"></a>Cancelar o timer
+## <a name="cancel-the-timer"></a>Cancelar o temporizador
 
 Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho não for mais necessário, chame [**Cancelar**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel). O temporizador é cancelado e o item de trabalho não é enviado para o pool de threads.
 

@@ -1,5 +1,5 @@
 ---
-Description: Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
+Description: Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os seus recursos e atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -18,7 +18,7 @@ ms.locfileid: "74257891"
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
 
-Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
+Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os seus recursos e atributos.
 
 > **APIs importantes**: [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 

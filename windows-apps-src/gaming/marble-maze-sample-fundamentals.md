@@ -1,5 +1,5 @@
 ---
-title: Princípios básicos de exemplo do Marble Maze
+title: Princípios básicos da amostra do Marble Maze
 description: Este documento descreve as características fundamentais do projeto Marble Maze; por exemplo, como ele usa o Visual C++ no ambiente do Windows do Windows Runtime, como ele é criado e estruturado, e como ele é compilado.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.date: 08/22/2017
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258482"
 ---
-# <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
+# <a name="marble-maze-sample-fundamentals"></a>Princípios básicos da amostra do Marble Maze
 
 
 
@@ -71,7 +71,7 @@ Você pode usar o toque, o acelerômetro, o controle Xbox One ou o mouse para co
 -   Use o toque, o acelerômetro, o botão de controle esquerdo ou o mouse para inclinar o labirinto.
 -   Use toque, o botão A ou Iniciar no controle ou o mouse para fechar menus, como a tabela de pontuações altas.
 -   Use o botão Iniciar no controle ou a tecla P no teclado para pausar ou retomar o jogo.
--   Use o botão Voltar no controlador ou a tecla Página Inicial no teclado para reiniciar o jogo.
+-   Use o botão Voltar no controle ou a tecla Início no teclado para reiniciar o jogo.
 -   Quando a tabela de pontuações altas estiver visível, use o botão Voltar no controle ou tecla Início no teclado para limpar todas as pontuações.
 
 ##  <a name="code-conventions"></a>Convenções de código
@@ -79,7 +79,7 @@ Você pode usar o toque, o acelerômetro, o controle Xbox One ou o mouse para co
 
 O Windows Runtime é uma interface de programação que pode ser usada para criar aplicativos UWP que são executados somente e um aplicativo especial. Esses aplicativos usam funções autorizadas, tipos de dados e dispositivos e são distribuídos do Microsoft Store. No nível mais baixo, o Windows Runtime é formado por uma ABI (Interface Binária de Aplicativo). A ABI é um contrato binário de nível inferior que torna as APIs do Windows Runtime mais acessíveis a várias linguagens de programação, como o JavaScript, as linguagens .NET e o Microsoft Visual C++.
 
-Para chamar APIs do Windows Runtime do JavaScript e do .NET, essas linguagens exigem projeções que são específicas do ambiente de cada linguagem. Quando você chama uma API do Windows Runtime do JavaScript ou do .NET, invoca a projeção, que, em seguida, chama a função ABI subjacente. Embora você possa chamar as funções ABI diretamente em C++, a Microsoft também oferece projeções para C++, pois elas simplificam muito o consumo das APIs do Windows Runtime, ao mesmo tempo mantendo o alto desempenho. A Microsoft também disponibiliza extensões de linguagem para o Visual C++ que oferecem suporte especificamente às projeções do Windows Runtime. Muitas dessas extensões de linguagem lembram a sintaxe da linguagem C++/CLI. No entanto, em vez de se voltarem para o CLR (Common Language Runtime), os aplicativos nativos usam essa sintaxe para se voltarem ao Windows Runtime. O modificador de referência de objeto, ou circunflexo (^), é uma parte importante dessa nova sintaxe, pois permite a exclusão automática de objetos de runtime por meio da contagem de referência. Em vez de chamar métodos, como [AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [Release](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) para gerenciar o tempo de vida de um objeto do Windows Runtime, o tempo de execução exclui o objeto quando não há outras referências de componentes, por exemplo, quando ele sai do escopo ou define todas as referências como **nullptr**. Outra parte importante do uso do Visual C++ para criar aplicativos UWP é a palavra-chave **ref new**. Use **ref new** em vez de **new** para criar objetos de contagem de referências do Windows Runtime. Para obter mais informações, consulte o artigo [Sistema de tipos (C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
+Para chamar APIs do Windows Runtime do JavaScript e do .NET, essas linguagens exigem projeções que são específicas do ambiente de cada linguagem. Quando você chama uma API do Windows Runtime do JavaScript ou do .NET, invoca a projeção, que, em seguida, chama a função ABI subjacente. Embora você possa chamar as funções ABI diretamente em C++, a Microsoft também oferece projeções para C++, pois elas simplificam muito o consumo das APIs do Tempo de Execução do Windows, ao mesmo tempo mantendo o alto desempenho. A Microsoft também disponibiliza extensões de linguagem para o Visual C++ que oferecem suporte especificamente às projeções do Windows Runtime. Muitas dessas extensões de linguagem lembram a sintaxe da linguagem C++/CLI. No entanto, em vez de se voltarem para o CLR (Common Language Runtime), os aplicativos nativos usam essa sintaxe para se voltarem ao Windows Runtime. O modificador de referência de objeto, ou circunflexo (^), é uma parte importante dessa nova sintaxe, pois permite a exclusão automática de objetos de runtime por meio da contagem de referência. Em vez de chamar métodos, como [AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [Release](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) para gerenciar o tempo de vida de um objeto do Windows Runtime, o tempo de execução exclui o objeto quando não há outras referências de componentes, por exemplo, quando ele sai do escopo ou define todas as referências como **nullptr**. Outra parte importante do uso do Visual C++ para criar aplicativos UWP é a palavra-chave **ref new**. Use **ref new** em vez de **new** para criar objetos de contagem de referências do Windows Runtime. Para obter mais informações, consulte o artigo [Sistema de tipos (C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
 
 > [!IMPORTANT]
 > Você só precisa usar **^** e **ref new** quando criar objetos ou componentes do Windows Runtime. Você pode usar a sintaxe do C++ padrão ao criar o código básico do aplicativo que não usa o Windows Runtime.
@@ -131,7 +131,7 @@ void LoadMesh(
     );
 ```
 
-Para realizar a análise de código no app, na barra de menu, escolha **Construir > Executar Análise de Código na Solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para realizar a análise de código no app, na barra de menu, escolha **Construir > Executar Análise de Código na Solução**. Para obter mais informações sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 A lista completa de anotações disponíveis está definida em sal.h. Para saber mais, veja [Anotações SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

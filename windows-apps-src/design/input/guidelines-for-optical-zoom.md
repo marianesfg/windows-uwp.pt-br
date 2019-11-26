@@ -46,7 +46,7 @@ Os diagramas a seguir demonstram as diferenças entre redimensionamento e zoom �
 
 Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento ou zoom óptico:
 
--   Se forem definidas restrições ou limites de tamanho máximo e mínimo, use o retorno visual para demonstrar quando o usuário atingiu ou excedeu esses limites.
+-   Se forem definidas restrições de tamanho máximo e mínimo ou limites, use o retorno visual para demonstrar quando o usuário atinge ou excede esses limites.
 -   Use pontos de ajuste para influenciar o comportamento de zoom e de redimensionamento fornecendo pontos lógicos em que é necessário parar a manipulação e garantir que um subconjunto de conteúdo específico seja exibido no visor. Forneça pontos de ajuste para níveis de zoom comuns ou modos de exibição lógicos para que seja mais fácil para um usuário escolher esses níveis. Por exemplo, aplicativos de fotos podem fornecer um ponto de ajuste a 100% para o redimensionamento ou, no caso de aplicativos de mapas, os pontos de ajuste podem ser úteis para modos de exibição de cidade, estado e país.
 
     Pontos de ajuste permitem que os usuários sejam imprecisos e ainda atinjam suas metas. Se estiver usando XAML, veja as propriedades dos pontos de ajuste do [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Para JavaScript e HTML, use [ **-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895).
@@ -54,8 +54,8 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
     Existem dois tipos de pontos de ajuste:
 
     -   Proximidade: depois que o contato for levantado, um ponto de ajuste será selecionado se a inércia parar dentro do limite de distância do ponto de ajuste. Os pontos de ajuste de proximidade ainda permitem que um zoom ou redimensionamento seja finalizado entre pontos de ajuste.
-    -   Obrigatório: o ponto de alinhamento escolhido é aquele que antecede ou sucede imediatamente o último ponto de alinhamento cruzado antes que o contato seja retirado (dependendo da direção e da velocidade do gesto). Uma manipulação precisa ser finalizada em um ponto de ajuste obrigatório.
--   Use a física da inércia. Entre eles estão os seguintes:
+    -   Obrigatório - o ponto de ajuste escolhido é aquele que antecede ou sucede imediatamente o último ponto de ajuste cruzado antes que o contato fosse erguido (dependendo da direção e velocidade do gesto). Uma manipulação precisa ser finalizada em um ponto de ajuste obrigatório.
+-   Use a física da inércia. Isso inclui:
     -   Desaceleração: ocorre quando o usuário para de pinçar ou ampliar. Isso é semelhante a deslizar até parar em uma superfície escorregadia.
     -   Salto: um efeito de leve salto ocorre quando uma restrição ou limite de tamanho é passada.
 -   Posicione os controles de acordo com as [Diretrizes de direcionamento](guidelines-for-targeting.md).

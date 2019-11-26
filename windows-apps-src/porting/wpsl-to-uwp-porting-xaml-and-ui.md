@@ -211,7 +211,7 @@ Há algumas diferenças na linguagem de design entre Windows Phone aplicativos d
 
 Para cadeias de caracteres localizadas, você pode usar novamente o arquivo. resx do seu projeto Windows Phone Silverlight no seu projeto de aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
-Windows Phone aplicativos do Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no runtime e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://docs.microsoft.com/windows/uwp/design/usability/index).
+Windows Phone aplicativos do Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://docs.microsoft.com/windows/uwp/design/usability/index).
 
 O tópico [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) descreve como carregar recursos específicos à família de dispositivos com base no fator de seleção de recurso de família de dispositivos.
 
@@ -309,7 +309,7 @@ A bandeja do sistema (definida na marcação XAML com `shell:SystemTray.IsVisibl
 
 Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a portabilidade, convém revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com a nova linguagem de design. Use estas ilustrações para encontrar os estilos de sistema **TextBlock** da UWP que estão disponíveis. Encontre os que correspondem aos Windows Phone estilos do Silverlight que você usou. Como alternativa, você pode criar seus próprios estilos universais e copiar as propriedades dos estilos de sistema Windows Phone Silverlight para eles.
 
-![system textblock styles fou windows 10 apps](images/label-uwp10stylegallery.png)
+![estilos de sistema textblock para aplicativos do windows 10](images/label-uwp10stylegallery.png)
 
 Estilos TextBlock do sistema para aplicativos do Windows 10
 

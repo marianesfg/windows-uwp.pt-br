@@ -55,7 +55,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
     * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
 
-    * **Dispositivos**: escolha os tipos de dispositivo em que você deseja que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu aplicativo são mostrados.
+    * **Dispositivos**: escolha os tipos de dispositivo em que você deseja que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu app são mostrados.
 
     * **Surface**: selecione **Universal** para permitir que o anúncio aparece nos aplicativos, além de MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Escolha **Aplicativo** se você deseja que o anúncio apareça somente em aplicativos.
 

@@ -52,7 +52,7 @@ O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos di
 ## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalando, desinstalando e executando o emulador
 
 ### <a name="installing"></a>Instalando o
-O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [página de download do Visual Studio](https://developer.microsoft.com/windows/downloads).
+O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [Página de transferência do Visual Studio](https://developer.microsoft.com/windows/downloads).
 
 Você também pode instalar o Emulador Microsoft para Windows 10 Mobile usando a [Instalação do Emulador da Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
@@ -62,7 +62,7 @@ Você pode desinstalar o Emulador da Microsoft para Windows 10 Mobile usando a o
 
 Quando você desinstala o Emulador da Microsoft para Windows 10 Mobile, o adaptador Ethernet Hyper-V Virtual que foi criado para o emulador usar não é removido automaticamente. Você pode remover manualmente esse adaptador virtual a partir de **Conexões de Rede** no **Painel de Controle**.
 
-### <a name="running"></a>Em execução
+### <a name="running"></a>Running
 
 Para executar um aplicativo no emulador, basta selecionar um dispositivo emulado no menu suspenso **executar** no Visual Studio.
 
@@ -94,7 +94,7 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 
     No emulador que está sendo executado, vá ao aplicativo **Configurações**, selecione as configurações do **sistema** e, em seguida, selecione **idioma** ou **região**. Altere as configurações que você deseja testar. Se for solicitado, clique em **reiniciar telefone** para aplicar a nova configuração e reiniciar o emulador.
 
--   **Ciclo de vida da aplicação e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
+-   **Ciclo de vida do aplicativo e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
 
 -   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)** . Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
 
@@ -109,7 +109,7 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 Teste os seguintes recursos apenas em um dispositivo físico.
 
 -   Bússola
--   Girômetro
+-   Giroscópio
 -   Controle de vibração
 -   Brilho. O nível do brilho do emulador é sempre Alto.
 -   Vídeo em alta resolução. Vídeos com uma resolução superior à resolução VGA (640 x 480) não podem ser exibidos com confiança, especialmente em imagens do emulador com somente 512 MB de memória.
@@ -362,7 +362,7 @@ No modo **Rota** você pode selecionar um dos seguintes perfis de velocidade na 
 
 | Perfil | Velocidade por hora               | Velocidade por segundo | Descrição | 
 |---------|------------------------------|------------------|-------------|
-| Limite de velocidade | Limite de velocidade da rota | Não Aplicável   | Atravessa a rota no limite de velocidade postado. |
+| Limite de velocidade | Limite de velocidade da rota | Não aplicável   | Atravessa a rota no limite de velocidade postado. |
 | Caminhada     | 5 km/h                   | 1,39 m           | Atravessa a rota em um passo de caminhada natural de 5 km/h. |
 | Pedalando      | 25 km/h                  | 6,94 m           | Atravessa a rota em uma pedalada natural de 25 km/h. |
 | Rápido        |                          |                  |Atravessa a rota mais rápido do que o limite de velocidade postado. | 
@@ -408,7 +408,7 @@ O recurso de simulação de rede lhe ajuda a ter certeza de que seu aplicativo r
 
 3.  Na lista suspensa, **Força do sinal**, selecione uma das seguintes opções:
     -   Bom
-    -   Média
+    -   Médio
     -   Pobre
 
 4.  Limpe o **Habilitar a simulação de rede** para restaurar o comportamento padrão, que utiliza as configurações de rede de seu computador de desenvolvimento.
@@ -440,9 +440,9 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
 
 3.  Opcionalmente, selecione ou limpe **arquivos atualizados sincronizados para a pasta local quando eu ejeto o cartão SD**.
 
-    Essa opção é habilitada por padrão. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
+    A opção está habilitada por padrão. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
 
-4.  **Ejete o cartão SD**.
+4.  **Ejetar o cartão SD**.
 
     Clique em **Ejetar o cartão SD**. Quando você ejetar o cartão SD, as seguintes coisas acontecem:
 
@@ -492,7 +492,7 @@ Você pode testar facilmente as notificações por push sem criar o serviço de 
             Quando seu aplicativo usa notificações WNS e você seleciona o tipo de notificação **Notificação do sistema** a aba simulação exibe a **Tag** e os campos **Grupo**. Você pode selecionar estas opções e inserir os valores **Tag** e **Grupo** para gerenciar as notificações do sistema no Centro de Notificações.
 
         -   Tile
-        -   Badge
+        -   Notificação
 
     -   As seguintes notificações MPN são suportadas.
 
@@ -545,7 +545,7 @@ Você pode habilitar ou desabilitar os seguintes hardwares de sensores opcionais
 
 -   Sensor de luz ambiente
 -   Câmera frontal
--   Girômetro
+-   Giroscópio
 -   Bússola (magnetômetro)
 -   NFC
 -   Botões de software (apenas em imagens de emuladores de alta resolução)
@@ -645,7 +645,7 @@ Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de 
 
 Para desativar a aceleração de hardware:
 
-1. Abra o Editor do Registro.
+1. Inicie o Editor do registro.
 2. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
 4. Clique em **DisableRemoteFx** e pressione Enter.

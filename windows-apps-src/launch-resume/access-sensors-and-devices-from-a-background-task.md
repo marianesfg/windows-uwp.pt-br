@@ -1,6 +1,6 @@
 ---
 title: Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
-description: O DeviceUseTrigger permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso.
+description: O DeviceUseTrigger permite que seu aplicativo universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu app em primeiro plano estiver suspenso.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ms.date: 02/08/2017
 ms.topic: article
@@ -78,7 +78,7 @@ Para usar o [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.Ap
 5.  Se o aplicativo puder solicitar uma tarefa em segundo plano, o método de ativação [**RequestAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger.requestasync) no objeto trigger do dispositivo.
 6.  Sua tarefa em segundo plano não é acelerada como outras tarefas em segundo plano (não há cota de tempo na CPU), mas será executada com prioridade reduzida para manter os aplicativos em primeiro plano capazes de responder.
 7.  O Windows fará a validação com base no tipo de gatilho que as políticas necessárias foram atendidas, incluindo a solicitação do consentimento do usuário para a operação antes de iniciar a tarefa em segundo plano.
-8.  O Windows monitora as condições do sistema e o runtime da tarefa e, se necessário, cancela a tarefa se as condições necessárias não forem mais atendidas.
+8.  O Windows monitora as condições do sistema e o tempo de execução da tarefa e, se necessário, cancela a tarefa se as condições necessárias não forem mais atendidas.
 9.  Quando as tarefas em segundo plano relatarem progresso ou conclusão, o seu aplicativo receberá esses eventos através de eventos em progresso e concluídos na tarefa registrada.
 
 **Importante**   considere estes pontos importantes ao usar o [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger):
@@ -114,26 +114,26 @@ Esta tabela indica quais políticas de início de tarefa se aplicam a um aplicat
 | Política | DeviceUseTrigger em um aplicativo Universal do Windows |
 |--------|---------------------------------------------|
 | O seu aplicativo está em primeiro plano ao acionar a tarefa em segundo plano. | ![a política se aplica](images/ap-tools.png) |
-| O dispositivo está conectado ao sistema (ou no intervalo de um dispositivo sem fio). | ![a política se aplica](images/ap-tools.png) |
+| O dispositivo está conectado ao sistema (ou no alcance de um dispositivo sem fio). | ![a política se aplica](images/ap-tools.png) |
 | O dispositivo é acessível pelo aplicativo usando as APIs periféricas do dispositivo suportado (as APIs do Windows Runtime para USB, HID, Bluetooth, Sensores etc.). Se o seu aplicativo não puder acessar o dispositivo ou o sensor, o acesso à tarefa em segundo plano será negado. | ![a política se aplica](images/ap-tools.png) |
 | O ponto de entrada de tarefa em segundo plano fornecido pelo aplicativo está registrado no manifesto do pacote do aplicativo. | ![a política se aplica](images/ap-tools.png) |
 | Apenas uma tarefa em segundo plano do [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) está em execução por aplicativo. | ![a política se aplica](images/ap-tools.png) |
-| O número máximo de tarefas em segundo plano do [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) ainda não foi alcançado no dispositivo (em que o seu aplicativo está sendo executado). | **Família de dispositivos da área de trabalho**: um número ilimitado de tarefas pode ser registrado e executado paralelamente. **Família de dispositivos móveis**: uma tarefa em um dispositivo de 512 MB; do contrário, duas tarefas podem ser registradas e executadas paralelamente. |
+| O número máximo de tarefas em segundo plano do [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) ainda não foi alcançado no dispositivo (em que o seu app está sendo executado). | **Família de dispositivos da área de trabalho**: um número ilimitado de tarefas pode ser registrado e executado paralelamente. **Família de dispositivos móveis**: uma tarefa em um dispositivo de 512 MB; do contrário, duas tarefas podem ser registradas e executadas paralelamente. |
 | O número máximo de dispositivos periféricos e sensores que o seu aplicativo pode acessar de uma única tarefa em segundo plano do [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) ao usar as APIs/protocolos com suporte. | ilimitado |
 | Sua tarefa em segundo plano consome 400 ms de tempo de CPU (supondo uma CPU de 1 GHz) a cada minuto quando a tela estiver bloqueada, ou a cada 5 minutos quando a tela não estiver bloqueada. A falha ao atender essa política pode resultar no cancelamento da tarefa. | ![a política se aplica](images/ap-tools.png) |
 
-### <a name="runtime-policy-checks"></a>Verificações da política de runtime
+### <a name="runtime-policy-checks"></a>Verificações da política de tempo de execução
 
-O Windows impõe os requisitos da política de runtime a seguir, enquanto sua tarefa está em execução em segundo plano. Se algum dos requisitos de runtime deixar de ser verdadeiro, o Windows cancelará sua tarefa em segundo plano no dispositivo.
+O Windows impõe os requisitos da política de runtime a seguir, enquanto sua tarefa está em execução em segundo plano. Se algum dos requisitos de tempo de execução deixar de ser verdadeiro, o Windows cancelará sua tarefa em segundo plano no dispositivo.
 
-Esta tabela indica quais políticas de runtime se aplicam a um aplicativo Universal do Windows.
+Esta tabela indica quais políticas de tempo de execução se aplicam a um aplicativo Universal do Windows.
 
 | Verificação de política | DeviceUseTrigger em um aplicativo Universal do Windows |
 |--------------|:-------------------------------------------:|
-| O dispositivo está conectado ao sistema (ou no intervalo de um dispositivo sem fio). | ![a verificação de política se aplica](images/ap-tools.png) |
+| O dispositivo está conectado ao sistema (ou no alcance de um dispositivo sem fio). | ![a verificação de política se aplica](images/ap-tools.png) |
 | A tarefa está executando E/S regular para o dispositivo (1 E/S a cada 5 segundos). | ![a verificação de política se aplica](images/ap-tools.png) |
 | O aplicativo não cancelou a tarefa. | ![a verificação de política se aplica](images/ap-tools.png) |
-| Limite de tempo no relógio de parede – a quantidade total de tempo em que a tarefa do aplicativo pode ser executada em segundo plano. | **Família de dispositivos da área de trabalho:** : 10 minutos. **Família de dispositivos móveis:** : sem limite de tempo. Para conservar os recursos, não mais que 1 ou 2 tarefas podem ser executadas de uma vez. |
+| Limite de tempo no relógio de parede – a quantidade total de tempo em que a tarefa do app pode ser executada em segundo plano. | **Família de dispositivos da área de trabalho:** : 10 minutos. **Família de dispositivos móveis:** : sem limite de tempo. Para conservar os recursos, não mais do que uma ou duas tarefas podem ser executadas de uma vez. |
 | O aplicativo não foi encerrado. | ![a verificação de política se aplica](images/ap-tools.png) |
 
 ## <a name="best-practices"></a>Práticas recomendadas

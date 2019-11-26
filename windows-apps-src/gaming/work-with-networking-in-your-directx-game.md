@@ -45,10 +45,10 @@ Diversas APIs de rede podem ser usadas em jogos DirectX. Portanto, é importante
 
 Estas são algumas das APIs de rede mais populares para jogos:
 
--   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. The [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) class provides a TCP socket that can be used in Microsoft Store games. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) no namespace.
+-   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. A classe [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) fornece um soquete TCP que pode ser usado em jogos de Microsoft Store. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) no namespace.
 -   TCP e soquetes usando SSL - Fornece uma conexão confiável que impede interceptações. Use conexões TCP com SSL para operações de jogos que precisem de segurança. A criptografia e a sobrecarga de SSL aumentam o custo de latência e desempenho, então ela é usada apenas quando a segurança é necessária. O TCP com SSL costuma ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) fornece um soquete TCP que dá suporte à SSL.
--   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. The [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) class provides a UDP socket that can be used in Microsoft Store games. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) no namespace.
--   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. The [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) class provides a modern HTTP client API for use in Microsoft Store games. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) no namespace.
+-   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. A classe [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) fornece um soquete UDP que pode ser usado em jogos de Microsoft Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) no namespace.
+-   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) fornece uma API de cliente http moderna para uso em jogos Microsoft Store. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) no namespace.
 
 ## <a name="handling-network-exceptions-in-your-directx-game"></a>Manipulando exceções de rede em seu jogo em DirectX
 
@@ -368,27 +368,27 @@ using namespace Windows::Web::Http;
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-**Other resources**
+**Outros recursos**
 
-* [Connecting with a datagram socket](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
-* [Connecting to a network resource with a stream socket](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
-* [Connecting to network services](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
-* [Connecting to web services](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+* [Conectando com um soquete de datagrama](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
+* [Conectando-se a um recurso de rede com um soquete de fluxo](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
+* [Conectando aos serviços de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+* [Conectando-se aos serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 * [Noções básicas de rede](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
-* [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [How to enable loopback and debug network isolation](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
+* [Como configurar os recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [Como habilitar o loopback e depurar o isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
 
 **Referência**
 
 * [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket)
 * [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)
 * [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket)
-* [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
-* [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+* [**Windows:: Web:: http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
+* [**Windows:: Networking:: Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
 
 **Exemplos**
 
-* [DatagramSocket sample](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
-* [HttpClient Sample]( https://go.microsoft.com/fwlink/p/?linkid=242550)
-* [Proximity sample](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [Exemplo de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [Exemplo de HttpClient]( https://go.microsoft.com/fwlink/p/?linkid=242550)
+* [Exemplo de proximidade](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
 * [Exemplo do StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

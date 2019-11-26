@@ -15,7 +15,7 @@ ms.locfileid: "74259245"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar o Hub de Feedback do seu app
 
-Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. All customer feedback that is submitted for your app through Feedback Hub is collected and presented to you in the [Feedback report](../publish/feedback-report.md) in Partner Center, so you can see the problems, suggestions, and upvotes that your customers have submitted in one report.
+Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todos os comentários do cliente enviados para seu aplicativo por meio do hub de comentários são coletados e apresentados a você no [relatório de comentários](../publish/feedback-report.md) no Partner Center, para que você possa ver os problemas, as sugestões e os votos que seus clientes enviaram em um relatório.
 
 Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu app que siga nossas diretrizes de design.
 

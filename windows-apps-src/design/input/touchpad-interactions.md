@@ -128,7 +128,7 @@ Para saber mais sobre como consultar os recursos do dispositivo, veja [Identific
 
 -   Quando o cursor do touchpad for detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o cursor do touchpad não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do touchpad desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 -   Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja a seção Cursores, a seguir).
--   Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
+-   Não exiba comentários sobre elementos visuais quando o elemento não der suporte a interação (como um texto estático).
 -   Não use retângulos de foco nas interações por touchpad; Reserve-os para as interações por teclado.
 -   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 

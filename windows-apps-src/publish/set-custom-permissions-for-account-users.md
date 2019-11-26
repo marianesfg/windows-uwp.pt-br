@@ -41,9 +41,9 @@ A menos que você defina [permissões personalizadas](#custom) ao selecionar **P
 > O **proprietário** da conta é a pessoa que a criou com uma conta da Microsoft (e não qualquer usuário adicionado pelo Azure AD). Esse proprietário da conta é a única pessoa com acesso completo à conta, incluindo a capacidade de excluir aplicativos, criar e editar todos os usuários da conta e alterar todas as informações financeiras e configurações da conta. 
 
 
-| Função                 | Descrição              |
+| Role                 | Descrição              |
 |----------------------|--------------------------|
-| Manager              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Partner Center, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD depende da permissão da conta no Azure AD. Ou seja, se uma função de gerente for atribuída a um usuário, mas não tiver permissões de administrador global no Azure AD da organização, elas não poderão criar novos usuários nem excluir usuários do diretório (embora possam alterar a função do centro de parceiros do usuário). <p> Observe que, se a conta do Partner Center estiver associada a mais de um locatário do Azure AD, um gerente não poderá ver os detalhes completos de um usuário (incluindo nome, sobrenome, email de recuperação de senha e se eles são um administrador global do Azure AD), a menos que sejam conectado ao mesmo locatário que o usuário com uma conta que tem permissões de administrador global para esse locatário. No entanto, eles podem adicionar e remover usuários em qualquer locatário associado à conta do Partner Center. |
+| Gerente              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Partner Center, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD depende da permissão da conta no Azure AD. Ou seja, se uma função de gerente for atribuída a um usuário, mas não tiver permissões de administrador global no Azure AD da organização, elas não poderão criar novos usuários nem excluir usuários do diretório (embora possam alterar a função do centro de parceiros do usuário). <p> Observe que, se a conta do Partner Center estiver associada a mais de um locatário do Azure AD, um gerente não poderá ver os detalhes completos de um usuário (incluindo nome, sobrenome, email de recuperação de senha e se eles são um administrador global do Azure AD), a menos que sejam conectado ao mesmo locatário que o usuário com uma conta que tem permissões de administrador global para esse locatário. No entanto, eles podem adicionar e remover usuários em qualquer locatário associado à conta do Partner Center. |
 | Desenvolvedor            | Pode carregar pacotes e enviar aplicativos e complementos, além de exibir o [Relatório de uso](usage-report.md) para obter detalhes de telemetria. Pode acessar [a funcionalidade de experiências entre dispositivos](https://developer.microsoft.com/windows/project-rome) . Não pode exibir informações financeiras ou configurações da conta.   |
 | Colaborador comercial | Pode exibir relatórios de [Integridade](health-report.md) e de [Uso](usage-report.md). Não é possível criar ou enviar produtos, alterar configurações de conta ou exibir informações financeiras.   |
 | Colaborador financeiro  | Pode exibir [relatórios de pagamento](payout-summary.md), informações financeiras e relatórios de aquisição. Não pode fazer alterações em aplicativos, complementos ou configurações da conta.    |
@@ -51,7 +51,7 @@ A menos que você defina [permissões personalizadas](#custom) ao selecionar **P
 
 A tabela a seguir mostra alguns dos recursos específicos disponíveis para cada uma dessas funções (e para o proprietário da conta).
 
-|                                                       |    Proprietário da conta                 |    Manager                       |    Desenvolvedor                     |    Colaborador comercial    |    Colaborador financeiro    |    Comerciante                      |
+|                                                       |    Proprietário da conta                 |    Gerente                       |    Desenvolvedor                     |    Colaborador comercial    |    Colaborador financeiro    |    Comerciante                      |
 |-------------------------------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------|---------------------------|----------------------------------|
 |    Relatório de aquisição (incluindo dados quase em tempo real) |    Pode exibir                      |    Pode exibir                      |    Sem acesso                     |    Sem acesso               |    Pode exibir               |    Sem acesso                     |
 |    Relatório/respostas de comentários                          |    Pode exibir e enviar comentários    |    Pode exibir e enviar comentários    |    Pode exibir e enviar comentários    |    Sem acesso               |    Sem acesso              |    Pode exibir e enviar comentários    |
@@ -59,7 +59,7 @@ A tabela a seguir mostra alguns dos recursos específicos disponíveis para cada
 |    Relatório de uso                                       |    Pode exibir                      |    Pode exibir                      |    Pode exibir                      |    Pode exibir                |    Sem acesso              |    Sem acesso                     |
 |    Conta de pagamento                                     |    Pode atualizar                    |    Sem acesso                     |    Sem acesso                     |    Sem acesso               |    Pode atualizar             |    Sem acesso                     |
 |    Perfil de imposto                                        |    Pode atualizar                    |    Sem acesso                     |    Sem acesso                     |    Sem acesso               |    Pode atualizar             |    Sem acesso                     |
-|    Resumo do pagamento                                     |    Pode exibir                      |    Sem acesso                     |    Sem acesso                     |    Sem acesso               |    Pode exibir               |    Sem acesso                     |
+|    Resumo de pagamentos                                     |    Pode exibir                      |    Sem acesso                     |    Sem acesso                     |    Sem acesso               |    Pode exibir               |    Sem acesso                     |
 
 Se nenhuma das funções padrão forem apropriadas, ou se você deseja limitar o acesso a aplicativos e/ou complementos específicos, você pode conceder permissões personalizadas ao usuário selecionando **Personalizar permissões**, como descrito abaixo.
 
@@ -152,12 +152,12 @@ Cada complemento está listado em uma linha separada abaixo de seu produto pai, 
 Observe que algumas permissões não podem ser definidas para complementos. Isso ocorre porque elas não se aplicam aos complementos (por exemplo, a permissão **Comentários dos clientes**) ou porque a permissão concedida no nível do produto pai se aplica a todos os complementos para aquele produto (por exemplo, **Códigos promocionais**). Observe, porém, que nenhuma permissão disponível para complementos deve ser definida separadamente; os complementos não herdam as seleções feitas para o produto pai. Por exemplo, se você deseja permitir que um usuário faça seleções de preço e disponibilidade de um complemento, você precisa habilitar a permissão **Preço e disponibilidade** para o complemento (ou para **Todos os complementos**), se você tiver concedido ou não a permissão **Preço e disponibilidade** para o produto pai. 
 
 
-### <a name="analytics"></a>Análise
+### <a name="analytics"></a>Análises
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome da&nbsp;permissão</th>
+    <th align="left">Nome&nbsp;da permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -178,7 +178,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome da&nbsp;permissão</th>
+    <th align="left">Nome&nbsp;da permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -199,7 +199,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome da&nbsp;permissão</th>
+    <th align="left">Nome&nbsp;da permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>
@@ -213,7 +213,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     <tr><td align="left">         de <b>classificações etárias</b></td><td>    Pode exibir a página <a href="age-ratings.md">classificações de idade</a> dos produtos.       </td><td>    Pode exibir e editar a página de <a href="age-ratings.md">classificações de idade</a> dos produtos.    </td><td>    Pode exibir a página classificações de idade dos complementos.          </td><td>     Pode exibir e editar a página de classificações de idade dos complementos.       </td></tr>
     <tr><td align="left">    <b>Pacotes</b>        </td><td>    Pode exibir a página <a href="upload-app-packages.md">pacotes</a> de produtos.  </td><td>    Pode exibir e editar a página de <a href="upload-app-packages.md">pacotes</a> de produtos, incluindo o carregamento de pacotes.     </td><td>   Pode exibir a página <a href="upload-app-packages.md">pacotes</a> de Complementos (se aplicável).   </td><td>     Pode exibir e editar <a href="upload-app-packages.md">pacotes</a> da página de Complementos (se aplicável).             </td></tr>
     <tr><td align="left">       de <b>lista de lojas</b></td><td>    Pode exibir as <a href="create-app-store-listings.md">páginas de listagem de armazenamento</a> dos produtos.  </td><td>    Pode exibir e editar as <a href="create-app-store-listings.md">páginas de listagem de armazenamento</a> dos produtos e pode adicionar novas listagens de lojas para diferentes idiomas.     </td><td>    Pode exibir as <a href="create-add-on-store-listings.md">páginas de listagem de armazenamento</a> dos complementos.            </td><td>    Pode exibir e editar as <a href="create-add-on-store-listings.md">páginas de listagem de repositório</a> de Complementos e pode adicionar listagens de armazenamento para diferentes idiomas.                 </td></tr>
-    <tr><td align="left">          de <b>envio de armazenamento</b></td><td>    Não é concedido acesso se essa permissão for definida como somente leitura.           </td><td>    Pode enviar o produto para a Loja e exibir relatórios de certificação. Inclui envios novos e atualizados. </td><td>Não é concedido acesso se essa permissão for definida como somente leitura.     </td><td>    Pode enviar o complemento para a Loja e exibir relatórios de certificação. Inclui envios novos e atualizados.</td></tr>
+    <tr><td align="left">          de <b>envio de armazenamento</b></td><td>    Não é concedido acesso se essa permissão for definida como somente leitura.           </td><td>    Pode enviar o produto para a Store e exibir relatórios de certificação. Inclui envios novos e atualizados. </td><td>Não é concedido acesso se essa permissão for definida como somente leitura.     </td><td>    Pode enviar o complemento para a Loja e exibir relatórios de certificação. Inclui envios novos e atualizados.</td></tr>
     <tr><td align="left">    <b>Nova</b>        de criação de envio</td><td>    Não é concedido acesso se essa permissão for definida como somente leitura.        </td><td>    Pode criar novos <a href="app-submissions.md">envios</a> para o produto.  </td><td>    Não é concedido acesso se essa permissão for definida como somente leitura.   </td><td>    Pode criar novos <a href="add-on-submissions.md">envios</a> para o complemento.        </td></tr>
     <tr><td align="left">    <b>Novos complementos</b>    </td><td>    Não é concedido acesso se essa permissão for definida como somente leitura. </td><td>    Pode <a href="set-your-add-on-product-id.md">criar novos complementos</a> para o produto. </td><td>    N/D    </td><td>    N/D        </td></tr>
     <tr><td align="left">    <b>Reservas de nome</b>   </td><td>    Pode exibir a página <a href="manage-app-names.md">Gerenciar nomes de aplicativo</a> do produto.</td><td>    Pode exibir e editar a página <a href="manage-app-names.md">Gerenciar nomes de aplicativo</a> do produto, incluindo reservar nomes adicionais e excluir nomes reservados. </td><td>   Pode exibir nomes reservados para o complemento.    </td><td>   Pode exibir e editar nomes reservados para o complemento.          </td></tr>
@@ -227,7 +227,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nome da&nbsp;permissão</th>
+    <th align="left">Nome&nbsp;da permissão</th>
     <th align="left">Somente&nbsp;leitura</th>
     <th align="left">Leitura/gravação</th>
     <th align="left">Somente&nbsp;leitura&nbsp;(complemento) </th>

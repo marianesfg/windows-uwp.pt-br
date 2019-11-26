@@ -1,6 +1,6 @@
 ---
 title: Iniciando automaticamente com a Reprodução Automática
-description: Você pode usar a Reprodução Automática para fornecer seu app como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como câmeras ou players de mídia, ou dispositivos com volume, como pen drives, cartões SD ou DVDs.
+description: Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.date: 02/08/2017
 ms.topic: article
@@ -15,7 +15,7 @@ ms.locfileid: "74259470"
 ---
 # <a name="span-iddev_launch_resumeauto-launching_with_autoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicialização automática com reprodução automática
 
-Você pode usar a **Reprodução Automática** para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como câmeras ou players de mídia, ou dispositivos com volume, como pen drives, cartões SD ou DVDs. Também é possível usar a **Reprodução Automática** para oferecer seu aplicativo como uma opção quando os usuários compartilham arquivos entre dois computadores usando proximidade (encostar).
+Você pode usar a **Reprodução Automática** para dar ao seu aplicativo uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs. Também é possível usar a **Reprodução Automática** para oferecer seu aplicativo como uma opção quando os usuários compartilham arquivos entre dois computadores usando proximidade (encostar).
 
 > **Observação**  se você for um fabricante de dispositivo e quiser associar seu [aplicativo de dispositivo de Microsoft Store](https://msdn.microsoft.com/library/windows/hardware/Dn265154(v=vs.85).aspx) como um manipulador de **reprodução automática** para seu dispositivo, poderá identificar esse aplicativo nos metadados do dispositivo. Para obter mais informações, consulte [Reprodução Automática para aplicativos de dispositivo da Microsoft Store](https://msdn.microsoft.com/library/windows/hardware/dn265136(v=vs.85).aspx).
 

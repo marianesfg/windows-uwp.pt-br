@@ -70,7 +70,7 @@ Siga estas etapas para criar uma notificação no Partner Center e enviá-la a u
     * **Adicionar consulta de imagem** (tipo de notificação do sistema interativa). Para obter mais detalhes, consulte [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
     * **Visual**. Uma imagem, vídeo ou som. Para obter mais detalhes, consulte [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
     * **Entrada**/**Ação**/**Seleção** (tipo de notificação do sistema interativa). Permite que você possibilite aos usuários interagirem com a notificação. Para obter mais informações, consulte [Notificações do sistema interativas e adaptáveis](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-    * **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, consulte [associação](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
+    * **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, veja [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
 
     > [!TIP]
     > Tente usar o aplicativo [Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1) para projetar e testar os blocos adaptáveis e as notificações interativas do sistema.
@@ -91,7 +91,7 @@ Você pode escolher dentre uma variedade de modelos de notificação.
 
     ![Caixa Iniciar da notificação do sistema de comentários](images/push-notifications-feedback-toast-launch-box.png)
 
--   **Promoção cruzada (notificação).** Uma notificação do sistema para promover um aplicativo diferente de sua escolha. Quando o cliente seleciona a notificação, os detalhes do outro aplicativo na Loja são exibidos.
+-   **Promoção cruzada (notificação).** Uma notificação do sistema para promover um aplicativo diferente de sua escolha. Quando o cliente seleciona a notificação, os detalhes da listagem da Loja do outro aplicativo são exibidos.
     > [!NOTE]
     > Se você escolher esse tipo de modelo, na caixa **Iniciar**, lembre-se de substituir o valor de espaço reservado **{ProductId que você deseja promover aqui}** pela ID da Loja real do item que você deseja promover. Você pode encontrar a ID da Loja na página [Identidade do aplicativo](view-app-identity-details.md) (**Gerenciamento de aplicativo** > **Identidade do aplicativo**).
 

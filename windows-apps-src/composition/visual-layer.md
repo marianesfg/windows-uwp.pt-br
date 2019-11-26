@@ -15,7 +15,7 @@ ms.locfileid: "74255520"
 ---
 # <a name="visual-layer"></a>Camada visual
 
-A camada Visual fornece uma API de modo retido para elementos gráficos, efeitos e animações de alto desempenho e é a base para todas as interfaces do usuário em dispositivos Windows. You define your UI in a declarative manner and the Visual layer relies on graphics hardware acceleration to ensure your content, effects and animations are rendered in a smooth, glitch-free manner independent of the app's UI thread.
+A camada Visual fornece uma API de modo retido para elementos gráficos, efeitos e animações de alto desempenho e é a base para todas as interfaces do usuário em dispositivos Windows. Você define sua interface de usuário de maneira declarativa e a camada Visual depende da aceleração de hardware de gráficos para garantir que o conteúdo, os efeitos e as animações sejam renderizados de forma suave e livre de falhas, independentemente do thread de interface do usuário do aplicativo.
 
 Destaques notáveis:
 
@@ -38,7 +38,7 @@ As funções principais de camada Visual são:
 
 ### <a name="content"></a>Conteúdo
 
-O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. Sub-classes of Visual include  [**ContainerVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) to allow for children to create trees of visuals and [**SpriteVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) that contains content and can be painted with either solid colors, custom drawn content or visual effects. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
+O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. As subclasses do Visual incluem  [**ContainerVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) para permitir que os filhos criem árvores de visuais e [**SpriteVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) que contenham conteúdo e possam ser pintados com cores sólidas, conteúdo desenhado personalizado ou efeitos visuais. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
 
 Para saber mais, veja a visão geral de [Composição de Visual](composition-visual-tree.md).
 
@@ -52,7 +52,7 @@ Para obter mais informações, consulte a visão geral de [Efeitos de composiç�
 
 ### <a name="animations"></a>Animações
 
-O sistema de animação na camada Visual permite que você mova elementos visuais, anime efeitos e promova transformações, clipes e outras propriedades.  It is a framework agnostic system that has been designed from the ground up with performance in mind.  It runs independently from the UI thread to ensure smoothness and scalability.  While it lets you use familiar KeyFrame animations to drive property changes over time, it also lets you set up mathematical relationships between different properties, including user input, letting you directly craft seamless choreographed experiences.
+O sistema de animação na camada Visual permite que você mova elementos visuais, anime efeitos e promova transformações, clipes e outras propriedades.  É um sistema independente de estrutura que foi projetado desde o início com o desempenho em mente.  Ele é executado independentemente do thread da interface do usuário para garantir a suavidade e a escalabilidade.  Embora ele permita que você use animações com quadro-chave familiares ao longo do tempo, ele também permite que você configure relações matemáticas entre diferentes propriedades, incluindo a entrada do usuário, permitindo que você crie diretamente experiências de coreografado diretas.
 
 Para obter mais informações, consulte a visão geral de [Animações de composição](composition-animation.md).
 
@@ -62,16 +62,16 @@ Você pode acessar um Visual criado pela estrutura XAML e apoiar um FrameworkEle
 
 Para saber mais, confira a visão geral [Uso da camada Visual com XAML](using-the-visual-layer-with-xaml.md).
 
-### <a name="working-with-your-desktop-app"></a>Working with your desktop app
+### <a name="working-with-your-desktop-app"></a>Trabalhando com seu aplicativo de área de trabalho
 
-You can use the Visual layer to enhance the look, feel, and functionality of your WPF, Windows Forms, and C++ Win32 desktop apps. You can migrate islands of content to use the Visual layer and keep the rest of your UI in its existing framework. This means you can make significant updates and enhancements to your application UI without needing to make extensive changes to your existing code base.
+Você pode usar a camada Visual para aprimorar a aparência e a funcionalidade de seus aplicativos de área de trabalho do C++ WPF, Windows Forms e Win32. Você pode migrar ilhas de conteúdo para usar a camada visual e manter o restante da sua interface do usuário em sua estrutura existente. Isso significa que você pode fazer atualizações e aprimoramentos significativos em sua interface do usuário do aplicativo sem a necessidade de fazer alterações extensivas em sua base de código existente.
 
 Para obter mais informações, consulte [Modernize seu aplicativo da área de trabalho usando a camada Visual](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* [**Full reference documentation for the API**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
+* [**Documentação de referência completa para a API**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 * Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)
-* [Windows.UI.Composition Sample Gallery](https://www.microsoft.com/store/apps/9pp1sb5wgnww)
-* [@windowsui Twitter feed ](https://twitter.com/windowsui)
+* [Galeria de exemplos do Windows. UI. composição](https://www.microsoft.com/store/apps/9pp1sb5wgnww)
+* [@windowsui feed do Twitter](https://twitter.com/windowsui)
 * Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Gráficos e Animação - Opções do Windows Composition 10](https://msdn.microsoft.com/magazine/mt590968)

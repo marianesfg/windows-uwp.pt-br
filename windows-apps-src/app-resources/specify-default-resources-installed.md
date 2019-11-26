@@ -1,6 +1,6 @@
 ---
-Description: Se o aplicativo não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do aplicativo serão usados. Este tópico explica como especificar quais são esses recursos padrão.
-title: Especificar os recursos padrão usados pelo aplicativo
+Description: Se o app não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do app serão usados. Este tópico explica como especificar quais são esses recursos padrão.
+title: Especificar os recursos padrão usados pelo app
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
@@ -13,9 +13,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254641"
 ---
-# <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar os recursos padrão usados pelo aplicativo
+# <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar os recursos padrão usados pelo app
 
-Se o aplicativo não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do aplicativo serão usados. Este tópico explica como especificar quais são esses recursos padrão.
+Se o app não tiver recursos que correspondam às configurações específicas de um dispositivo de cliente, os recursos padrão do app serão usados. Este tópico explica como especificar quais são esses recursos padrão.
 
 Quando um usuário instala o app da Microsoft Store, as configurações no dispositivo do cliente são comparadas com os recursos disponíveis do app. Essa comparação é feita para que somente os recursos apropriados precisem ser baixados e instalados para esse usuário. Por exemplo, as cadeias de caracteres e imagens mais apropriadas para as preferências de idioma do usuário e a resolução e as configurações de DPI do dispositivo são usadas. Por exemplo, `200` é o valor padrão para `scale`, mas você pode substituir esse padrão se desejar.
 
@@ -103,5 +103,5 @@ Salve e feche o arquivo, e recompile o projeto.
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](tailor-resources-lang-scale-contrast.md)
-* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
+* [BCP-marca de idioma 47](https://tools.ietf.org/html/bcp47)
 * [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)

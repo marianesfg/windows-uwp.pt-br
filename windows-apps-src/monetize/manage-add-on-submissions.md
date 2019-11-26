@@ -41,12 +41,12 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 </thead>
 <tbody>
 <tr>
-<td align="left">OBTER</td>
+<td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
 <td align="left"><a href="get-an-add-on-submission.md">Obter um envio de complemento existente</a></td>
 </tr>
 <tr>
-<td align="left">OBTER</td>
+<td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-an-add-on-submission.md">Obter o status de um envio de complemento existente</a></td>
 </tr>
@@ -230,20 +230,20 @@ Esse recurso tem os valores a seguir.
 
 | Valor      | Tipo   | Descrição        |
 |------------|--------|----------------------|
-| id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
-| contentType           | cadeia de caracteres  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Isso pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | matriz  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
-| lifetime           | cadeia de caracteres  |  O tempo de vida do complemento. Isso pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
-| listings           | object  |  Um dicionário de pares de chave e valor, em que cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do complemento.  |
-| pricing           | object  | Um [recurso de preço](#pricing-object) que contém informações de preço para o complemento.   |
-| targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
-| tag           | cadeia de caracteres  |  Os [dados de desenvolvedor personalizados](../publish/enter-add-on-properties.md#custom-developer-data) do complemento (essas informações foram anteriormente chamadas de *marca*).   |
-| visibilidade  | cadeia de caracteres  |  A visibilidade do complemento. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
-| status  | cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
-| fileUploadUrl           | cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
-| friendlyName  | cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.  |
+| id            | sequência  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
+| contentType           | sequência  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Isso pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
+| lifetime           | sequência  |  O tempo de vida do complemento. Isso pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
+| listings           | objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do complemento.  |
+| pricing           | objeto  | Um [recurso de preço](#pricing-object) que contém informações de preço para o complemento.   |
+| targetPublishMode           | sequência  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | sequência  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
+| tag           | sequência  |  Os [dados de desenvolvedor personalizados](../publish/enter-add-on-properties.md#custom-developer-data) do complemento (essas informações foram anteriormente chamadas de *marca*).   |
+| visibilidade  | sequência  |  A visibilidade do complemento. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| status  | sequência  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | objeto  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
+| fileUploadUrl           | sequência  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
+| friendlyName  | sequência  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.  |
 
 <span id="listing-object" />
 
@@ -253,9 +253,9 @@ Esse recurso contém [informações de listagem de um complemento](../publish/cr
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  description               |    cadeia de caracteres     |   A descrição da listagem do complemento.   |     
-|  ícone               |   object      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
-|  title               |     cadeia de caracteres    |   O título da listagem do complemento.   |  
+|  descrição               |    sequência     |   A descrição da listagem do complemento.   |     
+|  icon               |   objeto      |Um [recurso de ícone](#icon-object) que contém dados do ícone para a listagem de complemento.    |
+|  title               |     sequência    |   O título da listagem do complemento.   |  
 
 <span id="icon-object" />
 
@@ -265,8 +265,8 @@ Esse recurso contém dados de ícone para a listagem de um complemento. Esse rec
 
 | Valor           | Tipo    | Descrição     |
 |-----------------|---------|------|
-|  fileName               |    cadeia de caracteres     |   O nome do arquivo de ícone no arquivo ZIP que você carregou para o envio. O ícone deve ser um arquivo .png que meça exatamente 300 x 300 pixels.   |     
-|  fileStatus               |   cadeia de caracteres      |  O status do arquivo de ícone. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  fileName               |    sequência     |   O nome do arquivo de ícone no arquivo ZIP que você carregou para o envio. O ícone deve ser um arquivo .png que meça exatamente 300 x 300 pixels.   |     
+|  fileStatus               |   sequência      |  O status do arquivo de ícone. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
 
 <span id="pricing-object" />
 
@@ -276,9 +276,9 @@ Esse recurso contém informações de preço do complemento. Esse recurso tem os
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
-|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
-|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) do complemento.    |    
+|  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.     |     
+|  sales               |   array      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do complemento.     |     
+|  priceId               |   sequência      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) do complemento.    |    
 |  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
@@ -297,11 +297,11 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
-|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
-|  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
-|  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
-|  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
-|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
+|  name               |    sequência     |   O nome da promoção.    |     
+|  basePriceId               |   sequência      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
+|  startDate               |   sequência      |   A data de início da promoção no formato ISO 8601.  |     
+|  endDate               |   sequência      |  A data de término da promoção no formato ISO 8601.      |     
+|  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 <span id="status-details-object" />
 
@@ -311,9 +311,9 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Esse recurs
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  errors               |    object     |   Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do erro para o envio.   |     
-|  warnings               |   object      | Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do aviso para o envio.     |
-|  certificationReports               |     object    |   Uma matriz de [recursos do relatório de certificação](#certification-report-object) que dão acesso aos dados do relatório de certificação para o envio. Será possível examinar esses relatórios para obter mais informações, se a certificação falhar.    |  
+|  errors               |    objeto     |   Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do erro para o envio.   |     
+|  warnings               |   objeto      | Uma matriz de [recursos de detalhes do status](#status-detail-object) que contêm detalhes do aviso para o envio.     |
+|  certificationReports               |     objeto    |   Uma matriz de [recursos do relatório de certificação](#certification-report-object) que dão acesso aos dados do relatório de certificação para o envio. Será possível examinar esses relatórios para obter mais informações, se a certificação falhar.    |  
 
 <span id="status-detail-object" />
 
@@ -323,8 +323,8 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
-|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  code               |    sequência     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
+|  details               |     sequência    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 <span id="certification-report-object" />
 
@@ -334,8 +334,8 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição               |
 |-----------------|---------|------|
-|     date            |    cadeia de caracteres     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
-|     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
+|     date            |    sequência     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     reportUrl            |    sequência     |  A URL na qual é possível acessar o relatório.    |
 
 ## <a name="enums"></a>Enumerações
 

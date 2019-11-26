@@ -28,7 +28,7 @@ A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é di
 Consulte a seguir alguns dos pontos-chave que este documento discute para quando você estruturar o código do seu jogo:
 
 -   Na fase de inicialização, configure os componentes de tempo de execução e biblioteca usados pelo jogo e carregue recursos específicos do jogo.
--   Aplicativos UWP devem iniciar o processamento de eventos em até 5 segundos após a inicialização. Portanto, carregue apenas os recursos essenciais ao carregar seu aplicativo. Os jogos devem carregar recursos grandes em segundo plano e exibir uma tela de progresso.
+-   Os aplicativos UWP devem iniciar o processamento de eventos em até cinco segundos após a inicialização. Portanto, carregue apenas os recursos essenciais ao carregar seu aplicativo. Os jogos devem carregar recursos grandes em segundo plano e exibir uma tela de progresso.
 -   No loop do jogo, responda a eventos do Windows, leia a entrada do usuário, atualize objetos de cena e renderize a cena.
 -   Use manipuladores de eventos para responder a eventos de janela. (Estes substituem as mensagens de janela de aplicativos da área de trabalho do Windows.)
 -   Use uma máquina de estados para controlar o fluxo e a ordem da lógica do jogo.
@@ -50,7 +50,7 @@ Alguns dos componentes no Marble Maze podem ser reutilizados com qualquer jogo, 
 | Collision.h, Collision.cpp                 | Gerencia informações de colisão entre a bolinha e outros objetos, como o labirinto.                                                                                                       |
 | DDSTextureLoader.h, DDSTextureLoader.cpp   | Define a função **CreateDDSTextureFromMemory**, que carrega texturas no formato .dds a partir de um buffer de memória.                                                              |
 | DirectXHelper.h             | Define as funções auxiliares do DirectX que são úteis para vários aplicativos UWP DirectX.                                                                            |
-| LoadScreen.h, LoadScreen.cpp               | Define a classe **LoadScreen**, que exibe uma tela de carregamento durante a inicialização do aplicativo.                                                                                         |
+| LoadScreen.h, LoadScreen.cpp               | Define a classe **LoadScreen**, que exibe uma tela de carregamento durante a inicialização do app.                                                                                         |
 | MarbleMazeMain.h, MarbleMazeMain.cpp               | Define a classe **MarbleMazeMain**, que administra recursos específicos do jogo e define grande parte da lógica do jogo.                                                                          |
 | MediaStreamer.h, MediaStreamer.cpp         | Define a classe **MediaStreamer**, que usa o Media Foundation para ajudar o jogo a gerenciar recursos de áudio.                                                                            |
 | PersistentState.h, PersistentState.cpp     | Define a classe **PersistentState**, que lê e escreve tipos de dados primitivos de e em um repositório de suporte.                                                                      |
@@ -100,7 +100,7 @@ O exemplo a seguir mostra onde o método **App::SetWindow** cria o objeto de cla
 
 A classe **App** também começa a carregar os recursos adiados para o jogo. Consulte a próxima seção para saber mais detalhes.
 
-Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain**.
+Além disso, a classe **App** configura os manipuladores dos eventos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow). Quando os manipuladores desses eventos são chamados, eles passam a entrada para a classe **MarbleMazeMain*** .
 
 ## <a name="loading-game-assets-in-the-background"></a>Carregando ativos de jogo em segundo plano
 
@@ -123,7 +123,7 @@ O carregamento assíncrono de ativos começa com o método **App::Load**. Esse m
     });
 ```
 
-A classe **MarbleMazeMain** define o sinalizador *m\_deferredResourcesReady* para indicar que o carregamento assíncrono foi concluído. O método **MarbleMazeMain::LoadDeferredResources** carrega os recursos do jogo e, em seguida, define esse sinalizador. As fases de atualização (**MarbleMazeMain::Update**) e renderização (**MarbleMazeMain::Render**) do app verificam esse sinalizador. Quando esse sinalizador está definido, o jogo continua normalmente. Se o sinalizador ainda não estiver definido, o jogo mostrará a tela de carregamento.
+A classe **MarbleMazeMain** define o sinalizador *m\_deferredResourcesReady* para indicar que o carregamento assíncrono foi concluído. O método **MarbleMazeMain::LoadDeferredResources** carrega os recursos do jogo e, em seguida, define esse sinalizador. As fases de atualização (**MarbleMazeMain::Update**) e renderização (**MarbleMazeMain::Render**) do app verificam esse sinalizador. Quando esse sinalizador é definido, o jogo continua normalmente. Se o sinalizador ainda não estiver definido, o jogo mostrará a tela de carregamento.
 
 Para saber mais sobre programação assíncrona para aplicativos UWP, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
@@ -139,7 +139,7 @@ O método **App:: Run** executa o loop principal do jogo (**MarbleMazeMain::Upda
 
 Para ajudar a separar o código de janela e exibição do código específico do jogo, implementamos o método **App::Run** para encaminhar chamadas de atualização e renderização ao objeto **MarbleMazeMain**.
 
-O exemplo a seguir mostra o método **App::Run**, que inclui o loop principal do jogo. O loop de jogo atualiza as variáveis de tempo total e de tempo de quadros e depois atualiza e renderiza a cena. Isso também garante que o conteúdo seja renderizado apenas quando a janela estiver visível.
+O exemplo a seguir mostra o método **App::Run**, que inclui o loop principal do jogo. O loop do jogo atualiza as variáveis de tempo total e tempo de quadro e, depois, atualiza e renderiza a cena. Isso também garante que o conteúdo seja renderizado apenas quando a janela estiver visível.
 
 ```cpp
 void App::Run()
@@ -285,7 +285,7 @@ m_persistentState->Initialize(
     "MarbleMaze");
 ```
 
-O Marble Maze salva seu estado quando a bolinha passa sobre um ponto de verificação ou sobre a meta (no método **MarbleMazeMain::Update**) e quando a janela perde o foco (no método **MarbleMazeMain::OnFocusChange**). Se o seu jogo tem uma grande quantidade de dados de estado, convém ocasionalmente salvar o estado no armazenamento persistente de maneira semelhante, pois você tem apenas alguns segundos para responder à notificação de suspensão. Portanto, quando o seu aplicativo receber uma notificação de suspensão, ele só precisará salvar os dados que mudaram.
+O Marble Maze salva seu estado quando a bolinha passa sobre um ponto de verificação ou sobre a meta (no método **MarbleMazeMain::Update**) e quando a janela perde o foco (no método **MarbleMazeMain::OnFocusChange**). Se o seu jogo tem uma grande quantidade de dados de estado, convém ocasionalmente salvar o estado no armazenamento persistente de maneira semelhante, pois você tem apenas alguns segundos para responder à notificação de suspensão. Portanto, quando o app receber uma notificação de suspensão, ele só precisará salvar os dados que mudaram.
 
 Para responder a notificações de suspensão e retomada, a classe **MarbleMazeMain** define os métodos **SaveState** e **LoadState** que são chamados mediante suspensão e retomada. O método **MarbleMazeMain::OnSuspending** manipula o evento de suspensão, enquanto o método **MarbleMazeMain::OnResuming** manipula o evento de retomada.
 
@@ -414,7 +414,7 @@ void MarbleMazeMain::LoadState()
 > [!IMPORTANT]
 > O Marble Maze não faz distinção entre partida a frio, ou seja, começar pela primeira vez sem um evento de suspensão anterior, e retomada a partir de um estado suspenso. Este é um design recomendado para todos os aplicativos UWP.
 
-Para saber mais sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
+Para obter mais informações sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de app](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
 
 ##  <a name="next-steps"></a>Próximas etapas
 

@@ -26,12 +26,12 @@ Hoje em dia, o Windows é executado em um grande número de dispositivos. A UWP 
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Selecting an approach to iOS and UWP app development](selecting-an-approach-to-ios-and-uwp-app-development.md) | Quais são as opções ao desenvolver aplicativos de plataforma cruzada? |
-| [Getting started with UWP for iOS developers](getting-started-with-uwp-for-ios-developers.md) | Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um excelente ponto de partida. |
-| [Setting up your Mac with Windows 10](setting-up-your-mac-with-windows-10.md) | Use seu computador Mac atual para desenvolver aplicativos para Windows. |
+| [Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP](selecting-an-approach-to-ios-and-uwp-app-development.md) | Quais são as opções ao desenvolver aplicativos de plataforma cruzada? |
+| [Introdução ao UWP para desenvolvedores do iOS](getting-started-with-uwp-for-ios-developers.md) | Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um excelente ponto de partida. |
+| [Configurando seu Mac com o Windows 10](setting-up-your-mac-with-windows-10.md) | Use seu computador Mac atual para desenvolver aplicativos para Windows. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-**For designers and developers**
-* [Building Universal Windows apps for all Windows devices](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-* [Download design assets for UWP apps](https://docs.microsoft.com/windows/uwp/design/downloads/index)
+**Para designers e desenvolvedores**
+* [Criando aplicativos universais do Windows para todos os dispositivos Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+* [Baixar ativos de design para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/downloads/index)

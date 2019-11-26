@@ -133,7 +133,7 @@ var patternFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeForm
 string output = patternFormatter.Format(System.DateTime.Now);
 ```
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 
 * [Windows. Globalization. DateTimeFormatting](/uwp/api/windows.globalization.datetimeformatting?branch=live)
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)

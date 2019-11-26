@@ -24,19 +24,19 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Africâner | af-ZA | Segoe UI |
 | Albanês | sq-AL | Segoe UI |
 | Amárico | am-ET | Ebrima |
-| Árabe | ar-SA | Segoe UI |
-| armênio | hy-AM | Segoe UI |
-| assamês | as-IN | Nirmala UI |
+| Arábico | ar-SA | Segoe UI |
+| Armênio | hy-AM | Segoe UI |
+| Assamês | as-IN | Nirmala UI |
 | Azerbaidjano (Latino) | az-Latn-AZ | Segoe UI |
-| bangla (Bangladesh) | bn-BD | Nirmala UI |
+| Bangla (Bangladesh) | bn-BD | Nirmala UI |
 | Bangla (Índia) | bn-IN | Nirmala UI |
-| basco (País Basco) | eu-ES | Segoe UI |
+| Basco (Basco) | eu-ES | Segoe UI |
 | Bielorrusso | be-BY | Segoe UI |
-| bósnio (latino) | bs-Latn-BA | Segoe UI |
+| Bósnio (Latino) | bs-Latn-BA | Segoe UI |
 | Búlgaro | bg-BG | Segoe UI |
 | Catalão | ca-ES | Segoe UI |
-| curdo central (árabe) | ku-ARAB-IQ | Segoe UI |
-| cheroqui (cheroqui) | chr-CHER-US | Gadugi |
+| Curdo central (árabe) | ku-ARAB-IQ | Segoe UI |
+| Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
 | Chinês simplificado | zh-CN | Microsoft YaHei UI |
 | Chinês tradicional (Hong Kong) | zh-HK | Microsoft JhengHei UI |
 | Chinês tradicional (Taiwan) | zh-TW | Microsoft JhengHei UI |
@@ -67,13 +67,13 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | isiZulu | zu-ZA | Segoe UI |
 | Italiano | it-IT | Segoe UI |
 | Japonês | ja-JP | Interface do usuário Yu Gothic |
-| kannada | kn-IN | Nirmala UI |
+| Kannada | kn-IN | Nirmala UI |
 | Cazaque | kk-KZ | Segoe UI |
 | Khmer | km-KH | Leelawadee UI |
-| quiché | qut-GT | Segoe UI |
-| quiniaruanda | rw-RW | Segoe UI |
-| quissuaíle | sw-KE | Segoe UI |
-| concani | kok-IN | Nirmala UI |
+| Quiché | qut-GT | Segoe UI |
+| Quiniaruanda | rw-RW | Segoe UI |
+| Quissuaíle | sw-KE | Segoe UI |
+| Concani | kok-IN | Nirmala UI |
 | Coreano | ko-KR | Malgun Gothic |
 | quirguiz | ky-KG | Segoe UI |
 | Letão | lv-LV | Segoe UI |
@@ -82,21 +82,21 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Macedônio | mk-MK | Segoe UI |
 | Malaio | ms-MY | Segoe UI |
 | malaiala | ml-IN | Nirmala UI |
-| maltês | mt-MT | Segoe UI |
-| maori | mi-NZ | Segoe UI |
-| marati | mr-IN | Nirmala UI |
-| mongol (cirílico) | mn-MN | Segoe UI |
-| nepalês | ne-NP | Nirmala UI |
+| Maltês | mt-MT | Segoe UI |
+| Maori | mi-NZ | Segoe UI |
+| Marati | mr-IN | Nirmala UI |
+| Mongol (Cirílico) | mn-MN | Segoe UI |
+| Nepalês | ne-NP | Nirmala UI |
 | Norueguês (Bokmal) | nb-NO | Segoe UI |
-| norueguês (Nynorsk) | nn-NO | Segoe UI |
+| Norueguês (Nynorsk) | nn-NO | Segoe UI |
 | Oriá | or-IN | Nirmala UI |
 | Persa | fa-IR | Segoe UI |
 | Polonês | pl-PL | Segoe UI |
 | Português (Brasil) | pt-BR | Segoe UI |
 | Português (Portugal) | pt-PT | Segoe UI |
-| punjabi | pa-IN | Nirmala UI |
-| punjabi (árabe) | pa-Arab-PK | Segoe UI |
-| quíchua | quz-PE | Segoe UI |
+| Punjabi | pa-IN | Nirmala UI |
+| Punjabi (Árabe) | pa-Arab-PK | Segoe UI |
+| Quíchua | quz-PE | Segoe UI |
 | Romeno | ro-RO | Segoe UI |
 | Russo | ru-RU | Segoe UI |
 | Gaélico escocês | gd-GB | Segoe UI |
@@ -105,23 +105,23 @@ Na tabela a seguir, a coluna "Marca de idioma" lista a marca [BCP-47 language ta
 | Sérvio (Latino) | sr-Latn-CS | Segoe UI |
 | sesoto sa leboa | nso-ZA | Segoe UI |
 | Setsuana | tn-ZA | Segoe UI |
-| sindi (árabe) | sd-Arab-PK | Segoe UI |
-| cingalês | si-LK | Nirmala UI |
+| Sindi (Árabe) | sd-Arab-PK | Segoe UI |
+| Cingalês | si-LK | Nirmala UI |
 | Eslovaco | sk-SK | Segoe UI |
 | Esloveno | sl-SI | Segoe UI |
 | Espanhol | es-ES | Segoe UI |
 | Sueco | sv-SE | Segoe UI |
-| tadjique (cirílico) | tg-Cyrl-TJ | Segoe UI |
+| Tadjique (Cirílico) | tg-Cyrl-TJ | Segoe UI |
 | Tâmil | ta-IN | Nirmala UI |
-| tártaro | tt-RU | Segoe UI |
-| télugo | te-IN | Nirmala UI |
+| Tártaro | tt-RU | Segoe UI |
+| Télugo | te-IN | Nirmala UI |
 | Tailandês | th-TH | Leelawadee UI |
 | Tigrinya | ti-ET | Ebrima |
 | Turco | tr-TR | Segoe UI |
-| turcomeno | tk-TM | Segoe UI |
+| Turcomeno | tk-TM | Segoe UI |
 | Ucraniano | uk-UA | Segoe UI |
 | urdu | ur-PK | Segoe UI |
-| uigur | ug-CN | Segoe UI |
+| Uigur | ug-CN | Segoe UI |
 | Uzbeque (Latino) | uz-Latn-UZ | Segoe UI |
 | valenciano | ca-ES-valencia | Segoe UI |
 | Vietnamita | vi-VN | Segoe UI |

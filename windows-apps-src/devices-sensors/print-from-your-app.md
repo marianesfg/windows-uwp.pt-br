@@ -30,7 +30,7 @@ Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Es
 
 ## <a name="register-for-printing"></a>Registrar-se para impressão
 
-A primeira etapa para adicionar impressão ao seu aplicativo é registrar-se para o contrato do botão Imprimir. Seu aplicativo deve fazer isso em cada tela na qual você quer que o seu usuário seja capaz de imprimir. Apenas a tela exibida para o usuário pode ser registrada para impressão. Se uma tela do seu aplicativo registrou-se para impressão, ela deve cancelar o registro para impressão quando ele existir. Se ela for substituída por outra tela, a próxima tela deve registrar-se em um novo contrato do botão Imprimir quando abrir.
+A primeira etapa para adicionar impressão ao seu aplicativo é registrar-se para o contrato do botão Imprimir. Seu aplicativo deve fazer isso em cada tela na qual você quer que o seu usuário seja capaz de imprimir. Apenas a tela exibida para o usuário pode ser registrada para impressão. Se uma tela do seu aplicativo registrou-se para impressão, ela deve cancelar o registro para impressão quando ele existir. Se ela for substituída por outra tela, esta deverá se registrar para um novo contrato do botão Imprimir quando for aberta.
 
 > [!TIP]
 > se você precisar dar suporte à impressão de mais de uma página em seu aplicativo, poderá colocar esse código de impressão em uma classe auxiliar comum e fazer com que suas páginas de aplicativo a reutilizem. Para um exemplo de como fazer isso, veja a classe `PrintHelper` na [amostra de impressão UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing).

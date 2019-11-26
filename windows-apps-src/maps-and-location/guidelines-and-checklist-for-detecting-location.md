@@ -106,7 +106,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 **Em espera conectada**
 - Quando o computador está conectado no modo de espera, objetos [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) sempre podem ser instanciados. No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.statuschanged) serão chamados uma vez com o status **NoData**.
 
-## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
 
 
 ### <a name="detecting-changes-in-location-settings"></a>Detectando alterações nas configurações de localização

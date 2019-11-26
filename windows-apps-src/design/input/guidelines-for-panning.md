@@ -62,7 +62,7 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
 -   Use pontos de ajuste de proximidade se houver pontos chave ou casas lógicas no conteúdo em que o usuário provavelmente irá parar. Por exemplo, um cabeçalho de seção.
 
--   Se forem definidas restrições ou limites de tamanho máximo e mínimo, use o retorno visual para demonstrar quando o usuário atingiu ou excedeu esses limites.
+-   Se forem definidas restrições de tamanho máximo e mínimo ou limites, use o retorno visual para demonstrar quando o usuário atinge ou excede esses limites.
 
 **Encadeamento de conteúdo incorporado ou aninhado**
 
@@ -74,7 +74,7 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
     ![imagem demonstrando uma área incorporada com capacidade de movimento panorâmico que rola na mesma direção do seu contêiner.](images/scrolling-embedded3.png)
 
-## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
 
 O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que uma distinção seja feita em uma API ou exigida por alguma interface do usuário do Windows específica do dispositivo, simplesmente nos referimos a ambas as interações como movimento panorâmico.
 
@@ -83,7 +83,7 @@ O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o de
 > Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">classe ScrollViewer</a>.
 > </div>
 
-Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando um dos seguintes:
+Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando uma das seguintes opções:
 
 -   Um mouse, um touchpad ou uma caneta para clicar nas setas de rolagem, arrastar a caixa de rolagem ou clicar na barra de rolagem.
 -   O botão de roda do mouse para emular a caixa de rolagem sendo arrastada.
@@ -133,7 +133,7 @@ Pontos de alinhamento especificam paradas lógicas no conteúdo do aplicativo. D
 Existem dois tipos de pontos de ajuste:
 
 -   Proximidade: depois que o contato for levantado, um ponto de ajuste será selecionado se a inércia parar dentro do limite de distância do ponto de ajuste. O movimento panorâmico ainda pode parar entre pontos de alinhamento de proximidade.
--   Obrigatório: o ponto de alinhamento escolhido é aquele que antecede ou sucede imediatamente o último ponto de alinhamento cruzado antes que o contato seja retirado (dependendo da direção e da velocidade do gesto). O movimento panorâmico deve parar em um ponto de alinhamento obrigatório.
+-   Obrigatório - o ponto de ajuste escolhido é aquele que antecede ou sucede imediatamente o último ponto de ajuste cruzado antes que o contato fosse erguido (dependendo da direção e velocidade do gesto). O movimento panorâmico deve parar em um ponto de alinhamento obrigatório.
 
 Pontos de ajuste de movimento panorâmico são úteis para aplicativos como navegadores da Web e álbuns de fotos que emulam conteúdo paginado ou possuem agrupamentos lógicos de itens que podem ser reagrupados dinamicamente para caber em um visor ou tela.
 

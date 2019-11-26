@@ -1,5 +1,5 @@
 ---
-Description: Este guia ajuda você a capacitar seu aplicativo para manipular dados empresariais gerenciados pela política Proteção de Informações do Windows (WIP), bem como dados pessoais.
+Description: Este guia ajuda você a capacitar seu aplicativo para manipular dados empresariais gerenciados pela política de Proteção de Informações do Windows (WIP), bem como dados pessoais.
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Guia do desenvolvedor de Proteção de Informações do Windows (WIP)
@@ -65,7 +65,7 @@ Você executará as seguintes tarefas:
 
 Defina sua política adicionando informações a cada seção do Assistente de desenvolvedor de instalação do WIP. Escolha o ícone de ajuda ao lado de qualquer configuração para saber mais sobre como usá-lo.
 
-Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção Notas de versão na página de download do aplicativo.
+Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção Notas de versão na página de transferência do aplicativo.
 
 <a id="setup-vs-project" />
 
@@ -99,7 +99,7 @@ Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção
 
 <a id="setup-remote-debugging" />
 
-### <a name="setup-remote-debugging"></a>Configurar a depuração remota
+### <a name="setup-remote-debugging"></a>Configurar depuração remota
 
 Instale as Ferramentas Remotas para Visual Studio na VM de teste somente se você estiver desenvolvendo seu aplicativo em um computador que não seja a VM. Em seguida, no computador de desenvolvimento, inicie o depurador remoto e veja se seu aplicativo é executado na VM de teste.
 

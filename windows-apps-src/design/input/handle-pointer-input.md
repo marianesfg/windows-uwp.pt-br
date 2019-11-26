@@ -21,7 +21,7 @@ Receba, processe e gerencie dados de entrada de dispositivos apontadores (como t
 
 > [!Important]
 > Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações com suporte dos controles da plataforma não oferecerem suporte ao seu cenário.  
-> Se você personalizar as experiências de interação no seu aplicativo do Windows, os usuários esperam que elas sejam consistentes, intuitivas e detectáveis. Por esses motivos, recomendamos que você modele suas interações personalizadas naquelas com suporte dos [controles da plataforma](../controls-and-patterns/controls-by-function.md). Os controles de plataforma oferecem a experiência da interação do usuário da Plataforma Universal do Windows (UWP) completa, inclusive interações padrão, efeitos físicos animados, comentários visuais e acessibilidade. 
+> Se você personalizar as experiências de interação no seu aplicativo do Windows, os usuários esperam que elas sejam consistentes, intuitivas e detectáveis. Por esses motivos, recomendamos que você modele suas interações personalizadas naquelas com suporte dos [controles da plataforma](../controls-and-patterns/controls-by-function.md). Os controles de plataforma oferecem a experiência da interação do usuário da Plataforma Universal do Windows (UWP) completa, inclusive interações padrão, efeitos físicos animados, feedback visual e acessibilidade. 
 
 ## <a name="important-apis"></a>APIs Importantes
 - [Windows.Devices.Input](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
@@ -96,7 +96,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 <ul>
 <li>O toque requer um contato do dedo para disparar esse evento quando o ponteiro sai da área delimitadora do elemento.</li>
 <li>Mouse e touchpad têm um cursor na tela que está sempre visível e dispara esse evento mesmo caso nenhum botão do mouse ou do touchpad tenha sido pressionado.</li>
-<li>Assim como o toque, a caneta dispara esse evento ao sair da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que aciona esse evento quando o estado muda de true para false.</li>
+<li>Assim como o touch, a caneta aciona esse evento ao sair da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que aciona esse evento quando o estado muda de true para false.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -119,7 +119,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
-<td align="left"><p>Ocorre quando a roda do mouse é girada.</p>
+<td align="left"><p>Ocorre quando o botão de rolagem do mouse é girado.</p>
 <p>A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, de rolagem ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
 </tr>
 </tbody>

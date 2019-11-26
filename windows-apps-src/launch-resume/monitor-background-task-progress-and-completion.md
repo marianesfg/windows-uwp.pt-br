@@ -1,10 +1,10 @@
 ---
 title: Monitorar o progresso e a conclusão de tarefas em segundo plano
-description: Saiba como o app pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano.
+description: Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 ms.date: 07/06/2018
 ms.topic: article
-keywords: windows 10, uwp, background task
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -34,9 +34,9 @@ O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Criar um manipulador de eventos para gerenciar as tarefas em segundo plano concluídas
 
 ### <a name="step-1"></a>Etapa 1
-Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. This code needs to follow a specific footprint, which takes an [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) object and a [**BackgroundTaskCompletedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) object.
+Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Esse código precisa seguir uma superfície específica, que usa um objeto [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) e um objeto [**BackgroundTaskCompletedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) .
 
-Use the following footprint for the **OnCompleted** background task event handler method.
+Use a seguinte superfície para o método de manipulador de eventos de tarefa em segundo plano **OnCompleted** .
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

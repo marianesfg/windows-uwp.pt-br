@@ -28,7 +28,7 @@ O serviço de controle de anúncios integra-se a várias de redes de publicidade
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Gerenciar a complexidade das relações da rede de publicidade  
 
-O serviço de controle de anúncios integra-se a uma ampla variedade de redes de anúncios para que você não precise fazer esse trabalho. After you use the Microsoft Advertising SDK to display ads in your app, you can modify your ad mediation settings [in Partner Center](../publish/in-app-ads.md#mediation-settings) to display ads from multiple ad networks. Você aproveita os anúncios de novas redes de publicidade sem precisar fazer alterações no seu código.
+O serviço de controle de anúncios integra-se a uma ampla variedade de redes de anúncios para que você não precise fazer esse trabalho. Depois de usar o SDK do Microsoft Advertising para exibir anúncios em seu aplicativo, você pode modificar as configurações do AD mediaid [no Partner Center](../publish/in-app-ads.md#mediation-settings) para exibir anúncios de várias redes do AD. Você aproveita os anúncios de novas redes de publicidade sem precisar fazer alterações no seu código.
 
 Gerenciamos a relação de ponta a ponta com as redes de publicidade em seu nome. Tudo, desde a integração de rede de publicidade para veiculação de anúncios aos relatórios e pagamentos, é administrados por nós sem o seu envolvimento.
 
@@ -47,7 +47,7 @@ O serviço de controle de anúncios funciona para gerar o maior rendimento para 
 
 Novas redes de anúncios são incluídas automaticamente e avaliadas em relação ao desempenho por meio de um orçamento de aprendizagem. Em um curto período de tempo, eles encontrar seu lugar na cachoeira. Isso aumenta a competitividade das redes de publicidade e ajuda o desenvolvedor a aproveitar ao máximo a monetização por meio de aplicativos.
 
-É altamente recomendável usar nossas [configurações recomendadas de controle](../publish/in-app-ads.md#mediation-settings) para maximizar a receita dos anúncios em seus aplicativos. Isso permite que os algoritmos permitam o melhor rendimento para seu aplicativo. However, you also have the freedom to choose your own mediation settings in Partner Center to have more control over the ad networks that serve ads and the order in which they do.
+É altamente recomendável usar nossas [configurações recomendadas de controle](../publish/in-app-ads.md#mediation-settings) para maximizar a receita dos anúncios em seus aplicativos. Isso permite que os algoritmos permitam o melhor rendimento para seu aplicativo. No entanto, você também tem a liberdade de escolher suas próprias configurações de mediação no Partner Center para ter mais controle sobre as redes do AD que atendem anúncios e a ordem em que elas fazem.
 
 ## <a name="rich-data-and-signals"></a>Sinais e dados avançados
 
@@ -56,5 +56,5 @@ O serviço de controle de anúncios funciona com várias redes de anúncios para
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
-* [Mediation settings](../publish/in-app-ads.md#mediation-settings)
+* [Configurações de mediação](../publish/in-app-ads.md#mediation-settings)
 * [Relatório de desempenho da publicidade](../publish/advertising-performance-report.md)

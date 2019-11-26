@@ -1,7 +1,7 @@
 ---
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: Impressão e digitalização
-description: Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows.
+description: Esta seção descreve como imprimir e digitalizar em seu aplicativo universal do Windows.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, impressão, 3dprinting, impressão 3D
@@ -16,7 +16,7 @@ ms.locfileid: "74258624"
 # <a name="printing-and-scanning"></a>Impressão e digitalização
 
 
-Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows.
+Esta seção descreve como imprimir e digitalizar em seu aplicativo universal do Windows.
 
 | Tópico | Descrição | 
 |-------|-------------|

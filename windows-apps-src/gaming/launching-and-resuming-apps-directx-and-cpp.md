@@ -19,6 +19,6 @@ Saiba como iniciar, suspender e retomar seu aplicativo UWP (Plataforma Universal
 
 |Tópico|Descrição|
 |-|-|
-|[How to activate an app](how-to-activate-an-app-directx-and-cpp.md)|Este tópico mostra como definir a experiência de ativação para um aplicativo UWP DirectX.|
-|[How to suspend an app](how-to-suspend-an-app-directx-and-cpp.md)|Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP DirectX.|
-|[How to resume an app](how-to-resume-an-app-directx-and-cpp.md)|Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP DirectX.|
+|[Como ativar um aplicativo](how-to-activate-an-app-directx-and-cpp.md)|Este tópico mostra como definir a experiência de ativação para um aplicativo UWP DirectX.|
+|[Como suspender um aplicativo](how-to-suspend-an-app-directx-and-cpp.md)|Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP DirectX.|
+|[Como retomar um aplicativo](how-to-resume-an-app-directx-and-cpp.md)|Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP DirectX.|

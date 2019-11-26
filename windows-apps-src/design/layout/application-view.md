@@ -32,7 +32,7 @@ Da mesma forma, a estrutura XAML encapsula o objeto [**CoreWindow**](https://doc
 
 Embora cada layout de aplicativo seja exclusivo, é recomendável incluir um botão de "nova janela" em um local previsível, como o canto superior direito do conteúdo que pode ser aberto em uma nova janela. Considere também incluir uma opção de menu de contexto em "Abrir em uma nova janela".
 
-Vamos examinar as etapas de criação de um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique do botão.
+Vamos examinar as etapas de criação de um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique de botão.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)

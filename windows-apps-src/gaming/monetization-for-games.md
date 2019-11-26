@@ -1,6 +1,6 @@
 ---
 title: Monetização para jogos
-description: Implemente anúncios em faixa, anúncios intersticiais em vídeo e compras realizadas em aplicativo para jogos da Plataforma Universal do Windows (UWP) no Windows 10.
+description: Implemente anúncios em faixa, anúncios intersticiais em vídeo e compras realizadas em app para jogos da Plataforma Universal do Windows (UWP) no Windows 10.
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
 ms.date: 02/08/2017
 ms.topic: article
@@ -35,7 +35,7 @@ Jogos UWP publicados na Loja podem ser _pagos_ ou _gratuitos_. Um jogo pago perm
 
 Aqui estão alguns conceitos importantes a respeito do preço do jogo na Loja.
 
-### <a name="base-price"></a>Preço base
+### <a name="base-price"></a>Preço de base
 
 O preço base do jogo é o que determina se o jogo é categorizado como _pago_ ou _gratuito_. Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para configurar o preço base com base no país e na região.
 O processo de determinação do preço pode incluir as [responsabilidades tributárias na venda para países diferentes](https://docs.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) e [considerações sobre custo para mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Também é possível [definir preços personalizados para mercados específicos](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets).
@@ -43,7 +43,7 @@ O processo de determinação do preço pode incluir as [responsabilidades tribut
 ### <a name="sale-price"></a>Preço de venda
 
 Uma maneira de promover o jogo é reduzir o preço por um tempo limitado. Também é possível definir o preço de venda como __Grátis__ para permitir que o jogo seja baixado sem pagamento.
-É possível agendar campanhas de venda com antecedência definindo as datas inicial e final da venda. Para obter mais informações, consulte [Colocar aplicativos e complementos em promoção](https://docs.microsoft.com/windows/uwp/publish/put-apps-and-add-ons-on-sale).
+É possível agendar campanhas de venda com antecedência definindo as datas inicial e final da venda. Para obter mais informações, consulte [Colocar aplicativos e complementos à venda](https://docs.microsoft.com/windows/uwp/publish/put-apps-and-add-ons-on-sale).
 
 ## <a name="in-game-purchases"></a>Compras no jogo
 

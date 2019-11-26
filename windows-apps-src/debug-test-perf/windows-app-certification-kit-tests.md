@@ -124,11 +124,11 @@ Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, c
 
 -   **Verificação de comunicação entre processos (IPC)**
 
-    Esse teste impõe o requisito de que os aplicativos UWP não se comunicam fora do contêiner do aplicativo para componentes da área de trabalho. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a "DesktopApplicationPath" falham nesse teste.
+    Esse teste impõe o requisito de que os aplicativos UWP não se comunicam fora do contêiner do aplicativo para componentes da área de trabalho. A comunicação entre processos é destinada apenas a apps de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a "DesktopApplicationPath" falham nesse teste.
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Analise o manifesto do aplicativo em relação aos requisitos descritos em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
+Analise o manifesto do app em relação aos requisitos descritos em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 ## <a name="windows-security-features-test"></a>Teste dos recursos de segurança do Windows
 
@@ -206,7 +206,7 @@ Recomendamos que você teste os seus aplicativos em uma CPU habilitada para DEP 
 
 ### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>Randomização de layout de espaço de endereço
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste DBCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste DBCheck
 
 O ASLR carrega imagens executáveis em locais imprevisíveis da memória, o que dificulta a ação de softwares mal-intencionados que esperam que um programa seja carregado em um determinado endereço virtual para operar de maneira previsível. Seu aplicativo e todos os componentes usados por ele devem oferecer suporte para ASLR.
 
@@ -284,7 +284,7 @@ O *tamanho da\-de página* é o *SectionAlignment* padrão para executáveis.
 
 ### <a name="private-code-signing"></a>Assinatura de códigos privados
 
-Testes para a existência de binários de assinatura de código privado no pacote de app.
+Testes para a existência de binários de assinatura de código privado no pacote de aplicativo.
 
 ### <a name="background"></a>Histórico
 
@@ -364,7 +364,7 @@ O aplicativo pode não ser instalado se as cadeias de caracteres ou imagens decl
 
 ### <a name="test-details"></a>Detalhes do teste
 
-Inspeciona os recursos definidos no manifesto do aplicativo para garantir que estão presentes e são válidos.
+Inspeciona os recursos definidos no manifesto do app para garantir que estão presentes e são válidos.
 
 ### <a name="corrective-action"></a>Ação corretiva
 
@@ -429,7 +429,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>O arquivo "resources.pri" não deve ter o AutoMerge habilitado.</p>
 </td><td>
-<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no runtime. Não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O Resources. pri de um aplicativo que é distribuído por meio do Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de linguagem às quais o aplicativo dá suporte.</p>
+<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O Resources. pri de um aplicativo que é distribuído por meio do Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de linguagem às quais o aplicativo dá suporte.</p>
 </td></tr>
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
@@ -485,7 +485,7 @@ Os aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos
 
 ### <a name="test-details"></a>Detalhes do teste
 
-O teste valida se as imagens usadas pelo aplicativo não são imagens padrão de exemplos do SDK ou do Visual Studio.
+O teste valida se as imagens usadas pelo app não são imagens padrão de exemplos do SDK ou do Visual Studio.
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
@@ -507,7 +507,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 
 -   Compile o aplicativo como um Build de versão antes de enviá-lo para o Microsoft Store.
 -   Verifique se a versão correta do .NET framework está instalada.
--   Certifique-se de que o aplicativo não está vinculando versões de depuração de uma estrutura e se a versão é de liberação. Se o aplicativo contém componentes .NET, certifique-se de instalar a versão correta da estrutura .NET.
+-   Certifique-se de que o aplicativo não está vinculando versões de depuração de uma estrutura e se a versão é de liberação. Se o aplicativo contiver componentes .NET, verifique se você instalou a versão correta do .NET framework.
 
 ## <a name="file-encoding-test"></a>Teste de codificação de arquivo
 
@@ -581,7 +581,7 @@ Se qualquer uma dessas capacidades for declarada, o teste exibirá um aviso para
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
-Considere a remoção da funcionalidade de uso especial caso ela não seja necessária ao seu aplicativo. Além disso, o uso dessas funcionalidades está sujeito à análise da política do serviço.
+Considere a remoção da funcionalidade de uso especial caso ela não seja necessária ao seu app. Além disso, o uso dessas funcionalidades está sujeito à análise da política do serviço.
 
 ## <a name="windows-runtime-metadata-validation"></a>Validação dos metadados do Windows Runtime
 
@@ -597,7 +597,7 @@ Verifica se os arquivos **.winmd** no pacote estão em conformidade com as regra
 
 -   **Teste do atributo ExclusiveTo:** assegure-se de que as classes UWP não implementem interfaces marcadas como outra classe ExclusiveTo.
 -   **Teste de localização de tipos:** assegure-se de que os metadados de todos os tipos UWP estejam localizados no arquivo winmd que tem o nome correspondente ao namespace mais longo no pacote do aplicativo.
--   **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipos:** verifique se todos os tipos UWP têm nomes exclusivos e sem diferenciação de maiúsculas e minúsculas no pacote do aplicativo. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
+-   **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipos:** verifique se todos os tipos UWP têm nomes exclusivos e sem diferenciação de maiúsculas e minúsculas no pacote do aplicativo. Verifique também se nenhum nome de tipo UWP é usado como nome de namespace no pacote do app.
 -   **Teste de exatidão de nomes de tipos:** assegure-se de que não haja tipos UWP no namespace global nem no namespace de nível superior do Windows.
 -   **Teste de exatidão de metadados gerais:** assegure-se de que o compilador que você está usando para gerar seus tipos esteja atualizado de acordo com as especificações da UWP.
 -   **Teste de propriedades:** verifique se todas as propriedades em uma classe UWP têm um método get (os métodos set são opcionais). Verifique se o tipo do valor de retorno do método get corresponde ao tipo do parâmetro de entrada do método set em todas as propriedades em tipos UWP.
@@ -618,7 +618,7 @@ Valida se o "número de bit" de cada arquivo no cabeçalho PE é apropriado em c
 
 ### <a name="corrective-action"></a>Ação corretiva
 
-Siga estas diretrizes para garantir que seu pacote de aplicativos contenha apenas arquivos suportados pela arquitetura especificada no manifesto do aplicativo:
+Siga estas diretrizes para garantir que seu pacote de apps contenha apenas arquivos com suporte da arquitetura especificada no manifesto do app:
 
 -   Se a Arquitetura do processador alvo para o aplicativo for Tipo de processador neutro, o pacote de aplicativo não pode conter binário x86, x64 ou ARM ou arquivos do tipo imagem.
 

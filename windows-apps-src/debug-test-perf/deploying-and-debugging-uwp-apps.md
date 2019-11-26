@@ -129,7 +129,7 @@ No lançamento do Visual Studio 2015 atualização 3 e da atualização de anive
 
 As novas propriedades incluem:
 
-- Tipo de implantação
+- Tipo de implementação
 - Caminho do registro do pacote
 - Mantenha todos os arquivos no dispositivo, mesmo aqueles que não fazem parte do layout
 
@@ -217,7 +217,7 @@ Os arquivos de símbolos contêm uma variedade de dados muito úteis na depuraç
 
 Para definir opções de símbolos para o Visual Studio, selecione **Ferramentas > Opções** e vá para **Depuração > Símbolos** na janela da caixa de diálogo.
 
-![caixa de diálogo Opções](images/gs-debug-uwp-apps-004.png)
+![Caixa de diálogo Opções](images/gs-debug-uwp-apps-004.png)
 
 Para carregar símbolos em uma sessão de depuração com [WinDbg](#windbg), defina a variável **sympath** para o local do pacote de símbolos. Por exemplo, executar o comando a seguir carregará símbolos do servidor de símbolos da Microsoft e, em seguida, os armazenará em cache no diretório C:\Symbols:
 

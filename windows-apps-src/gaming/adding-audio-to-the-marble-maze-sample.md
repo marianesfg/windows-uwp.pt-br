@@ -389,7 +389,7 @@ enum SoundEvent
 
 A tabela a seguir mostra a relação entre cada um desses valores, o arquivo que contém os dados de som associados e uma breve descrição do que cada som representa. Os arquivos de áudio estão localizados na pasta **\\Media\\Audio** .
 
-| Valor de SoundEvent  | Nome do Arquivo      | Descrição                                              |
+| Valor de SoundEvent  | Nome do arquivo      | Descrição                                              |
 |-------------------|----------------|----------------------------------------------------------|
 | RollingEvent      | MarbleRoll.wav | Executado enquanto a bolinha rola.                              |
 | FallingEvent      | MarbleFall.wav | Executado quando a bolinha cai no labirinto.               |
@@ -570,7 +570,7 @@ if (sound == RollingEvent)
 }
 ```
 
-No entanto, para a música em segundo plano, o Marble Maze gerencia os buffers diretamente de forma que ele possa controlar melhor a quantidade de memória usada. Quando os arquivos de música são grandes, é possível transmitir os dados de música em buffers menores. Assim, você pode ajudar a equilibrar o tamanho da memória com a frequência da habilidade do jogo de processar e transmitir os dados de áudio.
+No entanto, para a música em segundo plano, o Marble Maze gerencia os buffers diretamente de forma que ele possa controlar melhor a quantidade de memória usada. Quando os arquivos de música são grandes, é possível transmitir os dados de música em buffers menores. Isso ajuda a equilibrar o tamanho da memória com a frequência da capacidade do jogo de processar e transmitir dados de áudio.
 
 > [!TIP]
 > Se o jogo tiver uma taxa de quadros baixa ou variável, o processamento de áudio no thread principal poderá produzir pausas ou interrupções inesperadas no áudio porque o mecanismo de áudio tem dados de áudio insuficientes em buffer com os quais trabalhar. Se o jogo for sensível a esse problema, considere processar áudio em um thread separado que não execute a renderização. Essa abordagem é útil principalmente em computadores que têm processadores múltiplos, porque o seu jogo pode usar os que estiverem ociosos.

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: Este artigo mostra como reduzir memória quando o aplicativo é movido para segundo plano.
-title: Reduzir o uso da memória quando o aplicativo é movido para o estado em segundo plano
+title: Reduzir o uso da memória quando o app é movido para o estado em segundo plano
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp

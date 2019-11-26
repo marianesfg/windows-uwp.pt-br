@@ -49,7 +49,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
 
 2. Se o seu projeto tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**). Se o seu projeto tem direcionamento **Any CPU**, você não conseguirá adicionar uma referência à biblioteca do Microsoft Advertising nas etapas a seguir. Para obter mais informações, consulte [Erros de referência causados pelo direcionamento Any CPU em seu projeto](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-3. Adicione uma referência para a biblioteca do **Microsoft Advertising SDK para JavaScript** ao seu projeto.
+3. Adicione uma referência para a biblioteca do **SDK do Microsoft Advertising para JavaScript** ao seu projeto.
 
     1. Na janela **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência...**
     2. No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para JavaScript** (versão 10.0).

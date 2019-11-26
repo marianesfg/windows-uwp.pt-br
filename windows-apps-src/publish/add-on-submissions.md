@@ -62,9 +62,9 @@ Aqui está uma lista das informações que você fornece ao criar o envio do com
 | [**Preços de venda**](put-apps-and-add-ons-on-sale.md)               | Opcional                    |
 
 
-### <a name="store-listings"></a>Listagens da Loja
+### <a name="store-listings"></a>Listagens da Store
 
-Uma listagem de Loja é necessária. É recomendável fornecer as listagens de Loja para cada [idioma](create-add-on-store-listings.md#store-listing-languages) ao qual o seu aplicativo dá suporte.
+Uma listagem de Store é necessária. É recomendável fornecer as listagens de Store para cada [idioma](create-add-on-store-listings.md#store-listing-languages) ao qual o seu aplicativo dá suporte.
 
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
@@ -73,7 +73,7 @@ Uma listagem de Loja é necessária. É recomendável fornecer as listagens de L
 | [**Cone**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 pixels)            |
 
 
-Quando você terminar de inserir essas informações, clique em **Enviar para a loja**. Na maioria dos casos, o processo de certificação leva cerca de uma hora. Depois disso, seu complemento será publicado na Loja e estará pronto para os clientes comprarem.
+Quando você terminar de inserir essas informações, clique em **Enviar para a loja**. Na maioria dos casos, o processo de certificação leva cerca de uma hora. Depois disso, seu complemento será publicado na Store e estará pronto para os clientes comprarem.
 
 > [!NOTE]
 > O complemento também deve ser implementado no código do aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](../monetize/in-app-purchases-and-trials.md).

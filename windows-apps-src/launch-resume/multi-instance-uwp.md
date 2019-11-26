@@ -108,7 +108,7 @@ public static class Program
 }
 ```
 
-`Main()` é a primeira coisa que é executada. Ele é executado antes de [**onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_)  e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
+`Main()` é a primeira coisa que é executada. Ele é executado antes de [**Onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
 
 O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Essa é a ideia por trás do código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
@@ -130,7 +130,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 - Se você adicionar `SupportsMultipleInstances`para qualquer outra extensão, além de plano de fundo tarefas ou serviços de aplicativo e o aplicativo que hospeda a extensão não também declara `SupportsMultipleInstances`em seu arquivo Package. appxmanifest, um erro de esquema é gerado.
 - Os aplicativos podem usar a Declaração [**resourcegroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) em seu manifesto para agrupar várias tarefas em segundo plano no mesmo host. Entra em conflito com várias instâncias, onde cada ativação entra em um host separado. Portanto, um aplicativo não pode declarar as duas `SupportsMultipleInstances`e `ResourceGroup` em seu manifesto.
 
-## <a name="sample"></a>Amostra
+## <a name="sample"></a>Exemplo
 
 Consulte [exemplo de várias instâncias](https://github.com/Microsoft/AppModelSamples/tree/master/Samples/BananaEdit) para obter um exemplo de redirecionamento de ativação de várias instâncias.
 

@@ -27,7 +27,7 @@ Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl
 
 * Quando o **AdControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
 
-* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. You cannot remove these deactivated ad units from your DePartnerv Center account. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK), ignore essas unidades de anúncio e crie novas.
+* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Não é possível remover essas unidades de anúncio desativadas da sua conta do DePartnerv Center. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK), ignore essas unidades de anúncio e crie novas.
 
 * Os anúncios em faixa também não serão mais disponibilizados para qualquer unidade de anúncio usada em mais de um aplicativo. Certifique-se de que suas unidades de anúncio serão usadas em um único aplicativo.
 
@@ -86,4 +86,4 @@ Remova todas as referências existentes às bibliotecas do Microsoft Advertising
 
 Teste o aplicativo para garantir que ele exiba anúncios em faixa conforme o esperado.
 
-If the previous version of your app is already available in the Store, [create a new submission](../publish/app-submissions.md) for your updated app in Partner Center to republish your app.
+Se a versão anterior do seu aplicativo já estiver disponível na loja, [crie um novo envio](../publish/app-submissions.md) para seu aplicativo atualizado no Partner Center para republicar seu aplicativo.

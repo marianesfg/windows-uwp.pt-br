@@ -58,7 +58,7 @@ Nossos modelos e exemplos de códigos usam recursos C++ com os quais você pode 
 
 Há dois conceitos que você usará com frequência:
 
--   Referências gerenciadas ([ **^ operator**](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)) and [**managed classes**](https://docs.microsoft.com/cpp/windows/classes-and-structs-cpp-component-extensions) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Windows Runtime, por exemplo [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) (você verá mais sobre isso no passo a passo).
+-   Referências gerenciadas ([ **^ operator**](https://docs.microsoft.com/cpp/windows/handle-to-object-operator-hat-cpp-component-extensions)) and [**managed classes**](https://docs.microsoft.com/cpp/windows/classes-and-structs-cpp-component-extensions) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Tempo de Execução do Windows, por exemplo [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) (você verá mais sobre isso no passo a passo).
 -   Ao trabalhar com interfaces do Direct3D 11 COM, use o tipo de modelo [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class) para deixar ponteiros COM mais fáceis de usar.
 
  

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: Dados de exemplo na superfície de design e para a criação de protótipo
+title: Dados de amostra na superfície de design e para a criação de protótipo
 description: Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio.
 ms.date: 02/08/2017
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254721"
 ---
-<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
+<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de amostra na superfície de design e para a criação de protótipo
 =============================================================================================
 
 
@@ -132,7 +132,7 @@ Se você usar um arquivo de dados de amostra JSON em vez da XAML, deverá defini
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de design de um arquivo XAML ou JSON. Uma alternativa é a extensão de marcação **d:DesignInstance**, que indica que a origem em tempo de design baseia-se na classe especificada pela propriedade **Type**. Aqui está um exemplo.
+Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de design de um arquivo XAML ou JSON. Uma alternativa é a extensão de marcação **d:DesignInstance**, que indica que a origem em tempo de design baseia-se na classe especificada pela propriedade **Type**. Veja um exemplo.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"

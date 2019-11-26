@@ -197,7 +197,7 @@ O qualificador `homeregion` corresponde à configuração do usuário referente 
 
 O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](https://tools.ietf.org/html/bcp47) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](https://www.iana.org/assignments/language-subtag-registry).
 
-Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e você tiver literais de cadeia de caracteres no código ou na marcação XAML, retire essas cadeias de caracteres do código/marcação e insira-as em um arquivo de recursos (`.resw`). Em seguida, você poderá fazer uma cópia traduzida desse arquivo de recursos para cada idioma ao qual o aplicativo dê suporte.
+Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e você tiver literais de cadeia de caracteres no código ou na marcação XAML, retire essas cadeias de caracteres do código/marcação e insira-as em um arquivo de recursos (`.resw`). Em seguida, você poderá fazer uma cópia traduzida desse arquivo de recursos para cada idioma ao qual o app ofereça suporte.
 
 Você normalmente usa um qualificador `language` para nomear as pastas que contêm os arquivos de recursos (`.resw`).
 
@@ -256,7 +256,7 @@ Você pode definir os ativos que representam os vários tamanhos do valor de qua
 
 Para obter informações sobre qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para tamanho alvo](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
-## <a name="theme"></a>Tema
+## <a name="theme"></a>Theme
 
 O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 

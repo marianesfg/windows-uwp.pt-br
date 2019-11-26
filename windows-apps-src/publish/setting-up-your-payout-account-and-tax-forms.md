@@ -1,5 +1,5 @@
 ---
-Description: In order to receive money from app sales in the Microsoft Store, you need to set up your payout account and fill out the necessary tax forms.
+Description: Para receber dinheiro das vendas de aplicativos no Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários.
 title: Configurar a conta de pagamento e formulários de imposto
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 ms.date: 12/14/2017
@@ -15,54 +15,54 @@ ms.locfileid: "74259907"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
-In order to receive money from app sales in the Microsoft Store, you need to set up your payout account and fill out the necessary tax forms in [Partner Center](https://partner.microsoft.com/dashboard).
+Para receber dinheiro das vendas de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de impostos necessários no [Partner Center](https://partner.microsoft.com/dashboard).
 
-Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. If you change your mind later and decide you do want to sell apps (or add-ons), you can set up your payout account and fill out tax forms at that time. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
+Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia posteriormente e decidir que deseja vender aplicativos (ou complementos), poderá configurar sua conta de pagamento e preencher os formulários de impostos nesse momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
 > [!NOTE]
 > Em [alguns mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), os desenvolvedores podem enviar somente aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
 
-After you have [set up your developer account](opening-a-developer-account.md), there are two things you need to do before you can sell apps (or add-ons) in the Microsoft Store:
+Depois de [configurar sua conta de desenvolvedor](opening-a-developer-account.md), há duas coisas que você precisa fazer para poder vender aplicativos (ou complementos) no Microsoft Store:
 
-- [Fill out your tax forms](#tax-forms)
-- [Set up your payout account](#payout-account)
+- [Preencha seus formulários de imposto](#tax-forms)
+- [Configurar sua conta de pagamento](#payout-account)
 
 > [!NOTE]
 > Para saber detalhes de como e quando você receberá o dinheiro obtido com os aplicativos, veja [Sendo pago](getting-paid-apps.md).
 
 ## <a name="tax-forms"></a>Formulários fiscais
 
-### <a name="filling-out-your-tax-forms"></a>Filling out your tax forms
+### <a name="filling-out-your-tax-forms"></a>Preenchendo seus formulários de imposto
 
-First, you'll need to create a tax profile and assign it to the programs you participate in. You can create your *tax profile* for the Microsoft Store by completing the following steps:
+Primeiro, você precisará criar um perfil de imposto e atribuí-lo aos programas que participa. Você pode criar seu *perfil de imposto* para o Microsoft Store concluindo as seguintes etapas:
 
 - Especificar seu país/região de residência e cidadania.
 - Preencher os formulários fiscais apropriados.
 
-You can complete and submit your tax forms electronically in Partner Center; in most cases, you don't need to print and mail any forms.
+Você pode concluir e enviar seus formulários de impostos eletronicamente no Partner Center; na maioria dos casos, você não precisa imprimir e enviar nenhum formulário.
 
 > [!IMPORTANT]
-> Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. We strongly encourage you to contact the relevant authority for your country or region that can best help you determine the right tax info for your Microsoft Store developer activities.
+> Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. É altamente recomendável que você entre em contato com a autoridade relevante para seu país ou região que possa ajudá-lo a determinar as informações de impostos corretas para suas atividades Microsoft Store Developer.
 
-1. In [Partner Center](https://partner.microsoft.com/dashboard), select the **Account settings** icon in the top right corner, then select **Developer settings**.
-2. In the left navigation menu, select **Payout and tax**, then select **Payout and tax assignments**.
+1. No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone **configurações de conta** no canto superior direito e, em seguida, selecione configurações do **desenvolvedor**.
+2. No menu de navegação à esquerda, selecione **pagamento e imposto**e, em seguida, selecione **pagamento e atribuições de impostos**.
 
-    ![Payout and tax profile assignment](images/payout-tax-profile-assignment.png)
+    ![Atribuição de perfil de pagamento e imposto](images/payout-tax-profile-assignment.png)
 
-3. Select the program and seller id combination for which you want to configure tax information.
+3. Selecione a combinação programa e ID do vendedor para a qual você deseja configurar as informações do imposto.
 
-    ![Payout select seller id](images/payout-select-seller-id.png)
+    ![Pagamento selecionar ID do vendedor](images/payout-select-seller-id.png)
 
-4. If you would like to use an existing tax profile, select it from the dropdown. Otherwise, select **Create new profile** and press **Submit**. You will be taken to the tax profiles page.
-5. Click the **Edit** button to edit your tax information.
-6. Select the appropriate radio button, and select your country if prompted. This step determines the Microsoft business entity that will be used to make payouts on your account.
+4. Se você quiser usar um perfil de imposto existente, selecione-o na lista suspensa. Caso contrário, selecione **criar novo perfil** e pressione **Enviar**. Você será levado para a página de perfis de impostos.
+5. Clique no botão **Editar** para editar suas informações de imposto.
+6. Selecione o botão de opção apropriado e selecione seu país, se solicitado. Esta etapa determina a entidade de negócios da Microsoft que será usada para fazer pagamentos em sua conta.
 
-    ![Payout select tax country](images/payout-select-tax-country.png)
+    ![Selecionar pagamento do país do imposto](images/payout-select-tax-country.png)
 
-7. Depending on your selections in step 6, you will be prompted to provide tax information required for your country.
+7. Dependendo de suas seleções na etapa 6, você será solicitado a fornecer informações de impostos necessárias para seu país.
 
 > [!NOTE]
-> Regardless of your country of residence or citizenship, you must fill out United States tax forms to sell any apps or add-ons through the Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
+> Independentemente do seu país de residência ou cidadania, você deve preencher Estados Unidos formulários de impostos para vender quaisquer aplicativos ou complementos por meio do Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
 
 ### <a name="withholding-rates"></a>Retenção de impostos
 
@@ -70,75 +70,75 @@ As informações que você envia em seus formulários fiscais determinam a taxa 
 
 ### <a name="tax-treaty-benefits"></a>Benefícios de tratados fiscais
 
-Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. These benefits vary from country to country, and may allow you to reduce the amount of taxes that the Microsoft Store withholds. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
+Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Esses benefícios variam de país para país e podem permitir que você reduza a quantidade de impostos que a Microsoft Store retenção. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
 
 > [!NOTE]
 > Não é necessário ter um ITIN (Número de Identificação de Contribuinte Individual) dos Estados Unidos para receber pagamentos da Microsoft ou reivindicar benefícios de tratados fiscais.
 
 ## <a name="payout-account"></a>Conta de pagamento
 
-A conta de pagamento é a conta bancária para a qual enviamos a receita de suas vendas. You can view all payment accounts that you have entered on the Profile page.
+A conta de pagamento é a conta bancária para a qual enviamos a receita de suas vendas. Você pode exibir todas as contas de pagamento inseridas na página perfil.
 
 > [!NOTE]
-> Em alguns mercados, o PayPal pode ser usado para sua conta de pagamento. See [Payment thresholds, methods, and timeframes](payment-thresholds-methods-and-timeframes.md) to find out if PayPal is supported for a specific market, and read the [PayPal info](#paypal-info) below for more details.
+> Em alguns mercados, o PayPal pode ser usado para sua conta de pagamento. Confira [limites de pagamento, métodos e períodos de tempo](payment-thresholds-methods-and-timeframes.md) para descobrir se o Paypal tem suporte para um mercado específico e leia as [informações de PayPal](#paypal-info) abaixo para obter mais detalhes.
 
-### <a name="create-a-payment-profile"></a>Create a payment profile
+### <a name="create-a-payment-profile"></a>Criar um perfil de pagamento
 
-1. In [Partner Center](https://partner.microsoft.com/dashboard), select the **Settings** gear icon in the top right corner, then select **Developer settings**.
-2. Underneath the *Payout and tax* heading, select **Payout and tax profile assignment**.
+1. No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem **configurações** no canto superior direito e, em seguida, selecione **configurações do desenvolvedor**.
+2. Abaixo do *pagamento e* do cabeçalho do imposto, selecione **pagamento e atribuição de perfil de imposto**.
 
     > [!NOTE]
     > Como se tratam de informações confidenciais, talvez você seja solicitado a entrar novamente.
 
-3. Select the payment method you would like to configure.
+3. Selecione o método de pagamento que você deseja configurar.
 
-    ![Payout account type selection](images/payout-account-type-selection.png)
+    ![Seleção do tipo de conta de pagamento](images/payout-account-type-selection.png)
 
-4. Select an existing payment profile, or click **Create a new payment profile** to create a new profile for the chosen payment method.
+4. Selecione um perfil de pagamento existente ou clique em **criar um novo perfil de pagamento** para criar um novo perfil para o método de pagamento escolhido.
 
 > [!NOTE]
-> If, for some reason, your account is not ready to receive funds from Microsoft, you may check the **Hold my payment** checkbox. You will continue to earn proceeds from your sales, but payments will not be distributed until you disable **Hold my payment.**
+> Se, por algum motivo, sua conta não estiver pronta para receber fundos da Microsoft, você poderá marcar a caixa de seleção **manter meu pagamento** . Você continuará a ganhar suas vendas, mas os pagamentos não serão distribuídos até que você desabilite **o meu pagamento.**
 
-### <a name="create-a-bank-based-payment-profile"></a>Create a bank-based payment profile
+### <a name="create-a-bank-based-payment-profile"></a>Criar um perfil de pagamento baseado no banco
 
-If you elected to use a bank account to receive payouts, you'll complete the following process to configure your bank account.
+Se você optou por usar uma conta bancária para receber pagamentos, você concluirá o processo a seguir para configurar sua conta bancária.
 
-1. On the *Bank Profile* page, provide the required information about your bank.
-2. Provide your bank account details.
+1. Na página *perfil bancário* , forneça as informações necessárias sobre seu banco.
+2. Forneça os detalhes da sua conta bancária.
 
     > [!NOTE]
     > Os campos que você usa para inserir as informações da conta aceitam apenas caracteres alfanuméricos.
 
-    ![Payout bank info](images/payout-bank-info.png)
+    ![Informações bancárias de pagamento](images/payout-bank-info.png)
 
-3. Provide beneficiary details.
-4. Back on the *Profile assignment* page, select the currency you would like us to use when we issue your payouts.
+3. Forneça os detalhes do beneficiário.
+4. De volta à página *atribuição de perfil* , selecione a moeda que você gostaria de usar ao emitir seus pagamentos.
 
     > [!WARNING]
-    > Make sure your bank accepts the payout currency you select.
+    > Verifique se seu banco aceita a moeda de pagamento que você selecionou.
 
-5. You will need to select a payment profile for each program you participate in, though you can use the same profile for multiple programs.
+5. Você precisará selecionar um perfil de pagamento para cada programa no qual você participa, embora possa usar o mesmo perfil para vários programas.
 
-    ![Payout use bank profile](images/payout-use-bank-profile.png)
+    ![Perfil bancário de uso de pagamento](images/payout-use-bank-profile.png)
 
-6. Click submit to save your changes.
+6. Clique em enviar para salvar as alterações.
 
 > [!NOTE]
-> Microsoft may take up to 48 hours to validate the information in your profile. When this process is complete *verification status* will show **Complete**
+> A Microsoft pode levar até 48 horas para validar as informações em seu perfil. Quando esse processo estiver concluído, o *status de verificação* mostrará **concluído**
 
 Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
 
-- The **Account holder name** entered for your payout account in Partner Center must be the exact same name associated with your bank account. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
+- O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ter exatamente o mesmo nome associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
 - Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda USD.
-- Bank information entered in Partner Center in Latin characters is translated to Cyrillic characters.
+- As informações bancárias inseridas no Partner Center em caracteres latinos são convertidas em caracteres cirílico.
 
-### <a name="editing-existing-payment-profiles"></a>Editing existing payment profiles
+### <a name="editing-existing-payment-profiles"></a>Editando perfis de pagamento existentes
 
-You can edit existing payment profiles if you need to make changes or correct any incorrect information.
+Você pode editar os perfis de pagamento existentes se precisar fazer alterações ou corrigir informações incorretas.
 
-1. In [Partner Center](https://partner.microsoft.com/dashboard), select the **Settings** gear icon in the top right corner, then select **Developer settings**.
-2. Underneath the *Payout and tax* heading, select **Payout and tax profiles**.
-3. Your payment profiles will be listed along with their status. Find the profile you wish to edit and click **Edit** at the far right
+1. No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem **configurações** no canto superior direito e, em seguida, selecione **configurações do desenvolvedor**.
+2. Abaixo do *pagamento e* do cabeçalho do imposto, selecione **pagamento e perfis de impostos**.
+3. Seus perfis de pagamento serão listados junto com seu status. Localize o perfil que você deseja editar e clique em **Editar** na extrema direita
 
 > [!IMPORTANT]
 > A modificação dessa conta pode atrasar seus pagamentos em até um ciclo. Esse atraso ocorre porque nós temos que verificar a mudança na conta, da mesma forma que fazemos quando você configura a conta de pagamento pela primeira vez. Você receberá o valor total após a verificação da conta; todos os pagamentos vencidos no ciclo de pagamento atual serão adicionados ao próximo ciclo. Consulte [Obtendo pagamento](getting-paid-apps.md) para saber mais.
@@ -147,16 +147,16 @@ You can edit existing payment profiles if you need to make changes or correct an
 
 Em alguns países e regiões, você pode criar uma conta de pagamento inserindo suas informações do PayPal. No entanto, antes de escolher o PayPal como opção de conta de pagamento:
 
-- Check [Payment thresholds, methods, and timeframes](payment-thresholds-methods-and-timeframes.md) to confirm whether PayPal is a supported payment method in your country or region.
+- Verifique os [limites de pagamento, os métodos e os períodos de tempo](payment-thresholds-methods-and-timeframes.md) para confirmar se o Paypal é um método de pagamento com suporte em seu país ou região.
 - Leia as perguntas frequentes a seguir. Dependendo da situação, o PayPal pode não ser a melhor opção de conta de pagamento para você e uma conta bancária pode ser preferencial.
 
 Perguntas comuns sobre como usar o PayPal como forma de pagamento:
 
-- **What PayPal settings do I need to have in order to receive payments?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via eCheck. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](https://developer.paypal.com/webapps/developer/docs/classic/admin/setup-account/) para saber mais.
-- **Is my country/region supported?** See [Payment thresholds, methods, and timeframes](payment-thresholds-methods-and-timeframes.md) to find out where PayPal is a supported payment method.
-- **Does my PayPal account have to be registered in the same country/region as my Partner Center account?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
-- **Do I have to accept PayPal payments manually?** Não. As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
-- **What currencies does PayPal support?** Please see [PayPal's support page](https://developer.paypal.com/docs/classic/api/currency-codes/#paypal) for the current list
+- **Quais configurações do PayPal preciso ter para receber pagamentos?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via eCheck. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](https://developer.paypal.com/webapps/developer/docs/classic/admin/setup-account/) para saber mais.
+- **Há suporte para meu país/região?** Confira [limites de pagamento, métodos e períodos de tempo](payment-thresholds-methods-and-timeframes.md) para descobrir onde o Paypal é um método de pagamento com suporte.
+- **Minha conta do PayPal precisa ser registrada no mesmo país/região que minha conta do centro de parceiros?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
+- **É necessário aceitar os pagamentos do PayPal manualmente?** Não. As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
+- **A quais moedas o PayPal dá suporte?** Consulte a [página de suporte do PayPal](https://developer.paypal.com/docs/classic/api/currency-codes/#paypal) para a lista atual
 
 ### <a name="specific-requirements-for-certain-countriesregions"></a>Requisitos específicos para determinados países/regiões
 
@@ -179,9 +179,9 @@ Se você for um desenvolvedor que vive na Rússia, talvez precise fornecer uma d
 
 Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
 
-- The **Account holder name** entered for your payout account in Partner Center must be the exact same name associated with your bank account. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
+- O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ter exatamente o mesmo nome associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
 - Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda rublo (RUB).
-- Bank information entered in Partner Center in Latin characters is translated to Cyrillic characters.
+- As informações bancárias inseridas no Partner Center em caracteres latinos são convertidas em caracteres cirílico.
 - Os pagamentos devem ser efetuados em uma conta bancária e não em um cartão bancário.
 
 #### <a name="ukraine"></a>Ucrânia
@@ -194,19 +194,19 @@ Se você for um desenvolvedor que vive na Ucrânia, talvez precise fornecer uma 
 
 A Microsoft fornece os três documentos quando é feita a tentativa de efetuar seu primeiro pagamento. Para todos os pagamentos subsequentes, você só receberá o documento AC. Guarde os documentos ADA e AA no caso de precisar deles para receber pagamentos futuros do seu banco.
 
-### <a name="create-a-paypal-payment-profile"></a>Create a PayPal payment profile
+### <a name="create-a-paypal-payment-profile"></a>Criar um perfil de pagamento do PayPal
 
-If you elected to use a bank account to receive payouts, you'll complete the following process to configure your bank account.
+Se você optou por usar uma conta bancária para receber pagamentos, você concluirá o processo a seguir para configurar sua conta bancária.
 
-1. On the *PayPal* page, provide the required information about your PayPal account.
-2. Provide your paypal account details.
+1. Na página *paypal* , forneça as informações necessárias sobre sua conta do PayPal.
+2. Forneça os detalhes da sua conta do PayPal.
 
     > [!NOTE]
     > Os campos que você usa para inserir as informações da conta aceitam apenas caracteres alfanuméricos.
 
-    ![Payout paypal info](images/payout-paypal-info.png)
+    ![Informações de pagamento do PayPal](images/payout-paypal-info.png)
 
-3. Provide beneficiary details.
-4. Back on the *Profile assignment* page, select the currency you would like us to use when we issue your payouts.
-5. You will need to select a payment profile for each program you participate in, though you can use the same profile for multiple programs.
-6. Click submit to save your changes.
+3. Forneça os detalhes do beneficiário.
+4. De volta à página *atribuição de perfil* , selecione a moeda que você gostaria de usar ao emitir seus pagamentos.
+5. Você precisará selecionar um perfil de pagamento para cada programa no qual você participa, embora possa usar o mesmo perfil para vários programas.
+6. Clique em enviar para salvar as alterações.

@@ -1,6 +1,6 @@
 ---
 title: Tratar a suspensão do aplicativo
-description: Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo.
+description: Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ms.date: 07/06/2018
 ms.topic: article
@@ -24,7 +24,7 @@ ms.locfileid: "74260406"
 
 - [**Suspensão**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
 
-Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) e salva uma cadeia de caracteres em um arquivo.
+Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) e salva uma cadeia de caracteres em um arquivo.
 
 ## <a name="register-the-suspending-event-handler"></a>Registrar o manipulador de eventos de suspensão
 

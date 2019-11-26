@@ -31,7 +31,7 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 
 | Conta individual | Conta empresarial |
 |--------------------|-----------------|
-| <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
+| <ul><li>Custa aproximadamente US$ 19 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
 As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. De acordo com as [políticas de armazenamento](store-policies.md#1014-account-type), os aplicativos com determinadas funcionalidades, como as que acessam informações de conta financeira ou que exigem autenticação para acessar a funcionalidade primária (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas da empresa.
 
@@ -151,12 +151,12 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Lituânia                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macau                         | 19 USD              | 99 USD           |  
-| Macedônia (ARIM)                 | 19 USD              | 99 USD           |  
+| macedônio (ARIM)                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
-| Malaui                            | 19 USD              | 99 USD           |  
+| Maláui                            | 19 USD              | 99 USD           |  
 | Malásia                          | 62 MYR              | 300 MYR          |  
 | Maldivas                          | 19 USD              | 99 USD           |  
-| Máli                              | 19 USD              | 99 USD           |  
+| Mali                              | 19 USD              | 99 USD           |  
 | Malta                             | 14 EUR              | 75 EUR           |  
 | Ilhas Marshall                  | 19 USD              | 99 USD           |  
 | Mauritânia                        | 5681 MRO            | 30046 MRO        |  
@@ -196,8 +196,8 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Santa Lúcia                       | 19 USD              | 99 USD           |  
 | São Vicente e Granadinas  | 19 USD              | 99 USD           |  
 | Samoa                             | 19 USD              | 99 USD           |  
-| San Marino                        | 14 EUR              | 75 EUR           |  
-| São Tomé and Príncipe             | 19 USD              | 99 USD           |  
+| São Marinho                        | 14 EUR              | 75 EUR           |  
+| São Tomé e Príncipe             | 19 USD              | 99 USD           |  
 | Arábia Saudita                      | 71 SAR              | 380 SAR          |  
 | Senegal                           | 19 USD              | 99 USD           |  
 | Sérvia                            | 1619 RSD            | 7000 RSD         |  
@@ -216,16 +216,16 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Suécia                            | 123 SEK             | 700 SEK          |  
 | Suíça                       | 17 CHF              | 90 CHF           |  
 | Taiwan                            | 568 TWD             | 2840 TWD         |  
-| Tadjiquistão                        | 19 USD              | 99 USD           |  
+| Tajiquistão                        | 19 USD              | 99 USD           |  
 | Tanzânia                          | 19 USD              | 99 USD           |  
 | Tailândia                          | 601 THB             | 3000 THB         |  
 | Timor-Leste                       | 19 USD              | 99 USD           |  
 | Togo                              | 19 USD              | 99 USD           |  
 | Tonga                             | 19 USD              | 99 USD           |  
-| Trinidad e Tobago               | 122 TTD             | 636 TTD          |  
+| Trinidade e Tobago               | 122 TTD             | 636 TTD          |  
 | Tunísia                           | 31 TND              | 140 TND          |  
 | Turquia                            | 37 TRY              | 160 TRY          |  
-| Turcomenistão                      | 19 USD              | 99 USD           |  
+| Turquemenistão                      | 19 USD              | 99 USD           |  
 | Tuvalu                            | 19 USD              | 99 USD           |  
 | Uganda                            | 19 USD              | 99 USD           |  
 | Ucrânia                           | 156 UAH             | 800 UAH          |  

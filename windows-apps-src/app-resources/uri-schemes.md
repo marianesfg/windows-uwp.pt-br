@@ -1,5 +1,5 @@
 ---
-Description: Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do aplicativo.
+Description: Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app.
 title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
@@ -15,7 +15,7 @@ ms.locfileid: "74254592"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
-Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do aplicativo. Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
+Há vários esquemas de URI (Uniform Resource Identifier) que você pode usar para fazer referência aos arquivos que vêm no conjunto de aplicativo, nas pastas de dados do seu aplicativo ou na nuvem. Você também pode usar um esquema de URI para fazer referência a cadeias de caracteres carregadas dos arquivos de recursos (.resw) do app. Você pode usar esses esquemas de URI em seu código, em sua marcação XAML, no manifesto do conjunto de aplicativo ou em seu bloco e modelos de notificação do sistema.
 
 ## <a name="common-features-of-the-uri-schemes"></a>Recursos comuns dos esquemas de URI
 

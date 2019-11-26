@@ -59,7 +59,7 @@ Ao lado de cada comentário, você verá a data em que os comentários foram dei
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 
 
-## <a name="translating-feedback"></a>Traduzindo comentários
+## <a name="translating-feedback"></a>Tradução de comentários
 
 Por padrão, os comentários que não foram gravados em seu idioma preferido são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
 

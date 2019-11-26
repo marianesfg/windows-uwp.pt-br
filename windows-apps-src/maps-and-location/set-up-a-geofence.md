@@ -24,7 +24,7 @@ Configure uma [**cerca geográfica**](https://docs.microsoft.com/uwp/api/Windows
 
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 
-## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de local
+## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de localização
 
 
 1.  Em **Gerenciador de Soluções**, clique duas vezes em **package.appxmanifest** e selecione a guia **Recursos**.
@@ -54,7 +54,7 @@ O método [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.de
 
 ### <a name="step-2-register-for-changes-in-geofence-state-and-location-permissions"></a>Etapa 2: Registrar-se para alterações em permissões de localização e estado de cerca geográfica
 
-Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para funcionar somente quando o acesso ao local do usuário for permitido. Caso o acesso ao local do usuário seja permitido, o código acessa as cercas geográficas atuais, registra alterações de estado da cerca geográfica e registra alterações em permissões de localização.
+Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para atuar somente quando o acesso à localização do usuário é permitido. Caso o acesso ao local do usuário seja permitido, o código acessa as cercas geográficas atuais, registra alterações de estado da cerca geográfica e registra alterações em permissões de localização.
 
 **Dica** Ao usar uma cerca geográfica, o monitor é alterado em permissões de local usando o evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geofencing.geofencemonitor.statuschanged) na classe GeofenceMonitor em vez do evento StatusChanged da classe Geolocator. Um [**GeofenceMonitorStatus**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus) de **Disabled** é equivalente a um [**PositionStatus**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.PositionStatus) desabilitado – os dois indicam que o aplicativo não tem permissão para acessar o local do usuário.
 
@@ -175,7 +175,7 @@ try {
 
 ### <a name="step-4-handle-changes-in-location-permissions"></a>Etapa 4: Manipular alterações em permissões de localização
 
-O objeto [**GeofenceMonitor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceMonitor) dispara o evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geofencing.geofencemonitor.statuschanged) para indicar que as configurações de localização do usuário mudaram. Esse evento transmite o status correspondente por meio da propriedade **sender.Status** do argumento (do tipo [**GeofenceMonitorStatus**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus)). Observe que esse método não é chamado no thread de interface do usuário, e o objeto [**Dispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) invoca as alterações de interface do usuário.
+O objeto [**GeofenceMonitor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceMonitor) dispara o evento [**StatusChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geofencing.geofencemonitor.statuschanged) para indicar que as configurações de localização do usuário mudaram. Esse evento transmite o status correspondente por meio da propriedade **sender.Status** do argumento (do tipo [**GeofenceMonitorStatus**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus)). Observe que esse método não é chamado a partir do thread de interface do usuário, e que o objeto [**Dispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) invoca as alterações na interface do usuário.
 
 ```csharp
 using Windows.UI.Core;

@@ -46,7 +46,7 @@ Diferente dos recursos de imagem, em que apenas um recurso de imagem está conti
 
     Neste exemplo, como temos uma entrada de identificador de recurso de cadeia de caracteres simples denominada "Farewell", não podemos ter *também* identificadores de propriedade com base no mesmo identificador. Portanto, adicionar "Farewell.Text" causaria um erro de entrada duplicada durante a compilação de `Resources.resw`.
 
-    Os identificadores de recurso não diferenciam maiúsculas de minúsculas e devem ser exclusivos por arquivo de recurso. Use identificadores de recurso significativos para fornecer contexto adicional para tradutores. Não altere os identificadores de recurso depois que os recursos de cadeia de caracteres forem enviados para tradução. Equipes de localização usam o identificador de recursos para rastrear adições, exclusões e atualizações nos recursos. As alterações em identificadores de recursos, o que também é conhecido como "deslocamento de identificadores de recursos", exigem que cadeias de caracteres sejam traduzidas novamente, pois parecerá que elas foram excluídas e que outras foram adicionadas.
+    Os identificadores de recurso não diferenciam maiúsculas de minúsculas e devem ser exclusivos por arquivo de recurso. Use identificadores de recurso significativos para fornecer contexto adicional para tradutores. Não altere os identificadores de recurso depois que os recursos de cadeia de caracteres forem enviados para tradução. As equipes de localização usam o identificador de recursos para rastrear adições, exclusões e atualizações nos recursos. As alterações em identificadores de recursos, o que também é conhecido como "deslocamento de identificadores de recursos", exigem que cadeias de caracteres sejam traduzidas novamente, pois parecerá que elas foram excluídas e que outras foram adicionadas.
 
 ## <a name="refer-to-a-string-resource-identifier-from-xaml"></a>Consulte um identificador de recurso de cadeia de caracteres do XAML
 
@@ -129,7 +129,7 @@ Em caso de dúvida, você pode usar [MakePri. exe](makepri-exe-command-options.m
 
     `Strings/de-DE/Resources.resw`
 
-    ![adicionar recursos, alemão](images/addresource-de-de.png)
+    ![adicionar recurso, alemão](images/addresource-de-de.png)
 
 Se quiser, repita as etapas 1 e 2 para um idioma adicional.
 
@@ -137,9 +137,9 @@ Se quiser, repita as etapas 1 e 2 para um idioma adicional.
 
 ![adicionar recurso, francês](images/addresource-fr-fr.png)
 
-## <a name="test-your-app"></a>Teste seu aplicativo
+## <a name="test-your-app"></a>Testar o app
 
-Teste o aplicativo no idioma de exibição padrão. Em seguida, altere o idioma de exibição em **Configurações** > **Hora e Idioma** > **Região e idioma** > **Idiomas** e teste o app novamente. Analise as cadeias de caracteres na interface do usuário e no shell (por exemplo, a barra de títulos, que é o Nome para exibição, e o Nome curto em seus blocos).
+Teste o app no idioma de exibição padrão. Em seguida, altere o idioma de exibição em **Configurações** > **Hora e Idioma** > **Região e idioma** > **Idiomas** e teste o app novamente. Analise as cadeias de caracteres na interface do usuário e no shell (por exemplo, a barra de títulos, que é o Nome para exibição, e o Nome curto em seus blocos).
 
 **Observação** Se for encontrado um nome de pasta que corresponda à configuração de idioma de exibição, o arquivo de recursos contido nessa pasta será carregado. Caso contrário, ocorrerá um fallback, que encerrará com os recursos do idioma padrão do app.
 
@@ -317,7 +317,7 @@ Para usar recursos em aplicativos não empacotados, você deve fazer algumas coi
 > [!Important]
 > Você deve recompilar os arquivos PRI manualmente sempre que os recursos forem modificados. É recomendável usar um script de pós-compilação que manipule o comando [MakePri. exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) e copie a saída de Resources. pri para o diretório. exe.
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [ApplicationModel. Resources. ResourceLoader](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.ResourceLoader)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)

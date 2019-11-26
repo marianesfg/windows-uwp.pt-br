@@ -88,7 +88,7 @@ Essas recomendações de tamanho de destino podem ser ajustadas de acordo com de
 - [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 - [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-### <a name="archive-samples"></a>Exemplos de arquivo
+### <a name="archive-samples"></a>Exemplos de arquivo-morto
 
 - [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
 - [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)

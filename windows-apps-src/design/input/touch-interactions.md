@@ -97,7 +97,7 @@ O direcionamento é otimizado por meio de:
 
     Toda a área de contato do dedo determina o objeto de destino mais provável.
 
--   Anulação
+-   Esfregar
 
     Os itens em um grupo são redirecionados com facilidade arrastando o dedo entre eles (por exemplo, botões de opção). O item atual é ativado quando o toque é liberado.
 
@@ -122,7 +122,7 @@ Para evitar a oclusão de dedo e mão:
 
     Posicione os menus e pop-ups sobre a área de contato sempre que possível.
 
--   Dicas de ferramenta
+-   Dicas de ferramentas
 
     Mostre dicas de ferramentas quando um usuário mantém o dedo em contato com um objeto. Isso é útil para descrever a funcionalidade do objeto. O usuário pode retirar a ponta do dedo para sair do objeto e assim evitar a invocação da dica de ferramenta.
 
@@ -130,7 +130,7 @@ Para evitar a oclusão de dedo e mão:
 
 -   Alças para precisão
 
-    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para saber mais, veja [Diretrizes para seleção de texto e imagens (aplicativos do Windows Runtime)](guidelines-for-textselection.md).
+    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para saber mais, veja [Diretrizes para seleção de texto e imagens (aplicativos do Tempo de Execução do Windows)](guidelines-for-textselection.md).
 
 ## <a name="timing"></a>Tempo
 
@@ -174,7 +174,7 @@ Para saber mais sobre modos de exibição do aplicativo, consulte [Controles, la
 ## <a name="custom-touch-interactions"></a>Interações por toque personalizadas
 
 
-Caso você implemente o próprio suporte à interação, tenha em mente que os usuários esperam uma experiência intuitiva que envolva a interação direta com os elementos da interface do usuário do aplicativo. Recomendamos que você modele suas interações personalizadas nas bibliotecas de controles da plataforma para manter os elementos consistentes e detectáveis. Os controles nessas bibliotecas oferecem a experiência de interação completa do usuário, incluindo interações padrão, efeitos físicos animados, feedback visual e acessibilidade. Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações básicas não derem suporte ao seu cenário.
+Caso você implemente seu próprio suporte à interação, tenha em mente que os usuários esperam uma experiência intuitiva que envolva a interação direta com os elementos da interface do usuário do aplicativo. Recomendamos que você modele suas interações personalizadas nas bibliotecas de controles da plataforma para manter os elementos consistentes e detectáveis. Os controles nessas bibliotecas oferecem a experiência de interação completa do usuário, incluindo interações padrão, efeitos físicos animados, feedback visual e acessibilidade. Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações básicas não derem suporte a seu cenário.
 
 Para oferecer suporte a toque personalizado, você pode manipular vários eventos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Esses eventos são agrupados em três níveis de abstração.
 
@@ -197,7 +197,7 @@ Aqui está o conjunto básico de gestos de toque aceitos pela UWP.
 | Toque            | Gesto estático       | Um dedo toca na tela e levanta.                                            |
 | Pressionar e segurar | Gesto estático       | Um dedo toca a tela e permanece no local.                                      |
 | Deslizar          | Gesto de manipulação | Um ou mais dedos tocam a tela e movem-se na mesma direção.                   |
-| Passar o dedo          | Gesto de manipulação | Um ou mais dedos tocam a tela e movem-se por uma curta distância na mesma direção.  |
+| Deslizar o dedo          | Gesto de manipulação | Um ou mais dedos tocam a tela e movem-se por uma curta distância na mesma direção.  |
 | Virar           | Gesto de manipulação | Dois ou mais dedos tocam a tela e movem-se em um arco em sentido horário ou anti-horário. |
 | Pinçar          | Gesto de manipulação | Dois ou mais dedos tocam a tela e aproximam-se.                         |
 | Ampliar        | Gesto de manipulação | Dois ou mais dedos tocam a tela e distanciam-se.                           |

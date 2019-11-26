@@ -1,5 +1,5 @@
 ---
-title: Aplicativos e dispositivos conectados (Projeto Roma)
+title: Aplicativos e dispositivos conectados (Projeto Rome)
 description: Esta seção descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
 ms.date: 06/08/2018
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260514"
 ---
-# <a name="connected-apps-and-devices-project-rome"></a>Aplicativos e dispositivos conectados (Projeto Roma)
+# <a name="connected-apps-and-devices-project-rome"></a>Aplicativos e dispositivos conectados (Projeto Rome)
 
 Esta seção explica como conectar aplicativos em dispositivos e plataformas usando o [Project Roma](https://developer.microsoft.com/en-us/windows/project-rome). Para saber como implementar o projeto Roma em um cenário de plataforma cruzada, visite a [página de documentos principal do projeto Roma](https://docs.microsoft.com/en-us/windows/project-rome/).
 

@@ -1,6 +1,6 @@
 ---
 title: Usando o MRT para jogos e aplicativos de área de trabalho convertidos
-description: Empacotando o aplicativo ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
+description: Empacotando o app ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de app personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite

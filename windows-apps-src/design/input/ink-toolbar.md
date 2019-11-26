@@ -39,7 +39,7 @@ Como uma sobreposição completamente transparente, o InkCanvas não fornece qua
 
 ## <a name="default-inktoolbar"></a>InkToolbar padrão
 
-Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como cor da tinta, espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
+Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como a cor da tinta, a espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
 
 ![InkToolbar](./images/ink/ink-tools-invoked-toolbar-small.png)  
 *Barra de ferramentas padrão do Windows Ink*
@@ -595,14 +595,14 @@ O InkToolbar consiste em dois grupos distintos de tipos de botões:
 1. Um grupo de botões de "ferramentas" que contém os botões internos para desenhar, apagar e realçar. Canetas personalizadas e ferramentas são adicionadas aqui.
 > **Observação**&nbsp;a seleção de recursos &nbsp;é mutuamente exclusiva.
 
-2. Um grupo de botões de "alternância" que contém o botão de régua interno. As alternâncias personalizadas são adicionadas aqui.
+2. Um grupo de botões de "alternância" que contém o botão de régua interno. Alternâncias personalizadas são adicionadas aqui.
 > **Observação**&nbsp;os recursos de &nbsp;não são mutuamente exclusivos e podem ser usados simultaneamente com outras ferramentas ativas.
 
 Dependendo de seu aplicativo e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
 
 - Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo aplicativo host.
 - Ferramenta personalizada – uma ferramenta sem caneta, definida pelo aplicativo host.
-- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
+- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
 
 > **Observe**&nbsp;&nbsp;você não pode alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
 
@@ -722,7 +722,7 @@ Em seguida, adicionamos as referências necessárias à caneta personalizada em 
 
 ### <a name="custom-toggle"></a>Alternância personalizada
 
-Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
+Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
 
 Neste exemplo, definimos um botão de alternância personalizada que permite escrever à tinta com entrada por toque (por padrão, escrita à tinta por toque não está habilitada).
 
@@ -1123,12 +1123,12 @@ Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações 
 
 - [Interações por caneta](pen-and-stylus-interactions.md)
 
-### <a name="topic-samples"></a>Amostras de tópico
+### <a name="topic-samples"></a>Exemplos de tópico
 
 - [Exemplo de localização e orientação da barra de ferramentas de tinta (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 - [Exemplo de localização e orientação da barra de ferramentas de tinta (dinâmico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
 
-### <a name="other-samples"></a>Outras amostras
+### <a name="other-samples"></a>Outros exemplos
 
 - [Exemplo de tinta simplesC#(C++/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
 - [Amostra de tinta complexaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)

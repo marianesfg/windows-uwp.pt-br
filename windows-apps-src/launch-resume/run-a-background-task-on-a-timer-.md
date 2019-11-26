@@ -4,7 +4,7 @@ description: Saiba como agendar uma tarefa ocasional em segundo plano ou executa
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 ms.date: 07/06/2018
 ms.topic: article
-keywords: windows 10, uwp, background task
+keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: b0d3c9401ff71475e379b2959a1f0cdc03fe8d8b
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -32,9 +32,9 @@ O temporizador interno para aplicativos da Plataforma Universal do Windows (UWP)
 - Se *FreshnessTime* for definido como 15 minutos e *OneShot* for falso, a tarefa será agendada para ser executada a cada 15 minutos começando entre 15 e 30 a partir do momento em que for registrada. Se ele estiver definido como n minutos e *OneShot* for falso, a tarefa será agendada para ser executada a cada n minutos começando entre n e n + 15 minutos depois que ele estiver registrado.
 
 > [!NOTE]
-> If *FreshnessTime* is set to less than 15 minutes, an exception is thrown when attempting to register the background task.
+> Se *FreshnessTime* for definido para menos de 15 minutos, uma exceção será lançada ao tentar registrar a tarefa em segundo plano.
 
-For example, this trigger will cause a background task to run once an hour.
+Por exemplo, esse gatilho fará com que uma tarefa em segundo plano seja executada uma vez por hora.
 
 ```cs
 TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
@@ -87,7 +87,7 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 Registre a tarefa em segundo plano chamando sua função de registro da tarefa em segundo plano. Para obter mais informações sobre como registrar tarefas em segundo plano e ver a definição do método **RegisterBackgroundTask()** no código de exemplo abaixo, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
 > [!IMPORTANT]
-> For background tasks that run in the same process as your app, do not set `entryPoint`. For background tasks that run in a separate process from your app, set `entryPoint` to be the namespace, '.', and the name of the class that contains your background task implementation.
+> Para tarefas em segundo plano que são executadas no mesmo processo que seu aplicativo, não defina `entryPoint`. Para tarefas em segundo plano que são executadas em um processo separado do seu aplicativo, defina `entryPoint` como o namespace, '. ' e o nome da classe que contém a implementação da tarefa em segundo plano.
 
 ```cs
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -124,21 +124,21 @@ Consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](support-you
 
 ## <a name="remarks"></a>Comentários
 
-Starting with Windows 10, it is no longer necessary for the user to add your app to the lock screen in order to utilize background tasks.
+A partir do Windows 10, não é mais necessário que o usuário adicione seu aplicativo à tela de bloqueio para utilizar tarefas em segundo plano.
 
 Uma tarefa em segundo plano será executada somente usando um **TimeTrigger** se você chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) primeiro.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Background task code sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)
+* [Exemplo de código de tarefa em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)
 * [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
 * [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Liberar memória quando seu aplicativo é movido para o segundo plano](reduce-memory-usage.md)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Adiar a suspensão do aplicativo com execução estendida](run-minimized-with-extended-execution.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)

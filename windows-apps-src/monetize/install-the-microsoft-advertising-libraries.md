@@ -18,7 +18,7 @@ ms.locfileid: "74260266"
 Para exibir anúncio em aplicativos UWP para Windows 10, instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores.
 
 > [!NOTE]
-> If you are developing a JavaScript/HTML UWP app and you have installed Windows 10 SDK version 10.0.14393 (Anniversary Update) or later, you must also install the [WinJS](https://github.com/winjs/winjs) library. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente.
+> Se você estiver desenvolvendo um aplicativo UWP JavaScript/HTML e tiver instalado o Windows 10 SDK versão 10.0.14393 (atualização de aniversário) ou posterior, você também deverá instalar a biblioteca [WinJS](https://github.com/winjs/winjs) . Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente.
 
 <span id="install-msi" />
 
@@ -94,8 +94,8 @@ Para orientações passo a passo que mostram como começar a usar as APIs de pub
 
 * [Anúncios intersticiais](interstitial-ads.md)
 * [Anúncios nativos](native-ads.md)
-* [AdControl in XAML and .NET](adcontrol-in-xaml-and--net.md)
-* [AdControl in HTML 5 and Javascript](adcontrol-in-html-5-and-javascript.md)
+* [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl em HTML 5 e JavaScript](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
 

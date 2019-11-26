@@ -1,5 +1,5 @@
 ---
-Description: Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
+Description: Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 title: Gerenciar problemas com entrada de áudio
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
@@ -18,7 +18,7 @@ ms.locfileid: "74258323"
 # <a name="manage-issues-with-audio-input"></a>Gerenciar problemas com entrada de áudio
 
 
-Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
+Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 
 > **APIs importantes**: [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer), [**RecognitionQualityDegrading**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading), [**SpeechRecognitionAudioProblem**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem)
 

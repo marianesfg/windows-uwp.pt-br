@@ -210,7 +210,7 @@ Ambos os problemas podem ser resolvidos usando SSML em vez de texto sem formata�
 | [Especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
 | [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md) | Saiba como definir e usar restrições personalizadas para reconhecimento de fala. |
 | [Habilitar o ditado contínuo](enable-continuous-dictation.md) |Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo. |
-| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
+| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
 | [Definir tempos limite de reconhecimento de fala](set-speech-recognition-timeouts.md) | Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala. |
 
 ## <a name="related-articles"></a>Artigos relacionados

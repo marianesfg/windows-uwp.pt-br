@@ -51,7 +51,7 @@ Observe que alguns dos aplicativos de criptografia não são restritos. Estas s�
 
 -   Criptografia de senha
 -   Proteção contra cópia
--   Authentication
+-   Autenticação
 -   Gerenciamento de direitos digitais
 -   Usando assinaturas digitais
 

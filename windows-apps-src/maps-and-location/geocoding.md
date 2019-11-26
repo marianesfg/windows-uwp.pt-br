@@ -72,7 +72,7 @@ private async void geocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse código exibe os seguintes resultados na caixa de texto `tbOutputText`.
+Esse código exibe os seguintes resultados na caixa de texto `tbOutputText` .
 
 ``` syntax
 result = (47.6406099647284,-122.129339994863)
@@ -113,7 +113,7 @@ private async void reverseGeocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse código exibe os seguintes resultados na caixa de texto `tbOutputText`.
+Esse código exibe os seguintes resultados na caixa de texto `tbOutputText` .
 
 ``` syntax
 town = Redmond

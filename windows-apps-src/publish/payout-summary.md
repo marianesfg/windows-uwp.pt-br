@@ -1,6 +1,6 @@
 ---
 Description: O Resumo de pagamentos mostra detalhes do dinheiro que você ganhou com os seus aplicativos e complementos. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
-title: Resumo do pagamento
+title: Resumo de pagamentos
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 08/02/2019
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259002"
 ---
-# <a name="payout-summary"></a>Resumo do pagamento
+# <a name="payout-summary"></a>Resumo de pagamentos
 
 O **Resumo do pagamento** mostra detalhes sobre o dinheiro que você ganhou com a Microsoft. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 
@@ -59,7 +59,7 @@ Para exportar qualquer um dos dados de transação nessa página, selecione expo
 | Cerimônia                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
 | Fatura de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes de poder ser pago |
 | Rejeitado durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
-| Failed (Falha)                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Falha                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
 | Em andamento              | O pagamento está em andamento.                                                                                                                 | Não                                                         |
 | Pagamento incorreto        | A revitóriação de pagamento está em andamento.                                                                                                       | Não                                                         |
 | Enviados                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
@@ -73,7 +73,7 @@ Para exportar qualquer um dos dados de transação nessa página, selecione expo
 
 Siga as instruções nesta página para exportar os dados desejados.
 
-Notas:
+Observações:
 
 - A página Exportar dados não é atualizada por conta própria. Talvez seja necessário atualizar a página manualmente para ver os dados mais recentes.
 - O filtro pode resultar em um erro de nenhum dado disponível. Isso provavelmente significa que você saiu do período de tempo padrão selecionado em três meses e, em seguida, selecionou uma ID de pagamento de uma conquista que está fora desse período. Expanda seu período de tempo e tente novamente.

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
-title: Visão geral do Windows Device Portal
+title: Visão geral do Portal de Dispositivos do Windows
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB.
 ms.date: 04/09/2019
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254758"
 ---
-# <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
+# <a name="windows-device-portal-overview"></a>Visão geral do Portal de Dispositivos do Windows
 
 O Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB. Ele também fornece ferramentas de diagnóstico avançadas para ajudá-lo a solucionar problemas e exibir o desempenho em tempo real do seu dispositivo Windows.
 
@@ -38,7 +38,7 @@ Família de dispositivos | Ativado por padrão? | HTTP | HTTPS | USB
 HoloLens | Sim, no Modo de Desenvolvedor | 80 (padrão) | 443 (padrão) | http://127.0.0.1:10080
 IoT | Sim, no Modo de Desenvolvedor | 8080 | Habilitar por meio da regkey | N/D
 Xbox | Habilitar dentro do Modo de Desenvolvedor | Desabilitado | 11443 | N/D
-Área de Trabalho| Habilitar dentro do Modo de Desenvolvedor | 50080\* | 50043\* | N/D
+Desktop| Habilitar dentro do Modo de Desenvolvedor | 50080\* | 50043\* | N/D
 Phone | Habilitar dentro do Modo de Desenvolvedor | 80| 443 | http://127.0.0.1:10080
 
 \* esse não é sempre o caso, pois o portal do dispositivo no desktop alega portas no intervalo efêmero (> 50000) para evitar colisões com declarações de porta existentes no dispositivo. Para saber mais, consulte a seção [Configurações de porta](device-portal-desktop.md#registry-based-configuration-for-device-portal) para área de trabalho.  
@@ -204,8 +204,8 @@ O Device Portal anuncia sua presença na rede local usando DNS-SD. Todas as inst
 Chave | Tipo | Descrição
 ----|------|-------------
 S | int | Porta segura para o Device Portal. Se 0 (zero), o Device Portal não está escutando conexões HTTPS.
-D | cadeia de caracteres | Tipo de dispositivo. Isso estará no formato "Windows. *", por exemplo, Windows. Xbox ou Windows. desktop
-A | cadeia de caracteres | Arquitetura do dispositivo. Isso será ARM, x86 ou AMD64.  
+D | sequência | Tipo de dispositivo. Isso estará no formato "Windows. *", por exemplo, Windows. Xbox ou Windows. desktop
+A | sequência | Arquitetura do dispositivo. Isso será ARM, x86 ou AMD64.  
 T | lista de cadeias de caracteres delineadas de caracteres nulos | Marcas aplicadas pelo usuário para o dispositivo. Consulte as Marcas API de REST para saber como usá-las. A lista é encerrada com duplo nulo.  
 
 É recomendável estabelecer conexão na porta HTTPS, pois nem todos os dispositivos estão ouvindo na porta HTTP anunciada pelo registro DNS SD.

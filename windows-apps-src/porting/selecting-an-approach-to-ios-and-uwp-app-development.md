@@ -54,7 +54,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Se a sua lógica de negócios principal está escrita em C++, em vez de Objective-C ou Swift, você geralmente pode usar esse código com apenas algumas pequenas alterações em seu projeto. Em seguida, você pode usar XAML para definir sua interface do usuário, como com outros aplicativos Windows, e chamar no código C++ quando necessário.
 
--   [Use ANGLE to run OpenGL ES on Windows](https://github.com/microsoft/angle/wiki)
+-   [Use o ângulo para executar OpenGL ES no Windows](https://github.com/microsoft/angle/wiki)
 
     Uma etapa intermediária para portabilidade de seu projeto do OpenGL ES 2.0 é usar o ANGLE. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
 
@@ -64,7 +64,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Um ambiente de criação de jogos.
 
--   [Construct 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
+-   [Construção 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
 
     Um ambiente de criação de jogos.
 
@@ -76,7 +76,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Uma biblioteca de códigos para várias plataformas para manipulação de sprites e modelagem física.
 
--   [Impact.js](https://impactjs.com/)
+-   [Impact. js](https://impactjs.com/)
 
     Uma biblioteca de jogos em HTML.
 

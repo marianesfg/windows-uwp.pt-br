@@ -535,7 +535,7 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 Verificamos se a entrada do direcional analógico esquerdo está fora da zona morta e, em caso afirmativo, o adicionamos a **combinedTiltX** e **combinedTiltY** (multiplicados por um fator de escala) para inclinar o palco.
 
 > [!IMPORTANT]
-> Quando você trabalhar com o controlador do Xbox, considere sempre a zona morta. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isio em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para obter mais informações sobre a zona morta, consulte [Lendo os botões de controle](gamepad-and-vibration.md#reading-the-thumbsticks).
+> Quando você trabalhar com o controlador do Xbox, considere sempre a zona morta. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isso em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para obter mais informações sobre a zona morta, consulte [Lendo os botões de controle](gamepad-and-vibration.md#reading-the-thumbsticks).
 
  
 

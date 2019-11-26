@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259796"
 ---
-# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente de vários threads
+# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
 Este artigo discute a maneira como o .NET Framework manipula chamadas de C# Visual Basic código para objetos que são fornecidos pelo Windows Runtime ou por componentes de Windows Runtime.
 
 No .NET Framework, você pode acessar qualquer objeto de vários threads por padrão, sem tratamento especial. Tudo o que você precisa é uma referência ao objeto. No Windows Runtime, esses objetos são chamados de *ágil*. A maioria das classes do Windows Runtime são ágeis, mas algumas classes não são e até mesmo classes ágeis podem exigir um tratamento especial.

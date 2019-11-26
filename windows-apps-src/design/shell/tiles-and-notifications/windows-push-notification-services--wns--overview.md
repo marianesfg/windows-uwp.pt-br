@@ -1,6 +1,6 @@
 ---
 Description: Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável.
-title: Visão geral dos Serviços de Notificação por Push do Windows (WNS)
+title: Visão geral do WNS (Serviço de Notificação por Push do Windows)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 05/19/2017
@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259710"
 ---
-# <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
+# <a name="windows-push-notification-services-wns-overview"></a>Visão geral do WNS (Serviço de Notificação por Push do Windows)
  
 
 Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável.
@@ -36,7 +36,7 @@ O diagrama a seguir mostra o fluxo de dados completo para o envio de uma notific
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registrando seu aplicativo e recebendo as credenciais para o serviço na nuvem
 
 
-Antes de enviar notificações usando o WNS, o aplicativo deve ser registrado com o Painel da Windows Store. Isso lhe fornecerá credenciais para o aplicativo que serão usadas pelo serviço na nuvem para a autenticação no WNS. Essas credenciais consistem em um SID (Identificador de Segurança de Pacote) e uma chave secreta. Para executar esse registro, entre no [Partner Center](https://partner.microsoft.com/dashboard). Depois de criar o aplicativo, você pode recuperar as credenciais seguindo as instruções na página de **Gerenciamento de aplicativo - WNS/MPNS**. Se você desejar usar a solução dos serviços Live, siga o link **site de serviços do Live** nesta página.
+Antes de enviar notificações usando o WNS, o aplicativo deve ser registrado com o Painel da Microsoft Store. Isso lhe fornecerá credenciais para o aplicativo que serão usadas pelo serviço na nuvem para a autenticação no WNS. Essas credenciais consistem em um SID (Identificador de Segurança de Pacote) e uma chave secreta. Para executar esse registro, entre no [Partner Center](https://partner.microsoft.com/dashboard). Depois de criar o aplicativo, você pode recuperar as credenciais seguindo as instruções na página de **Gerenciamento de aplicativo - WNS/MPNS**. Se você desejar usar a solução dos serviços Live, siga o link **site de serviços do Live** nesta página.
 
 Cada aplicativo tem seu próprio conjunto de credenciais para seu serviço na nuvem. Essas credenciais não podem ser usadas para enviar notificações para qualquer outro aplicativo.
 

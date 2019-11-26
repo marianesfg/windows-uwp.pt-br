@@ -84,7 +84,7 @@ Os itens que você será solicitado a fornecer ou especificar são indicados aba
 | **Atualização obrigatória**          | Opcional (somente para atualizações)            | [Atualização obrigatória](upload-app-packages.md#mandatory-update)
 
 
-### <a name="store-listings"></a>Listagens da Loja
+### <a name="store-listings"></a>Listagens da Store
 
 Você precisará de todas as informações obrigatórias para pelo menos um dos idiomas para os quais seu aplicativo oferece suporte. É recomendável fornecer [Listagens da Loja](create-app-store-listings.md) em todos os idiomas compatíveis com seu aplicativo, e você também poderá [fornecer listagens da Loja em outros idiomas](create-app-store-listings.md#store-listing-languages). Para facilitar o gerenciamento de várias listagens para o mesmo produto, você poderá [importar e exportar listagens da Store](import-and-export-store-listings.md).
 

@@ -156,7 +156,7 @@ Active Directory do Azure (Azure AD) é um serviço de gerenciamento de identida
 
 Embora o Azure AD também possa implementar a autenticação de fator único, as empresas geralmente exigem a maior segurança da autenticação multifator. Em uma configuração de autenticação multifator, um usuário autenticado com uma conta do Azure AD tem a opção de ter um código de verificação enviado como uma mensagem SMS para o telefone celular ou para o aplicativo Azure Authenticator no aplicativo de celular.
 
-Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para aplicativos em várias plataformas. Para saber mais, consulte [Active Directory do Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
+Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para aplicativos em várias plataformas. Para saber mais, consulte [Active Directory do Microsoft Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
 
 ## <a name="24-windows-hello"></a>2.4 Windows Hello
 
@@ -169,7 +169,7 @@ No entanto, o Windows Hello não é apenas uma renovação dos sistemas de 2FA t
 
 Um dispositivo deve ser registrado junto ao Windows Hello para que os usuários possam se autenticar junto a ele. O Windows Hello usa a criptografia assimétrica (chave pública/privada) em que um participante usa uma chave pública para criptografar os dados que a outra parte pode descriptografar usando uma chave privada. No caso do Windows Hello, ele cria um conjunto de pares de chave pública/privada e grava as chaves privadas no chip Trusted Platform Module (TPM) do dispositivo. Após o registro de um dispositivo, os aplicativos UWP (Plataforma Universal do Windows) podem chamar APIs de sistema para recuperar a chave pública do usuário, que pode ser utilizada para registrar o usuário no servidor.
 
-O fluxo de trabalho de registro de um aplicativo pode ter a seguinte aparência:
+O fluxo de trabalho de registro de um app pode ter a seguinte aparência:
 
 ![registro do windows hello](images/secure-passport.png)
 
@@ -284,7 +284,7 @@ Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em re
 ## <a name="41-windows-app-model"></a>4.1 Modelo de aplicativo do Windows
 
 
-Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de runtime, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
+Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
 
 Os aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
 

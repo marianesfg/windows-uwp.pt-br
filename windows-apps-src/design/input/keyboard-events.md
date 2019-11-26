@@ -1,5 +1,5 @@
 ---
-Description: Responda às ações de pressionamento de tecla de teclados de hardware ou de software nos aplicativos usando o teclado e manipuladores de eventos de classe.
+Description: Responda às ações de pressionamento de tecla em teclados de hardware ou de software nos aplicativos usando o teclado e manipuladores de eventos de classe.
 title: Eventos de teclado
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events

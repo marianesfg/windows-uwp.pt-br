@@ -121,7 +121,7 @@ Consulte [Reduzir o uso da memória quando o aplicativo se move para o estado em
 
 O manipulador de eventos de suspensão é o melhor lugar para salvar o estado do aplicativo. Entretanto, se você estiver fazendo um trabalho em segundo plano (por exemplo, a reprodução de áudio, o uso de uma sessão de execução estendida ou uma tarefa em segundo plano em processo), é melhor salvar seus dados de forma assíncrona a partir do manipulador de eventos **EnteredBackground**. Isso ocorre porque é possível que o aplicativo seja encerrado enquanto estiver com baixa prioridade em segundo plano. E devido ao aplicativo não ter passado pelo estado suspenso nesse caso, seus dados serão perdidos.
 
-É possível obter uma boa experiência do usuário quando este traz o aplicativo para o primeiro plano ao salvar os dados no manipulador de eventos **EnteredBackground** antes do início da atividade em segundo plano. Você pode usar as APIs de dados do aplicativo para salvar dados e configurações. Para saber mais, consulte [Armazene e recupere configurações e outros dados de aplicativos](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
+É possível obter uma boa experiência do usuário quando este traz o aplicativo para o primeiro plano ao salvar os dados no manipulador de eventos **EnteredBackground** antes do início da atividade em segundo plano. Você pode usar as APIs de dados do aplicativo para salvar dados e configurações. Para obter mais informações, consulte [Armazene e recupere configurações e outros dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
 
 Depois de salvar seus dados, se estiver acima do limite de uso de memória, você poderá liberar os dados da memória uma vez que pode recarregá-los posteriormente. Isso liberará a memória que pode ser usada pelos ativos necessários para a atividade em segundo plano.
 
@@ -173,7 +173,7 @@ Se o aplicativo suspenso for encerrado, não haverá nenhum evento **Resuming**.
 
 Enquanto o aplicativo estiver suspenso, ele não receberá nenhum evento de rede que esteja registrado para receber. Esses eventos de rede não são colocados em fila, eles são simplesmente perdidos. Sendo assim, o aplicativo deve testar o status da rede quando for retomado.
 
-**Observe** que   ,como o evento [**de retomada**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) não é gerado do thread da interface do usuário, um Dispatcher deve ser usado se o código em seu manipulador de retomada se comunicar com sua interface do usuário. Consulte [Atualizar o thread da interface do usuário a partir de um thread em segundo plano](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) para um código de exemplo sobre como fazer isso.
+**Observe**  como o evento de [**retomada**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resuming) não é gerado a partir do thread de interface do usuário, um Dispatcher deve ser usado se o código em seu manipulador de retomada se comunicar com sua interface do usuário. Consulte [Atualizar o thread da interface do usuário a partir de um thread em segundo plano](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) para um código de exemplo sobre como fazer isso.
 
 Para obter diretrizes gerais, consulte [Diretrizes para suspensão e retomada de aplicativos](https://docs.microsoft.com/windows/uwp/launch-resume/index).
 

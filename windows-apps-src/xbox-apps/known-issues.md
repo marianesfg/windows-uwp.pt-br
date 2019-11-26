@@ -26,7 +26,7 @@ A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora e
 Se você se perder, leia as informações neste tópico. Consulte [Perguntas frequentes](frequently-asked-questions.md) e use os fóruns para pedir ajuda.
 
  
-## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controles dos Pais ativados
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controle dos Pais ativado
 
 A inicialização do aplicativo com base em VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
 

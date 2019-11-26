@@ -1,6 +1,6 @@
 ---
 title: Criar e registrar uma tarefa em segundo plano em processo
-description: Crie e registre uma tarefa no processo que é executada no mesmo processo de seu aplicativo em primeiro plano.
+description: Crie e registre uma tarefa no processo que é executada no mesmo processo de seu app em primeiro plano.
 ms.date: 11/03/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarefa em segundo plano

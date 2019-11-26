@@ -1,9 +1,9 @@
 ---
-title: Estágio de sombreador de cálculo (CS)
+title: Estágio do sombreador de computação (CS)
 description: O estágio do sombreador de computação (CS) fornece a computação alta velocidade de finalidade geral e tira proveito de um grande número de processadores paralelos na unidade de processamento gráfico (GPU).
 ms.assetid: 300D4C0C-5450-45F8-9F29-E1A101D38F73
 keywords:
-- Estágio de sombreador de cálculo (CS)
+- Estágio do sombreador de computação (CS)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259509"
 ---
-# <a name="compute-shader-cs-stage"></a>Estágio de sombreador de cálculo (CS)
+# <a name="compute-shader-cs-stage"></a>Estágio do sombreador de computação (CS)
 
 
 O estágio do sombreador de computação (CS) fornece a computação alta velocidade de finalidade geral e tira proveito de um grande número de processadores paralelos na unidade de processamento gráfico (GPU). O estágio do sombreador de computação fornece compartilhamento de memória e sincronização de thread para permitir métodos mais eficazes de programação paralelos.

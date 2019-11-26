@@ -1,5 +1,5 @@
 ---
-title: Diretrizes para tarefas em segundo plano
+title: Diretrizes de tarefas em segundo plano
 description: Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 ms.date: 02/08/2017
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260495"
 ---
-# <a name="guidelines-for-background-tasks"></a>Diretrizes para tarefas em segundo plano
+# <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
 
 Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.
@@ -43,7 +43,7 @@ Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plan
 
 Se preferir, solicite um adiamento e use **async/await** para concluir as chamadas de método assíncronas. Feche o adiamento após as chamadas do método **await**.
 
-**Atualizar o manifesto do aplicativo:** para tarefas em segundo plano executadas fora do processo, declare cada tarefa em segundo plano no manifesto do aplicativo, juntamente com o tipo dos gatilhos usados. Do contrário, seu aplicativo não vai poder registrar a tarefa em segundo plano no runtime.
+**Atualizar o manifesto do aplicativo:** para tarefas em segundo plano executadas fora do processo, declare cada tarefa em segundo plano no manifesto do aplicativo, juntamente com o tipo dos gatilhos usados. Do contrário, seu aplicativo não vai poder registrar a tarefa em segundo plano no tempo de execução.
 
 Se você tiver várias tarefas em segundo plano, considere se devem ser executadas no mesmo processo de host ou ser divididas em processos de host diferentes. Coloque-as em processos de host separados se estiver preocupado que uma falha na tarefa em segundo possa gerar problemas para as tarefas em segundo plano.  Use a entrada do **Grupo de recursos** no designer de manifesto para agrupar tarefas em segundo plano nos processos de host diferentes. 
 
@@ -90,7 +90,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
 * [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Reproduzir mídia em segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)

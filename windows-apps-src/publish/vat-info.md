@@ -1,5 +1,5 @@
 ---
-Description: If you’re required to provide a VAT ID number during the Partner Center registration process, here’s some info to get you started.
+Description: Se for necessário fornecer um número de ID de IVA durante o processo de registro do Partner Center, aqui estão algumas informações para você começar.
 title: Informações sobre IVA
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ms.date: 10/31/2018
@@ -16,7 +16,7 @@ ms.locfileid: "74258959"
 # <a name="vat-info"></a>Informações sobre IVA
 
 
-If you’re required to provide a VAT ID number during the Partner Center registration process, here’s some info to get you started.
+Se for necessário fornecer um número de ID de IVA durante o processo de registro do Partner Center, aqui estão algumas informações para você começar.
 
 ## <a name="understanding-vat-numbers"></a>Noções básicas sobre números de IVA
 

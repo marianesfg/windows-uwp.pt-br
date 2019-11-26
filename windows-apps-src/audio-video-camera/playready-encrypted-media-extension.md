@@ -1,7 +1,7 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: Esta seção descreve como modificar seu aplicativo Web PlayReady para dar suporte às alterações feitas da versão de Windows 8.1 anterior para a versão do Windows 10.
-title: Extensão de Mídia Criptografada do PlayReady
+title: Extensão de mídia criptografada do PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74256817"
 ---
-# <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
+# <a name="playready-encrypted-media-extension"></a>Extensão de mídia criptografada do PlayReady
 
 
 
@@ -27,7 +27,7 @@ Esta seção fornece uma lista das alterações feitas na EME (extensão de míd
 
 A lista a seguir descreve os novos recursos e as alterações feitas na extensão de mídia criptografada do PlayReady para Windows 10:
 
--   Inclusão do gerenciamento de direitos digitais (DRM) de hardware.
+-   Inclusão do gerenciamento de direitos digitais (DRM) de hardware
 
     Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 

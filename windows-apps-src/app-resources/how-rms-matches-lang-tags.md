@@ -126,7 +126,7 @@ Quando uma submarca de idioma tem um valor de Script de Supressão definido no R
 
 Às vezes, a correspondência ocorre como parte de um processo maior de correspondência de um único idioma com uma lista de idiomas. Por exemplo, pode haver uma correspondência de um recurso baseado em um único idioma com a lista de idiomas de um aplicativo. A pontuação da correspondência é ponderada pela posição do primeiro idioma correspondente na lista. Quanto mais baixa a posição do idioma na lista, mas baixa é a pontuação.
 
-Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Aqui está um exemplo.
+Quando a lista de idiomas contém duas ou mais variantes regionais com as mesmas submarcas de idioma e script, as comparações da primeira marca de idioma são classificadas apenas para correspondências exatas, variantes e de região. A pontuação de correspondências parciais é adiada para a última variante regional. Dessa forma, os usuários podem controlar perfeitamente o comportamento da correspondência em sua lista de idiomas. O comportamento da correspondência pode incluir a precedência da correspondência exata de um item secundário na lista sobre uma correspondência parcial do primeiro item na lista, se houver um terceiro item que corresponda ao idioma e ao script do primeiro. Veja um exemplo.
 
 - Lista de idiomas (em ordem): "pt-PT" (Português (Portugal)), "en-US" (Inglês (Estados Unidos)), "pt-BR" (Português (Brasil)).
 - Recursos: "en-US", "pt-BR".
@@ -141,7 +141,7 @@ OU
 
 ## <a name="undetermined-language-und"></a>Idioma indeterminado ("und")
 
-A marca de idioma "und" pode ser usada para especificar um recurso que corresponda a qualquer idioma na ausência de uma correspondência melhor. Ela pode ser considerada similar ao intervalo de idiomas BCP-47 " *" ou "* -&lt;script&gt;". Aqui está um exemplo.
+A marca de idioma "und" pode ser usada para especificar um recurso que corresponda a qualquer idioma na ausência de uma correspondência melhor. Ela pode ser considerada similar ao intervalo de idiomas BCP-47 " *" ou "* -&lt;script&gt;". Veja um exemplo.
 
 - Lista de idiomas: "en-US", "zh-Hans-CN".
 - Recursos: "zh-Hans-CN", "und".

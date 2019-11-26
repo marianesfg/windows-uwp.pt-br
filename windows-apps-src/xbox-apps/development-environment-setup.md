@@ -47,7 +47,7 @@ Antes de implantar aplicativos em seu computador de desenvolvimento, você deve 
 
 Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usuário conectado ao console. Você pode usar sua conta do Xbox Live existente ou criar uma nova conta para seu console em modo de desenvolvimento. 
 
-## <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
+## <a name="create-your-first-app"></a>Crie seu primeiro aplicativo
 
 1. Verifique se o computador de desenvolvimento está na mesma rede local que o console Xbox One de destino. Em geral, isso significa que eles devem usar o mesmo roteador e devem estar na mesma sub-rede. Uma conexão de rede com fio é recomendada.
 
@@ -107,7 +107,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
 3. Se esta for a sua primeira implantação, você verá uma caixa de diálogo do Visual Studio solicitando o emparelhamento do dispositivo com o uso de um PIN.
 
-    a. Para obter um PIN, abra **Dev Home** na tela inicial do seu console Xbox One.
+    a. Para obter um PIN, abra **Dev Home** na tela Início do seu console Xbox One.
 
     b. Na guia **Início**, em **Ações rápidas**, selecione **Mostrar PIN do Visual Studio**.
   

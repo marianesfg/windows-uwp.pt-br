@@ -1,5 +1,5 @@
 ---
-title: Relatório de campanha de anúncios
+title: Relatório de campanha publicitária
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: O relatório de campanha do AD no Partner Center permite que você veja como as campanhas de anúncios de promoção de aplicativos estão sendo executadas.
 ms.date: 10/31/2018
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260070"
 ---
-# <a name="ad-campaign-report"></a>Relatório de campanha de anúncios
+# <a name="ad-campaign-report"></a>Relatório de campanha publicitária
 
 O relatório de **campanha do AD** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja como as [campanhas de anúncios](create-an-ad-campaign-for-your-app.md) de promoção de aplicativos estão sendo executadas. Para ver o relatório, expanda **atrair** no menu de navegação à esquerda e selecione **campanhas do AD**.
 

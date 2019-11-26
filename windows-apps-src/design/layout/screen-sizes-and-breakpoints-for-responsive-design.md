@@ -55,7 +55,7 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 </tr>
 <tr class="even">
 <td style="vertical-align:top;">Grande</td>
-<td style="vertical-align:top;">1008px ou mais</td>
+<td style="vertical-align:top;">1008 px ou maior</td>
 <td style="vertical-align:top;">13&quot; e maior</td>
 <td style="vertical-align:top;">Computadores, laptops, Surface Hubs</td>
 <td style="vertical-align:top;">1024 x 640, 1366 x 768, 1920 x 1080</td>
@@ -77,7 +77,7 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 ## <a name="general-recommendations"></a>Recomendações gerais
 
 ### <a name="small"></a>Pequeno
-- Defina as margens esquerda e direita de janela para 12px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
+- Defina as margens esquerda e direita de janela para 12 px para criar uma separação visual entre as margens esquerda e direita da janela do app.
 - Encaixe as [barras de aplicativos](../controls-and-patterns/app-bars.md) na parte inferior da janela para melhorar a acessibilidade.
 - Use uma coluna/região de cada vez.
 - Use um ícone para representar a pesquisa (não mostre uma caixa de pesquisa).
@@ -85,15 +85,15 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Se você estiver usando o [padrão de detalhes mestre](../controls-and-patterns/master-details.md), use o modo de apresentação empilhada para economizar espaço na tela.
 
 ### <a name="medium"></a>Médio
-- Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
+- Defina as margens esquerda e direita de janela para 24 px para criar uma separação visual entre as margens esquerda e direita da janela do app.
 - Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.
 - Use até duas colunas/regiões.
 - Mostre a caixa de pesquisa.
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.
-- Considere fazer mais adaptações para [experiências de TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
+- É recomendável fazer mais adaptações para [experiências de TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
 ### <a name="large"></a>Grande
-- Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
+- Defina as margens esquerda e direita de janela para 24 px para criar uma separação visual entre as margens esquerda e direita da janela do app.
 - Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.
 - Use até três colunas/regiões.
 - Mostre a caixa de pesquisa.

@@ -634,11 +634,11 @@ Parabéns, você concluiu o *Tutorial de Introdução: Suporte ao Surface Dial (
 
 ### <a name="samples"></a>Exemplos
 
-#### <a name="topic-samples"></a>Amostras de tópico
+#### <a name="topic-samples"></a>Exemplos de tópico
 
 [Personalização de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>Outras amostras
+#### <a name="other-samples"></a>Outros exemplos
 [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
 [Amostras da Plataforma Universal do Windows (C# e C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)

@@ -1,5 +1,5 @@
 ---
-title: Dar suporte a seu app com tarefas em segundo plano
+title: Dar suporte ao seu app com tarefas em segundo plano
 description: Os tópicos nesta seção mostram como fazer um código leve funcionar em segundo plano em resposta aos gatilhos.
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 ms.date: 08/21/2017
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259414"
 ---
-# <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
+# <a name="support-your-app-with-background-tasks"></a>Dar suporte ao seu app com tarefas em segundo plano
 
 
 Os tópicos nesta seção mostram como fazer um código leve funcionar em segundo plano em resposta aos gatilhos. Você pode usar tarefas em segundo plano para fornecer funcionalidade quando o seu aplicativo é suspenso ou não está em execução. Também é possível usar tarefas em segundo plano para aplicativos de comunicação em tempo real como VOIP, mail e IM.
@@ -73,7 +73,7 @@ Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois
 
 Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Essa condição economiza energia, pois a tarefa em segundo plano não é executada até a rede estar disponível. Essa condição não fornece ativação em tempo real.
 
-Se a tarefa em segundo plano exige a conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano é executada. Isso solicita que a infraestrutura de tarefas em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar no modo de Espera Conectado. Se a sua tarefa em segundo plano não definir **IsNetworkRequested**, a tarefa em segundo plano não poderá acessar a rede quando estiver no modo de espera conectado (por exemplo, quando a tela de um telefone estiver desligada).  
+Se a tarefa em segundo plano exige a conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano é executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se a sua tarefa em segundo plano não definir **IsNetworkRequested**, a tarefa em segundo plano não poderá acessar a rede quando estiver no modo de espera conectado (por exemplo, quando a tela de um telefone estiver desligada).  
 Para obter mais informações sobre as condições da tarefa em segundo plano, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>Requisitos do manifesto do aplicativo

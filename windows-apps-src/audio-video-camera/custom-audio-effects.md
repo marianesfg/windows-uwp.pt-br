@@ -15,12 +15,12 @@ ms.locfileid: "74257416"
 ---
 # <a name="custom-audio-effects"></a>Efeitos de áudio personalizados
 
-Este artigo descreve como criar um componente do Windows Runtime que implemente a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) para criar efeitos personalizados para fluxos de áudio. Efeitos personalizados podem ser usados com várias APIs diferentes do Windows Runtime, incluindo [MediaCapture](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture), que fornece acesso à câmera do dispositivo, [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition), que permite que você crie composições complexas de clipes de mídia, e [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph), que permite que você monte rapidamente um gráfico de vários nós de entrada, saída e submixagem de áudio.
+Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) para criar efeitos personalizados para fluxos de áudio. Efeitos personalizados podem ser usados com várias APIs diferentes do Windows Runtime, incluindo [MediaCapture](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture), que fornece acesso à câmera do dispositivo, [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition), que permite que você crie composições complexas de clipes de mídia, e [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph), que permite que você monte rapidamente um gráfico de vários nós de entrada, saída e submixagem de áudio.
 
 ## <a name="add-a-custom-effect-to-your-app"></a>Adicionar um efeito personalizado ao seu aplicativo
 
 
-Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Windows Runtime para hospedar sua classe de efeito de áudio.
+Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de áudio.
 
 **Adicionar um componente Windows Runtime para seu efeito de áudio**
 

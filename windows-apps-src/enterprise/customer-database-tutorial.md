@@ -447,7 +447,7 @@ As etapas necessárias para se conectar ao seu próprio banco de dados remoto s�
 * Associe seu aplicativo ao Microsoft Store.
 * Copie sobre o [projeto de serviço](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) em seu aplicativo e implante-o no Azure.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticação
 
 Você precisará criar um botão para iniciar uma sequência de autenticação e um pop-up ou uma página separada para coletar informações de um usuário. Depois de criar isso, você precisará fornecer um código que solicite as informações de um usuário e o use para adquirir um token de acesso. O exemplo de banco de dados Orders do cliente encapsula chamadas de Microsoft Graph com a biblioteca **accountmanager** para adquirir um token e manipular a autenticação para uma conta do AAD.
 

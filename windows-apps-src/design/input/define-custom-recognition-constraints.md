@@ -37,7 +37,7 @@ Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas c
 
 - Uma restrição baseada em um único tópico (ditado ou pesquisa na Web)
 - No Windows 10 Fall Creators Update (10.0.16299.15) e posteriores, uma restrição baseada em um único tópico pode ser combinada com uma restrição de lista
-- Uma combinação da lista de restrições e/ou restrições de arquivo de gramática.
+- Uma combinação de restrições de lista e/ou restrições de arquivo de gramática.
 
 > [!Important]
 > Chame o método **[SpeechRecognizer.CompileConstraintsAsync](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)** para compilar as restrições antes de iniciar o processo de reconhecimento.
@@ -49,7 +49,7 @@ Restrições de tópico (ditado ou gramática de pesquisa na Web) devem ser adic
 > [!NOTE]
 > Você pode usar uma [SpeechRecognitionListConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) em conjunto com uma [SpeechRecognitionTopicConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint) para aumentar a precisão do ditado fornecendo um conjunto de palavras-chave específicas ao domínio que, a seu ver, provavelmente serão usadas durante o ditado.
 
-Aqui, adicionamos uma gramática de pesquisa na Web para a coleção de restrições.
+Aqui, adicionamos uma gramática de pesquisa na Web à coleção de restrições.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
