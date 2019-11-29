@@ -6,31 +6,31 @@ ms.topic: article
 keywords: windows 10, uwp, código de exemplo, exemplos de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0e30804eabb7e50c5a7319bba9a6b2c83e1d7e
-ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.openlocfilehash: ac3c99bc364e81386a362f1d1b5530bee9d462c4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487840"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259519"
 ---
 # <a name="get-uwp-app-samples"></a>Obter exemplos de aplicativo UWP
 
-Os exemplos de aplicativo UWP (Plataforma Universal do Windows) são disponibilizados nos repositórios no GitHub. Confira [Exemplos](https://developer.microsoft.com/windows/samples) para ver uma lista pesquisável e categorizada ou navegue por [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "repositório de exemplos de aplicativo da Plataforma Universal do Windows do GitHub"). O repositório Windows-universal-samples contém amostras que demonstram todos os recursos UWP e seus padrões de uso de API.
+Os exemplos de aplicativo UWP (Plataforma Universal do Windows) são disponibilizados nos repositórios no GitHub. Confira [Amostras](https://developer.microsoft.com/windows/samples) para obter uma lista pesquisável e categorizada ou navegue pelo repositório [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Repositório GitHub de amostras de aplicativos da Plataforma Universal do Windows"). O repositório Windows-universal-samples contém amostras que demonstram todos os recursos UWP e seus padrões de uso de API.
 
 ![Repositório de exemplos UWP do GitHub](images/GitHubUWPSamplesPage.png)
 
 ## <a name="download-the-code"></a>Baixe o código
 
-Para baixar os exemplos, acesse o [repositório](https://github.com/Microsoft/Windows-universal-samples "repositório de exemplos de aplicativo da Plataforma Universal do Windows do GitHub"). Selecione **Clonar ou baixar** e, em seguida, selecione **Baixar ZIP**. 
+Para baixar as amostras, acesse o [repositório](https://github.com/Microsoft/Windows-universal-samples "Repositório GitHub de amostras de aplicativos da Plataforma Universal do Windows"). Selecione **Clonar ou baixar** e, em seguida, selecione **Baixar ZIP**. 
 
 ![Baixar exemplos](images/SamplesDownloadButton.png)
 
-Também é possível [baixar os exemplos](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "baixar o arquivo zip dos exemplos de aplicativo da Plataforma Universal do Windows") neste artigo.
+Baixe também [as amostras](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "Download do arquivo zip de amostras de aplicativos da Plataforma Universal do Windows") neste artigo.
 
 O arquivo .zip de download de exemplos sempre conta com os exemplos mais recentes. Você não precisa de uma conta do GitHub para baixar o arquivo. Quando uma atualização do SDK for liberada ou se você quiser escolher alterações e adições recentes, basta baixar o arquivo zip mais recente.
 
 > [!NOTE]
-> Os exemplos UWP precisam do Visual Studio 2015 ou posterior e do SDK do Windows para serem abertos, criados e executados. Você pode obter uma [cópia gratuita do Visual Studio Community](https://go.microsoft.com/fwlink/p/?LinkID=280676 "downloads de ferramentas de desenvolvimento do Windows"). O Visual Studio Community é compatível com a criação de aplicativos UWP.  
+> Os exemplos UWP precisam do Visual Studio 2015 ou posterior e do SDK do Windows para serem abertos, criados e executados. Obtenha uma [cópia gratuita do Visual Studio Community](https://www.microsoft.com/?ref=go). O Visual Studio Community é compatível com a criação de aplicativos UWP.  
 >
 > Para que os exemplos funcionem corretamente, não se esqueça de descompactar todo o arquivo, e não apenas exemplos individuais. Todos os exemplos dependem da pasta SharedContent no arquivo morto. Os exemplos de recursos UWP usam arquivos vinculados no Visual Studio para reduzir a duplicação de arquivos comuns, inclusive arquivos de modelo de exemplo e ativos de imagem. Os arquivos comuns são armazenados na pasta SharedContent na raiz do repositório. Os links são usados nos arquivos de projeto para fazer referência a arquivos comuns.
 > 

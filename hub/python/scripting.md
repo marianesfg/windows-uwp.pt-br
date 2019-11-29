@@ -1,127 +1,127 @@
 ---
-title: Scripts e automação com Python no Windows
-description: Como começar a usar o Python para scripting, automação e administração de sistemas no Windows.
+title: Script e automação com o Python no Windows
+description: Introdução ao uso do Python para script, automação e administração de sistemas no Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: Python, Windows 10, Microsoft, Python System Administration, Python File Automation, scripts Python no Windows, configurar o Python no Windows, ambiente de desenvolvedor Python no Windows, ambiente de desenvolvimento do Python no Windows, Python com PowerShell, scripts Python para tarefas do sistema de arquivos
+keywords: Python, Windows 10, Microsoft, administração do sistema do Python, automação de arquivos do Python, scripts do Python no Windows, configurar o Python no Windows, ambiente de desenvolvedor do Python no Windows, ambiente de desenvolvimento do Python no Windows, Python com o PowerShell, scripts do Python para tarefas do sistema de arquivos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 3f8a17de8121fed27e69442d5560f702a04c8e42
 ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72314860"
 ---
-# <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Comece a usar o Python no Windows para scripts e automação
+# <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>Introdução ao uso do Python no Windows para script e automação
 
 Veja a seguir um guia passo a passo para configurar seu ambiente de desenvolvedor e começar a usar o Python para criar scripts e automatizar operações do sistema de arquivos no Windows.
 
 > [!NOTE]
-> Este artigo abordará a configuração de seu ambiente para usar algumas das bibliotecas úteis do Python que podem automatizar tarefas entre plataformas, como pesquisar seu sistema de arquivos, acessar a Internet, analisar tipos de arquivo, etc., de uma abordagem centralizada no Windows. Para operações específicas do Windows, confira [ctypes](https://docs.python.org/3/library/ctypes.html), uma biblioteca de funções estrangeiras compatível com C para Python, [winreg](https://docs.python.org/3/library/winreg.html), funções expondo a API do registro do Windows para Python e [Python/WinRT](https://pypi.org/project/winrt/), habilitando o acesso Windows Runtime APIs de Python.
+> Este artigo abordará a configuração do ambiente para usar algumas das bibliotecas úteis do Python que podem automatizar tarefas entre plataformas, como pesquisa no sistema de arquivos, acesso à Internet, análise de tipos de arquivo etc., em uma abordagem centralizada no Windows. Para operações específicas do Windows, confira [ctypes](https://docs.python.org/3/library/ctypes.html), uma biblioteca de funções estrangeiras compatíveis com C para o Python, [winreg](https://docs.python.org/3/library/winreg.html), funções que expõem a API do Registro do Windows para Python e [Python/WinRT](https://pypi.org/project/winrt/), habilitação do acesso das APIs do Windows Runtime no Python.
 
 ## <a name="set-up-your-development-environment"></a>Configurar seu ambiente de desenvolvimento
 
-Ao usar o Python para gravar scripts que executam operações do sistema de arquivos, recomendamos que você [Instale o Python da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio do Microsoft Store usa o interpretador Python3 básico, mas trata da configuração de suas configurações de caminho para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas.
+Ao usar o Python para escrever scripts que executam operações do sistema de arquivos, recomendamos [instalar o Python por meio da Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio da Microsoft Store usa o interpretador básico Python3, mas cuida da definição das configurações de PATH para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas.
 
-Se você estiver usando o Python para **desenvolvimento na Web** no Windows, recomendamos uma configuração diferente usando o subsistema do Windows para Linux. Encontre instruções em nosso guia: Comece [a usar o Python para desenvolvimento para a Web no Windows](./web-frameworks.md). Se você for um novato no Python, experimente nosso guia: Comece [a usar o Python no Windows para iniciantes](./beginners.md). Para alguns cenários avançados (como a necessidade de acessar/modificar os arquivos instalados do Python, fazer cópias de binários ou usar as DLLs do Python diretamente), convém considerar o download de uma versão específica do Python diretamente do [Python.org](https://www.python.org/downloads/) ou considerar a instalação uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador de Python mais avançado com um motivo específico para escolher uma implementação alternativa.
+Se você estiver usando o Python para **desenvolvimento para a Web** no Windows, recomendamos uma configuração diferente usando o Subsistema do Windows para Linux. Encontre um passo a passo em nosso guia: [Introdução ao uso do Python para desenvolvimento para a Web no Windows](./web-frameworks.md). Se você estiver conhecendo o Python agora, experimente nosso guia: [Introdução ao uso do Python no Windows para iniciantes](./beginners.md). Para alguns cenários avançados (como a necessidade de acessar/modificar arquivos instalados do Python, fazer cópias de binários ou usar as DLLs do Python diretamente), o ideal é considerar a possibilidade de baixar uma versão específica do Python diretamente em [python.org](https://www.python.org/downloads/) ou instalar uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador mais avançado do Python com um motivo específico para escolher uma implementação alternativa.
 
 ## <a name="install-python"></a>Instalar o Python
 
-Para instalar o Python usando o Microsoft Store:
+Para instalar o Python usando a Microsoft Store:
 
-1. Vá para o menu **Iniciar** (ícone inferior esquerdo do Windows), digite "Microsoft Store", selecione o link para abrir o repositório.
+1. Acesse o menu **Iniciar** (ícone do Windows no canto inferior esquerdo), digite "Microsoft Store" e selecione o link para abrir a loja.
 
-2. Quando o repositório estiver aberto, selecione **Pesquisar** no menu superior direito e insira "Python". Abra "Python 3,7" nos resultados em aplicativos. Selecione **obter**.
+2. Quando a loja estiver aberta, selecione **Pesquisar** no menu superior direito e insira "Python". Abra "Python 3.7" nos resultados em Aplicativos. Selecione **Obter**.
 
-3. Depois que o Python concluir o processo de download e instalação, abra o Windows PowerShell usando o menu **Iniciar** (ícone inferior esquerdo do Windows). Quando o PowerShell estiver aberto, digite `Python --version` para confirmar se o Python3 foi instalado em seu computador.
+3. Depois que o Python concluir o processo de download e instalação, abra o Windows PowerShell usando o menu **Iniciar** (ícone do Windows no canto inferior esquerdo). Quando o PowerShell estiver aberto, insira `Python --version` para confirmar se o Python3 foi instalado no computador.
 
-4. O Microsoft Store instalação do Python inclui **Pip**, o Gerenciador de pacotes padrão. Pip permite que você instale e gerencie pacotes adicionais que não fazem parte da biblioteca padrão do Python. Para confirmar que você também tem o Pip disponível para instalar e gerenciar pacotes, digite `pip --version`.
+4. A instalação do Python por meio da Microsoft Store inclui o **pip**, o gerenciador de pacotes padrão. O pip permite que você instale e gerencie pacotes adicionais que não fazem parte da biblioteca padrão do Python. Para confirmar que você também tem o pip disponível para instalar e gerenciar pacotes, insira `pip --version`.
 
-## <a name="install-visual-studio-code"></a>Instalar Visual Studio Code
+## <a name="install-visual-studio-code"></a>Instalar o Visual Studio Code
 
-Usando VS Code como seu editor de texto/ambiente de desenvolvimento integrado (IDE), você pode tirar proveito do [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) (um auxílio de auto-completar de código), [rebaixando](https://code.visualstudio.com/docs/python/linting) (ajuda a evitar a criação de erros em seu código), o [suporte à depuração](https://code.visualstudio.com/docs/python/debugging) (ajuda a encontrar erros em seu código depois de executá-lo), trechos de [código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (modelos para pequenos blocos de código reutilizáveis) e [testes de unidade](https://code.visualstudio.com/docs/python/unit-testing) (testando a interface do seu código com diferentes tipos de entrada).
+Usando o VS Code como o editor de texto/o IDE (ambiente de desenvolvimento integrado), você pode aproveitar o [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) (um recurso de preenchimento de código), o [Linting](https://code.visualstudio.com/docs/python/linting) (ajuda a evitar erros no código), o [Suporte de depuração](https://code.visualstudio.com/docs/python/debugging) (ajuda a encontrar erros no código depois de executá-lo), os [Snippets de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (modelos para pequenos blocos de código reutilizáveis) e os [Testes de unidade](https://code.visualstudio.com/docs/python/unit-testing) (testes da interface do código com diferentes tipos de entrada).
 
-Baixe VS Code para Windows e siga as instruções de instalação: [https://code.visualstudio.com](https://code.visualstudio.com).
+Baixe o VS Code para Windows e siga as instruções de instalação: [https://code.visualstudio.com](https://code.visualstudio.com).
 
 ## <a name="install-the-microsoft-python-extension"></a>Instalar a extensão do Microsoft Python
 
 Você precisará instalar a extensão do Microsoft Python para aproveitar os recursos de suporte do VS Code. [Saiba mais](https://code.visualstudio.com/docs/languages/python).
 
-1. Abra a janela extensões de VS Code digitando **Ctrl + Shift + X** (ou use o menu para navegar para **exibir** **as extensões** > ).
+1. Abra a janela Extensões do VS Code inserindo **Ctrl+Shift+X** (ou use o menu para navegar até **Exibir** > **Extensões**).
 
-2. Na caixa **extensões de pesquisa principais no Marketplace** , digite:  **Python**.
+2. Na caixa **Pesquisar Extensões no Marketplace** no canto superior, insira:  **Python**.
 
-3. Localize a extensão **Python (MS-Python. Python) pela Microsoft** e selecione o botão de **instalação** verde.
+3. Encontre a extensão **Python (ms-python.python) da Microsoft** e selecione o botão verde **Instalar**.
 
-## <a name="open-the-integrated-powershell-terminal-in-vs-code"></a>Abra o terminal do PowerShell integrado no VS Code
+## <a name="open-the-integrated-powershell-terminal-in-vs-code"></a>Abrir o terminal integrado do PowerShell no VS Code
 
-VS Code contém um [terminal interno](https://code.visualstudio.com/docs/editor/integrated-terminal) que permite que você abra uma linha de comando do Python com o PowerShell, estabelecendo um fluxo de trabalho contínuo entre o editor de código e a linha de comando.
+O VS Code contém um [terminal interno](https://code.visualstudio.com/docs/editor/integrated-terminal) que permite abrir uma linha de comando do Python com o PowerShell, estabelecendo um fluxo de trabalho contínuo entre o editor de código e a linha de comando.
 
-1. Abra o terminal no VS Code, selecione **Exibir** **terminal** >  ou, como alternativa, use o atalho **Ctrl + '** (usando o caractere de acento grave).
+1. Abra o terminal no VS Code, selecione **Exibir** > **Terminal** ou, como alternativa, use o atalho **Ctrl+`** (usando o caractere de acento grave).
 
     > [!NOTE]
-    > O terminal padrão deve ser o PowerShell, mas se você precisar alterá-lo, use **Ctrl + Shift + P** para inserir o comando Pallette. Insira **Terminal: Selecione shell padrão @ no__t-0 e uma lista de opções de terminal será exibida contendo PowerShell, prompt de comando, WSL, etc. Selecione aquele que você deseja usar e **pressione Ctrl + Shift + '** (usando o acento grave) para criar um novo terminal.
+    > O terminal padrão deverá ser o PowerShell, mas se você precisar alterá-lo, use **Ctrl+Shift+P** para inserir a paleta de comandos. Insira **Terminal: Selecionar Shell Padrão** e uma lista de opções de terminal será exibida, contendo o PowerShell, o prompt de comando, o WSL etc. Selecione aquela que deseja usar e insira **Ctrl+Shift+`** (usando o acento grave) para criar um terminal.
 
-2. Dentro de seu Terminal VS Code, abra o Python digitando: `python`
+2. No terminal do VS Code, abra o Python inserindo: `python`
 
-3. Experimente o interpretador do Python inserindo: `print("Hello World")`. O Python retornará sua instrução "Olá, Mundo".
+3. Experimente o interpretador do Python inserindo `print("Hello World")`. O Python retornará a declaração "Olá, Mundo".
 
     ![Linha de comando do Python no VS Code](../images/python-in-vscode.png)
 
-4. Para sair do Python, você pode inserir `exit()`, `quit()` ou selecionar CTRL-Z.
+4. Para sair do Python, insira `exit()`, `quit()` ou selecione Ctrl-Z.
 
 ## <a name="install-git-optional"></a>Instalar o Git (opcional)
 
-Se você planeja colaborar com outras pessoas em seu código Python ou hospedar seu projeto em um site de software livre (como o GitHub), VS Code dá suporte ao [controle de versão com o Git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). A guia controle do código-fonte no VS Code rastreia todas as suas alterações e tem comandos git comuns (adicionar, confirmar, enviar por push, pull) criados diretamente na interface do usuário. Primeiro, você precisa instalar o Git para ligar o painel de controle do código-fonte.
+Se você pretende colaborar com outras pessoas no código Python ou hospedar seu projeto em um site open-source (como o GitHub), o VS Code dá suporte ao [controle de versão com o Git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). A guia Controle do Código-fonte no VS Code acompanha todas as alterações e tem comandos Git comuns (add, commit, push e pull) incorporados diretamente na interface do usuário. Primeiro, você precisa instalar o Git para ativar o painel Controle do Código-fonte.
 
-1. Baixe e instale o Git para Windows no [site do git-SCM](https://git-scm.com/download/win).
+1. Baixe e instale o Git para Windows no [site do git-scm](https://git-scm.com/download/win).
 
-2. Um assistente de instalação está incluído e fará uma série de perguntas sobre as configurações da instalação do git. É recomendável usar todas as configurações padrão, a menos que você tenha um motivo específico para alterar algo.
+2. Um Assistente de Instalação está incluído e fará uma série de perguntas sobre as configurações da instalação do Git. Recomendamos o uso de todas as configurações padrão, a menos que você tenha um motivo específico para alterar algo.
 
-3. Se você nunca trabalhou com o Git antes, os [guias do GitHub](https://guides.github.com/) podem ajudá-lo a começar.
+3. Se você nunca trabalhou com o Git antes, os [Guias do GitHub](https://guides.github.com/) podem ajudar você a começar a usá-lo.
 
 ## <a name="example-script-to-display-the-structure-of-your-file-system-directory"></a>Script de exemplo para exibir a estrutura do diretório do sistema de arquivos
 
-As tarefas comuns de administração do sistema podem levar um grande tempo, mas com um script Python, você pode automatizar essas tarefas para que elas não tenham nenhum tempo. Por exemplo, o Python pode ler o conteúdo do sistema de arquivos do seu computador e executar operações como imprimir uma estrutura de tópicos de seus arquivos e diretórios, mover pastas de um diretório para outro ou renomear centenas de arquivos. Normalmente, tarefas como essas poderiam levar um grande tempo se você fosse executá-las manualmente. Em vez disso, use um script Python!
+As tarefas comuns de administração do sistema podem levar muito tempo, mas com um script Python, você pode automatizar essas tarefas para torná-las rápidas. Por exemplo, o Python pode ler o conteúdo do sistema de arquivos do computador e executar operações como imprimir uma estrutura de tópicos dos arquivos e dos diretórios, mover pastas de um diretório para outro ou renomear centenas de arquivos. Normalmente, tarefas como essas poderão levar muito tempo se você executá-las manualmente. Em vez disso, use um script Python.
 
-Vamos começar com um script simples que examina uma árvore de diretório e exibe a estrutura do diretório.
+Vamos começar com um script simples que examina uma árvore de diretório e exibe a estrutura dele.
 
-1. Abra o PowerShell usando o menu **Iniciar** (ícone inferior esquerdo do Windows).
+1. Abra o PowerShell usando o menu **Iniciar** (ícone do Windows no canto inferior esquerdo).
 
-2. Crie um diretório para seu projeto: `mkdir python-scripts` e, em seguida, abra esse diretório: `cd python-scripts`.
+2. Crie um diretório `mkdir python-scripts` para o projeto e, em seguida, abra esse diretório `cd python-scripts`.
 
-3. Crie alguns diretórios para usar com nosso script de exemplo:
+3. Crie alguns diretórios para uso com o script de exemplo:
 
     ```powershell
     mkdir food, food\fruits, food\fruits\apples, food\fruits\oranges, food\vegetables
     ```
 
-4. Crie alguns arquivos dentro desses diretórios para usar com nosso script:
+4. Crie alguns arquivos nesses diretórios para uso com o script:
 
     ```powershell
     new-item food\fruits\banana.txt, food\fruits\strawberry.txt, food\fruits\blueberry.txt, food\fruits\apples\honeycrisp.txt, food\fruits\oranges\mandarin.txt, food\vegetables\carrot.txt
     ```
 
-5. Crie um novo arquivo Python em seu diretório Python-scripts:
+5. Crie um arquivo do Python no diretório python-scripts:
 
     ```powershell
     mkdir src
     new-item src\list-directory-contents.py
     ```
 
-6. Abra seu projeto no VS Code digitando: `code .`
+6. Abra o projeto no VS Code inserindo: `code .`
 
-7. Abra a janela VS Code explorador de arquivos digitando **Ctrl + Shift + E** (ou use o menu para navegar até a **exibição** > **Explorer**) e selecione o arquivo list-Directory-Contents.py que você acabou de criar. A extensão do Microsoft Python carregará automaticamente um intérprete do Python. Você pode ver qual intérprete foi carregado na parte inferior da janela de VS Code.
+7. Abra a janela Explorador de Arquivos do VS Code inserindo **Ctrl+Shift+E** (ou use o menu para navegar até **Exibir** > **Explorador**) e selecione o arquivo list-directory-contents.py recém-criado. A extensão do Microsoft Python carregará automaticamente um interpretador do Python. Você pode ver qual interpretador foi carregado na parte inferior da janela do VS Code.
 
     > [!NOTE]
-    > O Python é uma linguagem interpretada, o que significa que ele atua como uma máquina virtual, emulando um computador físico. Há diferentes tipos de intérpretes de Python que você pode usar: Python 2, Python 3, Anaconda, PyPy, etc. Para executar o código Python e obter o IntelliSense do Python, você deve informar VS Code qual intérprete usar. É recomendável ficar com o intérprete que VS Code escolhe por padrão (Python 3 em nosso caso), a menos que você tenha um motivo específico para escolher algo diferente. Para alterar o intérprete do Python, selecione o intérprete atualmente exibido na barra azul na parte inferior da janela de VS Code ou abra a **paleta de comandos** (Ctrl + Shift + P) e insira o comando **Python: Selecione intérprete @ no__t-0. Isso exibirá uma lista dos interpretadores do Python que você instalou atualmente. [Saiba mais sobre a configuração de ambientes do Python](https://code.visualstudio.com/docs/python/environments).
+    > O Python é uma linguagem interpretada, o que significa que ele funciona como uma máquina virtual, emulando um computador físico. Há diferentes tipos de interpretadores do Python que você pode usar: Python 2, Python 3, Anaconda, PyPy etc. Para executar o código Python e obter o Python IntelliSense, você precisará informar o VS Code de qual interpretador usar. Recomendamos o uso do interpretador escolhido por padrão pelo VS Code (Python 3, em nosso caso), a menos que você tenha um motivo específico para escolher algo diferente. Para alterar o interpretador do Python, selecione o interpretador atualmente exibido na barra azul na parte inferior da janela do VS Code ou abra a **paleta de comandos** (Ctrl+Shift+P) e insira o comando **Python: Selecionar Interpretador**. Isso exibirá uma lista dos interpretadores do Python atualmente instalados. [Saiba mais sobre a configuração de ambientes do Python](https://code.visualstudio.com/docs/python/environments).
 
-    ![Selecionar interpretador do Python no VS Code](../images/interpreterselection.gif)
+    ![Selecionar um interpretador do Python no VS Code](../images/interpreterselection.gif)
 
-8. Cole o código a seguir em seu arquivo list-directory-contents.py e, em seguida, selecione **salvar**:
+8. Cole o seguinte código no arquivo list-directory-contents.py e, em seguida, selecione **Salvar**:
 
     ```python
     import os
@@ -136,7 +136,7 @@ Vamos começar com um script simples que examina uma árvore de diretório e exi
         print()
     ```
 
-9. Abra o terminal integrado VS Code (**Ctrl + '** , usando o caractere de acento grave) e insira o diretório src em que você acabou de salvar o script Python:
+9. Abra o terminal integrado do VS Code (**CTRL+`** , usando o caractere de acento grave) e insira o diretório src em que você acabou de salvar o script Python:
 
     ```powershell
     cd src
@@ -174,22 +174,22 @@ Vamos começar com um script simples que examina uma árvore de diretório e exi
 
 11. Use o Python para imprimir essa saída do diretório do sistema de arquivos para seu próprio arquivo de texto inserindo este comando diretamente no terminal do PowerShell: `python3 list-directory-contents.py > food-directory.txt`
 
-Parabéns! Você acabou de escrever um script de administração de sistemas automatizados que lê o diretório e os arquivos que você criou e usa o Python para exibir e, em seguida, imprimir a estrutura de diretório no próprio arquivo de texto.
+Parabéns! Você acabou de escrever um script automatizado de administração de sistemas que lê o diretório e os arquivos criados e usa o Python para exibir e, em seguida, imprimir a estrutura de diretório no próprio arquivo de texto.
 
-## <a name="example-script-to-modify-all-files-in-a-directory"></a>Script de exemplo para modificar todos os arquivos em um diretório
+## <a name="example-script-to-modify-all-files-in-a-directory"></a>Script de exemplo para modificar todos os arquivos de um diretório
 
-Este exemplo usa os arquivos e diretórios que você acabou de criar, renomeando cada um dos arquivos adicionando a data da última modificação do arquivo ao início do nome de arquivo.
+Este exemplo usa os arquivos e os diretórios recém-criados, renomeando cada um dos arquivos com a adição da data da última modificação do arquivo ao início do nome do arquivo.
 
-1. Dentro da pasta **src** em seu diretório **Python-scripts** , crie um novo arquivo Python para o script:
+1. Na pasta **src** do diretório **python-scripts**, crie um arquivo do Python para o script:
 
     ```powershell
     new-item update-filenames.py
     ```
 
-2. Abra o arquivo update-filenames.py, Cole o código a seguir no arquivo e salve-o:
+2. Abra o arquivo update-filenames.py, cole o seguinte código no arquivo e salve-o:
 
     > [!NOTE]
-    > os. getmtime retorna um carimbo de data/hora em tiques, o que não é facilmente legível. Ele deve ser convertido em uma cadeia de caracteres DateTime padrão primeiro.
+    > os.getmtime retorna um carimbo de data/hora em tiques, o que não é facilmente legível. Ele precisa ser convertido em uma cadeia de caracteres de datetime padrão primeiro.
 
     ```python
     import datetime
@@ -208,7 +208,7 @@ Este exemplo usa os arquivos e diretórios que você acabou de criar, renomeando
             os.rename(source_name, target_name)
     ```
 
-3. Teste seu script update-filenames.py executando-o: `python3 update-filenames.py` e, em seguida, executando o script list-directory-contents.py novamente: `python3 list-directory-contents.py`
+3. Teste o script update-filenames.py executando-o – `python3 update-filenames.py` – e, em seguida, executando o script list-directory-contents.py novamente: `python3 list-directory-contents.py`
 
 4. Você deverá ver uma saída parecida com esta:
 
@@ -244,13 +244,13 @@ Este exemplo usa os arquivos e diretórios que você acabou de criar, renomeando
 
     ```
 
-5. Use o Python para imprimir os novos nomes de diretório do sistema de arquivos com o carimbo de data/hora modificado pela última vez em seu próprio arquivo de texto digitando este comando diretamente no seu terminal do PowerShell: `python3 list-directory-contents.py > food-directory-last-modified.txt`
+5. Use o Python para imprimir os novos nomes de diretório do sistema de arquivos com o carimbo de data/hora da última modificação em seu próprio arquivo de texto digitando este comando diretamente no terminal do PowerShell: `python3 list-directory-contents.py > food-directory-last-modified.txt`
 
-Espero que tenha aprendido algumas coisas divertidas sobre o uso de scripts Python para automatizar tarefas básicas de administração de sistemas. Há, é claro, uma infinidade de saber, mas esperamos que isso tenha sido iniciado no pé certo. Nós compartilhamos alguns recursos adicionais para continuar aprendendo abaixo.
+Esperamos que tenha aprendido algumas coisas divertidas sobre o uso de scripts Python para automatizar tarefas básicas de administração de sistemas. É claro que há muito mais para aprender, mas esperamos que isso tenha ajudado você a ter um bom começo. Compartilhamos abaixo alguns recursos adicionais para que você continue aprendendo.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- Documentos de @no__t 0Python: Acesso a arquivos e diretórios @ no__t-0: Documentação do Python sobre como trabalhar com sistemas de arquivos e usar módulos para ler as propriedades de arquivos, manipular caminhos de forma portátil e criar arquivos temporários.
-- Python @no__t 0Learn: Tutorial do String_Formatting @ no__t-0: Mais sobre o uso do operador "%" para formatação de cadeia de caracteres.
-- [10 métodos do sistema de arquivos Python que você deve saber](https://towardsdatascience.com/10-python-file-system-methods-you-should-know-799f90ef13c2): Artigo médio sobre a manipulação de arquivos e pastas com `os` e `shutil`.
-- Guia de hitchhikers de @no__t 0The para Python: Administração de sistemas @ no__t-0: Um "guia do conceituada" que oferece visões gerais e práticas recomendadas sobre tópicos relacionados ao Python. Esta seção aborda as ferramentas de administração do sistema e as estruturas do. Este guia é hospedado no GitHub para que você possa arquivar problemas e fazer contribuições.
+- [Documentos do Python: Acesso a arquivos e diretórios](https://docs.python.org/3.7/library/filesys.html): Documentação do Python sobre como trabalhar com sistemas de arquivos e usar módulos para ler as propriedades de arquivos, manipular caminhos de forma portátil e criar arquivos temporários.
+- [Aprender a usar o Python: ](https://www.learnpython.org/en/String_Formatting)Tutorial de String_Formatting: Mais sobre o uso do operador "%" para formatação de cadeia de caracteres.
+- [Dez métodos do sistema de arquivos do Python que você deve saber](https://towardsdatascience.com/10-python-file-system-methods-you-should-know-799f90ef13c2): Artigo um pouco mais aprofundado sobre a manipulação de arquivos e pastas com `os` e `shutil`.
+- [O Guia do Mochileiro do Python: Administração de sistemas](https://docs.python-guide.org/scenarios/admin/): Um "guia de opinião" que oferece visões gerais e melhores práticas sobre tópicos relacionados ao Python. Esta seção aborda as estruturas e as ferramentas de administração do sistema. Este guia é hospedado no GitHub e, portanto, você pode enviar problemas e fazer contribuições.

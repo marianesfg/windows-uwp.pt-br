@@ -10,14 +10,14 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
 ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/09/2019
 ms.locfileid: "72163709"
 ---
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
-As configurações do aplicativo são as partes personalizáveis pelo usuário de seu aplicativo Plataforma Universal do Windows (UWP) acessadas por meio de uma página de configurações do aplicativo. Por exemplo, um aplicativo de leitor de notícias pode permitir que o usuário especifique quais fontes de notícias exibir ou quantas colunas devem ser exibidas na tela, enquanto um aplicativo meteorológico pode permitir que o usuário escolha entre Celsius e Fahrenheit. Este artigo fornece recomendações e práticas recomendadas para criar e exibir configurações de aplicativo.
+As configurações do aplicativo são as partes personalizáveis pelo usuário do aplicativo da UWP (Plataforma Universal do Windows), acessadas por meio de uma página de configurações de aplicativo. Por exemplo, um aplicativo leitor de notícias pode permitir que o usuário especifique quais fontes de notícias exibir ou quantas colunas mostrar na tela, ao passo que um aplicativo de previsão do tempo pode permitir ao usuário escolher entre Celsius e Fahrenheit. Este artigo fornece recomendações e melhores práticas para criação e exibição das configurações do aplicativo.
 
 ## <a name="when-to-provide-a-settings-page"></a>Quando fornecer uma página de configurações
 
@@ -50,19 +50,19 @@ Para um layout de painel de navegação, as configurações do aplicativo devem 
 
 **Barra de aplicativos**
 
-Se você estiver usando uma [barra de aplicativos](../controls-and-patterns/app-bars.md) ou barra de ferramentas, coloque o ponto de entrada de configurações como o último item no menu de excedentes "Mais". Se for importante para o aplicativo ter maior capacidade de descoberta do ponto de entrada de configurações, coloque-o diretamente na barra de aplicativos, e não na área de excedentes.
+Se você estiver usando uma [barra de aplicativos](../controls-and-patterns/app-bars.md) ou uma barra de ferramentas, coloque o ponto de entrada de configurações como o último item do menu de excedentes "Mais". Se for importante para o aplicativo ter maior capacidade de descoberta do ponto de entrada de configurações, coloque-o diretamente na barra de aplicativos, e não na área de excedentes.
 
 ![ponto de entrada de configurações do aplicativo para a barra de aplicativos](images/appsettings-entrypoint-tabs.png)
 
 **Hub**
 
-Se você estiver usando um layout de Hub, o ponto de entrada de configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
+Se você estiver usando um layout de Hub, o ponto de entrada de configurações do aplicativo deve ser colocado dentro do menu de excedentes, "Mais", da barra de aplicativos.
 
-**Guias/tabelas dinâmicas**
+**Guias/pivôs**
 
-Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada das configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
+Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada de configurações do aplicativo deve ser colocado dentro do menu de excedentes, "Mais", da barra de aplicativos.
 
-**Mestre-detalhes**
+**Mestre/detalhes**
 
 Em vez de esconder totalmente o ponto de entrada das configurações do aplicativo em um painel de detalhes mestres, faça com que ele seja o último item fixado no nível superior do painel mestre.
 
@@ -79,15 +79,15 @@ Celular:
 
 ![layout da página de configurações do aplicativo em celular](images/appsettings-layout-navpane-mobile.png)
 
-## <a name="color-mode-settings"></a>Configurações de "Modo de cor"
+## <a name="color-mode-settings"></a>Configurações do "Modo de cor"
 
 
-Se seu aplicativo permite que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/combo-box.md) com o cabeçalho "Escolher um modo de aplicativo". Leia as opções
+Se o aplicativo permitir que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/combo-box.md) com o cabeçalho "Escolher um modo de aplicativo". As opções devem ser as seguintes
 - Claro
 - Escuro
 - Padrão do Windows
 
-Também recomendamos adicionar um hiperlink para a página de cores do aplicativo Configurações do Windows onde os usuários podem acessar e modificar o modo de aplicativo padrão. Use a cadeia de caracteres "Configurações de cores do Windows" para o texto de hiperlink.
+Também recomendamos adicionar um hiperlink para a página de Cores do aplicativo de Configurações do Windows, na qual os usuários poderão acessar e modificar o modo de aplicativo padrão atual. Use a cadeia de caracteres "Configurações de cores do Windows" como o texto do hiperlink.
 
 ![Seção "Escolher um modo"](images/appsettings_mode.png)
 
@@ -97,12 +97,12 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 </div>
 -->
 
-## <a name="about-section-and-feedback-button"></a>Seção Sobre e botão Fornecer feedback
+## <a name="about-section-and-feedback-button"></a>Seção Sobre e botão Comentários
 
 
-É recomendável colocar a seção "Sobre este aplicativo" em seu aplicativo como uma página dedicada ou em sua própria seção. Se você desejar um botão "Enviar comentários", coloque-o na parte inferior da página "Sobre este aplicativo".
+É recomendável colocar a seção "Sobre este aplicativo" como uma página dedicada ou uma seção própria do seu aplicativo. Se quiser disponibilizar um botão "Enviar comentários", coloque-o na parte inferior da página "Sobre este aplicativo".
 
-No subcabeçalho "Legal", coloque quaisquer "Termos de uso" e "Política de privacidade" (deve ser [botões de hiperlink](../controls-and-patterns/hyperlinks.md) com disposição do texto), bem como informações legais adicionais, como direitos autorais.
+No subcabeçalho "Legal", coloque eventuais "Termos de uso" e "Política de privacidade" (devem ser [botões de hiperlink](../controls-and-patterns/hyperlinks.md) com o texto em quebra automática), bem como informações jurídicas adicionais, como direitos autorais, por exemplo.
 
 ![seção "sobre este aplicativo" com o botão "fornecer comentários"](images/appsettings-about.png)
 
@@ -124,11 +124,11 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 - Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
 - Use os seguintes controles para configurações do aplicativo:
 
-    - [Alternar opções](../controls-and-patterns/toggles.md): Para permitir que os usuários definam ou desativem valores.
-    - [Botões de opção](../controls-and-patterns/radio-button.md): Para permitir que os usuários escolham um item de um conjunto de até 5 opções mutuamente exclusivas e relacionadas.
-    - [Caixa de entrada de texto](../controls-and-patterns/text-block.md): Para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
-    - [Hiperlinks](../controls-and-patterns/hyperlinks.md): Para levar o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
-    - [Botões](../controls-and-patterns/buttons.md): Para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu de configurações atual.
+    - [Switches de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
+    - [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item dentre um conjunto de até cinco opções relacionadas e mutuamente exclusivas.
+    - [Caixa de entrada de texto](../controls-and-patterns/text-block.md): para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
+    - [Hiperlinks](../controls-and-patterns/hyperlinks.md): para direcionar o usuário a outra página dentro do aplicativo ou a um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
+    - [Botões](../controls-and-patterns/buttons.md): para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu Configurações atual.
 - Adicione uma mensagem descritiva se um dos controles estiver desativado. Coloque esta mensagem acima do controle desativado.
 - Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) ou [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) com um deslocamento à esquerda de 100px.
 - Use cabeçalhos de seção, parágrafos e rótulos para ajudar a organizar e esclarecer conteúdo, se necessário.
@@ -140,7 +140,7 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Noções básicas de design de comando](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
-* [Diretrizes para controles de progresso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
+* [Noções básicas de design de comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
+* [Diretrizes de controles de progresso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
 * [Armazenar e recuperar dados de aplicativo](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)
