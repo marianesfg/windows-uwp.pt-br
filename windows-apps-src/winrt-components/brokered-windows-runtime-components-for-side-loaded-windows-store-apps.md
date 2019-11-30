@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 77993256752f081c5abc4f56164d0846c2b61060
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4d35945c803df2c4f84c5085de0a27a5d6731545
+ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258764"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74663543"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes de Windows Runtime orientados para um aplicativo UWP carregado por um lado
 
@@ -435,7 +435,7 @@ O servidor do Tempo de Execução do Windows de desktop pode ser pensado como co
 Por causa da natureza de processo cruzado do modelo de aplicativo, chamadas para o servidor têm mais sobrecarga do que o código que é executado exclusivamente no processo. Normalmente é seguro chamar uma propriedade simples que retorna um valor na memória porque ele executará isso de forma rápida o suficiente e o bloqueio do thread de IU não é uma preocupação. No entanto, qualquer chamada que envolva E/S de qualquer tipo (incluindo todas as recuperações de banco de dados e manipulação de arquivos) potencialmente pode bloquear o thread de IU de chamada e fazer com que o aplicativo seja finalizado devido à ausência de resposta. Além disso, chamadas de propriedade em objetos são desencorajadas nesta arquitetura de aplicativo por motivos de desempenho.
 Isso é abordado de forma mais detalhada na seção a seguir.
 
-Um servidor corretamente implementado normalmente implementará chamadas feitas diretamente a partir de threads de interface do usuário pelo padrão assíncrono do Windows Runtime. Isso pode ser implementado seguindo este padrão. Primeiro, a declaração (novamente, a partir do exemplo exibido):
+Um servidor corretamente implementado normalmente implementará chamadas feitas diretamente a partir de threads de interface do usuário pelo padrão assíncrono do Tempo de Execução do Windows. Isso pode ser implementado seguindo este padrão. Primeiro, a declaração (novamente, a partir do exemplo exibido):
 
 ```csharp
 public IAsyncOperation<int> FindElementAsync(int input)
@@ -472,7 +472,7 @@ Como é normal que o cliente e o servidor sejam escritos pela mesma organizaçã
 
 ## <a name="creating-and-deploying-the-windows-runtime-proxy"></a>Criação e implantação do proxy do Tempo de Execução do Windows
 
-Como a abordagem IPC envolve marshaling de interfaces do Windows Runtime entre dois processos, um proxy e stub do Windows Runtime registrado globalmente deve ser usado.
+Como a abordagem IPC envolve marshaling de interfaces do Tempo de Execução do Windows entre dois processos, um proxy e stub do Tempo de Execução do Windows registrado globalmente deve ser usado.
 
 **Criando o proxy no Visual Studio**
 
@@ -565,7 +565,7 @@ struct PersonStruct
 }
 ```
 
-Em seguida, retorne * PersonStruct\[\]* em vez da *lista&lt;personobject&gt;* .
+Em seguida, retorne *PersonStruct\[\]* em vez da *lista&lt;Personobject&gt;* .
 Isso leva todos os dados por um "salto" de processo cruzado
 
 Tal como acontece com todas as considerações de desempenho, medição e testes são fundamentais. O ideal é que uma telemetria seja inserida nas diversas operações para determinar quanto tempo elas levam. É importante fazer a medição através de uma escala: por exemplo, quanto tempo realmente leva para consumir todos os objetos *People* para uma consulta particular no aplicativo de sideload?
@@ -577,7 +577,7 @@ O exemplo ilustra como colocar atrasos no código usando técnicas assíncronas 
 
 Quando você faz alterações no servidor, é necessário certificar-se de que todas as instâncias em execução anteriormente já não estejam em execução. O COM eventualmente elimina o processo, mas o temporizador de encerramento leva mais tempo do que é eficaz para o desenvolvimento iterativo. Dessa forma, eliminar uma instância em execução anteriormente é uma etapa normal durante o desenvolvimento. Isso exige que o desenvolvedor mantenha o controle de qual instância dllhost está hospedando o servidor.
 
-O processo do servidor pode ser encontrado e eliminado usando o Gerenciador de Tarefas ou outros aplicativos de terceiros. A ferramenta de linha de comando **TaskList.exe **também está inclusa e possui sintaxe flexível, por exemplo:
+O processo do servidor pode ser encontrado e eliminado usando o Gerenciador de Tarefas ou outros aplicativos de terceiros. A ferramenta de linha de comando **TaskList. exe** também está incluída e tem uma sintaxe flexível, por exemplo:
 
   
  | **Linha** | **Ação** |
