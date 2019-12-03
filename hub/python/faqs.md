@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, pip, py.exe, caminhos de arquivos, PYTHONPATH, implantação do Python, empacotamento do Python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
+ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313378"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74663553"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Perguntas frequentes sobre como usar o Python no Windows
 
@@ -47,7 +47,7 @@ Você pode desabilitar os atalhos sem instalar o Python abrindo "Gerenciar alias
 
 As strings do python usam "escapes" para caracteres especiais. Por exemplo, para inserir um caractere de nova linha em uma cadeia de caracteres, você deve digitar `\n`. Como os caminhos de arquivo no Windows usam barras invertidas, algumas partes podem estar sendo convertidas em caracteres especiais.
 
-Para colar um caminho como uma cadeia de caracteres no Python, adicione o prefixo `r`. Isso indica que se trata de uma cadeia de caracteres `raw` e nenhum caractere de escape será usado, exceto a \" (talvez seja necessário remover a última barra invertida do caminho). Portanto, seu caminho terá a seguinte aparência: r"C:\Users\MyName\Documents\Document.txt"
+Para colar um caminho como uma cadeia de caracteres no Python, adicione o prefixo `r`. Isso indica que se trata de uma cadeia de caracteres `raw` e nenhum caractere de escape será usado, exceto a \" (talvez seja necessário remover a última barra invertida do caminho). Portanto, seu caminho pode ter a seguinte aparência: `r"C:\Users\MyName\Documents\Document.txt"`
 
 Ao trabalhar com caminhos no Python, é recomendável usar o módulo pathlib padrão. Isso permitirá que você converta a cadeia de caracteres em um objeto de caminho avançado, que pode fazer manipulações de caminho de forma consistente, independentemente de usar barras normais ou invertidas, fazendo com que o seu código funcione melhor em diferentes sistemas operacionais.
 

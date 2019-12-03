@@ -5,26 +5,26 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: e8bb86bd8d52ff96f010bf41758f1e4602330d52
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 55d512faccfa318156fb0dc28d3f804b53f0fe3d
+ms.sourcegitcommit: 102fdfdf32ba12a8911018d234d71d67ebef61ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393474"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551659"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos em C++/WinRT
 
-Este tópico demonstra como criar um componente do Windows Runtime que contém uma classe de tempo de execução representando uma conta bancária, que gera um evento quando seu saldo entra em débito. Também demonstra um App Core que utiliza a classe de tempo de execução de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
+Este tópico demonstra como criar um componente do Windows Runtime com uma classe de runtime representando uma conta bancária&mdash; que gera um evento quando seu saldo entra em débito. Também demonstra um App Core que utiliza a classe de runtime de conta bancária, chama uma função para ajustar o saldo e manipula todos os eventos resultantes.
 
 > [!NOTE]
 > Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
-> Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de tempo de execução com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
+> Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de runtime com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Windows Runtime (BankAccountWRC)
 
-Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto de **Componente do Windows Runtime (C++/WinRT)** e dê a ele o nome *BankAccountWRC* (isto é, "Componente do Windows Runtime para conta bancária"). Não compile o projeto ainda.
+Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto de **Componente do Windows Runtime (C++/WinRT)** e dê a ele o nome *BankAccountWRC* (isto é, "Componente do Windows Runtime para conta bancária"). Ao nomear o projeto *BankAccountWRC*, você terá a experiência mais fácil com o restante das etapas neste tópico. Não compile o projeto ainda.
 
 O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomeie esse arquivo `BankAccount.idl` (renomear o arquivo `.idl` também renomeia automaticamente os arquivos dependentes `.h` e `.cpp`). Substitua o conteúdo de `BankAccount.idl` pela listagem a seguir.
 
@@ -41,11 +41,11 @@ namespace BankAccountWRC
 }
 ```
 
-Salve o arquivo. O projeto não será compilado até a conclusão, mas é útil compilá-lo agora porque ele gera os arquivos de código fonte nos quais você implementará a classe de tempo de execução **BankAccount**. Portanto, vá em frente e compile agora (os erros de compilação que você espera ver neste estágio têm a ver com `Class.h` e `Class.g.h` que não foram encontrados).
+Salve o arquivo. O projeto não será compilado até a conclusão, mas é útil compilá-lo agora porque ele gera os arquivos de código fonte nos quais você implementará a classe de runtime **BankAccount**. Portanto, vá em frente e compile agora (os erros de compilação que você espera ver neste estágio têm a ver com `Class.h` e `Class.g.h` que não foram encontrados).
 
-Durante o processo de compilação, a ferramenta `midl.exe` é executada para criar o arquivo de metadados do componente do Tempo de Execução do Windows (que é `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Em seguida, a ferramenta `cppwinrt.exe` é executada (com a opção `-component`) para gerar arquivos de código fonte que dão suporte na criação do componente. Esses arquivos incluem stubs para ajudá-lo a começar a implementar a classe de tempo de execução **BankAccount**, que foi declarada em seu IDL. Esses stubs são `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` e `BankAccount.cpp`.
+Durante o processo de compilação, a ferramenta `midl.exe` é executada para criar o arquivo de metadados do componente do Windows Runtime (que é `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). Em seguida, a ferramenta `cppwinrt.exe` é executada (com a opção `-component`) para gerar arquivos de código fonte que dão suporte na criação do componente. Esses arquivos incluem stubs para ajudá-lo a começar a implementar a classe de runtime **BankAccount**, que foi declarada em seu IDL. Esses stubs são `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` e `BankAccount.cpp`.
 
-Clique com o botão direito do mouse no nó do projeto e clique em **Abrir Pasta no Explorador de Arquivos**. A pasta do projeto abre no Explorador de Arquivos. Copie os arquivos de stub `BankAccount.h` e `BankAccount.cpp` da pasta `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` para a pasta que contém os arquivos de projeto, que é `\BankAccountWRC\BankAccountWRC\`, e substitua os arquivos no destino. Agora vamos abrir `BankAccount.h` e `BankAccount.cpp`, e implementar nossa classe de tempo de execução. Em `BankAccount.h`, adicione dois membros privados à implementação de BankAccount, *não* à implementação de fábrica.
+Clique com o botão direito do mouse no nó do projeto e clique em **Abrir Pasta no Explorador de Arquivos**. A pasta do projeto abre no Explorador de Arquivos. Copie os arquivos de stub `BankAccount.h` e `BankAccount.cpp` da pasta `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` para a pasta que contém os arquivos de projeto, que é `\BankAccountWRC\BankAccountWRC\`, e substitua os arquivos no destino. Agora vamos abrir `BankAccount.h` e `BankAccount.cpp`, e implementar nossa classe de runtime. Em `BankAccount.h`, adicione dois membros privados à implementação (*não* à implementação de fábrica) de **BankAccount**.
 
 ```cppwinrt
 // BankAccount.h
@@ -102,11 +102,14 @@ Se um aviso impedir a compilação, resolva-o ou defina a propriedade de projeto
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um App Core (BankAccountCoreApp) para testar o componente do Windows Runtime
 
-Agora crie um novo projeto (na sua solução `BankAccountWRC` ou em uma nova). Crie um projeto do **App Core (C++/WinRT)** e nomeie-o como *BankAccountCoreApp*.
+Agora crie um projeto (na sua solução *BankAccountWRC* ou em uma nova). Crie um projeto do **App Core (C++/WinRT)** e nomeie-o como *BankAccountCoreApp*.
 
-Adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e em **OK**. Agora compile o BankAccountCoreApp. Se ocorrer o erro de que o arquivo de payload `readme.txt` não existe, o que é improvável, exclua esse arquivo do projeto do componente do Windows Runtime, compile-o novamente e, em seguida, recompile BankAccountCoreApp.
+> [!NOTE]
+> Como mencionado anteriormente, o arquivo de metadados do Windows Runtime para o componente do Windows Runtime (cujo projeto foi nomeado como *BankAccountWRC*) será criado na pasta `\BankAccountWRC\Debug\BankAccountWRC\`. O primeiro segmento desse caminho é o nome da pasta que contém o arquivo de solução. O próximo segmento é o subdiretório dela, chamado `Debug`. O último segmento é o subdiretório dele, nomeado para o componente do Windows Runtime. Se você não nomeou o projeto como *BankAccountWRC*, o arquivo de metadados estará na pasta `\<YourProjectName>\Debug\<YourProjectName>\`.
 
-Durante o processo de compilação, a ferramenta `cppwinrt.exe` é executada para processar o arquivo `.winmd` mencionado nos arquivos de código-fonte que contêm os tipos projetados para ajudá-lo a utilizar o componente. O cabeçalho dos tipos projetados para suas classes de tempo de execução do componente, denominado `BankAccountWRC.h`, é gerado na pasta `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\`.
+Agora, no projeto do App Core (*BankAccountCoreApp*), adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e em **OK**. Agora compile o *BankAccountCoreApp*. Se houver um erro, o que é improvável, indicando que o arquivo de carga `readme.txt` não existe, exclua esse arquivo do projeto do componente do Windows Runtime, compile-o novamente e recompile o *BankAccountCoreApp*.
+
+Durante o processo de compilação, a ferramenta `cppwinrt.exe` é executada para processar o arquivo `.winmd` mencionado nos arquivos de código-fonte que contêm os tipos projetados para ajudá-lo a utilizar o componente. O cabeçalho dos tipos projetados para suas classes de runtime do componente, denominado `BankAccountWRC.h`, é gerado na pasta `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\`.
 
 Inclua esse cabeçalho em `App.cpp`.
 
@@ -114,7 +117,7 @@ Inclua esse cabeçalho em `App.cpp`.
 #include <winrt/BankAccountWRC.h>
 ```
 
-Também em `App.cpp`, adicione o seguinte código para instanciar uma BankAccount (usando o construtor padrão do tipo projetado), registre um manipulador de eventos e faça com que a conta entre em débito.
+Também em `App.cpp`, adicione o seguinte código para criar uma instância para **BankAccount** (usando o construtor padrão do tipo projetado), registre um manipulador de eventos e faça com que a conta entre em débito.
 
 `WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 
@@ -155,9 +158,9 @@ Cada vez que você clicar na janela, você subtrai 1 do saldo da conta bancária
 
 Se o evento deve estar acessível por meio de uma ABI (interface binária de aplicativo), como entre um componente e seu aplicativo de consumo, o evento deve usar um tipo delegado do Windows Runtime. O exemplo acima usa o tipo delegado [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler) do Windows Runtime. [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo delegado do Windows Runtime.
 
-Os parâmetros de tipo desses dois tipos delegados têm que cruzar a ABI, portanto, os parâmetros de tipo também devem ser do tipo do Windows Runtime. Isso inclui classes de tempo de execução primárias e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador o ajudará com um erro "*deve ser do tipo WinRT*", caso você esqueça essa restrição.
+Os parâmetros de tipo desses dois tipos delegados têm que cruzar a ABI, portanto, os parâmetros de tipo também devem ser do tipo do Windows Runtime. Isso inclui classes de runtime primárias e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador o ajudará com um erro "*deve ser do tipo WinRT*", caso você esqueça essa restrição.
 
-Se você não precisa passar nenhum parâmetro ou argumento com seu evento, defina seu próprio tipo delegado simples do Windows Runtime. O exemplo a seguir mostra uma versão mais simples da classe de tempo de execução **BankAccount**. Ele declara um tipo delegado chamado **SignalDelegate** e, em seguida, usa isso para gerar um evento de tipo de sinal ao invés de um evento com um parâmetro.
+Se você não precisa passar nenhum parâmetro ou argumento com seu evento, defina seu próprio tipo delegado simples do Windows Runtime. O exemplo a seguir mostra uma versão mais simples da classe de runtime **BankAccount**. Ele declara um tipo delegado chamado **SignalDelegate** e, em seguida, usa isso para gerar um evento de tipo de sinal ao invés de um evento com um parâmetro.
 
 ```idl
 // BankAccountWRC.idl

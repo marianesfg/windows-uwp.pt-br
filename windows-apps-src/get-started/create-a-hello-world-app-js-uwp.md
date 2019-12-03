@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f4ab5b177539bc286ce24d480cd949d43a51e17
-ms.sourcegitcommit: bd41fb6f59dfbd7021b14ff749b8b0f83f883c0f
+ms.openlocfilehash: a161a5e26bd647a37b06a270ef6714d54bc16d80
+ms.sourcegitcommit: ac9fb37fe58cc728df2fa0495e36ee4d7b811a23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70963620"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467413"
 ---
 # <a name="create-a-hello-world-app-js"></a>Criar um aplicativo Hello, world (JS)
 
@@ -23,13 +23,13 @@ Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo "Olá, Mu
 > [!WARNING]
 > O Visual Studio 2019 não oferece suporte ao desenvolvimento de aplicativos UWP JavaScript. Para desenvolver um aplicativo UWP JavaScript deve-se usar o Visual Studio 2017.
 
-Aqui, você aprenderá a:
+Neste tópico, você aprenderá a:
 
 -   Crie um novo projeto do **Visual Studio 2017** orientado ao **Windows 10** e à **UWP**.
--   Adicionar conteúdo HTML e JavaScript
--   Execute o projeto na área de trabalho local no Visual Studio
+-   Adicione conteúdo HTML e JavaScript.
+-   Execute o projeto na área de trabalho local no Visual Studio.
 
-## <a name="before-you-start"></a>Antes de começar...
+## <a name="before-you-start"></a>Antes de começar
 
 -   [O que é um aplicativo UWP?](universal-application-platform-guide.md).
 -   Para concluir este tutorial, você precisa do Windows 10 e do Visual Studio. [Prepare-se para começar](get-set-up.md).
@@ -39,13 +39,13 @@ Aqui, você aprenderá a:
 
 1.  Inicialização do Visual Studio 2017.
 
-2.  No menu **Arquivo**, selecione **Novo > Projeto...** para abrir a caixa de diálogo *Criar um projeto*.
+2.  No menu **Arquivo**, selecione **Novo > Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
 
 3.  Escolha **Aplicativo em branco (Universal Windows) JavaScript** e, em seguida, selecione **Avançar**.
 
-    (Se você não vir modelos de Universal, talvez não tenha os componentes para a criação de aplicativos UWP. Repita o processo de instalação e adicione suporte a UWP clicando em **Abrir instalador do Visual Studio** na caixa de diálogo *Criar um projeto*. Confira [Preparar-se](get-set-up.md)
+    (Se você não vir modelos de Universal, talvez não tenha os componentes para a criação de aplicativos UWP. Repita o processo de instalação e adicione suporte a UWP clicando em **Abrir instalador do Visual Studio** na caixa de diálogo **Criar um novo projeto**. Confira [Preparar-se](get-set-up.md).
 
-4.  Na caixa de diálogo *Configurar novo projeto*, digite "Olá, Mundo" como **Nome do projeto** e, em seguida, selecione **Criar**.
+4.  Na caixa de diálogo **Configurar novo projeto**, digite **Olá, Mundo** como **Nome do projeto** e clique em **Criar**.
 
 > [!NOTE]
 > Se esta for a primeira vez que usa o Visual Studio, talvez veja uma caixa de diálogo Configurações solicitando a habilitação do **Modo de desenvolvedor**. O Modo de desenvolvedor é uma configuração especial que habilita determinados recursos, como a permissão para executar aplicativos diretamente, em vez de apenas na Store. Para saber mais, leia [Habilitar seu dispositivo para desenvolvimento](enable-your-device-for-development.md). Para continuar com este guia, selecione **Modo de desenvolvedor**, clique em **Sim** e feche a caixa de diálogo.
@@ -80,13 +80,13 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 - A página da Web do aplicativo, carregada e exibida quando o aplicativo é iniciado.
 
 *Um conjunto de imagens de logotipo*
--   Assets/Square150x150Logo.scale-200.png representa seu aplicativo no menu Iniciar.
+-   Assets/Square150x150Logo.scale-200.png representa seu aplicativo no menu **Iniciar**.
 -   Assets/StoreLogo.png representa seu aplicativo na Microsoft Store.
 -   Assets/SplashScreen.scale-200.png é a tela inicial que será exibida quando o aplicativo iniciar.
 
 ## <a name="step-2-adding-a-button"></a>Etapa 2: Adicionar um botão
 
-Clique em *index.html* para selecioná-lo no editor e altere o HTML que contém para ler:
+Clique em **index.html** para selecioná-lo no editor e altere o HTML que contém para ler.
 
 ```html
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ Clique em *index.html* para selecioná-lo no editor e altere o HTML que contém 
 </html>
 ```
 
-Ele deve ser assim:
+Ele deve ser assim.
 
  ![O HTML do projeto](images/win10-js-03.png)
 
@@ -116,7 +116,7 @@ Este HTML referencia o *main.js* que conterá o JavaScript e, em seguida, adicio
 
 ## <a name="step-3-adding-some-javascript"></a>Etapa 3: Adicionar algum JavaScript
 
-Agora, vamos adicionar o JavaScript. Clique em *main.js* para selecioná-lo e adicione o seguinte:
+Agora, vamos adicionar o JavaScript. Clique em **main.js** para selecioná-lo e adicione o seguinte.
 
 ```javascript
 // Your code here!
@@ -135,7 +135,7 @@ function sayHello() {
 
 ```
 
-Ele deve ser assim:
+Ele deve ser assim.
 
  ![O JavaScript do projeto](images/win10-js-04.png)
 
@@ -146,7 +146,7 @@ A segunda função, *sayHello()* , cria e exibe uma caixa de diálogo. Isso é m
 
 ## <a name="step-4-run-the-app"></a>Etapa 4: Executar o aplicativo.
 
-Agora, você pode executar o aplicativo pressionando F5. O aplicativo será carregado e a página da Web será exibida. Clique no botão e a caixa de diálogo será de mensagem exibida.
+Agora, você pode executar o aplicativo pressionando F5. O aplicativo será carregado e a página da Web será exibida. Clique no botão e a caixa de diálogo da mensagem será exibida.
 
  ![Executando o projeto](images/win10-js-05.png)
 
