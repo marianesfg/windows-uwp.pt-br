@@ -1,18 +1,18 @@
 ---
 Description: Estender seu aplicativo da área de trabalho com interfaces do usuário e componentes do Windows
-title: Estender seu aplicativo da área de trabalho com interfaces do usuário e componentes do Windows
+title: Estenda seu aplicativo com a interface do usuário e os componentes do Windows
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a404f2d9f58fc283cf47f47860362c0f5bc8164
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 4e4d3d22af21b8df3c78afc725ccc0e861934681
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142549"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734982"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Estenda seu aplicativo de desktop com componentes UWP modernos
 

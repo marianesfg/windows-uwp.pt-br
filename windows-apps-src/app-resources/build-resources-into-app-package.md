@@ -1,19 +1,19 @@
 ---
-Description: Alguns tipos de apps (dicionários multilíngues, ferramentas de tradução etc.) precisam substituir o comportamento padrão de um lote de aplicativo e compilar recursos no pacote de aplicativos, em vez de tê-los em pacotes de recursos separados. Este tópico explica como fazer isso.
-title: Compilar recursos no pacote de aplicativos, e não em um pacote de recursos
+Description: Alguns tipos de aplicativos (dicionários multilíngues, ferramentas de tradução etc.) precisam substituir o comportamento padrão de um lote de aplicativo e criar recursos no pacote do aplicativo, em vez de tê-los em pacotes de recursos separados. Este tópico explica como fazer isso.
+title: Criar recursos em seu pacote de aplicativo
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f7acabc9858f5a2fa0b6b76d752d2a342959f41f
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: d7a63c44ac8cb6f6b17951cf6515fad33fb83ee9
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682507"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734941"
 ---
-# <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Compilar recursos no pacote de aplicativos, e não em um pacote de recursos
+# <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crie recursos no pacote do aplicativo, não em um pacote de recursos
 
 Alguns tipos de apps (dicionários multilíngues, ferramentas de tradução etc.) precisam substituir o comportamento padrão de um lote de aplicativo e compilar recursos no pacote de aplicativos, em vez de tê-los em pacotes de recursos separados. Este tópico explica como fazer isso.
 

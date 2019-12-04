@@ -1,21 +1,21 @@
 ---
-title: Desenvolvimento de jogos C++ no Xbox usando a Plataforma Universal do Windows (UWP)
-description: Desenvolvimento de jogos UWP c++ no Xbox.
+title: C++desenvolvimento de jogos no Xbox usando UWP
+description: Desenvolvimento de jogos UWP em C++ no Xbox.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
-ms.openlocfilehash: 276a352918e4458e145755bbafad09d4278ec4d7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e64a9a443a35e1585257c02ad58186ae53192b48
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734931"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Trazer jogos personalizados em C++ para a UWP no Xbox
 
-Se você estiver elaborando um mecanismo em C++ personalizado, o Xbox One tem suporte completo para C++. 
+Se você estiver criando um mecanismo personalizado em C++, o Xbox One possui suporte completo para C++. 
 
 Jogos C++ na Plataforma Universal do Windows (UWP) usam o DirectX para renderização. Saiba mais em [Gráficos do DirectX e jogos](https://docs.microsoft.com/windows/desktop/directx).
 

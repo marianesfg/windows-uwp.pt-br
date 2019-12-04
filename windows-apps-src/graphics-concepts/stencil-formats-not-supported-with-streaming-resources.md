@@ -1,5 +1,5 @@
 ---
-title: Não há suporte para formatos de estêncil com recursos de streaming
+title: Formatos de estêncil sem suporte com recursos de streaming
 description: Formatos que contêm estêncil não são compatíveis com recursos de streaming.
 ms.assetid: 90A572A4-3C76-4795-BAE9-FCC72B5F07AD
 keywords:
@@ -7,19 +7,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d35813a6242abd555e87329c25a413285d1d948
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db6476afe265ea4a2556a5f787a14daa2e212e61
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735131"
 ---
 # <a name="stencil-formats-not-supported-with-streaming-resources"></a>Não há suporte para formatos de estêncil com recursos de streaming
 
 
 Formatos que contêm estêncil não são compatíveis com recursos de streaming.
 
-Os formatos que contêm o estêncil incluem DXGI\_formato\_D24\_UNORM\_S8\_UINT (e relacionados formatos na família R24G8) e DXGI\_formato\_D32\_FLUTUAR\_S8X24\_UINT (e relacionados formatos na família R32G8X24).
+Os formatos que contêm o estêncil incluem o formato de\_DXGI\_D24\_UNORM\_S8\_UINT (e os formatos relacionados na família R24G8) e o formato DXGI\_\_D32\_FLOAT\_S8X24\_UINT (e os formatos relacionados na família R32G8X24).
 
 Algumas implementações armazenam profundidade e estêncil em alocações separadas enquanto outras os armazenam juntos. O gerenciamento de blocos para os dois esquemas precisaria ser diferente, e nenhuma API única pode abstrair ou racionalizar as diferenças. É recomendável que o hardware futuro tenha suporte a superfícies de profundidade e estêncil independentes, cada uma colocada lado a lado de forma independente.
 
@@ -28,7 +28,7 @@ A profundidade de 32 bits teria blocos de 128 x 128, e o estêncil de 8 bits ter
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
-[Fluxo de recurso entre processos e compartilhamento de dispositivo](streaming-resource-cross-process-and-device-sharing.md)
+[Recurso de streaming entre processos e compartilhamento de dispositivos](streaming-resource-cross-process-and-device-sharing.md)
 
  
 

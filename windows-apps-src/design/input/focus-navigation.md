@@ -1,6 +1,6 @@
 ---
-title: Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade
-Description: Saiba como usar a navegação de foco para fornecer experiências de interação abrangente e consistente em seus aplicativos UWP e controles personalizados para usuários avançados de teclado, aquelas com deficiências e outros requisitos de acessibilidade, bem como a experiência de 10 pés de as telas de televisão e Xbox One.
+title: Navegação de foco sem um mouse
+Description: Saiba como usar a navegação em foco para fornecer experiências de interação abrangentes e consistentes em seus aplicativos UWP e controles personalizados para usuários avançados de teclado, aqueles com deficiências e outros requisitos de acessibilidade, bem como a experiência de 10 metros do telas de televisão e o Xbox One.
 label: ''
 template: detail.hbs
 keywords: teclado, controlador de jogo, controle remoto, navegação, navegação interna direcional, área direcional, estratégia de navegação, entrada, interação do usuário, acessibilidade, usabilidade
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cb49ed58f03710d44a5c06c15530936885b9beea
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625821"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735091"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade
 
@@ -59,7 +59,7 @@ O livro eletrônico [Software de engenharia para acessibilidade](https://www.mic
 A região de navegação interna 2D de um controle, ou grupo de controles, é conhecida como sua "área direcional". Quando o foco muda para esse objeto, as teclas de seta do teclado (esquerda, direita, para cima e para baixo) podem ser usadas para navegar entre os elementos filho dentro da área direcional.
 
 ![área direcional](images/keyboard/directional-area-small.png)
-*região 2D de navegação interna ou a área direcional, de um grupo de controle*
+*região de navegação interna 2D ou área direcional de um grupo de controle*
 
 Você pode usar a propriedade [XYFocusKeyboardNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_XYFocusKeyboardNavigation) (que tem como valores possíveis [Automático](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode), [Habilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) ou [Desabilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)) para gerenciar a navegação interna 2D com as teclas de seta do teclado.
 
@@ -70,12 +70,12 @@ Você pode usar a propriedade [XYFocusKeyboardNavigation](https://docs.microsoft
 
 Quando definido como Automático, o comportamento de navegação direcional é determinado pelos ancestrais, ou hierarquia herdada, do elemento. Se todos os ancestrais estiverem no modo padrão (definidos como **Automático**), a navegação direcional com o teclado *não* terá suporte.
 
-### <a name="disabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Desabilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="disabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Desabilitada](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 Defina **XYFocusKeyboardNavigation** como **Desabilitado** para bloquear a navegação direcional para o controle e seus elementos filho.
 
-![XYFocusKeyboardNavigation desabilitado comportamento](images/keyboard/xyfocuskeyboardnav-disabled.gif)
-*XYFocusKeyboardNavigation desabilitado comportamento*
+![comportamento desabilitado do XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-disabled.gif)
+*comportamento desabilitado do XYFocusKeyboardNavigation*
 
 Neste exemplo, o [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) primário (ContainerPrimary) tem **XYFocusKeyboardNavigation** definido como **Habilitado**. Todos os elementos filho herdam essa configuração e podem ser navegados com as teclas de seta. No entanto, os elementos B3 e B4 estão em um [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) secundário (ContainerSecondary) com **XYFocusKeyboardNavigation** definido como **Desabilitado**, que substitui o contêiner primário e desabilita a navegação por teclas de seta nele próprio e entre seus elementos filho.
 
@@ -125,14 +125,14 @@ Neste exemplo, o [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml
 </Grid>
 ```
 
-### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[habilitado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="enabledhttpsdocsmicrosoftcomuwpapiwindowsuixamlinputxyfocuskeyboardnavigationmode"></a>[Habilitada](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 Defina **XYFocusKeyboardNavigation** como **Habilitado** para oferecer suporte à navegação direcional 2D para um controle e cada um dos seus objetos filho [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).
 
 Quando definida, a navegação com as teclas de seta será restrita aos elementos dentro da área direcional. A navegação por guias não é afetada, pois todos os controles permanecem acessíveis por meio de sua hierarquia de ordem de guias.
 
-![XYFocusKeyboardNavigation habilitado comportamento](images/keyboard/xyfocuskeyboardnav-enabled.gif)
-*XYFocusKeyboardNavigation habilitado comportamento*
+![comportamento habilitado para XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled.gif)
+*comportamento habilitado do XYFocusKeyboardNavigation*
 
 Neste exemplo, o [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) primário (ContainerPrimary) tem **XYFocusKeyboardNavigation** definido como **Habilitado**. Todos os elementos filho herdam essa configuração e podem ser navegados com as teclas de seta. Os elementos B3 e B4 estão em um [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) secundário (ContainerSecondary) no qual **XYFocusKeyboardNavigation** não está definido e, por isso, herda a configuração do contêiner primário. O elemento B5 não está em uma área direcional declarada e não oferece suporte à navegação por teclas de seta, mas oferece suporte ao comportamento de navegação por guias padrão.
 
@@ -194,8 +194,8 @@ Neste exemplo, o [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml
 
 Aqui está um exemplo de duas áreas direcionais aninhadas dentro de um elemento que não oferece suporte explícito à navegação direcional 2D. Nesse caso, a navegação direcional não tem suporte entre as duas áreas aninhadas.
 
-![XYFocusKeyboardNavigation habilitado e aninhados comportamento](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
-*XYFocusKeyboardNavigation habilitado e aninhados comportamento*
+![XYFocusKeyboardNavigation habilitado e aninhado](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
+*comportamento de XYFocusKeyboardNavigation habilitado e aninhado*
 
 Aqui está um exemplo mais complexo de três áreas direcionais aninhadas nas quais:
 
@@ -205,7 +205,7 @@ Aqui está um exemplo mais complexo de três áreas direcionais aninhadas nas qu
 
 ![Comportamento de XYFocusKeyboardNavigation habilitado e com aninhamento complexo](images/keyboard/xyfocuskeyboardnav-enabled-nested2.gif)
 
-*XYFocusKeyboardNavigation habilitado e complexo aninhado comportamento*
+*XYFocusKeyboardNavigation habilitado e comportamento aninhado complexo*
 
 ## <a name="tab-navigation"></a>Navegação por tabulação
 
@@ -234,21 +234,21 @@ Conforme mencionamos na seção anterior, para evitar uma experiência de navega
 
    ![Comportamento de navegação da guia "Local"](images/keyboard/tabnav-local.gif)
 
-   *Guia "Local" comportamento de navegação*
+   *Comportamento de navegação da guia "local"*
 
-- **Vez**  
+- **Mesmo**  
   O contêiner e todos os elementos filho recebem o foco uma vez. Neste exemplo, a ordem de tabulação é B1, B2, B7, B1 (a navegação interna com a tecla de seta também é demonstrada).
 
    ![Comportamento de navegação da guia "Uma vez"](images/keyboard/tabnav-once.gif)
 
-   *"Uma vez" guia de comportamento de navegação*
+   *Comportamento de navegação de guia "Once"*
 
 - **Ciclo**   
   O foco volta para o elemento focalizável inicial em um contêiner. Neste exemplo, a ordem de tabulação é B1, B2, B3, B4, B5, B6, B2...
 
    ![Comportamento de navegação da guia "Ciclo"](images/keyboard/tabnav-cycle.gif)
 
-   *"Alternar" comportamento de navegação da guia*
+   *Comportamento de navegação da guia "Cycle"*
 
 Aqui está o código para os exemplos anteriores (com TabFocusNavigation = "Ciclo").
 
@@ -318,7 +318,7 @@ Aqui está o código para os exemplos anteriores (com TabFocusNavigation = "Cicl
 </Grid>
 ```
 
-### <a name="tabindexhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrolwindowsuixamlcontrolscontroltabindex"></a>[TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
+### <a name="tabindexhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrolwindows_ui_xaml_controls_control_tabindex"></a>[TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
 
 Use [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex) para especificar a ordem na qual os elementos recebem o foco quando o usuário navega por meio de controles usando a tecla Tab. Um controle com um índice de guia inferior recebe o foco antes de um controle com um índice superior.
 
@@ -338,7 +338,7 @@ Aqui, mostramos como a navegação por foco pode ser afetada pela propriedade [T
 
 ![Comportamento de navegação da guia "Local" com TabIndex](images/keyboard/tabnav-tabindex.gif)
 
-*"Local" guia de navegação com o comportamento de TabIndex*
+*Navegação de guia "local" com comportamento TabIndex*
 
 No exemplo anterior, há dois escopos: 
 - B1, área direcional (B2 - B6) e B7
@@ -425,7 +425,7 @@ Os tipos de entradas não apontadoras, como teclado, gamepad, controle remoto e 
 
 Nesta seção, abordamos como especificar uma estratégia de navegação preferencial e ajustar a navegação por foco no seu aplicativo por meio de um conjunto de propriedades de estratégia de navegação que oferecem suporte a todos os tipos de entradas baseadas em foco e não apontadoras.
 
-Para obter mais informações sobre a criação de aplicativos e experiências para Xbox/TV, consulte [interação do teclado](keyboard-interactions.md), [projetar para Xbox e TV](../devices/designing-for-tv.md), e [deinteraçõesdeGamepadecontroleremoto](gamepad-and-remote-interactions.md).
+Para obter mais informações gerais sobre a criação de aplicativos e experiências para Xbox/TV, consulte [interação do teclado](keyboard-interactions.md), [design para Xbox e TV](../devices/designing-for-tv.md)e [interações de controle remoto e gamepad](gamepad-and-remote-interactions.md).
 
 ### <a name="navigation-strategies"></a>Estratégias de navegação
 
@@ -482,7 +482,7 @@ Esta imagem mostra como, quando B1 tem o foco e a direção solicitada é para b
 
 
 ## <a name="related-articles"></a>Artigos relacionados
-- [Navegação de foco por programação](focus-navigation-programmatic.md)
+- [Navegação de foco programático](focus-navigation-programmatic.md)
 - [Interações de teclado](keyboard-interactions.md)
 - [Acessibilidade do teclado](../accessibility/keyboard-accessibility.md) 
 

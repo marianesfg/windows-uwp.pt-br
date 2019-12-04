@@ -1,5 +1,5 @@
 ---
-Description: Distribuir um aplicativo de área de trabalho empacotado (ponte de desktop)
+Description: Distribuir um aplicativo empacotado com a ponte de desktop
 title: Publique seu aplicativo de área de trabalho empacotado no Microsoft Store ou Sideload-o em um ou mais dispositivos.
 ms.date: 05/18/2018
 ms.topic: article
@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 597a283fd28b571ed968255312059c7049f3f700
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 15970afbeb5d9dee1c2079cd5933b1250ecb2f09
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682568"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734772"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribua seu aplicativo de desktop empacotado
 
@@ -28,7 +28,7 @@ A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveni
 
 Publique seu aplicativo no Microsoft Store para alcançar o público mais amplo. Além disso, os clientes organizacionais podem adquirir seu aplicativo para distribuir internamente para suas organizações por meio do [Microsoft Store for Business](https://businessstore.microsoft.com/store).
 
-Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Recursos restritos](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 

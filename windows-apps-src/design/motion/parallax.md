@@ -1,6 +1,6 @@
 ---
 Description: Use o controle ParallaxView para adicionar profundidade e movimento ao seu aplicativo.
-title: Como usar o controle ParallaxView para adicionar profundidade e movimento ao seu aplicativo.
+title: Use da Parallax para adicionar profundidade e movimentação ao seu aplicativo.
 ms.assetid: ''
 label: Parallax View
 template: detail.hbs
@@ -12,18 +12,18 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5feea95245a7e3ff6deefe73617b050f89243a90
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: ab37c49115acbccaf81725b74def85891fd73219
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984127"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735061"
 ---
 # <a name="parallax"></a>Paralaxe
 
 Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se movem mais rápido do que itens no plano de fundo. A Paralaxe cria uma sensação de profundidade, perspectiva e movimento. Em um aplicativo UWP, você pode usar o controle ParallaxView para criar um efeito de paralaxe.  
 
-> **APIs importantes**: [Classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift propriedade](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+> **APIs importantes**: [classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propriedade HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Exemplos
 
@@ -43,7 +43,7 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 
 ## <a name="parallax-and-the-fluent-design-system"></a>Paralaxe e o Sistema de Design Fluent
 
- O Sistema de Design Fluente ajuda você a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, consulte a [visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
+ O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, confira a [Visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
 
 ## <a name="how-it-works-in-a-user-interface"></a>Como ele funciona em uma interface de usuário
 
@@ -57,11 +57,11 @@ Em uma interface de usuário, você pode criar um efeito paralaxe movendo objeto
 Para criar um efeito paralaxe, use o controle [ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview). Esse controle vincula a posição de rolagem de um elemento do primeiro plano, como uma lista, a um elemento de fundo, como uma imagem. Enquanto você navega através do elemento do primeiro plano, ele anima o elemento de fundo para criar um efeito paralaxe. 
 
 Para usar o controle ParallaxView, você fornece um elemento de origem, um elemento de fundo e define as propriedades [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift) (para rolagem vertical) e/ou [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift) (para rolagem horizontal) como um valor maior que zero. 
-* A propriedade de Origem recebe uma referência do elemento do primeiro plano. Para que o efeito paralaxe ocorra, o primeiro plano deve ser um [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) ou um elemento que contenha um ScrollViewer, como uma [ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview) ou uma [RichTextBox](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). 
+* A propriedade de Origem recebe uma referência do elemento do primeiro plano. Para que o efeito paralaxe ocorra, o primeiro plano deve ser um [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) ou um elemento que contenha um ScrollViewer, como uma [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) ou uma [RichTextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). 
 
-* Para definir o elemento de fundo, adicione esse elemento como um filho do controle ParallaxView. O elemento de fundo pode ser qualquer [UIElement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement), como uma [Imagem](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Image) ou um painel que contém outros elementos de interface do usuário. 
+* Para definir o elemento de fundo, adicione esse elemento como um filho do controle ParallaxView. O elemento de fundo pode ser qualquer [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), como uma [Imagem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) ou um painel que contém outros elementos de interface do usuário. 
 
-Para criar um efeito paralaxe, o ParallaxView deve estar atrás do elemento do primeiro plano. Os painéis [Grade](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid) e [Tela](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.canvas) permitem que você coloque itens um sobre o outro, para que eles funcionem bem com o controle ParallaxView.  
+Para criar um efeito paralaxe, o ParallaxView deve estar atrás do elemento do primeiro plano. Os painéis [Grade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) e [Tela](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas) permitem que você coloque itens um sobre o outro, para que eles funcionem bem com o controle ParallaxView.  
 
 Este exemplo cria um efeito paralaxe para uma lista:
  
@@ -106,8 +106,8 @@ O ParallaxView ajusta automaticamente o tamanho da imagem para que ela funcione 
 
 As propriedades VerticalShift e HorizontalShift permitem controlar o nível do efeito paralaxe.
 
-* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não é movido.
-* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não é movido.
+* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não se move.
+* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. Um valor de 0 significa que o plano de fundo não se move.
 
 Valores maiores criam um efeito mais dramático. 
 
@@ -122,5 +122,5 @@ Para obter uma lista completa das maneiras de personalizar a paralaxe, consulte 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
-- [Design Fluent para UWP](/windows/apps/fluent-design-system)
-- [Ciência no sistema: Profundidade e Design Fluent](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Design Fluente para UWP](/windows/apps/fluent-design-system)
+- [Ciência no sistema: design e profundidade fluentes](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

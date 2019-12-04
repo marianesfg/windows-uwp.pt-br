@@ -1,17 +1,17 @@
 ---
-description: Ferramentas e técnicas para depurar e testar como o aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo.
-title: Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
+description: Ferramentas e técnicas para depurar e testar como seu aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo.
+title: Gerenciamento de tempo de vida do processo de teste e depuração
 ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d99492577fafc9f67929f795cd115d367940938
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 6912d7faa3a86dade13b60eac5654aef8a52173d
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713739"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735011"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
 

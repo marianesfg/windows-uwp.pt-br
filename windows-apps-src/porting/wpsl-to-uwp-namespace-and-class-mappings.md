@@ -1,17 +1,17 @@
 ---
 description: Este tópico fornece um mapeamento abrangente de Windows Phone APIs do Silverlight para seus equivalentes de Plataforma Universal do Windows (UWP).
-title: Windows Phone namespace do Silverlight para UWP e mapeamentos de classe
+title: WPSL para namespace UWP e mapeamentos de classe
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1af36b43e02c9ee08373098f57ba29c10badb6c8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fdb1dc8ad4b4e61e1ffec294cfbf17e8abcc8586
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735051"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Windows Phone mapeamentos de API do Silverlight para UWP
 
@@ -33,7 +33,7 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | Classe **Microsoft.Phone.BackgroundAgent** | Classe [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) |
 | Namespace **Microsoft.Phone.Scheduler** | Namespace [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background) |
 | Classe **Microsoft.Phone.Scheduler.Alarm** | Classes [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) e [**ToastNotificationManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationManager) |
-| Classes **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask** , **ScheduledTaskAgent** | Classe [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) |
+| Classes **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** | Classe [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) |
 | Classe **Microsoft.Phone.Scheduler.Reminder** | Classes [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) e [**ToastNotificationManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationManager) |
 | Classe **Microsoft.Phone.PictureDecoder** | Classe [**BitmapDecoder**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapDecoder) |
 | Namespace **Microsoft.Phone.BackgroundAudio** | Namespace do [**Windows. Media. playback**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback) |
@@ -99,7 +99,7 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | Namespace **System.Windows.Ink** | Nenhuma equivalência direta |
 | Namespace **System.Windows.Markup** | Namespace [**Windows. UI. XAML. Markup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup) | 
 | Namespace **System.Windows.Navigation** | Namespace [**Windows. UI. XAML. Navigation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Navigation) |
-| Evento **System.Windows.UIElement.Tap**, **EventHandler&lt;GestureEventArgs&gt;** delegado | Evento [**tocado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped) , delegado [**TappedEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.tappedeventhandler) |
+| Evento **System.Windows.UIElement.Tap**, representante **EventHandler&lt;GestureEventArgs&gt;** | Evento [**tocado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped) , delegado [**TappedEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.tappedeventhandler) |
 | Dados e serviços |  |
 | Classe **System.Data.Linq.DataContext** | Nenhuma equivalência direta |
 | Classe **System.Data.Linq.Mapping.ColumnAttribute** | Nenhuma equivalência direta |
@@ -168,9 +168,9 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | Classe **Microsoft.Phone.Maps.Services.RouteQuery** | Classe [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) |
 | Monetização | |
 | Namespace **Microsoft.Phone.Marketplace** | Namespace do [**Windows. ApplicationModel. Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) |
-| Media | |
+| Mídia | |
 | Namespace **Microsoft.Phone.Media** | Classe [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) |
-| Rede | |
+| Rede do | |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Classe **MPNN.DeviceNetworkInformation** | [**Nome do host**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName), classes [**NetworkInformation**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkInformation) |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Classe **MPNN.NetworkInterface** | Classe [**NetworkInformation**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkInformation) |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Classe **MPNN.NetworkInterfaceInfo** | Classe [**ConnectionProfile**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionProfile) |
@@ -179,7 +179,7 @@ Além disso, em um aplicativo do Windows 10, você se beneficiará do .NET Nativ
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Classe **MPNN.WebRequestExtensions** | Nenhuma equivalência direta |
 | Namespace **Microsoft.Phone.Networking.Voip** | Nenhuma equivalência direta |
 | Classe **System.Net.CookieCollection** | Ainda há suporte, mas algumas propriedades estão ausentes (por exemplo, IsReadOnly) |
-| Classe **System.Net.DownloadProgressChangedEventArgs**, e classes semelhantes relacionadas a **System.Net.WebClient** | Classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Derivar de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir o progresso. |
+| Classe **System.Net.DownloadProgressChangedEventArgs** e classes semelhantes relacionadas a **System.Net.WebClient** | Classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Derivar de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir o progresso. |
 | Classes **System.Net.DnsEndPoint**, **IPAddress** | Essas classes ainda têm suporte, mas algumas propriedades estão ausentes. Como alternativa, porte para a classe [**HostName**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName). |
 | Classe **System.Net.HttpUtility** | Classe [**HtmlFormatHelper**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.HtmlFormatHelper) |
 | Classe **System.Net.HttpWebRequest** | Suporte parcial, mas a alternativa recomendada e prospectiva é a classe [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (ou [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Essas APIs usam [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118)) para representar uma solicitação HTTP. |
