@@ -130,6 +130,8 @@
               href: controls-and-patterns/swipe.md
             - name: Puxar para atualizar
               href: controls-and-patterns/pull-to-refresh.md
+            - name: Coleções de filtragem
+              href: controls-and-patterns/listview-filtering.md
         - name: Opções de coleta e personalizações adicionais
           items:
             - name: Listas invertidas
