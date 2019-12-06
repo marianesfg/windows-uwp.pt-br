@@ -260,6 +260,8 @@
       href: style/reveal.md
     - name: Foco de revelação
       href: style/reveal-focus.md
+    - name: Raio de canto
+      href: style/rounded-corner.md
     - name: Som
       href: style/sound.md
     - name: Espaçamento
