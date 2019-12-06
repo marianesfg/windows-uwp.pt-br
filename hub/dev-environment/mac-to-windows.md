@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac para Windows, mapeamento de teclas de atalho, mover do UNIX para o Windows, fazer a transição do Mac para o Windows, ajudar a mudar do MacBook para a superfície, como usar o Windows para um usuário Macintosh, alternando do Macintosh para o Windows, ajudar a alterar os ambientes de desenvolvimento, Mac OS X para o Windows, ajuda movendo do Mac para o PC
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 563a8ad659cfff1396049aae78342642d1db3e72
-ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
+ms.openlocfilehash: a4e71143730184db094df2a7e8f1416cbaf244c4
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309155"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881275"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guia para alterar o ambiente de desenvolvimento do Mac para o Windows
 
@@ -24,22 +24,22 @@ Para o desenvolvimento de aplicativos, o equivalente mais próximo ao Xcode seri
 
 ## <a name="keyboard-shortcuts"></a>Atalhos de teclado
 
-| **Operacional** | **Mac** | **Windows** |
+| **Operação** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| Copiar | Comando + C | CTR + C |
-| Recortar | Comando + X | CTR + X |
-| Colar | Comando + V | CTR + V |
+| Copiar | Comando + C | Ctrl+C |
+| Recortar | Comando + X | Ctrl+X |
+| Colar | Comando + V | Ctrl+V |
 | Desfazer | Comando + Z | Ctrl+Z |
-| Salvar | Comando + S | Ctrl+S |
-| Open | Comando + O | Ctrl+O |
-| Bloquear computador | Comando + Control + Q | WindowKey + L |
-| Mostrar área de trabalho | Comando + F3 | WindowKey + D |
-| Minimizar o Windows | COMANDO + M | Tecla Windows + M |
-| Pesquisa | Comando + espaço | tecla do Windows |
+| salve | Comando + S | Ctrl+S |
+| Abra o | Comando + O | Ctrl+O |
+| Bloquear computador | Comando + Control + Q | WindowsKey + L |
+| Mostrar área de trabalho | Comando + F3 | WindowsKey + D |
+| Minimizar o Windows | Comando + M | WindowsKey + M |
+| Pesquisar | Comando + espaço | WindowsKey |
 | Fechar janela ativa | Comando + W | Controle + W |
 | Alternar tarefa atual | Comando + guia | Alt+Tab |
-| Salvar tela (Screen dump) | Comando + Shift + 3 | Windows + Shift + S |
-| Salvar janela | Comando + Shift + 4 | Windows + Shift + S |
+| Salvar tela (Screen dump) | Comando + Shift + 3 | WindowsKey + Shift + S |
+| Salvar janela | Comando + Shift + 4 | WindowsKey + Shift + S |
 | Exibir informações ou propriedades do item | Comando + I | Alt+Enter |
  | Selecionar todos os itens | Comando + A | Ctrl+A |
 | Selecionar mais de um item em uma lista (não contíguo) | E, em seguida, clique em cada item | Controle e clique em cada item |
@@ -49,7 +49,7 @@ Para o desenvolvimento de aplicativos, o equivalente mais próximo ao Xcode seri
 
 Observação: alguns desses atalhos exigem uma "precisão trackpad", como o trackpad em dispositivos de superfície e outros laptops de terceiros.
 
- **Operacional** | **Mac** | **Windows** |
+ **Operação** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Rolagem | Dedo vertical de dois dedos | Dedo vertical de dois dedos |
 | Zoom | Apertar e reduzir os dois dedos | Apertar e reduzir os dois dedos |
@@ -70,7 +70,7 @@ O Windows fornece várias alternativas ao emulador de terminal do Mac.
 
 1. A linha de comando do Windows
 
-A linha de comando do Windows aceitará os comandos DOS e é a ferramenta de linha de comando mais usada no Windows. Para abri-lo: pressione **Windows + R** para abrir a caixa **executar** e digite **cmd** e clique em **OK**. Para abrir uma linha de comando de administrador, digite **cmd** e pressione **Ctrl + Shift + Enter**. 
+A linha de comando do Windows aceitará os comandos DOS e é a ferramenta de linha de comando mais usada no Windows. Para abri-lo: pressione **WindowsKey + R** para abrir a caixa **executar** , digite **cmd** e clique em **OK**. Para abrir uma linha de comando de administrador, digite **cmd** e pressione **Ctrl + Shift + Enter**.
 
 2. PowerShell
 
@@ -78,13 +78,13 @@ O [PowerShell](https://docs.microsoft.com/powershell/scripting/overview?view=pow
 
 Incidentalmente, o PowerShell [também está disponível para Mac](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6).
 
-3. Subsistema do Windows para Linux (WSL)
+3. WSL (Subsistema do Windows para Linux)
 
-O WSL permite que você execute um shell do Linux no Windows. Isso significa que você pode executar o *bash** ou outro shell, dependendo da escolha e do distribuição Linux específico instalado. O uso de WSL fornecerá o tipo de ambiente mais familiar para os usuários do Mac. Por exemplo, você será o **ls** para listar os arquivos em um diretório atual, não o **dir** como você faria com a linha de comando do Windows. Para saber mais sobre como instalar e usar o WSL, consulte o [Guia de instalação do subsistema do Windows para Linux para Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+O WSL permite que você execute um shell do Linux no Windows. Isso significa que você pode executar o *bash** ou outro shell, dependendo da escolha e do distribuição Linux específico instalado. O uso de WSL fornecerá o tipo de ambiente mais familiar para os usuários do Mac. Por exemplo, você será o **ls** para listar os arquivos em um diretório atual, não o **dir** como você faria com a linha de comando do Windows. Para saber mais sobre como instalar e usar o WSL, consulte o [Guia de instalação do subsistema do Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
 
 ## <a name="apps-and-utilities"></a>Aplicativos e utilitários
 
- **Aplicação** | **Mac** | **Windows** |
+ **Aplicativo** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Configurações e preferências | Preferências do sistema | Configurações |
 | Gerenciador de tarefas | Monitor de atividade | Gerenciador de Tarefas |
