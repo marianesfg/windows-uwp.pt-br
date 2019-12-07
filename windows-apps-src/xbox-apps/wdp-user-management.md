@@ -5,14 +5,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 52f333af73084ed14982b9d09b6770c8294980f7
+ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244072"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902524"
 ---
-#<a name="xbox-live-user-management"></a>Gerenciamento de usuário em tempo real do Xbox #
+# <a name="xbox-live-user-management"></a>Gerenciamento do usuário do Xbox Live
 
 ## <a name="request"></a>Solicitação
 
@@ -20,15 +20,15 @@ Você pode obter a lista de usuários no console ou atualizar a lista adicionand
 
 | Método        | URI da solicitação     | 
 | ------------- |-----------------|
-| OBTER           | /ext/user |
+| GET           | /ext/user |
 | PUT           | /ext/user |
 
 
-**Parâmetros do URI**
+**Parâmetros de URI**
 
 * Nenhuma
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
 * Nenhuma
 
@@ -38,12 +38,12 @@ As chamadas para PUT devem incluir uma matriz JSON com a seguinte estrutura:
 
 * Usuários
   * AutoSignIn (opcional): bool desabilitando ou habilitando a entrada automática da conta especificada por EmailAddress ou UserId.
-  * Endereço de email (opcional - deve ser fornecido se a ID de usuário não for fornecido, a menos que entrar em um usuário patrocinado): Especificando o usuário para modificar/adicionar/excluir um endereço de email.
-  * Senha (opcional - deve ser fornecido se o usuário não estiver atualmente no console): Senha usada para adicionar um novo usuário no console.
+  * EmailAddress (opcional – deverá ser fornecido se UserId não for fornecido, a menos que haja a entrada de um usuário patrocinado): endereço de e-mail especificando o usuário a ser modificado/adicionado/excluído.
+  * Password (opcional – deverá ser fornecido se o usuário não estiver no console no momento): senha usada para adicionar um novo usuário ao console.
   * SignedIn (opcional): bool especificando se deve haver entra ou saída da conta fornecida.
-  * ID de usuário (opcional - deve ser fornecido se o endereço de email não for fornecido, a menos que entrar em um usuário patrocinado): UserId especificando o usuário para modificar/adicionar/excluir.
+  * UserId (opcional – deverá ser fornecido se EmailAddress não for fornecido, a menos que haja a entrada de um usuário patrocinado): UserId especificando o usuário a ser modificado/adicionado/excluído.
   * SponsoredUser (opcional): bool especificando se é necessário adicionar um usuário patrocinado ou não.
-  * Delete (opcional): booliano que especifica para excluir esse usuário no console do
+  * Delete (opcional): BOOL especificando para excluir este usuário do console
 
 ## <a name="response"></a>Resposta
 
