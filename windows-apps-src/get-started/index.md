@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: introdução, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 106e85fc0bd74740d99d5de6cb34c8b5a6e75e0f
-ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
+ms.openlocfilehash: 7439d437dda69bf235bd8681751617b2982be394
+ms.sourcegitcommit: 2d3a7d18edf2715987b26d1b5341ec88eefc99ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205914"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898529"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introdução aos aplicativos do Windows 10
 
@@ -173,7 +173,7 @@ ms.locfileid: "71205914"
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Adicionar de API</h3>
+                                <h3>Referência da API</h3>
                             </div>
                         </div>
                     </div>
@@ -208,6 +208,7 @@ ms.locfileid: "71205914"
                 <div class="card">
                     <div class="cardText">
                         <h3>Ferramentas de desenvolvedor</h3>
+                        <p><a href="https://github.com/Microsoft/WindowsTemplateStudio/">Windows Template Studio</a></p>
                         <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de Ferramentas da Comunidade do Windows</a></p>
                         <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">Máquinas virtuais</a></p>
                         <p><a href="//docs.microsoft.com/windows/wsl/about">Bash do Ubuntu no Windows</a></p>
