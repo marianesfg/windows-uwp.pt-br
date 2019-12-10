@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 71c59049b76219d6f9360748e9ca11ea84542e47
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3b732da8f92c258647f905e6939dc3cb1b9c9f87
+ms.sourcegitcommit: 3e47987fb4f86a6349ffe8262675f50971c77472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259314"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74954060"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -100,7 +100,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 | Cenário       | Métodos      |
 |---------------|--------------------|
 | Instalações |  <ul><li>[Obter instalações de aplicativos da área de trabalho](get-desktop-app-installs.md)</li></ul> |
-| Trava |  <ul><li>[Obter blocos de atualização para seu aplicativo de desktop](get-desktop-block-data.md)</li><li>[Obter detalhes do bloco de atualização para seu aplicativo de desktop](get-desktop-block-data-details.md)</li></ul> |
+| Blocks |  <ul><li>[Obter blocos de atualização para seu aplicativo de desktop](get-desktop-block-data.md)</li><li>[Obter detalhes do bloco de atualização para seu aplicativo de desktop](get-desktop-block-data-details.md)</li></ul> |
 | Erros de aplicativo |  <ul><li>[Obter dados de relatório de erros para seu aplicativo de desktop](get-desktop-application-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo de área de trabalho](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obter o rastreamento de pilha para obter um erro em seu aplicativo de desktop](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Baixe o arquivo CAB para obter um erro em seu aplicativo de desktop](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 | Insights | <ul><li>[Obter dados de informações para seu aplicativo de desktop](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
@@ -113,15 +113,6 @@ Os métodos adicionais a seguir estão disponíveis para uso por contas de desen
 | Análises gerais |  <ul><li>[Obter dados do Xbox Live Analytics](get-xbox-live-analytics.md)</li><li>[Obter dados de conquistas do Xbox Live](get-xbox-live-achievements-data.md)</li><li>[Obter dados de uso simultâneo do Xbox Live](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Análise de integridade |  <ul><li>[Obter dados de integridade do Xbox Live](get-xbox-live-health-data.md)</li></ul> |
 | Análise de comunidade |  <ul><li>[Obter dados do hub de jogos do Xbox Live](get-xbox-live-game-hub-data.md)</li><li>[Obter dados do clube do Xbox Live](get-xbox-live-club-data.md)</li><li>[Obter dados do Xbox Live multiplayer](get-xbox-live-multiplayer-data.md)</li></ul>  |
-
-### <a name="methods-for-xbox-one-games"></a>Métodos para jogos Xbox One
-
-Os seguintes métodos adicionais estão disponíveis para uso por contas de desenvolvedor com os jogos do Xbox One que foram ingeridos por meio do portal do desenvolvedor do Xbox (XDP) e disponíveis no painel de análise do XDP.
-
-| Cenário       | Métodos      |
-|---------------|--------------------|
-| Aquisições |  <ul><li>[Obtenha aquisições de jogos do Xbox One](get-xbox-one-game-acquisitions.md)</li><li>[Obter aquisições de complemento do Xbox One](get-xbox-one-add-on-acquisitions.md)</li></ul> |
-| Erros |  <ul><li>[Obter dados de relatório de erros para o seu jogo do Xbox One](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Obter detalhes de um erro em seu jogo do Xbox One](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Obter o rastreamento de pilha para obter um erro em seu jogo Xbox One](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Baixe o arquivo CAB para obter um erro em seu jogo Xbox One](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware e drivers
 

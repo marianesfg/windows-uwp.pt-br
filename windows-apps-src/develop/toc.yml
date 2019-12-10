@@ -553,19 +553,6 @@
                           href: ../monetize/download-the-cab-file-for-an-error-in-your-desktop-application.md
                 - name: Jogos do Xbox One e Xbox Live
                   items:
-                    - name: Obter aquisições de jogos Xbox One
-                      href: ../monetize/get-xbox-one-game-acquisitions.md
-                    - name: Obter aquisições de complementos do Xbox One
-                      href: ../monetize/get-xbox-one-add-on-acquisitions.md
-                    - name: Obter dados de relatório de erros do seu jogo do Xbox One
-                      href: ../monetize/get-error-reporting-data-for-your-xbox-one-game.md
-                      items:
-                        - name: Obter detalhes de um erro em seu jogo do Xbox One
-                          href: ../monetize/get-details-for-an-error-in-your-xbox-one-game.md
-                        - name: Obter o rastreamento de pilha de um erro em seu jogo do Xbox One
-                          href: ../monetize/get-the-stack-trace-for-an-error-in-your-xbox-one-game.md
-                        - name: Baixar o arquivo CAB de um erro em seu jogo do Xbox One
-                          href: ../monetize/download-the-cab-file-for-an-error-in-your-xbox-one-game.md
                     - name: Obter dados de análise do Xbox Live
                       href: ../monetize/get-xbox-live-analytics.md
                       items:
@@ -930,7 +917,7 @@
               href: ../composition/xaml-lighting.md
     - name: Windows como serviço
       href: ../updates-and-versions/application-development-for-windows-as-a-service.md
-    - name: Componentes do Tempo de Execução do Windows
+    - name: componentes do Windows Runtime
       href: ../winrt-components/index.md
       items:
         - name: Componentes do Windows Runtime com C++/CX
@@ -940,19 +927,19 @@
         - name: 'Componentes do Windows Runtime com C# e Visual Basic'
           href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
           items:
-            - name: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
+            - name: Eventos personalizados e acessadores de evento em componentes do Windows Runtime
               href: ../winrt-components/custom-events-and-event-accessors-in-windows-runtime-components.md
-            - name: Passagem de matrizes para um componente do Tempo de Execução do Windows
+            - name: Passagem de matrizes para um componente do Windows Runtime
               href: ../winrt-components/passing-arrays-to-a-windows-runtime-component.md
-            - name: Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
+            - name: Diagnosticando condições de erro do componente do Windows Runtime
               href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
-            - name: Distribuição de um componente do Tempo de Execução do Windows gerenciado
+            - name: Distribuição de um componente do Windows Runtime gerenciado
               href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
             - name: Mapeamentos do .NET dos tipos do Windows Runtime
               href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
         - name: 'Passo a passo de um componente do Windows Runtime em C# ou Visual Basic'
           href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
-        - name: Acionando eventos em componentes do Tempo de Execução do Windows
+        - name: Acionando eventos em componentes do Windows Runtime
           href: ../winrt-components/raising-events-in-windows-runtime-components.md
         - name: Componentes do Windows Runtime intermediários para aplicativos UWP de sideload
           href: ../winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md
