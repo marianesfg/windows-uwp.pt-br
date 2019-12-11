@@ -4,7 +4,7 @@ title: Diretrizes de controles de progresso
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 11/29/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -12,20 +12,42 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67315518238bda1359862f36acd398e25e8481e3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3e5ff5d0e9172432110d60a007228e59e48785b9
+ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258160"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830803"
 ---
 # <a name="progress-controls"></a>Controles de progresso
 
- 
-
 Um controle de progresso oferece feedback ao usuário que uma operação de execução longa está em andamento. Isso pode significar que o usuário não pode interagir com o aplicativo quando o indicador de progresso está visível e também pode indicar a duração do tempo de espera, dependendo do indicador usado.
 
-> **APIs importantes**: [classe ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
+| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
+| - | - |
+| [classe ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive) | [Classe ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate) |
+
+| **Obter a biblioteca de interface do usuário do Windows** |
+| - |
+| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> [!NOTE]
+> Há duas versões do controle da ProgressBar: uma na plataforma, representada pelo namespace Windows.UI.XAML e outra na biblioteca de interface do usuário do Windows, o namespace Microsoft.UI.XAML. Embora a API para ProgressBar seja a mesma, a aparência do controle é diferente entre essas duas versões. Este documento mostrará imagens da versão mais recente da biblioteca da interface do usuário do Windows.
+Neste documento, usaremos o alias **muxc** em XAML para representar a APIs da Biblioteca de interface do usuário do Windows que incluímos em nosso projeto. Adicionamos isso ao nosso elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page):
+
+```xaml
+xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+```
+
+No code-behind, também usaremos o alias **muxc** em C# para representar a APIs da Biblioteca de interface do usuário do Windows que incluímos em nosso projeto. Adicionamos essa instrução **using** na parte superior do arquivo:
+
+```csharp
+using muxc = Microsoft.UI.Xaml.Controls;
+```
+
+```vb
+Imports muxc = Microsoft.UI.Xaml.Controls
+```
 
 ## <a name="types-of-progress"></a>Tipo de progresso
 
@@ -37,7 +59,7 @@ Há dois controles para mostrar ao usuário que uma operação está em andament
 
 Além disso, um controle de progresso é somente leitura, não é interativo. Isso significa que o usuário não pode invocar nem usar esses controles diretamente.
 
-![Estados do ProgressBar](images/ProgressBar_TwoStates.png)
+![Estados do ProgressBar](images/progress-bar-two-states.png)
 
 *De cima para baixo – uma ProgressBar indeterminado e uma ProgressBar determinado*
 
@@ -119,13 +141,13 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 
 **ProgressBar – determinado**
 
-![Exemplo de ProgressBar determinado](images/PB_DeterminateExample.png)
+![Exemplo de ProgressBar determinado](images/progress-bar-determinate-example.png)
 
 O primeiro exemplo é o ProgressBar determinado. Quando a duração da operação é conhecida, ao instalar, baixar, configurar, etc., é melhor usar um ProgressBar determinado.
 
 **ProgressBar – indeterminado**
 
-![Exemplo de ProgressBar indeterminado](images/PB_IndeterminateExample.png)
+![Exemplo de ProgressBar indeterminado](images/progress-bar-indeterminate-example.png)
 
 Quando não se sabe o tempo que operação levará, use um ProgressBar indeterminado. ProgressBars indeterminados também são bons no preenchimento de uma lista virtualizada e na criação de uma transição visual suave entre um ProgressBar indeterminado para um determinado.
 
@@ -168,7 +190,7 @@ Por padrão, a cor principal dos controles de progresso é definida como a cor d
 
 ```XAML
 <ProgressRing IsActive="True" Height="100" Width="100" Foreground="Blue"/>
-<ProgressBar Width="100" Foreground="Green"/>
+<muxc:ProgressBar Width="100" Foreground="Green"/>
 ```
 
 A alteração da cor de primeiro plano do ProgressRing alterará as cores dos pontos. A propriedade de primeiro plano do ProgressBar alterará a cor de preenchimento da barra – para alterar a parte não preenchida da barra, basta substituir a propriedade de plano de fundo.
