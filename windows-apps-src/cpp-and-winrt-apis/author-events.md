@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d512faccfa318156fb0dc28d3f804b53f0fe3d
-ms.sourcegitcommit: 102fdfdf32ba12a8911018d234d71d67ebef61ce
+ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
+ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551659"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830783"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos em C++/WinRT
 
@@ -253,8 +253,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ```
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Delegados parametrizados, sinais simples e retornos de chamada dentro de um projeto
-
-Se o evento é usado somente internamente em seu projeto de C++/WinRT (não entre binários), ainda é possível usar o modelo de struct [**winrt::event**](/uwp/cpp-ref-for-winrt/event), mas é preciso parametrizá-lo com o modelo de struct do C++/WinRT [**winrt::delegate&lt;... T&gt;** ](/uwp/cpp-ref-for-winrt/delegate), que não é do Windows Runtime e é um delegado eficiente e de contagem de referências. E é compatível com qualquer número de parâmetros e não está limitado aos tipos do Windows Runtime.
+Se você precisar de eventos internos a seu projeto do Visual Studio (não entre binários), em que esses eventos não se limitem aos tipos do Windows Runtime, você ainda poderá usar o modelo da classe [**winrt::event**](/uwp/cpp-ref-for-winrt/event)\<Delegate\>. Basta usar [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate), em vez de um tipo de delegado do Windows Runtime real, já que **winrt::delegate** também dá suporte a parâmetros que não são do Windows Runtime.
 
 O exemplo a seguir mostra primeiro uma assinatura do delegado que não usa parâmetros (basicamente, um sinal simples) e, em seguida, outra que usa uma cadeia de caracteres.
 

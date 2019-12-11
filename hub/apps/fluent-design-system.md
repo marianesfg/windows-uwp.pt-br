@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: f3a2575b17cc4228d7c4db273845478aecf65f29
-ms.sourcegitcommit: f0936ce8e88d78b1af99998794a8765094f6a487
+ms.openlocfilehash: f46d6ba99d4342e1e4fe7a9926082a5981fd690a
+ms.sourcegitcommit: 11c5cb559c949b6fe645499c2265434885882d8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915102"
+ms.lasthandoff: 12/01/2019
+ms.locfileid: "74666905"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativos do Sistema de Design Fluente para Windows
 
@@ -65,7 +65,7 @@ Além das orientações de design, nossos artigos de Design Fluente também most
 
 ## <a name="find-a-natural-fit"></a>Encontrar uma opção natural
 
-Como fazer com que um aplicativo pareça natural em uma variedade de dispositivos? Ao fazer isso, parece que ele foi projetado com cada dispositivo específico em mente. Um layout de interface do usuário que se adapte a diferentes tamanhos de tela&mdash;para que não haja desperdício de espaço (e também nenhuma lotação)&mdash;torna uma experiência natural, como se ela fosse projetada para esse dispositivo.
+Como fazer com que um aplicativo pareça natural em uma variedade de dispositivos? Ao fazer isso, parece que ele foi projetado com cada dispositivo específico em mente. Um layout de interface do usuário que se adapte a diferentes tamanhos de tela para que não haja desperdício de espaço (e também nenhuma lotação) torna uma experiência natural, como se ela fosse projetada para esse dispositivo.
 
 :::row:::
     :::column:::
@@ -112,7 +112,7 @@ Aplicativos UWP podem ser executados em uma ampla variedade de dispositivos ofer
     :::column span="2":::
 **Otimizar para a entrada certa**
 
-Aplicativos UWP são automaticamente compatíveis com mouse, teclado, caneta e outras interações comuns por toque&mdash;você não precisa fazer mais nada. Mas você pode aprimorar seu aplicativo com suporte otimizado para entradas específicas, como caneta e Surface Dial.
+Os aplicativos UWP dão suporte automaticamente a interações comuns de mouse, teclado, caneta e toque. Você não precisa fazer nada extra. Porém, se quiser, pode aprimorar seu aplicativo com suporte otimizado para entradas específicas, como caneta e Surface Dial.
 
 [Saiba mais sobre entradas e interações](/windows/uwp/design/input/input-primer)
 :::row-end:::

@@ -3,14 +3,14 @@ description: Este tópico mostra como criar APIs de C++/WinRT usando a estrutura
 title: Criar APIs com C++/WinRT
 ms.date: 07/08/2019
 ms.topic: article
-keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
+keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de runtime, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: eba0e6312bc22153d8cb62eb97d32635184f0fdc
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
+ms.sourcegitcommit: 58f6643510a27d6b9cd673da850c191ee23b813e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317117"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74701484"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -20,16 +20,16 @@ Este tópico mostra como criar APIs [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/
 > Este tópico aborda os componentes do Windows Runtime, mas apenas no contexto do C++/WinRT. Se você estiver buscando conteúdo sobre componentes do Windows Runtime que abrange todas as linguagens do Windows Runtime, consulte [Componentes do Windows Runtime](/windows/uwp/winrt-components/).
 
 - Você *não* está criando uma classe do Windows Runtime (classe de tempo de execução); você apenas implementará uma ou mais interfaces do Windows Runtime para consumo local dentro de seu aplicativo. Você irá derivar diretamente de **winrt::implements** neste caso, e implementará funções.
-- Você *está* criando uma classe de tempo de execução. Você poderá estar criando um componente a ser consumido a partir de um aplicativo. Ou você poderá estar criando um tipo a ser consumido a partir da interface do usuário XAML e, nesse caso, você estará implementando e consumindo uma classe de tempo de execução dentro da mesma unidade de compilação. Nesses casos, você permitirá que as ferramentas gerem classes que derivam de **winrt::implements**.
+- Você *está* criando uma classe de runtime. Você poderá estar criando um componente a ser consumido a partir de um aplicativo. Ou você poderá estar criando um tipo a ser consumido a partir da interface do usuário XAML e, nesse caso, você estará implementando e consumindo uma classe de runtime dentro da mesma unidade de compilação. Nesses casos, você permitirá que as ferramentas gerem classes que derivam de **winrt::implements**.
 
 Em ambos os casos, o tipo que implementa as APIs C++/WinRT é denominado *tipo de implementação*.
 
 > [!IMPORTANT]
 > É importante distinguir o conceito de um tipo de implementação daquele de um tipo projetado. O tipo projetado está descrito em [Consumir APIs com C++/WinRT](consume-apis.md).
 
-## <a name="if-youre-not-authoring-a-runtime-class"></a>Se você *não* estiver criando uma classe de tempo de execução
+## <a name="if-youre-not-authoring-a-runtime-class"></a>Se você *não* estiver criando uma classe de runtime
 
-O cenário mais simples é aquele em que você implementará uma interface do Windows Runtime para consumo local. Você não precisa de uma classe de tempo de execução; apenas uma classe C++ comum. Por exemplo, você pode estar escrevendo um aplicativo com base em [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication).
+O cenário mais simples é aquele em que você implementará uma interface do Windows Runtime para consumo local. Você não precisa de uma classe de runtime; apenas uma classe C++ comum. Por exemplo, você pode estar escrevendo um aplicativo com base em [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication).
 
 > [!NOTE]
 > Para obter informações sobre como instalar e usar o C++/WinRT Visual Studio Extension (VSIX) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira as informações de [suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
@@ -126,11 +126,11 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="if-youre-authoring-a-runtime-class-in-a-windows-runtime-component"></a>Se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime
 
-Se o tipo estiver empacotado em um componente do Windows Runtime para consumo de um aplicativo, então ele precisará ser uma classe de tempo de execução. Declare uma classe de tempo de execução em um arquivo de IDL (linguagem IDL da Microsoft) (.idl) (confira [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](#factoring-runtime-classes-into-midl-files-idl)).
+Se o tipo estiver empacotado em um componente do Windows Runtime para consumo de um aplicativo, então ele precisará ser uma classe de tempo de execução. Declare uma classe de runtime em um arquivo de IDL (linguagem IDL da Microsoft) (.idl) (confira [Como fatorar classes de runtime em arquivos MIDL (.idl)](#factoring-runtime-classes-into-midl-files-idl)).
 
 Cada arquivo IDL resulta em um arquivo `.winmd`, e o Visual Studio mescla todos eles em um único arquivo com o mesmo nome do namespace raiz. O arquivo `.winmd` final será aquele que os consumidores de seu componente consultarão.
 
-Veja abaixo um exemplo de declaração de uma classe de tempo de execução em um arquivo IDL.
+Veja abaixo um exemplo de declaração de uma classe de runtime em um arquivo IDL.
 
 ```idl
 // MyRuntimeClass.idl
@@ -146,7 +146,7 @@ namespace MyProject
 }
 ```
 
-Esse IDL declara uma classe do Windows Runtime (tempo de execução). Uma classe de tempo de execução é um tipo que pode ser ativado e consumido por meio de interfaces COM modernas, normalmente entre limites executáveis. Quando você adiciona um arquivo IDL ao seu projeto e ao build, a cadeia de ferramentas C++/WinRT (`midl.exe` e `cppwinrt.exe`) gera um tipo de implementação. Para ver um exemplo do fluxo de trabalho do arquivo IDL em ação, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
+Esse IDL declara uma classe do Windows Runtime (tempo de execução). Uma classe de runtime é um tipo que pode ser ativado e consumido por meio de interfaces COM modernas, normalmente entre limites executáveis. Quando você adiciona um arquivo IDL ao seu projeto e ao build, a cadeia de ferramentas C++/WinRT (`midl.exe` e `cppwinrt.exe`) gera um tipo de implementação. Para ver um exemplo do fluxo de trabalho do arquivo IDL em ação, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
 
 Usando o exemplo de IDL acima, o tipo de implementação é um struct stub do C++ chamado **winrt::MyProject::implementation::MyRuntimeClass** nos arquivos de código fonte denominados `\MyProject\MyProject\Generated Files\sources\MyRuntimeClass.h` e `MyRuntimeClass.cpp`.
 
@@ -180,9 +180,9 @@ Então, nesse cenário, na raiz da hierarquia de herança está o modelo de stru
 
 Para obter mais detalhes, o código e um passo a passo das APIs de criação em um componente do Windows Runtime, veja como [criar eventos em C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component).
 
-## <a name="if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui"></a>Se você estiver criando uma classe de tempo de execução para ser referenciada em sua interface de usuário XAML
+## <a name="if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui"></a>Se você estiver criando uma classe de runtime para ser referenciada em sua interface de usuário XAML
 
-Se o tipo é referenciado por sua interface de usuário XAML, ele precisará ser uma classe de tempo de execução, mesmo que esteja no mesmo projeto que o XAML. Embora eles geralmente sejam ativados entre limites executáveis, uma classe de tempo de execução pode ser usada dentro da unidade de compilação que a implementa.
+Se o tipo é referenciado por sua interface de usuário XAML, ele precisará ser uma classe de runtime, mesmo que esteja no mesmo projeto que o XAML. Embora eles geralmente sejam ativados entre limites executáveis, uma classe de runtime pode ser usada dentro da unidade de compilação que a implementa.
 
 Nesse cenário, você estará criando *e* consumindo as APIs. O procedimento para a implementação da classe de tempo de execução é basicamente o mesmo para um componente do Windows Runtime. Portanto, confira a seção anterior&mdash;[Se você estiver criando uma classe de tempo de execução em um componente do Windows Runtime](#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component). O único detalhe que difere é que, no IDL, a cadeia de ferramentas C++/WinRT gera não apenas um tipo de implementação, mas também um tipo projetado. É importante entender que dizer apenas "**MyRuntimeClass**", neste cenário, pode ser ambíguo. Há várias entidades com esse nome e de tipos diferentes.
 
@@ -207,39 +207,39 @@ namespace winrt::MyProject
 }
 ```
 
-Para obter um exemplo de um passo a passo para implementar a interface **INotifyPropertyChanged** em uma classe de tempo de execução, confira os [controles XAML; associar a uma propriedade C++/WinRT](binding-property.md).
+Para obter um exemplo de um passo a passo para implementar a interface **INotifyPropertyChanged** em uma classe de runtime, confira os [controles XAML; associar a uma propriedade C++/WinRT](binding-property.md).
 
-O procedimento para o consumo da classe de tempo de execução neste cenário está descrito em [Consumir APIs com C++/WinRT](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project).
+O procedimento para o consumo da classe de runtime neste cenário está descrito em [Consumir APIs com C++/WinRT](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project).
 
-## <a name="factoring-runtime-classes-into-midl-files-idl"></a>Como fatorar classes de tempo de execução em arquivos MIDL (.idl)
+## <a name="factoring-runtime-classes-into-midl-files-idl"></a>Como fatorar classes de runtime em arquivos MIDL (.idl)
 
-Os modelos de projeto e item do Visual Studio produzem um arquivo IDL separado para cada classe de tempo de execução. Isso fornece uma correspondência lógica entre um arquivo IDL e seus arquivos de código-fonte gerados.
+Os modelos de projeto e item do Visual Studio produzem um arquivo IDL separado para cada classe de runtime. Isso fornece uma correspondência lógica entre um arquivo IDL e seus arquivos de código-fonte gerados.
 
-No entanto, se você consolidar todas as classes de tempo de execução do projeto em um único arquivo IDL, isso poderá melhorar significativamente o tempo de build. Se, de outra forma, você tiver dependências `import` complexas (ou circulares) entre eles, a consolidação poderá ser realmente necessária. Talvez você ache mais fácil criar e examinar as classes de tempo de execução se elas estiverem juntas.
+No entanto, se você consolidar todas as classes de runtime do projeto em um único arquivo IDL, isso poderá melhorar significativamente o tempo de build. Se, de outra forma, você tiver dependências `import` complexas (ou circulares) entre eles, a consolidação poderá ser realmente necessária. Talvez você ache mais fácil criar e examinar as classes de runtime se elas estiverem juntas.
 
-## <a name="runtime-class-constructors"></a>Construtores de classe de tempo de execução
+## <a name="runtime-class-constructors"></a>Construtores de classe de runtime
 
 Veja a seguir alguns pontos que devem ser observados nas listagens que vimos acima.
 
-- Cada construtor que você declarar em seu IDL faz com que um construtor seja gerado tanto no tipo de implementação quanto no tipo projetado. Os construtores declarados de IDL são usados para consumir a classe de tempo de execução de uma unidade de compilação *diferente*.
-- Quer você tenha ou não construtores declarados em IDL, uma sobrecarga de construtor que usa **std::nullptr_t** será gerada em no tipo projetado. Chamar o construtor **std::nullptr_t** é a *primeira de duas etapas* para consumir a classe de tempo de execução *na mesma* unidade de compilação. Para obter mais detalhes e um exemplo de código, confira as informações sobre [consumir APIs com C++/WinRT](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project).
-- Se você estiver consumindo a classe de tempo de execução na *mesma* unidade de compilação, você também poderá implementar construtores não padrão diretamente no tipo de implementação (que está em `MyRuntimeClass.h`).
+- Cada construtor que você declarar em seu IDL faz com que um construtor seja gerado tanto no tipo de implementação quanto no tipo projetado. Os construtores declarados de IDL são usados para consumir a classe de runtime de uma unidade de compilação *diferente*.
+- Quer você tenha ou não construtores declarados em IDL, uma sobrecarga de construtor que usa **std::nullptr_t** será gerada em no tipo projetado. Chamar o construtor **std::nullptr_t** é a *primeira de duas etapas* para consumir a classe de runtime *na mesma* unidade de compilação. Para obter mais detalhes e um exemplo de código, confira as informações sobre [consumir APIs com C++/WinRT](consume-apis.md#if-the-api-is-implemented-in-the-consuming-project).
+- Se você estiver consumindo a classe de runtime na *mesma* unidade de compilação, você também poderá implementar construtores não padrão diretamente no tipo de implementação (que está em `MyRuntimeClass.h`).
 
 > [!NOTE]
-> Se você espera que sua classe de tempo de execução seja consumida por uma unidade de compilação diferente (o que é comum), inclua construtores em seu IDL (pelo menos um construtor padrão). Ao fazer isso, você também terá uma implementação do alocador junto com seu tipo de implementação.
+> Se você espera que sua classe de runtime seja consumida por uma unidade de compilação diferente (o que é comum), inclua construtores em seu IDL (pelo menos um construtor padrão). Ao fazer isso, você também terá uma implementação do alocador junto com seu tipo de implementação.
 > 
-> Se você quiser criar e consumir a classe de tempo de execução somente dentro da mesma unidade de compilação, não declare nenhum construtor no IDL. Você não precisará de uma implementação de alocador, e ela não será gerada. O construtor padrão do tipo de implementação será excluído, mas é possível editá-lo facilmente e usá-lo como padrão.
+> Se você quiser criar e consumir a classe de runtime somente dentro da mesma unidade de compilação, não declare nenhum construtor no IDL. Você não precisará de uma implementação de alocador, e ela não será gerada. O construtor padrão do tipo de implementação será excluído, mas é possível editá-lo facilmente e usá-lo como padrão.
 > 
-> Se quiser criar e consumir a classe de tempo de execução somente dentro da mesma unidade de compilação, e precisar de parâmetros do construtor, crie s construtores necessários diretamente no tipo de implementação.
+> Se quiser criar e consumir a classe de runtime somente dentro da mesma unidade de compilação, e precisar de parâmetros do construtor, crie s construtores necessários diretamente no tipo de implementação.
 
-## <a name="runtime-class-methods-properties-and-events"></a>Métodos, propriedades e eventos de classe de tempo de execução
+## <a name="runtime-class-methods-properties-and-events"></a>Métodos, propriedades e eventos de classe de runtime
 
-Já vimos que o fluxo de trabalho é usar o IDL para declarar sua classe de tempo de execução e seus membros e, em seguida, a ferramenta gera protótipos e implementações de stub para você. Quanto a esses protótipos gerados automaticamente para os membros da classe de tempo de execução, você *pode* editá-los para que eles passem tipos diferentes dos tipos que você declarar em seu IDL. No entanto, você poderá fazer isso somente enquanto o tipo que declarar no IDL possa ser encaminhado para o tipo que declarar na versão implementada.
+Já vimos que o fluxo de trabalho é usar o IDL para declarar sua classe de runtime e seus membros e, em seguida, a ferramenta gera protótipos e implementações de stub para você. Quanto a esses protótipos gerados automaticamente para os membros da classe de runtime, você *pode* editá-los para que eles passem tipos diferentes dos tipos que você declarar em seu IDL. No entanto, você poderá fazer isso somente enquanto o tipo que declarar no IDL possa ser encaminhado para o tipo que declarar na versão implementada.
 
 Aqui estão alguns exemplos.
 
 - Você pode relaxar os tipos de parâmetro. Por exemplo, se no IDL seu método usar uma **SomeClass**, você poderá optar por alterá-la para **IInspectable** em sua implementação. Isso funciona porque qualquer **SomeClass** pode ser encaminhada para **IInspectable** (o inverso, obviamente, não funcionaria).
-- Você pode aceitar um parâmetro copiável por valor, em vez de por referência. Por exemplo, altere `SomeClass const&` para `SomeClass const&`. Isso é necessário quando você precisa evitar capturar uma referência em uma corrotina (consulte [Passagem de parâmetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
+- Você pode aceitar um parâmetro copiável por valor, em vez de por referência. Por exemplo, altere `SomeClass` para `SomeClass const&`. Isso é necessário quando você precisa evitar capturar uma referência em uma corrotina (consulte [Passagem de parâmetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
 - Você pode relaxar o valor retornado. Por exemplo, você pode alterar **void** para [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget).
 
 Os dois últimos são muito úteis quando você está escrevendo um manipulador de eventos assíncronos.
@@ -248,7 +248,7 @@ Os dois últimos são muito úteis quando você está escrevendo um manipulador 
 
 Nesta seção, teremos como exemplo um tipo de implementação denominado **MyType**, que implementa as interfaces [**IStringable**](/uwp/api/windows.foundation.istringable) e [**IClosable**](/uwp/api/windows.foundation.iclosable).
 
-Você pode derivar a **MyType** diretamente de [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) (não é uma classe de tempo de execução).
+Você pode derivar a **MyType** diretamente de [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) (não é uma classe de runtime).
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -263,7 +263,7 @@ struct MyType : implements<MyType, IStringable, IClosable>
 };
 ```
 
-Ou você poderá gerá-la em um IDL (esta é uma classe de tempo de execução).
+Ou você poderá gerá-la em um IDL (esta é uma classe de runtime).
 
 ```idl
 // MyType.idl
@@ -276,7 +276,13 @@ namespace MyProject
 }
 ```
 
-Para ir de **MyType** a um objeto **IStringable** ou **IClosable** que você poderá usar ou retornar como parte da projeção, chame o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **make** retorna a interface padrão do tipo de implementação.
+Você não pode alocar diretamente seu tipo de implementação.
+
+```cppwinrt
+MyType myimpl; // error C2259: 'MyType': cannot instantiate abstract class
+```
+
+Porém, você pode ir de **MyType** a um objeto **IStringable** ou **IClosable** que você pode usar ou retornar como parte da projeção chamando o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **make** retorna a interface padrão do tipo de implementação.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -329,36 +335,73 @@ impl.copy_from(winrt::get_self<MyType>(from));
 // com_ptr::copy_from ensures that AddRef is called.
 ```
 
-O tipo de implementação em si não deriva de **winrt::Windows::Foundation::IUnknown**, portanto, ele não tem a função **as**. Mesmo assim, você pode instanciar um deles e acessar os membros de todas as suas interfaces. Mas se você fizer isso, não retorne a instância do tipo de implementação bruta ao chamador. Em vez disso, use uma das técnicas exibidas acima e retorne uma interface projetada, ou um **com_ptr**.
+O tipo de implementação em si não deriva de **winrt::Windows::Foundation::IUnknown**, portanto, ele não tem a função **as**. Mesmo assim, como você pode ver na função **ImplFromIClosable** acima, é possível acessar os membros de todas as suas interfaces. Porém, se você fizer isso, não retorne a instância do tipo de implementação bruta ao chamador. Em vez disso, use uma das técnicas já exibidas e retorne uma interface projetada ou um **com_ptr**.
+
+Se tiver uma instância do tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, você poderá fazer isso como mostrado no código de exemplo abaixo. Há um operador de conversão no tipo de implementação (desde que o tipo de implementação tenha sido gerado pela ferramenta `cppwinrt.exe`), que torna isso possível. Você poderá passar um valor do tipo de implementação diretamente para um método que espera um valor do tipo projetado correspondente. A partir de uma função de membro do tipo de implementação, você poderá passar `*this` para um método que espera um valor do tipo projetado correspondente.
 
 ```cppwinrt
-MyType myimpl;
-myimpl.ToString();
-myimpl.Close();
-IClosable ic1 = myimpl.as<IClosable>(); // error
-```
-
-Se tiver uma instância do tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, você poderá fazer isso. Há um operador de conversão no tipo de implementação (desde que o tipo de implementação tenha sido gerado pela ferramenta `cppwinrt.exe`), que torna isso possível. Você poderá passar um valor do tipo de implementação diretamente para um método que espera um valor do tipo projetado correspondente. A partir de uma função de membro do tipo de implementação, você poderá passar `*this` para um método que espera um valor do tipo projetado correspondente.
-
-```cppwinrt
-// MyProject::MyType is the projected type; the implementation type would be MyProject::implementation::MyType.
-
-void MyOtherType::DoWork(MyProject::MyType const&){ ... }
-
-...
-
-void FreeFunction(MyProject::MyOtherType const& ot)
+// MyClass.idl
+import "MyOtherClass.idl";
+namespace MyProject
 {
-    MyType myimpl;
-    ot.DoWork(myimpl);
+    runtimeclass MyClass
+    {
+        MyClass();
+        void MemberFunction(MyOtherClass oc);
+    }
 }
 
+// MyClass.h
+...
+namespace winrt::MyProject::implementation
+{
+    struct MyClass : MyClassT<MyClass>
+    {
+        MyClass() = default;
+        void MemberFunction(MyProject::MyOtherClass const& oc) { oc.DoWork(*this); }
+    };
+}
 ...
 
-void MyType::MemberFunction(MyProject::MyOtherType const& ot)
+// MyOtherClass.idl
+import "MyClass.idl";
+namespace MyProject
 {
-    ot.DoWork(*this);
+    runtimeclass MyOtherClass
+    {
+        MyOtherClass();
+        void DoWork(MyClass c);
+    }
 }
+
+// MyOtherClass.h
+...
+namespace winrt::MyProject::implementation
+{
+    struct MyOtherClass : MyOtherClassT<MyOtherClass>
+    {
+        MyOtherClass() = default;
+        void DoWork(MyProject::MyClass const& c){ /* ... */ }
+    };
+}
+...
+
+//main.cpp
+#include "pch.h"
+#include <winrt/base.h>
+#include "MyClass.h"
+#include "MyOtherClass.h"
+using namespace winrt;
+
+// MyProject::MyClass is the projected type; the implementation type would be MyProject::implementation::MyClass.
+
+void FreeFunction(MyProject::MyOtherClass const& oc)
+{
+    auto defaultInterface = winrt::make<MyProject::implementation::MyClass>();
+    MyProject::implementation::MyClass* myimpl = winrt::get_self<MyProject::implementation::MyClass>(defaultInterface);
+    oc.DoWork(*myimpl);
+}
+...
 ```
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Derivando de um tipo que tem um construtor não padrão
@@ -422,7 +465,7 @@ Até você fazer a edição descrita acima (para passar esse parâmetro do const
 
 ## <a name="namespaces-projected-types-implementation-types-and-factories"></a>Namespaces: tipos projetados, tipos de implementação e fábricas
 
-Como você viu anteriormente neste tópico, uma classe de tempo de execução C++/WinRT existe na forma de mais de uma classe C++ em mais de um namespace. Sendo assim, o nome **MyRuntimeClass** tem um significado no namespace **winrt::MyProject** e um significado diferente no namespace **winrt::MyProject::implementation**. Observe qual namespace que você tem no contexto atualmente e, em seguida, use os prefixos de namespace se precisar de um nome de um namespace diferente. Vamos examinar com mais detalhes os namespaces em questão.
+Como você viu anteriormente neste tópico, uma classe de runtime C++/WinRT existe na forma de mais de uma classe C++ em mais de um namespace. Sendo assim, o nome **MyRuntimeClass** tem um significado no namespace **winrt::MyProject** e um significado diferente no namespace **winrt::MyProject::implementation**. Observe qual namespace que você tem no contexto atualmente e, em seguida, use os prefixos de namespace se precisar de um nome de um namespace diferente. Vamos examinar com mais detalhes os namespaces em questão.
 
 - **winrt::MyProject**. Este namespace contém tipos projetados. Um objeto de tipo projetado é um proxy; ele é essencialmente um ponteiro inteligente para um objeto de backup, podendo esse objeto de backup ser implementado aqui em seu projeto ou em outra unidade de compilação.
 - **winrt::MyProject::implementation**. Este namespace contém tipos de implementação. Um objeto de um tipo de implementação não é um ponteiro; ele é um valor&mdash;um objeto de pilha C++ completo. Não construa um tipo de implementação diretamente; em vez disso, chame [**winrt::make**](/uwp/cpp-ref-for-winrt/make) passando o tipo de implementação como o parâmetro de modelo. Mostramos exemplos de **winrt::make** em ação anteriormente neste tópico, e há outro exemplo em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage). Confira também [Diagnosticar alocações diretas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
@@ -548,7 +591,7 @@ namespace winrt::MyProject
 
 Não é necessário seguir todas as instruções acima; a intenção é mostrar que as duas chamadas envolvem uma chamada para uma função chamada **call_factory**. Essa é a pista de que essas chamadas envolvem o cache de fábrica e não estão acessando diretamente a implementação. *Com* `-opt[imize]`, essas mesmas funções não são definidas. Em vez disso, elas são declaradas pela projeção e suas definições são deixadas até o componente.
 
-O componente pode, então, fornecer definições que chamam diretamente para a implementação. Agora, chegamos à alteração da falha. Essas definições são geradas quando você usa `-component` e `-opt[imize]`, e são exibidas em um arquivo chamado `Type.g.cpp`, em que *Type* é o nome da classe de tempo de execução que está sendo implementada. É por isso que você pode atingir vários erros de vinculador quando habilita `-opt[imize]` pela primeira vez em um projeto existente. É necessário incluir esse arquivo gerado para sua implementação a fim de unir as coisas.
+O componente pode, então, fornecer definições que chamam diretamente para a implementação. Agora, chegamos à alteração da falha. Essas definições são geradas quando você usa `-component` e `-opt[imize]`, e são exibidas em um arquivo chamado `Type.g.cpp`, em que *Type* é o nome da classe de runtime que está sendo implementada. É por isso que você pode atingir vários erros de vinculador quando habilita `-opt[imize]` pela primeira vez em um projeto existente. É necessário incluir esse arquivo gerado para sua implementação a fim de unir as coisas.
 
 Em nosso exemplo, `MyClass.h` pode ter essa aparência (independentemente se `-opt[imize]` está sendo usado).
 

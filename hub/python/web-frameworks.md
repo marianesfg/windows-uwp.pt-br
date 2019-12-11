@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Python no Windows, Web para Python com WSL, aplicativo Web Python com Subsistema do Windows para Linux, desenvolvimento para a Web com o Python no Windows, aplicativo Flask no Windows, aplicativo Django no Windows, Web para Python, desenvolvimento para a Web com o Flask no Windows, desenvolvimento para a Web com o Django no Windows, desenvolvimento para a Web no Windows com o Python, desenvolvimento para a Web no VS Code com o Python, extensão do WSL remoto, Ubuntu, WSL, venv, pip, extensão do Microsoft Python, execução do Python no Windows, uso do Python no Windows, criação com o Python no Windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 285e5149778f2d5cb63554a5af63bb9ae23809dc
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314940"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881289"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introdução ao uso do Python para desenvolvimento para a Web no Windows
 
@@ -46,6 +46,9 @@ Existem várias distribuições do Linux disponíveis para execução no WSL. En
 3. Você deverá criar um nome e uma senha de conta ao executar uma distribuição pela primeira vez. Depois disso, você será automaticamente conectado como esse usuário por padrão. Escolha qualquer nome de usuário e senha. Eles não têm nenhuma influência no seu nome de usuário do Windows.
 
 Verifique a distribuição do Linux que você está usando no momento inserindo `lsb_release -d`. Para atualizar a distribuição do Ubuntu, use `sudo apt update && sudo apt upgrade`. Recomendamos fazer uma atualização regular para garantir que você tenha os pacotes mais recentes. O Windows não cuida automaticamente dessa atualização. Para obter links para outras distribuições do Linux disponíveis na Microsoft Store, métodos de instalação alternativos ou solução de problemas, confira [Guia de Instalação do Subsistema do Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
+
+> [!TIP]
+> Considere a possibilidade de experimentar o novo [terminal do Windows](https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md) se você planeja usar várias linhas de comando (Ubuntu, PowerShell, prompt de comando do Windows etc.) ou se quiser [personalizar seu terminal](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md), incluindo texto, cores de tela de fundo, associações de teclas etc.
 
 ## <a name="set-up-visual-studio-code"></a>Configurar o Visual Studio Code
 

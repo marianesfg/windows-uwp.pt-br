@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, introdução ao Python, Python no Windows para iniciantes, instalar o Python com a Microsoft Store, Python com o VS Code, PyGame no Windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d4c1cb6d65eb38a93e8bf9f0c34afd9e28f20129
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 688ae004dad8653e70d86b3b91652b6898c1e9d3
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314920"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881280"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>Introdução ao uso do Python no Windows para iniciantes
 
@@ -21,7 +21,7 @@ Veja a seguir um guia passo a passo para os iniciantes que estão interessados e
 
 ## <a name="set-up-your-development-environment"></a>Configurar seu ambiente de desenvolvimento
 
-Para os iniciantes que realmente não têm noções básicas sobre o Python, recomendamos a [instalação do Python pela Microsoft Store](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio da Microsoft Store usa o interpretador básico Python3, mas cuida da definição das configurações de PATH para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas. Isso será especialmente útil se você estiver em um ambiente educacional ou fizer parte de uma organização que restringe as permissões ou o acesso administrativo no computador.
+Para os iniciantes que realmente não têm noções básicas sobre o Python, recomendamos a [instalação do Python pela Microsoft Store](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). A instalação por meio da Microsoft Store usa o interpretador básico Python3, mas cuida da definição das configurações de PATH para o usuário atual (evitando a necessidade de acesso de administrador), além de fornecer atualizações automáticas. Isso será especialmente útil se você estiver em um ambiente educacional ou fizer parte de uma organização que restringe as permissões ou o acesso administrativo no computador.
 
 Se você estiver usando o Python no Windows para o **desenvolvimento para a Web**, recomendamos uma configuração diferente para o ambiente de desenvolvimento. Em vez da instalação direta no Windows, recomendamos a instalação e o uso do Python por meio do Subsistema do Windows para Linux. Para obter ajuda, confira: [Introdução ao uso do Python para desenvolvimento para a Web no Windows](./web-frameworks.md). Se você estiver interessado em automatizar tarefas comuns no sistema operacional, confira nosso guia: [Introdução ao uso do Python no Windows para script e automação](./scripting.md). Para alguns cenários avançados (como a necessidade de acessar/modificar arquivos instalados do Python, fazer cópias de binários ou usar as DLLs do Python diretamente), o ideal é considerar a possibilidade de baixar uma versão específica do Python diretamente em [python.org](https://www.python.org/downloads/) ou instalar uma [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython etc. Só recomendamos isso se você for um programador mais avançado do Python com um motivo específico para escolher uma implementação alternativa.
 
@@ -45,15 +45,17 @@ O VS Code também contém um [terminal interno](https://code.visualstudio.com/do
 
 1. Para instalar o VS Code, baixe o VS Code para Windows: [https://code.visualstudio.com](https://code.visualstudio.com).
 
-2. O Python é uma linguagem interpretada e, para executar o código Python, você precisará informar o VS Code de qual interpretador usar. Recomendamos o uso do Python 3.7, a menos que você tenha um motivo específico para escolher algo diferente. Selecione um interpretador do Python 3 abrindo a **paleta de comandos** (Ctrl+Shift+P) e comece a digitar o comando **Python: Selecionar Interpretador** para pesquisar e, em seguida, selecione o comando. Use também a opção **Selecionar Ambiente do Python** na barra de status inferior, se disponível (talvez ela já mostre um interpretador selecionado). O comando apresenta uma lista dos interpretadores disponíveis que o VS Code pode localizar automaticamente, incluindo ambientes virtuais. Se o interpretador desejado não for exibido, confira [Como configurar ambientes do Python](https://code.visualstudio.com/docs/python/environments).
+2. Depois que o VS Code tiver sido instalado, você também deverá instalar a extensão do Python. Para instalar a extensão do Python, você pode selecionar o link [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-python.python) ou abrir o VS Code e pesquisar **Python** no menu extensões (Ctrl+Shift+X).
+
+3. O Python é uma linguagem interpretada e, para executar o código Python, você precisará informar o VS Code de qual interpretador usar. Recomendamos o uso do Python 3.7, a menos que você tenha um motivo específico para escolher algo diferente. Depois de ter instalado a extensão do Python, selecione um interpretador do Python 3 abrindo a **paleta de comandos** (Ctrl+Shift+P) e comece a digitar o comando **Python: Selecionar Interpretador** para pesquisar e, em seguida, selecione o comando. Use também a opção **Selecionar Ambiente do Python** na barra de status inferior, se disponível (talvez ela já mostre um interpretador selecionado). O comando apresenta uma lista dos interpretadores disponíveis que o VS Code pode localizar automaticamente, incluindo ambientes virtuais. Se o interpretador desejado não for exibido, confira [Como configurar ambientes do Python](https://code.visualstudio.com/docs/python/environments).
 
     ![Selecionar um interpretador do Python no VS Code](../images/interpreterselection.gif)
 
-3. Para abrir o terminal no VS Code, selecione **Exibir** > **Terminal** ou, como alternativa, use o atalho **Ctrl+`** (usando o caractere de acento grave). O terminal padrão é o PowerShell.
+4. Para abrir o terminal no VS Code, selecione **Exibir** > **Terminal** ou, como alternativa, use o atalho **Ctrl+`** (usando o caractere de acento grave). O terminal padrão é o PowerShell.
 
-4. No terminal do VS Code, abra o Python apenas inserindo o comando: `python`
+5. No terminal do VS Code, abra o Python apenas inserindo o comando: `python`
 
-5. Experimente o interpretador do Python inserindo `print("Hello World")`. O Python retornará a declaração "Olá, Mundo".
+6. Experimente o interpretador do Python inserindo `print("Hello World")`. O Python retornará a declaração "Olá, Mundo".
 
     ![Linha de comando do Python no VS Code](../images/python-in-vscode.png)
 
@@ -188,7 +190,7 @@ Recomendamos os recursos a seguir para ajudar você a continuar aprendendo sobre
 
 ### <a name="online-courses-for-learning-python"></a>Cursos online de introdução ao Python
 
-- [Introdução ao Python no Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): Experimente a plataforma interativa do Microsoft Learn e ganhe pontos de experiência por concluir este módulo abordando os conceitos básicos sobre como escrever um código Python básico, declarar variáveis e trabalhar com a entrada e a saída do console. O ambiente interativo de área restrita faz desse um ótimo lugar para começar para as pessoas que ainda não têm seu próprio ambiente de desenvolvimento do Python configurado.
+- [Introdução ao Python no Microsoft Learn](https://docs.microsoft.com/learn/modules/intro-to-python/): Experimente a plataforma interativa do Microsoft Learn e ganhe pontos de experiência por concluir este módulo abordando os conceitos básicos sobre como escrever um código Python básico, declarar variáveis e trabalhar com a entrada e a saída do console. O ambiente interativo de área restrita faz desse um ótimo lugar para começar para as pessoas que ainda não têm seu próprio ambiente de desenvolvimento do Python configurado.
 
 - [Python no Pluralsight: 8 cursos, 29 horas](https://app.pluralsight.com/paths/skills/python): O roteiro de aprendizagem do Python no Pluralsight oferece cursos online que abrangem uma variedade de tópicos relacionados ao Python, incluindo uma ferramenta para avaliar suas habilidades e encontrar suas lacunas.
 
