@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: d540474140e4734320b06d852933b30fa20b61be
+ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393457"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74958966"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Mover do C++/CX para C++/WinRT
 
@@ -28,7 +28,7 @@ Este tópico mostra como fazer a portabilidade do código em um projeto [C++/CX]
 > [!NOTE]
 > O [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) e o SDK do Windows declaram tipos no namespace raiz **Windows**. Um tipo do Windows projetado no C++/WinRT tem o mesmo nome totalmente qualificado como o tipo do Windows, mas ele é colocado no namespace C++ **winrt**. Esses namespaces distintos permitem que você faça a portabilidade do C++/CX para o C++/WinRT em seu próprio ritmo.
 
-Tendo em mente as exceções mencionadas acima, a primeira etapa da portabilidade de um projeto C++/CX para C++/WinRT é adicionar manualmente o suporte ao C++/WinRT (confira [Suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Para fazer isso, instale o [pacote NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Projeto** \> **Gerenciar Pacotes NuGet...** \> **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e clique em **Instalar** para instalar o pacote do projeto. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É recomendado deixar o suporte desativado para que as mensagens de build possam ajudar a encontrar (e transferir) todas as dependências no C++/CX; ou você pode ativar o suporte (nas propriedades do projeto, **C/C++** \>**Geral**\>**Consumir a extensão do Tempo de Execução do Windows**\>**Sim (/ZW)** ) e fazer a portabilidade de forma gradual.
+Tendo em mente as exceções mencionadas acima, a primeira etapa da portabilidade de um projeto C++/CX para C++/WinRT é adicionar manualmente o suporte ao C++/WinRT (confira [Suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Para fazer isso, instale o [pacote NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Projeto** \> **Gerenciar Pacotes NuGet...** \> **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e clique em **Instalar** para instalar o pacote do projeto. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É recomendado deixar o suporte desativado para que as mensagens de build possam ajudar a encontrar (e transferir) todas as dependências no C++/CX; ou você pode ativar o suporte (nas propriedades do projeto, **C/C++** \>**Geral**\>**Consumir a extensão do Windows Runtime**\>**Sim (/ZW)** ) e fazer a portabilidade de forma gradual.
 
 Como alternativa, adicione manualmente a propriedade a seguir ao arquivo `.vcxproj` usando a página de propriedades do projeto C++/WinRT no Visual Studio. Para obter uma lista de opções de personalização semelhantes (que ajustam o comportamento da ferramenta `cppwinrt.exe`), confira o [arquivo Leiame](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
 
@@ -65,11 +65,11 @@ Observe que o C++/WinRT remove o `.xaml` dos nomes de arquivo `*.h` e `*.cpp`.
 
 O C++/WinRT adiciona um arquivo de desenvolvedor adicional, o **arquivo MIDL (.idl)** . O C++/CX gera de forma automática esse arquivo internamente, adicionando a ele todos os membros públicos e protegidos. No C++/WinRT, você mesmo adiciona e cria o arquivo. Para obter mais detalhes, exemplos de código e um passo a passo da criação de IDL, confira [Controles XAML; associação a uma propriedade do C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
-Confira também [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)
+Confira também [Como fatorar classes de runtime em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)
 
-### <a name="runtime-classes"></a>Classes de tempo de execução
+### <a name="runtime-classes"></a>classes de runtime
 
-O C++/CX não impõe restrições quanto aos nomes dos arquivos de cabeçalho; é comum colocar várias definições de classe de tempo de execução em um único arquivo de cabeçalho, especialmente para classes pequenas. Mas o C++/WinRT exige que cada classe de tempo de execução tenha seu próprio arquivo de cabeçalho com o mesmo nome de classe. 
+O C++/CX não impõe restrições quanto aos nomes dos arquivos de cabeçalho; é comum colocar várias definições de classe de runtime em um único arquivo de cabeçalho, especialmente para classes pequenas. Mas o C++/WinRT exige que cada classe de runtime tenha seu próprio arquivo de cabeçalho com o mesmo nome de classe. 
 
 | C++/CX | C++/WinRT |
 | - | - |
@@ -147,11 +147,11 @@ void LogPresenceRecord(PresenceRecord const& record);
 IASyncAction LogPresenceRecordAsync(PresenceRecord const record);
 ```
 
-Um objeto C++/WinRT é fundamentalmente um valor que mantém um ponteiro da interface para o objeto do Tempo de Execução do Windows subjacente. Quando você copia um objeto C++/WinRT, o compilador copia o ponteiro da interface encapsulado, aumentando sua contagem de referência. A consequente destruição da cópia envolve reduzir a contagem de referência. Portanto, apenas incorre na sobrecarga de uma cópia quando necessário.
+Um objeto C++/WinRT é fundamentalmente um valor que mantém um ponteiro da interface para o objeto do Windows Runtime subjacente. Quando você copia um objeto C++/WinRT, o compilador copia o ponteiro da interface encapsulado, aumentando sua contagem de referência. A consequente destruição da cópia envolve reduzir a contagem de referência. Portanto, apenas incorre na sobrecarga de uma cópia quando necessário.
 
 ## <a name="variable-and-field-references"></a>Referências de variáveis e campo
 
-Ao escrever o código-fonte do C++/CX, você usa as variáveis de circunflexo (\^) para fazer referência a objetos do Tempo de Execução do Windows e de operador seta (-&gt;) para desreferenciar uma variável desse tipo.
+Ao escrever o código-fonte do C++/CX, você usa as variáveis de circunflexo (\^) para fazer referência a objetos do Windows Runtime e de operador seta (-&gt;) para desreferenciar uma variável desse tipo.
 
 ```cppcx
 IVectorView<User^>^ userList = User::Users;
@@ -216,7 +216,7 @@ void Sample::LogPresenceRecord(PresenceRecord const& record)
 }
 ```
 
-Observe que a função **PresenceDeviceRecords** retorna um objeto do Tempo de Execução do Windows com uma função **Size**. Como o objeto retornado também é um tipo projetado do C++/WinRT, desreferenciamos usando o operador ponto para chamar **Size**.
+Observe que a função **PresenceDeviceRecords** retorna um objeto do Windows Runtime com uma função **Size**. Como o objeto retornado também é um tipo projetado do C++/WinRT, desreferenciamos usando o operador ponto para chamar **Size**.
 
 ### <a name="setting-a-property-to-a-new-value"></a>Definir uma propriedade como um novo valor
 
@@ -234,7 +234,7 @@ record.UserState(newValue);
 
 ## <a name="creating-an-instance-of-a-class"></a>Criar a instância de uma classe
 
-Trabalhe com o objeto do C++/CX por meio de um identificador, conhecido como uma referência de circunflexo (\^). Crie um novo objeto por meio da palavra-chave `ref new`, que, por sua vez, chama [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para ativar uma nova instância da classe do tempo de execução.
+Trabalhe com o objeto do C++/CX por meio de um identificador, conhecido como uma referência de circunflexo (\^). Crie um novo objeto por meio da palavra-chave `ref new`, que, por sua vez, chama [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance) para ativar uma nova instância da classe de runtime.
 
 ```cppcx
 using namespace Windows::Storage::Streams;
@@ -320,7 +320,7 @@ O operador subscrito `[]` para **std::map** se comporta desta forma.
 
 Em outras palavras, o operador `[]` sempre cria uma entrada no mapa. Isso é diferente de C#, Java e JavaScript.
 
-## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Converter de uma classe base de tempo de execução para uma derivada
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Converter de uma classe base de runtime para uma derivada
 
 É comum ter uma referência à base que você sabe que se refere a um objeto de um tipo derivado. No C++/CX, use `dynamic_cast` para *converter* a referência à base em uma referência para derivado. O `dynamic_cast` é apenas uma chamada oculta para [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Aqui está um exemplo típico em que &mdash;você está manipulando um evento de alteração de propriedade de dependência e deseja converter de **DependencyObject** de volta para o tipo real que possui a propriedade da dependência.
 
@@ -360,7 +360,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 
 ## <a name="derived-classes"></a>Classes derivadas
 
-Para derivação de uma classe de tempo de execução, a classe base precisa ser *combinável*. O C++/CX não exige que você execute nenhuma etapa especial para tornar suas classes combináveis, ao contrário do C++/WinRT. Use a [palavra-chave não selada](/uwp/midl-3/intro#base-classes) para indicar que deseja que a classe seja utilizável como uma classe base.
+Para derivação de uma classe de runtime, a classe base precisa ser *combinável*. O C++/CX não exige que você execute nenhuma etapa especial para tornar suas classes combináveis, ao contrário do C++/WinRT. Use a [palavra-chave não selada](/uwp/midl-3/intro#base-classes) para indicar que deseja que a classe seja utilizável como uma classe base.
 
 ```idl
 unsealed runtimeclass BasePage : Windows.UI.Xaml.Controls.Page
@@ -468,24 +468,23 @@ O C++/CX representa uma cadeia de caracteres do Windows Runtime como um tipo de 
 
 Além disso, o C++/CX permite desreferenciar uma **String^** nula, caso em que se ela comporta como a cadeia de caracteres `""`.
 
-| Operação | C++/CX | C++/WinRT|
+| Comportamento | C++/CX | C++/WinRT|
 |-|-|-|
+| Declarações | `Object^ o;`<br>`String^ s;` | `IInspectable o;`<br>`hstring s;` |
 | Categoria de tipo de cadeia de caracteres | Tipo de referência | Tipo de valor |
 | projetos **HSTRING** nulos como | `(String^)nullptr` | `hstring{}` |
 | São nulos e idênticos `""`? | Sim | Sim |
-| Validade de nulo | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = nullptr;`<br>`s.size() == 0` (válido) |
-| Fazer a conversão boxing de uma cadeia de caracteres | `o = s;` | `o = box_value(s);` |
-| Se `s` for `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
-| Se `s` for `""` | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
-| Fazer a conversão boxing de uma cadeia de caracteres preservando nulo | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
-| Fazer a conversão boxing forçada de uma cadeia de caracteres | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
-| Fazer a conversão unboxing de uma cadeia de caracteres conhecida | `s = (String^)o;` | `s = unbox_value<hstring>(o);` |
-| Se `o` for nulo | `s == nullptr; // equivalent to ""` | Falha |
-| Se `o` não for uma cadeia de caracteres convertida | `Platform::InvalidCastException` | Falha |
-| Fazer a conversão unboxing da cadeia de caracteres, se for nulo, usar fallback; falhar, em qualquer outra situação | `s = o ? (String^)o : fallback;` | `s = o ? unbox_value<hstring>(o) : fallback;` |
-| Fazer a conversão unboxing da cadeia de caracteres, se possível; usar fallback para qualquer outra situação | `auto box = dynamic_cast<IBox<String^>^>(o);`<br>`s = box ? box->Value : fallback;` | `s = unbox_value_or<hstring>(o, fallback);` |
+| Validade de nulo | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = hstring{};`<br>`s.size() == 0` (válido) |
+| Se você atribuir uma cadeia de caracteres nula ao objeto | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
+| Se você atribuir `""` ao objeto | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr` |
 
-Nos dois casos de *conversão unboxing com fallback* acima, é possível que seja feita a conversão boxing forçada de uma cadeia de caracteres nula, caso em que o fallback não será usado. O valor resultante será uma cadeia de caracteres vazia porque isso é o que estava na caixa.
+Conversões boxing e unboxing básicas.
+
+| Operação | C++/CX | C++/WinRT|
+|-|-|-|
+| Fazer a conversão boxing de uma cadeia de caracteres | `o = s;`<br>A cadeia de caracteres vazia torna-se nullptr. | `o = box_value(s);`<br>A cadeia de caracteres vazia se torna um objeto não nulo. |
+| Fazer a conversão unboxing de uma cadeia de caracteres conhecida | `s = (String^)o;`<br>O objeto nulo torna-se uma cadeia de caracteres vazia.<br>InvalidCastException se não for uma cadeia de caracteres. | `s = unbox_value<hstring>(o);`<br>O objeto nulo falha.<br>Falha se não for uma cadeia de caracteres. |
+| Fazer a conversão unboxing de uma possível cadeia de caracteres | `s = dynamic_cast<String^>(o);`<br>Objeto nulo ou não cadeia de caracteres se torna uma cadeia de caracteres vazia. | `s = unbox_value_or<hstring>(o, fallback);`<br>Nulo ou não cadeia de caracteres se torna fallback.<br>Cadeia de caracteres vazia preservada. |
 
 ## <a name="concurrency-and-asynchronous-operations"></a>Simultaneidade e operações assíncronas
 
@@ -503,7 +502,7 @@ Para obter mais informações e exemplos de código, confira [Como consumir obje
 
 ## <a name="mapping-ccx-platform-types-to-cwinrt-types"></a>Mapear os tipos **Platform** do C++/CX para tipos do C++/WinRT
 
-O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos não são do C++ padrão, portanto, podem ser usados somente ao habilitar as extensões de linguagem do Tempo de Execução do Windows (propriedade do projeto do Visual Studio **C/C++**  > **Geral** > **Consumir extensão do Tempo de Execução do Windows** > **Sim (/ZW)** ). A tabela abaixo ajuda a fazer a portabilidade dos tipos **Platform** para seus equivalentes no C++/WinRT. Depois de fazer isso, como o C++/WinRT é o C++ padrão, você poderá desativar a opção `/ZW`.
+O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos não são do C++ padrão, portanto, podem ser usados somente ao habilitar as extensões de linguagem do Windows Runtime (propriedade do projeto do Visual Studio **C/C++**  > **Geral** > **Consumir extensão do Windows Runtime** > **Sim (/ZW)** ). A tabela abaixo ajuda a fazer a portabilidade dos tipos **Platform** para seus equivalentes no C++/WinRT. Depois de fazer isso, como o C++/WinRT é o C++ padrão, você poderá desativar a opção `/ZW`.
 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
@@ -536,7 +535,7 @@ As opções incluem o uso de uma lista de inicializadores, um **std::array** ou 
 
 ### <a name="port-platformexception-to-winrthresult_error"></a>Fazer a portabilidade de **Platform::Exception\^** para **winrt::hresult_error**
 
-O tipo **Platform::Exception\^** é produzido no C++/CX quando uma API do Tempo de Execução do Windows retorna um HRESULT diferente de S\_OK. O equivalente do C++/WinRT é [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
+O tipo **Platform::Exception\^** é produzido no C++/CX quando uma API do Windows Runtime retorna um HRESULT diferente de S\_OK. O equivalente do C++/WinRT é [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
 
 Para fazer a portabilidade para C++/WinRT, altere todos os códigos que usam **Platform::Exception\^** para usarem **winrt::hresult_error**.
 
@@ -594,7 +593,7 @@ winrt::Windows::Foundation::IInspectable var{ nullptr };
 
 ### <a name="port-platformstring-to-winrthstring"></a>Fazer a portabilidade de **Platform::String\^** para **winrt::hstring**
 
-**Platform::String\^** é equivalente ao tipo ABI de HSTRING do Tempo de Execução do Windows. Para o C++/WinRT, o equivalente é [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring). Porém, com o C++/WinRT, você pode chamar as APIs do Tempo de Execução do Windows usando tipos de cadeia de caracteres longas da Biblioteca Padrão do C++, como **std::wstring**, e/ou literais de cadeias de caracteres longas. Para obter mais detalhes e exemplos de código, confira [Processamento da cadeia de caracteres em C++/WinRT](strings.md).
+**Platform::String\^** é equivalente ao tipo ABI de HSTRING do Windows Runtime. Para o C++/WinRT, o equivalente é [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring). Porém, com o C++/WinRT, você pode chamar as APIs do Windows Runtime usando tipos de cadeia de caracteres longas da Biblioteca Padrão do C++, como **std::wstring**, e/ou literais de cadeias de caracteres longas. Para obter mais detalhes e exemplos de código, confira [Processamento da cadeia de caracteres em C++/WinRT](strings.md).
 
 Com o C++/CX, você pode acessar a propriedade [**Platform::String::Data**](https://docs.microsoft.com/cpp/cppcx/platform-string-class?view=vs-2019#data) para recuperar a cadeia de caracteres como uma matriz **const wchar_t\*** C-style (por exemplo, para passá-lá a **std::wcout**).
 

@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, compatibilizar, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: a63d38db613ebe6425a05ed20563405242ffd441
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 17900829388bfe0b3cc325e27d0807b139ccaa27
+ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328862"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74958956"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Mover do C# para C++/WinRT
 
@@ -64,7 +64,7 @@ Se você pretende usar a extensão de marcação {Binding} para associar dados a
 
 No C++/WinRT versão 2.0.190530.8 e superior, [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) cria um vetor observável que dá suporte a **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** e **IObservableVector\<IInspectable\>** .
 
-Você pode criar o **arquivo MIDL (.idl)** desta forma (confira também [Como fatorar classes de tempo de execução em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)).
+Você pode criar o **arquivo MIDL (.idl)** desta forma (confira também [Como fatorar classes de runtime em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)).
 
 ```idl
 namespace Bookstore
@@ -121,9 +121,9 @@ A vinculação de dados XAML exige que uma origem de itens implemente **[IIterab
 - **IVector\<IInspectable\>**
 - **IBindableIterable** (iterará e salvará elementos em uma coleção particular)
 
-Uma interface genérica, como **IVector\<T\>** , não pode ser detectada em tempo de execução. Cada **IVector\<T\>** tem um IID (identificador de interface) diferente, que é uma função de **T**. Qualquer desenvolvedor pode expandir o conjunto de **T** de forma arbitrária e, portanto, é evidente que o código de associação XAML nunca pode saber o conjunto completo a ser consultado. Essa restrição não é um problema para o C#, porque cada objeto CLR que implementa **IEnumerable\<T\>** implementa **IEnumerable** automaticamente. No nível do ABI, isso significa que cada objeto que implementa **IObservableVector\<T\>** implementa **IObservableVector\<IInspectable\>** automaticamente.
+Uma interface genérica, como **IVector\<T\>** , não pode ser detectada em runtime. Cada **IVector\<T\>** tem um IID (identificador de interface) diferente, que é uma função de **T**. Qualquer desenvolvedor pode expandir o conjunto de **T** de forma arbitrária e, portanto, é evidente que o código de associação XAML nunca pode saber o conjunto completo a ser consultado. Essa restrição não é um problema para o C#, porque cada objeto CLR que implementa **IEnumerable\<T\>** implementa **IEnumerable** automaticamente. No nível do ABI, isso significa que cada objeto que implementa **IObservableVector\<T\>** implementa **IObservableVector\<IInspectable\>** automaticamente.
 
-O C++/WinRT não oferece essa garantia. Se uma classe de tempo de execução do C++/WinRT implementar **IObservableVector\<T\>** , não poderemos pressupor que uma implementação de **IObservableVector\<IInspectable\>** também seja fornecida de alguma forma.
+O C++/WinRT não oferece essa garantia. Se uma classe de runtime do C++/WinRT implementar **IObservableVector\<T\>** , não poderemos pressupor que uma implementação de **IObservableVector\<IInspectable\>** também seja fornecida de alguma forma.
 
 Consequentemente, veja abaixo como o exemplo anterior precisará ser examinado.
 
@@ -264,7 +264,7 @@ O C++/CX e o C# gerarão exceções se você tentar fazer a conversão unboxing 
 | Se o for nulo | `System.NullReferenceException` | Falha |
 | Se o não for um int convertido | `System.InvalidCastException` | Falha |
 | Fazer a conversão unboxing de int, se for nulo, usar fallback; falhar, em qualquer outra situação | `i = o != null ? (int)o : fallback;` | `i = o ? unbox_value<int>(o) : fallback;` |
-| Fazer a conversão unboxing de int, se possível; usar fallback para qualquer outra situação | `var box = o as int?;`<br>`i = box != null ? box.Value : fallback;` | `i = unbox_value_or<int>(o, fallback);` |
+| Fazer a conversão unboxing de int, se possível; usar fallback para qualquer outra situação | `i = as int? ?? fallback;` | `i = unbox_value_or<int>(o, fallback);` |
 
 ### <a name="boxing-and-unboxing-a-string"></a>Conversão boxing e unboxing de uma cadeia de caracteres
 
@@ -274,28 +274,27 @@ O tipo do ABI [**HSTRING**](/windows/win32/winrt/hstring) é um ponteiro para um
 
 O C# representa uma cadeia de caracteres do Windows Runtime como um tipo de referência, enquanto o C++/WinRT projeta uma cadeia de caracteres como um tipo de valor. Isso significa que uma cadeia de caracteres nula convertida pode ter diferentes representações, dependendo do procedimento adotado.
 
+| Comportamento | C# | C++/WinRT|
+|-|-|-|
+| Declarações | `object o;`<br>`string s;` | `IInspectable o;`<br>`hstring s;` |
+| Categoria de tipo de cadeia de caracteres | Tipo de referência | Tipo de valor |
+| projetos **HSTRING** nulos como | `""` | `hstring{}` |
+| São nulos e idênticos `""`? | Não | Sim |
+| Validade de nulo | `s = null;`<br>`s.Length` gera NullReferenceException | `s = hstring{};`<br>`s.size() == 0` (válido) |
+| Se você atribuir uma cadeia de caracteres nula ao objeto | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{});`<br>`o != nullptr` |
+| Se você atribuir `""` ao objeto | `o = "";`<br>`o != null` | `o = box_value(hstring{L""});`<br>`o != nullptr` |
+
+Conversões boxing e unboxing básicas.
+
 | Operação | C# | C++/WinRT|
 |-|-|-|
-| Categoria de tipo de cadeia de caracteres | Tipo de referência | Tipo de valor |
-| projetos **HSTRING** nulos como | `""` | `hstring{ nullptr }` |
-| São nulos e idênticos `""`? | Não | Sim |
-| Validade de nulo | `s = null;`<br>`s.Length` gera **NullReferenceException** | `s = nullptr;`<br>`s.size() == 0` (válido) |
-| Fazer a conversão boxing de uma cadeia de caracteres | `o = s;` | `o = box_value(s);` |
-| Se `s` for `null` | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{nullptr});`<br>`o != nullptr` |
-| Se `s` for `""` | `o = "";`<br>`o != null;` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
-| Fazer a conversão boxing de uma cadeia de caracteres preservando nulo | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
-| Fazer a conversão boxing forçada de uma cadeia de caracteres | `o = PropertyValue.CreateString(s);` | `o = box_value(s);` |
-| Fazer a conversão unboxing de uma cadeia de caracteres conhecida | `s = (string)o;` | `s = unbox_value<hstring>(o);` |
-| Se `o` for nulo | `s == null; // not equivalent to ""` | Falha |
-| Se `o` não for uma cadeia de caracteres convertida | `System.InvalidCastException` | Falha |
-| Fazer a conversão unboxing da cadeia de caracteres, se for nulo, usar fallback; falhar, em qualquer outra situação | `s = o != null ? (string)o : fallback;` | `s = o ? unbox_value<hstring>(o) : fallback;` |
-| Fazer a conversão unboxing da cadeia de caracteres, se possível; usar fallback para qualquer outra situação | `var s = o as string ?? fallback;` | `s = unbox_value_or<hstring>(o, fallback);` |
-
-Nos dois casos de *conversão unboxing com fallback* acima, é possível que seja feita a conversão boxing forçada de uma cadeia de caracteres nula, caso em que o fallback não será usado. O valor resultante será uma cadeia de caracteres vazia porque isso é o que estava na caixa.
+| Fazer a conversão boxing de uma cadeia de caracteres | `o = s;`<br>A cadeia de caracteres vazia se torna um objeto não nulo. | `o = box_value(s);`<br>A cadeia de caracteres vazia se torna um objeto não nulo. |
+| Fazer a conversão unboxing de uma cadeia de caracteres conhecida | `s = (string)o;`<br>O objeto nulo torna-se uma cadeia de caracteres nula.<br>InvalidCastException se não for uma cadeia de caracteres. | `s = unbox_value<hstring>(o);`<br>O objeto nulo falha.<br>Falha se não for uma cadeia de caracteres. |
+| Fazer a conversão unboxing de uma possível cadeia de caracteres | `s = o as string;`<br>Objeto nulo ou não cadeia de caracteres se torna uma cadeia de caracteres nula.<br><br>OU<br><br>`s = o as string ?? fallback;`<br>Nulo ou não cadeia de caracteres se torna fallback.<br>Cadeia de caracteres vazia preservada. | `s = unbox_value_or<hstring>(o, fallback);`<br>Nulo ou não cadeia de caracteres se torna fallback.<br>Cadeia de caracteres vazia preservada. |
 
 ## <a name="derived-classes"></a>Classes derivadas
 
-Para derivação de uma classe de tempo de execução, a classe base precisa ser *combinável*. O C# não exige que você execute nenhuma etapa especial para tornar suas classes combináveis, ao contrário do C++/WinRT. Use a [palavra-chave não selada](/uwp/midl-3/intro#base-classes) para indicar que deseja que a classe seja utilizável como uma classe base.
+Para derivação de uma classe de runtime, a classe base precisa ser *combinável*. O C# não exige que você execute nenhuma etapa especial para tornar suas classes combináveis, ao contrário do C++/WinRT. Use a [palavra-chave não selada](/uwp/midl-3/intro#base-classes) para indicar que deseja que a classe seja utilizável como uma classe base.
 
 ```idl
 unsealed runtimeclass BasePage : Windows.UI.Xaml.Controls.Page
