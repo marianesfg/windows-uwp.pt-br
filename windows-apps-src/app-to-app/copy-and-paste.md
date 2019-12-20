@@ -2,30 +2,29 @@
 description: Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência.
 title: Copiar e colar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
-ms.date: 02/08/2017
+ms.date: 12/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c5f3fcd796e813719a5aa99c5ec70706e9630ce5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: dfa5c15c2bd4d82588e0b197dc265c4b529e64c9
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317850"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302680"
 ---
 # <a name="copy-and-paste"></a>Copiar e colar
 
-Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau.
+Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau. Para obter exemplos de código completos que demonstram vários cenários diferentes de copiar e colar, consulte a [amostra da área de transferência](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard).
 
 ## <a name="check-for-built-in-clipboard-support"></a>Verifique Suporte interno da área de transferência
 
 Em muitos casos, você não precisa gravar código para suportar operações da área da transferência. Muitos dos controles XAML padrão que você pode usar para criar aplicativos já permitem operações na área da transferência. 
 
-## <a name="get-set-up"></a>Prepare-se para começar
+## <a name="get-set-up"></a>Prepare-se
 
 Primeiro, inclua o namespace [**Windows.ApplicationModel.DataTransfer**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer) no seu aplicativo. Em seguida, adicione uma instância do objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage). Esse objeto contém os dados que o usuário quer copiar e quaisquer propriedades (como uma descrição) que você quer incluir.
 
-<!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
 DataPackage dataPackage = new DataPackage();
 ```
@@ -42,22 +41,24 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-## <a name="drag-and-drop"></a>Arrastar e soltar
 
-Em seguida, você pode adicionar os dados que um usuário selecionou para o objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage). Se esses dados tiverem suporte pela classe **DataPackage**, você poderá usar um dos métodos correspondentes no objeto **DataPackage**. Veja a seguir como adicionar texto:
+## <a name="set-the-copied-content"></a>Definir o conteúdo copiado
+
+Em seguida, você pode adicionar os dados que um usuário selecionou para o objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage). Se esses dados forem compatíveis com a classe **DataPackage** , você poderá usar um dos [métodos](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage#methods) correspondentes do objeto **DataPackage** . Veja como adicionar texto usando o método [**SetText**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage.settext) :
 
 ```cs
 dataPackage.SetText("Hello World!");
 ```
 
-A última etapa é adicionar o [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) à área de transferência chamando o método estático [**SetContent**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard#Windows_ApplicationModel_DataTransfer_Clipboard_SetContent_Windows_ApplicationModel_DataTransfer_DataPackage_).
+A última etapa é adicionar o [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) à área de transferência chamando o método estático [**SetContent**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.setcontent).
 
 ```cs
 Clipboard.SetContent(dataPackage);
 ```
+
 ## <a name="paste"></a>Colar
 
-Para obter o conteúdo da área de transferência, chame o método estático [**GetContent**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.getcontent). Esse método retorna um [**DataPackageView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackageView) que inclui o conteúdo. Esse objeto é quase idêntico a um objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage), com a diferença de que seu conteúdo é somente leitura. Com esse objeto, você pode usar o método [**AvailableFormats**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.availableformats) ou [**Contains**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackageView#Windows_ApplicationModel_DataTransfer_DataPackageView_Contains_System_String_) para identificar quais formatos estão disponíveis. Em seguida, você pode chamar o método correspondente [**DataPackageView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackageView) para obter os dados.
+Para obter o conteúdo da área de transferência, chame o método estático [**GetContent**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.getcontent). Esse método retorna um [**DataPackageView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackageView) que inclui o conteúdo. Esse objeto é quase idêntico a um objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage), com a diferença de que seu conteúdo é somente leitura. Com esse objeto, você pode usar o método [**AvailableFormats**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.availableformats) ou [**Contains**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.contains) para identificar quais formatos estão disponíveis. Em seguida, você pode chamar o método correspondente [**DataPackageView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackageView) para obter os dados.
 
 ```cs
 async void OutputClipboardText()
@@ -91,20 +92,21 @@ Clipboard.ContentChanged += async (s, e) =>
 
 ## <a name="see-also"></a>Consulte também
 
+* [Exemplo da área de transferência](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard)
 * [Comunicação de aplicativo a aplicativo](index.md)
 * [DataTransfer](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer)
 * [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)
 * [DataPackageView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview)
 * [DataPackagePropertySet]( https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
-* [DataRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest) 
+* [Solicitação de DataPedido](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest) 
 * [DataRequested]( https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx)
 * [FailWithDisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext)
 * [ShowShareUi](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui)
 * [RequestedOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage.requestedoperation) 
-* [ControlsList](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/)
+* [Controle da](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/)
 * [SetContent](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.setcontent)
 * [GetContent](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.getcontent)
 * [AvailableFormats](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.availableformats)
-* [Contém](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.contains)
-* [ContentChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.contentchanged)
+* [Terá](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.contains)
+* [Contentchanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard.contentchanged)
 

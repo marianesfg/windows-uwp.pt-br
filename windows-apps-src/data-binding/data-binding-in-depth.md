@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: c9218fe2b74fe9a550cd347f72083f090bd48f85
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2ed94dd54c58c1ae1bd27238b6033cdbf00359b4
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255356"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302670"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -44,7 +44,7 @@ Independentemente do modo, há dois tipos de associação, e eles são normalmen
 
 -   [Amostra de {x:Bind}](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBind).
 -   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
--   [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics).
+-   [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 
 **Aplicativos de exemplo que demonstram {Binding}**
 
@@ -147,7 +147,7 @@ public class HostViewModel : INotifyPropertyChanged
     public void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
         // Raise the PropertyChanged event, passing the name of the property whose value has changed.
-        this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
 ```
@@ -224,7 +224,7 @@ public class HostViewModel : BindableBase
 ```
 
 > [!NOTE]
-> Para C++/WinRT, qualquer classe de tempo de execução que você declarar em seu aplicativo que deriva de uma classe base é conhecida como uma classe *combinável* . E há restrições sobre as classes combináveis. Para um aplicativo ser aprovado nos testes do [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar os envios (e, portanto, para que o aplicativo seja processado com êxito na Microsoft Store), uma classe combinável deve derivar de uma classe base do Windows. Isso significa que a classe na própria raiz da hierarquia de herança deve ser um tipo que origina em um namespace Windows.*. Se for necessário derivar uma classe de runtime de uma classe base (por exemplo, para implementar uma classe &mdash;BindableBase**da qual todos os seus modelos de exibição devem derivar), então é possível derivar a partir de**&mdash;Windows.UI.Xaml.DependencyObject[ **.
+> Para C++/WinRT, qualquer classe de tempo de execução que você declarar em seu aplicativo que deriva de uma classe base é conhecida como uma classe *combinável* . E há restrições sobre as classes combináveis. Para um aplicativo ser aprovado nos testes do [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar os envios (e, portanto, para que o aplicativo seja processado com êxito na Microsoft Store), uma classe combinável deve derivar de uma classe base do Windows. Isso significa que a classe na própria raiz da hierarquia de herança deve ser um tipo que origina em um namespace Windows.*. Se for necessário derivar uma classe de runtime de uma classe base (por exemplo, para implementar uma classe **BindableBase** da qual todos os seus modelos de exibição devem derivar), então é possível derivar a partir de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 
 Gerar o evento **PropertyChanged** com um argumento de [**String.Empty**](https://docs.microsoft.com/dotnet/api/system.string.empty) ou **null** indica que todas as propriedades não indexadas no objeto devem ser lidas novamente. Você pode gerar o evento para indicar que as propriedades do indexador no objeto foram alteradas usando um argumento de "item\[*indexador*\]" para indexadores específicos (em que o *indexador* é o valor do índice) ou um valor de "item\[\]" para todos os indexadores.
 
@@ -330,7 +330,7 @@ Quando concluído, podemos dar uma olhada na marcação que declara o objeto de 
 
 Observe o valor que especificamos para **Path**. Esse valor é interpretado no contexto da própria página e, nesse caso, o caminho começa referenciando a propriedade **ViewModel** que acabamos de adicionar à página **MainPage** . Essa propriedade retorna uma instância **HostViewModel** e, portanto, podemos especificar esse objeto para acessar a propriedade **HostViewModel.NextButtonText**. E podemos especificar **Mode**, para substituir o [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) padrão de unidirecional.
 
-A propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ICustomPropertyProvider). Para outras configurações, consulte [Extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
+A propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe de caminho e propriedade](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ICustomPropertyProvider). Para outras configurações, consulte [Extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
 
 Para ilustrar que a propriedade **HostViewModel. NextButtonText** é realmente observável, adicione um manipulador de eventos de **clique** ao botão e atualize o valor de **HostViewModel. NextButtonText**. Compile, execute e clique no botão para ver o valor da atualização de **conteúdo** do botão.
 
@@ -440,13 +440,13 @@ Dentro de um [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xa
 > [!NOTE]
 > Por padrão, as alterações em [**TextBox. Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) são enviadas para uma fonte de limite bidirecional quando a [**caixa de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) perde o foco. Para fazer com que as alterações sejam enviadas após cada pressionamento de teclas do usuário, defina **UpdateSourceTrigger** como **PropertyChanged** na associação na marcação. Você também pode assumir completamente o controle de quando as alterações são enviadas para a origem definindo **UpdateSourceTrigger** como **Explicit**. Você manipula eventos na caixa de texto (geralmente [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)), chama [**GetBindingExpression**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.getbindingexpression) no destino para obter um objeto [**BindingExpression**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.bindingexpression) e, finalmente, chama [**BindingExpression.UpdateSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.bindingexpression.updatesource) para atualizar de forma programática a fonte de dados.
 
-A propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ICustomPropertyProvider). A propriedade [**ElementName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.elementname) é útil para associação de elementos. A propriedade [**RelativeSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.relativesource) tem vários usos, um deles é como uma alternativa mais poderosa à associação de modelo dentro de um [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate). Para outras configurações, consulte [Extensão de marcação {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) e a classe [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding).
+A propriedade [**Path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe de caminho e propriedade](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ICustomPropertyProvider). A propriedade [**ElementName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.elementname) é útil para associação de elementos. A propriedade [**RelativeSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.relativesource) tem vários usos, um deles é como uma alternativa mais poderosa à associação de modelo dentro de um [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate). Para outras configurações, consulte [Extensão de marcação {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) e a classe [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding).
 
 ## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>E se a origem e o destino não forem do mesmo tipo?
 
 Se desejar controlar a visibilidade de um elemento de interface do usuário com base no valor de uma propriedade booleana, ou se você desejar renderizar um elemento de interface do usuário com uma cor que é uma função de um intervalo ou tendência de um valor numérico, ou se quiser exibir um valor de data e/ou hora em uma propriedade de elemento de interface do usuário que espera uma string, precisará converter valores de um tipo em outro. Haverá casos em que a solução ideal é expor outra propriedade do tipo certo de sua classe de origem de associação e manter a lógica de conversão encapsulada e testada lá. Mas isso não é flexível nem escalável quando você tem números grandes, ou combinações grandes, das propriedades de origem e destino. Nesse caso, você tem algumas opções:
 
-* Se estiver usando {x: Bind}, você poderá vincular-se diretamente a uma função para fazer essa conversão
+* Se estiver usando {x:Bind}, você poderá vincular-se diretamente a uma função para fazer essa conversão
 * Ou poderá especificar um conversor de valor que é um objeto criado para executar a conversão 
 
 ## <a name="value-converters"></a>Conversores de valor
@@ -521,9 +521,9 @@ Se você associar um controle de texto a um valor que não seja uma cadeia, o me
 > [!NOTE]
 > A partir do Windows 10, versão 1607, a estrutura XAML fornece um booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booleano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de destino mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-## <a name="function-binding-in-xbind"></a>Associação de função em {x: Bind}
+## <a name="function-binding-in-xbind"></a>Associação de função em {x:Bind}
 
-{x: Bind} permite que a etapa final em um caminho de associação seja uma função. Isso pode ser usado para realizar conversões e realizar associações que dependem de mais de uma propriedade. Consulte [ **funções no x:bind**](function-bindings.md)
+{x:Bind} permite que a etapa final em um caminho de associação seja uma função. Isso pode ser usado para realizar conversões e realizar associações que dependem de mais de uma propriedade. Consulte [ **funções no x:bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
 
@@ -816,6 +816,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | RelativeFonte: TemplatedParent | Não necessária | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Com {x:Bind} TargetType no ControlTemplate indica associação ao modelo pai. Para a associação de modelo regular {Binding} pode ser usada em modelos de controle para a maioria dos usos. Mas use TemplatedParent onde você precisa usar um conversor ou uma associação bidirecional.< | 
 | Origem | Não necessária | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x:Bind}, você pode usar diretamente o elemento nomeado, usar uma propriedade ou um caminho estático. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | Modo pode ser OneTime, OneWay ou TwoWay. {x:Bind} usa como padrão OneTime; {Binding} OneWay. | 
-| UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger pode ser Padrão, LostFocus ou PropertyChanged. {x:Bind} não oferece suporte a UpdateSourceTrigger=Explicit. {x:Bind} usa o comportamento PropertyChanged para todos os casos, exceto TextBox.Text, onde ele usa o comportamento LostFocus. | 
+| UpdateFonteTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger pode ser Padrão, LostFocus ou PropertyChanged. {x:Bind} não oferece suporte a UpdateSourceTrigger=Explicit. {x:Bind} usa o comportamento PropertyChanged para todos os casos, exceto TextBox.Text, onde ele usa o comportamento LostFocus. | 
 
 

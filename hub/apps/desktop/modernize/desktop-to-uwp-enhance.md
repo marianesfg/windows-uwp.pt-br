@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: ca9e91233206f0e97d17fdbdd7b0fd09a2897cd8
-ms.sourcegitcommit: 3710117f24adb8555aa94b372db814e5d30ae45a
+ms.openlocfilehash: 78d9760c5ef21b29d09babaace0f4379b6a51209
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73427086"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302600"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Chamar APIs UWP em aplicativos da área de trabalho
 
@@ -253,12 +253,6 @@ A maneira mais fácil de adicionar verificações de tempo de execução ao seu 
 * [Aplicativo WinForms que implementa um UpdateTask UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Exemplo de ponte de aplicativo de desktop para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
-## <a name="support-and-feedback"></a>Suporte e comentários
-
-**Encontre respostas para suas perguntas**
+## <a name="find-answers-to-your-questions"></a>Encontrar respostas para suas dúvidas
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Fornecer comentários ou fazer sugestões de recursos**
-
-Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
