@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: c05a973dc9a954569531be6e0fea212135532b84
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a348393a02bab946a128babefc07dc48faea6cd1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258504"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685070"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -50,7 +50,7 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     </colgroup>
     <tr>
         <td>Portal principal do Centro de Desenvolvimento do Windows</td>
-        <td><a href="https://developer.microsoft.com/windows">Centro de desenvolvimento do Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows">Centro de Desenvolvedores do Windows</a></td>
     </tr>
     <tr>
         <td>Desenvolvendo aplicativos do Windows</td>
@@ -113,7 +113,7 @@ A Microsoft também oferece vários programas de desenvolvedor para ajudar você
 
 A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Considere a possibilidade de participar de um programa de desenvolvedor se você quiser desenvolver jogos para Xbox One e integrar recursos do Xbox Live ao seu jogo. Para publicar um jogo no Microsoft Store, você também precisará criar uma conta de desenvolvedor no [Partner Center](https://partner.microsoft.com/dashboard) .
 
-#### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
+#### <a name="xbox-live-creators-program"></a>Xbox Live Creators Program
 
 O Programa de Criadores do Xbox Live permite que qualquer pessoa integre o Xbox Live a seu título e publique no Xbox One e no Windows 10. Há um processo de certificação simplificado, e nenhuma aprovação de conceito é necessária fora das [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) padrão.
 
@@ -127,7 +127,7 @@ Se você deseja ter acesso a mais recursos do Xbox Live, marketing dedicado e su
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Programa de Criadores do Xbox Live</td>
+        <td>Xbox Live Creators Program</td>
         <td><a href="https://developer.microsoft.com/games/xbox/xboxlive/creator">Saiba mais sobre o Xbox Live Creators Program</a></td>
     </tr>
 </table>
@@ -246,15 +246,15 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     </colgroup>
     <tr>
         <td>Publicando fóruns de desenvolvedores de aplicativos e jogos</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Publicação e anúncios-em aplicativos</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsapps">Publicação e anúncios-em aplicativos</a></td>
     </tr>
     <tr>
         <td>Fórum do desenvolvedor de aplicativos UWP</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?forum=wpdevelop">Desenvolvendo Plataforma Universal do Windows aplicativos</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop">Desenvolvendo Plataforma Universal do Windows aplicativos</a></td>
     </tr>
     <tr>
         <td>Fóruns de desenvolvedores de aplicativos da área de trabalho</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsdesktopdev">Fóruns de aplicativos da área de trabalho do Windows</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev">Fóruns de aplicativos da área de trabalho do Windows</a></td>
     </tr>
     <tr>
         <td>Jogos da Microsoft Store com DirectX (postagens arquivadas no fórum)</td>
@@ -270,7 +270,7 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     </tr>
     <tr>
         <td>Fóruns da plataforma Azure</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsazureplatform">Fórum do Azure</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsazureplatform">Fórum do Azure</a></td>
     </tr>
     <tr>
         <td>Fórum do Xbox Live</td>
@@ -306,7 +306,7 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
     </tr>
     <tr>
         <td>Blogs de ferramentas de desenvolvedor do Visual Studio</td>
-        <td><a href="https://devblogs.microsoft.com/visualstudio/">Ferramentas para Desenvolvedores Blogs</a></td>
+        <td><a href="https://devblogs.microsoft.com/visualstudio/">Blogs de Ferramentas para Desenvolvedores</a></td>
     </tr>
     <tr>
         <td>Blog de ferramentas de desenvolvedor do Somasegar</td>
@@ -322,7 +322,7 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
     </tr>
     <tr>
         <td>Blog da equipe de ferramentas do Visual C++</td>
-        <td><a href="https://devblogs.microsoft.com/cppblog/">Blog C++ da equipe Visual</a></td>
+        <td><a href="https://devblogs.microsoft.com/cppblog/">Blog da equipe do Visual C++</a></td>
     </tr>
     <tr>
         <td>Blog da equipe do PIX</td>
@@ -517,7 +517,7 @@ O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a po
     </colgroup>
     <tr>
         <td>Referência e visões gerais da linguagem C++/CX</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Referência C++ de linguagem VisualC++(/CX)</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Referência da linguagem Visual C++ (C++/CX)</a></td>
     </tr>
     <tr>
         <td>Guia e referência de programação do Visual C++</td>
@@ -555,7 +555,7 @@ Os aplicativos do Windows em JavaScript podem acessar os recursos avançados da 
     </colgroup>
     <tr>
         <td>Referência de JavaScript e do Windows Runtime</td>
-        <td><a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">Referência de JavaScript</a></td>
+        <td><a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">Referência do JavaScript</a></td>
     </tr>
 </table>
 
@@ -894,7 +894,7 @@ Se você tiver um jogo existente, há muitos recursos e guias disponíveis para 
     </tr>
     <tr>
         <td>Fazendo a portabilidade de um jogo do Xbox para um aplicativo da Plataforma Universal do Windows</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx">Portando do Xbox One para o Windows 10 UWP</a></td>
+        <td><a href="https://developer.xboxlive.com/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx">Portando do Xbox One para o Windows 10 UWP</a></td>
     </tr>
     <tr>
         <td>Fazendo a portabilidade do DirectX 9 para o DirectX 11</td>
@@ -1026,7 +1026,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </tr>
     <tr>
         <td>Funções CRT sem suporte na UWP</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">Funções CRT sem suporte em aplicativos Plataforma Universal do Windows</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows</a></td>
     </tr>
     <tr>
         <td>Comandos alternativos para as APIs do Windows</td>
@@ -1070,7 +1070,7 @@ Separadamente do design da experiência do usuário, o design de jogo, como o de
     </colgroup>
     <tr>
         <td>Diretrizes e noções básicas de design da UWP</td>
-        <td><a href="https://developer.microsoft.com/en-us/windows/apps/design">Crie aplicativos UWP</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/design">Crie aplicativos UWP</a></td>
     </tr>
     <tr>
         <td>Design para estados do ciclo de vida do aplicativo</td>
@@ -1311,7 +1311,7 @@ Esta é a documentação adicional do DirectX criada por parceiros externos.
 </table>
 
 
-## <a name="production"></a>Produção
+## <a name="production"></a>Production
 
 
 Agora seu estúdio está totalmente preparado e passando para o ciclo de produção, com trabalho distribuído por toda a sua equipe. Você está retocando, refatorando e estendendo o protótipo para transformá-lo em um jogo completo.
@@ -1397,7 +1397,7 @@ O Windows Performance Toolkit (WPT) consiste em ferramentas que monitoram o dese
     </colgroup>
     <tr>
         <td>Teste de desempenho do código</td>
-        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">Teste de carga baseado em nuvem</a></td>
+        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">Teste de carga baseado na nuvem</a></td>
     </tr>
     <tr>
         <td>Obtenha um tipo de console do Xbox usando informações de dispositivo para jogos</td>
@@ -1534,7 +1534,7 @@ Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para pu
     </tr>
     <tr>
         <td>Publicação avançada do Partner Center (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Guia de publicação avançada do Partner Center</a></td>
+        <td><a href="https://developer.xboxlive.com/windows/documentation/Pages/home.aspx">Guia de publicação avançada do Partner Center</a></td>
     </tr>
     <tr>
         <td>Use Azure Active Directory (AAD) para adicionar usuários à sua conta do Partner Center</td>
@@ -1833,7 +1833,7 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://edadfs.partners.extranet.microsoft.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fdeveloper.xboxlive.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fen-us%252flive%252fcertification%252frequirements%252fPages%252fTCR.aspx&wct=2019-11-20T19%3a55%3a26Z">Requisitos do Xbox para Xbox Live no Windows 10</a></td>
     </tr>
     <tr>
-        <td>Exemplos</td>
+        <td>Amostras</td>
         <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Exemplos de código para desenvolvedores de ID@Xbox</a></td>
     </tr>  
     <tr>
