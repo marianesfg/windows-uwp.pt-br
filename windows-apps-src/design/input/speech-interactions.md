@@ -8,23 +8,23 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fd33720255a04ffd8669673f027973afb4369086
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258243"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684216"
 ---
 # <a name="speech-interactions"></a>Interações de controle por voz
 
-Integre reconhecimento de fala e conversão de texto em fala (também conhecida como TTS ou sintetização de voz) diretamente à experiência do usuário do seu aplicativo.
+Integre o reconhecimento de fala e a conversão de texto em fala (também conhecida como TTS ou sintetização de voz) diretamente à experiência do usuário do seu aplicativo.
 
 **Reconhecimento de fala:** converte palavras faladas pelo usuário em texto para entrada de formulário e ditado de texto, para especificar uma ação ou um comando e realizar tarefas. As gramáticas predefinidas para ditado de texto livre e pesquisa na Web e as gramáticas personalizadas criadas usando SRGS (Especificação de Gramática de Reconhecimento de Fala) Versão 1.0 têm suporte.
 
 **TTS:** usa um mecanismo de sintetização de voz (voz) para converter uma cadeia de caracteres de texto em palavras faladas. A cadeia de caracteres de entrada pode ser texto básico e simples ou SSML (Linguagem de Marcação de Sintetização de Voz) mais complexa. A SSML fornece uma forma padrão de controlar as características da saída de fala, como pronúncia, volume, tom, taxa ou velocidade e ênfase.
 
 **Outros componentes relacionados à fala:** Em aplicativos do Windows, a 
-**Cortana** usa comandos de voz personalizados (falados ou digitados) para iniciar seu aplicativo em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativá-lo como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). Consulte as [Diretrizes para comando de voz da Cortana (VCD)](https://docs.microsoft.com/en-us/cortana/voice-commands/vcd) se você estiver expondo a funcionalidade do aplicativo na interface do usuário da **Cortana**.
+**Cortana** usa comandos de voz personalizados (falados ou digitados) para iniciar seu aplicativo em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativá-lo como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). Consulte as [Diretrizes para comando de voz da Cortana (VCD)](https://docs.microsoft.com/cortana/voice-commands/vcd) se você estiver expondo a funcionalidade do aplicativo na interface do usuário da **Cortana**.
 
 ## <a name="speech-interaction-design"></a>Design de interação de fala
 
@@ -179,7 +179,7 @@ Para uma pequena lista de palavras e frases, ou uma lista de palavras e frases u
 
 Para listas maiores de palavras e frases, ou palavras e frases usadas com frequência, você pode criar documentos separados de léxico de pronúncias. Consulte [Sobre léxicos e alfabetos fonéticos](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obter mais informações.
 
-## <a name="testing"></a>Testando
+## <a name="testing"></a>Testes
 
 Teste a precisão do reconhecimento de fala e qualquer interface do usuário de suporte com o público-alvo do seu aplicativo. Esta é a melhor maneira de determinar a eficiência da experiência de interação de fala no seu aplicativo. Por exemplo, os usuários estão obtendo resultados de reconhecimento insatisfatórios porque seu aplicativo não está ouvindo uma frase comum?
 
@@ -210,7 +210,7 @@ Ambos os problemas podem ser resolvidos usando SSML em vez de texto sem formata�
 | [Especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
 | [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md) | Saiba como definir e usar restrições personalizadas para reconhecimento de fala. |
 | [Habilitar o ditado contínuo](enable-continuous-dictation.md) |Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo. |
-| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
+| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas na precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
 | [Definir tempos limite de reconhecimento de fala](set-speech-recognition-timeouts.md) | Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala. |
 
 ## <a name="related-articles"></a>Artigos relacionados

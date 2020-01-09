@@ -1,17 +1,17 @@
 ---
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: IDs de classe de serviço AEP
-description: Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles.
+description: Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4b4c89fff2854c36bd76cc680197fad1aa8dff
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bc8fecd7a5a1596d074c170d7a7211126e88b8ae
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370401"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684860"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
@@ -19,9 +19,9 @@ ms.locfileid: "66370401"
 
 **APIs importantes**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
-Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
+Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
 Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind).
 

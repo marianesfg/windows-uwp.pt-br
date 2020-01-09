@@ -1,5 +1,5 @@
 ---
-Description: Projete seu aplicativo para que ele parece bom e funciona bem em realidade misturada.
+Description: Projete seu aplicativo para que ele pareça bom e funcione bem em realidade misturada.
 title: Desenvolvendo para realidade misturada
 ms.assetid: ''
 label: Designing for Mixed Reality
@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e8cee688cbfbda0fe3822017b769560fc0fffe3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5aaa5b5a51ab2aea863fece8fb466f274a00ace3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319382"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684256"
 ---
 # <a name="designing-for-mixed-reality"></a>Desenvolvendo para realidade misturada
 
@@ -26,7 +26,7 @@ Projete seu aplicativo para se encaixar bem na realidade misturada e aproveite o
 
 ## <a name="overview"></a>Visão geral
 
-[Realidade misturada](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) é o resultado da mistura do mundo físico com o mundo digital. As experiências do espectro de realidade misturada incluem de um lado dispositivos extremos, como as HoloLens (um dispositivo que mistura conteúdo gerado por computador com o mundo real), e do outro uma exibição completamente imersiva de Realidade virtual (como visto com o headset do Windows Mixed Reality). Consulte [Tipos de aplicativos de realidade misturada](https://developer.microsoft.com/en-us/windows/mixed-reality/types_of_mixed_reality_apps) para obter exemplos de como as experiências poderão variar.
+[Realidade misturada](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) é o resultado da mistura do mundo físico com o mundo digital. As experiências do espectro de realidade misturada incluem de um lado dispositivos extremos, como as HoloLens (um dispositivo que mistura conteúdo gerado por computador com o mundo real), e do outro uma exibição completamente imersiva de Realidade virtual (como visto com o headset do Windows Mixed Reality). Consulte [Tipos de aplicativos de realidade misturada](https://developer.microsoft.com/windows/mixed-reality/types_of_mixed_reality_apps) para obter exemplos de como as experiências poderão variar.
 
 Quase todos os aplicativos UWP existentes serão executados no ambiente de realidade misturada, como aplicativos 2D sem alterações, embora a experiência do usuário possa ser melhorada seguindo algumas das diretrizes neste tópico.
 
@@ -34,7 +34,7 @@ Quase todos os aplicativos UWP existentes serão executados no ambiente de reali
 
 Tanto as HoloLens quanto os headsets do Windows Mixed Reality oferecem suporte a aplicativos sendo executados na plataforma UWP, e ambos suportam dois tipos de experiência distintos. 
 
-### <a name="2d-vs-immersive-experience"></a>2D vs. Experiência de imersão
+### <a name="2d-vs-immersive-experience"></a>2D comparado a experiência imersiva
 
 Um aplicativo imersivo assume a tela inteira visível ao usuário, posicionando-o no centro de uma visualização criada pelo aplicativo. Por exemplo, um jogo imersivo pode colocar o usuário na superfície de um planeta alienígena ou um aplicativo de tour guia pode colocar o usuário em uma vila da América do Sul. Criar um aplicativo imersivo requer elementos gráficos 3D ou vídeo estereográfico capturado. Aplicativos imersivos geralmente são desenvolvidos usando um mecanismo de jogo de terceiros como Unity ou com DirectX.
 
@@ -84,7 +84,7 @@ Vários métodos de entrada novos foram projetados principalmente para uso com d
 * [Dispositivo clicker](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (HoloLens somente)
 * [Controladores de movimento](https://docs.microsoft.com/windows/mixed-reality/motion-controllers) (dispositivos de realidade misturada somente, mostrados acima.)
 
-Esses controladores fazem a interação com objetos virtuais se tornar natural e precisa. Algumas das interações você obtém gratuitamente. Por exemplo, os HoloLens selecione gesto ou clicando na tecla do Windows do controlador de animação ou gatilho irá gerar a resposta de entrada que você esperaria, novamente, sem nenhuma codificação de sua parte.
+Esses controladores fazem a interação com objetos virtuais se tornar natural e precisa. Algumas das interações você obtém gratuitamente. Por exemplo, o gesto de seleção do HoloLens ou o clique na chave do Windows ou no gatilho do controlador de movimento gerará a resposta de entrada que você esperaria, novamente, sem codificação de sua parte.
 
 Em outras ocasiões, você desejará adicionar código para tirar proveito das informações extras e entradas que são disponibilizadas. Por exemplo, os controladores de movimento podem ser usados para manipular objetos com um nível de controle fino, se você escrever um código que leva em consideração sua posição e pressionamento de botão.
 
@@ -92,7 +92,7 @@ Em outras ocasiões, você desejará adicionar código para tirar proveito das i
 > Em resumo: a orientação principal deve ser sempre para fornecer ao usuário o método de entrada mais natural e sem atrito possível.
 
 
-## <a name="2d-app-design-considerations-functionality"></a>Considerações de Design de aplicativos 2D: Funcionalidade
+## <a name="2d-app-design-considerations-functionality"></a>Considerações de design de aplicativo 2D: funcionalidade
 
 Ao criar um aplicativo UWP que possivelmente será usado em uma plataforma de realidade misturada, há várias coisas para se ter em mente.
 
@@ -163,9 +163,9 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 ## <a name="related-articles"></a>Artigos relacionados
 
 
-* [Limitações atuais para aplicativos que usam APIs do shell](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
+* [Limitações atuais para aplicativos que usam APIs do Shell](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
 * [Criando aplicativos 2D](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
-* [HoloLens: Criando aplicativos da UWP 2D para o Microsoft HoloLens](https://channel9.msdn.com/Events/Build/2016/B854)
-* [XAML condicional](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/conditional-xaml)
+* [HoloLens: Criando aplicativos de 2D do UWP para o Microsoft HoloLens](https://channel9.msdn.com/Events/Build/2016/B854)
+* [XAML condicional](https://docs.microsoft.com/windows/uwp/debug-test-perf/conditional-xaml)
 
 

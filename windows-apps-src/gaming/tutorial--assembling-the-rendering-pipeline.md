@@ -6,16 +6,16 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eeb515f07d9bc2e48ba97f6ef4d71afd0226ace
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8daf07d08dd760da680044938e9a6601e41108d3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367729"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685027"
 ---
-# <a name="rendering-framework-i-intro-to-rendering"></a>Framework de renderização i: Introdução à renderização
+# <a name="rendering-framework-i-intro-to-rendering"></a>Estrutura de renderização I: introdução à renderização
 
-Abordamos como estruturar um jogo da Plataforma Universal do Windows (UWP) e como definir uma máquina de estado para lidar com o fluxo do jogo nos tópicos anteriores. Agora está na hora de aprender como montar a estrutura de renderização. Vamos examinar como o jogo de exemplo é renderizado a cena do jogo usando 11 Direct3D (normalmente conhecido como o DirectX 11).
+Abordamos como estruturar um jogo da Plataforma Universal do Windows (UWP) e como definir uma máquina de estado para lidar com o fluxo do jogo nos tópicos anteriores. Agora está na hora de aprender como montar a estrutura de renderização. Vejamos como o jogo de exemplo renderiza a cena do jogo usando o Direct3D 11 (normalmente conhecido como DirectX 11).
 
 >[!Note]
 >Se você ainda não tiver baixado o código de jogo mais recente para este exemplo, acesse [Jogo de exemplo em Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este exemplo faz parte de uma grande coleção de exemplos de recursos UWP. Para obter instruções sobre como baixar o exemplo, consulte [Obtenha os exemplos da Plataforma Universal do Windows (UWP) do GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -36,7 +36,7 @@ Para configurar uma estrutura de renderização básica para exibir a saída gr�
 
 Este artigo explica como elementos gráficos são renderizados, abrangendo as etapas 1 e 3.
 
-[Framework de renderização II: Renderização de jogos](tutorial-game-rendering.md) abrange a etapa 2; como configurar o framework de renderização e como os dados são preparados antes de renderização pode acontecer.
+[Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md) aborda a etapa 2; como configurar a estrutura de renderização e como os dados são preparados antes que a renderização possa ocorrer.
 
 ## <a name="get-started"></a>Introdução
 
@@ -50,7 +50,7 @@ Nesta parte do tutorial, vamos nos concentrar na renderização de objetos 3D no
 
 Para acessar o hardware para renderização, consulte o artigo Estrutura UWP em [__App::Initialize__](tutorial--building-the-games-uwp-app-framework.md#appinitialize-method).
 
-O __tornar\_função shared__, conforme mostrado [abaixo](#appinitialize-method), é usado para criar um __compartilhado\_ptr__ para [ __DX::D eviceResources__](#dxdeviceresources), que também fornece acesso ao dispositivo. 
+A __função compartilhada make\___ , conforme mostrado [abaixo](#appinitialize-method), é usada para criar um __\_ptr compartilhado__ para [__DX::D eviceresources__](#dxdeviceresources), que também fornece acesso ao dispositivo. 
 
 No Direct3D 11, um [dispositivo](#device) é usado para alocar e destruir objetos, renderizar primitivas e comunicar-se com a placa gráfica por meio do driver gráfico.
 
@@ -74,8 +74,8 @@ void App::Initialize(
 A cena de jogo precisará renderizar quando o jogo for iniciado. As instruções para renderização começam no método  [__GameMain::Run__](#gamemainrun-method), conforme mostrado abaixo.
 
 O fluxo simples é:
-1. __Update__
-2. __Renderizar__
+1. __Atualização__
+2. __Renderização__
 3. __Presente__
 
 ### <a name="gamemainrun-method"></a>Método GameMain::Run
@@ -122,7 +122,7 @@ void GameMain::Run()
 }
 ```
 
-### <a name="update"></a>Atualização
+### <a name="update"></a>Atualizar
 
 Consulte o artigo [Gerenciamento de fluxo de jogo](tutorial-game-flow-management.md) para obter mais informações sobre como os estados do jogo são atualizados no métodos [__App::Update__ e __GameMain::Update__](tutorial-game-flow-management.md#appupdate-method).
 
@@ -130,7 +130,7 @@ Consulte o artigo [Gerenciamento de fluxo de jogo](tutorial-game-flow-management
 
 A renderização é implementada chamando o método [__GameRenderer::Render__](#gamerendererrender-method) em __GameMain::Run__.
 
-Se a [renderização estéreo](#stereo-rendering) for habilitada, haverá duas passagens de renderização: uma para o olho direito e a outra para o olho esquerdo. Em cada passagem de renderização, podemos associar o destino de renderização e o modo de exibição de estêncil de profundidade no dispositivo. Também limparemos a exibição de estêncil de profundidade posteriormente.
+Se a [renderização estéreo](#stereo-rendering) for habilitada, haverá duas passagens de renderização: uma para o olho direito e a outra para o olho esquerdo. Em cada passagem de renderização, vinculamos o destino de renderização e a exibição de estêncil de profundidade ao dispositivo. Também limparemos a exibição de estêncil de profundidade posteriormente.
 
 > [!Note]
 > A renderização estéreo pode ser alcançada por meio de outros métodos, como estéreo de passagem única usando instanciação de vértice ou sombreadores de geometria. Embora o método com duas passagens de renderização seja mais lento, é mais conveniente para se obter a renderização estéreo.
@@ -146,10 +146,10 @@ Neste jogo de exemplo, o renderizador foi criado para usar um layout de vértice
 
 Defina o contexto Direct3D para usar um layout de vértice de entrada. Os objetos de layout de entrada descrevem como os dados do buffer de vértices são transmitidos para o [pipeline de renderização](#rendering-pipeline). 
 
-Em seguida, definimos o contexto de Direct3D para usar os buffers de constantes definidos anteriormente, que são usados pela [sombreador de vértice](#vertex-shaders-and-pixel-shaders) o estágio de pipeline e o [sombreador de pixel](#vertex-shaders-and-pixel-shaders) o estágio de pipeline. 
+Em seguida, definimos o contexto do Direct3D para usar os buffers de constantes definidos anteriormente, que são usados pelo estágio de pipeline do [sombreador de vértice](#vertex-shaders-and-pixel-shaders) e pelo estágio de pipeline do [sombreador de pixels](#vertex-shaders-and-pixel-shaders) . 
 
 > [!Note]
-> Consulte [II do framework de renderização: Renderização de jogos](tutorial-game-rendering.md) para obter mais informações sobre a definição dos buffers de constantes.
+> Consulte [Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md) para obter mais informações sobre a definição dos buffers constantes.
 
 Como os mesmos layout de entrada e conjunto de buffers constantes são usados em todos os sombreadores no pipeline, é configurado uma vez por quadro.
 
@@ -334,14 +334,14 @@ void GameRenderer::Render()
 
 Ao renderizar a cena, você executará um loop por todos os objetos que precisam ser renderizados. As etapas a seguir são repetidas para cada objeto (primitiva).
 
-* Atualizar o buffer de constantes (__m\_constantBufferChangesEveryPrim__) com o modelo [matriz de transformação de mundo](#world-transform-matrix) e informações privilegiadas.
+* Atualize o buffer de constantes (__m\_constantBufferChangesEveryPrim__) com a [matriz de transformação mundial](#world-transform-matrix) do modelo e as informações de material.
 * O __m\_constantBufferChangesEveryPrim__ contém parâmetros para cada objeto.  Inclui o objeto para matriz de transformação de mundo e propriedades materiais como cor e expoente especular para cálculos de iluminação.
 * Defina o contexto Direct3D para usar o layout de vértice de entrada para os dados de objeto de malha que serão transmitidos ao estágio do assembler de entrada (IA) do [pipeline de renderização](#rendering-pipeline)
 * Defina o contexto Direct3D para usar um [buffer de índice](#index-buffer) no estágio do IA. Forneça as informações de primitiva: tipo, ordem de dados.
-* Envie uma chamada de desenho para desenhar a primitiva indexada não instanciada. O método __GameObject::Render__ atualiza o [buffer constante](#constant-buffer-or-shader-constant-buffer) de primitiva com os dados específicos de uma determinada primitiva. Isso resulta em uma chamada de __DrawIndexed__ no contexto para desenhar a geometria dessa primitiva. Especificamente, essa chamada de desenho enfileira comandos e dados para a GPU (Unidade de Processamento de Gráficos), conforme parametrizados pelos dados do buffer constante. Cada chamada de desenho o sombreador de vértice é executado uma vez por vértice e, em seguida, o [sombreador de pixel](#vertex-shaders-and-pixel-shaders) uma vez para cada pixel de cada triângulo no primitivo. As texturas fazem parte do estado que o sombreador de pixel usa para executar a renderização.
+* Envie uma chamada de desenho para desenhar a primitiva indexada não instanciada. O método __GameObject::Render__ atualiza o [buffer constante](#constant-buffer-or-shader-constant-buffer) de primitiva com os dados específicos de uma determinada primitiva. Isso resulta em uma chamada de __DrawIndexed__ no contexto para desenhar a geometria dessa primitiva. Especificamente, essa chamada de desenho enfileira comandos e dados para a GPU (Unidade de Processamento de Gráficos), conforme parametrizados pelos dados do buffer constante. Cada chamada de desenho executa o sombreador de vértice uma vez por vértice e, em seguida, o [sombreador de pixel](#vertex-shaders-and-pixel-shaders) uma vez para cada pixel de cada triângulo na primitiva. As texturas fazem parte do estado que o sombreador de pixel usa para executar a renderização.
 
 Motivos para vários buffers constantes:
-    * O jogo usa vários buffers constantes, mas só precisa atualizar esses buffers uma vez para cada primitiva. Conforme mencionado anteriormente, os buffers constantes são como uma entrada de dados para os sombreadores executados para cada primitiva. Alguns dados são estáticos (__m\_constantBufferNeverChanges__); alguns dados seja constantes ao longo do quadro (__m\_constantBufferChangesEveryFrame__), como a posição da câmera; e alguns dados são específicos para o primitivo, como a cor e texturas (__m\_constantBufferChangesEveryPrim__)
+    * O jogo usa vários buffers constantes, mas só precisa atualizar esses buffers uma vez para cada primitiva. Conforme mencionado anteriormente, os buffers constantes são como uma entrada de dados para os sombreadores executados para cada primitiva. Alguns dados são estáticos (__m\_constantBufferNeverChanges__); alguns dados são constantes sobre o quadro (__m\_constantBufferChangesEveryFrame__), como a posição da câmera; e alguns dados são específicos para o primitivo, como sua cor e texturas (__m\_constantBufferChangesEveryPrim__)
     * O renderizador do jogo separa essas entradas em diferentes buffers constantes para otimizar a largura de banda de memória usada pela CPU e pela GPU. Essa abordagem também ajuda a minimizar a quantidade de dados que a GPU precisa controlar. A GPU possui uma grande fila de comandos, e sempre que o jogo chama __Draw__, esse comando é inserido na fila com os respectivos dados. Quando o jogo atualiza o buffer de constantes de primitiva e emite o próximo comando __Draw__, o driver gráfico adiciona esse comando e os dados associados à fila. Se o jogo desenha 100 primitivas, pode haver 100 cópias dos dados do buffer constante na fila. Para minimizar a quantidade de dados enviados à GPU, o jogo usa um buffer de constantes de primitiva em separado contendo apenas as atualizações para cada primitiva.
 
 #### <a name="gameobjectrender-method"></a>Método GameObject::Render
@@ -473,7 +473,7 @@ void DX::DeviceResources::Present()
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Este artigo explicou como elementos gráficos são renderizados na tela e forneceu uma breve descrição para alguns dos termos de renderização usados. Saiba mais sobre como renderizar no [II do framework de renderização: Renderização de jogos](tutorial-game-rendering.md) do artigo e saiba como preparar os dados necessários antes da renderização.
+Este artigo explicou como elementos gráficos são renderizados na tela e forneceu uma breve descrição para alguns dos termos de renderização usados. Saiba mais sobre renderização no artigo [Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md) e como preparar os dados necessários antes da renderização.
 
 ## <a name="terms-and-concepts"></a>Termos e conceitos
 
@@ -490,11 +490,11 @@ As informações de cena e objeto são usadas pela estrutura de renderização p
 O pipeline de renderização é o processo em que as informações da cena 3D são convertidas em uma imagem exibida na tela. No Direct3D 11, esse pipeline é programável. É possível adaptar os estágios para atender às suas necessidades de renderização. Estágios que apresentam núcleos comuns de sombreador são programáveis por meio da linguagem de programação HLSL. Também é conhecido como o pipeline de renderização de elementos gráficos ou simplesmente o pipeline.
 
 Para criar esse pipeline, você precisa estar familiarizado com:
-* [HLSL](#HLSL). Recomendamos o uso do modelo de sombreador 5.1 do HLSL e acima para jogos UWP do DirectX.
-* [Sombreadores](#Shaders)
-* [Sombreadores de vértices e sombreadores de pixel](#vertext-shaders-pixel-shaders)
-* [Estágios de sombreador](#shader-stages)
-* [Vários formatos de arquivo do sombreador](#various-shader-file-formats)
+* [HLSL](#hlsl). Recomendamos o uso do modelo de sombreador 5.1 do HLSL e acima para jogos UWP do DirectX.
+* [Sombreadores](#shaders)
+* [Sombreadores de vértice e sombreadores de pixel](#vertex-shaders-and-pixel-shaders)
+* [Estágios do sombreador](#shader-stages)
+* [Vários formatos de arquivo de sombreador](#various-shader-file-formats)
 
 Para obter mais informações, consulte [Noções básicas sobre o pipeline de renderização do Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3dgetstarted/understand-the-directx-11-2-graphics-pipeline) e [Pipeline de elementos gráficos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline).
 
@@ -533,7 +533,7 @@ Extensões de arquivo de código de sombreador:
 
 O Direct3D 11 é um conjunto de APIs que nos ajudam a criar elementos gráficos de aplicativos ricos em elementos gráficos, como jogos, nos quais é preciso ter uma boa placa gráfica para processar cálculos intensos. Esta seção explica resumidamente os conceitos de programação de elementos gráficos do Direct3D 11: recurso, sub-recurso, dispositivo e contexto de dispositivo.
 
-#### <a name="resource"></a>Resource
+#### <a name="resource"></a>Recurso
 
 Para usuários novatos, pode-se considerar os recursos (também conhecidos como recursos de dispositivo) como informações sobre como renderizar um objeto, como textura, posição, cor. Os recursos fornecem dados para o pipeline e definem o que é renderizado durante a cena. Os recursos podem ser carregados a partir da mídia de jogo ou criados dinamicamente no momento de execução.
 
@@ -549,7 +549,7 @@ Um recurso de estêncil de profundidade contém o formato e o buffer para manter
 
 As informações de profundidade mostram quais áreas de polígonos são renderizadas em vez de serem ocultas da exibição. As informações de estêncil mostram quais pixels estão mascarados. Isso pode ser usado para produzir efeitos especiais, pois determina se um pixel é desenhado ou não; define o bit como 1 ou 0. 
 
-Para obter mais informações, consulte: [Modo de exibição de estêncil de profundidade](../graphics-concepts/depth-stencil-view--dsv-.md), [buffer de profundidade](../graphics-concepts/depth-buffers.md), e [buffer de estêncil](../graphics-concepts/stencil-buffers.md).
+Para obter mais informações, consulte: [Modo de exibição de estêncil de profundidade](../graphics-concepts/depth-stencil-view--dsv-.md), [buffer de profundidade](../graphics-concepts/depth-buffers.md) e [buffer de estêncil](../graphics-concepts/stencil-buffers.md).
 
 #### <a name="render-target"></a>Destino de renderização
 
@@ -567,7 +567,7 @@ Um dispositivo é representado pela interface [ID3D11Device](https://docs.micros
 
 Observe que existem versões diferentes da ID3D11Device, [ID3D11Device5](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11device5) é a versão mais recente e acrescenta novos métodos àquela em ID3D11Device4. Para obter mais informações sobre como o Direct3D se comunica com o hardware subjacente, consulte [Arquitetura do Windows Device Driver Model (WDDM)](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture).
 
-Cada aplicativo deve ter pelo menos um dispositivo; a maioria dos aplicativos só cria um dispositivo. Criar um dispositivo para um dos drivers de hardware instalados em seu computador, chamando __D3D11CreateDevice__ ou __D3D11CreateDeviceAndSwapChain__ e especificando o tipo de driver com o D3D\_ DRIVER\_sinalizador de tipo. Cada dispositivo pode usar um ou mais contextos de dispositivo, dependendo da funcionalidade desejada. Para obter mais informações, consulte a [função D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice).
+Cada aplicativo deve ter pelo menos um dispositivo; a maioria dos aplicativos só cria um dispositivo. Crie um dispositivo para um dos drivers de hardware instalados em seu computador chamando __D3D11CreateDevice__ ou __D3D11CreateDeviceAndSwapChain__ e especificando o tipo de driver com o sinalizador de tipo de\_do driver D3D\_. Cada dispositivo pode usar um ou mais contextos de dispositivo, dependendo da funcionalidade desejada. Para obter mais informações, consulte a [função D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice).
 
 #### <a name="device-context"></a>Contexto de dispositivo
 
@@ -577,7 +577,7 @@ O Direct3D 11 implementa dois tipos de contextos de dispositivo, um para renderi
 
 As interfaces __ID3D11DeviceContext__ têm diferentes versões; __ID3D11DeviceContext4__ acrescenta novos métodos àquela em __ID3D11DeviceContext3__.
 
-Observação: __ID3D11DeviceContext4__ é introduzido no Windows 10 Creators Update e é a versão mais recente do __ID3D11DeviceContext__ interface. Aplicativos que se destinam à Atualização do Windows 10 para Criadores devem usar essa interface em vez de versões anteriores. Para obter mais informações, consulte [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4).
+Observação: __ID3D11DeviceContext4__ é apresentada na Atualização do Windows 10 para Criadores e é a versão mais recente da interface __ID3D11DeviceContext__. Aplicativos que se destinam à Atualização do Windows 10 para Criadores devem usar essa interface em vez de versões anteriores. Para obter mais informações, consulte [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4).
 
 #### <a name="dxdeviceresources"></a>DX::DeviceResources
 
@@ -587,7 +587,7 @@ A classe __DX::DeviceResources__ está nos arquivos __DeviceResources.cpp__/ __.
 
 Um recurso de buffer é uma coleção de dados completamente tipados, agrupados em elementos. É possível usar buffers para armazenar uma ampla variedade de dados, incluindo vetores de posição, vetores normais, coordenadas de textura em um buffer de vértice, índices em um buffer de índice ou estado do dispositivo. Elementos de buffer podem incluir valores de dados de pacote (como valores de superfície R8G8B8A8), inteiros de 8 bits únicos ou quatro valores de ponto flutuante de 32 bits.
 
-Há três tipos de buffers disponíveis: Buffer de vértice, buffers de índice e buffer de constantes.
+Há três tipos de buffers disponíveis: buffer de vértice, buffer de índice e buffer constante.
 
 #### <a name="vertex-buffer"></a>Buffer de vértice
 
@@ -616,7 +616,7 @@ Para obter mais informações, consulte [Introdução a buffers no Direct3D 11](
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphics Infrastructure (DXGI) é um novo subsistema que foi introduzido com o Windows Vista que encapsula a algumas das tarefas de nível inferior que são necessários para o Direct3D 10, 10.1, 11 e 11.1. Deve-se ter um cuidado especial ao usar a DXGI em um aplicativo multithread para garantir que não ocorram deadlocks. Para obter mais informações, consulte [DirectX Graphics Infrastructure (DXGI): Práticas recomendadas-Multithreading](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
+O Microsoft DirectX Graphics Infrastructure (DXGI) é um novo subsistema que foi introduzido com o Windows Vista que encapsula algumas das tarefas de nível inferior que são necessárias para o Direct3D 10, 10,1, 11 e 11,1. Deve-se ter um cuidado especial ao usar a DXGI em um aplicativo multithread para garantir que não ocorram deadlocks. Para obter mais informações, consulte [DirectX Graphics Infrastructure (DXGI): Práticas recomendadas - Multithreading](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
 
 ### <a name="feature-level"></a>Nível de recursos
 
@@ -624,9 +624,9 @@ Nível de recursos é um conceito apresentado no Direct3D 11 para manipular a di
 
 Cada placa de vídeo implementa um certo nível de funcionalidade de DirectX dependendo das GPUs instaladas. Em versões anteriores do Microsoft Direct3D, você poderia descobrir a versão do Direct3D que a placa de vídeo implementou e programar o seu aplicativo adequadamente. 
 
-Com o nível de recursos, na criação de um dispositivo, pode-se tentar criá-lo para o nível de recursos que se deseja solicitar. Se for possível criar um dispositivo, isso significa que o nível de recursos existe; caso contrário, o hardware não permite tal nível de recursos. Você pode tentar recriar um dispositivo em um nível de recursos inferior ou optar por sair do aplicativo. Por exemplo, os 12\_nível de recurso 0 requer o Direct3D 11.3 ou Direct3D 12 e modelo de sombreador 5.1. Para obter mais informações, consulte [níveis de recurso do Direct3D: Visão geral para cada nível de recurso](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
+Com o nível de recursos, na criação de um dispositivo, pode-se tentar criá-lo para o nível de recursos que se deseja solicitar. Se for possível criar um dispositivo, isso significa que o nível de recursos existe; caso contrário, o hardware não permite tal nível de recursos. Você pode tentar recriar um dispositivo em um nível de recursos inferior ou optar por sair do aplicativo. Por exemplo, o nível de recurso 12\_0 requer Direct3D 11,3 ou Direct3D 12 e o modelo de sombreador 5,1. Para obter mais informações, consulte [Níveis de recursos do Direct3D: visão geral de cada nível de recursos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
-Usando níveis de recurso, você pode desenvolver um aplicativo para o Direct3D 9, Microsoft Direct3D 10 ou 11 do Direct3D e, em seguida, executá-lo em 9, 10 ou 11 hardware (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
+Usando níveis de recursos, você pode desenvolver um aplicativo para o Direct3D 9, o Microsoft Direct3D 10 ou o Direct3D 11 e executá-lo em um hardware de 9, 10 ou 11 (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
 ### <a name="stereo-rendering"></a>Renderização estéreo
 
@@ -650,10 +650,10 @@ onde:
 * M(model-to-world) é uma matriz de transformação de coordenadas de modelo para coordenadas de mundo, também conhecida como [Matriz de transformação de mundo](#world-transform-matrix). Isso é fornecido pela primitiva.
 * M(world-to-view) é uma matriz de transformação de coordenadas de mundo para coordenadas de exibição, também conhecida como [Matriz de transformação de exibição](#view-transform-matrix).
     * Isso é fornecido pela matriz de visualização da câmera. A posição da câmera, juntamente com os vetores de visão (o vetor "olhar para" que aponta diretamente para a cena a partir da câmera e o vetor "olhar para cima" que sobe perpendicularmente dele).
-    * O jogo de exemplo, __m\_viewMatrix__ é a matriz de transformação de exibição e é calculada usando __Camera::SetViewParams__ 
+    * No jogo de exemplo, __m\_viewMatrix__ é a matriz de transformação View e é calculada usando __Camera:: SetViewParams__ 
 * M(view-to-device) é uma matriz de transformação de coordenadas de exibição para coordenadas de dispositivo, também conhecida como [Matriz de transformação de projeção](#projection-transform-matrix).
     * Isso é fornecido pela projeção da câmera. Fornece informações sobre como muito desse espaço é realmente visível na cena final. O campo de visão (FoV), a taxa de proporção e os planos de recorte definem a matriz de transformação de projeção.
-    * O jogo de exemplo, __m\_projectionMatrix__ define a transformação para as coordenadas de projeção, calculadas usando __Camera::SetProjParams__ (para estéreo projeção, você usa dois matrizes de projeção: uma para cada do modo de exibição.) 
+    * No jogo de exemplo, __m\_projectionMatrix__ define a transformação para as coordenadas de projeção, calculada usando __Camera:: SetProjParams__ (para projeção estéreo, você usa duas matrizes de projeção: uma para cada exibição de olho.) 
 
 O código de shader em VertexShader.hlsl é carregado com esses vetores e matrizes dos buffers constantes e executa essa transformação para cada vértice.
 

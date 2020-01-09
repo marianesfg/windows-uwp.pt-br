@@ -5,24 +5,24 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d747d35148965480cb34714cde7859203a7424d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4db99097516fcead384af6fc9e4c588707b96d41
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634371"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684446"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Programa de editores de anúncios premium do Windows
 
-Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows a monetizar seus apps por meio de anúncios, oferecemos o [Programa de editores de anúncios premium do Windows](https://www.windowspremiumapps.com). Isso é um conjunto gerenciado de apps e jogos com os melhores anúncios do setor em termos de uso, envolvimento e experiência. Esses aplicativos e jogos têm visualização certificada, além de um público de usuários identificáveis distribuído globalmente, com alto grau de envolvimento.
+Como parte dos nossos esforços contínuos para ajudar os desenvolvedores do Windows a monetizar seus aplicativos por meio de anúncios, oferecemos o [Programa de editores de anúncios premium do Windows](https://www.windowspremiumapps.com). Isso é um conjunto administrado de aplicativos e jogos com os melhores anúncios do setor em termos de uso, envolvimento e experiência. Esses aplicativos e jogos têm visualização certificada, além de um público de usuários identificáveis distribuído globalmente, com alto grau de envolvimento.
 
-Os anunciantes de nossas redes de publicidade de parceiro podem identificar esses apps separadamente e veicular anúncios premium de alto rendimento para exclusivamente nesses apps a fim de obter o mais alto retorno sobre o investimento das campanhas. Para desenvolvedores, isso significa que os aplicativos participantes do programa podem gerar mais receitas de publicidade.
+Os anunciantes de nossas redes de anúncios de parceiro podem identificar esses aplicativos separadamente e veicular anúncios premium de alto rendimento para esses aplicativos a fim de obter o mais alto retorno sobre o investimento das campanhas. Para desenvolvedores, isso significa que os aplicativos participantes do programa podem gerar mais receitas de publicidade.
 
 ## <a name="how-does-microsoft-add-apps-to-this-program"></a>Como a Microsoft adiciona aplicativos ao programa? 
 
 Revisamos continuamente os aplicativos na Microsoft Store tendo em vista os [critérios de qualificação](#what-are-the-criteria-for-apps-in-the-program). Os aplicativos que atendem aos critérios de qualificação são colocados em um processo de revisão manual rigoroso a fim de verificar se há uma experiência de usuário bem definida e para verificar se os anúncios foram devidamente inseridos a fim de evitar cliques não intencionais. Os aplicativos aprovados no processo de triagem automática e manual são adicionados ao programa.
 
-No momento, o programa é somente por convite e apenas atender aos critérios de qualificação não permite que um aplicativo participe automaticamente do programa premium. Se quiser saber mais sobre como melhorar a experiência do aplicativo a fim de se qualificar para o programa, entre em contato conosco em aiacare@microsoft.com.
+No momento, o programa é somente por convite e apenas atender aos critérios de qualificação não permite que um aplicativo participe automaticamente do programa premium. Se você quiser saber mais sobre como melhorar sua experiência de aplicativo para se qualificar para o programa, entre em contato conosco em aiacare@microsoft.com.
 
 ## <a name="what-are-the-criteria-for-apps-in-the-program"></a>Quais são os critérios para aplicativos no programa?
 
@@ -41,7 +41,7 @@ Os aplicativos nesse programa devem atender aos seguintes critérios:
 
 ## <a name="can-apps-get-removed-from-the-program"></a>Os aplicativos podem ser removidos do programa?
 
-Os aplicativos no programa são monitorados regularmente para garantir que continuem a atender aos critérios de qualificação. Para manter um volume de solicitação mínima de anúncio diário, verifique se o uso do aplicativo não é reduzido significativamente ao longo do tempo. É uma ótima maneira de fazer isso é por meio de [campanhas promocionais veiculadas regularmente](https://developer.microsoft.com/en-us/store/promote-your-apps).
+Os aplicativos no programa são monitorados regularmente para garantir que continuem a atender aos critérios de qualificação. Para manter um volume de solicitação mínima de anúncio diário, verifique se o uso do aplicativo não é reduzido significativamente ao longo do tempo. É uma ótima maneira de fazer isso é por meio de [campanhas promocionais veiculadas regularmente](https://developer.microsoft.com/store/promote-your-apps).
 
 ## <a name="can-i-provide-additional-marketing-material-to-showcase-my-app-in-the-program"></a>Posso fornecer outros materiais de marketing para demonstrar o aplicativo no programa? 
 

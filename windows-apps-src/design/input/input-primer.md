@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f9aab8c4b627b9a4952e7e3e292f1e4b528f992
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b9fbe76244d37bda69a1737e04f7172a64b3af44
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258387"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684219"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
@@ -30,7 +30,7 @@ Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, re
 Na **Atualização de abril de 2018 para o Windows 10**, introduziu o suporte para entrada usando o foco com dispositivos de entrada com acompanhamento de movimentos de olho e cabeça. 
 
 > [!NOTE]
-> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala.
+> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -89,7 +89,7 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 [Diretrizes de design da Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
-## <a name="speech"></a>Speech
+## <a name="speech"></a>Controle por voz
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
 
@@ -168,7 +168,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 
 ### <a name="more-info"></a>Mais informações
 
-[Diretrizes de design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
+[Diretrizes para design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
 
 ## <a name="touch"></a>Touch
@@ -230,7 +230,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 [Diretrizes de design do touchpad](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
-## <a name="keyboard"></a>Teclado
+## <a name="keyboard"></a>Keyboard
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 

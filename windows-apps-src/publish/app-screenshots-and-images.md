@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 25dd6ffe698ae8141a02381d5ca45df31377599b
-ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
+ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74125231"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684608"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -170,7 +170,7 @@ Há requisitos adicionais dependendo do tipo de arquivo.
 
 | Vídeo | Áudio |
 | --- | --- |
-| <ul><li>Codec: [H. 264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>Varredura progressiva (sem entrelaçamento)</li><li>Alto Perfil</li><li>Dois quadros B consecutivos</li><li>GOP fechado. GOP da metade da taxa de quadros</li><li>CABAC</li><li>50 MB/s </li><li>Espaço de cores: 4.2.0</li></ul> | <ul><li>Codec: AAC-LC</li><li>Canais: estéreo ou som surround</li><li>Taxa de amostragem: 48 KHz</li><li>Taxa de bits de áudio: 384 KB/s para estéreo, 512 KB/s para sistema surround</li></ul> |
+| <ul><li>Codec: [H. 264](https://docs.microsoft.com/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>Varredura progressiva (sem entrelaçamento)</li><li>Alto Perfil</li><li>Dois quadros B consecutivos</li><li>GOP fechado. GOP da metade da taxa de quadros</li><li>CABAC</li><li>50 MB/s </li><li>Espaço de cores: 4.2.0</li></ul> | <ul><li>Codec: AAC-LC</li><li>Canais: estéreo ou som surround</li><li>Taxa de amostragem: 48 KHz</li><li>Taxa de bits de áudio: 384 KB/s para estéreo, 512 KB/s para sistema surround</li></ul> |
 
 > [!WARNING]
 > Os clientes não podem ouvir áudio para arquivos MP4 codificados com codecs diferentes de AVC1.

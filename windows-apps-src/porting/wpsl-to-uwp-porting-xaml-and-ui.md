@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eeb8cb8a8b71123c3a5a94eea316621e5f93fe8e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259080"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684625"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando Windows Phone XAML do Silverlight e interface do usuário para UWP
 
@@ -76,7 +76,7 @@ Assim que todas as diretivas using antigas forem removidas e as novas adicionada
 
 Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Em outras ocasiões, você precisará usar APIs UWP em vez de APIs do .NET para aplicativos Windows Runtime 8. x. Para identificar quais APIs têm suporte, use o restante deste guia de portação em combinação com o [.net para Windows Runtime visão geral dos aplicativos 8. x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) e a [referência de Windows Runtime](https://docs.microsoft.com/uwp/api/).
 
-E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do runtime sejam corrigidos e a portabilidade seja concluída.
+E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do tempo de execução sejam corrigidos e a portabilidade seja concluída.
 
 ## <a name="adaptiveresponsive-ui"></a>Interface do usuário responsiva/adaptável
 
@@ -205,7 +205,7 @@ Para saber mais sobre controles da UWP, consulte [Controles por função](https:
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
-Há algumas diferenças na linguagem de design entre Windows Phone aplicativos do Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/en-us/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
+Há algumas diferenças na linguagem de design entre Windows Phone aplicativos do Silverlight e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
 ## <a name="localization-and-globalization"></a>Localização e globalização
 
@@ -291,7 +291,7 @@ Em um aplicativo UWP, você pode usar código imperativo para definir a página 
     if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
 ```
 
-O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. A mesma meta pode ser obtida passando um parâmetro de navegação quando você chama o método [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate).
+O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. O mesmo objetivo pode ser obtido passando um parâmetro de navegação quando você chama o método [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate).
 
 Para obter mais informações, consulte [Navegação](https://docs.microsoft.com/windows/uwp/layout/navigation-basics).
 
@@ -313,7 +313,7 @@ Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a
 
 Estilos TextBlock do sistema para aplicativos do Windows 10
 
-Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você quiser reproduzir a aparência do seu Windows Phone texto do Silverlight, poderá definir suas próprias métricas usando propriedades como [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) e [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy). Para obter mais informações, consulte [Diretrizes para fontes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) e [Crie aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design).
+Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se você quiser reproduzir a aparência do seu Windows Phone texto do Silverlight, poderá definir suas próprias métricas usando propriedades como [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) e [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy). Para obter mais informações, consulte [Diretrizes para fontes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) e [Crie aplicativos UWP](https://developer.microsoft.com/windows/apps/design).
 
 ## <a name="theme-changes"></a>Alterações de tema
 

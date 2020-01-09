@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55165e0369c6bda64c19dc384c5c2addf224b8ba
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b8ff6d6b3b15992f0598bfb371e6bfb1023d6dc1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259113"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685001"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Configurando o seu Mac com o Windows 10
 
@@ -24,7 +24,7 @@ Você está pronto para começar a desenvolver aplicativos Universais do Windows
 
 **Observação**  você precisará de uma imagem inicializável do Windows 10 em disco ou unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador poderá ser adquirido no [Microsoft Store](https://www.microsoft.com/store/apps). Você também pode baixá-lo [deste local](https://www.microsoft.com/software-download/windows10), o que é útil se você já estiver executando o Windows e deseja atualizar.
 
-Depois que o Windows estiver em execução, você poderá instalar a versão mais recente do Visual Studio a partir dos [downloads para desenvolvedores do Windows 10](https://developer.microsoft.com/en-us/windows/downloads) e começar a escrever aplicativos!
+Depois que o Windows estiver em execução, você poderá instalar a versão mais recente do Visual Studio a partir dos [downloads para desenvolvedores do Windows 10](https://developer.microsoft.com/windows/downloads) e começar a escrever aplicativos!
 
 **Observação**  se você planeja usar os emuladores de dispositivo do Visual Studio, você **deve** instalar uma versão de 64 bits (x64) do Windows 10 pro ou superior. Infelizmente, alguns Macs mais antigos não podem executar Windows de 64 bits. Verifique junto à Apple se seu hardware é compatível nesta[página de suporte da Apple](https://support.apple.com/kb/HT5634).
 

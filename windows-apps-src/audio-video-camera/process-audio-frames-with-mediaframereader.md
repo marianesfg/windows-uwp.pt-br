@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8d357dfbceafb6cc366b2880956ab3db231047d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 170452443588399e0257bb49f3c63604bc0a7830
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74256659"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683879"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
@@ -31,7 +31,7 @@ O processo de aquisição dos quadros de áudio é basicamente o mesmo para outr
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
-4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
+4.  Para acessar a biblioteca de Imagens e Vídeos, marque as caixas da **Biblioteca de imagens** e da **Biblioteca de vídeos**.
 
 
 
@@ -72,7 +72,7 @@ Você pode recuperar o [**AudioDeviceController**](https://docs.microsoft.com/uw
 
 [!code-cs[AudioDeviceControllerMute](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetAudioDeviceControllerMute)]
 
-Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) a fim de passar dados de áudio captador por uma fonte de quadro de mídia em um [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph). Passe o quadro para o método [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) de um [**AudioFrameInputNode**](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeinputnode). Para obter mais informações sobre como usar os gráficos de áudio para capturar, processar e misturar sinais de áudio, consulte [Gráficos de áudio](audio-graphs.md).
+Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) a fim de passar dados de áudio captador por uma fonte de quadro de mídia em um [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph). Passe o quadro para o método [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) de um [**AudioFrameInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode). Para obter mais informações sobre como usar os gráficos de áudio para capturar, processar e misturar sinais de áudio, consulte [Gráficos de áudio](audio-graphs.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

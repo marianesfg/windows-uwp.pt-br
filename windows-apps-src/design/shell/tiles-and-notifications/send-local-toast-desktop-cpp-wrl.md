@@ -1,5 +1,5 @@
 ---
-Description: Saiba como os aplicativos Win32 C++ WRL podem enviar notificações do sistema local e lidar com o usuário clicar a torrada.
+Description: Saiba como os C++ aplicativos Win32 WRL podem enviar notificações do sistema local e manipular o usuário clicando no sistema de notificação.
 title: Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: af6c4392d97bdbf06c3e185b8a1c0235225bfe5a
-ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
+ms.openlocfilehash: abd3fc88f2ecacd0146a9f3a88a3240630078454
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940307"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684207"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
@@ -22,7 +22,7 @@ Aplicativos de área de trabalho (Ponte de Desktop e Win32 clássico) podem envi
 > Se você estiver criando um aplicativo UWP, consulte a [documentação da UWP](send-local-toast.md). Para outros idiomas da área de trabalho, consulte [Desktop C#](send-local-toast-desktop.md).
 
 
-## <a name="step-1-enable-the-windows-10-sdk"></a>Etapa 1: Habilitar o Windows 10 SDK
+## <a name="step-1-enable-the-windows-10-sdk"></a>Etapa 1: habilitar o SDK do Windows 10
 
 Se você ainda não ativou o SDK do Windows 10 para seu aplicativo Win32, você deve fazer isso primeiro. Existem algumas etapas chave...
 
@@ -38,14 +38,14 @@ Em **Vinculador -> Entrada**, adicione `runtimeobject.lib` às **Dependências a
 Em seguida, em **Geral**, certifique-se de que a **Versão do SDK do Windows** está definida como 10.0 ou posterior (não Windows 8.1).
 
 
-## <a name="step-2-copy-compat-library-code"></a>Etapa 2: Copie o código da biblioteca de compatibilidade
+## <a name="step-2-copy-compat-library-code"></a>Etapa 2: copiar o código da biblioteca de compatibilidade
 
 Copie o arquivo [DesktopNotificationManagerCompat.h](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.h) e [DesktopNotificationManagerCompat.cpp](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.cpp) do GitHub para o projeto. A biblioteca de compatibilidade abstrai grande parte da complexidade das notificações da área de trabalho. As instruções a seguir exigem a biblioteca de compatibilidade.
 
 Se você estiver usando cabeçalhos pré-compilados, certifique-se de `#include "stdafx.h"` como a primeira linha do arquivo DesktopNotificationManagerCompat.cpp.
 
 
-## <a name="step-3-include-the-header-files-and-namespaces"></a>Etapa 3: Incluir os arquivos de cabeçalho e os namespaces
+## <a name="step-3-include-the-header-files-and-namespaces"></a>Etapa 3: incluir os arquivos de cabeçalho e namespaces
 
 Inclua o arquivo de cabeçalho da biblioteca de compatibilidade, os arquivos de cabeçalho e namespaces relacionados para usar as APIs da UWP.
 
@@ -60,9 +60,9 @@ using namespace Microsoft::WRL;
 ```
 
 
-## <a name="step-4-implement-the-activator"></a>Etapa 4: Implementar o ativador
+## <a name="step-4-implement-the-activator"></a>Etapa 4: implementar o ativador
 
-Você deve implementar um manipulador para a ativação do sistema, para que quando o usuário clica em sua notificação do sistema, seu aplicativo possa fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
+Você deve implementar um manipulador para ativação do sistema de forma que, quando o usuário clicar no seu sistema de notificação, seu aplicativo possa fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
 
 Implemente a interface de **INotificationActivationCallback** como visto abaixo, incluindo uma UUID e também chame **CoCreatableClass** para sinalizar sua classe como criável para COM. Para a UUID, crie uma GUID exclusiva usando um dos muitos geradores de GUID online. Essa CLSID (identificador de classe) de GUID é como a Central de Ações sabe qual classe ativar para COM.
 
@@ -87,7 +87,7 @@ CoCreatableClass(NotificationActivator);
 ```
 
 
-## <a name="step-5-register-with-notification-platform"></a>Etapa 5: Registre-se com a plataforma de notificação
+## <a name="step-5-register-with-notification-platform"></a>Etapa 5: registrar-se na plataforma de notificação
 
 Em seguida, você deve se registrar na plataforma de notificação. Existem diferentes etapas dependendo se você estiver usando a Ponte de Desktop ou o Win32 clássico. Em caso de suporte para ambos, você deve executar as duas etapas (no entanto, não há necessidade de bifurcar o código; a nossa biblioteca processa isso para você!).
 
@@ -143,7 +143,7 @@ Se estiver usando o Win32 clássico (ou se ambos forem compatíveis), você deve
 
 Escolha uma AUMID exclusiva para identificar o aplicativo Win32. Em geral, isso ocorre na forma de [CompanyName].[AppName], mas você quer garantir que isso seja exclusivo em todos os aplicativos (fique à vontade para adicionar alguns dígitos no final).
 
-#### <a name="step-51-wix-installer"></a>Etapa 5.1: Instalador do WiX
+#### <a name="step-51-wix-installer"></a>Etapa 5.1: instalador do WiX
 
 Se estiver usando o WiX como instalador, edite o arquivo **Product.wxs** para adicionar duas propriedades de atalho ao atalho do menu Iniciar, como mostrado abaixo. Certifique-se de que a GUID da etapa 4 esteja encapsulada em `{}` como visto abaixo.
 
@@ -165,7 +165,7 @@ Se estiver usando o WiX como instalador, edite o arquivo **Product.wxs** para ad
 > Para usar as notificações, você deve instalar o aplicativo por meio do instalador uma vez antes da depuração normal para que o atalho de Iniciar com a AUMID e a CLSID esteja presente. Depois que o atalho de Iniciar estiver presente, você pode depurar usando F5 no Visual Studio.
 
 
-#### <a name="step-52-register-aumid-and-com-server"></a>Etapa 5.2: Registrar servidor AUMID e COM
+#### <a name="step-52-register-aumid-and-com-server"></a>Etapa 5.2: registrar a AUMID e o servidor COM
 
 Em seguida, independentemente do instalador, no código de inicialização do aplicativo (antes de chamar quaisquer APIs de notificação), chame o método **RegisterAumidAndComServer**, especificando a classe de ativador de notificação da etapa 4 e a AUMID usada acima.
 
@@ -179,7 +179,7 @@ Se você oferecer suporte para Ponte de Desktop e Win32 clássico, fique à vont
 Esse método permite que você chame as APIs de compatibilidade para enviar e gerenciar notificações sem precisar fornecer constantemente a AUMID. Além disso, insere a chave de registro LocalServer32 do servidor COM.
 
 
-## <a name="step-6-register-com-activator"></a>Etapa 6: Registre-se COM ativador
+## <a name="step-6-register-com-activator"></a>Etapa 6: registrar o ativador COM
 
 Para os aplicativos da Ponte de Desktop e do Win32 clássico, você deve registrar o tipo de ativador de notificação para poder manipular ativações de notificação do sistema.
 
@@ -191,7 +191,7 @@ hr = DesktopNotificationManagerCompat::RegisterActivator();
 ```
 
 
-## <a name="step-7-send-a-notification"></a>Etapa 7: Enviar uma notificação
+## <a name="step-7-send-a-notification"></a>Etapa 7: enviar uma notificação
 
 O envio de notificações é idêntico ao dos aplicativos UWP, exceto que você usará **DesktopNotificationManagerCompat** para criar um **ToastNotifier**. A biblioteca de compatibilidade manipula automaticamente a diferença entre a Ponte de Desktop e o Win32 clássico para que você não precise bifurcar o código. Para o Win32 clássico, a biblioteca de compatibilidade armazena em cache a AUMID fornecida ao chamar **RegisterAumidAndComServer** para que você não precisa se preocupar sobre quando deve fornecer ou não a AUMID.
 
@@ -232,7 +232,7 @@ if (SUCCEEDED(hr))
 > Os aplicativos clássicos do Win32 não podem usar modelos de notificação do sistema herdados (como ToastText02). A ativação dos modelos herdados falha quando CLSID COM é especificada. Você deve usar os modelos ToastGeneric do Windows 10 conforme visto acima.
 
 
-## <a name="step-8-handling-activation"></a>Etapa 8: Manipular a ativação
+## <a name="step-8-handling-activation"></a>Etapa 8: manipular a ativação
 
 Quando o usuário clica no sistema ou nos botões na notificação do sistema, o método **Activate** da classe **NotificationActivator** é invocado.
 
@@ -375,7 +375,7 @@ Se o aplicativo não estiver sendo executado:
 Para aplicativos da área de trabalho, a ativação em primeiro plano e em segundo plano é processada de forma idêntica: o ativador COM é chamado. O código do aplicativo deve decidir se deseja mostrar uma janela ou apenas executar algum trabalho e sair. Portanto, especificar um **activationType** de **segundo plano** no conteúdo da notificação do sistema não muda o comportamento.
 
 
-## <a name="step-9-remove-and-manage-notifications"></a>Etapa 9: Remover e gerenciar notificações
+## <a name="step-9-remove-and-manage-notifications"></a>Etapa 9: remover e gerenciar notificações
 
 A remoção e o gerenciamento de notificações é idêntico ao dos aplicativos UWP. No entanto, recomendamos que você use a biblioteca de compatibilidade para obter uma **DesktopNotificationHistoryCompat** para que você não precisa se preocupar em fornecer a AUMID se estiver usando o Win32 clássico.
 
@@ -393,7 +393,7 @@ if (SUCCEEDED(hr))
 ```
 
 
-## <a name="step-10-deploying-and-debugging"></a>Etapa 10: Implantando e depurando
+## <a name="step-10-deploying-and-debugging"></a>Etapa 10: implantação e depuração
 
 Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/windows/uwp/porting/desktop-to-uwp-debug).
 
@@ -416,7 +416,7 @@ Caso receba vários erros de compilação `unresolved external symbol`, você pr
 
 Se houver suporte para o Windows 8.1 ou anterior, você deve verificar no tempo de execução se está executando no Windows 10 antes de chamar quaisquer APIs de **DesktopNotificationManagerCompat** ou ao enviar quaisquer notificações do sistema ToastGeneric.
 
-O Windows 8 introduziu as notificações do sistema, mas usava os [modelos de notificação do sistema herdados](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. A ativação era manipulada pelo evento **Ativado** na memória na classe **ToastNotification** pois as notificações do sistema eram apenas breves pop-ups que não continuaram. O Windows 10 introduziu as [notificações do sistema interativas ToastGeneric](adaptive-interactive-toasts.md), assim como a Central de Ações em que as notificações são mantidas por vários dias. A introdução da Central de Ações exigiu a introdução de um ativador COM para que a notificação do sistema possa ser ativada alguns dias após sua criação.
+O Windows 8 introduziu as notificações do sistema, mas usava os [modelos de notificação do sistema herdados](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. A ativação era manipulada pelo evento **Ativado** na memória na classe **ToastNotification** pois as notificações do sistema eram apenas breves pop-ups que não continuaram. O Windows 10 introduziu as [notificações do sistema interativas ToastGeneric](adaptive-interactive-toasts.md), assim como a Central de Ações em que as notificações são mantidas por vários dias. A introdução da Central de Ações exigiu a introdução de um ativador COM para que a notificação do sistema possa ser ativada alguns dias após sua criação.
 
 | SO | ToastGeneric | Ativador COM | Modelos de notificação do sistema herdados |
 | -- | ------------ | ------------- | ---------------------- |
@@ -438,11 +438,11 @@ if (IsWindows10OrGreater())
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
-**CORRIGIDO: Não receba o foco do aplicativo depois de clicar em toast**: Em builds 15063 e versões anteriores, os direitos de primeiro plano não estavam sendo transferidos para seu aplicativo quando estamos ativado o servidor COM. Portanto,o aplicativo simplesmente piscava ao tentar movê-lo para o primeiro plano. Não havia uma solução alternativa para esse problema. Corrigimos isso nas versões 16299 e posteriores.
+**CORRIGIDO: o aplicativo não é concentrado depois de clicar na notificação do sistema**: nas versões 15063 e anteriores, os direitos de primeiro plano não estavam sendo transferidos para o aplicativo ao ativar o servidor COM. Portanto,o aplicativo simplesmente piscava ao tentar movê-lo para o primeiro plano. Não havia uma solução alternativa para esse problema. Corrigimos isso nas versões 16299 e posteriores.
 
 
 ## <a name="resources"></a>Recursos
 
 * [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/desktop-toasts)
 * [Notificações do sistema de aplicativos da área de trabalho](toast-desktop-apps.md)
-* [Documentação de conteúdo de notificação do sistema](adaptive-interactive-toasts.md)
+* [Documentação do conteúdo do sistema](adaptive-interactive-toasts.md)

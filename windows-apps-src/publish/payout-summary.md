@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: d609af268cfe304b34797cea4bf91e36d1475c29
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: aff36ace40317ff0b2ff54a8ca75381fe2c24a4e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259002"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684989"
 ---
 # <a name="payout-summary"></a>Resumo de pagamentos
 
@@ -47,7 +47,7 @@ Para exportar qualquer um dos dados nessa página, selecione exportar e, em segu
 
 Esta página exibe todos os seus ganhos individuais, incluindo a data, o tipo e a conquista de cada um. Você pode selecionar um período de tempo para exibir e também pode filtrar por ID de registro, programa, ID de pagamento, tipo de conquista, alavanca e status. Os dados estão disponíveis para o ano fiscal atual (1º de julho a 30 de junho) e os dois anos fiscais anteriores.
 
-Para ver mais detalhes sobre uma conquista, selecione a seta para baixo no lado direito da página. Isso exibirá a alavanca, o valor da receita e o produto. Se, por algum motivo, qualquer um desses dados estiver indisponível, mas você precisar acessá-lo, contate o [suporte](https://developer.microsoft.com/en-us/windows/support)]. Se a conquista for o resultado de um ajuste, e não de uma transação, os campos de produto não serão exibidos.
+Para ver mais detalhes sobre uma conquista, selecione a seta para baixo no lado direito da página. Isso exibirá a alavanca, o valor da receita e o produto. Se, por algum motivo, qualquer um desses dados estiver indisponível, mas você precisar acessá-lo, contate o [suporte](https://developer.microsoft.com/windows/support)]. Se a conquista for o resultado de um ajuste, e não de uma transação, os campos de produto não serão exibidos.
 
 Para exportar qualquer um dos dados de transação nessa página, selecione exportar e, em seguida, siga as instruções na página Exportar dados. Os arquivos exportados da página Histórico de transações mostram os dados na moeda da transação, os ganhos na moeda da transação e nos dólares dos EUA e o valor pago em pagar para a moeda.
 
@@ -56,18 +56,18 @@ Para exportar qualquer um dos dados de transação nessa página, selecione expo
 | Ganhando status           | Motivo                                                                                                                                      | Ação do parceiro necessária?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | Não processados              | A conquista está qualificada para pagamento. Ele permanece nesse estado por um período de resfriamento, conforme definido no guia do programa do programa de incentivo. | Não                                                         |
-| Cerimônia                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
+| Próximas                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
 | Fatura de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes de poder ser pago |
-| Rejeitado durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
-| Falha                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Rejeitado durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
+| Failed (Falha)                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
 | Em andamento              | O pagamento está em andamento.                                                                                                                 | Não                                                         |
 | Pagamento incorreto        | A revitóriação de pagamento está em andamento.                                                                                                       | Não                                                         |
-| Enviados                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
+| Enviado                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
 | Reprocessamento             | O pagamento encontrou um erro de sistema da Microsoft e está sendo reprocessado.                                                                  | Não                                                         |
 | Inversão                 | O pagamento foi revertido pelo seu banco e será enviado novamente no próximo ciclo de pagamento.                                                     | Não                                                         |
-| Fatura de imposto rejeitada     | A fatura do imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes estarão em espera até que a revisão da fatura fiscal seja concluída.                 | Contate [o suporte da Microsoft](https://developer.microsoft.com/en-us/windows/support) para obter detalhes                      |
+| Fatura de imposto rejeitada     | A fatura do imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes estarão em espera até que a revisão da fatura fiscal seja concluída.                 | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
 | Fatura de imposto em revisão | Sua fatura de imposto está sendo revisada. Seu pagamento será liberado depois que a nota fiscal do imposto tiver sido aprovada.                                   | Não                                                         |
-| Recusa                 | O pagamento foi rejeitado pelo seu banco.                                                                                                      | Entre em contato com seu banco para obter detalhes.                             |
+| Rejeitado                 | O pagamento foi rejeitado pelo seu banco.                                                                                                      | Entre em contato com seu banco para obter detalhes.                             |
 
 ## <a name="export-data-page"></a>Exportar página de dados
 
@@ -84,7 +84,7 @@ Essa opção fornece um download dos pagamentos recebidos em seu banco para um d
 
 | Nome da coluna              | Descrição                                                                                                                               |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------  |
-| participante da            | A principal identidade do parceiro ganhando sob o programa                                                                             |
+| participantID            | A principal identidade do parceiro ganhando sob o programa                                                                             |
 | participantIDType        | Normalmente a ID do programa para programas de incentivo e ID do vendedor para programas da loja                                                                |
 | participantename          | Nome do parceiro de conquista                                                                                                               |
 | programName              | Nome do programa de incentivo/loja                                                                                                              |
@@ -139,7 +139,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | paymentStatus                  | Status do pagamento                                                                                                                           | Todas                                                            |
 | paymentStatusDescription       | Descrição amigável do status de pagamento                                                                                                   | Todas                                                            |
 | customerId                     | Estará sempre em branco                                                                                                                     | Apenas programas de incentivo (exceção: OEM) e Azure Marketplace |
-| Customer                   | Estará sempre em branco                                                                                                                     | Apenas programas de incentivo (exceção: OEM) e Azure Marketplace |
+| customerName                   | Estará sempre em branco                                                                                                                     | Apenas programas de incentivo (exceção: OEM) e Azure Marketplace |
 | partNumber                     | Estará sempre em branco                                                                                                                     | Alguns programas de incentivo e de loja e o Azure Marketplace        |
 | productName                    | Nome do produto vinculado à transação                                                                                                       | Todas                                                            |
 | productId                      | Identificador exclusivo do produto                                                                                                                | Store e Azure Marketplace                                    |
@@ -157,7 +157,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | agreementNumber                | Número do contrato                                                                                                                         | Incentivo-apenas alguns programas                                 |
 | agreementStartDate             | Data de início do contrato                                                                                                                     | Incentivo-apenas alguns programas                                 |
 | agreementEndDate               | Data de término do contrato                                                                                                                       | Incentivo-apenas alguns programas                                 |
-| pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
+| workload                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
 | transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               | Store e Azure Marketplace                                    |
 | localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          | Somente armazenar                                                     |
 | taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   | Store e Azure Marketplace                                    |

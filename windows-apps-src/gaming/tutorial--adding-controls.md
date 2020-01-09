@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c2b7031bf8afb047fcfc869e23ee1c398218af8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: edc790ba949010fb1975317c5113ca02744889a0
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258425"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684561"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
@@ -86,7 +86,7 @@ Estado | Descrição
 :----- | :-------
 **Nenhum** | Esse é o estado inicializado para o controlador. Todas as entradas são ignoradas desde que o jogo não esteja esperando nenhuma entrada do controlador.
 **WaitForInput** | O controlador está esperando que o player confirme uma mensagem do jogo usando um clique esquerdo do mouse, um evento por toque ou o botão do mouse em um gamepad.
-**Activo** | O controlador está no modo de reprodução do jogo ativo.
+**Ativo** | O controlador está no modo de reprodução do jogo ativo.
 
 
 
@@ -459,7 +459,7 @@ Este jogo tem o seguinte layout de controle para teclado e mouse.
 Entrada do usuário | Ação
 :------- | :--------
 W | Mover o player para frente
-A | Mover o player para esquerda
+Um botão | Mover o player para esquerda
 S | Mover o player para trás
 D | Mover o player para direita
 X | Mover visualização para cima
@@ -484,7 +484,7 @@ O mouse é tratado de maneira ligeiramente diferente dos controles de toque, emb
 
 Isso é manipulado no método [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313) do **MoveLookController**.
 
-Nesse método, verificamos que tipo de dispositivo de ponteiro está sendo usado com a enumeração [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Input.PointerDeviceType). Se o jogo estiver **Ativo** e o **PointerDeviceType** não for **Toque**, podemos presumir que é a entrada do mouse.
+Nesse método, verificamos que tipo de dispositivo de ponteiro está sendo usado com a enumeração [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDeviceType). Se o jogo estiver **Ativo** e o **PointerDeviceType** não for **Toque**, podemos presumir que é a entrada do mouse.
 
 ```cpp
     case MoveLookControllerState::Active:
@@ -557,7 +557,7 @@ Quando o player para de pressionar um dos botões do mouse, o evento de mouse [C
 
 Agora examinaremos o último tipo de controle ao qual daremos suporte: gamepads. Os gamepads são manipulados separadamente dos controles de toque e de mouse, já que eles não usam o objeto de ponteiro. Por isso, alguns novos manipuladores de eventos e métodos terão que ser adicionados.
 
-## <a name="adding-gamepad-support"></a>Adicionar suporte a gamepad
+## <a name="adding-gamepad-support"></a>Adicionar suporte para gamepad
 
 
 No caso desse jogo, o suporte a gamepad é adicionado por chamadas às APIs [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input). Esse conjunto de APIs fornece acesso a entradas do controlador de jogo, como volantes de corrida e joysticks para simulador de voo. 

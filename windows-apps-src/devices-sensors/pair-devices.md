@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 85d42e69b376e2f3f455e44eb1dce3d41e890971
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1dbf843d9a45cbf31e5ec5c1a538e6e5e2b53ee2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258645"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684681"
 ---
 # <a name="pair-devices"></a>Emparelhar dispositivos
 
@@ -20,9 +20,9 @@ ms.locfileid: "74258645"
 
 **APIs importantes**
 
-- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
-Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) dá suporte a três maneiras diferentes de emparelhar dispositivos.
+Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) oferece suporte a três maneiras diferentes de emparelhar dispositivos.
 
 -   Emparelhamento automático
 -   Emparelhamento básico
@@ -46,7 +46,7 @@ Emparelhamento básico é quando seu aplicativo usa as APIs [**Windows.Devices.E
 
 Antes de tentar realizar o emparelhamento básico, você precisa obter o objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para o dispositivo em que você está interessado. Assim que receber esse objeto, você vai interagir com a propriedade [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing), que é um objeto [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing). Para tentar emparelhar, basta chamar [**DeviceInformationPairing.PairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.pairasync). Você precisará **esperar** o resultado para dar ao seu aplicativo tempo para tentar completar a ação de emparelhamento. O resultado da ação de emparelhamento será retornado e, desde que nenhum erro seja retornado, o dispositivo será emparelhado.
 
-Se estiver usando o emparelhamento básico, você também tem acesso a informações adicionais sobre o status de emparelhamento do dispositivo. Por exemplo, você sabe o status de emparelhamento ([**IsPaired**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) e se o dispositivo pode emparelhar ([**CanPair**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair)). Ambas são propriedades do objeto [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing). Se estiver usando o emparelhamento automático, você talvez não tenha acesso a essas informações a menos que obtenha os objetos [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) relevantes.
+Se estiver usando o emparelhamento básico, você também tem acesso a informações adicionais sobre o status de emparelhamento do dispositivo. Por exemplo, você sabe o status de emparelhamento ([**IsPaired**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) e se o dispositivo pode emparelhar ([**CanPair**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair)). Ambas são propriedades do objeto [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing). Se estiver usando o emparelhamento automático, você talvez não tenha acesso a essas informações a menos que obtenha os objetos [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) relevantes.
 
 ## <a name="custom-pairing"></a>Emparelhamento personalizado
 

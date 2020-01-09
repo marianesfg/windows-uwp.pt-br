@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e5773a77ccb98a75363184bcb17a6e3282e00932
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8196131b92c395c0b21f4ff68558ddeb531cf6fa
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370197"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684806"
 ---
 # <a name="enumerate-devices-over-a-network"></a>Enumerar dispositivos em uma rede
 
@@ -20,7 +20,7 @@ ms.locfileid: "66370197"
 
 **APIs importantes**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
 Além da descoberta de dispositivos conectados localmente, você pode usar as APIs [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) para enumerar dispositivos por meio de protocolos de rede e sem fio.
 

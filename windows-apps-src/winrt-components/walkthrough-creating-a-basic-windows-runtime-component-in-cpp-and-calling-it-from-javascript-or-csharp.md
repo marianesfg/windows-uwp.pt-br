@@ -1,24 +1,24 @@
 ---
 title: Passo a passos de C++criar um componente de Windows Runtime do/CX e chamá-lo do JavaScript ouC#
-description: Este tutorial mostra como criar uma DLL de componente de Windows Runtime básica que possa ser chamada do C#JavaScript, ou Visual Basic.
+description: Este passo a passo mostra como criar uma DLL básica do componente do Windows Runtime que pode ser chamada do JavaScript, do C# ou do Visual Basic.
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b12dd09251d8d8a93869ff2f4318233d89fa0e89
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 6dd0a011b4f71f5aefe111eae1900971d3353bf2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393645"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684699"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>Passo a passos de C++criar um componente de Windows Runtime do/CX e chamá-lo do JavaScript ouC#
 
 > [!NOTE]
-> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de Windows Runtime usando C++o/WinRT, consulte [criar eventos C++em/WinRT](../cpp-and-winrt-apis/author-events.md).
+> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do WinRT (Windows Runtime), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de Windows Runtime usando C++o/WinRT, consulte [criar eventos C++em/WinRT](../cpp-and-winrt-apis/author-events.md).
 
-Este tutorial mostra como criar uma DLL de componente de Windows Runtime básica que possa ser chamada do C#JavaScript, ou Visual Basic. Antes de começar este procedimento passo a passo, assegure-se de que você compreendeu conceitos como a Abstract Binary Interface (ABI), as classes ref e as extensões de componente do Visual C++ que facilitam o trabalho com classes ref. Para obter mais informações, consulte [componentes de C++Windows Runtime com o/CX e a](creating-windows-runtime-components-in-cpp.md) referência de [linguagem Visual C++ (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx).
+Este passo a passo mostra como criar uma DLL básica do componente do Windows Runtime que pode ser chamada do JavaScript, do C# ou do Visual Basic. Antes de começar este procedimento passo a passo, assegure-se de que você compreendeu conceitos como a Abstract Binary Interface (ABI), as classes ref e as extensões de componente do Visual C++ que facilitam o trabalho com classes ref. Para obter mais informações, consulte [componentes de C++Windows Runtime com o/CX e a](creating-windows-runtime-components-in-cpp.md) referência de [linguagem Visual C++ (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx).
 
 ## <a name="creating-the-c-component-dll"></a>Criação da DLL do componente C++
 Neste exemplo, criamos o projeto de componente primeiro, mas você pode criar o projeto JavaScript primeiro. A ordem não importa.
@@ -30,14 +30,14 @@ A classe principal do componente contém exemplos de definições de propriedade
 
 2. Na caixa de diálogo **Novo Projeto**, no painel à esquerda, expanda **Visual C++** e selecione o nó de aplicativos Universais do Windows.
 
-3. No painel central, selecione **Windows Runtime componente** e, em seguida, nomeie o\_projeto do CPP do WinRT.
+3. No painel central, selecione **Windows Runtime componente** e, em seguida, nomeie o projeto WINRT\_cpp.
 
 4. Escolha o botão **OK**.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**Para adicionar uma classe ativável ao componente**
 Uma classe ativável é aquela que código cliente pode criar usando uma expressão **new** (**New** em Visual Basic ou **ref new** em C++). Em seu componente, declare-a como **classe ref pública selado**. Na verdade, os arquivos Class1.h e .cpp já têm uma classe ref. É possível alterar o nome, mas neste exemplo usaremos o nome padrão – Class1. É possível definir classes ref adicionais ou classes regulares no componente caso elas sejam necessárias. Para obter mais informações sobre classes ref, consulte [Sistema de tipos (C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
 
-Adicione estas \#diretivas include a Class1. h:
+Adicione essas \#diretivas de inclusão a Class1. h:
 
 ```cpp
 #include <collection.h>
@@ -116,7 +116,7 @@ IVector<double>^ Class1::ComputeResult(double input)
     float numbers[] = { 1.0, 10.0, 60.0, 100.0, 600.0, 10000.0 };
     array_view<float, 1> logs(6, numbers);
 
-    // See http://msdn.microsoft.com/en-us/library/hh305254.aspx
+    // See http://msdn.microsoft.com/library/hh305254.aspx
     parallel_for_each(
         logs.extent,
         [=] (index<1> idx) restrict(amp)
@@ -480,7 +480,7 @@ Copie o código a seguir para o elemento Grid em MainPage.xaml.
 ```
 
 ## <a name="to-add-the-event-handlers-for-the-buttons"></a>Para adicionar os manipuladores de eventos para os botões
-No Gerenciador de Soluções, abra MainPage.xaml.cs. (O arquivo pode estar aninhado em MainPage. XAML.) Adicione uma diretiva using para System. Text e, em seguida, adicione o manipulador de eventos para o cálculo do logaritmo na classe MainPage.
+No Gerenciador de Soluções, abra MainPage.xaml.cs. (O arquivo pode estar aninhado em MainPage.xaml.) Adicione uma diretiva using para System.Text o manipulador de eventos para o cálculo de logaritmo na classe MainPage.
 
 ```csharp
 private void Button1_Click_1(object sender, RoutedEventArgs e)
@@ -588,7 +588,7 @@ No Pesquisador de Objetos, é possível inspecionar todos os tipos de Tempo de E
 ### <a name="to-inspect-a-component"></a>**Para inspecionar um componente**
 1. Na barra de menus, escolha **Exibir, Pesquisador de Objetos** (Ctrl+Alt+J).
 
-2. No painel esquerdo do pesquisador de objetos, expanda o\_nó cpp do WinRT para mostrar os tipos e métodos definidos no seu componente.
+2. No painel esquerdo do pesquisador de objetos, expanda o nó\_CPP do WinRT para mostrar os tipos e métodos que são definidos em seu componente.
 
 ## <a name="debugging-tips"></a>Dicas de depuração
 Para obter uma experiência de depuração melhor, baixe os símbolos de depuração dos servidores de símbolos Microsoft públicos:
@@ -611,4 +611,4 @@ Caso o código JavaScript não reconheça as propriedades públicas ou os métod
 Caso remova um projeto de componente do Tempo de Execução do Windows C++ de uma solução, você também deve remover manualmente a referência do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Windows Runtime componentes com C++o/CX](creating-windows-runtime-components-in-cpp.md)
+* [Componentes do Windows Runtime com C++/CX](creating-windows-runtime-components-in-cpp.md)

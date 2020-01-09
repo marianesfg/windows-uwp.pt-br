@@ -1,24 +1,24 @@
 ---
 description: Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar.
-title: Portabilidade de Windows Phone Silverlight para UWP para o formato e a experiência do usuário
+title: Portando Windows Phone Silverlight para UWP para fator de forma e UX
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 03a994930e956cb3c2e775c32e77c6e62b526a17
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3c15621ed34fb358f318549d7987d7c445247aae
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322313"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684630"
 ---
-#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portabilidade de Windows Phone Silverlight para UWP para o formato e a experiência do usuário
+#  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portando Windows Phone Silverlight para UWP para fator de forma e UX
 
 
 O tópico anterior era [Portando camadas de negócios e de dados](wpsl-to-uwp-business-and-data.md).
 
-Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar. Diferenças entre dispositivos, como o tamanho físico, a orientação padrão e o fator de resolução de pixel efetivo para o modo como um aplicativo da plataforma Universal do Windows (UWP) é processado pelo Windows 10. A boa notícia é que grande parte do trabalho pesado é feito para você pelo sistema usando conceitos inteligentes como pixels efetivos.
+Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar. Diferenças entre dispositivos como tamanho físico, orientação padrão e fator de resolução de pixel efetivo no modo como um aplicativo Plataforma Universal do Windows (UWP) é renderizado pelo Windows 10. A boa notícia é que grande parte do trabalho pesado é feito para você pelo sistema usando conceitos inteligentes como pixels efetivos.
 
 ## <a name="different-form-factors-and-user-experience"></a>Fatores forma diferentes e a experiência do usuário
 
@@ -30,7 +30,7 @@ A resposta resumida é que isso é subjetivo, já que depende não só do tamanh
 
 De maneira objetiva, uma tela é medida em unidades de polegadas e pixels (brutos) físicos. Conhecer ambas as métricas permite calcular quantos pixels cabem em uma polegada. Essa é a densidade de pixels, também conhecida como DPI (pontos por polegada) ou também PPI (pixels por polegada). E a recíproca do DPI é o tamanho físico dos pixels como uma fração de uma polegada. A densidade de pixels também é conhecida como *resolução*, embora esse termo seja frequentemente usado de forma geral para significar contagem de pixels.
 
-À medida que a distância de exibição aumenta, todas as métricas de objeto *parecem* menores, e são resolvidos para o *tamanho efetivo* da tela e para sua *resolução efetiva*. Em geral, o telefone é o que fica mais próximo aos olhos; em seguida, vêm o tablet e o monitor do computador, e os dispositivos [Surface Hub](https://www.microsoft.com/surface/devices/surface-hub) e as TVs são os que ficam mais distantes. Para compensar, os dispositivos tendem a ficar objetivamente maiores conforme a distância de exibição. Quando você define tamanhos em elementos da interface do usuário, está definindo esses tamanhos em unidades chamadas pixels efetivos (epx). E Windows 10 levarão em conta DPI e a distância de exibição típica de um dispositivo, para calcular o melhor tamanho de seus elementos de interface do usuário nos pixéis físicos para fornecer a melhor experiência de exibição. Consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
+À medida que a distância de exibição aumenta, todas as métricas de objeto *parecem* menores, e são resolvidos para o *tamanho efetivo* da tela e para sua *resolução efetiva*. Em geral, o telefone é o que fica mais próximo aos olhos; em seguida, vêm o tablet e o monitor do computador, e os dispositivos [Surface Hub](https://www.microsoft.com/surface/devices/surface-hub) e as TVs são os que ficam mais distantes. Para compensar, os dispositivos tendem a ficar objetivamente maiores conforme a distância de exibição. Quando você define tamanhos em elementos da interface do usuário, está definindo esses tamanhos em unidades chamadas pixels efetivos (epx). E o Windows 10 levará em conta o DPI e a distância de exibição típica de um dispositivo, para calcular o melhor tamanho dos elementos da interface do usuário em pixels físicos para proporcionar a melhor experiência de exibição. Consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Mesmo assim, recomendamos que você teste seu aplicativo com muitos dispositivos diferentes para que possa confirmar cada experiência.
 
@@ -50,13 +50,13 @@ A versão do dispositivo móvel está restrita à orientação somente retrato p
 
 Aplicar zoom óptico no aplicativo para parecer com a versão do dispositivo móvel, apenas maior, não aproveita a vantagem do dispositivo e de seu espaço adicional, além de não ser adequado ao usuário. Nós devemos pensar em mostrar mais conteúdo, em vez de mostrarmos o mesmo conteúdo em formato maior. Mesmo em um phablet, nós poderíamos mostrar mais linhas de conteúdo. Nós poderíamos usar espaço extra para exibição de conteúdo diferente, como anúncios, ou poderíamos alterar a caixa de listagem para uma exibição de listagem para encapsular itens em várias colunas, onde possível, para usar o espaço dessa maneira. Consulte [Diretrizes de controles de exibição de grade e de lista](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists).
 
-Além dos novos controles, como o modo de exibição de lista e o modo de exibição de grade, a maioria dos tipos de layout estabelecidas do Windows Phone Silverlight possuem equivalentes no Universal Windows Platform (UWP). Por exemplo, [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) e [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel). A portabilidade de grande parte da interface do usuário que usa esses tipos deve ser direta, mas sempre procure formas de aproveitar os recursos de layout dinâmico desses painéis de layout para redimensionar e gerar um novo layout em dispositivos de tamanhos diferentes automaticamente.
+Além de novos controles, como exibição de lista e exibição em grade, a maioria dos tipos de layout estabelecidos do Windows Phone Silverlight tem equivalentes no Plataforma Universal do Windows (UWP). Por exemplo, [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) e [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel). A portabilidade de grande parte da interface do usuário que usa esses tipos deve ser direta, mas sempre procure formas de aproveitar os recursos de layout dinâmico desses painéis de layout para redimensionar e gerar um novo layout em dispositivos de tamanhos diferentes automaticamente.
 
-Indo além do layout dinâmico incorporado aos controles de sistema e os painéis de layout, podemos usar um novo recurso do Windows 10 chamado [adaptável Gerenciador de estado Visual](wpsl-to-uwp-porting-xaml-and-ui.md).
+Indo além do layout dinâmico incorporado nos controles do sistema e painéis de layout, podemos usar um novo recurso do Windows 10 chamado [Gerenciador de estado de Visual adaptável](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 ## <a name="input-modalities"></a>Modalidades de entrada
 
-Uma interface do Windows Phone Silverlight é sensível ao toque específico. E, naturalmente, a interface do seu aplicativo portado também deve dar suporte ao toque, mas você pode optar por dar suporte a outras modalidades de entrada, como mouse e teclado. Na UWP, as entradas por toque, por caneta e por mouse são unificadas como *entrada do ponteiro*. Para obter mais informações, consulte [Identificar entrada do ponteiro](https://docs.microsoft.com/windows/uwp/input-and-devices/handle-pointer-input) e [Interações por teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
+Uma interface do Windows Phone Silverlight é específica ao toque. E, naturalmente, a interface do seu aplicativo portado também deve dar suporte ao toque, mas você pode optar por dar suporte a outras modalidades de entrada, como mouse e teclado. Na UWP, as entradas por toque, por caneta e por mouse são unificadas como *entrada do ponteiro*. Para obter mais informações, consulte [Identificar entrada do ponteiro](https://docs.microsoft.com/windows/uwp/input-and-devices/handle-pointer-input) e [Interações por teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
 
 ## <a name="maximizing-markup-and-code-re-use"></a>Maximizando a reutilização de marcação e de código
 
@@ -64,11 +64,11 @@ Consulte novamente a lista [maximizando a reutilização de marcação e de cód
 
 ## <a name="more-info-and-design-guidelines"></a>Mais informações e diretrizes de design
 
--   [Projetar aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design)
+-   [Projetar aplicativos UWP](https://developer.microsoft.com/windows/apps/design)
 -   [Diretrizes para fontes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts)
--   [Plano para diferentes fatores forma](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)
+-   [Planejar diferentes fatores forma](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Mapeamentos de Namespace e classe](wpsl-to-uwp-namespace-and-class-mappings.md)
+* [Namespace e mapeamentos de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
 

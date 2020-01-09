@@ -1,18 +1,18 @@
 ---
-title: Windows 10 em execução no ARM
+title: Windows 10 no ARM
 description: Este artigo fornece uma visão geral de como os aplicativos e experiências serão executado no ARM, quais são as limitações e onde você pode ir para saber mais.
 ms.date: 02/15/2018
 ms.topic: article
 keywords: Windows 10 s, sempre conectado, ARM, ARM64, emulação x86
 ms.localizationpriority: medium
-ms.openlocfilehash: 7450b469f77fec4288ad6dff01ee7673affc8dd9
-ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
+ms.openlocfilehash: 004b2410ab050ca32ec6219b2d9a6ba0d45a6ebb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237529"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683919"
 ---
-# <a name="windows-10-on-arm"></a>Windows 10 em execução no ARM
+# <a name="windows-10-on-arm"></a>Windows 10 no ARM
 Originalmente, o Windows 10 (diferente do Windows 10 Mobile) pode ser executado somente em computadores que foram equipados com processadores x86 e x64. Agora, o Windows 10 desktop pode ser executado em computadores que são alimentados por processadores ARM64 com a atualização de criadores de outono ou mais recente. A natureza de economia de energia da arquitetura de CPU do ARM permite que esses computadores tenham bateria o dia todo e ofereçam suporte para redes de dados móveis. Esses computadores fornecerão ótima compatibilidade de aplicativos e permitirão que você execute aplicativos win32 x86 existentes sem modificação. Para obter mais informações ou uma demonstração, consulte o [vídeo do canal 9 para o PC sempre conectado](https://channel9.msdn.com/Events/Build/2017/P4171).
 
 Usamos o termo *ARM* aqui como um atalho para computadores que executam a versão da área de trabalho do Windows 10 em processadores ARM64 (também conhecida como *AArch64*).  Usamos o termo *ARM32* aqui como um atalho para a arquitetura de 32 bits do ARM (mais conhecida como *ARM* em outras documentações).
@@ -26,7 +26,7 @@ As experiências internas do Windows 10, como Edge, Cortana, start menu e Explor
 O Windows 10 no ARM executa todos os [aplicativos UWP](../get-started/universal-application-platform-guide.md) x86, ARM32 e ARM64 da Microsoft Store. Os aplicativos ARM32 e ARM64 são executados nativamente sem qualquer emulação, enquanto aplicativos x86 são executados sob emulação. Se você for um desenvolvedor de UWP, certifique-se de enviar um pacote ARM para seu aplicativo, pois isso fornecerá a melhor experiência de usuário para o dispositivo. Para obter mais informações, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
 
 >[!NOTE]
-> Para criar seu aplicativo UWP para direcionar nativamente a plataforma ARM64, você deve ter o Visual Studio 2017 versão 15,9 ou posterior ou o Visual Studio 2019. Para obter mais informações, consulte [esta postagem no blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Para criar seu aplicativo UWP para direcionar nativamente a plataforma ARM64, você deve ter o Visual Studio 2017 versão 15,9 ou posterior ou o Visual Studio 2019. Para obter mais informações, consulte [esta postagem do blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
 
 
 >[!IMPORTANT]
@@ -46,5 +46,5 @@ Além dos aplicativos UWP, o Windows 10 no ARM também pode executar seus aplica
 ## <a name="related-topics"></a>Tópicos relacionados
 |Tópico | Descrição |
 |-----|-----|
-|[Criando drivers ARM64 com o WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instruções para a criação de um driver ARM64. |
-| [Depurando aplicativos x86 no ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) | Diretrizes para depuração de aplicativos x86 em ARM. |
+|[Criando drivers ARM64 com o WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)|Instruções para a criação de um driver ARM64. |
+| [Depurando aplicativos x86 no ARM](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) | Diretrizes para depuração de aplicativos x86 em ARM. |

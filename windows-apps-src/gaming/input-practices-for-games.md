@@ -6,12 +6,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8235b2c2029b2bb3b9351263a3c908879b4beba9
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634941"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684986"
 ---
 # <a name="input-practices-for-games"></a>Práticas de entrada para jogos
 
@@ -41,7 +41,7 @@ Embora cada tipo de controlador inclua uma lista de controladores conectados (co
 
 No entanto, o que acontece quando o jogador desconecta seu controlador ou conecta-se em um novo? Você precisa manipular esses eventos e atualizar sua lista adequadamente. Consulte [Adicionando e removendo gamepads](gamepad-and-vibration.md#adding-and-removing-gamepads) para obter mais informações (novamente, cada tipo de controlador tem uma seção de nome similar em seu próprio tópico).
 
-Como os eventos adicionados e removidos são gerados de forma assíncrona, você pode obter resultados incorretos ao lidar com a sua lista de controladores. Portanto, sempre que acessar sua lista de controladores, você deve bloqueá-la para que apenas um thread possa acessá-la de cada vez. Isso pode ser feito com o [Tempo de Execução de Simultaneidade](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), especialmente a [classe critical_section](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class), em **&lt;ppl.h&gt;**.
+Como os eventos adicionados e removidos são gerados de forma assíncrona, você pode obter resultados incorretos ao lidar com a sua lista de controladores. Portanto, sempre que acessar sua lista de controladores, você deve bloqueá-la para que apenas um thread possa acessá-la de cada vez. Isso pode ser feito com o [Tempo de Execução de Simultaneidade](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), especialmente a [classe critical_section](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class), em **&lt;ppl.h&gt;** .
 
 Outra coisa que deve ser considerada é que a lista de controladores conectados estará inicialmente vazia e levará um segundo ou dois para ser populada. Portanto, se você apenas atribuir o gamepad atual no método inicial, ele será **null**!
 
@@ -298,13 +298,13 @@ Esta fórmula pode ser aplicada para testar qualquer número de botões em qualq
 
 ## <a name="get-the-state-of-the-battery"></a>Obter o estado da bateria
 
-Em qualquer controlador de jogo que implementa a interface [IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo), você pode chamar o [TryGetBatteryReport](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport) na instância do controlador para obter um objeto [BatteryReport](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport) que fornece informações sobre a bateria no controlador. Você pode obter propriedades, como a taxa a que a bateria está carregando ([ChargeRateInMilliwatts](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), a capacidade de energia estimada de uma nova bateria ([DesignCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)) e a capacidade de energia totalmente carregada da bateria atual ([FullChargeCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)).
+Em qualquer controlador de jogo que implementa a interface [IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo), você pode chamar o [TryGetBatteryReport](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport) na instância do controlador para obter um objeto [BatteryReport](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport) que fornece informações sobre a bateria no controlador. Você pode obter propriedades, como a taxa a que a bateria está carregando ([ChargeRateInMilliwatts](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), a capacidade de energia estimada de uma nova bateria ([DesignCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)) e a capacidade de energia totalmente carregada da bateria atual ([FullChargeCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)).
 
 No caso dos controladores de jogo que dão suporte a relatórios detalhados sobre a bateria, você pode obter esses relatórios e mais informações sobre a bateria, conforme detalhado em [Obter informações sobre a bateria](../devices-sensors/get-battery-info.md). No entanto, a maior parte dos controladores de jogo não dão suporte a esse nível de relatório de bateria e, em vez disso, usam hardware de baixo custo. No caso desses controladores, você precisará considerar o seguinte:
 
 * **ChargeRateInMilliwatts** e **DesignCapacityInMilliwattHours** sempre serão **NULL**.
 
-* Você pode obter a porcentagem de bateria calculando [RemainingCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours) / **FullChargeCapacityInMilliwattHours**. Você deve ignorar os valores dessas propriedades e lidar apenas com a porcentagem calculada.
+* Você pode obter a porcentagem de bateria calculando [RemainingCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours) / **FullChargeCapacityInMilliwattHours**. Você deve ignorar os valores dessas propriedades e lidar apenas com a porcentagem calculada.
 
 * A porcentagem do ponto de marcador anterior sempre será:
 
@@ -315,8 +315,8 @@ No caso dos controladores de jogo que dão suporte a relatórios detalhados sobr
 
 Se seu código realizar alguma ação (como desenhar a interface do usuário) com base na porcentagem de duração de bateria restante, certifique-se de que ele está de acordo com os valores acima. Por exemplo, se quiser avisar o player quando a bateria do controlador estiver baixa, faça-o quando ela chegar a 10%.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-* [Classe Windows.System.User](https://docs.microsoft.com/uwp/api/windows.system.user)
-* [Interface Windows.Gaming.Input.IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Enumeração Windows.Gaming.Input.GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)
+* [Classe Windows. System. User](https://docs.microsoft.com/uwp/api/windows.system.user)
+* [Interface Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
+* [Enumeração Windows. Gaming. Input. GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)

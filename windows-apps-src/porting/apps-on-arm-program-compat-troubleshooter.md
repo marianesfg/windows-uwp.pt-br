@@ -5,18 +5,18 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, sempre conectado, solução de problemas de compatibilidade, windows no ARM
 ms.localizationpriority: medium
-ms.openlocfilehash: 763b00a5790274d81b6daa2838ef926936e458db
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6573bedb97a7081681e5ecc600bb473f6d0b83bf
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647611"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683949"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a>Solução de problemas de compatibilidade de programas no ARM
 Emulação para dar suporte a aplicativos x86 é um novo recurso criado para Windows 10 no ARM64. Às vezes, a emulação executa otimizações que não resultam na melhor experiência. Você pode usar a Solução de problemas de compatibilidade de programas para ativar/desativar as configurações de emulação para seu aplicativo x86, reduzindo as otimizações de padrão e possivelmente aumentando a compatibilidade.
 
 ## <a name="start-the-program-compatibility-troubleshooter"></a>Iniciar a Solução de problemas de compatibilidade de programas
-Inicie a [Solução de problemas de compatibilidade de programas](https://support.microsoft.com/en-us/help/15078/windows-make-older-programs-compatible) manualmente da mesma maneira em qualquer computador Windows 10: clique com botão direito em um arquivo executável (.exe) e selecione **Solucionar problemas de compatibilidade**. Essa tela aparece.
+Inicie a [Solução de problemas de compatibilidade de programas](https://support.microsoft.com/help/15078/windows-make-older-programs-compatible) manualmente da mesma maneira em qualquer computador Windows 10: clique com botão direito em um arquivo executável (.exe) e selecione **Solucionar problemas de compatibilidade**. Essa tela aparece.
 
 ![Captura de tela da opção Solucionar problemas de compatibilidade](images/arm/Capture4.png)
 
@@ -32,7 +32,7 @@ Todas as opções ativam as configurações que são aplicáveis e aplicadas em 
 
 Você pode alternar configurações de emulação clicando com o botão direito do mouse no executável e selecionando **Propriedades**.
 
-No ARM, uma seção intitulada **Windows 10 no ARM** estará disponível na **compatibilidade** guia. Clique em **alterar configurações de emulação** para iniciar uma segunda janela como a seguir.
+No ARM, uma seção intitulada **Windows 10 no ARM** estará disponível na guia **Compatibilidade**. Clique em **Alterar configurações de emulação** para iniciar uma segunda janela como esta.
 
 ![Captura de tela de Alterar configurações de emulação](images/arm/Capture.png)
 

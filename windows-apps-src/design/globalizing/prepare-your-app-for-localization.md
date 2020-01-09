@@ -1,20 +1,20 @@
 ---
 Description: Um app localizado é aquele que pode ser localizado em outros mercados, idiomas ou regiões sem revelar defeitos funcionais no app. A propriedade mais essencial de um aplicativo localizável é que seu código executável tenha sido separado cuidadosamente de seus recursos localizáveis.
-title: Torne seu app localizável
+title: Torne seu aplicativo localizável
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 341d46879895da221e3a17ba88f28fd22e7c5e27
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9e0991a8a06054b6136dfc1fd65c15dbeb66e6fd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258094"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684267"
 ---
-# <a name="make-your-app-localizable"></a>Torne seu app localizável
+# <a name="make-your-app-localizable"></a>Torne seu aplicativo localizável
 
 Um app localizado é aquele que pode ser localizado em outros mercados, idiomas ou regiões sem revelar defeitos funcionais no app. A propriedade mais essencial de um aplicativo localizável é que seu código executável tenha sido separado cuidadosamente de seus recursos localizáveis. Assim, você deve determinar quais dos recursos do seu app precisam ser localizados. Pergunte a si mesmo o que deve ser modificado se o app precisar ser localizado em outros mercados.
 
@@ -46,7 +46,7 @@ Use cadeias de caracteres dimensionadas adequadamente. As cadeias de caracteres 
 
 No entanto, em tensão com essa diretriz, existe o risco de reutilizar uma cadeias de caracteres em diferentes contextos. Mesmo palavras simples, como &quot;on&quot; e &quot;off&quot;, podem ser traduzidas de forma diferente, dependendo do contexto. Em inglês, "on" e "off" podem ser usados como alternância para o modo avião, Bluetooth e dispositivos. Mas em italiano, a tradução dependerá do contexto do que está sendo ativado e desativado. Você precisaria criar um par de cadeias de caracteres para cada contexto. Você pode reutilizar cadeias de caracteres se os dois contextos forem iguais. Por exemplo, você pode reutilizar a cadeia de caracteres "Volume" tanto para volume de efeito de som quanto para volume de música porque ambos se referem à intensidade do som. Você não deve reutilizar aquela mesma cadeia de caracteres quando se referir ao volume de disco, pois o contexto e o significado são diferentes e a palavra pode ser traduzida de forma diferente.
 
-Além disso, uma cadeia de caracteres como "text" ou "faz" podem ser usadas tanto como verbo quanto como substantivo em inglês, o que pode confundir o processo de tradução. Em vez disso, crie uma cadeia de caracteres separada para o formato de verbo e substantivo. Quando você não tiver certeza se os contextos são os mesmos, por precaução, use uma cadeia de caracteres distinta.
+Além disso, uma cadeia de caracteres como "text" ou "fax" podem ser usadas tanto como verbo quanto como substantivo em inglês, o que pode confundir o processo de tradução. Em vez disso, crie uma cadeia de caracteres separada para o formato de verbo e substantivo. Quando você não tiver certeza se os contextos são os mesmos, por precaução, use uma cadeia de caracteres distinta.
 
 Resumindo, decomponha as cadeias de caracteres em partes que funcionam em todos os contextos. Haverá casos em que uma cadeia de caracteres precisará ser uma frase inteira.
 
@@ -80,14 +80,14 @@ Usar uma voz ou tom informal em suas cadeias de caracteres é uma opção válid
 
 Pseudolocalize seu app para revelar quaisquer problemas de localização. A pseudolocalização é um tipo de simulação de localização, ou teste de divulgação. Você produz um conjunto de recursos que não estão realmente traduzidos; eles só parecem estar. As cadeias de caracteres são aproximadamente 40% mais longas do que no idioma padrão, por exemplo, e elas têm delimitadores para que você possa ver rapidamente se foram truncadas na interface do usuário.
 
-## <a name="deployment-considerations"></a>Considerações sobre implantação
+## <a name="deployment-considerations"></a>Considerações de implantação
 
 Quando você instala um aplicativo que contém dados de idioma localizados, pode descobrir que apenas o idioma padrão está disponível para o aplicativo, mesmo que você tenha incluído inicialmente recursos para vários idiomas. Isso ocorre porque o processo de instalação é otimizado para instalar apenas os recursos de idioma que correspondem ao idioma e à cultura atuais do dispositivo. Portanto, se o dispositivo estiver configurado para en-US, somente os recursos de idioma en-US serão instalados com seu aplicativo.
 
 > [!NOTE]
 > Não é possível instalar suporte de idioma adicional para seu aplicativo após a instalação inicial. Se você alterar o idioma padrão depois de instalar um aplicativo, o aplicativo continuará a usar apenas os recursos de idioma originais.
 
-Se você quiser garantir que todos os recursos de idioma estejam disponíveis após a instalação, crie um arquivo de configuração para o pacote do aplicativo que especifica que determinados recursos são necessários durante a instalação (incluindo recursos de idioma). Esse recurso de instalação otimizado é habilitado automaticamente quando o. appxbundle do seu aplicativo é gerado durante o empacotamento. Para obter mais informações, consulte [verificar se os recursos estão instalados em um dispositivo, independentemente de um dispositivo precisar deles](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+Se você quiser garantir que todos os recursos de idioma estejam disponíveis após a instalação, crie um arquivo de configuração para o pacote do aplicativo que especifica que determinados recursos são necessários durante a instalação (incluindo recursos de idioma). Esse recurso de instalação otimizado é habilitado automaticamente quando o. appxbundle do seu aplicativo é gerado durante o empacotamento. Para obter mais informações, consulte [verificar se os recursos estão instalados em um dispositivo, independentemente de um dispositivo precisar deles](https://docs.microsoft.com/previous-versions/dn482043(v=vs.140)).
 
 Opcionalmente, para garantir que todos os recursos estejam instalados (não apenas um subconjunto), você pode desabilitar a geração de. appxbundle ao empacotar seu aplicativo. No entanto, isso não é recomendável, pois pode aumentar o tempo de instalação do seu aplicativo.
 
@@ -188,6 +188,6 @@ A classificação segue o formato do **Painel de Controle Regional**.
 - [Ajustar layout e fontes e fornecer suporte para RTL](adjust-layout-and-fonts--and-support-rtl.md)
 - [Atualizando imagens em resposta a eventos de alteração de valor de qualificador](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 - [Exemplo de recursos e localização de aplicativos](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)

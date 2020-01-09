@@ -5,18 +5,18 @@ keywords: uwp de várias instâncias
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9be9b5eec70bc98bc2c44beaf1dcfbba00876f20
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: cdb8d87a63eba14ecb2dc25e3cb5451dce6cae60
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259432"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684644"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
 Este tópico descreve como criar aplicativos da Plataforma Universal do Windows (UWP) de várias instâncias.
 
-Do Windows 10, versão 1803 (10,0; Build 17134) em diante, seu aplicativo UWP pode optar por oferecer suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
+Do Windows 10, versão 1803 (10,0; Build 17134) em diante, seu aplicativo UWP pode optar por oferecer suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma instância, executada em um processo separado.
 
 > [!IMPORTANT]
 > Há suporte para várias instâncias em aplicativos JavaScript, mas o redirecionamento de várias instâncias não é. Como o redirecionamento de várias instâncias não tem suporte para aplicativos JavaScript, a classe [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) não é útil para tais aplicativos.
@@ -108,9 +108,9 @@ public static class Program
 }
 ```
 
-`Main()` é a primeira coisa que é executada. Ele é executado antes de [**Onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
+`Main()` é a primeira coisa que é executada. Ele é executado antes de [**onlaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_)  e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
 
-O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Essa é a ideia por trás do código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
+O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Essa é a ideia por trás do código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
 Se uma instância registrada com a chave for encontrada, essa instância é ativada. Se a chave não for encontrado, em seguida, a instância atual (a instância que está sendo executado `Main`) cria seu objeto de aplicativo e começa a ser executado.
 
@@ -134,7 +134,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 
 Consulte [exemplo de várias instâncias](https://github.com/Microsoft/AppModelSamples/tree/master/Samples/BananaEdit) para obter um exemplo de redirecionamento de ativação de várias instâncias.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [AppInstance.FindOrRegisterInstanceForKey](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appinstance#Windows_ApplicationModel_AppInstance_FindOrRegisterInstanceForKey_System_String_)
 [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appinstance#Windows_ApplicationModel_AppInstance_GetActivatedEventArgs)

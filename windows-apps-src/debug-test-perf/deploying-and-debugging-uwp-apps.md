@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: cdfcdfddb2b595a589c70d1facc24559c63b98da
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254788"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683849"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -98,7 +98,7 @@ Para obter mais informações, consulte a página [Centro de Download Visual Stu
 
 ## <a name="passing-command-line-debug-arguments"></a>Como passar argumentos de depuração de linha de comando
 
-No Visual Studio 2019, você pode passar argumentos de depuração de linha de comando ao iniciar a depuração de aplicativos UWP. Você pode acessar os argumentos de depuração de linha de comando do parâmetro *args* no método **OnLaunched** da classe [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar os argumentos de depuração de linha de comando, abra as propriedades do projeto e navegue até a guia **Depuração**.
+No Visual Studio 2019, você pode passar argumentos de depuração de linha de comando ao iniciar a depuração de aplicativos UWP. Você pode acessar os argumentos de depuração de linha de comando do parâmetro *args* no método **OnLaunched** da classe [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application). Para especificar os argumentos de depuração de linha de comando, abra as propriedades do projeto e navegue até a guia **Depuração**.
 
 > [!NOTE]
 > Isso está disponível no Visual Studio 2017 (versão 15.1) para C#, VB e C++. O JavaScript está disponível em versões posteriores. Os argumentos de depuração de linha de comando estão disponíveis para todos os tipos de implantação, exceto para o Simulador.
@@ -111,7 +111,7 @@ Para projetos UWP em C++ e JS, você verá **Argumentos de Linha de Comando** co
 
 ![Argumentos de linha de comando C++ e JS](images/command-line-arguments-cpp.png)
 
-Depois que você especificar os argumentos de linha de comando, poderá acessar o valor do argumento no método **OnLaunched** do App. Os [args**do objeto**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs)LaunchActivatedEventArgs terão uma propriedade **Arguments** com o valor definido como o texto do campo **Argumentos de Linha de Comando**.
+Depois que você especificar os argumentos de linha de comando, poderá acessar o valor do argumento no método **OnLaunched** do App. Os *args* do objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) terão uma propriedade **Arguments** com o valor definido como o texto do campo **Argumentos de Linha de Comando**.
 
 ![Argumentos de linha de comando C++ e JS](images/command-line-arguments-debugging.png)
 

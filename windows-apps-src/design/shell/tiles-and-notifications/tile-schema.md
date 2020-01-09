@@ -8,12 +8,12 @@ ms.date: 07/28/2017
 ms.topic: article
 keywords: windows 10, uwp, bloco, notificação de bloco, conteúdo de bloco, esquema, carga de bloco
 ms.localizationpriority: medium
-ms.openlocfilehash: 26dcfc992dfc7557b1a9d835111346588cd2431a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: eaf4583be8fdc5f0a70dddb7261b9b2d6d6afc09
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320762"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684190"
 ---
 # <a name="tile-content-schema"></a>Esquema de conteúdo do bloco
 
@@ -25,18 +25,18 @@ Se você preferir usar XML bruto em vez da [Biblioteca de notificações](https:
 
 [TileContent](#tilecontent)
 * [TileVisual](#tilevisual)
-  * [TileBinding](#tilebinding)
-    * [TileBindingContentAdaptive](#TileBindingContentAdaptive)
-    * [TileBindingContentIconic](#TileBindingContentIconic)
-    * [TileBindingContentContact](#TileBindingContentContact)
-    * [TileBindingContentPeople](#TileBindingContentPeople)
-    * [TileBindingContentPhotos](#TileBindingContentPhotos)
+  * [Blocobinding](#tilebinding)
+    * [TileBindingContentAdaptive](#tilebindingcontentadaptive)
+    * [TileBindingContentIconic](#tilebindingcontenticonic)
+    * [TileBindingContentContact](#tilebindingcontentcontact)
+    * [TileBindingContentPeople](#tilebindingcontentpeople)
+    * [TileBindingContentPhotos](#tilebindingcontentphotos)
 
 
 ## <a name="tilecontent"></a>TileContent
 TileContent é o objeto de nível superior que descreve o conteúdo da notificação de bloco, incluindo os elementos visuais.
 
-| Propriedade | Tipo | Obrigatório | Descrição |
+| Propriedade | Digite | Necessária | Descrição |
 |---|---|---|---|
 | **Visual** | [ToastVisual](#tilevisual) | verdadeiro | Descreve a parte visual da notificação de bloco. |
 
@@ -44,35 +44,35 @@ TileContent é o objeto de nível superior que descreve o conteúdo da notifica�
 ## <a name="tilevisual"></a>TileVisual
 A parte visual dos blocos contém as especificações visuais de todos os tamanhos de bloco e mais propriedades relacionadas aos elementos visuais.
 
-| Propriedade | Tipo | Obrigatório | Descrição |
+| Propriedade | Digite | Necessária | Descrição |
 |---|---|---|---|
-| **TileSmall** | [TileBinding](#tilebinding) | false | Forneça uma associação pequena opcional para especificar o conteúdo do tamanho de bloco pequeno. |
-| **TileMedium** | [TileBinding](#tilebinding) | false | Forneça uma associação média opcional para especificar o conteúdo do tamanho de bloco médio. |
-| **TileWide** | [TileBinding](#tilebinding) | false | Forneça uma associação larga opcional para especificar o conteúdo do tamanho de bloco largo. |
-| **TileLarge** | [TileBinding](#tilebinding) | false | Forneça uma associação grande opcional para especificar o conteúdo do tamanho de bloco grande. |
-| **Identidade Visual** | [TileBranding](#tilebranding) | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
-| **DisplayName** | cadeia de caracteres | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco durante a exibição dessa notificação. |
-| **Argumentos** | cadeia de caracteres | false | Novo na atualização de aniversário: Dados definidos pelo aplicativo que são passados de volta para seu aplicativo por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o aplicativo de blocos dinâmicos. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
-| **LockDetailedStatus1** | cadeia de caracteres | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a primeira linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
-| **LockDetailedStatus2** | cadeia de caracteres | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a segunda linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
-| **LockDetailedStatus3** | cadeia de caracteres | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a terceira linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
+| **TileSmall** | [Blocobinding](#tilebinding) | false | Forneça uma associação pequena opcional para especificar o conteúdo do tamanho de bloco pequeno. |
+| **TileMedium** | [Blocobinding](#tilebinding) | false | Forneça uma associação média opcional para especificar o conteúdo do tamanho de bloco médio. |
+| **TileWide** | [Blocobinding](#tilebinding) | false | Forneça uma associação larga opcional para especificar o conteúdo do tamanho de bloco largo. |
+| **TileLarge** | [Blocobinding](#tilebinding) | false | Forneça uma associação grande opcional para especificar o conteúdo do tamanho de bloco grande. |
+| **Identidade Visual** | TileBranding | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
+| **DisplayName** | sequência | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco durante a exibição dessa notificação. |
+| **Argumentos** | sequência | false | Novidades na Atualização de Aniversário: dados definidos pelo app que são retornados ao app por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o app no Bloco Dinâmico. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
+| **LockDetailedStatus1** | sequência | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a primeira linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
+| **LockDetailedStatus2** | sequência | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a segunda linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
+| **LockDetailedStatus3** | sequência | false | Se você especificar isso, também deverá fornecer uma associação TileWide. Esse será a terceira linha de texto a ser exibida na tela de bloqueio se o usuário tiver selecionado o bloco como app de status detalhado. |
 | **BaseUri** | Uri | false | Uma URL base padrão que é combinada às URLs relativas nos atributos de origem da imagem. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do sistema. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
-| **Idioma**| cadeia de caracteres | false | A localidade de destino da carga visual ao usar recursos localizados, especificados como marcações de idioma BCP-47 como "en-US" ou "pt-BR". Esse local é substituído por qualquer localidade especificada na associação ou no texto. Se não for fornecido, a localidade do sistema será usada em vez disso. |
+| **Idioma**| sequência | false | A localidade de destino da carga visual ao usar recursos localizados, especificados como marcações de idioma BCP-47 como "en-US" ou "pt-BR". Esse local é substituído por qualquer localidade especificada na associação ou no texto. Se não for fornecido, a localidade do sistema será usada em vez disso. |
 
 
 ## <a name="tilebinding"></a>TileBinding
 O objeto de associação possui o conteúdo visual para um tamanho de bloco específico.
 
-| Propriedade | Tipo | Obrigatório | Descrição |
+| Propriedade | Digite | Necessária | Descrição |
 |---|---|---|---|
-| **Content** | [ITileBindingContent](#itilebindingcontent) | false | O conteúdo visual a ser exibido no bloco. Uma das [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) ou [TileBindingContentPhotos](#TileBindingContentPhotos). |
+| **Conteúdo** | [ITileBindingContent](#itilebindingcontent) | false | O conteúdo visual a ser exibido no bloco. Uma das [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#tilebindingcontenticonic), [TileBindingContentContact](#tilebindingcontentcontact), [TileBindingContentPeople](#tilebindingcontentpeople) ou [TileBindingContentPhotos](#tilebindingcontentphotos). |
 | **Identidade Visual** | TileBranding | false | O formato que o bloco deve usar para exibir a marca do app. Por padrão, herda a identidade visual do bloco padrão. |
-| **DisplayName** | cadeia de caracteres | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco neste tamanho de bloco. |
-| **Argumentos** | cadeia de caracteres | false | Novo na atualização de aniversário: Dados definidos pelo aplicativo que são passados de volta para seu aplicativo por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o aplicativo de blocos dinâmicos. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
+| **DisplayName** | sequência | false | Uma cadeia de caracteres opcional que substitui o nome de exibição do bloco neste tamanho de bloco. |
+| **Argumentos** | sequência | false | Novidades na Atualização de Aniversário: dados definidos pelo app que são retornados ao app por meio da propriedade TileActivatedInfo em LaunchActivatedEventArgs quando o usuário inicia o app no Bloco Dinâmico. Informa a você quais notificações de bloco o usuário viu quando tocou no Bloco Dinâmico. Nos dispositivos sem a Atualização de Aniversário, isso simplesmente será ignorado. |
 | **BaseUri** | Uri | false | Uma URL base padrão que é combinada às URLs relativas nos atributos de origem da imagem. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do sistema. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
-| **Idioma**| cadeia de caracteres | false | A localidade de destino da carga visual ao usar recursos localizados, especificados como marcações de idioma BCP-47 como "en-US" ou "pt-BR". Esse local é substituído por qualquer localidade especificada na associação ou no texto. Se não for fornecido, a localidade do sistema será usada em vez disso. |
+| **Idioma**| sequência | false | A localidade de destino da carga visual ao usar recursos localizados, especificados como marcações de idioma BCP-47 como "en-US" ou "pt-BR". Esse local é substituído por qualquer localidade especificada na associação ou no texto. Se não for fornecido, a localidade do sistema será usada em vez disso. |
 
 
 ## <a name="itilebindingcontent"></a>ITileBindingContent
@@ -80,36 +80,36 @@ Interface de marcador para conteúdo de associação do bloco. Permite que você
 
 | Implementações |
 | --- |
-| [TileBindingContentAdaptive](#TileBindingContentAdaptive) |
-| [TileBindingContentIconic](#TileBindingContentIconic) |
-| [TileBindingContentContact](#TileBindingContentContact) |
-| [TileBindingContentPeople](#TileBindingContentPeople) |
-| [TileBindingContentPhotos](#TileBindingContentPhotos) |
+| [TileBindingContentAdaptive](#tilebindingcontentadaptive) |
+| [TileBindingContentIconic](#tilebindingcontenticonic) |
+| [TileBindingContentContact](#tilebindingcontentcontact) |
+| [TileBindingContentPeople](#tilebindingcontentpeople) |
+| [TileBindingContentPhotos](#tilebindingcontentphotos) |
 
 
 ## <a name="tilebindingcontentadaptive"></a>TileBindingContentAdaptive
 Compatível com todos os tamanhos. Esta é a maneira recomendada de especificar o conteúdo do bloco. Modelos de bloco adaptáveis novos no Windows 10; você pode criar uma ampla variedade de blocos personalizados por meio de modelos adaptáveis.
 
-| Propriedade | Tipo | Obrigatório | Descrição |
+| Propriedade | Digite | Necessária | Descrição |
 |---|---|---|---|
-| **Children** | IList<ITileBindingContentAdaptiveChild> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
+| **Filhos** | IList<ITileBindingContentAdaptiveChild> | false | Os elementos visuais embutidos. Os objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage) e [AdaptiveGroup](#adaptivegroup) podem ser adicionados. Os filhos são exibidos em um StackPanel vertical. |
 | **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | false | Uma imagem de plano de fundo opcional exibida atrás do conteúdo do bloco, sangramento total. |
 | **PeekImage** | [TilePeekImage](#tilepeekimage) | false | Uma imagem opcional animada que surge da parte superior do bloco. |
-| **TextStacking** | [TileTextStacking](#tiletextstacking) | false | Controla o empilhamento de texto (alinhamento vertical) do conteúdo filho como um todo. |
+| **Textempilhing** | [TileTextStacking](#tiletextstacking) | false | Controla o empilhamento de texto (alinhamento vertical) do conteúdo filho como um todo. |
 
 
 ## <a name="adaptivetext"></a>AdaptiveText
 Um elemento de texto adaptável.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Texto** | cadeia de caracteres | false | O texto a ser exibido. |
-| **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | O estilo controla o tamanho, a espessura e a opacidade da fonte do texto. |
+| **Texto** | sequência | false | O texto a ser exibido. |
+| **Dicastyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | O estilo controla o tamanho, a espessura e a opacidade da fonte do texto. |
 | **HintWrap** | bool? | false | Defina como true para habilitar a quebra automática de texto. Assume false como valor padrão. |
 | **HintMaxLines** | int? | false | O número máximo de linhas que o elemento de texto tem permissão de exibir. |
 | **HintMinLines** | int? | false | O número mínimo de linhas que o elemento de texto deve exibir. |
 | **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | false | O alinhamento horizontal do texto. |
-| **Idioma** | cadeia de caracteres | false | A localidade de destino da carga XML, especificada como marcações de idioma BCP-47 como "en-US" ou "pt-BR". A localidade especificada aqui substitui qualquer outra localidade especificada, como na vinculação ou no visual. Se esse valor é uma cadeia de caracteres literal, esse atributo assume como padrão o idioma do usuário da interface do usuário. Se esse valor for uma referência de sequência, este atributo assumirá como padrão a localidade escolhida pelo Windows Runtime na resolução da sequência. |
+| **Idioma** | sequência | false | A localidade de destino da carga XML, especificada como marcações de idioma BCP-47 como "en-US" ou "pt-BR". A localidade especificada aqui substitui qualquer outra localidade especificada, como na vinculação ou no visual. Se esse valor é uma cadeia de caracteres literal, esse atributo assume como padrão o idioma do usuário da interface do usuário. Se esse valor for uma referência de sequência, este atributo assumirá como padrão a localidade escolhida pelo Windows Runtime na resolução da sequência. |
 
 
 ### <a name="adaptivetextstyle"></a>AdaptiveTextStyle
@@ -117,22 +117,22 @@ O estilo de texto controla o tamanho, a espessura e opacidade da fonte. A opacid
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O estilo é determinado pelo renderizador. |
-| **Legenda** | Tamanho menor do que a fonte de parágrafo. |
+| **Padrão** | Valor padrão. O estilo é determinado pelo renderizador. |
+| **Caption** | Tamanho menor do que a fonte de parágrafo. |
 | **CaptionSubtle** | Mesmo que Caption, mas com opacidade sutil. |
 | **Corpo** | Tamanho da fonte de parágrafo. |
 | **BodySubtle** | Mesmo que Body, mas com opacidade sutil. |
-| **Base** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
+| **Polybase** | Tamanho da fonte de parágrafo, a espessura é negrito. Essencialmente a versão em negrito do corpo. |
 | **BaseSubtle** | Mesmo que Base, mas com opacidade sutil. |
 | **Subtítulo** | Tamanho da fonte H4. |
 | **SubtitleSubtle** | Mesmo que Subtitle, mas com opacidade sutil. |
 | **Título** | Tamanho da fonte H3. |
 | **TitleSubtle** | Mesmo que Title, mas com opacidade sutil. |
 | **TitleNumeral** | Igual a Title, mas com preenchimento superior ou inferior removido. |
-| **Subheader** | Tamanho da fonte H2. |
+| **Subcabeçalho** | Tamanho da fonte H2. |
 | **SubheaderSubtle** | Mesmo que Subheader, mas com opacidade sutil. |
 | **SubheaderNumeral** | Igual a Subheader, mas com preenchimento superior ou inferior removido. |
-| **Cabeçalho** | Tamanho da fonte H1. |
+| **Header** | Tamanho da fonte H1. |
 | **HeaderSubtle** | Mesmo que Header, mas com opacidade sutil. |
 | **HeaderNumeral** | Igual a Header, mas com preenchimento superior ou inferior removido. |
 
@@ -142,23 +142,23 @@ Controla o alinhamento horizontal de texto.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
+| **Padrão** | Valor padrão. O alinhamento é determinado automaticamente pelo renderizador. |
 | **Automático** | O alinhamento é determinado por idioma e cultura atual. |
 | **Left** | Alinha o texto horizontalmente à esquerda. |
-| **Center** | Alinha o texto horizontalmente no centro. |
-| **Certo** | Alinha o texto horizontalmente à direita. |
+| **Centraliza** | Alinha o texto horizontalmente no centro. |
+| **Direita** | Alinha o texto horizontalmente à direita. |
 
 
 ## <a name="adaptiveimage"></a>AdaptiveImage
 Uma imagem embutida.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Origem** | cadeia de caracteres | verdadeiro | A URL da imagem. Suporte para ms-appx, ms-appdata e http. Na the Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB. |
+| **Origem** | sequência | verdadeiro | A URL da imagem. Suporte para ms-appx, ms-appdata e http. Na the Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB. |
 | **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | Controla o recorte desejado da imagem. |
 | **HintRemoveMargin** | bool? | false | Por padrão, as imagens em grupos/subgrupos têm uma margem de 8 px em volta. Você pode remover essa margem ao definir essa propriedade como true. |
 | **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | false | O alinhamento horizontal da imagem. |
-| **AlternateText** | cadeia de caracteres | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
+| **AlternateText** | sequência | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do bloco. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
 
 
@@ -167,9 +167,9 @@ Especifica o recorte desejado da imagem.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
+| **Padrão** | Valor padrão. Comportamento de corte determinado pelo renderizador. |
 | **Nenhum** | A imagem não é cortada. |
-| **Circle** | A imagem é cortada na forma de círculo. |
+| **Multiplica** | A imagem é cortada na forma de círculo. |
 
 
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
@@ -177,27 +177,27 @@ Especifica o alinhamento horizontal de uma imagem.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
-| **Stretch** | A imagem é esticada para preencher a largura disponível (e a altura possivelmente disponível também, dependendo de onde a imagem é colocada). |
+| **Padrão** | Valor padrão. Comportamento de alinhamento determinado pelo renderizador. |
+| **Estendi** | A imagem é esticada para preencher a largura disponível (e a altura possivelmente disponível também, dependendo de onde a imagem é colocada). |
 | **Left** | Alinhe a imagem à esquerda, exibindo a imagem na resolução nativa. |
-| **Center** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
-| **Certo** | Alinhe a imagem à direita, exibindo a imagem na resolução nativa. |
+| **Centraliza** | Alinhe a imagem horizontalmente no centro, exibindo a imagem na resolução nativa. |
+| **Direita** | Alinhe a imagem à direita, exibindo a imagem na resolução nativa. |
 
 
 ## <a name="adaptivegroup"></a>AdaptiveGroup
 Os grupos identificam semanticamente que o conteúdo do grupo deve ser exibido como um todo ou não exibido se não couber. Os Grupos também permitem a criação de várias colunas.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
+| **Filhos** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Subgrupos são exibidos como colunas verticais. Você deve usar subgrupos para fornecer qualquer conteúdo em um AdaptiveGroup. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
 Os subgrupos são colunas verticais que podem conter texto e imagens.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
+| **Filhos** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) e [AdaptiveImage](#adaptiveimage) são filhos válidos de subgrupos. |
 | **HintWeight** | int? | false | Controle a largura da coluna do subgrupo ao especificar a espessura em relação aos outros subgrupos. |
 | **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Controle o alinhamento vertical do conteúdo deste subgrupo. |
 
@@ -216,21 +216,21 @@ TextStacking especifica o alinhamento vertical do conteúdo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
-| **Top** | Alinhamento vertical com a parte superior. |
-| **Center** | Alinhamento vertical com o centro. |
-| **parte inferior** | Alinhamento vertical com a parte inferior. |
+| **Padrão** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
+| **Superior** | Alinhamento vertical com a parte superior. |
+| **Centraliza** | Alinhamento vertical com o centro. |
+| **Inferior** | Alinhamento vertical com a parte inferior. |
 
 
 ## <a name="tilebackgroundimage"></a>TileBackgroundImage
 Uma imagem de plano de fundo exibida com sangramento total no bloco.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Origem** | cadeia de caracteres | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
+| **Origem** | sequência | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
 | **HintOverlay** | int? | false | Uma sobreposição preta em uma imagem de plano de fundo. Este valor controla a opacidade da sobreposição preta, sendo 0 equivalente a nenhuma sobreposição e 100 equivalente a completamente preto. Assume 20 como valor padrão. |
-| **HintCrop** | [TileBackgroundImageCrop](#tilebackgroundimagecrop) | false | Novo no 1511: Especifica como você deseja que a imagem seja cortada. Nas versões anteriores a 1511, isso será ignorado e a imagem de plano de fundo será exibida sem cortes. |
-| **AlternateText** | cadeia de caracteres | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
+| **HintCrop** | [TileBackgroundImageCrop](#tilebackgroundimagecrop) | false | Novo na versão 1511: especifica como a imagem deve ser cortada. Nas versões anteriores a 1511, isso será ignorado e a imagem de plano de fundo será exibida sem cortes. |
+| **AlternateText** | sequência | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do bloco. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
 
 
@@ -239,20 +239,20 @@ Controla o recorte da imagem de plano de fundo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | O corte usa o comportamento padrão do renderizador. |
+| **Padrão** | O corte usa o comportamento padrão do renderizador. |
 | **Nenhum** | A imagem não é cortada, exibida em um quadrado. |
-| **Circle** | A imagem é cortada em círculo. |
+| **Multiplica** | A imagem é cortada em círculo. |
 
 
 ## <a name="tilepeekimage"></a>TilePeekImage
 Uma imagem animada que surge da parte superior do bloco.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Origem** | cadeia de caracteres | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
-| **HintOverlay** | int? | false | Novo no 1511: Uma sobreposição de preta a imagem de pico. Este valor controla a opacidade da sobreposição preta, sendo 0 equivalente a nenhuma sobreposição e 100 equivalente a completamente preto. Assume 20 como valor padrão. Nas versões anteriores, este valor será ignorado e a imagem que surge será exibida com sobreposição 0. |
-| **HintCrop** | [TilePeekImageCrop](#tilepeekimagecrop) | false | Novo no 1511: Especifica como você deseja que a imagem seja cortada. Nas versões anteriores a 1511, isso será ignorado e a imagem que surge será exibida sem cortes. |
-| **AlternateText** | cadeia de caracteres | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
+| **Origem** | sequência | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
+| **HintOverlay** | int? | false | Novo na versão 1511: uma sobreposição preta na imagem que surge. Este valor controla a opacidade da sobreposição preta, sendo 0 equivalente a nenhuma sobreposição e 100 equivalente a completamente preto. Assume 20 como valor padrão. Nas versões anteriores, este valor será ignorado e a imagem que surge será exibida com sobreposição 0. |
+| **HintCrop** | [TilePeekImageCrop](#tilepeekimagecrop) | false | Novo na versão 1511: especifica como a imagem deve ser cortada. Nas versões anteriores a 1511, isso será ignorado e a imagem que surge será exibida sem cortes. |
+| **AlternateText** | sequência | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do bloco. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
 
 
@@ -261,9 +261,9 @@ Controla o recorte da imagem que surge.
 
 | Valor | Significado |
 |---|---|
-| **Default** | O corte usa o comportamento padrão do renderizador. |
+| **Padrão** | O corte usa o comportamento padrão do renderizador. |
 | **Nenhum** | A imagem não é cortada, exibida em um quadrado. |
-| **Circle** | A imagem é cortada em círculo. |
+| **Multiplica** | A imagem é cortada em círculo. |
 
 
 ### <a name="tiletextstacking"></a>TileTextStacking
@@ -271,33 +271,33 @@ O empilhamento de texto especifica o alinhamento vertical do conteúdo.
 
 | Valor | Significado |
 |---|---|
-| **Default** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
-| **Top** | Alinhamento vertical com a parte superior. |
-| **Center** | Alinhamento vertical com o centro. |
-| **parte inferior** | Alinhamento vertical com a parte inferior. |
+| **Padrão** | Valor padrão. O renderizador selecionará automaticamente o alinhamento vertical padrão. |
+| **Superior** | Alinhamento vertical com a parte superior. |
+| **Centraliza** | Alinhamento vertical com o centro. |
+| **Inferior** | Alinhamento vertical com a parte inferior. |
 
 
 ## <a name="tilebindingcontenticonic"></a>TileBindingContentIconic
 Compatível com blocos pequenos e médios. Habilita um modelo de bloco icônico, em que você pode ter um ícone e um selo exibidos um ao lado do outro no bloco, no estilo clássico verdadeiro do Windows Phone. O número ao lado do ícone é obtido por meio de uma notificação de selo separada.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Ícone** | [TileBasicImage](#tilebasicimage) | verdadeiro | No mínimo, para dar suporte a blocos pequenos e médios na Área de Trabalho e no Celular forneça uma imagem de taxa de proporção quadrada com uma resolução de 200 x 200, formato PNG, com transparência e nenhuma outra cor além do branco. Para obter mais informações, consulte: [Modelos de bloco especial](../tiles-and-notifications/special-tile-templates-catalog.md). |
+| **Ícone** | [TileBasicImage](#tilebasicimage) | verdadeiro | No mínimo, para dar suporte a blocos pequenos e médios na Área de Trabalho e no Celular forneça uma imagem de taxa de proporção quadrada com uma resolução de 200 x 200, formato PNG, com transparência e nenhuma outra cor além do branco. Para obter mais informações, consulte [Modelos de bloco especiais](../tiles-and-notifications/special-tile-templates-catalog.md). |
 
 
 ## <a name="tilebindingcontentcontact"></a>TileBindingContentContact
 Somente celular. Compatível com blocos pequenos, médios e largos.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
 | **Image** | [TileBasicImage](#tilebasicimage) | verdadeiro | A imagem a ser exibida. |
 | **Texto** | [TileBasicText](#tilebasictext) | false | Uma linha de texto exibida. Não é exibida em blocos pequenos. |
 
 
 ## <a name="tilebindingcontentpeople"></a>TileBindingContentPeople
-Novo no 1511: Tem suporte no médio, largo e grande (Desktop e Mobile). Antigamente, isso aplicava-se somente a celulares e a blocos médios e largos.
+Novo na versão 1511: compatível com blocos médios, largos e grandes (Área de Trabalho e Celular). Antigamente, isso aplicava-se somente a celulares e a blocos médios e largos.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
 | **Imagens** | IList<[TileBasicImage](#tilebasicimage)> | verdadeiro | Imagens que percorrerão o entorno como círculos. |
 
@@ -305,7 +305,7 @@ Novo no 1511: Tem suporte no médio, largo e grande (Desktop e Mobile). Antigame
 ## <a name="tilebindingcontentphotos"></a>TileBindingContentPhotos
 Oferece animação por meio de uma apresentação de slides de fotos. Compatível com todos os tamanhos.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
 | **Imagens** | IList<[TileBasicImage](#tilebasicimage)> | verdadeiro | Até 12 imagens podem ser fornecidas (o celular exibirá até nove imagens), que serão usadas na apresentação de slides. A adição de mais de 12 imagens gerará uma exceção. |
 
@@ -313,23 +313,23 @@ Oferece animação por meio de uma apresentação de slides de fotos. Compatíve
 ### <a name="tilebasicimage"></a>TileBasicImage
 Uma imagem usada em diversos modelos especiais.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Origem** | cadeia de caracteres | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
-| **AlternateText** | cadeia de caracteres | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
+| **Origem** | sequência | verdadeiro | A URL da imagem. ms-appx, ms-appdata e http(s) são compatíveis. As imagens HTTP devem ter 200 KB ou menos. |
+| **AlternateText** | sequência | false | Texto alternativo que descreve a imagem, usado para fins de acessibilidade. |
 | **AddImageQuery** | bool? | false | Defina como "true" para permitir que o Windows acrescente uma cadeia de caracteres de consulta à URL de imagem fornecida na notificação do bloco. Use esse atributo se o servidor hospedar imagens e conseguir manipular cadeias de caracteres de consulta, ao recuperar uma variante da imagem com base nas cadeias de caracteres de consulta ou ao ignorar a cadeia de caracteres de consulta e retornar a imagem conforme especificado sem a cadeia de caracteres de consulta. Essa cadeia de caracteres de consulta especifica a escala, a configuração de contraste e o idioma; por exemplo, um valor de "www.website.com/images/hello.png" fornecido na notificação é transformado em "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us" |
 
 
 ### <a name="tilebasictext"></a>TileBasicText
 Um elemento de texto básico usado em diversos modelos especiais.
 
-| Propriedade | Tipo | Obrigatório |Descrição |
+| Propriedade | Digite | Necessária |Descrição |
 |---|---|---|---|
-| **Texto** | cadeia de caracteres | false | O texto a ser exibido. |
-| **Idioma** | cadeia de caracteres | false | A localidade de destino da carga XML, especificada como marcações de idioma BCP-47 como "en-US" ou "pt-BR". A localidade especificada aqui substitui qualquer outra localidade especificada, como na vinculação ou no visual. Se esse valor é uma cadeia de caracteres literal, esse atributo assume como padrão o idioma do usuário da interface do usuário. Se esse valor for uma referência de sequência, este atributo assumirá como padrão a localidade escolhida pelo Windows Runtime na resolução da sequência. |
+| **Texto** | sequência | false | O texto a ser exibido. |
+| **Idioma** | sequência | false | A localidade de destino da carga XML, especificada como marcações de idioma BCP-47 como "en-US" ou "pt-BR". A localidade especificada aqui substitui qualquer outra localidade especificada, como na vinculação ou no visual. Se esse valor é uma cadeia de caracteres literal, esse atributo assume como padrão o idioma do usuário da interface do usuário. Se esse valor for uma referência de sequência, este atributo assumirá como padrão a localidade escolhida pelo Windows Runtime na resolução da sequência. |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Guia de início rápido: Enviar uma notificação de bloco local](../tiles-and-notifications/sending-a-local-tile-notification.md)
+* [Início rápido: Enviar uma notificação de bloco local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Biblioteca de notificações no GitHub](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/dev/Notifications)

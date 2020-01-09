@@ -5,12 +5,12 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f3fc2b2aa10fedf143c55158e521b2c1cd5b75d
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: bc3a8afbc0d3ca4655e0b1745090db633bcd92b7
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816695"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684672"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>Declaração de dispositivo de ponto de serviço e habilitar modelo
 
@@ -23,7 +23,7 @@ Depois de criar um objeto de dispositivo de PointOfService com sucesso, você de
 
 ### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar/liberar
 
-|Dispositivo|Declaração | Versão | 
+|Dispositivo|Declaração | Liberação | 
 |-|:-|:-|
 |BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
 |CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
@@ -81,7 +81,7 @@ Esse exemplo mostra como declarar um dispositivo de scanner de código de barras
 
 > [!Warning]
 > Uma declaração pode ser perdida nas seguintes circunstâncias:
-> 1. Outro aplicativo solicitou uma declaração do mesmo dispositivo e o aplicativo não emitiu uma **RetainDevice** em resposta ao evento **ReleaseDeviceRequested**.  (Consulte [Negociação de declaração](#Claim-negotiation) abaixo para saber mais.)
+> 1. Outro aplicativo solicitou uma declaração do mesmo dispositivo e o aplicativo não emitiu uma **RetainDevice** em resposta ao evento **ReleaseDeviceRequested**.  (Consulte [Negociação de declaração](#claim-negotiation) abaixo para saber mais.)
 > 2. O aplicativo foi suspenso, o que resultou no objeto do dispositivo ser fechado e consequentemente a declaração não é mais válida. (Consulte [Ciclo de vida do objeto do dispositivo](pos-basics-deviceobject.md#device-object-lifecycle) para obter mais informações.)
 
 
