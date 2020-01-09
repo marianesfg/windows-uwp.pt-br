@@ -6,16 +6,16 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f25e882f53bb4f673aa5003495f37d553208721
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281998"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681967"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
-O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Device Portal para fazer o seguinte:
+O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Portal de Dispositivos para fazer o seguinte:
 - Ver e manipular uma lista de processos em execução
 - Instalar, excluir, iniciar e encerrar os aplicativos
 - Alterar perfis de Wi-Fi, exibir a intensidade do sinal e ver ipconfig
@@ -66,24 +66,24 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Rastreamento de Eventos para Windows (ETW)
 - Rastreamento de desempenho
 - Gerenciador de dispositivos
-- Rede
+- Rede do
 - Dados de pane
 - Recursos
 - Realidade Misturada
 - Depurador de instalação de streaming
-- Location
+- Local
 - Rascunho
 
 ## <a name="more-device-portal-options"></a>Mais opções do Portal de Dispositivos
 
 ### <a name="registry-based-configuration-for-device-portal"></a>Configuração baseada no registro para o Portal de Dispositivos
 
-Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
+Se você quiser selecionar números de porta para o Portal de Dispositivos (como 80 e 443), será possível definir as seguintes chaves do registro:
 
 - Em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
     - `UseDynamicPorts`: um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - `HttpPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
-    - `HttpsPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
+    - `HttpPort`: um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTP.    
+    - `HttpsPort`: um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTPS.
     
 No mesmo caminho da chave do registro, você também pode desativar o requisito de autenticação:
 - `UseDefaultAuthorizer` - `0` desabilitada, `1` habilitada.  
@@ -103,7 +103,7 @@ Em um prompt de comando administrativo, você pode ativar e configurar partes do
     - Isso permite que você instale seu próprio certificado SSL para corrigir a página de aviso SSL que normalmente é vista no Portal de Dispositivos. 
 - `-Debug <various options for authentication, port selection, and tracing level>`
     - Execute uma versão autônoma do Portal de Dispositivos com uma configuração específica e mensagens de depuração visível. Isso é mais útil para criar um [plug-in empacotado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
-    - Consulte o [artigo de revista do MSDN](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx) para obter detalhes sobre como executar isso como sistema para testar completamente o plug-in empacotado.
+    - Consulte o [artigo de revista do MSDN](https://msdn.microsoft.com/magazine/mt826332.aspx) para obter detalhes sobre como executar isso como sistema para testar completamente o plug-in empacotado.
 
 ## <a name="common-errors-and-issues"></a>Erros e problemas comuns
 
@@ -129,7 +129,7 @@ Você poderá receber esse erro se os pacotes do desenvolvedor não estiverem in
 
 Você poderá receber esse erro se você estiver em uma conexão de Internet limitada. Você não poderá baixar os pacotes do desenvolvedor em uma conexão limitada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Visão geral do portal de dispositivos Windows](device-portal.md)
 * [Referência da API principal do portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

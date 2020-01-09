@@ -1,17 +1,17 @@
 ---
-Description: O app pode carregar arquivos de recurso de imagem contendo imagens personalizadas para fator de escala de exibição, tema, alto contraste e outros contextos de tempo de execução.
+Description: O aplicativo pode carregar arquivos de recurso de imagem contendo imagens personalizadas para fator de escala de exibição, tema, alto contraste e outros contextos de runtime.
 title: Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 236365bc729bb6b9a2615720c4b69aea21296e5f
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2aadcb8dc3d414db7951dc571855e01bddb03a99
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339468"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683639"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros
 O app pode carregar arquivos de recurso de imagem (ou outros arquivos de ativo) personalizados para [fator de escala de exibição](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, alto contraste e outros contextos de tempo de execução. Essas imagens podem ser referenciadas no código imperativo ou na marcação XAML, por exemplo, como a propriedade **Source** de uma **Imagem**. Elas também podem aparecer no arquivo de origem do manifesto do pacote de aplicativos (o arquivo `Package.appxmanifest`), por exemplo, como o valor do ícone de aplicativo na guia Ativos Visuais do Designer de Manifesto do Visual Studio, ou em seus blocos e notificações do sistema. Usando qualificadores nos nomes de arquivo das imagens e, opcionalmente, carregando-os dinamicamente com a ajuda de um [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), você pode fazer com que o arquivo de imagem que melhor corresponde às configurações de tempo de execução do usuário para escala de exibição, tema, alto contraste, idiomas e outros contextos seja carregado.
@@ -86,12 +86,12 @@ O esquema `ms-appx-web` acessa os mesmos arquivos que `ms-appx`, mas no comparti
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-Para qualquer um dos cenários mostrados nestes exemplos, use a sobrecarga do [construtor Uri](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infere o [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind). Especifique um URI absoluto válido, incluindo o esquema e a autoridade, ou deixe a autoridade assumir o conjunto de aplicativo como valor padrão no exemplo acima.
+Para qualquer um dos cenários mostrados nestes exemplos, use a sobrecarga do [construtor Uri](https://docs.microsoft.com/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infere o [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind). Especifique um URI absoluto válido, incluindo o esquema e a autoridade, ou deixe a autoridade assumir o conjunto de aplicativo como valor padrão no exemplo acima.
 
 Observe como, nestes URIs de exemplo, o esquema ("`ms-appx`" ou "`ms-appx-web`") é seguido por "`://`", que é acompanhado por um caminho absoluto. Em um caminho absoluto, o símbolo "`/`" à esquerda faz com que o caminho seja interpretado da raiz do pacote.
 
 > [!NOTE]
-> Os esquemas de URI `ms-resource` (para [recursos de cadeia de caracteres](localize-strings-ui-manifest.md)) e `ms-appx(-web)` (para imagens e outros ativos) executam a correspondência de qualificador automática para localizar o recurso mais apropriado para o contexto atual. O esquema URI `ms-appdata` (que é usado para carregar dados de app) não executa nenhuma correspondência automática, mas você pode responder ao conteúdo de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) e carregar explicitamente os ativos apropriados a partir dos dados de app usando seu nome de arquivo físico completo no URI. Para obter mais informações sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de app](../design/app-settings/store-and-retrieve-app-data.md). Esquemas URI da Web (por exemplo, `http`, `https` e `ftp`) não executam quaisquer correspondências automáticas. Para obter informações sobre o que fazer nesse caso, consulte [Hospedando e carregando imagens na nuvem](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
+> Os esquemas de URI de `ms-resource` (para [recursos de cadeia de caracteres](localize-strings-ui-manifest.md)) e `ms-appx(-web)` (para imagens e outros ativos) executam a correspondência de qualificador automática para localizar o recurso mais apropriado para o contexto atual. O esquema URI `ms-appdata` (que é usado para carregar dados de app) não executa nenhuma correspondência automática, mas você pode responder ao conteúdo de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) e carregar explicitamente os ativos apropriados a partir dos dados de app usando seu nome de arquivo físico completo no URI. Para obter mais informações sobre dados de aplicativo, consulte [Armazenar e recuperar configurações e outros dados de app](../design/app-settings/store-and-retrieve-app-data.md). Esquemas URI da Web (por exemplo, `http`, `https` e `ftp`) não executam quaisquer correspondências automáticas. Para obter informações sobre o que fazer nesse caso, consulte [Hospedando e carregando imagens na nuvem](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
 
 Os caminhos absolutos serão uma boa opção se os arquivos de imagem permanecerem onde estão na estrutura do projeto. Se você deseja mover um arquivo de imagem, mas deseja mantê-lo no mesmo local em relação ao seu arquivo de marcação XAML de referência, use um caminho relativo ao arquivo de marcação que o contêm, em vez de usar um caminho absoluto. Se você fizer isso, não precisará usar um esquema de URI. Você ainda tirará proveito da correspondência automática de qualificador nesse caso, mas apenas porque está usando o caminho relativo na marcação XAML.
 
@@ -139,7 +139,7 @@ Isso é tudo o que você precisa fazer; o sistema operacional fará a correspond
 Consulte [Espelhando imagens](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md#mirroring-images).
 
 ## <a name="load-an-image-for-a-specific-language-or-other-context"></a>Carregar uma imagem para um idioma ou outro contexto
-Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
+Para obter mais informações sobre a proposta de valor de localização do aplicativo, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
 
 O [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) padrão (obtido em [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView)) contém um valor de qualificador para cada nome de qualificador, representando o contexto de tempo de execução padrão (em outras palavras, as configurações do usuário atual e da máquina). Os arquivos de imagem são comparados&mdash;, com base nos qualificadores contidos em seus nomes&mdash;, com os valores de qualificador nesse contexto de tempo de execução.
 
@@ -203,7 +203,7 @@ private void RefreshUIImages()
 }
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)

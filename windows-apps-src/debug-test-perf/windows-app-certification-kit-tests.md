@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificação de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ece54ef17c97b1cb16b3f0a706c86eb2858556
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6ab5b2ec13e0de3d234fafc6c1a32e10d35aed4f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257863"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681937"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -110,7 +110,7 @@ Os aplicativos devem ter um manifesto corretamente formatado.
 
 ### <a name="test-details"></a>Detalhes do teste
 
-Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
+Analisa o manifesto do app para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 -   **Extensões de arquivo e protocolos**
 
@@ -149,7 +149,7 @@ Os testes do Analisador de Binários BinScope verificam o uso correto dos seguin
 
 ### <a name="binscope-binary-analyzer-tests"></a>Testes do Analisador de Binários BinScope
 
-Os testes do [Analisador de Binários BinScope](https://www.microsoft.com/en-us/download/details.aspx?id=44995) examinam os arquivos binários do aplicativo em busca de práticas de programação e compilação que o tornam menos vulnerável a ataques ou a ser usado como um vetor de ataque.
+Os testes do [Analisador de Binários BinScope](https://www.microsoft.com/download/details.aspx?id=44995) examinam os arquivos binários do aplicativo em busca de práticas de programação e compilação que o tornam menos vulnerável a ataques ou a ser usado como um vetor de ataque.
 
 Os testes do Analisador de Binários BinScope verificam o uso correto destes recursos relacionados à segurança:
 
@@ -218,7 +218,7 @@ Habilite a opção /DYNAMICBASE no comando vinculador ao compilar o seu aplicati
 
 Normalmente, o ASLR não afeta o desempenho. Mas, em alguns cenários, há um ligeiro aumento do desempenho em sistemas de 32 bits. É possível que o desempenho seja prejudicado em um sistema muito congestionado que possua muitas imagens carregadas em muitos locais diferentes da memória.
 
-Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenciadas, por exemplo, com o uso do C# ou do C++.
+Este teste é realizado apenas em app escritos em linguagens não gerenciadas, por exemplo, C ou C++.
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Ler/gravar seção PE compartilhada
 
@@ -232,7 +232,7 @@ Remova todas as seções compartilhadas do aplicativo e crie objetos de memória
 
 **Comentários**
 
-Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenciadas, por exemplo, com o uso do C# ou do C++.
+Este teste é realizado apenas em app escritos em linguagens não gerenciadas, por exemplo, C ou C++.
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
@@ -284,7 +284,7 @@ O *tamanho da\-de página* é o *SectionAlignment* padrão para executáveis.
 
 ### <a name="private-code-signing"></a>Assinatura de códigos privados
 
-Testes para a existência de binários de assinatura de código privado no pacote de aplicativo.
+Testes para a existência de binários de assinatura de código privado no pacote de app.
 
 ### <a name="background"></a>Histórico
 
@@ -309,7 +309,7 @@ Os aplicativos devem usar as APIs para aplicativos UWP (Windows Runtime ou APIs 
 ### <a name="test-details"></a>Detalhes do teste
 
 -   Verifica se cada binário no pacote do aplicativo não tem uma dependência em uma API do Win32 que não tem suporte para o desenvolvimento de aplicativos UWP, verificando a tabela de endereços de importação do binário.
--   Verifica se cada binário gerenciado no pacote do aplicativo não depende de uma função fora do perfil aprovado.
+-   Verifica se cada binário gerenciado no pacote do app não depende de uma função fora do perfil aprovado.
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
@@ -489,7 +489,7 @@ O teste valida se as imagens usadas pelo app não são imagens padrão de exempl
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
-Substitua as imagens padrão por algo mais distinto e que representa seu aplicativo.
+Substitua as imagens padrão por algo mais distinto e que represente seu app.
 
 ## <a name="debug-configuration-test"></a>Teste de configuração de depuração
 
@@ -515,7 +515,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 
 ### <a name="background"></a>Histórico
 
-Os arquivos HTML, CSS e JavaScript devem estar codificados no formato UTF-8 com a marca de ordem de byte (BOM) correspondente para aproveitar o cache do código de bytes e evitar determinadas condições de erro de runtime.
+Os arquivos HTML, CSS e JavaScript devem estar codificados no formato UTF-8 com a marca de ordem de byte (BOM) correspondente para aproveitar o cache do código de bytes e evitar determinadas condições de erro de tempo de execução.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -571,7 +571,7 @@ As funcionalidades de uso especial destinam-se a cenários bastante específicos
 
 ### <a name="test-details"></a>Detalhes do teste
 
-Valide se o aplicativo está declarando qualquer uma das capacidades abaixo:
+Valide se o app está declarando qualquer uma das funcionalidades abaixo:
 
 -   EnterpriseAuthentication
 -   SharedUserCertificates
@@ -587,7 +587,7 @@ Considere a remoção da funcionalidade de uso especial caso ela não seja neces
 
 ### <a name="background"></a>Histórico
 
-Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo UWP.
+Verifica se os componentes que vêm com o app são compatíveis com o sistema do tipo UWP.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -610,7 +610,7 @@ Os aplicativos que instalam binários mistos podem falhar ou não funcionar corr
 
 ### <a name="background"></a>Histórico
 
-Este teste valida os binários em um pacote de aplicativo para conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o aplicativo à falhas ou um aumento desnecessário no tamanho do pacote do aplicativo.
+Este teste valida os binários em um pacote de aplicativo para conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o app à falhas ou um aumento desnecessário no tamanho do pacote do app.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -624,7 +624,7 @@ Siga estas diretrizes para garantir que seu pacote de apps contenha apenas arqui
 
 -   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x86, o pacote de aplicativo deve conter apenas binário x86 ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou ARM ou tipos de imagem, ele irá falhar no teste.
 
--   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote pode também incluir arquivos x86, mas a experiência aplicativo primário deve utilizar o binário x64.
+-   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote também poderá incluir arquivos x86, mas a experiência do app primário deve utilizar o binário x64.
 
     No entanto, se a embalagem contiver binário ARM ou arquivos do tipo imagem, ou se contiver apenas binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
 

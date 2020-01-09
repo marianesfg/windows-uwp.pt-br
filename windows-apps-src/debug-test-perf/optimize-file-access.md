@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 176791388bc0d0a5ac33659f6744852a2c857187
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 3114bc7a86f7f7f4d22c69c814735c146352efbd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339597"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681947"
 ---
 # <a name="optimize-file-access"></a>Otimizar o acesso a arquivos
 
@@ -135,7 +135,7 @@ Se você estiver realizando várias operações em objetos Windows.Storage, como
 
 Há muitos cenários em que você pode converter um fluxo UWP (como um [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) ou [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream)) em fluxo .NET ([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream)). Isso é útil quando você está escrevendo um aplicativo UWP e quer usar um código .NET existente que funcione em fluxos com o sistema de arquivo UWP, por exemplo. Para habilitar isso, as APIs do .NET para aplicativos UWP fornecem métodos de extensão que permitem a conversão entre os tipos de fluxo .NET e UWP. Para obter mais informações, consulte [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions).
 
-Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de runtime associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
+Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de tempo de execução associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
 
 Para acelerar os aplicativos, os adaptadores de fluxo UWP contêm um buffer de dados. A amostra de código a seguir demonstra pequenas leituras consecutivas com o uso de um adaptador de fluxo UWP com um tamanho de buffer padrão.
 
@@ -236,6 +236,6 @@ Quando você está trabalhando com uma grande quantidade de fluxos simultaneamen
 
 Você também pode querer evitar o buffer se preferir leituras e gravações de baixa latência e não quiser ler em blocos grandes do fluxo UWP adjacente. Por exemplo, leituras e gravações de baixa latência podem ser desejáveis, se você está usando o fluxo para comunicações em rede.
 
-Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/en-us/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) e [**AsStream**](https://docs.microsoft.com/en-us/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
+Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede para enviar e receber mensagens. Nesse caso, você quer enviar mensagens assim que estiverem prontas, e não esperar até o buffer ficar cheio. Se você definir o tamanho do buffer para 0 quando chamar os métodos de extensão [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) e [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0), o adaptador resultante não alocará um buffer e todas as chamadas manipularão o fluxo UWP subjacente diretamente.
 
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a13f0779414f60784ac1703fa32ac1ef5c89635
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 520e1fa18a0930d2a1fd4c2561dd4a4fc8d6c14b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74256546"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683504"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
@@ -37,7 +37,7 @@ Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que s
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
-4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
+4.  Para acessar a biblioteca de Imagens e Vídeos, marque as caixas da **Biblioteca de imagens** e da **Biblioteca de vídeos**.
 
 O código de exemplo deste artigo usa APIs dos namespaces a seguir, além dos incluídos pelo modelo de projeto padrão.
 
@@ -138,7 +138,7 @@ Na tarefa, a variável *_taskRunning* é verificada para garantir que apenas uma
 Por fim, a variável *_taskRunning* é definida como false para que a tarefa possa ser executada novamente na próxima vez que o manipulador for chamado.
 
 > [!NOTE] 
-> Se você acessar a propriedade [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframe.softwarebitmap) ou [**Direct3DSurface**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframe.direct3dsurface) fornecidas pela propriedade [**VideoMediaFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference.videomediaframe) de uma [**MediaFrameReference**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference), o sistema criará uma forte referência a esses objetos, o que significa que eles não serão descartados quando você chamar [**Dispose**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference.close) na **MediaFrameReference** contida. Você deve chamar explicitamente o método **Dispose** do **SoftwareBitmap** ou **Direct3DSurface** diretamente para os objetos serem descartados imediatamente. Caso contrário, o coletor de lixo acabará liberando a memória para esses objetos, mas você não saberá quando isso vai ocorrer, e se o número de bitmaps ou superfícies alocados exceder o valor máximo permitido pelo sistema, o fluxo de quadros novos será interrompido. Você pode copiar quadros recuperados, usando o método [**SoftwareBitmap.Copy**](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.imaging.softwarebitmap.copy), por exemplo, e liberar os quadros originais para superar essa limitação. Além disso, se você criar o **MediaFrameReader** usando a sobrecarga [CreateFrameReaderAsync(Windows.Media.Capture.Frames.MediaFrameSource inputSource, System.String outputSubtype, Windows.Graphics.Imaging.BitmapSize outputSize)](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_Windows_Graphics_Imaging_BitmapSize_) ou [CreateFrameReaderAsync(Windows.Media.Capture.Frames.MediaFrameSource inputSource, System.String outputSubtype)](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_), os quadros retornados são cópias dos dados de quadro originais para que a aquisição de quadros não pare quando for retida. 
+> Se você acessar a propriedade [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframe.softwarebitmap) ou [**Direct3DSurface**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframe.direct3dsurface) fornecidas pela propriedade [**VideoMediaFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference.videomediaframe) de uma [**MediaFrameReference**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference), o sistema criará uma forte referência a esses objetos, o que significa que eles não serão descartados quando você chamar [**Dispose**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference.close) na **MediaFrameReference** contida. Você deve chamar explicitamente o método **Dispose** do **SoftwareBitmap** ou **Direct3DSurface** diretamente para os objetos serem descartados imediatamente. Caso contrário, o coletor de lixo acabará liberando a memória para esses objetos, mas você não saberá quando isso vai ocorrer, e se o número de bitmaps ou superfícies alocados exceder o valor máximo permitido pelo sistema, o fluxo de quadros novos será interrompido. Você pode copiar quadros recuperados, usando o método [**SoftwareBitmap.Copy**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.copy), por exemplo, e liberar os quadros originais para superar essa limitação. Além disso, se você criar o **MediaFrameReader** usando a sobrecarga [CreateFrameReaderAsync(Windows.Media.Capture.Frames.MediaFrameSource inputSource, System.String outputSubtype, Windows.Graphics.Imaging.BitmapSize outputSize)](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_Windows_Graphics_Imaging_BitmapSize_) ou [CreateFrameReaderAsync(Windows.Media.Capture.Frames.MediaFrameSource inputSource, System.String outputSubtype)](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_), os quadros retornados são cópias dos dados de quadro originais para que a aquisição de quadros não pare quando for retida. 
 
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
@@ -235,7 +235,7 @@ Inicialize o objeto **MediaCapture** para usar o **MediaFrameSourceGroup** selec
 
 [!code-cs[MediaSourceInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceInitMediaCapture)]
 
-Por fim, chame **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** a fim de criar um **MediaSource** para cada origem de quadro usando a propriedade **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** do objeto **MediaFrameSourceInfo** associado para selecionar uma das origens de quadro na coleçãoFrameSources **[ objeto de ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)MediaCapture**. Inicialize um novo objeto **MediaPlayer** e atribua-o a um **MediaPlayerElement** chamando **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Em seguida, configure a propriedade **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** para o objeto **MediaSource** recém-criado.
+Por fim, chame **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** a fim de criar um **MediaSource** para cada origem de quadro usando a propriedade **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** do objeto **MediaFrameSourceInfo** associado para selecionar uma das origens de quadro na coleção **[FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** objeto de **MediaCapture**. Inicialize um novo objeto **MediaPlayer** e atribua-o a um **MediaPlayerElement** chamando **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Em seguida, configure a propriedade **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** para o objeto **MediaSource** recém-criado.
 
 [!code-cs[MediaSourceMediaPlayer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceMediaPlayer)]
 

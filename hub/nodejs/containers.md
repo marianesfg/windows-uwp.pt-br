@@ -8,12 +8,12 @@ ms.topic: article
 keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 16b1421606d3c8271141256b80ae2600ec9ca49d
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 9467224814b1e26f18031662f5e8d994a8fae1ac
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315120"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683669"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Introdução ao uso de contêineres do Docker com node. js
 
@@ -70,7 +70,7 @@ Aqui estão alguns comandos do Docker que você deve saber:
 - Liste os recursos e as estatísticas do sistema do Docker (CPU & memória) disponíveis no contexto WSL 2, com: `docker info`
 - Exibir onde o Docker está em execução no momento, com: `docker context ls`
 
-Você pode ver que há dois contextos que o Docker está executando no--`default` (o daemon clássico do Docker) e `wsl` (nossa recomendação usando a visualização técnica). (Além disso, o comando `ls` é curto para `list` e pode ser usado de forma intercambiável).
+Você pode ver que há dois contextos que o Docker está executando no--`default` (o daemon clássico do Docker) e `wsl` (nossa recomendação é usar a visualização técnica). (Além disso, o comando `ls` é curto para `list` e pode ser usado de forma intercambiável).
 
 ![Contexto de exibição do Docker no PowerShell](../images/docker-context.png)
 
@@ -87,11 +87,11 @@ A extensão do Docker facilita a criação, o gerenciamento e a implantação de
 
     ![Extensão do Docker em VS Code em WSL remota](../images/docker-vscode-extension.png)
 
-Ao instalar a extensão do Docker no VS Code, agora você poderá abrir uma lista de comandos `Dockerfile` usados na próxima seção com o atalho: `Ctrl+Space`
+Ao instalar a extensão do Docker no VS Code, agora você poderá exibir uma lista de comandos `Dockerfile` usados na próxima seção com o atalho: `Ctrl+Space`
 
 Saiba mais sobre como [trabalhar com o Docker no vs Code](https://code.visualstudio.com/docs/azure/docker).
 
-## <a name="create-a-container-image-with-dockerfile"></a>Criar uma imagem de contêiner com DockerFile
+## <a name="create-a-container-image-with-dockerfile"></a>Criar uma imagem de contêiner com o DockerFile
 
 Uma **imagem de contêiner** armazena o código do aplicativo, as bibliotecas, os arquivos de configuração, as variáveis de ambiente e o tempo de execução. O uso de uma imagem garante que o ambiente em seu contêiner seja padronizado e contenha apenas o que é necessário para compilar e executar seu aplicativo.
 
@@ -99,7 +99,7 @@ Um **DockerFile** contém as instruções necessárias para criar a nova imagem 
 
 Vamos criar uma imagem de contêiner usando o próximo aplicativo. js configurado no guia de [estruturas da Web](./web-frameworks.md) .
 
-1. Abra seu próximo aplicativo. js no VS Code (garantindo que a extensão WSL remota esteja em execução conforme indicado na guia verde inferior esquerda). Abra o terminal WSL integrado no VS Code (**exibir > terminal**) e verifique se o caminho do terminal é apontado para seu próximo diretório do projeto. js (ou seja, `~/NextProjects/my-next-app$`).
+1. Abra seu próximo aplicativo. js no VS Code (garantindo que a extensão WSL remota esteja em execução conforme indicado na guia verde inferior esquerda). Abra o terminal WSL integrado no VS Code (**exibir > terminal**) e verifique se o caminho do terminal é apontado para seu próximo diretório do projeto. js (ie. `~/NextProjects/my-next-app$`).
 
 2. Crie um novo arquivo chamado `Dockerfile` na raiz do seu próximo projeto. js e adicione o seguinte:
 
@@ -132,14 +132,14 @@ Vamos criar uma imagem de contêiner usando o próximo aplicativo. js configurad
 > [!NOTE]
 > O Docker deve estar em execução com o WSL Tech Preview para que esse comando funcione. Para obter um lembrete de como iniciar o Docker, consulte [step #4](#install-docker-desktop-wsl-2-tech-preview) da seção install. O sinalizador `-t` especifica o nome da imagem a ser criada, "My-nextjs-App: v1" em nosso caso. Recomendamos que você sempre [use uma versão # nos nomes de marca](https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375) ao criar uma imagem. Certifique-se de incluir o período no final do comando, que especifica o diretório de trabalho atual que deve ser usado para localizar e copiar os arquivos de compilação para seu próximo aplicativo. js.
 
-4. Para executar essa nova imagem do Docker do seu próximo aplicativo. js em um contêiner, insira o comando: `docker run -d -p 3333:3000 <your_docker_username>/my-nextjs-app:v1`
+4. Para executar essa nova imagem do Docker do seu próximo aplicativo. js em um contêiner, digite o comando: `docker run -d -p 3333:3000 <your_docker_username>/my-nextjs-app:v1`
 
-5. O sinalizador `-p` associa a porta ' 3000 ' (a porta em que o aplicativo está sendo executado dentro do contêiner) à porta local ' 3333 ' em seu computador, portanto, agora você pode apontar seu navegador da Web para [http://localhost:3333](http://localhost:3333) e ver o próximo aplicativo. js renderizado no lado do servidor como um Docker imagem de contêiner.
+5. O sinalizador de `-p` associa a porta ' 3000 ' (a porta em que o aplicativo está sendo executado dentro do contêiner) à porta local ' 3333 ' em seu computador, portanto, agora você pode apontar seu navegador da Web para [http://localhost:3333](http://localhost:3333) e ver o próximo aplicativo. js renderizado no lado do servidor como uma imagem de contêiner do Docker.
 
 > [!TIP]
-> Criamos nossa imagem de contêiner usando `FROM node:12`, que faz referência à imagem padrão do node. js versão 12 armazenada no Hub do Docker. Essa imagem padrão do node. js se baseia em um sistema Debian/Ubuntu Linux, há muitas imagens diferentes do node. js para escolher, no entanto, e convém considerar o uso de algo mais leve ou personalizado para suas necessidades. Saiba mais no [registro de imagem do node. js no Hub do Docker](https://hub.docker.com/_/node/).
+> Criamos nossa imagem de contêiner usando `FROM node:12` que faz referência à imagem padrão do node. js versão 12 armazenada no Hub do Docker. Essa imagem padrão do node. js se baseia em um sistema Debian/Ubuntu Linux, há muitas imagens diferentes do node. js para escolher, no entanto, e convém considerar o uso de algo mais leve ou personalizado para suas necessidades. Saiba mais no [registro de imagem do node. js no Hub do Docker](https://hub.docker.com/_/node/).
 
-## <a name="upload-your-container-image-to-a-repository"></a>Carregar a imagem de contêiner em um repositório
+## <a name="upload-your-container-image-to-a-repository"></a>Carregar sua imagem de contêiner em um repositório
 
 Um **repositório de contêiner** armazena a imagem de contêiner na nuvem. Geralmente, um repositório de contêiner conterá, na verdade, uma coleção de imagens relacionadas, como versões diferentes, que estão disponíveis para fácil instalação e implantação rápida. Normalmente, você pode acessar imagens em repositórios de contêiner por meio de pontos de extremidade HTTPs seguros, permitindo que você extraia, envie ou gerencie imagens por meio de qualquer sistema, hardware ou instância de VM.
 
@@ -159,23 +159,23 @@ Para carregar sua nova imagem de contêiner em um repositório hospedado no Hub 
 
 6. Você deve ver que o contêiner "My-nextjs-App: v1" está ativo na porta 3333-> 3000/TCP. Você também pode ver sua "ID do contêiner" listada aqui. Para interromper a execução do seu contêiner, insira o comando: `docker stop <container ID>`
 
-7. Normalmente, quando um contêiner é interrompido, ele também deve ser removido. A remoção de um contêiner limpa todos os recursos que ele deixa para trás. Depois de remover um contêiner, as alterações feitas em seu sistema de arquivos de imagem serão permanentemente perdidas. Será necessário criar uma nova imagem para representar as alterações. PARA remover o contêiner, use o comando: `docker rm <container ID>`
+7. Normalmente, após a interrupção de um contêiner, ele também deve ser removido. Remover um contêiner limpa todos os recursos que ele deixa para trás. Depois de remover um contêiner, as alterações feitas em seu sistema de arquivos de imagem serão permanentemente perdidas. Será necessário criar uma nova imagem para representar as alterações. PARA remover o contêiner, use o comando: `docker rm <container ID>`
 
 Saiba mais sobre como [criar um aplicativo Web em contêineres com o Docker](https://docs.microsoft.com/learn/modules/intro-to-containers/).
 
-## <a name="deploy-to-azure-container-registry"></a>Implantar no registro de contêiner do Azure
+## <a name="deploy-to-azure-container-registry"></a>Implantar no Registro de Contêiner do Azure
 
-O ACR ( [**registro de contêiner do Azure**](https://azure.microsoft.com/services/container-registry/) ) permite que você armazene, gerencie e mantenha suas imagens de contêiner seguras em repositórios, autenticados e privados. Compatível com os comandos padrão do Docker, o ACR pode manipular tarefas críticas para você, como monitoramento e manutenção da integridade do contêiner, emparelhando com o [kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes) para criar sistemas de orquestração escalonáveis. Crie sob demanda ou Automatize totalmente compilações com gatilhos, como confirmações de código-fonte e atualizações de imagem de base. O ACR também aproveita a vasta rede de nuvem do Azure para gerenciar a latência de rede, implantações globais e criar uma experiência nativa tranqüila para qualquer pessoa que use o [serviço de Azure app](https://docs.microsoft.com/azure/app-service/) (para hospedagem na Web, back-ends móveis, APIs REST) ou [outros serviços de nuvem do Azure ](https://azure.microsoft.com/product-categories/containers/).
+O ACR ( [**registro de contêiner do Azure**](https://azure.microsoft.com/services/container-registry/) ) permite que você armazene, gerencie e mantenha suas imagens de contêiner seguras em repositórios, autenticados e privados. Compatível com os comandos padrão do Docker, o ACR pode manipular tarefas críticas para você, como monitoramento e manutenção da integridade do contêiner, emparelhando com o [kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes) para criar sistemas de orquestração escalonáveis. Compile sob demanda ou automatize completamente os builds com gatilho como commits de código-fonte e atualizações de imagem de base. O ACR também aproveita a vasta rede de nuvem do Azure para gerenciar a latência de rede, implantações globais e criar uma experiência nativa tranqüila para qualquer pessoa que use o [serviço de Azure app](https://docs.microsoft.com/azure/app-service/) (para hospedagem na Web, back-ends móveis, APIs REST) ou [outros serviços de nuvem do Azure](https://azure.microsoft.com/product-categories/containers/).
 
 > [!IMPORTANT]
 > Você precisa de sua própria assinatura do Azure para implantar um contêiner no Azure e você pode receber uma cobrança. Se você ainda não tiver uma assinatura do Azure, [crie uma conta gratuita](https://azure.microsoft.com/free/) antes de começar.
 
-Para obter ajuda para criar um registro de contêiner do Azure e implantar a imagem de contêiner do aplicativo, consulte o exercício: [Implante uma imagem do Docker em uma instância de contêiner do Azure](https://docs.microsoft.com/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance).
+Para obter ajuda para criar um registro de contêiner do Azure e implantar a imagem de contêiner do aplicativo, consulte o exercício: [implantar uma imagem do Docker em uma instância de contêiner do Azure](https://docs.microsoft.com/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Node. js no Azure](https://azure.microsoft.com/en-us/develop/nodejs/)
-- Início Rápido: [Criar um aplicativo Web node. js no Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs)
-- Curso online: [Administrar contêineres no Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/)
-- Usando VS Code: [Trabalhando com o Docker](https://code.visualstudio.com/docs/azure/docker)
+- [Node.js no Azure](https://azure.microsoft.com/develop/nodejs/)
+- Início rápido: [criar um aplicativo Web node. js no Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs)
+- Curso online: [administrar contêineres no Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/)
+- Usando VS Code: [trabalhando com o Docker](https://code.visualstudio.com/docs/azure/docker)
 - Documentos do Docker: [Visualização técnica do Docker desktop WSL 2](https://docs.docker.com/docker-for-windows/wsl-tech-preview/)

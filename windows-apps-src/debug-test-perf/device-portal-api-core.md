@@ -1,20 +1,20 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: Referência de API central do Device Portal
+title: Referência de API central do Portal de Dispositivos
 description: Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
 ms.custom: 19H1
 ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e6b505dfd24a57f03169df3ed38402e7b3e9bb0
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 86724b084edb9350adfd2ed2623623d255302b70
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282118"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683454"
 ---
-# <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
+# <a name="device-portal-core-api-reference"></a>Referência de API central do Portal de Dispositivos
 
 Toda a funcionalidade do Portal de Dispositivos é criada com base em APIs REST, que os desenvolvedores podem chamar diretamente para acessar os recursos e controlar seus dispositivos de forma programática.
 
@@ -22,13 +22,13 @@ Toda a funcionalidade do Portal de Dispositivos é criada com base em APIs REST,
 
 ### <a name="install-an-app"></a>Instalar um aplicativo
 
-**Quest**
+**Solicitar**
 
 Você pode instalar um aplicativo usando o formato de solicitação a seguir.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/app/packagemanager/package |
+| POST | /api/app/packagemanager/package |
 
 **Parâmetros de URI**
 
@@ -38,16 +38,16 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | pacote   | (**necessário**) O nome do arquivo do pacote a ser instalado. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
 - O arquivo .appx ou. appxbundle, bem como quaisquer dependências que exigem o aplicativo. 
 - O certificado usado para assinar o aplicativo, se o dispositivo for IoT ou área de trabalho do Windows. Outras plataformas não exigem o certificado. 
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -71,13 +71,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="install-a-related-set"></a>Instalar um conjunto relacionado
 
-**Quest**
+**Solicitar**
 
 Você pode instalar um [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) usando o formato de solicitação a seguir.
 
 | Método      | URI da solicitação |
 | :------     | :------ |
-| POSTAR | /api/app/packagemanager/package |
+| POST | /api/app/packagemanager/package |
 
 **Parâmetros de URI**
 
@@ -87,16 +87,16 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | pacote   | (**necessário**) Os nomes do arquivo dos pacotes a serem instalados. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação** 
 - Adicionar ".opt" aos nomes de arquivo de pacote opcional ao especificá-las como parâmetro, da seguinte forma: "foo.appx.opt" ou "bar.appxbundle.opt". 
 - O arquivo .appx ou. appxbundle, bem como quaisquer dependências que exigem o aplicativo. 
 - O certificado usado para assinar o aplicativo, se o dispositivo for IoT ou área de trabalho do Windows. Outras plataformas não exigem o certificado. 
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -120,21 +120,21 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="register-an-app-in-a-loose-folder"></a>Registre um aplicativo em uma pasta flexível
 
-**Quest**
+**Solicitar**
 
 Você pode registrar um aplicativo em uma pasta flexível usando o formato de solicitação a seguir.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/app/packagemanager/networkapp |
+| POST | /api/app/packagemanager/networkapp |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
@@ -149,7 +149,7 @@ Você pode registrar um aplicativo em uma pasta flexível usando o formato de so
 }
 ```
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -172,21 +172,21 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar um conjunto relacionado em pastas de arquivo flexível
 
-**Quest**
+**Solicitar**
 
 Você pode registrar um [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) em pastas flexíveis usando o formato de solicitação a seguir.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/app/packagemanager/networkapp |
+| POST | /api/app/packagemanager/networkapp |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
@@ -210,7 +210,7 @@ Você pode registrar um [conjunto relacionado](https://blogs.msdn.microsoft.com/
 }
 ```
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -233,27 +233,27 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-app-installation-status"></a>Obter o status de instalação do aplicativo
 
-**Quest**
+**Solicitar**
 
 Você pode obter o status de uma instalação de aplicativo que esteja em andamento usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/app/packagemanager/state |
+| GET | /api/app/packagemanager/state |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -277,7 +277,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 
-**Quest**
+**Solicitar**
 
 Você pode desinstalar um aplicativo usando o seguinte formato de solicitação:
  
@@ -291,15 +291,15 @@ Você pode desinstalar um aplicativo usando o seguinte formato de solicitação:
 | :------          | :------ |
 | pacote   | (**necessário**) O PackageFullName (de GET/api/app/packagemanager/packages) do aplicativo de destino |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -323,28 +323,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-installed-apps"></a>Obter aplicativos instalados
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista de aplicativos instalados no sistema usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/app/packagemanager/packages |
+| GET | /api/app/packagemanager/packages |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma lista de pacotes instalados com os detalhes associados. O modelo dessa resposta é o seguinte.
 ```json
@@ -353,7 +353,7 @@ A resposta inclui uma lista de pacotes instalados com os detalhes associados. O 
         "Name": string,
         "PackageFamilyName": string,
         "PackageFullName": string,
-        "PackageOrigin": int, (https://msdn.microsoft.com/en-us/library/windows/desktop/dn313167(v=vs.85).aspx)
+        "PackageOrigin": int, (https://msdn.microsoft.com/library/windows/desktop/dn313167(v=vs.85).aspx)
         "PackageRelativeId": string,
         "Publisher": string,
         "Version": {
@@ -397,29 +397,29 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-bluetooth-radios-on-the-machine"></a>Ouça rádios Bluetooth no computador
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista rádios Bluetooth instaladas no computador usando o seguinte formato de solicitação: Isso pode ser atualizado para uma conexão WebSocket também, com os mesmos dados JSON.
  
 | Método        | URI da solicitação |
 | :------          | :------ |
-| OBTER           | /api/bt/getradios |
+| GET           | /api/bt/getradios |
 | GET/WebSocket | /api/bt/getradios |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma matriz JSON das rádios Bluetooth conectadas ao dispositivo.
 ```json
@@ -455,13 +455,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="turn-the-bluetooth-radio-on-or-off"></a>Ativar ou desativar a rádio Bluetooth
 
-**Quest**
+**Solicitar**
 
 Define uma rádio Bluetooth específica como ativada ou desativada.
  
 | Método | URI da solicitação |
 | :------   | :------ |
-| POSTAR   | /api/bt/setradio |
+| POST   | /api/bt/setradio |
 
 **Parâmetros de URI**
 
@@ -469,18 +469,18 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| id            | (**obrigatório**) A ID do dispositivo para rádio Bluetooth e deve ter codificação na base 64. |
+| ID            | (**obrigatório**) A ID do dispositivo para rádio Bluetooth e deve ter codificação na base 64. |
 | Estado         | (**obrigatório**) Isso pode ser `"On"` ou `"Off"`. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -501,28 +501,28 @@ Esta API tem os códigos de status esperados a seguir.
 ---
 ### <a name="get-a-list-of-paired-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth emparelhados
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista dos dispositivos Bluetooth emparelhados no momento usando o formato de solicitação a seguir. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão WebSocket, a lista de dispositivos pode ser alterada. Uma lista completa de dispositivos será enviada pela conexão WebSocket toda vez que houver uma atualização.
 
 | Método        | URI da solicitação       |
 | :---          | :---              |
-| OBTER           | /api/bt/getpaired |
+| GET           | /api/bt/getpaired |
 | GET/WebSocket | /api/bt/getpaired |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão emparelhados no momento.
 ```json
@@ -539,28 +539,28 @@ O campo *AudioConnectionStatus* estará presente se o dispositivo puder ser usad
 ---
 ### <a name="get-a-list-of-available-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth disponíveis
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista dos dispositivos Bluetooth disponíveis para emparelhamento usando o formato de solicitação a seguir. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão WebSocket, a lista de dispositivos pode ser alterada. Uma lista completa de dispositivos será enviada pela conexão WebSocket toda vez que houver uma atualização.
 
 | Método        | URI da solicitação          |
 | :---          | :---                 |
-| OBTER           | /api/bt/getavailable |
+| GET           | /api/bt/getavailable |
 | GET/WebSocket | /api/bt/getavailable |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão atualmente disponíveis para emparelhamento.
 ```json
@@ -575,29 +575,29 @@ A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão atualment
 ---
 ### <a name="connect-a-bluetooth-device"></a>Conectar um dispositivo Bluetooth
 
-**Quest**
+**Solicitar**
 
 Se conectará ao dispositivo, se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
 
 | Método       | URI da solicitação           |
 | :---         | :---                  |
-| POSTAR         | /api/bt/connectdevice |
+| POST         | /api/bt/connectdevice |
 
 **Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
-| id            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
+| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -619,29 +619,29 @@ Esta API tem os códigos de status esperados a seguir.
 ---
 ### <a name="disconnect-a-bluetooth-device"></a>Desconectar um dispositivo Bluetooth
 
-**Quest**
+**Solicitar**
 
 O desconectará o dispositivo se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
 
 | Método       | URI da solicitação              |
 | :---         | :---                     |
-| POSTAR         | /api/bt/disconnectdevice |
+| POST         | /api/bt/disconnectdevice |
 
 **Parâmetros de URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
-| id            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
+| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -665,27 +665,27 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-installed-devices-on-the-machine"></a>Obter os dispositivos instalados no computador
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista de dispositivos que estão instalados no computador usando o seguinte formato de solicitação:
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/devicemanager/devices |
+| GET | /api/devicemanager/devices |
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma matriz JSON dos dispositivos conectados ao dispositivo.
 ```json
@@ -722,28 +722,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-data-on-connected-usb-deviceshubs"></a>Obter dados em dispositivos USB/Hubs conectados
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista de descritores USB para os dispositivos USB e Hubs usando o seguinte formato de solicitação:
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /ext/Devices/usbdevices |
+| GET | /ext/Devices/usbdevices |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta é o JSON que inclui DeviceID para o dispositivo USB, juntamente com os descritores de USB e as informações de porta para hubs.
 ```json
@@ -811,28 +811,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obter a lista de todos os despejos de memória para aplicativos
 
-**Quest**
+**Solicitar**
 
 Você pode obter a lista de todos os despejos de memória disponíveis para todos os aplicativos de sideload usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/usermode/dumps |
+| GET | /api/debug/dump/usermode/dumps |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma lista de despejos de memória para cada aplicativo de sideload.
 
@@ -857,13 +857,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obter configurações da coleta de despejo de memória para um app
 
-**Quest**
+**Solicitar**
 
 Você pode obter as configurações da coleta de despejo de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/usermode/crashcontrol |
+| GET | /api/debug/dump/usermode/crashcontrol |
 
 
 **Parâmetros de URI**
@@ -874,15 +874,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | packageFullname   | (**necessário**) O nome completo do pacote para o aplicativo de sideload. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta tem o formato a seguir.
 ```json
@@ -910,7 +910,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Excluir um despejo de memória para um app de sideload
 
-**Quest**
+**Solicitar**
 
 Você pode excluir um despejo de memória de um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -928,15 +928,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | packageFullname   | (**necessário**) O nome completo do pacote para o aplicativo de sideload. |
 | fileName   | (**necessário**) O nome do arquivo de despejo que deve ser excluído. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -959,7 +959,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Desabilitar despejos de memória para um app de sideload
 
-**Quest**
+**Solicitar**
 
 Você pode desabilitar despejos de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -976,15 +976,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :---          | :--- |
 | packageFullname   | (**necessário**) O nome completo do pacote para o aplicativo de sideload. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -1007,13 +1007,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Baixar o despejo de memória para um app de sideload
 
-**Quest**
+**Solicitar**
 
 Você pode baixar um despejo de memória de um aplicativo de sideload usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/usermode/crashdump |
+| GET | /api/debug/dump/usermode/crashdump |
 
 
 **Parâmetros de URI**
@@ -1025,15 +1025,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | packageFullname   | (**necessário**) O nome completo do pacote para o aplicativo de sideload. |
 | fileName   | (**necessário**) O nome do arquivo de despejo que você deseja baixar. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui um arquivo de despejo. Você pode usar o WinDbg ou o Visual Studio para examinar o arquivo de despejo.
 
@@ -1058,13 +1058,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar despejos de memória para um app de sideload
 
-**Quest**
+**Solicitar**
 
 Você pode habilitar despejos de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/debug/dump/usermode/crashcontrol |
+| POST | /api/debug/dump/usermode/crashcontrol |
 
 
 **Parâmetros de URI**
@@ -1075,15 +1075,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :---          | :--- |
 | packageFullname   | (**necessário**) O nome completo do pacote para o aplicativo de sideload. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -1104,28 +1104,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-bugcheck-files"></a>Obter a lista de arquivos de verificação de erro
 
-**Quest**
+**Solicitar**
 
 Você pode obter a lista de arquivos de minidespejo de verificação de erro usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/kernel/dumplist |
+| GET | /api/debug/dump/kernel/dumplist |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma lista de nomes de arquivos de despejo e os tamanhos desses arquivos. Essa lista estará no formato a seguir. 
 ```json
@@ -1154,13 +1154,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-bugcheck-dump-file"></a>Baixar um arquivo de despejo de verificação de erro
 
-**Quest**
+**Solicitar**
 
 Você pode baixar um arquivo de despejo de verificação de erro usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/kernel/dump |
+| GET | /api/debug/dump/kernel/dump |
 
 
 **Parâmetros de URI**
@@ -1172,15 +1172,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | filename   | (**necessário**) O nome do arquivo de despejo de memória. Você pode descobrir isso usando a API para obter a lista de despejo. |
 
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui o arquivo de despejo. Você pode inspecionar esse arquivo usando o WinDbg.
 
@@ -1203,28 +1203,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-bugcheck-crash-control-settings"></a>Obter as configurações de controle de falhas de verificação de erro
 
-**Quest**
+**Solicitar**
 
 Você pode obter essas configurações de controle de falhas de verificação de erro usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/kernel/crashcontrol |
+| GET | /api/debug/dump/kernel/crashcontrol |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui as configurações de controle de falhas. Para saber mais sobre CrashControl, consulte o artigo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). O modelo da resposta é como está a seguir.
 ```json
@@ -1238,13 +1238,13 @@ A resposta inclui as configurações de controle de falhas. Para saber mais sobr
 
 **Tipos de despejo**
 
-0: Desabilitado
+0: desabilitado
 
-1: Despejo de memória completo (coleta todas as memórias em uso)
+1: despejo de memória completo (coleta toda a memória em uso)
 
-2: Despejo de memória do kernel (ignora a memória de modo de usuário)
+2: despejo de memória do kernel (ignora a memória do modo de usuário)
 
-3: Minidespejo de kernel limitado
+3: minidespejo de kernel limitado
 
 **Código de status**
 
@@ -1265,28 +1265,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-a-live-kernel-dump"></a>Obter um despejo de kernel dinâmico
 
-**Quest**
+**Solicitar**
 
 Você pode obter um despejo de kernel dinâmico usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/livekernel |
+| GET | /api/debug/dump/livekernel |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui o despejo no modo kernel completo. Você pode inspecionar esse arquivo usando o WinDbg.
 
@@ -1309,13 +1309,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-a-dump-from-a-live-user-process"></a>Obter um despejo de um processo de usuário dinâmico
 
-**Quest**
+**Solicitar**
 
 Você pode obter o despejo para o processo de usuário dinâmico usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/debug/dump/usermode/live |
+| GET | /api/debug/dump/usermode/live |
 
 
 **Parâmetros de URI**
@@ -1326,15 +1326,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | pid   | (**necessário**) A ID de processo exclusiva do processo no qual você está interessado. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui o despejo do processo. Você pode inspecionar esse arquivo usando o WinDbg ou o Visual Studio.
 
@@ -1357,13 +1357,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-bugcheck-crash-control-settings"></a>Definir as configurações de controle de falhas de verificação de erro
 
-**Quest**
+**Solicitar**
 
 Você pode definir as configurações para coletar dados de verificação de erro usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/debug/dump/kernel/crashcontrol |
+| POST | /api/debug/dump/kernel/crashcontrol |
 
 
 **Parâmetros de URI**
@@ -1377,15 +1377,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | maxdumpcount   | (**opcional**) O número máximo de despejos para salvar. |
 | overwrite   | (**opcional**) True ou false. Isso indica a substituição ou não de despejos antigos quando o limite do contador de despejos especificado pelo *maxdumpcount* foi atingido. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -1410,7 +1410,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Criar uma sessão ETW em tempo real por um Websocket
 
-**Quest**
+**Solicitar**
 
 Você pode criar uma sessão ETW em tempo real usando o seguinte formato de solicitação: Isso será gerenciado por um Websocket.  Os eventos ETW são enviados em lote no servidor e enviados para o cliente uma vez por segundo. 
  
@@ -1421,17 +1421,17 @@ Você pode criar uma sessão ETW em tempo real usando o seguinte formato de soli
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui os eventos ETW de provedores habilitados.  Veja comandos do ETW WebSocket a seguir. 
 
@@ -1505,28 +1505,28 @@ Exemplo:
 
 ### <a name="enumerate-the-registered-etw-providers"></a>Enumerar os provedores ETW registrados
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar os provedores registrados usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/etw/providers |
+| GET | /api/etw/providers |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui a lista de provedores ETW. A lista incluirá o nome amigável e o GUID de cada provedor no formato a seguir.
 ```json
@@ -1557,28 +1557,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumere os provedores ETW personalizados expostos pela plataforma.
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar os provedores registrados usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/etw/customproviders |
+| GET | /api/etw/customproviders |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 200 OK. A resposta inclui a lista de provedores ETW. A lista incluirá o nome amigável e o GUID para cada provedor.
 
@@ -1604,34 +1604,34 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 
 <hr>
 
-## <a name="location"></a>Location
+## <a name="location"></a>Local
 
 <hr>
 
 ### <a name="get-location-override-mode"></a>Obter modo de substituição de local
 
-**Quest**
+**Solicitar**
 
 Você pode obter o status da substituição de pilha de locais do dispositivo usando o formato de solicitação a seguir. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /ext/location/override |
+| GET | /ext/location/override |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui o estado de substituição do dispositivo no formato a seguir. 
 
@@ -1659,7 +1659,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-location-override-mode"></a>Definir modo de substituição de local
 
-**Quest**
+**Solicitar**
 
 Você pode definir o status da substituição de pilha de locais do dispositivo usando o formato de solicitação a seguir. Quando habilitada, a pilha de locais permite a injeção de posição. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
 
@@ -1670,11 +1670,11 @@ Você pode definir o status da substituição de pilha de locais do dispositivo 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
@@ -1682,7 +1682,7 @@ Você pode definir o status da substituição de pilha de locais do dispositivo 
 {"Override" : bool}
 ```
 
-**Responde**
+**Resposta**
 
 A resposta inclui o estado de substituição para o qual o dispositivo foi definido no formato a seguir. 
 
@@ -1710,28 +1710,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-injected-position"></a>Obtenha a posição injetada
 
-**Quest**
+**Solicitar**
 
 Você pode obter o local injetado (falsificado) do dispositivo usando o formato de solicitação a seguir. Um local injetado deve ser definido; caso contrário, um erro será lançado.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /ext/location/position |
+| GET | /ext/location/position |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui os valores atuais de longitude e latitude injetados no formato a seguir. 
 
@@ -1762,7 +1762,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-injected-position"></a>Definir a posição injetada
 
-**Quest**
+**Solicitar**
 
 Você pode definir o local injetado (falsificado) do dispositivo usando o formato de solicitação a seguir. O modo de substituição de local deve ser habilitado primeiro no dispositivo, e o local definido deve ser um local válido, caso contrário, um erro será lançado.
 
@@ -1773,11 +1773,11 @@ Você pode definir o local injetado (falsificado) do dispositivo usando o format
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
@@ -1788,7 +1788,7 @@ Você pode definir o local injetado (falsificado) do dispositivo usando o format
 }
 ```
 
-**Responde**
+**Resposta**
 
 A resposta inclui o local definido no formato a seguir. 
 
@@ -1825,28 +1825,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-machine-name"></a>Obter o nome do computador
 
-**Quest**
+**Solicitar**
 
 Você pode obter o nome de um computador usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/os/machinename |
+| GET | /api/os/machinename |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui o nome do computador no formato a seguir. 
 
@@ -1876,28 +1876,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-operating-system-information"></a>Obter as informações do sistema operacional
 
-**Quest**
+**Solicitar**
 
 Você pode obter as informações do sistema operacional de um computador usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/os/info |
+| GET | /api/os/info |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui as informações do sistema operacional no formato a seguir.
 
@@ -1933,28 +1933,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-device-family"></a>Obter a família de dispositivos 
 
-**Quest**
+**Solicitar**
 
 Você pode obter a família de dispositivos (Xbox, telefone, área de trabalho etc.) usando o seguinte formato de solicitação.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/os/devicefamily |
+| GET | /api/os/devicefamily |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui a família de dispositivos (SKU - Desktop, Xbox etc.).
 
@@ -1988,13 +1988,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-machine-name"></a>Definir o nome do computador
 
-**Quest**
+**Solicitar**
 
 Você pode definir o nome de um computador usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/os/machinename |
+| POST | /api/os/machinename |
 
 
 **Parâmetros de URI**
@@ -2005,15 +2005,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | name | (**necessário**) O novo nome para o computador. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2039,28 +2039,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-active-user"></a>Obter o usuário ativo
 
-**Quest**
+**Solicitar**
 
 Você pode obter o nome do usuário ativo no dispositivo usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/users/activeuser |
+| GET | /api/users/activeuser |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui as informações do usuário no formato a seguir. 
 
@@ -2105,29 +2105,29 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
 
-**Quest**
+**Solicitar**
 
 Você pode obter a lista de processos atualmente em execução usando o seguinte formato de solicitação:  isso pode ser atualizado para uma conexão WebSocket também, com os mesmos dados JSON sendo enviados ao cliente uma vez por segundo. 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/resourcemanager/processes |
+| GET | /api/resourcemanager/processes |
 | GET/WebSocket | /api/resourcemanager/processes |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui uma lista de processos com detalhes para cada um deles. As informações estão no formato JSON e têm o modelo a seguir.
 ```json
@@ -2167,30 +2167,30 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-system-performance-statistics"></a>Obter as estatísticas de desempenho do sistema
 
-**Quest**
+**Solicitar**
 
 Você pode obter as estatísticas de desempenho do sistema usando o seguinte formato de solicitação: Isso inclui informações como ciclos de leitura e gravação e a quantidade de memória que foi usada.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/resourcemanager/systemperf |
+| GET | /api/resourcemanager/systemperf |
 | GET/WebSocket | /api/resourcemanager/systemperf |
 
 Isso também pode ser atualizado para uma conexão WebSocket.  Isso fornece os mesmos dados JSON a seguir uma vez por segundo. 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui as estatísticas de desempenho do sistema como CPU e uso de GPU, acesso à memória e acesso à rede. Essas informações estão no formato JSON e têm o modelo a seguir.
 ```json
@@ -2245,34 +2245,34 @@ Esta API tem os códigos de status esperados a seguir.
 
 <hr>
 
-## <a name="power"></a>Potência
+## <a name="power"></a>Ligar/Desligar
 
 <hr>
 
 ### <a name="get-the-current-battery-state"></a>Obter o estado atual da bateria
 
-**Quest**
+**Solicitar**
 
 Você pode obter o estado atual da bateria usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/battery |
+| GET | /api/power/battery |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 As informações do estado atual da bateria são retornadas usando o formato a seguir.
 ```json
@@ -2309,28 +2309,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-active-power-scheme"></a>Obter o esquema de energia ativo
 
-**Quest**
+**Solicitar**
 
 Você pode obter o esquema de energia ativo usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/activecfg |
+| GET | /api/power/activecfg |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 O esquema de energia ativo tem o formato a seguir.
 ```json
@@ -2356,30 +2356,30 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-sub-value-for-a-power-scheme"></a>Obter o subvalor para um esquema de energia
 
-**Quest**
+**Solicitar**
 
 Você pode obter o subvalor para um esquema de energia usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/cfg/ *<power scheme path>* |
+| GET | /api/power/cfg/ *<power scheme path>* |
 
 Opções:
 - SCHEME_CURRENT
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
 Uma listagem completa de estados de energia disponíveis por aplicativo e as configurações para sinalizar vários estados de energia como bateria crítica e baixa. 
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2400,28 +2400,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-power-state-of-the-system"></a>Obter o estado de energia do sistema
 
-**Quest**
+**Solicitar**
 
 Você pode verificar o estado de energia do sistema usando o seguinte formato de solicitação: Isso permitirá que você verifique se ele está em um estado de baixo consumo de energia.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/state |
+| GET | /api/power/state |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 As informações de estado de energia têm o modelo a seguir.
 ```json
@@ -2448,13 +2448,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-active-power-scheme"></a>Definir o esquema de energia ativo
 
-**Quest**
+**Solicitar**
 
 Você pode definir o esquema de energia ativo usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/power/activecfg |
+| POST | /api/power/activecfg |
 
 
 **Parâmetros de URI**
@@ -2465,15 +2465,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :---          | :--- |
 | scheme | (**necessário**) O GUID do esquema que você deseja definir como o esquema de energia ativo para o sistema. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2494,13 +2494,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-sub-value-for-a-power-scheme"></a>Definir o subvalor para um esquema de energia
 
-**Quest**
+**Solicitar**
 
 Você pode definir o subvalor para um esquema de energia usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/power/cfg/ *<power scheme path>* |
+| POST | /api/power/cfg/ *<power scheme path>* |
 
 
 **Parâmetros de URI**
@@ -2512,15 +2512,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | valueAC | (**necessário**) O valor a ser usado para energia CA. |
 | valueDC | (**necessário**) O valor a ser usado para energia da bateria. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2539,11 +2539,11 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-a-sleep-study-report"></a>Obter um relatório de estudo de suspensão
 
-**Quest**
+**Solicitar**
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/sleepstudy/report |
+| GET | /api/power/sleepstudy/report |
 
 Você pode obter um relatório de estudo de suspensão usando o seguinte formato de solicitação:
 
@@ -2552,15 +2552,15 @@ Você pode obter um relatório de estudo de suspensão usando o seguinte formato
 | :------          | :------ |
 | nome_de_arquivo | (**necessário**) O nome completo do arquivo que você deseja baixar. Esse valor deve ser codificado em hex64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta é um arquivo que contém o estudo de suspensão. 
 
@@ -2583,28 +2583,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar os relatórios de estudo de suspensão disponíveis
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar os relatórios de estudo de suspensão disponíveis usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/sleepstudy/reports |
+| GET | /api/power/sleepstudy/reports |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A lista de relatórios disponíveis tem o modelo a seguir.
 
@@ -2635,28 +2635,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-sleep-study-transform"></a>Obter a transformação de estudo de suspensão
 
-**Quest**
+**Solicitar**
 
 Você pode obter o relatório de estudo de suspensão usando o seguinte formato de solicitação: Essa transformação é um XSLT que converte o relatório de estudo de suspensão em um formato XML que possa ser lido por uma pessoa.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/power/sleepstudy/transform |
+| GET | /api/power/sleepstudy/transform |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta contém a transformação do estudo de suspensão.
 
@@ -2683,28 +2683,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="restart-the-target-computer"></a>Reiniciar o computador de destino
 
-**Quest**
+**Solicitar**
 
 Você pode reiniciar o computador de destino usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/control/restart |
+| POST | /api/control/restart |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2726,28 +2726,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="shut-down-the-target-computer"></a>Desligar o computador de destino
 
-**Quest**
+**Solicitar**
 
 Você pode desligar o computador de destino usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/control/shutdown |
+| POST | /api/control/shutdown |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2775,13 +2775,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-modern-app"></a>Iniciar um aplicativo moderno
 
-**Quest**
+**Solicitar**
 
 Você pode iniciar um aplicativo moderno usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/taskmanager/app |
+| POST | /api/taskmanager/app |
 
 
 **Parâmetros de URI**
@@ -2793,15 +2793,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | appid   | (**necessário**) O PRAID do aplicativo que você deseja iniciar. Esse valor deve ser codificado em hex64. |
 | pacote   | (**necessário**) O nome completo do pacote do aplicativo que você deseja iniciar. Esse valor deve ser codificado em hex64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2825,7 +2825,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-modern-app"></a>Parar um aplicativo moderno
 
-**Quest**
+**Solicitar**
 
 Você pode parar um aplicativo moderno usando o seguinte formato de solicitação:
  
@@ -2843,15 +2843,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | pacote   | (**necessário**) O nome completo dos pacotes do aplicativo que você deseja parar. Esse valor deve ser codificado em hex64. |
 | forcestop   | (**opcional**) Um valor **yes** indica que o sistema deve forçar todos os processos a parar. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2875,7 +2875,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="kill-process-by-pid"></a>Interromper o processo por PID
 
-**Quest**
+**Solicitar**
 
 Você pode interromper um processo usando o formato de solicitação a seguir.
  
@@ -2892,15 +2892,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | pid   | (**necessário**) A ID de processo exclusiva do processo a ser interrompido. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -2920,34 +2920,34 @@ Esta API tem os códigos de status esperados a seguir.
 
 <hr>
 
-## <a name="networking"></a>Rede
+## <a name="networking"></a>Rede do
 
 <hr>
 
 ### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
 
-**Quest**
+**Solicitar**
 
 Você pode obter a configuração de IP atual usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/networking/ipconfig |
+| GET | /api/networking/ipconfig |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A resposta inclui a configuração de IP no modelo a seguir.
 
@@ -3013,7 +3013,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-a-static-ip-address-ipv4-configuration"></a>Definir um endereço IP estático (configuração de IPV4)
 
-**Quest**
+**Solicitar**
 
 Define a configuração de IPV4 com IP estático e DNS. Se um IP estático não for especificado, ele habilitará o DHCP. Se um IP estático for especificado, o DNS também deverá ser especificado.
  
@@ -3041,15 +3041,15 @@ Para maior clareza, para definir uma interface para DHCP, Serialize apenas o `Ad
 }
 ```
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -3073,28 +3073,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-wireless-network-interfaces"></a>Enumerar as interfaces de rede sem fio
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar as interfaces de rede sem fio disponíveis usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wifi/interfaces |
+| GET | /api/wifi/interfaces |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 Uma lista das interfaces sem fio disponíveis com detalhes no formato a seguir.
 
@@ -3136,13 +3136,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-wireless-networks"></a>Enumerar as redes sem fio
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar a lista de redes sem fio na interface especificada usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wifi/networks |
+| GET | /api/wifi/networks |
 
 
 **Parâmetros de URI**
@@ -3153,15 +3153,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | :------          | :------ |
 | interface   | (**necessário**) O GUID da interface de rede a ser usado para procurar redes sem fio, sem colchetes. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A lista de redes sem fio encontradas na *interface* fornecida. Isso inclui detalhes das redes no formato a seguir.
 
@@ -3207,13 +3207,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar-se a uma rede Wi-Fi e desconectar-se dela
 
-**Quest**
+**Solicitar**
 
 Você pode se conectar a uma rede Wi-Fi ou se desconectar dela usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/wifi/network |
+| POST | /api/wifi/network |
 
 
 **Parâmetros de URI**
@@ -3228,15 +3228,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | key   | (**necessário se *op* = = connect e se a rede exigir autenticação**) A chave compartilhada. |
 | createprofile | (**necessário**) Crie um perfil de rede no dispositivo.  Isso fará o dispositivo se conectar automaticamente à rede no futuro. Isso pode ser **sim** ou **não**. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -3258,7 +3258,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-wi-fi-profile"></a>Excluir um perfil de Wi-Fi
 
-**Quest**
+**Solicitar**
 
 Você pode excluir um perfil associado a uma rede em uma interface específica usando o seguinte formato de solicitação:
  
@@ -3274,17 +3274,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
 | interface   | (**necessário**) O GUID da interface de rede associada ao perfil a ser excluído. |
-| profile   | (**necessário**) O nome do perfil a ser excluído. |
+| perfil   | (**necessário**) O nome do perfil a ser excluído. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -3310,13 +3310,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Baixar um arquivo de relatório de erros do Windows (WER)
 
-**Quest**
+**Solicitar**
 
 Você pode baixar um arquivo relacionado a WER usando o formato de solicitação a seguir:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wer/report/file |
+| GET | /api/wer/report/file |
 
 
 **Parâmetros de URI**
@@ -3325,20 +3325,20 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| usuário   | (**necessário**) O nome de usuário associado ao relatório. |
-| type   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
+| user   | (**necessário**) O nome de usuário associado ao relatório. |
+| tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
 | name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 | arquivo   | (**necessário**) O nome do arquivo a ser baixado do relatório. Isso deve ser codificado em base64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 - A resposta contém o arquivo solicitado. 
 
@@ -3362,13 +3362,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar arquivos em um relatório de erros do Windows (WER)
 
-**Quest**
+**Solicitar**
 
 Você pode enumerar os arquivos em um relatório WER usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wer/report/files |
+| GET | /api/wer/report/files |
 
 
 **Parâmetros de URI**
@@ -3377,13 +3377,13 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| usuário   | (**necessário**) O usuário associado ao relatório. |
-| type   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
+| user   | (**necessário**) O usuário associado ao relatório. |
+| tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
 | name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
@@ -3396,7 +3396,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 ]}
 ```
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -3418,28 +3418,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="list-the-windows-error-reporting-wer-reports"></a>Listar os relatórios WER (Relatório de Erros do Windows)
 
-**Quest**
+**Solicitar**
 
 Você pode obter os relatórios WER usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wer/reports |
+| GET | /api/wer/reports |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 Os relatórios WER no formato a seguir.
 
@@ -3481,28 +3481,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-tracing-with-a-custom-profile"></a>Inicie o rastreamento com um perfil personalizado
 
-**Quest**
+**Solicitar**
 
 Você pode carregar um perfil WPR e iniciar o rastreamento com esse perfil usando o seguinte formato de solicitação:  Somente um rastreamento pode ser executado por vez. O perfil não permanecerá no dispositivo. 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/wpr/customtrace |
+| POST | /api/wpr/customtrace |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
 - Um corpo http correspondente a várias partes, que contém o perfil WPR personalizado.
 
-**Responde**
+**Resposta**
 
 O status da sessão WPR no formato a seguir.
 
@@ -3534,13 +3534,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-boot-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho de inicialização
 
-**Quest**
+**Solicitar**
 
 Você pode iniciar uma sessão de rastreamento de WPR de inicialização usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/wpr/boottrace |
+| POST | /api/wpr/boottrace |
 
 
 **Parâmetros de URI**
@@ -3549,17 +3549,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| profile   | (**necessário**) Esse parâmetro é necessário no início. O nome do perfil que deve iniciar uma sessão de rastreamento de desempenho. Os perfis possíveis estão armazenados em perfprofiles/profiles.json. |
+| perfil   | (**necessário**) Esse parâmetro é necessário no início. O nome do perfil que deve iniciar uma sessão de rastreamento de desempenho. Os perfis possíveis estão armazenados em perfprofiles/profiles.json. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 No início, essa API retorna o status da sessão WPR no formato a seguir.
 
@@ -3591,30 +3591,30 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-boot-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho de inicialização
 
-**Quest**
+**Solicitar**
 
 Você pode parar uma sessão WPR de rastreamento de inicialização usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wpr/boottrace |
+| GET | /api/wpr/boottrace |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
--  nenhuma.  **Observação:** Esta é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.
+-  Nenhum.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.
 
 **Código de status**
 
@@ -3637,13 +3637,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho
 
-**Quest**
+**Solicitar**
 
 Você pode iniciar uma sessão WPR de rastreamento usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.  Somente um rastreamento pode ser executado por vez. 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/wpr/trace |
+| POST | /api/wpr/trace |
 
 
 **Parâmetros de URI**
@@ -3652,17 +3652,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| profile   | (**necessário**) O nome do perfil que deve iniciar uma sessão de rastreamento de desempenho. Os perfis possíveis estão armazenados em perfprofiles/profiles.json. |
+| perfil   | (**necessário**) O nome do perfil que deve iniciar uma sessão de rastreamento de desempenho. Os perfis possíveis estão armazenados em perfprofiles/profiles.json. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 No início, essa API retorna o status da sessão WPR no formato a seguir.
 
@@ -3694,30 +3694,30 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho
 
-**Quest**
+**Solicitar**
 
 Você pode parar uma sessão WPR de rastreamento usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wpr/trace |
+| GET | /api/wpr/trace |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
-- nenhuma.  **Observação:** Esta é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
+- Nenhum.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
 
 **Código de status**
 
@@ -3740,28 +3740,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar o status de uma sessão de rastreamento
 
-**Quest**
+**Solicitar**
 
 Você pode recuperar o status da sessão WPR atual usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wpr/status |
+| GET | /api/wpr/status |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 O status da sessão de rastreamento de WPR no formato a seguir.
 
@@ -3793,28 +3793,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="list-completed-tracing-sessions-etls"></a>Listar sessões de rastreamento concluídas (ETLs)
 
-**Quest**
+**Solicitar**
 
 Você pode obter uma lista dos rastreamentos de ETL no dispositivo usando o seguinte formato de solicitação: 
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wpr/tracefiles |
+| GET | /api/wpr/tracefiles |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 A listagem de sessões de rastreamento concluídas é fornecida no formato a seguir.
 
@@ -3851,13 +3851,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-tracing-session-etl"></a>Baixar uma sessão de rastreamento (ETL)
 
-**Quest**
+**Solicitar**
 
 Você pode baixar um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/wpr/tracefile |
+| GET | /api/wpr/tracefile |
 
 
 **Parâmetros de URI**
@@ -3868,15 +3868,15 @@ Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 | :------          | :------ |
 | filename   | (**obrigatório**) O nome do rastreamento de ETL a ser baixado.  Podem ser encontrados em /api/wpr/tracefiles |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 - Retorna o arquivo de rastreamento ETL.
 
@@ -3901,7 +3901,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-tracing-session-etl"></a>Excluir uma sessão de rastreamento (ETL)
 
-**Quest**
+**Solicitar**
 
 Você pode excluir um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
 
@@ -3918,15 +3918,15 @@ Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 | :------          | :------ |
 | filename   | (**obrigatório**) O nome do rastreamento de ETL a ser excluído.  Podem ser encontrados em /api/wpr/tracefiles |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 - Retorna o arquivo de rastreamento ETL.
 
@@ -3955,28 +3955,28 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="view-tags"></a>Exibir Marcas
 
-**Quest**
+**Solicitar**
 
 Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas por meio de registros DNS-SD TXT na chave T.  
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/dns-sd/tags |
+| GET | /api/dns-sd/tags |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Resposta** as marcas atualmente aplicadas no formato a seguir. 
+**Resposta** As tags atualmente aplicadas no formato a seguir. 
 ```json
  {
     "tags": [
@@ -4009,7 +4009,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-tags"></a>Excluir Marcas
 
-**Quest**
+**Solicitar**
 
 Exclua todas as marcas atualmente anunciadas pelo DNS-SD.   
  
@@ -4020,18 +4020,18 @@ Exclua todas as marcas atualmente anunciadas pelo DNS-SD.
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
- - Nenhuma
+**Resposta**
+ - Não
 
 **Código de status**
 
@@ -4055,7 +4055,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-tag"></a>Excluir Marca
 
-**Quest**
+**Solicitar**
 
 Exclua uma marca atualmente anunciada pelo DNS-SD.   
  
@@ -4070,16 +4070,16 @@ Exclua uma marca atualmente anunciada pelo DNS-SD.
 | :------     | :----- |
 | tagValue | (**obrigatório**) A marca a ser removida. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
- - Nenhuma
+**Resposta**
+ - Não
 
 **Código de status**
 
@@ -4102,13 +4102,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="add-a-tag"></a>Adicionar uma Marca
 
-**Quest**
+**Solicitar**
 
 Adicione uma marca do anúncio DNS-SD.   
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/dns-sd/tag |
+| POST | /api/dns-sd/tag |
 
 
 **Parâmetros de URI**
@@ -4117,16 +4117,16 @@ Adicione uma marca do anúncio DNS-SD.
 | :------     | :----- |
 | tagValue | (**obrigatório**) A marca a ser adicionada. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
- - Nenhuma
+**Resposta**
+ - Não
 
 **Código de status**
 
@@ -4152,26 +4152,26 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-known-folders"></a>Obter pastas conhecidas
 
-**Quest**
+**Solicitar**
 
 Obtenha uma lista de pastas de nível superior acessíveis.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/filesystem/apps/knownfolders |
+| GET | /api/filesystem/apps/knownfolders |
 
 
 **Parâmetros de URI**
 
-- Nenhuma
+- Não
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta** As pastas disponíveis no formato a seguir. 
 ```json
@@ -4203,13 +4203,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-files"></a>Obter arquivos
 
-**Quest**
+**Solicitar**
 
 Obtenha uma lista de arquivos em uma pasta.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/filesystem/apps/files |
+| GET | /api/filesystem/apps/files |
 
 
 **Parâmetros de URI**
@@ -4220,13 +4220,13 @@ Obtenha uma lista de arquivos em uma pasta.
 | packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta** As pastas disponíveis no formato a seguir. 
 ```json
@@ -4264,13 +4264,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-file"></a>Baixar um arquivo
 
-**Quest**
+**Solicitar**
 
 Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/filesystem/apps/file |
+| GET | /api/filesystem/apps/file |
 
 **Parâmetros de URI**
 
@@ -4281,15 +4281,15 @@ Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 | packagefullname | (**necessário se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
 - O arquivo solicitado, se presente
 
-**Responde**
+**Resposta**
 
 **Código de status**
 
@@ -4313,13 +4313,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="rename-a-file"></a>Renomear um arquivo
 
-**Quest**
+**Solicitar**
 
 Renomeie um arquivo em uma pasta.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/filesystem/apps/rename |
+| POST | /api/filesystem/apps/rename |
 
 
 **Parâmetros de URI**
@@ -4332,17 +4332,17 @@ Renomeie um arquivo em uma pasta.
 | packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -4366,7 +4366,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-file"></a>Excluir um arquivo
 
-**Quest**
+**Solicitar**
 
 Exclua um arquivo em uma pasta.
 
@@ -4383,17 +4383,17 @@ Exclua um arquivo em uma pasta.
 | packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
-- Nenhuma 
+- Não 
 
 **Código de status**
 
@@ -4417,13 +4417,13 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="upload-a-file"></a>Carregar um arquivo
 
-**Quest**
+**Solicitar**
 
 Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com o mesmo nome, mas não criará novas pastas. 
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/filesystem/apps/file |
+| POST | /api/filesystem/apps/file |
 
 **Parâmetros de URI**
 
@@ -4433,15 +4433,15 @@ Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com 
 | packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
-**Cabeçalhos de solicitação**
+**Cabeçalhos da solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
-**Responde**
+**Resposta**
 
 **Código de status**
 

@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 253eea00ba6c4188197224111909c28a53932b88
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c7b876cff994f775b770d22c103d27271047b269
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257355"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683629"
 ---
 # <a name="connect-to-remote-cameras"></a>Conectar-se a câmeras remotas
 
@@ -33,9 +33,9 @@ A classe [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.
 > O método auxiliar [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) retorna uma cadeia de caracteres AQS que monitorará as câmeras de rede remota e conectadas localmente. Para monitorar apenas câmeras de rede, você deve usar a cadeia de caracteres AQS mostrada acima.
 
 
-Quando você iniciar o **DeviceWatcher** retornado chamando o método [**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) , ele gerará o evento [**adicionado**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) para cada câmera de rede disponível no momento. Até que você pare o observador chamando [**Stop**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop), o evento **adicionado** será gerado quando novos dispositivos de câmera de rede ficarem disponíveis e o evento [**removido**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) será gerado quando um dispositivo de câmera ficar indisponível.
+Quando você iniciar o **DeviceWatcher** retornado chamando o método [**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) , ele gerará o evento [**adicionado**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) para cada câmera de rede disponível no momento. Até que você pare o observador chamando [**Stop**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop), o evento **adicionado** será gerado quando novos dispositivos de câmera de rede ficarem disponíveis e o evento [**removido**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed) será gerado quando um dispositivo de câmera ficar indisponível.
 
-Os args de evento passados para os manipuladores de eventos **adicionados** e **removidos** são um objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) ou [**DeviceInformationUpdate**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) , respectivamente. Cada um desses objetos tem uma propriedade **ID** que é o identificador para a câmera de rede para a qual o evento foi acionado. Passe essa ID para o método [**MediaFrameSourceGroup. FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) para obter um objeto [**MediaFrameSourceGroup**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) que você pode usar para recuperar quadros da câmera.
+Os args de evento passados para os manipuladores de eventos **adicionados** e **removidos** são um objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) ou [**DeviceInformationUpdate**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationupdate) , respectivamente. Cada um desses objetos tem uma propriedade **ID** que é o identificador para a câmera de rede para a qual o evento foi acionado. Passe essa ID para o método [**MediaFrameSourceGroup. FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) para obter um objeto [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) que você pode usar para recuperar quadros da câmera.
 
 ## <a name="remote-camera-pairing-helper-class"></a>Classe auxiliar de emparelhamento de câmera remota
 

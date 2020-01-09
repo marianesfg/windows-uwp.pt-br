@@ -1,21 +1,21 @@
 ---
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
-title: Testes de app de Ponte de Desktop do Windows
+title: Testes de aplicativo de Ponte de Desktop do Windows
 description: Use os testes internos da ponte de área de trabalho para garantir que seu aplicativo de desktop seja otimizado para sua conversão em um aplicativo UWP.
 ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificação de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: dcdac5130af673d1b0d1ab1a9713902e9ab22830
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ec780253deb170c5dde1828add366907c403f100
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257826"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681897"
 ---
-# <a name="windows-desktop-bridge-app-tests"></a>Testes de app de Ponte de Desktop do Windows
+# <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo de Ponte de Desktop do Windows
 
-Os aplicativos de [ponte de desktop](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) são aplicativos da área de trabalho do Windows convertidos em aplicativos plataforma universal do Windows (UWP) usando a [ponte de desktop](https://developer.microsoft.com/en-us/windows/bridges/desktop). Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
+Os aplicativos de [ponte de desktop](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) são aplicativos da área de trabalho do Windows convertidos em aplicativos plataforma universal do Windows (UWP) usando a [ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop). Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Testes obrigatórios versus opcionais
 Os testes opcionais para aplicativos do Windows Desktop Bridge são apenas informativos e não serão usados para avaliar seu aplicativo durante a integração de Microsoft Store. É recomendável investigar esses resultados de teste para produzir aplicativos de melhor qualidade. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
@@ -90,7 +90,7 @@ Este teste verifica se o aplicativo está tentando iniciar arquivos executáveis
 As funcionalidades de uso especial destinam-se a cenários bastante específicos. Somente contas empresariais podem usar esses recursos. 
 
 **Detalhes do teste**  
-Valide se o aplicativo está declarando qualquer uma das capacidades abaixo: 
+Valide se o app está declarando qualquer uma das funcionalidades abaixo: 
 * EnterpriseAuthentication
 * SharedUserCertificates
 * DocumentsLibrary
@@ -122,9 +122,9 @@ A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. E
 O pacote tem um arquivo "resources.pri" ausente.  | Se você tiver conteúdo localizável no manifesto do aplicativo, verifique se o pacote do aplicativo inclui um arquivo resources.pri válido. 
 O arquivo "resources.pri" deve conter um mapa de recursos com um nome que corresponda ao nome do pacote {package full name}  | Você pode obter esse erro quando o manifesto é alterado e o nome do mapa de recursos no resources.pri não corresponde mais ao nome do pacote no manifesto. Na mensagem real, {package full name} contém o nome do pacote que resources.pri deve conter. Para corrigir isso, você precisa recompilar o resources.pri e a maneira mais fácil de fazer isso é recompilando o pacote do app. 
 O arquivo "resources.pri" não deve ter o AutoMerge habilitado.  | O MakePRI.exe oferece suporte a uma opção denominada AutoMerge. O valor padrão de AutoMerge é desativar. Quando está habilitado, o AutoMerge mescla os recursos de pacote de idiomas do app em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O Resources. pri de um aplicativo que é distribuído por meio do Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de linguagem às quais o aplicativo dá suporte. 
-A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.  | Consulte os [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo. 
+A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.  | Consulte os [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo. 
 A cadeia de caracteres {string} não pode ser espaço inicial/final.  | O esquema dos elementos no manifesto do aplicativo não permite caracteres de espaço iniciais ou finais. Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro. Verifique se algum dos valores localizados nos campos do manifesto no resources.pri contém caracteres de espaço iniciais ou finais. 
-A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)  | Para obter mais informações, consulte [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). 
+A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)  | Para obter mais informações, consulte [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). 
 Não há recurso padrão especificado no arquivo "resources.pri".  | Para saber mais, veja o guia sobre [recursos do app](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data). Na configuração de compilação padrão, o Visual Studio inclui apenas os recursos de imagem de escala 200 no pacote do app quando gera pacotes, colocando outros recursos no pacote de recursos. Inclua recursos de imagem de escala 200 ou configure seu projeto para incluir os recursos que você tem. 
 Não há valor de recurso especificado no arquivo "resources.pri".  | Verifique se o manifesto do aplicativo tem recursos válidos definidos no resources.pri. 
 O arquivo de imagem {filename} deve ter menos de 204.800 bytes.  | Reduza o tamanho das imagens indicadas. 
@@ -140,7 +140,7 @@ Espera-se que os Apps de Ponte de Desktop estejam completos e totalmente funcion
 O teste valida se as imagens usadas pelo app não são imagens padrão de exemplos do SDK ou do Visual Studio. 
 
 **Ações corretivas**  
-Substitua as imagens padrão por algo mais distinto e que representa seu aplicativo.
+Substitua as imagens padrão por algo mais distinto e que represente seu app.
 
 ### <a name="3-package-compliance-tests"></a>3. Testes de conformidade do pacote
 #### <a name="31-app-manifest"></a>3.1 Manifesto do App
@@ -150,7 +150,7 @@ Testa o conteúdo do manifesto do app para garantir que seu conteúdo esteja cor
 Os aplicativos devem ter um manifesto corretamente formatado.
 
 **Detalhes do teste**  
-Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). As seguintes verificações estão concluídas neste teste:
+Analisa o manifesto do app para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). As seguintes verificações estão concluídas neste teste:
 * **Extensões de arquivo e protocolos**  
 Seu app pode declarar os tipos de arquivo aos quais ele pode ser associado. Uma declaração de um grande número de tipos de arquivo incomuns prejudica a experiência de usuário. Este teste limita o número de extensões de arquivo aos quais um app pode se associar.
 * **Regra de dependência de estrutura**  
@@ -159,7 +159,7 @@ Esse teste enfatiza o requisito de que os app declarem as devidas dependências 
 Esse teste impõe o requisito de que os apps de Ponte de Desktop não se comunicam fora do contêiner do app para componentes de desktop. A comunicação entre processos é destinada apenas a apps de sideload. Os aplicativos que especificarem o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a `DesktopApplicationPath` falharão nesse teste.  
 
 **Ação corretiva**  
-Analise o manifesto do app em relação aos requisitos descritos em [Requisitos do pacote do app](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements).
+Analise o manifesto do app em relação aos requisitos descritos em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 
 #### <a name="32-application-count"></a>3.2 Contagem de aplicativos
@@ -190,7 +190,7 @@ Examine as falhas e remova os serviços ou drivers em questão se eles forem des
 Os apps que instalam binários mistos podem falhar ou não funcionar corretamente dependendo da arquitetura do processador do usuário. 
 
 **Tela de fundo**  
-Este teste examina os binários em um pacote de aplicativo em busca de conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o aplicativo à falhas ou um aumento desnecessário no tamanho do pacote do aplicativo. 
+Este teste examina os binários em um pacote de aplicativo em busca de conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o app à falhas ou um aumento desnecessário no tamanho do pacote do app. 
 
 **Detalhes do teste**  
 Valida se o "número de bit" de cada arquivo no cabeçalho executável portável é apropriado em caso de referência cruzada com a declaração de arquitetura do processador do pacote do aplicativo 
@@ -199,7 +199,7 @@ Valida se o "número de bit" de cada arquivo no cabeçalho executável portável
 Siga estas diretrizes para garantir que seu pacote de apps contenha apenas arquivos com suporte da arquitetura especificada no manifesto do app: 
 * Se a Arquitetura do Processador Alvo para o app for do Tipo de Processador Neutro, o pacote de aplicativo não poderá conter um binário x86, x64 ou ARM ou arquivos do tipo imagem.
 * Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x86, o pacote de aplicativo deve conter apenas binário x86 ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou ARM ou tipos de imagem, ele irá falhar no teste.
-* Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote pode também incluir arquivos x86, mas a experiência aplicativo primário deve utilizar o binário x64. Se o pacote contiver binário ARM ou arquivos do tipo imagem, ou se contiver *apenas* binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
+* Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote também poderá incluir arquivos x86, mas a experiência do app primário deve utilizar o binário x64. Se o pacote contiver binário ARM ou arquivos do tipo imagem, ou se contiver *apenas* binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
 * Se a Arquitetura do processador alvo para o aplicativo for tipo de processador ARM, o pacote de aplicativo deve conter apenas binário ARM ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou x86 ou arquivos de tipos de imagem, ele falhará no teste. 
 
 ### <a name="5-supported-api-test"></a>5. Teste de API com suporte
@@ -211,7 +211,7 @@ Os apps de Ponte de Desktop podem aproveitar algumas APIs Win32 herdadas juntame
 **Detalhes do teste**  
 Esse teste verifica todos os componentes da UWP no app:
 * Verifica se cada binário gerenciado no pacote do aplicativo não tem uma dependência em uma API do Win32 que não tem suporte para o desenvolvimento de aplicativos UWP, verificando a tabela de endereços de importação do binário.
-* Verifica se cada binário gerenciado no pacote do aplicativo não depende de uma função fora do perfil aprovado. 
+* Verifica se cada binário gerenciado no pacote do app não depende de uma função fora do perfil aprovado. 
 
 **Ações corretivas**  
 Isso pode ser corrigido, garantindo que o app foi compilado como um build de versão e não como um build de depuração. 
@@ -236,7 +236,7 @@ Os apps devem ser executados como um usuário interativo. Veja [Visão geral sob
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Validação dos metadados do Windows Runtime
 **Tela de fundo**  
-Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo UWP.
+Verifica se os componentes que vêm com o app são compatíveis com o sistema do tipo UWP.
 
 **Detalhes do teste**  
 Esse teste gera alguns sinalizadores relacionados ao uso apropriado de tipos.
@@ -272,7 +272,7 @@ Essa verificação geralmente falha quando um app está usando uma versão "Rele
 Para corrigir isso, use a versão mais recente do [SDK do Bing Maps](https://www.bingmapsportal.com/) para aplicativos UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Assinatura de códigos privados
-Testes para a existência de binários de assinatura de código privado no pacote de aplicativo. 
+Testes para a existência de binários de assinatura de código privado no pacote de app. 
 
 **Tela de fundo**  
 Os arquivos de assinatura de código privado devem ser mantidos privados, já que eles podem ser utilizados para fins maliciosos no caso de serem comprometidos. 

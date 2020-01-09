@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ba05e958a8746874becd4cfa17ec0e8f255ff00
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9e58334dafa35004080b7ed109fa90e253399040
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255146"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683474"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Adicionando o suporte para Minhas Pessoas a um aplicativo
 
@@ -23,15 +23,15 @@ O recurso Minhas Pessoas permite que os usuários fixem contatos de um aplicativ
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 e Microsoft Visual Studio 2019. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Windows 10 e Microsoft Visual Studio 2019. Para obter detalhes da instalação, consulte [Prepare-se para começar o Visual Studio](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
++ Conhecimento básico de C# ou de uma linguagem de programação similar orientada a objeto. Para começar a usar C#, consulte [Criar um app "Hello, world"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="overview"></a>Visão geral
 
 Há três coisas que você precisa fazer para permitir que seu aplicativo use o recurso Minhas Pessoas:
 
-1. [Declare o suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anote os contatos que os usuários podem compartilhar para usar seu aplicativo.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare o suporte para o contrato de ativação shareTarget no manifesto do aplicativo.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote os contatos que os usuários podem compartilhar para usar seu aplicativo.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  Dê suporte a várias instâncias do seu aplicativo em execução ao mesmo tempo. Os usuários devem poder interagir com a versão completa de seu aplicativo enquanto o usam em um painel de contato.  Eles podem até usá-lo em vários painéis de contato ao mesmo tempo.  Para dar suporte a isso, seu aplicativo precisa ser capaz de executar várias exibições simultaneamente. Para saber como fazer isso, consulte o artigo ["Mostrar vários modos de exibição para um aplicativo"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Feito isso, seu aplicativo será exibido no painel de contato para os contatos anotados.
@@ -172,7 +172,7 @@ override protected void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Quando seu aplicativo for ativado com esse contrato, ele receberá um [objeto ContactPanelActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs).  Contém a ID do contato com o qual seu aplicativo está tentando interagir na inicialização e um objeto [ContactPanel](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactpanel). Você deve manter uma referência a esse objeto ContactPanel, que permitirá a interação com o painel.
+Quando seu aplicativo for ativado com esse contrato, ele receberá um [objeto ContactPanelActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs).  Contém a ID do contato com o qual seu aplicativo está tentando interagir na inicialização e um objeto [ContactPanel](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpanel). Você deve manter uma referência a esse objeto ContactPanel, que permitirá a interação com o painel.
 
 O objeto ContactPanel tem dois eventos que seu aplicativo deve escutar:
 + O evento **LaunchFullAppRequested** é enviado quando o usuário chama o elemento de interface que solicita que seu aplicativo completo seja iniciado na própria janela.  Seu aplicativo é responsável pela própria inicializando, passando todo o contexto necessário.  Você é livre para fazer isso da maneira que quiser (por exemplo, por meio de inicialização de protocolo).
@@ -182,13 +182,13 @@ O objeto ContactPanel também permite que você defina a cor de fundo do cabeça
 
 ## <a name="supporting-notification-badging"></a>Suporte a selos de notificação
 
-Se você deseja fixar contatos na barra de tarefas para marcação quando chegam novas notificações do aplicativo relacionados à pessoa, você deve incluir o parâmetro **hint-people** nas [notificações do sistema](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) e [Notificações expressivas de Minhas Pessoas](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
+Se você deseja fixar contatos na barra de tarefas para marcação quando chegam novas notificações do aplicativo relacionados à pessoa, você deve incluir o parâmetro **hint-people** nas [notificações do sistema](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) e [Notificações expressivas de Minhas Pessoas](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-notifications).
 
 ![Selos de notificações de pessoas](images/my-people-badging.png)
 
 Para marcar um contato, o nó de nível superior da notificação do sistema deve incluir o parâmetro hint-people para indicar o envio ou o contato relacionado. Esse parâmetro pode ter qualquer um dos seguintes valores:
 + **Endereço de email** 
-    + Ex. mailto:johndoe@mydomain.com
+    + Ex. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](mailto:johndoe@mydomain.com)
 + **Número de telefone** 
     + Ex. tel:888-888-8888
 + **ID remota** 
@@ -206,12 +206,12 @@ Aqui está um exemplo de como identificar uma notificação do sistema está rel
 ```
 
 > [!NOTE]
-> Se seu app utiliza as [APIs de ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) e utiliza a propriedade [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para associar contatos armazenados no computador com contatos armazenados remotamente, é fundamental que o valor para a propriedade RemoteId seja estável e exclusivo. Isso significa que a ID remota deve identificar consistentemente uma única conta de usuário e deve manter uma única marca para garantir que ele não entre em conflito com as IDs remotas de outros contatos no computador, incluindo contatos que são de propriedade de outros aplicativos.
+> Se seu app utiliza as [APIs de ContactStore](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactstore) e utiliza a propriedade [StoredContact.RemoteId](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para associar contatos armazenados no computador com contatos armazenados remotamente, é fundamental que o valor para a propriedade RemoteId seja estável e exclusivo. Isso significa que a ID remota deve identificar consistentemente uma única conta de usuário e deve manter uma única marca para garantir que ele não entre em conflito com as IDs remotas de outros contatos no computador, incluindo contatos que são de propriedade de outros aplicativos.
 > Se as IDs remotas usadas por seu app não forem com certeza estáveis e exclusivas, você pode usar a classe RemoteIdHelper mostrada mais adiante neste tópico para adicionar uma marca exclusiva a todas as IDs remotas antes de você adicioná-las ao sistema. Ou você pode optar por não usar a propriedade RemoteId e criar uma propriedade estendida personalizada na qual armazenar as IDs remotas de seus contatos.
 
 ## <a name="the-pinnedcontactmanager-class"></a>A classe PinnedContactManager
 
-O [PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) é usado para gerenciar quais contatos são fixados à barra de tarefas. Essa classe permite que você fixe e desafixe contatos, determine se um contato está fixado e se há suporte para fixação em uma superfície específica no sistema em que seu aplicativo está sendo executado.
+O [PinnedContactManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) é usado para gerenciar quais contatos são fixados à barra de tarefas. Essa classe permite que você fixe e desafixe contatos, determine se um contato está fixado e se há suporte para fixação em uma superfície específica no sistema em que seu aplicativo está sendo executado.
 
 Você pode recuperar o objeto PinnedContactManager usando o método **GetDefault**:
 
@@ -249,13 +249,13 @@ async Task PinMultipleContacts(Contact[] contacts)
 > [!Note]
 > Atualmente, não há uma operação em lote para desafixar contatos.
 
-**Observação:** 
+**Observação**: 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 + [Compartilhamento de Minhas Pessoas](my-people-sharing.md)
 + [Minhas pessoas notificatons](my-people-notifications.md)
 + [Vídeo do Channel 9 sobre como adicionar suporte de pessoas a um aplicativo](https://channel9.msdn.com/Events/Build/2017/P4056)
 + [Exemplo de integração de minhas pessoas](https://github.com/tonyPendolino/MyPeopleBuild2017)
 + [Exemplo de cartão de visita](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
-+ [Documentação da classe PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [Conectar seu aplicativo a ações em um cartão de visita](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Documentação da classe PinnedContactManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [Conectar seu aplicativo a ações em um cartão de visita](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/integrating-with-contacts)

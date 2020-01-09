@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a214288c778505d16707fd64391a9b8cedbbb32
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6178758cd67471d56b1d65e293104e987e81fb9b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260355"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681917"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anúncios em conteúdo de vídeo
 
@@ -70,7 +70,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
     > [!NOTE]
     > Esta linha deve ser colocada na seção `<head>` após a inclusão do main.js; caso contrário, você encontrará um erro ao compilar seu projeto.
 
-6.  No arquivo main.js no seu projeto, adicione o código que cria um novo objeto **AdScheduler**. Passe o **MediaPlayer** que hospeda o conteúdo do vídeo. O código deve ser colocado para que ele seja executado após [WinJS.UI.processAll](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh440975).
+6.  No arquivo main.js no seu projeto, adicione o código que cria um novo objeto **AdScheduler**. Passe o **MediaPlayer** que hospeda o conteúdo do vídeo. O código deve ser colocado para que ele seja executado após [WinJS.UI.processAll](https://docs.microsoft.com/previous-versions/windows/apps/hh440975).
 
     [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 

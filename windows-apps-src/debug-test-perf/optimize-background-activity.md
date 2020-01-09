@@ -1,17 +1,17 @@
 ---
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: Otimizar a atividade em segundo plano
-description: Crie aplicativos UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria.
+description: Crie apps UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8731e5c794210c1a084c3de3cbf5004c7749a5e0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: eb3ff12e4b616edd7b87cab7f13aa060f301fc52
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359907"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683829"
 ---
 # <a name="optimize-background-activity"></a>Otimizar a atividade em segundo plano
 
@@ -23,7 +23,7 @@ O comportamento da tarefa em segundo plano certamente é o fator mais importante
 
 Em dispositivos desktop e móveis que executam o Windows 10, versão 1607 ou posteriores, os usuários podem exibir seu "uso da bateria pelo app" na seção Bateria do app Configurações. Aqui, ele verá uma lista de aplicativos e a porcentagem da duração da bateria que cada app consumiu (fora a carga da bateria que foi usada desde a última cobrança). Para os aplicativos UWP incluídos nessa lista, os usuários podem selecionar o app para abrir os controles relacionados à atividade em segundo plano.
 
-![uso da bateria por aplicativo](images/battery-usage-by-app.png)
+![uso da bateria por app](images/battery-usage-by-app.png)
 
 ### <a name="background-permissions-on-mobile"></a>Permissões em segundo plano no celular
 
@@ -39,14 +39,14 @@ Em dispositivos desktop, a configuração "Gerenciado pelo Windows" é apresenta
 
 ![botão de permissões de tarefa em segundo plano desativado](images/background-task-permissions-off.png)
 
-Em seu aplicativo, você pode usar o valor de enumeração [**BackgroundAccessStatus**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) retornado por uma chamada para o método [**BackgroundExecutionManager.RequestAccessAsync()** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) para determinar sua configuração de permissão de atividades em segundo plano atual.
+Em seu aplicativo, você pode usar o valor de enumeração [**BackgroundAccessStatus**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) retornado por uma chamada para o método [**BackgroundExecutionManager.RequestAccessAsync()** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) para determinar sua configuração de permissão de atividades em segundo plano atual.
 
-Tudo isso é para dizer que se seu aplicativo não implementa o gerenciamento responsável de atividades em segundo plano, o usuário pode negar permissões em segundo plano para seu aplicativo por completo, o que não é desejável para ambas as partes. Se seu app tiver permissão negada para ser executado em segundo plano, mas exigir que a atividade em segundo plano seja concluído uma ação para o usuário; você pode notificar o usuário e apontá-los para o app Configurações. Isso pode ser realizado por [Iniciar o app Configurações](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-settings-app) para a página Apps de Segundo Plano ou Detalhes de Uso da Bateria.
+Tudo isso é para dizer que se seu aplicativo não implementa o gerenciamento responsável de atividades em segundo plano, o usuário pode negar permissões em segundo plano para seu aplicativo por completo, o que não é desejável para ambas as partes. Se seu app tiver permissão negada para ser executado em segundo plano, mas exigir que a atividade em segundo plano seja concluído uma ação para o usuário; você pode notificar o usuário e apontá-los para o app Configurações. Isso pode ser realizado por [Iniciar o app Configurações](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app) para a página Apps de Segundo Plano ou Detalhes de Uso da Bateria.
 
 ## <a name="work-with-the-battery-saver-feature"></a>Trabalhar com o recurso de economia de bateria
 Economia de Bateria é um recurso do sistema que os usuários podem definir em Configurações. Isso corta todas as atividades em segundo plano de todos os aplicativos quando o nível de bateria fica abaixo de um limite definido pelo usuário, *exceto* para a atividade em segundo plano de aplicativos que foram definidos como "Sempre permitido".
 
-Verifique o status do modo de Economia de Bateria no app ao consultar a propriedade [**PowerManager.EnergySaverStatus**](https://docs.microsoft.com/en-us/uwp/api/windows.system.power.energysaverstatus). É um valor de enumeração: **EnergySaverStatus.Disabled**, **EnergySaverStatus.Off** ou **EnergySaverStatus.On**. Se seu app exigir atividade em segundo plano e não estiver definido como "Sempre permitido", ele deverá manipular **EnergySaverStatus.On** ao notificar o usuário de que as tarefas em segundo plano determinadas não serão executadas até que a Economia de Bateria seja desativada. Embora o gerenciamento de atividades em segundo plano seja o principal objetivo do recurso Economia de Bateria, seu aplicativo pode fazer ajustes adicionais para conservar ainda mais a energia quando a Economia de Bateria está ativada.  Quando a Economia de Bateria está ativada, seu aplicativo pode reduzir o uso de animações, parar a sondagem de localização ou atrasar sincronizações e backups. 
+Verifique o status do modo de Economia de Bateria no app ao consultar a propriedade [**PowerManager.EnergySaverStatus**](https://docs.microsoft.com/uwp/api/windows.system.power.energysaverstatus). É um valor de enumeração: **EnergySaverStatus.Disabled**, **EnergySaverStatus.Off** ou **EnergySaverStatus.On**. Se seu app exigir atividade em segundo plano e não estiver definido como "Sempre permitido", ele deverá manipular **EnergySaverStatus.On** ao notificar o usuário de que as tarefas em segundo plano determinadas não serão executadas até que a Economia de Bateria seja desativada. Embora o gerenciamento de atividades em segundo plano seja o principal objetivo do recurso Economia de Bateria, seu aplicativo pode fazer ajustes adicionais para conservar ainda mais a energia quando a Economia de Bateria está ativada.  Quando a Economia de Bateria está ativada, seu aplicativo pode reduzir o uso de animações, parar a sondagem de localização ou atrasar sincronizações e backups. 
 
 ## <a name="further-optimize-background-tasks"></a>Otimizar ainda mais as tarefas em segundo plano
 As etapas adicionais a seguir devem ser seguidas ao registrar suas tarefas em segundo plano para torná-las mais cientes do consumo da bateria.

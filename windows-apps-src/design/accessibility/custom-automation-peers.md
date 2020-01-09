@@ -8,12 +8,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3f409116cc904d9cef5bc3960b90225ed3b5721
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e82a48b774913279ada67adc7e2ce1c5c75d0b31
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257760"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683819"
 ---
 # <a name="custom-automation-peers"></a>Pares de automação personalizados  
 
@@ -112,7 +112,7 @@ Normalmente, o código de cliente da Automação da Interface do Usuário que ac
 <span id="ONCREATEAUTOMATIONPEER"/>
 
 ## <a name="oncreateautomationpeer"></a>OnCreateAutomationPeer  
-Todas as classes derivadas de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) contêm o método virtual protegido [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer). A sequência de inicialização do objeto para pares de automação chama **OnCreateAutomationPeer** para obter o objeto de par de automação para cada controle e assim construir uma árvore de Automação da IU para uso em tempo de execução. O código de Automação da Interface do Usuário pode usar o par para obter informações sobre recursos e características de um controle e para simular o uso interativo por meio de seus padrões de controle. Um controle personalizado que dá suporte à automação deve substituir **OnCreateAutomationPeer** e retornar uma instância de uma classe derivada de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer). Por exemplo, se um controle personalizado é derivado da classe [**ButtonBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase), o objeto retornado por **OnCreateAutomationPeer** deve derivar de [**ButtonBaseAutomationPeer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.peers.buttonbaseautomationpeer).
+Todas as classes derivadas de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) contêm o método virtual protegido [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer). A sequência de inicialização do objeto para pares de automação chama **OnCreateAutomationPeer** para obter o objeto de par de automação para cada controle e assim construir uma árvore de Automação da IU para uso em tempo de execução. O código de Automação da Interface do Usuário pode usar o par para obter informações sobre recursos e características de um controle e para simular o uso interativo por meio de seus padrões de controle. Um controle personalizado que dá suporte à automação deve substituir **OnCreateAutomationPeer** e retornar uma instância de uma classe derivada de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer). Por exemplo, se um controle personalizado é derivado da classe [**ButtonBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase), o objeto retornado por **OnCreateAutomationPeer** deve derivar de [**ButtonBaseAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.buttonbaseautomationpeer).
 
 Se você estiver escrevendo uma classe de controle personalizada e pretende também fornecer um novo par de automação, você deverá substituir o método [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer) do controle personalizado para que ele retorne uma nova instância do par. A classe de par precisa ser derivada direta ou indiretamente de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer).
 

@@ -6,16 +6,16 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, volante de corrida, force feedback
 ms.localizationpriority: medium
-ms.openlocfilehash: ab7c5bc15b149d5f469b7fc5e6b6285986569b22
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 12b28284fcc459a5d4f155ec7b5fc7cedc0ed8ca
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608831"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685170"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>Volante de corrida e force feedback
 
-Esta página descreve os conceitos básicos da programação para usando a roda Xbox One racing [Windows.Gaming.Input.RacingWheel] [ racingwheel] e APIs relacionadas para Universal Windows Platform (UWP).
+Esta página descreve as noções básicas de programação para rodas de uma corrida do Xbox usando [Windows. games. Input. RacingWheel][racingwheel] e APIs relacionadas para o plataforma universal do Windows (UWP).
 
 Ao ler esta página, você saberá como:
 
@@ -27,13 +27,13 @@ Ao ler esta página, você saberá como:
 
 ## <a name="racing-wheel-overview"></a>Visão geral do volante de corrida
 
-Volantes de corrida são dispositivos de entrada que reproduzem a sensação do cockpit de um carro de corrida real. Volantes de corrida são o dispositivo de entrada perfeito para jogos de corrida em estilos arcade e simulação com carros ou caminhões. Os volantes de corrida são compatíveis em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input).
+Volantes de corrida são dispositivos de entrada que reproduzem a sensação do cockpit de um carro de corrida real. Volantes de corrida são o dispositivo de entrada perfeito para jogos de corrida em estilos arcade e simulação com carros ou caminhões. Os volantes de corrida são compatíveis em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input).
 
 Os volantes de corrida do Xbox One são oferecidos em uma grande variedade de faixas de preço com entrada e funcionalidades de force feedback melhores à medida que as faixas de preços sobem. Todos os volantes de corrida estão equipados com um volante analógico, controles de aceleração e freio analógicos e alguns botões no volante. Além disso, alguns volantes de corrida estão equipados com controles de embreagem e freio de mão analógicos, borboletas de câmbio e funcionalidades de force feedback. Nem todos os volantes de corrida estão equipados com os mesmos conjuntos de recursos e também podem variar no suporte para determinados recursos, por exemplo, os volantes podem suportar graus de esterçamento diferentes e as borboletas de câmbio podem suportar números de marchas diferentes.
 
 ### <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
-Rodas de corrida Xbox One diferentes oferecem diferentes conjuntos de recursos do dispositivo opcionais e níveis variados de suporte para esses recursos; Esse nível de variação entre um único tipo de dispositivo de entrada é exclusivo entre os dispositivos compatíveis com o [Windows.Gaming.Input](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) API. Além disso, a maioria dos dispositivos que você encontrará dará suporte a pelo menos alguma funcionalidade opcional ou outras variações. Por isso, é importante determinar as funcionalidades de cada volante de corrida conectado individualmente e dar suporte a toda a variação de funcionalidades justificável para o jogo.
+Diferentes rodas do Xbox uma corrida oferecem diferentes conjuntos de recursos de dispositivo opcionais e níveis variados de suporte para esses recursos; esse nível de variação entre um único tipo de dispositivo de entrada é exclusivo entre os dispositivos com suporte da API [Windows. Gaming. Input](https://docs.microsoft.com/uwp/api/windows.gaming.input) . Além disso, a maioria dos dispositivos que você encontrará dará suporte a pelo menos alguma funcionalidade opcional ou outras variações. Por isso, é importante determinar as funcionalidades de cada volante de corrida conectado individualmente e dar suporte a toda a variação de funcionalidades justificável para o jogo.
 
 Para obter mais informações, consulte [Determinar funcionalidades de volante de corrida](#determining-racing-wheel-capabilities).
 
@@ -55,39 +55,39 @@ Como um controlador de navegação da interface do usuário, os volantes de corr
 | ------------------:| ------------------ |
 |                 Para cima | Direcional para cima           |
 |               Para baixo | Direcional para baixo         |
-|               Esquerda | Direcional para a esquerda         |
+|               Left | Direcional para a esquerda         |
 |              Direita | Direcional para a direita        |
 |               Exibir | Botão Exibir        |
 |               Menu | Botão Menu        |
 |             Aceitar | Botão A           |
-|             Cancel | Botão B           |
+|             Cancelar | Botão B           |
 
 Além disso, alguns volantes de corrida podem mapear alguns dos comandos de navegação do [conjunto opcional](ui-navigation-controller.md#optional-set) para outras entradas compatíveis, mas os mapeamentos de comando podem variar de um dispositivo para outro. Também leve em consideração o suporte a esses comandos, mas certifique-se de que esses comandos não sejam essenciais para navegar na interface do jogo.
 
 | Comando de navegação | Entrada do volante de corrida    |
 | ------------------:| --------------------- |
-|            Página acima | _varia de acordo_              |
-|          Página abaixo | _varia de acordo_              |
-|          Página à esquerda | _varia de acordo_              |
-|         Página à direita | _varia de acordo_              |
-|          Rolar para cima | _varia de acordo_              |
-|        Rolar para baixo | _varia de acordo_              |
-|        Rolar para esquerda | _varia de acordo_              |
-|       Rolar para direita | _varia de acordo_              |
+|            Página acima | _consoante_              |
+|          Página abaixo | _consoante_              |
+|          Página à esquerda | _consoante_              |
+|         Página à direita | _consoante_              |
+|          Role para cima | _consoante_              |
+|        Rolar para baixo | _consoante_              |
+|        Rolar para a esquerda | _consoante_              |
+|       Rolar para a direita | _consoante_              |
 |          Contexto 1 | Botão X (_normalmente_) |
 |          Contexto 2 | Botão Y (_normalmente_) |
-|          Contexto 3 | _varia de acordo_              |
-|          Contexto 4 | _varia de acordo_              |
+|          Contexto 3 | _consoante_              |
+|          Contexto 4 | _consoante_              |
 
 ## <a name="detect-and-track-racing-wheels"></a>Detectar e acompanhar volantes de corrida
 
-A detecção e o acompanhamento de joysticks para simulador de voo funcionam exatamente da mesma forma nos gamepads, exceto na classe [RacingWheel](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel) em vez da classe [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad). Consulte [Gamepad e vibração](gamepad-and-vibration.md) para obter mais informações.
+A detecção e o acompanhamento de joysticks para simulador de voo funcionam exatamente da mesma forma nos gamepads, exceto na classe [RacingWheel](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel) em vez da classe [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad). Consulte [Gamepad e vibração](gamepad-and-vibration.md) para obter mais informações.
 
 <!-- Racing wheels are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected racing wheels and events to notify you when a racing wheel is added or removed.
 
 ### The racing wheels list
 
-The [RacingWheel](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel) class provides a static property, [RacingWheels](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.racingwheels#Windows_Gaming_Input_RacingWheel_RacingWheels), which is a read-only list of racing wheels that are currently connected. Because you might only be interested in some of the connected racing wheels, it's recommended that you maintain your own collection instead of accessing them through the `RacingWheels` property.
+The [RacingWheel](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel) class provides a static property, [RacingWheels](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.racingwheels#Windows_Gaming_Input_RacingWheel_RacingWheels), which is a read-only list of racing wheels that are currently connected. Because you might only be interested in some of the connected racing wheels, it's recommended that you maintain your own collection instead of accessing them through the `RacingWheels` property.
 
 The following example copies all connected racing wheels into a new collection.
 ```cpp
@@ -102,7 +102,7 @@ for (auto racingwheel : RacingWheel::RacingWheels)
 
 ### Adding and removing racing wheels
 
-When a racing wheel is added or removed the [RacingWheelAdded](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.racingwheeladded) and [RacingWheelRemoved](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.racingwheelremoved) events are raised. You can register handlers for these events to keep track of the racing wheels that are currently connected.
+When a racing wheel is added or removed the [RacingWheelAdded](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.racingwheeladded) and [RacingWheelRemoved](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.racingwheelremoved) events are raised. You can register handlers for these events to keep track of the racing wheels that are currently connected.
 
 The following example starts tracking an racing wheels that's been added.
 ```cpp
@@ -138,7 +138,7 @@ Depois de identificar os volantes de corrida de interesse, você estará pronto 
 
 A sondagem registra um instantâneo do volante de corrida em um momento preciso. Essa abordagem de coleta de entrada é ótima para a maioria dos jogos, pois sua lógica normalmente é executada em um loop determinante em vez de ser orientada por evento; também é normalmente mais simples interpretar os comandos de jogos da entrada coletada de uma vez do que de várias entradas individuais coletadas ao longo do tempo.
 
-Você sonda um volante de corrida chamando [GetCurrentReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.getcurrentreading#Windows_Gaming_Input_RacingWheel_GetCurrentReading); essa função retorna um [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) que contém o estado do volante de corrida.
+Você sonda um volante de corrida chamando [GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.getcurrentreading#Windows_Gaming_Input_RacingWheel_GetCurrentReading); essa função retorna um [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading) que contém o estado do volante de corrida.
 
 O exemplo a seguir faz a sondagem de um volante de corrida para saber o estado atual.
 
@@ -154,7 +154,7 @@ Além do estado do volante de corrida, cada leitura inclui um carimbo de data e 
 
 Muitos dos controles de volante de corrida são opcionais ou dão suporte a variações diferentes mesmo nos controles obrigatórios. Portanto, você precisa determinar as funcionalidades de cada volante de corrida individualmente para poder processar a entrada coletada em cada leitura do volante de corrida.
 
-Os controles opcionais são o freio de mão, a embreagem e a borboleta de câmbio; você pode determinar se um volante de corrida conectado dá suporte a esses controles lendo as propriedades [HasHandbrake](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.hashandbrake#Windows_Gaming_Input_RacingWheel_HasHandbrake), [HasClutch](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.hasclutch#Windows_Gaming_Input_RacingWheel_HasClutch) e [HasPatternShifter](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.haspatternshifter#Windows_Gaming_Input_RacingWheel_HasPatternShifter) do volante de corrida, respectivamente. O controle será compatível se o valor da propriedade for **true**; do contrário, ele não será compatível.
+Os controles opcionais são o freio de mão, a embreagem e a borboleta de câmbio; você pode determinar se um volante de corrida conectado dá suporte a esses controles lendo as propriedades [HasHandbrake](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.hashandbrake#Windows_Gaming_Input_RacingWheel_HasHandbrake), [HasClutch](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.hasclutch#Windows_Gaming_Input_RacingWheel_HasClutch) e [HasPatternShifter](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.haspatternshifter#Windows_Gaming_Input_RacingWheel_HasPatternShifter) do volante de corrida, respectivamente. O controle será compatível se o valor da propriedade for **true**; do contrário, ele não será compatível.
 
 ```cpp
 if (racingwheel->HasHandbrake)
@@ -180,7 +180,7 @@ auto maxWheelDegrees = racingwheel->MaxWheelAngle;
 auto maxShifterGears = racingwheel->MaxPatternShifterGear;
 ```
 
-Por fim, alguns volantes de corrida são suporte a force feedback por meio do volante de corrida. Você pode determinar se um volante de corrida conectado dá suporte a force feedback lendo a propriedade [WheelMotor](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.wheelmotor#Windows_Gaming_Input_RacingWheel_WheelMotor) do volante de corrida. Force feedback será compatível se `WheelMotor` não for **null**; do contrário, ele não será compatível.
+Por fim, alguns volantes de corrida são suporte a force feedback por meio do volante de corrida. Você pode determinar se um volante de corrida conectado dá suporte a force feedback lendo a propriedade [WheelMotor](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.wheelmotor#Windows_Gaming_Input_RacingWheel_WheelMotor) do volante de corrida. Force feedback será compatível se `WheelMotor` não for **null**; do contrário, ele não será compatível.
 
 ```cpp
 if (racingwheel->WheelMotor != nullptr)
@@ -193,12 +193,12 @@ Para obter informações sobre como usar a funcionalidade de force feedback dos 
 
 ### <a name="reading-the-buttons"></a>Lendo os botões
 
-Cada um dos botões do volante de corrida&mdash;as quatro direções do direcional, os botões **Marcha anterior** e **Marcha posterior** e os 16 botões adicionais&mdash;oferecem uma leitura digital que indica se ele está pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores boolianos individuais; elas são empacotadas em um único campo de bits representado pela enumeração [RacingWheelButtons](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelbuttons).
+Cada um dos botões do volante de corrida&mdash;as quatro direções do direcional, os botões **Marcha anterior** e **Marcha posterior** e os 16 botões adicionais&mdash;oferecem uma leitura digital que indica se ele está pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores boolianos individuais; elas são empacotadas em um único campo de bits representado pela enumeração [RacingWheelButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelbuttons).
 
 > [!NOTE]
 > Os volantes de corrida são equipados com botões adicionais usados para navegação na interface do usuário, como os botões **Exibir** e **Menu**. Esses botões não fazem parte da enumeração `RacingWheelButtons` e só podem ser lidos acessando-se o volante de corrida como um dispositivo de navegação da interface do usuário. Para obter mais informações, consulte [Dispositivo de navegação da interface do usuário](ui-navigation-controller.md).
 
-Os valores dos botões são lidos pela propriedade `Buttons` da estrutura [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading). Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
+Os valores dos botões são lidos pela propriedade `Buttons` da estrutura [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading). Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de seu interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
 
 O exemplo a seguir determina se o botão **Marcha posterior** é pressionado.
 
@@ -222,7 +222,7 @@ if (RacingWheelButtons::None == (reading.Buttons & RacingWheelButtons::NextGear)
 
 ### <a name="reading-the-wheel"></a>Como ler o volante
 
-O volante é um controle obrigatório que fornece uma leitura analógica entre -1,0 e +1,0. Um valor -1,0 corresponde à posição mais à esquerda do volante; um valor + 1,0 corresponde à posição mais à direita. O valor do volante é lido com base na propriedade `Wheel` da estrutura [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading).
+O volante é um controle obrigatório que fornece uma leitura analógica entre -1,0 e +1,0. Um valor -1,0 corresponde à posição mais à esquerda do volante; um valor + 1,0 corresponde à posição mais à direita. O valor do volante é lido com base na propriedade `Wheel` da estrutura [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading).
 
 ```cpp
 float wheel = reading.Wheel;  // returns a value between -1.0 and +1.0.
@@ -232,7 +232,7 @@ Embora as leituras do volante correspondam a graus diferentes de esterçamento f
 
 ### <a name="reading-the-throttle-and-brake"></a>Como ler o acelerador e o freio
 
-O acelerador e o freio são controles obrigatórios que fornecem leituras analógicas entre 0,0 (totalmente liberados) e 1,0 (totalmente pressionados) representadas como valores de ponto flutuante. O valor de controle do acelerador é lido com base na propriedade `Throttle` do struct [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading); o valor de controle do freio é lido com base na propriedade `Brake`.
+O acelerador e o freio são controles obrigatórios que fornecem leituras analógicas entre 0,0 (totalmente liberados) e 1,0 (totalmente pressionados) representadas como valores de ponto flutuante. O valor de controle do acelerador é lido com base na propriedade `Throttle` do struct [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading); o valor de controle do freio é lido com base na propriedade `Brake`.
 
 ```cpp
 float throttle = reading.Throttle;  // returns a value between 0.0 and 1.0
@@ -241,7 +241,7 @@ float brake    = reading.Brake;     // returns a value between 0.0 and 1.0
 
 ### <a name="reading-the-handbrake-and-clutch"></a>Como ler o freio de mão e a embreagem
 
-O freio de mão e a embreagem são controles opcionais que fornecem leituras analógicas entre 0,0 (totalmente liberados) e 1,0 (totalmente acionados) representados como valores de ponto flutuante. O valor de controle do freio de mão é lido com base na propriedade `Handbrake` do struct [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading); o valor de controle da embreagem é lido com base na propriedade `Clutch`.
+O freio de mão e a embreagem são controles opcionais que fornecem leituras analógicas entre 0,0 (totalmente liberados) e 1,0 (totalmente acionados) representados como valores de ponto flutuante. O valor de controle do freio de mão é lido com base na propriedade `Handbrake` do struct [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading); o valor de controle da embreagem é lido com base na propriedade `Clutch`.
 
 ```cpp
 float handbrake = 0.0;
@@ -260,7 +260,7 @@ if(racingwheel->HasClutch)
 
 ### <a name="reading-the-pattern-shifter"></a>Como ler a borboleta de câmbio
 
-A borboleta de câmbio é um controle opcional que fornece uma leitura digital entre -1 e [MaxPatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) representada como um valor de inteiro assinado. Um valor -1 ou 0 corresponde às marchas _a ré_ e _neutra_ marcha, respectivamente; valores cada vez mais positivos correspondem a marchas à frente mais altas até **MaxPatternShifterGear**, inclusive. O valor de deslocar o padrão é lido do [PatternShifterGear](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) propriedade da [RacingWheelReading](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheelreading) struct.
+A borboleta de câmbio é um controle opcional que fornece uma leitura digital entre -1 e [MaxPatternShifterGear](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.maxpatternshiftergear) representada como um valor de inteiro assinado. Um valor -1 ou 0 corresponde às marchas _a ré_ e _neutra_ marcha, respectivamente; valores cada vez mais positivos correspondem a marchas à frente mais altas até **MaxPatternShifterGear**, inclusive. O valor do deslocamento de padrão é lido na propriedade [PatternShifterGear](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading.patternshiftergear) do struct [RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading) .
 
 ```cpp
 if (racingwheel->HasPatternShifter)
@@ -272,13 +272,13 @@ if (racingwheel->HasPatternShifter)
 > [!NOTE]
 > A borboleta de câmbio, quando compatível, fica ao lado dos botões de **Marcha anterior** e **Posterior** obrigatórios, o que também afeta a marcha atual do carro do jogador. Uma estratégia simple para unificar essas entradas nas quais ambos estejam presentes é ignorar a borboleta de câmbio (e a embreagem) quando um jogador escolhe uma transmissão automática para o carro e só ignorar os botões de **Marcha anterior** e **posterior** quando um jogador escolhe uma transmissão manual para o carro caso o volante de corrida esteja equipado com uma borboleta de câmbio. Será possível implementar uma estratégia de unificação diferente se ela não for indicada para o jogo.
 
-## <a name="run-the-inputinterfacing-sample"></a>Executar o exemplo InputInterfacing
+## <a name="run-the-inputinterfacing-sample"></a>Executar a amostra InputInterfacing
 
-O [exemplo InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) demonstra como usar volantes de corrida e diferentes tipos de dispositivos de entrada em conjunto, além de como esses dispositivos de entrada se comportam como controladores de navegação da interface do usuário.
+O [exemplo InputInterfacingUWP _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) demonstra como usar volantes de corrida e diferentes tipos de dispositivos de entrada em conjunto, além de como esses dispositivos de entrada se comportam como controladores de navegação da interface do usuário.
 
 ## <a name="force-feedback-overview"></a>Visão geral do force feedback
 
-Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. Force feedback tem suporte em aplicativos do Windows 10 e UWP do Xbox One, o [Windows.Gaming.Input.ForceFeedback](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback) namespace.
+Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. Há suporte para a força de comentários nos aplicativos Windows 10 e Xbox One UWP pelo namespace [Windows. Gaming. Input. ForceFeedback](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback) .
 
 > [!NOTE]
 > As APIs de force feedback são capazes de dar suporte a diversos eixos de força, mas nenhum volante de corrida do Xbox One atualmente dá suporte a qualquer eixo de feedback que não seja de esterçamento do volante.
@@ -289,7 +289,7 @@ Estas seções descrevem as noções básicas de programação dos efeitos de fo
 
 ### <a name="determining-force-feedback-capabilities"></a>Como determinar funcionalidades de force feedback
 
-Você pode determinar se um volante de corrida conectado dá suporte a force feedback lendo a propriedade [WheelMotor](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.racingwheel.wheelmotor#Windows_Gaming_Input_RacingWheel_WheelMotor) do volante de corrida. O force feedback não será compatível se `WheelMotor` for **null**. Do contrário, force feedback será compatível, e será possível continuar para determinar as funcionalidades de feedback específicas do motor, como os eixos que ele pode afetar.
+Você pode determinar se um volante de corrida conectado dá suporte a force feedback lendo a propriedade [WheelMotor](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel.wheelmotor#Windows_Gaming_Input_RacingWheel_WheelMotor) do volante de corrida. O force feedback não será compatível se `WheelMotor` for **null**. Do contrário, force feedback será compatível, e será possível continuar para determinar as funcionalidades de feedback específicas do motor, como os eixos que ele pode afetar.
 
 ```cpp
 if (racingwheel->WheelMotor != nullptr)
@@ -315,7 +315,7 @@ if (racingwheel->WheelMotor != nullptr)
 
 ### <a name="loading-force-feedback-effects"></a>Como carregar efeitos de force feedback
 
-Os efeitos de force feedback são carregados no dispositivo de feedback no qual são "executados" de maneira autônoma no comando do jogo. Um número de efeitos básicos é fornecido; efeitos personalizados podem ser criados por meio de uma classe que implementa o [IForceFeedbackEffect](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) interface.
+Os efeitos de force feedback são carregados no dispositivo de feedback no qual são "executados" de maneira autônoma no comando do jogo. Vários efeitos básicos são fornecidos; os efeitos personalizados podem ser criados por meio de uma classe que implementa a interface [IForceFeedbackEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect) .
 
 | Classe de efeito         | Descrição de efeito                                                                     |
 | -------------------- | -------------------------------------------------------------------------------------- |
@@ -369,11 +369,11 @@ else
 
 Por fim, é possível habilitar, desabilitar ou redefinir de maneira assíncrona todo o sistema de force feedback em um determinado volante sempre que precisar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-* [Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.uinavigationcontroller)
-* [Windows.Gaming.Input.IGameController](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.igamecontroller)
-* [Práticas recomendadas de entrada para jogos](input-practices-for-games.md)
+* [Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller)
+* [Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
+* [Práticas de entrada para jogos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx

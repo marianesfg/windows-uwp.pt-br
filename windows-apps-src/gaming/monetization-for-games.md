@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
-ms.openlocfilehash: 132f8c1d0ff314b794cc8464ec69cdf84f6a5f3b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: baef3750b8dc076fd78c239cfc61662256e57c14
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258477"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685248"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -206,10 +206,10 @@ A Smaato permite que os anúncios em faixa sejam incorporados a aplicativos UWP 
 É possível usar o AdDuplex para implementar anúncios em faixa ou anúncios intersticiais no jogo.
 
 Para saber mais sobre a integração do AdDuplex diretamente a um projeto XAML do Windows 10, vá até o site do AdDuplex:
-* Anúncios em faixa: [SDK do Windows 10 para XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
-* Anúncios intersticiais: [Instalação e uso do anúncio intersticial do AdDuplex XAML do Windows 10](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
+* Anúncios em faixa: [SDK do Windows 10 para XAML](https://adduplex.zendesk.com/hc/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
+* Anúncios intersticiais: [Instalação e uso do anúncio intersticial do AdDuplex XAML do Windows 10](https://adduplex.zendesk.com/hc/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
 
-Para obter informações sobre como integrar o SDK do AdDuplex a jogos UWP do Windows 10 criados usando-se o Unity, consulte [Instalação e uso de aplicativos do SDK do Windows para Unity](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage).
+Para obter informações sobre como integrar o SDK do AdDuplex a jogos UWP do Windows 10 criados usando-se o Unity, consulte [Instalação e uso de aplicativos do SDK do Windows para Unity](https://adduplex.zendesk.com/hc/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage).
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>Maximize o potencial do jogo por meio de campanhas publicitárias
 
