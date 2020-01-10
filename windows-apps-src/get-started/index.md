@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: introdução, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 7439d437dda69bf235bd8681751617b2982be394
-ms.sourcegitcommit: 2d3a7d18edf2715987b26d1b5341ec88eefc99ec
+ms.openlocfilehash: 4f78bdfec6c6e06ffc542bc7741b875e952bc169
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898529"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684895"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introdução aos aplicativos do Windows 10
 
@@ -30,7 +30,7 @@ ms.locfileid: "74898529"
                         <h3>Saiba mais sobre aplicativos Windows 10</h3>
                         <p>O Windows 10 e a Plataforma Universal do Windows permitem a você criar aplicativos que funcionam bem e têm ótima aparência em todos os tipos de dispositivo Windows ou atualizar os aplicativos existentes com recursos modernos.</p>
                         <ul>
-                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">O que é um aplicativo UWP?</a></li>
+                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">O que é um aplicativo da UWP?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ ms.locfileid: "74898529"
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>Exemplos</h3>
+                    <h3>Amostras</h3>
                     <p>Obtenha uma experiência em primeira mão com a plataforma Windows 10 e veja as APIs em ação.</p>
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Como usar exemplos de aplicativos UWP</a></p>
@@ -173,7 +173,7 @@ ms.locfileid: "74898529"
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Referência da API</h3>
+                                <h3>Adicionar de API</h3>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@ ms.locfileid: "74898529"
                 <div class="card">
                     <div class="cardText">
                         <h3>Novo em desenvolvimento?</h3>
-                        <p><a href="//docs.microsoft.com/en-us/learn/browse/?products=windows&resource_type=module">Windows no Microsoft Learn</a></p>
+                        <p><a href="//docs.microsoft.com/learn/browse/?products=windows&resource_type=module">Windows no Microsoft Learn</a></p>
                         </div>
                     </div>
                 </div>
