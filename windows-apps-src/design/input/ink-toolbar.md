@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ae67e5d4d6da3cc9716c5f0efd276023bae9af0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 48fea83560655b02909b302225f44fa3e9713f00
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258376"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684490"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Adicionar um InkToolbar a um aplicativo UWP (Plataforma Universal do Windows)
 
@@ -77,7 +77,7 @@ Para adicionar um [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui
 
 ## <a name="basic-customization"></a>Personalização básica
 
-Nesta seção, abordamos alguns cenários de personalização básica de barra de ferramentas do Windows Ink.
+Nesta seção, abordamos alguns cenários de personalização básica da barra de ferramentas do Windows Ink.
 
 ### <a name="specify-location-and-orientation"></a>Especificar a localização e a orientação
 
@@ -172,7 +172,7 @@ Você também pode usar a associação para cuidar das atualizações da interfa
 
     1. Adicione duas propriedades boolianas à classe InkToolbarSnippetHostViewModel: **LeftHandedLayout** (mesma funcionalidade do exemplo somente XAML anterior) e **PortraitLayout** (orientação do dispositivo).
         >[!NOTE] 
-        > A propriedade PortraitLayout é configurável e inclui a definição do evento [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
+        > A propriedade PortraitLayout é configurável e inclui a definição do evento [PropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
 
         ```csharp
         public bool LeftHandedLayout
@@ -214,7 +214,7 @@ Você também pode usar a associação para cuidar das atualizações da interfa
     1. Adicione duas novas classes à pasta Converters (neste exemplo, chamamos elas de **HorizontalAlignmentFromHandednessConverter.cs** e **VerticalAlignmentFromAppViewConverter.cs**).
     1. Adicione os namespaces `using Windows.UI.Xaml` e `using Windows.UI.Xaml.Data` a cada arquivo.
     1. Altere cada classe para `public` e especifique que ela implementa a interface [IValueConverter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter).
-    1. Adicione os métodos [Convert](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) e [ConvertBack](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada arquivo, conforme mostrado aqui (não implementamos o método ConvertBack).
+    1. Adicione os métodos [Convert](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) e [ConvertBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada arquivo, conforme mostrado aqui (não implementamos o método ConvertBack).
         - HorizontalAlignmentFromHandednessConverter posiciona a barra de ferramentas de tinta no lado direito do aplicativo para usuários destros e no lado esquerdo para os usuários canhotos.
         ```csharp
         using System;
@@ -592,7 +592,7 @@ Você pode personalizar e estender o conjunto de botões (e os recursos de escri
 
 O InkToolbar consiste em dois grupos distintos de tipos de botões:
 
-1. Um grupo de botões de "ferramentas" que contém os botões internos para desenhar, apagar e realçar. Canetas personalizadas e ferramentas são adicionadas aqui.
+1. Um grupo de botões de "ferramentas" que contém os botões internos para desenhar, apagar e realçar. Canetas e ferramentas personalizadas são adicionadas aqui.
 > **Observação**&nbsp;a seleção de recursos &nbsp;é mutuamente exclusiva.
 
 2. Um grupo de botões de "alternância" que contém o botão de régua interno. Alternâncias personalizadas são adicionadas aqui.
@@ -1123,7 +1123,7 @@ Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações 
 
 - [Interações por caneta](pen-and-stylus-interactions.md)
 
-### <a name="topic-samples"></a>Exemplos de tópico
+### <a name="topic-samples"></a>Amostras de tópico
 
 - [Exemplo de localização e orientação da barra de ferramentas de tinta (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 - [Exemplo de localização e orientação da barra de ferramentas de tinta (dinâmico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)

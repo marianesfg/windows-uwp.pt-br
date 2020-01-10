@@ -1,21 +1,21 @@
 ---
-title: Aplicativos e dispositivos conectados (Projeto Rome)
+title: Aplicativos e dispositivos conectados (Projeto Roma)
 description: Esta seção descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
 ms.date: 06/08/2018
 ms.topic: article
 keywords: Windows 10, UWP, dispositivos conectados, sistemas remotos, Roma, projeto Roma
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: b989f5c115ef5c8555f8cb48ac43f2d50a9d830c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 742ef56165ea26df3a03d54e99a17d2a00908cb6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260514"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684450"
 ---
-# <a name="connected-apps-and-devices-project-rome"></a>Aplicativos e dispositivos conectados (Projeto Rome)
+# <a name="connected-apps-and-devices-project-rome"></a>Aplicativos e dispositivos conectados (Projeto Roma)
 
-Esta seção explica como conectar aplicativos em dispositivos e plataformas usando o [Project Roma](https://developer.microsoft.com/en-us/windows/project-rome). Para saber como implementar o projeto Roma em um cenário de plataforma cruzada, visite a [página de documentos principal do projeto Roma](https://docs.microsoft.com/en-us/windows/project-rome/).
+Esta seção explica como conectar aplicativos em dispositivos e plataformas usando o [Project Roma](https://developer.microsoft.com/windows/project-rome). Para saber como implementar o projeto Roma em um cenário de plataforma cruzada, visite a [página de documentos principal do projeto Roma](https://docs.microsoft.com/windows/project-rome/).
 
 A maioria dos usuários tem vários dispositivos e muitas vezes começam uma atividade em um dispositivo e a concluem em outro. Para acomodar isso, os aplicativos precisam estendem a dispositivos e plataformas. O Project Roma permite que você descubra dispositivos remotos, inicie um aplicativo em um dispositivo remoto e comunique-se com um serviço de aplicativo em um dispositivo remoto.
 

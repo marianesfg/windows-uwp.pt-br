@@ -1,19 +1,19 @@
 ---
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: O SDK do Microsoft Advertising oferece várias maneiras de monetizar seu aplicativo com anúncios.
-title: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
+title: Exibir anúncios em seu aplicativo com o SDK do Microsoft Advertising
 ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c12d64bde6b16774b9090f7122f3933e0129ddc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 48aacf03d6e424b7b53052e2c292d4a8589a8d9f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260329"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684571"
 ---
-# <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
+# <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Exibir anúncios em seu aplicativo com o SDK do Microsoft Advertising
 
 Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma ad monetização oferece uma variedade de formatos de anúncios que podem ser integrados diretamente aos seus aplicativos e dá suporte à mediação com muitas redes populares do AD. Nossa plataforma é compatível com os padrões OpenRTB, VAST 2.x, MRAID 2 e VPAID 3, além de aceitar MOAT e IAS. 
 
@@ -110,14 +110,14 @@ Para obter ajuda adicional usando o SDK do Microsoft Advertising, use os recurso
 
 |  Tarefa    | Recurso |               
 |----------|-------|
-| Relatar um bug ou obter suporte assistido para publicidade     | Visite a [página de suporte](https://developer.microsoft.com/en-us/windows/support) e escolha **Anúncios em Apps**.        |
+| Relatar um bug ou obter suporte assistido para publicidade     | Visite a [página de suporte](https://developer.microsoft.com/windows/support) e escolha **Anúncios em Apps**.        |
 | Obter suporte da comunidade     | Visite o [fórum](https://go.microsoft.com/fwlink/?LinkID=401264).       |
 | Baixe os projetos de exemplo que demonstram como adicionar faixa e anúncios intersticiais a aplicativos.     | Consulte os [Exemplos de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).       |
 | Saiba mais sobre as oportunidades de monetização mais recentes para aplicativos do Windows     | Visite [Monetize seus aplicativos](https://developer.microsoft.com/store/monetize).        |
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Aplicativos para Windows 8.1 e Windows Phone 8.x
 
-Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDKforWindowsandWindowsPhone8x). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
+Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDKforWindowsandWindowsPhone8x). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://docs.microsoft.com/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

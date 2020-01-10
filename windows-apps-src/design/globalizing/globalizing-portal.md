@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c2d05c87f4f7b6164afe1fcbcb62323eef3bdf1
-ms.sourcegitcommit: 5f80bfc3ba04ad0a0853f83917d6a0ef3da24fa3
+ms.openlocfilehash: d180621736e79daec91a11a6932e80633962d6c7
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2019
-ms.locfileid: "72302256"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684519"
 ---
 # <a name="globalization-and-localization"></a>Globalização e localização
 
@@ -38,7 +38,7 @@ Seu código precisa funcionar igualmente bem em qualquer uma das culturas que vo
 - Regras de classificação
 
 >[!NOTE]
-> Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de marca de idioma da tabela no [Apêndice a: comportamento do produto](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) na [referência do identificador de código de idioma do Windows (LCID)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
+> Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de marca de idioma da tabela no [Apêndice a: comportamento do produto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) na [referência do identificador de código de idioma do Windows (LCID)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
 
 **Localizabilidade** é o processo de preparar um app globalizado para a localização e/ou verificar se o app está pronto para a localização. Tornar um app corretamente localizável significa que o processo de localização posterior não revelará nenhum defeito funcional no app. A propriedade mais essencial de um app localizável é que seu código executável tenha sido separado cuidadosamente dos recursos localizáveis do app.
 

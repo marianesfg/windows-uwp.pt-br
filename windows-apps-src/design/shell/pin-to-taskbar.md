@@ -1,28 +1,28 @@
 ---
 Description: Você pode fixar programaticamente seu app na barra de tarefas e verificar se ele está fixado.
-title: Fixar seu app na barra de tarefas
+title: Fixar seu aplicativo na barra de tarefas
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, barra de tarefas, gerenciador de barra de tarefas, fixar na barra de tarefas, bloco principal
 ms.localizationpriority: medium
-ms.openlocfilehash: 640dc637a1c50718210d87af87cb8b8e706a5ab7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3aa259cd8c5c45ea99d83eaecb8e30fb0438aa8f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604091"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684530"
 ---
-# <a name="pin-your-app-to-the-taskbar"></a>Fixar seu app na barra de tarefas
+# <a name="pin-your-app-to-the-taskbar"></a>Fixar seu aplicativo na barra de tarefas
 
 Programaticamente, você pode fixar o bloco principal do seu app na barra de tarefa, da mesma forma que pode [fixar seu app no menu Iniciar](tiles-and-notifications/primary-tile-apis.md). E você pode verificar se seu app está fixado e se a barra de tarefas permite que se fixe apps. 
 
 ![Barra de tarefas](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
-> **Requer a atualização dos criadores de outono**: Você deve ter como destino 16299 do SDK e estar executando a compilação 16299 ou superior para usar a APIs da barra de tarefas.
+> **Requer a Fall Creators Update**: você precisa usar o SDK 16299 e executar a compilação 16299 ou mais recente para usar as APIs de barra de tarefa.
 
-> **APIs importantes**: [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
+> **APIs importantes**: [classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>Quando você deve pedir ao usuário para fixar seu app na barra de tarefas? 
@@ -38,7 +38,7 @@ A [classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.ta
 
 ## <a name="1-check-whether-the-required-apis-exist"></a>1. Verifique se as APIs necessárias existem
 
-Se o aplicativo oferece suporte às versões mais antigas do Windows 10, é preciso verificar se a classe TaskbarManager está disponível. Você pode usar o [método ApiInformation.IsTypePresent](https://docs.microsoft.com/en-us/uwp/api/windows.foundation.metadata.apiinformation#Windows_Foundation_Metadata_ApiInformation_IsTypePresent_System_String_) para executar essa verificação. Se a classe TaskbarManager não estiver disponível, evite a execução de chamadas às APIs.
+Se o aplicativo oferece suporte às versões mais antigas do Windows 10, é preciso verificar se a classe TaskbarManager está disponível. Você pode usar o [método ApiInformation.IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation#Windows_Foundation_Metadata_ApiInformation_IsTypePresent_System_String_) para executar essa verificação. Se a classe TaskbarManager não estiver disponível, evite a execução de chamadas às APIs.
 
 ```csharp
 if (ApiInformation.IsTypePresent("Windows.UI.Shell.TaskbarManager"))
@@ -68,7 +68,7 @@ bool isPinningAllowed = TaskbarManager.GetDefault().IsPinningAllowed;
 > Se você não quiser fixar seu app na barra de tarefas e apenas quiser saber se a barra de tarefas está disponível, use a [propriedade TaskbarManager.IsSupported](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsSupported).
 
 
-## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o seu aplicativo no momento está fixado na barra de tarefas
+## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. Verifique se o seu app está atualmente fixado na barra de tarefas
 
 Obviamente, não faz sentido pedir ao usuário para permitir que você fixe o app na barra de tarefas se ele já estiver fixado lá. Você pode usar o [método TaskbarManager.IsCurrentAppPinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsCurrentAppPinnedAsync) para verificar se o app já está fixado antes de pedir que o usuário.
 
@@ -87,7 +87,7 @@ else
 ```
 
 
-##  <a name="4-pin-your-app"></a>4. Fixar o seu aplicativo
+##  <a name="4-pin-your-app"></a>4. Fixe seu app
 
 Se a barra de tarefas estiver presente e a fixação for permitida e seu app não estiver fixado, você talvez queira mostrar uma dica sutil para que os usuários saibam que podem fixar seu app. Por exemplo, você pode mostrar um ícone de fixação em algum lugar na interface do usuário no qual o usuário poderá clicar. 
 
@@ -110,4 +110,4 @@ Esse método retorna um valor booliano que indica se o seu app está fixado na b
 
 * [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
 * [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [Fixar um aplicativo no menu Iniciar](tiles-and-notifications/primary-tile-apis.md)
+* [Fixar um aplicativo no menu iniciar](tiles-and-notifications/primary-tile-apis.md)
