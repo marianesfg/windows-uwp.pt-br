@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19e754fd6a52880c7bc636818acaeda815f9da16
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 879dee0c8c4c3ad9004c11fa488d32eae8936510
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259102"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684651"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
@@ -22,7 +22,7 @@ A prática de definição da interface do usuário na forma de marcação XAML d
 
 ## <a name="imperative-code"></a>Código imperativo
 
-Se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](w8x-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do runtime sejam corrigidos e a portabilidade seja concluída.
+Se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](w8x-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do tempo de execução sejam corrigidos e a portabilidade seja concluída.
 
 ## <a name="adaptiveresponsive-ui"></a>Interface do usuário responsiva/adaptável
 
@@ -122,7 +122,7 @@ Para saber mais sobre controles do aplicativo UWP, consulte [Controles por funç
 
 ##  <a name="design-language-in-windows10"></a>Linguagem de design no Windows 10
 
-Há algumas diferenças pequenas, mas importantes, na linguagem de design entre aplicativos do Universal 8,1 e do Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/en-us/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
+Há algumas diferenças pequenas, mas importantes, na linguagem de design entre aplicativos do Universal 8,1 e do Windows 10. Para saber todos os detalhes, consulte [Design](https://developer.microsoft.com/windows/apps/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Pixels efetivos, distância exibição e fatores de escala
 
@@ -194,13 +194,13 @@ Esta tabela descreve as alterações feitas nos estados visuais e nos grupos de 
 |                     | PointerOver             |                   | PointerOver         |
 |                     | Pressed                 |                   | Pressed             |
 |                     | PointerOverPressed      |                   | [indisponível]       |
-|                     | Desabilitado                |                   | [indisponível]       |
+|                     | Desabilitada                |                   | [indisponível]       |
 |                     | [indisponível]           |                   | PointerOverSelected |
 |                     | [indisponível]           |                   | Selected            |
 |                     | [indisponível]           |                   | PressedSelected     |
 | [indisponível]       |                         | DisabledStates    |                     |
-|                     | [indisponível]           |                   | Desabilitado            |
-|                     | [indisponível]           |                   | Habilitado             |
+|                     | [indisponível]           |                   | Desabilitada            |
+|                     | [indisponível]           |                   | Habilitada             |
 | SelectionHintStates |                         | [indisponível]     |                     |
 |                     | VerticalSelectionHint   |                   | [indisponível]       |
 |                     | HorizontalSelectionHint |                   | [indisponível]       |
@@ -247,7 +247,7 @@ A linguagem de design evoluiu para o Windows 10 e, consequentemente, alguns esti
 
 Em outros casos, as chaves de recurso deixam de ser compatíveis. O editor de marcação XAML no Visual Studio realça referências a chaves de recurso que não podem ser resolvidas. Por exemplo, o editor de marcação XAML sublinhará uma referência à chave de estilo `ListViewItemTextBlockStyle` com uma linha ondulada vermelha. Se isso não for corrigido, o aplicativo será encerrado imediatamente quando você tentar implantá-lo no emulador ou no dispositivo. Portanto, é importante estar atento à correção da marcação XAML. E você descobrirá que o Visual Studio é uma ótima ferramenta para identificar esses problemas.
 
-Para chaves que ainda têm suporte, as mudanças na linguagem de design significam que as propriedades definidas por alguns estilos foram alteradas. Por exemplo, `TitleTextBlockStyle` define **FontSize** como 14.667 PX em um aplicativo Windows Runtime 8. x e 18.14 PX em um aplicativo da loja Windows Phone. Porém, o mesmo estilo define **FontSize** para um 24px muito maior em um aplicativo do Windows 10. Revise os designs e layouts e use os estilos apropriados nos locais corretos. Para obter mais informações, consulte [Diretrizes para fontes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) e [Crie aplicativos UWP](https://developer.microsoft.com/en-us/windows/apps/design).
+Para chaves que ainda têm suporte, as mudanças na linguagem de design significam que as propriedades definidas por alguns estilos foram alteradas. Por exemplo, `TitleTextBlockStyle` define **FontSize** como 14.667 PX em um aplicativo Windows Runtime 8. x e 18.14 PX em um aplicativo da loja Windows Phone. Porém, o mesmo estilo define **FontSize** para um 24px muito maior em um aplicativo do Windows 10. Revise os designs e layouts e use os estilos apropriados nos locais corretos. Para obter mais informações, consulte [Diretrizes para fontes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) e [Crie aplicativos UWP](https://developer.microsoft.com/windows/apps/design).
 
 Esta é uma lista completa das chaves que não têm suporte.
 
