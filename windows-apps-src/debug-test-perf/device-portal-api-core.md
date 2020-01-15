@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 86724b084edb9350adfd2ed2623623d255302b70
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
+ms.sourcegitcommit: 8d945e0406818e614eacdc962493e570cc7615ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683454"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955306"
 ---
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Portal de Dispositivos
 
@@ -2003,7 +2003,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| name | (**necessário**) O novo nome para o computador. |
+| name | (**necessário**) O novo nome para o computador. Isso deve ser codificado em base64. |
 
 **Cabeçalhos da solicitação**
 
