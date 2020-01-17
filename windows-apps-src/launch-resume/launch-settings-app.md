@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6387cc75047371666ac55b9fb70ae73d3e4c4d64
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: c67d359120b738458d7397c9558f19b4794888f6
+ms.sourcegitcommit: 87c20c6a40ed54e086adbe80caa509d851f54f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302660"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123838"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
 
@@ -135,12 +135,12 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Áudio | ms-settings:easeofaccess-audio |
 | Legendas ocultas | ms-settings:easeofaccess-closedcaptioning |
 | Filtros de cores | MS-Settings: easeofaccess-colorfilter |
-| Tamanho do ponteiro & do cursor | MS-Settings: easeofaccess-cursorandpointersize |
+| Tamanho de ponteiro e de cursor | MS-Settings: easeofaccess-cursorandpointersize |
 | Vídeo | ms-settings:easeofaccess-display |
 | Controle com os olhos | ms-settings:easeofaccess-eyecontrol |
 | Fontes | ms-settings:fonts |
 | Alto contraste | ms-settings:easeofaccess-highcontrast |
-| Teclado | ms-settings:easeofaccess-keyboard |
+| Keyboard | ms-settings:easeofaccess-keyboard |
 | Lupa | ms-settings:easeofaccess-magnifier |
 | Mouse | ms-settings:easeofaccess-mouse |
 | Narrador | ms-settings:easeofaccess-narrator |
@@ -237,23 +237,24 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Calendário | ms-settings:privacy-calendar |
 | Histórico de chamadas | ms-settings:privacy-callhistory |
 | Camera | ms-settings:privacy-webcam |
-| Contatos | ms-settings:privacy-contacts |
+| Contacts | ms-settings:privacy-contacts |
 | Documentos | ms-settings:privacy-documents |
 | Email | ms-settings:privacy-email |
 | Eye tracker | ms-settings:privacy-eyetracker (exige hardware eyetracker) |
 | Comentários e diagnóstico | ms-settings:privacy-feedback |
 | Sistema de arquivos | ms-settings:privacy-broadfilesystemaccess |
-| Geral | ms-settings:privacy-general |
-| Location | ms-settings:privacy-location |
+| Geral | MS-Settings: privacidade ou MS-Settings: privacidade-geral |
+| Digitação de & de tinta |ms-settings:privacy-speechtyping |
+| Local | ms-settings:privacy-location |
 | Messaging | ms-settings:privacy-messaging |
 | Microfone | ms-settings:privacy-microphone |
 | Movimento | ms-settings:privacy-motion |
 | Notificações | ms-settings:privacy-notifications |
 | Outros dispositivos | ms-settings:privacy-customdevices |
-| Imagens | ms-settings:privacy-pictures |
 | Chamadas telefônicas | MS-Settings: privacidade – telefonemas |
+| Imagens | ms-settings:privacy-pictures |
 | Rádios | ms-settings:privacy-radios |
-| Controle por voz, escrita à tinta e digitação |ms-settings:privacy-speechtyping |
+| Controle por voz | MS-configurações: privacidade – fala |
 | Tarefas | ms-settings:privacy-tasks |
 | Vídeos | ms-settings:privacy-videos |
 | Ativação de voz | MS-Settings: privacy-voiceactivation |
@@ -333,7 +334,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Opções de reinicialização do Windows Update | ms-settings:windowsupdate-restartoptions |
 | Visualização de histórico do Windows Update | ms-settings:windowsupdate-history |
 
-## <a name="user--accounts"></a>Contas de usuário
+## <a name="user-accounts"></a>Contas de usuário
 
 |Página de configurações| URI |
 |-------------|-----|
