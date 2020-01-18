@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
 ms.localizationpriority: medium
-ms.openlocfilehash: 606267080ced6ea8dd41f8f05ddcdee4d33b00f2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
+ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259964"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258352"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -44,6 +44,7 @@ No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de c
 | Polônia               | Laranja, reproduzir                                            |
 | Cingapura            | M1 Limited, StarHub                                     |
 | Eslováquia             | Slovak Telekom                                          |
+| África do Sul         | Vodacom                                                 |
 | Espanha                | Orange                                                  |
 | Suécia               | Telenor, 3                                              |
 | Suíça          | Swisscom, Sunrise                                       |

@@ -9,17 +9,17 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, serviço de notificações do Windows, notificação, Windows, firewall, solução de problemas, IP, tráfego, Enterprise, rede, IPv4, VIP, FQDN, endereço IP público
 ms.localizationpriority: medium
-ms.openlocfilehash: c3774164d16e86a88f45eb50030beec099629d6f
-ms.sourcegitcommit: 738bab9a088a244a7a212dcac6fb3560c547b8d5
+ms.openlocfilehash: fa0153a395144382aee3f764f0f7d9316afa9c5e
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695767"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265017"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configurações de proxy e firewall corporativo para dar suporte ao tráfego WNS
 
 ## <a name="background"></a>Histórico
-Muitas empresas usam firewalls para bloquear o tráfego de rede indesejado; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas pelo WNS serão descartadas em determinadas configurações de rede. Para evitar isso, os administradores de rede podem adicionar a lista de FQDNs ou VIPs do WNS aprovados à sua lista de isenção para permitir que o tráfego do WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar, bem como suporte para tipos de proxy diferentes.
+Muitas empresas usam firewalls para bloquear tráfego e portas de rede indesejadas; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas pelo WNS serão descartadas em determinadas configurações de rede. Para evitar isso, os administradores de rede podem adicionar a lista de FQDNs ou VIPs do WNS aprovados à sua lista de isenção para permitir que o tráfego do WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar, bem como suporte para tipos de proxy diferentes.
 
 ## <a name="proxy-support"></a>Suporte a proxy
 
@@ -39,8 +39,8 @@ Abaixo está uma lista que contém os FQDNs, VIPs e os intervalos de endereços 
 > Os intervalos de endereços IP serão alterados periodicamente; por isso, eles não estão incluídos nesta página. Se você quiser ver a lista de intervalos de IP, você pode baixar o arquivo do centro de download: [VIP (serviço de notificação do Windows) e intervalos de IP](https://www.microsoft.com/download/details.aspx?id=44238). Verifique regularmente para certificar-se de que você tem as informações mais atualizadas. 
 
 
-### <a name="fqdns-vips-and-ips"></a>FQDNs, VIPs e IPs
-Cada um dos elementos no documento XML a seguir é explicado na tabela que o segue (em [termos e notações](#terms-and-notations)). Os intervalos de IP foram intencionalmente deixados para fora deste documento para incentivar você a usar apenas os FQDNs, pois os FQDNs permanecerão constantes. No entanto, você pode baixar o arquivo XML que contém a lista completa no centro de download: [serviços de notificação do Windows (WNS) e intervalos de IP](https://www.microsoft.com/download/details.aspx?id=44238). Novos VIPs ou intervalos de IP entrarão em **vigor uma semana após serem carregados**.
+### <a name="fqdns-vips-ips-and-ports"></a>FQDNs, VIPs, IPs e portas
+Independentemente do método que você escolher abaixo, você precisará permitir o tráfego de rede para os destinos listados por meio da **porta 443**. Cada um dos elementos no documento XML a seguir é explicado na tabela que o segue (em [termos e notações](#terms-and-notations)). Os intervalos de IP foram intencionalmente deixados para fora deste documento para incentivar você a usar apenas os FQDNs, pois os FQDNs permanecerão constantes. No entanto, você pode baixar o arquivo XML que contém a lista completa no centro de download: [serviços de notificação do Windows (WNS) e intervalos de IP](https://www.microsoft.com/download/details.aspx?id=44238). Novos VIPs ou intervalos de IP entrarão em **vigor uma semana após serem carregados**.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
