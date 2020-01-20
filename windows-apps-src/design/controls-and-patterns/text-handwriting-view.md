@@ -11,18 +11,18 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ec78498cc3941c3c03b33d8c3ab55b40c100a7ea
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062079"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684281"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com exibição de texto manuscrito
 
 ![Caixa de texto se expande quando tocada com a caneta](images/handwritingview/handwritingview2.gif)
 
-Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto UWP, como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), e controles derivados destes, como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
+Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto UWP, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), e controles derivados destes, como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
 
 ## <a name="overview"></a>Visão geral
 
@@ -50,7 +50,7 @@ O modo de exibição interno de manuscrito é habilitado por padrão.
 
 Talvez você queira desabilitar o modo de exibição de manuscrito se você já fornece funcionalidade equivalente de tinta em texto em seu aplicativo ou sua experiência de entrada de texto se baseia em algum tipo de formatação ou caractere especial (como uma guia) não disponível por meio de manuscrito.
 
-Neste exemplo, podemos desabilitar o modo de exibição de manuscrito definindo a propriedade [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) do controle [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) como false. Todos os controles de texto que dão suporte à exibição de texto manuscrito oferecem suporte a uma propriedade semelhante.
+Neste exemplo, podemos desabilitar o modo de exibição de manuscrito definindo a propriedade [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) do controle [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) como false. Todos os controles de texto que dão suporte à exibição de texto manuscrito oferecem suporte a uma propriedade semelhante.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -67,7 +67,7 @@ O modo de exibição de manuscrito localizado acima do controle de texto subjace
 
 A interface do usuário do aplicativo não reflui para acomodar o controle maior, de modo que o sistema pode fazer com que o modo de exibição obstrua uma interface do usuário importante.
 
-Aqui, mostramos como usar a propriedade [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) de um [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qual âncora no controle de texto subjacente é usada para alinhar o modo de exibição de manuscrito.
+Aqui, mostramos como usar a propriedade [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) de uma [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qual âncora no controle de texto subjacente é usada para alinhar o modo de exibição de manuscrito.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -107,7 +107,7 @@ Um usuário pode escolher de uma coleção predefinida de fontes com base em tex
 
 Seu aplicativo pode acessar essa configuração e usar a fonte selecionada para o texto reconhecido no controle de texto.
 
-Neste exemplo, podemos escutar o evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) de um [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) e aplicar a fonte de selecionada do usuário se a alteração de texto se originou do HandwritingView (ou uma fonte padrão, caso contrário).
+Neste exemplo, podemos escutar o evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) de um [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) e aplicar a fonte de selecionada do usuário se a alteração de texto se originou do HandwritingView (ou uma fonte padrão, caso contrário).
 
 ```csharp
 private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -121,7 +121,7 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 ## <a name="access-the-handwritingview-in-composite-controls"></a>Acessar HandwritingView em controles compostos
 
-Controles compostos que usam os controles [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) ou [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox), também dão suporte a [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview).
+Controles compostos que usam os controles [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) ou [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox), também dão suporte a [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview).
 
 Para acessar o [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) em um controle composto, use a API [VisualTreeHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper).
 

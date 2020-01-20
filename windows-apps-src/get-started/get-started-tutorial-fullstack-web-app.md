@@ -5,12 +5,12 @@ keywords: aplicativo web hospedado, HWA, API REST, aplicativo de página única,
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f5195cc3ed84116797c0b424a637c255b082386
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: b9a6b80034dc8272226c9563960079434dff8e41
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281858"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684779"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Criar um aplicativo Web de página única com back-end da API REST
 
@@ -20,7 +20,7 @@ ms.locfileid: "72281858"
 
 Este tutorial de duas partes oferece um tour rápido pelo desenvolvimento moderno da Web de pilha completa à medida que você cria um jogo de memória simples que funciona no navegador e como um Aplicativo Web Hospedado para a Microsoft Store. Na Parte I, você compilará um serviço API REST simples para o back-end do jogo. Armazenando a lógica do jogo na nuvem como um serviço de API, você preserva o estado do jogo para que o usuário possa continuar no mesmo jogo em dispositivos diferentes. Na Parte II, você criará a interface do usuário front-end como um aplicativo Web de página única com layout dinâmico.
 
-Usaremos algumas das tecnologias da Web mais populares, incluindo o tempo de execução [Node.js](https://nodejs.org/en/) e o [Express](https://expressjs.com/) para o desenvolvimento do lado do servidor, a estrutura da interface do usuário [Bootstrap](https://getbootstrap.com/), o mecanismo de modelo [Pug](https://www.npmjs.com/package/pug) e o [Swagger](https://swagger.io/tools/) para a criação de APIs RESTful. Você também vai adquirir experiência com o [Portal do Azure](https://ms.portal.azure.com/) para hospedagem na nuvem e trabalho com o editor [Visual Studio Code](https://code.visualstudio.com/).
+Usaremos algumas das tecnologias da Web mais populares, incluindo o runtime [Node.js](https://nodejs.org/en/) e o [Express](https://expressjs.com/) para o desenvolvimento do lado do servidor, a estrutura da interface do usuário [Bootstrap](https://getbootstrap.com/), o mecanismo de modelo [Pug](https://www.npmjs.com/package/pug) e o [Swagger](https://swagger.io/tools/) para a criação de APIs RESTful. Você também vai adquirir experiência com o [Portal do Azure](https://ms.portal.azure.com/) para hospedagem na nuvem e trabalho com o editor [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -32,7 +32,7 @@ Caso você ainda não tenha esses recursos no computador, siga estes links de do
 
  - [Visual Studio Code](https://code.visualstudio.com/)
 
-Se você quiser concluir as etapas finais de hospedagem do serviço de API e do aplicativo de jogo da memória no Microsoft Azure, você precisará [criar uma conta gratuita do Azure](https://azure.microsoft.com/en-us/free/), caso ainda não tenha feito isso.
+Se você quiser concluir as etapas finais de hospedagem do serviço de API e do aplicativo de jogo da memória no Microsoft Azure, você precisará [criar uma conta gratuita do Azure](https://azure.microsoft.com/free/), caso ainda não tenha feito isso.
 
 Se você decidir abandonar (ou adiar) a parte do Azure, basta ignorar as seções finais das partes I e II, que abrangem a hospedagem do Azure e o empacotamento do aplicativo para a Microsoft Store. O serviço de API e o aplicativo Web criado ainda serão executados localmente (em `http://localhost:8000` e `http://localhost:3000`, respectivamente) no computador.
 
@@ -290,7 +290,7 @@ Veja a seguir alguns recursos úteis para aprofundamento:
 
  - [Depuração avançada do Node.js com o Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Documentos do Azure para Web + dispositivos móveis](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
+ - [Documentos do Azure para Web + dispositivos móveis](https://docs.microsoft.com/azure/#pivot=services&panel=web)
 
  - [Documentos do Azure DocumentDB](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
@@ -490,7 +490,7 @@ if (cardsFlipped == gameBoardSize) {
 Se o número de cartas viradas corresponder ao tamanho do tabuleiro do jogo (por exemplo, `cardsFlipped == gameBoardSize`), não haverá mais cartas a serem viradas e o usuário ganhou o jogo. Adicionaremos um HTML simples a `div` com `id="game-board"` para que o usuário saiba que ganhou e pode jogar novamente.  
 
 ### <a name="3-create-the-user-interface"></a>3. Criar a interface do usuário 
-Agora vamos conferir todo esse código em ação criando a interface do usuário. Neste tutorial, usamos o mecanismo de modelagem [Pug](https://pugjs.org/) (antigo Jade).  *Pug* é uma sintaxe limpa que faz distinção de espaços em branco na escrita de HTML. Aqui está um exemplo. 
+Agora vamos conferir todo esse código em ação criando a interface do usuário. Neste tutorial, usamos o mecanismo de modelagem [Pug](https://pugjs.org/) (antigo Jade).  *Pug* é uma sintaxe limpa que faz distinção de espaços em branco na escrita de HTML. Veja um exemplo. 
 
 ```
 body
@@ -634,8 +634,8 @@ Agora você pode implantar o aplicativo no Azure (ou em qualquer outro serviço 
 
 Estas são as etapas básicas para publicação na Microsoft Store:
 
- 1. Criar uma conta de [Desenvolvedor do Windows](https://developer.microsoft.com/en-us/store/register)
- 2. Usar a [lista de verificação](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions) do envio de aplicativo
+ 1. Criar uma conta de [Desenvolvedor do Windows](https://developer.microsoft.com/store/register)
+ 2. Usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo
  3. Envie o aplicativo para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)
 
 Veja a seguir alguns recursos úteis para aprofundamento:

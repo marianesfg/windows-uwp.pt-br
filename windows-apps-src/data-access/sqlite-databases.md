@@ -5,15 +5,15 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, banco de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b9c26710dfc5f71a9709fa93de4b369f6281e8c
-ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
+ms.openlocfilehash: 7e10dc35464472a16f64ec94cd0fdd78c41eb484
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73560697"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302720"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar um banco de dados do SQLite em um aplicativo UWP
-É possível usar o SQLite para armazenar e recuperar dados em um banco de dados leve nos dispositivos dos usuários. Este guia mostra como fazer isso.
+É possível usar o SQLite para armazenar e recuperar dados em um banco de dados leve no dispositivo do usuário. Este guia mostra como fazer isso.
 
 ## <a name="some-benefits-of-using-sqlite-for-local-storage"></a>Alguns benefícios do uso do SQLite para armazenamento local
 
@@ -47,7 +47,7 @@ O restante deste guia ajuda você a usar essa biblioteca.
 
 Vamos começar com um projeto UWP básico, adicionar uma biblioteca de classes e, em seguida, instalar os pacotes NuGet corretos.
 
-O tipo de biblioteca de classes que você adiciona à sua solução e os pacotes específicos que você instala dependem da versão mínima do SDK do Windows a que seu aplicativo se destina. Você pode encontrar essas informações na página Propriedades do seu projeto UWP.
+O tipo de biblioteca de classes que você adiciona à sua solução e os pacotes específicos que você instala dependem da versão mínima do SDK do Windows a que seu aplicativo se destina. Essas informações estão na página de propriedades do seu projeto da UWP.
 
 ![Versão mínima do SDK do Windows](images/min-version.png)
 

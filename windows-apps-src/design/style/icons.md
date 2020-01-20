@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5e464251200812e79474d05d9d0a680b49167871
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e30e9b2bed5cb4c0b7876ff1c597bb7d1243008a
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564542"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684161"
 ---
 # <a name="icons-for-uwp-apps"></a>Ícones para aplicativos UWP
 
@@ -28,16 +28,14 @@ Os ícones fornecem uma abreviação visual para uma ação, um conceito ou um p
 
 :::row:::
     :::column:::
-        **Icons inside the app**
+        **Ícones dentro do aplicativo**
 
-        ![icons inside the app](images/icons/inside-icons.png)
-Dentro de seu aplicativo, use ícones para representar uma ação, como copiar o texto ou navegar até a página de configurações.
+        ![ícones dentro do aplicativo](images/icons/inside-icons.png) Dentro de seu aplicativo, use ícones para representar uma ação, como copiar o texto ou navegar até a página de configurações.
     :::column-end:::
     :::column:::
 **Ícones fora do aplicativo**
 
-        ![icons outside the app](images/icons/outside-icons.jpg)
-Fora do seu aplicativo, o Windows usa um ícone para representá-lo no menu Iniciar e na barra de tarefas. Se o usuário optar por fixar o seu aplicativo no menu Iniciar, o bloco de início do seu aplicativo pode apresentar o ícone do aplicativo. O ícone do seu aplicativo aparece na barra de título e você pode optar por criar uma tela inicial com o logotipo do aplicativo.
+        ![ícones fora do aplicativo](images/icons/outside-icons.jpg) Fora do seu aplicativo, o Windows usa um ícone para representá-lo no menu Iniciar e na barra de tarefas. Se o usuário optar por fixar o seu aplicativo no menu Iniciar, o bloco de início do seu aplicativo pode apresentar o ícone do aplicativo. O ícone do seu aplicativo aparece na barra de título e você pode optar por criar uma tela inicial com o logotipo do aplicativo.
     :::column-end:::
 :::row-end:::
 
@@ -49,14 +47,12 @@ Este artigo descreve os ícones no seu aplicativo. Para saber mais sobre ícones
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        ![icons standard image](images/icons/icons-standard.svg)<br>
+        ![o que fazer](images/do.svg) ![imagem padrão dos ícones](images/icons/icons-standard.svg)<br>
 
 Use ícones para ações, como recortar, copiar, colar e salvar, ou para itens de navegação em um menu de navegação.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        ![icons concept image](images/icons/icons-concept.svg)<br>
+        ![o que não fazer](images/dont.svg) ![imagem de conceito dos ícones](images/icons/icons-concept.svg)<br>
 
 Use um ícone se já existir um para o conceito que deseja representar. (Para ver se existe um ícone, verifique a lista de ícones da Segoe.)
     :::column-end:::
@@ -64,14 +60,12 @@ Use um ícone se já existir um para o conceito que deseja representar. (Para ve
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        ![icon shopping cart](images/icons/icon-shopping-cart.svg)<br>
+        ![o que fazer](images/do.svg) ![carrinho de compras de ícone](images/icons/icon-shopping-cart.svg)<br>
 
 Use um ícone se for fácil para o usuário entender o que ele significa e se for simples o bastante para ser entendido em tamanhos pequenos.
     :::column-end:::
     :::column:::
-        ![dont](images/dont.svg)
-        ![icons concept image](images/icons/icon-bad-example.png)<br>
+        ![o que não fazer](images/dont.svg) ![imagem de conceito dos ícones](images/icons/icon-bad-example.png)<br>
 
 Não use um ícone se o significado não está claro, ou se para que fique claro seja necessário usar uma forma complexa.
     :::column-end:::
@@ -89,7 +83,7 @@ Há muitas maneiras de criar um ícone. É possível: Usar uma fonte de símbolo
 A Microsoft fornece mais de 1.000 ícones na forma da fonte Segoe MDL2 Assets. Talvez não seja intuitivo obter um ícone a partir de uma fonte, mas nossa tecnologia de exibição de fonte proporciona a nitidez ideal em qualquer tela, em qualquer resolução e em qualquer tamanho. Para obter instruções, confira [Ícones Segoe MDL2](segoe-ui-symbol-font.md).
     :::column-end:::
     :::column:::
-        ![pre-defined icon image](images/icons/predefined-icon.png)
+        ![imagem de ícone predefinida](images/icons/predefined-icon.png)
     :::column-end:::
 :::row-end:::
 
@@ -99,7 +93,7 @@ A Microsoft fornece mais de 1.000 ícones na forma da fonte Segoe MDL2 Assets. T
 Você não precisa usar a fonte Segoe MDL2 Assets, é possível usar qualquer fonte que o usuário tenha instalada no sistema, como Wingdings ou Webdings.
     :::column-end:::
     :::column:::
-        ![wingdings image](images/icons/wingdings.png)
+        ![imagem Wingdings](images/icons/wingdings.png)
     :::column-end:::
 :::row-end:::
 
@@ -109,7 +103,7 @@ Você não precisa usar a fonte Segoe MDL2 Assets, é possível usar qualquer fo
 Os recursos SVG são ideais para ícones, pois sempre têm aparência nítida em qualquer tamanho ou resolução. A maioria dos aplicativos de desenho pode exportar para SVG. Para obter instruções, confira [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource).
     :::column-end:::
     :::column:::
-        ![SVG image](images/icons/icon-scale.gif)
+        ![imagem SVG](images/icons/icon-scale.gif)
     :::column-end:::
 :::row-end:::
 
@@ -119,7 +113,7 @@ Os recursos SVG são ideais para ícones, pois sempre têm aparência nítida em
 Como os arquivos SVG, objetos geométricos são um recurso baseado em vetor, então sempre têm aparência nítida. No entanto, é complicado criar um objeto geométrico, pois você precisa especificar individualmente cada ponto e curva. É uma boa opção somente se você precisar modificar o ícone enquanto o aplicativo está em execução (para animá-lo, por exemplo). Para ver instruções, confira [Mover e desenhar comandos para objetos geométricos](../../xaml-platform/move-draw-commands-syntax.md). 
     :::column-end:::
     :::column:::
-        ![Geometry objects image](images/icons/geometry-objects.png)
+        ![Imagem de objetos geométricos](images/icons/geometry-objects.png)
     :::column-end:::
 :::row-end:::
 
@@ -129,8 +123,7 @@ Como os arquivos SVG, objetos geométricos são um recurso baseado em vetor, ent
 As imagens bitmap são criadas com um tamanho específico para poderem ser dimensionadas dependendo do tamanho desejado do ícone e da resolução da tela. Quando a imagem é redimensionada (reduzida), pode parecer desfocada; quando é ampliada, pode parecer irregular e pixelada. Se precisa usar uma imagem bitmap, recomendamos usar PNG ou GIF ao invés de JPEG. 
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        ![Bitmap image](images/icons/bitmap-image.png)
+        ![o que não fazer](images/dont.svg) ![imagem Bitmap](images/icons/bitmap-image.png)
     :::column-end:::
 :::row-end:::
 
@@ -148,11 +141,11 @@ Existem algumas maneiras de adicionar um ícone a um botão:
 
 :::row:::
     :::column span="2":::
-        <b>Step 1</b><br>
+        <b>Etapa 1</b><br>
 Defina a família de fontes do botão como `Segoe MDL2 Assets` e sua propriedade de conteúdo como o valor Unicode do glifo que deseja usar:
     :::column-end:::
     :::column:::
-        ![Create an icon button step 1](images/icons/create-icon-step-1.svg)
+        ![Etapa 1 de criação de um botão de ícone](images/icons/create-icon-step-1.svg)
     :::column-end:::
 :::row-end:::
 
@@ -162,11 +155,11 @@ Defina a família de fontes do botão como `Segoe MDL2 Assets` e sua propriedade
 
 :::row:::
     :::column span="2":::
-        <b>Step 2</b><br>
+        <b>Etapa 2</b><br>
 É possível usar um dos objetos de elemento de ícone: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) ou [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). Isso oferece mais tipos de ícones para escolher e permite combinar ícones e outros tipos de conteúdo, como texto, se você quiser:
     :::column-end:::
     :::column:::
-        ![Create an icon button step 2](images/icons/icon-text-step-2.svg)
+        ![Etapa 2 de criação de um botão de ícone](images/icons/icon-text-step-2.svg)
     :::column-end:::
 :::row-end:::
 
@@ -183,10 +176,10 @@ Defina a família de fontes do botão como `Segoe MDL2 Assets` e sua propriedade
 
 :::row:::
     :::column span:::
-Quando se tem uma série de comandos que funcionam juntos, como cortar/copiar/colar ou um conjunto de comandos de desenho para um programa de edição de fotos, coloque-os juntos em uma [barra de comando](../controls-and-patterns/app-bars.md). Uma barra de comando usa um ou mais botões ou botões de alternância da barra de aplicativos, cada um representando uma ação. Cada botão tem uma propriedade [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) que você pode usar para controlar qual ícone é exibido. Existem diversas maneiras de especificar o ícone. 
+Quando se tem uma série de comandos que funcionam juntos, como cortar/copiar/colar ou um conjunto de comandos de desenho para um programa de edição de fotos, coloque-os juntos em uma [barra de comando](../controls-and-patterns/app-bars.md). Uma barra de comando usa um ou mais botões ou botões de alternância da barra de aplicativos, cada um representando uma ação. Cada botão tem uma propriedade [Icon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) que você pode usar para controlar qual ícone é exibido. Existem diversas maneiras de especificar o ícone. 
     :::column-end:::
     :::column:::
-        ![Example of a command bar with icons](images/icons/create-icon-command-bar.svg)
+        ![Exemplo de uma barra de comandos com ícones](images/icons/create-icon-command-bar.svg)
     :::column-end:::
 :::row-end:::
 

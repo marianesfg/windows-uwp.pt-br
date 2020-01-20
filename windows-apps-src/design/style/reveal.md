@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0810365eeb0023a31862d31213862e2b3bce8db8
-ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
+ms.openlocfilehash: 63a7ee8550b72356199645f54b587480275c2bcd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70930345"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685078"
 ---
 # <a name="reveal-highlight"></a>Realce de Revelação
 
@@ -23,7 +23,7 @@ ms.locfileid: "70930345"
 
 O Realce da Revelação é um efeito de iluminação que destaca os elementos interativos, como barras de comandos, quando o usuário move o ponteiro perto deles. 
 
-> **APIs importantes**: [classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [classe RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [classe RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [classe RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [classe VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
+> **APIs importantes**: [classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [classe RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [classe RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [classe RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [classe VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Como funciona
 O Realce da Revelação chama a atenção para elementos interativos, revelando o contêiner do elemento quando o ponteiro está próximo, como mostrado nesta ilustração:
@@ -76,7 +76,7 @@ Se você tiver um cenário onde deve ser aplicada a Revelação (esses controles
 
 Esses controles não têm a Revelação por padrão, uma vez que são controles menores que geralmente são ajudantes dos principais pontos de foco da sua aplicação; no entanto cada aplicativo é diferente, e se esses controles são os mais utilizados em seu aplicativo, nós criamos alguns estilos para auxiliá-lo com isso:
 
-| Nome do controle   | Nome do recurso |
+| Nome do controle   | Nome do Recurso |
 |----------|:-------------:|
 | Botão |  ButtonRevealStyle |
 | ToggleButton | ToggleButtonRevealStyle |
@@ -268,7 +268,7 @@ Ao habilitar a Revelação em um controle personalizado ou remodelado ou em uma 
 - Usar a Revelação em áreas com uma grande quantidade de elementos interativos (cenários de comando)
 - Colocar espaços de margem de 1px entre os itens da Revelação
 
-### <a name="dont"></a>Você não deve
+### <a name="dont"></a>O que não fazer
 - Não usar a Revelação em conteúdo estático (telas de fundo, texto)
 - Não usar a Revelação em pop-ups, submenus ou listas suspensas
 - Não usar a Revelação em situações únicas e isoladas

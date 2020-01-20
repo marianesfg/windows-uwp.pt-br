@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31f527cff7588ccf6da2594566cfa3cf13a214f1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8ed1344b5ee49244a6c1afcbb873b54fcc28624f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258676"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684880"
 ---
 # <a name="sound"></a>Som
 
@@ -41,11 +41,11 @@ Há muitas maneiras de usar o som para aprimorar o aplicativo. Você pode usar s
 </tr>
 </table>
 
-## <a name="sound-global-api"></a>API de som Global
+## <a name="sound-global-api"></a>API de Som Global
 
 O UWP fornece um sistema de som facilmente acessível que permite simplesmente "usar um interruptor" e obter uma intensa experiência de áudio em seu aplicativo inteiro.
 
-O [**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) é um sistema de som integrado no XAML e, quando ativado em todos os controles padrão, reproduzirá sons automaticamente.
+O [**ElementSoundPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer) é um sistema de som integrado no XAML e, quando ativado em todos os controles padrão, reproduzirá sons automaticamente.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
@@ -60,7 +60,7 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 A propriedade **SpatialAudioMode** pode usar esses valores: 
-- **Auto**: o áudio espacial é ligado quando som está ativado. 
+- **Automático**: o áudio espacial é ligado quando som está ativado. 
 - **Desativado**: o áudio espacial sempre está desativado, mesmo quando o som está ativado.
 - **Ativado**: o áudio espacial sempre será reproduzido.
 
@@ -68,22 +68,22 @@ Para saber mais sobre o áudio espacial e como o XAML processa isso, veja [Audio
 
 ### <a name="sound-for-tv-and-xbox"></a>Som de TV e Xbox
 
-O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
+O som é uma parte essencial da experiência dos 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
 Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
 ## <a name="sound-volume-override"></a>Substituição de volume do som
 
-Todos os sons no aplicativo podem ser reduzidos com o controle **Volume**. No entanto, os sons no aplicativo não podem ficar *mais altos do que o volume do sistema*.
+Todos os sons no aplicativo podem ser esmaecidos com o controle **Volume**. No entanto, os sons no aplicativo não podem ficar *mais altos do que o volume do sistema*.
 
 Para definir o nível de volume do aplicativo, chame:
 ```C#
 ElementSoundPlayer.Volume = 0.5;
 ```
-Onde volume máximo (em relação ao volume do sistema) é 1,0 e o mínimo é 0,0 (essencialmente silencioso).
+Quando volume máximo (em relação ao volume do sistema) for 1,0 e o mínimo for 0,0 (essencialmente silencioso).
 
 ## <a name="control-level-state"></a>Estado de nível de controle
 
-Se não desejar o som do padrão de um controle, ele poderá ser desativado. Isso é feito por meio do **ElementSoundMode** no controle.
+Se não desejar o som do padrão de um controle, ele poderá ser desabilitado. Isso é feito por meio do **ElementSoundMode** no controle.
 
 O **ElementSoundMode** tem dois estados: **Desativado** e **Padrão**. Quando não definido, é **Padrão**. Se definido como **Desativado**, cada som que for reproduzido pelo controle será silenciado, *exceto o foco*.
 
@@ -101,19 +101,19 @@ Ao criar um controle personalizado ou alterar o som de um controle existente, é
 
 Cada som está relacionado a uma determinada interação básica do usuário e, embora os sons possam ser personalizados para reprodução em qualquer interação, esta seção serve para ilustrar os cenários nos quais os sons devem ser usados para manter uma experiência consistente em todos os aplicativos UWP.
 
-### <a name="invoking-an-element"></a>Invocando um elemento
+### <a name="invoking-an-element"></a>Invocar um elemento
 
 O som disparado por controle mais comum em nosso sistema hoje é o **Invoke**. Esse som é reproduzido quando o usuário invoca um controle por meio de um toque/clique/enter/espaço ou pressionamento do botão "A" em um gamepad.
 
 Normalmente, esse som só é executado quando um usuário direciona explicitamente um controle simples ou parte de um controle por meio de um [dispositivo de entrada](../input/index.md).
 
 
-Para reproduzir esse som a partir de qualquer evento de controle, basta chamar o método Play de **ElementSoundPlayer** e transmitir **ElementSound.Invoke**:
+Para reproduzir esse som de qualquer evento de controle, basta chamar o método Play de **ElementSoundPlayer** e transmitir **ElementSound.Invoke**:
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
 
-### <a name="showing--hiding-content"></a>Mostrando e ocultando conteúdo
+### <a name="showing--hiding-content"></a>Mostrar e ocultar conteúdo
 
 Há muitos submenus, caixas de diálogo e interfaces do usuário rejeitadas em XAML, e qualquer ação que dispare uma dessas sobreposições deve chamar o som **Mostrar** ou **Ocultar**.
 
@@ -122,7 +122,7 @@ Quando uma janela de conteúdo de sobreposição é exibida, o som **Mostrar** d
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```
-Por outro lado, quando uma janela de conteúdo de sobreposição é fechada (ou light dismissed), o som **Ocultar** deve ser chamado:
+Por outro lado, quando uma janela de conteúdo de sobreposição é fechada (ou ignorada), o som **Ocultar** deve ser chamado:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
@@ -150,13 +150,13 @@ Ao navegar da página atual para a página anterior dentro de um aplicativo, o s
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```
-### <a name="focusing-on-an-element"></a>Focando em um elemento
+### <a name="focusing-on-an-element"></a>Focar em um elemento
 
-O som **Foco** é o único som implícito em nosso sistema. Ou seja, um usuário não está interagindo diretamente com nada, mas ainda ouve um som.
+O som **Focus** é o único som implícito em nosso sistema. Ou seja, um usuário não está interagindo diretamente com nada, mas ainda ouve um som.
 
-O foco acontece quando um usuário navega por meio de um aplicativo, que pode ser com o teclado/gamepad/remoto ou kinect. Normalmente, o som **Foco** *não é reproduzido em eventos PointerEntered nem do mouse*.
+O foco acontece quando um usuário navega por meio de um aplicativo, que pode ser com o teclado/gamepad/remoto ou kinect. Normalmente, o som **Foco***não é reproduzido em eventos PointerEntered nem do mouse*.
 
-Para configurar um controle para reproduzir o som **Foco** quando o controle recebe foco, chame:
+Para configurar um controle para reproduzir o som **Focus** quando o controle recebe foco, chame:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);

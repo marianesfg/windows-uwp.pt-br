@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 93a81501b524826484111419899675fbb99b86fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364762"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684392"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -264,7 +264,7 @@ Os itens mostrados pelo [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.item
 
 [StackLayout](/uwp/api/microsoft.ui.xaml.controls.stacklayout) organiza os elementos em uma única linha que você pode orientar horizontal ou verticalmente.
 
-Você pode definir a propriedade [Espaçamento](/en-us/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) para ajustar a quantidade de espaço entre os itens. O espaçamento é aplicado na direção da [Orientação](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation) do layout.
+Você pode definir a propriedade [Espaçamento](/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) para ajustar a quantidade de espaço entre os itens. O espaçamento é aplicado na direção da [Orientação](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation) do layout.
 
 ![Espaçamento do layout de pilha](images/stack-layout.png)
 
@@ -642,6 +642,12 @@ Este exemplo mostra como você pode exibir uma lista de itens agrupados em uma p
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+
+<Page.Resources>
+    <muxc:StackLayout x:Key="MyGroupLayout"/>
+    <muxc:StackLayout x:Key="MyItemLayout" Orientation="Horizontal"/>
+</Page.Resources>
+
 <ScrollViewer>
   <muxc:ItemsRepeater ItemsSource="{x:Bind AppNotifications}"
                       Layout="{StaticResource MyGroupLayout}">
@@ -650,7 +656,7 @@ Este exemplo mostra como você pode exibir uma lista de itens agrupados em uma p
         <!-- Group -->
         <StackPanel>
           <!-- Header -->
-          TextBlock Text="{x:Bind AppTitle}"/>
+          <TextBlock Text="{x:Bind AppTitle}"/>
           <!-- Items -->
           <muxc:ItemsRepeater ItemsSource="{x:Bind Notifications}"
                               Layout="{StaticResource MyItemLayout}"
@@ -663,10 +669,11 @@ Este exemplo mostra como você pode exibir uma lista de itens agrupados em uma p
   </muxc:ItemsRepeater>
 </ScrollViewer>
 ```
-
-Este exemplo mostra um layout para um aplicativo que tem várias categorias que podem ser alteradas com a preferência do usuário e são apresentadas como rolagem horizontal de listas, conforme mostrado aqui.
+A imagem abaixo mostra o layout básico que é criado usando o exemplo acima como uma diretriz.
 
 ![Layout aninhado com repetidor de itens](images/items-repeater-nested-layout.png)
+
+Este exemplo mostra um layout para um aplicativo que tem várias categorias que podem ser alteradas com a preferência do usuário e são apresentadas como rolagem horizontal de listas. O layout desse exemplo também é representado pela imagem acima.
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
@@ -777,7 +784,7 @@ O ItemsRepeater automaticamente garante que a ordem de tabulação padrão para 
 > [!NOTE]
 > O ItemsRepeater não se lembra automaticamente do último item focalizado.  Isso significa que, quando um usuário está usando Shift+Tab, pode ser levado para o último item realizado.
 
-### <a name="announcing-item-x-of-y-in-screen-readers"></a>Anunciando o "Item _X_ de _Y_" em Leitores de Tela
+### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>Anunciando o "Item _X_ de _Y_" em Leitores de Tela
 
 Você precisa gerenciar a definição das propriedades de automação apropriadas, como valores para **PositionInSet** e **SizeOfSet**, além de mantê-las atualizadas quando os itens forem adicionados, movidos, removidos etc.
 

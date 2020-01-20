@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Acessibilidade no Windows 10, acessibilidade, criação de aplicativos Win32 acessíveis, criação de aplicativos UWP acessíveis, criação de aplicativos WPF acessíveis, criação de aplicativos WinForms acessíveis
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 76bbd3f0e04bbb2f729ad0950bae190b2fffb6ac
-ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
+ms.openlocfilehash: fdb1092139602edd00086e17ff4dc7a27cf361dd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987192"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681887"
 ---
 # <a name="accessibility-in-windows-10"></a>Acessibilidade no Windows 10
 
@@ -39,11 +39,11 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
 
       [Projetando software inclusivo](https://docs.microsoft.com/windows/uwp/accessibility/designing-inclusive-software)
 
-      [Desenvolvendo aplicativos inclusivos do Windows](https://docs.microsoft.com/windows/uwp/accessibility/developing-inclusive-windows-apps)
+      [Desenvolvendo aplicativos do Windows inclusivos](https://docs.microsoft.com/windows/uwp/accessibility/developing-inclusive-windows-apps)
 
       [Testes de acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-testing)
 
-      [Acessibilidade na Loja](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
+      [Acessibilidade na Store](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
    :::column-end:::
    :::column:::
       ![Aplicativos da plataforma Win32](images/platform-win32.png)
@@ -123,19 +123,19 @@ Esta página fornece informações sobre como as diversas estruturas de desenvol
       [Projetando sites acessíveis](https://docs.microsoft.com/microsoft-edge/accessibility/design)
    :::column-end:::
    :::column:::
-      [Criando sites acessíveis ](https://docs.microsoft.com/microsoft-edge/accessibility/build)
+      [Criando sites acessíveis](https://docs.microsoft.com/microsoft-edge/accessibility/build)
 
       [Testando sites acessíveis](https://docs.microsoft.com/microsoft-edge/accessibility/test)
    :::column-end:::
 :::row-end:::
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 Baixe e execute exemplos completos do Windows que demonstram vários recursos e funcionalidades de acessibilidade.
 
 :::row:::
    :::column:::
-      [Navegador de exemplo de código](https://docs.microsoft.com/en-us/samples/browse/)
+      [Navegador de exemplo de código](https://docs.microsoft.com/samples/browse/)
 
       O novo navegador de exemplos que substitui a Galeria de Códigos da MSDN.
    :::column-end:::

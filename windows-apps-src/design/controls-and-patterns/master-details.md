@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63773337"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684382"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -21,7 +21,7 @@ ms.locfileid: "63773337"
 
 O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição de lista](lists.md)) e um painel de detalhes para o conteúdo. Quando um item na lista mestra é selecionado, o painel de detalhes é atualizado. Esse padrão é usado com frequência para email e catálogos de endereços.
 
-> **APIs importantes**: [classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **APIs importantes**: [classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
 
@@ -88,7 +88,7 @@ Para implementar um padrão de mestre/detalhes para qualquer tamanho de tela, cr
 ![layout de detalhe mestre adaptável](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>Criar um padrão mestre/detalhes adaptável
-Para criar um layout adaptável, defina diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para a interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
+Para criar um layout adaptável, defina diferentes [**VisualStates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate) para a interface do usuário e declare pontos de interrupção para os estados diferentes com [**AdaptiveTriggers**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
@@ -104,5 +104,5 @@ Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adapt�
 - [Listas](lists.md)
 - [Pesquisa](search.md)
 - [Aplicativo e barras de comandos](app-bars.md)
-- [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [Classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Classe SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)

@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319104"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684101"
 ---
 # <a name="teaching-tip"></a>Dica de ensino
 
@@ -71,11 +71,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Save automatically"
             Subtitle="When you save your file to OneDrive, we save your changes as you go - so you never have to.">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -106,10 +106,10 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to.">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 Neste exemplo, observe que TeachingTip está na árvore de elementos, e não em ResourceDictionary ou no code-behind. Isso não afeta o comportamento. TeachingTip só é exibido quando aberto e não ocupa espaço no layout.
@@ -120,7 +120,7 @@ Neste exemplo, observe que TeachingTip está na árvore de elementos, e não em 
 
 A dica de ensino replica o comportamento de posicionamento [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) do submenu com a propriedade TeachingTipPlacementMode. O modo de posicionamento padrão tentará colocar a dica de ensino com alvo acima do alvo e uma dica de ensino sem alvo centralizada na parte inferior da raiz XAML. Assim como no submenu, se o modo de posicionamento preferencial não deixar espaço para a exibição da dica de ensino, outro modo de posicionamento será escolhido automaticamente. 
 
-Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
+Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
 
 Uma dica de ensino com alvo e PreferredPlacement definido como "BottomLeft" será exibida com a cauda centralizada na parte inferior do alvo. O corpo da dica de ensino ficará deslocado para a esquerda.
 
@@ -128,12 +128,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
             PreferredPlacement="BottomLeft">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -147,11 +147,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Um aplicativo de exemplo com uma dica de ensino no canto inferior esquerdo. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo". Há um botão Fechar no canto superior direito da dica de ensino.](../images/teaching-tip-non-targeted-preferred-placement.png)
@@ -164,7 +164,7 @@ O diagrama a seguir mostra o resultado de todos os 13 modos PreferredPlacement q
 
 ### <a name="add-a-placement-margin"></a>Adicionar uma margem de posicionamento  
 
-Com a propriedade PlacementMargin, é possível controlar a distância entre a dica de ensino com alvo e o alvo, bem como a distância entre uma dica de ensino sem alvo e as bordas da raiz XAML. Assim como [Margin](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tem quatro valores – esquerda, direita, parte superior e parte inferior. Assim, somente os valores relevantes são usados. Por exemplo, PlacementMargin.Left é usado quando a dica está à esquerda do alvo ou da borda da raiz XAML.
+Com a propriedade PlacementMargin, é possível controlar a distância entre a dica de ensino com alvo e o alvo, bem como a distância entre uma dica de ensino sem alvo e as bordas da raiz XAML. Assim como [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tem quatro valores – esquerda, direita, parte superior e parte inferior. Assim, somente os valores relevantes são usados. Por exemplo, PlacementMargin.Left é usado quando a dica está à esquerda do alvo ou da borda da raiz XAML.
 
 O exemplo a seguir mostra uma dica sem alvo com todos os valores de PlacementMargin definidos como 80.
 
@@ -172,12 +172,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft"
     PlacementMargin="80">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Um aplicativo de exemplo com uma dica de ensino posicionada em direção ao canto inferior direito, mas não totalmente nessa posição. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo". Há um botão Fechar no canto superior direito da dica de ensino.](../images/teaching-tip-placement-margin.png)
@@ -191,7 +191,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
@@ -199,7 +199,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -218,7 +218,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
@@ -229,7 +229,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -244,14 +244,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
-            <controls:TeachingTip.HeroContent>
+            <muxc:TeachingTip.HeroContent>
                 <Image Source="Assets/cloud.png" />
-            </controls:TeachingTip.HeroContent>
-        </controls:TeachingTip>
+            </muxc:TeachingTip.HeroContent>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -266,14 +266,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
-            <controls:TeachingTip.IconSource>
-                <controls:SymbolIconSource Symbol="Save" />
-            </controls:TeachingTip.IconSource>
-        </controls:TeachingTip>
+            <muxc:TeachingTip.IconSource>
+                <muxc:SymbolIconSource Symbol="Save" />
+            </muxc:TeachingTip.IconSource>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -290,11 +290,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     IsLightDismissEnabled="True">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Um aplicativo de exemplo com uma dica com light dismiss no canto inferior direito. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo".](../images/teaching-tip-light-dismiss.png)
@@ -309,13 +309,13 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomRight"
     PlacementMargin="-80,-50,0,0"
     ShouldConstrainToRootBounds="False">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Um aplicativo de exemplo com uma dica de ensino fora do canto inferior direito do aplicativo. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo". Há um botão Fechar no canto superior direito da dica de ensino.](../images/teaching-tip-escape-xaml-root.png)
@@ -328,11 +328,11 @@ O evento Closing pode ser usado para cancelar e/ou adiar o fechamento de uma dic
 
 XAML
 ```XAML
-<controls:TeachingTip x:Name="EnableNewSettingsTip"
+<muxc:TeachingTip x:Name="EnableNewSettingsTip"
     Title="New ways to protect your privacy!"
     Subtitle="Please close this tip and review our updated privacy policy and privacy settings."
     Closing="OnTipClosing">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 C#
@@ -359,13 +359,13 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ### <a name="related-articles"></a>Artigos relacionados 
 
-* [Caixas de diálogo e submenus](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
+* [Caixas de diálogo e submenus](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>Recomendações
 * As dicas não são permanentes e não devem conter informações ou opções críticas para a experiência de um aplicativo. 
 * Tente evitar mostrá-las com muita frequência. É mais provável que uma dica de ensino receba atenção individualizada quando está intercalada ao longo de sessões demoradas ou em várias sessões.    
 * As dicas precisam ser breves e o tópico deve ser claro. Pesquisas mostram que, em média, os usuários só leem de três a cinco palavras e compreendem somente duas a três palavras antes de decidir se querem interagir com uma dica.
-* A acessibilidade de uma dica de ensino no gamepad não é garantida. Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
+* A acessibilidade de uma dica de ensino no gamepad não é garantida. Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
 * Ao habilitar uma dica de ensino para escapar da raiz XAML, é recomendável também habilitar a propriedade IsLightDismissEnabled e definir o modo PreferredPlacement mais próximo do centro da raiz XAML. 
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>Reconfigurar uma dica de ensino aberta

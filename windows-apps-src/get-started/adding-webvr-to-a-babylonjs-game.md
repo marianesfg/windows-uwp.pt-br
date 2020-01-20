@@ -5,25 +5,18 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr, edge, desenvolvimento da web, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f212e4e06035134b0ac5b5ea69381ed0d985783
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ff350f8ce08f566b8c95c3c46faad330923e4b2e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321161"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685198"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Adicionando suporte a WebVR a um jogo Babylon.js 3D
 
 Se você criou um jogo 3D com o Babylon.js e achou que ele pode funcionar perfeitamente em VR (realidade virtual), siga as etapas simples deste tutorial para fazer disso uma realidade.
 
-Adicionaremos suporte a WebVR ao jogo mostrado aqui. Vá em frente e conecte um controlador do Xbox para experimentar!
-
-
-<iframe height='300' scrolling='no' title='Jogo de dinossauro do Babylon.js usando Babylon.GUI' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/wrOvoj/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte a Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/wrOvoj/'>Jogo de dinossauro do Babylon.js usando Babylon.GUI</a> da Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) no <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-Este é um jogo 3D que funciona bem em tela plana, mas e em VR?
-Neste tutorial, percorreremos as etapas necessárias para colocá-lo em funcionamento com WebVR. Usaremos um headset do [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) que pode tirar proveito do suporte adicional a WebVR no Microsoft Edge. Após aplicarmos essas alterações ao jogo, espera-se que ele também funcione em outras combinações de navegador/headset compatíveis com WebVR.
+Neste tutorial, percorreremos as etapas necessárias para colocar um jogo em 3D em funcionamento com WebVR. Usaremos um headset do [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) que pode tirar proveito do suporte adicional a WebVR no Microsoft Edge. Após aplicarmos essas alterações ao jogo, espera-se que ele também funcione em outras combinações de navegador/headset compatíveis com WebVR.
 
 
 
@@ -32,7 +25,7 @@ Neste tutorial, percorreremos as etapas necessárias para colocá-lo em funciona
 - Um editor de texto (como o [Visual Studio Code](https://code.visualstudio.com/download))
 - Um controlador do Xbox conectado ao computador
 - Atualização do Windows 10 para Criadores
-- Um computador com as [especificações mínimas necessárias à execução de Windows Mixed Reality](https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup)
+- Um computador com as [especificações mínimas necessárias à execução de Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality/immersive_headset_setup)
 - Um dispositivo Windows Mixed Reality (opcional) 
 
 
@@ -204,9 +197,6 @@ Adicione este código abaixo da chamada `scene.onPointerDown = function() {...}`
 
 Se abrirmos **index.html** com nosso headset e controlador de jogo conectados, um clique com o botão esquerdo do mouse na janela azul do jogo colocará o jogo no modo VR! Vá em frente e coloque o headset para conferir os resultados. 
 
-
-<iframe height='300' scrolling='no' title='Jogo de dinossauro do Babylon.js usando Babylon.GUI – WebVR' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/RjgpJd/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte a Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RjgpJd/'>Jogo de dinossauro do Babylon.js usando Babylon.GUI – WebVR</a> da Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) no <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 
 ## <a name="conclusion"></a>Conclusão

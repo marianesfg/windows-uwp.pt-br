@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluente
-ms.openlocfilehash: ff071a2a98c533ad7c089b28165f026de00ba68f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e1a5b192ed57d3962b6ba4cbef69e3663bc1e2ec
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319091"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683989"
 ---
 # <a name="forms"></a>Formulários
 Um formulário é um grupo de controles que coleta e envia dados de usuários. Os formulários são usados normalmente em páginas de configurações, pesquisas, criação de contas e muito mais. 
@@ -26,7 +26,7 @@ Um formulário é uma página dedicada a coletar entradas de dados que estão cl
 - Alterar configurações de aplicativo, como privacidade ou opções de exibição
 - Fazer uma pesquisa
 - Comprar um item
-- Enviar comentários
+- Fornecer comentários
 
 ## <a name="types-of-forms"></a>Tipos de formulários
 
@@ -58,7 +58,7 @@ Esse tipo de formulário fornece ao usuário flexibilidade para responder. Norma
 Para facilitar a experiência do usuário e certificar-se de que os usuários sejam capazes de inserir a entrada correta, considere as seguintes recomendações para a criação de layouts de formulários. 
 
 ### <a name="labels"></a>Rótulos
-Os [rótulos](labels.md) devem estar alinhados à esquerda e ser colocados acima do controle de entrada. Muitos controles têm uma propriedade Header interna para exibir o rótulo. Para controles que não tenham uma propriedade Header ou para rotular grupos de controles, use um [TextBlock](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
+Os [rótulos](labels.md) devem estar alinhados à esquerda e ser colocados acima do controle de entrada. Muitos controles têm uma propriedade Header interna para exibir o rótulo. Para controles que não tenham uma propriedade Header ou para rotular grupos de controles, use um [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
 Para [design com acessibilidade](../accessibility/accessibility.md), rotule todos os indivíduos e grupos de controles para maior clareza tanto para leitores de tela quanto para pessoas. 
 
@@ -66,7 +66,7 @@ Para estilos de fonte, use o padrão [rampa de tipo UWP](../style/typography.md)
 
 <div class="mx-responsive-img">
 <table>
-<tr><th>Você deve</th><th>Você não deve</th></tr>
+<tr><th>O que fazer</th><th>O que não fazer</th></tr>
 <tr>
 <td><img src="../controls-and-patterns/images/forms-shortform1col.png" alt="form with top labels"></td>
 <td><img src="../controls-and-patterns/images/forms-leftlabel-donot1.png" alt="form with left labels don't"></td>
@@ -84,7 +84,7 @@ A criação de colunas pode reduzir o espaço em branco desnecessário em formul
 
 <div class="mx-responsive-img">
 <table>
-<tr><th>Você deve</th><th>Você não deve</th></tr>
+<tr><th>O que fazer</th><th>O que não fazer</th></tr>
 <tr>
 <td><img src="../controls-and-patterns/images/forms-2cols.png" alt="form with 2 columns"></td>
 <td><img src="../controls-and-patterns/images/forms-2cols-bad.png" alt="form with 2 bad columns"></td>
@@ -108,7 +108,7 @@ Os usuários podem usar o teclado para navegar pelos controles com as [paradas d
 Os controles de entrada são os elementos de interface do usuário que permitem aos usuários inserir informações em formulários. Alguns controles comuns que podem ser adicionados aos formulários estão listados abaixo, bem como informações sobre quando usá-los.
 
 ### <a name="text-input"></a>Entrada de texto
-Controle | Uso | Exemplo
+Control | Uso | Exemplo
  - | - | -
 [TextBox](text-box.md) | Capturar uma ou várias linhas de texto | Nomes, comentários ou respostas em formato livre
 [PasswordBox](password-box.md) | Colete dados particulares ao ocultar caracteres | Senhas, SSN (Número do Seguro Social), PINs, informações de cartão de crédito 
@@ -116,7 +116,7 @@ Controle | Uso | Exemplo
 [RichEditBox](rich-edit-box.md) | Edite arquivos de texto com texto formatado, hiperlinks e imagens | Faça upload do arquivo, visualização e edição no aplicativo
 
 ### <a name="selection"></a>Seleção
-Controle | Uso | Exemplo
+Control | Uso | Exemplo
 - | - | - 
 | [CheckBox](checkbox.md) | Selecione ou anule a seleção de itens de ação | Concorde com os termos e condições, adicione itens opcionais, selecione todas as alternativas aplicáveis
 [RadioButton](radio-button.md) | Selecione uma opção entre duas ou mais escolhas | Escolha tipo, método de envio, etc.
@@ -125,21 +125,21 @@ Controle | Uso | Exemplo
 > **Observação**: Se houver cinco ou mais itens de seleção, use um controle de lista.
 
 ### <a name="lists"></a>Listas
-Controle | Uso | Exemplo
+Control | Uso | Exemplo
 - | - | -
 [ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Inicie no estado compacto e expanda para mostrar a lista de itens selecionáveis | Selecione de uma longa lista de itens, como estados ou países
 [ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | Categorize itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens | Opções de classificação
 [GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | Organize e procure coleções baseadas em imagem | Escolha uma foto, cor, tema de exibição
 
 ### <a name="numeric-input"></a>Entrada numérica
-Controle | Uso | Exemplo
+Control | Uso | Exemplo
 - | - | -
-[Slider](slider.md) | Selecione um número de um intervalo de valores numéricos contíguos | Porcentagens, volume e velocidade de reprodução
-[Classificação](rating.md) | Classificação por estrelas | Comentários do cliente
+[Controle deslizante](slider.md) | Selecione um número de um intervalo de valores numéricos contíguos | Porcentagens, volume e velocidade de reprodução
+[Classificação](rating.md) | Classificação por estrelas | Comentários de clientes
 
 ### <a name="date-and-time"></a>Data e Hora
 
-Controle | Uso 
+Control | Uso 
 - | - 
 [CalendarView](calendar-view.md) | Selecione uma única data ou um intervalo de datas de um calendário sempre visível 
 [CalendarDatePicker](calendar-date-picker.md) | Selecione uma única data de um calendário contextual 
@@ -152,7 +152,7 @@ Para obter uma lista completa de controles da UWP, confira [índice de controles
 Para controles de interface do usuário mais complexos e personalizados, confira os recursos da UWP disponíveis de empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) e [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
 
 ## <a name="one-column-form-example"></a>Exemplo de formulário de uma coluna
-Este exemplo usa uma [exibição de lista](master-details.md) [mestre/detalhada](lists.md) acrílica e o controle [NavigationView](navigationview.md).
+Este exemplo usa uma [exibição de lista](master-details.md) [mestre/detalhada](lists.md) Acrílica e o controle [NavigationView](navigationview.md).
 ![Captura de tela de outro exemplo de formulário](images/FormExample2.png)
 ```xaml
 <StackPanel>

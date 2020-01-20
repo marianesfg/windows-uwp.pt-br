@@ -5,18 +5,18 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b4cc5f10ba23c942851f34ef64afd887d265dba1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259775"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684721"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades nos documentos de desenvolvedor do Windows de agosto de 2017
 
 A Documentação do Desenvolvedor do Windows recebe atualizações constantes com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados e contêm informações novas e atualizadas para desenvolvedores do Windows.
 
-[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/your-first-app.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -57,7 +57,7 @@ Confira [Estender seu aplicativo da área de trabalho com componentes UWP modern
 
 ### <a name="getting-started-with-point-of-service"></a>Introdução ao ponto de serviço
 
-Adicionamos um novo guia para ajudar você [a começar a usar os dispositivos de ponto de serviço](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started). Ele cobre tópicos como enumeração do dispositivo, verificação de recursos do dispositivo, declaração e compartilhamento de dispositivos. 
+Adicionamos um novo guia para ajudar você [a começar a usar os dispositivos de ponto de serviço](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-get-started). Ele cobre tópicos como enumeração do dispositivo, verificação de recursos do dispositivo, declaração e compartilhamento de dispositivos. 
 
 ### <a name="xbox-live"></a>Xbox Live
 
@@ -73,7 +73,7 @@ Confira a [Visão geral do programa para desenvolvedores do Xbox Live](https://d
 
 ### <a name="mixed-reality"></a>Realidade Misturada
 
-Uma série com novos tutoriais em vídeo foi lançada para o [Curso Microsoft HoloLens 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250). Se você já instalou as ferramentas e está familiarizado com as noções básicas de desenvolvimento de realidade misturada, confira esses cursos em vídeo para obter informações sobre como criar experiências compartilhadas em dispositivos de realidade misturada.
+Uma série com novos tutoriais em vídeo foi lançada para o [Curso Microsoft HoloLens 250](https://developer.microsoft.com/windows/mixed-reality/mixed_reality_250). Se você já instalou as ferramentas e está familiarizado com as noções básicas de desenvolvimento de realidade misturada, confira esses cursos em vídeo para obter informações sobre como criar experiências compartilhadas em dispositivos de realidade misturada.
 
 ### <a name="narrator-and-dev-mode"></a>Narrador e modo de desenvolvedor
 

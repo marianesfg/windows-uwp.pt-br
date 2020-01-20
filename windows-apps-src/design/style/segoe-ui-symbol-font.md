@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a615e00513bba0ba21f2f9a18fa0c8cdda31cb3f
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: b2003553ae7bf41b9c472f59528b46f39a07900c
+ms.sourcegitcommit: cd185e16d976f2d149312d39d560681538070e3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414129"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737649"
 ---
 # <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
@@ -28,7 +28,7 @@ Este artigo lista os ícones fornecidos pela fonte Segoe MDL2 Assets.
 
 Com o lançamento do Windows 10, a fonte Segoe MDL2 Assets substituiu a fonte de ícone Segoe UI Symbol do Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** continuará disponível como um recurso "herdado", mas recomendamos atualizar o aplicativo para usar a nova **Segoe MDL2 Assets**.)
 
-A maioria dos ícones e controles da interface do usuário incluídos na fonte **Segoe MDL2 Assets** são mapeados para PUA (Área de Uso Privado de Unicode). A PUA permite que os desenvolvedores atribuam valores Unicode privados aos glifos que não são mapeados para pontos de código existentes. Isso é útil ao criar uma fonte de símbolo, mas gera um problema de interoperabilidade. Se a fonte não estiver disponível, os glifos não aparecerão. Use esses glifos somente quando puder especificar a fonte **Segoe MDL2 Assets** .
+A maioria dos ícones e controles da interface do usuário incluídos na fonte **Segoe MDL2 Assets** é mapeada para PUA (Área de Uso Privado) do Unicode. A PUA permite que os desenvolvedores atribuam valores Unicode privados aos glifos que não são mapeados para pontos de código existentes. Isso é útil ao criar uma fonte de símbolo, mas gera um problema de interoperabilidade. Se a fonte não estiver disponível, os glifos não aparecerão. Use esses glifos somente quando puder especificar a fonte **Segoe MDL2 Assets**.
 
 Use estes glifos somente quando puder especificar explicitamente a fonte **Segoe MDL2 Assets**. Se você estiver trabalhando com blocos, não poderá usar esses glifos porque não é possível especificar a fonte de bloco e os glifos da PUA não são disponibilizados via fallback de fonte.
 
@@ -38,7 +38,7 @@ Ao contrário de **Segoe UI Symbol**, os ícones na fonte **Segoe MDL2 Assets** 
 
 Todos os glifos na fonte **Segoe MDL2 Assets** têm a mesma largura fixa com uma altura consistente e ponto de origem à esquerda, portanto, as camadas e os efeitos de colorização podem ser obtidos, desenhando glifos diretamente um em cima do outro. Este exemplo mostra um contorno preto desenhado sobre o coração vermelho de largura zero.
 
-![usando glifo de largura zero](images/segoe-ui-symbol-layering.png)
+![usar um glifo de largura zero](images/segoe-ui-symbol-layering.png)
 
 Vários ícones também têm formulários espelhados disponíveis para uso em idiomas que usam a direção de texto da direita para esquerda como árabe, farsi e hebraico.
 
@@ -83,7 +83,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E701.png" width="32" height="32" alt="Wifi" /></td>
   <td>E701</td>
-  <td>Wifi</td>
+  <td>Wi-Fi</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E702.png" width="32" height="32" alt="Bluetooth" /></td>
   <td>E702</td>
@@ -143,19 +143,19 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E710.png" width="32" height="32" alt="Add" /></td>
   <td>E710</td>
-  <td>Adicionar</td>
+  <td>Add</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E711.png" width="32" height="32" alt="Cancel" /></td>
   <td>E711</td>
-  <td>Cancel</td>
+  <td>Cancelar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E712.png" width="32" height="32" alt="More" /></td>
   <td>E712</td>
-  <td>More</td>
+  <td>Mais</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E713.png" width="32" height="32" alt="Settings" /></td>
   <td>E713</td>
-  <td>Configurações</td>
+  <td>Settings</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E714.png" width="32" height="32" alt="Video" /></td>
   <td>E714</td>
@@ -167,11 +167,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E716.png" width="32" height="32" alt="People" /></td>
   <td>E716</td>
-  <td>People</td>
+  <td>Pessoas</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E717.png" width="32" height="32" alt="Phone" /></td>
   <td>E717</td>
-  <td>Phone</td>
+  <td>Telefone</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E718.png" width="32" height="32" alt="Pin" /></td>
   <td>E718</td>
@@ -183,7 +183,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E71A.png" width="32" height="32" alt="Stop" /></td>
   <td>E71A</td>
-  <td>Stop</td>
+  <td>Parar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71B.png" width="32" height="32" alt="Link" /></td>
   <td>E71B</td>
@@ -191,7 +191,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E71C.png" width="32" height="32" alt="Filter" /></td>
   <td>E71C</td>
-  <td>Filtro</td>
+  <td>Filtrar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71D.png" width="32" height="32" alt="AllApps" /></td>
   <td>E71D</td>
@@ -211,7 +211,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E721.png" width="32" height="32" alt="Search" /></td>
   <td>E721</td>
-  <td>Pesquisa</td>
+  <td>Pesquisar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E722.png" width="32" height="32" alt="Camera" /></td>
   <td>E722</td>
@@ -223,7 +223,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E724.png" width="32" height="32" alt="Send" /></td>
   <td>E724</td>
-  <td>Send</td>
+  <td>Enviar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E725.png" width="32" height="32" alt="SendFill" /></td>
   <td>E725</td>
@@ -247,11 +247,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E72A.png" width="32" height="32" alt="Forward" /></td>
   <td>E72A</td>
-  <td>Forward</td>
+  <td>Encaminhar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72B.png" width="32" height="32" alt="Back" /></td>
   <td>E72B</td>
-  <td>Back</td>
+  <td>Voltar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72C.png" width="32" height="32" alt="Refresh" /></td>
   <td>E72C</td>
@@ -259,7 +259,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E72D.png" width="32" height="32" alt="Share" /></td>
   <td>E72D</td>
-  <td>Share</td>
+  <td>Compartilhamento</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72E.png" width="32" height="32" alt="Lock" /></td>
   <td>E72E</td>
@@ -295,7 +295,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E739.png" width="32" height="32" alt="Checkbox" /></td>
   <td>E739</td>
-  <td>Checkbox</td>
+  <td>Caixa de seleção</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E73A.png" width="32" height="32" alt="CheckboxComposite" /></td>
   <td>E73A</td>
@@ -359,15 +359,15 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E749.png" width="32" height="32" alt="Print" /></td>
   <td>E749</td>
-  <td>Print</td>
+  <td>Imprimir</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74A.png" width="32" height="32" alt="Up" /></td>
   <td>E74A</td>
-  <td>Para cima</td>
+  <td>Up</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74B.png" width="32" height="32" alt="Down" /></td>
   <td>E74B</td>
-  <td>Para baixo</td>
+  <td>Down</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74C.png" width="32" height="32" alt="OEM" /></td>
   <td>E74C</td>
@@ -571,7 +571,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E783.png" width="32" height="32" alt="Error" /></td>
   <td>E783</td>
-  <td>Erro</td>
+  <td>Erro do</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E784.png" width="32" height="32" alt="GripperBarVertical" /></td>
   <td>E784</td>
@@ -587,7 +587,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E787.png" width="32" height="32" alt="Calendar" /></td>
   <td>E787</td>
-  <td>Calendário</td>
+  <td>Calendar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E788.png" width="32" height="32" alt="GripperResize" /></td>
   <td>E788</td>
@@ -611,7 +611,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E790.png" width="32" height="32" alt="Color" /></td>
   <td>E790</td>
-  <td>Cor</td>
+  <td>Color</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E791.png" width="32" height="32" alt="DataSense" /></td>
   <td>E791</td>
@@ -623,7 +623,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E793.png" width="32" height="32" alt="Light" /></td>
   <td>E793</td>
-  <td>Claro</td>
+  <td>Leve</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E799.png" width="32" height="32" alt="AspectRatio" /></td>
   <td>E799</td>
@@ -635,7 +635,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7A6.png" width="32" height="32" alt="Redo" /></td>
   <td>E7A6</td>
-  <td>Redo</td>
+  <td>Refazer</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7A7.png" width="32" height="32" alt="Undo" /></td>
   <td>E7A7</td>
@@ -651,7 +651,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7AD.png" width="32" height="32" alt="Rotate" /></td>
   <td>E7AD</td>
-  <td>Girar</td>
+  <td>Rotate</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7B3.png" width="32" height="32" alt="RedEye" /></td>
   <td>E7B3</td>
@@ -679,7 +679,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7BE.png" width="32" height="32" alt="Education" /></td>
   <td>E7BE</td>
-  <td>Educação</td>
+  <td>Formação educacional</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7BF.png" width="32" height="32" alt="ShoppingCart" /></td>
   <td>E7BF</td>
@@ -687,15 +687,15 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C0.png" width="32" height="32" alt="Train" /></td>
   <td>E7C0</td>
-  <td>Trem</td>
+  <td>Train</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C1.png" width="32" height="32" alt="Flag" /></td>
   <td>E7C1</td>
-  <td>Flag</td>
+  <td>Sinalizador</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C3.png" width="32" height="32" alt="Page" /></td>
   <td>E7C3</td>
-  <td>Page</td>
+  <td>?</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C4.png" width="32" height="32" alt="TaskView" /></td>
   <td>E7C4</td>
@@ -731,7 +731,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E6.png" width="32" height="32" alt="Highlight" /></td>
   <td>E7E6</td>
-  <td>Highlight</td>
+  <td>Realce</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E7.png" width="32" height="32" alt="ActionCenterNotification" /></td>
   <td>E7E7</td>
@@ -787,11 +787,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E7F5.png" width="32" height="32" alt="Speakers" /></td>
   <td>E7F5</td>
-  <td>Alto-falantes</td>
+  <td>Speakers</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7F6.png" width="32" height="32" alt="Headphone" /></td>
   <td>E7F6</td>
-  <td>Fone de ouvido</td>
+  <td>Headphone</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7F7.png" width="32" height="32" alt="DeviceLaptopPic" /></td>
   <td>E7F7</td>
@@ -863,7 +863,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E80F.png" width="32" height="32" alt="Home" /></td>
   <td>E80F</td>
-  <td>Início</td>
+  <td>Inicial</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E811.png" width="32" height="32" alt="ParkingLocation" /></td>
   <td>E811</td>
@@ -907,7 +907,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E81D.png" width="32" height="32" alt="Location" /></td>
   <td>E81D</td>
-  <td>Location</td>
+  <td>Local</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E81E.png" width="32" height="32" alt="MapLayers" /></td>
   <td>E81E</td>
@@ -919,11 +919,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E821.png" width="32" height="32" alt="Work" /></td>
   <td>E821</td>
-  <td>Trabalho</td>
+  <td>Work</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E822.png" width="32" height="32" alt="Construction" /></td>
   <td>E822</td>
-  <td>Construction</td>
+  <td>Construção</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E823.png" width="32" height="32" alt="Recent" /></td>
   <td>E823</td>
@@ -1343,27 +1343,27 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E893.png" width="32" height="32" alt="Next" /></td>
   <td>E893</td>
-  <td>Próximo</td>
+  <td>Avançar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E894.png" width="32" height="32" alt="Clear" /></td>
   <td>E894</td>
-  <td>Clear</td>
+  <td>Limpar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E895.png" width="32" height="32" alt="Sync" /></td>
   <td>E895</td>
-  <td>Sync</td>
+  <td>Sincronização</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E896.png" width="32" height="32" alt="Download" /></td>
   <td>E896</td>
-  <td>Baixar</td>
+  <td>Download</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E897.png" width="32" height="32" alt="Help" /></td>
   <td>E897</td>
-  <td>Help</td>
+  <td>Ajuda</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E898.png" width="32" height="32" alt="Upload" /></td>
   <td>E898</td>
-  <td>Upload</td>
+  <td>Carregar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E899.png" width="32" height="32" alt="Emoji" /></td>
   <td>E899</td>
@@ -1439,7 +1439,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AC.png" width="32" height="32" alt="Rename" /></td>
   <td>E8AC</td>
-  <td>Rename</td>
+  <td>Renomear</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AD.png" width="32" height="32" alt="Go" /></td>
   <td>E8AD</td>
@@ -1451,7 +1451,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AF.png" width="32" height="32" alt="Remote" /></td>
   <td>E8AF</td>
-  <td>Controle remoto</td>
+  <td>Remoto</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B0.png" width="32" height="32" alt="Click" /></td>
   <td>E8B0</td>
@@ -1463,7 +1463,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B2.png" width="32" height="32" alt="Movies" /></td>
   <td>E8B2</td>
-  <td>Filmes</td>
+  <td>Movies</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B3.png" width="32" height="32" alt="SelectAll" /></td>
   <td>E8B3</td>
@@ -1471,11 +1471,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B4.png" width="32" height="32" alt="Orientation" /></td>
   <td>E8B4</td>
-  <td>Orientação</td>
+  <td>Orientation</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B5.png" width="32" height="32" alt="Import" /></td>
   <td>E8B5</td>
-  <td>Import</td>
+  <td>Importar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B6.png" width="32" height="32" alt="ImportAll" /></td>
   <td>E8B6</td>
@@ -1491,7 +1491,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B9.png" width="32" height="32" alt="Picture" /></td>
   <td>E8B9</td>
-  <td>Imagem</td>
+  <td>Picture</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BA.png" width="32" height="32" alt="Caption" /></td>
   <td>E8BA</td>
@@ -1531,7 +1531,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C3.png" width="32" height="32" alt="Read" /></td>
   <td>E8C3</td>
-  <td>Read</td>
+  <td>Leitura</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C4.png" width="32" height="32" alt="ShowBcc" /></td>
   <td>E8C4</td>
@@ -1583,7 +1583,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D0.png" width="32" height="32" alt="Priority" /></td>
   <td>E8D0</td>
-  <td>Priority</td>
+  <td>Prioridade</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D1.png" width="32" height="32" alt="GotoToday" /></td>
   <td>E8D1</td>
@@ -1591,7 +1591,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D2.png" width="32" height="32" alt="Font" /></td>
   <td>E8D2</td>
-  <td>Font</td>
+  <td>Fonte</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D3.png" width="32" height="32" alt="FontColor" /></td>
   <td>E8D3</td>
@@ -1627,7 +1627,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DB.png" width="32" height="32" alt="Italic" /></td>
   <td>E8DB</td>
-  <td>Italic</td>
+  <td>Itálico</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DC.png" width="32" height="32" alt="Underline" /></td>
   <td>E8DC</td>
@@ -1635,7 +1635,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DD.png" width="32" height="32" alt="Bold" /></td>
   <td>E8DD</td>
-  <td>Bold</td>
+  <td>Negrito</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DE.png" width="32" height="32" alt="MoveToFolder" /></td>
   <td>E8DE</td>
@@ -1707,7 +1707,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8EF.png" width="32" height="32" alt="Calculator" /></td>
   <td>E8EF</td>
-  <td>Calculadora</td>
+  <td>Calculator</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8F0.png" width="32" height="32" alt="Directions" /></td>
   <td>E8F0</td>
@@ -1715,7 +1715,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8F1.png" width="32" height="32" alt="Library" /></td>
   <td>E8F1</td>
-  <td>Library</td>
+  <td>Biblioteca</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8F2.png" width="32" height="32" alt="ChatBubbles" /></td>
   <td>E8F2</td>
@@ -1767,11 +1767,11 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FE.png" width="32" height="32" alt="Scan" /></td>
   <td>E8FE</td>
-  <td>Scan</td>
+  <td>Verificação</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FF.png" width="32" height="32" alt="Preview" /></td>
   <td>E8FF</td>
-  <td>Preview</td>
+  <td>Visualizar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E902.png" width="32" height="32" alt="Group" /></td>
   <td>E902</td>
@@ -1799,7 +1799,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E909.png" width="32" height="32" alt="World" /></td>
   <td>E909</td>
-  <td>World</td>
+  <td>World (Mundo)</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E90A.png" width="32" height="32" alt="Comment" /></td>
   <td>E90A</td>
@@ -1823,7 +1823,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E90F.png" width="32" height="32" alt="Repair" /></td>
   <td>E90F</td>
-  <td>Repair</td>
+  <td>Reparar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E910.png" width="32" height="32" alt="Accounts" /></td>
   <td>E910</td>
@@ -1835,7 +1835,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E912.png" width="32" height="32" alt="Manage" /></td>
   <td>E912</td>
-  <td>Gerenciar</td>
+  <td>assinaturas</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E913.png" width="32" height="32" alt="Street" /></td>
   <td>E913</td>
@@ -1855,7 +1855,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E91B.png" width="32" height="32" alt="Photo" /></td>
   <td>E91B</td>
-  <td>Fotografia</td>
+  <td>Photo</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E91C.png" width="32" height="32" alt="ActionCenter" /></td>
   <td>E91C</td>
@@ -1879,7 +1879,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E924.png" width="32" height="32" alt="Annotation" /></td>
   <td>E924</td>
-  <td>Anotações</td>
+  <td>Annotation</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E925.png" width="32" height="32" alt="BackSpaceQWERTYSm" /></td>
   <td>E925</td>
@@ -1891,7 +1891,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E927.png" width="32" height="32" alt="Swipe" /></td>
   <td>E927</td>
-  <td>Passar o dedo</td>
+  <td>Swipe</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E928.png" width="32" height="32" alt="Fingerprint" /></td>
   <td>E928</td>
@@ -1919,7 +1919,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E930.png" width="32" height="32" alt="Completed" /></td>
   <td>E930</td>
-  <td>Completed</td>
+  <td>Concluído</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E931.png" width="32" height="32" alt="ChromeAnnotate" /></td>
   <td>E931</td>
@@ -1927,7 +1927,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E932.png" width="32" height="32" alt="Label" /></td>
   <td>E932</td>
-  <td>Rótulo</td>
+  <td>Label</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E933.png" width="32" height="32" alt="IBeam" /></td>
   <td>E933</td>
@@ -1979,7 +1979,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E946.png" width="32" height="32" alt="Info" /></td>
   <td>E946</td>
-  <td>Informações</td>
+  <td>Info</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E947.png" width="32" height="32" alt="CalculatorMultiply" /></td>
   <td>E947</td>
@@ -2027,7 +2027,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E952.png" width="32" height="32" alt="Dock" /></td>
   <td>E952</td>
-  <td>Doca</td>
+  <td>Dock</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E953.png" width="32" height="32" alt="MultimediaDMS" /></td>
   <td>E953</td>
@@ -2067,7 +2067,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E95E.png" width="32" height="32" alt="Health" /></td>
   <td>E95E</td>
-  <td>Health</td>
+  <td>Integridade</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/E95F.png" width="32" height="32" alt="Wire" /></td>
   <td>E95F</td>
@@ -2371,7 +2371,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E9CE.png" width="32" height="32" alt="Unknown" /></td>
   <td>E9CE</td>
-  <td>Desconhecido</td>
+  <td>Unknown</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D2.png" width="32" height="32" alt="AreaChart" /></td>
   <td>E9D2</td>
@@ -2383,7 +2383,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>
-  <td>Diagnostic</td>
+  <td>Diagnóstico</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9E9.png" width="32" height="32" alt="Equalizer" /></td>
   <td>E9E9</td>
@@ -2439,7 +2439,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EA38.png" width="32" height="32" alt="Asterisk" /></td>
   <td>EA38</td>
-  <td>Asterisco</td>
+  <td>Asterisk</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA39.png" width="32" height="32" alt="ErrorBadge" /></td>
   <td>EA39</td>
@@ -2595,7 +2595,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EA69.png" width="32" height="32" alt="Media" /></td>
   <td>EA69</td>
-  <td>Media</td>
+  <td>Mídia</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA6A.png" width="32" height="32" alt="SyncError" /></td>
   <td>EA6A</td>
@@ -2631,7 +2631,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EA86.png" width="32" height="32" alt="Puzzle" /></td>
   <td>EA86</td>
-  <td>Quebra-cabeça</td>
+  <td>Puzzle</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA89.png" width="32" height="32" alt="CalendarSolid" /></td>
   <td>EA89</td>
@@ -2707,7 +2707,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
  <tr><td><img src="images/segoe-mdl/EAFC.png" width="32" height="32" alt="Market" /></td>
   <td>EAFC</td>
-  <td>Mercado</td>
+  <td>Market</td>
 </tr>
 <tr><td><img src="images/segoe-mdl/EB05.png" width="32" height="32" alt="PieSingle" /></td>
   <td>EB05</td>
@@ -2723,7 +2723,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EB3C.png" width="32" height="32" alt="Design" /></td>
   <td>EB3C</td>
-  <td>Criar</td>
+  <td>Design</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB41.png" width="32" height="32" alt="Website" /></td>
   <td>EB41</td>
@@ -2935,7 +2935,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EB9E.png" width="32" height="32" alt="Rewind" /></td>
   <td>EB9E</td>
-  <td>Retroceder</td>
+  <td>Rewind</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB9F.png" width="32" height="32" alt="Photo2" /></td>
   <td>EB9F</td>
@@ -3119,7 +3119,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EBDA.png" width="32" height="32" alt="Family" /></td>
   <td>EBDA</td>
-  <td>Família</td>
+  <td>Family</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EBDB.png" width="32" height="32" alt="LockFeedback" /></td>
   <td>EBDB</td>
@@ -3475,7 +3475,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/ECA5.png" width="32" height="32" alt="Tiles" /></td>
   <td>ECA5</td>
-  <td>Blocos</td>
+  <td>Tiles</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ECA7.png" width="32" height="32" alt="PartyLeader" /></td>
   <td>ECA7</td>
@@ -3527,7 +3527,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/ECC6.png" width="32" height="32" alt="Unit" /></td>
   <td>ECC6</td>
-  <td>Unidade</td>
+  <td>Unit</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ECC8.png" width="32" height="32" alt="AddTo" /></td>
   <td>ECC8</td>
@@ -3607,7 +3607,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
 </tr>
 <tr><td><img src="images/segoe-mdl/ED15.png" width="32" height="32" alt="Feedback" /></td>
   <td>ED15</td>
-  <td>Privacidade Jurídica</td>
+  <td>Comentários</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED1E.png" width="32" height="32" alt="Subtitles" /></td>
   <td>ED1E</td>
@@ -3711,7 +3711,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/ED4D.png" width="32" height="32" alt="Narrator" /></td>
   <td>ED4D</td>
-  <td>Narrador</td>
+  <td>Narrator</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED53.png" width="32" height="32" alt="EmojiTabPeople" /></td>
   <td>ED53</td>
@@ -3909,9 +3909,9 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
   <td>EDE3</td>
   <td>ButtonMenu</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSeach" /></td>
+<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSearch" /></td>
   <td>EDE4</td>
-  <td>CloudSeach</td>
+  <td>CloudSearch</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EDE5.png" width="32" height="32" alt="PinyinIMELogo" /></td>
   <td>EDE5</td>
@@ -3987,7 +3987,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EE94.png" width="32" height="32" alt="Wheel" /></td>
   <td>EE94</td>
-  <td>Roda</td>
+  <td>Wheel</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/EEA3.png" width="32" height="32" alt="VirtualMachineGroup" /></td>
   <td>EEA3</td>
@@ -4087,7 +4087,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
  </tr>
 <tr><td><img src="images/segoe-mdl/EFA9.png" width="32" height="32" alt="Speech" /></td>
   <td>EFA9</td>
-  <td>Controle por voz</td>
+  <td>Speech</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F000.png" width="32" height="32" alt="KnowledgeArticle" /></td>
   <td>F000</td>
@@ -5521,7 +5521,7 @@ Lembre-se que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que pod
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Diretrizes para ícones](../style/icons.md)
-* [Enumeração Symbol](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [Enumeração Symbol](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Symbol)
 * [Classe FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 

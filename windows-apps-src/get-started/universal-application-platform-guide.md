@@ -1,19 +1,19 @@
 ---
-title: O que é um aplicativo da Plataforma Universal do Windows (UWP)?
-description: Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos nos quais o Windows 10 esteja em execução.
+title: O que é um aplicativo da UWP (Plataforma Universal do Windows)?
+description: Saiba mais sobre os aplicativos da UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos que executam o Windows 10.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0d226a9492a2218edf20e68b8216ea513ca12a
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fdb06581639391c09c445c8497f67af28a8405df
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260535"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685008"
 ---
-# <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
+# <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da UWP (Plataforma Universal do Windows)?
 
 ![Os aplicativos da Plataforma Universal do Windows são executados em uma variedade de dispositivos, são compatíveis com interface do usuário adaptável, entrada do usuário natural, um repositório, Partner Center e serviços de nuvem](images/universalapps-overview.png)
 
@@ -56,13 +56,13 @@ Os elementos de interface do usuário respondem ao tamanho e à resolução em D
 
 ![Dispositivos Windows](images/1894834-hig-device-primer-01-500.png)
 
-O Windows ajuda a direcionar sua interface do usuário para vários dispositivos com os seguintes recursos:
+O Windows ajuda a direcionar sua interface do usuário a vários dispositivos com os seguintes recursos:
 
 - Controles universais e painéis de layout ajudarão a otimizar sua interface do usuário para a resolução de tela do dispositivo. Por exemplo, controles como botões e controles deslizantes adaptam-se automaticamente ao tamanho da tela do dispositivo e à densidade do DPI. Os painéis de layout ajudam a ajustar o layout do conteúdo com base no tamanho da tela. O dimensionamento adaptável ajusta a resolução e as diferenças de DPI entre dispositivos.
 - A manipulação de entrada comum permite que você receba a entrada por toque, caneta, mouse, teclado ou por um controlador, como um controlador do Xbox da Microsoft.
 - As ferramentas que ajudam você a criar a interface do usuário que pode se adaptar a diferentes resoluções de tela.
 
-Alguns aspectos da interface do usuário do seu aplicativo se adaptará automaticamente em todos os dispositivos. O projeto de experiência do usuário do seu aplicativo, no entanto, talvez seja necessário adaptar-se dependendo do dispositivo que o aplicativo está sendo executado. Por exemplo, um aplicativo de fotos pode se adaptar a sua interface do usuário quando executado em um dispositivo pequeno e portátil para garantir que esse uso seja ideal para uso com uma única mão. Quando um aplicativo de fotos é executado em um computador desktop, a interface do usuário deve se adaptar para aproveitar ao máximo o espaço adicional na tela.
+Alguns aspectos da interface do usuário do seu aplicativo se adaptará automaticamente em todos os dispositivos. O projeto de experiência do usuário do seu aplicativo, no entanto, talvez precise se adaptar dependendo do dispositivo no qual o aplicativo está sendo executado. Por exemplo, um aplicativo de fotos pode se adaptar a sua interface do usuário quando executado em um dispositivo pequeno e portátil para garantir que esse uso seja ideal para uso com uma única mão. Quando um aplicativo de fotos é executado em um computador desktop, a interface do usuário deve se adaptar para aproveitar ao máximo o espaço adicional na tela.
 
 ## <a name="theres-one-store-for-all-devices"></a>Existe uma loja para todos os dispositivos
 
@@ -97,7 +97,7 @@ Há várias formas de manter os usuários interessados no seu aplicativo UWP:
 - O aplicativo pode usar dispositivos de voz e Bluetooth LE para ajudar os usuários a interagir com o mundo ao redor.
 - Integre a Cortana para adicionar a funcionalidade de comando de voz a seu aplicativo.
 
-##  <a name="use-a-language-you-already-know"></a>Use uma linguagem que você já conhece
+##  <a name="use-a-language-you-already-know"></a>Usar uma linguagem que você já conhece
 
 Os aplicativos UWP usam o Windows Runtime, a API nativa fornecida pelo sistema operacional. Essa API é implementada em C++ e tem suporte em C#, Visual Basic, C++ e JavaScript. Algumas opções para criar aplicativos UWP incluem:
 
@@ -115,13 +115,13 @@ Confira [Preparar-se](get-set-up.md) para baixar as ferramentas necessárias par
 
 O sistema de design da Microsoft chama-se Fluente. O Sistema de Design Fluente é um conjunto de recursos UWP combinado a práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows. As experiências do Fluente adaptam-se a e funcionam normalmente em dispositivos de tablets a notebooks e de computadores a televisores, além de em dispositivos de realidade virtual. Confira [O Sistema de Design Fluente para aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/fluent-design-system) para obter uma introdução ao Design Fluente.
 
-Um bom [projeto](http://design.windows.com/) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, como será sua aparência e como ele funcionará. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. As [Noções básicas de design](https://developer.microsoft.com/en-us/windows/apps/design) apresentam o design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](http://design.windows.com/) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, como será sua aparência e como ele funcionará. A experiência do usuário desempenha uma função enorme em determinar o grau de felicidade que as pessoas terão com seu aplicativo. Portanto, não economize nessa etapa. As [Noções básicas de design](https://developer.microsoft.com/windows/apps/design) apresentam o design de um aplicativo Universal do Windows. Confira a [Introdução aos aplicativos da UWP (Plataforma Universal do Windows) para os designers](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para saber mais sobre como criar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, confira a [cartilha de dispositivos](../design/devices/index.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes que você deseja direcionar.
 
 Além da interação em diferentes dispositivos, [planeje seu aplicativo](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app) para adotar os benefícios de trabalhar em vários dispositivos. Por exemplo:
 
 - Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) para acomodar dispositivos móveis com tela pequena e grande. [Dispor a interface do usuário](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) para responder a diferentes tamanhos de tela e resoluções.
 
-- Considere como você vai acomodar vários tipos de entrada. Consulte as [Diretrizes para interações](https://docs.microsoft.com/windows/uwp/design/layout/index) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [Controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [Interações por toque](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), o [Teclado virtual](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) e muito mais.  Ou confira as [Diretrizes de texto e entrada de texto](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls) para obter mais experiências de interação tradicionais.
+- Considere como você vai acomodar vários tipos de entrada. Confira as [Diretrizes para interações](https://docs.microsoft.com/windows/uwp/design/layout/index) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-design-guidelines), [Voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions), [Interações por toque](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction), o [Teclado virtual](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) e muito mais.  Ou confira as [Diretrizes de texto e entrada de texto](https://docs.microsoft.com/windows/uwp/controls-and-patterns/text-controls) para obter mais experiências de interação tradicionais.
 
 ### <a name="add-services"></a>Adicionar serviços
 
@@ -129,11 +129,11 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 - Saiba como [conectar-se a serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10)) para melhorar a experiência do aplicativo.
 - Inclua [Notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) e [compras no aplicativo](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.
 
-### <a name="submit-your-app-to-the-store"></a>Envie seu aplicativo para a Loja.
+### <a name="submit-your-app-to-the-store"></a>Enviar seu aplicativo para a Store
 
 O [Partner Center](https://partner.microsoft.com/dashboard) permite gerenciar e enviar todos os seus aplicativos para dispositivos Windows em um único local. Confira [Publicar aplicativos e jogos do Windows](../publish/index.md) para aprender a enviar seus aplicativos para publicação na Microsoft Store.
 
-Os novos recursos simplificam os processos, dando mais controle para você. Você também encontrará [relatórios de análise](https://docs.microsoft.com/windows/uwp/publish/analytics) detalhados, [detalhes de pagamento](https://docs.microsoft.com/windows/uwp/publish/payout-summary) combinados, formas de [promover seu aplicativo e atrair os seus clientes](https://docs.microsoft.com/windows/uwp/publish/app-promotion-and-customer-engagement), e muito mais.
+Os novos recursos simplificam os processos, dando mais controle a você. Você também encontrará [relatórios de análise](https://docs.microsoft.com/windows/uwp/publish/analytics) detalhados, [detalhes de pagamento](https://docs.microsoft.com/windows/uwp/publish/payout-summary) combinados, formas de [promover seu aplicativo e atrair os seus clientes](https://docs.microsoft.com/windows/uwp/publish/app-promotion-and-customer-engagement) e muito mais.
 
 Para mais material introdutório, confira [Uma Introdução sobre como criar aplicativos para dispositivos Windows 10](https://msdn.microsoft.com/magazine/dn973012.aspx)
 

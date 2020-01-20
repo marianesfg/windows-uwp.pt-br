@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49e126ea0212499361fea58b58237ee13fb76ca2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 42913aae69e5d049530d649c031351f4f3ab9ace
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259174"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684971"
 ---
 # <a name="sockets"></a>Soquetes
 Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
@@ -1277,13 +1277,13 @@ Algumas limitações importantes são impostas ao usar envios em lote em seu có
 -   Você não pode modificar o conteúdo das instâncias **IBuffer** que estão sendo gravadas até que a gravação assíncrona seja concluída.
 -   O padrão **FlushAsync** só funciona em **StreamSocket.OutputStream** e **DatagramSocket.OutputStream**.
 -   O padrão **FlushAsync** só funciona do Windows 10 em diante.
--   Em outros casos, use [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___), em vez do padrão **FlushAsync**.
+-   Em outros casos, use [**Task.WaitAll**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___), em vez do padrão **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Compartilhamento de DatagramSocket de porta
 Você pode configurar um [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para coexistir com outros soquetes multicast do Win32 ou UWP associados ao mesmo endereço/porta. Você faz isso definindo [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) como `true` antes da associação ou conexão do soquete. Acesse uma instância de **DatagramSocketControl** do próprio objeto **DatagramSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
 
-## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado cliente com a classe StreamSocket
-[ **StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor com o qual o aplicativo cliente se comunica. Em alguns casos, o aplicativo cliente também precisa se autenticar no servidor usando um certificado cliente SSL/TLS. Você pode fornecer a um certificado de cliente a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele precisa ser definido antes do handshake SSL/TLS ser iniciado). Acesse uma instância de **StreamSocketControl** do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado do cliente, o Windows responderá com o certificado cliente fornecido por você.
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecer um certificado cliente com a classe StreamSocket
+[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor com o qual o aplicativo cliente se comunica. Em alguns casos, o aplicativo cliente também precisa se autenticar no servidor usando um certificado cliente SSL/TLS. Você pode fornecer a um certificado de cliente a propriedade [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes da associação ou conexão do soquete (ele precisa ser definido antes do handshake SSL/TLS ser iniciado). Acesse uma instância de **StreamSocketControl** do próprio objeto **StreamSocket** por meio de sua propriedade [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Se o servidor solicitar o certificado do cliente, o Windows responderá com o certificado cliente fornecido por você.
 
 Use uma substituição de [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que usa um [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), conforme mostrado neste exemplo mínimo de código.
 
@@ -1350,7 +1350,7 @@ Para erros de validação de parâmetro, é possível usar o **HRESULT** baseado
 
 O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) poderá gerar uma exceção se a sequência passada não for um nome do host válido. Por exemplo, ela contém caracteres que não são permitidos, o que é provável se o nome do host foi digitado em seu aplicativo pelo usuário. Construa um **HostName** dentro de um bloco try/catch. Dessa forma, se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar um novo nome do host.
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [CertificateQuery](/uwp/api/windows.security.cryptography.certificates.certificatequery)
 * [CertificateStores.FindAllAsync](/uwp/api/windows.security.cryptography.certificates.certificatestores.findallasync)
 * [DatagramSocket](/uwp/api/Windows.Networking.Sockets.DatagramSocket)
@@ -1383,5 +1383,5 @@ O construtor [**HostName**](/uwp/api/Windows.Networking.HostName) poderá gerar 
 * [Como definir recursos de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
 * [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 * [Exemplo do StreamSocket](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)

@@ -1,17 +1,17 @@
 ---
 description: O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas.
-title: Referências fracas em C++/WinRT
+title: Referências fortes e fracas em C++/WinRT
 ms.date: 05/16/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, forte, fraca, referência
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3ad6bb9a98b0fe2a699580001698740e44cea14f
-ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
+ms.openlocfilehash: 781b63f9f32a0fdf7edee6479b60fd82822cc745
+ms.sourcegitcommit: e1bd1d9b2598e40b5d788338a07e12f4e4c58495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2019
-ms.locfileid: "67870313"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585389"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas em C++/WinRT
 
@@ -401,7 +401,7 @@ struct MyImplementation: implements<MyImplementation, IStringable, no_weak_ref>
 }
 ```
 
-Se você estiver criando uma classe de tempo de execução.
+Se você estiver criando uma classe de runtime.
 
 ```cppwinrt
 struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
@@ -412,7 +412,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 
 Não importa onde o struct de marcador apareça no pacote de parâmetros variadic. Se você solicitar uma referência fraca para um tipo recusado, o compilador ajudará você com "*This is only for weak ref support*".
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
 * [winrt::make_weak function template](/uwp/cpp-ref-for-winrt/make-weak)
 * [winrt::no_weak_ref marker struct](/uwp/cpp-ref-for-winrt/no-weak-ref)

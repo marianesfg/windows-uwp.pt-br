@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 1c535e4ea4ad3c93acb048de2050d5ae7a9c2c2b
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: 08853a201eff063b49dcc69d5827c9b54e324b75
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061933"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684877"
 ---
 # <a name="control-size-and-density"></a>Controle de tamanho e densidade
 
@@ -72,7 +72,7 @@ O dimensionamento compacto permite grupos de controles densos e ricos em informa
 
 ### <a name="examples"></a>Exemplos
 
-O dimensionamento compacto é implementado por meio de um dicionário de recursos especiais que pode ser especificado em seu aplicativo no nível da página ou em um layout específico. O dicionário de recursos está disponível no pacote Nuget [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
+O dimensionamento compacto é implementado por meio de um dicionário de recursos especiais que pode ser especificado em seu aplicativo no nível da página ou em um layout específico. O dicionário de recursos está disponível no pacote Nuget [WinUI](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Os exemplos a seguir mostram como o estilo `Compact` pode ser aplicado à página e a um controle de grade individual.
 
@@ -101,6 +101,6 @@ Os exemplos a seguir mostram como o estilo `Compact` pode ser aplicado à págin
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para destinos de toque](../input/guidelines-for-targeting.md)
-- [Referências de ResourceDictionary e recursos XAML](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
-- [Dicionário de recursos](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.resourcedictionary)
-- [Estilos de XAML](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-styles) 
+- [Referências de ResourceDictionary e recursos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
+- [Dicionário de recursos](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary)
+- [Estilos de XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) 

@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: f416db0266c4ab2ec959c926c0bf0b676b66dd95
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 824476cb098d0ff561fca67497a896586c70b8fb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258703"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681957"
 ---
 # <a name="reveal-focus"></a>Foco de Revelação
 
@@ -74,7 +74,7 @@ Você pode personalizar o efeito Foco de Revelação modificando as propriedades
 
 Porém, antes de começar a personalizá-lo, vale a pena saber um pouco mais sobre os componentes que fazem parte do Foco de Revelação.
 
-Há três partes nos visuais do Foco de Revelação padrão: a borda principal, a borda secundária e o brilho da Revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do Foco de Revelação tem espessura proporcional à espessura da borda principal e é visto na parte *externa* da borda principal.
+Há três partes nos visuais do Foco de Revelação padrão: a borda principal, a borda secundária e o brilho da Revelação. A borda principal tem espessura de **2px** e é traçada em torno da parte *externa* da borda secundária. A borda secundária tem espessura de **1px** e é traçada em torno da parte *interna* da borda principal. O brilho do Foco de Revelação tem espessura proporcional à espessura da borda principal e é visto na parte *externa* da borda principal.
 
 Além dos elementos estáticos, os visuais do Foco de Revelação contam com uma luz animada que pulsa quando está em repouso e que se move na direção do foco quando o foco é movido.
 
@@ -108,7 +108,7 @@ Uma margem negativa move a borda para mais longe do centro do controle, e uma ma
 
 ## <a name="customize-the-color"></a>Personalizar a cor
 
-Para alterar a cor do visual do Foco de Revelação, use as propriedades [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) e [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush).
+Para alterar a cor do visual do Foco de Revelação, use as propriedades [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) e [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush).
 
 | Propriedade | Recurso padrão | Valor do recurso padrão |
 | ---- | ---- | --- | 
@@ -175,7 +175,7 @@ O Foco de Revelação é um componente do Sistema de Design Fluente que adiciona
 - [Realce de Revelação](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Projetando para TV e Xbox](/windows/uwp/design/devices/designing-for-tv)
 - [Interações de gamepad e de controle remoto](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
-- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+- [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 - [Efeitos de composição](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
 - [Ciência no sistema: Design Fluente e profundidade](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciência no sistema: Design Fluente e iluminação](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

@@ -11,18 +11,18 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c276b232e76afb98d778ef65c7e0e363285c4794
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a3bf48da5fdfff205b2013341aaf6869064ce341
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258204"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684371"
 ---
 # <a name="person-picture-control"></a>Controle de imagem da pessoa
 
-O controle de imagem da pessoa exibe a imagem de avatar de uma pessoa, se existir uma disponível. Caso contrário, ele exibe as iniciais da pessoa ou um glifo genérico. Você pode usar o controle para exibir um [objeto Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), um objeto que gerencia informações de contato da pessoa ou você pode fornecer informações de contato, como o nome de exibição e a imagem de perfil, manualmente.  
+O controle de imagem da pessoa exibe a imagem de avatar de uma pessoa, se existir uma disponível. Caso contrário, ele exibe as iniciais da pessoa ou um glifo genérico. Você pode usar o controle para exibir um [objeto Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact), um objeto que gerencia informações de contato da pessoa ou você pode fornecer informações de contato, como o nome de exibição e a imagem de perfil, manualmente.  
 
-> **APIs importantes**: [classe PersonPicture](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [classe Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [classe ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **APIs importantes**: [classe PersonPicture](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [classe Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact), [classe ContactManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
 Esta ilustração mostra dois controles de imagem da pessoa acompanhados por dois elementos de [bloco de texto](text-block.md) que exibem os nomes dos usuários. 
 ![O controle de imagem da pessoa](images/person-picture/person-picture_hero.png)
@@ -79,7 +79,7 @@ Para criar uma imagem da pessoa, você deve usar a classe PersonPicture. Este ex
 
 ## <a name="using-the-person-picture-control-to-display-a-contact-object"></a>Como usar o controle de imagem da pessoa para exibir um objeto de Contact
 
-Você pode usar o controle seletor de pessoa para exibir um objeto [Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact): 
+Você pode usar o controle seletor de pessoa para exibir um objeto [Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact): 
 
 ```xaml
 <Page
@@ -167,11 +167,11 @@ namespace SampleApp
 ```
 
 > [!NOTE]
-> Para simplificar o código, este exemplo cria um novo objeto Contact. Em um aplicativo real, você pode permitir que o usuário selecione um contato ou é possível usar [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager) para consultar uma lista de contatos. Para obter informações sobre como recuperar e gerenciar contatos, confira os [artigos sobre Contatos e calendário](../../contacts-and-calendar/index.md). 
+> Para simplificar o código, este exemplo cria um novo objeto Contact. Em um aplicativo real, você pode permitir que o usuário selecione um contato ou é possível usar [ContactManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager) para consultar uma lista de contatos. Para obter informações sobre como recuperar e gerenciar contatos, confira os [artigos sobre Contatos e calendário](../../contacts-and-calendar/index.md). 
 
 ## <a name="determining-which-info-to-display"></a>Como determinar quais informações devem ser exibidas
 
-Ao fornecer um objeto [Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), o controle de imagem da pessoa o avalia para determinar quais informações podem ser exibidas. 
+Ao fornecer um objeto [Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact), o controle de imagem da pessoa o avalia para determinar quais informações podem ser exibidas. 
 
 Se uma imagem estiver disponível, o controle exibirá a primeira imagem encontrada, nesta ordem:
 

@@ -12,24 +12,24 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 761cd9e6d1fc92b4919f701fdd9f8f62078faedf
-ms.sourcegitcommit: b8a4b0d5a65da297290b93d73c641df3c135a086
+ms.openlocfilehash: 2445f1b718532fd0862c276e8fadf12e88fe36ac
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72531664"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684419"
 ---
 # <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
  
 
-Os controles **ListView** e **GridView** gerenciam como seus itens são organizados (horizontal, vertical, quebra automática, etc...) e como o usuário interage com os itens, mas não como os itens individuais são mostrados na tela. A visualização dos itens é gerenciada por contêineres de itens. Quando você adiciona itens a um recurso exibição de lista, eles são colocados automaticamente em um contêiner. O contêiner de itens padrão de ListView é [ListViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem); de GridView, é [GridViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
+Os controles **ListView** e **GridView** gerenciam como seus itens são organizados (horizontal, vertical, quebra automática etc…) e como o usuário interage com os itens, mas não como os itens individuais são mostrados na tela. A visualização dos itens é gerenciada por contêineres de itens. Quando você adiciona itens a uma exibição de lista, eles são colocados automaticamente em um contêiner. O contêiner de itens padrão de ListView é [ListViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem); de GridView, é [GridViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
 
-> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Classe ListViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listviewitem), [Classe GridViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.gridviewitem), [Propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [Propriedade ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
+> **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Classe ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem), [Classe GridViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridviewitem), [Propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [Propriedade ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
 
 
 > [!NOTE]
-> Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* para o equivalente a grade correspondente (GridView ou GridViewItem). 
+> Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* no equivalente a grade correspondente (GridView ou GridViewItem). 
 
 ## <a name="listview-items-and-gridview-items"></a>Itens ListView e itens GridView
 Conforme mencionado acima, os itens ListView são colocados automaticamente no contêiner ListViewItem e os itens GridView são colocados no contêiner GridViewItem. Esses contêineres de item são controles que têm seu próprio estilo e interação internos, mas também podem ser altamente personalizados. No entanto, antes da personalização, familiarize-se com as diretrizes e o estilo recomendados para o ListViewItem e o GridViewItem:
@@ -368,7 +368,7 @@ Para modificar outras propriedades ListViewItemPresenter que não estejam associ
 4. Na caixa de diálogo Criar Recurso de Estilo, insira um nome para o estilo. Neste exemplo, você usa `colorsGridViewItemStyle`.
     ![Visual Studio Create Style Resource dialog(images/listview-style-resource-vs.png)
 
-Uma cópia do estilo padrão é adicionada ao seu aplicativo como um recurso, e a propriedade **GridView.ItemContainerStyle** é definida como esse recurso, conforme mostrado neste XAML. 
+Uma cópia do estilo padrão é adicionada ao seu aplicativo como um recurso e a propriedade **GridView.ItemContainerStyle** é definida como esse recurso, conforme mostrado neste XAML. 
 
 ```xaml
 <Style x:Key="colorsGridViewItemStyle" TargetType="GridViewItem">
@@ -435,7 +435,7 @@ Você pode definir a propriedade [CheckMode](https://docs.microsoft.com/uwp/api/
 
 Esta tabela mostra os elementos visuais padrão usados para indicar a seleção.
 
-SelectionMode:&nbsp;&nbsp; | Única/Estendida | Múltipla
+SelectionMode:&nbsp;&nbsp; | Single/Extended | Vários
 ---------------|-----------------|---------
 Embutido | ![Seleção única ou estendida embutida](images/listview-single-selection.png) | ![Seleção múltipla embutida](images/listview-multi-selection.png)
 Sobreposição | ![Seleção única ou estendida sobreposta](images/gridview-single-selection.png) | ![Seleção múltipla sobreposta](images/gridview-multi-selection.png)
@@ -468,12 +468,12 @@ ListViewItemPresenter tem outras propriedades de pincel para estados de espaços
 
 ### <a name="expanded-xaml-item-templates"></a>Modelos de item XAML expandidos
 
-Se você precisar fazer modificações mais do que o que é permitido pelas propriedades **ListViewItemPresenter** – se precisar alterar a posição da caixa de seleção, por exemplo – pode usar os modelos *ListViewItemExpanded* ou *GridViewItemExpanded*. Esses modelos são incluídos com os estilos padrão em generic.xaml. Eles seguem o padrão XAML usual de criação de todos os elementos visuais de UIElements individuais.
+Se você precisar fazer modificações mais do que o que é permitido pelas propriedades **ListViewItemPresenter** – se precisar alterar a posição da caixa de seleção, por exemplo – poderá usar os modelos *ListViewItemExpanded* ou *GridViewItemExpanded*. Esses modelos são incluídos com os estilos padrão em generic.xaml. Eles seguem o padrão XAML usual de criação de todos os elementos visuais de UIElements individuais.
 
 Como mencionado anteriormente, o número de UIElements em um modelo de item tem um impacto significativo no desempenho de sua exibição de lista. A substituição de ListViewItemPresenter pelos modelos XAML expandidos aumenta consideravelmente o número de elementos e não é recomendada quando a exibição de lista mostrará um grande número de itens ou quando o desempenho for uma preocupação.
 
 > [!NOTE]
-> **ListViewItemPresenter** terá suporte apenas quando o [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) da exibição de lista for um [ItemsWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemswrapgrid) ou [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel). Se você alterar o ItemsPanel para usar [VariableSizedWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid), [WrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.wrapgrid) ou [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel), o modelo de item será alternado automaticamente para o modelo XAML expandido. Para obter mais informações, consulte [Otimização das interfaces do usuário ListView e GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
+> **ListViewItemPresenter** terá suporte apenas quando o [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) da exibição de lista for um [ItemsWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemswrapgrid) ou [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel). Se você alterar o ItemsPanel para usar [VariableSizedWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid), [WrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.wrapgrid) ou [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel), o modelo de item será alternado automaticamente para o modelo XAML expandido. Para saber mais, confira a [otimização das interfaces do usuário ListView e GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
 
 Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele em seu aplicativo e definir a propriedade **ItemContainerStyle** para sua cópia.
 

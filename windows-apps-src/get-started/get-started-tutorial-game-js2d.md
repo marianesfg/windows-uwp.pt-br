@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 343fa50dbe9a0574914dc96b9fac450475a69b0a
-ms.sourcegitcommit: 87ddc67d31668a6351206bda3546ffbabb7b4551
+ms.openlocfilehash: b2b60354acb2c3d97ced3dce0b3fb7f6d97ac35d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68807849"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684770"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -30,7 +30,7 @@ Para publicar seu aplicativo na Microsoft Store, ele deve ser escrito como um ap
 
 Este projeto foi desenvolvido com JavaScript usando o Visual Studio. Com algumas pequenas alterações, também pode ser hospedado em um site ou adaptado para outras plataformas. 
 
-**Observação:** este não é um jogo completo (ou bom!); ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um aplicativo pronto para ser publicado na Microsoft Store.
+**Observação**: este não é um jogo completo (ou bom!); ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um aplicativo pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -65,7 +65,7 @@ Pressione **F5** para iniciar o aplicativo em execução. Você deve ver uma jan
 
 ![Apenas um dinossauro comum com um gato ninja nas costas](images/JS2D_3.png)
 
-**Observação:** Algo deu errado? Verifique se você instalou o Visual Studio com suporte para Web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
+**Observação**: Algo deu errado? Verifique se você instalou o Visual Studio com suporte para Web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
 
 ## <a name="walkthough"></a>Explicação passo a passo
 
@@ -260,7 +260,7 @@ Agora que você tem um aplicativo UWP, é possível publicá-lo na Microsoft Sto
 
 Há algumas etapas no processo.
 
-1. É preciso estar [registrado](https://developer.microsoft.com/en-us/store/register) como Desenvolvedor do Windows.
+1. É preciso estar [registrado](https://developer.microsoft.com/store/register) como Desenvolvedor do Windows.
 2. É preciso usar a [lista de verificação](https://docs.microsoft.com/windows/uwp/publish/app-submissions) de envio de aplicativo.
 3. O aplicativo deve ser enviado para [certificação](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 

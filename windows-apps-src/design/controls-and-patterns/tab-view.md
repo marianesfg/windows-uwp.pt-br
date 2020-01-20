@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: acad94c0697f930235af809cc3e2826e4c5befde
-ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
+ms.openlocfilehash: 141a24ca1f828f98231ec35471f7b43229df57e6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71144956"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684349"
 ---
 # <a name="tabview"></a>TabView
 
@@ -31,7 +31,7 @@ TabView oferece guias de documento para aplicativos UWP. Use um TabView quando:
 - Os usuários puderem abrir documentos ou páginas da Web diretamente em guias.
 - Os usuários puderem arrastar e soltar as guias entre janelas.
 
-Se um TabView não for apropriado para seu aplicativo, considere usar controles como [Pivot](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot) ou [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview).
+Se um TabView não for apropriado para seu aplicativo, considere usar controles como [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot) ou [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview).
 
 ## <a name="anatomy"></a>Anatomia
 
@@ -91,7 +91,7 @@ Em vez de fazer as guias ocuparem sua própria linha embaixo do título de uma j
 
 Como um usuário pode arrastar uma janela por sua barra de títulos para reposicionar a janela, é importante que a barra de títulos não seja completamente preenchida com guias. Portanto, ao exibir guias em uma barra de títulos, é necessário especificar uma parte da barra de títulos para ser reservada como uma área que pode ser arrastada. Se você não especificar uma região que pode ser arrastada, toda a barra de títulos poderá ser arrastada, o que impedirá que suas guias recebam eventos de entrada. Se o TabView for exibido na barra de títulos de uma janela, você sempre deverá incluir um TabStripFooter em seu TabView e marcá-lo como uma região que pode ser arrastada.
 
-Para obter mais informações, confira [Personalização da barra de título](https://docs.microsoft.com/en-us/windows/uwp/design/shell/title-bar)
+Para obter mais informações, confira [Personalização da barra de título](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)
 
 ![Guias na barra de títulos](images/tabview/tab-extend-to-title.png)
 
@@ -151,7 +151,7 @@ Como a barra de guias fica cheia, é possível controlar como elas são exibidas
 
 | Valor TabWidthMode | Comportamento                                                                                                                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Igual a              | À medida que novas guias forem adicionadas, todas elas serão reduzidas horizontalmente até chegarem a uma largura mínima muito pequena.                                                       |
+| Igual              | À medida que novas guias forem adicionadas, todas elas serão reduzidas horizontalmente até chegarem a uma largura mínima muito pequena.                                                       |
 | SizeToContent      | As guias sempre terão seu "tamanho natural", o tamanho mínimo necessário para exibir seu ícone e cabeçalho. Elas não serão expandidas ou recolhidas conforme novas guias forem adicionadas ou fechadas. |
 
 Independentemente do valor escolhido, eventualmente pode haver muitas guias a serem exibidas em sua faixa de guias. Nesse caso, serão exibidos amortecedores de rolagem que permitem que o usuário role a TabStrip para a esquerda e para a direita.
@@ -162,7 +162,7 @@ A maioria dos usuários tem experiência com o uso de guias de documentos simple
 
 Não importa como o usuário interage com um conjunto de guias de documento, sempre deve haver uma guia ativa. Se o usuário fechar a guia selecionada ou quebrar a guia selecionada em outra janela, outra guia deverá se tornar a ativa. O TabView tenta fazer isso automaticamente selecionando a próxima guia. Se você tiver um bom motivo por que seu aplicativo deve permitir um TabView com uma guia não selecionada, a área de conteúdo do TabView estará simplesmente em branco.
 
-## <a name="keyboard-navigation"></a>Navegação de teclado
+## <a name="keyboard-navigation"></a>Navegação por teclado
 
 O TabView dá suporte a muitos cenários de navegação de teclado comuns por padrão. Esta seção explica a funcionalidade interna e fornece recomendações sobre funcionalidades adicionais que podem ser úteis para alguns aplicativos.
 
@@ -293,6 +293,6 @@ private void NavigateToNumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerato
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [MasterDetails](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/master-details)
-- [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview)
-- [Pivô](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot)
+- [MasterDetails](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/master-details)
+- [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview)
+- [Pivô](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot)

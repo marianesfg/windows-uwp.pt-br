@@ -5,12 +5,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ec7762fd64f0f0b8de65faa1aaf079bdaba3a3
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1cef2fb660681d3e382eb8ca7dcb92456756f627
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63807009"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685231"
 ---
 # <a name="track-file-system-changes-in-the-background"></a>Controlar alterações no sistema de arquivos em segundo plano
 
@@ -56,7 +56,7 @@ videoTracker.Enable();
 
 Algumas observações importantes:
 
-- Verifique se seu aplicativo tem permissão para a biblioteca correta no manifesto antes de criar o objeto [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary). Para obter mais detalhes, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions).
+- Verifique se seu aplicativo tem permissão para a biblioteca correta no manifesto antes de criar o objeto [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary). Para obter mais detalhes, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions).
 - [**Enable**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) é thread safe, não redefine seu ponteiro e pode ser chamado quantas vezes você quiser (haverá mais informações sobre isso posteriormente).
 
 ![Habilitando um controlador de alterações vazio](images/changetracker-enable.png)

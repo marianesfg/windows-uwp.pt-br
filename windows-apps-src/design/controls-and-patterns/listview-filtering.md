@@ -7,12 +7,12 @@ ms.date: 12/3/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 93f11c31866c50950a1f6c63632a77e01b296038
-ms.sourcegitcommit: e272af7ece8e449f46357b392d80dc1a0f44e625
+ms.openlocfilehash: 24669b81c244339509e30a43a0da8a2b27e67eeb
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74799748"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302650"
 ---
 # <a name="filtering-collections-and-lists-through-user-input"></a>Como filtrar coleções e listas por meio de entrada do usuário
 Se sua coleção exibir muitos itens ou estiver fortemente ligada à interação do usuário, a filtragem será um recurso útil de implementar. A filtragem usando o método descrito neste artigo pode ser implementada na maioria dos controles de coleção, incluindo [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) e [ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2). Muitos tipos de entrada do usuário podem ser usados para filtrar uma coleção, como caixas de seleção, botões de opção e controles deslizantes, mas este artigo se concentrará na criação de entrada de usuário baseada em texto e no seu uso para atualizar uma ListView em tempo real, de acordo com a pesquisa do usuário. 
@@ -35,6 +35,10 @@ Para a filtragem funcionar, ListView deve ter uma fonte de dados que possa ser m
         <ColumnDefinition Width="1*"></ColumnDefinition>
         <ColumnDefinition Width="1*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+            <RowDefinition Height="400"></RowDefinition>
+            <RowDefinition Height="400"></RowDefinition>
+    </Grid.RowDefinitions>
 
     <ListView x:Name="FilteredListView"
                 Grid.Column="0"
@@ -54,8 +58,9 @@ Para a filtragem funcionar, ListView deve ter uma fonte de dados que possa ser m
 
     </ListView>
 
-    <TextBox x:Name="FilterByLName" Grid.Column="1" Width="150" Header="Last Name" 
-             Margin="8" HorizontalAlignment="Left" TextChanged="FilteredLV_LNameChanged"/>
+    <TextBox x:Name="FilterByLName" Grid.Column="1" Header="Last Name" Width="200"
+             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,20"
+             TextChanged="FilteredLV_LNameChanged"/>
 </Grid>
 ```
 ## <a name="filtering-the-data"></a>Como filtrar os dados
@@ -78,7 +83,8 @@ using System.Linq;
 
 public MainPage()
 {
-    // Define People collection to hold all Person objects. Populate collection - i.e. add Person objects (not shown)
+    // Define People collection to hold all Person objects. 
+    // Populate collection - i.e. add Person objects (not shown)
     IList<Person> People = new List<Person>();
 
     // Create PeopleFiltered collection and copy data from original People collection
@@ -92,13 +98,16 @@ public MainPage()
 
 private void FilteredLV_LNameChanged(object sender, TextChangedEventArgs e)
 {
-    // Perform a Linq query to find all Person objects (from the original People collection) that fit the criteria of the filter, save them in a new collection object called TempFiltered.
-    ObservableCollection<Person> TempFiltered = new ObservableCollection<Person>();
+    /* Perform a Linq query to find all Person objects (from the original People collection)
+    that fit the criteria of the filter, save them in a new List called TempFiltered. */
+    List<Person> TempFiltered;
     
-    // Make sure all text is case-insensitive when comparing
-    TempFiltered = People.Where(contact => contact.LastName.ToLower().Contains(FilterByLastName.Text.ToLower()));
+    /* Make sure all text is case-insensitive when comparing, and make sure 
+    the filtered items are in a List object */
+    TempFiltered = people.Where(contact => contact.LastName.Contains(FilterByLName.Text, StringComparison.InvariantCultureIgnoreCase)).ToList();
     
-    // Go through TempFiltered and compare it with the current PeopleFiltered collection, adding and subtracting items as necessary:
+    /* Go through TempFiltered and compare it with the current PeopleFiltered collection,
+    adding and subtracting items as necessary: */
 
     // First, remove any Person objects in PeopleFiltered that are not in TempFiltered
     for (int i = PeopleFiltered.Count - 1; i >= 0; i--)
@@ -110,7 +119,8 @@ private void FilteredLV_LNameChanged(object sender, TextChangedEventArgs e)
         }
     }
 
-    // Next, add back any Person objects that are included in TempFiltered and may not currently be in PeopleFiltered (in case of a backspace)
+    /* Next, add back any Person objects that are included in TempFiltered and may 
+    not currently be in PeopleFiltered (in case of a backspace) */
 
     foreach (var item in TempFiltered)
     {

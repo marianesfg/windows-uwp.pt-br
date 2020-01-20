@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: efe67707edc5f556301ded466f3f2919ec04873e
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153726"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684579"
 ---
 # <a name="color"></a>Cor
 
@@ -60,7 +60,7 @@ Os aplicativos UWP podem usar um tema de aplicativo claro ou escuro. O tema afet
 
 Por padrão, o tema do aplicativo UWP é a preferência de tema do usuário das Configurações do Windows ou o tema do padrão do dispositivo (ou seja, escuro no Xbox). No entanto, você pode definir o tema do aplicativo UWP.
 
-### <a name="changing-the-theme"></a>Alterando o tema
+### <a name="changing-the-theme"></a>Alterar o tema
 
 Você pode alterar temas facilmente alterando a propriedade **RequestedTheme** no arquivo `App.xaml`.
 
@@ -219,13 +219,13 @@ Para saber mais sobre os controles de estilo, confira [Estilos de XAML](../contr
 
 ## <a name="color-api"></a>API de cor
 
-Existem várias APIs que podem ser usadas para adicionar cor ao seu aplicativo. Primeiro, a classe [**Colors**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors), que implementa uma lista abrangente de cores predefinidas. Elas podem ser acessadas automaticamente com as propriedades XAML. No exemplo a seguir, é possível criar um botão e definir as propriedades de cor de primeiro e segundo plano de acordo com os membros da classe **Colors**.
+Existem várias APIs que podem ser usadas para adicionar cor ao seu aplicativo. Primeiro, a classe [**Colors**](https://docs.microsoft.com/uwp/api/windows.ui.colors), que implementa uma lista abrangente de cores predefinidas. Elas podem ser acessadas automaticamente com as propriedades XAML. No exemplo a seguir, é possível criar um botão e definir as propriedades de cor de primeiro e segundo plano de acordo com os membros da classe **Colors**.
 
 ```xaml
 <Button Background="MediumSlateBlue" Foreground="White">Button text</Button>
 ```
 
-Você pode criar suas próprias cores de RGB ou valores hexadecimais usando a estrutura [**Color**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color) em XAML.
+Você pode criar suas próprias cores de RGB ou valores hexadecimais usando a estrutura [**Color**](https://docs.microsoft.com/uwp/api/windows.ui.color) em XAML.
 
 ```xaml
 <Color x:Key="LightBlue">#FF36C0FF</Color>
@@ -240,9 +240,9 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 As letras "Argb" significam alfa (opacidade), vermelho, verde e azul, que são os quatro componentes de uma cor. Cada argumento pode variar de 0 a 255. Você pode optar por omitir o primeiro valor, o que oferece uma opacidade padrão de 255 ou 100% opaco.
 
 > [!Note]
-> Se você estiver usando C++, é necessário criar cores usando a classe [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper).
+> Se você estiver usando C++, é necessário criar cores usando a classe [**ColorHelper**](https://docs.microsoft.com/uwp/api/windows.ui.colorhelper).
 
-O uso mais comum para uma **Cor** é como um argumento para [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush), que pode ser usado para pintar elementos da interface do usuário como uma única cor sólida. Esses pincéis geralmente são definidos em um [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary), portanto, eles podem ser reutilizados em vários elementos.
+O uso mais comum para uma **Cor** é como um argumento para [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.solidcolorbrush), que pode ser usado para pintar elementos da interface do usuário como uma única cor sólida. Esses pincéis geralmente são definidos em um [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), portanto, eles podem ser reutilizados em vários elementos.
 
 ```xaml
 <ResourceDictionary>
@@ -269,7 +269,7 @@ Além de definir suas próprias cores no aplicativo, você também pode definir 
 A ColorPaletteResources é uma API que informa ao sistema quais recursos estão sendo definidos onde. ColorPaletteResources deve ter um [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), que pode ser uma das três opções:
 - Padrão
   * Irá mostrar as alterações de cor nos temas [Claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) e [Escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
-- Claro
+- Leve
   * Irá mostrar as alterações de cor apenas no tema [Claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme)
 - Escuro
   * Irá mostrar as alterações de cor apenas no tema [Escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)

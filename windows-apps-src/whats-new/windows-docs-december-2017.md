@@ -5,24 +5,24 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 17238dd886b76e16b0fe63151a73d4a3a5c23704
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f785ad5d7898f838435e0a05cf8dea5c778e70f3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259754"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684749"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novidades dos Documentos de Desenvolvedor do Windows em dezembro de 2017
 
 A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Após o lançamento do Fall Creators Update, foram disponibilizadas as visões gerais de recursos, diretrizes para desenvolvedores e amostras a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
 
-[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/create-uwp-apps.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
 ### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: Guia do entusiasta
 
-Destinado a entusiastas de tecnologia que estão explorando o mundo da realidade misturada, o [Guia do entusiasta](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/) responde às principais questões sobre o Windows Mixed Reality. 
+Destinado a entusiastas de tecnologia que estão explorando o mundo da realidade misturada, o [Guia do entusiasta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/) responde às principais questões sobre o Windows Mixed Reality. 
 
 Neste guia, você encontrará: 
 - Perguntas frequentes antes da compra, 
@@ -87,7 +87,7 @@ As orientações sobre design da UWP (Plataforma Universal do Windows) são um r
 
 Adicionamos um novo artigo que mostra como você pode [solicitar classificações e opiniões para o seu aplicativo](../monetize/request-ratings-and-reviews.md). Você pode mostrar uma caixa de diálogo de classificações e análises no contexto do aplicativo ou abrir uma página de classificações e análises para o aplicativo na Store.
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 ### <a name="customer-orders"></a>Pedidos de clientes
 

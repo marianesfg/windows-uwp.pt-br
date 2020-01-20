@@ -5,12 +5,12 @@ keywords: XAML, UWP, Introdução
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f2c63c90170a633ae718db618c502efa41fb3f7d
-ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
+ms.openlocfilehash: 0e9e0a426d51fddaf4ff509438176e9db7a3e474
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72680761"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684121"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Criar estilos personalizados
 
@@ -55,7 +55,7 @@ O controle deslizante de exposição ajusta a exposição da imagem: deslize-o p
 
 3. Use um elemento Polígono para criar uma forma de plano de fundo para o controle deslizante de exposição.
 
-    O [namespace Windows.XAML.Ui.Shapes](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes) oferece sete formas para você escolher. Há uma elipse, um retângulo e um elemento chamado Caminho, que pode criar qualquer tipo de forma; sim, até mesmo um unicórnio! 
+    O [namespace Windows.XAML.Ui.Shapes](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes) oferece sete formas para você escolher. Há uma elipse, um retângulo e um elemento chamado Caminho, que pode criar qualquer tipo de forma; sim, até mesmo um unicórnio! 
     
     <!-- TODO reduce size -->
     ![Um unicórnio](../basics/images/xaml-basics/unicorn.png)
@@ -177,7 +177,7 @@ Parabéns, você concluiu a Parte 1! Se não consegue mais avançar ou quer ver 
 
 Uma das vantagens dos estilos XAML é que é possível reduzir significativamente a quantidade de código que você precisa escrever, e pode facilitar muito a atualização da aparência do seu aplicativo.
 
-Para definir um estilo, adicione um elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) à propriedade [Resources](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) de um elemento que contém o controle cujo estilo você deseja definir.  Se você adicionar o estilo à propriedade **Page.Resources**, seus estilos poderão ser acessados em toda a página. Se adicionar o estilo à propriedade **Application.Resources** no arquivo App.xaml, o estilo poderá ser acessado em todo o aplicativo.
+Para definir um estilo, adicione um elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) à propriedade [Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Resources) de um elemento que contém o controle cujo estilo você deseja definir.  Se você adicionar o estilo à propriedade **Page.Resources**, seus estilos poderão ser acessados em toda a página. Se adicionar o estilo à propriedade **Application.Resources** no arquivo App.xaml, o estilo poderá ser acessado em todo o aplicativo.
 
 É possível criar estilos gerais e estilos nomeados. Um estilo nomeado deve ser aplicado explicitamente a controles específicos; um estilo geral é aplicado a qualquer controle que corresponda ao **TargetType** especificado. 
 

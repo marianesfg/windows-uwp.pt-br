@@ -5,21 +5,21 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluente
-ms.openlocfilehash: 491489c0a6462c1bcbee2015027403ae359c47a2
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 9328c3f156acd13fd8947e01e924bf0d6849c0a6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282273"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684401"
 ---
 # <a name="item-templates-for-list-view"></a>Modelos de item para exibição de lista
 
-Esta seção contém modelos de item que você pode usar com um controle [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView). Use esses modelos para obter a aparência de tipos de aplicativos comuns. 
+Esta seção contém modelos de item que você pode usar com um controle [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView). Use esses modelos para obter a aparência de tipos de aplicativos comuns. 
 
 Para demonstrar associação de dados, esses modelos associam **ListViewItems** à classe Recording de exemplo da [visão geral da associação de dados](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente do método .ToString() no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, confira [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
+> No momento, quando um **DataTemplate** contém vários controles (por exemplo, mais de um único **TextBlock**), o nome acessível padrão para leitores de tela é proveniente do método .ToString() no item. Para fins de praticidade, você pode definir o [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) no elemento raiz de **DataTemplate**. Para obter mais informações sobre acessibilidade, confira [Visão geral de acessibilidade](../accessibility/accessibility-overview.md).
 
 ## <a name="single-line-list-item"></a>Item de lista de linha única
 Use esse modelo para exibir uma lista de itens com uma imagem e uma única linha de texto.
@@ -129,7 +129,7 @@ Use esse modelo para exibir uma lista de itens com texto em colunas definidas.
 ```
 
 ## <a name="related-articles"></a>Artigos relacionados
-- [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview)
+- [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)
 - [Visão geral da vinculação de dados](../../data-binding/data-binding-quickstart.md)
 - [Visão geral sobre acessibilidade](../accessibility/accessibility-overview.md)
 - [Amostra de ListView e GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

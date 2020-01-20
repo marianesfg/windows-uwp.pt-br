@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67c729455c6eb2d8f5e8b07db5e1be7ac13f59b8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 07da54dddfffe082aa5633ac8eac3f342aaa6a5c
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258172"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302710"
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -32,7 +32,7 @@ Use o controle **TextBox** para permitir que o usuário digite e edite texto nã
 
 Você pode tornar um TextBox somente leitura, mas deve ser um estado temporário e condicional. Se o texto nunca for editável, considere usar um [TextBlock](text-block.md).
 
-Use o controle [PasswordBox](password-box.md) para receber uma senha ou outros dados particulares, como um número de CPF. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido.
+Use o controle [PasswordBox](password-box.md) para receber uma senha ou outros dados particulares, como um número do seguro social. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido.
 
 Use o controle [AutoSuggestBox](auto-suggest-box.md) para permitir que o usuário insira termos de pesquisa ou para mostrar ao usuário uma lista de sugestões das quais escolher ao digitarem.
 
@@ -215,13 +215,13 @@ Colar | a área de transferência contém texto.
 Selecionar tudo | a TextBox contém texto.
 Desfazer | texto foi alterado.
 
-Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](https://code.msdn.microsoft.com/windowsapps/Context-menu-sample-40840351). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
+Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obter um exemplo disso, consulte o exemplo **Personalizando o CommandBarFlyout da RichEditBox – adicionando 'Share'** da <a href="xamlcontrolsgallery:/item/RichEditBox">Galeria de Controles XAML</a>. Para obter informações de design, consulte as Diretrizes dos [menus de contexto](menus.md).
 
 ### <a name="select-copy-and-paste"></a>Selecionar, copiar e colar
 
 Você pode obter ou definir o texto selecionado em uma caixa de texto usando a propriedade [SelectedText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectedtext). Use as propriedades [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) e [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) e os métodos [Select](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.select) e [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectall) para manipular a seleção de texto. Manipule o evento [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) para fazer algo quando o usuário selecionar ou desmarcar texto. Você pode alterar a cor usada para realçar o texto selecionado, definindo a propriedade [SelectionHighlightColor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionhighlightcolor).
 
-A TextBox dá suporte às ações de copiar e colar por padrão. Você pode fornecer tratamento personalizado do evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) em controles de texto editáveis em seu aplicativo Por exemplo, é possível remover as quebras de linha de um endereço de vários linhas ao colá-lo em uma caixa de pesquisa de linha única. Você também pode verificar o comprimento do texto colado e avisar o usuário se ele exceder o tamanho máximo que pode ser salvo em um banco de dados. Para obter mais informações e exemplos, consulte o evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste).
+A TextBox dá suporte às ações de copiar e colar por padrão. Você pode fornecer tratamento personalizado do evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) em controles de texto editáveis em seu aplicativo. Por exemplo, é possível remover as quebras de linha de um endereço de vários linhas ao colá-lo em uma caixa de pesquisa de linha única. Você também poderá verificar o comprimento do texto colado e avisar o usuário se ele exceder o tamanho máximo que pode ser salvo em um banco de dados. Para obter mais informações e exemplos, consulte o evento [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste).
 
 Aqui, nós temos um exemplo destas propriedades e métodos em uso. Quando você selecionar texto na primeira caixa de texto, o texto selecionado será exibido na segunda caixa, que é somente leitura. Os valores das propriedades [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) e [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) são mostrados em dois blocos de texto. Isso é feito usando o evento [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged).
 
@@ -270,19 +270,19 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 - Use um texto de rótulo ou espaço reservado se a finalidade da caixa de texto não for clara. Um rótulo fica visível, independentemente da caixa de entrada de texto ter ou não um valor. O texto de espaço reservado é exibido dentro da caixa de entrada de texto e desaparece uma vez que um valor tiver sido inserido.
 - Defina uma largura apropriada para a caixa de texto para o intervalo de valores que podem ser inseridos. O comprimento da palavra varia entre os idiomas, então leve em conta a localização se quiser que seu aplicativo esteja preparado para uso internacional.
 - Uma caixa de entrada de texto tem normalmente uma única linha (`TextWrap = "NoWrap"`). Quando os usuários precisam inserir ou editar uma cadeia longa, defina a caixa de entrada de texto como de várias linhas (`TextWrap = "Wrap"`).
-- Geralmente, uma caixa de entrada de texto é usada para texto editável. Mas você pode tornar uma caixa de entrada de texto somente-leitura, de modo que seu conteúdo possa ser lido, selecionado e copiado, mas não editado.
+- Geralmente, uma caixa de entrada de texto é usada para texto editável. Mas você pode tornar uma caixa de entrada de texto somente leitura, de modo que seu conteúdo possa ser lido, selecionado e copiado, mas não editado.
 - Se você precisar reduzir a desorganização em uma visualização, considere a possibilidade de fazer um conjunto de caixas de entrada de texto aparecerem somente quando uma caixa de seleção de controle está selecionada. Você também pode associar o estado habilitado de uma caixa de entrada de texto a um controle como uma caixa de seleção.
-- Considere como deseja que uma caixa de entrada de texto se comporte quando contém um valor e o usuário toca nela. O comportamento padrão é adequado para editar o valor em vez de substituí-lo; o ponto de inserção é colocado entre palavras e nada é selecionado. Se substituição é o caso de uso mais comum para uma determinada caixa de entrada de texto, você pode selecionar todo o texto no campo sempre que o controle recebe foco e a digitação substitui a seleção.
+- Considere como deseja que uma caixa de entrada de texto se comporte quando contém um valor e o usuário toca nela. O comportamento padrão é adequado para editar o valor em vez de substituí-lo; o ponto de inserção é colocado entre palavras e nada é selecionado. Se substituição for o caso de uso mais comum para uma determinada caixa de entrada de texto, você poderá selecionar todo o texto no campo sempre que o controle recebe foco e a digitação substitui a seleção.
 
 ### <a name="single-line-input-boxes"></a>Caixas de entrada de linha única
 
-- Use diversas caixas de entrada de linha única para capturar fragmentos muitos pequenos de informação de texto. Se as caixas de texto são relacionadas quanto à sua natureza, você deve agrupá-las.
+- Use diversas caixas de entrada de linha única para capturar fragmentos muitos pequenos de informação de texto. Se as caixas de texto forem relacionadas quanto à sua natureza, você deverá agrupá-las.
 
 - Torne as caixas de texto de linha única um pouco mais largas do que a entrada mais comprida antecipada. Se isso deixar o controle muito largo, separe-o em dois controles. Por exemplo, você pode dividir uma entrada de endereço única em "Linha de endereço 1" e "Linha de endereço 2".
 - Defina um comprimento máximo de caracteres que podem ser inseridos. Se a fonte de dados de backup não permitir uma cadeia de entrada longa, limite a entrada e use um pop-up de validação para que os usuários saibam quando chegaram ao limite.
 - Use controles de entrada de texto de linha única para coletar pequenos textos dos usuários.
 
-    O exemplo a seguir mostra uma caixa de texto de linha única para capturar uma resposta a uma pergunta de segurança. A resposta deve ser curta, e uma caixa de texto de linha única é apropriada aqui.
+    O exemplo a seguir mostra uma caixa de texto de linha única para capturar uma resposta a uma pergunta de segurança. A resposta deve ser curta e, portanto, uma caixa de texto de linha única é apropriada aqui.
 
     ![Entrada de dados básicos](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
 
@@ -304,7 +304,7 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
     ![Um longo trecho de texto](images/guidelines_and_checklist_for_multiline_text_input_text_limits.png)
 
 - Não deixe que seus controles de entrada de texto aumentem de tamanho enquanto os usuários digitam.
-- Não use uma caixa de texto multilinha quando os usuários só precisarem de uma linha única.
+- Não use uma caixa de texto com várias linhas quando os usuários só precisarem de uma linha única.
 - Não use um controle Rich Text se um controle de texto sem formatação for adequado.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo

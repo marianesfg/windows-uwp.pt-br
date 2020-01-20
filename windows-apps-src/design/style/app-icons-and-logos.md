@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
-ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
+ms.openlocfilehash: 25d9df392d6ed2725b171fe6513334a39458410b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212064"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684592"
 ---
 # <a name="app-icons-and-logos"></a>Ícones e logotipos de aplicativos 
 
@@ -29,7 +29,7 @@ Cada aplicativo tem um ícone/logotipo que o representa, e esse ícone é exibid
         * Na Microsoft Store
     :::column-end:::
     :::column:::
-        ![windows 10 start and tiles](images/assetguidance01.jpg)
+        ![início e blocos do Windows 10](images/assetguidance01.jpg)
     :::column-end:::
 :::row-end:::
 
@@ -75,7 +75,7 @@ Como os ativos de ícone de aplicativos são bitmaps e estes não possuem um bom
 
 "Como especificar imagens para os detalhes do meu aplicativo na Microsoft Store?"
 
-Por padrão, usamos algumas imagens de seus pacotes na Store, conforme descrito na tabela na parte superior desta página (em conjunto com outras [imagens que você fornece durante o processo de envio](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). No entanto, você também pode impedir que a Store use as imagens do logotipo nos pacotes do aplicativo ao exibir os detalhes para os clientes no Windows 10 (inclusive no Xbox) e, em vez disso, permitir que a Store use apenas as imagens que você carregar. Isso oferece mais controle sobre a aparência do aplicativo em várias telas, em toda a Store. Observação: se o seu produto der suporte a versões anteriores do sistema operacional, os clientes poderão ver as imagens de seus pacotes, mesmo se você usar esta opção. Você pode fazer isso na seção **Logotipos da Store** na etapa de **Listagem da Store** do processo de envio.
+Por padrão, usamos algumas imagens de seus pacotes na Store, conforme descrito na tabela na parte superior desta página (em conjunto com outras [imagens que você fornece durante o processo de envio](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)). No entanto, você também pode impedir que a Store use as imagens do logotipo nos pacotes do aplicativo ao exibir os detalhes para os clientes no Windows 10 (inclusive no Xbox) e, em vez disso, permitir que a Store use apenas as imagens que você carregar. Isso oferece mais controle sobre a aparência do aplicativo em várias telas, em toda a Store. Observação: se o seu produto der suporte a versões anteriores do sistema operacional, os clientes poderão ver as imagens de seus pacotes, mesmo se você usar esta opção. Você pode fazer isso na seção **Logotipos da Store** na etapa de **Listagem da Store** do processo de envio.
 
 ![Especificando logotipos da Store durante o processo de envio do aplicativo](images/app-icons/storelogodisplay.png)
 
@@ -133,15 +133,15 @@ Para iniciar o Designer de Manifesto:
         2. No **Gerenciador de Soluções**, clique duas vezes no arquivo Package.appmxanifest.
     :::column-end:::
     :::column:::
-        ![The Visual Studio 2019 Manifest Designer](images/icons/vs-solution-explorer.png)
+        ![O Designer de Manifesto do Visual Studio 2019](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-            Visual Studio displays the Manifest Designer.
+            O Visual Studio exibe o Designer de Manifesto.
     :::column-end:::
     :::column:::
-            ![The Visual Assets tab](images/icons/vs-manfiest-designer.png)
+            ![A guia Ativos Visuais](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
@@ -149,7 +149,7 @@ Para iniciar o Designer de Manifesto:
         3. Clique na guia **Ativos visuais**.
     :::column-end:::
     :::column:::
-        ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![A guia Ativos Visuais](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 
@@ -196,10 +196,10 @@ O ativo de ícone do aplicativo é exibido em muitos lugares: na barra de tarefa
 ### <a name="target-size-app-icon-assets"></a>Ativos de ícone do aplicativo de tamanho de destino
 Além dos tamanhos do fator da escala padrão ("Quadrado44x44Logotipo.escala-400.png"), também recomendamos a criação de ativos de "tamanho de destino". Esses ativos são chamados de “tamanho de destino” porque eles precisam ter tamanhos específicos, como 16 pixels, em vez de fatores de escala específicos, como 400. Os ativos de tamanho de destino são para superfícies que não usam o sistema de nível de ajuste pré-definido:
 
-* Iniciar a lista de atalhos (desktop)
-* Iniciar o canto inferior do bloco (desktop)
-* Atalhos (desktop)
-* Painel de Controle (desktop)
+* Iniciar a lista de atalhos (área de trabalho)
+* Iniciar o canto inferior do bloco (área de trabalho)
+* Atalhos (área de trabalho)
+* Painel de Controle (área de trabalho)
 
 Veja a seguir a lista de ativos de tamanho de destino:
 
@@ -225,7 +225,7 @@ Veja a seguir a lista de ativos de tamanho de destino:
 
 Você não precisa adicionar preenchimento a esses ativos; o Windows adicionará o preenchimento, se necessário. Esses ativos devem levar em conta uma superfície mínima de 16 pixels. 
 
-Aqui está um exemplo desses ativos conforme eles aparecem em ícones da barra de tarefas do Windows:
+Veja um exemplo desses ativos conforme eles aparecem em ícones da barra de tarefas do Windows:
 
 ![ativos na barra de tarefas do Windows](images/assetguidance21.png)
 
@@ -237,7 +237,7 @@ Por padrão, o Windows usa o ativo com tamanho do destino sobre um fundo colorid
 Veja a seguir as superfícies que usam ativos de ícone sem fundo:
 * Barra de tarefas e miniatura da barra de tarefas (área de trabalho)
 * Lista de atalhos da barra de tarefas
-* Visão de tarefas
+* Modo de exibição de tarefas
 * ALT+TAB
 
 ### <a name="unplated-assets-and-themes"></a>Ativos sem fundo e os temas
@@ -295,17 +295,17 @@ Para blocos grandes, limite a largura do ícone em 66% e a altura em 50% do tama
 
 ![razões de tamanho de bloco grande](images/assetguidance12.png)
 
-Alguns ícones foram projetados para serem orientados horizontal ou verticalmente, e outros têm formas mais complexas que os impedem de se ajustar de maneira centralizada dentro das dimensões desejadas. Ícones que aparentam estar centralizados podem estar pensos para um lado. Nesse caso, partes de um ícone podem travar fora da superfície recomendada, pois ele ocupa a mesma espessura visual de um ícone centralizado por igual:
+Alguns ícones foram criados para serem orientados horizontal ou verticalmente, e outros têm formas mais complexas que os impedem de se ajustar de maneira centralizada dentro das dimensões desejadas. Ícones que aparentam estar centralizados podem estar pensos para um lado. Nesse caso, partes de um ícone podem travar fora da superfície recomendada, pois ele ocupa a mesma espessura visual de um ícone centralizado por igual:
 
 ![três ícones centralizados](images/assetguidance13.png)
 
-Com ativos com sangramento completo, leve em conta elementos que interajam dentro das margens e das bordas dos blocos. Mantenha margens de pelo menos 16% da altura ou da largura do bloco. Essa porcentagem representa duas vezes a largura das margens nos tamanhos de bloco menores:
+Com ativos com sangramento completo, leve em conta elementos que interajam dentro das margens e das bordas dos blocos. Mantenha margens de pelo menos 16% da altura ou da largura do bloco. Esse percentual representa duas vezes a largura das margens nos tamanhos de bloco menores:
 
 ![bloco com sangramento completo e margens](images/assetguidance14.png)
 
 Neste exemplo, as margens estão muito apertadas:
 
-![bloco de sangramento completo com margens muito pequenas](images/assetguidance15.png)
+![bloco com sangramento completo com margens muito pequenas](images/assetguidance15.png)
 
 
 ## <a name="optimizing-for-specific-themes-languages-and-other-conditions"></a>Otimizar para temas, idiomas e outras condições específicas 

@@ -6,12 +6,12 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro aplicativo, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: f386de7ebf9aae2f49a2709d8c1c8ce2595cbf1d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260522"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685156"
 ---
 # <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
 
@@ -61,7 +61,7 @@ Usufrua de seus conhecimentos sobre a Web para criar aplicativos usando HTML5, C
 Amplie suas habilidades em JavaScript e HTML para além da UWP para criar aplicativos Web ou explore a realidade virtual na Web com WebVR
 
 * [Documentação do desenvolvedor do Microsoft Edge](https://docs.microsoft.com/microsoft-edge/)
-* [Usar WebVR com Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
+* [Usar WebVR com Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/)
 
 Aplicativos Web podem ser empacotados facilmente na estrutura da UWP como aplicativos Web hospedados e promovidos na Microsoft Store.
 
@@ -69,9 +69,9 @@ Aplicativos Web podem ser empacotados facilmente na estrutura da UWP como aplica
 * [Converter seu aplicativo Web em um aplicativo UWP](../porting/hwa-create-windows.md)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 * [Comece a codificar](create-uwp-apps.md)
-* [O que é um aplicativo UWP?](universal-application-platform-guide.md)
+* [O que é um aplicativo da UWP?](universal-application-platform-guide.md)
 * [Prepare-se para começar](get-set-up.md)
 * [Inscrever-se em uma conta do Windows](sign-up.md)

@@ -5,12 +5,12 @@ keywords: XAML, UWP, Introdução
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 71c04725fed4ab9d5d2158f2f892af038aefc8fd
-ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
+ms.openlocfilehash: b9c5348063f277d4d76cbea120689328bcc217b1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72680749"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684148"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Criar layouts adaptáveis
 
@@ -30,7 +30,7 @@ A **página de detalhes**, que exibe uma única foto após ela ter sido selecion
 
 * Visual Studio 2019: [Baixar o Visual Studio 2019 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * SDK do Windows 10 (10.0.15063.468 ou posterior):  [Baixar o SDK mais recente do Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Windows Mobile Emulator: [Baixar o Windows 10 Mobile Emulator (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Windows Mobile Emulator: [Baixar o Windows 10 Mobile Emulator (gratuito)](https://developer.microsoft.com/windows/downloads/sdk-archive)
 
 ## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: obter o código inicial do github
 

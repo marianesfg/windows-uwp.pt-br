@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dcbeffc7e3db8f3df9c197e8c388f30faf7ad03d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369508"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685246"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Práticas recomendadas para gravar em arquivos
 
@@ -44,7 +44,7 @@ Um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.s
 Entender esse conceito é útil ao realizar E/S com um **StorageFile**. Por exemplo, a seção [Gravando em um arquivo](quickstart-reading-and-writing-files.md#writing-to-a-file) apresenta três maneiras de gravar em um arquivo:
 
 * Usando o método [**FileIO.WriteTextAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync).
-* Criando um buffer e, em seguida, chamando o método [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.storage.fileio.writebufferasync).
+* Criando um buffer e, em seguida, chamando o método [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writebufferasync).
 * O modelo de quatro etapas usando um fluxo:
   1. [Abra](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync) o arquivo para obter um fluxo.
   2. [Obtenha](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) um fluxo de saída.
@@ -82,7 +82,7 @@ Esta tabela apresenta códigos de erro comuns que os desenvolvedores de aplicati
 |  ERROR_UNABLE_TO_REMOVE_REPLACED (0x80070497)  |  19-20  |  Não foi possível substituir o arquivo original (arquivo.txt), porque ele está em uso. Outro processo ou operação obteve acesso ao arquivo antes que ele fosse substituído.  |  Repita a operação.</br>Certifique-se de que o acesso ao arquivo seja sincronizado.  |
 |  ERROR_DISK_FULL (0x80070070)  |  7, 14, 16, 20  |  O modelo transacionado cria um arquivo extra e isso consome armazenamento adicional.  |    |
 |  ERROR_OUTOFMEMORY (0x8007000E)  |  14, 16  |  Isso pode acontecer devido a várias operações de E/S pendentes ou tamanhos de arquivos grandes.  |  Uma abordagem mais granular, controlando o fluxo, pode resolver o erro.  |
-|  E_FAIL (0x80004005) |  Qualquer  |  Diversos  |  Repita a operação. Se ainda falhar, poderá ser devido a um erro de plataforma e o aplicativo deverá ser interrompido porque está em um estado inconsistente. |
+|  E_FAIL (0x80004005) |  qualquer  |  Diversos  |  Repita a operação. Se ainda falhar, poderá ser devido a um erro de plataforma e o aplicativo deverá ser interrompido porque está em um estado inconsistente. |
 
 ## <a name="other-considerations-for-file-states-that-might-lead-to-errors"></a>Outras considerações de estados de arquivo que podem levar a erros
 
@@ -194,6 +194,6 @@ else
 
 O [blog Programação Paralela com .NET](https://devblogs.microsoft.com/pfxteam/) é um excelente recurso para obter diretrizes sobre programação paralela. Em particular, a [postagens sobre AsyncReaderWriterLock](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) descreve como manter o acesso exclusivo a um arquivo para gravações, permitindo o acesso simultâneo de leitura. Tenha em mente que serializar a E/S afetará o desempenho.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Criar, gravar e ler um arquivo](quickstart-reading-and-writing-files.md)

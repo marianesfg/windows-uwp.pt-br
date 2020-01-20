@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
-ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
+ms.openlocfilehash: a3cd8a0c988df08047b10911a4d4f55e3ba1cb6e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68835636"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684102"
 ---
 # <a name="buttons"></a>Botões
 
@@ -28,9 +28,9 @@ Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botõ
 
 A estrutura [XAML (Extensible Application Markup Language)](../../xaml-platform/xaml-overview.md) fornece um controle de botão padrão, bem como vários controles de botão especializados.
 
-Controle | Descrição
+Control | Descrição
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Um botão que inicia uma ação imediata. Pode ser usado com um evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) ou uma associação [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
+[Botão](/uwp/api/windows.ui.xaml.controls.button) | Um botão que inicia uma ação imediata. Pode ser usado com um evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) ou uma associação [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) continuamente enquanto pressionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo de um hiperlink e é usado para navegação. Para obter mais informações sobre hiperlinks, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Um botão com uma divisa para abrir um submenu anexado.
@@ -127,14 +127,14 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 Quando você toca em um controle **Button** com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Se um botão tiver foco do teclado, pressionar a tecla Enter ou a barra de espaço também acionará o evento **Click**.
 
-Geralmente, não se pode manipular eventos de baixo nível [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) em um objeto **Button** porque, em vez disso, ele tem o comportamento de **Click**. Para saber mais, consulte [Events and routed events overview](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+Geralmente, não se pode manipular eventos de baixo nível [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) em um objeto **Button** porque, em vez disso, ele tem o comportamento de **Click**. Para saber mais, confira [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
-Você pode alterar a forma como um botão aciona o evento **Click**, alterando a propriedade [ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode). O valor padrão de **ClickMode** é **Release**, mas você também pode definir o **ClickMode** de um botão como **Hover** ou **Press**. Se **ClickMode** for **Hover**, o evento **Click** não poderá ser chamado usando o teclado ou o toque.
+Você pode alterar a forma como um botão aciona o evento **Click**, alterando a propriedade [ClickMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.clickmode). O valor padrão de **ClickMode** é **Release**, mas você também pode definir o **ClickMode** de um botão como **Hover** ou **Press**. Se **ClickMode** for **Hover**, o evento **Click** não poderá ser chamado usando o teclado ou o toque.
 
 
 ### <a name="button-content"></a>Conteúdo do botão
 
-**Button** é um controle de conteúdo da classe [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl). Sua propriedade de conteúdo XAML é [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content), que habilita uma sintaxe assim para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um objeto [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), ele será renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
+**Button** é um controle de conteúdo da classe [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl). Sua propriedade de conteúdo XAML é [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content), que habilita uma sintaxe assim para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um objeto [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), ele será renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres será mostrada no botão.
 
 Geralmente, o conteúdo de um botão é texto. Quando projetar o texto, use as seguintes recomendações:
 
@@ -217,7 +217,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Criar um botão suspenso
 
-> **DropDownButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+> **DropDownButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Um [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) é um botão que mostra uma divisa como um indicador visual de que ele tem um submenu anexado que contém mais opções. Ele tem o mesmo comportamento de um controle **Button** padrão com um submenu, apenas a aparência é diferente.
 
@@ -278,7 +278,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 ## <a name="create-a-split-button"></a>Criar um botão de divisão
 
  > [!IMPORTANT]
- > **SplitButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+ > **SplitButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Um controle [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocadas separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
@@ -388,7 +388,7 @@ public sealed partial class MainPage : Page
 ## <a name="create-a-toggle-split-button"></a>Criar um botão de divisão de alternância
 
 > [!NOTE]
-> **ToggleSplitButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+> **ToggleSplitButton** exige a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/) ou o Windows 10, versão 1809 (SDK 17763) ou posterior. Para baixar o SDK mais recente, consulte [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk); para baixar um SDK anterior, consulte [Arquivo morto de emulador e SDK do Windows](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Um controle [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocadas separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém opções adicionais dentre as quais o usuário pode escolher.
 
@@ -522,9 +522,9 @@ private void ApplyListStyle(string listStyle)
 - Quando houver vários botões para a mesma decisão (como em uma caixa de diálogo de confirmação), apresente os botões de confirmação nesta ordem, em que [Faça] e [Não faça] são respostas específicas para a instrução principal:
   - OK/[Faça]/Sim
     - [Não faça]/Não
-    - Cancel
+    - Cancelar
 
-- Exponha apenas um ou dois botões de cada vez para o usuário, por exemplo, **Aceitar** e **Cancelar**. Se precisar expor mais ações para o usuário, considere usar [checkboxes](checkbox.md) or [radio buttons](radio-button.md), de onde o usuário pode selecionar ações com apenas um botão de comando para acionar tais ações.
+- Exponha apenas um ou dois botões de cada vez para o usuário, por exemplo, **Aceitar** e **Cancelar**. Se precisar expor mais ações para o usuário, considere usar [caixas de seleção](checkbox.md) ou [botões de opção](radio-button.md), de onde o usuário poderá selecionar ações com apenas um botão de comando para acionar tais ações.
 
 - Para uma ação que precise ser avaliada em múltiplas páginas em seu aplicativo, em vez de duplicar um botão em múltiplas páginas, considere usar uma [barra inferior do aplicativo](app-bars.md).
 
