@@ -54,7 +54,7 @@ Em caso de comentários sobre as políticas, entre em contato conosco através d
 - [10.9 Notificações](#109-notifications)
 - [10.10 Conteúdo e Conduta de Publicidade](#1010-advertising-conduct-and-content)
 - [10.11 Planos de Voz Móvel](#1011-mobile-voice-plans)
-- [10.12 Extensões do Edge](#1012-edge-extensions)
+- [10.12 Extensões do Microsoft Edge](#1012-edge-extensions)
 - [10.13 Jogos e Xbox](#1013-gaming-and-xbox)
 - [10.14 Tipo de Conta](#1014-account-type)
 
@@ -174,7 +174,7 @@ Os requisitos a seguir aplicam-se aos produtos que acessam Informações Pessoai
 
 Se seu produto acessar, coletar ou transmitir Informações Pessoais ou exigidas por lei, você deverá manter uma política de privacidade. Você deve fornecer aos usuários acesso à sua política de privacidade digitando a respectiva URL no Partner Center ao enviar seu produto. Além disso, você também pode incluir sua política de privacidade no produto ou criar nele um link para essa política. A política de privacidade pode ser hospedada dentro do produto ou diretamente vinculada a ele. Sua política de privacidade deve informar aos usuários sobre as Informações Pessoais acessadas, coletadas ou transmitidas por seu produto e como essas informações são usadas, armazenadas e protegidas, além de indicar para quem elas são divulgadas. Ela deve descrever os controles que os usuários têm sobre o uso e compartilhamento de suas informações e como eles podem acessar suas informações, e ela deve estar em conformidade com as leis e regulamentações aplicáveis. Sua política de privacidade deve estar sempre atualizada conforme você adiciona novos recursos e funcionalidades ao seu produto.
 
-Os tipos de produto que inerentemente têm acesso às Informações Pessoais devem sempre ter políticas de privacidade. Eles incluem, mas sem se limitar, os produtos Ponte de Desktop e Extensões do Edge.
+Os tipos de produto que inerentemente têm acesso às Informações Pessoais devem sempre ter políticas de privacidade. Eles incluem, mas sem se limitar, os produtos Ponte de Desktop e Extensões do Microsoft Edge.
 
 **10.5.2**
 
@@ -315,9 +315,9 @@ Se seu produto for voltado para crianças com idade inferior a 13 anos (conforme
 
 Seu produto não pode vender nem promover planos de voz móvel nem, de outro modo, vincular-se a esse tipo de plano.
 
-### <a name="1012-edge-extensions"></a>10.12 Extensões do Edge
+### <a name="1012-edge-extensions"></a>10.12 Extensões do Microsoft Edge
 
-As Extensões do Edge estão sujeitas a estes requisitos adicionais:
+As Extensões do Microsoft Edge estão sujeitas a estes requisitos adicionais:
 
 - Sua Extensão deve ter uma única finalidade com funcionalidade de escopo restrito que esteja claramente explicada na descrição do produto.
 - Sua Extensão pode coletar Informações Pessoais somente como parte de um recurso voltado para o usuário, divulgado de forma destacada.

@@ -62,7 +62,7 @@ ms.locfileid: "71705563"
 <p>Adicionamos suporte da plataforma aos requisitos de suporte do dispositivo na 10.4.1.</p>
 <p>Removemos a 10.3.3 que detalhava os requisitos de cartão-presente.</p>
 <p>Simplificamos os requisitos do botão Voltar na 10.4.4.</p>
-<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões de Edge e Ponte de Desktop.</p>
+<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões de Microsoft Edge e Ponte de Desktop.</p>
 <p>Adicionamos a 10.5.6 para especificar os requisitos para usar autenticação de identidade da Microsoft.</p>
 <p>Adicionamos a 10.5.7 para especificar os requisitos de localização do dispositivo, incluindo consentir com o uso de dados de localização.</p>
 <p>Atualizamos a 10.8.2 para adicionar requisitos para receber doações de usuários.</p>
@@ -136,7 +136,7 @@ ms.locfileid: "71705563"
 <p>Atualização sobre usabilidade (10.4.2) para esclarecer requisitos.</p>
 <p>Atualização de informações pessoais (10.5) para exigir a descrição de tipos de partes interessadas a quem as PIIs são divulgadas (em 10.5.1 e 10.5.2) e incluir os itens 10.5.4 e 10.5.5.</p>
 <p>Atualização sobre transações financeiras (10.8) para incluir moeda virtual e o item 10.8.1 sobre a remoção do período de cortesia na implementação do IAP da MS para bens digitais.</p>
-<p>Inclusão das Extensões do Edge (10.12).</p>
+<p>Inclusão das Extensões do Microsoft Edge (10.12).</p>
 <p>Inclusão do Xbox One (10.13).</p>
 <p>Atualização sobre conteúdo ofensivo (11.5) para aplicação explícita a metadados e inclusão de conteúdo sensível.</p>
 <p>Atualizado do Código de Conduta para incluir explicitamente a obtenção de acesso não autorizado a informações pessoais e o uso delas.</p></td>
