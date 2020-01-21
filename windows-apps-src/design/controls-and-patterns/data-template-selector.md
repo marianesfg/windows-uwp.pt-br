@@ -7,12 +7,12 @@ ms.date: 10/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 956ac13dcdc1a2e6367e590bb8885c8722f41e2c
-ms.sourcegitcommit: cb7f80100c99d4b6466a819bea191006ec3d616c
+ms.openlocfilehash: d388e1f4b3f1b1be4e265185934a02b6ccd20064
+ms.sourcegitcommit: 87c20c6a40ed54e086adbe80caa509d851f54f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73640873"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123848"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>Seleção de modelo de dados: Estilizando itens com base em suas propriedades
 
@@ -31,7 +31,7 @@ O design personalizado de controles de coleções é gerenciado por um [DataTemp
 
 Em geral, você não deve dar a cada item em um ListView ou GridView um layout/estilo completamente diferente – isso seria um uso insatisfatório de um DataTemplateSelector e impacta negativamente o desempenho.
 
-Determinados elementos da exibição visual de um item de lista podem ser controlados usando apenas um modelo de dados, por meio da associação de determinadas propriedades. Por exemplo, os itens podem ter ícones diferentes associando-se a uma propriedade de origem de ícone no modelo de dados e dando a cada item um valor diferente para essa propriedade de origem de ícone. Isso alcançaria um desempenho melhor do que usar um DataTemplateSelector.
+Determinados elementos da exibição visual de um item de lista podem ser controlados usando apenas um modelo de dados, por meio da associação de determinadas propriedades. Por exemplo, cada item pode ter um ícone diferente associando-se a uma propriedade de origem de ícone no modelo de dados e dando a cada item um valor diferente para essa propriedade. Isso alcançaria um desempenho melhor do que usar um DataTemplateSelector.
 
 ## <a name="when-to-use-a-datatemplateselector"></a>Quando usar um DataTemplateSelector
 
@@ -50,7 +50,7 @@ Aqui estão alguns exemplos de quando você pode usar um seletor de modelo de da
 
 ## <a name="create-a-datatemplateselector"></a>Criar um DataTemplateSelector
 
-Ao criar um seletor de modelo de dados, você define a lógica de seleção de modelo em seu código e define os modelos de dados em seu XAML.
+Ao criar um seletor de modelo de dados, você define a lógica de seleção de modelo no código e define os modelos de dados no XAML.
 
 ### <a name="code-behind-component"></a>Componente code-behind
 

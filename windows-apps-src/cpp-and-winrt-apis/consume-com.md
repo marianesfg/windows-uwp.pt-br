@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: bb28ec7afa22f81033bfce2aff530119e53a4b91
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 88012d96b7c769094cb80d0f34b77060291a3eef
+ms.sourcegitcommit: 80ea5e05f8c15700f6c6fa3d1ed37e479568762b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660153"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75928813"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
@@ -18,7 +18,7 @@ Você pode usar as instalações da biblioteca do [C++/WinRT](/windows/uwp/cpp-a
 
 No final deste tópico, você encontrará uma listagem completa de código-fonte de um aplicativo mínimo do Direct2D. Vamos ressaltar extratos desse código e usá-los para ilustrar como consumir componentes COM usando C++/WinRT com várias instalações da biblioteca do C++/WinRT.
 
-## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>Ponteiros inteligentes COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+## <a name="com-smart-pointers-winrtcom_ptruwpcpp-ref-for-winrtcom-ptr"></a>Ponteiros inteligentes COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
 Ao programar usando COM, você trabalha diretamente com interfaces, em vez de projetos (isso também se aplica aos bastidores para APIs do Windows Runtime, que são uma evolução do COM). Para chamar uma função em uma classe COM, por exemplo, ative a classe, obtenha de volta uma interface e, em seguida, chame funções nessa interface. Para acessar o estado de um objeto, não acesse seus membros de dados diretamente; em vez disso, chame as funções de acessador e modificador em uma interface.
 
@@ -81,7 +81,7 @@ DWriteCreateFactory(
     reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
 ```
 
-## <a name="re-seat-a-winrtcomptr"></a>Restabelecer um **winrt::com_ptr**
+## <a name="re-seat-a-winrtcom_ptr"></a>Restabelecer um **winrt::com_ptr**
 
 > [!IMPORTANT]
 > Se você tiver um [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que já esteja estabelecido (seu ponteiro bruto interno já tem um destino) e deseja restabelecê-lo para apontar para outro objeto, primeiramente, é preciso atribuir `nullptr` a ele&mdash; conforme mostrado no exemplo de código abaixo. Se não o fizer, um **com_ptr** já estabelecido chamará sua atenção para o problema (quando você chamar [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function) ou [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput_void-function)) afirmando que seu ponteiro interno não é nulo.
@@ -169,7 +169,11 @@ Como alternativa, use [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#com_p
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>Listagem completa de código-fonte de um aplicativo Direct2D mínimo
 
-Se você quiser compilar e executar esse exemplo de código-fonte, primeiramente, no Visual Studio, crie um novo **aplicativo de núcleo (C++/WinRT)** . `Direct2D` é um nome razoável para o projeto, mas você pode nomeá-lo como desejar. Abra `App.cpp`, exclua todo o seu conteúdo e cole na lista abaixo.
+Se você quiser compilar e executar esse exemplo de código-fonte, primeiramente, no Visual Studio, crie um novo **aplicativo de núcleo (C++/WinRT)** . `Direct2D` é um nome razoável para o projeto, mas você pode nomeá-lo como desejar.
+
+Abra o `pch.h` e adicione `#include <unknwn.h>` imediatamente após a inclusão de `windows.h`.
+
+Abra `App.cpp`, exclua todo o seu conteúdo e cole na lista abaixo.
 
 O código a seguir usa a função [winrt::com_ptr::capture](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function) sempre que possível. `WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 
@@ -538,7 +542,7 @@ namespace winrt
 
 Você pode, em seguida, fazer referência a **winrt::Windows::Storage::StorageFile**, por exemplo, apenas como **winrt::StorageFile**.
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [função winrt::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
-* [modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
-* [struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+* [Struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
