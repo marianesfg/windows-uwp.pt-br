@@ -1,19 +1,19 @@
 ---
 description: Este artigo descreve como hospedar a interface do usuário do UWP XAML C++ em seu aplicativo Win32 da área de trabalho.
 title: Usar a API de hospedagem XAML UWP em um aplicativo C++ Win32
-ms.date: 08/20/2019
+ms.date: 01/10/2010
 ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF, Win32, Ilhas XAML
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 9e4fdc8366e26bcd7e106bf070cb42ed2cd1a49f
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5a0973bcce4de4fac8f923a303b0c3216600fb97
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683679"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520421"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>Usar a API de hospedagem XAML UWP em um aplicativo C++ Win32
 
@@ -55,7 +55,7 @@ Escolha uma das seguintes opções para preparar seu projeto para implantação:
     1. Instale o SDK do Windows 10, versão 1903 (versão 10.0.18362) ou uma versão posterior.
     2. Empacote seu aplicativo em um pacote MSIX adicionando um [projeto de empacotamento de aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) à sua solução e adicionando uma C++referência ao seu projeto/Win32.
 
-* **Instale o pacote Microsoft. Toolkit. Win32. UI. SDK**. Se você não quiser empacotar seu aplicativo em um pacote MSIX, poderá instalar o [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) (versão v 6.0.0-preview7 ou posterior). Esse pacote fornece vários ativos de compilação e tempo de execução que permitem que as ilhas XAML funcionem em seu aplicativo. Verifique se a opção **incluir pré-lançamento** está selecionada para que você possa ver as versões de visualização mais recentes deste pacote.
+* **Instale o pacote Microsoft. Toolkit. Win32. UI. SDK**. Se você não quiser empacotar seu aplicativo em um pacote MSIX, poderá instalar o [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) (versão v 6.0.0 ou posterior). Esse pacote fornece vários ativos de compilação e tempo de execução que permitem que as ilhas XAML funcionem em seu aplicativo.
 
 > [!NOTE]
 > As versões anteriores dessas instruções tinham que adicionar o elemento `maxversiontested` a um manifesto do aplicativo em seu projeto. Desde que você esteja usando uma das opções listadas acima, você não precisa mais adicionar esse elemento ao seu manifesto.
@@ -125,7 +125,7 @@ Esta seção orienta você pelo processo de usar a API de hospedagem XAML do UWP
 4. Instale o pacote NuGet [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) :
 
     1. Na janela **Gerenciador de pacotes NuGet** , certifique-se de que **incluir pré-lançamento** está selecionado.
-    2. Selecione a guia **procurar** , procure o pacote [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) e instale a versão v 6.0.0-preview7 (ou posterior) deste pacote.
+    2. Selecione a guia **procurar** , procure o pacote [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) e instale a versão v 6.0.0 (ou posterior) deste pacote.
 
 ### <a name="use-the-xaml-hosting-api-to-host-a-uwp-control"></a>Usar a API de hospedagem XAML para hospedar um controle UWP
 

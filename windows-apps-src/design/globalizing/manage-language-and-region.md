@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 79edf30733f7bca443c5fd12103fbd5d93909732
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1642f8ccc989ce224ff0b3250fa1b79c954167b1
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258062"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520411"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do app
 Um usuário do Windows pode usar **Configurações** > **Hora e Idioma** > **Região e idioma** para configurar uma lista ordenada de idiomas de preferência de exibição, ou um único idioma de preferência de exibição. Um idioma pode ter uma variante regional. Por exemplo, você pode selecionar o espanhol falado na Espanha, o espanhol falado no México, o espanhol falado nos Estados Unidos, entre outros.
@@ -193,9 +193,9 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 </table>
 
 >[!NOTE]
-> Para obter uma lista de códigos de país/região padrão usados pela Microsoft, consulte a [lista de país/região oficial](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+> Para obter uma lista de códigos de país/região padrão usados pela Microsoft, consulte a [lista de país/região oficial](/windows/uwp/publish/supported-languages).
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [GlobalizationPreferences. Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
 * [ApplicationLanguages.ManifestLanguages](/uwp/api/windows.globalization.applicationlanguages.ManifestLanguages)
 * [PrimaryLanguageOverride](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)
@@ -211,9 +211,9 @@ A seguinte tabela contém exemplos do que o usuário veria na sua interface do u
 * [BCP-marca de idioma 47](https://tools.ietf.org/html/bcp47)
 * [Registro Subtag da linguagem IANA](https://www.iana.org/assignments/language-subtag-registry)
 * [Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Idiomas com suporte](../../publish/supported-languages.md)
+* [Linguagens com suporte](../../publish/supported-languages.md)
 * [Globalizar os formatos de data/hora/número](use-global-ready-formats.md)
 * [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 * [Exemplo de recursos e localização de aplicativos](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)
