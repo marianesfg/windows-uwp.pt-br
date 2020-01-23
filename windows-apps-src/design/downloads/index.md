@@ -7,19 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f33e2f10686edf149feb11e317a10e535685ef19
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.openlocfilehash: 4678565547616c0cee4a7961cb4a0c95fc03241b
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902538"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520451"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
 
 ![Noções básicas de design](../images/downloads-2x.png)
 
-Downloads relacionados à interface do usuário e design para aplicativos de Design Fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/windows/downloads">nossa página principal de downloads</a>. 
-
+Downloads relacionados à interface do usuário e design para aplicativos de Design Fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/windows/downloads">nossa página principal de downloads</a>.
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
 
@@ -60,11 +59,6 @@ v1705, maio de 2017<br>
 <a href="https://aka.ms/adobephotoshoptoolkit">Baixar</a>
     :::column-end:::
     :::column:::
-![imagem hero](images/framer.png)
-<b>Kit de ferramentas do Framer</b><br>
-(Não há mais suporte para o kit de ferramentas.)<br/>
-v1806, junho de 2018<br>
-<a href="https://github.com/Microsoft/windows-framer-toolkit">Baixar</a>
     :::column-end:::
 :::row-end:::
 
@@ -104,7 +98,7 @@ Funções auxiliares, controles personalizados e serviços de aplicativos.<br />
 :::row-end:::
 
     
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 ![Imagem do Editor de Tema do XAML Fluente](images/XamlThemeEditor_screenshot.png)
 **Imagem do Editor de Tema do XAML Fluente**<br>
