@@ -106,7 +106,7 @@
           href: controls-and-patterns/listview-and-gridview.md
         - name: Exibição de inversão
           href: controls-and-patterns/flipview.md
-        - name: Modo de exibição em árvore
+        - name: Exibição em árvore
           href: controls-and-patterns/tree-view.md
         - name: ItemsRepeater
           href: controls-and-patterns/items-repeater.md
@@ -126,7 +126,7 @@
               href: controls-and-patterns/collection-commanding.md
             - name: Visão geral do modo de seleção
               href: controls-and-patterns/selection-modes.md
-            - name: Passar o dedo
+            - name: Swipe
               href: controls-and-patterns/swipe.md
             - name: Puxar para atualizar
               href: controls-and-patterns/pull-to-refresh.md
@@ -162,7 +162,7 @@
           href: controls-and-patterns/custom-transport-controls.md
         - name: Formas
           href: controls-and-patterns/shapes.md
-        - name: Modo de exibição da Web
+        - name: Exibição Web
           href: controls-and-patterns/web-view.md
     - name: Menus e barras de ferramentas
       items:
@@ -182,7 +182,7 @@
           href: controls-and-patterns/pivot.md
         - name: Modo de exibição de guia
           href: controls-and-patterns/tab-view.md
-    - name: People
+    - name: Pessoas
       items:
         - name: Cartão de visita
           href: controls-and-patterns/contact-card.md
@@ -208,7 +208,7 @@
           href: controls-and-patterns/scroll-controls.md
         - name: Zoom Semântico
           href: controls-and-patterns/semantic-zoom.md
-    - name: Pesquisa
+    - name: Pesquisar
       href: controls-and-patterns/search.md
     - name: Status e as informações
       items:
@@ -240,6 +240,8 @@
           href: controls-and-patterns/content-links.md
         - name: Exibição de manuscrito
           href: controls-and-patterns/text-handwriting-view.md
+    - name: Exibição de dois painéis
+      href: controls-and-patterns/two-pane-view.md
 - name: Estilo
   items:
     - name: Visão geral
@@ -308,7 +310,7 @@
           href: motion/key-frame-and-easing-function-animations.md
 - name: Shell
   items:
-    - name: Blocos
+    - name: Tiles
       href: shell/tiles-and-notifications/creating-tiles.md
       items:
         - name: Blocos secundários
@@ -427,10 +429,10 @@
       href: input/touch-interactions.md
     - name: Mouse
       href: input/mouse-interactions.md
-    - name: Teclado
+    - name: Keyboard
       href: input/keyboard-interactions.md
       items:
-        - name: Teclas de acesso
+        - name: Chaves de acesso
           href: input/access-keys.md
         - name: Aceleradores de teclado
           href: input/keyboard-accelerators.md
@@ -505,7 +507,7 @@
       href: input/guidelines-for-rotation.md
     - name: Selecionando texto e imagens
       href: input/guidelines-for-textselection.md
-    - name: Direcionamento
+    - name: Configurando destinos
       href: input/guidelines-for-targeting.md
     - name: Feedback visual
       href: input/guidelines-for-visualfeedback.md
