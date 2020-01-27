@@ -5,12 +5,12 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: Windows 10 s, sempre conectado, ARM, ARM64, emulação x86
 ms.localizationpriority: medium
-ms.openlocfilehash: 004b2410ab050ca32ec6219b2d9a6ba0d45a6ebb
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 1a72fbaf4982f2a053298f10279eacba6a46d05d
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683919"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725999"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 no ARM
 Originalmente, o Windows 10 (diferente do Windows 10 Mobile) pode ser executado somente em computadores que foram equipados com processadores x86 e x64. Agora, o Windows 10 desktop pode ser executado em computadores que são alimentados por processadores ARM64 com a atualização de criadores de outono ou mais recente. A natureza de economia de energia da arquitetura de CPU do ARM permite que esses computadores tenham bateria o dia todo e ofereçam suporte para redes de dados móveis. Esses computadores fornecerão ótima compatibilidade de aplicativos e permitirão que você execute aplicativos win32 x86 existentes sem modificação. Para obter mais informações ou uma demonstração, consulte o [vídeo do canal 9 para o PC sempre conectado](https://channel9.msdn.com/Events/Build/2017/P4171).
@@ -26,11 +26,11 @@ As experiências internas do Windows 10, como Edge, Cortana, start menu e Explor
 O Windows 10 no ARM executa todos os [aplicativos UWP](../get-started/universal-application-platform-guide.md) x86, ARM32 e ARM64 da Microsoft Store. Os aplicativos ARM32 e ARM64 são executados nativamente sem qualquer emulação, enquanto aplicativos x86 são executados sob emulação. Se você for um desenvolvedor de UWP, certifique-se de enviar um pacote ARM para seu aplicativo, pois isso fornecerá a melhor experiência de usuário para o dispositivo. Para obter mais informações, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
 
 >[!NOTE]
-> Para criar seu aplicativo UWP para direcionar nativamente a plataforma ARM64, você deve ter o Visual Studio 2017 versão 15,9 ou posterior ou o Visual Studio 2019. Para obter mais informações, consulte [esta postagem do blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Para criar seu aplicativo UWP para direcionar nativamente a plataforma ARM64, você deve ter o Visual Studio 2017 versão 15,9 ou posterior ou o Visual Studio 2019. Para obter mais informações, consulte [esta postagem no blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
 
 
 >[!IMPORTANT]
-> Quando um usuário baixar um aplicativo UWP na Microsoft Store, a versão ARM32 será instalada em um dispositivo ARM64, a menos que somente a versão x86 esteja disponível. Para obter mais informações sobre arquiteturas, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
+> O Windows 10 no ARM dá suporte a aplicativos UWP x86, ARM32 e ARM64 da loja em dispositivos ARM64. Quando um usuário baixa seu aplicativo UWP em um dispositivo ARM64, o sistema operacional instalará automaticamente a versão ideal do seu aplicativo que está disponível. Se você enviar versões x86, ARM32 e ARM64 do seu aplicativo para a loja, o sistema operacional instalará automaticamente a versão ARM64 do seu aplicativo. Se você enviar apenas as versões x86 e ARM32 do seu aplicativo, o sistema operacional instalará a versão ARM32. Se você enviar apenas a versão x86 do seu aplicativo, o sistema operacional instalará essa versão e a executará em emulação. Para obter mais informações sobre arquiteturas, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
 
 ### <a name="win32-apps"></a>Aplicativos Win32
 Além dos aplicativos UWP, o Windows 10 no ARM também pode executar seus aplicativos Win32 x86 sem modificações, com bom desempenho e uma experiência de usuário tranqüila, assim como qualquer PC. Esses aplicativos Win32 x86 não precisam ser recompilados para o ARM e nem mesmo percebem que estão em execução em um processador ARM. Observe que os aplicativos do Win32 de 64 bits x64 não têm suporte, mas a grande maioria dos aplicativos tem versões x86 disponíveis.  Quando for dada a opção de arquitetura do aplicativo, basta escolher a versão x86 de 32 bits para executar o aplicativo em um PC com Windows 10 no ARM.

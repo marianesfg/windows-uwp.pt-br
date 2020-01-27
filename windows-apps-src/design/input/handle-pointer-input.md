@@ -1,6 +1,6 @@
 ---
 Description: Receba, processe e gerencie dados de entrada de dispositivos apontadores, como Touch, mouse, caneta/caneta e Touchpad, em seus aplicativos Plataforma Universal do Windows (UWP).
-title: Manusear entrada do ponteiro
+title: Manipular entrada de ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
@@ -8,14 +8,14 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f3d5480c0fa12366afe02cc31cdb994fdd4a842
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 97c4941a6ec694b3bb23864ede3119d6f76113d2
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257897"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725989"
 ---
-# <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
+# <a name="handle-pointer-input"></a>Manipular entrada de ponteiro
 
 Receba, processe e gerencie dados de entrada de dispositivos apontadores (como touch, mouse, caneta e touchpad) nos seus aplicativos da Plataforma Universal do Windows (UWP).
 
@@ -23,7 +23,7 @@ Receba, processe e gerencie dados de entrada de dispositivos apontadores (como t
 > Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações com suporte dos controles da plataforma não oferecerem suporte ao seu cenário.  
 > Se você personalizar as experiências de interação no seu aplicativo do Windows, os usuários esperam que elas sejam consistentes, intuitivas e detectáveis. Por esses motivos, recomendamos que você modele suas interações personalizadas naquelas com suporte dos [controles da plataforma](../controls-and-patterns/controls-by-function.md). Os controles de plataforma oferecem a experiência da interação do usuário da Plataforma Universal do Windows (UWP) completa, inclusive interações padrão, efeitos físicos animados, feedback visual e acessibilidade. 
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 - [Windows.Devices.Input](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 - [Windows.UI.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 - [Windows.UI.Xaml.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
@@ -33,12 +33,10 @@ A maioria das experiências de interação normalmente envolve a identificação
 
 > [!NOTE]
 > As informações específicas do dispositivo também são promovida dos dados brutos de HID, caso o aplicativo as exija.
- 
 
 Cada ponto de entrada (ou contato) na pilha de entrada é representado por um objeto [**Pointer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.Pointer) exposto por meio do parâmetro [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) nos vários manipuladores de eventos de ponteiro. No caso de entrada com várias canetas ou de multi-touch, cada contato é tratado como um ponteiro de entrada único.
 
 ## <a name="pointer-events"></a>Eventos de ponteiro
-
 
 Os eventos de ponteiro expõem informações básicas, como o tipo de dispositivo de entrada e o estado de detecção (em intervalo ou contato), além de informações estendidas, como localização, pressão e geometria de contato. Além disso, propriedades específicas do dispositivo, como qual botão do mouse um usuário pressionou ou se a ponta da borracha da caneta está sendo usada, também estão disponíveis. Caso o aplicativo precise diferenciar dispositivos de entrada e suas funcionalidades, consulte [Identificar dispositivos de entrada](identify-input-devices.md).
 
@@ -46,7 +44,6 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 
 > [!NOTE]
 > Restrinja a entrada de ponteiro a um elemento específico da interface do usuário chamando [**CapturePointer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer) nesse elemento dentro de um manipulador de eventos de ponteiro. Quando um ponteiro é capturado por um elemento, somente esse objeto recebe os eventos de entrada do ponteiro, mesmo quando o ponteiro é movido para fora da área delimitadora do objeto. O [**IsInContact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isincontact) (botão do mouse pressionado, toque ou caneta em contato) deve ser true para que **CapturePointer** seja bem-sucedido.
- 
 
 <table>
 <colgroup>
@@ -105,7 +102,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 <ul>
 <li>O toque requer um contato do dedo e só dispara esse evento quando em contato dentro da área delimitadora do elemento.</li>
 <li>Mouse e touchpad têm um cursor na tela que está sempre visível e dispara esse evento mesmo caso nenhum botão do mouse ou do touchpad tenha sido pressionado.</li>
-<li>Assim como o toque, a caneta dispara esse evento quando em contato dentro da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, quando true e dentro da área delimitadora do elemento, aciona esse evento.</li>
+<li>Assim como o touch, a caneta aciona esse evento quando em contato dentro da área delimitadora do elemento. No entanto, a caneta também tem um estado de foco (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, quando true e dentro da área delimitadora do elemento, aciona esse evento.</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -119,7 +116,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
-<td align="left"><p>Ocorre quando o botão de rolagem do mouse é girado.</p>
+<td align="left"><p>Ocorre quando a roda do mouse é girada.</p>
 <p>A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, de rolagem ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
 </tr>
 </tbody>
@@ -285,7 +282,7 @@ void Target_PointerPressed(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered). Adicionamos o evento ao log de eventos, adicionamos o ponteiro à coleção de ponteiros e exibimos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered). Adicionamos o evento ao log de eventos, o ponteiro à coleção de ponteiros e exibimos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -325,7 +322,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Esse manipulador gerencia o evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved). Adicionamos o evento ao log de eventos e atualizamos os detalhes do ponteiro.
 
     > [!Important]
-    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). O evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Em razão dessa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
+    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). O evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Devido a essa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
 
 ```csharp
 /// <summary>
@@ -372,7 +369,7 @@ private void Target_PointerMoved(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Esse manipulador gerencia o evento [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged). Adicionamos o evento ao log de eventos, adicionamos o ponteiro à matriz de ponteiros (se necessário) e exibimos os detalhes do ponteiro.
+-   Esse manipulador gerencia o evento [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged). Adicionamos o evento ao log de eventos, o ponteiro à matriz de ponteiros (se necessário) e exibimos os detalhes do ponteiro.
 
 ```csharp
 /// <summary>
@@ -957,7 +954,7 @@ Por fim, definimos os manipuladores de eventos de ponteiro básicos no code-behi
 * [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 * [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 * [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Amostras de arquivo-morto**
 * [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)

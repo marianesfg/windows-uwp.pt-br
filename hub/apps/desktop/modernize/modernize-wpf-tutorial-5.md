@@ -2,22 +2,22 @@
 description: Este tutorial demonstra como adicionar interfaces de usuário do UWP XAML, criar pacotes do MSIX e incorporar outros componentes modernos ao seu aplicativo do WPF.
 title: Empacotar e implantar com o MSIX
 ms.topic: article
-ms.date: 06/27/2019
+ms.date: 01/23/2020
 ms.author: mcleans
 author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 6f5c01b23f02bb9c116ddaaec698612aa539539d
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 27906d9d389c065ab1fdf7124151cd1915f850eb
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726009"
 ---
-# <a name="part-5-package-and-deploy-with-msix"></a>Parte 5: Empacotar e implantar com o MSIX
+# <a name="part-5-package-and-deploy-with-msix"></a>Parte 5: empacotar e implantar com MSIX
 
-Esta é a parte final de um tutorial que demonstra como modernizar um aplicativo de área de trabalho WPF de exemplo chamado contoso despesas. Para obter uma visão geral do tutorial, dos pré-requisitos e das instruções para baixar o aplicativo de exemplo [, consulte o tutorial: Modernizar um aplicativo](modernize-wpf-tutorial.md)do WPF. Este artigo pressupõe que você já concluiu a [parte 4](modernize-wpf-tutorial-4.md).
+Esta é a parte final de um tutorial que demonstra como modernizar um aplicativo de área de trabalho WPF de exemplo chamado contoso despesas. Para obter uma visão geral do tutorial, dos pré-requisitos e das instruções para baixar o aplicativo de exemplo, consulte [tutorial: modernizar um aplicativo do WPF](modernize-wpf-tutorial.md). Este artigo pressupõe que você já concluiu a [parte 4](modernize-wpf-tutorial-4.md).
 
 Na [parte 4](modernize-wpf-tutorial-4.md) , você aprendeu que algumas APIs do WinRT, incluindo a API de notificações, exigem a identidade do pacote antes que elas possam ser usadas em um aplicativo. Você pode obter a identidade do pacote empacotando as despesas da contoso usando o [MSIX](https://docs.microsoft.com/windows/msix), o formato de empacotamento introduzido no Windows 10 para empacotar e implantar aplicativos do Windows. O MSIX fornece vantagens para os desenvolvedores e profissionais de ti, incluindo:
 
@@ -36,9 +36,9 @@ O Visual Studio 2019 fornece uma maneira fácil de empacotar um aplicativo de á
 
     ![Adicionar novo projeto](images/wpf-modernize-tutorial/AddNewProject.png)
 
-3. Na caixa de diálogo **Adicionar um novo projeto** , `packaging`procure, escolha o modelo de projeto empacotamento de **aplicativos do Windows** na C# categoria e clique em **Avançar**.
+3. Na caixa de diálogo **Adicionar um novo projeto** , procure `packaging`, escolha o modelo projeto de **projeto de pacote de aplicativos** do C# Windows na categoria e clique em **Avançar**.
 
-    ![Projeto de Empacotamento de Aplicativos do Windows](images/wpf-modernize-tutorial/WAP.png)
+    ![Projeto de empacotamento de aplicativos do Windows](images/wpf-modernize-tutorial/WAP.png)
 
 4. Nomeie o novo projeto `ContosoExpenses.Package` e clique em **criar**.
 
@@ -54,42 +54,12 @@ O Visual Studio 2019 fornece uma maneira fácil de empacotar um aplicativo de á
 
 8. Clique com o botão direito do mouse no projeto **ContosoExpenses. Package** e escolha **definir como projeto de inicialização**.
 
-9. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto **ContosoExpenses. Package** e selecione **Editar arquivo de projeto**.
-
-10. Localize o elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` no arquivo.
-
-11. Substitua este elemento pelo XML a seguir.
-
-    ``` xml
-    <ItemGroup>
-        <SDKReference Include="Microsoft.VCLibs,Version=14.0">
-        <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
-        <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
-        <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
-        <Implicit>true</Implicit>
-        </SDKReference>
-    </ItemGroup>
-    <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
-    <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
-        <ItemGroup>
-        <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
-        <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
-        <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-            <SourceProject></SourceProject>
-            <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
-        </_FilteredNonWapProjProjectOutput>
-        </ItemGroup>
-    </Target>
-    ```
-
-12. Salve o arquivo de projeto e feche-o.
-
-13. Pressione **F5** para iniciar o aplicativo empacotado no depurador.
+9. Pressione **F5** para iniciar o aplicativo empacotado no depurador.
 
 Neste ponto, você pode observar algumas alterações que indicam que o aplicativo agora está sendo executado como empacotado:
 
-- O ícone na barra de tarefas ou no menu Iniciar agora é o ativo padrão que é incluído em cada **projeto**de empacotamento de aplicativos do Windows.
-- Se você clicar com o botão direito do mouse no aplicativo **ContosoExpense. Package** listado no menu Iniciar, observará opções que normalmente são reservadas para aplicativos baixados do Microsoft Store, como **configurações do aplicativo**, **taxa e revisão** e **compartilhamento** .
+- O ícone na barra de tarefas ou no menu Iniciar agora é o ativo padrão que é incluído em cada **projeto de empacotamento de aplicativos do Windows**.
+- Se você clicar com o botão direito do mouse no aplicativo **ContosoExpense. Package** listado no menu Iniciar, observará opções que normalmente são reservadas para aplicativos baixados do Microsoft Store, como **configurações do aplicativo**, **taxa e revisão** e **compartilhamento**.
 
     ![ContosoExpenses no menu iniciar](images/wpf-modernize-tutorial/StartMenu.png)
 
@@ -99,7 +69,7 @@ Neste ponto, você pode observar algumas alterações que indicam que o aplicati
 
 Agora que você pacoteu o aplicativo de despesas da contoso com o MSIX, você pode testar o cenário de notificação que não estava funcionando no final da [parte 4](modernize-wpf-tutorial-4.md).
 
-1. No aplicativo de despesas da Contoso, escolha um funcionário na lista e clique no botão **Adicionar nova despesa** . 
+1. No aplicativo de despesas da Contoso, escolha um funcionário na lista e clique no botão **Adicionar nova despesa** .
 2. Preencha todos os campos no formulário e pressione **salvar**.
 3. Confirme que você vê uma notificação do sistema operacional.
 

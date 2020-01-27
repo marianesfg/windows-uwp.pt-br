@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluente
-ms.openlocfilehash: e1a5b192ed57d3962b6ba4cbef69e3663bc1e2ec
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: b6533864748b4245b16ec7bcea9d2a831ff1c88a
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683989"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520441"
 ---
 # <a name="forms"></a>Formulários
 Um formulário é um grupo de controles que coleta e envia dados de usuários. Os formulários são usados normalmente em páginas de configurações, pesquisas, criação de contas e muito mais. 
@@ -127,7 +127,7 @@ Control | Uso | Exemplo
 ### <a name="lists"></a>Listas
 Control | Uso | Exemplo
 - | - | -
-[ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | Inicie no estado compacto e expanda para mostrar a lista de itens selecionáveis | Selecione de uma longa lista de itens, como estados ou países
+[ComboBox](combo-box.md) | Inicie no estado compacto e expanda para mostrar a lista de itens selecionáveis | Selecione de uma longa lista de itens, como estados ou países
 [ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | Categorize itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens | Opções de classificação
 [GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | Organize e procure coleções baseadas em imagem | Escolha uma foto, cor, tema de exibição
 

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4fb6e2d4fc13d90ec69f962e69b1ee8cb5c1361c
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 70ba858daa09f4412a771441e76f5c00dd8c6c32
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520391"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725979"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML
 
@@ -258,36 +258,7 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
 
 2. No projeto de empacotamento, clique com o botão direito do mouse no nó **aplicativos** e escolha **Adicionar referência**. Na lista de projetos, selecione o projeto do WPF em sua solução e clique em **OK**.
 
-3. Edite o arquivo de projeto de empacotamento. Essas alterações são necessárias no momento para empacotar aplicativos WPF direcionados ao .NET Core 3 e que hospedam as ilhas XAML.
-
-    1. No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto de empacotamento e selecione **Editar arquivo de projeto**.
-    2. Localize o elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` no arquivo. Substitua este elemento pelo XML a seguir. Essas alterações são necessárias no momento para empacotar aplicativos WPF direcionados ao .NET Core 3 e que hospedam os controles UWP.
-
-        ``` xml
-        <ItemGroup>
-            <SDKReference Include="Microsoft.VCLibs,Version=14.0">
-            <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
-            <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
-            <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
-            <Implicit>true</Implicit>
-            </SDKReference>
-        </ItemGroup>
-        <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
-        <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
-            <ItemGroup>
-            <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
-            <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
-            <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-                <SourceProject></SourceProject>
-                <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
-            </_FilteredNonWapProjProjectOutput>
-            </ItemGroup>
-        </Target>
-        ```
-
-    3. Salve o arquivo de projeto e feche-o.
-
-4. Edite o arquivo de projeto do WPF. Essas alterações são necessárias no momento para empacotar aplicativos WPF que hospedam controles UWP personalizados.
+3. Edite o arquivo de projeto do WPF. Essas alterações são necessárias no momento para empacotar aplicativos WPF que hospedam controles UWP personalizados.
 
     1. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto WPF e selecione **descarregar projeto**.
     2. Clique com o botão direito do mouse no nó do projeto WPF e selecione **Editar**.
@@ -302,7 +273,7 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
     4. Salve o arquivo de projeto e feche-o.
     5. Clique com o botão direito do mouse no nó do projeto WPF e escolha **recarregar projeto**.
 
-5. Compile e execute o projeto de empacotamento. Confirme se o WPF é executado e se o controle personalizado UWP é exibido conforme o esperado.
+4. Compile e execute o projeto de empacotamento. Confirme se o WPF é executado e se o controle personalizado UWP é exibido conforme o esperado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
