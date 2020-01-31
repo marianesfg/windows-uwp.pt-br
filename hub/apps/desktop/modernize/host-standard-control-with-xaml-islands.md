@@ -1,19 +1,19 @@
 ---
 description: Este artigo demonstra como hospedar um controle UWP padrão em um aplicativo WPF usando as ilhas XAML.
 title: Hospedar um controle UWP padrão em um aplicativo WPF usando as ilhas XAML
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML, controles encapsulados, controles padrão, InkCanvas, InkToolbar
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 47998d9c79dbbb41060b4fbd52fe3ee805aecc52
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: e7fa4a3d97354efdfe4514ea69230883fffdb3cd
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520381"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814016"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP padrão em um aplicativo WPF usando as ilhas XAML
 
@@ -23,16 +23,23 @@ Este artigo demonstra duas maneiras de hospedar um controle UWP padrão (ou seja
 
 * Ele também mostra como hospedar um controle [CALENDARVIEW](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) UWP usando o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no kit de ferramentas da Comunidade do Windows. Como apenas um pequeno conjunto de controles UWP está disponível como controles encapsulados, você pode usar [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar qualquer outro controle UWP padrão.
 
-Para hospedar um controle UWP em um aplicativo do WPF, você precisará dos componentes a seguir. Este artigo fornece instruções para criar cada um desses componentes.
-
-* O código-fonte e o projeto para seu aplicativo WPF.
-* Um projeto de aplicativo UWP que define uma instância da classe `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` do kit de ferramentas da Comunidade do Windows.
-  > [!NOTE]
-  > Para garantir que seu aplicativo funcione bem em todos os cenários da ilha XAML, seu projeto do WPF (ou Windows Forms) deve ter acesso a um objeto `XamlApplication`. Esse objeto atua como um provedor de metadados raiz para carregar metadados para tipos de XAML do UWP em assemblies no diretório atual do seu aplicativo. A maneira recomendada para fazer isso é adicionar um projeto de **aplicativo em branco (universal do Windows)** à mesma solução que o projeto do WPF (ou Windows Forms) e revisar a classe de `App` padrão neste projeto para derivar de `XamlApplication`.
-  >
-  > Embora essa etapa não seja necessária para cenários da ilha trivial XAML, como hospedar um controle UWP de primeira empresa, seu aplicativo do WPF precisa desse `XamlApplication` objeto para dar suporte a toda a gama de cenários da ilha XAML, incluindo a hospedagem de controles UWP personalizados. É recomendável que você sempre adicione um projeto UWP e defina um objeto `XamlApplication` em qualquer solução na qual você esteja usando as ilhas XAML. Sua solução pode conter apenas um projeto que define um objeto `XamlApplication`. Todos os controles UWP personalizados em seu aplicativo compartilham o mesmo objeto `XamlApplication`.
-
 Embora este artigo demonstre como hospedar controles UWP em um aplicativo do WPF, o processo é semelhante para um aplicativo Windows Forms.
+
+## <a name="required-components"></a>Componentes necessários
+
+Para hospedar um controle UWP em um aplicativo WPF (ou Windows Forms), você precisará dos seguintes componentes em sua solução. Este artigo fornece instruções para criar cada um desses componentes.
+
+* **O código-fonte e o projeto para seu aplicativo**. O uso do controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar controles UWP de terceiros padrão tem suporte em aplicativos direcionados ao .NET Framework ou ao .NET Core 3.
+
+* **Um projeto de aplicativo UWP que define uma classe de aplicativo raiz que deriva de XamlApplication**. Seu projeto do WPF ou Windows Forms deve ter acesso a uma instância da classe [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo kit de ferramentas da Comunidade do Windows. Esse objeto atua como um provedor raiz de metadados para carregar metadados para tipos personalizados UWP XAML em assemblies no diretório atual do seu aplicativo.
+
+    A maneira recomendada para fazer isso é adicionar um projeto de **aplicativo em branco (universal do Windows)** à mesma solução que o seu projeto do WPF ou Windows Forms, revisar a classe de `App` padrão neste projeto para derivar de `XamlApplication`e, em seguida, criar uma instância desse objeto no código do ponto de entrada para seu aplicativo.
+
+    > [!NOTE]
+    > Embora esse componente não seja necessário para cenários da ilha trivial XAML, como a hospedagem de um controle UWP de primeira empresa, seu aplicativo precisa desse `XamlApplication` objeto para dar suporte a toda a gama de cenários da ilha XAML, incluindo a hospedagem de controles UWP personalizados. Portanto, é recomendável que você sempre defina um objeto `XamlApplication` em qualquer solução na qual esteja usando as ilhas XAML.
+
+    > [!NOTE]
+    > Sua solução pode conter apenas um projeto que define um objeto `XamlApplication`. Todos os controles UWP personalizados em seu aplicativo compartilham o mesmo objeto `XamlApplication`. O projeto que define o objeto `XamlApplication` deve incluir referências a todas as outras bibliotecas UWP e projetos que são usados para hospedar controles UWP na ilha XAML.
 
 ## <a name="create-a-wpf-project"></a>Criar um projeto do WPF
 
@@ -60,9 +67,9 @@ Antes de começar, siga estas instruções para criar um projeto do WPF e config
     3. Na caixa de diálogo **nova plataforma de solução** , selecione **x64** ou **x86** e pressione **OK**. 
     4. Feche as caixas de diálogo abertas.
 
-## <a name="create-a-xamlapplication-object-in-a-uwp-app-project"></a>Criar um objeto XamlApplication em um projeto de aplicativo UWP
+## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>Definir uma classe XamlApplication em um projeto de aplicativo UWP
 
-Em seguida, adicione um projeto de aplicativo UWP à mesma solução que o seu projeto do WPF. Você irá revisar a classe de `App` padrão neste projeto para derivar da classe `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` fornecida pelo kit de ferramentas da Comunidade do Windows. Embora essa etapa não seja necessária para cenários da ilha trivial XAML, como hospedar um único controle UWP de terceiros, seu aplicativo do WPF precisa desse `XamlApplication` objeto para dar suporte a toda a gama de cenários da ilha XAML. É recomendável que você sempre adicione esse projeto a qualquer solução na qual esteja usando as ilhas XAML.
+Em seguida, adicione um projeto de aplicativo UWP à mesma solução que o seu projeto do WPF. Você irá revisar a classe de `App` padrão neste projeto para derivar da classe [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo kit de ferramentas da Comunidade do Windows. Para obter mais informações sobre a finalidade dessa classe, consulte [esta seção](#required-components).
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó da solução e selecione **Adicionar** -> **novo projeto**.
 2. Adicione um projeto **App em Branco (Universal do Windows)** à sua solução. Verifique se a versão de destino e a versão mínima estão definidas como **Windows 10, versão 1903** ou posterior.
@@ -98,11 +105,43 @@ Em seguida, adicione um projeto de aplicativo UWP à mesma solução que o seu p
 7. Crie o projeto de aplicativo UWP.
 8. No projeto do WPF, clique com o botão direito do mouse no nó **dependências** e adicione uma referência ao seu projeto de aplicativo UWP.
 
+## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>Criar uma instância do objeto XamlApplication no ponto de entrada do aplicativo do WPF
+
+Em seguida, adicione o código ao ponto de entrada do aplicativo WPF para criar uma instância da classe `App` que você acabou de definir no projeto UWP (essa é a classe que agora é derivada de `XamlApplication`). Para obter mais informações sobre a finalidade deste objeto, consulte [esta seção](#required-components).
+
+1. No projeto do WPF, clique com o botão direito do mouse no nó do projeto, selecione **adicionar** -> **novo item**e, em seguida, selecione **classe**. Nomeie o **programa** de classe e clique em **Adicionar**.
+
+2. Substitua a classe `Program` gerada pelo código a seguir e salve o arquivo. Substitua `MyUWPApp` pelo namespace do seu projeto de aplicativo UWP e substitua `MyWPFApp` pelo namespace do seu projeto de aplicativo do WPF.
+
+    ```csharp
+    public class Program
+    {
+        [System.STAThreadAttribute()]
+        public static void Main()
+        {
+            using (new MyUWPApp.App())
+            {
+                MyWPFApp.App app = new MyWPFApp.App();
+                app.InitializeComponent();
+                app.Run();
+            }
+        }
+    }
+    ```
+
+3. Clique com o botão direito do mouse no nó do projeto e escolha **Propriedades**.
+
+4. Na guia **aplicativo** das propriedades, clique na lista suspensa **objeto de inicialização** e escolha o nome totalmente qualificado da classe `Program` que você adicionou na etapa anterior. 
+    > [!NOTE]
+    > Por padrão, os projetos do WPF definem uma `Main` função de ponto de entrada em um arquivo de código gerado que não deve ser modificado. Essa etapa altera o ponto de entrada para o seu projeto para o método `Main` da nova classe `Program`, que permite que você adicione o código que é executado como antes no processo de inicialização do aplicativo possível. 
+
+5. Salve as alterações nas propriedades do projeto.
+
 ## <a name="host-an-inkcanvas-and-inktoolbar-by-using-wrapped-controls"></a>Hospedar um InkCanvas e InkToolbar usando controles encapsulados
 
 Agora que você configurou seu projeto para usar as ilhas do UWP XAML, agora você está pronto para adicionar os controles do [UWP e do](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) encapsulado ao aplicativo.
 
-1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **MainWindow.xaml**.
+1. No **Gerenciador de soluções**, abra o arquivo **MainWindow. XAML** .
 
 2. No elemento **Window** próximo à parte superior do arquivo XAML, adicione o atributo a seguir. Isso faz referência ao namespace XAML para o controle [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) e [INKTOOLBAR](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) encapsulado UWP.
 
@@ -144,7 +183,7 @@ Agora que você configurou seu projeto para usar as ilhas do UWP XAML, agora voc
 
 4. Salve o arquivo **MainWindow. XAML** .
 
-    Se você tiver um dispositivo que dá suporte a uma caneta digital, como uma superfície e estiver executando esse laboratório em um computador físico, você poderá criar e executar o aplicativo e desenhar tinta digital na tela com a caneta. No entanto, se você não tiver um dispositivo com capacidade de caneta e tentar entrar com o mouse, nada acontecerá. Isso ocorre porque o controle **InkCanvas** está habilitado apenas para canetas digitais por padrão. Porém, é possível alterar esse comportamento.
+    Se você tiver um dispositivo que dá suporte a uma caneta digital, como uma superfície e estiver executando esse laboratório em um computador físico, você poderá criar e executar o aplicativo e desenhar tinta digital na tela com a caneta. No entanto, se você não tiver um dispositivo com capacidade de caneta e tentar entrar com o mouse, nada acontecerá. Isso ocorre porque o controle **InkCanvas** está habilitado apenas para canetas digitais por padrão. No entanto, você pode alterar esse comportamento.
 
 5. Abra o arquivo **MainWindow.XAML.cs** .
 
@@ -171,7 +210,7 @@ Agora que você adicionou o [InkCanvas](https://docs.microsoft.com/windows/commu
 > [!NOTE]
 > O controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) é fornecido pelo pacote [Microsoft. Toolkit. WPF. UI. XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) . Esse pacote está incluído no pacote [Microsoft. Toolkit. WPF. UI. Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) que você instalou anteriormente.
 
-1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **MainWindow.xaml**.
+1. No **Gerenciador de soluções**, abra o arquivo **MainWindow. XAML** .
 
 2. No elemento **Window** próximo à parte superior do arquivo XAML, adicione o atributo a seguir. Isso faz referência ao namespace XAML para o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) .
 
@@ -256,36 +295,7 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
 
 2. No projeto de empacotamento, clique com o botão direito do mouse no nó **aplicativos** e escolha **Adicionar referência**. Na lista de projetos, selecione o projeto do WPF em sua solução e clique em **OK**.
 
-3. Se o projeto do WPF for destinado ao .NET Core 3, você deverá editar o arquivo de projeto de empacotamento. Essas alterações são necessárias no momento para empacotar aplicativos WPF direcionados ao .NET Core 3 e que hospedam os controles UWP.
-
-    1. No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto de empacotamento e selecione **Editar arquivo de projeto**.
-    2. Localize o elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` no arquivo. Substitua este elemento pelo XML a seguir.
-
-        ``` xml
-        <ItemGroup>
-            <SDKReference Include="Microsoft.VCLibs,Version=14.0">
-            <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
-            <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
-            <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
-            <Implicit>true</Implicit>
-            </SDKReference>
-        </ItemGroup>
-        <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
-        <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
-            <ItemGroup>
-            <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
-            <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
-            <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-                <SourceProject></SourceProject>
-                <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
-            </_FilteredNonWapProjProjectOutput>
-            </ItemGroup>
-        </Target>
-        ```
-
-    3. Salve o arquivo de projeto e feche-o.
-
-4. Configure sua solução para direcionar uma plataforma específica, como x86 ou x64. Isso é necessário para criar o aplicativo do WPF em um pacote MSIX usando o projeto de empacotamento de aplicativos do Windows.
+3. Configure sua solução para direcionar uma plataforma específica, como x86 ou x64. Isso é necessário para criar o aplicativo do WPF em um pacote MSIX usando o projeto de empacotamento de aplicativos do Windows.
 
     1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó da solução e selecione **Propriedades** -> **Propriedades de configuração** -> **Configuration Manager**.
     2. Em **plataforma de solução ativa**, selecione **x64** ou **x86**.
@@ -297,7 +307,8 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Controles UWP em aplicativos de área de trabalho](xaml-islands.md)
+* [Hospedar controles XAML UWP em aplicativos de área de trabalho (Ilhas XAML)](xaml-islands.md)
+* [Exemplos de código de ilhas XAML](https://github.com/microsoft/Xaml-Islands-Samples)
 * [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)
 * [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)
 * [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)
