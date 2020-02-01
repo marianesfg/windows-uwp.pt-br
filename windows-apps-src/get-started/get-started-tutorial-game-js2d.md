@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: b2b60354acb2c3d97ced3dce0b3fb7f6d97ac35d
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 92a1567fe72d46e53bf218c033fc59e8c98a2981
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684770"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929267"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -30,7 +30,7 @@ Para publicar seu aplicativo na Microsoft Store, ele deve ser escrito como um ap
 
 Este projeto foi desenvolvido com JavaScript usando o Visual Studio. Com algumas pequenas alterações, também pode ser hospedado em um site ou adaptado para outras plataformas. 
 
-**Observação**: este não é um jogo completo (ou bom!); ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um aplicativo pronto para ser publicado na Microsoft Store.
+**Observação:** este não é um jogo completo (ou bom!); ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um aplicativo pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -65,7 +65,7 @@ Pressione **F5** para iniciar o aplicativo em execução. Você deve ver uma jan
 
 ![Apenas um dinossauro comum com um gato ninja nas costas](images/JS2D_3.png)
 
-**Observação**: Algo deu errado? Verifique se você instalou o Visual Studio com suporte para Web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
+**Observação:** Algo deu errado? Verifique se você instalou o Visual Studio com suporte para Web. Você pode verificar criando um novo projeto - se não houver suporte para JavaScript, você precisará instalar o Visual Studio novamente e verificar a caixa de *Microsoft Web Developer Tools*.
 
 ## <a name="walkthough"></a>Explicação passo a passo
 
@@ -165,7 +165,6 @@ Execute o aplicativo novamente (pressione F5) e você verá nossas nuvens aparec
 Agora, vamos fazer nuvens se moverem. O segredo para mover nuvens – e mover qualquer coisa, na verdade – é configurar uma função [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) que é chamada repetidamente várias vezes por segundo. Toda vez que essa função é chamada, ela redesenha os elementos gráficos em um local ligeiramente diferente.
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Confira a Caneta <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS – Animar nuvens</a> dos documentos do Microsoft Edge (<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) na <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
   O código para fazer isso já está no arquivo **main.js**, fornecido pela biblioteca do CreateJS, EaselJS. Ele é semelhante ao seguinte:
 
 ```
