@@ -1,37 +1,36 @@
 ---
-title: Criar e armazenar uma extensão de app
-description: Extensões do aplicativo Gravar e hospedar Plataforma Universal do Windows (UWP) que permitam que você estenda seu aplicativo por meio de pacotes que os usuários podem instalar a partir da Microsoft Store.
+title: Criar e hospedar uma extensão de aplicativo
+description: Crie e hospede extensões de aplicativo que permitem estender seu aplicativo por meio de pacotes que os usuários podem instalar do Microsoft Store.
 keywords: extensão de aplicativo, serviço de aplicativo, segundo plano
-ms.date: 10/05/2017
+ms.date: 01/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d315fb89f38e517e61194adf5b75a28b4675de9c
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282388"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929280"
 ---
-# <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
+# <a name="create-and-host-an-app-extension"></a>Criar e hospedar uma extensão de aplicativo
 
-Este artigo mostra como criar uma extensão de aplicativo UWP e hospedá-la em um aplicativo UWP.
+Este artigo mostra como criar uma extensão de aplicativo do Windows 10 e hospedá-la em um aplicativo. As extensões de aplicativo têm suporte em aplicativos UWP e [aplicativos de área de trabalho empacotados](/windows/apps/desktop/modernize/#msix-packages).
 
-Este artigo é acompanhado por um exemplo de código:
-- Baixe e descompacte [Exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
+Para demonstrar como criar uma extensão de aplicativo, este artigo usa XML de manifesto de pacote e trechos de código do [exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/tree/MathExtensionSample). Este exemplo é um aplicativo UWP, mas os recursos demonstrados no exemplo também são aplicáveis a aplicativos de área de trabalho empacotados. Siga estas instruções para começar a usar o exemplo:
+
+- Baixe e descompacte o [exemplo de código de extensão matemática](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
 - No Visual Studio 2019, abra MathExtensionSample. sln. Defina o tipo de compilação para x86 (**Compilação** > **Gerente de configuração**, depois mude **Plataforma** para **x86** para ambos projetos).
-- Implantar a solução: **Compilar** > **implantar solução**.
+- Implante a solução: **Compilar** > **Implantar solução**.
 
 ## <a name="introduction-to-app-extensions"></a>Introdução a extensões de aplicativo
 
-Na Plataforma Universal do Windows (UWP), as extensões de aplicativo fornecem funcionalidades semelhante às funções de plug-ins, suplementos e complementos em outras plataformas. Por exemplo, extensões do Microsoft Edge são extensões de aplicativos UWP. Extensões de aplicativos UWP foram introduzidas na edição de aniversário do Windows 10 (versão 1607, compilação 10.0.14393).
+No Windows 10, as extensões de aplicativo fornecem funcionalidade semelhante ao que os plug-ins, suplementos e Complementos fazem em outras plataformas. As extensões de aplicativo foram introduzidas na edição de aniversário do Windows 10 (versão 1607, Build 10.0.14393).
 
-Extensões de aplicativos UWP são aplicativos UWP que têm uma declaração de extensão que permite que eles compartilhem os eventos de conteúdo e implantação com um aplicativo de hospedagem. Um aplicativo de extensão pode fornecer várias extensões.
+As extensões de aplicativo são aplicativos UWP ou aplicativos de área de trabalho empacotados que têm uma declaração de extensão que permite que eles compartilhem conteúdo e eventos de implantação com um aplicativo host. Um aplicativo de extensão pode fornecer várias extensões.
 
-Como extensões de aplicativos são apenas aplicativos UWP, eles também podem ser aplicativos totalmente funcionais, e fornecerem extensões do host para outros aplicativos — tudo isso sem a criação de pacotes de aplicativo separados.
+Como as extensões de aplicativo são apenas aplicativos UWP ou aplicativos de área de trabalho empacotados, eles também podem ser aplicativos totalmente funcionais, extensões de host e fornecer extensões para outros aplicativos, tudo sem criar pacotes de aplicativos separados.
 
-Quando você cria um host de extensão do aplicativo, você cria uma oportunidade de desenvolver um ecossistema em torno de seu aplicativo em que outros desenvolvedores podem melhorar seu aplicativo de maneiras de que você possa não esperado ou que não tinha os recursos para. Considere as extensões de Microsoft Office, extensões do Visual Studio, extensões de navegador, etc. Elas criam experiências mais ricas para os aplicativos que vão além da funcionalidade com a qual acompanham. Extensões podem adicionar valor e longevidade ao seu aplicativo.
-
-**Visão geral**
+Quando você cria um host de extensão do aplicativo, você cria uma oportunidade de desenvolver um ecossistema em torno de seu aplicativo em que outros desenvolvedores podem melhorar seu aplicativo de maneiras de que você possa não esperado ou que não tinha os recursos para. Considere a possibilidade de extensões do Microsoft Office, extensões do Visual Studio, extensões do navegador, etc. Esses modelos criam experiências mais ricas para os aplicativos que vão além da funcionalidade que o acompanham. Extensões podem adicionar valor e longevidade ao seu aplicativo.
 
 Em um nível alto, para configurar uma relação de extensão do aplicativo, nós precisamos:
 
@@ -120,9 +119,9 @@ Novamente, observe a linha `xmlns:uap3="http://..."` e a presença de `uap3` em 
 
 O significado dos atributos `<uap3:AppExtension>` é o seguinte:
 
-|Atributo|Descrição|Obrigatório|
+|Atributo|Descrição|Necessária|
 |---------|-----------|:------:|
-|**Name**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
+|**Nome**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
 |**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
 |**DisplayName**| Pode ser usado em seu próprio aplicativo host para identificar a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**Descrição** | Pode ser usado em seu próprio aplicativo host para descrever a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
@@ -211,7 +210,7 @@ Você pode definir seu próprio XML no elemento `<uap3:Properties>`. Nesse caso,
 
 Quando o host carrega uma extensão, um código como este extrai o nome do serviço das propriedades definidas no Package.appxmanifest da extensão:
 
-_`Update()` em ExtensionManager.cs, no projeto MathExtensionHost_
+_`Update()` no ExtensionManager.cs, no projeto MathExtensionHost_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -395,7 +394,7 @@ Quando você compila um host de extensão e está pronto para testar o quanto el
 - Executa o host e, em seguida, implanta um aplicativo de extensão que tem conteúdo ou propriedades inválido
     - O host detecta o conteúdo inválido e o manipula corretamente?
 
-## <a name="design-considerations"></a>Considerações sobre o design
+## <a name="design-considerations"></a>Consideração sobre design
 
 - Forneça a interface do usuário que mostra ao usuário quais extensões estão disponíveis e permite que eles o habilitem/desabilitem. Você também pode considerar a adição de glifos de extensões que não ficam disponíveis como um pacote que fica offline, etc.
 - Encaminha o usuário para onde ele pode baixar extensões. Talvez a sua página de extensão possa fornecer uma consulta de pesquisa do Microsoft Store que exibe uma lista de extensões que podem ser usadas com seu aplicativo.
@@ -407,7 +406,7 @@ O diferencial entre [pacotes opcionais](/windows/msix/package/optional-packages)
 
 Extensões de aplicativo participam de um ecossistema aberto. Se seu aplicativo puder hospedar extensões de aplicativo, qualquer pessoa pode gravar uma extensão para seu host, desde que elas cumpram seu método de passar/receber informações da extensão. Isso difere pacotes opcionais, que participam de um ecossistema fechado, onde o fornecedor decide quem tem permissão para fazer um pacote opcional que pode ser usado com o aplicativo.
 
-Extensões de aplicativos são pacotes independentes e podem ser aplicativos autônomos. Elas não têm uma dependência de implantação em outro aplicativo. Pacotes opcionais exigem o pacote principal e não podem ser executados sem ele.
+Extensões de aplicativos são pacotes independentes e podem ser aplicativos autônomos. Elas não têm uma dependência de implantação em outro aplicativo. Os pacotes opcionais exigem o pacote primário e não podem ser executados sem ele.
 
 Um pacote de expansão para um jogo seria um bom candidato para um pacote opcional, pois ele está estreitamente ligado ao jogo, ele não será executado independentemente do jogo e talvez não queira que os pacotes de expansão sejam criados por qualquer desenvolvedor no ecossistema.
 
