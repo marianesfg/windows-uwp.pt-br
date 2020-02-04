@@ -52,9 +52,9 @@ Esta página fornece informações sobre como as várias estruturas de desenvolv
 
       Desenvolva aplicativos habilitados para fala para Windows desktop e Windows Server usando as ferramentas, as informações e os mecanismos de exemplo e os aplicativos fornecidos aqui.
 
-      [Microsoft Speech Platform – Software Development Kit (SDK) (versão 11)](https://www.microsoft.com/download/details.aspx?id=27226)
+      [Microsoft Speech Platform – SDK (Software Development Kit) (versão 11)](https://www.microsoft.com/download/details.aspx?id=27226)
       
-      [SDK do Microsoft Speech, versão 5,1](https://www.microsoft.com/download/details.aspx?id=10121)
+      [SDK do Microsoft Speech, versão 5.1](https://www.microsoft.com/download/details.aspx?id=10121)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -65,7 +65,7 @@ Esta página fornece informações sobre como as várias estruturas de desenvolv
 
       Desenvolva aplicativos e ferramentas acessíveis na plataforma estabelecida para aplicativos do Windows gerenciados com um modelo XAML de interface do usuário e o .NET Framework.
 
-      [Guia de programação do System. Speech para .NET Framework](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
+      [Guia de programação do System.Speech para .NET Framework](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
    :::column-end:::
    :::column:::
       ![Serviços de fala do Azure](images/platform-azure-speech.png)
@@ -128,7 +128,7 @@ Baixe e execute exemplos completos do Windows que demonstram vários recursos e 
       Esses exemplos demonstram os padrões de uso da API para a UWP (Plataforma Universal do Windows) no SDK (kit de desenvolvimento de software) do Windows para Windows 10.
    :::column-end:::
    :::column:::
-      [Galeria de controles XAML](https://github.com/microsoft/Xaml-Controls-Gallery)
+      [XAML Controls Gallery](https://github.com/microsoft/Xaml-Controls-Gallery)
 
       Este aplicativo demonstra os inúmeros controles XAML compatíveis com o Sistema de Design Fluente.
    :::column-end:::
