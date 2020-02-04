@@ -1,19 +1,19 @@
 ---
 description: Este guia ajudará você a criar interfaces do usuário do UWP baseadas no Fluent diretamente nos aplicativos WPF e do Windows Forms
 title: Controles UWP em aplicativos da área de trabalho
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, ilhas xaml
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 95fbfc9aa988330fb21713651687690fa769b99f
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 96705faff278c4cab31e0ab271bc31d08261401b
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520401"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814006"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Hospedar controles XAML do UWP em aplicativos da área de trabalho (Ilhas XAML)
 
@@ -62,7 +62,7 @@ Para cenários além daqueles abordados pelos controles encapsulados disponívei
 Para obter passos a passos que demonstram como usar o controle **WindowsXamlHost**, confira [Hospedar um controle UWP padrão em um aplicativo WPF](host-standard-control-with-xaml-islands.md) e [Hospedar um controle UWP personalizado em um aplicativo WPF usando as Ilhas XAML](host-custom-control-with-xaml-islands.md).
 
 > [!NOTE]
-> Só há suporte ao uso do controle **WindowsXamlHost** para hospedar controles UWP personalizados em aplicativos WPF e do Windows Forms direcionados ao .NET Core 3. Há suporte à hospedagem de controles UWP internos fornecidos pelo SDK do Windows em aplicativos direcionados ao .NET Framework ou ao .NET Core 3.
+> Só é compatível com o uso do controle **WindowsXamlHost** para hospedar controles UWP personalizados em aplicativos WPF e do Windows Forms direcionados ao .NET Core 3. É compatível com a hospedagem de controles UWP internos fornecidos pelo SDK do Windows em aplicativos direcionados ao .NET Framework ou ao .NET Core 3.
 
 <span id="requirements" />
 
@@ -79,7 +79,7 @@ Esteja ciente dos seguintes detalhes:
 
 * Os pacotes do controle de host também estão incluídos nos pacotes do controle encapsulado. Instale os pacotes do controle encapsulado caso deseje usar os dois conjuntos de controles.
 
-* Se você estiver hospedando um controle UWP personalizado, o projeto do WPF ou do Windows Forms precisará ser direcionado ao .NET Core 3. Não há suporte à hospedagem de controles UWP personalizados em aplicativos direcionados ao .NET Framework. Você também precisará executar algumas etapas adicionais para referenciar o controle personalizado. Para obter mais informações, confira [Hospedar um controle UWP personalizado em um aplicativo WPF usando as Ilhas XAML](host-custom-control-with-xaml-islands.md).
+* Se você estiver hospedando um controle UWP personalizado, o projeto do WPF ou do Windows Forms precisará ser direcionado ao .NET Core 3. Não é compatível com a hospedagem de controles UWP personalizados em aplicativos direcionados ao .NET Framework. Você também precisará executar algumas etapas adicionais para referenciar o controle personalizado. Para obter mais informações, confira [Hospedar um controle UWP personalizado em um aplicativo WPF usando as Ilhas XAML](host-custom-control-with-xaml-islands.md).
 
 * As versões anteriores dessas instruções exigiam a adição do elemento `maxversiontested` a um manifesto do aplicativo no projeto do WPF ou do Windows Forms. Desde que você esteja usando as últimas versões dos pacotes NuGet listados acima, você não precisará mais adicionar esse elemento ao manifesto.
 
@@ -107,7 +107,7 @@ Para usar esses controles, instale um destes pacotes NuGet:
 
 ## <a name="c-win32-applications"></a>Aplicativos C++ Win32
 
-Não há suporte para os controles .NET da Ilha XAML em aplicativos C++ Win32. Esses aplicativos precisam usar a *API de hospedagem XAML do UWP* fornecida pelo SDK do Windows 10 (versão 1903 e posterior).
+Não é compatível com os controles .NET da Ilha XAML em aplicativos C++ Win32. Esses aplicativos precisam usar a *API de hospedagem XAML do UWP* fornecida pelo SDK do Windows 10 (versão 1903 e posterior).
 
 A API de hospedagem XAML do UWP consiste em várias classes do Windows Runtime e interfaces COM C++ que o aplicativo Win32 pode usar para hospedar qualquer controle UWP derivado de [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement). Você pode hospedar controles UWP em qualquer elemento de interface do usuário em seu aplicativo que tenha um identificador de janela associado (HWND). Para obter mais informações sobre essa API, incluindo os pré-requisitos, confira [Como usar a API de hospedagem XAML do UWP em um aplicativo C++ Win32](using-the-xaml-hosting-api.md).
 
@@ -127,4 +127,5 @@ Este é o estado atual dos recursos relacionados às Ilhas XAML no Windows 10, v
 Para obter mais informações básicas e tutoriais sobre como usar as Ilhas XAML, confira os seguintes artigos e recursos:
 
 * [Tutorial: modernizar um aplicativo WPF](modernize-wpf-tutorial.md): esse tutorial fornece instruções passo a passo de uso dos controles encapsulados e dos controles de host no Kit de Ferramentas da Comunidade do Windows para adicionar controles UWP a um aplicativo WPF de linha de negócios existente. Esse tutorial inclui o código completo para o aplicativo WPF, bem como instruções detalhadas de cada etapa do processo.
+* [Exemplos de código de Ilhas XAML](https://github.com/microsoft/Xaml-Islands-Samples): este repositório contém exemplos do Windows Forms, do WPF e do C++/Win32 que demonstram como usar as Ilhas XAML.
 * [Ilhas XAML v1: atualizações e roteiro](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap): Essa postagem no blog aborda muitas perguntas comuns sobre as Ilhas XAML e fornece um roteiro de desenvolvimento detalhado.

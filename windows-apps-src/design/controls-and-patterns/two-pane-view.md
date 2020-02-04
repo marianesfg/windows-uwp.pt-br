@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3d12f2aad1d5dffbbad0790e5940699536daf0b
-ms.sourcegitcommit: e6a435716799c7bb192b3d5c4d3b8295ec3911d4
+ms.openlocfilehash: 67b97aec970cc655700729743f10c63c666ab0a6
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549701"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929258"
 ---
 # <a name="two-pane-view"></a>Exibição de dois painéis
 
@@ -238,8 +238,8 @@ A exibição de dois painéis entra no modo vertical quando há uma exibição m
 Quando a exibição de dois painéis está no modo horizontal, a propriedade TallLayout determina o que é mostrado:
 
 - **SinglePane**: um só painel (conforme determinado por PanePriority). O painel ocupa o tamanho original do TwoPaneView (ou seja, é dimensionado em estrela em ambas as direções).
-- **TopBottom**: Pane1 na parte superior/Pane2 à direita. Ambos os painéis são dimensionados em estrela horizontalmente: a altura de Pane1 é dimensionada automaticamente, e a altura de Pane2 é dimensionada em estrela.
-- **BottomTop**: Pane1 à direita/Pane2 à esquerda. Ambos os painéis são dimensionados em estrela horizontalmente: a altura de Pane2 é dimensionada automaticamente, e a altura de Pane1 é dimensionada em estrela.
+- **TopBottom**: Pane1 na parte superior/Pane2 na parte inferior. Ambos os painéis são dimensionados em estrela horizontalmente: a altura de Pane1 é dimensionada automaticamente, e a altura de Pane2 é dimensionada em estrela.
+- **BottomTop**: Pane1 na parte inferior/Pane2 na parte superior. Ambos os painéis são dimensionados em estrela horizontalmente: a altura de Pane2 é dimensionada automaticamente, e a altura de Pane1 é dimensionada em estrela.
 
 O padrão é **TopBottom**.
 
