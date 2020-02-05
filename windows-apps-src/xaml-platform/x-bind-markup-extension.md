@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 10f601b29ff441fe8cec9261d7751ba525c7f52b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8008c652dea89b42185c9fb1d9ac42e96f16a117
+ms.sourcegitcommit: 5af282fb230765a7225e138d99e9cb1b60bf7238
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258746"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77012044"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -94,7 +94,7 @@ Se a fonte de dados for uma colação, um caminho de propriedade pode especifica
 
 Para usar um indexador, o modelo precisa implementar **IList&lt;T&gt;** ou **IVector&lt;T&gt;** no tipo de propriedade que vai ser indexada. (Observe que IReadOnlyList&lt;T&gt; e IVectorView&lt;T&gt; não dão suporte à sintaxe do indexador.) Se o tipo da propriedade indexada oferecer suporte a **INotifyCollectionChanged** ou **IObservableVector** e a associação for OneWay ou TwoWay, ele será registrado e escutará as notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
 
-Se a fonte de dados for um dicionário ou um mapa, um caminho de propriedade poderá especificar itens na coleção pelo nome da cadeia de caracteres. Por exemplo **&lt;TextBlock Text = "{X:bind players\[' John Smith '\]"/&gt;** procurará um item no dicionário chamado "John Smith". O nome precisa estar entre aspas, e aspas simples ou duplas podem ser usadas. O acento circunflexo (^) pode ser usado no escape de citações em cadeias de caracteres. Normalmente é mais fácil usar aspas alternativas do que as usadas para o atributo XAML. (Observe que IReadOnlyDictionary&lt;T&gt; e IMapView&lt;T&gt; não dão suporte à sintaxe do indexador.)
+Se a fonte de dados for um dicionário ou um mapa, um caminho de propriedade poderá especificar itens na coleção pelo nome da cadeia de caracteres. Por exemplo **&lt;TextBlock Text = "{X:bind players\[' John Smith '\]}"/&gt;** procurará um item no dicionário chamado "John Smith". O nome precisa estar entre aspas, e aspas simples ou duplas podem ser usadas. O acento circunflexo (^) pode ser usado no escape de citações em cadeias de caracteres. Normalmente é mais fácil usar aspas alternativas do que as usadas para o atributo XAML. (Observe que IReadOnlyDictionary&lt;T&gt; e IMapView&lt;T&gt; não dão suporte à sintaxe do indexador.)
 
 Para usar um indexador da cadeia de caracteres, o modelo precisa implementar **IDictionary&lt;string, T&gt;** ou **IMap&lt;string, T&gt;** no tipo da propriedade que será indexada. Se o tipo da propriedade indexada suportar **IObservableMap** e a associação for OneWay ou TwoWay, então registrará e escutará notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
 
