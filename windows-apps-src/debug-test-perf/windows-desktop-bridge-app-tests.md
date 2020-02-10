@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificação de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: ec780253deb170c5dde1828add366907c403f100
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c7ffd500f3b616367ac26dffbbfc03d43b507dac
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681897"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089402"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo de Ponte de Desktop do Windows
 
@@ -43,7 +43,7 @@ Os apps da área de trabalho convertidos podem ser aprimorados com uma ampla gam
 Veja [Ponte de Desktop para UWP: extensões de apps](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para obter uma explicação sobre essas extensões e como usá-las corretamente. 
 
 ### <a name="3-debug-configuration-test"></a>3. Teste de configuração de depuração
-Esse teste verifica se o appx não é um build de depuração.
+Esse teste verifica se o. msix ou. Appx não é uma compilação de depuração.
  
 **Tela de fundo**  
 Para ser certificado para o Microsoft Store, os aplicativos não devem ser compilados para depuração e não devem fazer referência a versões de depuração de um arquivo executável. Além disso, você deve criar seu código como otimizado para que seu aplicativo passe nesse teste.
@@ -54,7 +54,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 **Ações corretivas**  
 * Compile o aplicativo como um Build de versão antes de enviá-lo para o Microsoft Store.
 * Verifique se a versão correta do .NET framework está instalada.
-* Certifique-se de que o aplicativo não está vinculando versões de depuração de uma estrutura e se a versão é de liberação. Se o aplicativo contiver componentes .NET, verifique se você instalou a versão correta do .NET framework.
+* Certifique-se de que o aplicativo não está vinculando versões de depuração de uma estrutura e se a versão é de liberação. Se o aplicativo contém componentes .NET, certifique-se de instalar a versão correta da estrutura .NET.
 
 ### <a name="4-package-sanity-test"></a>4. Testes de integridade do pacote
 #### <a name="41-archive-files-usage"></a>4.1 Uso de arquivos mortos
@@ -90,7 +90,7 @@ Este teste verifica se o aplicativo está tentando iniciar arquivos executáveis
 As funcionalidades de uso especial destinam-se a cenários bastante específicos. Somente contas empresariais podem usar esses recursos. 
 
 **Detalhes do teste**  
-Valide se o app está declarando qualquer uma das funcionalidades abaixo: 
+Valide se o aplicativo está declarando qualquer uma das capacidades abaixo: 
 * EnterpriseAuthentication
 * SharedUserCertificates
 * DocumentsLibrary
@@ -98,19 +98,19 @@ Valide se o app está declarando qualquer uma das funcionalidades abaixo:
 Se qualquer uma dessas capacidades for declarada, o teste exibirá um aviso para o usuário. 
 
 **Ações corretivas**  
-Considere a remoção da funcionalidade de uso especial caso ela não seja necessária ao seu app. Além disso, o uso dessas funcionalidades está sujeito à análise da política do serviço.
+Considere a remoção da funcionalidade de uso especial caso ela não seja necessária ao seu aplicativo. Além disso, o uso dessas funcionalidades está sujeito à análise da política do serviço.
 
 ### <a name="2-app-manifest-resources-tests"></a>2, Testes de recursos do manifesto do app 
 #### <a name="21-app-resources-validation"></a>2.1 Validação de recursos do app
 O app pode não ser instalado adequadamente se as cadeias de caracteres ou imagens declaradas no manifesto do seu app estiverem incorretas. Se o app não for instalado com esses erros, o logotipo do app ou outras imagens poderão não ser exibidas corretamente.    
 
 **Detalhes do teste**  
-Inspeciona os recursos definidos no manifesto do app para garantir que estão presentes e são válidos.
+Inspeciona os recursos definidos no manifesto do aplicativo para garantir que estão presentes e são válidos.
 
 **Ação corretiva**  
 Use a tabela a seguir como guia.
 
-Mensagem de erro | Comentários
+Mensagem de erro | Comments
 --------------|---------
 A imagem {image name} define os qualificadores Scale e TargetSize; você pode definir somente um qualificador por vez. | Você pode personalizar imagens para resoluções diferentes. Na mensagem real, {image name} contém o nome da imagem com o erro. Verifique se cada imagem define Scale ou TargetSize como o qualificador. 
 Houve falha nas restrições de tamanho da imagem {image name}.  | Verifique se todas as imagens do aplicativo atendem às restrições adequadas de tamanho. Na mensagem real, {image name} contém o nome da imagem com o erro. 
@@ -137,10 +137,10 @@ O arquivo {filename} não deve conter uma seção de mapa reverso.  | Apesar do 
 Espera-se que os Apps de Ponte de Desktop estejam completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 **Detalhes do teste**  
-O teste valida se as imagens usadas pelo app não são imagens padrão de exemplos do SDK ou do Visual Studio. 
+O teste valida se as imagens usadas pelo aplicativo não são imagens padrão de exemplos do SDK ou do Visual Studio. 
 
 **Ações corretivas**  
-Substitua as imagens padrão por algo mais distinto e que represente seu app.
+Substitua as imagens padrão por algo mais distinto e que representa seu aplicativo.
 
 ### <a name="3-package-compliance-tests"></a>3. Testes de conformidade do pacote
 #### <a name="31-app-manifest"></a>3.1 Manifesto do App
@@ -150,16 +150,16 @@ Testa o conteúdo do manifesto do app para garantir que seu conteúdo esteja cor
 Os aplicativos devem ter um manifesto corretamente formatado.
 
 **Detalhes do teste**  
-Analisa o manifesto do app para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). As seguintes verificações estão concluídas neste teste:
+Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, conforme descrito em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). As seguintes verificações estão concluídas neste teste:
 * **Extensões de arquivo e protocolos**  
 Seu app pode declarar os tipos de arquivo aos quais ele pode ser associado. Uma declaração de um grande número de tipos de arquivo incomuns prejudica a experiência de usuário. Este teste limita o número de extensões de arquivo aos quais um app pode se associar.
 * **Regra de dependência de estrutura**  
 Esse teste enfatiza o requisito de que os app declarem as devidas dependências na UWP. Se existir uma dependência inadequada, o teste falhará. Se houver incompatibilidade entre a versão do sistema operacional ao qual o aplicativo se destina e as dependências de estrutura que foram feitas, o teste falhará. O teste também falha quando o aplicativo se refere a versões de "visualização" das dlls de estrutura.
 * **Verificação de comunicação entre processos (IPC)**  
-Esse teste impõe o requisito de que os apps de Ponte de Desktop não se comunicam fora do contêiner do app para componentes de desktop. A comunicação entre processos é destinada apenas a apps de sideload. Os aplicativos que especificarem o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a `DesktopApplicationPath` falharão nesse teste.  
+Esse teste impõe o requisito de que os apps de Ponte de Desktop não se comunicam fora do contêiner do app para componentes de desktop. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificarem o [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) com nome igual a `DesktopApplicationPath` falharão nesse teste.  
 
 **Ação corretiva**  
-Analise o manifesto do app em relação aos requisitos descritos em [Requisitos do pacote do app](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
+Analise o manifesto do aplicativo em relação aos requisitos descritos em [Requisitos do pacote do aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 
 #### <a name="32-application-count"></a>3.2 Contagem de aplicativos
@@ -190,16 +190,16 @@ Examine as falhas e remova os serviços ou drivers em questão se eles forem des
 Os apps que instalam binários mistos podem falhar ou não funcionar corretamente dependendo da arquitetura do processador do usuário. 
 
 **Tela de fundo**  
-Este teste examina os binários em um pacote de aplicativo em busca de conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o app à falhas ou um aumento desnecessário no tamanho do pacote do app. 
+Este teste examina os binários em um pacote de aplicativo em busca de conflitos de arquitetura. Um pacote de aplicativo não deve incluir os binários que não podem ser utilizados na arquitetura do processador especificado no manifesto. Incluir binários sem suporte pode levar o aplicativo à falhas ou um aumento desnecessário no tamanho do pacote do aplicativo. 
 
 **Detalhes do teste**  
 Valida se o "número de bit" de cada arquivo no cabeçalho executável portável é apropriado em caso de referência cruzada com a declaração de arquitetura do processador do pacote do aplicativo 
 
 **Ações corretivas**  
-Siga estas diretrizes para garantir que seu pacote de apps contenha apenas arquivos com suporte da arquitetura especificada no manifesto do app: 
+Siga estas diretrizes para garantir que seu pacote de aplicativos contenha apenas arquivos suportados pela arquitetura especificada no manifesto do aplicativo: 
 * Se a Arquitetura do Processador Alvo para o app for do Tipo de Processador Neutro, o pacote de aplicativo não poderá conter um binário x86, x64 ou ARM ou arquivos do tipo imagem.
 * Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x86, o pacote de aplicativo deve conter apenas binário x86 ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou ARM ou tipos de imagem, ele irá falhar no teste.
-* Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote também poderá incluir arquivos x86, mas a experiência do app primário deve utilizar o binário x64. Se o pacote contiver binário ARM ou arquivos do tipo imagem, ou se contiver *apenas* binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
+* Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote pode também incluir arquivos x86, mas a experiência aplicativo primário deve utilizar o binário x64. Se o pacote contiver binário ARM ou arquivos do tipo imagem, ou se contiver *apenas* binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
 * Se a Arquitetura do processador alvo para o aplicativo for tipo de processador ARM, o pacote de aplicativo deve conter apenas binário ARM ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou x86 ou arquivos de tipos de imagem, ele falhará no teste. 
 
 ### <a name="5-supported-api-test"></a>5. Teste de API com suporte
@@ -211,7 +211,7 @@ Os apps de Ponte de Desktop podem aproveitar algumas APIs Win32 herdadas juntame
 **Detalhes do teste**  
 Esse teste verifica todos os componentes da UWP no app:
 * Verifica se cada binário gerenciado no pacote do aplicativo não tem uma dependência em uma API do Win32 que não tem suporte para o desenvolvimento de aplicativos UWP, verificando a tabela de endereços de importação do binário.
-* Verifica se cada binário gerenciado no pacote do app não depende de uma função fora do perfil aprovado. 
+* Verifica se cada binário gerenciado no pacote do aplicativo não depende de uma função fora do perfil aprovado. 
 
 **Ações corretivas**  
 Isso pode ser corrigido, garantindo que o app foi compilado como um build de versão e não como um build de depuração. 
@@ -236,7 +236,7 @@ Os apps devem ser executados como um usuário interativo. Veja [Visão geral sob
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Validação dos metadados do Windows Runtime
 **Tela de fundo**  
-Verifica se os componentes que vêm com o app são compatíveis com o sistema do tipo UWP.
+Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo UWP.
 
 **Detalhes do teste**  
 Esse teste gera alguns sinalizadores relacionados ao uso apropriado de tipos.
@@ -251,7 +251,7 @@ Garanta que todas as propriedades em uma classe UWP tenham um método `get` (os 
 * **Local do tipo**  
 Verifique se os metadados de todos os tipos UWP estão localizados no arquivo .winmd que tem o nome correspondente ao namespace mais longo no pacote do app.
 * **Nome do tipo-diferencia maiúsculas de minúsculas**  
-Verifique se todos os tipos UWP têm nomes exclusivos que não diferenciam maiúsculas de minúsculas no pacote do app. Verifique também se nenhum nome de tipo UWP é usado como nome de namespace no pacote do app.
+Verifique se todos os tipos UWP têm nomes exclusivos que não diferenciam maiúsculas de minúsculas no pacote do app. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
 * **Correção de nome de tipo**  
 Verifique se não há tipos UWP no namespace global nem no namespace de nível superior do Windows.
  
@@ -272,7 +272,7 @@ Essa verificação geralmente falha quando um app está usando uma versão "Rele
 Para corrigir isso, use a versão mais recente do [SDK do Bing Maps](https://www.bingmapsportal.com/) para aplicativos UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Assinatura de códigos privados
-Testes para a existência de binários de assinatura de código privado no pacote de app. 
+Testes para a existência de binários de assinatura de código privado no pacote de aplicativo. 
 
 **Tela de fundo**  
 Os arquivos de assinatura de código privado devem ser mantidos privados, já que eles podem ser utilizados para fins maliciosos no caso de serem comprometidos. 

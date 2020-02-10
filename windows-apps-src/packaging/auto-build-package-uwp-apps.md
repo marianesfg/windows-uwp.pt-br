@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: b7d38464a26af0df03c1aa381b16fbddf1de55cc
-ms.sourcegitcommit: e0644abf76a2535ea24758d1904ff00dfcd86a51
+ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008048"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089492"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
@@ -93,13 +93,13 @@ Esta tarefa compila qualquer solução que esteja na pasta de trabalho para bin�
 |--------------------|---------|---------------|
 | AppxPackageDir | $(Build.ArtifactStagingDirectory)\AppxPackages | Define a pasta para armazenar os artefatos gerados. |
 | AppxBundlePlatforms | $(Build.BuildPlatform) | Permite que você defina as plataformas a serem incluídas no pacote. |
-| AppxBundle | Sempre | Cria um. msixbundle/. appxbundle com os arquivos. msix/. Appx para a plataforma especificada. |
+| AppxBundle | {1&gt;Sempre&lt;1} | Cria um. msixbundle/. appxbundle com os arquivos. msix/. Appx para a plataforma especificada. |
 | UapAppxPackageBuildMode | StoreUpload | Gera o arquivo. msixupload/. appxupload e a pasta **_Test** para Sideload. |
 | UapAppxPackageBuildMode | CI | Gera somente o arquivo. msixupload/. appxupload. |
 | UapAppxPackageBuildMode | SideloadOnly | Gera a pasta **_Test** somente para Sideload. |
-| AppxPackageSigningEnabled | true | Habilita a assinatura de pacote. |
+| AppxPackageSigningEnabled | {1&gt;true&lt;1} | Habilita a assinatura de pacote. |
 | PackageCertificateThumbprint | Impressão digital do certificado | Esse valor **deve** corresponder à impressão digital no certificado de autenticação ou ser uma cadeia de caracteres vazia. |
-| PackageCertificateKeyFile | Path | O caminho para o certificado a ser usado. Isso é recuperado dos metadados de arquivo seguro. |
+| PackageCertificateKeyFile | Caminho | O caminho para o certificado a ser usado. Isso é recuperado dos metadados de arquivo seguro. |
 | PackageCertificatePassword | Senha | A senha da chave privada no certificado. É recomendável que você armazene sua senha no [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) e vincule a senha ao [grupo de variáveis](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Você pode passar a variável para esse argumento. |
 
 ### <a name="configure-the-build"></a>Configurar a compilação
@@ -115,8 +115,8 @@ Se você quiser compilar sua solução usando a linha de comando ou usando qualq
 
 ### <a name="configure-package-signing"></a>Configurar assinatura de pacote
 
-Para assinar o pacote MSIX (ou APPX), o pipeline precisa recuperar o certificado de autenticação. Para fazer isso, adicione uma tarefa DownloadSecureFile antes da tarefa VSBuild.
-Isso fornecerá acesso ao certificado de autenticação via ```signingCert```.
+Para assinar o pacote MSIX (ou. AppX), o pipeline precisa recuperar o certificado de autenticação. Para fazer isso, adicione uma tarefa DownloadSecureFile antes da tarefa VSBuild.
+Isso fornecerá acesso ao certificado de autenticação por meio de ```signingCert```.
 
 ```yml
 - task: DownloadSecureFile@1
@@ -148,7 +148,7 @@ Em seguida, atualize a tarefa VSBuild para fazer referência ao certificado de a
 
 ### <a name="review-parameters"></a>Examinar parâmetros
 
-Os parâmetros definidos com a sintaxe `$()` são variáveis definidas na definição da compilação e serão alterados em outros sistemas de compilação.
+Os parâmetros definidos com a sintaxe `$()` são variáveis definidas na definição de compilação e serão alterados em outros sistemas de compilação.
 
 ![variáveis padrão](images/building-screen5.png)
 
@@ -174,9 +174,9 @@ O pipeline UWP padrão não salva os artefatos gerados. Para adicionar os recurs
 
 Você pode ver os artefatos gerados na opção **artefatos** da página compilar resultados.
 
-![artifacts](images/building-screen6.png)
+![artefatos](images/building-screen6.png)
 
-Como definimos o argumento `UapAppxPackageBuildMode` como `StoreUpload`, a pasta artefatos inclui o pacote para envio para o repositório (. msixupload/. appxupload). Observe que você também pode enviar um pacote de aplicativo regular (. msix/. AppX) ou um pacote de aplicativo (. msixbundle/. appxbundle/) para o repositório. Para os fins deste artigo, vamos usar o arquivo .appxupload.
+Como definimos o argumento `UapAppxPackageBuildMode` como `StoreUpload`, a pasta artefatos inclui o pacote para envio para a loja (. msixupload/. appxupload). Observe que você também pode enviar um pacote de aplicativo regular (. msix/. AppX) ou um pacote de aplicativo (. msixbundle/. appxbundle/) para o repositório. Para os fins deste artigo, vamos usar o arquivo .appxupload.
 
 ## <a name="address-bundle-errors"></a>Erros de pacote de endereços
 
@@ -191,7 +191,7 @@ Esse erro é exibido porque, no nível da solução, não está claro qual aplic
 |Aplicativo|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
 
-Em seguida, remova o argumento `AppxBundle` do MSBuild da etapa de compilação.
+Em seguida, remova o `AppxBundle` argumento do MSBuild da etapa de compilação.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

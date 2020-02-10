@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: fb6d2bebda31ed768309b23d18b3b47e4487b058
-ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
+ms.openlocfilehash: c2e7524605847009dae415d93794658dd08a79a3
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929253"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089392"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -24,7 +24,7 @@ Este artigo descreve os recursos do Windows 10 e da UWP que você pode usar em s
 
 ## <a name="msix-packages"></a>Pacotes de MSIX
 
-MSIX é um formato de pacote do aplicativo do Windows moderno, que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, incluindo aplicativos UWP, WPF, Windows Forms e Win32. O MSIX reúne os melhores aspectos das tecnologias de instalação MSI, AppX, App-V e ClickOnce para oferecer uma experiência de empacotamento moderna e confiável.
+MSIX é um formato de pacote do aplicativo do Windows moderno, que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, incluindo aplicativos UWP, WPF, Windows Forms e Win32. O MSIX reúne os melhores aspectos das tecnologias de instalação MSI, .appx, App-V e ClickOnce para oferecer uma experiência de empacotamento moderna e confiável.
 
 Empacotar seus aplicativos da área de trabalho do Windows em pacotes MSIX fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento empresarial e muitos modelos de distribuição personalizados.
 
@@ -44,7 +44,7 @@ Para obter mais informações, consulte [Usar APIs UWP em aplicativos da área d
 
 ## <a name="host-uwp-controls-xaml-islands"></a>Controles de host UWP (ilhas de XAML)
 
-Começando com o Windows 10 versão 1903, você pode adicionar [controles XAML UWP](/windows/uwp/design/controls-and-patterns/controls-by-function) diretamente para qualquer elemento de interface do usuário em um aplicativo Win32, WPF, Windows Forms ou C++ que esteja associado com um identificador de janela (HWND). Isso significa que você pode integrar totalmente os recursos mais recentes da UWP, tais como o [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) e os controles que dão suporte ao [Sistema de Fluent Design](/windows/uwp/design/fluent-design-system/index), com janelas e outras superfícies de exibição em seus aplicativos da área de trabalho. Às vezes, esse cenário de desenvolvedor é chamado de *ilhas de XAML*.
+Começando com o Windows 10 versão 1903, você pode adicionar [controles XAML UWP](/windows/uwp/design/controls-and-patterns/controls-by-function) diretamente para qualquer elemento de interface do usuário em um aplicativo Win32, WPF, Windows Forms ou C++ que esteja associado com um identificador de janela (HWND). Isso significa que você pode integrar totalmente os recursos mais recentes da UWP, tais como o [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) e os controles que dão suporte ao [Sistema de Design Fluente](/windows/uwp/design/fluent-design-system/index), com janelas e outras superfícies de exibição em seus aplicativos da área de trabalho. Às vezes, esse cenário de desenvolvedor é chamado de *ilhas de XAML*.
 
 Para obter mais informações, consulte [Controles UWP em aplicativos da área de trabalho](xaml-islands.md)
 
@@ -60,14 +60,14 @@ Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplic
 
 Há várias maneiras de conceder identidade a um aplicativo da área de trabalho:
 
-* Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote do aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
+* Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote de aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
 * Se não for possível adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, do Build 10.0.19000.0 do Windows 10 Insider Preview em diante você poderá conceder a identidade do pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
 
 <a id="desktop-uwp-controls"/>
 
 ## <a name="uwp-controls-optimized-for-desktop-apps"></a>Controles UWP otimizados para aplicativos de área de trabalho
 
-Esteja você criando um aplicativo UWP destinado exclusivamente à família de dispositivos de desktop ou desejando usar controles da UWP em um aplicativo da área de trabalho Win32 WPF, Windows Forms, ou C++, os seguintes controles da UWP novos e atualizados são projetados para oferecer experiências de otimização de área de trabalho com o [Sistema de Fluent Design](/windows/uwp/design/fluent-design-system/index). Esses controles foram introduzidos no Windows 10, versão 1809 (atualização de outubro de 2018 ou versão 10.0.17763).
+Esteja você criando um aplicativo UWP destinado exclusivamente à família de dispositivos de desktop ou desejando usar controles da UWP em um aplicativo da área de trabalho Win32 WPF, Windows Forms, ou C++, os seguintes controles da UWP novos e atualizados são projetados para oferecer experiências de otimização de área de trabalho com o [Sistema de Design Fluente](/windows/uwp/design/fluent-design-system/index). Esses controles foram introduzidos no Windows 10, versão 1809 (atualização de outubro de 2018 ou versão 10.0.17763).
 
 | Control |  Descrição |
 |------ |--------------|
@@ -91,7 +91,7 @@ Veja a [Biblioteca de Interface do Usuário do Windows](https://docs.microsoft.c
 ### <a name="microsoft-graph"></a>Microsoft Graph
 
 O Microsoft Graph é uma coleção de APIs que você pode usar para criar aplicativos para empresas e consumidores que interagem com os dados de milhões de usuários. O Microsoft Graph expõe APIs REST e bibliotecas de cliente para acessar dados no seguinte:
-* Azure Active Directory
+* Active Directory do Azure
 * Serviços do Office 365: SharePoint, OneDrive, Outlook/Exchange, Microsoft Teams, OneNote, Planner e Excel
 * Serviços de segurança e mobilidade corporativa: Identity Manager, Intune, Advanced Threat Analytics e Proteção Avançada Contra Ameaças.
 * Serviços do Windows 10: atividades e dispositivos

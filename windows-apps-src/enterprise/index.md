@@ -6,12 +6,12 @@ ms.date: 01/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a95529f40ef5bb1cbf112c91c385e6621620a01
-ms.sourcegitcommit: 7a8aea567b26283c71420e0d305d78f675e1fba7
+ms.openlocfilehash: 7e17b155966c609537c40050edc4c11ee6935b0d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125686"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089462"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -88,7 +88,7 @@ Veja [Usar um banco de dados do SQL Server em um aplicativo UWP](https://docs.mi
 
 ### <a name="msix-deployment"></a>Implantação de MSIX
 
-MSIX é um formato de pacote de aplicativos do Windows que combina os melhores recursos de MSI, AppX, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável para todos os aplicativos Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes do aplicativo existentes e de arquivos de instalação, além de habilitar recursos de empacotamento e de implantação modernos para aplicativos Win32, WPF e Windows Forms. 
+O MSIX é um formato de pacote do aplicativo do Windows que combina os melhores recursos de MSI, .appx, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável para todos os aplicativos Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes do aplicativo existentes e de arquivos de instalação, além de habilitar recursos de empacotamento e de implantação modernos para aplicativos Win32, WPF e Windows Forms. 
 
 ![Ícone MSIX](images/MSIX-App-Package.ico)
 
@@ -155,7 +155,7 @@ Você tem opções para distribuir aplicativos aos usuários da sua organizaçã
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Documentação de MSIX](https://docs.microsoft.com/windows/msix/) | MSIX é um formato de pacote de aplicativos do Windows que combina os melhores recursos de MSI, AppX, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável. |
+| [Documentação de MSIX](https://docs.microsoft.com/windows/msix/) | O MSIX é um formato de pacote do aplicativo do Windows que combina os melhores recursos de MSI, .appx, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável. |
 | [Distribua aplicativos LOB às empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | Conheça as opções para distribuir aplicativos de linha de negócios sem tornar os aplicativos amplamente disponíveis ao público, incluindo a implantação baseada no Instalador de Aplicativo, o Microsoft Endpoint Configuration Manager e o Microsoft Intune e a publicação no Microsoft Store para Empresas. |
 | [Sideload de apps](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
 | [Publicar aplicativos para a Microsoft Store](https://developer.microsoft.com/store/publish-apps) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |

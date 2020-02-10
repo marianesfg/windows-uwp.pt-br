@@ -5,15 +5,15 @@ ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
 author: mcleanbyron
-keywords: Windows 10, UWP, Windows Forms, WPF, Ilhas XAML
+keywords: windows 10, uwp, windows forms, wpf, ilhas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: de84cbb2e1927d9426eefaaf7b0d70d604427da1
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683809"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089302"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: modernizar um aplicativo do WPF 
 
@@ -51,7 +51,7 @@ No tutorial, você aprimorará as despesas da contoso com novos recursos do Wind
 * Integre os cartões adaptáveis e as notificações do Windows 10 ao aplicativo.
 * Empacote o aplicativo com MSIX e configure um pipeline de CI/CD no Azure DevOps para que você possa fornecer automaticamente novas versões do aplicativo para testadores e usuários assim que ele estiver disponível.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para executar este tutorial, o computador de desenvolvimento deve ter estes pré-requisitos instalados:
 
@@ -61,7 +61,7 @@ Para executar este tutorial, o computador de desenvolvimento deve ter estes pré
 
 Certifique-se de instalar as seguintes cargas de trabalho e recursos opcionais com o Visual Studio 2019:
 
-* Desenvolvimento de área de trabalho do .NET
+* Desenvolvimento para área de trabalho .NET
 * Desenvolvimento para a Plataforma Universal do Windows
 * SDK do Windows 10 (10.0.18362.0 ou posterior)
 
@@ -98,9 +98,9 @@ No futuro, a maioria dos novos recursos do Windows 10 são expostos por meio de 
 
 ### <a name="msix-packaging"></a>Empacotamento de MSIX
 
-[MSIX](/windows/msix/) (anteriormente conhecido como AppX) é o modelo de empacotamento moderno para aplicativos do Windows. O MSIX dá suporte a aplicativos UWP, bem como a criação de aplicativos de desktop usando tecnologias como Win32, WPF, Windows Forms, Java, aplicativos de área de trabalho e muito mais. Ao empacotar um aplicativo de área de trabalho em um pacote MSIX, você pode publicar seu aplicativo no Microsoft Store. Seu aplicativo de desktop também obtém a identidade do pacote quando ele é instalado, o que permite que seu aplicativo de Desktop use um conjunto mais amplo de APIs do WinRT.
+[MSIX](/windows/msix/) é o modelo de empacotamento moderno para aplicativos do Windows. O MSIX dá suporte a aplicativos UWP, bem como a criação de aplicativos de desktop usando tecnologias como Win32, WPF, Windows Forms, Java, aplicativos de área de trabalho e muito mais. Ao empacotar um aplicativo de área de trabalho em um pacote MSIX, você pode publicar seu aplicativo no Microsoft Store. Seu aplicativo de desktop também obtém a identidade do pacote quando ele é instalado, o que permite que seu aplicativo de Desktop use um conjunto mais amplo de APIs do WinRT.
 
-Para saber mais, confira estes tópicos:
+Para obter mais informações, consulte estes artigos:
 
 * [Aplicativos de desktop de pacote](/windows/uwp/porting/desktop-to-uwp-root)
 * [Nos bastidores do aplicativo de área de trabalho empacotado](/windows/uwp/porting/desktop-to-uwp-behind-the-scenes)

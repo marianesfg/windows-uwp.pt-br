@@ -6,19 +6,19 @@ ms.date: 07/22/2019
 ms.topic: article
 keywords: windows 10, uwp, empacotamento
 ms.localizationpriority: medium
-ms.openlocfilehash: d067511e4ceb5aaf072aabf8f74ccf186a7787dc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: bb772007cd5c4391634f9df6ba0b6d2037a7b5de
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682668"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089472"
 ---
 # <a name="packaging-apps"></a>Empacotando apps
 
-Esta seção contém artigos (ou links para eles) sobre empacotamento de aplicativos UWP (Plataforma Universal do Windows) em pacotes de aplicativos MSIX e AppX para implantação e instalação. Alguns desses links acessam artigos relevantes na [documentação do MSIX](https://docs.microsoft.com/windows/msix/).
+Esta seção contém artigos (ou links para eles) sobre o empacotamento de aplicativos UWP (Plataforma Universal do Windows) em pacotes de aplicativos MSIX e .appx para implantação e instalação. Alguns desses links acessam artigos relevantes na [documentação do MSIX](https://docs.microsoft.com/windows/msix/).
 
 > [!NOTE]
-> O formato original de empacotamento de aplicativos UWP no Windows 10 foi nomeado AppX. A partir da versão 1809 do Windows 10, esse formato de empacotamento foi renomeado para MSIX e estendido para dar suporte a todos os tipos de aplicativos da área de trabalho do Windows, incluindo aplicativos .NET e C++/Win32. O suporte para MSIX também está sendo estendido para as versões anteriores do Windows. Para obter mais informações, confira a [documentação do MSIX](https://docs.microsoft.com/windows/msix/).
+> O formato original de empacotamento de aplicativos UWP no Windows 10 era .appx. Da versão 1809 do Windows 10 em diante, esse formato de empacotamento foi renomeado para .msix e estendido para dar suporte a todos os tipos de aplicativos da área de trabalho do Windows, incluindo aplicativos .NET e C++/Win32. O suporte para MSIX também está sendo estendido para as versões anteriores do Windows. Para obter mais informações, confira a [documentação do MSIX](https://docs.microsoft.com/windows/msix/).
 
 | Tópico | Descrição |
 |-------|-------------|

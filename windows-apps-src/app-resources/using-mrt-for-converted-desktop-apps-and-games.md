@@ -1,24 +1,24 @@
 ---
 title: Usando o MRT para jogos e aplicativos de área de trabalho convertidos
-description: Empacotando o aplicativo ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
+description: Ao empacotar seu aplicativo .NET ou Win32 ou jogo como um pacote. msix ou. Appx, você pode aproveitar o sistema de gerenciamento de recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 0425e7bb00e4a5be848443aa278ebaad1706cb30
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c753e9437c76c89ac6af8cedcb1f954d1ce56fe3
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683909"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089443"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Use o Sistema de Gerenciamento de Recursos do Windows 10 em um app ou jogo herdado
 
-Os apps e jogos .NET e Win32 geralmente são localizados em diferentes idiomas para expandir totalmente o mercado ao qual se destinam. Para obter mais informações sobre a proposta de valor de localização do aplicativo, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md). Ao empacotar seu aplicativo .NET ou Win32 ou jogo como um pacote MSIX ou AppX, você pode aproveitar o sistema de gerenciamento de recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
+Os apps e jogos .NET e Win32 geralmente são localizados em diferentes idiomas para expandir totalmente o mercado ao qual se destinam. Para obter mais informações sobre a proposta de valor de localização do aplicativo, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md). Ao empacotar seu aplicativo .NET ou Win32 ou jogo como um pacote. msix ou. Appx, você pode aproveitar o sistema de gerenciamento de recursos para carregar recursos de aplicativo personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
 
 Há muitas maneiras de localizar um aplicativo Win32 tradicionais, mas o Windows 8 introduziu um [novo sistema de gerenciamento de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) que funciona entre linguagens de programação, entre tipos de aplicativos e fornece uma funcionalidade que transcende a simples localização. Esse sistema será chamado de "MRT" neste tópico. Antigamente, a sigla significava "Modern Resource Technology", mas o termo "Modern" deixou de ser utilizado. O gerenciador de recursos também pode ser conhecido como MRM (Modern Resource Manager) ou PRI ( Índice de Recurso do Pacote).
 
-Combinado com a implantação baseada em MSIX ou em AppX (por exemplo, da Microsoft Store), o MRT pode entregar automaticamente os recursos mais aplicáveis para um determinado usuário/dispositivo, o que minimiza o download e o tamanho da instalação do seu aplicativo. Essa redução de tamanho pode ser significativa para aplicativos com uma grande quantidade de conteúdo localizado, talvez na ordem de vários *gigabytes* para jogos AAA. Os benefícios adicionais do MRT incluem listagens localizadas no Shell do Windows e na Microsoft Store, lógica de fallback automática quando o idioma preferencial de um usuário não corresponde aos recursos disponíveis.
+Combinado com a implantação baseada em MSIX ou. Appx (por exemplo, da Microsoft Store), o MRT pode fornecer automaticamente os recursos mais aplicáveis a um determinado usuário/dispositivo, o que minimiza o download e o tamanho da instalação do seu aplicativo. Essa redução de tamanho pode ser significativa para aplicativos com uma grande quantidade de conteúdo localizado, talvez na ordem de vários *gigabytes* para jogos AAA. Os benefícios adicionais do MRT incluem listagens localizadas no Shell do Windows e na Microsoft Store, lógica de fallback automática quando o idioma preferencial de um usuário não corresponde aos recursos disponíveis.
 
 Este documento descreve a arquitetura de alto nível do MRT e fornece um guia de portabilidade para ajudar a migrar aplicativos Win32 herdados para MRT com o mínimo de alterações no código. Depois que a migração para o MRT é feita, benefícios adicionais (por exemplo, a capacidade de segmentar recursos por fator de escala ou tema do sistema) são disponibilizados para o desenvolvedor. Observe que a localização baseada em MRT funciona para aplicativos UWP e Win32 processados pela Ponte de Desktop (também conhecida como "Centennial").
 
@@ -33,17 +33,17 @@ Em muitas situações, você pode continuar usando o código-fonte e os formatos
 <tr>
 <td>Localizar manifesto do pacote</td>
 <td>Descobrir o mínimo de trabalho necessário para que o conteúdo localizado apareça no Shell do Windows e na Microsoft Store</td>
-<td>Pequeno</td>
+<td>Pequena</td>
 </tr>
 <tr>
 <td>Usar o MRT para identificar e localizar recursos</td>
 <td>Pré-requisito para minimizar os tamanhos dos downloads e das instalações; fallback de idioma automático</td>
-<td>Médio</td>
+<td>Média</td>
 </tr>
 <tr>
 <td>Criar pacotes de recursos</td>
 <td>Etapa final para minimizar os tamanhos dos downloads e das instalações</td>
-<td>Pequeno</td>
+<td>Pequena</td>
 </tr>
 <tr>
 <td>Migrar para formatos de recurso MRT e APIs</td>
@@ -58,7 +58,7 @@ A maioria dos aplicativos não triviais contém elementos de interface do usuár
 
 Desse modo, o objetivo principal de qualquer tecnologia de gerenciamento de recursos é converter, em tempo de execução, uma solicitação de *nome de recurso* lógico ou simbólico (como `SAVE_BUTTON_LABEL`) de um conjunto de *candidatos* possíveis (por exemplo, "Salvar", "Speichern" ou "저장") no melhor *valor* real possível (por exemplo, "Salvar"). O MRT fornece essa função e permite que os aplicativos identifiquem os candidatos a recursos usando uma ampla variedade de atributos, chamados *qualificadores*, como o idioma do usuário, o fator de escala da exibição, o tema selecionado pelo usuário e outros fatores ambientais. O MRT oferece até mesmo suporte a qualificadores personalizados em aplicativos que precisam dele (por exemplo, um aplicativo pode fornecer ativos de gráfico diferentes para os usuários que fizeram logon usando uma conta x usuários convidados, sem adicionar explicitamente essa verificação em cada parte do aplicativo). O MRT funciona com recursos de cadeia de caracteres e recursos baseados em arquivo; estes últimos são implementados como referências aos dados externos (os arquivos propriamente ditos).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este é um exemplo simples de um aplicativo que tem rótulos de texto em dois botões (`openButton` e `saveButton`) e um arquivo PNG usado para um logotipo (`logoImage`). Os rótulos de texto são localizados em inglês e alemão, e o logotipo é otimizado para desktops normais (fator de escala 100%) e telefones de alta resolução (fator de escala 300%). Observe que este diagrama apresenta uma visão geral conceitual do modelo; ele não é mapeado exatamente para a implementação.
 
@@ -207,7 +207,7 @@ Se você quiser usar o designer no Visual Studio:
 
 Depois de ter os valores definidos no arquivo de `.resw`, a próxima etapa é atualizar o manifesto para referenciar as cadeias de caracteres de recurso. Mais uma vez, você pode editar um arquivo XML diretamente ou contar com o Designer de Manifesto do Visual Studio.
 
-Se você estiver editando o XML diretamente, abra o arquivo `AppxManifest.xml` e faça as seguintes alterações nos <span style="background-color: lightgreen">valores realçados</span> - use *exatamente* este texto, e não o texto específico do seu aplicativo. Não há nenhuma exigência para o uso desses nomes de recurso exatos; você pode escolher o nome, desde que ele corresponda exatamente ao que estiver no arquivo `.resw`. Esses nomes devem corresponder aos `Names` criados no arquivo `.resw`, prefixados com o esquema `ms-resource:` e o namespace `Resources/`. 
+Se você estiver editando o XML diretamente, abra o arquivo `AppxManifest.xml` e faça as seguintes alterações nos <span style="background-color: lightgreen">valores realçados</span> - use *exatamente* este texto, e não o texto específico do seu aplicativo. Não há nenhuma exigência para o uso desses nomes de recurso exatos; você pode escolher o nome, desde que ele corresponda exatamente ao que estiver no arquivo &mdash;. Esses nomes devem corresponder aos `Names` criados no arquivo `.resw`, prefixados com o esquema `ms-resource:` e o namespace `Resources/`. 
 
 > [!NOTE]
 > Muitos elementos do manifesto foram omitidos deste trecho de código-não exclua nada!
@@ -293,7 +293,7 @@ Você pode abrir o arquivo de mapeamento `..\resources.map.txt` para verificar s
 
 Agora que o arquivo PRI já foi criado, você pode criar e assinar o pacote:
 
-1. Para criar o pacote do aplicativo, execute o comando a seguir, substituindo `contoso_demo.appx` pelo nome do arquivo MSIX/AppX que você deseja criar e escolhendo um diretório diferente para o arquivo (Este exemplo usa o diretório pai; ele pode estar em qualquer lugar, mas **não** deve ser o diretório do projeto).
+1. Para criar o pacote do aplicativo, execute o comando a seguir, substituindo `contoso_demo.appx` pelo nome do arquivo. msix/. Appx que você deseja criar e escolhendo um diretório diferente para o arquivo (Este exemplo usa o diretório pai; ele pode estar em qualquer lugar, mas **não** deve ser o diretório do projeto).
 
     ```CMD
     makeappx pack /m AppXManifest.xml /f ..\resources.map.txt /p ..\contoso_demo.appx /o
@@ -317,7 +317,7 @@ Agora que o arquivo PRI já foi criado, você pode criar e assinar o pacote:
     ```
 
     Você pode digitar `signtool sign /?` para ver o que cada parâmetro faz, mas, em resumo:
-      * `/fd` define o algoritmo de síntese de arquivo (SHA256 é o padrão para AppX)
+      * `/fd` define o algoritmo de síntese de arquivo (SHA256 é o padrão para. AppX)
       * `/a` selecionará automaticamente o melhor certificado
       * `/f` especifica o arquivo de entrada que contém o certificado de autenticação
 
@@ -349,7 +349,7 @@ Para usar o Windows Explorer:
 3. Escolha `Local Machine` e clique em `Next`
 4. Aceite a solicitação de elevação de administrador do controle de conta de usuário, se ela aparecer, e clique em `Next`
 5. Digite a senha da chave privada, se houver uma, e clique em `Next`
-6. Selecione `Place all certificates in the following store`
+6. Selecionar `Place all certificates in the following store`
 7. Clique em `Browse` e escolha a pasta `Trusted People` (e **não** "Trusted Publishers")
 8. Clique em `Next` e `Finish`
 
@@ -578,7 +578,7 @@ A partir daqui, o aplicativo de exemplo pode continuar usando `CreateFile` para 
 
 #### <a name="loading-net-resources"></a>Carregando recursos .NET
 
-Como o .NET tem um mecanismo interno para localizar e carregar recursos (conhecidos como "Assemblies satélites"), não há nenhum código explícito a ser substituído no exemplo resumido anterior; no .NET, basta que as DLLs de recurso estejam nos diretórios apropriados que elas serão localizadas automaticamente para você. Quando um aplicativo é empacotado como um MSIX ou AppX usando pacotes de recursos, a estrutura de diretório é um pouco diferente, em vez de ter os diretórios de recursos em subdiretórios do diretório principal do aplicativo, eles são os pares dele (ou não estão presentes se o usuário Não tem a linguagem listada em suas preferências). 
+Como o .NET tem um mecanismo interno para localizar e carregar recursos (conhecidos como "Assemblies satélites"), não há nenhum código explícito a ser substituído no exemplo resumido anterior; no .NET, basta que as DLLs de recurso estejam nos diretórios apropriados que elas serão localizadas automaticamente para você. Quando um aplicativo é empacotado como um MSIX ou. Appx usando pacotes de recursos, a estrutura de diretório é um pouco diferente, em vez de ter os diretórios de recursos em subdiretórios do diretório principal do aplicativo, eles são os pares dele (ou não estão presentes se o usuário Não tem a linguagem listada em suas preferências). 
 
 Por exemplo, imagine um aplicativo .NET com o layout a seguir, em que todos os arquivos estão abaixo da pasta `MainApp`:
 
@@ -595,7 +595,7 @@ Por exemplo, imagine um aplicativo .NET com o layout a seguir, em que todos os a
 </pre>
 </blockquote>
 
-Após a conversão em AppX, o layout terá uma aparência semelhante a esta, supondo que `en-US` foi o idioma padrão e os idiomas alemão e francês estão relacionados na lista de idiomas do usuário:
+Após a conversão para. Appx, o layout será semelhante a este, supondo que `en-US` foi o idioma padrão e que o usuário tenha o alemão e o francês listados em sua lista de idiomas:
 
 <blockquote>
 <pre>
@@ -630,7 +630,7 @@ static class PriResourceResolver
 
     var resource = ResourceManager.Current.MainResourceMap.GetSubtree("Files")[fileName];
 
-    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with AppX, but
+    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with .appx, but
     // in general is discouraged. The full sample provides a safer wrapper of this method
     return Assembly.UnsafeLoadFrom(resource.Resolve(resourceContext).ValueAsString);
   }
