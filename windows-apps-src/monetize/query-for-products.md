@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, exibir produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f6976f8161089be1f907d85e7373fc0f3474c62
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: a5a986896ca3b2585590e11d17219106a9043204
+ms.sourcegitcommit: 2747d9266e1678fca96d3822ce47499ca91a2c70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2020
-ms.locfileid: "77112236"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77252280"
 ---
 # <a name="query-for-products"></a>Consulta por produtos
 
@@ -43,7 +43,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do AD do Azure no formulário **portador** &lt;*token*&gt;.                           |
+| Authorization  | string | Obrigatório. O token de acesso do AD do Azure no formulário **portador** &lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
@@ -59,7 +59,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 | modifiedAfter     | datetime     | Se especificado, o serviço retorna apenas produtos que foram modificados após essa data.        | Não       |
 | parentProductId   | string       | Se especificado, o serviço retorna apenas complementos que correspondem ao aplicativo especificado.      | Não       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Se especificado, o serviço retornará apenas os produtos aplicáveis aos pares produto/SKU fornecidos. Para obter mais informações, consulte a tabela abaixo.      | Não       |
-| productTypes      | listar&lt;cadeia de caracteres&gt;       | Especifica os tipos de produtos a serem retornados nos resultados da consulta. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.     | Sim       |
+| productTypes      | listar&lt;cadeia de caracteres&gt;       | Especifica os tipos de produtos a serem retornados nos resultados da consulta. Os tipos de produtos com suporte são **Application**, **durável**, **Game**e **UnmanagedConsumable**.     | Sim       |
 | validityType      | string       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
 
