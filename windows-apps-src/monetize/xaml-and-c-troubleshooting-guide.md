@@ -2,28 +2,31 @@
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: Conheça as soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos XAML.
 title: Guia de solução de problemas de XAML e C#
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 94af97e1e678c6ee92aaa731057c5f67185e25c5
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 9783036d00fc56b904e6d362f55ddaaf8375a872
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334654"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463738"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guia de solução de problemas de XAML e C#
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos XAML.
 
 * [XAML](#xaml)
-  * [AdControl não aparecem](#xaml-notappearing)
+  * [AdControl não aparecendo](#xaml-notappearing)
   * [Caixa preta pisca e desaparece](#xaml-blackboxblinksdisappears)
   * [Anúncios não atualizando](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
-  * [AdControl não aparecem](#csharp-adcontrolnotappearing)
+  * [AdControl não aparecendo](#csharp-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#csharp-blackboxblinksdisappears)
   * [Anúncios não atualizando](#csharp-adsnotrefreshing)
 
@@ -37,7 +40,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 1.  Certifique-se de que a funcionalidade **Internet (Client)** esteja selecionada em Package.appxmanifest.
 
-2.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+2.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder à ID do aplicativo e à ID da unidade do AD que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -89,7 +92,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 2.  Manipule o evento **ErrorOccurred** e use a mensagem que é passada ao manipulador de eventos para determinar se ocorreu um erro e qual tipo de erro foi gerado. Consulte [Tratamento de erros no passo a passo do XAML/C#](error-handling-in-xamlc-walkthrough.md) para obter mais informações.
 
-    Este exemplo demonstra um manipulador de eventos **ErrorOccurred**. O primeiro trecho é a marcação da interface do usuário XAML.
+    Este exemplo demonstra um manipulador de eventos **ErrorOccurred**. O primeiro snippet é a marcação da interface do usuário XAML.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -133,7 +136,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 2.  Verifique as chamadas para o método **Refresh**. Ao usar a atualização automática, não é possível usar **Refresh** para recuperar outro anúncio. Ao usar a atualização manual, **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
 
-    Os trechos de código a seguir mostram um exemplo de como usar o método **Refresh**. O primeiro trecho é a marcação da interface do usuário XAML.
+    Os trechos de código a seguir mostram um exemplo de como usar o método **Refresh**. O primeiro snippet é a marcação da interface do usuário XAML.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -144,7 +147,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
                   IsAutoRefreshEnabled="False" />
     ```
 
-    Esse trecho de código mostra um exemplo do código C# por trás da marcação da interface do usuário.
+    Esse snippet mostra um exemplo do código C# por trás da marcação da interface do usuário.
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -160,7 +163,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 <span id="csharp"/>
 
-## <a name="c"></a>C\# #
+## <a name="c"></a>\# de C #
 
 <span id="csharp-adcontrolnotappearing"/>
 
@@ -173,7 +176,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     > [!div class="tabbedCodeSnippets"]
     [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder à ID do aplicativo e à ID da unidade do AD que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs

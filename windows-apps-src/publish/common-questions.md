@@ -2,18 +2,21 @@
 Description: Perguntas comuns sobre campanhas publicitárias
 title: Perguntas comuns sobre campanhas publicitárias
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
-ms.date: 10/31/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c44f93676fd0324ef82ad7b33832bb6653409cda
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: be6759ea808e230d3cf504caf03763123babd870
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685162"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463728"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Perguntas comuns sobre campanhas publicitárias
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 ### <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>Quanto custa para executar um anúncio do meu aplicativo?
 
@@ -21,7 +24,7 @@ Realmente depende de você, mas lembre-se: quanto mais você gastar, mais pessoa
 
 ### <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a>Como posso aumentar o valor do orçamento mensal máximo permitido para minha campanha publicitária?
 
-Se você pretende gastar mais de US$10.000 por mês em suas campanhas publicitárias, entre em contato com [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Vamos atualizar sua conta para premium, o que permite gastar até US$50.000 por campanha. Uma conta premium também oferece funcionalidades adicionais, como a capacidade de definir as datas de início e término da campanha e especificar uma URL de destino para a campanha.
+Se você pretende gastar mais de US$10.000 por mês em suas campanhas publicitárias, entre em contato com [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Vamos atualizar sua conta para premium, o que permite gastar até US$ 50.000 por campanha. Uma conta premium também oferece funcionalidades adicionais, como a capacidade de definir as datas de início e término da campanha e especificar uma URL de destino para a campanha.
 
 ### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>Posso executar anúncios de um dos meus apps em meus outros apps?
 

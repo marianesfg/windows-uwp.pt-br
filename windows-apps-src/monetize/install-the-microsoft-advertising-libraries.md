@@ -2,18 +2,21 @@
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Saiba mais sobre como instalar as bibliotecas do SDK do Microsoft Advertising.
 title: Instalar o SDK do Microsoft Advertising
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, instalação, SDK, biblioteca do publicidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 37e57d49ba40814891154aef2ec0de6b3b7e560c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f3b63ac40041b93372544d586d3feb23940fccc5
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260266"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463382"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar o SDK do Microsoft Advertising
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Para exibir anúncio em aplicativos UWP para Windows 10, instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores.
 
@@ -80,7 +83,7 @@ Para instalar o SDK do Microsoft Advertising em um projeto UWP específico por m
 
 Depois de instalar o SDK do Microsoft Advertising, siga estas instruções para fazer referência o SDK em seu projeto para que você possa usar as APIs de publicidade.
 
-1. Abra seu projeto no Visual Studio.
+1. {1&gt;Abra seu projeto no Visual Studio.&lt;1}
     > [!NOTE]
     > Se o seu projeto tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**). Se o seu projeto tem direcionamento **Any CPU**, você não conseguirá adicionar uma referência ao SDK do Microsoft Advertising nas etapas a seguir. Para obter mais informações, consulte [Erros de referência causados pelo direcionamento Any CPU em seu projeto](known-issues-for-the-advertising-libraries.md#reference_errors).
 

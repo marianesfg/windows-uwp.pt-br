@@ -2,26 +2,28 @@
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP).
 title: AdControl em XAML e .NET
-ms.date: 03/22/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, controle de anúncios, XAML, .net, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: beafc002888605ddebac99a67ae1cdac9715de14
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 55a67d3f0c74492fdf00110c28cb15eb3167a81a
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259306"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463478"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl em XAML e .NET
 
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Este guia passo a passo mostra como usar a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir anúncios em faixa em um aplicativo JavaScript/XAML da Plataforma Universal do Windows (UWP) para Windows 10 implementado usando C#.
 
 > [!NOTE]
 > O SDK do Microsoft Advertising também oferece suporte a aplicativos XAML implementados em C++. Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * Instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) com o Visual Studio 2015 ou uma versão posterior do Visual Studio. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
@@ -124,7 +126,7 @@ Este guia passo a passo mostra como usar a classe [AdControl](https://docs.micro
 
 1. Verifique se o uso de anúncios em faixa no aplicativo segue as [diretrizes para anúncios em faixa](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads).
 
-2.  No Partner Center, vá para a página [anúncios no aplicativo](../publish/in-app-ads.md) e [crie uma unidade do AD](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Faixa**. Anote a ID da unidade publicitária e a ID do aplicativo.
+2.  No Partner Center, vá para a página [anúncios no aplicativo](../publish/in-app-ads.md) e [crie uma unidade do AD](set-up-ad-units-in-your-app.md#live-ad-units). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote a ID da unidade de anúncio e a ID do aplicativo.
     > [!NOTE]
     > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de AD UWP ao vivo no Partner Center, o valor da ID do aplicativo para a unidade do AD sempre corresponde à ID da loja do seu aplicativo (um valor de ID de repositório de exemplo é semelhante a 9NBLGGH4R315).
 

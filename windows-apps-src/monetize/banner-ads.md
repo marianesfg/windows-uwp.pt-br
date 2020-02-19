@@ -1,18 +1,21 @@
 ---
 description: Saiba como adicionar anúncios em faixa no aplicativo UWP.
 title: Anúncios em faixa
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
-ms.openlocfilehash: cd3e57ebf5a7f7770adf2a8defcd92e66ad1e3a0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d3e4715dee6c1e182ed195288cba7b96612b743b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260333"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463518"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Os artigos nesta seção mostram como usar a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) no SDK do Microsoft Advertising para adicionar anúncios em faixa ao seu aplicativo UWP.
 

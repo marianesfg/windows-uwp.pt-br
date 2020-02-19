@@ -2,18 +2,21 @@
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: Saiba mais sobre problemas conhecidos para a versão atual das bibliotecas do SDK do Microsoft Advertising.
 title: Problemas conhecidos e solução de problemas para anúncios em aplicativos
-ms.date: 04/16/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 6701ff346f41352a108922f82da82fbf52fd7402
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 34c07a46d31ddf6c8f5b56ffd19059b4d225a72c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685096"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463958"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Esta tópico lista os problemas conhecidos com a versão atual do SDK do Microsoft Advertising. Para obter instruções adicionais de solução de problemas, consulte os seguintes tópicos.
 
@@ -89,7 +92,7 @@ Os aplicativos JavaScript/HTML não devem colocar elementos no intervalo de 10 M
 
 Definir propriedades relacionadas a borda herdada do **AdControl** da classe pai fará com que o posicionamento de anúncios fique incorreto.
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter mais informações sobre os problemas conhecidos mais recentes e publicar perguntas relacionadas às bibliotecas do SDK do Microsoft Advertising, visite o [fórum](https://go.microsoft.com/fwlink/?LinkID=401264).
 

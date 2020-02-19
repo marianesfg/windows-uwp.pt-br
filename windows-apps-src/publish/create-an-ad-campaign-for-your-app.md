@@ -2,18 +2,21 @@
 Description: Você pode criar campanhas do AD no Partner Center para ajudar a promover seu aplicativo e aumentar a base de usuários do seu aplicativo.
 title: Criar uma campanha publicitária para seu app
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.date: 10/31/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: ec5d23a502c5517193956da6c57efe1eb668e0f0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e804260a312c963c380f4d09b00cc276b385c2ff
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260016"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463718"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Você pode criar campanhas do AD no [Partner Center](https://partner.microsoft.com/dashboard) para ajudar a promover seu aplicativo e aumentar sua base de usuários. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações de seu aplicativo no Partner Center, mas você pode, opcionalmente, definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
 
@@ -22,7 +25,7 @@ Você pode criar campanhas publicitárias somente para aplicativos que passaram 
 > [!NOTE]
 > Esta seção da documentação descreve como criar uma campanha do AD no Partner Center. Outras opções de campanha para criar e gerenciar campanhas do AD programaticamente incluem [Vungle](https://vungle.com/) e a [API de promoções de Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md).
 
-## <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instructions
 
 Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
@@ -55,7 +58,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
     * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
 
-    * **Dispositivos**: escolha os tipos de dispositivo em que você deseja que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu app são mostrados.
+    * **Dispositivos**: escolha os tipos de dispositivo em que você deseja que esses anúncios apareçam. Somente os tipos de dispositivo suportados por seu aplicativo são mostrados.
 
     * **Surface**: selecione **Universal** para permitir que o anúncio aparece nos aplicativos, além de MSN.com, Outlook.com, Skype e outras propriedades premium da Microsoft. Escolha **Aplicativo** se você deseja que o anúncio apareça somente em aplicativos.
 

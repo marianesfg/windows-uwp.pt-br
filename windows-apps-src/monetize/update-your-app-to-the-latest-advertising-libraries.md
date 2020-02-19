@@ -1,19 +1,22 @@
 ---
 description: Saiba como atualizar o aplicativo para usar as bibliotecas do Microsoft Advertising compatíveis mais recentes e verifique se o aplicativo continua recebendo anúncios em faixa.
 title: Usar as bibliotecas de anúncios mais recentes para anúncios de faixa
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl, migração
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 74ac8499e673cacad897455c7065dd3386103406
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: a8ccc8e9c76fc0f16bcdfc619d8048307fdfbc57
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735041"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463878"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 A partir de 1 de abril de 2017, não veicularemos mais os anúncios em faixa para aplicativos que usam uma versão do SDK de publicidade sem suporte. Se você usar o **AdControl** para exibir anúncios em faixa em aplicativo UWP (Plataforma Universal do Windows), use as informações neste artigo para determinar se você está usando um SDK de publicidade sem suporte e migrar o aplicativo para um SDK com suporte.
 
@@ -36,7 +39,7 @@ Se tiver um aplicativo (já na Microsoft Store ou ainda em desenvolvimento) com 
 > [!NOTE]
 > Se o aplicativo já usa o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicativos UWP), você não precisa fazer outras alterações nele.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * O código-fonte completo e os arquivos de projeto do Visual Studio do aplicativo que usam **AdControl**.
 * O pacote .appx do aplicativo.

@@ -1,18 +1,21 @@
 ---
 description: O serviço de controle de anúncios da Microsoft permite que você maximize a receita do anúncio e os recursos de promoção do aplicativo ao exibir anúncios de várias redes de anúncios conhecidas.
 title: Serviço de controle de anúncios da Microsoft
-ms.date: 06/05/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 700a80aff4c991f4fa3bff681ba995b113025fec
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ad2f60b6b87f81df44bc2f875a722a9e36fdd170
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259328"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463978"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Serviço de controle de anúncios da Microsoft
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Quando você usa o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) para [exibir anúncios em seus aplicativos](display-ads-in-your-app.md), como alternativa você pode usar o serviço de controle de anúncios da Microsoft para maximizar a receita dos anúncios. Este artigo fornece uma visão geral do serviço de controle de anúncios e suas metas.
 

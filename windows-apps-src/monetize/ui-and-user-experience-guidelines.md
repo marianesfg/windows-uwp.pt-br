@@ -2,18 +2,21 @@
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos.
 title: Diretrizes para a interface do usuário e experiência do usuário para anúncios
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
-ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2ce51f1ec99b080de6483b1d703492050c7a434c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320679"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463918"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Este artigo fornece diretrizes para proporcionar ótimas experiências com anúncios em faixa, intersticiais e nativos em seus aplicativos. Para obter diretrizes gerais sobre como elaborar o visual dos apps, consulte [Design e interface do usuário](https://developer.microsoft.com/windows/apps/design).
 
@@ -71,13 +74,13 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 
 * Ignorar o timer de atualização mínimo interno para anúncios em faixa por qualquer meio, incluindo (mas não se limitando a) trocar objetos do [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) ou forçar uma atualização da página sem a interação do usuário.
 
-* Usando unidades de anúncios em tempo real (ou seja, unidades de anúncios que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
+* Usar unidades do AD Live (ou seja, unidades do AD que você obtém do Partner Center) durante o desenvolvimento e teste ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 
 * Interagir com interfaces não documentadas ou objetos filho criados pelas bibliotecas do Microsoft Advertising, como **WebView** ou **MediaElement**.
 
-* Colocar anúncios em uma caixa de exibição para reduzir o tamanho dos anúncios para permitir que mais anúncios em uma página que o normal.
+* Colocar anúncios em um Viewbox para reduzir o tamanho dos anúncios a fim de permitir mais anúncios em uma página do que o normal.
 
 <span id="interstitialbestpractices10" />
 
@@ -157,7 +160,7 @@ Esta seção fornece exemplos de cenários de anúncios intersticiais que violam
 
 * Solicitar um anúncio intersticial simplesmente para ter um anúncio de backup para uma sequência de cascata de anúncios. Se você solicitar um anúncio intersticial e, em seguida, receber o evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), o próximo anúncio intersticial mostrado em seu app deve ser o anúncio que está pronto para ser exibido por meio do método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-* Usando unidades de anúncios em tempo real (ou seja, unidades de anúncios que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
+* Usar unidades do AD Live (ou seja, unidades do AD que você obtém do Partner Center) durante o desenvolvimento e teste ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 

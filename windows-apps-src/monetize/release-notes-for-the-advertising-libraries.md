@@ -2,21 +2,21 @@
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
 description: Consulte as notas de versão das bibliotecas do Microsoft Advertising.
 title: Notas de versão para as bibliotecas de anúncio
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d3554620cde44fc9907845a7765d023e1ed03e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50eea90dcf8ed59f420953eec5da5b7a0fe6b4b2
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260202"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463908"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de versão para as bibliotecas de anúncio
 
-
-
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas dão suporte a aplicativos XAML e JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8,1 e Windows Phone 8.
 
@@ -31,7 +31,7 @@ Antes de instalar o SDK do Microsoft Advertising mais recente, é altamente reco
 
 ## <a name="target-architecture-specific-build-outputs"></a>Direcionar saídas de compilação específicas da arquitetura
 
-Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar para **Any CPU** em seu projeto. Se o seu projeto for direcionado para **qualquer plataforma de CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
+Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar **nenhuma CPU** em seu projeto. Se o seu projeto for direcionado para **qualquer plataforma de CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
 
 ## <a name="c-support"></a>Suporte a C++
 

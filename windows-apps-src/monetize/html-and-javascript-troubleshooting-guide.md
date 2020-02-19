@@ -2,28 +2,31 @@
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Leia sobre soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
 title: Guia de solução de problemas em HTML e JavaScript
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, HTML, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fb804c312962fc349607b9d55176bfd7279cf8e9
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633231"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463788"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guia de solução de problemas em HTML e JavaScript
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
 
 * [HTML](#html)
-  * [AdControl não aparecem](#html-notappearing)
+  * [AdControl não aparecendo](#html-notappearing)
   * [Caixa preta pisca e desaparece](#html-blackboxblinksdisappears)
   * [Anúncios não atualizando](#html-adsnotrefreshing)
 
-* [JavaScript](#js)
-  * [AdControl não aparecem](#js-adcontrolnotappearing)
+* [Linguagem](#js)
+  * [AdControl não aparecendo](#js-adcontrolnotappearing)
   * [Caixa preta pisca e desaparece](#js-blackboxblinksdisappears)
   * [Anúncios não atualizando](#js-adsnotrefreshing)
 
@@ -46,7 +49,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     </head>
     ```
 
-3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder à ID do aplicativo e à ID da unidade do AD que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -271,7 +274,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     });  
     ```
 
-4.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder a ID do aplicativo e a ID de unidade do ad que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+4.  Verifique a ID do aplicativo e a ID da unidade de anúncio. Essas IDs devem corresponder à ID do aplicativo e à ID da unidade do AD que você obteve no Partner Center. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript
@@ -293,7 +296,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 2.  Manipule o evento **onErrorOccurred** e use a mensagem que é transmitida ao manipulador de eventos para determinar se ocorreu um erro e qual tipo de erro foi gerado. É possível encontrar mais detalhes em [Passo a passo do tratamento de erros em JavaScript](error-handling-in-javascript-walkthrough.md).
 
-    Este exemplo demonstra como implementar um manipulador de erros que informa as mensagens de erro. Este trecho de código HTML fornece um exemplo de como configurar a interface do usuário para exibir mensagens de erro.
+    Este exemplo demonstra como implementar um manipulador de erros que informa as mensagens de erro. Este snippet HTML fornece um exemplo de como configurar a interface do usuário para exibir mensagens de erro.
 
     > [!div class="tabbedCodeSnippets"]
     ``` html

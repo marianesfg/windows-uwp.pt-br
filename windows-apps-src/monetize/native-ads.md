@@ -1,27 +1,30 @@
 ---
 description: Saiba como adicionar anúncios nativos ao seu aplicativo UWP.
 title: Anúncios nativos
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, anúncio nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 83c174dc682af27a4811a44c826c572f91ec1f06
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7a2022db39c27453dd3c1e9e1eb63914b25a637b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260215"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463928"
 ---
 # <a name="native-ads"></a>Anúncios nativos
 
-Um anúncio nativo é um formato de anúncio com base em componente em que cada parte do criativo do anúncio (como título, imagem, descrição e texto do chamada para ação) é entregue ao aplicativo como um elemento individual. Você pode integrar esses elementos ao seu app usando suas próprias fontes, cores, animações e outros componentes de IU para compor uma experiência de usuário discreto que se ajuste à aparência do seu app enquanto também obtém alto rendimento dos anúncios.
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
+
+Um anúncio nativo é um formato de anúncio com base em componente em que cada parte do criativo do anúncio (como título, imagem, descrição e texto do plano de ação) é entregue ao aplicativo como um elemento individual. Você pode integrar esses elementos ao seu app usando suas próprias fontes, cores, animações e outros componentes de IU para compor uma experiência de usuário discreto que se ajuste à aparência do seu app enquanto também obtém alto rendimento dos anúncios.
 
 Para os anunciantes, os anúncios nativos fornecem posicionamentos de alto desempenho, porque a experiência de anúncios está totalmente integrada ao aplicativo e os usuários, portanto, tendem a interagir mais com esses tipos de anúncios.
 
 > [!NOTE]
 > No momento, os anúncios nativos têm suporte apenas para aplicativos UWP baseados em XAML para Windows 10. O suporte para aplicativos UWP escrito usando HTML e JavaScript está planejado para uma versão futura do SDK do Microsoft Advertising.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * Instale o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) com o Visual Studio 2015 ou uma versão posterior do Visual Studio. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
@@ -109,7 +112,7 @@ Depois de confirmar que a implementação do seu anúncio nativo mostra com êxi
 
 1.  Certifique-se de que sua implementação de anúncios nativo segue as [diretrizes para anúncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
-2.  No Partner Center, vá para a página [anúncios no aplicativo](../publish/in-app-ads.md) e [crie uma unidade do AD](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Nativa**. Anote a ID da unidade publicitária e a ID do aplicativo.
+2.  No Partner Center, vá para a página [anúncios no aplicativo](../publish/in-app-ads.md) e [crie uma unidade do AD](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Nativa**. Anote a ID da unidade de anúncio e a ID do aplicativo.
     > [!NOTE]
     > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de AD UWP ao vivo no Partner Center, o valor da ID do aplicativo para a unidade do AD sempre corresponde à ID da loja do seu aplicativo (um valor de ID de repositório de exemplo é semelhante a 9NBLGGH4R315).
 

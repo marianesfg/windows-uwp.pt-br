@@ -1,21 +1,24 @@
 ---
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: Saiba mais sobre os tamanhos de anúncios em banner com suporte.
-title: Tamanhos de anúncios de banner compatíveis
-ms.date: 08/23/2017
+title: Tamanhos de anúncio em faixa compatíveis
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tamanhos, barra de notificação
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd21be7f0e1f05e1fe4de07053cb18ee5048c6a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c3836c2d4b0c7f522db936906e2eae3ed2862b68
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613841"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463888"
 ---
-# <a name="supported-banner-ad-sizes"></a>Tamanhos de anúncios de banner compatíveis
+# <a name="supported-banner-ad-sizes"></a>Tamanhos de anúncio em faixa compatíveis
 
-Os seguintes tamanhos de anúncios em faixa têm suporte para aplicativos UWP (Plataforma Universal do Windows). Quando você criar uma instância de sua **AdControl** em seu aplicativo, verifique se você definir as propriedades width e height para corresponder a um desses tamanhos com suporte.
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
+
+Os seguintes tamanhos de anúncios em faixa têm suporte para aplicativos UWP (Plataforma Universal do Windows). Ao instanciar o objeto **AdControl** em seu aplicativo, defina as propriedades width e Height para corresponder a um desses tamanhos com suporte.
 
 Os tamanhos são largura x altura.
 
@@ -28,7 +31,7 @@ Os tamanhos são largura x altura.
 * 728 x 90
 
 > [!NOTE]
-> Para obter a melhor experiência, recomendamos o uso dos seguintes tamanhos em dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 e 640 x 100.
+> Para obter a melhor experiência, é recomendado usar os seguintes tamanhos em dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 e 640 x 100.
 
 A tabela a seguir fornece exemplos que ilustram cada tamanho dos anúncios em faixa.
 
@@ -40,7 +43,7 @@ A tabela a seguir fornece exemplos que ilustram cada tamanho dos anúncios em fa
 <thead>
 <tr class="header">
 <th align="left">Tamanho do anúncio</th>
-<th align="left">Exemplo</th>
+<th align="left">{1&gt;Exemplo&lt;1}</th>
 </tr>
 </thead>
 <tbody>

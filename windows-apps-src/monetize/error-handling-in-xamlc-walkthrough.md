@@ -2,18 +2,21 @@
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no passo a passo do XAML/C#
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c9f29cacd740392e3cfd4b5b4b63d1f7ce9c5cd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ab8b34820a81334dbe6ba0e52989d86d7414c67e
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260273"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463858"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tratamento de erros no passo a passo do XAML/C#
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
 
 Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo. O passo a passo usa um [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
 
@@ -44,7 +47,7 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
       ErrorOccurred="OnAdError"/>
     ```
 
-3.  Para gerar um erro em tempo de execução, crie um segundo **AdControl** com uma ID de aplicativo diferente. Como todos os objetos **AdControl** em um aplicativo devem usar a mesma ID de aplicativo, criar um **AdControl** adicional com uma id de aplicativo diferente causará um erro.
+3.  Para gerar um erro em runtime, crie um segundo **AdControl** com uma ID de aplicativo diferente. Como todos os objetos **AdControl** em um aplicativo devem usar a mesma ID de aplicativo, criar um **AdControl** adicional com uma id de aplicativo diferente causará um erro.
 
     Defina um segundo **AdControl** no MainPage.xaml logo após o primeiro **AdControl**, e defina a propriedade [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) como zero (“0”).
     ``` xml
