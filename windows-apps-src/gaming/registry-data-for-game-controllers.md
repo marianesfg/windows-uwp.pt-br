@@ -30,13 +30,13 @@ A tabela a seguir explica os valores esperados no local raiz do dispositivo:
 
 <table>
     <tr>
-        <th>Nome</th>
-        <th>Digite</th>
+        <th>{1&gt;Nome&lt;1}</th>
+        <th>Tipo</th>
         <th>Necessário?</th>
         <th>Informações</th>
     </tr>
     <tr>
-        <td>Desabilitada</td>
+        <td>Desabilitado</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>
@@ -78,7 +78,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Gam
         <td>Sim</td>
     </tr>
     <tr>
-        <td>Um botão</td>
+        <td>A</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -308,7 +308,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Rac
         <td rowspan="5" style="vertical-align: middle;">Consulte <a href="#axis-mapping">Mapeamento de eixos</a></td>
     </tr>
     <tr>
-        <td>Throttle</td>
+        <td>Limitação</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -416,7 +416,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Fli
         <td rowspan="4" style="vertical-align: middle;">Consulte <a href="#axis-mapping">Mapeamento de eixos</a></td>
     </tr>
     <tr>
-        <td>Pitch</td>
+        <td>Rotação sobre o eixo x</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -424,7 +424,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **Fli
         <td>Sim</td>
     </tr>
     <tr>
-        <td>Throttle</td>
+        <td>Limitação</td>
         <td>Sim</td>
     </tr>
     <tr>
@@ -545,7 +545,7 @@ A tabela abaixo lista as subchaves necessárias e opcionais sob a subchave **UIN
 
 Para saber mais sobre os controladores de navegação da interface do usuário e os comandos acima, consulte [Controlador de navegação da interface do usuário](https://docs.microsoft.com/windows/uwp/gaming/ui-navigation-controller).
 
-## <a name="keys"></a>Chaves
+## <a name="keys"></a>Keys
 
 As seções a seguir explicam o conteúdo de cada uma das subchaves sob as chaves **Gamepad**, **RacingWheel**, **ArcadeStick**, **FlightStick** e **UINavigation**.
 
@@ -576,7 +576,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         <td>Índice na matriz de eixos <b>RawGameController</b>.</td>
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inversão</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>Indica que o valor do eixo deverá ser invertido antes de os fatores <b>ThresholdPercent</b> e <b>DebouncePercent</b> serem aplicados.</td>
@@ -597,7 +597,7 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Mude</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -610,13 +610,13 @@ A tabela a seguir lista os valores que são necessários para mapear um botão. 
         <td>
             <p>Indica a posição do comutador que fará com que o botão mapeado relate que está sendo pressionado. Os valores de posição podem ser uma destas cadeias de caracteres:</p>
             <ul>
-                <li>Para cima</li>
+                <li>Para Cima</li>
                 <li>UpRight</li>
-                <li>Direita</li>
+                <li>{1&gt;Direita&lt;1}</li>
                 <li>DownRight</li>
-                <li>Para baixo</li>
+                <li>Para Baixo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Esquerda</li>
                 <li>UpLeft</li>
             </ul>
         </td>
@@ -679,7 +679,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                 <tr>
                     <td>FALSE</td>
                     <td>FALSE</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
                     <td>FALSE</td>
@@ -694,7 +694,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                 <tr>
                     <td>TRUE</td>
                     <td>TRUE</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
             </table>
         </td>
@@ -707,13 +707,13 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
         <td>Índice na matriz de eixos <b>RawGameController</b>.</td>
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inversão</td>
         <td>DWORD</td>
         <td>Não</td>
         <td>Indica que o valor do eixo mapeado deverá ser invertido antes de ser retornado.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Mude</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sim</td>
@@ -726,13 +726,13 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
         <td>
             <p>Uma das seguintes cadeias de caracteres:</p>
             <ul>
-                <li>Para cima</li>
+                <li>Para Cima</li>
                 <li>UpRight</li>
-                <li>Direita</li>
+                <li>{1&gt;Direita&lt;1}</li>
                 <li>DownRight</li>
-                <li>Para baixo</li>
+                <li>Para Baixo</li>
                 <li>DownLeft</li>
-                <li>Left</li>
+                <li>Esquerda</li>
                 <li>UpLeft</li>
             </ul>
             <p>Isso indica a posição do comutador que faz com que o valor do eixo mapeado seja relatados como 1.0. A direção oposta de <b>MaxValueSwitchPosition</b> é tratado como 0.0. Por exemplo, se <b>MaxValueSwitchPosition</b> for <b>Up</b>, a conversão do valor do eixo é mostrada abaixo:</p>
@@ -742,15 +742,15 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Para cima</td>
+                    <td>Para Cima</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
                     <td>Center</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
-                    <td>Para baixo</td>
+                    <td>Para Baixo</td>
                     <td>0.0</td>
                 </tr>
             </table>
@@ -768,7 +768,7 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>Para cima</td>
+                    <td>Para Cima</td>
                     <td>1.0</td>
                 </tr>
                 <tr>
@@ -781,10 +781,10 @@ A tabela a seguir lista os valores que são necessários para mapear um eixo:
                 </tr>
                 <tr>
                     <td>Center</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
-                    <td>Para baixo</td>
+                    <td>Para Baixo</td>
                     <td>0.0</td>
                 </tr>
                 <tr>
@@ -898,13 +898,13 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Mude</td>
+        <td rowspan="3" style="vertical-align: middle;">Alternar</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice na matriz de comutadores <b>RawGameController</b>.
     </tr>
     <tr>
-        <td>Invert</td>
+        <td>Inversão</td>
         <td>DWORD</td>
         <td>Indica que o comutador relata suas posições na ordem no sentido anti-horário, em vez da ordem no sentido horário padrão.</td>
     </tr>
@@ -926,7 +926,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td>Direita</td>
+                    <td>{1&gt;Direita&lt;1}</td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
@@ -936,17 +936,17 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Para cima</td>
+                    <td>Para Cima</td>
                     <td>3</td>
                     <td>0</td>
                 </tr>
                 <tr>
                     <td>UpLeft</td>
-                    <td>추가를 클릭합니다.</td>
+                    <td>4</td>
                     <td>7</td>
                 </tr>
                 <tr>
-                    <td>Left</td>
+                    <td>Esquerda</td>
                     <td>5</td>
                     <td>6</td>
                 </tr>
@@ -956,9 +956,9 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Para baixo</td>
+                    <td>Para Baixo</td>
                     <td>7</td>
-                    <td>추가를 클릭합니다.</td>
+                    <td>4</td>
                 </tr>
             </table>
     </tr>
@@ -985,7 +985,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
         </td>
     </tr>
     <tr>
-        <td>추가를 클릭합니다.</td>
+        <td>4</td>
         <td>FourWay</td>
         <td>
             <ul>
@@ -997,7 +997,7 @@ As posições do comutador podem ser mapeadas a partir de um conjunto de botões
         </td>
     </tr>
     <tr>
-        <td>추가를 클릭합니다.</td>
+        <td>4</td>
         <td>EightWay</td>
         <td>
             <ul>
@@ -1070,7 +1070,7 @@ Os rótulos devem aparecer nesta ordem sob a chave **Buttons**:
 
 <table>
     <tr>
-        <th>Nome</th>
+        <th>{1&gt;Nome&lt;1}</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1136,7 +1136,7 @@ A tabela a seguir mostra um conjunto de exemplo de rótulos para posições de u
 
 <table>
     <tr>
-        <th>Nome</th>
+        <th>{1&gt;Nome&lt;1}</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1345,7 +1345,7 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Namespace Windows. Gaming. Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
 * [Namespace Windows. Gaming. Input. Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
