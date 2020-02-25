@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, ilhas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089302"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521269"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: modernizar um aplicativo do WPF 
 
@@ -69,7 +69,7 @@ Certifique-se de instalar as seguintes cargas de trabalho e recursos opcionais c
 
 Antes de começar o tutorial, baixe o código-fonte do aplicativo de despesas da Contoso e verifique se você pode criar o código no Visual Studio.
 
-1. Baixe o código-fonte do aplicativo na guia **versões** do [repositório do AppConsult WinAppsModernization Workshop](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop). O link direto é [https://aka.ms/wamwc](https://aka.ms/wamwc).
+1. Baixe o código-fonte do aplicativo na guia **versões** do [repositório do AppConsult WinAppsModernization Workshop](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop). O link direto é [https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases).
 2. Abra o arquivo zip e extraia todo o conteúdo para a raiz da unidade **C:\\** . Ele criará uma pasta chamada **C:\WinAppsModernizationWorkshop**.
 3. Abra o Visual Studio 2019 e clique duas vezes no arquivo **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** para abrir a solução.
 4. Verifique se você pode criar, executar e depurar o projeto do WPF de despesas da Contoso pressionando o botão **Iniciar** ou CTRL + F5.

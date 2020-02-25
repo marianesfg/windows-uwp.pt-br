@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d79e65b2937e7ec6db57e00b31b44b1796203a50
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 7f7ee8f95ad1471c73d5ac9e7bb08796dadd6411
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463968"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507020"
 ---
 # <a name="manage-your-ad-campaign"></a>Gerenciar sua campanha publicitária
 
 >[!WARNING]
-> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://aka.ms/ad-monetization-shutdown)
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Para gerenciar campanhas do AD para seu aplicativo no [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** no menu de navegação à esquerda e selecione **campanhas do AD**. Você visualizará todas as campanhas publicitárias associadas aos seus aplicativos com impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de campanha publicitária](promote-your-app-report.md).
 

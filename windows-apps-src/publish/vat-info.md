@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0be47e5edeee0d00843d06297857f39977e085f4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d6b90b000564c1c6929154c3ac3b79c129e3fff6
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258959"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507140"
 ---
 # <a name="vat-info"></a>Informações sobre IVA
 
@@ -21,7 +21,7 @@ Se for necessário fornecer um número de ID de IVA durante o processo de regist
 ## <a name="understanding-vat-numbers"></a>Noções básicas sobre números de IVA
 
 
-Um número do imposto sobre valor agregado (IVA) é um identificador usado para países ou regiões na União Europeia. Para obter mais informações, consulte o [site da VIES](https://go.microsoft.com/fwlink/p/?LinkId=181246) oficial da União Europeia.
+Um número do imposto sobre valor agregado (IVA) é um identificador usado para países ou regiões na União Europeia. Para obter mais informações, consulte o [site da VIES](http://ec.europa.eu/taxation_customs/vies/vieshome.do) oficial da União Europeia.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>Formatos aceitos para números de IVA
 
@@ -98,7 +98,7 @@ Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é 
 <li>Exemplo: 12345678</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">França</td><td data-th="VAT info">
+<tr><td data-th="Country/region">France</td><td data-th="VAT info">
 <ul>
 <li>Formato do número do IVA: 11 dígitos</li>
 <li>Código do país/região: FR</li>
@@ -106,7 +106,7 @@ Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é 
 <li>Observações: Podem incluir quaisquer caracteres alfabéticos exceto I ou Q como o primeiro ou segundo caractere, ou como o primeiro e segundo caracteres, seguidos de 9 dígitos.</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Alemanha</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Germany</td><td data-th="VAT info">
 <ul>
 <li>Formato do número do IVA: 9 dígitos</li>
 <li>Código do país/região: DE</li>

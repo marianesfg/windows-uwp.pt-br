@@ -8,12 +8,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e82a48b774913279ada67adc7e2ce1c5c75d0b31
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ca361c7097c7b0decc9491f06673cf87f398875a
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683819"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521237"
 ---
 # <a name="custom-automation-peers"></a>Pares de automação personalizados  
 
@@ -182,7 +182,7 @@ protected:
 ```
 
 > [!NOTE]
-> A implementação [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer) não deve fazer nada além de inicializar uma nova instância do par de automação personalizado (passando o controle da chamada como proprietário) e retornar a instância. Não tente lógicas adicionais nesse método. Especificamente, qualquer lógica que possa levar à destruição do [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) na mesma chamada pode levar a um comportamento de tempo de execução inesperado.
+> A implementação [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer) não deve fazer nada além de inicializar uma nova instância do par de automação personalizado (passando o controle da chamada como proprietário) e retornar a instância. Não tente lógicas adicionais nesse método. Especificamente, qualquer lógica que possa levar à destruição do [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) na mesma chamada pode levar a um comportamento de runtime inesperado.
 
 Em implementações típicas de [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer), o *owner* é especificado como **this** ou **Me**, pois a substituição do método está no mesmo escopo que o resto da definição de classe do controle.
 
@@ -275,7 +275,7 @@ protected override string GetClassNameCore()
 
 Algumas tecnologias assistenciais usam o valor [**GetAutomationControlType**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltype) diretamente ao relatar característica dos itens em uma árvore de Automação da IU, como informações adicionais além do **Name** de Automação da Interface do Usuário. Se seu controle for bastante diferente do controle do qual está fazendo a derivação e quiser relatar um tipo de controle diferente daquele relatado pela classe do par base usada pelo controle, você deverá implementar um par e substituir [**GetAutomationControlTypeCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) na implementação do par. Isso é especialmente importante quando você deriva de uma classe base generalizada, como [**ItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) ou [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), em que o par base não fornece informações precisas sobre o tipo de controle.
 
-Sua implementação de [**GetAutomationControlTypeCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) descreve seu controle retornando um valor de [**AutomationControlType**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType). Você pode retornar **AutomationControlType.Custom**, mas deve retornar um dos tipos de controle mais específicos se ele descrever precisamente os cenários principais de seu controle. Veja um exemplo.
+Sua implementação de [**GetAutomationControlTypeCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) descreve seu controle retornando um valor de [**AutomationControlType**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType). Você pode retornar **AutomationControlType.Custom**, mas deve retornar um dos tipos de controle mais específicos se ele descrever precisamente os cenários principais de seu controle. Aqui está um exemplo.
 
 ```csharp
 protected override AutomationControlType GetAutomationControlTypeCore()
@@ -318,7 +318,7 @@ Para obter uma lista dos padrões de provedor disponíveis na implementação do
 
 Um par pode relatar que dá suporte a mais de um padrão. Nesse caso, a substituição deve incluir a lógica do caminho de retorno para cada valor de [**PatternInterface**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface) com suporte e retornar o par a cada correspondência. Espera-se que o chamador solicite apenas uma interface por vez e o chamador decide se deve fazer a conversão para a interface esperada.
 
-Consulte um exemplo da uma substituição de [**GetPatternCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para um par personalizado. Ele relata o suporte a dois padrões, [**IRangeValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) e [**IToggleProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IToggleProvider). Este é um controle de exibição de mídia que pode ser mostrado em tela inteira (o modo de alternância) e tem uma barra de progresso na qual os usuários podem escolher uma posição (o controle de intervalo). Esse código vem do [Exemplo de acessibilidade XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d).
+Consulte um exemplo da uma substituição de [**GetPatternCore**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para um par personalizado. Ele relata o suporte a dois padrões, [**IRangeValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) e [**IToggleProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IToggleProvider). Este é um controle de exibição de mídia que pode ser mostrado em tela inteira (o modo de alternância) e tem uma barra de progresso na qual os usuários podem escolher uma posição (o controle de intervalo). Esse código vem do [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample).
 
 
 ```csharp
@@ -456,7 +456,7 @@ Como alternativa de implementação, o próprio controle pode fazer referência 
 
 Os eventos de Automação da Interface do Usuário estão nas seguintes categorias.
 
-| Evento | Descrição |
+| {1&gt;Evento&lt;1} | Descrição |
 |-------|-------------|
 | Alteração da propriedade | É disparado quando uma propriedade em um padrão de controle ou elemento de Automação da IU muda. Por exemplo, se um cliente precisa monitorar o controle de uma caixa de seleção do aplicativo, ele pode registrar-se para escutar um evento de alteração de propriedade na propriedade [**ToggleState**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.provider.itoggleprovider.togglestate). Quando o controle da caixa de seleção está marcado ou desmarcado, o provedor dispara o evento e o cliente pode agir conforme o necessário. |
 | Ação de elemento | É disparado quando uma alteração na interface do usuário resulta de atividade do usuário ou programática. Por exemplo, quando um botão é clicado ou invocado por meio do padrão **Invoke**. |
@@ -538,7 +538,7 @@ Além disso, os pares devem ser relativamente conservadores no que diz respeito 
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Exemplo de acessibilidade XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [**FrameworkElementAutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)
 * [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer)
 * [**OnCreateAutomationPeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer)

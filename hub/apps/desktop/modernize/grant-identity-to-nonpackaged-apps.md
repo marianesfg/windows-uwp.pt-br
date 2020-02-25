@@ -1,6 +1,6 @@
 ---
 Description: Saiba como conceder identidade a aplicativos de área de trabalho não empacotados para que você possa usar os recursos modernos do Windows 10 nesses aplicativos.
-title: Conceder identidade a aplicativos de área de trabalho não empacotados
+title: Conceder identidade a aplicativos da área de trabalho não empacotados
 ms.date: 10/25/2019
 ms.topic: article
 keywords: Windows 10, área de trabalho, pacote, identidade, MSIX, Win32
@@ -8,14 +8,14 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f355bba3087f58ed20800052371804048bc0006c
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 10ed6b8e1bd5efce4c9d4429d91849b1333505b6
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145611"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521347"
 ---
-# <a name="grant-identity-to-non-packaged-desktop-apps"></a>Conceder identidade a aplicativos de área de trabalho não empacotados
+# <a name="grant-identity-to-non-packaged-desktop-apps"></a>Conceder identidade a aplicativos da área de trabalho não empacotados
 
 <!--
 > [!NOTE]
@@ -50,7 +50,7 @@ Um *pacote esparso* contém um manifesto de pacote, mas nenhum outro conteúdo e
 
 Para dar suporte a pacotes esparsos, o esquema de manifesto de pacote agora dá suporte a um elemento opcional **\<AllowExternalContent\>** no elemento [ **\>Propriedades de\<** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) . Isso permite que o manifesto do pacote faça referência ao conteúdo fora do pacote, em um local específico no disco.
 
-Por exemplo, se você tiver seu aplicativo de área de trabalho não empacotado existente que instala o executável do aplicativo e outro conteúdo em C:\Program Files\MyDesktopApp\, você pode criar um pacote esparso que inclui o **\<AllowExternalContent\>** no manifesto. Durante o processo de instalação para seu aplicativo ou na primeira vez que seus aplicativos, você pode instalar o pacote esparso e declarar C:\Program Files\MyDesktopApp\ como o local externo que seu aplicativo usará.
+Por exemplo, se você tiver seu aplicativo de área de trabalho não empacotado existente que instala o executável do aplicativo e outro conteúdo em C:\Program Files\MyDesktopApp\, você pode criar um pacote esparso que inclui o elemento **\<\>do AllowExternalContent** no manifesto. Durante o processo de instalação para seu aplicativo ou na primeira vez que seus aplicativos, você pode instalar o pacote esparso e declarar C:\Program Files\MyDesktopApp\ como o local externo que seu aplicativo usará.
 
 ## <a name="create-a-package-manifest-for-the-sparse-package"></a>Criar um manifesto de pacote para o pacote esparso
 
@@ -61,7 +61,7 @@ Verifique se o manifesto do pacote inclui estes itens:
 * Um [ **\<identidade\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) elemento que descreve os atributos de identidade para seu aplicativo de área de trabalho.
 * Um elemento **\<AllowExternalContent\>** no elemento [ **\>de propriedades de\<** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) . Esse elemento deve ser atribuído ao valor `true`, que permite que o manifesto do pacote faça referência ao conteúdo fora do pacote, em um local específico no disco. Em uma etapa posterior, você especificará o caminho do local externo ao registrar seu pacote esparso a partir do código que é executado em seu instalador ou seu aplicativo. Qualquer conteúdo que você referencia no manifesto que não está localizado no pacote em si deve ser instalado no local externo.
 * O atributo **MinVersion** do elemento [ **\<TargetDeviceFamily\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) deve ser definido como `10.0.19000.0` ou uma versão posterior.
-* Os atributos **TrustLevel = mediumIL** e **RuntimeBehavior = Win32App** do elemento [ **\<Application\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) declaram que o aplicativo de desktop associado ao pacote esparso será executado de forma semelhante a uma área de trabalho desempacotada padrão aplicativo, sem o registro e a virtualização do sistema de arquivos e outras alterações de tempo de execução.
+* Os atributos **TrustLevel = mediumIL** e **RuntimeBehavior = Win32App** do elemento [ **\<Application\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) declaram que o aplicativo da área de trabalho associado ao pacote esparso será executado de forma semelhante a um aplicativo de área de trabalho não empacotado padrão, sem a virtualização do registro e do sistema de arquivos e outras alterações de tempo de execução.
 
 O exemplo a seguir mostra o conteúdo completo de um manifesto de pacote esparso (AppxManifest. xml). Esse manifesto inclui uma extensão `windows.sharetarget`, que requer a identidade do pacote.
 
@@ -137,9 +137,9 @@ SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>Adicionar os metadados de identidade do pacote ao manifesto do aplicativo da área de trabalho
 
-You must also include a [side-by-side application manifest](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) with your desktop app and include an **\<msix\>** element with attributes that declare the identity attributes of your app. The values of these attributes are used by the OS to determine your app's identity when the executable is launched.
+Você também deve incluir um [manifesto do aplicativo lado a lado](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) com seu aplicativo de área de trabalho e incluir um elemento **\<msix\>** com atributos que declaram os atributos de identidade do seu aplicativo. Os valores desses atributos são usados pelo sistema operacional para determinar a identidade do aplicativo quando o executável é iniciado.
 
-The following example shows a side-by-side application manifest with an **\<msix\>** element.
+O exemplo a seguir mostra um manifesto do aplicativo lado a lado com um elemento **\<msix\>** .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -153,18 +153,18 @@ The following example shows a side-by-side application manifest with an **\<msix
 </assembly>
 ```
 
-The attributes of the **\<msix\>** element must match these values in the package manifest for your sparse package:
+Os atributos do elemento **\<msix\>** devem corresponder a esses valores no manifesto do pacote para seu pacote esparso:
 
-* The **packageName** and **publisher** attributes must match the **Name** and **Publisher** attributes in the [ **\<Identity\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in your package manifest, respectively.
-* The **applicationId** attribute must match the **Id** attribute of the [ **\<Application\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) element in your package manifest.
+* Os atributos **PackageName** e **Publisher** devem corresponder aos atributos **Name** e **Publisher** no elemento [ **\<Identity\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) no manifesto do pacote, respectivamente.
+* O atributo **ApplicationId** deve corresponder ao atributo **Id** do elemento [ **\<Application\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) no manifesto do pacote.
 
-The side-by-side application manifest must exist in the same directory as the executable file for your desktop app, and by convention it should have the same name as your app's executable file with the `.manifest` extension appended to it. For example, if your app's executable name is `ContosoPhotoStore`, the application manifest filename should be `ContosoPhotoStore.exe.manifest`.
+O manifesto do aplicativo lado a lado deve existir no mesmo diretório que o arquivo executável para seu aplicativo de área de trabalho e, por convenção, ele deve ter o mesmo nome que o arquivo executável do seu aplicativo com a extensão `.manifest` acrescentada a ele. Por exemplo, se o nome do executável do seu aplicativo for `ContosoPhotoStore`, o nome de arquivo do manifesto do aplicativo deverá ser `ContosoPhotoStore.exe.manifest`.
 
-## <a name="register-your-sparse-package-at-run-time"></a>Register your sparse package at run time
+## <a name="register-your-sparse-package-at-run-time"></a>Registrar seu pacote esparso em tempo de execução
 
-To grant package identity to your desktop app, your app must register the sparse package by using the [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) class. You can add code to your app to register the sparse package when your app is run for the first time, or you can run code to register the package while your desktop app is installed (for example, if you're using MSI to install your desktop app, you can run this code from a custom action).
+Para conceder identidade de pacote ao seu aplicativo de área de trabalho, seu aplicativo deve registrar o pacote esparso usando a classe [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) . Você pode adicionar código ao seu aplicativo para registrar o pacote esparso quando seu aplicativo é executado pela primeira vez ou você pode executar o código para registrar o pacote enquanto seu aplicativo de área de trabalho está instalado (por exemplo, se você estiver usando o MSI para instalar seu aplicativo de área de trabalho , você pode executar esse código de uma ação personalizada.
 
-The following example demonstrates how to register a sparse package. This code creates an **AddPackageOptions** object that contains the path to the external location where your package manifest can reference content outside the package. Then, the code passes this object to the **PackageManager.AddPackageByUriAsync**  method to register the sparse package. This method also receives the location of your signed sparse package as a URI. For a more complete example, see the `StartUp.cs` code file in the related [sample](#sample).
+O exemplo a seguir demonstra como registrar um pacote esparso. Esse código cria um objeto **Addpackageoptions** que contém o caminho para o local externo onde o manifesto do pacote pode fazer referência a conteúdo fora do pacote. Em seguida, o código passa esse objeto para o método **PackageManager. AddPackageByUriAsync** para registrar o pacote esparso. Esse método também recebe o local do pacote esparso assinado como um URI. Para obter um exemplo mais completo, consulte o arquivo de código `StartUp.cs` no [exemplo](#sample)relacionado.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)
@@ -196,10 +196,10 @@ private static bool registerSparsePackage(string externalLocation, string sparse
 
 ## <a name="sample"></a>Exemplo
 
-For a fully functional sample app that demonstrates how to grant package identity to a desktop app using a sparse package, see [https://aka.ms/sparsepkgsample](https://aka.ms/sparsepkgsample). More information about building and running the sample is provided in [this blog post](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
+Para um aplicativo de exemplo totalmente funcional que demonstra como conceder a identidade do pacote a um aplicativo de desktop usando um pacote esparso, consulte [https://github.com/microsoft/AppModelSamples/tree/master/Samples/SparsePackages](https://github.com/microsoft/AppModelSamples/tree/master/Samples/SparsePackages). Mais informações sobre como criar e executar o exemplo são fornecidas nesta [postagem de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
 
-This sample includes the following:
+Este exemplo inclui o seguinte:
 
-* The source code for a WPF app named PhotoStoreDemo. During startup, the app checks to see whether it is running with identity. If it is not running with identity, it registers the sparse package and then restarts the app. See `StartUp.cs` for the code that performs these steps.
-* A side-by-side application manifest named `PhotoStoreDemo.exe.manifest`.
-* A package manifest named `AppxManifest.xml`.
+* O código-fonte de um aplicativo do WPF chamado PhotoStoreDemo. Durante a inicialização, o aplicativo verifica se ele está em execução com a identidade. Se não estiver em execução com a identidade, ele registrará o pacote esparso e reiniciará o aplicativo. Consulte `StartUp.cs` para o código que executa essas etapas.
+* Um manifesto de aplicativo lado a lado chamado `PhotoStoreDemo.exe.manifest`.
+* Um manifesto de pacote chamado `AppxManifest.xml`.
