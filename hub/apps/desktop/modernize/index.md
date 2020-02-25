@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c2e7524605847009dae415d93794658dd08a79a3
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089392"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521337"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -20,7 +20,7 @@ O Windows 10 e a UWP (Plataforma Universal do Windows) oferecem muitos recursos 
 Este artigo descreve os recursos do Windows 10 e da UWP que você pode usar em seus aplicativos da área de trabalho atualmente. Para ver um tutorial que demonstra como modernizar um aplicativo existente a fim de usar muitos dos recursos descritos neste artigo, consulte o tutorial [Modernizar um aplicativo WPF](modernize-wpf-tutorial.md).
 
 > [!NOTE]
-> Você precisa de assistência para migrar os aplicativos da área de trabalho para o Windows 10? O serviço [Garantia de Aplicativo da Área de Trabalho](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) fornece suporte direto e sem custos para os desenvolvedores que estão compatibilizando seus aplicativos com o Windows 10. Esse programa está disponível para todos os ISVs e empresas qualificadas. Para obter mais detalhes sobre qualificação e sobre o programa propriamente dito, visite [https://aka.ms/DesktopAppAssure](https://aka.ms/DesktopAppAssure). Para começar agora mesmo, [envie sua solicitação](https://aka.ms/DesktopAppAssureRequest).
+> Você precisa de assistência para migrar os aplicativos da área de trabalho para o Windows 10? O serviço [Garantia de Aplicativo da Área de Trabalho](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) fornece suporte direto e sem custos para os desenvolvedores que estão compatibilizando seus aplicativos com o Windows 10. Esse programa está disponível para todos os ISVs e empresas qualificadas. Para obter mais detalhes sobre qualificação e sobre o programa propriamente dito, visite [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered). Para começar agora mesmo, [envie sua solicitação](https://fasttrack.microsoft.com/dl/daa).
 
 ## <a name="msix-packages"></a>Pacotes de MSIX
 
