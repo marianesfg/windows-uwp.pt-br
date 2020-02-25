@@ -713,9 +713,9 @@ HRESULT GetMrtResourceHandle(LPCWSTR resourceFilePath,  HINSTANCE* resourceHandl
 
 ## <a name="phase-3-building-resource-packs"></a>Fase 3: Criando pacotes de recursos
 
-Agora que você tem um "pacote gordo" com todos os recursos, há dois caminhos para criar um pacote principal separado e pacotes de recursos, a fim de minimizar os tamanhos dos downloads e das instalações:
+Agora que você tem um "pacote grande" com todos os recursos, há dois caminhos para criar um pacote principal separado e pacotes de recursos, a fim de minimizar os tamanhos dos downloads e das instalações:
 
-* Execute um pacote gordo por meio da [ferramenta de geração de pacotes](https://www.microsoft.com/store/apps/9nblggh43pmq) para criar pacotes de recursos automaticamente. Essa será a abordagem preferencial se você tiver um sistema de compilação que já produz um pacote gordo e quiser processá-lo posteriormente para gerar os pacotes de recursos.
+* Execute um pacote grande por meio da [ferramenta de geração de pacotes](https://www.microsoft.com/store/apps/9nblggh43pmq) para criar pacotes de recursos automaticamente. Essa será a abordagem preferencial se você tiver um sistema de compilação que já produz um pacote grande e quiser processá-lo posteriormente para gerar os pacotes de recursos.
 * Produza diretamente os pacotes de recursos individuais e compile-os em um único pacote. Essa será a abordagem preferencial se você tiver mais controle sobre o sistema de compilação e puder criar os pacotes diretamente.
 
 ### <a name="step-31-creating-the-bundle"></a>Etapa 3.1: Criando o pacote

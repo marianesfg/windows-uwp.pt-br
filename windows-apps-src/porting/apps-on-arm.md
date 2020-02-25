@@ -20,7 +20,7 @@ Usamos o termo *ARM* aqui como um atalho para computadores que executam a versã
 ## <a name="apps-and-experiences-on-arm"></a>Aplicativos e experiências no ARM
 
 ### <a name="built-in-windows-10-experiences-apps-and-drivers"></a>Experiências integradas do Windows 10, aplicativos e drivers
-As experiências internas do Windows 10, como Edge, Cortana, start menu e Explorer, são todas nativas e executadas como ARM64. Isso também inclui todos os drivers de dispositivo, como gráficos, rede ou disco rígido. Isso garante que você obtenha a melhor experiência do usuário e a vida útil da bateria do dispositivo em execução na velocidade nativa completa do processador Qualcomm Snapdragon.
+As experiências internas do Windows 10, como Microsoft Edge, Cortana, start menu e Explorer, são todas nativas e executadas como ARM64. Isso também inclui todos os drivers de dispositivo, como gráficos, rede ou disco rígido. Isso garante que você obtenha a melhor experiência do usuário e a vida útil da bateria do dispositivo em execução na velocidade nativa completa do processador Qualcomm Snapdragon.
 
 ### <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da Plataforma Universal do Windows (UWP)
 O Windows 10 no ARM executa todos os [aplicativos UWP](../get-started/universal-application-platform-guide.md) x86, ARM32 e ARM64 da Microsoft Store. Os aplicativos ARM32 e ARM64 são executados nativamente sem qualquer emulação, enquanto aplicativos x86 são executados sob emulação. Se você for um desenvolvedor de UWP, certifique-se de enviar um pacote ARM para seu aplicativo, pois isso fornecerá a melhor experiência de usuário para o dispositivo. Para obter mais informações, consulte [Arquiteturas de pacote do aplicativo](/windows/msix/package/device-architecture).
