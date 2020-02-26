@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 35ddf17d121a06e453e9b51e023e859f0c1cd0ab
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: b6bd46bcdec639cee2bc867c2c4e71cccbb13cfb
+ms.sourcegitcommit: a2a3c887f6da47a6638ce5286199ea31ee7780e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089342"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77606696"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML
 
@@ -91,7 +91,7 @@ Em seguida, adicione um projeto de aplicativo UWP à mesma solução que o seu p
     ```csharp
     namespace MyUWPApp
     {
-        sealed partial class App : Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication
+        public sealed partial class App : Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication
         {
             public App()
             {
@@ -305,7 +305,7 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
         </PropertyGroup>
         ```
 
-    4. Salve o arquivo de projeto e feche-o.
+    4. Salve o arquivo do projeto e feche-o.
     5. Clique com o botão direito do mouse no nó do projeto WPF e escolha **recarregar projeto**.
 
 4. Compile e execute o projeto de empacotamento. Confirme se o WPF é executado e se o controle personalizado UWP é exibido conforme o esperado.
