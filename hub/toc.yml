@@ -71,7 +71,27 @@
     - name: Speech
       href: apps/speech.md
     - name: Recursos e tecnologias
-      href: apps/features-and-technologies.md
+      items:
+        - name: Visão geral
+          href: apps/features-and-technologies.md
+        - name: Processar rastreamentos ETW no .NET
+          items:
+            - name: Visão geral
+              href: apps/trace-processing/overview.md
+            - name: Processar seu primeiro rastreamento
+              href: apps/trace-processing/quickstart.md
+            - name: Acessar dados de rastreamento
+              href: apps/trace-processing/tutorial.md
+            - name: Estender o TraceProcessor
+              href: apps/trace-processing/extensibility.md
+            - name: Carregar símbolos
+              href: apps/trace-processing/symbols.md
+            - name: Usar streaming
+              href: apps/trace-processing/streaming.md
+            - name: Amostras
+              href: 'https://github.com/microsoft/eventtracing-processing-samples'
+            - name: Referência
+              href: apps/trace-processing/reference.md
     - name: Atualizações mais recentes do documento
       href: apps/whats-new/latest-doc-updates.md
 - name: Criar com o Windows

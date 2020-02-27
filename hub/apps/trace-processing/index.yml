@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Documentação do .NET TraceProcessing
+summary: O .NET TraceProcessing é um pacote NuGet que fornece acesso fácil aos dados em arquivos de ETW (Rastreamento de Eventos para Windows).
+metadata:
+  title: Documentação – .NET TraceProcessing
+  description: O .NET TraceProcessing é um pacote NuGet que fornece acesso fácil aos dados em arquivos de ETW (Rastreamento de Eventos para Windows).
+  ms.prod: traceprocessor
+  ms.topic: landing-page
+  author: maiak
+  ms.author: maiak
+  ms.date: 02/20/2020
+  ms.openlocfilehash: e518ba18d21fce24f58b2dca6a28d3b48b40b06d
+  ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 02/26/2020
+  ms.locfileid: "77629117"
+landingContent:
+- title: Sobre o .NET TraceProcessing
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é o .NET TraceProcessing?
+      url: overview.md
+- title: Introdução
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Processar seu primeiro rastreamento
+      url: quickstart.md
+- title: Desenvolver
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Acesso aos dados de rastreamento
+      url: tutorial.md
+    - text: Extensão do TraceProcessor
+      url: extensibility.md
+    - text: Carregamento de símbolos
+      url: symbols.md
+    - text: Uso de streaming
+      url: streaming.md
+- title: Amostras
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Localizar uma amostra
+      url: https://github.com/microsoft/eventtracing-processing-samples
+- title: Referência
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Adicionar de API
+      url: reference.md
