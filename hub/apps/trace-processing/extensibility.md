@@ -5,18 +5,21 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: overview
-ms.openlocfilehash: bf5f7a7c1bb007b7f1a19508fa0ee7bbaf298654
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 59722f1f31364c464a8a763d28f3d15ef13609a8
+ms.sourcegitcommit: cfba95a96202c4250de845115d1b99361412a779
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629137"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903283"
 ---
 # <a name="extend-traceprocessor"></a>Estender TraceProcessor
 
 Muitos tipos de dados de rastreamento têm suporte interno em [TraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor), mas se você tiver seus outros provedores que deseja analisar (incluindo seus próprios provedores personalizados), esses dados também estarão disponíveis no rastreamento ao vivo enquanto o processamento ocorre.
 
-Por exemplo, aqui está uma maneira simples de obter a lista de IDs de provedores em um rastreamento:
+> [!NOTE]
+> Esta parte da API está em versão prévia e em desenvolvimento ativo. Ele pode ser alterado em versões futuras.
+
+Por exemplo, aqui está uma maneira simples de obter a lista de IDs de provedores em um rastreamento.
 
 ```csharp
 // Open a trace with TraceProcessor.Create() and call Run...
@@ -34,7 +37,7 @@ static void Run(ITraceProcessor trace)
 }
 ```
 
-O exemplo a seguir mostra uma fonte de dados personalizada simplificada:
+O exemplo a seguir mostra uma fonte de dados personalizada simplificada.
 
 ```csharp
 // Open a trace with TraceProcessor.Create() and call Run...
