@@ -1,0 +1,19 @@
+- name: Documentação do .NET TraceProcessing
+  href: index.yml
+  items:
+    - name: Visão geral
+      href: overview.md
+    - name: Processar seu primeiro rastreamento
+      href: quickstart.md
+    - name: Acessar dados de rastreamento
+      href: tutorial.md
+    - name: Estender o TraceProcessor
+      href: extensibility.md
+    - name: Carregar símbolos
+      href: symbols.md
+    - name: Usar streaming
+      href: streaming.md
+    - name: Amostras
+      href: 'https://github.com/microsoft/eventtracing-processing-samples'
+    - name: Referência
+      href: reference.md

@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Documentação do Windows
-summary: Informações para desenvolvedores de software, engenheiros de hardware e profissionais de TI.
+title: Documentação técnica do Windows
+summary: Informações para desenvolvedores de aplicativos e de hardware e profissionais de TI.
 brand: windows
 metadata:
   title: Documentação do Windows | Microsoft Docs
@@ -9,61 +9,27 @@ metadata:
   ms.author: tedhudek
   ms.topic: hub-page
   uhfHeaderId: MSDocsHeader-DocsL1
-  ms.openlocfilehash: 50a82a07d74e44746858e0800e2ff2007b5385e8
-  ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+  ms.openlocfilehash: 588fb1ddf7581867d705d531c3459a6962f07d56
+  ms.sourcegitcommit: cfba95a96202c4250de845115d1b99361412a779
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72777264"
-highlightedContent:
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77903313"
+productDirectory:
   items:
-  - title: Obtenha o Visual Studio e o SDK do Windows
-    itemType: download
-    url: https://developer.microsoft.com/windows/downloads
-  - title: Baixe o WDK
-    itemType: download
-    url: https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk
-  - title: Participe do Programa Windows Insider
-    itemType: overview
-    url: https://docs.microsoft.com/windows-insider
-  - title: Melhore suas habilidades
-    itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?products=m365%2Cwindows
-additionalContent:
-  sections:
-  - items:
-    - title: Desenvolvimento de aplicativo
-      links:
-      - text: Inicie a gravação de aplicativos do Windows 10
-        url: https://docs.microsoft.com/windows/apps
-      - text: Adicione recursos do Windows 10 aos seus aplicativos
-        url: https://docs.microsoft.com/windows/apps/desktop/modernize/
-      - text: Criar aplicativos da área de trabalho
-        url: https://docs.microsoft.com/windows/apps/desktop/
-      - text: Desenvolva com o Python, o Node.js e o Subsistema do Windows para Linux
-        url: https://docs.microsoft.com/windows/dev-environment/
-      - text: Encontre exemplos de código
-        url: https://developer.microsoft.com/windows/samples
-    - title: Desenvolvimento de hardware
-      links:
-      - text: Saiba mais sobre a criação de dispositivos
-        url: https://docs.microsoft.com/windows-hardware/get-started/index
-      - text: Desenvolva drivers de dispositivo
-        url: https://docs.microsoft.com/windows-hardware/drivers
-      - text: Crie imagens do Windows
-        url: https://docs.microsoft.com/windows-hardware/manufacture/
-      - text: Teste de desempenho e compatibilidade
-        url: https://docs.microsoft.com/windows-hardware/test
-      - text: Encontre exemplos de driver
-        url: https://docs.microsoft.com/samples/browse/?products=windows-wdk
-    - title: Administrador de TI
-      links:
-      - text: Configure e implante o Windows 10
-        url: https://docs.microsoft.com/windows/windows-10/
-      - text: Encontre informações sobre versões do Windows 10
-        url: https://docs.microsoft.com/windows/release-information/
-      - text: Gerenciar o Windows Server
-        url: https://docs.microsoft.com/windows-server/
-      - text: Introdução ao Microsoft Store para Empresas
-        url: https://docs.microsoft.com/microsoft-store/
-  footer: '[Blogs](https://blogs.windows.com/) - [Twitter](https://twitter.com/windowsdocs) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows) - [Developer Community](https://social.msdn.microsoft.com/Forums/windowsdesktop)'
+  - title: Desenvolvedores de aplicativos
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Projete, desenvolva e implante aplicativos e outras soluções para computadores e outros dispositivos Windows.
+    url: /windows/apps/
+  - title: Desenvolvedores de hardware
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Projete, desenvolva e implante hardware e drivers de dispositivo para computadores e outros dispositivos Windows.
+    url: https://docs.microsoft.com/windows-hardware/drivers/
+  - title: Windows 10 para profissionais de TI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Avalie, planeje, implante, proteja e gerencie dispositivos que executam o Windows 10.
+    url: https://docs.microsoft.com/windows/windows-10/
+  - title: Windows Server para profissionais de TI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Crie e implante aplicativos conectados, redes e serviços Web no Windows Server.
+    url: https://docs.microsoft.com/windows-server/
