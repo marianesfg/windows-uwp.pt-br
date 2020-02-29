@@ -1,18 +1,17 @@
 ---
 title: Políticas da Microsoft Store
 description: Os produtos na Store devem atender aos padrões de certificação, oferecer aos clientes uma experiência verdadeiramente útil e envolvente e fornecer uma boa opção para a Store.
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 5086353adbc07e265f02e12f998ae655cd512d48
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258975"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607254"
 ---
 # <a name="microsoft-store-policies"></a>Políticas da Microsoft Store
 
@@ -54,7 +53,7 @@ Em caso de comentários sobre as políticas, entre em contato conosco através d
 - [10.9 Notificações](#109-notifications)
 - [10.10 Conteúdo e Conduta de Publicidade](#1010-advertising-conduct-and-content)
 - [10.11 Planos de Voz Móvel](#1011-mobile-voice-plans)
-- [10.12 Extensões do Microsoft Edge](#1012-edge-extensions)
+- [10.12 Extensões do Edge](#1012-edge-extensions)
 - [10.13 Jogos e Xbox](#1013-gaming-and-xbox)
 - [10.14 Tipo de Conta](#1014-account-type)
 
@@ -174,7 +173,7 @@ Os requisitos a seguir aplicam-se aos produtos que acessam Informações Pessoai
 
 Se seu produto acessar, coletar ou transmitir Informações Pessoais ou exigidas por lei, você deverá manter uma política de privacidade. Você deve fornecer aos usuários acesso à sua política de privacidade digitando a respectiva URL no Partner Center ao enviar seu produto. Além disso, você também pode incluir sua política de privacidade no produto ou criar nele um link para essa política. A política de privacidade pode ser hospedada dentro do produto ou diretamente vinculada a ele. Sua política de privacidade deve informar aos usuários sobre as Informações Pessoais acessadas, coletadas ou transmitidas por seu produto e como essas informações são usadas, armazenadas e protegidas, além de indicar para quem elas são divulgadas. Ela deve descrever os controles que os usuários têm sobre o uso e compartilhamento de suas informações e como eles podem acessar suas informações, e ela deve estar em conformidade com as leis e regulamentações aplicáveis. Sua política de privacidade deve estar sempre atualizada conforme você adiciona novos recursos e funcionalidades ao seu produto.
 
-Os tipos de produto que inerentemente têm acesso às Informações Pessoais devem sempre ter políticas de privacidade. Eles incluem, mas sem se limitar, os produtos Ponte de Desktop e Extensões do Microsoft Edge.
+Os tipos de produto que inerentemente têm acesso às Informações Pessoais devem sempre ter políticas de privacidade. Eles incluem, mas sem se limitar, os produtos Ponte de Desktop e Extensões do Edge.
 
 **10.5.2**
 
@@ -315,9 +314,9 @@ Se seu produto for voltado para crianças com idade inferior a 13 anos (conforme
 
 Seu produto não pode vender nem promover planos de voz móvel nem, de outro modo, vincular-se a esse tipo de plano.
 
-### <a name="1012-edge-extensions"></a>10.12 Extensões do Microsoft Edge
+### <a name="1012-edge-extensions"></a>10.12 Extensões do Edge
 
-As Extensões do Microsoft Edge estão sujeitas a estes requisitos adicionais:
+As Extensões do Edge estão sujeitas a estes requisitos adicionais:
 
 - Sua Extensão deve ter uma única finalidade com funcionalidade de escopo restrito que esteja claramente explicada na descrição do produto.
 - Sua Extensão pode coletar Informações Pessoais somente como parte de um recurso voltado para o usuário, divulgado de forma destacada.
@@ -474,7 +473,7 @@ O conteúdo gerado pelo usuário é o conteúdo com o qual os usuários contribu
 ---
 <sup>1</sup>"Store" ou "Microsoft Store" significa uma plataforma operada ou que pertence à Microsoft, independentemente da sua designação, por meio da qual os Aplicativos podem ser oferecidos ou adquiridos pelos Clientes. Salvo especificação em contrário, a Store inclui a Microsoft Store, a Windows Store, a Loja Xbox, a Microsoft Store para Empresas e a Microsoft Store para Educação.
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 - [Histórico de alterações das Políticas da Microsoft Store](store-policies-change-history.md)
 - [Código de Conduta e Políticas da Microsoft Store](store-policies-and-code-of-conduct.md)

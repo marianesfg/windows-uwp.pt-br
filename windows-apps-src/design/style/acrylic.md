@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d8ed5fa1e3c4a7ffffaf47583eca3796f081cf
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c6995ab6116d4e3bda8e21c397ab3b4985732763
+ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683979"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77639763"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -235,7 +235,7 @@ Para adicionar um pincel acrílico, defina os três recursos para os temas escur
 O exemplo a seguir mostra como declarar o AcrylicBrush no código. Se seu aplicativo dá suporte a diversos sistemas operacionais, certifique-se de verificar se a API está disponível no computador do usuário.
 
 ```csharp
-if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
+if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.AcrylicBrush"))
 {
     Windows.UI.Xaml.Media.AcrylicBrush myBrush = new Windows.UI.Xaml.Media.AcrylicBrush();
     myBrush.BackgroundSource = Windows.UI.Xaml.Media.AcrylicBackgroundSource.HostBackdrop;

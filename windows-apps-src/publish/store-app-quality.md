@@ -1,18 +1,17 @@
 ---
 title: Qualidade do aplicativo
 description: É importante para os clientes e desenvolvedores que os aplicativos da Store sejam agradáveis, divertidos e úteis. Para ajudar os desenvolvedores a cumprir essa meta, estamos fornecendo esta visão geral de alguns dos principais aspectos de qualidade para os aplicativos.
-layout: LandingPage
-ms.date: 10/26/2017
+ms.date: 07/25/2017
 ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
-ms.openlocfilehash: 550ffeac8912769fc7e319d819f4de67f6d36cf1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d093a7b49a8c5ac00ca927614365d1b548e2f63a
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826413"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607263"
 ---
 # <a name="app-quality"></a>Qualidade do aplicativo
 
@@ -86,7 +85,7 @@ Os clientes valorizam a sua atenção para suas necessidades e comentários. Cli
 - Para obter mais detalhes, leia [Envolver-se com seus clientes](https://developer.microsoft.com/store/engage).
 
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 - [Código de Conduta e Políticas da Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)

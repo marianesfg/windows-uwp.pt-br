@@ -1,18 +1,17 @@
 ---
 title: Histórico de alterações das Políticas da Microsoft Store
 description: Histórico de alterações das Políticas da Microsoft Store
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
-ms.openlocfilehash: 879a400d22b3032bb4ee3f3f378a85f04ad73355
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: 3fbdc8e4831a39386396dc2c1dad25581f12fbf9
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705563"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607274"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Histórico de alterações das Políticas da Microsoft Store
 
@@ -62,7 +61,7 @@ ms.locfileid: "71705563"
 <p>Adicionamos suporte da plataforma aos requisitos de suporte do dispositivo na 10.4.1.</p>
 <p>Removemos a 10.3.3 que detalhava os requisitos de cartão-presente.</p>
 <p>Simplificamos os requisitos do botão Voltar na 10.4.4.</p>
-<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões de Microsoft Edge e Ponte de Desktop.</p>
+<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões de Edge e Ponte de Desktop.</p>
 <p>Adicionamos a 10.5.6 para especificar os requisitos para usar autenticação de identidade da Microsoft.</p>
 <p>Adicionamos a 10.5.7 para especificar os requisitos de localização do dispositivo, incluindo consentir com o uso de dados de localização.</p>
 <p>Atualizamos a 10.8.2 para adicionar requisitos para receber doações de usuários.</p>
@@ -136,7 +135,7 @@ ms.locfileid: "71705563"
 <p>Atualização sobre usabilidade (10.4.2) para esclarecer requisitos.</p>
 <p>Atualização de informações pessoais (10.5) para exigir a descrição de tipos de partes interessadas a quem as PIIs são divulgadas (em 10.5.1 e 10.5.2) e incluir os itens 10.5.4 e 10.5.5.</p>
 <p>Atualização sobre transações financeiras (10.8) para incluir moeda virtual e o item 10.8.1 sobre a remoção do período de cortesia na implementação do IAP da MS para bens digitais.</p>
-<p>Inclusão das Extensões do Microsoft Edge (10.12).</p>
+<p>Inclusão das Extensões do Edge (10.12).</p>
 <p>Inclusão do Xbox One (10.13).</p>
 <p>Atualização sobre conteúdo ofensivo (11.5) para aplicação explícita a metadados e inclusão de conteúdo sensível.</p>
 <p>Atualizado do Código de Conduta para incluir explicitamente a obtenção de acesso não autorizado a informações pessoais e o uso delas.</p></td>
@@ -196,7 +195,7 @@ ms.locfileid: "71705563"
 </table>
 
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 - [Código de Conduta e Políticas da Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)

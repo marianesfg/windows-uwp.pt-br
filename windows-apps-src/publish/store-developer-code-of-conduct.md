@@ -1,18 +1,17 @@
 ---
 title: Código de Conduta do desenvolvedor
 description: Como desenvolvedor de aplicativos para a Microsoft Store, você está vinculado pelos termos do Contrato de Desenvolvedor de Aplicativos e por quaisquer outras licenças ou contratos firmados entre você e a Microsoft.
-layout: LandingPage
-ms.date: 10/26/2017
+ms.date: 02/25/2020
 ms.topic: article
 keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
-ms.openlocfilehash: a9e96431594cf1a046741659011e546807294f7a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826443"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607239"
 ---
 # <a name="developer-code-of-conduct"></a>Código de Conduta do desenvolvedor
 
@@ -34,7 +33,7 @@ Sua conta de desenvolvedor da Store deve ter boa reputação. Isso inclui, mas n
 Você não pode se envolver em nenhuma atividade fraudulenta ou desonesta na Store ou no Partner Center. Isso inclui, entre outros, a tentativa de manipular a classificação, os resultados de pesquisa, as pontuações ou as análises para o seu aplicativo ou para qualquer outro aplicativo; interferir no uso por qualquer outra parte do serviço da Store (ou quaisquer serviços relacionados oferecidos pela Microsoft); a tentativa de qualquer forma de fraude financeira (incluindo, entre outros, qualquer impressão de publicidade ou fraude por cliques); envolvimento em atividades fraudulentas em relação ao inventário de anúncios e anúncios criativos em seu aplicativo; obtenção ou tentativa de obter acesso não autorizado a informações pessoais, seja por meios diretos ou indiretos, e qualquer uso dessas informações.
 
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 - [Código de Conduta e Políticas da Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
