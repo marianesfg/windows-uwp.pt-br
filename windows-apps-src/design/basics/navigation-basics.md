@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6290b142eee4aff7287b9542b645df89164d173b
-ms.sourcegitcommit: 34671182c26f5d0825c216a6cededc02b0059a9e
+ms.openlocfilehash: 137dbfe6471ee4d42e2a34e24512bdb658e985d0
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286939"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463758"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -27,17 +27,17 @@ Há várias opções de navegação. possível:
 
 :::row:::
     :::column:::
-        ![navigation example 1](images/nav/nav-1.svg)
+        ![exemplo de navegação 1](images/nav/nav-1.svg)
 
 Exigir que os usuários passem por uma série de páginas em ordem.
     :::column-end:::
     :::column:::
-        ![navigation example 2](images/nav/nav-2.svg)
+        ![exemplo de navegação 2](images/nav/nav-2.svg)
 
 Fornecer um menu que permite aos usuários ir diretamente para qualquer página.
     :::column-end:::
     :::column:::
-        ![navigation example 3](images/nav/nav-3.svg)
+        ![exemplo de navegação 3](images/nav/nav-3.svg)
 
 Colocar tudo em uma única página e fornecer mecanismos de filtragem para exibir o conteúdo.
     :::column-end:::
@@ -67,16 +67,16 @@ Menos itens de navegação simplificam a tomada de decisão para os usuários. F
 
 :::row:::
     :::column:::
-        ![do example](images/nav/do.svg)
+        ![exemplo do que fazer](images/nav/do.svg)
 
-        ![navview good](images/nav/navview-good.svg)
+        ![modo de exibição de navegação adequado](images/nav/navview-good.svg)
 
 Apresente os itens de navegação em um menu de navegação familiar.
     :::column-end:::
     :::column:::
-        ![don't example](images/nav/dont.svg)
+        ![exemplo do que não fazer](images/nav/dont.svg)
 
-        ![navview bad](images/nav/navview-bad.svg)
+        ![modo de exibição de navegação inadequado](images/nav/navview-bad.svg)
 
 Não sobrecarregue os usuários com várias opções de navegação.
     :::column-end:::
@@ -106,10 +106,10 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
 
 :::row:::
     :::column:::
-        ![Pages arranged in a flat structure](images/nav/flat-lateral-structure.svg)
+        ![Páginas dispostas em uma estrutura simples](images/nav/flat-lateral-structure.svg)
     :::column-end:::
     :::column span="2":::
-        ### Flat/lateral
+        ### <a name="flatlateral"></a>Simples/lateral
 
 Em uma estrutura simples/lateral, as páginas são dispostas lado a lado. Você pode ir de uma página para outra em qualquer ordem.
 
@@ -125,10 +125,10 @@ Recomendamos usar uma estrutura simples quando:
 
 :::row:::
     :::column:::
-        ![Pages arranged in a hierarchy](images/nav/hierarchical-structure.svg)
+        ![Páginas dispostas em uma hierarquia](images/nav/hierarchical-structure.svg)
     :::column-end:::
     :::column span="2":::
-        ### Hierarchical
+        ### <a name="hierarchical"></a>Hierárquico
 
 Em uma estrutura hierárquica, as páginas são organizadas em uma estrutura de árvore. Cada página filho tem um pai, mas um pai pode ter uma ou mais páginas filho. Para acessar uma página filho, você passa pela página pai.
 
@@ -145,10 +145,10 @@ Recomendamos uma estrutura hierárquica quando:
 
 :::row:::
     :::column:::
-        ![an app with a hybrid structure](images/nav/combining-structures.svg)
+        ![um aplicativo com uma estrutura híbrida](images/nav/combining-structures.svg)
     :::column-end:::
     :::column span="2":::
-        ### Combining structures
+        ### <a name="combining-structures"></a>Como combinar estruturas
 
 Você não precisa escolher uma ou outra estrutura; muitos aplicativos com design satisfatório usam ambas. Um aplicativo pode usar estruturas simples em páginas de nível superior que podem ser exibidas em qualquer ordem, e estruturas hierárquicas em páginas que têm relações mais complexas.
 
@@ -165,39 +165,51 @@ Após decidir-se por uma estrutura de página, precisará decidir como os usuár
 
 :::row:::
     :::column:::
-        ![Frame image](images/nav/thumbnail-frame.svg)
+        ![Imagem do quadro](images/nav/thumbnail-frame.svg)
     :::column-end:::
     :::column span="2":::
-        [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+        [**Quadro**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
 Com algumas exceções, qualquer aplicativo com várias páginas usa um quadro. Geralmente, um aplicativo tem uma página principal que contém o quadro e um elemento de navegação principal, como um controle de modo de exibição de navegação. Quando o usuário seleciona uma página, o quadro carrega e exibe essa página.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+        ![imagem das guias e do pivô](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
     :::column span="2":::
-        [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
+        [**Navegação superior**](../controls-and-patterns/navigationview.md)
 
-Exibe uma lista horizontal de links para páginas no mesmo nível. O controle [NavigationView](../controls-and-patterns/navigationview.md) implementa o painel de navegação superior e padrões de guias.
+Exibe uma lista horizontal de links para páginas no mesmo nível. O controle [NavigationView](../controls-and-patterns/navigationview.md) implementa o padrão de navegação superior.
         
 Use o painel de navegação superior quando:
 
 - Quiser mostrar todas as opções de navegação na tela.
 - Quiser mais espaço para o conteúdo do aplicativo.
 - Os ícones não descrevem claramente as categorias de navegação do seu aplicativo.
-        
-Use guias quando:
-
-- Quiser preservar o estado da página e o histórico de navegação.
-- Você espera que os usuários alternem entre as guias com frequência.
 
 :::row-end:::
 
 :::row:::
     :::column:::
-         ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+        ![imagem das guias e do pivô](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+    :::column span="2":::
+        [**Guias**](../controls-and-patterns/tab-view.md)
+
+Exibe um conjunto horizontal de guias e o respectivo conteúdo. O controle [TabView](../controls-and-patterns/tab-view.md) é útil para exibir várias páginas (ou documentos), oferecendo ao usuário a capacidade de reorganizar, abrir ou fechar guias.
+    
+Use guias quando:
+
+- Desejar que os usuários possam abrir, fechar ou reorganizar guias dinamicamente.
+- Esperar que possa haver um grande número de guias abertas ao mesmo tempo.
+- Esperar que os usuários possam mover as guias com facilidade entre janelas no aplicativo que usam guias, de modo semelhante aos navegadores da Web, como o Microsoft Edge.
+
+:::row-end:::
+
+:::row:::
+    :::column:::
+         ![imagem das guias e do pivô](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
         :::column span="2":::
     [**Pivô**](../controls-and-patterns/pivot.md)
@@ -213,10 +225,10 @@ Use um pivô quando:
 
 :::row:::
     :::column:::
-        ![navview image](images/nav/thumbnail-navview.svg)
+        ![imagem do modo de exibição de navegação](images/nav/thumbnail-navview.svg)
     :::column-end:::
     :::column span="2":::
-        [**Left navigation**](../controls-and-patterns/navigationview.md)
+        [**Navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
 Exibe uma lista vertical de links para páginas de nível superior. Use quando:
         
@@ -228,10 +240,10 @@ Exibe uma lista vertical de links para páginas de nível superior. Use quando:
         
 :::row:::
     :::column:::
-        ![Master details image](images/nav/thumbnail-master-detail.svg)
+        ![Imagem de mestre/detalhes](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
     :::column span="2":::
-        [**Master/details**](../controls-and-patterns/master-details.md)
+        [**Mestre/detalhes**](../controls-and-patterns/master-details.md)
 
 Exibe uma lista (exibição mestre) de itens. Selecionar um item exibe a página correspondente na seção de detalhes. Use quando:
         
@@ -243,10 +255,10 @@ Mestre/detalhes é adequado para caixas de entrada de email, listas de contatos 
 
 :::row:::
     :::column:::
-        ![Hyperlinks and buttons image](images/nav/thumbnail-hyperlinks-buttons.svg)
+        ![Imagem de hiperlinks e botões](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
     :::column span="2":::
-        [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
+        [**Hiperlinks**](../controls-and-patterns/hyperlinks.md)
 
 Elementos de navegação inseridos podem aparecer no conteúdo de uma página. Diferente de outros elementos de navegação, que devem ser consistentes em todas as páginas, os elementos de navegação de conteúdo inserido são exclusivos de uma página para outra.
 :::row-end:::

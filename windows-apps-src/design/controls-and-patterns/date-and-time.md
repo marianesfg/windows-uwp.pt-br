@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e489aa8cbf8b63885f039847b291404393444e9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 13901e044cbf6a14ac0ede6e9ed0f451859e49a1
+ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339381"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629147"
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
@@ -87,7 +87,7 @@ O ponto de entrada mostra a data escolhida e, quando o usuário seleciona o pont
 
 ### <a name="time-picker"></a>Seletor de hora
 
-O **TimePicker** é usado para selecionar um valor de hora único para itens como compromissos ou uma hora de partida. É uma exibição estática que é definida pelo usuário ou no código, mas não é atualizada para exibir a hora atual. 
+O **TimePicker** é usado para selecionar um valor de hora único para itens como compromissos ou uma hora de partida. É uma exibição estática que é definida pelo usuário ou no código, mas não é atualizada para exibir a hora atual.
 
 O ponto de entrada mostra a hora escolhida e, quando o usuário seleciona o ponto de entrada, uma superfície de seletor se expande verticalmente do meio para que o usuário faça uma seleção. O seletor de hora se sobrepõe a outra interface do usuário; ele não remove a outra interface do usuário.
 
@@ -110,10 +110,10 @@ Os controles de data de XAML são compatíveis com todos os sistemas de calendá
 
 O controle seletor de hora dá suporte a todos os sistemas de relógio especificados na classe [Windows.Globalization.ClockIdentifiers](https://docs.microsoft.com/uwp/api/Windows.Globalization.ClockIdentifiers). Você pode definir a propriedade [ClockIdentifier](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) para usar um relógio de 12 horas ou de 24 horas. O tipo da propriedade é String, mas você deve usar valores que correspondam às propriedades de cadeia de caracteres estática da classe ClockIdentifiers. Elas são: TwelveHour (a cadeia de caracteres "12HourClock") e TwentyFourHour (a cadeia de caracteres "24HourClock"). O valor padrão é "12HourClock".
 
-
 ### <a name="datetime-and-calendar-values"></a>Valores DateTime e Calendar
 
-Os objetos de data usados nos controles de data e hora de XAML têm uma representação diferente, dependendo de sua linguagem de programação. 
+Os objetos de data usados nos controles de data e hora de XAML têm uma representação diferente, dependendo de sua linguagem de programação.
+
 - C# e Visual Basic usam a estrutura [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) que faz parte do .NET. 
 - C++/CX usa a estrutura [Windows::Foundation::DateTime](https://docs.microsoft.com/windows/desktop/api/windows.foundation/ns-windows-foundation-datetime). 
 
@@ -121,15 +121,19 @@ Um conceito relacionado é a classe Calendar, que influencia como as datas são 
 
 O .NET também dá suporte a um tipo chamado [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime), que é implicitamente conversível para um [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset). Portanto, você pode ver um tipo de "DateTime"usado em código .NET que é usado para definir valores que são realmente DateTimeOffset. Para obter mais informações sobre a diferença entre DateTime e DateTimeOffset, confira Comentários na classe [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset).
 
-> **Observação**&nbsp;&nbsp;propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão da [extensão de marcação \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
+> [!NOTE]
+> As propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão da [extensão de marcação \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 
+- [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+- [Amostra de calendário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Calendar)
+- [Amostra de formatação de data e hora](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/DateTimeFormatting)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-**Para desenvolvedores (XAML)**
+### <a name="for-developers-xaml"></a>Para desenvolvedores (XAML)
+
 - [Classe CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)
 - [Classe CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker)
 - [Classe DatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker)
