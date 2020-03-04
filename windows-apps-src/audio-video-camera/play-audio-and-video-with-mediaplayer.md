@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a53c03c10089856cfd738a5c071c37502a34e9a5
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4ae87600c49b61e5ee426e8dd7ab33b3d3cf7ea3
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683619"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256149"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproduzir áudio e vídeo com o MediaPlayer
 
@@ -67,7 +67,7 @@ No evento [**SelectionChanged**](https://docs.microsoft.com/uwp/api/windows.ui.x
 [!code-cs[SetAudioEndpontSelectionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpontSelectionChanged)]
 
 ### <a name="playback-session"></a>Sessão de reprodução
-Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de transferência e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
+Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de download e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
 
 O exemplo a seguir mostra como implementar um manipulador de clique de botão que avança 10 segundos no conteúdo. Primeiro, o objeto**MediaPlaybackSession** do player é recuperado com a propriedade [**PlaybackSession**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.playbacksession). Em seguida, a propriedade [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position) é definida como a posição de reprodução atual mais 10 segundos.
 
@@ -115,6 +115,8 @@ Por fim, o [**NormalizedSourceRect**](https://docs.microsoft.com/uwp/api/windows
 No manipulador de eventos [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped), o retângulo de origem é definido de volta como (0,0,1,1) para fazer com que o quadro de vídeo inteiro seja renderizado.
 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
+
+**Observação** Esta seção descreve a entrada por toque. O touchpad envia eventos de ponteiro e não enviará eventos de manipulação.
 
 ### <a name="handling-policy-based-playback-degradation"></a>Processamento da degradação da reprodução com base em política
 
@@ -214,7 +216,7 @@ No manipulador de eventos **VideoTracksChanged**, obtenha as propriedades de cod
 ## <a name="use-mediaplayer-in-frame-server-mode"></a>Usar o MediaPlayer no modo de servidor de quadros
 A partir do Windows 10, versão 1703, você poderá usar o **MediaPlayer** no modo de servidor de quadros. Nesse modo, o **MediaPlayer** não renderiza automaticamente os quadros para um **MediaPlayerElement** associado. Em vez disso, seu app copia o quadro atual do **MediaPlayer** para um objeto que implementa [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). O principal cenário que esse recurso habilita é o uso de sombreadores de pixel para processar os quadros de vídeo fornecidos pelo **MediaPlayer**. Seu aplicativo é responsável pela exibição de cada quadro após o processamento, como ao mostrar o quadro em um controle [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) XAML.
 
-No exemplo a seguir, um novo **MediaPlayer** é inicializado e o conteúdo de vídeo é carregado. Em seguida, um manipulador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable) é registrado. O modo de servidor de quadros é habilitado por meio da configuração da propriedade [**IsVideoFrameServerEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) do objeto **MediaPlayer** como **true**. Por fim, a reprodução de mídia é iniciada com uma chamada a [**Play**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
+No exemplo a seguir, um novo **MediaPlayer** é inicializado e o conteúdo de vídeo é carregado. Em seguida, um manipulador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable) é registrado. O modo de servidor de quadros é habilitado por meio da configuração da propriedadeIsVideoFrameServerEnabled[**do objeto**MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) como **true**. Por fim, a reprodução de mídia é iniciada com uma chamada a [**Play**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
 
 [!code-cs[FrameServerInit](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetFrameServerInit)]
 
