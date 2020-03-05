@@ -6,14 +6,17 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e12641695dd72cddcfb6b51f6cd2f20fa66ddf41
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 96994566d19e03f1d85b751242331f04fef098ad
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258995"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78290340"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
+
+>[!WARNING]
+> A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Use o **monetizar** &gt; página **de anúncios no aplicativo** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades do AD para:
 
@@ -48,7 +51,7 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
     * Se você selecionar a família de dispositivos **Computador/Tablet (Windows 8.1)** ou **Celular (Windows Phone 8. x)** para uma unidade de anúncio em faixa, você pode selecionar opcionalmente **Mostrar anúncios da comunidade em seu aplicativo** para optar por [Anúncios de comunidade](about-community-ads.md).
 
 7.  Se você ainda não tiver definido a conformidade com COPPA para o aplicativo selecionado, escolha uma opção na seção [Conformidade com COPPA](#coppa).
-8.  Clique em **Criar unidade publicitária**.
+8.  Clique em **Criar unidade de anúncio**.
 
 Depois de criar a nova unidade do AD, ela aparecerá na tabela de unidades do AD disponíveis no **monetizar** &gt; página **de anúncios no aplicativo** .
 
@@ -56,7 +59,7 @@ Depois de criar a nova unidade do AD, ela aparecerá na tabela de unidades do AD
 
 ## <a name="review-and-edit-ad-units"></a>Revisar e editar unidades de anúncio
 
-Depois de criar unidades do AD para um ou mais aplicativos em sua conta, essas unidades do AD aparecem em uma tabela na parte inferior da página de anúncios do **monetizar** &gt; **no aplicativo** . Esta tabela mostra a **ID do aplicativo** e **ID da unidade publicitária** para cada unidade publicitária, juntamente com outras informações. Para mostrar anúncios em seu aplicativo, você precisará usar estes valores em seu código. Para obter mais informações, consulte [Configurar unidades publicitárias no app](../monetize/set-up-ad-units-in-your-app.md).
+Depois de criar unidades do AD para um ou mais aplicativos em sua conta, essas unidades do AD aparecem em uma tabela na parte inferior da página de anúncios do **monetizar** &gt; **no aplicativo** . Esta tabela mostra a **ID do aplicativo** e **ID da unidade publicitária** para cada unidade publicitária, juntamente com outras informações. Para mostrar anúncios em seu aplicativo, você precisará usar estes valores em seu código. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](../monetize/set-up-ad-units-in-your-app.md).
 
 * Se o aplicativo mostrar [anúncios em banner](../monetize/banner-ads.md), atribua esses valores às propriedades [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) e [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) de seu objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol).
 * Se seu aplicativo mostrar [anúncios intersticiais](../monetize/interstitial-ads.md), passe esses valores para o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) de seu objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad).

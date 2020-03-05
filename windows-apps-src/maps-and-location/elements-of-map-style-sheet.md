@@ -7,12 +7,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 723426b4affec4251f26485ac7ecc1fca307c102
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: b59e8c3c6d9c4c299e441964be1afb4e02051e23
+ms.sourcegitcommit: 5264d7499ddbe21199a63d74a294206069f90f8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867708"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78287453"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
@@ -52,17 +52,17 @@ Este tópico mostra as entradas JSON e as [propriedades](#properties) que você 
 ## <a name="entries"></a>Entradas
 Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da entrada.  Ele também mostra quais versões do Windows oferecem suporte a cada entrada e que a ignora.
 
-| Version | Nome da versão do Windows |
+| {1&gt;Version&lt;1} | Nome da versão do Windows |
 |---------|----------------------|
 |  1703   | Atualização dos criadores      |
-|  1709   | Atualização do Fall Creators |
+|  1709   | Fall Creators Update |
 |  1803   | Atualização de abril de 2018    |
 |  1809   | Atualização de outubro de 2018  |
 |  1903   | Atualização 2019 de maio      |
 
-| Nome                               | Grupo de propriedades            | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição    |
+| {1&gt;Nome&lt;1}                               | Grupo de propriedades            | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição    |
 |------------------------------------|---------------------------|------|------|------|------|------|----------------|
-| version                            | [Version](#version)       |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A versão de folha de estilos que você deseja usar. |
+| version                            | [Versão](#version)       |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A versão de folha de estilos que você deseja usar. |
 | configurações                           | [Configurações](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | As configurações que se aplicam à folha de estilos inteira. |
 | mapElement                         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas do mapa. |
 | > baseMapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A entrada pai para todas as entradas que não foram feitas por usuário. |
@@ -233,7 +233,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 
 <a id="properties" />
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>{1&gt;Propriedades&lt;1}
 
 Esta seção descreve as propriedades que você pode usar para cada entrada.
 
@@ -241,28 +241,26 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 ### <a name="version-properties"></a>Propriedades de versão
 
-| Propriedade                     | type    | Descrição                                                                                                           |
+| Propriedade                     | Tipo    | Descrição                                                                                                           |
 |------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| version                      | String  | Versão de folha de estilos direcionada. Usado para aplicabilidade. "1.0" para padrão, "1." para atualizações adicionais de pequenos recursos. |
+| version                      | Cadeia de caracteres  | Versão de folha de estilos direcionada. Usado para aplicabilidade. "1.0" para padrão, "1." para atualizações adicionais de pequenos recursos. |
 
 <a id="settings" />
 
 ### <a name="settings-properties"></a>Propriedades de configurações
 
-| Propriedade                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | atmosphereVisible            | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se o atmosfera aparece no controle 3D. |
 | buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se deseja ou não mostrar texturas em construções 3D simbólicas com texturas. |
 | fogColor                     | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB do nevoeiro a distância que aparece no controle 3D. |
 | glowColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB que pode ser aplicado para rotular o brilho e o brilho do ícone. |
-| imageFamily                  | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O nome da imagem definida para usar para esse estilo. Defina esse valor como *padrão* para sinais que uso corrigido cores que são baseados na entrada do mundo real. Defina esse valor como *Palette* para sinais que usem uma paleta de cores configuráveis. |
+| imageFamily                  | Cadeia de caracteres  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O nome da imagem definida para usar para esse estilo. Defina esse valor como *padrão* para sinais que uso corrigido cores que são baseados na entrada do mundo real. Defina esse valor como *Palette* para sinais que usem uma paleta de cores configuráveis. |
 | landColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB da land terra antes que algo seja desenhado naquela terra. |
 | logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se os itens com uma propriedade **Organization** devem desenhar os Logotipos apropriados ou usar um ícone genérico. |
 | officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se os itens que possuem uma propriedade de cor oficial (como linhas de trânsito na China) devem desenhar essa cor. Por exemplo, desative esse valor para um mapa em preto e branco. |
 | rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se deve ou não desenhar regiões rasterizadoras onde elas têm uma representação melhor do que os vetores (Japão e Coreia). |
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se é possível ou não desenhar o sombreamento de elevações no mapa. |
-| shadedReliefDarkColor        | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado escuro do baixo relevo sombreado.  O canal alfa representa o valor alfa máximo. |
-| shadedReliefLightColor       | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado claro do baixo relevo sombreado.  O canal alfa representa o valor alfa máximo. |
 | shadowColor                  | Cor   |      |      |      |  ✔   |  ✔   | A cor da sombra por trás dos ícones que usam sombras. |
 | spaceColor                   | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB para a área ao redor do mapa. |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se as cores originais no SVG devem ser usadas em vez de Pesquisar a entrada da paleta em busca de cores em uma imagem. |
@@ -271,12 +269,12 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 ### <a name="mapelement-properties"></a>Propriedades de MapElement
 
-| Propriedade                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | backgroundScale              | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Quantidade pela qual o elemento de fundo de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | fillColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor que é usada para polígonos de preenchimento, a tela de fundo de ícones de ponto e para o centro de linhas se elas tiverem se dividido. |
-| fontFamily                   | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| fontWeight                   | String  |      |      |      |      |  ✔   | A densidade de uma face de tipos, em termos da claridade ou da pesada dos traços. "**Light**", "**normal**", "**seminegrito**" e "**Bold**" podem ser definidos |
+| fontFamily                   | Cadeia de caracteres  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| fontWeight                   | Cadeia de caracteres  |      |      |      |      |  ✔   | A densidade de uma face de tipos, em termos da claridade ou da pesada dos traços. "**Light**", "**normal**", "**seminegrito**" e "**Bold**" podem ser definidos |
 | iconColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do glifo mostrado no meio de um ícone de ponto. |
 | iconScale                    | Float   |      |  ✔   |  ✔   |  ✔   |  ✔   | Quantidade pela qual o glifo de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | labelColor                   | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
@@ -284,7 +282,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 | labelScale                   | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor pelo qual os tamanhos de rótulo padrão são dimensionados. Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | labelVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 | overwriteColor               | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Faz com que o valor alfa de **FillColor** substitua **StrokeColor** em vez de mesclar-se com ela. |
-| scale                        | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor pelo qual o tamanho inteiro do ponto é dimensionado. Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
+| dimensionar                        | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor pelo qual o tamanho inteiro do ponto é dimensionado. Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | strokeColor                  | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor a ser usada para o contorno em torno de polígonos, o contorno em torno dos ícones de ponto e a cor das linhas. |
 | strokeWidthScale             | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor pelo qual o traço de linhas é dimensionado. Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | visible                      | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
@@ -295,7 +293,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | borderOutlineColor           | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor secundária a linha de revestimento da borda de um polígono preenchido. |
 | borderStrokeColor            | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor da linha principal da borda de um polígono preenchido. |
@@ -308,11 +306,11 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | shadowVisible                | Bool    |      |      |      |      |  ✔   | O sinalizador que indica se a sombra do ícone deve estar visível ou não |
-| forma-plano de fundo             | String  |      |      |      |      |  ✔   | Forma a ser usada como plano de fundo do ícone – substituindo qualquer forma existente. |
-| Ícone de forma                   | String  |      |      |      |      |  ✔   | Forma a ser usada como o glifo de primeiro plano do ícone – substituindo qualquer forma existente. |
+| forma-plano de fundo             | Cadeia de caracteres  |      |      |      |      |  ✔   | Forma a ser usada como plano de fundo do ícone – substituindo qualquer forma existente. |
+| Ícone de forma                   | Cadeia de caracteres  |      |      |      |      |  ✔   | Forma a ser usada como o glifo de primeiro plano do ícone – substituindo qualquer forma existente. |
 | stemAnchorRadiusScale        | Float   |      |      |  ✔   |  ✔   |  ✔   | Quantidade pela qual o ponto de ancoramento de um tronco do ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | stemColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do tronco oriundo da parte inferior do ícone no modo de 3D. |
 | stemHeightScale              | Float   |      |      |  ✔   |  ✔   |  ✔   | Quantidade pela qual o tamanho do tronco de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
@@ -325,6 +323,6 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|------------|
 | renderAsSurface              | Bool    |      |      |  ✔   |  ✔   |  ✔   | Um sinalizador indica que um modelo 3D deve ser renderizado como uma construção, sem esmaecimento de profundidade em relação ao piso. |
