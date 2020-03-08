@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
 ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254991"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853367"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -71,10 +71,10 @@ Esse erro também poderá ocorrer se você tentar criar uma instância de uma cl
 
 Para saber como criar uma instância de suas classes de runtime implementadas localmente que *não* exigem construção uniforme, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md).
 
-## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
+## <a name="should-i-implement-windowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime), é recomendável implementar também **IClosable** para dar suporte ao consumo de sua classe de tempo de execução por linguagens que carecem de finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close), ou ambos forem chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.
 
-## <a name="do-i-need-to-call-iclosablecloseuwpapiwindowsfoundationiclosableclose-on-runtime-classes-that-i-consume"></a>É necessário chamar [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) nas classes de runtime que eu consumo?
+## <a name="do-i-need-to-call-iclosableclose-on-runtime-classes-that-i-consume"></a>É necessário chamar [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) nas classes de runtime que eu consumo?
 **IClosable** existe para dar suporte a linguagens que não têm finalização determinística. Portanto, você não deve chamar **IClosable::Close** de C++/WinRT, exceto em casos bem raros, envolvendo corridas de desligamento ou adoções semifatais. Se estiver usando tipos **Windows.UI.Composition**, por exemplo, você poderá se deparar com casos em que queira descartar objetos em uma sequência definida, como uma alternativa para permitir que a destruição do wrapper de C++/WinRT faça o trabalho para você.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>É possível usar LLVM/Clang para compilar com C++/WinRT?

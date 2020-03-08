@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manipulação, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: b64fbe93198af95402161873c1d68d0da41f33f7
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270109"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853365"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manipular eventos usando delegados em C++/WinRT
 
 Este tópico mostra como registrar e revogar delegados que manipulam eventos usando [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Você pode manipular um evento usando qualquer objeto de função de C++ padrão.
 
 > [!NOTE]
-> Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para obter informações sobre como instalar e usar o C++/WinRT Visual Studio Extension (VSIX) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira as informações de [suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="using-visual-studio-2019-to-add-an-event-handler"></a>Usando o Visual Studio 2019 para adicionar um manipulador de eventos
 
@@ -189,7 +189,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 ```
 
 > [!NOTE]
-> No exemplo de código acima, `Button::Click_revoker` é um alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Um padrão semelhante aplica-se a todos os eventos de C++/WinRT. Cada evento de tempo de execução do Windows tem uma sobrecarga de função de revogação que retorna um revogador de evento, e esse tipo de revogador é um membro da origem do evento. Vejamos outro exemplo, o evento [**CoreWindow::SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tem uma sobrecarga de função de registro que retorna um valor do tipo **CoreWindow::SizeChanged_revoker**.
+> No exemplo de código acima, `Button::Click_revoker` é um alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Um padrão semelhante aplica-se a todos os eventos de C++/WinRT. Cada evento de Windows Runtime tem uma sobrecarga de função de revogação que retorna um revogador de evento, e esse tipo de revogador é um membro da origem do evento. Vejamos outro exemplo, o evento [**CoreWindow::SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tem uma sobrecarga de função de registro que retorna um valor do tipo **CoreWindow::SizeChanged_revoker**.
 
 Considere a revogação de manipuladores em um cenário de navegação de página. Se estiver navegando repetidamente em uma página e depois retroceder, é possível revogar quaisquer manipuladores ao navegar para fora da página. Como alternativa, se estiver reutilizando a mesma instância de página, verifique o valor do token e registre somente se ele ainda não tiver sido definido (`if (!m_token){ ... }`). Uma terceira opção é armazenar um revogador de evento na página como um membro de dados. E uma quarta opção, conforme descrito mais adiante neste tópico, é capturar uma referência forte ou fraca para o objeto *this* na sua função lambda.
 
@@ -270,7 +270,7 @@ winrt::hstring f(ListView listview)
 
 Se você manipular um evento com uma função de membro de objeto, ou de dentro de uma função lambda dentro da função de membro de um objeto, precisará pensar sobre os ciclos de vida relativos do destinatário do evento (o objeto que está manipulando o evento) e a origem do evento (o objeto que está acionando o evento). Para saber mais e obter exemplos de código, confira [Referências fortes e fracas em C++/WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Struct de marcador winrt::auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [Função winrt::implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
 * [Função winrt::implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
