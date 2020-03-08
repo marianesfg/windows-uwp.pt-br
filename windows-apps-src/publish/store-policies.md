@@ -7,18 +7,18 @@ keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
 ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
-ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
-ms.translationtype: HT
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77607254"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853434"
 ---
 # <a name="microsoft-store-policies"></a>Políticas da Microsoft Store
 
 
-**Versão do documento: 7.12**
+**Versão do documento: 7,12**
 
-**Data do documento: 1º de outubro de 2019**
+**Data do documento: 1 de outubro de 2019**
 
 > [!NOTE]
 > Para obter um resumo das alterações recentes deste contrato, consulte o [Histórico de alterações](store-policies-change-history.md).
@@ -473,7 +473,7 @@ O conteúdo gerado pelo usuário é o conteúdo com o qual os usuários contribu
 ---
 <sup>1</sup>"Store" ou "Microsoft Store" significa uma plataforma operada ou que pertence à Microsoft, independentemente da sua designação, por meio da qual os Aplicativos podem ser oferecidos ou adquiridos pelos Clientes. Salvo especificação em contrário, a Store inclui a Microsoft Store, a Windows Store, a Loja Xbox, a Microsoft Store para Empresas e a Microsoft Store para Educação.
 
-### <a name="see-also"></a>Veja também
+### <a name="see-also"></a>Consulte também
 
 - [Histórico de alterações das Políticas da Microsoft Store](store-policies-change-history.md)
 - [Código de Conduta e Políticas da Microsoft Store](store-policies-and-code-of-conduct.md)

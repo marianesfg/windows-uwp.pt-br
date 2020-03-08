@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: c6384b5890466ff13c72a1b90eb9b27194d51fff
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788278"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853523"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
-Ao enviar um complemento na [Partner Center](https://partner.microsoft.com/dashboard), as opções a **preços e disponibilidade** página determinar o quanto a cobrar os clientes para seu complemento e como ele deve ser oferecido aos clientes.
+Ao enviar um complemento no [Partner Center](https://partner.microsoft.com/dashboard), as opções na página **preços e disponibilidade** determinam quanto cobrar os clientes pelo seu complemento e como eles devem ser oferecidos aos clientes.
 
 ## <a name="markets"></a>Mercados
 
@@ -33,8 +33,8 @@ A opção padrão é **Podem ser exibidos na listagem da Store do produto pai**.
 
 Para complementos que você não quer disponibilizar por completo, selecione **Oculto na Store** e uma das seguintes opções:
 
--   **Disponível para compra dentro do produto pai somente**: Esta opção permite que qualquer cliente comprar o complemento de dentro de seu aplicativo, mas o complemento não será exibido na listagem de Store do seu aplicativo ou detectável na Store. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
--   **Pare a aquisição de: Qualquer cliente com um link direto pode ver a listagem de Store do produto, mas eles podem baixá-lo somente se o produto antes, de propriedade ou tiver um código promocional e estiver usando um dispositivo Windows 10. Este complemento não é exibido na listagem do produto pai**: Escolher essa opção significa que o complemento não será exibido nos detalhes de seu aplicativo e novos clientes não podem adquirir o complemento. No entanto, **essa opção não tem suporte para clientes Windows 8.1 ou anterior**. Se seu aplicativo publicado anteriormente está disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta de complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e, em seguida, publicar um envio de novo para o aplicativo. Isso é recomendado, mesmo se seu aplicativo não tem como meta Windows 8.1 ou anterior; é uma melhor experiência para seus clientes se você nunca oferecê-las um complemento que você tenha optado por tornar indisponível.
+-   **Disponível para compra somente de dentro do produto pai**: a escolha dessa opção permite que qualquer cliente adquira o complemento de dentro de seu aplicativo, mas o complemento não será exibido na listagem de armazenamento do aplicativo ou detectável na loja. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
+-   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Store do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não tem suporte para clientes no Windows 8.1 ou anterior**. Se o aplicativo publicado anteriormente estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra para esses clientes. Para parar de oferecer o complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e, em seguida, publicar um novo envio para o aplicativo. Isso é recomendado mesmo que seu aplicativo não direcione Windows 8.1 ou anterior; é uma experiência melhor para seus clientes se você nunca oferecer a eles um complemento que você tenha optado por tornar-se indisponível.
     
  > [!NOTE] 
  > A seleção da opção **Parar aquisição** e/ou enviar uma atualização de aplicativo que remove o complemento do código do aplicativo não afeta clientes que já adquiriram o complemento, independentemente do sistema operacional.
@@ -49,12 +49,12 @@ Para obter mais informações, consulte [Configurar agendamento preciso do lanç
 
 ## <a name="pricing"></a>Preço
 
-Você deve selecionar um preço base para seu complemento (a menos que você selecionou a **parar a aquisição** opção a **visibilidade** seção). A seleção padrão é **gratuito**, portanto, se você quiser cobrar dinheiro para o complemento, certifique-se de escolher uma das camadas de preço disponíveis (começando em USD.99).
+Você deve selecionar um preço base para seu complemento (a menos que tenha selecionado a opção **parar aquisição** na seção **visibilidade** ). A seleção padrão é **gratuita**, portanto, se você quiser cobrar dinheiro pelo complemento, certifique-se de escolher um dos tipos de preço disponíveis (começando em 99 USD).
 
 Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do complemento deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 
 > [!TIP]
-> Para complementos de assinatura, você não pode aumentar o preço depois de publicar o complemento, selecionando um preço mais alto de base em um envio posterior ou com o agendamento de uma alteração de preço que aumenta o preço. Você pode selecionar um preço mais baixo usando qualquer um desses métodos, mas depois que o preço é reduzido não será capaz de gerá-lo maior do que esse novo preço. Por isso, é especialmente importante para garantir que você selecionar a camada de preços apropriada para complementos de assinaturas. 
+> Para Complementos de assinatura, você não pode aumentar o preço depois de publicar o complemento, seja selecionando um preço base mais alto em um envio posterior ou agendando uma alteração de preço que aumente o preço. Você pode selecionar um preço menor usando qualquer um desses métodos, mas depois que o preço for reduzido, você não poderá aumentar esse preço para um valor maior. Por isso, é especialmente importante ter certeza de que você selecionou o tipo de preço apropriado para Complementos de assinatura. 
 
 Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
 

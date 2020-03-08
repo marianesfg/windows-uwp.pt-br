@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
 ms.openlocfilehash: f39d8512398c43ea65037de82434e3740bac7ff2
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77506736"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852563"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
@@ -92,7 +92,7 @@ Os aplicativos JavaScript/HTML não devem colocar elementos no intervalo de 10 M
 
 Definir propriedades relacionadas a borda herdada do **AdControl** da classe pai fará com que o posicionamento de anúncios fique incorreto.
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
 Para obter mais informações sobre os problemas conhecidos mais recentes e publicar perguntas relacionadas às bibliotecas do SDK do Microsoft Advertising, visite o [fórum](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps).
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: eebd98d8e1ce39ef8d9876ab4749bcc76012f9fa
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685145"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852807"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 
@@ -36,7 +36,7 @@ As seleções feitas para o agendamento base se aplicarão a todos os mercados e
 
 Você verá duas opções aqui: **Lançamento** e **Parar aquisição**. 
 
-## <a name="release"></a>Liberação
+## <a name="release"></a>Versão
 
 Na lista suspensa **Lançamento**, você pode definir quando deseja que o aplicativo seja disponibilizado na Loja. Isso significa que o aplicativo pode ser descoberto na Loja por meio de pesquisa ou navegação, e que os clientes podem ver a listagem da Loja e adquirir o aplicativo.
 
@@ -56,7 +56,7 @@ Na lista suspensa **Parar aquisição**, você pode definir uma data e hora em q
 
 Por padrão, a opção **Parar aquisição** é definida como nunca. Para alterar essa configuração, selecione **em** na lista suspensa e especifique uma data e hora, conforme descrito acima. Na data e hora que você selecionar, os clientes não poderão mais adquirir o aplicativo.
 
-É importante entender que essa opção tem o mesmo impacto que selecionar **tornar este aplicativo detectável, mas não disponível** na seção de [visibilidade](choose-visibility-options.md#discoverability) e escolher **parar a aquisição: qualquer cliente com um link direto pode ver a listagem de armazenamento do produto, mas eles só poderão baixá-lo se possuírem o produto antes ou tiver um código promocional e estiver usando um dispositivo Windows 10.** Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Como remover um aplicativo da Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+É importante entender que essa opção tem o mesmo impacto que selecionar **tornar este aplicativo detectável, mas não disponível** na seção de [visibilidade](choose-visibility-options.md#discoverability) e escolher **parar a aquisição: qualquer cliente com um link direto pode ver a listagem de armazenamento do produto, mas eles só poderão baixá-lo se possuírem o produto antes ou tiver um código promocional e estiver usando um dispositivo Windows 10.** Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Se você selecionar uma data para **Parar aquisição** e depois decidir disponibilizar o aplicativo novamente, poderá criar um novo envio e alterar **Parar aquisição** para **Nunca**. O aplicativo ficará disponível novamente depois que o envio atualizado for publicado.
@@ -80,245 +80,245 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 
 | Mercado | Fuso Horário |
 |--------|-----------|
-| Afeganistão  |  (UTC+04:30) Cabul |
-| Albânia  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Algeria  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Samoa Americana  |  (UTC+13:00) Samoa |
-| Andorra  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Angola  |  (UTC+01:00) Centro-oeste da África |
-| Anguilla  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Antártida  |  (UTC+12:00) Auckland, Wellington |
-| Antígua e Barbuda  |  (UTC-04:00) Horário do Atlântico (Canadá) |
+| Afeganistão  |  (UTC + 04:30) Cabul |
+| Albânia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Argélia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Samoa Americana  |  (UTC + 13:00) Samoa |
+| Andorra  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Angola  |  (UTC + 01:00) Centro-oeste da África |
+| Anguilla  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Antártida  |  (UTC + 12:00) Auckland, Wellington |
+| Antígua e Barbuda  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Argentina  |  (UTC-03:00) Cidade de Buenos Aires |
-| Armênia  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Aruba  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Austrália  |  (UTC+10:00) Camberra, Melbourne, Sidney |
-| Áustria  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Azerbaijão  |  (UTC+04:00) Baku |
-| Bahamas, As  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Bahrein  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Bangladesh  |  (UTC+06:00) Dacca |
-| Barbados  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Belarus  |  (UTC+03:00) Minsk |
-| Bélgica  |  (UTC+01:00) Bruxelas, Copenhague, Madri, Paris |
-| Belize  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| Benin  |  (UTC+01:00) Centro-oeste da África |
-| Bermuda  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Butão  |  (UTC+06:00) Dacca |
+| Armênia  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Aruba  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Austrália  |  (UTC + 10:00) Camberra, Melbourne, Sydney |
+| Áustria  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Azerbaijão  |  (UTC + 04:00) Baku |
+| Bahamas, As  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Bahrein  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Bangladesh  |  (UTC + 06:00) Dacca |
+| Barbados  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Belarus  |  (UTC + 03:00) Minsk |
+| Bélgica  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| Belize  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| Benin  |  (UTC + 01:00) Centro-oeste da África |
+| Bermuda  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Butão  |  (UTC + 06:00) Dacca |
 | República Bolivariana da Venezuela  |  (UTC-04:00) Caracas |
-| Bolívia  |  (UTC-04:00) Georgetown, La Paz, Manaus, San Juan |
-| Bonaire, Santo Eustáquio e Saba  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Bósnia e Herzegovina  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Botsuana  |  (UTC+01:00) Centro-oeste da África |
-| Ilha Bouvet  |  (UTC+00:00) Monróvia, Reykjavík |
+| Bolívia  |  (UTC-04:00) Georgetown, la paz, Manaus, San Juan |
+| Bonaire, Santo Eustáquio e Saba  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Bósnia e Herzegovina  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Botsuana  |  (UTC + 01:00) Centro-oeste da África |
+| Ilha Bouvet  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Brasil  |  (UTC-03:00) Brasília |
-| Território Britânico do Oceano Índico  |  (UTC+06:00) Dacca |
-| Ilhas Virgens Britânicas  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Brunei  |  (UTC+08:00) Irkutsk |
-| Bulgária  |  (UTC+02:00) Chisinau |
-| Burquina Faso  |  (UTC+00:00) Monróvia, Reykjavík |
-| Burundi  |  (UTC+02:00) Harare, Pretória |
-| CÃ ́te d' Ivoire  |  (UTC+00:00) Monróvia, Reykjavík |
-| Camboja  |  (UTC+07:00) Bancoc, Hanói, Jacarta |
-| Camarões  |  (UTC+01:00) Centro-oeste da África |
-| Canadá  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Cabo Verde  |  (UTC-01:00) Cabo Verde |
-| Ilhas Cayman  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| República Centro-Africana  |  (UTC+01:00) Centro-oeste da África |
-| Chade  |  (UTC+01:00) Centro-oeste da África |
+| Território Britânico do Oceano Índico  |  (UTC + 06:00) Dacca |
+| Ilhas Virgens Britânicas  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Brunei  |  (UTC + 08:00) Irkutsk |
+| Bulgária  |  (UTC + 02:00) Chisinau |
+| Burquina Faso  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Burundi  |  (UTC + 02:00) Harare, Pretória |
+| CÃ ́te d' Ivoire  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Camboja  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
+| Camarões  |  (UTC + 01:00) Centro-oeste da África |
+| Canadá  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Cabo Verde  |  (UTC-01:00) Ilha de cabo verde |
+| Ilhas Cayman  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| República Centro-Africana  |  (UTC + 01:00) Centro-oeste da África |
+| Chade  |  (UTC + 01:00) Centro-oeste da África |
 | Chile  |  (UTC-04:00) Santiago |
-| China  |  (UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqui |
-| Ilha Christmas  |  (UTC+07:00) Krasnoyarsk |
-| Ilhas Cocos (Keeling)  |  (UTC+06:30) Yangon (Rangoon) |
+| China  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
+| Ilha Christmas  |  (UTC + 07:00) Krasnoyarsk |
+| Ilhas Cocos (Keeling)  |  (UTC + 06:30) Yangon (Rangoon) |
 | Colômbia  |  (UTC-05:00) Bogotá, Lima, Quito, Rio Branco |
-| Ilhas Comores  |  (UTC+03:00) Nairóbi |
-| Congo  |  (UTC+01:00) Centro-oeste da África |
-| Congo (República Democrática)  |  (UTC+01:00) Centro-oeste da África |
+| Ilhas Comores  |  (UTC + 03:00) Nairóbi |
+| Congo  |  (UTC + 01:00) Centro-oeste da África |
+| Congo (República Democrática)  |  (UTC + 01:00) Centro-oeste da África |
 | Ilhas Cook  |  (UTC-10:00) Havaí |
-| Costa Rica  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| Croácia  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Costa Rica  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| Croácia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | CuraÃ § ao  |  (UTC-04:00) Cuiabá |
-| Chipre  |  (UTC+02:00) Chisinau |
-| República Tcheca  |  (UTC+01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
-| Dinamarca  |  (UTC+01:00) Bruxelas, Copenhague, Madri, Paris |
-| Djibuti  |  (UTC+03:00) Nairóbi |
-| Dominica  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| República Dominicana  |  (UTC-04:00) Horário do Atlântico (Canadá) |
+| Chipre  |  (UTC + 02:00) Chisinau |
+| República Tcheca  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Dinamarca  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| Djibuti  |  (UTC + 03:00) Nairóbi |
+| Dominica  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| República Dominicana  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Equador  |  (UTC-05:00) Bogotá, Lima, Quito, Rio Branco |
-| Egito  |  (UTC+02:00) Chisinau |
-| El Salvador  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| Guiné Equatorial  |  (UTC+01:00) Centro-oeste da África |
-| Eritreia  |  (UTC+03:00) Nairóbi |
-| Estônia  |  (UTC+02:00) Chisinau |
-| Etiópia  |  (UTC+03:00) Nairóbi |
+| Egito  |  (UTC + 02:00) Chisinau |
+| El Salvador  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| Guiné Equatorial  |  (UTC + 01:00) Centro-oeste da África |
+| Eritreia  |  (UTC + 03:00) Nairóbi |
+| Estônia  |  (UTC + 02:00) Chisinau |
+| Etiópia  |  (UTC + 03:00) Nairóbi |
 | Ilhas Malvinas  |  (UTC-04:00) Santiago |
-| Ilhas Faroés  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Fiji  |  (UTC+12:00) Fiji |
-| Finlândia  |  (UTC+02:00) Helsinque, Kiev, Riga, Sófia, Tallinn, Vilnius |
-| França  |  (UTC+01:00) Bruxelas, Copenhague, Madri, Paris |
-| Guiana Francesa  |  (UTC-03:00) Caiena, Fortaleza |
+| Ilhas Faroés  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Fiji  |  (UTC + 12:00) Ilhas |
+| Finlândia  |  (UTC + 02:00) Helsinque, Kiev, Riga, Sófia, Tallinn, Vilnius |
+| França  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| Guiana Francesa  |  (UTC-03:00) Caiena, fortaleza |
 | Polinésia Francesa  |  (UTC-10:00) Havaí |
-| Terras Austrais e Antárticas Francesas  |  (UTC+05:00) Ashgabat, Tashkent |
-| Gabão  |  (UTC+01:00) Centro-oeste da África |
-| Gâmbia, A  |  (UTC+00:00) Monróvia, Reykjavík |
-| Geórgia  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Alemanha  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Gana  |  (UTC+00:00) Monróvia, Reykjavík |
-| Gibraltar  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Grécia  |  (UTC+02:00) Atenas, Bucareste |
-| Groenlândia  |  (UTC+00:00) Monróvia, Reykjavík |
-| Granada  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Guadalupe  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Guam  |  (UTC+10:00) Guam, Port Moresby |
-| Guatemala  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| Guernsey  |  (UTC+00:00) Monróvia, Reykjavík |
-| Guiné  |  (UTC+00:00) Monróvia, Reykjavík |
-| Guiné-Bissau  |  (UTC+00:00) Monróvia, Reykjavík |
-| Guiana  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Haiti  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
+| Terras Austrais e Antárticas Francesas  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Gabão  |  (UTC + 01:00) Centro-oeste da África |
+| Gâmbia, A  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Geórgia  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Alemanha  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Gana  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Gibraltar  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Grécia  |  (UTC + 02:00) Atenas, Bucareste |
+| Groenlândia  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Granada  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Guadalupe  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Guam  |  (UTC + 10:00) Guam, porta Moresby |
+| Guatemala  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| Guernsey  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Guiné  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Guiné-Bissau  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Guiana  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Haiti  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Ilhas Heard e McDonald  |  (UTC-05:00) Bogotá, Lima, Quito, Rio Branco |
-| Santa Sé (Cidade do Vaticano)  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Honduras  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| RAE de Hong Kong  |  (UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqui |
-| Hungria  |  (UTC+01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
-| Islândia  |  (UTC+00:00) Monróvia, Reykjavík |
-| Índia  |  (UTC+05:30) Chennai, Kolkata (Calcutá), Mumbai, Nova Délhi |
-| Indonésia  |  (UTC+07:00) Bancoc, Hanói, Jacarta |
-| Iraque  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Irlanda  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Israel  |  (UTC+02:00) Jerusalém |
-| Itália  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Jamaica  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Japão  |  (UTC+09:00) Osaka, Sapporo, Tóquio |
-| Jersey  |  (UTC+00:00) Monróvia, Reykjavík |
-| Jordânia  |  (UTC+02:00) Chisinau |
-| Cazaquistão  |  (UTC+05:00) Ashgabat, Tashkent |
-| Quênia  |  (UTC+03:00) Nairóbi |
-| Kiribati  |  (UTC+14:00) Ilha de Kiritimati |
-| Coreia  |  (UTC+09:00) Seul |
-| Kuwait  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Quirguizistão  |  (UTC+06:00) Astana |
-| Laos  |  (UTC+07:00) Bancoc, Hanói, Jacarta |
-| Letônia  |  (UTC+02:00) Chisinau |
-| Líbano  |  (UTC+02:00) Chisinau |
-| Lesoto  |  (UTC+02:00) Harare, Pretória |
-| Libéria  |  (UTC+00:00) Monróvia, Reykjavík |
-| Líbia  |  (UTC+02:00) Chisinau |
-| Liechtenstein  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Lituânia  |  (UTC+02:00) Chisinau |
-| Luxemburgo  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| RAE de Macau  |  (UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqui |
-| Macedônia do Norte  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Madagascar  |  (UTC+03:00) Nairóbi |
-| Maláui  |  (UTC+02:00) Harare, Pretória |
-| Malásia  |  (UTC+08:00) Kuala Lumpur, Singapura |
-| Maldivas  |  (UTC+05:00) Ashgabat, Tashkent |
-| Máli  |  (UTC+00:00) Monróvia, Reykjavík |
-| Malta  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Homem, ilha de  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Ilhas Marshall  |  (UTC+12:00) Petropavlovsk-Kamchatsky – Antiga |
-| Martinica  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Mauritânia  |  (UTC+00:00) Monróvia, Reykjavík |
-| Maurício  |  (UTC+04:00) Port Louis |
-| Mayotte  |  (UTC+03:00) Nairóbi |
-| México  |  (UTC-06:00) Guadalajara, México, Monterrey |
-| Micronésia  |  (UTC+10:00) Guam, Port Moresby |
-| Moldova  |  (UTC+02:00) Chisinau |
-| Mônaco  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Mongólia  |  (UTC+07:00) Krasnoyarsk |
-| Montenegro  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Montserrat  |  (UTC-04:00) Horário do Atlântico (Canadá) |
+| Santa Sé (Cidade do Vaticano)  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Honduras  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| RAE de Hong Kong  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
+| Hungria  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Islândia  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Índia  |  (UTC + 05:30) Chennai, Kolkata, Mumbai, Nova Délhi |
+| Indonésia  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
+| Iraque  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Irlanda  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Israel  |  (UTC + 02:00) Jerusalém |
+| Itália  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Jamaica  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Japão  |  (UTC + 09:00) Osaka, Sapporo, Tóquio |
+| Jersey  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Jordânia  |  (UTC + 02:00) Chisinau |
+| Cazaquistão  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Quênia  |  (UTC + 03:00) Nairóbi |
+| Kiribati  |  (UTC + 14:00) Ilha Kiritimati |
+| Coreia  |  (UTC + 09:00) Seul |
+| Kuwait  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Quirguistão  |  (UTC + 06:00) Astana |
+| Laos  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
+| Letônia  |  (UTC + 02:00) Chisinau |
+| Líbano  |  (UTC + 02:00) Chisinau |
+| Lesoto  |  (UTC + 02:00) Harare, Pretória |
+| Libéria  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Líbia  |  (UTC + 02:00) Chisinau |
+| Liechtenstein  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Lituânia  |  (UTC + 02:00) Chisinau |
+| Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| RAE de Macau  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
+| Macedônia (ARIM)  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Madagascar  |  (UTC + 03:00) Nairóbi |
+| Malaui  |  (UTC + 02:00) Harare, Pretória |
+| Malásia  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
+| Maldivas  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Máli  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Malta  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Homem, ilha de  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Ilhas Marshall  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
+| Martinica  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Mauritânia  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Maurício  |  (UTC + 04:00) Porta Louis |
+| Mayotte  |  (UTC + 03:00) Nairóbi |
+| México  |  (UTC-06:00) Guadalajara, cidade do México, Monterrey |
+| Micronésia  |  (UTC + 10:00) Guam, porta Moresby |
+| Moldova  |  (UTC + 02:00) Chisinau |
+| Mônaco  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Mongólia  |  (UTC + 07:00) Krasnoyarsk |
+| Montenegro  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Montserrat  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Marrocos  |  (UTC + 01:00) Casablanca |
-| Moçambique  |  (UTC+02:00) Harare, Pretória |
-| Myanmar  |  (UTC+06:30) Yangon (Rangoon) |
-| Namíbia  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Nauru  |  (UTC+12:00) Petropavlovsk-Kamchatsky – Antiga |
-| Nepal  |  (UTC+05:45) Katmandu |
-| Países Baixos  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Nova Caledônia  |  (UTC+11:00) Ilhas Salomão, Nova Caledônia |
-| Nova Zelândia  |  (UTC+12:00) Auckland, Wellington |
-| Nicarágua  |  (UTC-06:00) Hora Central (EUA e Canadá) |
-| Níger  |  (UTC+01:00) Centro-oeste da África |
-| Nigéria  |  (UTC+01:00) Centro-oeste da África |
-| Niue  |  (UTC+13:00) Samoa |
-| Ilha Norfolk  |  (UTC+11:00) Ilhas Salomão, Nova Caledônia |
-| Ilhas Marianas do Norte  |  (UTC+10:00) Guam, Port Moresby |
-| Noruega  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Omã  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Paquistão  |  (UTC+05:00) Islamabad, Karachi |
-| Palau  |  (UTC+09:00) Osaka, Sapporo, Tóquio |
-| Autoridade Palestina  |  (UTC+02:00) Chisinau |
-| Panamá  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Papua Nova-Guiné  |  (UTC+10:00) Vladivostok |
+| Moçambique  |  (UTC + 02:00) Harare, Pretória |
+| Myanmar  |  (UTC + 06:30) Yangon (Rangoon) |
+| Namíbia  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Nauru  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
+| Nepal  |  (UTC + 05:45) Katmandu |
+| Países Baixos  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Nova Caledônia  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
+| Nova Zelândia  |  (UTC + 12:00) Auckland, Wellington |
+| Nicarágua  |  (UTC-06:00) Hora central (EUA & Canadá) |
+| Níger  |  (UTC + 01:00) Centro-oeste da África |
+| Nigéria  |  (UTC + 01:00) Centro-oeste da África |
+| Niue  |  (UTC + 13:00) Samoa |
+| Ilha Norfolk  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
+| Ilhas Marianas do Norte  |  (UTC + 10:00) Guam, porta Moresby |
+| Noruega  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Omã  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Paquistão  |  (UTC + 05:00) Islamabad, Carachi |
+| Palau  |  (UTC + 09:00) Osaka, Sapporo, Tóquio |
+| Autoridade Palestina  |  (UTC + 02:00) Chisinau |
+| Panamá  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Papua Nova-Guiné  |  (UTC + 10:00) Oficial Vladivostok |
 | Paraguai  |  (UTC-04:00) Assunção |
 | Peru  |  (UTC-05:00) Bogotá, Lima, Quito, Rio Branco |
-| Filipinas  |  (UTC+08:00) Kuala Lumpur, Singapura |
-| Ilhas Pitcairn  |  (UTC-08:00) Hora do Pacífico (EUA e Canadá) |
-| Polônia  |  (UTC+01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
-| Portugal  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Catar  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Reunião  |  (UTC+04:00) Port Louis |
-| Romênia  |  (UTC+02:00) Chisinau |
-| LINHA  |  (UTC-07:00) Hora das Montanhas (EUA e Canadá) |
+| Filipinas  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
+| Ilhas Pitcairn  |  (UTC-08:00) Hora do Pacífico (EUA & Canadá) |
+| Polônia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Portugal  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Catar  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Reunião  |  (UTC + 04:00) Porta Louis |
+| Romênia  |  (UTC + 02:00) Chisinau |
+| FILA  |  (UTC-07:00) Hora das montanhas (EUA & Canadá) |
 | Rússia  |  (UTC + 03:00) Moscou, São Petersburgo |
-| Ruanda  |  (UTC+02:00) Harare, Pretória |
-| SÃ £ o TomÃ © e PrÃncipe  |  (UTC+00:00) Monróvia, Reykjavík |
-| São BarthÃ © Lemy  |  (UTC+04:00) Ierevan |
-| Santa Helena, Ascensão e Tristão da Cunha  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| São Cristóvão e Névis  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Santa Lúcia  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Saint Martin (parte francesa)  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| São Pedro e Miquelon  |  (UTC-02:00) Atlântico Central – Antiga |
-| São Vicente e Granadinas  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Samoa  |  (UTC+13:00) Samoa |
-| São Marinho  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Arábia Saudita  |  (UTC+03:00) Kuwait, Riad |
-| Senegal  |  (UTC+00:00) Monróvia, Reykjavík |
-| Sérvia  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Seicheles  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Serra Leoa  |  (UTC+00:00) Monróvia, Reykjavík |
-| Cingapura  |  (UTC+08:00) Kuala Lumpur, Singapura |
-| Sint Maarten (parte holandesa)  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Eslováquia  |  (UTC+01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
-| Eslovênia  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Ilhas Salomão  |  (UTC+11:00) Ilhas Salomão, Nova Caledônia |
-| Somália  |  (UTC+03:00) Nairóbi |
-| África do Sul  |  (UTC+02:00) Harare, Pretória |
-| Ilhas Geórgia do Sul e Sandwich do Sul  |  (UTC-02:00) Atlântico Central – Antiga |
-| Espanha  |  (UTC+01:00) Bruxelas, Copenhague, Madri, Paris |
-| Sri Lanka  |  (UTC+05:30) Chennai, Kolkata (Calcutá), Mumbai, Nova Délhi |
-| Suriname  |  (UTC-03:00) Caiena, Fortaleza |
-| Svalbard e Jan Mayen  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
-| Suazilândia  |  (UTC+02:00) Harare, Pretória |
-| Suécia  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Suíça  |  (UTC+01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
-| Taiwan  |  (UTC+08:00) Taipé |
-| Tajiquistão  |  (UTC+05:00) Ashgabat, Tashkent |
-| Tanzânia  |  (UTC+03:00) Nairóbi |
-| Tailândia  |  (UTC+07:00) Bancoc, Hanói, Jacarta |
-| Timor-Leste  |  (UTC+09:00) Seul |
-| Togo  |  (UTC+00:00) Monróvia, Reykjavík |
-| Tokelau  |  (UTC+13:00) Nuku'alofa |
-| Tonga  |  (UTC+13:00) Nuku'alofa |
-| Trinidade e Tobago  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Tunísia  |  (UTC+01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Ruanda  |  (UTC + 02:00) Harare, Pretória |
+| SÃ £ o TomÃ © e PrÃncipe  |  (UTC + 00:00) Monróvia, Reykjavík |
+| São BarthÃ © Lemy  |  (UTC + 04:00) Ierevan |
+| Santa Helena, Ascensão e Tristão da Cunha  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| São Cristóvão e Névis  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Santa Lúcia  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Saint Martin (parte francesa)  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| São Pedro e Miquelon  |  (UTC-02:00) Meados do Atlântico-antigo |
+| São Vicente e Granadinas  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Samoa  |  (UTC + 13:00) Samoa |
+| San Marino  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Arábia Saudita  |  (UTC + 03:00) Kuwait, Riad |
+| Senegal  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Sérvia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Seicheles  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Serra Leoa  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Cingapura  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
+| Sint Maarten (parte holandesa)  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Eslováquia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Eslovênia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Ilhas Salomão  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
+| Somália  |  (UTC + 03:00) Nairóbi |
+| África do Sul  |  (UTC + 02:00) Harare, Pretória |
+| Ilhas Geórgia do Sul e Sandwich do Sul  |  (UTC-02:00) Meados do Atlântico-antigo |
+| Espanha  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| Sri Lanka  |  (UTC + 05:30) Chennai, Kolkata, Mumbai, Nova Délhi |
+| Suriname  |  (UTC-03:00) Caiena, fortaleza |
+| Svalbard e Jan Mayen  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Suazilândia  |  (UTC + 02:00) Harare, Pretória |
+| Suécia  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Suíça  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Taiwan  |  (UTC + 08:00) Horário |
+| Tadjiquistão  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Tanzânia  |  (UTC + 03:00) Nairóbi |
+| Tailândia  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
+| Timor-Leste  |  (UTC + 09:00) Seul |
+| Togo  |  (UTC + 00:00) Monróvia, Reykjavík |
+| Tokelau  |  (UTC + 13:00) Nuku ' alofa |
+| Tonga  |  (UTC + 13:00) Nuku ' alofa |
+| Trinidad e Tobago  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Tunísia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Turquia  |  (UTC + 03:00) Istambul |
-| Turquemenistão  |  (UTC+05:00) Ashgabat, Tashkent |
-| Ilhas Turks e Caicos  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
-| Tuvalu  |  (UTC+12:00) Petropavlovsk-Kamchatsky – Antiga |
-| Territórios Insulares dos EUA  |  (UTC+13:00) Samoa |
-| Ilhas Virgens dos Estados Unidos  |  (UTC-04:00) Horário do Atlântico (Canadá) |
-| Uganda  |  (UTC+03:00) Nairóbi |
-| Ucrânia  |  (UTC+02:00) Chisinau |
-| Emirados Árabes Unidos  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Reino Unido  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Estados Unidos  |  (UTC-05:00) Hora do Leste (EUA e Canadá) |
+| Turcomenistão  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Ilhas Turcas e Caicos  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Tuvalu  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
+| Territórios Insulares dos EUA  |  (UTC + 13:00) Samoa |
+| Ilhas Virgens Americanas  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Uganda  |  (UTC + 03:00) Nairóbi |
+| Ucrânia  |  (UTC + 02:00) Chisinau |
+| Emirados Árabes Unidos  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Reino Unido  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Estados Unidos  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Uruguai  |  (UTC-03:00) Brasília |
-| Uzbequistão  |  (UTC+05:00) Ashgabat, Tashkent |
-| Vanuatu  |  (UTC+11:00) Ilhas Salomão, Nova Caledônia |
-| Vietnã  |  (UTC+07:00) Bancoc, Hanói, Jacarta |
-| Wallis e Futuna  |  (UTC+12:00) Petropavlovsk-Kamchatsky – Antiga |
-| Saara Ocidental (Área em Disputa)  |  (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres |
-| Iêmen  |  (UTC+04:00) Abu Dhabi, Mascate |
-| Zâmbia  |  (UTC+02:00) Harare, Pretória |
-| Zimbábue  |  (UTC+02:00) Harare, Pretória |
+| Uzbequistão  |  (UTC + 05:00) Ashgabat, Tashkent |
+| Vanuatu  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
+| Vietnã  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
+| Wallis e Futuna  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
+| Saara Ocidental (Área em Disputa)  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Iêmen  |  (UTC + 04:00) Abu Dhabi, Mascate |
+| Zâmbia  |  (UTC + 02:00) Harare, Pretória |
+| Zimbábue  |  (UTC + 02:00) Harare, Pretória |
