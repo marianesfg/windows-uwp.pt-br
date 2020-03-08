@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, unidades publicitária, testes
 ms.localizationpriority: medium
 ms.openlocfilehash: c7bafdc7d21814a03d6f7da7132d8017d7f238e5
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77506729"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852561"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 
@@ -63,7 +63,7 @@ Para obter uma unidade do AD ao vivo do Partner Center e usá-la em seu aplicati
     > [!NOTE]
     > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de AD UWP ao vivo no Partner Center, o valor da ID do aplicativo para a unidade do AD sempre corresponde à ID da loja do seu aplicativo (um valor de ID de repositório de exemplo é semelhante a 9NBLGGH4R315).
 
-3.  Atribua os valores de ID do aplicativo e de ID da unidade publicitária no código do seu aplicativo. Para obter mais informações, consulte os seguintes artigos:
+3.  Atribua os valores de ID do aplicativo e de ID da unidade publicitária no código do seu aplicativo. Para obter mais informações, confira os seguintes artigos:
     * [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)
     * [AdControl em HTML 5 e JavaScript](adcontrol-in-html-5-and-javascript.md)
     * [Anúncios intersticiais](../monetize/interstitial-ads.md)

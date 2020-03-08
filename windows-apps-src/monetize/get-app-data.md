@@ -1,32 +1,32 @@
 ---
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: Use esses métodos na API de envio a Microsoft Store para recuperar dados para aplicativos que são registrados em sua conta no Partner Center.
+description: Use esses métodos na API de envio de Microsoft Store para recuperar dados para aplicativos que estão registrados em sua conta do Partner Center.
 title: Obter dados de app
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372143"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853343"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
-Use os seguintes métodos na API de envio a Microsoft Store para obter dados para aplicativos existentes em sua conta no Partner Center. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio de Microsoft Store para obter dados de aplicativos existentes em sua conta do Partner Center. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
-Antes de usar esses métodos, o aplicativo já deve existir na sua conta no Partner Center. Para criar ou gerenciar envios de apps, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
+Antes de poder usar esses métodos, o aplicativo já deve existir na sua conta do Partner Center. Para criar ou gerenciar envios de apps, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
 | Método | URI                                                                                             | Descrição                                                 |
 |------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
-| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obter dados para todos os seus aplicativos](get-all-apps.md)               |
-| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obter dados para um aplicativo específico](get-an-app.md)                |
-| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)         |
-| OBTER    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obter voos de pacote para um aplicativo](get-flights-for-an-app.md) |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obter dados para todos os seus aplicativos](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obter dados para um aplicativo específico](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obter Complementos para um aplicativo](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obter vôos de pacote para um aplicativo](get-flights-for-an-app.md) |
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Se você ainda não tiver feito isso, preencha todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) da API de envio da Microsoft Store antes de tentar usar qualquer um desses métodos.
 
@@ -62,16 +62,16 @@ Esse recurso representa um app que está registrado em sua conta.
 
 Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição       |
+| {1&gt;Valor&lt;1}           | Tipo    | Descrição       |
 |-----------------|---------|---------------------|
-| id            | cadeia de caracteres  | A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
-| primaryName   | cadeia de caracteres  | O nome principal do aplicativo.      |
-| packageFamilyName | cadeia de caracteres  | O nome da família de pacotes do aplicativo.      |
-| packageIdentityName          | cadeia de caracteres  | O nome da identidade do pacote do aplicativo.                       |
-| publisherName       | cadeia de caracteres  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde à **identidade/pacote/Publisher** valor que aparece na [identidade de aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) página para o aplicativo no Partner Center.       |
-| firstPublishedDate      | cadeia de caracteres  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
-| lastPublishedApplicationSubmission       | objeto | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
-| pendingApplicationSubmission        | objeto  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   
+| {1&gt;id&lt;1}            | string  | A ID da Loja do aplicativo. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
+| primaryName   | string  | O nome principal do aplicativo.      |
+| packageFamilyName | string  | O nome da família de pacotes do aplicativo.      |
+| packageIdentityName          | string  | O nome da identidade do pacote do aplicativo.                       |
+| publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor de **pacote/identidade/Publicador** que aparece na página [identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) para o aplicativo no Partner Center.       |
+| firstPublishedDate      | string  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
+| lastPublishedApplicationSubmission       | object | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
+| pendingApplicationSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   
 | hasAdvancedListingPermission        | boolean  |  Indica se você pode configurar [gamingOptions](manage-app-submissions.md#gaming-options-object) ou [trailers](manage-app-submissions.md#trailer-object) para envios para o app. Este valor é verdadeiro para envios criados depois de maio de 2017. |  |
 
 
@@ -89,9 +89,9 @@ Esse recurso fornece informações sobre um complemento.
 
 Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição         |
+| {1&gt;Valor&lt;1}           | Tipo    | Descrição         |
 |-----------------|---------|----------------------|
-| inAppProductId            | cadeia de caracteres  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.   |
+| inAppProductId            | string  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.   |
 
 
 <span id="flight-object" />
@@ -121,14 +121,14 @@ Esse recurso fornece informações sobre um pacote de pré-lançamento de um app
 
 Esse recurso tem os valores a seguir.
 
-| Valor           | Tipo    | Descrição           |
+| {1&gt;Valor&lt;1}           | Tipo    | Descrição           |
 |-----------------|---------|------------------------|
-| flightId            | cadeia de caracteres  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de parceiros.  |
-| friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |
-| lastPublishedFlightSubmission       | objeto | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do pacote de pré-lançamento.   |
-| pendingFlightSubmission        | objeto  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do pacote de pré-lançamento.  |    
+| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Partner Center.  |
+| friendlyName           | string  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |
+| lastPublishedFlightSubmission       | object | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do pacote de pré-lançamento.   |
+| pendingFlightSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do pacote de pré-lançamento.  |    
 | groupIds           | matriz  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
+| rankHigherThan           | string  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />
@@ -148,17 +148,17 @@ Esse recurso fornece informações sobre um envio. O exemplo a seguir demonstra 
 
 Esse recurso tem os valores a seguir.
 
-| Valor              | Tipo   | Descrição               |
+| {1&gt;Valor&lt;1}              | Tipo   | Descrição               |
 |--------------------|--------|---------------------------|
-| id                 | cadeia de caracteres | A ID do envio. |
-| resourceLocation   | cadeia de caracteres | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio. |
+| {1&gt;id&lt;1}                 | string | A ID do envio. |
+| resourceLocation   | string | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio. |
 
  
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando os serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Gerenciar envios de aplicativo usando a API de envio da Microsoft Store](manage-app-submissions.md)
+* [Criar e gerenciar envios usando serviços Microsoft Stores](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de aplicativo usando a API de envio de Microsoft Store](manage-app-submissions.md)
 * [Obter todos os aplicativos](get-all-apps.md)
 * [Obter um aplicativo](get-an-app.md)
-* [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)
-* [Obter voos de pacote para um aplicativo](get-flights-for-an-app.md)
+* [Obter Complementos para um aplicativo](get-add-ons-for-an-app.md)
+* [Obter vôos de pacote para um aplicativo](get-flights-for-an-app.md)
