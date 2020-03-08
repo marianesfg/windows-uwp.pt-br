@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340127"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853194"
 ---
 # <a name="layout-panels"></a>Painéis de layout
 
@@ -182,7 +182,7 @@ Neste exemplo, o dimensionamento funciona assim:
 
 Você pode distribuir o espaço em uma coluna ou linha usando o dimensionamento **Auto** ou em estrela. Você pode usar o dimensionamento automático para permitir que os elementos de interface do usuário sejam redimensionados para caber no contêiner de conteúdo ou pai. Você também pode usar o dimensionamento automático com as linhas e as colunas de uma grade. Para usar o dimensionamento automático, defina Height e/ou Width dos elementos de interface do usuário como **Auto**.
 
-Você usa o dimensionamento proporcional, também chamado de *dimensionamento em estrela* para distribuir o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas. Em XAML, os valores de estrela são \* expressos como (ou *n* \* para o dimensionamento em estrela ponderado). Por exemplo, para especificar que uma coluna é 5 vezes mais larga do que a segunda coluna em um layout de duas colunas, use "\*5" e\*"" para as propriedades de [**largura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) nos elementos [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) .
+Você usa o dimensionamento proporcional, também chamado de *dimensionamento em estrela* para distribuir o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas. Em XAML, os valores de estrela são expressos como \* (ou *n*\* para o dimensionamento em estrela ponderado). Por exemplo, para especificar que uma coluna é 5 vezes mais larga do que a segunda coluna em um layout de duas colunas, use "5\*" e "\*" para as propriedades de [**largura**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) nos elementos [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) .
 
 Esse exemplo integra dimensionamentos fixo, automático e proporcional em um [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) com quatro colunas.
 
@@ -243,7 +243,7 @@ O resultado tem a seguinte aparência.
 
 Neste exemplo, o número máximo de linhas em cada coluna é três. A primeira coluna contém apenas dois itens (os retângulos vermelho e azul) porque o retângulo azul abrange duas linhas. O retângulo verde encapsula na parte superior da coluna seguinte.
 
-## <a name="canvas"></a>Canvas
+## <a name="canvas"></a>Tela
 
 O painel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona seus elementos filho usando pontos de coordenada fixos e não oferece suporte a layouts fluidos. Especifique os pontos nos elementos filho individuais definindo as propriedades anexadas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) e [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) em cada elemento. O Canvas pai lê esses valores de propriedades anexadas de seus filhos durante o cálculo do layout [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
 
@@ -264,7 +264,7 @@ Aqui está um exemplo de um Canvas em XAML.
 
 O resultado tem a seguinte aparência.
 
-![Canvas](images/layout-panel-canvas.png)
+![Tela](images/layout-panel-canvas.png)
 
 Use o painel Canvas com cautela. Apesar de ser conveniente poder controlar com precisão as posições dos elementos da interface do usuário para alguns cenários, um painel de layout com posição fixa faz com que a área da interface do usuário seja menos adaptável a mudanças gerais no tamanho das janelas do aplicativo. O redimensionamento de janelas do aplicativo pode ser proveniente de mudanças na orientação do dispositivo, janelas de aplicativo dividido, mudança de monitores e inúmeros outros cenários dos usuários.
 

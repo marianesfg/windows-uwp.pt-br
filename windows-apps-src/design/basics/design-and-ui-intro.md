@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281796"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853195"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -170,12 +170,12 @@ Fornecemos uma variedade de ferramentas para ajudá-lo no processo de design:
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>Próximo: Sistema de Design Fluente
+## <a name="next-fluent-design-system"></a>Próximo: Sistema Fluent Design
 
 se você quiser saber mais sobre os princípios por trás do Design Fluente (sistema de design da Microsoft) e ver mais recursos que podem ser incorporados em seu aplicativo UWP, vá para o [Sistema de Design Fluente](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [O que é um aplicativo UWP?](../../get-started/universal-application-platform-guide.md)
+- [O que é um aplicativo da UWP?](../../get-started/universal-application-platform-guide.md)
 - [Sistema de Design Fluent](/windows/apps/fluent-design-system)
 - [Visão geral da plataforma XAML](../../xaml-platform/index.md)

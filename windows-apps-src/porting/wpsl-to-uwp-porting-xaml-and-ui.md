@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684625"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853153"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando Windows Phone XAML do Silverlight e interface do usuário para UWP
 
@@ -76,7 +76,7 @@ Assim que todas as diretivas using antigas forem removidas e as novas adicionada
 
 Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Em outras ocasiões, você precisará usar APIs UWP em vez de APIs do .NET para aplicativos Windows Runtime 8. x. Para identificar quais APIs têm suporte, use o restante deste guia de portação em combinação com o [.net para Windows Runtime visão geral dos aplicativos 8. x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) e a [referência de Windows Runtime](https://docs.microsoft.com/uwp/api/).
 
-E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do tempo de execução sejam corrigidos e a portabilidade seja concluída.
+E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do runtime sejam corrigidos e a portabilidade seja concluída.
 
 ## <a name="adaptiveresponsive-ui"></a>Interface do usuário responsiva/adaptável
 
@@ -187,7 +187,7 @@ Dessa forma, o restante do modelo de exibição, os valores de caminho na propri
 
 Windows Phone aplicativos do Silverlight usam controles definidos no namespace **Microsoft. Phone. Controls** e no namespace **System. Windows. Controls** . Aplicativos UWP XAML usam controles definidos no namespace [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls). A arquitetura e o design dos controles XAML no UWP são praticamente os mesmos que Windows Phone controles do Silverlight. Porém, algumas alterações foram feitas para melhorar o conjunto de controles disponíveis e unificá-los aos aplicativos do Windows. Veja exemplos específicos.
 
-| Nome do controle | Alteração |
+| Nome do controle | Alterar |
 |--------------|--------|
 | ApplicationBar | A propriedade [Page.TopAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.topappbar). |
 | ApplicationBarIconButton | O equivalente UWP é a propriedade [Glyph](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon.glyph). PrimaryCommands é a propriedade de conteúdo de CommandBar. O analisador XAML interpreta o xml interno de um elemento como o valor de sua propriedade de conteúdo. |
@@ -211,7 +211,7 @@ Há algumas diferenças na linguagem de design entre Windows Phone aplicativos d
 
 Para cadeias de caracteres localizadas, você pode usar novamente o arquivo. resx do seu projeto Windows Phone Silverlight no seu projeto de aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
-Windows Phone aplicativos do Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://docs.microsoft.com/windows/uwp/design/usability/index).
+Windows Phone aplicativos do Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no runtime e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://docs.microsoft.com/windows/uwp/design/usability/index).
 
 O tópico [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) descreve como carregar recursos específicos à família de dispositivos com base no fator de seleção de recurso de família de dispositivos.
 
@@ -291,7 +291,7 @@ Em um aplicativo UWP, você pode usar código imperativo para definir a página 
     if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
 ```
 
-O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. O mesmo objetivo pode ser obtido passando um parâmetro de navegação quando você chama o método [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate).
+O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. A mesma meta pode ser obtida passando um parâmetro de navegação quando você chama o método [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate).
 
 Para obter mais informações, consulte [Navegação](https://docs.microsoft.com/windows/uwp/layout/navigation-basics).
 
@@ -309,7 +309,7 @@ A bandeja do sistema (definida na marcação XAML com `shell:SystemTray.IsVisibl
 
 Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a portabilidade, convém revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com a nova linguagem de design. Use estas ilustrações para encontrar os estilos de sistema **TextBlock** da UWP que estão disponíveis. Encontre os que correspondem aos Windows Phone estilos do Silverlight que você usou. Como alternativa, você pode criar seus próprios estilos universais e copiar as propriedades dos estilos de sistema Windows Phone Silverlight para eles.
 
-![estilos de sistema textblock para aplicativos do windows 10](images/label-uwp10stylegallery.png)
+![system textblock styles fou windows 10 apps](images/label-uwp10stylegallery.png)
 
 Estilos TextBlock do sistema para aplicativos do Windows 10
 
@@ -319,7 +319,7 @@ Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Sego
 
 Para um aplicativo Windows Phone Silverlight, o tema padrão é escuro por padrão. Para dispositivos Windows 10, o tema padrão foi alterado, mas você pode controlar o tema usado pela declaração de um tema solicitado em app. XAML. Por exemplo, para usar um tema escuro em todos os dispositivos, adicione `RequestedTheme="Dark"` ao elemento Application raiz.
 
-## <a name="tiles"></a>Blocos
+## <a name="tiles"></a>Lado a lado
 
 Os blocos para aplicativos UWP têm comportamentos semelhantes aos blocos dinâmicos para Windows Phone aplicativos do Silverlight, embora haja algumas diferenças. Por exemplo, o código que chama o método **Microsoft.Phone.Shell.ShellTile.Create** para criar blocos secundários deve ser portado para chamar [**SecondaryTile.RequestCreateAsync**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestcreateasync). Aqui está um exemplo antes e depois, primeiro a Windows Phone versão do Silverlight:
 

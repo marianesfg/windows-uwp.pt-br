@@ -1,5 +1,5 @@
 ---
-Description: Declarações de produto ajudar a garantir que seu aplicativo é exibido corretamente na Microsoft Store e oferecido para o conjunto certo de clientes.
+Description: As declarações de produto ajudam a garantir que seu aplicativo seja exibido adequadamente no Microsoft Store e oferecido ao conjunto certo de clientes.
 title: Declarações de produto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.date: 10/31/2018
@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826107"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853433"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
-O **declarações de produto** seção o [propriedades](enter-app-properties.md) página da [processo de envio](app-submissions.md) ajuda a assegurar que seu aplicativo é exibido adequadamente e oferecido para o conjunto certo de clientes e ajuda a compreender como eles podem usar seu aplicativo.
+A seção **declarações de produto** da página [Propriedades](enter-app-properties.md) do processo de [envio](app-submissions.md) ajuda a garantir que seu aplicativo seja exibido adequadamente e oferecido ao conjunto correto de clientes e os ajuda a entender como eles podem usar seu aplicativo.
 
-As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que duas dessas declarações são verificadas por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de examinar todas as declarações e garantir que reflitam seu envio.
+As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que duas dessas declarações são verificadas por padrão (conforme descrito abaixo). Dependendo da categoria do produto, você também poderá ver declarações adicionais. Certifique-se de examinar todas as declarações e garantir que elas reflitam com precisão seu envio.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esse aplicativo permite que os usuários fazer compras, mas não usa o sistema de comércio do Microsoft Store.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esse aplicativo permite que os usuários façam compras, mas não usa o sistema de comércio Microsoft Store.
 
-Para quase todos envio, você deve deixar essa caixa desmarcada, desde aplicativos que oferecem oportunidades para comprar os itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API as compras no aplicativo Microsoft Store para criar e enviar os complementos. Pela [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, foi possível continuar a oferecer a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, como a funcionalidade de compra, desde está em conformidade com o [Microsoft Store políticas](store-policies.md#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
+Para quase todos os envios, você deve deixar essa caixa desmarcada, já que os aplicativos que oferecem oportunidades para comprar itens que são ou podem ser consumidos ou usados em seu aplicativo devem usar a API de compra do Microsoft Store no aplicativo para criar e enviar os complementos. De acordo com o [contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), os aplicativos que foram criados e enviados antes de 29 de junho de 2015 podem continuar a oferecer a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com as políticas de [Microsoft Store](store-policies.md#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Este aplicativo foi testado para atender às diretrizes de acessibilidade.
 
@@ -40,13 +40,13 @@ Ao declarar seu aplicativo como acessível, você concorda que o aplicativo é a
 Para obter mais informações, consulte [Acessibilidade](../design/accessibility/accessibility.md), [Testes de acessibilidade](../design/accessibility/accessibility-testing.md) e [Acessibilidade na Loja](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> Não lista seu aplicativo como acessíveis, a menos que especificamente projetado e testado para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
+> não liste seu aplicativo como acessível, a menos que você tenha desenvolvido e testado especificamente para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
-Essa caixa é marcada por padrão, para permitir que os clientes instalem o seu aplicativo para o armazenamento externo ou removível unidade de mídia como um cartão SD, ou para um volume não são do sistema, como uma unidade externa.
+Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo em mídia de armazenamento externa ou removível, como um cartão SD, ou em uma unidade de volume que não seja do sistema, como uma unidade externa.
 
-Se você quiser impedir que seu aplicativo está sendo instalado em unidades alternativas ou de armazenamento removível e permitir somente a instalação para o disco rígido interno em seu dispositivo, desmarque essa caixa. (Observe que não há nenhuma opção para restringir a instalação para que um aplicativo possa *apenas* ser instalado para a mídia de armazenamento removível.)
+Se você quiser impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitir a instalação somente no disco rígido interno em seu dispositivo, desmarque essa caixa. (Observe que não há nenhuma opção para restringir a instalação para que um aplicativo *só* possa ser instalado na mídia de armazenamento removível.)
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.

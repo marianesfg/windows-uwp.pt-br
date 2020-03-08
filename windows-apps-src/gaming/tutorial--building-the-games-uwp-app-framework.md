@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153698"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852994"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP
 
@@ -403,7 +403,7 @@ Ao desenvolver seu próprio jogo, crie o código de inicialização com base nes
 -   Use **Load** para manipular a configuração restante e iniciar a criação assíncrona de objetos e o carregamento de recursos. Se você precisar criar arquivos ou dados temporários, como ativos gerados por procedimentos, faça-o aqui também.
 
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Abrange a estrutura básica de um jogo UWP com o DirectX. Tenha esses cinco métodos em mente quando nos referirmos a eles em outras partes do passo a passo. Em seguida, vamos nos aprofundar em como gerenciar os estados do jogo e a manipulação de eventos para manter o jogo funcionando em [Gerenciamento de fluxo de jogo](tutorial-game-flow-management.md).
 

@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681967"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853423"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
-O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Portal de Dispositivos para fazer o seguinte:
+O Portal de Dispositivos do Windows permite exibir informações de diagnóstico e interagir com seu desktop por HTTP em uma janela de seu navegador. Você pode usar o Device Portal para fazer o seguinte:
 - Ver e manipular uma lista de processos em execução
 - Instalar, excluir, iniciar e encerrar os aplicativos
 - Alterar perfis de Wi-Fi, exibir a intensidade do sinal e ver ipconfig
@@ -60,13 +60,13 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 
 - Gerente de aplicativos
 - Explorador de Arquivos
-- Processos em execução
+- Processos em Execução
 - Desempenho
 - Depuração
 - Rastreamento de Eventos para Windows (ETW)
 - Rastreamento de desempenho
 - Gerenciador de dispositivos
-- Rede do
+- Rede
 - Dados de pane
 - Recursos
 - Realidade Misturada
@@ -78,12 +78,12 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 
 ### <a name="registry-based-configuration-for-device-portal"></a>Configuração baseada no registro para o Portal de Dispositivos
 
-Se você quiser selecionar números de porta para o Portal de Dispositivos (como 80 e 443), será possível definir as seguintes chaves do registro:
+Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
 
 - Em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
     - `UseDynamicPorts`: um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - `HttpPort`: um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTP.    
-    - `HttpsPort`: um DWORD necessário. Contém o número da porta na qual o Portal de Dispositivos escutará conexões HTTPS.
+    - `HttpPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
+    - `HttpsPort`: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
     
 No mesmo caminho da chave do registro, você também pode desativar o requisito de autenticação:
 - `UseDefaultAuthorizer` - `0` desabilitada, `1` habilitada.  
@@ -129,7 +129,7 @@ Você poderá receber esse erro se os pacotes do desenvolvedor não estiverem in
 
 Você poderá receber esse erro se você estiver em uma conexão de Internet limitada. Você não poderá baixar os pacotes do desenvolvedor em uma conexão limitada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Visão geral do portal de dispositivos Windows](device-portal.md)
 * [Referência da API principal do portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

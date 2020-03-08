@@ -8,11 +8,11 @@ keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Stor
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3b732da8f92c258647f905e6939dc3cb1b9c9f87
-ms.sourcegitcommit: 3e47987fb4f86a6349ffe8262675f50971c77472
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74954060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853353"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -32,7 +32,7 @@ Antes de começar a escrever o código para chamar a API de análise da Microsof
 
 * Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem custo adicional.
 
-* Você deve associar um aplicativo do Azure AD à sua conta do Partner Center, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Microsoft Store. Você precisa da ID do locatário, ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
+* Você deve associar um aplicativo do Azure AD à sua conta do Partner Center, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Microsoft Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
     > [!NOTE]
     > Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
@@ -85,7 +85,7 @@ Os métodos a seguir estão disponíveis para aquisições de aplicativos e jogo
 
 Os seguintes métodos de análise estão disponíveis para aplicativos UWP no Partner Center.
 
-| Cenário       | Métodos      |
+| Cenário       | {1&gt;Métodos&lt;1}      |
 |---------------|--------------------|
 | Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de aplicativos](get-app-acquisitions.md) (Herdado)</li><li>[Obter dados de funil de aquisição de aplicativo](get-acquisition-funnel-data.md) (Herdado)</li><li>[Obter conversões de aplicativo por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter instalações de aplicativos](get-app-installs.md)</li><li>[Obter uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter uso mensal do aplicativo](get-app-usage-monthly.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatório de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha para obter um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixe o arquivo CAB para obter um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
@@ -97,9 +97,9 @@ Os seguintes métodos de análise estão disponíveis para aplicativos UWP no Pa
 
 Os métodos de análise a seguir estão disponíveis para uso por contas de desenvolvedor que pertencem ao [programa Aplicativo da Área de Trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program).
 
-| Cenário       | Métodos      |
+| Cenário       | {1&gt;Métodos&lt;1}      |
 |---------------|--------------------|
-| Instalações |  <ul><li>[Obter instalações de aplicativos da área de trabalho](get-desktop-app-installs.md)</li></ul> |
+| Instala |  <ul><li>[Obter instalações de aplicativos da área de trabalho](get-desktop-app-installs.md)</li></ul> |
 | Blocks |  <ul><li>[Obter blocos de atualização para seu aplicativo de desktop](get-desktop-block-data.md)</li><li>[Obter detalhes do bloco de atualização para seu aplicativo de desktop](get-desktop-block-data-details.md)</li></ul> |
 | Erros de aplicativo |  <ul><li>[Obter dados de relatório de erros para seu aplicativo de desktop](get-desktop-application-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo de área de trabalho](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obter o rastreamento de pilha para obter um erro em seu aplicativo de desktop](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Baixe o arquivo CAB para obter um erro em seu aplicativo de desktop](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 | Insights | <ul><li>[Obter dados de informações para seu aplicativo de desktop](get-insights-data-for-your-desktop-app.md)</li></ul>  |
@@ -108,7 +108,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 
 Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md).
 
-| Cenário       | Métodos      |
+| Cenário       | {1&gt;Métodos&lt;1}      |
 |---------------|--------------------|
 | Análises gerais |  <ul><li>[Obter dados do Xbox Live Analytics](get-xbox-live-analytics.md)</li><li>[Obter dados de conquistas do Xbox Live](get-xbox-live-achievements-data.md)</li><li>[Obter dados de uso simultâneo do Xbox Live](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Análise de integridade |  <ul><li>[Obter dados de integridade do Xbox Live](get-xbox-live-health-data.md)</li></ul> |

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 638de4d2795b3b248edfdcc35dc72fa21d31fc3b
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089313"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853114"
 ---
 # <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
@@ -458,7 +458,7 @@ E este é um conteúdo de exemplo de um arquivo de mapeamento de pacote de recur
 
 ## <a name="output-summary"></a>Resumo de saída
 
-Se os pacotes de recursos forem criados, o resumo de saída de MakePRI.exe será mais detalhado. Veja um exemplo.
+Se os pacotes de recursos forem criados, o resumo de saída de MakePRI.exe será mais detalhado. Aqui está um exemplo.
 
 ```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack

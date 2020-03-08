@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66364105"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853512"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -28,9 +28,9 @@ Recursos de temas no XAML são um conjunto de recursos que aplicam valores difer
 
 Existem duas extensões de marcação XAML que podem referenciar um recurso XAML de um dicionário de recursos XAML existente: a[extensão de marcação {StaticResource}](../../xaml-platform/staticresource-markup-extension.md) e a [extensão de marcação {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md).
 
-A avaliação de uma [extensão de marcação {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) ocorre quando o aplicativo é carregado e, posteriormente, toda vez que o tema é alterado em tempo de execução. Normalmente é o resultado da alteração que o usuário faz nas configurações do dispositivo ou de uma alteração programática dentro do aplicativo que altera o tema atual.
+A avaliação de uma [extensão de marcação {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) ocorre quando o aplicativo é carregado e, posteriormente, toda vez que o tema é alterado em runtime. Normalmente é o resultado da alteração que o usuário faz nas configurações do dispositivo ou de uma alteração programática dentro do aplicativo que altera o tema atual.
 
-Por outro lado, uma [extensão de marcação {StaticResource}](../../xaml-platform/staticresource-markup-extension.md) é avaliada somente quando o XAML é carregado pela primeira vez pelo aplicativo. Ele não é atualizado. Isso é semelhante a localizar e substituir no XAML pelo valor do tempo de execução real na inicialização do aplicativo.
+Por outro lado, uma [extensão de marcação {StaticResource}](../../xaml-platform/staticresource-markup-extension.md) é avaliada somente quando o XAML é carregado pela primeira vez pelo aplicativo. Ele não é atualizado. Isso é semelhante a localizar e substituir no XAML pelo valor do runtime real na inicialização do aplicativo.
 
 ## <a name="theme-resources-in-the-resource-dictionary-structure"></a>Recursos de tema na estrutura de dicionário de recursos
 
@@ -65,7 +65,7 @@ A estrutura XAML fornece um conjunto de recursos nomeado [Color](/uwp/api/Window
 
 Esta tabela lista a chave, o nome simples e a representação da cadeia de caracteres da cor (usando o formato \#aarrggbb) dos recursos "Light" e "Dark" fornecidos pela estrutura XAML. A chave é usada para fazer referência ao recurso em um aplicativo. O "Simple light/dark name" é usado como parte da convenção de nomenclatura de pincel que explicaremos mais adiante.
 
-| Chave                             | Simple light/dark name | Claro      | Escuro       |
+| Chave                             | Simple light/dark name | Leve      | Escuro       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -94,10 +94,10 @@ Esta tabela lista a chave, o nome simples e a representação da cadeia de carac
 
 :::row:::
     :::column:::
-        #### Light theme
+        #### <a name="light-theme"></a>Tema claro
     :::column-end:::
     :::column:::
-        #### Dark theme
+        #### <a name="dark-theme"></a>Tema escuro
     :::column-end:::
 :::row-end:::
 
@@ -105,10 +105,10 @@ Esta tabela lista a chave, o nome simples e a representação da cadeia de carac
 
 :::row:::
     :::column:::
-        ![The base light theme](images/themes/light-base.png)
+        ![O tema claro base](images/themes/light-base.png)
     :::column-end:::
     :::column:::
-        ![The base dark theme](images/themes/dark-base.png)
+        ![O tema escuro base](images/themes/dark-base.png)
     :::column-end:::
 :::row-end:::
 
@@ -116,10 +116,10 @@ Esta tabela lista a chave, o nome simples e a representação da cadeia de carac
 
 :::row:::
     :::column:::
-        ![The alt light theme](images/themes/light-alt.png)
+        ![O tema claro alternativo](images/themes/light-alt.png)
     :::column-end:::
     :::column:::
-        ![The alt dark theme](images/themes/dark-alt.png)
+        ![O tema escuro alternativo](images/themes/dark-alt.png)
     :::column-end:::
 :::row-end:::
 
@@ -127,10 +127,10 @@ Esta tabela lista a chave, o nome simples e a representação da cadeia de carac
 
 :::row:::
     :::column:::
-        ![The list light theme](images/themes/light-list.png)
+        ![O tema claro de lista](images/themes/light-list.png)
     :::column-end:::
     :::column:::
-        ![The list dark theme](images/themes/dark-list.png)
+        ![O tema escuro de lista](images/themes/dark-list.png)
     :::column-end:::
 :::row-end:::
 
@@ -138,10 +138,10 @@ Esta tabela lista a chave, o nome simples e a representação da cadeia de carac
 
 :::row:::
     :::column:::
-        ![The chrome light theme](images/themes/light-chrome.png)
+        ![O tema claro cromado](images/themes/light-chrome.png)
     :::column-end:::
     :::column:::
-        ![The chrome dark theme](images/themes/dark-chrome.png)
+        ![O tema escuro cromado](images/themes/dark-chrome.png)
     :::column-end:::
 :::row-end:::
 
@@ -153,10 +153,10 @@ Esta tabela lista as cores de todo o sistema que XAML fornece como objetos de re
 
 | Chave                           | Ease of Access name            | Simple HighContrast name | Initial default |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
-| SystemColorButtonFaceColor    | **Texto do Botão** (em segundo plano)   | Histórico               | \#FFF0F0F0      |
+| SystemColorButtonFaceColor    | **Texto do Botão** (em segundo plano)   | Tela de fundo               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **Texto do Botão** (em primeiro plano)   | Primeiro plano               | \#FF000000      |
-| SystemColorGrayTextColor      | **Texto Desabilitado**              | Desabilitada                 | \#FF6D6D6D      |
-| SystemColorHighlightColor     | **Texto Selecionado** (em segundo plano) | Highlight                | \#FF3399FF      |
+| SystemColorGrayTextColor      | **Texto Desabilitado**              | Desabilitado                 | \#FF6D6D6D      |
+| SystemColorHighlightColor     | **Texto Selecionado** (em segundo plano) | Realce                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto Selecionado** (em primeiro plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hiperlinks**                 | Hyperlink                | \#FF0066CC      |
 | SystemColorWindowColor        | **Tela de fundo**                 | PageBackground           | \#FFFFFFFF      |
@@ -170,7 +170,7 @@ Para obter mais informações sobre como dar suporte a temas de alto contraste, 
 
 ### <a name="system-accent-color"></a>Cor de destaque do sistema
 
-Além das cores do tema de alto contraste do sistema, a cor de destaque do sistema é fornecida como um recurso de cores especial usando-se a chave `SystemAccentColor`. Em tempo de execução, esse recurso obtém a cor que o usuário especificou como a cor de destaque nas configurações de personalização do Windows.
+Além das cores do tema de alto contraste do sistema, a cor de destaque do sistema é fornecida como um recurso de cores especial usando-se a chave `SystemAccentColor`. Em runtime, esse recurso obtém a cor que o usuário especificou como a cor de destaque nas configurações de personalização do Windows.
 
 > [!NOTE]
 > Embora seja possível substituir os recursos de cor do sistema, é uma prática recomendada respeitar as opções de cor do usuário, especialmente para configurações de alto contraste.
@@ -189,11 +189,11 @@ No dicionário de recursos "HighContrast", esse pincel é definido desta forma:
 
 Quando esse pincel é aplicado a um elemento XAML, a cor é determinada em tempo de execução pelo tema atual, conforme mostrado nesta tabela.
 
-| Tema        | Nome simples da cor | Recurso de cores             | Valor do tempo de execução                                              |
+| Tema        | Nome simples da cor | Recurso de cores             | Valor do runtime                                              |
 |--------------|-------------------|----------------------------|------------------------------------------------------------|
-| Claro        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
+| Leve        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
 | Escuro         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
-| HighContrast | Histórico        | SystemColorButtonFaceColor | A cor especificada nas configurações do segundo plano do botão. |
+| HighContrast | Tela de fundo        | SystemColorButtonFaceColor | A cor especificada nas configurações do segundo plano do botão. |
 
 Você pode usar o esquema de nomenclatura `SystemControl[Simple HighContrast name][Simple light/dark name]Brush` para determinar qual pincel aplicar aos próprios elementos XAML.
 
@@ -402,7 +402,7 @@ Ele é semelhante ao seguinte:
 
 ### <a name="navigationbackbuttonnormalstyle"></a>NavigationBackButtonNormalStyle
 
-**TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
+**TargetType**: [Botão](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
 Esse [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) oferece um modelo completo para um [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que pode ser o botão voltar de navegação de um aplicativo de navegação. As dimensões padrão são 40 x 40 pixels. Para personalizar o estilo, você pode definir explicitamente [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize) e outras propriedades no **Button** ou criar um estilo derivado usando [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon).
 
@@ -418,7 +418,7 @@ Ele é semelhante ao seguinte:
 
 ### <a name="navigationbackbuttonsmallstyle"></a>NavigationBackButtonSmallStyle
 
-**TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
+**TargetType**: [Botão](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
 Esse [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) oferece um modelo completo para um [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que pode ser o botão voltar de navegação de um aplicativo de navegação. Ele é semelhante a **NavigationBackButtonNormalStyle**, mas as dimensões são 30 x 30 pixels.
 

@@ -1,5 +1,5 @@
 ---
-Description: No momento da compilação, o Sistema de Gerenciamento de Recursos cria um índice de todas as variantes dos recursos que são empacotados com o app. Em tempo de execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor e carrega os recursos que representam a melhor correspondência para essas configurações.
+Description: No momento do build, o Sistema de Gerenciamento de Recursos cria um índice de todas as variantes dos recursos que são empacotados com o aplicativo. Em tempo de execução, o sistema detecta as configurações do usuário e do computador que estão em vigor e carrega os recursos que representam a melhor correspondência para essas configurações.
 title: Sistema de Gerenciamento de Recursos
 template: detail.hbs
 ms.date: 10/20/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598621"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853113"
 ---
 # <a name="resource-management-system"></a>Sistema de Gerenciamento de Recursos
 O Sistema de Gerenciamento de Recursos tem recursos em tempo de compilação e em tempo de execução. No momento da compilação, o sistema cria um índice de todas as variantes dos recursos que são empacotados com o app. Trata-se do índice de recurso do pacote, conhecido também como PRI, que também está incluído no pacote do app. No momento da execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor, consulta as informações no PRI e carrega automaticamente os recursos que oferecem a melhor correspondência para essas configurações.
@@ -24,7 +24,7 @@ Cada pacote de aplicativo deve conter um índice binário dos recursos no app. E
 - O arquivo resources.pri na raiz de cada pacote é carregado automaticamente quando o [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) é instanciado.
 - Os arquivos PRI podem ser criados e despejados com a ferramenta [MakePRI.exe](compile-resources-manually-with-makepri.md).
 - Para o desenvolvimento comum de apps, você não precisará do MakePRI.exe, pois ele já está integrado ao fluxo de trabalho de compilação do Visual Studio. E o Visual Studio oferece suporte à edição de arquivos PRI em uma interface do usuário dedicada. No entanto, os tradutores e as ferramentas que eles usam talvez precisem do MakePRI.exe.
-- Cada arquivo PRI contém uma coleção nomeada de recursos, conhecida como mapa de recursos. Quando um arquivo PRI de um pacote é carregado, o nome do mapa de recursos é verificado para constar se corresponde ao nome de identidade do pacote.
+- Cada arquivo PRI contém uma coleção nomeada de recursos, conhecida como um mapa de recursos. Quando um arquivo PRI de um pacote é carregado, o nome do mapa de recursos é verificado para constar se corresponde ao nome de identidade do pacote.
 - Os arquivos PRI contêm somente dados, portanto, não use o formato de arquivo PE. Eles são criados especificamente para terem somente dados como formato de recurso do Windows. Eles substituem os recursos contidos em DLLs no modelo de app do Win32.
 - O limite de tamanho em um arquivo PRI é 64 KB.
 
@@ -63,7 +63,7 @@ Os candidatos a recursos são escolhidos com base em um [**ResourceContext**](/u
 ## <a name="important-apis"></a>APIs Importantes
 * [ResourceLoader](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live)
 * [ResourceManager](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)
-* [Resourcecontext)&lt;2}&lt;1}](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
+* [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
