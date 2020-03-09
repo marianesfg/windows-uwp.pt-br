@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 8235b2c2029b2bb3b9351263a3c908879b4beba9
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684986"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853043"
 ---
 # <a name="input-practices-for-games"></a>Práticas de entrada para jogos
 
@@ -315,7 +315,7 @@ No caso dos controladores de jogo que dão suporte a relatórios detalhados sobr
 
 Se seu código realizar alguma ação (como desenhar a interface do usuário) com base na porcentagem de duração de bateria restante, certifique-se de que ele está de acordo com os valores acima. Por exemplo, se quiser avisar o player quando a bateria do controlador estiver baixa, faça-o quando ela chegar a 10%.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 * [Classe Windows. System. User](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [Interface Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)

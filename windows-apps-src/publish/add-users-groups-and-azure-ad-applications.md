@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, aplicativo do Azure AD, AAD, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 41467f51e02f3cc700e3759f33d6fd6eea3ac7a6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260074"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852551"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Adicionar usuários, grupos e aplicativos do Azure AD à sua conta do Partner Center
 
@@ -67,7 +67,7 @@ Se você estiver conectado com uma conta de gerente que também tem permissões 
 
 1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e, em seguida, escolha **criar novos usuários**.
 2.  Insira o nome, o sobrenome e o nome de usuário do novo usuário.
-3.  Se quiser que o novo usuário tenha uma [Conta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) no diretório da organização, marque a caixa rotulada **Tornar esse usuário um Administrador Global no Azure AD, com controle total sobre todos os recursos de diretório**. Isso dará ao usuário acesso completo a todos os recursos administrativos no Azure AD de sua empresa. Eles poderão adicionar e gerenciar usuários no diretório da sua organização (embora não no Partner Center, a menos que você conceda à conta as [permissões/funções](set-custom-permissions-for-account-users.md)apropriadas). Se você marcar essa caixa, será necessário fornecer um **Email de recuperação de senha** para o usuário.
+3.  Se quiser que o novo usuário tenha uma [Conta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) no diretório da organização, marque a caixa rotulada **Tornar esse usuário um Administrador Global no Azure AD, com controle total sobre todos os recursos de diretório**. Isso dará ao usuário acesso completo a todos os recursos administrativos no Azure AD de sua empresa. Eles poderão adicionar e gerenciar usuários no diretório da sua organização (embora não no Partner Center, a menos que você conceda à conta as [permissões/funções](set-custom-permissions-for-account-users.md)apropriadas). Se você marcar essa caixa, você precisará fornecer um **Email de recuperação de senha** para o usuário.
 4.  Se você marcou a caixa **Tornar este usuário um administrador Global em seu Azure AD**, insira um email que o usuário pode usar caso precise recuperar a senha.
 5.  Na seção **Associação de grupo**, selecione qualquer grupo ao qual o novo usuário deve pertencer.
 6.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o usuário.
@@ -83,19 +83,19 @@ Se você estiver conectado com uma conta de gerente que também tem permissões 
 > Você deve estar conectado com uma conta de administrador global no seu locatário do Azure AD para convidar usuários externos.
 
 1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e, em seguida, escolha **convidar usuários por email**.
-1.  Insira um ou mais endereços de email (até dez), separados por vírgulas ou pontos e vírgulas.
+1.  Insira um ou mais endereços de email (até dez), separados por vírgulas ou ponto e vírgulas.
 2.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o usuário.
 3.  Clique em **Salvar**.
 
 Os usuários que você convidou receberão um convite por email para participar da sua conta, e uma nova conta de [usuário convidado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) será criada para eles no seu locatário do Azure AD. Cada usuário precisará aceitar o convite antes que possa acessar sua conta.
 
-Se você precisar enviar um convite novamente, localize o usuário na página **Usuários** e selecione o endereço de email desse usuário (ou o texto que diz **Convite pendente**). Em seguida, na parte inferior da página, clique em **Reenviar o convite**.
+Se você precisar enviar um convite novamente, localize o usuário na página **Usuários** e selecione o endereço de email desse usuário (ou o texto que diz **Convite pendente**). Em seguida, na parte inferior da página, clique em **Reenviar convite**.
 
 > [!IMPORTANT]
 > Usuários externos que você convidar para ingressar na sua conta do Partner Center podem receber as mesmas funções e permissões que outros usuários. No entanto, os usuários externos não poderão executar determinadas tarefas no Visual Studio, como associar um app à Store ou criar pacotes para carregar na Store. Se um usuário precisar executar essas tarefas, escolha **Criar novos usuários** em vez de **Convidar usuários externos**. (Se você não quiser adicionar esses usuários ao seu locatário do Azure AD existente, poderá [criar um novo locatário](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) e então criar novas contas de usuário para eles no locatário). 
 
 
-### <a name="changing-a-users-directory-password"></a>Como alterar a senha do diretório de um usuário
+### <a name="changing-a-users-directory-password"></a>Alterando a senha do diretório de um usuário
 
 Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se você tiver fornecido um **Email de recuperação de senha** ao criar a conta de usuário. Você também pode atualizar a senha do usuário seguindo as etapas a seguir (se você estiver conectado com uma conta de administrador global no seu locatário do Azure AD para alterar a senha do usuário). Observe que isso alterará a senha do usuário em seu locatário do Azure AD, juntamente com a senha que eles usam para acessar o Partner Center. 
 
@@ -163,7 +163,7 @@ Você pode permitir que aplicativos ou serviços que fazem parte do Azure AD da 
 Se você quiser conceder acesso à central de parceiros a uma nova conta de aplicativo do Azure AD, poderá criar uma na seção **usuários** . Observe que isso criará uma nova conta no diretório da sua organização, não apenas na sua conta do Partner Center.
 
 > [!TIP]
-> Se você estiver usando principalmente esse aplicativo do Azure AD para a autenticação do Partner Center e não precisar que os usuários o acessem diretamente, poderá inserir qualquer endereço válido para a **URL de resposta** e o URI da **ID do aplicativo**, desde que esses valores não sejam usados por nenhum outro Azure Aplicativo do AD em seu diretório.
+> Se você estiver usando principalmente esse aplicativo do Azure AD para a autenticação do Partner Center e não precisar que os usuários o acessem diretamente, poderá inserir qualquer endereço válido para a **URL de resposta** e o URI da **ID do aplicativo**, desde que esses valores não sejam usados por nenhum outro aplicativo do Azure AD em seu diretório.
 
 1.  Na página **usuários** (em **configurações de conta**), selecione **adicionar aplicativos do Azure ad**.
 2.  Na página seguinte, selecione **novo aplicativo Azure ad**.
