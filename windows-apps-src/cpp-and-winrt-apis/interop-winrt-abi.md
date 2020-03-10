@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: 91602c75cdaddc325407529ab4d231db46ecca39
-ms.sourcegitcommit: 412bf5bb90e1167d118699fbf71d0e6864ae79bd
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586715"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853263"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidade entre C++/WinRT e ABI
 
@@ -352,7 +352,7 @@ void GetString(_Out_ HSTRING* value);
 | Copiar **HSTRING** para **hstring** | `copy_from_abi(s, h);` | *s* faz uma cópia particular da cadeia de caracteres. A cadeia de caracteres anteriormente pertencente a *s* é liberada. |
 | Copiar **hstring** para **HSTRING** | `copy_to_abi(s, reinterpret_cast<void*&>(h));` | *h* recebe uma cópia da cadeia de caracteres. Qualquer cadeia de caracteres anteriormente pertencente a *h* é vazada. |
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Função AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)
 * [Função QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [Função winrt::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
