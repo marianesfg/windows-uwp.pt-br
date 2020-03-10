@@ -9,11 +9,11 @@ keywords: Python, Windows 10, Microsoft, Python no Windows, Web para Python com 
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
-ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74881289"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853073"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introdução ao uso do Python para desenvolvimento para a Web no Windows
 

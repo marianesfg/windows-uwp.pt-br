@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
 ms.openlocfilehash: 61a54edc236f94bec44420471a176a2014fcdb0d
-ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71329572"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852800"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -76,7 +76,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | - | - |
 | [Categorias de valor e referências a eles](cpp-value-categories.md) | Este tópico descreve as diversas categorias de valores que existem em C++. Você já deve ter ouvido falar de lvalues e rvalues, mas há outros tipos também. |
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [namespace winrt](/uwp/cpp-ref-for-winrt/winrt)
 
 ## <a name="related-topics"></a>Tópicos relacionados
