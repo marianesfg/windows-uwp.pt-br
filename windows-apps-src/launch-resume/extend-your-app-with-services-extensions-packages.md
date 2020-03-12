@@ -1,18 +1,18 @@
 ---
-title: Estender seu app com serviços, extensões e pacotes
+title: Estender seu aplicativo com serviços, extensões e pacotes
 description: Descreve como criar uma tarefa em segundo plano que é executada quando seu aplicativo da loja Plataforma Universal do Windows (UWP) é atualizado.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, estender, dividir, serviço de aplicativo, pacote, extensão
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
-ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
+ms.openlocfilehash: a2d12fbf1c45c05c2e9917c77c0d15f15bccaf72
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329510"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935340"
 ---
-# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu app com serviços, extensões e pacotes
+# <a name="extend-your-app-with-services-extensions-and-packages"></a>Estender seu aplicativo com serviços, extensões e pacotes
 
 Há muitas tecnologias no Windows 10 para estender e modelar seu aplicativo. Esta tabela deve ajudá-lo a determinar qual tecnologia você deve usar dependendo dos requisitos. Ela é seguida por uma breve descrição dos cenários e tecnologias.
 
@@ -78,7 +78,7 @@ Pacotes de recursos são apenas pacotes de ativos que permitem ao aplicativo se 
 Os pacotes opcionais são usados para complementar ou estender a funcionalidade original do pacote do aplicativo. É possível publicar um aplicativo, seguido da publicação de pacotes opcionais em um momento posterior, ou publicar pacotes de aplicativo e opcionais simultaneamente. Ao estender seu aplicativo por meio de um pacote opcional, você tem as vantagens de distribuir e monetizar conteúdo como um pacote de aplicativo separado. Os pacotes opcionais geralmente devem ser desenvolvidos pelo desenvolvedor do aplicativo original, pois são executados com a identidade do aplicativo principal (diferente das extensões de aplicativo). Dependendo de como você define o pacote opcional, você pode carregar código, ativos ou código e ativos do pacote opcional para o aplicativo principal. Se você precisar aprimorar seu aplicativo com conteúdo que possa ser monetizadas, licenciado e distribuído separadamente, os pacotes opcionais podem ser a escolha certa para você. Para obter detalhes de implementação, consulte [Criação de pacotes opcionais e conjunto relacionado](/windows/msix/package/optional-packages).
 
 **Pacote simples**
-[Pacotes simples do aplicativo](/windows/msix/package/flat-bundles.md) são semelhantes aos regulares, exceto que em vez de incluírem todos os pacotes de aplicativo na pasta, o pacote simples contém apenas *referências* aos pacotes de aplicativo. Por conter referências aos pacotes de aplicativo em vez dos próprios arquivos, um pacote simples reduz o tempo necessário para empacotar e baixar um aplicativo.
+[Pacotes simples do aplicativo](/windows/msix/package/flat-bundles) são semelhantes aos regulares, exceto que em vez de incluírem todos os pacotes de aplicativo na pasta, o pacote simples contém apenas *referências* aos pacotes de aplicativo. Por conter referências aos pacotes de aplicativo em vez dos próprios arquivos, um pacote simples reduz o tempo necessário para empacotar e baixar um aplicativo.
 
 **Extensão do aplicativo**
 
@@ -88,11 +88,11 @@ Se um aplicativo oferece suporte a extensões, qualquer desenvolvedor pode envia
 
 Os aplicativos não podem carregar o código a partir das extensões. Se você precisar de execução de código, considere os Serviços de aplicativo.
 
-**Serviço de Aplicativo**
+**Serviço de aplicativo**
 
 Os serviços de aplicativos do Windows permitem a comunicação entre aplicativos, permitindo que seu aplicativo UWP forneça serviços para outro aplicativo universal do Windows. Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. Consulte [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) para obter mais detalhes.
 
-Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da Web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos podem usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.
+Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da Web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos possam usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.
 
 **Instalação de streaming de aplicativo UWP**
 

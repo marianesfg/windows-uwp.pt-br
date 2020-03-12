@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 84a41b4dd77a451a79e607e5ad5cb7df548419a9
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 9f6ba075a8dba048c9a11cc415734d040d953079
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089412"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935370"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>Usar a API de hospedagem XAML UWP em um aplicativo C++ Win32
 
@@ -34,7 +34,7 @@ A API de hospedagem do UWP XAML fornece a infraestrutura de baixo nível para ho
 
 Como recomendamos que apenas C++ os aplicativos Win32 usem a API de hospedagem XAML do UWP, este artigo fornece principalmente instruções C++ e exemplos para aplicativos Win32. No entanto, você pode usar a API de hospedagem XAML do UWP no WPF e Windows Forms aplicativos se escolher. Este artigo aponta para o código-fonte relevante para os [controles de host](xaml-islands.md#host-controls) para WPF e Windows Forms no kit de ferramentas da Comunidade do Windows para que você possa ver como a API de hospedagem XAML do UWP é usada por esses controles.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 As ilhas XAML exigem o Windows 10, versão 1903 (ou posterior) e a compilação correspondente do SDK do Windows. Para usar as ilhas XAML em C++ seu aplicativo Win32, você deve configurar seu projeto conforme descrito nesta [seção](#configure-the-project).
 
@@ -51,7 +51,7 @@ A API de hospedagem XAML do UWP inclui esses tipos de Windows Runtime principais
 
 O diagrama a seguir ilustra a hierarquia de objetos em uma ilha XAML hospedada em um aplicativo de área de trabalho.
 
-* No nível base está o elemento de interface do usuário em seu aplicativo em que você deseja hospedar a ilha XAML. Este elemento de interface do usuário deve ter um identificador de janela (HWND). Exemplos de elementos de interface do usuário nos quais você pode hospedar uma ilha XAML incluem C++ uma [janela](https://docs.microsoft.com/windows/desktop/winmsg/about-windows) para aplicativos Win32, um [System. Windows. Interop. HwndHost](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) para aplicativos do WPF e um [System. Windows. Forms. Control](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) para Windows Forms aplicativos.
+* No nível base está o elemento de interface do usuário em seu aplicativo em que você deseja hospedar a ilha XAML. Este elemento de interface do usuário deve ter um identificador de janela (HWND). Exemplos de elementos de interface do usuário nos quais você pode hospedar uma ilha [window](https://docs.microsoft.com/windows/desktop/winmsg/about-windows) XAML incluem C++ uma janela para aplicativos Win32, um [System. Windows. Interop. HwndHost](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) para aplicativos do WPF e um [System. Windows. Forms. Control](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) para Windows Forms aplicativos.
 
 * No próximo nível está um objeto **DesktopWindowXamlSource** . Esse objeto fornece a infraestrutura para hospedar a ilha XAML. Seu código é responsável por criar esse objeto e anexá-lo ao elemento pai da interface do usuário.
 
@@ -60,6 +60,9 @@ O diagrama a seguir ilustra a hierarquia de objetos em uma ilha XAML hospedada e
 * Por fim, no nível superior está o controle UWP que você deseja hospedar em seu aplicativo de desktop. Pode ser qualquer objeto UWP derivado de [Windows. UI. XAML. UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluindo qualquer controle UWP fornecido pelo SDK do Windows, bem como controles de usuário personalizados.
 
 ![Arquitetura do DesktopWindowXamlSource](images/xaml-islands/xaml-hosting-api-rev2.png)
+
+> [!NOTE]
+> Ao hospedar as ilhas XAML em um aplicativo de área de trabalho, você pode ter várias árvores de conteúdo XAML em execução no mesmo thread ao mesmo tempo. Para acessar o elemento raiz de uma árvore de conteúdo XAML em uma ilha XAML e obter informações relacionadas sobre o contexto no qual ele está hospedado, use a classe [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) . As APIs [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)e [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) não fornecerão as informações corretas para as ilhas XAML. Para obter mais informações, consulte [esta seção](xaml-islands.md#window-host-context-for-xaml-islands).
 
 ## <a name="related-samples"></a>Exemplos relacionados
 
@@ -100,7 +103,7 @@ Esta seção orienta você pelo processo de usar a API de hospedagem XAML do UWP
     2. Selecione a guia **procurar** , procure o pacote [Microsoft. Windows. CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e instale a versão mais recente deste pacote.
 
     > [!NOTE]
-    > Para novos projetos, você pode instalar a extensão do [ C++/WinRT Visual Studio (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) como alternativa e usar um dos C++modelos de projeto/WinRT incluídos nessa extensão. Para obter mais detalhes, consulte [Este artigo](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+    > Para novos projetos, você pode instalar a extensão do [ C++/WinRT Visual Studio (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) como alternativa e usar um dos C++modelos de projeto/WinRT incluídos nessa extensão. Para obter mais detalhes, veja [este artigo](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 4. Instale o pacote NuGet [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) :
 
@@ -341,7 +344,7 @@ Para obter exemplos completos que demonstram essas tarefas, consulte os seguinte
 * **C++Win32**
   * Consulte o arquivo [HelloWindowsDesktop. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/CppWinRT_Basic_Win32App/Win32DesktopApp/HelloWindowsDesktop.cpp) .
   * Consulte o arquivo [XamlBridge. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) .
-* **WFP** Consulte os arquivos [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) no kit de ferramentas da Comunidade do Windows.  
+* **WPF:** Consulte os arquivos [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) no kit de ferramentas da Comunidade do Windows.  
 
 * **Windows Forms:** Consulte os arquivos [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) e [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) no kit de ferramentas da Comunidade do Windows.
 
@@ -392,9 +395,9 @@ As seções a seguir fornecem orientações e links para exemplos de código sob
 
 Para lidar corretamente com a entrada de teclado para cada ilha XAML, seu aplicativo deve passar todas as mensagens do Windows para a estrutura de XAML do UWP para que determinadas mensagens possam ser processadas corretamente. Para fazer isso, em algum lugar em seu aplicativo que possa acessar o loop de mensagem, converta o objeto **DesktopWindowXamlSource** para cada ilha XAML em uma interface com **IDesktopWindowXamlSourceNative2** . Em seguida, chame o método **PreTranslateMessage** dessa interface e passe a mensagem atual.
 
-  * **C++ Win32:** : O aplicativo pode chamar **PreTranslateMessage** diretamente em seu loop de mensagem principal. Para obter um exemplo, consulte o arquivo [XamlBridge. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp#L16) .
+  * Win32:: o aplicativo pode chamar **PreTranslateMessage** diretamente em seu loop de mensagem principal. **C++** Para obter um exemplo, consulte o arquivo [XamlBridge. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp#L16) .
 
-  * **WFP** O aplicativo pode chamar **PreTranslateMessage** do manipulador de eventos para o evento [ComponentDispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage) . Para obter um exemplo, consulte o arquivo [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) no kit de ferramentas da Comunidade do Windows.
+  * **WPF:** O aplicativo pode chamar **PreTranslateMessage** do manipulador de eventos para o evento [ComponentDispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage) . Para obter um exemplo, consulte o arquivo [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) no kit de ferramentas da Comunidade do Windows.
 
   * **Windows Forms:** O aplicativo pode chamar **PreTranslateMessage** de uma substituição para o método [Control. PreprocessMessage](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.preprocessmessage) . Para obter um exemplo, consulte o arquivo [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs#L100) no kit de ferramentas da Comunidade do Windows.
 
@@ -410,9 +413,9 @@ A API de hospedagem XAML do UWP fornece vários tipos e membros para ajudá-lo a
 
 Para obter exemplos que demonstram como fazer isso no contexto de um aplicativo de exemplo funcional, consulte os seguintes arquivos de código:
 
-  * **C++/Win32**: Consulte o arquivo [XamlBridge. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) .
+  * /Win32: consulte o arquivo [XamlBridge. cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) .  **C++**
 
-  * **WFP** Consulte o arquivo [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) no kit de ferramentas da Comunidade do Windows.  
+  * **WPF:** Consulte o arquivo [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) no kit de ferramentas da Comunidade do Windows.  
 
   * **Windows Forms:** Consulte o arquivo [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs) no kit de ferramentas da Comunidade do Windows.
 
@@ -469,7 +472,7 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
 
 | Problema | Resolução |
 |-------|------------|
-| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "Não é possível ativar DesktopWindowXamlSource. Este tipo não pode ser usado em um aplicativo UWP. " ou "não é possível ativar WindowsXamlManager. Este tipo não pode ser usado em um aplicativo UWP. " | Esse erro indica que você está tentando usar a API de hospedagem XAML do UWP (especificamente, está tentando instanciar os tipos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) ou [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) ) em um aplicativo UWP. A API de hospedagem XAML do UWP destina-se apenas a ser usada em aplicativos de área de trabalho não UWP, como WPF C++ , Windows Forms e aplicativos Win32. |
+| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "não é possível ativar DesktopWindowXamlSource. Este tipo não pode ser usado em um aplicativo UWP. " ou "não é possível ativar WindowsXamlManager. Este tipo não pode ser usado em um aplicativo UWP. " | Esse erro indica que você está tentando usar a API de hospedagem XAML do UWP (especificamente, está tentando instanciar os tipos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) ou [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) ) em um aplicativo UWP. A API de hospedagem XAML do UWP destina-se apenas a ser usada em aplicativos de área de trabalho não UWP, como WPF C++ , Windows Forms e aplicativos Win32. |
 
 ### <a name="error-trying-to-use-the-windowsxamlmanager-or-desktopwindowxamlsource-types"></a>Erro ao tentar usar os tipos WindowsXamlManager ou DesktopWindowXamlSource
 
@@ -481,13 +484,13 @@ As instruções a seguir mostram como empacotar todos os componentes na soluçã
 
 | Problema | Resolução |
 |-------|------------|
-| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "O método AttachToWindow falhou porque o HWND especificado foi criado em um thread diferente." | Esse erro indica que seu aplicativo chamou o método **IDesktopWindowXamlSourceNative:: AttachToWindow** e passou a ele o HWND de uma janela que foi criada em um thread diferente. Você deve passar esse método a HWND de uma janela que foi criada no mesmo thread que o código do qual você está chamando o método. |
+| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "o método AttachToWindow falhou porque o HWND especificado foi criado em um thread diferente." | Esse erro indica que seu aplicativo chamou o método **IDesktopWindowXamlSourceNative:: AttachToWindow** e passou a ele o HWND de uma janela que foi criada em um thread diferente. Você deve passar esse método a HWND de uma janela que foi criada no mesmo thread que o código do qual você está chamando o método. |
 
 ### <a name="error-attaching-to-a-window-on-a-different-top-level-window"></a>Erro ao anexar a uma janela em uma janela de nível superior diferente
 
 | Problema | Resolução |
 |-------|------------|
-| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "O método AttachToWindow falhou porque o HWND especificado descende de uma janela de nível superior diferente da HWND que foi passada anteriormente para AttachToWindow no mesmo thread." | Esse erro indica que seu aplicativo chamou o método **IDesktopWindowXamlSourceNative:: AttachToWindow** e passou a ele o HWND de uma janela que descende de uma janela de nível superior diferente de uma janela que você especificou em uma chamada anterior para esse método no mesmo thread.</p></p>Depois que o aplicativo chama **AttachToWindow** em um thread específico, todos os outros objetos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) no mesmo thread só podem se anexar a janelas descendentes da mesma janela de nível superior que foi passada na primeira chamada para **AttachToWindow**. Quando todos os objetos **DesktopWindowXamlSource** são fechados para um thread específico, a próxima **DesktopWindowXamlSource** é gratuita para anexar a qualquer janela novamente.</p></p>Para resolver esse problema, feche todos os objetos **DesktopWindowXamlSource** que estão vinculados a outras janelas de nível superior nesse thread ou crie um novo thread para esse **DesktopWindowXamlSource**. |
+| Seu aplicativo recebe uma **COMException** com a seguinte mensagem: "o método AttachToWindow falhou porque o HWND especificado descende de uma janela de nível superior diferente da HWND que foi passada anteriormente para AttachToWindow no mesmo thread". | Esse erro indica que seu aplicativo chamou o método **IDesktopWindowXamlSourceNative:: AttachToWindow** e passou a ele o HWND de uma janela que descende de uma janela de nível superior diferente de uma janela que você especificou em uma chamada anterior para esse método no mesmo thread.</p></p>Depois que o aplicativo chama **AttachToWindow** em um thread específico, todos os outros objetos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) no mesmo thread só podem se anexar a janelas descendentes da mesma janela de nível superior que foi passada na primeira chamada para **AttachToWindow**. Quando todos os objetos **DesktopWindowXamlSource** são fechados para um thread específico, a próxima **DesktopWindowXamlSource** é gratuita para anexar a qualquer janela novamente.</p></p>Para resolver esse problema, feche todos os objetos **DesktopWindowXamlSource** que estão vinculados a outras janelas de nível superior nesse thread ou crie um novo thread para esse **DesktopWindowXamlSource**. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
