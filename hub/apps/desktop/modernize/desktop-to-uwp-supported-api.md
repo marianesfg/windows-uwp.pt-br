@@ -10,11 +10,11 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302530"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209662"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>APIs UWP disponíveis para aplicativos da área de trabalho
 
@@ -33,7 +33,7 @@ Muitas APIs UWP exigem que a [identidade do pacote](modernize-packaged-apps.md) 
 | Criptografia | Não há suporte para todas as APIs no momento. |
 | Geolocalização | Não há suporte para todas as APIs no momento. |
 | Seletores de arquivos e pastas | Aplicativos com identidade têm acesso total ao sistema de arquivos e não precisam de seletores UWP. |
-| Mídia | Não há suporte para todas as APIs no momento. |
+| Media | Não há suporte para todas as APIs no momento. |
 | Ponto de serviço | Não há suporte para todas as APIs no momento. |
 | Cartões inteligentes | Não há suporte para todas as APIs no momento. |
 | PlayReady | Não há suporte para todas as APIs no momento. |
@@ -383,4 +383,4 @@ As APIs que têm o [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos no Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

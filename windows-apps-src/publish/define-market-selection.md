@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
 ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787114"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210962"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
 
 A Microsoft Store abrange clientes em mais de 200 países e regiões em todo o mundo. Você pode escolher os mercados em que deseja oferecer seu aplicativo, com a opção de personalizar muitos recursos de [preço e disponibilidade](set-app-pricing-and-availability.md) por mercado ou por grupo de mercados.
 
-Para obter informações ajudar a tornar seu aplicativo adequado para clientes em todo o mundo, consulte [diretrizes para globalização](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) e [tornar seu aplicativo localizável](../design/globalizing/prepare-your-app-for-localization.md).
+Para obter informações para ajudar a tornar seu aplicativo adequado para clientes em todo o mundo, consulte [diretrizes para globalização](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) e [tornar seu aplicativo localizável](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Embora este tópico se refira aos aplicativos, a seleção de mercado para envios de complemento usa o mesmo processo.
@@ -34,19 +34,19 @@ Por padrão, todos os mercados são selecionados. Você pode desmarcar mercados 
 Observe que as seleções feitas aqui se aplicam apenas a novas aquisições; se uma pessoa já tiver seu aplicativo em um determinado mercado e depois você remover esse mercado, ela poderá continuar utilizando o aplicativo, mas não receberá as atualizações que você enviar e nenhum novo cliente nesse mercado poderá baixar seu aplicativo.
 
 > [!IMPORTANT]
-> É sua responsabilidade para atender às exigências legais locais, mesmo se esses requisitos não estão listados aqui ou no Partner Center.
+> É sua responsabilidade atender a requisitos legais locais, mesmo que esses requisitos não estejam listados aqui ou no Partner Center.
 
 Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e restrições ou outros fatores podem impedir que certos aplicativos sejam listados em alguns países e regiões. Além disso, alguns mercados podem ter requisitos específicos relacionados às classificações etárias. Se o seu aplicativo não cumprir esses requisitos, não poderemos oferecer o seu aplicativo nesse mercado. Veja [Classificações etárias](age-ratings.md) para saber mais.
 
 > [!NOTE]
-> Para aplicativos publicados anteriormente que incluem pacotes de direcionamento para o Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Restante do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Para aplicativos publicados anteriormente que incluem pacotes direcionados para o Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "REST do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 Você também verá uma caixa de seleção que permitirá a você informar se deseja oferecer seu aplicativo em qualquer mercado que a Loja possa adicionar no futuro. Se você deixar essa caixa marcada e posteriormente adicionamos novos mercados, o preço base e a data de disponibilidade geral do seu envio serão usados para o aplicativo nesses mercados. Se você não quiser que isso aconteça, desmarque essa caixa; nesse caso, não listaremos seu aplicativo em nenhum mercado futuro (porém, você sempre poderá adicioná-lo posteriormente).
  
 
-## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor da Microsoft Store
+## <a name="microsoft-store-consumer-markets"></a>Microsoft Store mercados de consumo
 
-Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir. Os mercados com um asterisco dão suporte a Microsoft Store no Xbox One; Você verá **Xbox** ao lado de seus nomes na **mercado seleção** janela pop-up.
+Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir. Os mercados com um asterisco dão suporte à Microsoft Store no Xbox um; Você verá o **Xbox** próximo aos seus nomes na janela pop-up **seleção de mercado** .
 
 
 <table>
@@ -127,7 +127,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Ilhas Cocos (Keeling)</td>
     <td>Colômbia *</td>
     <td>Ilhas Comores</td>
-    <td>República do Congo</td>
+    <td>Congo</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
@@ -160,7 +160,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Ilhas Malvinas</td>
   </tr>
   <tr>
-    <td>Ilhas Faroe</td>
+    <td>Ilhas Faroés</td>
     <td>Fiji</td>
     <td>Finlândia *</td>
     <td>França *</td>
@@ -244,7 +244,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>RAE de Macau</td>
   </tr>
   <tr>
-    <td>Macedônia, Macedônia do Norte da</td>
+    <td>Macedônia, ARI da</td>
     <td>Madagascar</td>
     <td>Malaui</td>
     <td>Malásia</td>
@@ -388,8 +388,8 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Tuvalu</td>
   </tr>
   <tr>
-    <td>Territórios Insulares dos Estados Unidos</td>
-    <td>Territórios Insulares Americanas</td>
+    <td>Territórios Insulares dos EUA</td>
+    <td>Ilhas Virgens Americanas</td>
     <td>Uganda</td>
     <td>Ucrânia</td>
   </tr>
@@ -476,9 +476,9 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto do mundo" para Windows 8.x
 
-Se seu aplicativo publicado anteriormente inclui os pacotes direcionados a Windows 8.x, é importante estar ciente de que vários mercados são tratados como um mercado de único "de Rest do World" para os clientes que usam o Store no Windows 8. x, mesmo que elas são mostradas como mercados individuais no Partner Center.
+Se o aplicativo publicado anteriormente incluir pacotes destinados ao Windows 8. x, é importante estar ciente de que vários mercados são tratados como um único mercado "REST do mundo" para clientes que usam a loja no Windows 8. x, embora sejam mostrados como mercados individuais no Partner Center.
 
-Se você deixar a seleção de mercado padrão ao enviar seu aplicativo, você não precisa se preocupar com isso, e seu aplicativo estará disponível para todos os mercados possíveis. No entanto, se você quiser excluir determinados mercados, mantenha em mente que excluindo até mesmo um desses meios de mercados "Restante do mundo" que seu aplicativo não estará disponível no *qualquer* do "Restante do mundo" mercados para os clientes no Windows 8 ou Windows 8.1.
+Se você deixar a seleção de mercado padrão ao enviar seu aplicativo, não precisará se preocupar com isso e seu aplicativo estará disponível para todos os possíveis mercados. No entanto, se você quiser excluir determinados mercados, tenha em mente que a exclusão de até mesmo um desses mercados "no mundo real" significa que seu aplicativo não estará disponível em *nenhum* dos mercados "no mundo real" para clientes no Windows 8 ou Windows 8.1.
 
 Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 
@@ -541,7 +541,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Ilha Christmas</td>
     <td>Ilhas Cocos (Keeling)</td>
     <td>Ilhas Comores</td>
-    <td>República do Congo</td>
+    <td>Congo</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
@@ -563,7 +563,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
   </tr>
   <tr>
     <td>Ilhas Malvinas</td>
-    <td>Ilhas Faroe</td>
+    <td>Ilhas Faroés</td>
     <td>Fiji</td>
     <td>Guiana Francesa</td>
   </tr>
@@ -613,7 +613,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Libéria</td>
     <td>Liechtenstein</td>
     <td>RAE de Macau</td>
-    <td>Macedônia, Macedônia do Norte da</td>
+    <td>Macedônia, ARI da</td>
   </tr>
   <tr>
     <td>Madagascar</td>
@@ -714,8 +714,8 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
   <tr>
     <td>Tuvalu</td>
     <td>Uganda</td>
-    <td>Territórios Insulares dos Estados Unidos</td>
-    <td>Territórios Insulares Americanas</td>
+    <td>Territórios Insulares dos EUA</td>
+    <td>Ilhas Virgens Americanas</td>
   </tr>
   <tr>
     <td>Uzbequistão</td>
@@ -738,4 +738,4 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 </table>
 
 > [!NOTE]
-> Para obter uma lista dos países e regiões em que você pode se registrar para uma conta de desenvolvedor, consulte [tipos de conta, locais e tarifas de](account-types-locations-and-fees.md).
+> para obter uma lista dos países e regiões em que você pode se registrar para uma conta de desenvolvedor, consulte [tipos de conta, locais e taxas](account-types-locations-and-fees.md).

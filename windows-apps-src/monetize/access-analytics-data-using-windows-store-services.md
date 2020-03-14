@@ -8,11 +8,11 @@ keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Stor
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3b732da8f92c258647f905e6939dc3cb1b9c9f87
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853353"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210782"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -85,7 +85,7 @@ Os métodos a seguir estão disponíveis para aquisições de aplicativos e jogo
 
 Os seguintes métodos de análise estão disponíveis para aplicativos UWP no Partner Center.
 
-| Cenário       | {1&gt;Métodos&lt;1}      |
+| Cenário       | Métodos      |
 |---------------|--------------------|
 | Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de aplicativos](get-app-acquisitions.md) (Herdado)</li><li>[Obter dados de funil de aquisição de aplicativo](get-acquisition-funnel-data.md) (Herdado)</li><li>[Obter conversões de aplicativo por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter instalações de aplicativos](get-app-installs.md)</li><li>[Obter uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter uso mensal do aplicativo](get-app-usage-monthly.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatório de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha para obter um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixe o arquivo CAB para obter um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
@@ -97,7 +97,7 @@ Os seguintes métodos de análise estão disponíveis para aplicativos UWP no Pa
 
 Os métodos de análise a seguir estão disponíveis para uso por contas de desenvolvedor que pertencem ao [programa Aplicativo da Área de Trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program).
 
-| Cenário       | {1&gt;Métodos&lt;1}      |
+| Cenário       | Métodos      |
 |---------------|--------------------|
 | Instala |  <ul><li>[Obter instalações de aplicativos da área de trabalho](get-desktop-app-installs.md)</li></ul> |
 | Blocks |  <ul><li>[Obter blocos de atualização para seu aplicativo de desktop](get-desktop-block-data.md)</li><li>[Obter detalhes do bloco de atualização para seu aplicativo de desktop](get-desktop-block-data-details.md)</li></ul> |
@@ -108,7 +108,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 
 Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos que usam os [serviços Xbox Live](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md).
 
-| Cenário       | {1&gt;Métodos&lt;1}      |
+| Cenário       | Métodos      |
 |---------------|--------------------|
 | Análises gerais |  <ul><li>[Obter dados do Xbox Live Analytics](get-xbox-live-analytics.md)</li><li>[Obter dados de conquistas do Xbox Live](get-xbox-live-achievements-data.md)</li><li>[Obter dados de uso simultâneo do Xbox Live](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Análise de integridade |  <ul><li>[Obter dados de integridade do Xbox Live](get-xbox-live-health-data.md)</li></ul> |

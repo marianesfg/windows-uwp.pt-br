@@ -1,21 +1,21 @@
 ---
-Description: Quando você concluir a criação de envio do seu aplicativo e clique em Enviar para a Store, o envio insere a etapa de certificação.
+Description: Quando você terminar de criar o envio do aplicativo e clicar em enviar para a loja, o envio entrará na etapa de certificação.
 title: O processo de certificação de aplicativos
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.date: 10/31/2018
 ms.topic: article
-keywords: o Windows 10, uwp, publicar, pré-processamento, certificação, liberar, pendente, enviar, publicar, status, tempo
+keywords: Windows 10, UWP, publicação, pré-processamento, certificação, versão, pendente, envio, publicação, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: d88d8deeb467f186f120fb8c1e579d5c9222aaf1
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826231"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210952"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
-Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que o envio for aprovado na certificação, pode levar até 24 horas para os clientes vejam a listagem do aplicativo para um envio de novo, ou para um envio atualizado com alterações aos pacotes. Se sua atualização altera somente Store detalhes da listagem, o processo de publicação será concluído em menos de uma hora.  Você será notificado quando seu envio é publicado, e o status do aplicativo no painel de controle serão **the Store em**.
+Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que o envio passa pela certificação, pode levar até 24 horas para que os clientes vejam a listagem do aplicativo para um novo envio ou para um envio atualizado com alterações nos pacotes. Se sua atualização alterar apenas os detalhes da listagem do repositório, o processo de publicação será concluído em menos de uma hora.  Você será notificado quando o envio for publicado e o status do aplicativo no painel estará **na loja**.
 
 ## <a name="preprocessing"></a>Pré-processamento
 
@@ -25,29 +25,29 @@ Depois que você carrega os pacotes do aplicativo com êxito e envia o aplicativ
 
 Durante essa fase, vários testes são realizados:
 
--   **Testes de segurança:** Esse primeiro teste verifica pacotes do seu aplicativo de vírus e malwares. Se o aplicativo falhar no teste, você precisará conferir o sistema de desenvolvimento executando o software antivírus mais recente e, em seguida, recompilar o pacote do aplicativo em um sistema limpo.
--   **Testes de conformidade técnica:** Conformidade técnica é testada pelo Kit de certificação de aplicativos do Windows. (Você deve sempre garantir o [teste do aplicativo com o Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviá-lo à loja).
--   **Conformidade do conteúdo:** A quantidade de tempo que necessário para isso varia dependendo da complexidade de seu aplicativo está, quanto conteúdo visual, ele tem e quantos aplicativos tenham sido enviados recentemente. Não se esqueça de fornecer todas as informações importantes aos testadores na página [Notas para certificação](notes-for-certification.md).
+-   **Testes de segurança:** O primeiro teste verifica se há vírus e malware nos pacotes do aplicativo. Se o aplicativo falhar no teste, você precisará conferir o sistema de desenvolvimento executando o software antivírus mais recente e, em seguida, recompilar o pacote do aplicativo em um sistema limpo.
+-   **Testes de conformidade técnica:** a conformidade técnica é testada pelo Kit de Certificação de Aplicativos Windows. (Você deve sempre garantir o [teste do aplicativo com o Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviá-lo à loja).
+-   **Conformidade de conteúdo:** o tempo necessário varia dependendo da complexidade do aplicativo, da quantidade de conteúdo visual e de quantos aplicativos foram enviados recentemente. Não se esqueça de fornecer todas as informações importantes aos testadores na página [Notas para certificação](notes-for-certification.md).
 
 Após a conclusão do processo de certificação, você receberá um relatório de certificação informando se o aplicativo passou ou não na certificação. Se ele não for aprovado, o relatório indicará em qual teste ele falhou ou qual [política](store-policies.md) não foi atendida. Depois de corrigir o problema, você pode criar um novo envio para o seu aplicativo para iniciar o processo de certificação novamente.
 
 ## <a name="release"></a>Versão
 
-Quando seu aplicativo for aprovado na certificação, ele estará pronto para mover para o **publicação** processo.
+Quando seu aplicativo passa a certificação, ele está pronto para mudar para o processo de **publicação** .
 
-- Se você indicou que o seu envio deve ser publicado mais breve possível (a opção padrão), o processo de publicação será iniciada imediatamente.
-- Se esta for a primeira vez que você publicou o aplicativo, e você especificou uma **data de lançamento** na [agenda](configure-precise-release-scheduling.md#release) seção, o aplicativo será disponibilizado acordo com seu **dadatadelançamento**seleções.
-- Se você já usou [mantenha a opções de publicação](manage-submission-options.md#publishing-hold-options) para especificar que ele não deve ser liberado até uma determinada data, vamos aguardar até essa data para iniciar o processo de publicação, a menos que você selecione **alterar a data de lançamento**.
-- Se você já usou [mantenha a opções de publicação](manage-submission-options.md#publishing-hold-options) para especificar que você deseja publicar o envio manualmente, não iniciaremos o processo de publicação até que você selecione **publicar agora** (ou selecione **alteração Data de lançamento** e selecione uma data específica).
+- Se você indicou que o envio deve ser publicado assim que possível (a opção padrão), o processo de publicação será iniciado imediatamente.
+- Se esta for a primeira vez que você publicou o aplicativo e tiver especificado uma **data de lançamento** na seção [agenda](configure-precise-release-scheduling.md#release) , o aplicativo ficará disponível de acordo com as seleções de **data de lançamento** .
+- Se você usou [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options) para especificar que ela não deve ser liberada até uma determinada data, Aguardaremos até essa data para iniciar o processo de publicação, a menos que você selecione **alterar Data de lançamento**.
+- Se você usou [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options) para especificar que deseja publicar o envio manualmente, não iniciaremos o processo de publicação até que você selecione **Publicar agora** (ou selecione **alterar Data de liberação** e escolha uma data específica).
 
 
 ## <a name="publishing"></a>Publicação
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Para novos aplicativos e atualizações que incluem alterações aos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para obter atualizações que apenas alterar as opções como Store detalhes da listagem, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
+Para novos aplicativos e atualizações que incluem alterações nos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para atualizações que só alteram opções como detalhes da listagem de armazenamento, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
 
-Enquanto o aplicativo está na fase de publicação, o **Mostrar detalhes** link na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e Store listando os detalhes estão disponíveis para clientes em cada um dos seu sistema operacional com suporte versões. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até que o processo for concluído, o que significa que os novos pacotes e/ou listando os detalhes está disponível para todos os clientes em potencial do seu aplicativo.
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna status para o envio do aplicativo permite que você saiba quando os novos pacotes e detalhes da lista de armazenamento estão disponíveis para clientes em cada uma das versões do sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até que o processo seja concluído, o que significa que os novos pacotes e/ou detalhes de listagem estão disponíveis para todos os clientes potenciais do seu aplicativo.
 
 ## <a name="in-the-store"></a>Na Loja 
 

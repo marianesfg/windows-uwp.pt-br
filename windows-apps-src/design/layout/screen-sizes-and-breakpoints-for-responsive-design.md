@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853134"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210172"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
@@ -40,14 +40,14 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 </thead>
 <tbody>
 <tr class="even">
-<td style="vertical-align:top;">Pequena</td>
+<td style="vertical-align:top;">Pequeno</td>
 <td style="vertical-align:top;">640px ou menos</td>
 <td style="vertical-align:top;">4&quot; a 6&quot;; 20&quot; a 65&quot;</td>
 <td style="vertical-align:top;">Telefones e TVs</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">Média</td>
+<td style="vertical-align:top;">Médio</td>
 <td style="vertical-align:top;">641px a 1007px</td>
 <td style="vertical-align:top;">7&quot; a 12&quot;</td>
 <td style="vertical-align:top;">Phablets, tablets</td>
@@ -76,7 +76,7 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 
 ## <a name="general-recommendations"></a>Recomendações gerais
 
-### <a name="small"></a>Pequena
+### <a name="small"></a>Pequeno
 - Defina as margens esquerda e direita de janela para 12px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
 - Encaixe as [barras de aplicativos](../controls-and-patterns/app-bars.md) na parte inferior da janela para melhorar a acessibilidade.
 - Use uma coluna/região de cada vez.
@@ -84,7 +84,7 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de sobreposição para conservar espaço na tela.
 - Se você estiver usando o [padrão de detalhes mestre](../controls-and-patterns/master-details.md), use o modo de apresentação empilhada para economizar espaço na tela.
 
-### <a name="medium"></a>Média
+### <a name="medium"></a>Médio
 - Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.
 - Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.
 - Use até duas colunas/regiões.

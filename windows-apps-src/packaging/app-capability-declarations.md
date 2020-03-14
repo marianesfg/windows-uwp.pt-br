@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 3951a34501b24483fb47b97450ad172a93e168e0
-ms.sourcegitcommit: b0930dfeb45e696fe4fa14bdb547de13ba5ade89
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146346"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209932"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 

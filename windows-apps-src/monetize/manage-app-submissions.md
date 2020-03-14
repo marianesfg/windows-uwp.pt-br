@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0575127096a016c54c1ee84c1e57c2f22054384b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260223"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210822"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -26,9 +26,9 @@ A API de envio da Microsoft Store oferece métodos que é possível usar para ge
 
 <span id="methods-for-app-submissions" />
 
-## <a name="methods-for-managing-app-submissions"></a>Métodos para gerenciar envios de aplicativo
+## <a name="methods-for-managing-app-submissions"></a>Métodos para gerenciar envios de aplicativos
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de app. Antes de poder usar esses métodos, o aplicativo já deve existir em sua conta do Partner Center e você deve primeiro criar um envio para o aplicativo no Partner Center. Para obter mais informações, consulte os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de aplicativo. Antes de poder usar esses métodos, o aplicativo já deve existir em sua conta do Partner Center e você deve primeiro criar um envio para o aplicativo no Partner Center. Para obter mais informações, consulte os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
 
 <table>
 <colgroup>
@@ -337,31 +337,31 @@ Esse recurso tem os valores a seguir.
 
 | Valor      | Tipo   | Descrição      |
 |------------|--------|-------------------|
-| id            | sequência  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md), [obter todos os apps](get-all-apps.md) e [obter um app](get-an-app.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
-| applicationCategory           | sequência  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
+| id            | cadeia de caracteres  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md), [obter todos os apps](get-all-apps.md) e [obter um app](get-an-app.md). Para um envio criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
+| applicationCategory           | cadeia de caracteres  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
 | pricing           |  objeto  | Um [recurso de preço](#pricing-object) que contém informações de preço para o aplicativo.        |   
-| visibilidade           |  sequência  |  A visibilidade do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | sequência  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | sequência  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
+| visibilidade           |  cadeia de caracteres  |  A visibilidade do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
+| targetPublishMode           | cadeia de caracteres  | O modo de publicação do envio. Isso pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | cadeia de caracteres  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
 | listings           |   objeto  |  Um dicionário de pares de chave e valor, em que cada chave é um código de país e cada valor é um [recurso de listagem](#listing-object) que contém informações de listagem do aplicativo.       |   
-| hardwarePreferences           |  array  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
+| hardwarePreferences           |  matriz  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties) do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
 | automaticBackupEnabled           |  booliano  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
-| gamingOptions           |  array |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
+| gamingOptions           |  matriz |   Uma matriz que contém um [recurso de opções de jogo](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
 | hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  sequência  |   Contém [observações de certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
-| status           |   sequência  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
+| notesForCertification           |  cadeia de caracteres  |   Contém [observações de certificação](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
+| status           |   cadeia de caracteres  |  O status do envio. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   objeto  | Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.       |    
-| fileUploadUrl           |   sequência  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para este URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
-| applicationPackages           |   array  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
+| fileUploadUrl           |   cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para este URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
+| applicationPackages           |   matriz  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
 | packageDeliveryOptions    | objeto  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.  |
-| enterpriseLicensing           |  sequência  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
+| enterpriseLicensing           |  cadeia de caracteres  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).    |    
 | allowTargetFutureDeviceFamilies           | objeto   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
-| friendlyName           |   sequência  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
-| trailers           |  array |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
+| friendlyName           |   cadeia de caracteres  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
+| trailers           |  matriz |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
 
 
 <span id="pricing-object" />
@@ -372,10 +372,10 @@ Esse recurso contém informações de preço do aplicativo. Esse recurso tem os 
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  trialPeriod               |    sequência     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
+|  trialPeriod               |    cadeia de caracteres     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Isso pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    objeto     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
-|  sales               |   array      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
-|  priceId               |   sequência      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection) do app.   |     
+|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
+|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection) do aplicativo.   |     
 |  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
 
 
@@ -394,10 +394,10 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição    |
 |-----------------|---------|------|
-|  name               |    sequência     |   O nome da promoção.    |     
-|  basePriceId               |   sequência      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
-|  startDate               |   sequência      |   A data de início da promoção no formato ISO 8601.  |     
-|  endDate               |   sequência      |  A data de término da promoção no formato ISO 8601.      |     
+|  name               |    cadeia de caracteres     |   O nome da promoção.    |     
+|  basePriceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
+|  startDate               |   cadeia de caracteres      |   A data de início da promoção no formato ISO 8601.  |     
+|  endDate               |   cadeia de caracteres      |  A data de término da promoção no formato ISO 8601.      |     
 |  marketSpecificPricings               |   objeto      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 
@@ -420,24 +420,24 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 
 | Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   sequência      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions).  |
-|  keywords                |  array       |  Uma matriz de [palavra-chave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
-|  licenseTerms                |    sequência     | Os [termos de licença](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcionais do seu aplicativo.     |
-|  privacyPolicy                |   sequência      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#privacy-policy-url) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
-|  supportContact                |   sequência      |  Este valor está obsoleto. Para definir ou alterar a URL de contato de suporte ou endereço de email para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#support-contact-info) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
-|  websiteUrl                |   sequência      |  Este valor está obsoleto. Para definir ou alterar a URL da página da Web para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#website) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
-|  descrição               |    sequência     |   A [descrição](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) dos detalhes do aplicativo.   |     
-|  features               |    array     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do seu aplicativo.     |
-|  releaseNotes               |  sequência       |  As [notas de versão](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do aplicativo.    |
-|  images               |   array      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
-|  recommendedHardware               |   array      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
-|  minimumHardware               |     sequência    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
-|  title               |     sequência    |   O título da listagem do aplicativo.   |  
-|  shortDescription               |     sequência    |  Usado somente para jogos. Essa descrição é exibida na seção **Informações** do Hub de Jogos no Xbox One e ajuda os clientes a entender mais sobre o seu jogo.   |  
-|  shortTitle               |     sequência    |  Uma versão mais curta do nome do seu produto. Se fornecido, esse nome mais curto pode aparecer em vários lugares no Xbox One (durante a instalação, em Conquistas etc.) no lugar do título completo do seu produto.    |  
-|  sortTitle               |     sequência    |   Se seu produto puder ser colocado em ordem alfabética de maneiras diferentes, você poderá inserir outra versão aqui. Isso pode ajudar os clientes a encontrar o produto mais rapidamente ao pesquisar.    |  
-|  voiceTitle               |     sequência    |   Um nome alternativo para seu produto que, se fornecido, pode ser usado na experiência de áudio no Xbox One ao usar o Kinect ou um headset.    |  
-|  devStudio               |     sequência    |   Especifica esse valor se você quiser incluir um campo **Desenvolvido por** na listagem. (O campo **Publicado por** listará o nome de exibição do publicador associado à conta, independentemente de você fornecer ou não um valor para o campo *devStudio*).    |  
+|  copyrightAndTrademarkInfo                |   cadeia de caracteres      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions).  |
+|  keywords                |  matriz       |  Uma matriz de [palavra-chave](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
+|  licenseTerms                |    cadeia de caracteres     | Os [termos de licença](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) opcionais do seu aplicativo.     |
+|  privacyPolicy                |   cadeia de caracteres      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#privacy-policy-url) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
+|  supportContact                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL de contato de suporte ou endereço de email para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#support-contact-info) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
+|  websiteUrl                |   cadeia de caracteres      |  Este valor está obsoleto. Para definir ou alterar a URL da página da Web para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#website) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
+|  description               |    cadeia de caracteres     |   A [descrição](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) dos detalhes do aplicativo.   |     
+|  features               |    matriz     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do seu aplicativo.     |
+|  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions) do aplicativo.    |
+|  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
+|  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
+|  minimumHardware               |     cadeia de caracteres    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
+|  title               |     cadeia de caracteres    |   O título da listagem do aplicativo.   |  
+|  shortDescription               |     cadeia de caracteres    |  Usado somente para jogos. Essa descrição é exibida na seção **Informações** do Hub de Jogos no Xbox One e ajuda os clientes a entender mais sobre o seu jogo.   |  
+|  shortTitle               |     cadeia de caracteres    |  Uma versão mais curta do nome do seu produto. Se fornecido, esse nome mais curto pode aparecer em vários lugares no Xbox One (durante a instalação, em Conquistas etc.) no lugar do título completo do seu produto.    |  
+|  sortTitle               |     cadeia de caracteres    |   Se seu produto puder ser colocado em ordem alfabética de maneiras diferentes, você poderá inserir outra versão aqui. Isso pode ajudar os clientes a encontrar o produto mais rapidamente ao pesquisar.    |  
+|  voiceTitle               |     cadeia de caracteres    |   Um nome alternativo para seu produto que, se fornecido, pode ser usado na experiência de áudio no Xbox One ao usar o Kinect ou um headset.    |  
+|  devStudio               |     cadeia de caracteres    |   Especifica esse valor se você quiser incluir um campo **Desenvolvido por** na listagem. (O campo **Publicado por** listará o nome de exibição do publicador associado à conta, independentemente de você fornecer ou não um valor para o campo *devStudio*).    |  
 
 <span id="image-object" />
 
@@ -447,11 +447,11 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
-|  fileName               |    sequência     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
-|  fileStatus               |   sequência      |  O status do arquivo de imagem. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
-|  id  |  sequência  | A ID da imagem. Esse valor é fornecido pelo Partner Center.  |
-|  descrição  |  sequência  | A descrição da imagem.  |
-|  imageType  |  sequência  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
+|  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
+|  fileStatus               |   cadeia de caracteres      |  O status do arquivo de imagem. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  id  |  cadeia de caracteres  | A ID da imagem. Esse valor é fornecido pelo Partner Center.  |
+|  description  |  cadeia de caracteres  | A descrição da imagem.  |
+|  imageType  |  cadeia de caracteres  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
 <span id="gaming-options-object" />
@@ -488,7 +488,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  gêneros               |    array     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
+|  gêneros               |    matriz     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
 |  isLocalMultiplayer               |    booliano     |  Indica se o jogo dá suporte a multijogador local.      |     
 |  isLocalCooperative               |   booliano      |  Indica se o jogo dá suporte a cooperação local.    |     
 |  isOnlineMultiplayer               |   booliano      |  Indica se o jogo dá suporte a multijogador online.    |     
@@ -499,7 +499,7 @@ Esse recurso tem os valores a seguir.
 |  localCooperativeMaxPlayers               |   int      |   Especifica o número máximo de jogadores a que o jogo dá suporte para cooperação local.  |     
 |  isBroadcastingPrivilegeGranted               |   booliano      |  Indica se o jogo dá suporte a difusão.   |     
 |  isCrossPlayEnabled               |   booliano      |   Indica se o jogo oferece suporte a sessões multijogador entre jogadores no Xbox e em computadores Windows 10.  |     
-|  kinectDataForExternal               |   sequência      |  Um dos seguintes valores de cadeia de caracteres que indica se o jogo pode coletar dados do Kinect e enviá-los a serviços externos: <ul><li>NotSet</li><li>Desconhecido</li><li>Habilitado</li><li>Desabilitado</li></ul>   |
+|  kinectDataForExternal               |   cadeia de caracteres      |  Um dos seguintes valores de cadeia de caracteres que indica se o jogo pode coletar dados do Kinect e enviá-los a serviços externos: <ul><li>NotSet</li><li>Desconhecido</li><li>Habilitado</li><li>Desabilitada</li></ul>   |
 
 > [!NOTE]
 > O recurso *gamingOptions* foi adicionado em maio de 2017, depois que a API de envio da Microsoft Store foi lançada pela primeira vez para desenvolvedores. Se você tiver criado um envio para um app por meio da API de envio antes da introdução desse recurso e se esse envio ainda estiver em andamento, esse recurso será nulo para envios para o app até que você confirme com êxito o envio ou o exclua. Se o recurso *gamingOptions* não estiver disponível para envios para um app, o campo *hasAdvancedListingPermission* do [recurso Application](get-app-data.md#application_object) retornado pelo método [obter um app](get-an-app.md) será falso.
@@ -525,8 +525,8 @@ Esse recurso contém informações adicionais sobre todos os erros ou avisos rel
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  code               |    sequência     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
-|  details               |     sequência    |  Uma mensagem com mais detalhes sobre o problema.     |
+|  code               |    cadeia de caracteres     |   Um [código de status do envio](#submission-status-code) que descreve o tipo de erro ou aviso.   |     
+|  details               |     cadeia de caracteres    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="application-package-object" />
@@ -569,16 +569,16 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição                   |
 |-----------------|---------|------|
-| fileName   |   sequência      |  O nome do pacote.    |  
-| fileStatus    | sequência    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>    |  
-| id    |  sequência   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Partner Center.   |     
-| versão    |  sequência   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  sequência   |  A arquitetura do pacote (por exemplo, ARM).   |     
-| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  sequência   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | sequência    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | array    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes sequências de família de dispositivos atualmente têm suporte para pacotes do Windows 10, onde *{0}* é uma sequência de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
+| fileName   |   cadeia de caracteres      |  O nome do pacote.    |  
+| fileStatus    | cadeia de caracteres    |  O status do pacote. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  cadeia de caracteres   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Partner Center.   |     
+| version    |  cadeia de caracteres   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| architecture    |  cadeia de caracteres   |  A arquitetura do pacote (por exemplo, ARM).   |     
+| languages    | matriz    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  matriz   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| minimumDirectXVersion    |  cadeia de caracteres   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | cadeia de caracteres    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para apps destinados ao Windows 8.x. Para aplicativos destinados a outras versões do sistema operacional, esse valor deve estar presente ao chamar o método [atualizar um envio de aplicativo](update-an-app-submission.md), mas o valor especificado será ignorado. Isso pode ter um dos seguintes valores: <ul><li>Nenhuma</li><li>Memory2GB</li></ul>   |       
+| targetDeviceFamilies    | matriz    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes sequências de família de dispositivos atualmente têm suporte para pacotes do Windows 10, onde *{0}* é uma sequência de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
 
 <span/>
 
@@ -590,8 +590,8 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição             |
 |-----------------|---------|------|
-|     date            |    sequência     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
-|     reportUrl            |    sequência     |  A URL na qual é possível acessar o relatório.    |
+|     date            |    cadeia de caracteres     |  A data e a hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     reportUrl            |    cadeia de caracteres     |  A URL na qual é possível acessar o relatório.    |
 
 
 <span id="package-delivery-options-object" />
@@ -633,8 +633,8 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 |-----------------|---------|------|
 | isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
-| packageRolloutStatus    |  sequência   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  sequência   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+| packageRolloutStatus    |  cadeia de caracteres   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  cadeia de caracteres   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
 
 > [!NOTE]
 > Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Partner Center e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
@@ -675,9 +675,9 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  id               |    sequência     |   A ID do trailer. Esse valor é fornecido pelo Partner Center.   |
-|  videoFileName               |    sequência     |    O nome do arquivo de vídeo de trailer no arquivo ZIP que contém arquivos para o envio.    |     
-|  videoFileId               |   sequência      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Partner Center.   |     
+|  id               |    cadeia de caracteres     |   A ID do trailer. Esse valor é fornecido pelo Partner Center.   |
+|  videoFileName               |    cadeia de caracteres     |    O nome do arquivo de vídeo de trailer no arquivo ZIP que contém arquivos para o envio.    |     
+|  videoFileId               |   cadeia de caracteres      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Partner Center.   |     
 |  trailerAssets               |   objeto      |  Um dicionário de pares de chave e valor, onde cada chave é um código de idioma e cada valor é um [recurso de ativos de trailer](#trailer-assets-object) que contém outros ativos específicos da localidade para o trailer. Para saber mais sobre os códigos de idioma com suporte, consulte [Idiomas com suporte](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
@@ -691,8 +691,8 @@ Esse recurso contém outros ativos específicos da localidade para um trailer de
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-| title   |   sequência      |  O título localizado do trailer. O título é exibido quando o usuário reproduz o trailer em modo de tela inteira.     |  
-| imageList    | array    |   Uma matriz que contém um recurso de [imagem](#image-for-trailer-object) que fornece a imagem em miniatura do trailer. Você só pode incluir um recurso de [imagem](#image-for-trailer-object) nessa matriz.  |   
+| title   |   cadeia de caracteres      |  O título localizado do trailer. O título é exibido quando o usuário reproduz o trailer em modo de tela inteira.     |  
+| imageList    | matriz    |   Uma matriz que contém um recurso de [imagem](#image-for-trailer-object) que fornece a imagem em miniatura do trailer. Você só pode incluir um recurso de [imagem](#image-for-trailer-object) nessa matriz.  |   
 
 
 <span id="image-for-trailer-object" />
@@ -703,9 +703,9 @@ Esse recurso descreve a imagem em miniatura para um trailer. Esse recurso tem os
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
-|  fileName               |    sequência     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
-|  id  |  sequência  | A ID da imagem em miniatura. Esse valor é fornecido pelo Partner Center.  |
-|  descrição  |  sequência  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
+|  fileName               |    cadeia de caracteres     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
+|  id  |  cadeia de caracteres  | A ID da imagem em miniatura. Esse valor é fornecido pelo Partner Center.  |
+|  description  |  cadeia de caracteres  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
 
 <span/>
 
@@ -723,7 +723,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |-----------------|------|
 |  Base               |   A faixa de preço não está definida. Use o preço base para o aplicativo.      |     
 |  NotAvailable              |   O aplicativo não está disponível na região especificada.    |     
-|  Grátis              |   O app é gratuito.    |    
+|  Grátis              |   O aplicativo é gratuito.    |    
 |  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do app, no formato **Faixa<em>xxxx</em>** . No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de camadas de preço que estão disponíveis para sua conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página de **preços e disponibilidade** de qualquer envio de aplicativo no Partner Center e clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, esse link está na seção de **preços** ).    |
 
 

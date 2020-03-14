@@ -1,5 +1,5 @@
 ---
-Description: A seção de listagens de Store do processo de envio de aplicativo é onde você fornece o texto e imagens que os clientes verão durante a exibição de que listagem de seu aplicativo em que a Microsoft Store.
+Description: A seção listagens de repositório do processo de envio de aplicativo é onde você fornece o texto e as imagens que os clientes verão ao exibir a listagem do aplicativo no Microsoft Store.
 title: Criar listagens de aplicativos da Loja
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.date: 03/13/2019
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e9c7f56dd799b568e12a887355ec19561f207ea
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495722"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210372"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens de aplicativos da Loja
 
 A seção **Listagens da Store** do [processo de envio de aplicativo](app-submissions.md) é onde você fornece o texto e as [imagens](app-screenshots-and-images.md) que os clientes verão na listagem do seu app na Microsoft Store.
 
-Muitos dos campos da seção **listagem da Loja** são opcionais, mas sugerimos o fornecimento de várias imagens e tantas informações quanto possível para fazer a sua listagem se destacar. O mínimo necessário para a etapa **listagens da Loja** ser considerada completa é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots).
+Muitos dos campos em uma **listagem da Store** são opcionais, mas sugerimos que você forneça várias imagens e o máximo de informações possível para a listagem se destacar. O mínimo necessário para etapa de **listagens da Microsoft Store** ser considerada como concluída é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots).
 
 > [!TIP]
-> Você pode opcionalmente [importação e exportação de listagens de Store](import-and-export-store-listings.md) se você preferir a inserir suas informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregar arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo.
+> Opcionalmente, você pode [importar e exportar listagens de armazenamento](import-and-export-store-listings.md) se preferir inserir suas informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregar arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo.
 
-Se seu aplicativo publicado anteriormente dá suporte ao Windows 8.x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens de Store específicas da plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes.
+Se o aplicativo publicado anteriormente oferecer suporte ao Windows 8. x e/ou Windows Phone 8. x ou anterior, você poderá [criar listagens de armazenamento específicas da plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes.
 
 ## <a name="store-listing-languages"></a>Idiomas de listagem da Loja
 
@@ -37,22 +37,22 @@ Na seção **Idiomas adicionais da listagem da Loja**, você pode clicar em **Ge
 
 Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
 
-## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações sobre a listagem de Store
+## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações de listagem de repositório
 
-Para editar um Store listagem, selecione o nome do idioma da página de visão geral de envio. Você deve editar cada idioma separadamente, a menos que você optar por exportar as listagens do Store e trabalhar offline, em seguida, importar todos os dados de listagem ao mesmo tempo. Para obter mais informações sobre como isso funciona, consulte [importação e exportação de listagens de Store](import-and-export-store-listings.md).
+Para editar uma listagem de repositório, selecione o nome do idioma na página Visão geral de envio. Você deve editar cada idioma separadamente, a menos que opte por exportar suas listagens de armazenamento e trabalhe offline e, em seguida, importe todos os dados de listagem de uma só vez. Para obter mais informações sobre como isso funciona, consulte [importar e exportar listagens de repositório](import-and-export-store-listings.md).
 
 Os campos disponíveis são descritos abaixo.
 
 ## <a name="product-name"></a>Nome do produto
 
-Essa caixa de lista suspensa permite especificar qual nome deve ser usado na listagem Store (se você tiver reservado mais de um nome para o aplicativo).
+Essa caixa suspensa permite especificar qual nome deve ser usado na listagem da loja (se você tiver reservado mais de um nome para o aplicativo).
 
-Se você tiver carregado pacotes no mesmo idioma em que o Store listando você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar [renomear o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que já foi publicada, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio, depois de carregar pacotes que usam o novo nome.
+Se você carregou pacotes no mesmo idioma da listagem da loja na qual está trabalhando, o nome usado nesses pacotes será selecionado. Se precisar [renomear o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você poderá selecionar um nome reservado diferente aqui ao criar um novo envio, depois de carregar os pacotes que usam o novo nome.
 
-Se você ainda não carregou pacotes da linguagem você está trabalhando e que você reservou mais de um nome, você precisará selecionar um de seus nomes reservados do aplicativo, já que existe no idioma do qual extrair o nome, não um pacote associado.
+Se você não carregou pacotes para o idioma em que está trabalhando e reservou mais de um nome, precisará selecionar um dos nomes de aplicativos reservados, pois não há um pacote associado nesse idioma do qual extrair o nome.
 
 > [!NOTE]
-> O **nome do produto** você selecione só se aplica à listagem Store na linguagem que você está trabalhando. Ela não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que o pacote (s) de cada idioma e listagem Store usem o mesmo nome.
+> O **nome do produto** que você selecionar aplica-se somente à listagem de repositório no idioma em que você está trabalhando. Ele não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome é proveniente do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes de cada idioma e a listagem da loja usem o mesmo nome.
 
 ## <a name="description"></a>Descrição
 
@@ -64,14 +64,14 @@ Para obter algumas dicas sobre como fazer a sua descrição se destacar, consult
 
 ## <a name="whats-new-in-this-version"></a>Novidades desta versão
 
-Se esta for a primeira vez em que está enviando o seu app, deixe esse campo em branco. Para obter uma atualização para um aplicativo existente, isso é onde você pode avisar aos clientes o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres. (Anteriormente, esse campo foi chamado de **Notas de versão**).
+Se esta for a primeira vez em que está enviando o seu app, deixe esse campo em branco. Para uma atualização de um aplicativo existente, é aqui que você pode permitir que os clientes saibam o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres. (Anteriormente, esse campo foi chamado de **Notas de versão**).
 
 ## <a name="product-features"></a>Recursos do produto
 
 Trata-se de resumos dos principais recursos do aplicativo. Eles são exibidos para o cliente como uma lista com marcadores na seção **Recursos** da listagem da Store do app, juntamente com a **Descrição**. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por recurso. Você pode incluir até 20 recursos.
 
 > [!NOTE]
-> Esses recursos serão exibidos com marcadores em sua listagem Store, portanto, não adicione seus próprios marcadores.
+> Esses recursos aparecerão com marcadores na listagem da loja, portanto, não adicione seus próprios marcadores.
 
 ## <a name="screenshots"></a>Capturas de tela
 
@@ -90,9 +90,9 @@ Para obter mais informações, consulte [Logotipos da Loja](app-screenshots-and-
 
 ## <a name="trailers-and-additional-assets"></a>Trailers e ativos adicionais
 
-Você pode enviar ativos adicionais para o seu produto, incluindo trechos de vídeos e imagens promocionais. Estas são todas opcionais, mas recomendamos que você carregue o máximo possível delas. Essas imagens podem dar aos clientes uma ideia melhor do que é seu produto e tornar a listagem mais atrativa.
+Você pode enviar ativos adicionais para seu produto, incluindo trailers de vídeo e imagens promocionais. Estas são todas opcionais, mas recomendamos que você carregue o máximo possível delas. Essas imagens podem dar aos clientes uma ideia melhor do que é seu produto e tornar a listagem mais atrativa.
 
-Para obter mais informações, consulte [Trailers e ativos adicionais](app-screenshots-and-images.md#trailers-and-additional-assets).
+Para obter mais informações, consulte [trailers e ativos adicionais](app-screenshots-and-images.md#trailers-and-additional-assets).
 
 <a id="supplemental-information" />
 
@@ -124,7 +124,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Para obter melhores resultados, mantenha a breve descrição em 270 caracteres. O campo tem um limite de 1000 caracteres, mas em alguns modos de exibição, somente os caracteres primeiro 270 serão mostrados (com um link disponível para exibir o resto da descrição curta).
+Para obter melhores resultados, mantenha sua descrição curta abaixo de 270 caracteres. O campo tem um limite de 1000 caracteres, mas em alguns modos de exibição, somente os primeiros 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição curta).
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema
 

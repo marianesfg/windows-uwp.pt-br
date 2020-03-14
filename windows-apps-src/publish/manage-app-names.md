@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, nomes de aplicativos, alterar nome do aplicativo, atualizar nome do aplicativo, nome do jogo, nome do produto
 ms.localizationpriority: medium
 ms.openlocfilehash: 38cedf40d4ecf997f6fbced2186cd5b27c6d5e4f
-ms.sourcegitcommit: 2d709ddcc31f52d2a4ace1134aea45057d99a615
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74782592"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210352"
 ---
 # <a name="manage-app-names"></a>Gerenciar nomes de aplicativo
 
@@ -40,7 +40,7 @@ Para excluir um dos nomes reservados do seu aplicativo, encontre o nome que voc�
 Observe que seu aplicativo deve ter pelo menos um nome reservado. Para remover completamente um aplicativo do Partner Center (e liberar todos os nomes que você reservou para esse aplicativo), clique em **excluir este aplicativo** na página **visão geral do aplicativo** . Se você tiver um envio do aplicativo em andamento, é necessário excluir o envio primeiro. Observe que, se você já publicou o aplicativo na loja, não poderá excluí-lo do Partner Center (embora você possa usar a funcionalidade **Mostrar/ocultar produtos** na página de **visão geral** para ocultá-lo). 
 
 
-## <a name="rename-an-app-that-has-already-been-published"></a>Renomear um aplicativo já publicado
+## <a name="rename-an-app-that-has-already-been-published"></a>Renomear um aplicativo que já foi publicado
 
 Se o aplicativo já está na Loja e você deseja renomeá-lo, é possível fazer isso reservando um novo nome para ele (seguindo as etapas descritas acima) e, em seguida, criando um novo envio para o aplicativo. 
 

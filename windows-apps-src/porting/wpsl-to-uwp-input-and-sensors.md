@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a62fcb4a208a52fd77be2a9913e265b12bf31f43
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853133"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210912"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portando Windows Phone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo
 
@@ -84,11 +84,11 @@ Um aplicativo do Windows Phone Silverlight pode usar a classe **Microsoft. Phone
 | Propriedade **PowerSource**                                                                | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
 | Evento **PowerSourceChanged**                                                            | Manipule o evento [**RemainingChargePercentChanged**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercentchanged) (somente família de dispositivos móveis). O evento é acionado quando o valor da propriedade [**RemainingChargePercent**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercent) (somente família de dispositivos móveis) diminui em 1%. |
 
-## <a name="location"></a>Local
+## <a name="location"></a>Location
 
 Quando um aplicativo que declara a capacidade de localização em seu manifesto de pacote de aplicativo é executado no Windows 10, o sistema solicitará o consentimento do usuário final. Portanto, se o aplicativo exibir a própria solicitação de consentimento personalizado, ou se ele fornecer um botão ativar/desativar, remova-a de maneira que o usuário final receba apenas uma solicitação.
 
-## <a name="orientation"></a>{1&gt;Orientação&lt;1}
+## <a name="orientation"></a>Orientação
 
 O equivalente ao aplicativo UWP das propriedades **PhoneApplicationPage.SupportedOrientations** e **Orientation** é o elemento [**uap:InitialRotationPreference**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-splashscreen) no manifesto do pacote do aplicativo. Selecione a guia **Aplicativo** caso ela ainda não esteja selecionada e marque uma ou mais caixas de seleção em **Rotações suportadas** para registrar as preferências.
 

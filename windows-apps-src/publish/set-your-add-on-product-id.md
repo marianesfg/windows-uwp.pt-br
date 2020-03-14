@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: a6ef1ca71ffcd7b2d445292bfb38a6a8d29e7a74
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852442"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210502"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Definir seu tipo de produto e ID do produto (product ID) do complemento
 
@@ -52,7 +52,7 @@ Há suporte para complementos de assinatura somente para os clientes que executa
 
 Você deve enviar o produto pai antes de publicar os complementos da assinatura no repositório (embora possa criar o envio no Partner Center e começar a trabalhar nele a qualquer momento).
 
-## <a name="product-id"></a>Produto ID
+## <a name="product-id"></a>ID do Produto
 
 Independentemente do tipo de produto escolhido, é necessário inserir um ID de produto exclusiva para o complemento. Esse nome será usado para identificar o complemento no Partner Center e você poderá usar esse identificador para [fazer referência ao complemento em seu código](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code).
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, preço, disponível, detectável, avaliação gratuita, avaliações, avaliação, apps, data de lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 715e4c677b3b3e62b9ff515396d3582c3fd99184
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788260"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210552"
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 
@@ -30,7 +30,7 @@ Para obter mais informações, consulte [Definir seleção de mercado](define-pr
 
 A seção **Visibilidade** permite que você defina restrições sobre como seu app pode ser descoberto e adquirido, inclusive se as pessoas podem encontrar seu app na Store ou ver sua listagem da Store.
 
-Para saber mais, consulte [Escolher opções de visibilidade](choose-visibility-options.md).
+Para obter mais informações, confira [Escolher opções de visibilidade](choose-visibility-options.md).
 
 
 ## <a name="schedule"></a>Agendamento
@@ -44,7 +44,7 @@ Para obter mais informações, consulte [Configurar agendamento preciso do lanç
 
 É necessário selecionar um preço base para seu app (a não ser que você tenha selecionado a opção **Parar aquisição** em **Disponibilizar este produto mas não torná-lo detectável na Store** na seção [Visibilidade](choose-visibility-options.md#discoverability)), escolhendo **Gratuito** ou uma das faixas de preço disponíveis. Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do aplicativo deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 
-Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
+Para obter mais informações, confira [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
 
 
 ## <a name="free-trial"></a>Avaliação gratuita
@@ -55,9 +55,9 @@ Existem dois tipos de versão de avaliação que você pode escolher, e você te
 
 ### <a name="time-limited"></a>Limitada ao tempo
 
-Escolher **tempo limitado** para permitir aos clientes testar o seu aplicativo gratuitamente para um determinado número de dias: **1 dia**, **7 dias**, **15 dias**, ou **30 dias**. Você pode limitar os recursos adicionando código a [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md), ou pode permitir que os clientes acessem a funcionalidade completa durante esse período. 
+Escolha **Limitada ao tempo** para permitir que os clientes testem o aplicativo gratuitamente por um determinado número de dias: **1 dia**, **7 dias**, **15 dias** ou **30 dias**. Você pode limitar os recursos adicionando código a [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md), ou pode permitir que os clientes acessem a funcionalidade completa durante esse período. 
 > [!NOTE]
-> As avaliações de tempo limite não são mostradas aos clientes no Windows 10 build 10.0.10586 ou anterior, ou para os clientes no Windows Phone 8.1 e versões anteriores.
+> avaliações de tempo limitado não são mostradas aos clientes no Windows 10 Build 10.0.10586 ou anterior, ou aos clientes no Windows Phone 8,1 e versões anteriores.
 
 ### <a name="unlimited"></a>Ilimitado
 
@@ -70,7 +70,7 @@ Por padrão, a versão de avaliação será disponibilizada assim que o aplicati
 >[!NOTE]
 > Essas datas se aplicam somente a clientes no Windows 10 (incluindo o Xbox). Se o app estiver disponível para os clientes nas versões anteriores do sistema operacional, a versão de avaliação será oferecida a esses clientes enquanto seu produto estiver disponível. 
 
-Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado. Você pode selecionar **personalizar para mercados específicos** se você quiser definir datas diferentes para qualquer market(s).
+Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para o Estados Unidos, o fuso horário do leste é usado.) Você pode selecionar **Personalizar para mercados específicos** se desejar definir datas diferentes para qualquer mercado.
 
 
 ## <a name="sale-pricing"></a>Preço promocional

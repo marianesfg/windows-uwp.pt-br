@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, modelos
 ms.localizationpriority: medium
 ms.openlocfilehash: 668a41a69c2b7dab338d251d95e23e801fa85cf6
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853023"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210512"
 ---
 # <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 
@@ -19,7 +19,7 @@ ms.locfileid: "78853023"
 
 Os modelos DirectX e UWP (Plataforma Universal do Windows) permitem criar rapidamente um projeto como ponto de partida para seu jogo.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Para criar o projeto, você precisa:
@@ -63,7 +63,7 @@ Os modelos DirectX universais do Windows contêm os seguintes arquivos:
     -   d3dx12.h – contém a biblioteca de utilitários D3DX12. Esse arquivo aparece apenas no aplicativo DirectX 12 (Universal Windows).
 -   Ativos – imagens de logotipo e splashscreen usadas pelo aplicativo.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 
 Agora que você tem um ponto de partida, adicione essas informações para criar seus próprios conhecimentos e habilidades de desenvolvimento de jogos da Microsoft Store.

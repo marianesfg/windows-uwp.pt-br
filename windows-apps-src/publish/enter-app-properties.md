@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado, política de privacidade, informações de contato de suporte, site do app, informações de suporte
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bc1283560334d2eac97fd358feabfca0f411014
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320037"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210752"
 ---
 # <a name="enter-app-properties"></a>Insira as propriedades do aplicativo
 
@@ -58,7 +58,7 @@ Insira a URL da página da Web em que seus clientes podem buscar suporte relacio
 
 ## <a name="game-settings"></a>Configurações do jogo
 
-Esta seção só aparecerá se você tiver selecionado **Jogos** como categoria do produto. Aqui você pode especificar quais recursos são compatíveis com seu jogo. As informações que você fornecer nesta seção serão exibidas na Store do produto listagem.
+Esta seção só aparecerá se você tiver selecionado **Jogos** como categoria do produto. Aqui você pode especificar quais recursos são compatíveis com seu jogo. As informações fornecidas nesta seção serão exibidas na listagem de armazenamento do produto.
 
 Se o jogo oferecer suporte a qualquer uma das opções multijogador, indique o número mínimo e máximo de jogadores em uma sessão. Você não pode inserir mais que o mínimo ou o máximo de 1.000 jogadores.
 
@@ -92,16 +92,16 @@ Se você selecionar **Hardware mínimo**, esses itens serão exibidos na listage
 
 O comportamento dos clientes varia de acordo com os requisitos específicos e a versão do Windows do cliente:
 
-- **Para os clientes no Windows 10, versão 1607 ou posterior:**
+- **Para clientes no Windows 10, versão 1607 ou posterior:**
      - Todos os requisitos mínimos e recomendados serão exibidos na listagem da Loja.
      - A Loja verificará todos os requisitos mínimos e exibirá um aviso aos clientes em um dispositivo que não satisfaz os requisitos.
-- **Para os clientes em versões anteriores do Windows 10:**
+- **Para clientes em versões anteriores do Windows 10:**
      - Para a maioria dos clientes, todos os requisitos de hardware mínimos e recomendados serão exibidos na listagem da Loja (embora os clientes que acessarem uma versões mais antigas do cliente da Loja só verão os requisitos mínimos de hardware).
      - A Loja tentará verificar os itens que você designar como **Hardware mínimo**, com exceção de **Memória**, **DirectX**, **Memória de vídeo**, **Elementos gráficos** e **Processador**. Nenhuma dessas opções serão verificadas e os clientes não verão nenhum aviso em dispositivos que não atendam a esses requisitos. 
-- **Para clientes do Windows 8.x e versões anteriores ou Windows Phone 8. x e anteriores:**
+- **Para clientes no Windows 8. x e versões anteriores ou Windows Phone 8. x e anteriores:**
      - Se você marcar a caixa **Hardware mínimo** para **Tela touch**, esse requisito será exibido na listagem da Loja do seu aplicativo e os clientes em dispositivos sem tela touch verão um aviso se tentarem baixar o aplicativo. Nenhum outro requisito será verificado ou exibido em sua listagem da Loja.
 
-Também recomendamos adicionar verificações de tempo de execução para o hardware especificado em seu aplicativo, pois a Loja nem sempre pode detectar se os recursos selecionados estão ausentes no dispositivo do cliente e ele ainda poderá baixar seu aplicativo, mesmo se um aviso for exibido. Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo [XML StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).
+Também recomendamos adicionar verificações de runtime para o hardware especificado em seu aplicativo, pois a Loja nem sempre pode detectar se os recursos selecionados estão ausentes no dispositivo do cliente e ele ainda poderá baixar seu aplicativo, mesmo se um aviso for exibido. Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo [XML StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).
 
 > [!TIP]
 > Se o produto exige itens adicionais que não estão listados nesta seção para funcionar corretamente, como impressoras 3D ou dispositivos USB, você também pode inserir [mais requisitos do sistema](create-app-store-listings.md#additional-system-requirements) ao criar a listagem da Microsoft Store.

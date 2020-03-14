@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: c6384b5890466ff13c72a1b90eb9b27194d51fff
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
-ms.translationtype: MT
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853523"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210992"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
@@ -56,7 +56,7 @@ Você também pode agendar alterações de preço para indicar a data e a hora e
 > [!TIP]
 > Para Complementos de assinatura, você não pode aumentar o preço depois de publicar o complemento, seja selecionando um preço base mais alto em um envio posterior ou agendando uma alteração de preço que aumente o preço. Você pode selecionar um preço menor usando qualquer um desses métodos, mas depois que o preço for reduzido, você não poderá aumentar esse preço para um valor maior. Por isso, é especialmente importante ter certeza de que você selecionou o tipo de preço apropriado para Complementos de assinatura. 
 
-Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
+Para obter mais informações, confira [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
 
 
 ## <a name="sale-pricing"></a>Preço promocional

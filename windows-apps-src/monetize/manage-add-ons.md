@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e06f8e915466f116692c63df5c53c2a0f97447f
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852365"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209652"
 ---
 # <a name="manage-add-ons"></a>Gerenciar complementos
 
@@ -56,7 +56,7 @@ Esses métodos só podem ser usados para obter, criar ou excluir os complementos
 </tbody>
 </table>
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Se você ainda não tiver feito isso, preencha todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) da API de envio da Microsoft Store antes de tentar usar qualquer um desses métodos.
 
@@ -97,12 +97,12 @@ Esse recurso descreve um complemento.
 
 Esse recurso tem os valores a seguir.
 
-| {1&gt;Valor&lt;1}      | Tipo   | Descrição        |
+| Valor      | Tipo   | Descrição        |
 |------------|--------|--------------|
-| aplicativos      | matriz  | Uma matriz que contém um [recurso de aplicativo](#application-object) que representa o aplicativo ao qual esse complemento está associado. Somente um item é compatível nessa matriz.  |
-| {1&gt;id&lt;1} | string  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.  |
-| productId | string  | A ID do produto do complemento. Essa é a ID que foi fornecida pelo desenvolvedor quando o complemento foi criado. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
-| productType | string  | O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **Consumíveis**.  |
+| applications      | matriz  | Uma matriz que contém um [recurso de aplicativo](#application-object) que representa o aplicativo ao qual esse complemento está associado. Somente um item é compatível nessa matriz.  |
+| id | cadeia de caracteres  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.  |
+| productId | cadeia de caracteres  | A ID do produto do complemento. Essa é a ID que foi fornecida pelo desenvolvedor quando o complemento foi criado. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
+| productType | cadeia de caracteres  | O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **Consumíveis**.  |
 | lastPublishedInAppProductSubmission       | objeto | Um [recurso de envio](#submission-object) que fornece informações sobre o envio publicado mais recentemente para o complemento.         |
 | pendingInAppProductSubmission        | objeto  |  Um [recurso de envio](#submission-object) que fornece informações sobre o envio pendente atual para o complemento.  |   |
 
@@ -128,9 +128,9 @@ Esse recurso descreve o aplicativo ao qual um complemento está associado. O exe
 
 Esse recurso tem os valores a seguir.
 
-| {1&gt;Valor&lt;1}           | Tipo    | Descrição        |
+| Valor           | Tipo    | Descrição        |
 |-----------------|---------|-----------|
-| {1&gt;Valor&lt;1}            | objeto  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Store do app. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do aplicativo.</li></ul>   |
+| value            | objeto  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Store do app. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do aplicativo.</li></ul>   |
 | totalCount   | int  | O número de objetos de aplicativo na matriz *applications* do corpo da resposta.                                                                                                                                                 |
 
 <span id="submission-object" />
@@ -150,10 +150,10 @@ Esse recurso fornece informações sobre um envio para um complemento. O exemplo
 
 Esse recurso tem os valores a seguir.
 
-| {1&gt;Valor&lt;1}           | Tipo    | Descrição     |
+| Valor           | Tipo    | Descrição     |
 |-----------------|---------|------------------|
-| {1&gt;id&lt;1}            | string  | A ID do envio.    |
-| resourceLocation   | string  | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio.     |
+| id            | cadeia de caracteres  | A ID do envio.    |
+| resourceLocation   | cadeia de caracteres  | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio.     |
  
 <span/>
 

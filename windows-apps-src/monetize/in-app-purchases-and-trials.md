@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
 ms.openlocfilehash: 5396a8a6f02271647eb16d469853241b5717bd6e
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340288"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209772"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras no aplicativo e avaliações
 
@@ -19,7 +19,7 @@ O SDK do Windows fornece APIs que você pode usar para implementar os seguintes 
 
 * **Compras no aplicativo**&nbsp;&nbsp;Seja seu aplicativo gratuito ou não, você pode vender conteúdo ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo.
 
-* **Funcionalidade de avaliação**&nbsp; @ No__t-2If você [configura seu aplicativo como uma avaliação gratuita no Partner Center](../publish/set-app-pricing-and-availability.md#free-trial), você pode convencer seus clientes a comprar a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
+* A **funcionalidade de avaliação**&nbsp;&nbsp;se você [configurar seu aplicativo como uma avaliação gratuita no Partner Center](../publish/set-app-pricing-and-availability.md#free-trial), poderá convencer seus clientes a comprar a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 Este artigo fornece uma visão geral de como as compras no aplicativo e as avaliações funcionam em aplicativos UWP.
 
@@ -29,12 +29,12 @@ Este artigo fornece uma visão geral de como as compras no aplicativo e as avali
 
 Há dois namespaces diferentes que você pode usar para adicionar compras no aplicativo e funcionalidade de avaliação aos seus aplicativos UWP, dependendo da versão do Windows 10 à qual seus aplicativos se destinam. Embora as APIs nesses namespaces tenha os mesmos objetivos, elas foram criadas de forma bem diferente, e o código não é compatível entre as duas APIs.
 
-* **[Windows. Services. Store](https://docs.microsoft.com/uwp/api/windows.services.store)** &nbsp; @ No__t-3Starting no Windows 10, versão 1607, os aplicativos podem usar a API nesse namespace para implementar compras e avaliações no aplicativo. Recomendamos que você use os membros nesse namespace se o projeto do aplicativo for voltado para o **Windows 10 Anniversary Edition (10.0, Compilação 14393)** ou uma versão posterior no Visual Studio. Esse namespace dá suporte aos tipos de complemento mais recentes, como Complementos de consumo gerenciados por loja e é projetado para ser compatível com tipos futuros de produtos e recursos com suporte no Partner Center e na loja. Para obter mais informações sobre esse namespace, consulte a seção [Compras no aplicativo e avaliações que usam o namespace Windows.Services.Store](#api_intro) neste artigo.
+* O **[Windows. Services. Store](https://docs.microsoft.com/uwp/api/windows.services.store)** &nbsp;&nbsp;a partir do Windows 10, versão 1607, os aplicativos podem usar a API nesse namespace para implementar compras e avaliações no aplicativo. Recomendamos que você use os membros nesse namespace se o projeto do aplicativo for voltado para o **Windows 10 Anniversary Edition (10.0, Compilação 14393)** ou uma versão posterior no Visual Studio. Esse namespace dá suporte aos tipos de complemento mais recentes, como Complementos de consumo gerenciados por loja e é projetado para ser compatível com tipos futuros de produtos e recursos com suporte no Partner Center e na loja. Para obter mais informações sobre esse namespace, consulte a seção [Compras no aplicativo e avaliações que usam o namespace Windows.Services.Store](#api_intro) neste artigo.
 
-* As versões **[Windows. ApplicationModel. Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store)** &nbsp; @ No__t-3All do Windows 10 também dão suporte a uma API mais antiga para compras e avaliações no aplicativo neste namespace. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+* **[Windows. ApplicationModel. Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store)** &nbsp;&nbsp;todas as versões do Windows 10 também dão suporte a uma API mais antiga para compras e avaliações no aplicativo neste namespace. Para obter informações sobre o namespace **Windows.ApplicationModel.Store**, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
-> O namespace **Windows.ApplicationModel.Store** não está sendo atualizado com os novos recursos e recomendamos que você use o namespace **Windows.Services.Store** em vez disso, se possível para seu app. Não há suporte para o namespace **Windows. ApplicationModel. Store** em aplicativos de área de trabalho do Windows que usam a [ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso de qualquer jogo que integra-se ao Xbox Live).
+> O namespace **Windows.ApplicationModel.Store** não está sendo atualizado com os novos recursos e recomendamos que você use o namespace **Windows.Services.Store** em vez disso, se possível para seu app. Não há suporte para o namespace **Windows. ApplicationModel. Store** em aplicativos de área de trabalho do Windows que usam a [ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso de qualquer jogo que se integre com o Xbox Live).
 
 <span id="concepts" />
 
@@ -227,7 +227,7 @@ Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho
 
 Cada produto na Loja tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são dissociados da maioria dos desenvolvedores no Partner Center, e a maioria dos desenvolvedores nunca definirá SKUs ou Availabilities para seus aplicativos ou Complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
 
-| Object |  Descrição  |
+| Objeto |  Descrição  |
 |---------|-------------------|
 | Produto  |  Um *produto* refere-se a qualquer tipo de produto que esteja disponível na Store, incluindo um app ou um complemento. <p/><p/> Cada produto na Store tem um objeto [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) correspondente. Essa classe fornece propriedades que você pode usar para acessar dados, como a ID da Loja do produto, as imagens e os vídeos para a listagem da Loja e informações de preços. Também fornece métodos que você pode usar para comprar o produto. |
 | SKU |  A *SKU* é uma versão específica de um produto com sua própria descrição, preço e outros detalhes exclusivos do produto. Cada aplicativo ou complemento tem uma SKU padrão. O único momento em que a maioria dos desenvolvedores terá várias SKUs para um aplicativo é se publicarem uma versão completa do aplicativo e uma versão de avaliação (no catálogo da Loja, cada uma dessas versões é uma SKU diferente do mesmo aplicativo). <p/><p/> Alguns fornecedores podem definir suas próprias SKUs. Por exemplo, um grande fornecedor de jogos pode lançar um jogo com uma SKU que mostre sangue verde em mercados que não permitem sangue vermelho e outra SKU que mostre sangue vermelho nos demais mercados. Como alternativa, um fornecedor que vende conteúdo em vídeo digital pode publicar duas SKUs para um vídeo, uma SKU para a versão em alta definição e outra SKU para a versão em definição padrão. <p/><p/> Cada SKU na Store tem um objeto [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) correspondente. Cada [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) tem uma propriedade [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) que você pode usar para acessar as SKUs para o produto. |
@@ -247,10 +247,10 @@ A ID da Loja de qualquer produto na Loja é uma cadeia de 12 caracteres alfanum�
 
 Para produtos com SKUs e disponibilidades, as SKUs e as disponibilidades também têm suas próprias IDs da Store com formatos diferentes.
 
-| Object |  Formato da ID da Loja  |
+| Objeto |  Formato da ID da Loja  |
 |---------|-------------------|
-| SKU |  A ID da Store para uma SKU tem o formato ```<product Store ID>/xxxx```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto. Por exemplo: ```9NBLGGH4R315/000N```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) de um objeto [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) e é chamada, às vezes, de *ID da Loja para a SKU*. |
-| Disponibilidade  |  A ID da Store para uma disponibilidade tem o formato ```<product Store ID>/xxxx/yyyyyyyyyyyy```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto e ```yyyyyyyyyyyy``` é uma cadeia de 12 caracteres alfanuméricos que identifica uma disponibilidade para a SKU. Por exemplo: ```9NBLGGH4R315/000N/4KW6QZD2VN6X```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) de um objeto [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) e é chamada, às vezes, de *ID da Loja para a disponibilidade*.  |
+| SKU |  A ID da Store para uma SKU tem o formato ```<product Store ID>/xxxx```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto. Por exemplo, ```9NBLGGH4R315/000N```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) de um objeto [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) e é chamada, às vezes, de *ID da Loja para a SKU*. |
+| Disponibilidade  |  A ID da Store para uma disponibilidade tem o formato ```<product Store ID>/xxxx/yyyyyyyyyyyy```, onde ```xxxx``` é uma cadeia de 4 caracteres alfanuméricos que identifica uma SKU do produto e ```yyyyyyyyyyyy``` é uma cadeia de 12 caracteres alfanuméricos que identifica uma disponibilidade para a SKU. Por exemplo, ```9NBLGGH4R315/000N/4KW6QZD2VN6X```. Essa ID é retornada pela propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) de um objeto [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) e é chamada, às vezes, de *ID da Loja para a disponibilidade*.  |
 
 <span id="product-ids" />
 

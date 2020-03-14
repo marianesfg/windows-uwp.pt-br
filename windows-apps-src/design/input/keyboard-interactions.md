@@ -12,15 +12,15 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.openlocfilehash: 449f0c81bdd54d99ef0977ca1c9b6ba10ba5eae7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258354"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210102"
 ---
 # <a name="keyboard-interactions"></a>Interações por teclado
 
-![imagem do teclado](images/keyboard/keyboard-hero.jpg)
+![imagem hero do teclado](images/keyboard/keyboard-hero.jpg)
 
 Aprenda como projetar e otimizar seus aplicativos UWP para que eles ofereçam a melhor experiência possível tanto para usuários avançados como para usuários com deficiências e outras necessidades de acessibilidade.
 
@@ -111,7 +111,7 @@ Consulte [acessibilidade do teclado](../accessibility/keyboard-accessibility.md)
 
 Coordenar a ordem de tabulação e a ordem visual (também conhecida como ordem de leitura ou ordem de exibição) ajuda a reduzir a confusão para os usuários à medida que navegam pela interface do usuário do aplicativo.
 
-Experimente classificar e apresentar os comandos, controles e conteúdos mais importantes primeiro na ordem de tabulação e na ordem visual. No entanto, a posição de exibição real pode depender do recipiente do layout pai e de certas propriedades dos elementos filho que influenciam o layout. Especificamente, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem visual bem diferente da ordem de tabulação.
+Experimente classificar e apresentar os comandos, controles e conteúdos mais importantes primeiro na ordem de tabulação e na ordem visual. Entretanto, a posição de exibição real pode depender do contêiner de layout pai e de certas propriedades dos elementos filho que influenciam o layout. Especificamente, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem visual bem diferente da ordem de tabulação.
 
 **OBSERVAÇÃO** A ordem visual também depende do local e do idioma.
 
@@ -267,7 +267,7 @@ Consulte a página [Teclas de acesso](access-keys.md) para obter informações m
 As teclas de acesso ajudam os usuários com deficiências motoras e aqueles capazes de pressionar apenas uma tecla por vez para agir sobre um item específico da interface de usuário. Além disso, as teclas de acesso podem ser usadas para comunicar teclas de atalho adicionais, ajudando usuários avançados a executar ações mais rapidamente.
 
 Teclas de acesso têm as seguintes características:
--   Elas usam a tecla Alt, mais uma tecla alfanumérica.
+-   Elas usam a tecla Alt mais uma tecla alfanumérica.
 -   Elas são principalmente para acessibilidade.
 -   Eles são documentados diretamente na interface do usuário, adjacentes ao controle, por meio de [dicas de tecla](access-keys.md).
 -   Elas têm efeito somente na janela atual e navegam até o item de menu ou controle correspondente.
@@ -281,7 +281,7 @@ A tabela a seguir é uma pequena amostra de atalhos de teclado usados com frequ�
 | Ação                               | Comando de tecla                                      |
 |--------------------------------------|--------------------------------------------------|
 | Selecionar tudo                           | Ctrl+A                                           |
-| Selecionar continuamente                  | Shift+Tecla de seta                                  |
+| Selecionar continuamente                  | Shift+Tecla de cursor                                  |
 | Salvar                                 | Ctrl+S                                           |
 | Localizar                                 | Ctrl+F                                           |
 | Print                                | Ctrl+P                                           |
@@ -291,7 +291,7 @@ A tabela a seguir é uma pequena amostra de atalhos de teclado usados com frequ�
 | Desfazer                                 | Ctrl+Z                                           |
 | Guia Próximo                             | Ctrl+Tab                                         |
 | Fechar a guia                            | Ctrl+F4 ou Ctrl+W                                |
-| Zoom semântico                        | Ctrl++ ou Ctrl+-                                 |
+| Zoom Semântico                        | Ctrl++ ou Ctrl+-                                 |
 
 Para obter uma lista abrangente de atalhos de sistema do Windows, consulte [atalhos de teclado para o Windows](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). Para atalhos de aplicativos comuns, consulte [atalhos de teclado para aplicativos da Microsoft](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps).
 
@@ -501,7 +501,7 @@ Se o último item tiver foco e a tecla de seta para baixo for pressionada, o foc
 
 Recomendamos que você eMule esses mesmos comportamentos em seus controles personalizados. O exemplo de código sobre como implementar esse comportamento pode ser encontrado na documentação de [navegação de foco programático](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) .
 
-## <a name="test-your-app"></a>Testar o app
+## <a name="test-your-app"></a>Teste seu aplicativo
 
 Teste seu aplicativo com todos os dispositivos de entrada suportados para garantir que a navegação pelos elementos da interface de usuário aconteça de maneira coerente e intuitiva para que nenhum elemento não esperado interfira na ordem de tabulação desejada.
 
@@ -529,7 +529,7 @@ Dependendo do dispositivo, o teclado de software aparece quando um campo de text
 
 ![ícone de teclado virtual no centro de notificações](images/keyboard/touch-keyboard-notificationcenter.png)
 
-Se o seu aplicativo define o foco de forma programática para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
+Se o seu aplicativo define o foco por meio de programação para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
 
 Normalmente, o teclado virtual permanece visível enquanto o usuário navega entre controles em um formulário. Esse comportamento pode variar com base nos outros tipos de controle no formulário.
 
@@ -562,10 +562,10 @@ Interações de teclado bem-sucedidas permitem que os usuários utilizem cenári
 
 **Observação**  o teclado de toque não dá suporte à alternância e à maioria dos comandos do sistema.
 
-#### <a name="on-screen-keyboard"></a>Teclado Virtual
+#### <a name="on-screen-keyboard"></a>Teclado virtual
 Como o teclado de software, o Teclado Virtual é um teclado de software, visual, que pode ser usado no lugar do teclado físico para digitar e inserir dados através do toque, mouse, caneta/stylus ou outro dispositivo apontador (não é necessária uma tela sensível ao toque). O teclado virtual é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O teclado virtual emula a maior parte, se não toda a funcionalidades de um teclado de hardware.
 
-O Teclado Virtual pode ser ativado pela página Teclado em Configurações &gt; Facilidade de acesso.
+O teclado virtual pode ser ativado na página Teclado em Configurações &gt; Facilidade de acesso.
 
 **OBSERVAÇÃO** O Teclado Virtual possui prioridade sobre o teclado virtual, que não será exibido caso o Teclado Virtual esteja presente.
 

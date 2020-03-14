@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8727a48cd68b304d515fe34082b4c4f632b4b
-ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265037"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210522"
 ---
 # <a name="payout-reports"></a>Relatórios de pagamento
 
@@ -67,13 +67,13 @@ Para exportar qualquer um dos dados de transação nessa página, selecione expo
 | Ganhando status           | Motivo                                                                                                                                      | Ação do parceiro necessária?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | Não processados              | A conquista está qualificada para pagamento. Ele permanece nesse estado por um período de resfriamento, conforme definido no guia do programa do programa de incentivo. | Não                                                         |
-| Próximas                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
+| Cerimônia                 | A ordem de pagamento gerou revisões internas pendentes antes de o pagamento ser processado.                                                               | Não                                                         |
 | Fatura de imposto pendente      | Sua fatura de imposto está incompleta ou inválida.                                                                                                  | Você precisa atualizar sua fatura de imposto antes de poder ser pago |
 | Rejeitado durante a revisão   | O pagamento foi rejeitado durante a revisão.                                                                                                     | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
 | Failed (Falha)                   | O pagamento falhou devido a um erro do sistema da Microsoft.                                                                                         | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
 | Em andamento              | O pagamento está em andamento.                                                                                                                 | Não                                                         |
 | Pagamento incorreto        | A revitóriação de pagamento está em andamento.                                                                                                       | Não                                                         |
-| Enviado                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
+| Enviados                     | O pagamento foi enviado ao seu banco.                                                                                                     | Não                                                         |
 | Reprocessamento             | O pagamento encontrou um erro de sistema da Microsoft e está sendo reprocessado.                                                                  | Não                                                         |
 | Inversão                 | O pagamento foi revertido pelo seu banco e será enviado novamente no próximo ciclo de pagamento.                                                     | Não                                                         |
 | Fatura de imposto rejeitada     | A fatura do imposto foi rejeitada durante a revisão. Todos os pagamentos pendentes estarão em espera até que a revisão da fatura fiscal seja concluída.                 | Contate [o suporte da Microsoft](https://developer.microsoft.com/windows/support) para obter detalhes                      |
@@ -97,7 +97,7 @@ Essa opção fornece um download dos pagamentos recebidos em seu banco para um d
 
 | Nome da coluna              | Descrição                                                                                                                               |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------  |
-| participantID            | A principal identidade do parceiro ganhando sob o programa                                                                             |
+| participante da            | A principal identidade do parceiro ganhando sob o programa                                                                             |
 | participantIDType        | Normalmente a ID do programa para programas de incentivo e ID do vendedor para programas da loja                                                                |
 | participantename          | Nome do parceiro de conquista                                                                                                               |
 | programName              | Nome do programa de incentivo/loja                                                                                                              |
@@ -114,7 +114,7 @@ Essa opção fornece um download dos pagamentos recebidos em seu banco para um d
 | paymentStatusDescription | Descrição amigável do status de pagamento                                                                                                    |
 | paymentDate              | A data de pagamento foi enviada da Microsoft                                                                                                      |
 
-## <a name="transaction-history"></a>Histórico de transação
+## <a name="transaction-history"></a>Histórico de transações
 
 ![Exportar histórico de transações](images/pc-export-transaction.png)
 
@@ -172,7 +172,7 @@ Essa opção fornece um download de cada item de linha de produção que você v
 | agreementNumber                | Número de contrato                                                                                                                         | Incentivo-apenas alguns programas                                 |
 | agreementStartDate             | Data de início do contrato                                                                                                                     | Incentivo-apenas alguns programas                                 |
 | agreementEndDate               | Data de término do contrato                                                                                                                       | Incentivo-apenas alguns programas                                 |
-| workload                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
+| pico                       | Carga de trabalho                                                                                                                                 | Incentivo-apenas alguns programas                                 |
 | transactionType                | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               | Store e Azure Marketplace                                    |
 | localProviderSeller            | Vendedor ou provedor local do registro                                                                                                          | Somente armazenar                                                     |
 | taxRemitted                    | Valor do imposto remetido (vendas, uso ou impostos IVA/GST).                                                                                   | Store e Azure Marketplace                                    |
@@ -212,11 +212,11 @@ O histórico de transações de até julho de 1 2019 é tratado separadamente. A
 | ID da transação          | Identificador exclusivo da transação.                                                                                                                                          |
 | Data/hora da transação   | A data e a hora em que a transação ocorreu (UTC).                                                                                                                       |
 | ID do Produto (Product ID) pai       | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto (Product ID).                                |
-| ID do produto (product ID)              | Identificador exclusivo do produto.                                                                                                                                              |
+| ID do Produto              | Identificador exclusivo do produto.                                                                                                                                              |
 | Nome do produto pai     | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.                                  |
-| Nome do produto            | Nome do produto.                                                                                                                                                    |
+| Nome do Produto            | Nome do produto.                                                                                                                                                    |
 | Tipo do Produto            | Tipo de produto (por exemplo, app, complemento, jogo, etc.)                                                                                                                       |
-| Quantity                | Quando a fonte de receita é a Microsoft Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1. |
+| Quantidade                | Quando a fonte de receita é a Microsoft Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1. |
 | Tipo de transação        | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                                                              |
 | Forma de pagamento          | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, PayPal, etc)                                                               |
 | País/região        | País/região onde ocorreu a transação.                                                                                                                          |

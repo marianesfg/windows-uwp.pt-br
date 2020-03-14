@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 43782a1a5d26ba84fe53f6c164a944fa357edfb1
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852771"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210802"
 ---
 # <a name="create-add-on-store-listings"></a>Criar listagens de complementos da Loja
 
@@ -33,15 +33,15 @@ Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à 
 
 Para editar uma listagem da Store, clique no nome do idioma na página de visão geral de envio do complemento. As informações que você pode inserir para cada idioma são descritas abaixo.
 
-## <a name="title"></a>{1&gt;Título&lt;1}
+## <a name="title"></a>Título
 
 Você deve fornecer um título aqui, que é o nome que seus clientes verão para o complemento. Seu título pode ter até 100 caracteres.
 
 ## <a name="description"></a>Descrição
 
-Se você quiser exibir mais informações do que apenas um título, é possível inserir até 200 caracteres aqui. Este campo é opcional.
+Se você quiser exibir mais informações do que apenas um título, é possível inserir até 200 caracteres aqui. Esse campo é opcional.
 
-## <a name="icon"></a>ícone
+## <a name="icon"></a>Ícone
 
 Você também tem a opção de fornecer uma imagem que pode ser exibida para o cliente. Este ícone deve ser um arquivo .png que mede exatamente 300 x 300 pixels.
 

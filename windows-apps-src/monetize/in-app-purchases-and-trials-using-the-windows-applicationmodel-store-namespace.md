@@ -7,11 +7,11 @@ ms.topic: article
 keywords: uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 03bd2740022864008e87b448682c1025c46d2f2d
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852772"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209672"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
@@ -144,7 +144,7 @@ O exemplo a seguir é um arquivo WindowsStoreProxy.xml (UTF-16 codificado) que d
 
 <span id="proxy-schema" />
 
-### <a name="schema"></a>Schema
+### <a name="schema"></a>Esquema
 
 Esta seção lista o arquivo XSD que define a estrutura do arquivo WindowsStoreProxy.xml. Para aplicar esse esquema ao editor de XML no Visual Studio ao trabalhar com o arquivo WindowsStoreProxy.xml, faça o seguinte:
 
@@ -469,10 +469,10 @@ A tabela a seguir mostra como simular algumas condições comuns combinando valo
 
 |  Condição para simulação  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
-|  Totalmente licenciado  |    {1&gt;true&lt;1}   |  {1&gt;false&lt;1}  |    Ausente. Na verdade, ele pode estar presente e especificar uma data futura, mas é recomendável omitir o elemento do arquivo XML. Se estiver presente e especificar uma data no passado, **IsActive** será ignorado e considerado como false.          |
-|  Em período de avaliação  |    {1&gt;true&lt;1}  |  {1&gt;true&lt;1}   |      &lt;uma data/hora no futuro&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quanto tempo no futuro deve ser definido para obter o período de avaliação restante desejado.         |
-|  Avaliação expirada  |    {1&gt;false&lt;1}  |  {1&gt;true&lt;1}   |      &lt;uma data/hora no passado&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quando "o passado" está no UTC.         |
-|  Inválido  |    {1&gt;false&lt;1}  | {1&gt;false&lt;1}       |     &lt;qualquer valor ou omitido&gt;          |  |
+|  Totalmente licenciado  |    verdadeiro   |  false  |    Ausente. Na verdade, ele pode estar presente e especificar uma data futura, mas é recomendável omitir o elemento do arquivo XML. Se estiver presente e especificar uma data no passado, **IsActive** será ignorado e considerado como false.          |
+|  Em período de avaliação  |    verdadeiro  |  verdadeiro   |      &lt;uma data/hora no futuro&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quanto tempo no futuro deve ser definido para obter o período de avaliação restante desejado.         |
+|  Avaliação expirada  |    false  |  verdadeiro   |      &lt;uma data/hora no passado&gt; Este elemento deve estar presente porque **IsTrial** é true. Você pode visitar um site mostrando o Tempo Universal Coordenado (UTC) atual para saber quando "o passado" está no UTC.         |
+|  Inválido  |    false  | false       |     &lt;qualquer valor ou omitido&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684608"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210892"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -25,7 +25,7 @@ A loja também pode usar o ícone do aplicativo e outras imagens que você inclu
 
 ## <a name="screenshots"></a>Capturas de tela
 
-As capturas de tela são as imagens do app exibidas para os clientes na listagem da Store do app.
+As capturas de tela são as imagens do seu aplicativo que são exibidas para os clientes nos detalhes de seu aplicativo.
 
 Você tem a opção de fornecer capturas de tela para as diferentes famílias de dispositivos com seu app é compatível a fim de que as capturas de tela apropriadas apareçam quando um cliente exibir a listagem da Store do app nesse tipo de dispositivo. 
 

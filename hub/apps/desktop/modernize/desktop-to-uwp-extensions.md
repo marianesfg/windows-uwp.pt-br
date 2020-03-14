@@ -9,11 +9,11 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.openlocfilehash: d1f01774d5950dbb73cff2e5c38f16167b4b812b
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302590"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209712"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>Integre seu aplicativo de desktop com o Windows 10 e o UWP
 
@@ -101,7 +101,7 @@ Você pode garantir que os usuários abram o novo aplicativo empacotado por padr
 
 Para fazer isso, você especifica o [identificador programático (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) de cada aplicativo do qual você deseja herdar associações de arquivos.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 * `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
@@ -160,7 +160,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Você pode associar o aplicativo empacotado a extensões de tipo de arquivo. Se um usuário clicar com o botão direito do mouse em um arquivo e selecionar a opção **abrir com** , seu aplicativo aparecerá na lista de sugestões.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10`
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
@@ -220,7 +220,7 @@ Na maioria dos casos, os usuários, clique duas vezes arquivos para abri-los. Se
 
 Você pode adicionar opções de menu. Essas opções oferecem aos usuários outras formas de interagir com seu arquivo, como imprimir, editar ou visualizar o arquivo.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10`
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
@@ -247,7 +247,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |Verb |O nome que aparece no menu de contexto do Explorador de arquivos. Essa sequência é localizável usando ```ms-resource```.|
 |Id |A Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, ele será passado para seu aplicativo como parte de seus args de evento de ativação para que possa manipular a seleção do usuário adequadamente. Se seu aplicativo for um aplicativo empacotado com confiança total, ele receberá parâmetros em vez disso (consulte o próximo marcador). |
 |Parâmetros |A lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo empacotado com confiança total, esses parâmetros serão passados para o aplicativo como args de evento quando o aplicativo for ativado. Você pode personalizar o comportamento do seu aplicativo com base em verbos de ativação diferentes. Se uma variável pode conter um caminho de arquivo, envolva o valor do parâmetro entre aspas. Isso evitará quaisquer problemas que aconteçam nos casos em que o caminho inclua espaços. Se seu aplicativo for um aplicativo UWP, você não poderá passar parâmetros. O aplicativo recebe o Id em vez disso (veja a bala anterior).|
-|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor de **false** (por exemplo, sempre mostrar o verbo) se não estiver listado. Você especifica esse comportamento individualmente para cada verbo (exceto para "Abrir", que sempre será **False**).|
+|Estendido |Especifica que o verbo só aparece se o usuário mostrar o menu de contexto segurando a tecla **Shift** antes de clicar com o botão direito no arquivo. Esse atributo é opcional e o padrão é um valor de **false** (por exemplo, sempre mostrar o verbo) se não estiver listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre **False**).|
 
 #### <a name="example"></a>Exemplo
 
@@ -285,7 +285,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Você pode garantir que os usuários abram o novo aplicativo empacotado por padrão para tipos específicos de arquivos em vez de abrir a versão da área de trabalho do seu aplicativo.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10`
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
@@ -473,7 +473,7 @@ Ajude os usuários organizar seus arquivos e interagir com eles de maneiras fami
 
 Especifique como seu aplicativo se comporta quando um usuário abre vários arquivos simultaneamente.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10`
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
@@ -675,7 +675,7 @@ No Explorador de Arquivos, os usuários podem agrupar esses arquivos usando esse
 
 Para obter mais informações sobre o campo **Tipo** e os valores que você pode usar para esse campo, consulte [usando nomes de tipo](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names).
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10`
 * `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
@@ -796,7 +796,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Se seu aplicativo de área de trabalho definir um [manipulador de menu de contexto](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers), use essa extensão para registrar o manipulador de menu.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/foundation/windows10`
 * `http://schemas.microsoft.com/appx/manifest/desktop/windows10/4`
@@ -1018,7 +1018,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 Os usuários e outros processos podem usar um alias para iniciar seu aplicativo sem precisar especificar o caminho completo para seu aplicativo. Você pode especificar esse nome de alias.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 * `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 * `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
@@ -1040,7 +1040,7 @@ Os usuários e outros processos podem usar um alias para iniciar seu aplicativo 
 |-------|-------------|
 |Categoria |Sempre ``windows.appExecutionAlias``.
 |Executável |O caminho relativo para o executável para iniciar quando o alias é invocado. |
-|Alias |O nome abreviado para o seu aplicativo. Deve sempre terminar com a extensão ".exe". Você só pode especificar um único alias de execução de aplicativo para cada aplicativo no pacote. Se vários aplicativos se registrarem para o mesmo alias, o sistema irá chamar o último que foi registrado. Portanto, escolha um alias exclusivo que outros aplicativos provavelmente não substituirão.
+|Alias |O nome abreviado para o seu aplicativo. Sempre deve terminar com a extensão ".exe". Você só pode especificar um único alias de execução de aplicativo para cada aplicativo no pacote. Se vários aplicativos se registrarem para o mesmo alias, o sistema irá chamar o último que foi registrado. Portanto, escolha um alias exclusivo que outros aplicativos provavelmente não substituirão.
 |
 
 #### <a name="example"></a>Exemplo
@@ -1104,7 +1104,7 @@ Os usuários podem desativar manualmente tarefas de inicialização do seu aplic
 |Categoria |Sempre ``windows.startupTask``.|
 |Executável |O caminho relativo para o arquivo executável para começar. |
 |TaskId |Um identificador exclusivo para sua tarefa. Usando esse identificador, seu aplicativo pode chamar as APIs na classe [Windows. ApplicationModel. StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) para habilitar ou desabilitar programaticamente uma tarefa de inicialização. |
-|Habilitado |Indica se a tarefa inicialmente é iniciada ou desabilitada. As tarefas habilitadas serão executadas na próxima vez que o usuário efetuar o login (a menos que o usuário o desabilite). |
+|Habilitado |Indica se a tarefa inicialmente é iniciada ou desabilitada. As tarefas habilitadas serão executadas na próxima vez em que o usuário fizer logon (a menos que o usuário as tenha desabilitado). |
 |DisplayName |O nome da tarefa que aparece no Gerenciador de tarefas. Você pode localizar essa cadeia de caracteres usando ```ms-resource```. |
 
 #### <a name="example"></a>Exemplo
@@ -1225,7 +1225,7 @@ Quando os usuários desejarem imprimir dados de outro aplicativo, como o bloco d
 
 Você precisará modificar seu aplicativo para que ele receba dados de impressão no formato XPS (XML Paper Specification).
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
@@ -1275,7 +1275,7 @@ Encontrar um exemplo que usa essa extensão [aqui](https://github.com/Microsoft/
 
 Compartilhe suas fontes personalizadas com outros aplicativos do Windows.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
@@ -1323,7 +1323,7 @@ Encontre a referência do esquema completo [aqui](/uwp/schemas/appxpackage/uapma
 
 Inicie um processo do Win32 que é executado em confiança total.
 
-#### <a name="xml-namespaces"></a>Namespaces do XML
+#### <a name="xml-namespaces"></a>Namespaces XML
 
 `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
@@ -1376,4 +1376,4 @@ Basta criar um pacote de aplicativo do Windows para seu aplicativo Win32. Em seg
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Tem dúvidas? Pergunte-nos no Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

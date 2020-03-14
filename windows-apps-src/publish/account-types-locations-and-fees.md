@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853522"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210902"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -29,7 +29,7 @@ Contas de empresa são projetadas para organizações e empresas. Para contas em
 
 Aqui estão as principais diferenças entre os dois tipos de conta.
 
-| Conta individual | Conta da empresa |
+| Conta individual | Conta empresarial |
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
@@ -108,11 +108,11 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Ilhas Faroés                     | 19 USD              | 99 USD           |  
 | Fiji                              | 19 USD              | 99 USD           |  
 | Finlândia                           | 14 EUR              | 75 EUR           |  
-| France                            | 14 EUR              | 75 EUR           |  
+| França                            | 14 EUR              | 75 EUR           |  
 | Gabão                             | 19 USD              | 99 USD           |  
 | Gâmbia                        | 19 USD              | 99 USD           |  
 | Geórgia                           | 19 USD              | 99 USD           |  
-| Germany                           | 14 EUR              | 75 EUR           |  
+| Alemanha                           | 14 EUR              | 75 EUR           |  
 | Gana                             | 19 USD              | 99 USD           |  
 | Grécia                            | 14 EUR              | 75 EUR           |  
 | Groenlândia                         | 19 USD              | 99 USD           |  
@@ -138,7 +138,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Cazaquistão                        | 2897 KZT            | 15038 KZT        |  
 | Quênia                             | KES 1900            | KES 9999         |  
 | Kiribati                          | 19 USD              | 99 USD           |  
-| Coreia do Sul                             | 21216 KRW           | 108000 KRW       |  
+| Coreia                             | 21216 KRW           | 108000 KRW       |  
 | Kuwait                            | 5 KWD               | 28 KWD           |  
 | Quirguistão                        | 19 USD              | 99 USD           |  
 | Laos                              | 19 USD              | 99 USD           |  
@@ -203,7 +203,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Sérvia                            | 1619 RSD            | 7000 RSD         |  
 | Seicheles                        | 19 USD              | 99 USD           |  
 | Serra Leoa                      | 19 USD              | 99 USD           |  
-| Singapura                         | 24 SGD              | 120 SGD          |  
+| Cingapura                         | 24 SGD              | 120 SGD          |  
 | Eslováquia                          | 14 EUR              | 75 EUR           |  
 | Eslovênia                          | 14 EUR              | 75 EUR           |  
 | Ilhas Salomão                   | 19 USD              | 99 USD           |  

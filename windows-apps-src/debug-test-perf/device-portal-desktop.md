@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, portal do dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853423"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210182"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de Dispositivos para desktop Windows
 
@@ -71,7 +71,7 @@ O Portal de Dispositivos na área de trabalho do Windows fornece o conjunto padr
 - Recursos
 - Realidade Misturada
 - Depurador de instalação de streaming
-- Local
+- Location
 - Rascunho
 
 ## <a name="more-device-portal-options"></a>Mais opções do Portal de Dispositivos

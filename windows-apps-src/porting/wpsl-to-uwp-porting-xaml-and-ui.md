@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853153"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210632"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portando Windows Phone XAML do Silverlight e interface do usuário para UWP
 
@@ -187,7 +187,7 @@ Dessa forma, o restante do modelo de exibição, os valores de caminho na propri
 
 Windows Phone aplicativos do Silverlight usam controles definidos no namespace **Microsoft. Phone. Controls** e no namespace **System. Windows. Controls** . Aplicativos UWP XAML usam controles definidos no namespace [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls). A arquitetura e o design dos controles XAML no UWP são praticamente os mesmos que Windows Phone controles do Silverlight. Porém, algumas alterações foram feitas para melhorar o conjunto de controles disponíveis e unificá-los aos aplicativos do Windows. Veja exemplos específicos.
 
-| Nome do controle | Alterar |
+| Nome do controle | Alteração |
 |--------------|--------|
 | ApplicationBar | A propriedade [Page.TopAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.topappbar). |
 | ApplicationBarIconButton | O equivalente UWP é a propriedade [Glyph](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon.glyph). PrimaryCommands é a propriedade de conteúdo de CommandBar. O analisador XAML interpreta o xml interno de um elemento como o valor de sua propriedade de conteúdo. |
@@ -319,7 +319,7 @@ Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Sego
 
 Para um aplicativo Windows Phone Silverlight, o tema padrão é escuro por padrão. Para dispositivos Windows 10, o tema padrão foi alterado, mas você pode controlar o tema usado pela declaração de um tema solicitado em app. XAML. Por exemplo, para usar um tema escuro em todos os dispositivos, adicione `RequestedTheme="Dark"` ao elemento Application raiz.
 
-## <a name="tiles"></a>Lado a lado
+## <a name="tiles"></a>Blocos
 
 Os blocos para aplicativos UWP têm comportamentos semelhantes aos blocos dinâmicos para Windows Phone aplicativos do Silverlight, embora haja algumas diferenças. Por exemplo, o código que chama o método **Microsoft.Phone.Shell.ShellTile.Create** para criar blocos secundários deve ser portado para chamar [**SecondaryTile.RequestCreateAsync**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestcreateasync). Aqui está um exemplo antes e depois, primeiro a Windows Phone versão do Silverlight:
 

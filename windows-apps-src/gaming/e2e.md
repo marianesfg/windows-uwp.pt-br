@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: a348393a02bab946a128babefc07dc48faea6cd1
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685070"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210612"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -50,7 +50,7 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     </colgroup>
     <tr>
         <td>Portal principal do Centro de Desenvolvimento do Windows</td>
-        <td><a href="https://developer.microsoft.com/windows">Centro de Desenvolvedores do Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows">Centro de desenvolvimento do Windows</a></td>
     </tr>
     <tr>
         <td>Desenvolvendo aplicativos do Windows</td>
@@ -113,7 +113,7 @@ A Microsoft também oferece vários programas de desenvolvedor para ajudar você
 
 A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Considere a possibilidade de participar de um programa de desenvolvedor se você quiser desenvolver jogos para Xbox One e integrar recursos do Xbox Live ao seu jogo. Para publicar um jogo no Microsoft Store, você também precisará criar uma conta de desenvolvedor no [Partner Center](https://partner.microsoft.com/dashboard) .
 
-#### <a name="xbox-live-creators-program"></a>Xbox Live Creators Program
+#### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
 
 O Programa de Criadores do Xbox Live permite que qualquer pessoa integre o Xbox Live a seu título e publique no Xbox One e no Windows 10. Há um processo de certificação simplificado, e nenhuma aprovação de conceito é necessária fora das [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) padrão.
 
@@ -127,7 +127,7 @@ Se você deseja ter acesso a mais recursos do Xbox Live, marketing dedicado e su
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Xbox Live Creators Program</td>
+        <td>Programa de Criadores do Xbox Live</td>
         <td><a href="https://developer.microsoft.com/games/xbox/xboxlive/creator">Saiba mais sobre o Xbox Live Creators Program</a></td>
     </tr>
 </table>
@@ -306,7 +306,7 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
     </tr>
     <tr>
         <td>Blogs de ferramentas de desenvolvedor do Visual Studio</td>
-        <td><a href="https://devblogs.microsoft.com/visualstudio/">Blogs de Ferramentas para Desenvolvedores</a></td>
+        <td><a href="https://devblogs.microsoft.com/visualstudio/">Ferramentas para Desenvolvedores Blogs</a></td>
     </tr>
     <tr>
         <td>Blog de ferramentas de desenvolvedor do Somasegar</td>
@@ -322,7 +322,7 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
     </tr>
     <tr>
         <td>Blog da equipe de ferramentas do Visual C++</td>
-        <td><a href="https://devblogs.microsoft.com/cppblog/">Blog da equipe do Visual C++</a></td>
+        <td><a href="https://devblogs.microsoft.com/cppblog/">Blog C++ da equipe Visual</a></td>
     </tr>
     <tr>
         <td>Blog da equipe do PIX</td>
@@ -517,7 +517,7 @@ O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a po
     </colgroup>
     <tr>
         <td>Referência e visões gerais da linguagem C++/CX</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Referência da linguagem Visual C++ (C++/CX)</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Referência C++ de linguagem VisualC++(/CX)</a></td>
     </tr>
     <tr>
         <td>Guia e referência de programação do Visual C++</td>
@@ -528,7 +528,7 @@ O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a po
 
 #### <a name="c"></a>C#
 
-O C# (fala-se "C sharp") é uma linguagem inovadora e moderna, simples, eficiente, fortemente tipada e orientada a objeto. O C# permite um desenvolvimento rápido, pois mantém a familiaridade e expressividade das linguagens no estilo C. Embora seja fácil de usar, o C# tem vários recursos de linguagem avançados, como polimorfismo, representantes, lambdas, fechamentos, métodos de iterador, covariância e expressões de consulta integrada à linguagem (LINQ). O C# é uma excelente opção se você está visando o XAML, deseja começar a desenvolver seu jogo rapidamente ou tem experiência anterior em C#. O C# é usado principalmente com XAML. Portanto, para usar DirectX, escolha C++, ou crie parte do seu jogo como um componente C++ que interaja com DirectX. Ou considere o [Win2D](https://github.com/Microsoft/Win2D), uma biblioteca de elementos gráficos em modo imediato Direct2D para C# e C++.
+O C# (fala-se "C sharp") é uma linguagem inovadora e moderna, simples, eficiente, fortemente tipada e orientada a objeto. O C# permite um desenvolvimento rápido, pois mantém a familiaridade e expressividade das linguagens no estilo C. Embora seja fácil de usar, o C# tem vários recursos de linguagem avançados, como polimorfismo, representantes, lambdas, fechamentos, métodos de iterador, covariância e expressões de consulta integrada à linguagem (LINQ). O C# é uma excelente opção se você está visando o XAML, deseja começar a desenvolver seu jogo rapidamente ou tem experiência anterior em C#. O C# é usado principalmente com o XAML. Por isso, para usar o DirectX, escolha o C++ ou crie parte do seu jogo como um componente C++ que interaja com o DirectX. Ou considere o [Win2D](https://github.com/Microsoft/Win2D), uma biblioteca de elementos gráficos em modo imediato Direct2D para C# e C++.
 
 <table>
     <colgroup>
@@ -555,7 +555,7 @@ Os aplicativos do Windows em JavaScript podem acessar os recursos avançados da 
     </colgroup>
     <tr>
         <td>Referência de JavaScript e do Windows Runtime</td>
-        <td><a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">Referência do JavaScript</a></td>
+        <td><a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">Referência de JavaScript</a></td>
     </tr>
 </table>
 
@@ -1026,7 +1026,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </tr>
     <tr>
         <td>Funções CRT sem suporte na UWP</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">Funções CRT sem suporte em aplicativos Plataforma Universal do Windows</a></td>
     </tr>
     <tr>
         <td>Comandos alternativos para as APIs do Windows</td>
@@ -1388,7 +1388,7 @@ Um complemento (produto no aplicativo) é um item suplementar que os jogadores p
 
 Para otimizar o desempenho, aproveite o Modo de Jogo no Windows 10 para fornecer aos jogadores a melhor experiência de jogo possível utilizando totalmente a capacidade de hardware atual.
 
-O Windows Performance Toolkit (WPT) consiste em ferramentas que monitoram o desempenho e produzem perfis de desempenho detalhados de sistemas operacionais Windows e aplicativos. Isso é especialmente útil para monitorar o uso da memória e melhorar o desempenho do jogo. O Windows Performance Toolkit está incluído no SDK do Windows 10 e Windows ADK. Esse kit de ferramentas consiste em duas ferramentas independentes: Windows Performance Recorder (WPR) e Windows Performance Analyzer (WPA). O ProcDump, que faz parte do [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default), é um utilitário de linha de comando que monitora picos de CPU e gera arquivos de despejo durante falhas de jogos. 
+O Windows Performance Toolkit (WPT) consiste em ferramentas que produzem perfis de desempenho detalhadas de sistemas operacionais Windows e aplicativos de monitoramento de desempenho. Isso é especialmente útil para monitorar o uso da memória e melhorar o desempenho do jogo. O Windows Performance Toolkit está incluído no SDK do Windows 10 e Windows ADK. Esse kit de ferramentas consiste em duas ferramentas independentes: Windows Performance Recorder (WPR) e Windows Performance Analyzer (WPA). O ProcDump, que faz parte do [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default), é um utilitário de linha de comando que monitora picos de CPU e gera arquivos de despejo durante falhas de jogos. 
 
 <table>
     <colgroup>
@@ -1397,7 +1397,7 @@ O Windows Performance Toolkit (WPT) consiste em ferramentas que monitoram o dese
     </colgroup>
     <tr>
         <td>Teste de desempenho do código</td>
-        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">Teste de carga baseado na nuvem</a></td>
+        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">Teste de carga baseado em nuvem</a></td>
     </tr>
     <tr>
         <td>Obtenha um tipo de console do Xbox usando informações de dispositivo para jogos</td>
@@ -1616,7 +1616,7 @@ Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aq
 </table>
  
 
-### <a name="store-manifest-storemanifestxml"></a>Manifesto da Store (StoreManifest.xml)
+### <a name="store-manifest-storemanifestxml"></a>Manifesto da Loja (StoreManifest.xml)
 
 O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional que pode ser incluído no pacote do aplicativo. O manifesto da loja fornece recursos adicionais que não fazem parte do arquivo AppxManifest.xml. Por exemplo, você pode usar o manifesto da loja para bloquear a instalação de seu jogo se um dispositivo de destino não tiver o nível de recurso mínimo especificado do DirectX ou o mínimo especificado para a memória do sistema.
 
@@ -1653,7 +1653,7 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
         <td><a href="../publish/xbox-analytics-report.md">Relatório do Xbox Analytics</a></td>
     </tr>
     <tr>
-        <td>Respondendo às análises dos clientes</td>
+        <td>Respondendo às críticas dos clientes</td>
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/respond-to-customer-reviews">Responder às opiniões de clientes</a></td>
     </tr>
     <tr>
@@ -1833,7 +1833,7 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://edadfs.partners.extranet.microsoft.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fdeveloper.xboxlive.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fen-us%252flive%252fcertification%252frequirements%252fPages%252fTCR.aspx&wct=2019-11-20T19%3a55%3a26Z">Requisitos do Xbox para Xbox Live no Windows 10</a></td>
     </tr>
     <tr>
-        <td>Amostras</td>
+        <td>Exemplos</td>
         <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Exemplos de código para desenvolvedores de ID@Xbox</a></td>
     </tr>  
     <tr>

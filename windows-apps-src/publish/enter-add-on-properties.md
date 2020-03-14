@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 59c7e5b2c9ceea534f530bc6880b32a808c91e70
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787034"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210392"
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
@@ -29,7 +29,7 @@ Os campos disponíveis nesta página variam de acordo com o tipo de produto do c
 
 ## <a name="product-lifetime"></a>Tempo de vida do produto
 
-Se você selecionou **Durável** como o tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se você preferir, você pode alterar o **tempo de vida do produto** , de modo que o complemento expira após uma duração definida (com opções de 1 a 365 dias).
+Se você selecionou **Durável** como o tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se preferir, você pode alterar o **tempo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1-365 dias).
 
 
 ## <a name="quantity"></a>Quantidade
@@ -39,7 +39,7 @@ Se você selecionou **Consumível gerenciado pela Store** como o tipo de produto
 
 ## <a name="subscription-period"></a>Período de assinatura
 
-Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Selecione uma opção para especificar a frequência com a qual o cliente será cobrado pela assinatura. A opção padrão é **mensal**, mas você também pode selecionar **3 meses**, **6 meses**, **anualmente**, ou **24 meses**.
+Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Selecione uma opção para especificar a frequência com a qual o cliente será cobrado pela assinatura. A opção padrão é **mensal**, mas você também pode selecionar **três**meses, **6 meses**, **anualmente**ou **24 meses**.
 
 > [!IMPORTANT]
 > Depois que o complemento é publicado, você não pode alterar a seleção **Período de assinatura**.
@@ -84,7 +84,7 @@ Você tem a opção de fornecer até dez as palavras-chave de até 30 caracteres
 Para consultar este campo, use a propriedade [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) no [namespace Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (ou, se você estiver usando o [namespace Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), use a propriedade [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords).)
 
 > [!NOTE]
-> Palavras-chave não estão disponíveis para uso em pacotes destinados ao Windows 8 e Windows 8.1.
+> As palavras-chave não estão disponíveis para uso em pacotes destinados ao Windows 8 e Windows 8.1.
 
 <span id="custom-developer-data" />
 
@@ -97,7 +97,7 @@ Por exemplo, digamos que você tenha um jogo e esteja vendendo um complemento qu
 Para consultar este campo, use a propriedade [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) no [namespace Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (Ou, se você estiver usando o [namespace Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), use a propriedade [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag).)
 
 > [!NOTE]
-> O **de dados personalizado desenvolvedor** campo não estará disponível para uso em pacotes destinados ao Windows 8 e Windows 8.1.
+> O campo de **dados do desenvolvedor personalizado** não está disponível para uso em pacotes destinados ao Windows 8 e Windows 8.1.
 
  
 

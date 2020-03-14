@@ -1,19 +1,19 @@
 ---
 Description: Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos.
-title: Diretrizes para gerenciamento do pacote do aplicativo
+title: Orientação para gerenciamento do pacote de aplicativo
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5caa2610e19234cfd83119d570f858c540b401
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685131"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210192"
 ---
-# <a name="guidance-for-app-package-management"></a>Diretrizes para gerenciamento do pacote do aplicativo
+# <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
 Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos.
 
@@ -33,7 +33,7 @@ De modo geral, as versões posteriores do sistema operacional podem executar pac
 > A partir de 31 de outubro de 2018, os produtos recém-criados não podem incluir pacotes destinados ao Windows 8. x/Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem no blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 
-## <a name="removing-an-app-from-the-store"></a>Como remover um app da Store
+## <a name="removing-an-app-from-the-store"></a>Removendo um aplicativo da Loja
 
 Às vezes, você pode desejar cancelar a oferta de um aplicativo aos clientes efetivamente "cancelando sua publicação". Para fazer isso, clique em **Make app unavailable** na página **Visão geral do aplicativo**. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Microsoft Store, e os novos clientes não poderão obtê-lo (exceto com um [código promocional](generate-promotional-codes.md) e se usarem o dispositivo Windows 10).
 

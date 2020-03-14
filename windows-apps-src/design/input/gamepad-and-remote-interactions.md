@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 440f758e5db8bd77d3f26290eb59d7684e5f87a3
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853045"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210022"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interações de Gamepad e de controle remoto
 
@@ -96,7 +96,7 @@ A UWP mapeia automaticamente o comportamento existente de entrada do teclado par
 | Teclado              | Gamepad/controle remoto                        |
 |-----------------------|---------------------------------------|
 | Teclas de direção            | D-pad (também joystick esquerdo no gamepad)    |
-| Barra de espaços              | Botão A/Selecionar                       |
+| Barra de espaço              | Botão A/Selecionar                       |
 | Enter                 | Botão A/Selecionar                       |
 | Escape                | Botão B/Voltar*                        |
 
@@ -158,11 +158,11 @@ A tabela a seguir lista o suporte a acelerador incorporado à UWP, bem como o qu
 | Interação   | Teclado/Mouse   | Gamepad      | Incorporado em:  | Recomendado para: |
 |---------------|------------|--------------|----------------|------------------|
 | Page up/Page down  | Page up/Page down | Gatilhos esquerdo/direito | [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem vertical
-| Página esquerda/direita | Nenhum | Botões superiores esquerdo/direito | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem horizontal
-| Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhum | `ScrollViewer`, exibições que dão suporte à ampliação e redução |
-| Abrir/fechar painel de navegação | Nenhum | Exibir | Nenhum | Painéis de navegação |
-| Pesquisa | Nenhum | Botão Y | Nenhum | Atalho para a função de pesquisa principal no aplicativo |
-| [Abrir menu de contexto](#commandbar-and-contextflyout) | Clique com botão direito em | Botão Menu | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menus de contexto |
+| Página esquerda/direita | Nenhuma | Botões superiores esquerdo/direito | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem horizontal
+| Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhuma | `ScrollViewer`, exibições que dão suporte à ampliação e redução |
+| Abrir/fechar painel de navegação | Nenhuma | Exibir | Nenhuma | Painéis de navegação |
+| Pesquisa | Nenhuma | Botão Y | Nenhuma | Atalho para a função de pesquisa principal no aplicativo |
+| [Abrir menu de contexto](#commandbar-and-contextflyout) | Clique com o botão direito do mouse | Botão Menu | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menus de contexto |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interação e navegação de foco do plano XY
 
@@ -347,7 +347,7 @@ Nesses casos, você pode ativar o [modo de mouse](#mouse-mode) para permitir que
 
 ![Mapear elemento de interface do usuário usando o modo de mouse](images/designing-for-tv/map-mouse-mode.png)
 
-## <a name="mouse-mode"></a>Modo do mouse
+## <a name="mouse-mode"></a>Modo de mouse
 
 Conforme descrito em [Interação e navegação de foco do plano XY](#xy-focus-navigation-and-interaction), o foco no Xbox One é movido por meio de um sistema de navegação do plano XY, permitindo que o usuário mude o foco de controle para controle movendo-se para cima, para baixo, para a esquerda e para a direita.
 No entanto, alguns controles, como [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) e [MapControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), exigem uma interação de mouse na qual os usuários podem mover livremente o ponteiro dentro dos limites do controle.
@@ -549,13 +549,13 @@ Alguns controles tornam o ajuste de registro de foco comum o suficiente para gar
 | Controle               | Padrão de envolvimento de foco  |
 |-----------------------|---------------------------|
 | CalendarDatePicker    | Ativado                        |
-| FlipView              | Desativar                       |
-| GridView              | Desativar                       |
-| ListBox               | Desativar                       |
-| ListView              | Desativar                       |
-| ScrollViewer          | Desativar                       |
-| SemanticZoom          | Desativar                       |
-| Controle Deslizante                | Ativado                        |
+| FlipView              | Desativado                       |
+| GridView              | Desativado                       |
+| ListBox               | Desativado                       |
+| ListView              | Desativado                       |
+| ScrollViewer          | Desativado                       |
+| SemanticZoom          | Desativado                       |
+| Controle deslizante                | Ativado                        |
 
 Todos os outros controles da UWP não resultarão em mudanças comportamentais ou visuais `IsFocusEngagementEnabled="True"`.
 
@@ -563,7 +563,7 @@ Todos os outros controles da UWP não resultarão em mudanças comportamentais o
 
 Você pode criar aplicativos UWP que são otimizados para um dispositivo ou experiência específica, mas o Plataforma Universal do Windows também permite que você crie aplicativos que podem ser usados com êxito em dispositivos, em experiências de 2 e 10 pés, e independentemente da entrada capacidade do dispositivo ou do usuário. Usar as recomendações neste artigo pode garantir que seu aplicativo seja tão bom quanto pode estar na TV e em um PC.
 
-## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Projetando para TV e Xbox](../devices/designing-for-tv.md)
 - [Os aplicativos da UWP (primer for Plataforma Universal do Windows) do dispositivo](index.md)
