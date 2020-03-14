@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
-ms.openlocfilehash: c6384b5890466ff13c72a1b90eb9b27194d51fff
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: HT
+ms.openlocfilehash: 803164c395602313bcb84331e30376efd6832731
+ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210992"
+ms.locfileid: "79295719"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
@@ -37,7 +37,7 @@ Para complementos que você não quer disponibilizar por completo, selecione **O
 -   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Store do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não tem suporte para clientes no Windows 8.1 ou anterior**. Se o aplicativo publicado anteriormente estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra para esses clientes. Para parar de oferecer o complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e, em seguida, publicar um novo envio para o aplicativo. Isso é recomendado mesmo que seu aplicativo não direcione Windows 8.1 ou anterior; é uma experiência melhor para seus clientes se você nunca oferecer a eles um complemento que você tenha optado por tornar-se indisponível.
     
  > [!NOTE] 
- > A seleção da opção **Parar aquisição** e/ou enviar uma atualização de aplicativo que remove o complemento do código do aplicativo não afeta clientes que já adquiriram o complemento, independentemente do sistema operacional.
+ > Escolher a opção **parar a aquisição** e/ou enviar uma atualização de aplicativo que remove o complemento do seu aplicativo não impedirá que os clientes usem o complemento se já o tiverem comprado. As assinaturas existentes não serão renovadas e subsequentemente serão canceladas depois que o termo atual terminar.
 
 
 ## <a name="schedule"></a>Agendamento
@@ -47,7 +47,7 @@ Por padrão (a menos que você tenha selecionado uma das opções **Ocultar na S
 Para obter mais informações, consulte [Configurar agendamento preciso do lançamento](configure-precise-release-scheduling.md).
 
 
-## <a name="pricing"></a>Preço
+## <a name="pricing"></a>Preços
 
 Você deve selecionar um preço base para seu complemento (a menos que tenha selecionado a opção **parar aquisição** na seção **visibilidade** ). A seleção padrão é **gratuita**, portanto, se você quiser cobrar dinheiro pelo complemento, certifique-se de escolher um dos tipos de preço disponíveis (começando em 99 USD).
 
