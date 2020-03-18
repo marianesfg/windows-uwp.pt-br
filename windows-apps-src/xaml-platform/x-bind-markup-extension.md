@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c8fda22a565972e4157777c1db537a8f8d9ba20
-ms.sourcegitcommit: 20af365ce85d3d7d3a8d07c4cba5d0f1fbafd85d
+ms.openlocfilehash: d148df8de9086aaaec004525c3ee4865e4320c4e
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77033997"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79453356"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -30,7 +30,7 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 
 -   [{exemplo de x:Bind}](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBind)
 -   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
--   [Exemplo básico da interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+-   [Galeria de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery)
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
@@ -85,8 +85,7 @@ Por exemplo: em uma página, **Text="{x:Bind Employee.FirstName}"** procurará p
 
 Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propriedades no modelo de página ou dados – você precisará ter uma propriedade pública para que seja associável. A área de superfície para associação precisa ser exposta como classes/interfaces CX para que possamos obter os metadados relevantes. O atributo de **\]\[vinculável** não deve ser necessário.
 
-Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação porque os elementos nomeados se tornam campos dentro da página ou controle de usuário que representa a origem da Associação raiz. 
-
+Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação porque os elementos nomeados se tornam campos dentro da página ou controle de usuário que representa a origem da Associação raiz.
 
 ### <a name="collections"></a>Coleções
 
@@ -104,10 +103,80 @@ Para associar a [Propriedades anexadas](./attached-properties-overview.md), voc�
 
 ### <a name="casting"></a>Conversão
 
-Associações compiladas são fortemente tipadas e resolverão o tipo de cada etapa em um caminho. Se o tipo retornado não tiver o membro, falhará no momento da compilação. Você pode especificar uma conversão para informar o tipo real do objeto de associação. No caso a seguir, **obj** é uma propriedade do objeto de tipo, mas que contém uma caixa de texto, para que possamos usar **Text="{x:Bind ((TextBox)obj).Text}"** ou **Text="{x:Bind obj.(TextBox.Text)}"** .
+Associações compiladas são fortemente tipadas e resolverão o tipo de cada etapa em um caminho. Se o tipo retornado não tiver o membro, falhará no momento da compilação. Você pode especificar uma conversão para informar o tipo real do objeto de associação.
+
+No caso a seguir, **obj** é uma propriedade do objeto de tipo, mas que contém uma caixa de texto, para que possamos usar **Text="{x:Bind ((TextBox)obj).Text}"** ou **Text="{x:Bind obj.(TextBox.Text)}"** .
+
 O campo **groups3** em **text = "{x:Bind ((data: SampleDataGroup) groups3\[0\]). Title} "** é um dicionário de objetos, portanto, você deve convertê-lo em **dados: SampleDataGroup**. Observe o uso do prefixo de namespace xml **data:** para mapear o tipo de objeto para um namespace de código que não seja parte do namespace XAML padrão.
 
 _Observação: a C#sintaxe de conversão-Style é mais flexível do que a sintaxe de propriedade anexada e é a sintaxe recomendada no futuro._
+
+#### <a name="pathless-casting"></a>Conversão de caminho
+
+O analisador de ligação nativo não fornece uma palavra-chave para representar `this` como um parâmetro de função, mas oferece suporte à conversão sem caminhos (por exemplo, `{x:Bind (x:String)}`), que pode ser usada como um parâmetro de função. Portanto, `{x:Bind MethodName((namespace:TypeOfThis))}` é uma maneira válida de executar o que é conceitualmente equivalente a `{x:Bind MethodName(this)}`.
+
+Exemplo:
+
+`Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}"`
+
+```xaml
+<Page
+    x:Class="AppSample.MainPage"
+    ...
+    xmlns:local="using:AppSample">
+
+    <Grid>
+        <ListView ItemsSource="{x:Bind Songs}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:SongItem">
+                    <TextBlock
+                        Margin="12"
+                        FontSize="40"
+                        Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+```
+
+```csharp
+namespace AppSample
+{
+    public class SongItem
+    {
+        public string TrackName { get; private set; }
+        public string ArtistName { get; private set; }
+
+        public SongItem(string trackName, string artistName)
+        {
+            ArtistName = artistName;
+            TrackName = trackName;
+        }
+    }
+
+    public sealed partial class MainPage : Page
+    {
+        public List<SongItem> Songs { get; }
+        public MainPage()
+        {
+            Songs = new List<SongItem>()
+            {
+                new SongItem("Track 1", "Artist 1"),
+                new SongItem("Track 2", "Artist 2"),
+                new SongItem("Track 3", "Artist 3")
+            };
+
+            this.InitializeComponent();
+        }
+
+        public static string GenerateSongTitle(SongItem song)
+        {
+            return $"{song.TrackName} - {song.ArtistName}";
+        }
+    }
+}
+```
 
 ## <a name="functions-in-binding-paths"></a>Funções em caminhos de associação
 

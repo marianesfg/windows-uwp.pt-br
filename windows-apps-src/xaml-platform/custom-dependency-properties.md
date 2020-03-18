@@ -11,18 +11,18 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 796ee7ed1454515817f5fc994ccb9242d2a2918c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: eadb0d1547387789fc202b833294e761f2faf22c
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259867"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448597"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
 Aqui explicamos como definir e implementar suas próprias propriedades de dependência para um aplicativo do Windows Runtime em C++, C# ou Visual Basic. Listamos os motivos pelos quais os desenvolvedores de aplicativos e os autores de componentes podem querer criar propriedades de dependência personalizadas. Descrevemos as etapas de implementação de uma propriedade de dependência personalizada e também algumas práticas recomendadas que podem melhorar o desempenho, a usabilidade ou a versatilidade da propriedade de dependência.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Supomos que você leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md) e que entende as propriedades de dependência sob a perspectiva de um consumidor de propriedades de dependência existentes. Para seguir os exemplos deste tópico, você também precisa conhecer XAML e saber como gravar um aplicativo básico do Windows Runtime em C++, C# ou Visual Basic.
 
@@ -44,7 +44,7 @@ Se implementar você mesmo uma propriedade de dependência personalizada e quise
 
 Sempre que você implementa uma propriedade pública de leitura/gravação em uma classe, assim que a classe é derivada do [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject), você pode fazer com que a propriedade funcione como uma propriedade de dependência. Às vezes, a técnica clássica de apoiar sua propriedade com um campo particular é adequada. A definição da propriedade personalizada como uma propriedade de dependência nem sempre é necessária ou adequada. A escolha vai depender dos cenários aos quais sua propriedade dará suporte.
 
-Considere implementar sua propriedade como uma propriedade de dependência para que ela permita um ou mais desses recursos do Tempo de Execução do Windows ou dos aplicativos do mesmo:
+Considere implementar sua propriedade como uma propriedade de dependência para que ela permita um ou mais desses recursos do Windows Runtime ou dos aplicativos do mesmo:
 
 - Definir a propriedade por meio de um [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)
 - Agir como uma propriedade de destino válida para vinculação de dados com [ **{Binding}** ](binding-markup-extension.md)
@@ -427,7 +427,7 @@ Tenha em mente as seguintes considerações de práticas recomendadas ao definir
 
 ### <a name="dependencyobject-and-threading"></a>DependencyObject e threading
 
-Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Tempo de Execução do Windows. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads chamando [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher).
+Todas as instâncias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) devem ser criadas no thread da interface do usuário que está associado à [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) mostrada por um aplicativo do Windows Runtime. Embora seja necessário que cada **DependencyObject** seja criada no thread da interface do usuário principal, os objetos podem ser acessados usando uma referência de dispatcher de outros threads chamando [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher).
 
 Os aspectos de threading de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) são relevantes porque em geral isso significa que somente o código que é executado no thread da interface do usuário pode mudar ou até mesmo ler o valor de uma propriedade de dependência. Em geral, é possível evitar os problemas com threading em códigos de interface do usuário típicos que usam corretamente padrões **async** e threads de trabalho em segundo plano. Normalmente, você tem problemas de threading relacionados a **DependencyObject** somente quando define seus próprios tipos de **DependencyObject** e tenta usá-los para fontes de dados ou outros cenários em que um **DependencyObject** não é necessariamente apropriado.
 
@@ -464,7 +464,7 @@ Declare as propriedades de dependência como propriedades públicas. Declare os 
 
 As propriedades de wrapper existem apenas por conveniência. Os mecanismos de segurança aplicados aos wrappers podem ser ignorados com a chamada de [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) ou de [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue). Assim, mantenha as propriedades de wrapper públicas, caso contrário, chamadores legítimos terão muita dificuldade para usá-las e você não fornecerá qualquer benefício real de segurança.
 
-O Tempo de Execução do Windows não fornece um modo para registrar uma propriedade de dependência personalizada como somente leitura.
+O Windows Runtime não fornece um modo para registrar uma propriedade de dependência personalizada como somente leitura.
 
 ### <a name="dependency-properties-and-class-constructors"></a>Propriedades de dependência e construtores de classe
 
@@ -472,12 +472,12 @@ Há um princípio geral de que os construtores de classe não devem chamar méto
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>Registrando as propriedades de dependência para aplicativos C++/CX
 
-A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (As C++ extensões de componenteC++Visual (/CX) colocam o código de inicializador estático do escopo raiz diretamente C# em **DllMain**, enquanto os compiladores atribuem os inicializadores estáticos a classes e, portanto, evitam problemas de bloqueio de carga **DllMain** .). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e) se analisar o código para a versão C++/CX do exemplo.
+A implementação para registrar uma propriedade em C++/CX é mais complicada que em C#, devido à separação em cabeçalho e arquivo de implementação, e também porque a inicialização no escopo raiz do arquivo de implementação não é uma prática recomendada. (As C++ extensões de componenteC++Visual (/CX) colocam o código de inicializador estático do escopo raiz diretamente C# em **DllMain**, enquanto os compiladores atribuem os inicializadores estáticos a classes e, portanto, evitam problemas de bloqueio de carga **DllMain** .). A melhor prática aqui é declarar uma função auxiliar que faz todo o registro de propriedade de dependência para uma classe, uma função por classe. Então, para cada classe personalizada que seu aplicativo consumir, será necessário fazer referência à função de registro auxiliar que é exposta por cada classe personalizada que deseja usar. Chame cada função de registro auxiliar uma vez, como parte do [**Application constructor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor) (`App::App()`), antes de `InitializeComponent`. Esse construtor só é executado quando o aplicativo é realmente referenciado pela primeira vez. Ele não será executado novamente se um aplicativo suspenso for retomado, por exemplo. Além disso, como pode ser visto no exemplo de registro anterior de C++, a verificação do **nullptr** em torno de cada chamada de [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) é importante: é a segurança de que nenhum chamador da função pode registrar a propriedade duas vezes. Uma segunda chamada de registro, provavelmente, travaria o aplicativo sem essa verificação, porque o nome da propriedade seria uma duplicação. Você pode ver esse padrão de implementação nos exemplos de controle personalizado e de usuário [XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample) se analisar o código para a versão C++/CX do exemplo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 - [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)
 - [**DependencyProperty. Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)
 - [Visão geral das propriedades de dependência](dependency-properties-overview.md)
-- [Usuário XAML e exemplo de controles personalizados](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
+- [Usuário XAML e exemplo de controles personalizados](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample)
  
