@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de runtime, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: 58f6643510a27d6b9cd673da850c191ee23b813e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74701484"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209271"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -114,7 +114,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ...
 ```
 
-Como seu tipo de **Aplicativo** *é um* **IFrameworkViewSource**, você poderá passar apenas um para **Executar**.
+Como seu tipo de **Aplicativo***é um* **IFrameworkViewSource**, você poderá passar apenas um para **Executar**.
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -740,8 +740,8 @@ namespace winrt::MyNamespace::implementation
 
 Isso exige que todos os membros da hierarquia de classe concordem com o valor retornado e os tipos de parâmetro do método **OnNavigatedFrom**. Se eles discordarem, você deverá usar a versão acima como o método virtual e encapsular as alternativas.
 
-## <a name="important-apis"></a>APIs Importantes
-* [modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+## <a name="important-apis"></a>APIs importantes
+* [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [função winrt::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcopy_from-function)
 * [modelo da função winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
 * [modelo da função winrt::get_self](/uwp/cpp-ref-for-winrt/get-self)

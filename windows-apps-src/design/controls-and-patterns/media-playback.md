@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
-ms.translationtype: MT
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853502"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209031"
 ---
 # <a name="media-player"></a>Media player
 
@@ -91,7 +91,7 @@ O layout de controles de linha dupla (abaixo) é recomendado para a maioria dos 
 
 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) é integrado automaticamente aos controles de transporte de mídia do sistema. Os controles de transporte de mídia do sistema são os controles exibidos quando teclas de mídia de hardware são pressionadas, como os botões de mídia em teclados. Para saber mais, confira [SystemMediaTransportControls](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls).
 
-> **Observação**&nbsp;&nbsp; [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) não se integre automaticamente aos controles de transporte de mídia do sistema, portanto, você deve conectá-los por conta própria. Para obter mais informações, consulte [Controles de transporte de mídia do sistema](https://docs.microsoft.com/windows/uwp/audio-video-camera/system-media-transport-controls).
+> **Observação**&nbsp;&nbsp; [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) não se integra automaticamente aos controles de transporte de mídia do sistema, logo, você deve conectá-los por conta própria. Para obter mais informações, consulte [Controles de transporte de mídia do sistema](https://docs.microsoft.com/windows/uwp/audio-video-camera/system-media-transport-controls).
 
 
 ### <a name="set-the-media-source"></a>Definir a origem da mídia
@@ -392,9 +392,9 @@ Embora os controles padrão tenham sido otimizados para reprodução de mídia, 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
-## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Noções básicas de design de comandos para aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
 - [Noções básicas de design de conteúdo para aplicativos UWP](https://docs.microsoft.com/windows/uwp/layout/content-basics)

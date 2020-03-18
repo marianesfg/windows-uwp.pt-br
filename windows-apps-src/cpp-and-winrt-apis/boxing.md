@@ -5,18 +5,21 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, conversão, boxing, escalar, valor
 ms.localizationpriority: medium
-ms.openlocfilehash: 431230d3b67d7a380b4f0b20fdef1e0f918c3aa2
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 29263260217de154f1a942d37d1e18fece15e3d0
+ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270159"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79038089"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT
  
 A [**interface IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) é a interface raiz de cada classe de tempo de execução no Windows Runtime (WinRT). Isso é uma ideia análoga a [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) estando na raiz de cada interface e classe COM, e **System.Object** estando na raiz de cada classe [Common Type System](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
 
-Em outras palavras, uma função que espera **IInspectable** pode ser passada como uma instância de qualquer classe de tempo de execução. Porém, não é possível passar diretamente um valor escalar, como um valor numérico ou de texto, a tal função. Em vez disso, um valor escalar precisa ser encapsulado dentro de um objeto de classe de referência. Esse processo de encapsulamento é conhecido como *conversão* do valor.
+Em outras palavras, uma função que espera **IInspectable** pode ser passada como uma instância de qualquer classe de runtime. Porém, não é possível passar diretamente um valor escalar, como um valor numérico ou de texto, a tal função. Em vez disso, um valor escalar precisa ser encapsulado dentro de um objeto de classe de referência. Esse processo de encapsulamento é conhecido como *conversão* do valor.
+
+> [!IMPORTANT]
+> Você pode converter e desconverter qualquer tipo que você possa passar para uma API Windows Runtime. Em outras palavras, um tipo do Windows Runtime. Valores numéricos e de texto (cadeias de caracteres) são os exemplos fornecidos acima. Outro exemplo é um `struct` que você define em IDL. Se você tentar usar um `struct` C++ comum (um que não esteja definido em IDL), o compilador lembrará você de que é possível converter apenas um tipo de Windows Runtime. Uma classe de runtime é um tipo de Windows Runtime, mas é claro que você pode passar classes de runtime para APIs do Windows Runtime sem convertê-las.
 
 O [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) fornece a função [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value), que pega um valor escalar e retorna o valor convertido em **IInspectable**. Para converter um **IInspectable** via unboxing de volta ao valor escalar, há as funções [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) e [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
 
@@ -64,7 +67,7 @@ auto piPropertyValue = piInspectable.as<winrt::Windows::Foundation::IPropertyVal
 WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType::Single);
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Interface IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [Modelo de função winrt::box_value](/uwp/cpp-ref-for-winrt/box-value)
 * [Struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)

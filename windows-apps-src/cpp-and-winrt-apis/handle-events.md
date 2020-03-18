@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manipulação, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: b64fbe93198af95402161873c1d68d0da41f33f7
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.openlocfilehash: 664f6799d3bb6f848243820ec46e655262e8c1a7
+ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853365"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79295709"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manipular eventos usando delegados em C++/WinRT
 
@@ -38,6 +38,9 @@ Um exemplo simples está manipulando um evento de clique do botão. É comum usa
 ```
 
 ```cppwinrt
+// MainPage.h
+void ClickHandler(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
+
 // MainPage.cpp
 void MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
 {
@@ -59,6 +62,22 @@ MainPage::MainPage()
 
 > [!IMPORTANT]
 > Ao registrar o delegado, o exemplo de código acima passa um ponteiro bruto *this* (apontando para o objeto atual). Para saber como estabelecer uma referência fraca ou forte ao objeto atual, consulte [Se você usar uma função de membro como um delegado](weak-references.md#if-you-use-a-member-function-as-a-delegate).
+
+Veja um exemplo que usa uma função de membro estático. Observe a sintaxe mais simples.
+
+```cppwinrt
+// MainPage.h
+static void ClickHandler(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
+
+// MainPage.cpp
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    Button().Click( MainPage::ClickHandler );
+}
+void MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */) { ... }
+```
 
 Há outras formas de criar um **RoutedEventHandler**. Apresentamos a seguir o bloco de sintaxe tirado do tópico da documentação de [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (escolha *C++/WinRT* na lista suspensa **Language** no canto superior direito da página). Observe os vários construtores: um deles usa um lambda; outro uma função livre; e outro (aquele que usamos acima) usa um objeto e um ponteiro para função de membro.
 
