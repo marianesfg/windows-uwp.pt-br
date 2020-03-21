@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: 88012d96b7c769094cb80d0f34b77060291a3eef
-ms.sourcegitcommit: 80ea5e05f8c15700f6c6fa3d1ed37e479568762b
+ms.openlocfilehash: 4a9bdfcee8811e52587eb4fcd59913a731b799a2
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75928813"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510999"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
@@ -18,7 +18,7 @@ Você pode usar as instalações da biblioteca do [C++/WinRT](/windows/uwp/cpp-a
 
 No final deste tópico, você encontrará uma listagem completa de código-fonte de um aplicativo mínimo do Direct2D. Vamos ressaltar extratos desse código e usá-los para ilustrar como consumir componentes COM usando C++/WinRT com várias instalações da biblioteca do C++/WinRT.
 
-## <a name="com-smart-pointers-winrtcom_ptruwpcpp-ref-for-winrtcom-ptr"></a>Ponteiros inteligentes COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+## <a name="com-smart-pointers-winrtcom_ptr"></a>Ponteiros inteligentes COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
 Ao programar usando COM, você trabalha diretamente com interfaces, em vez de projetos (isso também se aplica aos bastidores para APIs do Windows Runtime, que são uma evolução do COM). Para chamar uma função em uma classe COM, por exemplo, ative a classe, obtenha de volta uma interface e, em seguida, chame funções nessa interface. Para acessar o estado de um objeto, não acesse seus membros de dados diretamente; em vez disso, chame as funções de acessador e modificador em uma interface.
 
@@ -127,7 +127,7 @@ Você pode chamar a função [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#c
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>Funções COM que adotam um ponteiro de interface **IUnknown**
 
-Você pode chamar a função [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#get_unknown-function) para passar seu **com_ptr** para uma função que usa um ponteiro de interface **IUnknown**.
+Você pode chamar a função [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para passar seu **com_ptr** para uma função que usa um ponteiro de interface **IUnknown**.
 
 ```cppwinrt
 winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
