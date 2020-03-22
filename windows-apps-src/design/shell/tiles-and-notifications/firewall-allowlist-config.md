@@ -4,21 +4,20 @@ Description: Muitas empresas usam firewalls para bloquear o tráfego indesejado.
 title: Adicionando o tráfego WNS àlist de permissão do firewall
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, serviço de notificações do Windows, notificação, Windows, firewall, solução de problemas, IP, tráfego, Enterprise, rede, IPv4, VIP, FQDN, endereço IP público
 ms.localizationpriority: medium
-ms.openlocfilehash: fa0153a395144382aee3f764f0f7d9316afa9c5e
-ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
+ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265017"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080659"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configurações de proxy e firewall corporativo para dar suporte ao tráfego WNS
 
-## <a name="background"></a>Histórico
+## <a name="background"></a>Tela de fundo
 Muitas empresas usam firewalls para bloquear tráfego e portas de rede indesejadas; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas pelo WNS serão descartadas em determinadas configurações de rede. Para evitar isso, os administradores de rede podem adicionar a lista de FQDNs ou VIPs do WNS aprovados à sua lista de isenção para permitir que o tráfego do WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar, bem como suporte para tipos de proxy diferentes.
 
 ## <a name="proxy-support"></a>Suporte a proxy

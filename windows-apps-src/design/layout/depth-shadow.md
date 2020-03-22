@@ -3,19 +3,18 @@ author: knicholasa
 description: A profundidade Z, ou a profundidade relativa, e a sombra são duas maneiras de incorporar a profundidade em seu aplicativo para ajudar os usuários a se concentrarem naturalmente e com eficiência.
 title: Profundidade Z e sombra para aplicativos UWP
 template: detail.hbs
-ms.author: nichola
 ms.date: 04/19/2019
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e9197be38d1edfdad41a434132f318cdf3f45ea
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 216974ba564a192f94473469f3a7a49191ef2192
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282419"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081393"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidade Z e sombra
 
@@ -39,7 +38,7 @@ Se você usar controles padrão, as sombras ThemeShadow serão incorporadas auto
 
 ## <a name="themeshadow"></a>ThemeShadow
 
-O tipo ThemeShadow pode ser aplicado a qualquer elemento XAML para desenhar sombras adequadamente com base em coordenadas x, y, z. O ThemeShadow também se ajusta automaticamente para outras especificações ambientais:
+O tipo [ThemeShadow](/uwp/api/windows.ui.xaml.media.themeshadow) pode ser aplicado a qualquer elemento XAML para desenhar sombras adequadamente com base em coordenadas x, y, z. O ThemeShadow também se ajusta automaticamente para outras especificações ambientais:
 
 - Adapta-se às alterações na iluminação, tema do usuário, ambiente de aplicativo e Shell.
 - Aplica sombras aos elementos automaticamente com base em sua profundidade z. 
@@ -65,7 +64,7 @@ Os seguintes controles comuns usarão automaticamente o ThemeShadow para convert
 - [Controle de transporte de mídia](../controls-and-patterns/media-playback.md#media-transport-controls), [InkToolbar](../controls-and-patterns/inking-controls.md)
 - [Animação conectada](../motion/connected-animation.md)
 
-Observação: Os submenus só aplicarão ThemeShadow quando compilados no Windows 10 versão 1903 ou em um SDK mais recente.
+Observação: os submenus só aplicarão ThemeShadow quando compilados no Windows 10 versão 1903 ou em um SDK mais recente.
 
 ### <a name="themeshadow-in-popups"></a>ThemeShadow em pop-ups
 
@@ -115,7 +114,7 @@ Se a sombra padrão não parecer correta no conteúdo do controle, você poderá
 
 Em geral, incentivamos você a pensar cuidadosamente sobre o uso de sombra e limitar seu uso a casos em que ele introduz uma hierarquia visual significativa. No entanto, fornecemos uma maneira de converter uma sombra de qualquer elemento da interface do usuário caso você tenha cenários avançados que precisem dela.
 
-Para converter uma sombra de um elemento XAML que não está em um popup, você deve especificar explicitamente os outros elementos que podem receber a sombra na coleção `ThemeShadow.Receivers`. Os receptores não podem ser um ancestral do elenco na árvore visual.
+Para converter uma sombra de um elemento XAML que não está em um popup, você deve especificar explicitamente os outros elementos que podem receber a sombra na coleção de `ThemeShadow.Receivers`. Os receptores não podem ser um ancestral do elenco na árvore visual.
 
 Este exemplo mostra dois retângulos que convertem sombras em uma grade por trás deles:
 
@@ -160,11 +159,11 @@ O DropShadow não responde automaticamente ao seu ambiente e não usa fontes de 
 ## <a name="which-shadow-should-i-use"></a>Qual sombra devo usar?
 
 | Propriedade | ThemeShadow | DropShadow |
-| - | - | - | - |
+| - | - | - |
 | **Mínimo de SDK** | Windows 10 versão 1903 | 14393 |
 | **Adaptação** | Sim | Não |
 | **Customization** | Não | Sim |
-| **Fonte de luz** | Automático (global por padrão, mas pode substituir por aplicativo) | Nenhuma |
+| **Fonte de luz** | Automático (global por padrão, mas pode substituir por aplicativo) | Nenhum |
 | **Com suporte em ambientes 3D** | Sim | Não |
 
 - Tenha em mente que a finalidade da sombra é fornecer uma hierarquia significativa, não como um simples tratamento Visual.
