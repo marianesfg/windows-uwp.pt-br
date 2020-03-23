@@ -11,21 +11,18 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 43d63b1831766ecdf65fe1c1d7fd15457f728f83
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 37ab62a6e6c2e294e8d6b5222eab4a1a9ae25a2e
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867448"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081014"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
-
-
 Caixas de diálogo e submenus são elementos transitórios da interface do usuário que aparecem quando acontece algo que requer notificação, aprovação ou informações adicionais do usuário.
 
-> **APIs importantes**: [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
-
+> **APIs de plataforma:** [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 :::row:::
     :::column:::
@@ -59,7 +56,7 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
     :::column:::
    <p><b>Use uma caixa de diálogo para...</b> <br/>
 <ul>
-<li>Expressar informações importantes que o usuário <b>deve</b> ler e confirmar antes de prosseguir. Os exemplos incluem:
+<li>Expressar informações importantes que o usuário <b>deve</b> ler e confirmar antes de prosseguir. Alguns exemplos:
 <ul>
   <li>Quando a segurança do usuário pode ser comprometida</li>
   <li>Quando o usuário está prestes a alterar um ativo valioso de forma permanente</li>
@@ -103,7 +100,7 @@ Consulte o [Artigo de submenu](flyouts.md).
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
