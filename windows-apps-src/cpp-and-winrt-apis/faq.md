@@ -5,15 +5,18 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 167286226adb6d26a6cdd4ee4a26bdcc58e4b5ed
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209171"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448577"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+
+> [!IMPORTANT]
+> Para ver as notas sobre a versão do C++/WinRT, confira [Novidades e alterações no C++/WinRT 2.0](news.md#news-and-changes-in-cwinrt-20).
 
 > [!NOTE]
 > Caso sua pergunta seja sobre uma mensagem de erro já vista, consulte também o tópico [Solução de problemas de C++/WinRT](troubleshooting.md).

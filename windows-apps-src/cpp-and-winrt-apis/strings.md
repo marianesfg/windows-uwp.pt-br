@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, cadeia de caracteres
 ms.localizationpriority: medium
-ms.openlocfilehash: 004aa3e267bab86527ac3d5c3fe0383ccd4ad904
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 1771c3754e8e9580514f646ae8589b1982911fc7
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844308"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448566"
 ---
 # <a name="string-handling-in-cwinrt"></a>Processamento da cadeia de caracteres em C++/WinRT
 
@@ -159,17 +159,19 @@ Você pode perceber que os parâmetros de entrada do C++/WinRT que logicamente d
 O resultado é que, na maioria das vezes, é possível ignorar as especificidades do gerenciamento de cadeias de caracteres do Windows Runtime e trabalhar com eficiência com o que você sabe. E isso é importante, considerando até que ponto as cadeias de caracteres são usadas no Windows Runtime.
 
 ## <a name="formatting-strings"></a>Formatar cadeias de caracteres
-Uma opção para a formatação de cadeias de caracteres é **std::wstringstream**. Este é um exemplo que formata e exibe uma mensagem simples de rastreamento de depuração.
+Uma opção para a formatação de cadeias de caracteres é **std::wostringstream**. Este é um exemplo que formata e exibe uma mensagem simples de rastreamento de depuração.
 
 ```cppwinrt
 #include <sstream>
+#include <winrt/Windows.UI.Input.h>
+#include <winrt/Windows.UI.Xaml.Input.h>
 ...
-void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
+void MainPage::OnPointerPressed(winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
 {
-    float2 const point = args.CurrentPoint().Position();
-    std::wstringstream wstringstream;
-    wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
-    ::OutputDebugString(wstringstream.str().c_str());
+    winrt::Windows::Foundation::Point const point{ e.GetCurrentPoint(nullptr).Position() };
+    std::wostringstream wostringstream;
+    wostringstream << L"Pointer pressed at (" << point.X << L"," << point.Y << L")" << std::endl;
+    ::OutputDebugString(wostringstream.str().c_str());
 }
 ```
 
@@ -189,7 +191,7 @@ O código a seguir está incorreto. Ele é compilado, mas tudo o que faz é modi
 myTextBlock.Text() = L"Hello!";
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
 * [Função winrt::to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
 * [Função winrt::to_string](/uwp/cpp-ref-for-winrt/to-string)

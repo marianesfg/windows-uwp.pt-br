@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: Windows, win32, desenvolvimento de área de trabalho
-ms.openlocfilehash: d0d87f8e4b6524471ff5e2ada9012a22641b06d7
-ms.sourcegitcommit: ddf0137929945eddf01041a81aa4d26038e70f46
+ms.openlocfilehash: bf8a5970d1999427023592f919ef0b92737fa934
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74392087"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510979"
 ---
 # <a name="choose-your-app-platform"></a>Escolha sua plataforma de aplicativo
 
@@ -26,9 +26,13 @@ Quando você deseja criar um aplicativo da área de trabalho para computadores W
 
 Todas essas plataformas de aplicativos permitem criar aplicativos da área de trabalho como o Word, o Excel e o Photoshop executados na área de trabalho clássica do Windows e aproveitar ao máximo os recursos específicos desse ambiente. No entanto, algumas dessas plataformas compartilham características e são mais adequadas para determinados tipos de aplicativos:
 
-* **UWP, WPF e Windows Forms**. Essas plataformas fornecem ambientes de tempo de execução gerenciados (o Windows Runtime para UWP e .NET para Windows Forms e WPF) com muitos benefícios, especialmente nas áreas de produtividade do desenvolvedor, interface do usuário sofisticada e personalizável e segurança de aplicativos. Como essas estruturas dão suporte a designers visuais e marcação de interface do usuário para criar rapidamente a interface do usuário, elas são especialmente adequadas para aplicativos de linha de negócios.
+* **UWP**. A plataforma conta com um Common Type System, APIs e um modelo de aplicativo para todos os dispositivos que executam o Windows 10. Os aplicativos UWP podem ser nativos ou gerenciados. 
 
-* **API do Win32**. A API do Win32 (também chamada de API do Windows) é plataforma original para aplicativos nativos do Windows em C/C++ que exigem acesso direto ao Windows e ao hardware. Ela fornece uma experiência de desenvolvimento de primeira classe sem depender de um ambiente de runtime gerenciado como .NET e WinRT. Isso torna a API do Win32 a plataforma preferida para aplicativos que precisam do nível mais alto de desempenho e acesso direto ao hardware do sistema.
+* **WPF e Windows Forms**. Essas plataformas fornecem um Common Type System, APIs e um modelo de aplicativo para aplicativos gerenciados em execução no .NET.
+
+* **API do Win32**. A API do Win32 (também chamada de API do Windows) é plataforma original para aplicativos nativos do Windows em C/C++ que exigem acesso direto ao Windows e ao hardware. Isso torna a API do Win32 a plataforma preferida para aplicativos que precisam do nível mais alto de desempenho e acesso direto ao hardware do sistema.
+
+Tanto a UWP quanto o .NET têm integração profunda com o Visual Studio. Isso gera muitos benefícios, principalmente nas áreas de produtividade do desenvolvedor, interface do usuário sofisticada e personalizável e segurança do aplicativo. Como essas estruturas dão suporte a designers visuais e marcação de interface do usuário para criar rapidamente a interface do usuário, elas são especialmente adequadas para aplicativos de linha de negócios.
 
 Este artigo descreve essas plataformas com mais detalhes e ajuda a determinar a melhor para seu aplicativo. 
 
@@ -47,7 +51,7 @@ Para obter mais informações sobre a UWP, confira os seguintes artigos:
 * [Design e interface do usuário](/windows/uwp/design/)
 * [Recursos e tecnologias](/windows/uwp/develop/)
 * [Referência de API](/uwp/)
-* [Exemplos](https://github.com/Microsoft/Windows-universal-samples)
+* [Amostras](https://github.com/Microsoft/Windows-universal-samples)
 
 ## <a name="wpf"></a>WPF
 
@@ -60,7 +64,7 @@ Para obter mais informações sobre o WPF, confira os seguintes artigos:
 * [Criar seu primeiro aplicativo (.NET Framework)](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
 * [Migrar aplicativos do WPF para o .NET Core](/dotnet/desktop-wpf/migration/convert-project-from-net-framework/)
 * [Referência de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
-* [Exemplos](https://github.com/Microsoft/WPF-Samples)
+* [Amostras](https://github.com/Microsoft/WPF-Samples)
 
 ## <a name="windows-forms"></a>Windows Forms
 
@@ -86,13 +90,13 @@ Aqui estão alguns destaques do que a API do Win32 e C++ oferece para permitir q
 * Contêineres e algoritmos eficientes e seguros.
 * DirectX, especialmente Direct3D e DirectCompute (observe que a UWP também oferece interoperabilidade com DirectX).
 
-Para obter mais informações, consulte os seguintes artigos:
+Para obter mais informações, confira os seguintes artigos:
 
 * [Introdução](/windows/win32/desktop-programming/)
 * [Criar seu primeiro aplicativo Win32 e C++](/windows/win32/learnwin32/learn-to-program-for-windows/)
 * [Recursos e tecnologias](/windows/win32/desktop-app-technologies)
 * [Referência de API](/windows/win32/apiindex/windows-api-list/)
-* [Exemplos](https://github.com/Microsoft/Windows-classic-samples)
+* [Amostras](https://github.com/Microsoft/Windows-classic-samples)
 
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>Comparação de plataformas: UWP, WPF e Windows Forms
 
