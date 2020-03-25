@@ -7,12 +7,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: b59e8c3c6d9c4c299e441964be1afb4e02051e23
-ms.sourcegitcommit: 5264d7499ddbe21199a63d74a294206069f90f8b
+ms.openlocfilehash: b2e6e57721a5667a9ca38b21eee2a618353cd30b
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78287453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218556"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
@@ -243,7 +243,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 | Propriedade                     | Tipo    | Descrição                                                                                                           |
 |------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| version                      | Cadeia de caracteres  | Versão de folha de estilos direcionada. Usado para aplicabilidade. "1.0" para padrão, "1." para atualizações adicionais de pequenos recursos. |
+| version                      | String  | Versão de folha de estilos direcionada. Usado para aplicabilidade. "1.0" para padrão, "1." para atualizações adicionais de pequenos recursos. |
 
 <a id="settings" />
 
@@ -255,7 +255,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 | buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se deseja ou não mostrar texturas em construções 3D simbólicas com texturas. |
 | fogColor                     | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB do nevoeiro a distância que aparece no controle 3D. |
 | glowColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB que pode ser aplicado para rotular o brilho e o brilho do ícone. |
-| imageFamily                  | Cadeia de caracteres  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O nome da imagem definida para usar para esse estilo. Defina esse valor como *padrão* para sinais que uso corrigido cores que são baseados na entrada do mundo real. Defina esse valor como *Palette* para sinais que usem uma paleta de cores configuráveis. |
+| imageFamily                  | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O nome da imagem definida para usar para esse estilo. Defina esse valor como *padrão* para sinais que uso corrigido cores que são baseados na entrada do mundo real. Defina esse valor como *Palette* para sinais que usem uma paleta de cores configuráveis. |
 | landColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB da land terra antes que algo seja desenhado naquela terra. |
 | logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se os itens com uma propriedade **Organization** devem desenhar os Logotipos apropriados ou usar um ícone genérico. |
 | officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se os itens que possuem uma propriedade de cor oficial (como linhas de trânsito na China) devem desenhar essa cor. Por exemplo, desative esse valor para um mapa em preto e branco. |
@@ -263,6 +263,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se é possível ou não desenhar o sombreamento de elevações no mapa. |
 | shadowColor                  | Cor   |      |      |      |  ✔   |  ✔   | A cor da sombra por trás dos ícones que usam sombras. |
 | spaceColor                   | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB para a área ao redor do mapa. |
+| terrainFlat                  | Bool    |      |      |      |      |      | Um sinalizador que indica se o terreno deve ser simples (desabilitado) no mapa. |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se as cores originais no SVG devem ser usadas em vez de Pesquisar a entrada da paleta em busca de cores em uma imagem. |
 
 <a id="mapelement" />
@@ -273,8 +274,8 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 |------------------------------|---------|------|------|------|------|------|-------------|
 | backgroundScale              | Float   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Quantidade pela qual o elemento de fundo de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | fillColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor que é usada para polígonos de preenchimento, a tela de fundo de ícones de ponto e para o centro de linhas se elas tiverem se dividido. |
-| fontFamily                   | Cadeia de caracteres  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| fontWeight                   | Cadeia de caracteres  |      |      |      |      |  ✔   | A densidade de uma face de tipos, em termos da claridade ou da pesada dos traços. "**Light**", "**normal**", "**seminegrito**" e "**Bold**" podem ser definidos |
+| fontFamily                   | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| fontWeight                   | String  |      |      |      |      |  ✔   | A densidade de uma face de tipos, em termos da claridade ou da pesada dos traços. "**Light**", "**normal**", "**seminegrito**" e "**Bold**" podem ser definidos |
 | iconColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do glifo mostrado no meio de um ícone de ponto. |
 | iconScale                    | Float   |      |  ✔   |  ✔   |  ✔   |  ✔   | Quantidade pela qual o glifo de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | labelColor                   | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
@@ -309,8 +310,8 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 | Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | 1903 | Descrição |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | shadowVisible                | Bool    |      |      |      |      |  ✔   | O sinalizador que indica se a sombra do ícone deve estar visível ou não |
-| forma-plano de fundo             | Cadeia de caracteres  |      |      |      |      |  ✔   | Forma a ser usada como plano de fundo do ícone – substituindo qualquer forma existente. |
-| Ícone de forma                   | Cadeia de caracteres  |      |      |      |      |  ✔   | Forma a ser usada como o glifo de primeiro plano do ícone – substituindo qualquer forma existente. |
+| forma-plano de fundo             | String  |      |      |      |      |  ✔   | Forma a ser usada como plano de fundo do ícone – substituindo qualquer forma existente. |
+| Ícone de forma                   | String  |      |      |      |      |  ✔   | Forma a ser usada como o glifo de primeiro plano do ícone – substituindo qualquer forma existente. |
 | stemAnchorRadiusScale        | Float   |      |      |  ✔   |  ✔   |  ✔   | Quantidade pela qual o ponto de ancoramento de um tronco do ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | stemColor                    | Cor   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do tronco oriundo da parte inferior do ícone no modo de 3D. |
 | stemHeightScale              | Float   |      |      |  ✔   |  ✔   |  ✔   | Quantidade pela qual o tamanho do tronco de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |

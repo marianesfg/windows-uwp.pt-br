@@ -6,17 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08dbe9ed7aaa732172d488712aa47d6d3631508a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2be088edd732a22acb11be5fc209ff25c84bae17
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317699"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218346"
 ---
 # <a name="share-data"></a>Compartilhar dados
 
 
 Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
+
+> [!NOTE]
+> Os exemplos de código neste artigo são escritos para aplicativos UWP. Os aplicativos de área de C++trabalho do WPF, Windows Forms e/Win32 devem usar a interface [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) para obter o objeto [datatransfermanager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) para uma janela específica. Para obter mais informações, consulte o exemplo de [ShareName](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource) .
 
 ## <a name="set-up-an-event-handler"></a>Configurar um manipulador de eventos
 
@@ -33,11 +36,11 @@ Quando ocorre um evento [**DataRequested**](https://docs.microsoft.com/uwp/api/w
 Você pode compartilhar vários tipos de dados, incluindo:
 
 -   Texto simples
--   URIs (Uniform Resource Identifiers)
+-   Uniform Resource Identifiers (URIs)
 -   HTML
 -   Texto formatado
 -   Bitmaps
--   Arquivos
+-   Files
 -   Dados personalizados definidos pelo desenvolvedor
 
 O objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) pode conter um ou mais desses formatos, em qualquer combinação. O exemplo a seguir demonstra o compartilhamento de texto.
@@ -99,7 +102,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 * [Receber dados](receive-data.md)
 * [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)
 * [DataPackagePropertySet](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackagepropertyset)
-* [DataRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
+* [Solicitação de DataPedido](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
 * [DataRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
 * [FailWithDisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext)
 * [ShowShareUi](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui)

@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1979e16853fc288b83f5e4216c970440300fc597
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 5192177edf284d1fe6e0c6eb06bf8713fbff8b4e
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218376"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -22,7 +22,7 @@ Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um
 
 > **APIs importantes**: [**Windows.Media.SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
 
-O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de reconhecimento para programação do tempo de execução, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
+O reconhecimento de fala é realizado em um runtime de fala, APIs de reconhecimento para programação do runtime, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
 
 ## <a name="configure-speech-recognition"></a>Configurar o reconhecimento de fala
 
@@ -208,7 +208,7 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 ## <a name="recognize-speech-input"></a>Reconhecer a entrada da fala
 
-Uma *restrição* define as palavras e frases (vocabulário) que um aplicativo reconhece na entrada de fala. As restrições estão no núcleo do reconhecimento de fala e proporcionam ao seu aplicativo mais exatidão no reconhecimento de fala.
+Uma *restrição* define as palavras e frases (vocabulário) que um aplicativo reconhece na entrada de fala. As restrições estão no núcleo do reconhecimento de fala e dão ao seu aplicativo maior controle sobre a precisão do reconhecimento de fala.
 
 Você pode usar os seguintes tipos de restrições para reconhecer a entrada de fala.
 
@@ -220,7 +220,8 @@ A gramática de ditado de texto livre padrão pode reconhecer a maioria das pala
 
 A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-**Observe**  como ditado predefinido e gramáticas de pesquisa da Web podem ser grandes, e como estão online (não no dispositivo), o desempenho pode não ser tão rápido quanto com uma gramática personalizada instalada no dispositivo.     
+> [!NOTE]
+> como ditado predefinido e gramáticas de pesquisa da Web podem ser grandes, e como estão online (não no dispositivo), o desempenho pode não ser tão rápido quanto com uma gramática personalizada instalada no dispositivo.     
 
 Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 
@@ -365,7 +366,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="related-articles"></a>Artigos relacionados
+## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
 
 
 **Desenvolvedores**

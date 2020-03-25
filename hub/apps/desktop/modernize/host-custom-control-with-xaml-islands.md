@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d881fc42e453e2ace0a44543c3e204aa154958b7
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: b1ac53e0a6b6e01cd2129e2b1893f91fae2ef0fe
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209792"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218596"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando ilhas XAML
 
-Este artigo demonstra como usar o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no kit de ferramentas da Comunidade do Windows para hospedar um controle UWP personalizado em um aplicativo do WPF direcionado ao .NET Core 3. O controle personalizado contém vários controles UWP de terceiros da SDK do Windows e associa uma propriedade em um dos controles UWP a uma cadeia de caracteres no aplicativo do WPF. Este artigo também demonstra como hospedar também um controle UWP de primeira parte da [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/).
+Este artigo demonstra como usar o controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) no kit de ferramentas da Comunidade do Windows para hospedar um controle UWP personalizado em um aplicativo do WPF direcionado ao .NET Core 3. O controle personalizado contém vários controles UWP de terceiros da SDK do Windows e associa uma propriedade em um dos controles UWP a uma cadeia de caracteres no aplicativo do WPF. Este artigo também demonstra como hospedar também um controle UWP da [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Embora este artigo demonstre como fazer isso em um aplicativo do WPF, o processo é semelhante para um aplicativo Windows Forms. Para obter uma visão geral sobre como hospedar controles UWP no WPF e Windows Forms aplicativos, consulte [Este artigo](xaml-islands.md#wpf-and-windows-forms-applications).
 
@@ -231,7 +231,7 @@ Se você já tiver um controle personalizado, poderá usá-lo em vez do controle
 
 ## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>Adicionar um controle da biblioteca WinUI ao controle personalizado
 
-Tradicionalmente, os controles UWP foram lançados como parte do sistema operacional Windows 10 e disponibilizados para os desenvolvedores por meio do SDK do Windows. A [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) é uma abordagem alternativa, em que versões atualizadas dos controles UWP de primeira parte da SDK do Windows são distribuídas em um pacote NuGet que não está vinculado a versões SDK do Windows. Essa biblioteca também inclui novos controles que não fazem parte do SDK do Windows e da plataforma UWP padrão. Consulte nosso [roteiro da biblioteca WinUI](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) para obter mais detalhes.
+Tradicionalmente, os controles UWP foram lançados como parte do sistema operacional Windows 10 e disponibilizados para os desenvolvedores por meio do SDK do Windows. A [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) é uma abordagem alternativa, em que as versões atualizadas dos controles UWP da SDK do Windows são distribuídas em um pacote NuGet que não está vinculado a versões SDK do Windows. Essa biblioteca também inclui novos controles que não fazem parte do SDK do Windows e da plataforma UWP padrão. Consulte nosso [roteiro da biblioteca WinUI](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) para obter mais detalhes.
 
 Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu controle de usuário para que você possa hospedar esse controle em seu aplicativo WPF.
 
@@ -286,6 +286,9 @@ Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu
 Opcionalmente, você pode empacotar o aplicativo do WPF em um [pacote MSIX](https://docs.microsoft.com/windows/msix) para implantação. O MSIX é a tecnologia de empacotamento de aplicativo moderna para Windows e é baseado em uma combinação das tecnologias de instalação MSI,. Appx, App-V e ClickOnce.
 
 As instruções a seguir mostram como empacotar todos os componentes na solução em um pacote MSIX usando o [projeto de empacotamento de aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) no Visual Studio 2019. Essas etapas serão necessárias apenas se você quiser empacotar o aplicativo do WPF em um pacote MSIX. Observe que essas etapas atualmente incluem algumas soluções alternativas específicas para o cenário de Hospedagem de controles UWP personalizados.
+
+> [!NOTE]
+> Se você optar por não empacotar seu aplicativo em um [pacote MSIX](https://docs.microsoft.com/windows/msix) para implantação, os computadores que executam seu aplicativo deverão ter o [tempo de execução C++ Visual](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) instalado.
 
 1. Adicione um novo [projeto de empacotamento de aplicativos do Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) à sua solução. Ao criar o projeto, selecione **Windows 10, versão 1903 (10,0; Build 18362)** para a **versão de destino** e a **versão mínima**.
 

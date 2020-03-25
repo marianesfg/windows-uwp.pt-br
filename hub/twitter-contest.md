@@ -6,12 +6,12 @@ ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.date: 03/19/2020
-ms.openlocfilehash: ae86947b461e3fb748b67043827ffeebfc5cb0d2
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 2a7a5983dcc7e330a30cf53b93c73f36f811d17d
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218466"
 ---
 # <a name="contribute-to-windows-docs-and-be-entered-to-win-some-swag"></a>Contribuir para documentos do Windows e ser inserido para ganhar algumas swag
 
@@ -27,7 +27,7 @@ Veja o que você precisa fazer:
     - [Ferramentas e drivers](https://docs.microsoft.com/windows-hardware/drivers/) do **Windows Hardware Developer** - 
 3. Faça correções em uma página de documentos selecionando o botão **Editar** na parte superior da página. Isso o levará para o arquivo de origem de redução no GitHub.
 4. Quando as alterações forem concluídas. Arquivo sua solicitação de pull (PR).
-5. Visite a conta do [@WindowsDocs](https://twitter.com/WindowsDocs) Twitter e responda à postagem do concurso com um link para sua pr.
+5. Responda à [postagem do concurso@WindowsDocs](https://twitter.com/WindowsDocs/status/1242088720209268736) com um link para sua pr.
 
 Agradecemos a nossa comunidade de colaboradores!
 
