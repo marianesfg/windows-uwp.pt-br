@@ -175,7 +175,7 @@ Como é menos comum ter uma sensibilidade reduzida à luz azul, ao projetar para
     
   + Não conte apenas com a cor para comunicar ou distinguir objetos do jogo. Use formas e padrões também.
   + Se for necessário contar apenas com a cor, combine predefinições com uma seleção livre de cores para que elas possam ser completamente personalizadas pelos jogadores que precisam delas e sem criar trabalho extra para os jogadores que não precisam delas.
-  + Use um simulador de cores cegas para testar seus designs para que você possa exibir seus designs por meio de olhos cegos de cores. Isso pode ajudar a evitar os problemas de contraste comuns. A [cor Oracle](https://www.colororacle.org) é um simulador cego de cor livre que pode simular os três tipos mais comuns de deficiência de visão de cor – deuteranopia, protanopia e Tritanopia.
+  + Use um simulador de cores cegas para testar seus designs para que você possa exibir seus designs por meio de olhos cegos de cores. Isso pode ajudar a evitar os problemas de contraste comuns. O [Color Oracle](https://www.colororacle.org) é um simulador de daltonismo gratuito que pode simular os três tipos mais comuns de deficiência de visão de cor – deuteranopia, protanopia e Tritanopia.
   
 ### <a name="closed-captioning-and-subtitles"></a>Legendagem oculta e legendas
 
@@ -261,7 +261,7 @@ Aqui estão alguns sites externos que fornecem informações adicionais sobre ac
 * [Caça War contratados](https://www.warfighterengaged.org/)
 
 ### <a name="other-references-used"></a>Outras referências usadas
-* [Reconhecimento cego de cores, uma empresa de interesse da Comunidade](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [Color Blind Awareness, uma empresa de interesse da comunidade](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
 * [Como fazer uma legenda bem&mdash;um artigo de blog em Gamasutra por Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
 * [Inovação para todos os programadores](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
 * [Epilepsia Foundation](https://www.epilepsy.com/)

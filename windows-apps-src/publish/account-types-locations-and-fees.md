@@ -151,7 +151,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Lituânia                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macau                         | 19 USD              | 99 USD           |  
-| Macedônia (ARIM)                 | 19 USD              | 99 USD           |  
+| Macedônia do Norte                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malaui                            | 19 USD              | 99 USD           |  
 | Malásia                          | 62 MYR              | 300 MYR          |  

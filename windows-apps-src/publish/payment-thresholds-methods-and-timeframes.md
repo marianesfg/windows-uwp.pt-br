@@ -100,7 +100,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Guiné                           | Sim               | Sim                                      | Sim    | Não              |
 | Haiti                            | Sim               | Sim                                      | Sim    | Não              |
 | Honduras                         | Sim               | Sim                                      | Sim    | Sim             |
-| Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
+| RAE de Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
 | Hungria                          | Sim               | Sim                                      | Sim    | Sim             |
 | Islândia                          | Sim               | Sim                                      | Sim    | Não              |
 | Índia                            | Sim               | Sim                                      | Sim    | Sim             |
@@ -124,7 +124,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Liechtenstein                    | Sim               | Sim                                      | Sim    | Sim             |
 | Lituânia                        | Sim               | Sim                                      | Sim    | Não              |
 | Luxemburgo                       | Sim               | Sim                                      | Sim    | Sim             |
-| Macedônia, ARJ da                        | Não                | Sim                                      | Sim    | Não              |
+| Macedônia do Norte                        | Não                | Sim                                      | Sim    | Não              |
 | Madagascar                       | Sim               | Sim                                      | Sim    | Não              |
 | Malaui                           | Sim               | Sim                                      | Sim    | Sim             |
 | Malásia                         | Sim               | Sim                                      | Sim    | Sim             |

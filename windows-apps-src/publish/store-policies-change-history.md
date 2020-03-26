@@ -61,7 +61,7 @@ ms.locfileid: "77607274"
 <p>Adicionamos suporte da plataforma aos requisitos de suporte do dispositivo na 10.4.1.</p>
 <p>Removemos a 10.3.3 que detalhava os requisitos de cartão-presente.</p>
 <p>Simplificamos os requisitos do botão Voltar na 10.4.4.</p>
-<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões de Edge e Ponte de Desktop.</p>
+<p>Atualizamos a 10.5.1 para mudar os requisitos de localização do dispositivo para a nova seção 10.5.7 e exigimos políticas de privacidade para os produtos Extensões do Microsoft Edge e Ponte de Desktop.</p>
 <p>Adicionamos a 10.5.6 para especificar os requisitos para usar autenticação de identidade da Microsoft.</p>
 <p>Adicionamos a 10.5.7 para especificar os requisitos de localização do dispositivo, incluindo consentir com o uso de dados de localização.</p>
 <p>Atualizamos a 10.8.2 para adicionar requisitos para receber doações de usuários.</p>

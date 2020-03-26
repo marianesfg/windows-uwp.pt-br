@@ -208,7 +208,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Lituânia  |  (UTC + 02:00) Chisinau |
 | Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | RAE de Macau  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
-| Macedônia (ARIM)  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Macedônia do Norte  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Madagascar  |  (UTC + 03:00) Nairóbi |
 | Malaui  |  (UTC + 02:00) Harare, Pretória |
 | Malásia  |  (UTC + 08:00) Kuala Lumpur, Cingapura |

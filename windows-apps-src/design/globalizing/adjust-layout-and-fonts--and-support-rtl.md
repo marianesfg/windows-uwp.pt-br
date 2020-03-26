@@ -19,7 +19,7 @@ ms.locfileid: "79209832"
 Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda). Direção de fluxo é a direção na qual o script é criado e exibido e os elementos de interface do usuário na página são visualizados por nós.
 
 ## <a name="layout-guidelines"></a>Diretrizes de layout
-Idiomas como alemão e finlandês geralmente usam mais caracteres do que o inglês. Fontes do Extremo Oriente geralmente exigem mais altura. E idiomas, como árabe e hebraico, exigem que painéis de layout e elementos de texto sejam dispostos na ordem de leitura da direita para a esquerda (RTL).
+Idiomas como alemão e finlandês geralmente usam mais caracteres do que o inglês. Fontes da Ásia geralmente exigem mais altura. E idiomas, como árabe e hebraico, exigem que painéis de layout e elementos de texto sejam dispostos na ordem de leitura da direita para a esquerda (RTL).
 
 Devido a essas variações nas métricas de texto traduzido, recomendamos que você não incorpore o posicionamento absoluto, larguras fixas ou alturas fixas na interface do usuário (IU). Em vez disso, aproveite os mecanismos de layout dinâmico que integram os elementos de interface do usuário do Windows. Por exemplo, controles de conteúdo (como botões), controles de itens (como modos de exibição de grade e lista), painéis de layout (como grades e stackpanels) redimensionam e refluem por padrão para adaptar o conteúdo automaticamente. A pseudotradução do aplicativo revelará todas as margens problemáticas em que os elementos de interface do usuário não acomodam o conteúdo adequadamente.
 
