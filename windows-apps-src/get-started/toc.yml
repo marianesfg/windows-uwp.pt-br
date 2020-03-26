@@ -1,42 +1,35 @@
-items:
 - name: Visão geral
   href: index.md
-- name: O que é um aplicativo UWP?
+- name: O que é um aplicativo do Windows?
   href: ../get-started/universal-application-platform-guide.md
 - name: Prepare-se para começar
   href: ../get-started/get-set-up.md
   items:
-  - name: Habilitar seu dispositivo para desenvolvimento
-    href: ../get-started/enable-your-device-for-development.md
-  - name: Crie uma conta de desenvolvedor
-    href: ../get-started/sign-up.md
+    - name: Habilitar seu dispositivo para desenvolvimento
+      href: ../get-started/enable-your-device-for-development.md
+    - name: Crie uma conta de desenvolvedor
+      href: ../get-started/sign-up.md
 - name: Comece a codificar
   href: ../get-started/create-uwp-apps.md
   items:
-  - name: Construir um formulário
-    href: construct-form-learning-track.md
-  - name: Exibir clientes em uma lista
-    href: display-customers-in-list-learning-track.md
-  - name: Salvar e carregar configurações
-    href: settings-learning-track.md
-  - name: Trabalhar com arquivos
-    href: fileio-learning-track.md
-  - name: Seu primeiro aplicativo
-    href: ../get-started/your-first-app.md
-    items:
-    - name: Criar um aplicativo "Olá, Mundo" (C#)
-      href: ../get-started/create-a-hello-world-app-xaml-universal.md
-    - name: Criar um aplicativo "Olá, Mundo" (C++)
-      href: ../get-started/create-a-basic-windows-10-app-in-cpp.md
-    - name: Criar um aplicativo "Olá, mundo" (JS)
-      href: ../get-started/create-a-hello-world-app-js-uwp.md
-  - name: Criar um aplicativo complexo
-    href: ../get-started/plan-your-app.md
-- name: Obter exemplos de aplicativo UWP
+    - name: Construir um formulário
+      href: construct-form-learning-track.md
+    - name: Exibir clientes em uma lista
+      href: display-customers-in-list-learning-track.md
+    - name: Salvar e carregar configurações
+      href: settings-learning-track.md
+    - name: Trabalhar com arquivos
+      href: fileio-learning-track.md
+    - name: Seu primeiro aplicativo
+      href: ../get-started/your-first-app.md
+      items:
+        - name: 'Criar um aplicativo "Olá, Mundo" (C#)'
+          href: ../get-started/create-a-hello-world-app-xaml-universal.md
+        - name: 'Criar um aplicativo "Olá, Mundo" (C++)'
+          href: ../get-started/create-a-basic-windows-10-app-in-cpp.md
+        - name: 'Criar um aplicativo "Olá, mundo" (JS)'
+          href: ../get-started/create-a-hello-world-app-js-uwp.md
+    - name: Criar um aplicativo complexo
+      href: ../get-started/plan-your-app.md
+- name: Obter exemplos de aplicativos do Windows
   href: ../get-started/get-uwp-app-samples.md
-ms.openlocfilehash: 6d2635bec653e5c9f409ff6a5249ee0215276225
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582147"

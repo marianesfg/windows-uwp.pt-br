@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: introdução, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f78bdfec6c6e06ffc542bc7741b875e952bc169
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 9183d9e2134d376400d2d6b85901477ff7b27413
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218576"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introdução aos aplicativos do Windows 10
 
@@ -30,7 +30,7 @@ ms.locfileid: "75684895"
                         <h3>Saiba mais sobre aplicativos Windows 10</h3>
                         <p>O Windows 10 e a Plataforma Universal do Windows permitem a você criar aplicativos que funcionam bem e têm ótima aparência em todos os tipos de dispositivo Windows ou atualizar os aplicativos existentes com recursos modernos.</p>
                         <ul>
-                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">O que é um aplicativo da UWP?</a></li>
+                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">O que é um aplicativo do Windows?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ ms.locfileid: "75684895"
                     <h3>Amostras</h3>
                     <p>Obtenha uma experiência em primeira mão com a plataforma Windows 10 e veja as APIs em ação.</p>
                     <br>
-                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Como usar exemplos de aplicativos UWP</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Usar exemplos de aplicativo do Windows</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-customers-orders-database">Banco de dados de pedidos de clientes</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-remote-system-sessions">Jogo de Perguntas (Project Rome)</a></p>
                     <p><a href="//developer.microsoft.com/windows/samples">Portal de exemplos de código do Windows</a></p>

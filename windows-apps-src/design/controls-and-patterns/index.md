@@ -1,29 +1,29 @@
 ---
-description: Obtenha diretrizes de design e instruções de codificação para adicionar padrões de &amp; controles ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo.
-title: Controles e padrões UWP - Desenvolvimento de aplicativos do Windows
-keywords: controles de UWP, interface do usuário, controles de aplicativo
+description: Veja diretrizes de design e instruções de codificação para adicionar controles &amp; padrões ao aplicativo do Windows. Encontre mais de 45 controles poderosos para uso com o seu aplicativo.
+title: Controles e padrões do Windows – Desenvolvimento de aplicativos do Windows
+keywords: controles da UWP, interface do usuário, controles de aplicativo, controles do Windows
 label: Controls & patterns
 template: detail.hbs
-ms.date: 11/16/2017
+ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ea9f58c8f861be7774285c5611ad222d9587e2a1
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218446"
 ---
-# <a name="controls-for-uwp-apps"></a>Controles para aplicativos UWP
+# <a name="controls-for-windows-apps"></a>Controles para aplicativos do Windows
 
 ![Controles](../images/controls-2x.png)
 
-No desenvolvimento de aplicativos UWP, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
+No desenvolvimento de aplicativos do Windows, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
 
 Fornecemos mais de 45 controles para você usar, desde botões simples a controles de dados avançados, como o modo de exibição de grade.  Esses controles fazem parte do Sistema de Design Fluent e podem ajudá-lo a criar uma interface do usuário ousada e escalonável com uma ótima aparência em todos os dispositivos e tamanhos de tela.
 
-Os artigos desta seção fornecem orientações de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP.
+Os artigos desta seção fornecem orientações de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo do Windows.
 
 ## <a name="intro"></a>Introdução
 
@@ -140,4 +140,4 @@ Obtenha o _XAML Controls Gallery_ aplicativo da Microsoft Store para ver esses c
 
 ## <a name="additional-controls"></a>Controles adicionais
 
-Controles adicionais para o desenvolvimento UWP estão disponíveis de empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> e <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Esses controles fornecem suporte adicional para empresas e desenvolvedores .NET aumentando os controles padrão do sistema com os serviços e controles personalizados.
+Controles adicionais para o desenvolvimento no Windows são disponibilizados por empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> e <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Esses controles fornecem suporte adicional para empresas e desenvolvedores .NET aumentando os controles padrão do sistema com os serviços e controles personalizados.

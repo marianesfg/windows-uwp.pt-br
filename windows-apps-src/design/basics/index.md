@@ -1,28 +1,28 @@
 ---
-description: Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
+description: Saiba como projetar e codificar um aplicativo do Windows que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
 title: Noções básicas de design
-keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface
-ms.date: 03/07/2018
+keywords: layout do aplicativo UWP, plataforma universal do Windows, design do aplicativo, interface, layout do aplicativo do Windows
+ms.date: 03/23/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 78462d5d29ebcc31792aa46da7657c57fb960e13
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: fdedd400928a32ae44a1e88b8e0159d7b36473f2
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984110"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218506"
 ---
-# <a name="design-basics-for-uwp-apps"></a>Noções básicas de design para aplicativos UWP
+# <a name="design-basics-for-windows-apps"></a>Noções básicas de design para aplicativos do Windows
 
 ![Ícone de design básico](../images/basics-2x.png)
 
-As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Não é uma lista de regras prescritivas – é um documento dinâmico, projetado para se adaptar ao nosso Sistema de Design Fluente em evolução, bem como às necessidades de nossa comunidade de criação de aplicativos. 
+As diretrizes sobre design do Windows são recursos que ajudam você a projetar e criar aplicativos belos e refinados. Não é uma lista de regras prescritivas – é um documento dinâmico, projetado para se adaptar ao nosso Sistema de Design Fluente em evolução, bem como às necessidades de nossa comunidade de criação de aplicativos. 
 
 ## <a name="overview"></a>Visão geral
 
-[**Introdução ao design de aplicativos UWP**](design-and-ui-intro.md)
+[**Introdução ao design de aplicativos do Windows**](design-and-ui-intro.md)
 
-Uma introdução aos recursos da UWP combinada às práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows.
+Uma introdução aos recursos de aplicativo do Windows combinada às melhores práticas de criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows.
 
 [**Sistema de Design Fluente**](/windows/apps/fluent-design-system)
 
@@ -32,7 +32,7 @@ O sistema de Design Fluente apresenta nossas metas e princípios para criar inte
 
 [**Noções básicas de navegação**](navigation-basics.md)
 
-A navegação em aplicativos UWP se baseia em um modelo flexível de estruturas de navegação, elementos de navegação e recursos de nível do sistema. Este artigo apresenta esses componentes e mostra como usá-los juntos para proporcionar uma boa experiência de navegação.
+A navegação em aplicativos do Windows se baseia em um modelo flexível de estruturas de navegação, elementos de navegação e recursos de nível do sistema. Este artigo apresenta esses componentes e mostra como usá-los juntos para proporcionar uma boa experiência de navegação.
 
 [**Noções básicas de comandos**](commanding-basics.md)
 
@@ -57,4 +57,4 @@ Dê um layout adaptável ao aplicativo de edição de fotos.
 
 [**3. Criar estilos personalizados**](xaml-basics-style.md)
 
-Dê sua própria aparência e sensação a nossos controles UWP criando estilos personalizados.
+Dê sua própria aparência e sensação a nossos controles do Windows criando estilos personalizados.
