@@ -5,18 +5,18 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
-ms.openlocfilehash: 196c6d98b0944bbc22c3d0f652853ecab28bd3c6
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 46f20a4f63decfad063332d2e8e494c15563e398
+ms.sourcegitcommit: f2832e1e04cbf472f7fd51c08144489c510ff470
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061915"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80270391"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>Criar pontos de ajuste com modificadores de inércia
 
 Neste artigo, analisares detalhadamente como usar o recurso InertiaModifier do InteractionTracker para criar experiências de movimento que se ajustam a um ponto especificado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Aqui, presumimos que você esteja familiarizado com os conceitos abordados neste artigo:
 
@@ -54,7 +54,7 @@ Ao entrar em inércia, o InteractionTracker avalia cada um dos InertiaModifiers 
 > [!NOTE]
 > O aspecto da condição dos InertiaModifiers só é avaliado uma vez quando InteractionTracker entra em inércia. No entanto, apenas para InertiaMotion, a expressão de movimento é avaliada a cada quadro para o modificador cuja condição é verdadeira.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Agora, vamos analisar como você pode usar os InertiaModifiers para criar algumas experiências de pontos de ajuste que recriarão a tela de rolagem de imagens. Neste exemplo, cada manipulação deve mover-se por uma única imagem; isso geralmente é denominado pontos de ajuste obrigatórios únicos.
 
@@ -93,12 +93,12 @@ Quer o ajuste para cima ou para baixo seja determinado ou não pelo local onde o
 ```csharp
 // Is NaturalRestingPosition less than the halfway point between Snap Points?
 snapUpModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y < (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y < (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapUpModifier.Condition.SetReferenceParameter("prop", _propSet);
 // Is NaturalRestingPosition greater than the halfway point between Snap Points?
 snapDownModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y >= (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y >= (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapDownModifier.Condition.SetReferenceParameter("prop", _propSet);
 ```
@@ -113,10 +113,10 @@ Agora você só precisa definir os valores de repouso de cada InertiaModifier: m
 snapUpModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue - mod(this.StartingValue, prop.snapDistance)");
 snapUpModifier.RestingValue.SetReferenceParameter("prop", _propSet);
-snapForwardModifier.RestingValue = _compositor.CreateExpressionAnimation(
+snapDownModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue + prop.snapDistance - mod(this.StartingValue, " + 
 "prop.snapDistance)");
-snapForwardModifier.RestingValue.SetReferenceParameter("prop", _propSet);
+snapDownModifier.RestingValue.SetReferenceParameter("prop", _propSet);
 ```
 
 Por fim, adicione os InertiaModifiers ao InteractionTracker. Agora, quando o InteractionTracker entrar no estado de inércia, ele verificará as condições dos InertiaModifiers para saber se sua posição deve ser modificada.
