@@ -1,20 +1,20 @@
 ---
-description: Este tópico mostra como fazer a portabilidade do código C# para o equivalente no C++/WinRT.
+description: Este tópico descreve os detalhes técnicos envolvidos em portar o código-fonte em um projeto [C#](/visualstudio/get-started/csharp) para seu equivalente em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 title: Mover do C# para C++/WinRT
 ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, compatibilizar, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 17900829388bfe0b3cc325e27d0807b139ccaa27
-ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
+ms.openlocfilehash: f7cd35dbf211b14dfb886fc9ba4305cd7ce56e5e
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74958956"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290051"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Mover do C# para C++/WinRT
 
-Este tópico mostra como compatibilizar o código em um projeto [C#](/visualstudio/get-started/csharp) para seu equivalente no [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+Este tópico descreve os detalhes técnicos envolvidos em portar o código-fonte em um projeto [C#](/visualstudio/get-started/csharp) para seu equivalente em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 ## <a name="register-an-event-handler"></a>Registrar um manipulador de eventos
 
@@ -193,7 +193,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 
 O C++/WinRT também dá suporte a [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) em um número limitado de tipos. Você precisará adicionar sobrecargas para os tipos adicionais que deseja converter em cadeia de caracteres.
 
-| Idioma | Converter int em cadeia de caracteres | Converter uma enumeração em cadeia de caracteres |
+| Language | Converter int em cadeia de caracteres | Converter uma enumeração em cadeia de caracteres |
 | - | - | - |
 | C# | `string result = "hello, " + intValue.ToString();`<br>`string result = $"hello, {intValue}";` | `string result = "status: " + status.ToString();`<br>`string result = $"status: {status}";` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |
@@ -331,7 +331,7 @@ Além disso, a associação a um booliano exibe `true` ou `false` no C#, mas mos
 
 Para obter mais informações e exemplos de código, confira [Como consumir objetos para marcação](/windows/uwp/cpp-and-winrt-apis/binding-property#consuming-objects-from-xaml-markup).
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Modelo de função winrt::single_threaded_observable_vector](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)
 * [namespace winrt](/uwp/cpp-ref-for-winrt/winrt)
 

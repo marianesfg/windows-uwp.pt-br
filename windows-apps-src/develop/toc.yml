@@ -160,6 +160,8 @@
           href: ../app-to-app/receive-data.md
         - name: Copiar e colar
           href: ../app-to-app/copy-and-paste.md
+    - name: IPC (Comunicação Entre Processos)
+      href: ../communication/interprocess-communication.md
     - name: Serviços de rede e Web
       href: ../networking/index.md
       items:

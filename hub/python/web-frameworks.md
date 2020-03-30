@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Python no Windows, Web para Python com WSL, aplicativo Web Python com Subsistema do Windows para Linux, desenvolvimento para a Web com o Python no Windows, aplicativo Flask no Windows, aplicativo Django no Windows, Web para Python, desenvolvimento para a Web com o Flask no Windows, desenvolvimento para a Web com o Django no Windows, desenvolvimento para a Web no Windows com o Python, desenvolvimento para a Web no VS Code com o Python, extensão do WSL remoto, Ubuntu, WSL, venv, pip, extensão do Microsoft Python, execução do Python no Windows, uso do Python no Windows, criação com o Python no Windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 8cbc8343764e4de57bd418ecdb36bd606b037c68
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79208971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218476"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introdução ao uso do Python para desenvolvimento para a Web no Windows
 
@@ -325,7 +325,7 @@ O [Django](https://www.djangoproject.com) é uma estrutura de aplicativo Web par
 
 16. Salve todos os arquivos modificados.
 
-17. No terminal do VS Code, execute o servidor de desenvolvimento com `python manage.py runserver` e abra um navegador em `http://127.0.0.1:8000/` para ver uma página que renderiza "Olá, Django".
+17. No terminal do VS Code, execute o servidor de desenvolvimento com `python3 manage.py runserver` e abra um navegador em `http://127.0.0.1:8000/` para ver uma página que renderiza "Olá, Django".
 
 Parabéns, você criou um aplicativo Web do Django usando o VS Code e o Subsistema do Windows para Linux! Para obter um tutorial mais aprofundado sobre como usar o VS Code e o Django, confira [Tutorial do Django no Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django).
 

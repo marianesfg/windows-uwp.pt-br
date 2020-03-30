@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57639fc370ed7e10a427af4808e2a8a6de91b554
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8f1717a59399fb95f7b71a38ee8d2d46de4ca765
+ms.sourcegitcommit: e11e0f65930665579d1f296861234893e82bf8fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257702"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301452"
 ---
 # <a name="controls-by-function"></a>Controles por função
 
@@ -100,7 +100,7 @@ Um controle que responde a uma entrada de usuário e dispara um evento **Click**
         Click="Button_Click" />
 ```
 
-Referência: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 
+Referência: [Botão](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 
 
 Design e instruções: [Guia de controle de botões](buttons.md) 
 
@@ -578,7 +578,7 @@ Referência: [SplitView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Cont
 
 Design e instruções: [Guia de controle de exibição dividida](split-view.md)
 
-### <a name="web-view"></a>Modo de exibição da Web
+### <a name="web-view"></a>Exibição Web
 
 Um controle de contêiner que hospeda conteúdo da Web.
 
@@ -724,10 +724,10 @@ Código de exemplo: [Amostra de texto XAML](https://code.msdn.microsoft.com/wind
 ### <a name="text-box"></a>Caixa de texto
 Um campo de texto sem formatação com uma única linha ou com várias linhas.
 
-![Controle da caixa de texto](images/controls/text-box.png) 
+![Controle da caixa de texto](images/controls/text-box.png)
 
 ```xaml
-<TextBox x:Name="textBox1" Text="I am a TextBox" 
+<TextBox x:Name="textBox1" Text="I am a Text Box."
          TextChanged="TextBox_TextChanged"/>
 ```
 
@@ -779,9 +779,9 @@ Um controle que apresenta uma lista embutida de itens, na qual o usuário pode f
 ```xaml
 <ListBox x:Name="listBox1" Width="100"
          SelectionChanged="ListBox_SelectionChanged">
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
+    <x:String>List item 1</x:String>
+    <x:String>List item 2</x:String>
+    <x:String>List item 3</x:String>
 </ListBox>
 ```
 
@@ -816,7 +816,7 @@ Um controle que permite que o usuário selecione de uma lista de valores movendo
 <Slider x:Name="slider1" Width="100" ValueChanged="Slider_ValueChanged" />
 ```
 
-Referência: [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 
+Referência: [Controle deslizante](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 
 
 Design e instruções: [Guia de controle deslizante](slider.md) 
 

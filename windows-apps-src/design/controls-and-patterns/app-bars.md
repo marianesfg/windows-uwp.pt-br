@@ -13,18 +13,18 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f5fd3408657047c3d1d102c65f6264954983134
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c32b60b3d9e717a916b5424f3b8bd78102439f30
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257740"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081965"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
 As barras de comandos proporcionam aos usuários um acesso fácil às tarefas mais comuns do seu aplicativo. As barras de comandos podem oferecer um acesso aos comandos no nível do aplicativo ou específicos da página e podem ser usadas com qualquer padrão de navegação.
 
-> **APIs importantes**: [classe CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [classe AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
+> **APIs de plataforma:** [classe CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [classe AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
 
 ![Exemplo de uma barra de comandos com ícones](images/controls_appbar_icons.png)
 
@@ -40,7 +40,7 @@ O controle CommandBar é um controle de finalidade geral, flexível e leve que p
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CommandBar">abri-lo e ver o CommandBar em funcionamento</a>.</p>
     <ul>
@@ -259,7 +259,7 @@ Embora os modos Minimal e Hidden sejam úteis em algumas situações, tenha em m
 
 A alteração de ClosedDisplayMode para fornecer mais ou menos dicas para o usuário afeta o layout dos elementos ao redor. Em contraste, quando CommandBar faz a transição entre fechada e aberta, ela não afeta o layout dos outros elementos.
 
-## <a name="placement"></a>Colocação
+## <a name="placement"></a>Posicionamento
 As barras de comandos podem ser colocadas na parte superior da janela do aplicativo, na parte inferior da janela do aplicativo e embutidas.
 
 ![Exemplo 1 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement1.png)

@@ -12,20 +12,18 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: fa4ff0cbc2bd361b241f660f9c6b28f03bc7c24c
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362754"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080887"
 ---
 # <a name="hyperlinks"></a>Hiperlinks
 
- 
-
 Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado. Há duas formas de se adicionar um hiperlink a um aplicativo XAML: o elemento de texto **Hyperlink** e o controle **HyperlinkButton**.
 
-> **APIs importantes**: [elemento de texto de Hiperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [controle HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **APIs da plataforma**: [elemento de texto de Hiperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [controle HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![Um botão de hiperlink](images/controls/hyperlink-button.png)
 
@@ -45,7 +43,7 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrir o aplicativo e ver o HyperlinkButton em ação</a>.</p>
     <ul>
@@ -175,7 +173,7 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

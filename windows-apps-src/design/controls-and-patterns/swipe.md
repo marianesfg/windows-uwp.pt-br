@@ -4,21 +4,21 @@ design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
 Description: O comando de deslizar o dedo é um acelerador de toque para menus de contexto.
-title: Passar o dedo
+title: Swipe
 label: Swipe
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d575eb25d9a013aa999cf304db6d83faeb87765
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9a9ff0acd46ef7efa92239b0a3ef07b507850a66
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63774697"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081516"
 ---
-# <a name="swipe"></a>Passar o dedo
+# <a name="swipe"></a>Swipe
 
 O comando de deslizar o dedo é um acelerador para menus de contexto que permite aos usuários acessar facilmente as ações comuns do menu apenas tocando, sem precisar alterar estados no aplicativo.
 
@@ -42,7 +42,7 @@ Você deve usar o comando de deslizar o dedo quando tiver um grupo potencialment
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/SwipeControl">abri-lo e ver o SwipeControl em ação</a>.</p>
     <ul>
@@ -235,7 +235,7 @@ Aqui, um item de deslizar o dedo de _resposta_ é definido para fechar depois qu
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

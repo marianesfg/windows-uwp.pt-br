@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: f2097a35d87594251ed2c0a04be06ccdb705902f
+ms.sourcegitcommit: 378693fe9b655fe14814d683e8d8cb2dd1380fd7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209041"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249850"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -177,7 +177,7 @@ Além das cores do tema de alto contraste do sistema, a cor de destaque do siste
 
 ### <a name="theme-dependent-brushes"></a>Pincéis dependentes de temas
 
-Os recursos de cor mostrados nas seções anteriores são usados para definir a propriedade [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) dos recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) nos dicionários de recursos de temas do sistema. Use os recursos de pincel para aplicar a cor a elementos XAML. As chaves dos recursos de pincel seguem o formato de nomenclatura: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por exemplo, `SystemControlBackroundAltHighBrush`.
+Os recursos de cor mostrados nas seções anteriores são usados para definir a propriedade [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) dos recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) nos dicionários de recursos de temas do sistema. Use os recursos de pincel para aplicar a cor a elementos XAML. As chaves dos recursos de pincel seguem o formato de nomenclatura: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por exemplo, `SystemControlBackgroundAltHighBrush`.
 
 Consultemos como o valor de cores desse pincel é determinado no tempo de execução. Nos dicionários de recursos "Light" e "Dark", esse pincel é definido desta forma:
 
