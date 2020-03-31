@@ -6,14 +6,17 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47eb494ac1b61caac0549f89254ae5d60a7ddf4c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50ffec5beafd88ddc852e4d9b2fb995fb12bd939
+ms.sourcegitcommit: 56d777134bc85f049e281e34660de612ac938a01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259014"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80417433"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
+
+> [!WARNING]
+> Reprovação de relatório de comentários em 15 de abril de 2020 este relatório não terá mais suporte após 15 de abril de 2020. Os dados neste relatório não serão atualizados após essa data e o relatório será removido no futuro sem aviso prévio. Você pode continuar a exibir os comentários recebidos de seus clientes diretamente no Hub de comentários.
 
 O **relatório de comentários** no Partner Center permite que você veja os problemas, as sugestões e os votos que seus clientes do Windows 10 enviaram por meio do hub de comentários. Você pode exibir esses dados no Partner Center ou exportar os dados para exibição offline.
 
@@ -59,7 +62,7 @@ Ao lado de cada comentário, você verá a data em que os comentários foram dei
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 
 
-## <a name="translating-feedback"></a>Tradução de comentários
+## <a name="translating-feedback"></a>Traduzindo comentários
 
 Por padrão, os comentários que não foram gravados em seu idioma preferido são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
 
