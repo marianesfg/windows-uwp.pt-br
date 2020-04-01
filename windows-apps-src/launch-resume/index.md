@@ -6,12 +6,12 @@ ms.date: 10/04/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo, dispositivos conectados, sistemas remotos
 ms.localizationpriority: medium
-ms.openlocfilehash: 79f3f1d28294527d6987540a159baa31d663db4c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9280a240f35c2fdf5290c94d837e2fafc008dbfd
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371718"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80483013"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Início, retomada e tarefas em segundo plano
 
@@ -98,6 +98,7 @@ A seção [Tarefas em segundo plano](support-your-app-with-background-tasks.md) 
 | [Acessar sensores e dispositivos de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso. |
 | [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)       | Crie e registre uma tarefa em segundo plano que é executada no mesmo processo de seu aplicativo em primeiro plano. |
 | [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)           | Crie e registre uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo e registre-a para ser executada quando o aplicativo não estiver em primeiro plano. |
+| [Criar e registrar uma tarefa COM em segundo plano para um aplicativo winmain](create-and-register-a-winmain-background-task.md) | Crie uma tarefa COM em segundo plano que possa ser executada em seu processo principal ou fora do processo quando o aplicativo winmain empacotado não estiver em execução. |
 | [Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md) | Saiba como portar uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada no mesmo processo do seu aplicativo em primeiro plano.|
 | [Depurar uma tarefa em segundo plano](debug-a-background-task.md)                                                       | Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows. |
 | [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md) | Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo. |
