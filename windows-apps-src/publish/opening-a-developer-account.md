@@ -2,16 +2,16 @@
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
 description: Aqui está uma visão geral de como registrar-se para uma conta de desenvolvedor do Windows para Microsoft Store e outros programas da Microsoft no Partner Center.
-ms.date: 10/31/2018
+ms.date: 3/30/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d00fcee11b8cf813144a6f8ea021dc40829056d2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0ab3dcc5f774de6bd7ce422ecdcec61b26cc9a4b
+ms.sourcegitcommit: 9aef3bc26a56b8d266b3089d509f79b119234b6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259957"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80538198"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
@@ -24,6 +24,9 @@ Este artigo descreve como registrar-se para uma conta de desenvolvedor do Window
 
 > [!NOTE]
 > Em alguns casos, as telas e os campos que você vê ao se registrar para uma conta de desenvolvedor podem variar um pouco do que é descrito nas etapas a seguir. Mas as informações básicas e o processo corresponderão ao que essas etapas descrevem.
+
+> [!NOTE]
+> Há um problema conhecido em que os usuários em algumas localidades podem não conseguir concluir a conclusão do registro. Até que possamos confirmar que ela foi resolvida, recomendamos que você altere manualmente a marca de localidade do navegador para **en-US** depois de iniciar o processo de inscrição no Partner.Microsoft.com.
 
 1.  Acesse a [página de registro](https://developer.microsoft.com/store/register) e selecione **inscrever-se**.
 2.  Se você ainda não estiver conectado com uma conta da Microsoft, entre agora ou crie uma nova conta da Microsoft. O conta Microsoft usado aqui é o que você usará para entrar em sua conta de desenvolvedor.

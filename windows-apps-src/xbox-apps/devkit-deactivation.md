@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6e7b96e3b8b0cd6f47fdd97008aa8d90dc032fc4
+ms.sourcegitcommit: bee98f7a468c97c707de76afc14e1707c25f74f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651771"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531459"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Desativação do Modo de Desenvolvedor do Xbox One
 
@@ -70,11 +70,11 @@ Para redefinir o console, siga estas etapas:
    
     ![Redefinir e remover tudo](images/devkit-deactivation-4.png)
 
-## <a name="deactivate-your-console-using-partner-center"></a>Desativar seu console usando o Partner Center
+## <a name="deactivate-your-console-using-partner-center"></a>Desativar o console usando o Partner Center
 
-Se você não conseguir acessar seu console por algum motivo, você também poderá desativar o modo de desenvolvedor no seu console usando o Partner Center.
+Se não for possível acessar o console por qualquer motivo, você também poderá desativar o modo de desenvolvedor no seu console usando o Partner Center.
 
-1. Navegue até a [consoles gerenciar Xbox One](https://partner.microsoft.com/xboxdevices) página no Partner Center. Você será solicitado a entrar.
+1. Navegue até a página [gerenciar o Xbox One consoles](https://partner.microsoft.com/xboxconfig/devices) no Partner Center. Você pode ser solicitado a entrar.
 
 2. Localize o console que você deseja desativar na lista de consoles, correspondendo o número de série, a ID de console ou a ID de dispositivo.  
 
