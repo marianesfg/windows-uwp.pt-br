@@ -74,6 +74,10 @@
               href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
         - name: Conceder identidade a aplicativos da área de trabalho não empacotados
           href: apps/desktop/modernize/grant-identity-to-nonpackaged-apps.md
+    - name: Desenvolver para Windows 10X
+      items:
+        - name: Perguntas frequentes sobre o desenvolvimento para Windows 10X
+          href: apps/10x/faq.md
     - name: Sistema Fluent Design
       href: apps/fluent-design-system.md
     - name: Acessibilidade

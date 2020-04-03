@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 Description: Veja como publicar seus aplicativos do Windows na Microsoft Store.
 title: Publique aplicativos do Windows
 ms.date: 10/31/2018
@@ -7,258 +6,100 @@ ms.topic: article
 keywords: windows 10, uwp, publicação, publicar, venda, vender, distribuir, distribuição, store, painel
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: ac003cd0931f0ff320ba2906451c5eaf448eac78
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: 4d30eb37e9633496e510a2e05ec48cc819bd51c9
+ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826128"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614973"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicativos e jogos do Windows  
- 
-<p>Você pode usar <a href="https://partner.microsoft.com/dashboard">Partner Center</a> para publicar seus aplicativos e jogos para a Microsoft Store. <a href="https://developer.microsoft.com/store/register">Inscreva-se hoje mesmo.</a></p>
 
-<ul class="panelContent cardsK">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage bgdAccent1">
-                            <img src="//docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="App submission illustration" data-linktype="external" class="x-hidden-focus">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Envios de aplicativos</h3>
-                        <p>Descubra o que você precisa para criar um envio e certificar seu aplicativo.</p>
-                        <ul>
-                            <li><a href="app-submissions.md">Lista de verificação de envio do aplicativo</a></li>
-                            <li><a href="the-app-certification-process.md">O processo de certificação</a></li>                      
-                            <li><a href="store-policies.md">Políticas da Microsoft Store</a></li>   
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage bgdAccent1">
-                            <img src="//docs.microsoft.com/media/illustrations/bcs-partner-advanced-management- billing-7.svg" alt="Pricing illustration" data-linktype="external" class="x-hidden-focus">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Preço e disponibilidade</h3>
-                        <p>Personalize a disponibilidade de seu app com agendamento e preço, opões de visibilidade, preços promocionais e mais por mercado.</p>
-                        <ul>
-                            <li><a href="define-pricing-and-market-selection.md">Escolha seus mercados</a></li>
-                            <li><a href="set-and-schedule-app-pricing.md">Defina e agende o preço </a></li>
-                            <li><a href="configure-precise-release-scheduling.md">Configurar datas precisas do lançamento</a></li>
-                            <li><a href="set-app-pricing-and-availability.md">Veja todas as opções de disponibilidade</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage bgdAccent1">
-                            <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="Store listing illustration" data-linktype="external" class="x-hidden-focus">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Opções de listagem da Store</h3>
-                        <p>Forneça texto e ativos visuais que despertem a vontade de testar seu app nos clientes.</p>
-                        <ul>
-                            <li><a href="create-app-store-listings.md">Visão geral da listagem da Store</a></li>
-                            <li><a href="app-screenshots-and-images.md">Capturas de tela, imagens e trailers</a></li>
-                              <li><a href="import-and-export-store-listings.md">Gerencie listagens em massa </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-<ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_billing.svg" alt="Payment icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Pagamentos e relatórios</h3>                  
-                        <p><a href="getting-paid-apps.md">Recebendo pagamentos</a></p>
-                        <p><a href="in-app-ads.md">Anúncios no aplicativo</a></p>
-                        <p><a href="analytics.md">Relatórios analíticos</a></p>                   
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_whats-new.svg" alt="Promote icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Promova seus aplicativos</h3>   
-                        <p><a href="create-an-ad-campaign-for-your-app.md">Criar campanhas publicitárias</a></p>
-                        <p><a href="generate-promotional-codes.md">Gerar códigos promocionais</a></p>
-                        <p><a href="put-apps-and-add-ons-on-sale.md">Oferecer preço de venda</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_multi-connect.svg" alt="Multi-connect icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Interaja com os clientes</h3>
-                        <p><a href="create-customer-groups.md">Criar grupos de clientes</a></p>
-                        <p><a href="send-push-notifications-to-your-apps-customers.md">Enviar notificações por push</a></p>
-                        <p><a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">Criar ofertas direcionadas</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-<ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_configure-teams.svg" alt="Account icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Gerenciamento de usuários da conta</h3>                    
-                        <p><a href="associate-azure-ad-with-dev-center.md">Configurar o Azure AD</a></p>
-                        <p><a href="add-users-groups-and-azure-ad-applications.md">Adicionar usuários da conta</a></p>
-                        <p><a href="set-custom-permissions-for-account-users.md">Funções e permissões</a></p>                   
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_extend.svg" alt="Shopping cart icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Complementos (produtos no aplicativo)</h3>      
-                        <p><a href="add-on-submissions.md">Envios de complemento</a></p>
-                        <p><a href="../monetize/in-app-purchases-and-trials.md">Habilitar complementos no código do seu aplicativo</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="//docs.microsoft.com/media/common/i_continuous-testing.svg" alt="Test icon"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Estratégias de teste</h3>
-                        <p><a href="beta-testing-and-targeted-distribution.md">Teste beta e distribuição direcionada</a></p>
-                        <p><a href="choose-visibility-options.md#audience">Público-alvo particular</a></p>
-                        <p><a href="package-flights.md">Pacotes de pré-lançamento</a></p>
-                        <p><a href="gradual-package-rollout.md">Distribuição gradual</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-<ul class="cardsY panelContent featuredContent">
-    <li>
-        <a href="account-types-locations-and-fees.md">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img data-hoverimage="//docs.microsoft.com//media/common/i_preview.svg" src="//docs.microsoft.com//media/common/i_preview.svg" alt="Preview icon" />
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Tipos de conta, localizações e taxas</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="distribute-lob-apps-to-enterprises.md">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img data-hoverimage="//docs.microsoft.com/media/common/i_portal.svg" src="//docs.microsoft.com/media/common/i_portal.svg" alt="Web portal icon" />
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Distribuição LOB</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="//docs.microsoft.com/legal/windows/agreements/app-developer-agreement">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img data-hoverimage="//docs.microsoft.com/media/common/i_learn-about.svg" src="//docs.microsoft.com//media/common/i_learn-about.svg" alt="Agreement icon" />
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Contrato de Desenvolvedor de Aplicativos</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
+Você pode usar [Partner Center](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos para a Microsoft Store. [Inscreva-se hoje mesmo.](https://developer.microsoft.com/store/register)
 
+<br/>
+
+:::row:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="App submission illustration" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Envios de aplicativos</h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Descubra o que você precisa para criar um envio e certificar seu aplicativo.</p>
+        <br>
+        <a href="app-submissions.md">Lista de verificação de envio do aplicativo</a><br/>
+        <a href="the-app-certification-process.md">O processo de certificação</a><br/>
+        <a href="store-policies.md">Políticas da Microsoft Store</a><br/>
+        <a href="//docs.microsoft.com/legal/windows/agreements/app-developer-agreement">Contrato de Desenvolvedor de Aplicativos</a><br/>
+        <a href="distribute-lob-apps-to-enterprises.md">Distribuição de LOB</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management- billing-7.svg" alt="Pricing illustration" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Preço e disponibilidade</h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Personalize a disponibilidade de seu app com agendamento e preço por mercado, opões de visibilidade, preços promocionais e muito mais.</p>
+        <br>
+        <a href="define-pricing-and-market-selection.md">Escolha seus mercados</a><br/>
+        <a href="set-and-schedule-app-pricing.md">Defina e agende o preço </a><br/>
+        <a href="configure-precise-release-scheduling.md">Configurar datas precisas do lançamento</a><br/>
+        <a href="set-app-pricing-and-availability.md">Veja todas as opções de disponibilidade</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="Store listing illustration" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Opções de listagem da Store</h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Forneça texto e ativos visuais que despertem a vontade de testar seu app nos clientes.</p>
+        <br>
+        <a href="create-app-store-listings.md">Visão geral da listagem da Store</a><br/>
+        <a href="app-screenshots-and-images.md">Capturas de tela, imagens e trailers</a><br/>
+        <a href="import-and-export-store-listings.md">Gerencie listagens em massa </a><br/>
+    :::column-end:::
+:::row-end:::
+
+<br/>
+
+:::row:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="Payment icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Pagamentos e relatórios</h3>
+        <a href="account-types-locations-and-fees.md">Tipos de conta, localizações e taxas</a><br/>
+        <a href="getting-paid-apps.md">Recebendo pagamentos</a><br/>
+        <a href="in-app-ads.md">Anúncios no aplicativo</a><br/>
+        <a href="analytics.md">Relatórios analíticos</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-news-2.svg" alt="Promote icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Promova seus aplicativos</h3>
+        <a href="create-an-ad-campaign-for-your-app.md">Criar campanhas publicitárias</a><br/>
+        <a href="generate-promotional-codes.md">Gerar códigos promocionais</a><br/>
+        <a href="put-apps-and-add-ons-on-sale.md">Oferecer preço de venda</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="Multi-connect icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Interaja com os clientes</h3>
+        <a href="create-customer-groups.md">Criar grupos de clientes</a><br/>
+        <a href="send-push-notifications-to-your-apps-customers.md">Enviar notificações por push</a><br/>
+        <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">Criar ofertas direcionadas</a><br/>
+    :::column-end:::
+:::row-end:::
+
+<br/>
+
+:::row:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/bcs-user-management-add-customer-1.svg" alt="Account icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Gerenciamento de usuários da conta</h3>
+        <a href="associate-azure-ad-with-dev-center.md">Configurar o Azure AD</a><br/>
+        <a href="add-users-groups-and-azure-ad-applications.md">Adicionar usuários da conta</a><br/>
+        <a href="set-custom-permissions-for-account-users.md">Funções e permissões</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" alt="Shopping cart icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Complementos (produtos no aplicativo)</h3>
+        <a href="add-on-submissions.md">Envios de complemento</a><br/>
+        <a href="../monetize/in-app-purchases-and-trials.md">Habilitar complementos no código do seu aplicativo</a><br/>
+    :::column-end:::
+    :::column:::
+        <img src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" alt="Test icon" />
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Estratégias de teste</h3>
+        <a href="beta-testing-and-targeted-distribution.md">Teste de versão beta e distribuição direcionada</a></br/> <a href="choose-visibility-options.md#audience">Público privado</a><br/>
+        <a href="package-flights.md">Pacotes de pré-lançamento</a><br/>
+        <a href="gradual-package-rollout.md">Distribuição gradual</a><br/>
+    :::column-end:::
+:::row-end:::

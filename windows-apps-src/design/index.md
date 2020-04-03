@@ -7,13 +7,12 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-layout: LandingPage
-ms.openlocfilehash: a1a828bc3ade8d7eee977387149c0577bb43122a
-ms.sourcegitcommit: 701955a4e4b42a05606198a2f9a9e8df2ca3ab60
+ms.openlocfilehash: a2c674d95ea9fb9a8efb41cdcb0d991f26fe52c5
+ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65615699"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614989"
 ---
 # <a name="design-and-code-windows-apps"></a>Design e código de aplicativos do Windows
 
@@ -21,21 +20,20 @@ ms.locfileid: "65615699"
 
 Design fluente e exemplos de código de UI para a criação de experiências de aplicativo no Windows 10.
 
-
 :::row:::
     :::column:::
         <a href="downloads/index.md">
             <img src="images/downloads-1x.png" alt="Design downloads" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="downloads/index.md">Design downloads</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Get design toolkits and samples.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="downloads/index.md">Downloads de design</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Obtenha kits de ferramentas de design e amostras.</p>
     :::column-end:::
     :::column:::
         <a href="basics/index.md">
             <img src="images/basics-1x.png" alt="Design basics" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="basics/index.md">Design basics</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">An introduction to app design and the Fluent Design System.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="basics/index.md">Noções básicas de design</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Uma introdução ao design de aplicativo e ao sistema Design Fluente.</p>
     :::column-end:::
 :::row-end:::
 
@@ -61,15 +59,15 @@ Design fluente e exemplos de código de UI para a criação de experiências de 
         <a href="style/index.md">
             <img src="images/style-1x.png" alt="Style" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="style/index.md">Style</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Make your app stand out with color, typography, acrylic, and reveal.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="style/index.md">Estilo</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Destaque seu aplicativo com cor, tipografia, acrílico e revelação.</p>
     :::column-end:::
     :::column:::
         <a href="motion/index.md">
             <img src="images/motion-1x.png" alt="Motion" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="motion/index.md">Motion</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Bring your app to life with animations and transitions.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="motion/index.md">Movimento</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Dê vida ao seu aplicativo com animações e transições.</p>
     :::column-end:::
 :::row-end:::
 
@@ -79,14 +77,14 @@ Design fluente e exemplos de código de UI para a criação de experiências de 
             <img src="images/shell-1x.png" alt="Shell" />
         </a><br/>
         <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="shell/tiles-and-notifications/creating-tiles.md">Shell</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Create tiles for launching your app and displaying notifications.</p>
+        <p style="margin-top: 0px; margin-bottom: 50px">Crie blocos para iniciar seu aplicativo e exibir notificações.</p>
     :::column-end:::
     :::column:::
         <a href="input/index.md">
             <img src="images/inputs-1x.png" alt="Input and interactions" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="input/index.md">Input and interactions</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Optimize your app for pen, Surface dial, and other input types.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="input/index.md">Entrada e interações</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Otimize seu aplicativo para caneta, Surface Dial e outros tipos de entrada.</p>
     :::column-end:::
 :::row-end:::
 
@@ -95,14 +93,14 @@ Design fluente e exemplos de código de UI para a criação de experiências de 
         <a href="devices/index.md">
             <img src="images/devices-1x.png" alt="Devices" />
         </a><br />
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="devices/index.md">Devices</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Learn about the spectrum of Windows 10 devices and how to optimize for them.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="devices/index.md">Dispositivos</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Saiba mais sobre a gama de dispositivos Windows 10 e como otimizá-los.</p>
     :::column-end:::
     :::column:::
         <a href="usability/index.md">
             <img src="images/usability-1x.png" alt="Usability" />
         </a><br/>
-        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="usability/index.md">Usability</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">Make your app inclusive and accessible to people around the world.</p>
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="usability/index.md">Usabilidade</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Torne seu aplicativo inclusivo e acessível para pessoas ao redor do mundo.</p>
     :::column-end:::
 :::row-end:::

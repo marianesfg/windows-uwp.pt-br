@@ -2,18 +2,17 @@
 description: Saiba como tornar seu aplicativo inclusivo e acessível para pessoas ao redor do mundo.
 keywords: acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade
 title: Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows
-layout: LandingPage
 template: detail.hbs
 ms.date: 10/18/2017
 ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: a6912932b7ad71fd3d04c038eab7e0aa4dd6cb11
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: c725839a29c093c78eb977538da4c43d906051c6
+ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076389"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614956"
 ---
 # <a name="usability-for-uwp-apps"></a>Usabilidade para aplicativos UWP
 
@@ -179,13 +178,24 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
 
 As configurações do aplicativo permitem que o usuário personalize seu aplicativo, otimizando-o para suas necessidades e preferências individuais. Fornecer as configurações certas e armazená-las adequadamente podem tornar uma experiência de usuário ótima ainda melhor.
 
-<ul class="panelContent cardsH" style="margin-left: 1px">
+:::row:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../app-settings/guidelines-for-app-settings.md">Diretrizes</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Práticas recomendadas para criar e exibir configurações de aplicativo.</p>
+    :::column-end:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../app-settings/store-and-retrieve-app-data.md">Armazenar e recuperar dados de aplicativo</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Como armazenar e recuperar dados de aplicativo locais, em roaming e temporários.</p>
+    :::column-end:::
+:::row-end:::
+
+<!-- <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../app-settings/guidelines-for-app-settings.md">Diretrizes</a></b><br/>Práticas recomendadas para criar e exibir configurações de aplicativo.</p>
+<p><b><a href="../app-settings/guidelines-for-app-settings.md">Guidelines</a></b><br/>Best practices for creating and displaying app settings.</p>
                     </div>
                 </div>
             </div>
@@ -196,13 +206,13 @@ As configurações do aplicativo permitem que o usuário personalize seu aplicat
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../app-settings/store-and-retrieve-app-data.md">Armazene e recupere dados de aplicativo</a></b><br/>Como armazenar e recuperar dados de aplicativo locais, em roaming e temporários.</p>
+<p><b><a href="../app-settings/store-and-retrieve-app-data.md">Store and retrieve app data</a></b><br/>How to store and retrieve local, roaming, and temporary app data.</p>
                     </div>
                 </div>
             </div>
         </div>
     </li>
-</ul>
+</ul> -->
 
 ## <a name="globalization-and-localization"></a>Globalização e localização
 
@@ -213,13 +223,34 @@ O Windows é usado no mundo todo por públicos diversificados em termos de idiom
 ## <a name="in-app-help"></a>Ajuda no aplicativo
 Não importa quão bem você projetou o aplicativo, alguns usuários precisarão de um pouco mais de ajuda.
 
-<ul class="panelContent cardsH" style="margin-left: 1px">
+:::row:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../in-app-help/guidelines-for-app-help.md">Diretrizes da ajuda ao aplicativo</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários.</p>
+    :::column-end:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../in-app-help/instructional-ui.md">Interface do usuário instrucional</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Às vezes, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa descobrir e usar os recursos que talvez tenha ignorado.</p>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../in-app-help/in-app-help.md">Ajuda no aplicativo</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+    :::column-end:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../in-app-help/external-help.md">Ajuda externa</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+    :::column-end:::
+:::row-end:::
+
+<!-- <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/guidelines-for-app-help.md">Diretrizes da ajuda do aplicativo</a></b><br/>Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários.
+<p><b><a href="../in-app-help/guidelines-for-app-help.md">Guidelines for app help</a></b><br/>Applications can be complex, and providing effective help for your users can greatly improve their experience.
 </p>
                     </div>
                 </div>
@@ -231,7 +262,7 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/instructional-ui.md">Interface do usuário instrucional</a></b><br/>Às vezes, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa descobrir e usar os recursos que talvez tenha ignorado.</p>
+<p><b><a href="../in-app-help/instructional-ui.md">Instructional UI</a></b><br/>Sometimes it can be helpful to teach the user about functions in your app that might not be obvious to them, such as specific touch interactions. In these cases, you need to present instructions to the user through the UI so they can discover and use features they might have missed.</p>
                     </div>
                 </div>
             </div>
@@ -242,7 +273,7 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/in-app-help.md">Ajuda no aplicativo</a></b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+<p><b><a href="../in-app-help/in-app-help.md">In-app help</a></b><br/>Most of the time, it's best for help to be displayed within the app, and to be displayed when the user chooses to view it. Consider the following guidelines when creating in-app help.</p>
                     </div>
                 </div>
             </div>
@@ -253,11 +284,11 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../in-app-help/external-help.md">Ajuda externa</a></b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+<p><b><a href="../in-app-help/external-help.md">External help</a></b><br/>Most of the time, it's best for help to be displayed within the app, and to be displayed when the user chooses to view it. Consider the following guidelines when creating in-app help.</p>
                     </div>
                 </div>
             </div>
         </div>
     </li>        
-</ul>
+</ul> -->
 
