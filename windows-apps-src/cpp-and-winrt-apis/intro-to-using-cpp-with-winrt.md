@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 250e3626c5abee43cf3b8ca3320c78ec4f8f9751
+ms.sourcegitcommit: 7dcf74b11aa0cb2f3ff4ab10caf26ba769f96dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209131"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662381"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -62,7 +62,7 @@ Da 2.0 em diante, o pacote NuGet **Microsoft.Windows.CppWinRT** inclui a ferrame
 
 Com o C++/WinRT, você também pode implementar suas próprias classes de runtime usando o C++ padrão, sem precisar recorrer à programação de estilo COM. Para uma classe de runtime, você descreve apenas os tipos em um arquivo IDL e `midl.exe` e `cppwinrt.exe` geram os arquivos de código-fonte clichê de implementação para você. Você também pode implementar apenas interfaces derivando uma classe base do C++/WinRT. Para obter mais informações, confira [Criar APIs com C++/WinRT](author-apis.md).
 
-Para obter uma lista de opções de personalização para o conjunto de ferramentas `cppwinrt.exe` por meio das propriedades do projeto, confira o [arquivo Leiame](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
+Para obter uma lista de opções de personalização para o conjunto de ferramentas `cppwinrt.exe` por meio das propriedades do projeto, confira o [arquivo Leiame](https://github.com/microsoft/cppwinrt/blob/master/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
 
 Você pode identificar um projeto que usa o suporte do MSBuild C++/WinRT pela presença do pacote NuGet **Microsoft.Windows.CppWinRT** instalado dentro do projeto.
 
