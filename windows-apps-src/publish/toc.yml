@@ -54,7 +54,7 @@
           href: ../publish/app-package-requirements.md
         - name: Numeração de versão do pacote
           href: ../publish/package-version-numbering.md
-        - name: Idiomas compatíveis
+        - name: Idiomas com suporte
           href: ../publish/supported-languages.md
         - name: Orientação para gerenciamento do pacote de aplicativo
           href: ../publish/guidance-for-app-package-management.md
@@ -189,7 +189,7 @@
       href: ../publish/setting-up-your-payout-account-and-tax-forms.md
     - name: 'Intervalos de tempo, métodos e limites de pagamento'
       href: ../publish/payment-thresholds-methods-and-timeframes.md
-    - name: Resumo do pagamento
+    - name: Relatórios de pagamento
       href: ../publish/payout-summary.md
     - name: Detalhes de imposto
       href: ../publish/tax-details-for-paid-apps.md
