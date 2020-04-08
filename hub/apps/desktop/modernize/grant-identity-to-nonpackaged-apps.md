@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ae05a00cac19fdd349aa48160b88cde6b84e26b0
-ms.sourcegitcommit: 620e4a51e2486ec2cb7190176b3d9bf3d7b5b6af
+ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
+ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78222022"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588714"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Conceder identidade a aplicativos da área de trabalho não empacotados
 
@@ -124,7 +124,7 @@ Depois de criar o manifesto do pacote, compile o pacote esparso usando a [ferram
 O exemplo a seguir demonstra como criar um pacote esparso na linha de comando.  
 
 ```Console
-MakeAppx.exe  pack  /d  <path to directory that contains manifest>  /p  <output path>\MyPackage.msix  /nv
+MakeAppx.exe pack /d <path to directory that contains manifest> /p <output path>\MyPackage.msix /nv
 ```
 
 Antes que o pacote esparso possa ser instalado com êxito em um computador de destino, você precisa conectá-lo com um certificado confiável no computador de destino. Você pode criar um certificado autoassinado para fins de desenvolvimento e assinar o pacote esparso usando [SignTool](https://docs.microsoft.com/windows/msix/package/sign-app-package-using-signtool), que está disponível no SDK do Windows.
@@ -132,7 +132,7 @@ Antes que o pacote esparso possa ser instalado com êxito em um computador de de
 O exemplo a seguir demonstra como assinar um pacote esparso na linha de comando.
 
 ```Console
-SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <certificate password>  <path to sparse package>\MyPackage.msix
+SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx /p <certificate password> <path to sparse package>\MyPackage.msix
 ```
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>Adicionar os metadados do identificador de pacote ao manifesto do aplicativo da área de trabalho
