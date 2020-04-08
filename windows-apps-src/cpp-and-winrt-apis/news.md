@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, novidades, o que há, de novo
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 734544a1294c6a97e70afcbf7ce6b5efc13cf841
-ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
+ms.openlocfilehash: 3057a3d13ba1e7d368dd6bf8820710030687a04d
+ms.sourcegitcommit: 7dcf74b11aa0cb2f3ff4ab10caf26ba769f96dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79448587"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662416"
 ---
 # <a name="whats-new-in-cwinrt"></a>O que há de novo no C++/WinRT
 
@@ -89,7 +89,7 @@ Para obter mais informações sobre a [Extensão de C++WinRT Visual Studio VSIX]
 
 - A ferramenta `cppwinrt.exe` agora está incluída no pacote do NuGet Microsoft.Windows.CppWinRT e a ferramenta gera cabeçalhos de projeção de plataforma para cada projeto sob demanda. Assim, a ferramenta `cppwinrt.exe` não depende mais do SDK do Windows (embora a ferramenta ainda seja fornecida com o SDK por razões de compatibilidade).
 - O `cppwinrt.exe` agora gera os cabeçalhos de projeção sob cada pasta intermediária específica da plataforma/configuração ($IntDir) para habilitar builds paralelos.
-- O suporte de build C++/WinRT (propriedades/destinos) agora está totalmente documentado, caso você queira personalizar manualmente seus arquivos de projeto. Confira o [arquivo Leiame](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
+- O suporte de build C++/WinRT (propriedades/destinos) agora está totalmente documentado, caso você queira personalizar manualmente seus arquivos de projeto. Confira o [arquivo Leiame](https://github.com/microsoft/cppwinrt/blob/master/nuget/readme.md#customizing) do pacote NuGet Microsoft.Windows.CppWinRT.
 - Diversas correções de bugs foram feitas.
 
 ### <a name="changes-to-cwinrt-for-version-20"></a>Alterações ao C++/WinRT para a versão 2.0
@@ -98,7 +98,7 @@ Para obter mais informações sobre a [Extensão de C++WinRT Visual Studio VSIX]
 
 A ferramenta `cppwinrt.exe` pega um arquivo de metadados do Windows Runtime (`.winmd`) e gera uma biblioteca C++ padrão baseada em arquivo de cabeçalho que *projeta* as APIs descritas nos metadados. Dessa forma, você pode consumir essas APIs de seu código C++/WinRT.
 
-Essa ferramenta agora é um projeto totalmente de software livre, disponível no GitHub. Visite [Microsoft\/xlang](https://github.com/Microsoft/xlang) e clique em **src** > **ferramenta** > **cppwinrt**.
+Essa ferramenta agora é um projeto totalmente de software livre, disponível no GitHub. Visite [Microsoft\/cppwinrt](https://github.com/microsoft/cppwinrt).
 
 #### <a name="xlang-libraries"></a>Bibliotecas xlang
 

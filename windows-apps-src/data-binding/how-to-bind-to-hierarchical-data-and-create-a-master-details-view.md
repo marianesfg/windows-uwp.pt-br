@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes
+title: Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 description: Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias CollectionViewSource que são associadas em uma cadeia.
 ms.date: 02/08/2017
 ms.topic: article
@@ -8,16 +8,16 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b6ab96ac5423d1811618c6a3c91ccf56645664
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74255121"
 ---
-# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
 
 
-> **Observe**  também consulte o [exemplo mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail).
+> **Observação**  Confira também o [Exemplo de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail).
 
 Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que são associadas em uma cadeia. Neste tópico, usamos a [extensão de marcação {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) onde possível, e a [extensão de marcação {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) mais flexível (mas menos eficiente) onde necessário.
 

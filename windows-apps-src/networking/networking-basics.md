@@ -6,17 +6,17 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d6bafc9a21e3950974615078af24989aab7da9e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1cf9d4866ddb72da0a284bcdcff07e3420f2880e
+ms.sourcegitcommit: 4657ac3be576b1d6dcd938d73a2f6a7e060ab17b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259188"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80404912"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
 
-## <a name="capabilities"></a>Funcionalidades
+## <a name="capabilities"></a>Capacidades
 Para usar a rede, você deve adicionar elementos de recurso apropriados ao manifesto do aplicativo. Se nenhum recurso de rede for especificado no manifesto do aplicativo, o aplicativo não terá nenhum recurso de rede, e qualquer tentativa de conexão com a rede falhará.
 
 Estes são os recursos de rede mais usados.
@@ -460,13 +460,13 @@ Além da criptografia TLS/SSL, um servidor por exigir um valor de cabeçalho **S
 
 Caso a solicitação inicial do cliente não contenha esse valor ou forneça um valor que não corresponde ao esperado pelo servidor, o valor esperado será enviado do servidor para o cliente no erro de handshake WebSocket.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticação
 Como fornecer as credenciais de autenticação ao conectar-se pela rede.
 
-### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado cliente com a classe StreamSocket
-A classe [**Windows.Networking.StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o aplicativo se comunica. Em certos casos, o aplicativo também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado cliente sobre o objeto [**StreamSocket.Control**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketControl) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
+### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecer um certificado cliente com a classe StreamSocket
+A classe [**Windows.Networking.Sockets.StreamSocket**](/uwp/api/windows.networking.sockets.streamsocket) dá suporte ao uso de SSL/TLS para autenticar o servidor com o qual o aplicativo se comunica. Em certos casos, o aplicativo também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado cliente sobre o objeto [**StreamSocket.Control**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketControl) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
 
-Aqui está um trecho de código mostrando como implementar isso:
+Aqui está um snippet mostrando como implementar isso:
 
 ```csharp
 var socket = new StreamSocket();

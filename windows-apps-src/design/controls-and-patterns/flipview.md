@@ -11,21 +11,24 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ff6031878b9189ca3794e2a9c68c85b76e5d21a7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ef17fdc69f7a9f25831c5c17419768ff32874f80
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257438"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080944"
 ---
 # <a name="flip-view"></a>Exibição de inversão
 
- 
-
 Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem na passagem do mouse. No teclado, as teclas de seta movem a coleção.
 
-> **APIs importantes**: [Classe FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [propriedade ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propriedade ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
+**Obter a biblioteca de interface do usuário do Windows**
 
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de Interface do Usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs de plataforma:** [Classe FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [propriedade ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propriedade ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -36,7 +39,7 @@ O recurso exibição de inversão é melhor para examinar imagens em coleções 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/FlipView">abri-lo e ver o FlipView em ação</a>.</p>
     <ul>

@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74257874"
@@ -27,7 +27,7 @@ Seu computador deve atender aos seguintes requisitos:
 
 CPU (essas configurações, se disponíveis, podem ser habilitadas no BIOS)
 
--   Virtualização assistida por hardware ([verificar compatibilidade](https://www.microsoft.com/download/details.aspx?id=592)).
+-   Virtualização assistida por hardware ([verificar a compatibilidade](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Conversão de Endereços de Segundo Nível (SLAT).
 -   Prevenção de Execução de Dados baseados em hardware (DEP).
 
@@ -43,26 +43,26 @@ Sistema operacional
 
 Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emulador para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105)).
 
-Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança**e, em seguida, selecione **Sistema**.
+Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança** e, em seguida, selecione **Sistema**.
 
-O Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; Ele não é compatível com versões anteriores do Visual Studio.
+O Emulador Microsoft para Windows 10 Mobile requer o Visual Studio 2015; ele não é compatível com versões anteriores do Visual Studio.
 
 O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos direcionados à versão de sistema operacional do Windows Phone que seja anterior ao Windows Phone 7.1.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalando, desinstalando e executando o emulador
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalar, desinstalar e executar o emulador
 
 ### <a name="installing"></a>Instalando o
-O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [Página de transferência do Visual Studio](https://developer.microsoft.com/windows/downloads).
+O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [página de download do Visual Studio](https://developer.microsoft.com/windows/downloads).
 
-Você também pode instalar o Emulador Microsoft para Windows 10 Mobile usando a [Instalação do Emulador da Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
+Também é possível instalar o Emulador Microsoft para Windows 10 Mobile usando a [instalação do Microsoft Emulator](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
-### <a name="uninstalling"></a>Desinstalando
+### <a name="uninstalling"></a>Desinstalação
 
 Você pode desinstalar o Emulador da Microsoft para Windows 10 Mobile usando a opção instalar/reparar do Visual Studio. Ou você pode usar a opção **Programas e Recursos** no **Painel de Controle** para remover o emulador.
 
 Quando você desinstala o Emulador da Microsoft para Windows 10 Mobile, o adaptador Ethernet Hyper-V Virtual que foi criado para o emulador usar não é removido automaticamente. Você pode remover manualmente esse adaptador virtual a partir de **Conexões de Rede** no **Painel de Controle**.
 
-### <a name="running"></a>Running
+### <a name="running"></a>Em execução
 
 Para executar um aplicativo no emulador, basta selecionar um dispositivo emulado no menu suspenso **executar** no Visual Studio.
 
@@ -94,7 +94,7 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 
     No emulador que está sendo executado, vá ao aplicativo **Configurações**, selecione as configurações do **sistema** e, em seguida, selecione **idioma** ou **região**. Altere as configurações que você deseja testar. Se for solicitado, clique em **reiniciar telefone** para aplicar a nova configuração e reiniciar o emulador.
 
--   **Ciclo de vida do aplicativo e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
+-   **Ciclo de vida da aplicação e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
 
 -   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)** . Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
 
@@ -109,7 +109,7 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 Teste os seguintes recursos apenas em um dispositivo físico.
 
 -   Bússola
--   Giroscópio
+-   Girômetro
 -   Controle de vibração
 -   Brilho. O nível do brilho do emulador é sempre Alto.
 -   Vídeo em alta resolução. Vídeos com uma resolução superior à resolução VGA (640 x 480) não podem ser exibidos com confiança, especialmente em imagens do emulador com somente 512 MB de memória.
@@ -177,7 +177,7 @@ Em todos os modos, a janela do emulador tem três áreas de interesse.
 -   A parte superior direita lista os logs. Quando você toca um dispositivo no outro (ou toca em um terminal de PDV), o evento de toque é registrado; quando os dispositivos são separados, o evento de cancelamento de toque é registrado. Esta seção também registra se seu aplicativo respondeu antes de a conexão ser interrompida, ou qualquer outra ação que você tenha executado na interface do usuário do emulador com carimbos de data/hora. Os logs são persistentes entre as alternâncias de modos, e você pode limpá-los a qualquer momento clicando no botão **Limpar** situado acima da tela de **Logs**.
 -   A metade inferior da tela é o log de mensagens e mostra a transcrição de todas as mensagens enviadas ou recebidas pela conexão selecionada no momento, dependendo do modo selecionado.
 
-> **Importante**  ao iniciar pela primeira vez a ferramenta Tapper, você receberá um prompt do firewall do Windows. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
+> **Importante**  Ao iniciar a ferramenta de toque pela primeira vez, você receberá uma solicitação do Firewall do Windows. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
 
 Depois de iniciar o instalador de início rápido, certifique-se de seguir as instruções acima e marque todas as três caixas de seleção na solicitação do firewall. Além disso, a ferramenta de toque deve ser instalada e usada no mesmo computador host físico que o Emulador da Microsoft.
 
@@ -232,7 +232,7 @@ No modo de Emulação de Cartão de Host (HCE), você pode testar seu aplicativo
 -   Exclua seus scripts selecionando o script no menu suspenso e clicando no botão **Excluir**.
 -   A ferramenta do emulador não verifica a sintaxe dos scripts até que você execute o script usando o botão **Reproduzir**. As mensagens enviadas pelo script dependem da implementação do seu aplicativo de emulação de cartão.
 
-Você também pode usar a ferramenta de simulador de terminal da MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) para o teste de aplicativos de pagamentos.
+Também é possível usar a ferramenta de simulador de terminal da MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) para o teste de aplicativos de pagamentos.
 
 -   Marque a caixa de seleção de ouvinte **Habilitar MasterCard** abaixo das janelas do editor de script e inicie o simulador da MasterCard.
 -   Usando a ferramenta, você pode gerar comandos que são retransmitidos ao seu aplicativo em execução no emulador por meio da ferramenta de NFC.
@@ -299,7 +299,7 @@ Você pode testar o sensor do acelerômetro com os dados ao vivo ou os dados pr�
 
 2.  -   Selecione o tipo de entrada.
 
-        **Para executar a simulação com entrada ao vivo**
+        **Para executar a simulação com a entrada ao vivo**
 
         Na metade do simulador acelerômetro, arraste o ponto colorido para simular o movimento do dispositivo em um plano 3D.
 
@@ -307,7 +307,7 @@ Você pode testar o sensor do acelerômetro com os dados ao vivo ou os dados pr�
 
         Opcionalmente, clique em **Reiniciar** para restaurar a orientação de início.
 
-    -   **Para executar a simulação com entrada gravada**
+    -   **Para executar a simulação com a entrada gravada**
 
         Na seção **Dados gravados** clique no botão **Reproduzir** para começar a reproduzir os dados simulados. A única opção disponível na lista **Dados gravados** está desabilitada. O simulador não se move na tela quando os dados estão sendo reproduzidos.
 
@@ -356,13 +356,13 @@ Em todos os modos do simulador de localização, você pode selecionar os seguin
 | Suburbano | Assume que o posicionamento do satélite é relativamente bom e há uma boa densidade de torres de celulares, mas a densidade dos pontos de acesso de Wi-Fi não é boa.  |
 | Rural    | Assume que o posicionamento de satélite é bom, mas há uma baixa densidade de torres de celulares e quase nenhum ponto de acesso Wi-Fi que possa ser usado para posicionar. |
 
-**Perfis de velocidade**
+**Velocidade dos perfis**
 
 No modo **Rota** você pode selecionar um dos seguintes perfis de velocidade na lista suspensa.
 
 | Perfil | Velocidade por hora               | Velocidade por segundo | Descrição | 
 |---------|------------------------------|------------------|-------------|
-| Limite de velocidade | Limite de velocidade da rota | Não aplicável   | Atravessa a rota no limite de velocidade postado. |
+| Limite de velocidade | Limite de velocidade da rota | Não Aplicável   | Atravessa a rota no limite de velocidade postado. |
 | Caminhada     | 5 km/h                   | 1,39 m           | Atravessa a rota em um passo de caminhada natural de 5 km/h. |
 | Pedalando      | 25 km/h                  | 6,94 m           | Atravessa a rota em uma pedalada natural de 25 km/h. |
 | Rápido        |                          |                  |Atravessa a rota mais rápido do que o limite de velocidade postado. | 
@@ -408,7 +408,7 @@ O recurso de simulação de rede lhe ajuda a ter certeza de que seu aplicativo r
 
 3.  Na lista suspensa, **Força do sinal**, selecione uma das seguintes opções:
     -   Bom
-    -   Médio
+    -   Média
     -   Pobre
 
 4.  Limpe o **Habilitar a simulação de rede** para restaurar o comportamento padrão, que utiliza as configurações de rede de seu computador de desenvolvimento.
@@ -440,9 +440,9 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
 
 3.  Opcionalmente, selecione ou limpe **arquivos atualizados sincronizados para a pasta local quando eu ejeto o cartão SD**.
 
-    A opção está habilitada por padrão. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
+    Por padrão, essa opção é ativada. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
 
-4.  **Ejetar o cartão SD**.
+4.  **Ejete o cartão SD**.
 
     Clique em **Ejetar o cartão SD**. Quando você ejetar o cartão SD, as seguintes coisas acontecem:
 
@@ -452,7 +452,7 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
         -   Se você clicar em **Cancelar sincronização** enquanto a operação de sincronização está em progresso, o cartão é ejetado e os resultados da operação de sincronização são incompletas.
     -   O botão **Ejetar cartão SD** altera para **Inserir cartão SD**.
 
-> **Observe**  como um cartão SD usado pelo telefone é formatado com o sistema de arquivos FAT32, 32 GB é o tamanho máximo.
+> **Observação**  Como um cartão SD usado pelo telefone é formatado com um sistema de arquivos FAT32, 32 GB é o tamanho máximo.
 
 A velocidade de leitura e escrita para o cartão SD simulado é projetada para imitar as velocidades do mundo real. Acessar o cartão SD é mais lento do que acessar o disco rígido do computador.
 
@@ -462,7 +462,7 @@ Envie notificações por push para seu aplicativo usando a aba **Notificações*
 
 Você pode testar facilmente as notificações por push sem criar o serviço de nuvem que é requerido após você publicar seu aplicativo.
 
-1.  **Habilitar simulação.**
+1.  **Habilite a simulação.**
 
     Após selecionar **Habilitado**, todos os aplicativos implantados no emulador usam o motor de simulação em vez do serviço WNS ou MPN até que você desabilite a simulação.
 
@@ -492,7 +492,7 @@ Você pode testar facilmente as notificações por push sem criar o serviço de 
             Quando seu aplicativo usa notificações WNS e você seleciona o tipo de notificação **Notificação do sistema** a aba simulação exibe a **Tag** e os campos **Grupo**. Você pode selecionar estas opções e inserir os valores **Tag** e **Grupo** para gerenciar as notificações do sistema no Centro de Notificações.
 
         -   Tile
-        -   Notificação
+        -   Badge
 
     -   As seguintes notificações MPN são suportadas.
 
@@ -506,7 +506,7 @@ Você pode testar facilmente as notificações por push sem criar o serviço de 
 
     A simulação suporta todos os tipos de modelos.
 
-6.  **Opcionalmente, altere a carga de notificação.**
+6.  **Como opção, altere o conteúdo da notificação.**
 
     Após selecionar um modelo na lista **Modelos** a caixa de texto **Carga útil de notificação** é automaticamente preenchida com uma amostra de carga útil para o modelo. Revise a amostra de carga útil na caixa de texto **Carga útil de notificação**.
 
@@ -545,7 +545,7 @@ Você pode habilitar ou desabilitar os seguintes hardwares de sensores opcionais
 
 -   Sensor de luz ambiente
 -   Câmera frontal
--   Giroscópio
+-   Girômetro
 -   Bússola (magnetômetro)
 -   NFC
 -   Botões de software (apenas em imagens de emuladores de alta resolução)
@@ -589,7 +589,7 @@ O seguinte quadro descreve cada taxa de fotogramas.
 | Contador de superfície intermediária                 | O número de superfícies implícitas geradas como um resultado de superfícies em cache.    |
 | Contador de taxa de preenchimento de tela                     | O número de pixels sendo pintado por quadro em termos de tela. Um valor de 1 representa o número de pixels na resolução de tela atual – por exemplo, 480 x 800 pixels. |
 
-**Habilitando e desabilitando os contadores de taxa de quadros**
+**Habilitar e desabilitar os contadores de taxa de quadros**
 
 Você pode habilitar ou desabilitar a tela das taxas de fotogramas em seu código. Quando você cria um projeto de aplicativo do Windows Phone em Visual Studio, o seguinte código para habilitar as taxas de fotogramas é adicionado por padrão no arquivo App.xaml.cs. Para desabilitar os contadores de taxa de quadros, defina **EnableFrameRateCounter** como **false** ou comente a linha de código.
 
@@ -621,23 +621,23 @@ A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas 
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
 
-Em determinadas situações, incluindo após a atualização para um novo vôo do Windows 10, um comutador de rede virtual associado ao emulador pode entrar em um estado em que ele não pode ser excluído por meio da interface do usuário.
+Em determinadas situações, inclusive depois de atualizar para uma nova versão piloto do Windows 10, um comutador de rede virtual associado ao emulador pode entrar em um estado no qual ele não pode ser excluído pela interface do usuário.
 
 Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação.
 
-**Observação**  este comando excluirá todos os dispositivos de rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
+**Observação**  Esse comando excluirá todos os dispositivos em rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
  
 ### <a name="unable-to-launch-the-emulators"></a>Não é possível iniciar os emuladores
 
 O Emulador Microsoft inclui o arquivo XDECleanup.exe, uma ferramenta que exclui todas as VMs, discos diff e comutadores de rede específicos ao emulador, e já inclui os binários do emulador (XDE). Você deve usar essa ferramenta para limpar VMs do emulador caso elas entrem em um estado inválido. Execute a ferramenta em um prompt de comando de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Observe**  XDECleanup. exe exclui todas as VMs do Hyper-V específicas do emulador e também exclui os pontos de verificação da VM ou os Estados salvos.
+> **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador e também exclui pontos de verificação de VM ou estados salvos.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Desinstalar a imagem do Windows 10 para dispositivos móveis
 
-Quando você instala o emulador, uma imagem VHD do Windows 10 para dispositivos móveis é instalada, a qual recebe sua própria entrada na lista **Programas e Recursos** no Painel de Controle. Se você quiser desinstalar a imagem, localize o **Windows 10 para Mobile Image-\<versão\>** na lista de programas instalados, clique com o botão direito do mouse nele e escolha **desinstalar**.
+Quando você instala o emulador, uma imagem VHD do Windows 10 para dispositivos móveis é instalada, a qual recebe sua própria entrada na lista **Programas e Recursos** no Painel de Controle. Se desejar desinstalar a imagem, procure o item **Imagem do Windows 10 Mobile –\<versão\>** na lista de programas instalados, clique nele com o botão direito do mouse e escolha **Desinstalar**.
 
-Na versão atual, você deve, em seguida, excluir manualmente o arquivo VHD do emulador. Se você instalou o emulador no caminho padrão, o arquivo VHD estará em C:\\arquivos de programas (x86)\\kits do Windows\\10\\emulação\\Mobile\\\<versão\>\\flash. vhd.
+Na versão atual, você deve, em seguida, excluir manualmente o arquivo VHD do emulador. Se você instalou o emulador no caminho padrão, o arquivo VHD está em C:\\Arquivos de Programas (x86)\\Windows Kits\\10\\Emulation\\Mobile\\\<versão\>\\flash.vhd.
 
 ### <a name="how-to-disable-hardware-accelerated-graphics"></a>Como desabilitar elementos gráficos acelerados de hardware
 
@@ -645,14 +645,14 @@ Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de 
 
 Para desativar a aceleração de hardware:
 
-1. Inicie o Editor do registro.
-2. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+1. Abra o Editor do Registro.
+2. Se não existir, crie a subchave de Registro a seguir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
 4. Clique em **DisableRemoteFx** e pressione Enter.
 5. Clique duas vezes em **DisableRemoteFx**, digite 1 na caixa de dados **Valor**, selecione a opção **Decimal** e, em seguida, clique em **OK**.
 6. Feche o Editor do Registro.
 
-**Observação:** depois de definir esse valor de Registro, você deve excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
+**Observação**: depois de definir esse valor de Registro, você precisa excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
 
 ## <a name="support-resources"></a>Recursos de suporte
 
@@ -660,7 +660,7 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Executar Windows Phone aplicativos no emulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
+* [Executar aplicativos do Windows Phone no emulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Arquivo morto do SDK do Windows e do Windows Phone](https://developer.microsoft.com/windows/downloads/sdk-archive)
  
 

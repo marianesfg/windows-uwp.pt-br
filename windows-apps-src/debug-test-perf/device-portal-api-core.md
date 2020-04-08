@@ -1,28 +1,28 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: Referência de API central do Portal de Dispositivos
+title: Referência de API central do Device Portal
 description: Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
 ms.custom: 19H1
 ms.date: 04/19/2019
 ms.topic: article
-keywords: Windows 10, UWP, portal do dispositivo
+keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
 ms.sourcegitcommit: 8d945e0406818e614eacdc962493e570cc7615ed
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955306"
 ---
-# <a name="device-portal-core-api-reference"></a>Referência de API central do Portal de Dispositivos
+# <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
-Toda a funcionalidade do Portal de Dispositivos é criada com base em APIs REST, que os desenvolvedores podem chamar diretamente para acessar os recursos e controlar seus dispositivos de forma programática.
+Toda a funcionalidade do Portal de Dispositivos é criada com base em APIs REST, que os desenvolvedores podem chamar diretamente para acessar os recursos e controlar seus dispositivos de modo programático.
 
 ## <a name="app-deployment"></a>Implantação de aplicativos
 
 ### <a name="install-an-app"></a>Instalar um aplicativo
 
-**Solicitar**
+**Solicitação**
 
 Você pode instalar um aplicativo usando o formato de solicitação a seguir.
 
@@ -30,7 +30,7 @@ Você pode instalar um aplicativo usando o formato de solicitação a seguir.
 | :------     | :----- |
 | POST | /api/app/packagemanager/package |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -62,7 +62,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -71,7 +71,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="install-a-related-set"></a>Instalar um conjunto relacionado
 
-**Solicitar**
+**Solicitação**
 
 Você pode instalar um [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) usando o formato de solicitação a seguir.
 
@@ -79,7 +79,7 @@ Você pode instalar um [conjunto relacionado](https://blogs.msdn.microsoft.com/a
 | :------     | :------ |
 | POST | /api/app/packagemanager/package |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -92,7 +92,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 - Não
 
 **Corpo da solicitação** 
-- Adicionar ".opt" aos nomes de arquivo de pacote opcional ao especificá-las como parâmetro, da seguinte forma: "foo.appx.opt" ou "bar.appxbundle.opt". 
+- Adicione ".opt" aos nomes de arquivo de pacote opcional ao especificá-los como parâmetro, da seguinte forma: "foo.appx.opt" ou "bar.appxbundle.opt". 
 - O arquivo .appx ou. appxbundle, bem como quaisquer dependências que exigem o aplicativo. 
 - O certificado usado para assinar o aplicativo, se o dispositivo for IoT ou área de trabalho do Windows. Outras plataformas não exigem o certificado. 
 
@@ -111,7 +111,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -120,7 +120,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="register-an-app-in-a-loose-folder"></a>Registre um aplicativo em uma pasta flexível
 
-**Solicitar**
+**Solicitação**
 
 Você pode registrar um aplicativo em uma pasta flexível usando o formato de solicitação a seguir.
 
@@ -128,7 +128,7 @@ Você pode registrar um aplicativo em uma pasta flexível usando o formato de so
 | :------     | :----- |
 | POST | /api/app/packagemanager/networkapp |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -163,16 +163,16 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 <hr>
 
-### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar um conjunto relacionado em pastas de arquivo flexível
+### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar um conjunto relacionado em pastas de arquivos flexíveis
 
-**Solicitar**
+**Solicitação**
 
 Você pode registrar um [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) em pastas flexíveis usando o formato de solicitação a seguir.
 
@@ -180,7 +180,7 @@ Você pode registrar um [conjunto relacionado](https://blogs.msdn.microsoft.com/
 | :------     | :----- |
 | POST | /api/app/packagemanager/networkapp |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -224,7 +224,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -233,7 +233,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-app-installation-status"></a>Obter o status de instalação do aplicativo
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o status de uma instalação de aplicativo que esteja em andamento usando o seguinte formato de solicitação:
  
@@ -241,7 +241,7 @@ Você pode obter o status de uma instalação de aplicativo que esteja em andame
 | :------     | :----- |
 | GET | /api/app/packagemanager/state |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -268,7 +268,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -277,7 +277,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 
-**Solicitar**
+**Solicitação**
 
 Você pode desinstalar um aplicativo usando o seguinte formato de solicitação:
  
@@ -285,7 +285,7 @@ Você pode desinstalar um aplicativo usando o seguinte formato de solicitação:
 | :------     | :----- |
 | DELETE | /api/app/packagemanager/package |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
@@ -314,7 +314,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -323,7 +323,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-installed-apps"></a>Obter aplicativos instalados
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter uma lista de aplicativos instalados no sistema usando o seguinte formato de solicitação:
  
@@ -332,7 +332,7 @@ Você pode obter uma lista de aplicativos instalados no sistema usando o seguint
 | GET | /api/app/packagemanager/packages |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -384,7 +384,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -397,9 +397,9 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-bluetooth-radios-on-the-machine"></a>Ouça rádios Bluetooth no computador
 
-**Solicitar**
+**Solicitação**
 
-Você pode obter uma lista rádios Bluetooth instaladas no computador usando o seguinte formato de solicitação: Isso pode ser atualizado para uma conexão WebSocket também, com os mesmos dados JSON.
+Você pode obter uma lista de rádios Bluetooth instalados no computador usando o formato de solicitação a seguir. Isso pode ser atualizado para uma conexão WebSocket também, com os mesmos dados JSON.
  
 | Método        | URI da solicitação |
 | :------          | :------ |
@@ -407,7 +407,7 @@ Você pode obter uma lista rádios Bluetooth instaladas no computador usando o s
 | GET/WebSocket | /api/bt/getradios |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -447,7 +447,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -455,7 +455,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="turn-the-bluetooth-radio-on-or-off"></a>Ativar ou desativar a rádio Bluetooth
 
-**Solicitar**
+**Solicitação**
 
 Define uma rádio Bluetooth específica como ativada ou desativada.
  
@@ -463,7 +463,7 @@ Define uma rádio Bluetooth específica como ativada ou desativada.
 | :------   | :------ |
 | POST   | /api/bt/setradio |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -494,14 +494,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
 ### <a name="get-a-list-of-paired-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth emparelhados
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter uma lista dos dispositivos Bluetooth emparelhados no momento usando o formato de solicitação a seguir. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão WebSocket, a lista de dispositivos pode ser alterada. Uma lista completa de dispositivos será enviada pela conexão WebSocket toda vez que houver uma atualização.
 
@@ -510,7 +510,7 @@ Você pode obter uma lista dos dispositivos Bluetooth emparelhados no momento us
 | GET           | /api/bt/getpaired |
 | GET/WebSocket | /api/bt/getpaired |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -534,12 +534,12 @@ A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão emparelha
     },...
 ]}
 ```
-O campo *AudioConnectionStatus* estará presente se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.) *AudioConnectionStatus* será "conectado" ou "desconectado".
+O campo *AudioConnectionStatus* estará presente se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.) *AudioConnectionStatus* será "Conectado" ou "Desconectado".
 
 ---
 ### <a name="get-a-list-of-available-bluetooth-devices"></a>Obter uma lista de dispositivos Bluetooth disponíveis
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter uma lista dos dispositivos Bluetooth disponíveis para emparelhamento usando o formato de solicitação a seguir. Isso pode ser atualizado para uma conexão WebSocket com os mesmos dados JSON. Durante o tempo de vida da conexão WebSocket, a lista de dispositivos pode ser alterada. Uma lista completa de dispositivos será enviada pela conexão WebSocket toda vez que houver uma atualização.
 
@@ -548,7 +548,7 @@ Você pode obter uma lista dos dispositivos Bluetooth disponíveis para emparelh
 | GET           | /api/bt/getavailable |
 | GET/WebSocket | /api/bt/getavailable |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -562,7 +562,7 @@ Você pode obter uma lista dos dispositivos Bluetooth disponíveis para emparelh
 
 **Resposta**
 
-A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão atualmente disponíveis para emparelhamento.
+A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão disponíveis no momento para emparelhamento.
 ```json
 {"AvailableDevices": [
     {
@@ -575,19 +575,19 @@ A resposta inclui uma matriz JSON de dispositivos Bluetooth que estão atualment
 ---
 ### <a name="connect-a-bluetooth-device"></a>Conectar um dispositivo Bluetooth
 
-**Solicitar**
+**Solicitação**
 
-Se conectará ao dispositivo, se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
+Fará conexão com o dispositivo se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
 
 | Método       | URI da solicitação           |
 | :---         | :---                  |
 | POST         | /api/bt/connectdevice |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
-| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
+| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em Base64. |
 
 **Cabeçalhos da solicitação**
 
@@ -611,7 +611,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -619,19 +619,19 @@ Esta API tem os códigos de status esperados a seguir.
 ---
 ### <a name="disconnect-a-bluetooth-device"></a>Desconectar um dispositivo Bluetooth
 
-**Solicitar**
+**Solicitação**
 
-O desconectará o dispositivo se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
+Fará desconexão do dispositivo, se o dispositivo puder ser usado para áudio neste sistema. (As políticas e os componentes opcionais podem afetar isso.)
 
 | Método       | URI da solicitação              |
 | :---         | :---                     |
 | POST         | /api/bt/disconnectdevice |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
-| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em base64. |
+| ID            | (**obrigatório**) A ID do ponto de extremidade de associação para o dispositivo Bluetooth e deve ser codificada em Base64. |
 
 **Cabeçalhos da solicitação**
 
@@ -655,7 +655,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -665,7 +665,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-installed-devices-on-the-machine"></a>Obter os dispositivos instalados no computador
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter uma lista de dispositivos que estão instalados no computador usando o seguinte formato de solicitação:
 
@@ -673,7 +673,7 @@ Você pode obter uma lista de dispositivos que estão instalados no computador u
 | :------     | :----- |
 | GET | /api/devicemanager/devices |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -715,23 +715,23 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-data-on-connected-usb-deviceshubs"></a>Obter dados em dispositivos USB/Hubs conectados
 
-**Solicitar**
+**Solicitação**
 
-Você pode obter uma lista de descritores USB para os dispositivos USB e Hubs usando o seguinte formato de solicitação:
+Você pode obter uma lista de descritores USB para os dispositivos USB e Hubs conectados usando o formato de solicitação a seguir.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
-| GET | /ext/Devices/usbdevices |
+| GET | /ext/devices/usbdevices |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -800,7 +800,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
@@ -811,7 +811,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obter a lista de todos os despejos de memória para aplicativos
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter a lista de todos os despejos de memória disponíveis para todos os aplicativos de sideload usando o seguinte formato de solicitação:
  
@@ -820,7 +820,7 @@ Você pode obter a lista de todos os despejos de memória disponíveis para todo
 | GET | /api/debug/dump/usermode/dumps |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -849,7 +849,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -857,7 +857,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obter configurações da coleta de despejo de memória para um app
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter as configurações da coleta de despejo de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -866,7 +866,7 @@ Você pode obter as configurações da coleta de despejo de memória para um apl
 | GET | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -902,7 +902,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -910,7 +910,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Excluir um despejo de memória para um app de sideload
 
-**Solicitar**
+**Solicitação**
 
 Você pode excluir um despejo de memória de um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -919,7 +919,7 @@ Você pode excluir um despejo de memória de um aplicativo de sideload usando o 
 | DELETE | /api/debug/dump/usermode/crashdump |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -951,7 +951,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -959,7 +959,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Desabilitar despejos de memória para um app de sideload
 
-**Solicitar**
+**Solicitação**
 
 Você pode desabilitar despejos de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -968,7 +968,7 @@ Você pode desabilitar despejos de memória para um aplicativo de sideload usand
 | DELETE | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -999,7 +999,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1007,7 +1007,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Baixar o despejo de memória para um app de sideload
 
-**Solicitar**
+**Solicitação**
 
 Você pode baixar um despejo de memória de um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -1016,7 +1016,7 @@ Você pode baixar um despejo de memória de um aplicativo de sideload usando o s
 | GET | /api/debug/dump/usermode/crashdump |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1050,7 +1050,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1058,7 +1058,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar despejos de memória para um app de sideload
 
-**Solicitar**
+**Solicitação**
 
 Você pode habilitar despejos de memória para um aplicativo de sideload usando o seguinte formato de solicitação:
  
@@ -1067,7 +1067,7 @@ Você pode habilitar despejos de memória para um aplicativo de sideload usando 
 | POST | /api/debug/dump/usermode/crashcontrol |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1096,7 +1096,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile (no Programa Windows Insider)
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1104,7 +1104,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-bugcheck-files"></a>Obter a lista de arquivos de verificação de erro
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter a lista de arquivos de minidespejo de verificação de erro usando o seguinte formato de solicitação:
  
@@ -1113,7 +1113,7 @@ Você pode obter a lista de arquivos de minidespejo de verificação de erro usa
 | GET | /api/debug/dump/kernel/dumplist |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1147,14 +1147,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="download-a-bugcheck-dump-file"></a>Baixar um arquivo de despejo de verificação de erro
 
-**Solicitar**
+**Solicitação**
 
 Você pode baixar um arquivo de despejo de verificação de erro usando o seguinte formato de solicitação:
  
@@ -1163,7 +1163,7 @@ Você pode baixar um arquivo de despejo de verificação de erro usando o seguin
 | GET | /api/debug/dump/kernel/dump |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1196,14 +1196,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-the-bugcheck-crash-control-settings"></a>Obter as configurações de controle de falhas de verificação de erro
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter essas configurações de controle de falhas de verificação de erro usando o seguinte formato de solicitação:
  
@@ -1212,7 +1212,7 @@ Você pode obter essas configurações de controle de falhas de verificação de
 | GET | /api/debug/dump/kernel/crashcontrol |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1238,7 +1238,7 @@ A resposta inclui as configurações de controle de falhas. Para saber mais sobr
 
 **Tipos de despejo**
 
-0: desabilitado
+0: Desabilitado
 
 1: despejo de memória completo (coleta toda a memória em uso)
 
@@ -1258,14 +1258,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-a-live-kernel-dump"></a>Obter um despejo de kernel dinâmico
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter um despejo de kernel dinâmico usando o seguinte formato de solicitação:
  
@@ -1274,7 +1274,7 @@ Você pode obter um despejo de kernel dinâmico usando o seguinte formato de sol
 | GET | /api/debug/dump/livekernel |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1302,14 +1302,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-a-dump-from-a-live-user-process"></a>Obter um despejo de um processo de usuário dinâmico
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o despejo para o processo de usuário dinâmico usando o seguinte formato de solicitação:
  
@@ -1318,7 +1318,7 @@ Você pode obter o despejo para o processo de usuário dinâmico usando o seguin
 | GET | /api/debug/dump/usermode/live |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1350,14 +1350,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="set-the-bugcheck-crash-control-settings"></a>Definir as configurações de controle de falhas de verificação de erro
 
-**Solicitar**
+**Solicitação**
 
 Você pode definir as configurações para coletar dados de verificação de erro usando o seguinte formato de solicitação:
  
@@ -1366,7 +1366,7 @@ Você pode definir as configurações para coletar dados de verificação de err
 | POST | /api/debug/dump/kernel/crashcontrol |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -1399,7 +1399,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
@@ -1410,7 +1410,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Criar uma sessão ETW em tempo real por um Websocket
 
-**Solicitar**
+**Solicitação**
 
 Você pode criar uma sessão ETW em tempo real usando o seguinte formato de solicitação: Isso será gerenciado por um Websocket.  Os eventos ETW são enviados em lote no servidor e enviados para o cliente uma vez por segundo. 
  
@@ -1419,7 +1419,7 @@ Você pode criar uma sessão ETW em tempo real usando o seguinte formato de soli
 | GET/WebSocket | /api/etw/session/realtime |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1448,7 +1448,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1505,7 +1505,7 @@ Exemplo:
 
 ### <a name="enumerate-the-registered-etw-providers"></a>Enumerar os provedores ETW registrados
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar os provedores registrados usando o seguinte formato de solicitação:
  
@@ -1514,7 +1514,7 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 | GET | /api/etw/providers |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1549,7 +1549,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1557,7 +1557,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumere os provedores ETW personalizados expostos pela plataforma.
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar os provedores registrados usando o seguinte formato de solicitação:
  
@@ -1566,7 +1566,7 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 | GET | /api/etw/customproviders |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1598,7 +1598,7 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -1608,18 +1608,18 @@ Você pode enumerar os provedores registrados usando o seguinte formato de solic
 
 <hr>
 
-### <a name="get-location-override-mode"></a>Obter modo de substituição de local
+### <a name="get-location-override-mode"></a>Obter modo de substituição de localização
 
-**Solicitar**
+**Solicitação**
 
-Você pode obter o status da substituição de pilha de locais do dispositivo usando o formato de solicitação a seguir. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
+Você pode obter o status da substituição de pilha de localização do dispositivo usando o formato de solicitação a seguir. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
 | GET | /ext/location/override |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1652,23 +1652,23 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
-### <a name="set-location-override-mode"></a>Definir modo de substituição de local
+### <a name="set-location-override-mode"></a>Definir modo de substituição de localização
 
-**Solicitar**
+**Solicitação**
 
-Você pode definir o status da substituição de pilha de locais do dispositivo usando o formato de solicitação a seguir. Quando habilitada, a pilha de locais permite a injeção de posição. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
+Você pode definir o status da substituição de pilha de localização do dispositivo usando o formato de solicitação a seguir. Quando habilitada, a pilha de localização permite a injeção de posição. O modo de desenvolvedor deve estar ativado para que esta chamada seja bem-sucedida.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
 | PUT | /ext/location/override |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1703,23 +1703,23 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
-### <a name="get-the-injected-position"></a>Obtenha a posição injetada
+### <a name="get-the-injected-position"></a>Obter a posição injetada
 
-**Solicitar**
+**Solicitação**
 
-Você pode obter o local injetado (falsificado) do dispositivo usando o formato de solicitação a seguir. Um local injetado deve ser definido; caso contrário, um erro será lançado.
+Você pode obter a localização injetada (falsificada) do dispositivo usando o formato de solicitação a seguir. Uma localização injetada deve ser definida; caso contrário, um erro será lançado.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
 | GET | /ext/location/position |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1755,23 +1755,23 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ### <a name="set-the-injected-position"></a>Definir a posição injetada
 
-**Solicitar**
+**Solicitação**
 
-Você pode definir o local injetado (falsificado) do dispositivo usando o formato de solicitação a seguir. O modo de substituição de local deve ser habilitado primeiro no dispositivo, e o local definido deve ser um local válido, caso contrário, um erro será lançado.
+Você pode definir a localização injetada (falsificada) do dispositivo usando o formato de solicitação a seguir. O modo de substituição de localização deve ser habilitado primeiro no dispositivo e a localização definida deve ser válida, caso contrário, um erro será lançado.
 
 | Método      | URI da solicitação |
 | :------     | :----- |
 | PUT | /ext/location/override |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1790,7 +1790,7 @@ Você pode definir o local injetado (falsificado) do dispositivo usando o format
 
 **Resposta**
 
-A resposta inclui o local definido no formato a seguir. 
+A resposta inclui a localização definida no formato a seguir. 
 
 ```json
 {
@@ -1812,7 +1812,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1825,7 +1825,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-machine-name"></a>Obter o nome do computador
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o nome de um computador usando o seguinte formato de solicitação:
  
@@ -1834,7 +1834,7 @@ Você pode obter o nome de um computador usando o seguinte formato de solicitaç
 | GET | /api/os/machinename |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1867,7 +1867,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1876,7 +1876,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-operating-system-information"></a>Obter as informações do sistema operacional
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter as informações do sistema operacional de um computador usando o seguinte formato de solicitação:
  
@@ -1885,7 +1885,7 @@ Você pode obter as informações do sistema operacional de um computador usando
 | GET | /api/os/info |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1924,7 +1924,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1933,7 +1933,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-device-family"></a>Obter a família de dispositivos 
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter a família de dispositivos (Xbox, telefone, área de trabalho etc.) usando o seguinte formato de solicitação.
  
@@ -1942,7 +1942,7 @@ Você pode obter a família de dispositivos (Xbox, telefone, área de trabalho e
 | GET | /api/os/devicefamily |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -1979,7 +1979,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1988,7 +1988,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-machine-name"></a>Definir o nome do computador
 
-**Solicitar**
+**Solicitação**
 
 Você pode definir o nome de um computador usando o seguinte formato de solicitação:
  
@@ -1997,7 +1997,7 @@ Você pode definir o nome de um computador usando o seguinte formato de solicita
 | POST | /api/os/machinename |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2026,7 +2026,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2039,16 +2039,16 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-active-user"></a>Obter o usuário ativo
 
-**Solicitar**
+**Solicitação**
 
-Você pode obter o nome do usuário ativo no dispositivo usando o seguinte formato de solicitação:
+Você pode obter o nome do usuário ativo no dispositivo usando o formato de solicitação a seguir.
  
 | Método      | URI da solicitação |
 | :------     | :----- |
 | GET | /api/users/activeuser |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2064,7 +2064,7 @@ Você pode obter o nome do usuário ativo no dispositivo usando o seguinte forma
 
 A resposta inclui as informações do usuário no formato a seguir. 
 
-Em caso de sucesso: 
+Em caso de êxito: 
 ```json
 {
     "UserDisplayName" : string, 
@@ -2093,7 +2093,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -2105,7 +2105,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter a lista de processos atualmente em execução usando o seguinte formato de solicitação:  isso pode ser atualizado para uma conexão WebSocket também, com os mesmos dados JSON sendo enviados ao cliente uma vez por segundo. 
  
@@ -2115,7 +2115,7 @@ Você pode obter a lista de processos atualmente em execução usando o seguinte
 | GET/WebSocket | /api/resourcemanager/processes |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2159,7 +2159,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -2167,7 +2167,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-system-performance-statistics"></a>Obter as estatísticas de desempenho do sistema
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter as estatísticas de desempenho do sistema usando o seguinte formato de solicitação: Isso inclui informações como ciclos de leitura e gravação e a quantidade de memória que foi usada.
  
@@ -2178,7 +2178,7 @@ Você pode obter as estatísticas de desempenho do sistema usando o seguinte for
 
 Isso também pode ser atualizado para uma conexão WebSocket.  Isso fornece os mesmos dados JSON a seguir uma vez por segundo. 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2238,20 +2238,20 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 <hr>
 
-## <a name="power"></a>Ligar/Desligar
+## <a name="power"></a>Energia
 
 <hr>
 
 ### <a name="get-the-current-battery-state"></a>Obter o estado atual da bateria
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o estado atual da bateria usando o seguinte formato de solicitação:
  
@@ -2260,7 +2260,7 @@ Você pode obter o estado atual da bateria usando o seguinte formato de solicita
 | GET | /api/power/battery |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2301,7 +2301,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -2309,7 +2309,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-the-active-power-scheme"></a>Obter o esquema de energia ativo
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o esquema de energia ativo usando o seguinte formato de solicitação:
  
@@ -2318,7 +2318,7 @@ Você pode obter o esquema de energia ativo usando o seguinte formato de solicit
 | GET | /api/power/activecfg |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2349,14 +2349,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-the-sub-value-for-a-power-scheme"></a>Obter o subvalor para um esquema de energia
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o subvalor para um esquema de energia usando o seguinte formato de solicitação:
  
@@ -2367,7 +2367,7 @@ Você pode obter o subvalor para um esquema de energia usando o seguinte formato
 Opções:
 - SCHEME_CURRENT
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2393,14 +2393,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-the-power-state-of-the-system"></a>Obter o estado de energia do sistema
 
-**Solicitar**
+**Solicitação**
 
 Você pode verificar o estado de energia do sistema usando o seguinte formato de solicitação: Isso permitirá que você verifique se ele está em um estado de baixo consumo de energia.
  
@@ -2409,7 +2409,7 @@ Você pode verificar o estado de energia do sistema usando o seguinte formato de
 | GET | /api/power/state |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2440,7 +2440,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -2448,7 +2448,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-the-active-power-scheme"></a>Definir o esquema de energia ativo
 
-**Solicitar**
+**Solicitação**
 
 Você pode definir o esquema de energia ativo usando o seguinte formato de solicitação:
  
@@ -2457,7 +2457,7 @@ Você pode definir o esquema de energia ativo usando o seguinte formato de solic
 | POST | /api/power/activecfg |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2487,14 +2487,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="set-the-sub-value-for-a-power-scheme"></a>Definir o subvalor para um esquema de energia
 
-**Solicitar**
+**Solicitação**
 
 Você pode definir o subvalor para um esquema de energia usando o seguinte formato de solicitação:
  
@@ -2503,7 +2503,7 @@ Você pode definir o subvalor para um esquema de energia usando o seguinte forma
 | POST | /api/power/cfg/ *<power scheme path>* |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2532,14 +2532,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-a-sleep-study-report"></a>Obter um relatório de estudo de suspensão
 
-**Solicitar**
+**Solicitação**
 
 | Método      | URI da solicitação |
 | :------     | :----- |
@@ -2547,7 +2547,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 Você pode obter um relatório de estudo de suspensão usando o seguinte formato de solicitação:
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
 | nome_de_arquivo | (**necessário**) O nome completo do arquivo que você deseja baixar. Esse valor deve ser codificado em hex64. |
@@ -2576,14 +2576,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar os relatórios de estudo de suspensão disponíveis
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar os relatórios de estudo de suspensão disponíveis usando o seguinte formato de solicitação:
  
@@ -2592,7 +2592,7 @@ Você pode enumerar os relatórios de estudo de suspensão disponíveis usando o
 | GET | /api/power/sleepstudy/reports |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2628,14 +2628,14 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
 
 ### <a name="get-the-sleep-study-transform"></a>Obter a transformação de estudo de suspensão
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter o relatório de estudo de suspensão usando o seguinte formato de solicitação: Essa transformação é um XSLT que converte o relatório de estudo de suspensão em um formato XML que possa ser lido por uma pessoa.
  
@@ -2644,7 +2644,7 @@ Você pode obter o relatório de estudo de suspensão usando o seguinte formato 
 | GET | /api/power/sleepstudy/transform |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2672,7 +2672,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * IoT
 
 <hr>
@@ -2683,7 +2683,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="restart-the-target-computer"></a>Reiniciar o computador de destino
 
-**Solicitar**
+**Solicitação**
 
 Você pode reiniciar o computador de destino usando o seguinte formato de solicitação:
  
@@ -2692,7 +2692,7 @@ Você pode reiniciar o computador de destino usando o seguinte formato de solici
 | POST | /api/control/restart |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2717,7 +2717,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2726,7 +2726,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="shut-down-the-target-computer"></a>Desligar o computador de destino
 
-**Solicitar**
+**Solicitação**
 
 Você pode desligar o computador de destino usando o seguinte formato de solicitação:
  
@@ -2735,7 +2735,7 @@ Você pode desligar o computador de destino usando o seguinte formato de solicit
 | POST | /api/control/shutdown |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -2762,7 +2762,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2775,7 +2775,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-modern-app"></a>Iniciar um aplicativo moderno
 
-**Solicitar**
+**Solicitação**
 
 Você pode iniciar um aplicativo moderno usando o seguinte formato de solicitação:
  
@@ -2784,7 +2784,7 @@ Você pode iniciar um aplicativo moderno usando o seguinte formato de solicitaç
 | POST | /api/taskmanager/app |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2816,7 +2816,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2825,7 +2825,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-modern-app"></a>Parar um aplicativo moderno
 
-**Solicitar**
+**Solicitação**
 
 Você pode parar um aplicativo moderno usando o seguinte formato de solicitação:
  
@@ -2834,7 +2834,7 @@ Você pode parar um aplicativo moderno usando o seguinte formato de solicitaçã
 | DELETE | /api/taskmanager/app |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -2866,7 +2866,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2875,7 +2875,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="kill-process-by-pid"></a>Interromper o processo por PID
 
-**Solicitar**
+**Solicitação**
 
 Você pode interromper um processo usando o formato de solicitação a seguir.
  
@@ -2884,13 +2884,13 @@ Você pode interromper um processo usando o formato de solicitação a seguir.
 | DELETE | /api/taskmanager/process |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| pid   | (**necessário**) A ID de processo exclusiva do processo a ser interrompido. |
+| pid   | (**obrigatório**) A ID de processo exclusiva do processo a ser interrompido. |
 
 **Cabeçalhos da solicitação**
 
@@ -2914,19 +2914,19 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
 <hr>
 
-## <a name="networking"></a>Rede do
+## <a name="networking"></a>Rede
 
 <hr>
 
 ### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter a configuração de IP atual usando o seguinte formato de solicitação:
  
@@ -2935,7 +2935,7 @@ Você pode obter a configuração de IP atual usando o seguinte formato de solic
 | GET | /api/networking/ipconfig |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3004,7 +3004,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3013,7 +3013,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="set-a-static-ip-address-ipv4-configuration"></a>Definir um endereço IP estático (configuração de IPV4)
 
-**Solicitar**
+**Solicitação**
 
 Define a configuração de IPV4 com IP estático e DNS. Se um IP estático não for especificado, ele habilitará o DHCP. Se um IP estático for especificado, o DNS também deverá ser especificado.
  
@@ -3022,18 +3022,18 @@ Define a configuração de IPV4 com IP estático e DNS. Se um IP estático não 
 | PUT | /api/networking/ipv4config |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :---          | :--- |
-| Adaptadorname | (**obrigatório**) O GUID da interface de rede. |
+| AdapterName | (**obrigatório**) O GUID do adaptador de rede. |
 | IPAddress | O endereço IP estático a ser definido. |
-| SubnetMask | (**necessário** se *IPAddress* não for nulo) A máscara de sub-rede estática. |
-| DefaultGateway | (**necessário** se *IPAddress* não for nulo) O gateway padrão estático. |
-| PrimaryDNS | (**necessário** se *IPAddress* não for nulo) O DNS primário estático a ser definido. |
+| SubnetMask | (**obrigatório** se *IPAddress* não for nulo) A máscara de sub-rede estática. |
+| DefaultGateway | (**obrigatório** se *IPAddress* não for nulo) O gateway padrão estático. |
+| PrimaryDNS | (**obrigatório** se *IPAddress* não for nulo) O DNS primário estático a ser definido. |
 | SecondayDNS | (**obrigatório** se *PrimaryDNS* não for nulo) O DNS secundário estático a ser definido. |
 
-Para maior clareza, para definir uma interface para DHCP, Serialize apenas o `AdapterName` na conexão:
+Para maior clareza, para definir uma interface para DHCP, serialize apenas `AdapterName` na conexão:
 
 ```json
 {
@@ -3064,7 +3064,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3073,7 +3073,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-wireless-network-interfaces"></a>Enumerar as interfaces de rede sem fio
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar as interfaces de rede sem fio disponíveis usando o seguinte formato de solicitação:
  
@@ -3082,7 +3082,7 @@ Você pode enumerar as interfaces de rede sem fio disponíveis usando o seguinte
 | GET | /api/wifi/interfaces |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3127,7 +3127,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3136,7 +3136,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-wireless-networks"></a>Enumerar as redes sem fio
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar a lista de redes sem fio na interface especificada usando o seguinte formato de solicitação:
  
@@ -3145,7 +3145,7 @@ Você pode enumerar a lista de redes sem fio na interface especificada usando o 
 | GET | /api/wifi/networks |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3198,7 +3198,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3207,7 +3207,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar-se a uma rede Wi-Fi e desconectar-se dela
 
-**Solicitar**
+**Solicitação**
 
 Você pode se conectar a uma rede Wi-Fi ou se desconectar dela usando o seguinte formato de solicitação:
  
@@ -3216,7 +3216,7 @@ Você pode se conectar a uma rede Wi-Fi ou se desconectar dela usando o seguinte
 | POST | /api/wifi/network |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3225,7 +3225,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | interface   | (**necessário**) O GUID da interface de rede que você usa para se conectar à rede. |
 | op   | (**necessário**) Indica a ação a ser executada. Valores possíveis são connect ou disconnect.|
 | ssid   | (**necessário se *op* = = connect**) O SSID ao qual se conectar. |
-| key   | (**necessário se *op* = = connect e se a rede exigir autenticação**) A chave compartilhada. |
+| key   | (**obrigatório se *op* = = conectar e rede requer autenticação**) A chave compartilhada. |
 | createprofile | (**necessário**) Crie um perfil de rede no dispositivo.  Isso fará o dispositivo se conectar automaticamente à rede no futuro. Isso pode ser **sim** ou **não**. |
 
 **Cabeçalhos da solicitação**
@@ -3249,7 +3249,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3258,7 +3258,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-wi-fi-profile"></a>Excluir um perfil de Wi-Fi
 
-**Solicitar**
+**Solicitação**
 
 Você pode excluir um perfil associado a uma rede em uma interface específica usando o seguinte formato de solicitação:
  
@@ -3267,7 +3267,7 @@ Você pode excluir um perfil associado a uma rede em uma interface específica u
 | DELETE | /api/wifi/profile |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3297,7 +3297,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -3310,7 +3310,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Baixar um arquivo de relatório de erros do Windows (WER)
 
-**Solicitar**
+**Solicitação**
 
 Você pode baixar um arquivo relacionado a WER usando o formato de solicitação a seguir:
  
@@ -3319,13 +3319,13 @@ Você pode baixar um arquivo relacionado a WER usando o formato de solicitação
 | GET | /api/wer/report/file |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| user   | (**necessário**) O nome de usuário associado ao relatório. |
+| usuário   | (**necessário**) O nome de usuário associado ao relatório. |
 | tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
 | name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 | arquivo   | (**necessário**) O nome do arquivo a ser baixado do relatório. Isso deve ser codificado em base64. |
@@ -3354,7 +3354,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3362,7 +3362,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar arquivos em um relatório de erros do Windows (WER)
 
-**Solicitar**
+**Solicitação**
 
 Você pode enumerar os arquivos em um relatório WER usando o seguinte formato de solicitação:
  
@@ -3371,13 +3371,13 @@ Você pode enumerar os arquivos em um relatório WER usando o seguinte formato d
 | GET | /api/wer/report/files |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
 | Parâmetro do URI | Descrição |
 | :------          | :------ |
-| user   | (**necessário**) O usuário associado ao relatório. |
+| usuário   | (**necessário**) O usuário associado ao relatório. |
 | tipo   | (**necessário**) O tipo de relatório. Pode ser **queried** ou **archived**. |
 | name   | (**necessário**) O nome do relatório. Isso deve ser codificado em base64. |
 
@@ -3410,7 +3410,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3418,7 +3418,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="list-the-windows-error-reporting-wer-reports"></a>Listar os relatórios WER (Relatório de Erros do Windows)
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter os relatórios WER usando o seguinte formato de solicitação:
  
@@ -3427,7 +3427,7 @@ Você pode obter os relatórios WER usando o seguinte formato de solicitação:
 | GET | /api/wer/reports |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3469,7 +3469,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 **Famílias de dispositivos disponíveis**
 
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3481,7 +3481,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-tracing-with-a-custom-profile"></a>Inicie o rastreamento com um perfil personalizado
 
-**Solicitar**
+**Solicitação**
 
 Você pode carregar um perfil WPR e iniciar o rastreamento com esse perfil usando o seguinte formato de solicitação:  Somente um rastreamento pode ser executado por vez. O perfil não permanecerá no dispositivo. 
  
@@ -3490,7 +3490,7 @@ Você pode carregar um perfil WPR e iniciar o rastreamento com esse perfil usand
 | POST | /api/wpr/customtrace |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3526,7 +3526,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3534,7 +3534,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-boot-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho de inicialização
 
-**Solicitar**
+**Solicitação**
 
 Você pode iniciar uma sessão de rastreamento de WPR de inicialização usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
@@ -3543,7 +3543,7 @@ Você pode iniciar uma sessão de rastreamento de WPR de inicialização usando 
 | POST | /api/wpr/boottrace |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3583,7 +3583,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3591,7 +3591,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-boot-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho de inicialização
 
-**Solicitar**
+**Solicitação**
 
 Você pode parar uma sessão WPR de rastreamento de inicialização usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
@@ -3600,7 +3600,7 @@ Você pode parar uma sessão WPR de rastreamento de inicialização usando o seg
 | GET | /api/wpr/boottrace |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3614,7 +3614,7 @@ Você pode parar uma sessão WPR de rastreamento de inicialização usando o seg
 
 **Resposta**
 
--  Nenhum.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.
+-  Nenhum.  **Observação**: é uma operação execução prolongada.  Ela retornará quando ETL terminar de gravar em disco.
 
 **Código de status**
 
@@ -3629,7 +3629,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3637,7 +3637,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="start-a-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho
 
-**Solicitar**
+**Solicitação**
 
 Você pode iniciar uma sessão WPR de rastreamento usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.  Somente um rastreamento pode ser executado por vez. 
  
@@ -3646,7 +3646,7 @@ Você pode iniciar uma sessão WPR de rastreamento usando o seguinte formato de 
 | POST | /api/wpr/trace |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
 
@@ -3686,7 +3686,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3694,7 +3694,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="stop-a-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho
 
-**Solicitar**
+**Solicitação**
 
 Você pode parar uma sessão WPR de rastreamento usando o seguinte formato de solicitação: Isso também é conhecido como uma sessão de rastreamento de desempenho.
  
@@ -3703,7 +3703,7 @@ Você pode parar uma sessão WPR de rastreamento usando o seguinte formato de so
 | GET | /api/wpr/trace |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3717,7 +3717,7 @@ Você pode parar uma sessão WPR de rastreamento usando o seguinte formato de so
 
 **Resposta**
 
-- Nenhum.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
+- Nenhum.  **Observação**: é uma operação execução prolongada.  Ela retornará quando ETL terminar de gravar em disco.  
 
 **Código de status**
 
@@ -3732,7 +3732,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3740,7 +3740,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar o status de uma sessão de rastreamento
 
-**Solicitar**
+**Solicitação**
 
 Você pode recuperar o status da sessão WPR atual usando o seguinte formato de solicitação:
  
@@ -3749,7 +3749,7 @@ Você pode recuperar o status da sessão WPR atual usando o seguinte formato de 
 | GET | /api/wpr/status |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3785,7 +3785,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3793,7 +3793,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="list-completed-tracing-sessions-etls"></a>Listar sessões de rastreamento concluídas (ETLs)
 
-**Solicitar**
+**Solicitação**
 
 Você pode obter uma lista dos rastreamentos de ETL no dispositivo usando o seguinte formato de solicitação: 
 
@@ -3802,7 +3802,7 @@ Você pode obter uma lista dos rastreamentos de ETL no dispositivo usando o segu
 | GET | /api/wpr/tracefiles |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3843,7 +3843,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3851,7 +3851,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-tracing-session-etl"></a>Baixar uma sessão de rastreamento (ETL)
 
-**Solicitar**
+**Solicitação**
 
 Você pode baixar um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
 
@@ -3860,7 +3860,7 @@ Você pode baixar um arquivo de rastreamento (rastreamento de inicialização ou
 | GET | /api/wpr/tracefile |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 
@@ -3893,7 +3893,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3901,7 +3901,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-tracing-session-etl"></a>Excluir uma sessão de rastreamento (ETL)
 
-**Solicitar**
+**Solicitação**
 
 Você pode excluir um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
 
@@ -3910,7 +3910,7 @@ Você pode excluir um arquivo de rastreamento (rastreamento de inicialização o
 | DELETE | /api/wpr/tracefile |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
 
@@ -3943,7 +3943,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * IoT
 
@@ -3955,7 +3955,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="view-tags"></a>Exibir Marcas
 
-**Solicitar**
+**Solicitação**
 
 Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas por meio de registros DNS-SD TXT na chave T.  
  
@@ -3964,7 +3964,7 @@ Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas po
 | GET | /api/dns-sd/tags |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -3976,7 +3976,7 @@ Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas po
 
 - Não
 
-**Resposta** As tags atualmente aplicadas no formato a seguir. 
+**Resposta** as marcas atualmente aplicadas no formato a seguir. 
 ```json
  {
     "tags": [
@@ -4000,7 +4000,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -4009,7 +4009,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-tags"></a>Excluir Marcas
 
-**Solicitar**
+**Solicitação**
 
 Exclua todas as marcas atualmente anunciadas pelo DNS-SD.   
  
@@ -4018,7 +4018,7 @@ Exclua todas as marcas atualmente anunciadas pelo DNS-SD.
 | DELETE | /api/dns-sd/tags |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -4046,7 +4046,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -4055,7 +4055,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-tag"></a>Excluir Marca
 
-**Solicitar**
+**Solicitação**
 
 Exclua uma marca atualmente anunciada pelo DNS-SD.   
  
@@ -4064,7 +4064,7 @@ Exclua uma marca atualmente anunciada pelo DNS-SD.
 | DELETE | /api/dns-sd/tag |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4093,7 +4093,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -4102,7 +4102,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="add-a-tag"></a>Adicionar uma Marca
 
-**Solicitar**
+**Solicitação**
 
 Adicione uma marca do anúncio DNS-SD.   
  
@@ -4111,7 +4111,7 @@ Adicione uma marca do anúncio DNS-SD.
 | POST | /api/dns-sd/tag |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4141,7 +4141,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -4152,7 +4152,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-known-folders"></a>Obter pastas conhecidas
 
-**Solicitar**
+**Solicitação**
 
 Obtenha uma lista de pastas de nível superior acessíveis.
 
@@ -4161,7 +4161,7 @@ Obtenha uma lista de pastas de nível superior acessíveis.
 | GET | /api/filesystem/apps/knownfolders |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 - Não
 
@@ -4194,7 +4194,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -4203,7 +4203,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="get-files"></a>Obter arquivos
 
-**Solicitar**
+**Solicitação**
 
 Obtenha uma lista de arquivos em uma pasta.
 
@@ -4212,7 +4212,7 @@ Obtenha uma lista de arquivos em uma pasta.
 | GET | /api/filesystem/apps/files |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4255,7 +4255,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -4264,7 +4264,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="download-a-file"></a>Baixar um arquivo
 
-**Solicitar**
+**Solicitação**
 
 Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 
@@ -4272,13 +4272,13 @@ Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 | :------     | :----- |
 | GET | /api/filesystem/apps/file |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
 | knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja baixar arquivos. Use **LocalAppData** para acessar aplicativos de sideload. |
 | filename | (**necessário**) O nome do arquivo que está sendo baixado. |
-| packagefullname | (**necessário se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. |
+| packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. |
 | path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. |
 
 **Cabeçalhos da solicitação**
@@ -4304,7 +4304,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -4313,7 +4313,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="rename-a-file"></a>Renomear um arquivo
 
-**Solicitar**
+**Solicitação**
 
 Renomeie um arquivo em uma pasta.
 
@@ -4322,7 +4322,7 @@ Renomeie um arquivo em uma pasta.
 | POST | /api/filesystem/apps/rename |
 
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4357,7 +4357,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -4366,7 +4366,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="delete-a-file"></a>Excluir um arquivo
 
-**Solicitar**
+**Solicitação**
 
 Exclua um arquivo em uma pasta.
 
@@ -4374,7 +4374,7 @@ Exclua um arquivo em uma pasta.
 | :------     | :----- |
 | DELETE | /api/filesystem/apps/file |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4408,7 +4408,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -4417,7 +4417,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 ### <a name="upload-a-file"></a>Carregar um arquivo
 
-**Solicitar**
+**Solicitação**
 
 Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com o mesmo nome, mas não criará novas pastas. 
 
@@ -4425,7 +4425,7 @@ Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com 
 | :------     | :----- |
 | POST | /api/filesystem/apps/file |
 
-**Parâmetros de URI**
+**Parâmetros do URI**
 
 | Parâmetro do URI | Descrição |
 | :------     | :----- |
@@ -4456,7 +4456,7 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
-* Área de Trabalho do Windows
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT

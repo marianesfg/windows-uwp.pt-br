@@ -1,6 +1,6 @@
 ---
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
-title: Práticas recomendadas para o desempenho inicial de seu app
+title: Práticas recomendadas para o desempenho inicial de seu aplicativo
 description: Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
 ms.date: 02/08/2017
 ms.topic: article
@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254681"
 ---
-# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
+# <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
 
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
 
-## <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
+## <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu aplicativo
 
 Em parte, os usuários percebem se seu aplicativo é rápido ou lento com base no tempo que leva para ele iniciar. Para os fins deste tópico, o tempo de inicialização de um aplicativo começa quando o usuário inicia o aplicativo e termina quando o usuário pode interagir com o aplicativo de alguma forma significativa. Esta seção oferece sugestões de como obter um desempenho melhor de seu aplicativo quando ele é iniciado.
 
@@ -26,13 +26,13 @@ Em parte, os usuários percebem se seu aplicativo é rápido ou lento com base n
 
 Inicie seu aplicativo algumas vezes antes de realmente medir o tempo de inicialização dele. Isso lhe dá uma linha de base para a medição e garante que você esteja medindo um tempo de inicialização mais curto possível, razoavelmente.
 
-Quando seu aplicativo UWP chegar aos computadores de seus clientes, seu aplicativo estará compilado com a cadeia de ferramentas .NET Native. .NET Native é uma tecnologia de pré-compilação que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL. Os aplicativos criados com o .NET Native vinculam estaticamente um tempo de execução personalizado e o novo .NET Core convergido que pode ser executado em todos os dispositivos, para que não dependam da implementação nativa do .NET. Por padrão, seu aplicativo usa .NET Native, se você estiver criando em modo "Versão", e usa CoreCLR, se você estiver criando em modo "depuração", na sua máquina de desenvolvimento. Você pode configurar isso no Visual Studio usando a página Compilar em "Propriedades" C#) ou Compilar -> Avançado em "Meu Projeto" (VB). Procure uma caixa de seleção que diz "Compilar com a cadeia de ferramentas nativa do .NET".
+Quando seu aplicativo UWP chegar aos computadores de seus clientes, seu aplicativo estará compilado com a cadeia de ferramentas .NET Native. .NET Native é uma tecnologia de pré-compilação que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL. Os aplicativos criados com o .NET Native vinculam estaticamente um runtime personalizado e o novo .NET Core convergido que pode ser executado em todos os dispositivos, para que não dependam da implementação nativa do .NET. Por padrão, seu aplicativo usa .NET Native, se você estiver criando em modo "Versão", e usa CoreCLR, se você estiver criando em modo "depuração", na sua máquina de desenvolvimento. Você pode configurar isso no Visual Studio usando a página Compilar em "Propriedades" C#) ou Compilar -> Avançado em "Meu Projeto" (VB). Procure uma caixa de seleção que diz "Compilar com a cadeia de ferramentas nativa do .NET".
 
 Obviamente, você deve adotar medidas que representem o que o usuário final experimentará. Portanto, se você não tiver certeza de que está compilando seu aplicativo para código nativo em sua máquina de desenvolvimento, pode executar a ferramenta Native Image Generator (Ngen.exe) para pré-compilar seu aplicativo antes de medir o tempo de inicialização.
 
 O procedimento a seguir descreve como executar Ngen.exe para pré-compilar seu aplicativo.
 
-**Para executar NGen. exe**
+**Para executar Ngen.exe**
 
 1.  Execute seu aplicativo uma vez, no mínimo, para garantir que Ngen.exe o detecte.
 2.  Abra o **Agendador de Tarefas** seguindo um destes procedimentos:
@@ -54,7 +54,7 @@ Quando você recompila seu aplicativo, a imagem nativa não é mais usada. Em ve
 
 ### <a name="defer-work-as-long-as-possible"></a>Adie o trabalho tanto quanto possível
 
-Para melhorar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O tempo de execução de linguagem comum carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
+Para aprimorar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O Common Language runtime carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
 
 ### <a name="do-long-running-work-independently"></a>Faça trabalhos longos de forma independente
 
@@ -107,7 +107,7 @@ A janela [Live Visual Tree no Visual Studio](https://devblogs.microsoft.com/visu
 
 ![Live Visual Tree.](images/live-visual-tree.png)
 
-**Use o adiamento**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usando x:Load ou x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, veja [Atributo x:Load](../xaml-platform/x-load-attribute.md) e [Atributo x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute).
+**Use o adiamento**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usando x:Load ou x:DeferLoadStrategy, é possível atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, confira [Atributo x:Load](../xaml-platform/x-load-attribute.md) e [Atributo x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute).
 
 **Virtualização**. Se houver conteúdo em lista ou de repetição em sua interface do usuário, é altamente recomendável que você use a virtualização da interface do usuário. Se a interface do usuário de lista não for virtualizada, você pagará o preço de criar todos os elementos com antecedência, e isso pode retardar a inicialização. Consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -357,7 +357,7 @@ A PageStackEntry também inclui o parâmetro que foi passado para o método Fram
 
 Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas.
 
-**Armazenamento de páginas em cache**. Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada.
+**Cache de páginas**. Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada.
 
 O Frame, porém, oferece um cache de página opcional que pode evitar essas criações de instâncias. Para armazenar uma página em cache, use a propriedade Page.NavigationCacheMode. Definindo esse modo como Required forçará a página a ser armazenada em cache, definindo-a como Enabled permitirá que ela seja armazenada em cache. Por padrão, o tamanho do cache é de 10 páginas, mas isso pode ser alterado com a propriedade Frame.CacheSize. Todas as páginas necessárias serão armazenadas em cache, e se houver menos de páginas CacheSize Required, as páginas Enabled também poderão ser armazenadas em cache.
 

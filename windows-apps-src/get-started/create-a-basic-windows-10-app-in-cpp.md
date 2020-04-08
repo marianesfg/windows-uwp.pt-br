@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 13e6f4ac59a99463cd891e936f51449baf4ea7c2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4c388b9b81744c0d27d96c1f97b4e405af63eaef
+ms.sourcegitcommit: fc5db2e26db65be025e9f62044b4d29bb1744f8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259535"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80524081"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Criar um aplicativo "Olá, Mundo" em C++/CX
 
