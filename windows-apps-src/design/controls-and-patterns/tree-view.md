@@ -1,6 +1,6 @@
 ---
 description: Você pode criar um modo de exibição de árvore expansível associando o ItemsSource a uma fonte de dados hierárquica ou pode criar e gerenciar objetos de TreeViewNode por conta própria.
-title: Modo de exibição em árvore
+title: Exibição em árvore
 label: Tree view
 template: detail.hbs
 ms.date: 07/24/2019
@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 8e18455a39441d46e13e5a9a72291c9cd379c310
-ms.sourcegitcommit: 9effd88952bd26611f7b0a0e7baa68aba7d0ee8d
+ms.openlocfilehash: 9c451eba40b5c36843a32efbc80de40866f2f0dc
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68616523"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081446"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -34,13 +34,15 @@ As APIs **TreeView** dão suporte aos seguintes recursos:
 - Tipos arbitrários de conteúdo em um **TreeViewItem**
 - Arrastar e soltar entre modos de exibição de árvore
 
-| **Obter a biblioteca de interface do usuário do Windows** |
-| - |
-| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+**Obter a biblioteca de interface do usuário do Windows**
 
-| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
+|  |  |
 | - | - |
-| [Classe TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [Classe TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **TreeView** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de interface do usuário do Windows:** [Classe TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource)
+>
+> **APIs de plataforma:** [Classe TreeView](/uwp/api/windows.ui.xaml.controls.treeview), [classe TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [propriedade TreeView.ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource)
 
 Neste documento, usaremos o alias **muxc** em XAML para representar a APIs da Biblioteca de interface do usuário do Windows que incluímos em nosso projeto. Adicionamos isso ao nosso elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page):
 
@@ -69,7 +71,7 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TreeView">abrir o aplicativo e ver o TreeView em ação</a>.</p>
     <ul>

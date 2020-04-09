@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2f34c9c56cf9db5dfcfd702b97f2d34273b86e6a
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 23d7fbf129e9cf53a9510200aa4e3836dffa602f
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80226310"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482644"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedar um controle UWP personalizado em um aplicativo C++ Win32
 
@@ -45,20 +45,20 @@ Para hospedar um controle UWP XAML personalizado, você criará os seguintes pro
 4. Na janela **Gerenciar Pacotes NuGet**, instale os seguintes pacotes NuGet adicionais:
 
     * [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) (versão v6.0.0 ou posterior). Esse pacote fornece vários ativos de build e runtime que permitem que as Ilhas XAML funcionem no seu aplicativo.
-    * [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) (versão v6.0.0 ou posterior).
+    * [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) (versão v6.0.0 ou posterior). Esse pacote define a classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication), que você usará posteriormente neste passo a passo.
     * [Microsoft.VCRTForwarders.140](https://www.nuget.org/packages/Microsoft.VCRTForwarders.140).
 
 5. Compile a solução e confirme se ela foi compilada com êxito.
 
 ## <a name="create-a-uwp-app-project"></a>Criar um projeto de aplicativo UWP
 
-Em seguida, adicione um projeto de aplicativo **UWP (C++/WinRT)** à solução e faça algumas alterações de configuração nesse projeto. Mais adiante neste passo a passo, você adicionará o código a este projeto para implementar um controle UWP XAML personalizado e definir uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Seu aplicativo usará essa classe como um provedor de metadados raiz para carregar os metadados dos tipos UWP XAML personalizados.
+Em seguida, adicione um projeto de aplicativo **UWP (C++/WinRT)** à solução e faça algumas alterações de configuração nesse projeto. Posteriormente neste passo a passo, você adicionará o código a esse projeto para implementar um controle UWP XAML personalizado e definir uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication). 
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó da solução e selecione **Adicionar** -> **Novo Projeto**.
 
 2. Adicione o projeto **Aplicativo em Branco (C++/WinRT)** à solução. Nomeie o projeto **MyUWPApp** e verifique se a versão de destino e a versão mínima estão definidas como **Windows 10, versão 1903** ou posterior.
 
-3. Instale o pacote NuGet [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) no projeto **MyUWPApp**:
+3. Instale o pacote NuGet [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) no projeto **MyUWPApp**. Esse pacote define a classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication), que você usará posteriormente neste passo a passo.
 
     1. Clique com o botão direito do mouse no projeto **MyUWPApp** e escolha **Gerenciar Pacotes NuGet**.
     2. Selecione a guia **Procurar**, procure o pacote [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) e instale a v6.0.0 ou uma versão posterior desse pacote.
@@ -150,7 +150,7 @@ Nesta seção, você atualizará a solução que contém os dois projetos para c
 Agora você está pronto para adicionar o código ao projeto **MyUWPApp** e executar estas tarefas:
 
 * Implemente um controle UWP XAML personalizado. Mais adiante neste passo a passo, você adicionará o código que hospeda esse controle no projeto **MyDesktopWin32App**.
-* Defina um tipo que deriva da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) no Windows Community Toolkit. Essa classe funciona como um provedor de metadados raiz para carregar os metadados dos tipos UWP XAML personalizados.
+* Defina um tipo que deriva da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) no Windows Community Toolkit.
 
 ### <a name="define-a-custom-uwp-xaml-control"></a>Definir um controle UWP XAML personalizado
 
@@ -181,7 +181,7 @@ Agora você está pronto para adicionar o código ao projeto **MyUWPApp** e exec
 
 ### <a name="define-a-xamlapplication-class"></a>Definir uma classe XamlApplication
 
-Em seguida, revise a classe **App** padrão no projeto **MyUWPApp** para que ela derive da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Mais adiante neste passo a passo, você atualizará o projeto de área de trabalho para criar uma instância dessa classe como um provedor de metadados raiz para carregar os metadados dos tipos UWP XAML personalizados.
+Em seguida, revise a classe **App** padrão no projeto **MyUWPApp** para que ela derive da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Essa classe dá suporte à interface [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que o aplicativo descubra e carregue metadados para controles XAML personalizados da UWP em assemblies no diretório atual do seu aplicativo em tempo de execução. Essa classe também inicializa a estrutura XAML da UWP para o thread atual. Posteriormente neste tutorial, você atualizará o projeto da área de trabalho para criar uma instância dessa classe.
 
   > [!NOTE]
   > Cada solução que usa as Ilhas XAML pode conter apenas um projeto que define um objeto `XamlApplication`. Todos os controles UWP XAML personalizados no aplicativo compartilham o objeto `XamlApplication`. 

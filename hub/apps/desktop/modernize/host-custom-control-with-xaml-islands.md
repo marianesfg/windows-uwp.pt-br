@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: b1ac53e0a6b6e01cd2129e2b1893f91fae2ef0fe
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: fa8dd744120d5751dcf8c10a090ccc31094000d2
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218596"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482496"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando as Ilhas XAML
 
@@ -29,7 +29,7 @@ Para hospedar um controle UWP personalizado em um aplicativo WPF (ou do Windows 
 
 * **O controle UWP personalizado**. Você precisará do código-fonte do controle UWP personalizado que deseja hospedar para compilá-lo com seu aplicativo. Normalmente, o controle personalizado é definido em um projeto de biblioteca de classes UWP que você faz referência na mesma solução que o seu projeto do WPF ou Windows Forms.
 
-* **Um projeto de aplicativo UWP que define uma Classe de aplicativo raiz que deriva de XamlApplication**. Seu projeto do WPF ou Windows Forms deve ter acesso a uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. A maneira recomendada para fazer isso é definir esse objeto em um projeto de aplicativo UWP separado que faça parte da solução do seu aplicativo WPF ou Windows Forms. Esse objeto atua como um provedor raiz de metadados para carregar metadados para tipos personalizados de XAML de UWP em assemblies no diretório atual do seu aplicativo.
+* **Um projeto de aplicativo UWP que define uma Classe de aplicativo raiz que deriva de XamlApplication**. Seu projeto do WPF ou do Windows Forms deve ter acesso a uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit para que ele possa descobrir e carregar controles XAML personalizados da UWP. A maneira recomendada para fazer isso é definir esse objeto em um projeto de aplicativo UWP separado que faça parte da solução do seu aplicativo WPF ou Windows Forms. 
 
     > [!NOTE]
     > Sua solução pode conter apenas um projeto que define um objeto `XamlApplication`. Todos os controles UWP personalizados em seu aplicativo compartilham o mesmo objeto `XamlApplication`. O projeto que define o objeto `XamlApplication` deve incluir referências a todas as outras bibliotecas UWP e projetos que são usados para hospedar controles UWP na Ilha XAML.
@@ -67,7 +67,7 @@ Antes de começar, siga estas instruções para criar um projeto do WPF e config
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>Definir uma classe XamlApplication em um projeto de aplicativo UWP
 
-Agora, adicione um projeto de aplicativo UWP à sua solução e revise a classe `App` padrão neste projeto para derivar da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Seu aplicativo usará essa classe como um provedor raiz de metadados para carregar metadados para tipos personalizados de XAML de UWP em assemblies no diretório atual do seu aplicativo.
+Agora, adicione um projeto de aplicativo UWP à sua solução e revise a classe `App` padrão neste projeto para derivar da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Essa classe dá suporte à interface [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que o aplicativo descubra e carregue metadados para controles XAML personalizados da UWP em assemblies no diretório atual do seu aplicativo em tempo de execução. Essa classe também inicializa a estrutura XAML da UWP para o thread atual. 
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó da solução e selecione **Adicionar** -> **Novo Projeto**.
 2. Adicione um projeto **Aplicativo em Branco (Universal do Windows)** à sua solução. Verifique se a versão de destino e a versão mínima estão definidas como **Windows 10, versão 1903** ou posterior.
@@ -105,7 +105,7 @@ Agora, adicione um projeto de aplicativo UWP à sua solução e revise a classe 
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>Criar uma instância do objeto XamlApplication no ponto de entrada do aplicativo WPF
 
-Em seguida, adicione o código ao ponto de entrada do aplicativo WPF para criar uma instância da classe `App` que você acabou de definir no projeto UWP (essa é a classe que agora é derivada de `XamlApplication`). Esse objeto atua como um provedor raiz de metadados para carregar metadados para tipos personalizados de XAML de UWP em assemblies no diretório atual do seu aplicativo.
+Em seguida, adicione o código ao ponto de entrada do aplicativo WPF para criar uma instância da classe `App` que você acabou de definir no projeto UWP (essa é a classe que agora é derivada de `XamlApplication`).
 
 1. No projeto do WPF, clique com o botão direito do mouse no nó do projeto, selecione **Adicionar** -> **Novo item** e, em seguida, selecione **Classe**. Nomeie a classe como **Programa** e clique em **Adicionar**.
 

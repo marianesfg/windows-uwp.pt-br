@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3f2a0a6ee6b22fa7d08e7fc746c4ec2ad4ebffa7
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: ed6aa406cd1372819c25bd43b59cd416130b09e0
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218586"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482511"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP padrão em um aplicativo WPF usando as Ilhas XAML
 
@@ -31,7 +31,7 @@ Para hospedar um controle UWP em um aplicativo WPF (ou do Windows Forms), você 
 
 * **O projeto e o código-fonte para seu aplicativo**. O uso do controle [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar controles UWP internos padrão é compatível com aplicativos direcionados ao .NET Framework ou ao .NET Core 3.
 
-* **Um projeto de aplicativo UWP que define uma Classe de aplicativo raiz que deriva de XamlApplication**. Seu projeto do WPF ou Windows Forms deve ter acesso a uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. A maneira recomendada para fazer isso é definir esse objeto em um projeto de aplicativo UWP separado que faça parte da solução do seu aplicativo WPF ou Windows Forms. Esse objeto atua como um provedor raiz de metadados para carregar metadados para tipos personalizados de XAML de UWP em assemblies no diretório atual do seu aplicativo.
+* **Um projeto de aplicativo UWP que define uma Classe de aplicativo raiz que deriva de XamlApplication**. Seu projeto do WPF ou do Windows Forms deve ter acesso a uma instância da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit para que ele possa descobrir e carregar controles XAML personalizados da UWP. A maneira recomendada para fazer isso é definir esse objeto em um projeto de aplicativo UWP separado que faça parte da solução do seu aplicativo WPF ou Windows Forms. 
 
     > [!NOTE]
     > Embora o objeto `XamlApplication` não seja necessário para hospedar um controle UWP interno, seu aplicativo precisa desse objeto para dar suporte a todos os cenários possíveis da Ilha XAML, incluindo a hospedagem de controles UWP personalizados. Portanto, é recomendável que você sempre defina um objeto `XamlApplication` em qualquer solução na qual esteja usando as Ilhas XAML.
@@ -67,7 +67,7 @@ Antes de começar, siga estas instruções para criar um projeto do WPF e config
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>Definir uma classe XamlApplication em um projeto de aplicativo UWP
 
-Agora, adicione um projeto de aplicativo UWP à sua solução e revise a classe `App` padrão neste projeto para derivar da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit.
+Agora, adicione um projeto de aplicativo UWP à sua solução e revise a classe `App` padrão neste projeto para derivar da classe [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) fornecida pelo Windows Community Toolkit. Essa classe dá suporte à interface [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que o aplicativo descubra e carregue metadados para controles XAML personalizados da UWP em assemblies no diretório atual do seu aplicativo em tempo de execução. Essa classe também inicializa a estrutura XAML da UWP para o thread atual.
 
 > [!NOTE]
 > Embora essa etapa não seja necessária para hospedar um controle UWP interno, seu aplicativo precisa do objeto `XamlApplication` para dar suporte a todos os cenários possíveis da Ilha XAML, incluindo a hospedagem de controles UWP personalizados. Portanto, é recomendável que você sempre defina um objeto `XamlApplication` em qualquer solução na qual esteja usando as Ilhas XAML.
