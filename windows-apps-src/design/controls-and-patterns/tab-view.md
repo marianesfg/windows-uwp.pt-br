@@ -7,20 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 24c7bd8828ec036135233f569ee7add5d39ffb32
-ms.sourcegitcommit: 136416e8e2eb0565bb6eb99e42482c1723ccb8c7
+ms.openlocfilehash: ce9e3775f4b0f78d17f0ffdf3d6381f2e8a233d9
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76890421"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081529"
 ---
 # <a name="tabview"></a>TabView
 
 O controle TabView é uma maneira de exibir um conjunto de guias e seu respectivo conteúdo. TabViews são úteis para exibir várias páginas (ou documentos) de conteúdo e, ao mesmo tempo, dar a um usuário a capacidade de reorganizar, abrir ou fechar novas guias.
 
-> **APIs importantes**: [classe TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [classe TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
-
 ![Exemplo de um TabView](images/tabview/tab-introduction.png)
+
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | Este controle **TabView** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da biblioteca de interface do usuário do Windows**: [classe TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [classe TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 

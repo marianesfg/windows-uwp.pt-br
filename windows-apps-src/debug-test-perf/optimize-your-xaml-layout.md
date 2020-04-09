@@ -1,14 +1,14 @@
 ---
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Otimizar seu layout XAML
-description: Layout pode ser uma parte cara de um aplicativo XAML &\#8212; os dois em memória e uso de sobrecarga de CPU. Aqui estão algumas etapas simples que você pode seguir para melhorar o desempenho de layout do seu aplicativo XAML.
+description: O layout pode ser uma parte cara de um aplicativo XAML&\#8212; tanto no uso de CPU quanto na sobrecarga de memória. Aqui estão algumas etapas simples que você pode seguir para melhorar o desempenho de layout do seu aplicativo XAML.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 92dca27a4cfb02f5d1bcb722683eca89ec16a6d6
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66362217"
@@ -42,7 +42,7 @@ Considere a interface do usuário a seguir.
 
 Estes exemplos mostram três formas de implementar a mesma interface do usuário. Cada opção de implementação resulta em pixels quase idênticos na tela, mas difere substancialmente nos detalhes de implementação.
 
-Opção 1: Aninhado [ **StackPanel** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) elementos
+Opção 1: Elementos [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) aninhados
 
 Embora esse seja o modelo mais simples, ele usa 5 elementos do painel e resulta em uma sobrecarga significativa.
 
@@ -70,7 +70,7 @@ Embora esse seja o modelo mais simples, ele usa 5 elementos do painel e resulta 
 </StackPanel>
 ```
 
-Opção 2: Uma única [ **grade**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
+Opção 2: Um único [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
 
 O [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) adiciona certa complexidade, mas usa apenas um único elemento do painel.
 
@@ -103,7 +103,7 @@ O [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) a
 </Grid>
 ```
 
-Opção 3: Uma única [ **RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
+Opção 3: Um único [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
 
 Esse painel único também é um pouco mais complexo do que a utilização de painéis aninhados, mas pode ser mais fácil de entender e manter do que um [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid).
 
@@ -134,7 +134,7 @@ Como esses exemplos mostram, há muitas maneiras de atingir a mesma interface do
 
 Um requisito da interface do usuário comum é ter um layout em que elementos se sobrepõem uns aos outros. Geralmente, preenchimento, margens, alinhamentos e transformações são usados para posicionar os elementos dessa maneira. O controle [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) XAML é otimizado para melhorar o desempenho do layout para elementos que se sobrepõem.
 
-**Importante**  para ver a melhoria, use uma única célula [ **grade**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid). Não defina [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**  Para ver a melhora, use um [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) de célula única. Não defina [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### <a name="examples"></a>Exemplos
 
@@ -160,7 +160,7 @@ Um requisito da interface do usuário comum é ter um layout em que elementos se
 
 ## <a name="use-a-panels-built-in-border-properties"></a>Use as propriedades de borda internas do painel
 
-[**Grade**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [ **StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel), [ **RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel), e [  **ContentPresenter** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) controles têm propriedades de borda internos que permitem que você desenhar uma borda ao redor deles sem adicionar adicional [ **borda** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) elemento o XAML. As novas propriedades que dão suporte a borda interna são: **BorderBrush**, **BorderThickness**, **CornerRadius**, e **preenchimento**. Cada um desses é um [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
+Os controles [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel), [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) e [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) têm propriedades de borda internas que permitem que você desenhe uma borda em torno deles sem acrescentar um elemento [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) ao XAML. As novas propriedades que suportam bordas internas são: **BorderBrush**, **BorderThickness**, **CornerRadius** e **Padding**. Cada um desses é um [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
 
 Se a sua interface do usuário tem elementos [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) em torno desses painéis, use a borda interna ao invés, o que economiza um elemento extra na estrutura do layout de seu aplicativo. Como mencionado anteriormente, isso pode ser uma economia significativa, principalmente no caso de interface do usuário repetida.
 
@@ -175,11 +175,11 @@ Se a sua interface do usuário tem elementos [**Border**](https://docs.microsoft
 
 ## <a name="use-sizechanged-events-to-respond-to-layout-changes"></a>Use eventos **SizeChanged** para responder a mudanças de layout
 
-O [ **FrameworkElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) classe expõe dois eventos semelhantes para responder a alterações de layout: [**LayoutUpdated** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) e [ **SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged). Você pode estar usando um desses eventos para receber notificações quando um elemento é redimensionado durante o layout. A semântica dos dois eventos é diferente e existem considerações de desempenho importantes na escolha entre eles.
+A classe [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) expõe dois eventos similares para responder a alterações de layout: [**LayoutUpdated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) e [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged). Você pode estar usando um desses eventos para receber notificações quando um elemento é redimensionado durante o layout. A semântica dos dois eventos é diferente e existem considerações de desempenho importantes na escolha entre eles.
 
 Para um bom desempenho, [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) é quase sempre a escolha certa. **SizeChanged** tem semântica intuitiva. É gerado durante o layout quando o tamanho do [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) foi atualizado.
 
-[**LayoutUpdated** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) também é gerado durante o layout, mas tem semântica global — ele é gerado em cada elemento sempre que qualquer elemento é atualizado. É comum fazer apenas processamento local no manipulador de evento. Nesse caso, o código é executado com mais frequência que o necessário. Use **LayoutUpdated** apenas se você precisar saber quando um elemento é reposicionado sem alteração de tamanho (o que é incomum).
+[**LayoutUpdated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) também é gerado durante o layout, mas tem uma semântica global: é gerado em cada elemento sempre que qualquer elemento for atualizado. É comum fazer apenas processamento local no manipulador de evento. Nesse caso, o código é executado com mais frequência que o necessário. Use **LayoutUpdated** apenas se você precisar saber quando um elemento é reposicionado sem alteração de tamanho (o que é incomum).
 
 ## <a name="choosing-between-panels"></a>Escolhendo painéis
 

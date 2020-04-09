@@ -12,26 +12,30 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dfa010d3e50208df31dad9d838486e72f38787c2
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: ecc4dbebcee5e99d78f8523cf78c9dbd5a20b334
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340241"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081656"
 ---
 # <a name="password-box"></a>Caixa de senha
 
- 
-
 Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
-
-> **APIs importantes**: [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Propriedade Password](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password), [Propriedade PasswordChar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [Propriedade PasswordRevealMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [Evento PasswordChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a senha pressionando um botão de revelar. Você pode desabilitar o botão de revelação ou fornecer um mecanismo alternativo para revelar a senha, como uma caixa de seleção.
 
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de Interface do Usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da plataforma**: [Classe PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Propriedade Password](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.password), [Propriedade PasswordChar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [Propriedade PasswordRevealMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [Evento PasswordChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
+
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use o controle **PasswordBox** para receber uma senha ou outros dados particulares, como um número de CPF.
+Use o controle **PasswordBox** para receber uma senha ou outros dados particulares, como um número do seguro social.
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
@@ -40,7 +44,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PasswordBox">abri-lo e ver o PasswordBox em ação</a>.</p>
     <ul>

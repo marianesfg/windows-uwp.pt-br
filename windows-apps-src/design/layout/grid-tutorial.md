@@ -9,29 +9,29 @@ ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: f7c5eb595f3347eb4670e4f7c0a50aa930341d3e
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735031"
 ---
-# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Use Grid e StackPanel para criar um aplicativo de clima simples
+# <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Usar Grid e StackPanel para criar um aplicativo de clima simples
 
-Use XAML para criar o layout de um aplicativo de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
+Use XAML para criar o layout de um app de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
 
-> **APIs importantes**: [classe Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid), [classe StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **APIs importantes**: [Classe Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid), [classe StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Pré-requisitos
-- Windows 10 e Microsoft Visual Studio 2015 ou posterior. (O Visual Studio mais recente é recomendado para atualizações de segurança e desenvolvimento atuais) [Clique aqui para saber como configurar com o Visual Studio](../../get-started/get-set-up.md).
+- Windows 10 e Microsoft Visual Studio 2015 ou posterior. (O Visual Studio mais recente recomendado para atualizações de segurança e desenvolvimento atuais) [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](../../get-started/get-set-up.md).
 - Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um aplicativo "Hello World"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>Etapa 1: Criar um app em branco
+## <a name="step-1-create-a-blank-app"></a>Etapa 1: Crie um aplicativo em branco
 1. No menu Visual Studio, selecione **Arquivo** > **Novo Projeto**.
 2. No painel esquerdo da caixa de diálogo **Novo Projeto**, selecione **Visual C#**  > **Windows** > **Universal** ou **Visual C++**  > **Windows** > **Universal**.
 3. No painel central, selecione **Aplicativo em Branco**.
 4. Na caixa **Nome**, insira **WeatherPanel** e selecione **OK**.
 5. Para executar o programa, selecione **Depurar** > **Iniciar Depuração** no menu ou pressione F5.
 
-## <a name="step-2-define-a-grid"></a>Etapa 2: Definir uma grade
+## <a name="step-2-define-a-grid"></a>Etapa 2: Definir um Grid
 Em XAML, um elemento **Grid** é composto de uma série de linhas e colunas. Ao especificar a linha e a coluna de um elemento dentro de um **Grid**, você pode posicionar e espaçar outros elementos dentro de uma interface do usuário. As linhas e colunas são definidas com os elementos **RowDefinition** e **ColumnDefinition**.
 
 Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador de Soluções** e substitua o elemento **Grid** gerado automaticamente por este código.
@@ -49,7 +49,7 @@ Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador 
 </Grid>
 ```
 
-O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem uma **largura** de "3\*", enquanto a segunda tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm uma **altura** de "2\*" e "\*" respectivamente, portanto, a **grade** aloca duas vezes mais espaço para a primeira linha do segundo ("\*" é o mesmo que "1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
+O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem o valor **Width** de "3\*", enquanto a segunda tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm um valor **Height** de "2\*" e "\*" respectivamente, de modo que o elemento **Grid** aloca três vezes mais espaço para a primeira linha do que para a segunda ("\*" é o mesmo que "1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
 
 Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml).
 
@@ -103,7 +103,7 @@ Baixe a imagem abaixo e salve-a como um PNG denominado "parcialmente-nublado".
 
 ![Parcialmente nublado](images/partially-cloudy.PNG)
 
-No **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Ativos** e selecione **Adicionar** -> **Item existente...** Encontre parcialmente-nublado.png no navegador que é aberto, selecione-o e clique em **Adicionar**.
+No **Explorador de Soluções**, clique com o botão direito da pasta **Ativos** e selecione **Adicionar** -> **Item Existente...** Encontre partially-cloudy.png no navegador que é exibido, selecione-o e clique em **Adicionar**.
 
 Em seguida, em **MainPage.xaml**, adicione o elemento **Image** seguinte abaixo dos StackPanels da etapa 4.
 

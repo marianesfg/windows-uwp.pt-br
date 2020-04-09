@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 351e234577b1a07b33bdcdbb92642c3697342503
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: 31b3bcc2388a98941fc5e8aa44d18beee53de5c7
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163695"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081104"
 ---
 # <a name="combo-box-and-list-box"></a>Caixa de combinação e caixa de listagem
 
@@ -23,11 +23,17 @@ Use uma caixa de combinação (também conhecida como lista suspensa) para apres
 
 Quando a caixa de combinação é fechada, ela exibe a seleção atual ou fica vazia se não há nenhum item selecionado. Quando o usuário expande a caixa de combinação, ela exibe a lista de itens selecionáveis.
 
-> **APIs importantes**: [classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propriedade IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-
-Uma caixa de combinação no estado compacto com um cabeçalho.
-
 ![Exemplo de uma lista suspensa no estado compacto](images/combo_box_collapsed.png)
+
+> _Uma caixa de combinação no estado compacto com um cabeçalho._
+
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de Interface do Usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs de plataforma:** [classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propriedade IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -41,7 +47,7 @@ Uma caixa de combinação no estado compacto com um cabeçalho.
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ComboBox">abrir o aplicativo e conferir a ComboBox em ação</a>.</p>
     <ul>
@@ -240,13 +246,13 @@ private void FontSizeComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSubmitt
 {
     if (byte.TryParse(e.Text, out double newValue))
     {
-        // Update the app’s font size.
+        // Update the app's font size.
         _fontSize = newValue;
     }
     else
     {
         // If the item is invalid, reject it and revert the text.
-        // Mark the event as handled so the framework doesn’t update the selected item.
+        // Mark the event as handled so the framework doesn't update the selected item.
         sender.Text = sender.SelectedValue.ToString();
         e.Handled = true;
     }
@@ -279,7 +285,7 @@ private void FavoriteColorComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSu
     else
     {
         // If the item is invalid, reject it but do not revert the text.
-        // Mark the event as handled so the framework doesn’t update the selected item.
+        // Mark the event as handled so the framework doesn't update the selected item.
         e.Handled = true;
     }
 }

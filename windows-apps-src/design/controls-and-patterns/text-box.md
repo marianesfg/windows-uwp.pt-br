@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 07da54dddfffe082aa5633ac8eac3f342aaa6a5c
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: 0167d1f0ed69f8354fa6ee7cd77387aee9aee842
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302710"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081508"
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -24,7 +24,13 @@ O controle TextBox permite que um usuário digite texto em um aplicativo. Em ger
 
 O controle TextBox tem vários recursos que podem simplificar a entrada de texto. Ele é fornecido com um menu de contexto familiar, integrado, com suporte para copiar e colar texto. O botão "Limpar tudo" permite que um usuário exclua rapidamente todo o texto que foi digitado. Ele também tem recursos de verificação ortográfica integrados e habilitados por padrão.
 
-> **APIs importantes**: [classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [propriedade Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da plataforma**: [classe de caixa de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [propriedade Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -45,7 +51,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TextBox">abrir o aplicativo e conferir o TextBox em ação</a>.</p>
     <ul>

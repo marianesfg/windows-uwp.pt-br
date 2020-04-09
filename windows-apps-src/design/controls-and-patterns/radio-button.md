@@ -12,22 +12,22 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f623c18db5af8e503965c0c4518e35e263791a51
-ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
+ms.openlocfilehash: ad18426a36503c9a540343565c20297502810b76
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039152"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081653"
 ---
 # <a name="radio-buttons"></a>Botões de opção
-
-> **APIs importantes**: [Classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 Os botões de opção possibilitam que os usuários selecionem uma opção de um conjunto. Cada opção é representada por um botão de opção, e os usuários podem selecionar apenas um botão de opção de um grupo.
 
 (Se você tem curiosidade em saber a origem do nome, os botões de opção, também conhecidos como botões de rádio, receberam esse nome por causa dos botões predefinidos de canais em um rádio.)
 
 ![Botões de opção](images/controls/radio-button.png)
+
+> **APIs da plataforma**: [Classe RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propriedade IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -55,14 +55,14 @@ Se há mais que oito opções, use uma [lista suspensa](lists.md) ou [caixa de l
 
 ![caixa de combinação](images/combo_box_scroll.png)
 
-Se as opções disponíveis baseiam-se no contexto atual do aplicativo ou, de outra forma, variam dinamicamente, use uma [caixa de listagem](lists.md) de seleção única.
+Se as opções disponíveis forem baseadas no contexto atual do aplicativo ou, de outra forma, variarem dinamicamente, use uma [caixa de listagem](lists.md) de seleção única.
 
 ## <a name="examples"></a>Exemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RadioButton">abri-lo e ver o RadioButton em ação</a>.</p>
     <ul>
@@ -174,7 +174,7 @@ Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um bot�
 ## <a name="recommendations"></a>Recomendações
 
 -   Certifique-se de que a finalidade e o estado atual de um conjunto de botões de opção sejam claros.
--   Limite o conteúdo em texto do botão de opção para uma única linha.
+-   Limite o conteúdo em texto do botão de opção a uma única linha.
 -   Se o conteúdo do texto for dinâmico, considere como o botão redimensionará e o que acontecerá com os elementos visuais ao redor dele.
 -   Use fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
 -   Não coloque dois grupos de botão de opção lado a lado. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo.

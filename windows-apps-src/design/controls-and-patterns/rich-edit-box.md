@@ -11,20 +11,24 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 00a65324b799b0cf974271da23fdbcb36aa6c8e2
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: d3acd69b2b0e3a1bd97b6aa917991d4b2c88d075
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399621"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081585"
 ---
 # <a name="rich-edit-box"></a>Caixa de edição com formato
 
- 
-
 É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
 
-> **APIs importantes**: [classe RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [propriedade Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [propriedade IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [propriedade IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de Interface do Usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da plataforma**: [classe RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [propriedade Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [propriedade IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [propriedade IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -40,7 +44,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RichEditBox">abrir o aplicativo e ver o RichEditBox em ação</a>.</p>
     <ul>
@@ -212,7 +216,7 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - Use uma fonte que seja consistente com o estilo de seu aplicativo.
 - Faça com que a altura do controle de texto seja suficiente para acomodar entradas típicas.
 - Não deixe que seus controles de entrada de texto aumentem de tamanho enquanto os usuários digitam.
-- Não use uma caixa de texto multilinha quando os usuários só precisarem de uma linha única.
+- Não use uma caixa de texto com várias linhas quando os usuários só precisarem de uma linha única.
 - Não use um controle Rich Text se um controle de texto sem formatação for adequado.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo

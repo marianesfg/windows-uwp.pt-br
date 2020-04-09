@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 71f8298456b3c297994d6aa11d815a6b46ba7ff4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 9f90ce11c9a35200121722f3b0a0ac7d7047e819
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340366"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081562"
 ---
 # <a name="rich-text-block"></a>Bloco rich text
 
@@ -24,13 +24,13 @@ ms.locfileid: "71340366"
 
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
-> **APIs importantes**: [classe RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [classe RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [classe Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [classe Typography](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
+> **APIs da plataforma**: [classe RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [classe RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [classe Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [classe Typography](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, várias colunas ou outros layouts de texto complexos ou elementos de interface do usuário embutidos, como imagens.
 
-Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. Você pode usá-lo para exibir texto de linha única ou de várias linhas, hiperlinks embutidos e texto com formatação, como negrito, itálico ou sublinhado. TextBlock fornece um modelo de conteúdo mais simples e, portanto, é mais fácil de usar e pode fornecer melhor desempenho na renderização de texto do que RichTextBlock. Esse é o controle preferencial para a maioria dos textos de interface do usuário de aplicativos. Embora você possa colocar quebras de linha no texto, TextBlock é projetado para exibir um único parágrafo e não oferece suporte a recuo de texto.
+Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. Você pode usá-lo para exibir texto de linha única ou de várias linhas, hiperlinks embutidos e texto com formatação, como negrito, itálico ou sublinhado. O TextBlock fornece um modelo de conteúdo mais simples e, portanto, é mais fácil de usar e pode oferecer melhor desempenho na renderização de texto do que RichTextBlock. Esse é o controle preferencial para a maioria dos textos de interface do usuário de aplicativos. Embora você possa colocar quebras de linha no texto, o TextBlock é projetado para exibir um único parágrafo e não é compatível com recuo de texto.
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
@@ -39,7 +39,7 @@ Para obter mais informações sobre como escolher o controle de texto certo, con
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RichTextBlock">abrir o aplicativo e ver o RichTextBlock em ação</a>.</p>
     <ul>

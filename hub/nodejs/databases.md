@@ -1,33 +1,33 @@
 ---
-title: Introdução à conexão de aplicativos node. js a um banco de dados
-description: Introdução à conexão de aplicativos node. js a um banco de dados no Windows.
+title: Introdução à conexão de aplicativos Node.js a um banco de dados
+description: Introdução à conexão de aplicativos Node.js a um banco de dados no Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: NodeJS, Node. js, Windows 10, Microsoft, Learning NodeJS, nó no Windows, nó em WSL, nó no Linux no Windows, instalar nó no Windows, NodeJS com vs Code, desenvolver com nó no Windows, desenvolver com NodeJS no Windows, instalar nó em WSL, NodeJS no Windows Subsistema para Linux
+keywords: NodeJS, Node.js, windows 10, microsoft, aprendizado no nodejs, nó no windows, nó no wsl, nó no linux no windows, instalar nó no windows, nodejs com vs code, desenvolver com nó no windows, desenvolver com nodejs no windows, instalar nó no WSL, NodeJS no Subsistema do Windows para Linux
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: 63c47107538d8744201f83ea1be24cfaf3193f4f
 ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72517822"
 ---
-# <a name="get-started-using-mongodb-or-postgresql-with-nodejs-on-windows"></a>Introdução ao uso do MongoDB ou PostgreSQL com node. js no Windows
+# <a name="get-started-using-mongodb-or-postgresql-with-nodejs-on-windows"></a>Introdução ao uso de MongoDB ou PostgreSQL com Node.js no Windows
 
-Os aplicativos node. js geralmente precisam manter dados, o que pode ocorrer por meio de arquivos, armazenamento local, serviços de nuvem ou bancos de dados. Este guia passo a passo irá ajudá-lo a começar a conectar seu aplicativo node. js a um banco de dados. Optamos por se concentrar em duas opções populares: MongoDB e PostgreSQL.
+Os aplicativos Node.js geralmente precisam persistir dados, o que pode ocorrer por meio de arquivos, do armazenamento local, de serviços de nuvem ou de bancos de dados. Este guia passo a passo ajudará você a conectar seu aplicativo Node.js a um banco de dados. Optamos por se concentrar em duas opções populares: MongoDB e PostgreSQL.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este guia pressupõe que você já concluiu as etapas para [configurar seu ambiente de desenvolvimento do node. js com o WSL 2](./setup-on-wsl2.md), incluindo:
+Este guia pressupõe que você já concluiu as etapas para [configurar o ambiente de desenvolvimento Node.js com WSL 2](./setup-on-wsl2.md), incluindo:
 
-- Instale o Windows 10 Insider Preview versão 18932 ou posterior.
-- Habilite o recurso WSL 2 no Windows.
-- Instale uma distribuição do Linux (Ubuntu 18, 4 para nossos exemplos). Você pode verificar isso com: `wsl lsb_release -a`
-- Verifique se a distribuição do Ubuntu 18, 4 está em execução no modo WSL 2. (WSL pode executar distribuições no modo v1 ou v2.) Você pode verificar isso abrindo o PowerShell e inserindo: `wsl -l -v`
-- Usando o PowerShell, defina o Ubuntu 18, 4 como sua distribuição padrão, com: `wsl -s ubuntu 18.04`
+- Instalar o build 18932 ou posterior do Windows 10 Insider Preview.
+- Habilitar o recurso WSL 2 no Windows.
+- Instalar uma distribuição do Linux (Ubuntu 18.04 nos nossos exemplos). Você pode verificar isso com: `wsl lsb_release -a`
+- Verificar se a distribuição do Ubuntu 18.04 está em execução no modo WSL 2. (O WSL pode executar distribuições no modo v1 ou v2.) Para verificar isso, abra o PowerShell e digite: `wsl -l -v`
+- Usando o PowerShell, definir o Ubuntu 18.04 como a distribuição padrão, com: `wsl -s ubuntu 18.04`
 
 ## <a name="differences-between-mongodb-and-postgresql"></a>Diferenças entre o MongoDB e o PostgreSQL
 
@@ -37,27 +37,27 @@ Este guia pressupõe que você já concluiu as etapas para [configurar seu ambie
 
 [!INCLUDE [Install and run Mongo](../includes/install-and-run-mongo.md)]
 
-### <a name="vs-code-support-for-mongodb"></a>Suporte de VS Code para MongoDB
+### <a name="vs-code-support-for-mongodb"></a>Suporte do VS Code para MongoDB
 
-VS Code dá suporte ao trabalho com bancos de dados do MongoDB por meio da [extensão CosmosDB do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb), você pode criar, gerenciar e consultar bancos de dados do MongoDB de dentro vs Code.
+O VS Code dá suporte ao trabalho com bancos de dados MongoDB por meio da [extensão do Azure Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb), você pode criar bancos de dados MongoDB no VS Code, gerenciá-los e consultá-los.
 
-Para saber mais, visite o VS Code docs: [trabalhando com o MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
+Para saber mais, acesse os documentos do VS Code: [Como trabalhar com o MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
 
 Saiba mais nos documentos do MongoDB:
 
-- [Introdução ao uso do MongoDB](https://docs.mongodb.com/manual/introduction/)
+- [Introdução ao MongoDB](https://docs.mongodb.com/manual/introduction/)
 - [Criar usuários](https://docs.mongodb.com/manual/tutorial/create-users/)
 - [Conectar-se a uma instância do MongoDB em um host remoto](https://docs.mongodb.com/manual/mongo/#mongodb-instance-on-a-remote-host)
-- [CRUD: criar, ler, atualizar, excluir](https://docs.mongodb.com/manual/crud/)
+- [CRUD: Criar, Ler, Atualizar e Excluir](https://docs.mongodb.com/manual/crud/)
 - [Documentos de referência](https://docs.mongodb.com/manual/reference/)
 
 ## <a name="install-postgresql"></a>Instalar o PostgreSQL
 
 [!INCLUDE [Install and run PostgresQL](../includes/install-and-run-postgres.md)]
 
-### <a name="vs-code-support-for-postgresql"></a>Suporte VS Code para PostgreSQL
+### <a name="vs-code-support-for-postgresql"></a>Suporte do VS Code para PostgreSQL
 
-VS Code dá suporte ao trabalho com bancos de dados PostgreSQL por meio da [extensão PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql), você pode criar, conectar-se a, gerenciar e consultar bancos de dados PostgreSQL de dentro vs Code.
+O VS Code dá suporte ao trabalho com bancos de dados PostgreSQL por meio da [extensão do PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql), você pode criar bancos de dados PostgreSQL no VS Code, conectar-se a eles, gerenciá-los e consultá-los.
 
 ## <a name="set-up-profile-aliases"></a>Configurar aliases de perfil
 

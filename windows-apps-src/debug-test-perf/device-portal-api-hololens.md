@@ -4,14 +4,14 @@ title: Referência de API do Device Portal para HoloLens
 description: Saiba mais sobre as APIs REST do Windows Device Portal para Hololens que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
 ms.date: 03/22/2018
 ms.topic: article
-keywords: Windows 10, uwp, o portal do dispositivo
+keywords: windows 10, uwp, portal de dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb068908adf6d6c40a50cee3aececba1861ee8
-ms.sourcegitcommit: 81511fddf1393dffcfc069c769bb149da99529b1
-ms.translationtype: MT
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59013333"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63801385"
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>Referência de API do Device Portal para HoloLens
 
@@ -27,24 +27,24 @@ Você pode obter os requisitos de HTTPS para o Device Portal usando o seguinte f
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/os/webmanagement/settings/https |
+| GET | /api/holographic/os/webmanagement/settings/https |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -58,24 +58,24 @@ Você pode obter o valor armazenado da DIP usando o seguinte formato de solicita
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/os/settings/ipd |
+| GET | /api/holographic/os/settings/ipd |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -89,24 +89,24 @@ Você pode obter uma lista de provedores ETW específicos do HoloLens que não s
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/os/etw/customproviders |
+| GET | /api/holographic/os/etw/customproviders |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -121,24 +121,24 @@ Você pode obter o estado de todos os serviços em execução no momento usando 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/os/services |
+| GET | /api/holographic/os/services |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -153,7 +153,7 @@ Você pode definir os requisitos de HTTPS para o Device Portal usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/management/settings/https |
+| POST | /api/holographic/management/settings/https |
 
 
 **Parâmetros do URI**
@@ -166,15 +166,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -189,7 +189,7 @@ Você pode definir a DIP armazenada usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/os/settings/ipd |
+| POST | /api/holographic/os/settings/ipd |
 
 
 **Parâmetros do URI**
@@ -202,15 +202,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -240,15 +240,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -265,19 +265,19 @@ Você pode obter o estágio térmico do dispositivo usando o seguinte formato de
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/ |
+| GET | /api/holographic/ |
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
@@ -289,7 +289,7 @@ Os valores possíveis são indicados pela tabela a seguir.
 | 2 | Morno |
 | 3 | Crítico |
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -302,7 +302,7 @@ Você pode criar um fluxo de controle ou postar dados em um fluxo criado usando 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/control/stream |
+| POST | /api/holographic/simulation/control/stream |
 
 
 **Parâmetros do URI**
@@ -316,15 +316,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -343,19 +343,19 @@ Você pode excluir um fluxo de controle usando o seguinte formato de solicitaç�
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -374,19 +374,19 @@ Você pode abrir uma conexão de soquete da Web para um fluxo de controle usando
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -400,24 +400,24 @@ Você pode obter o modo de simulação usando o seguinte formato de solicitaçã
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/control/mode |
+| GET | /api/holographic/simulation/control/mode |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -431,7 +431,7 @@ Você pode definir o modo de simulação usando o seguinte formato de solicitaç
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simluation/control/mode |
+| POST | /api/holographic/simluation/control/mode |
 
 
 **Parâmetros do URI**
@@ -444,15 +444,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -481,15 +481,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -503,24 +503,24 @@ Você pode obter todas as gravações disponíveis usando o seguinte formato de 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/playback/files |
+| GET | /api/holographic/simulation/playback/files |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -534,7 +534,7 @@ Você pode obter os tipos de dados em uma gravação carregada usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/playback/session/types |
+| GET | /api/holographic/simulation/playback/session/types |
 
 
 **Parâmetros do URI**
@@ -547,15 +547,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -569,24 +569,24 @@ Você pode obter todas as gravações carregadas disponíveis usando o seguinte 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/playback/session/files |
+| GET | /api/holographic/simulation/playback/session/files |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -600,7 +600,7 @@ Você pode obter o estado de reprodução atual de uma gravação usando o segui
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/playback/session |
+| GET | /api/holographic/simulation/playback/session |
 
 
 **Parâmetros do URI**
@@ -613,17 +613,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -635,7 +635,7 @@ Você pode carregar uma gravação usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/playback/session/file |
+| POST | /api/holographic/simulation/playback/session/file |
 
 
 **Parâmetros do URI**
@@ -648,17 +648,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -670,7 +670,7 @@ Você pode pausar uma gravação usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/playback/session/pause |
+| POST | /api/holographic/simulation/playback/session/pause |
 
 
 **Parâmetros do URI**
@@ -683,17 +683,17 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -705,7 +705,7 @@ Você pode reproduzir uma gravação usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/playback/session/play |
+| POST | /api/holographic/simulation/playback/session/play |
 
 
 **Parâmetros do URI**
@@ -718,15 +718,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -740,7 +740,7 @@ Você pode parar uma gravação usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/playback/session/stop |
+| POST | /api/holographic/simulation/playback/session/stop |
 
 
 **Parâmetros do URI**
@@ -753,15 +753,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -788,15 +788,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -810,24 +810,24 @@ Você pode carregar uma gravação usando o seguinte formato de solicitação:
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/playback/file |
+| POST | /api/holographic/simulation/playback/file |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -843,24 +843,24 @@ Você pode obter a estado de gravação atual usando o seguinte formato de solic
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/simulation/recording/status |
+| GET | /api/holographic/simulation/recording/status |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -874,7 +874,7 @@ Você pode iniciar uma gravação usando o seguinte formato de solicitação: S�
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/recording/start |
+| POST | /api/holographic/simulation/recording/start |
 
 
 **Parâmetros do URI**
@@ -887,22 +887,22 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 | hands   | (**veja abaixo**) Defina esse valor como 1 para indicar que o sistema deve gravar dados das mãos. |
 | spatialMapping   | (**veja abaixo**) Defina esse valor como 1 para indicar que o sistema deve gravar dados do mapeamento espacial. |
 | environment   | (**veja abaixo**) Defina esse valor como 1 para indicar que o sistema deve gravar dados do ambiente. |
-| nome   | (**necessário**) O nome da gravação. |
+| name   | (**necessário**) O nome da gravação. |
 | singleSpatialMappingFrame   | (**opcional**) Defina esse valor como 1 para indicar que somente um único quadro de mapeamento espacial deve ser gravado. |
 
 Para esses parâmetros, um dos seguintes parâmetros deve ser definido exatamente como 1: *head*, *hands*, *spatialMapping* ou *environment*.
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -916,24 +916,24 @@ Você pode parar a gravação atual usando o seguinte formato de solicitação: 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/simulation/recording/stop |
+| POST | /api/holographic/simulation/recording/stop |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -962,15 +962,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -984,7 +984,7 @@ Você pode baixar um arquivo de MRC do dispositivo usando o seguinte formato de 
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/mrc/file |
+| GET | /api/holographic/mrc/file |
 
 
 **Parâmetros do URI**
@@ -998,15 +998,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1020,24 +1020,24 @@ Você pode obter as configurações de MRC usando o seguinte formato de solicita
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/mrc/settings |
+| GET | /api/holographic/mrc/settings |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1051,24 +1051,24 @@ Você pode obter o status da gravação de MRC usando o seguinte formato de soli
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/mrc/status |
+| GET | /api/holographic/mrc/status |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1082,24 +1082,24 @@ Você pode obter os arquivos de MRC armazenados no dispositivo usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/mrc/files |
+| GET | /api/holographic/mrc/files |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1113,24 +1113,24 @@ Você pode definir as configurações de MRC usando o seguinte formato de solici
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/mrc/settings |
+| POST | /api/holographic/mrc/settings |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1144,24 +1144,24 @@ Você pode iniciar uma gravação de MRC usando o seguinte formato de solicitaç
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/mrc/video/control/start |
+| POST | /api/holographic/mrc/video/control/start |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1175,24 +1175,24 @@ Você pode parar a atual gravação de MRC usando o seguinte formato de solicita
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| POSTAR | /api/holographic/mrc/video/control/stop |
+| POST | /api/holographic/mrc/video/control/stop |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1206,24 +1206,24 @@ Você pode tirar uma foto de MRC usando o seguinte formato de solicitação: A f
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/mrc/photo |
+| GET | /api/holographic/mrc/photo |
 
 
 **Parâmetros do URI**
 
-- Nenhuma
+- Não
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1239,7 +1239,7 @@ Você pode iniciar um download em partes de um mp4 fragmentado usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/stream/live.mp4 |
+| GET | /api/holographic/stream/live.mp4 |
 
 
 **Parâmetros do URI**
@@ -1255,15 +1255,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1277,7 +1277,7 @@ Você pode iniciar um download em partes de um mp4 fragmentado usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/stream/live_high.mp4 |
+| GET | /api/holographic/stream/live_high.mp4 |
 
 
 **Parâmetros do URI**
@@ -1293,15 +1293,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1315,7 +1315,7 @@ Você pode iniciar um download em partes de um mp4 fragmentado usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/stream/live_low.mp4 |
+| GET | /api/holographic/stream/live_low.mp4 |
 
 
 **Parâmetros do URI**
@@ -1331,15 +1331,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 
@@ -1353,7 +1353,7 @@ Você pode iniciar um download em partes de um mp4 fragmentado usando o seguinte
  
 | Método      | URI da solicitação |
 | :------     | :----- |
-| OBTER | /api/holographic/stream/live_med.mp4 |
+| GET | /api/holographic/stream/live_med.mp4 |
 
 
 **Parâmetros do URI**
@@ -1369,15 +1369,15 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Não
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Não
 
 **Resposta**
 
-- Nenhuma
+- Não
 
 **Código de status**
 

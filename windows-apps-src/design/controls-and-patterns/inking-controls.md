@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: b665145eac8599bae69aaf4b1951d267bf79f7a7
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 892e8e9bdeed562a83e566266a7391e9c24b2ad3
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062106"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081727"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
@@ -54,7 +54,7 @@ Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuá
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/InkCanvas">abri-lo e ver o InkCanvas em ação</a>.</p>
     <ul>
@@ -158,7 +158,7 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 - Use um controle InkToolbar com InkCanvas para fornecer configurações e recursos de escrita à tinta básicos. O InkCanvas e InkToolbar podem ser personalizados de forma programática.
 - O InkToolbar, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo.
 - Para dar suporte à escrita à tinta com entrada por toque, recomendamos usar o ícone ED5F da fonte Segoe MLD2 Assets para o botão de alternância, com uma dica de ferramenta "Escrita por toque".
-- Se você fornecer seleção de traço, recomendamos usar o ícone EF20 da fonte Segoe MLD2 Assets para o botão de ferramenta, com uma dica de ferramenta "Ferramenta de seleção".
+- Caso você forneça seleção de traço, recomendamos usar o ícone EF20 da fonte Segoe MLD2 Assets para o botão de ferramenta, com uma dica "Ferramenta de seleção".
 - Se for usar mais de um InkCanvas, recomendamos usar um único InkToolbar para controlar a escrita à tinta em telas.
 - Para obter o melhor desempenho, recomendamos alterar o submenu padrão, em vez de criar um personalizado para ferramentas padrão e personalizadas.
 
@@ -166,7 +166,7 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 - [Exemplo do SimpleInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk): demonstra oito cenários de recursos de personalização e extensibilidade dos controles InkCanvas e InkToolbar. Cada cenário fornece orientação básica sobre situações comuns de escrita à tinta e implementações de controle.
 - [Exemplo do ComplexInk](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) - demonstra cenários de escrever à tinta mais avançados.
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

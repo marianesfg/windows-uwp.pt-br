@@ -1,16 +1,15 @@
 ---
 title: Comando em aplicativos da UWP (Plataforma Universal do Windows)
 description: Como usar as classes XamlUICommand e StandardUICommand (juntamente com a interface ICommand) para compartilhar e gerenciar os comandos entre vários tipos de controles, independentemente do tipo de entrada e do dispositivo que está sendo usado.
-author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: cd34c9444c68b8e959f449124fe4ae294ec14fc4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 57e4a135e97c0a8f5d09834f2eb8c729c6422af0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257716"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081754"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Aplique comandos em aplicativos da UWP (Plataforma Universal do Windows) usando StandardUICommand, XamlUICommand e ICommand
 
@@ -20,7 +19,7 @@ Neste tópico, descreveremos o comando nos aplicativos da UWP (Plataforma Univer
 
 *Compartilhe comandos entre vários controles, independentemente do tipo de entrada e do dispositivo*
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 
 - [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) e [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)
 - [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)
@@ -242,7 +241,7 @@ public class ListItemData
 }
 ```
 
-2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) do [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o Delete do [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) associado e com texto).
+2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o Delete do [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) associado e com texto).
 
 ```csharp
 /// <summary>
@@ -541,7 +540,7 @@ public class ListItemData
 }
 ```
 
-2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) do [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) associado e com texto).
+2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) associado e com texto).
 
 ```csharp
 ObservableCollection<ListItemData> collection = new ObservableCollection<ListItemData>();
@@ -1100,11 +1099,11 @@ Ao criar comandos para seus aplicativos UWP, use as seguintes abordagens:
 
 Para obter um exemplo completo que demonstra uma implementação de [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) e [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand), confira a amostra da [Galeria de controles XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Controles e padrões para aplicativos UWP](index.md)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 #### <a name="topic-samples"></a>Amostras de tópico
 

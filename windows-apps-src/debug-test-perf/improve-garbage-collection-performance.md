@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
 ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72282194"
@@ -18,7 +18,7 @@ ms.locfileid: "72282194"
 
 Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/index).
 
-**Observe**  a necessidade de intervir no comportamento padrão do coletor de lixo é um indício de problemas gerais de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tópico se aplica somente a C# e Visual Basic.
+**Observação**  Precisar intervir no comportamento padrão do coletor de lixo é um forte indicativo de problemas gerais de memória em seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tópico se aplica somente a C# e Visual Basic.
 
  
 
@@ -42,7 +42,7 @@ Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo
 
 É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_), em que n é a geração que você deseja coletar (0, 1 ou 2).
 
-**Observe**  recomendamos que você não force uma coleta de lixo em seu aplicativo porque o coletor de lixo usa muitos heurísticos para determinar o melhor momento para executar uma coleta, e forçar uma coleta em muitos casos é um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
+**Observação**  Recomendamos que você não imponha uma coleta de lixo em seu aplicativo porque o coletor de lixo usa várias heurísticas para determinar a melhor ocasião para a execução de uma coleta, e impor uma coleta é, em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
  
 Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
@@ -74,7 +74,7 @@ Qualquer objeto com 85 KB ou mais é alocado na pilha de objetos grandes (LOH) e
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos com muitas referências
 
-O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos de referência avançados em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
+O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos com muitas referências em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
 
 Substituir referências de objeto por índices pode ser uma alteração prejudicial e complicada para seu aplicativo e é mais eficiente para objetos grandes com um grande número de referências. Faça isso somente se estiver observando tempos muito grandes de coleta de lixo em seu aplicativo com relação a objetos com muitas referências.
 

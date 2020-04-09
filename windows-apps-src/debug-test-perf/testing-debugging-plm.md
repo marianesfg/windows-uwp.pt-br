@@ -1,6 +1,6 @@
 ---
-description: Ferramentas e técnicas para depurar e testar como seu aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo.
-title: Gerenciamento de tempo de vida do processo de teste e depuração
+description: Ferramentas e técnicas para depurar e testar como o aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo.
+title: Testar e depurar o Gerenciamento do Tempo de Vida do Processo
 ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,14 +8,14 @@ ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 6912d7faa3a86dade13b60eac5654aef8a52173d
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735011"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
 
-Uma das principais diferenças entre aplicativos UWP e aplicativos da área de trabalho tradicionais é que títulos UWP residem em um contêiner de aplicativo sujeito ao PLM (Gerenciamento do Tempo de Vida do Processo). Os aplicativos UWP podem ser suspensos, retomados ou encerrados em todas as plataformas pelo serviço Agente do Tempo de Execução, e há ferramentas dedicadas a serem usadas para forçar essas transições quando você testa ou depura o código que as manipula.
+Uma das principais diferenças entre aplicativos UWP e aplicativos da área de trabalho tradicionais é que títulos UWP residem em um contêiner de aplicativo sujeito ao PLM (Gerenciamento do Tempo de Vida do Processo). Os aplicativos UWP podem ser suspensos, retomados ou encerrados em todas as plataformas pelo serviço Agente do Runtime, e há ferramentas dedicadas a serem usadas para forçar essas transições quando você testa ou depura o código que as manipula.
 
 ## <a name="features-in-visual-studio-2015"></a>Recursos no Visual Studio 2015
 
@@ -27,7 +27,7 @@ O depurador interno do Visual Studio 2015 pode ajudar a investigar problemas em 
 
 PLMDebug.exe é uma ferramenta de linha de comando que permite controlar o estado PLM de um pacote de aplicativos e é fornecida como parte do SDK do Windows. Depois de instalada, a ferramenta reside em *C:\Program Files (x86) \Windows Kits\10\Debuggers\x64* por padrão.
 
-PLMDebug também permite desabilitar o PLM de qualquer pacote de aplicativos instalado, algo necessário para alguns depuradores. A desabilitação do PLM impede que o serviço Agente do Tempo de Execução encerre o aplicativo antes que você tenha uma chance de depurar. Para desabilitar PLM, use a opção **/enableDebug**, seguida do *nome completo do pacote* do aplicativo UWP (o nome curto, o nome da família de pacotes, ou o AUMID de um pacote não funcionará):
+PLMDebug também permite desabilitar o PLM de qualquer pacote de aplicativos instalado, algo necessário para alguns depuradores. A desabilitação do PLM impede que o serviço Agente do Runtime encerre o aplicativo antes que você tenha uma chance de depurar. Para desabilitar PLM, use a opção **/enableDebug**, seguida do *nome completo do pacote* do aplicativo UWP (o nome curto, o nome da família de pacotes, ou o AUMID de um pacote não funcionará):
 
 ```cmd
 plmdebug /enableDebug [PackageFullName]

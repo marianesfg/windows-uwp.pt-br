@@ -1,39 +1,39 @@
 ---
 ms.assetid: e04ebe3f-479c-4b48-99d8-3dd4bb9bfaf4
 title: Provisionar o Portal de Dispositivos com um certificado SSL personalizado
-description: Saiba como provisionar o Windows Device Portal com um certificado personalizado para uso em comunicação HTTPS.
+description: Saiba como provisionar o Portal de Dispositivos do Windows com um certificado personalizado para uso em comunicações HTTPS.
 ms.date: 04/19/2019
 ms.topic: article
-keywords: Windows 10, uwp, o portal do dispositivo
+keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: ce4e45bc23f4efb636618bb4891b9d6e9d207490
 ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "63774146"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Provisionar o Portal de Dispositivos com um certificado SSL personalizado
 
-Na Atualização do Windows 10 para Criadores, o Windows Device Portal adicionou uma maneira de os administradores de dispositivo para instalar um certificado personalizado para uso na comunicação HTTPS.
+Na Atualização do Windows 10 para Criadores, o Portal de Dispositivos do Windows adicionou uma maneira para os administradores de dispositivo instalarem um certificado personalizado para uso na comunicação HTTPS.
 
 Embora seja possível fazer isso em seu próprio computador, esse recurso destina-se principalmente a empresas que têm uma infraestrutura de certificado em vigor.  
 
-Por exemplo, uma empresa pode ter uma autoridade de certificação (CA) para assinar certificados de sites de intranet por HTTPS. Além disso, esse recurso funciona sobre essa infraestrutura.
+Por exemplo, uma empresa pode ter uma AC (autoridade de certificação) para assinar certificados de sites de intranet por HTTPS. Além disso, esse recurso funciona sobre essa infraestrutura.
 
 ## <a name="overview"></a>Visão geral
 
-Por padrão, o Device Portal gera uma autoridade de certificação raiz autoassinada e, em seguida, a utiliza para assinar certificados SSL para cada ponto de extremidade no qual esteja realizando a escuta. Isso inclui `localhost`, `127.0.0.1` e `::1` (IPv6 localhost).
+Por padrão, o Portal de Dispositivos gera uma AC raiz autoassinada, depois a utiliza para assinar certificados SSL em cada ponto de extremidade que ele esteja escutando. Isso inclui `localhost`, `127.0.0.1` e `::1` (localhost IPv6).
 
 Também estão incluídos o nome de host do dispositivo (por exemplo, `https://LivingRoomPC`) e o endereço IP de link local atribuído ao dispositivo (até dois [IPv4, IPv6] por adaptador de rede).
-Você pode ver os endereços IP de link local de um dispositivo analisando a ferramenta de rede no Device Portal. Eles começarão com `10.` ou `192.` para IPv4 ou `fe80:` para IPv6.
+Você pode ver os endereços IP de link local de um dispositivo analisando a ferramenta de Rede no Portal de Dispositivos. Eles começarão com `10.` ou `192.` para IPv4 ou `fe80:` para IPv6.
 
-Na configuração padrão, um aviso de certificado pode aparecer no navegador devido à autoridade de certificação raiz não confiável. Especificamente, o certificado SSL fornecido pelo Device Portal é assinado por uma autoridade de certificação raiz na qual o navegador ou o computador não confie. Isso pode ser corrigido por meio da criação de uma nova autoridade de certificação raiz confiável.
+Na configuração padrão, um aviso de certificado pode aparecer no navegador devido à AC raiz não confiável. Especificamente, o certificado SSL fornecido pelo Portal de Dispositivos é assinado por uma AC raiz na qual o navegador ou computador não confia. Isso pode ser corrigido por meio da criação de uma nova AC raiz confiável.
 
-## <a name="create-a-root-ca"></a>Criar uma autoridade de certificação raiz
+## <a name="create-a-root-ca"></a>Criar uma AC raiz
 
-Isso só deverá ser feito uma vez e se sua empresa (ou casa) não tiver uma configuração de infraestrutura de certificado. O script de PowerShell a seguir cria uma autoridade de certificação raiz chamada _WdpTestCA.cer_. A instalação desse arquivo nas autoridades de certificação raiz confiáveis do computador local fará com que o dispositivo confie nos certificados SSL assinados por essa autoridade de certificação raiz. Você pode (e deve) instalar esse arquivo. cer em cada computador que você deseja conectar ao Windows Device Portal.  
+Isso só deverá ser feito uma vez e se sua empresa (ou casa) não tiver uma configuração de infraestrutura de certificado. O script do PowerShell a seguir cria uma AC raiz chamada _WdpTestCA.cer_. A instalação desse arquivo nas autoridades de certificação raiz confiáveis do computador local fará com que o dispositivo confie nos certificados SSL assinados por essa AC raiz. Você pode (e deve) instalar esse arquivo .cer em cada computador que você deseja conectar ao Portal de Dispositivos do Windows.  
 
 ```PowerShell
 $CN = "PickAName"
@@ -48,11 +48,11 @@ $rootCAFile = Export-Certificate -Cert $rootCA -FilePath $FilePath
 
 Depois que isso for criado, use o arquivo _WdpTestCA.cer_ para assinar certificados SSL.
 
-## <a name="create-an-ssl-certificate-with-the-root-ca"></a>Criar um certificado SSL com a autoridade de certificação raiz
+## <a name="create-an-ssl-certificate-with-the-root-ca"></a>Criar um certificado SSL com a AC raiz
 
 Os certificados SSL têm duas funções essenciais: proteger sua conexão por meio de criptografia e verificar se é você que está se comunicando com o endereço exibido na barra do navegador (Bing.com, 192.168.1.37 etc.), e não um terceiro mal-intencionado.
 
-O script de PowerShell a seguir cria um certificado SSL para o ponto de extremidade `localhost`. Cada ponto de extremidade no qual o Device Portal realiza a escuta precisa ter seu próprio certificado; você pode substituir o argumento `$IssuedTo` no script por cada um dos pontos de extremidade do seu dispositivo: nome do host, localhost e os endereços IP.
+O script de PowerShell a seguir cria um certificado SSL para o ponto de extremidade `localhost`. Cada ponto de extremidade que o Portal de Dispositivos escuta precisa ter seu próprio certificado; você pode substituir o argumento `$IssuedTo` no script por cada um dos pontos de extremidade de seu dispositivo: nome do host, localhost e os endereços IP.
 
 ```PowerShell
 $IssuedTo = "localhost"
@@ -70,9 +70,9 @@ $certFile = Export-PfxCertificate -cert $cert -FilePath $FilePath -Password (Con
 
 Se você tiver vários dispositivos, poderá reutilizar os arquivos .pfx do localhost, mas ainda precisará criar certificados de endereço IP e nome de host para cada dispositivo separadamente.
 
-Quando o pacote de arquivos .pfx for gerado, você precisará carregá-los no Windows Device Portal.
+Quando o pacote de arquivos .pfx for gerado, você precisará carregá-lo no Portal de Dispositivos do Windows.
 
-## <a name="provision-device-portal-with-the-certifications"></a>Provisionar Device Portal com as certificações
+## <a name="provision-device-portal-with-the-certifications"></a>Provisionar Portal de Dispositivos com as certificações
 
 Para cada arquivo .pfx que você criou para um dispositivo, será necessário executar o seguinte comando em um prompt de comandos com privilégios elevados.
 
@@ -80,7 +80,7 @@ Para cada arquivo .pfx que você criou para um dispositivo, será necessário ex
 WebManagement.exe -SetCert <Path to .pfx file> <password for pfx>
 ```
 
-Veja a seguir o uso do exemplo:
+Confira o seguinte exemplo de uso:
 
 ```cmd
 WebManagement.exe -SetCert localhost.pfx PickAPassword
@@ -97,4 +97,4 @@ sc start webmanagement
 
 > [!TIP]
 > Os endereços IP podem mudar ao longo do tempo.
-Muitas redes usam DHCP para atribuir endereços IP; portanto, nem sempre os dispositivos terão o mesmo endereço IP que tinham antes. Se você tiver criado um certificado para um endereço IP em um dispositivo e se o endereço desse dispositivo tiver sido alterado, o Windows Device Portal gerará um novo certificado usando o certificado autoassinado existente e deixará de usar o que você criou. Isso fará com que a página de aviso de certificado apareça no navegador novamente. Por esse motivo, recomendamos que você se conecte aos seus dispositivos por meio dos nomes de host, que você pode definir no Device Portal. Eles permanecerão inalterados, independentemente dos endereços IP.
+Muitas redes usam DHCP para atribuir endereços IP, portanto, nem sempre os dispositivos terão o mesmo endereço IP que tinham antes. Se você tiver criado um certificado para um endereço IP em um dispositivo, e o endereço desse dispositivo tiver sido alterado, o Portal de Dispositivos do Windows gerará um novo certificado usando o certificado autoassinado existente e deixará de usar o que você criou. Isso fará com que a página de aviso de certificado apareça no navegador novamente. Por esse motivo, recomendamos que você se conecte aos seus dispositivos por meio dos nomes de host, que você pode definir no Portal de Dispositivos. Eles permanecerão inalterados, independentemente dos endereços IP.

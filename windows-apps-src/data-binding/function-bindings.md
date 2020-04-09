@@ -1,23 +1,23 @@
 ---
-description: A extensão de marcação xBind permite que as funções a serem usadas na marcação.
-title: 'Funções em x: Bind'
+description: A extensão de marcação xBind permite que as funções sejam usadas na marcação.
+title: Funções em x:Bind
 ms.date: 02/06/2019
 ms.topic: article
-keywords: Windows 10, uwp, xBind
+keywords: Windows 10, UWP, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66360080"
 ---
-# <a name="functions-in-xbind"></a>Funções em x: Bind
+# <a name="functions-in-xbind"></a>Funções em x:Bind
 
 > [!NOTE]
-> Para obter informações gerais sobre como usar a vinculação de dados em seu aplicativo com **{X:Bind}** (e para obter uma comparação de todo o entre **{X:Bind}** e **{Binding}** ), consulte [dados vinculação profunda](data-binding-in-depth.md).
+> Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}** ), confira [Vinculação de dados em detalhes](data-binding-in-depth.md).
 
-Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso permite:
+Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso possibilita:
 
 - Uma maneira mais simples de conseguir a conversão de valor
 - Uma maneira para associações dependerem de mais de um parâmetro
@@ -63,7 +63,7 @@ class ColorEntry
 
 O caminho para a função é especificado como outros caminhos de propriedade e pode incluir pontos (.), indexadores ou conversões para localizar a função.
 
-As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use o abaixo de sintaxe de ligação com funções estáticas no code-behind.
+As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use a sintaxe abaixo para associação a funções estáticas em code-behind.
 
 ```xaml
 <Page 
@@ -87,7 +87,7 @@ namespace MyNamespace
 }
 ```
 
-Você também pode usar as funções do sistema diretamente na marcação para realizar cenários simples, como formatação de datas, formatação de texto, concatenações de cadeias de texto, etc., por exemplo:
+Você também pode usar as funções do sistema diretamente na marcação para realizar cenários simples, como formatação de datas, formatação de texto, concatenações de texto etc., por exemplo:
 
 ```xaml
 <Page 
@@ -108,7 +108,7 @@ A função associada precisa:
 - Os tipos de argumento precisam corresponder aos dados passados – não fazemos conversões de restrição
 - O tipo de retorno da função precisa corresponder ao tipo da propriedade que está usando a associação
 
-O mecanismo de associação reage a alteração da propriedade notificações acionado com o nome da função e reavaliar associações conforme necessário. Por exemplo: 
+O mecanismo de associação reage às notificações de alteração de propriedade acionadas com o nome da função e reavalia as associações conforme necessário. Por exemplo:
 
 ```xaml
 <DataTemplate x:DataType="local:Person">
@@ -164,7 +164,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Você pode usar funções em x: Bind para alcançar os mesmos cenários como o que tinha suporte por meio de conversores e MultiBinding no WPF.
+> Você pode usar funções no x:Bind para obter os mesmos cenários que aqueles com suporte por meio de conversores e MultiBinding na WPF.
 
 ## <a name="function-arguments"></a>Argumentos de função
 
@@ -178,7 +178,7 @@ Vários argumentos de função podem ser especificados, separados por vírgula (
 
 ### <a name="two-way-function-bindings"></a>Associações de função bidirecional
 
-Em um cenário de associação bidirecional, uma segunda função deve ser especificada para a direção inversa da associação. Isso é feito usando o **BindBack** propriedade de associação. No exemplo abaixo, a função deve usar um argumento que é o valor que precisa ser enviado de volta para o modelo.
+Em um cenário de associação bidirecional, uma segunda função deve ser especificada para a direção inversa da associação. Isso é feito usando a propriedade de associação **BindBack**. No exemplo abaixo, a função deve utilizar um argumento que é o valor que precisa ser reenviado para o modelo.
 
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />

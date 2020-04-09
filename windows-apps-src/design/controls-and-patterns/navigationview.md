@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c0d12b3b043546cd908fb474fa8ca9656d8dc56e
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 17eb1a2f24e9fd893fee1a0aff349989577375c7
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100850"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081698"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 
@@ -24,6 +24,12 @@ O controle NavigationView fornece navegação de nível superior para seu aplica
 
 ![navegação superior](images/nav-view-header.png)<br/>
 _A exibição de navegação é compatível com o menu ou painel de navegação superior e esquerdo_
+
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **NavigationView** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da plataforma**: [Classe Windows.UI.Xaml.Controls.NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
@@ -46,7 +52,7 @@ Para outros padrões de navegação, confira [Noções básicas de design de nav
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/XAML-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td><img src="images/XAML-controls-gallery-app-icon-sm.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/NavigationView">abri-lo e ver o NavigationView em ação</a>.</p>
     <ul>
@@ -65,7 +71,7 @@ Use a propriedade PaneDisplayMode para configurar os diferentes estilos de naveg
 
 :::row:::
     :::column:::
-    ### <a name="top"></a>Maior
+    ### <a name="top"></a>Parte superior
     O painel está posicionado acima do conteúdo.</br>
     `PaneDisplayMode="Top"`
     :::column-end:::
@@ -226,7 +232,7 @@ Adicione conteúdo livremente ao painel com a propriedade [PaneCustomContent](ht
     :::column-end:::
 :::row-end:::
 
-### <a name="header"></a>Cabeçalho
+### <a name="header"></a>parâmetro
 
 Adicione um título de página definindo a propriedade [Header](/uwp/api/windows.ui.xaml.controls.navigationview.header).
 
@@ -379,12 +385,12 @@ No modo Minimal ou Compact, o Painel do modo de exibição de navegação abre c
 
 :::row:::
     :::column:::
-        ![Navigation view back button in the left navigation pane](images/leftnav-back.png)<br/>
-        _The back button in the left navigation pane_
+        ![Botão voltar de exibição de navegação no painel de navegação à esquerda](images/leftnav-back.png)<br/>
+        _O botão voltar no painel de navegação à esquerda_
     :::column-end:::
     :::column:::
-        ![Navigation view back button in the top navigation pane](images/topnav-back.png)<br/>
-        _The back button in the top navigation pane_
+        ![Botão voltar de exibição de navegação no painel de navegação superior](images/topnav-back.png)<br/>
+        _O botão voltar no painel de navegação superior_
     :::column-end:::
 :::row-end:::
 
@@ -660,7 +666,7 @@ Essa tabela mostra quais recursos de temas são usados em cada modo de exibiçã
 | ------------ | -------------- |
 | Esquerda | NavigationViewExpandedPaneBackground |
 | LeftCompact<br/>LeftMinimal | NavigationViewDefaultPaneBackground |
-| Maior | NavigationViewTopPaneBackground |
+| Parte superior | NavigationViewTopPaneBackground |
 
 Este exemplo mostra como substituir os recursos de tema em App.xaml. Ao substituir os recursos de tema, forneça sempre no mínimo os dicionários de recursos "Default" e "HighContrast" e os dicionários para os recursos "Light" ou "Dark", conforme necessário. Para saber mais, confira [ResourceDictionary.ThemeDictionaries](/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries).
 

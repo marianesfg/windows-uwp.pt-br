@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 320586fb8fe7f71eaea2d4b12c0dd731a1f721db
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793801"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080966"
 ---
 # <a name="flyouts"></a>Submenus
 
@@ -24,20 +24,26 @@ Um submenu é um contêiner de light dismiss que pode mostrar uma interface do u
 
 ![Menu de contexto aninhado em um submenu](../images/flyout-nested.png)
 
-> **APIs importantes**: [Classe Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](../images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs de plataforma:** [Classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 * Não use um submenu no lugar de [tooltip](../tooltips.md) ou [menu de contexto](../menus.md). Use tooltip para mostrar uma breve descrição que fica oculta depois de um determinado tempo. Use um menu de contexto para ações contextuais relacionadas a um elemento da interface do usuário, como copiar e colar.
 
-Para ver recomendações sobre quando usar um submenu e quando usar uma caixa de diálogo (um controle semelhante), confira [Caixas de diálogo e submenus](index.md). 
+Para ver recomendações sobre quando usar um submenu e quando usar uma caixa de diálogo (um controle semelhante), confira [Caixas de diálogo e submenus](index.md).
 
 ## <a name="examples"></a>Exemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
@@ -74,7 +80,7 @@ Este exemplo adiciona um submenu simples a uma imagem. Quando o usuário toca na
   <FlyoutBase.AttachedFlyout>
     <Flyout>
       <TextBlock Text="This is some text in a flyout."  />
-    </Flyout>        
+    </Flyout>
   </FlyoutBase.AttachedFlyout>
 </Image>
 ````
@@ -121,7 +127,7 @@ Os exemplos anteriores definiram seus submenus embutido. Você pode também defi
 ````csharp
 private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 {
-    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);  
+    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
 }
 ````
 
@@ -157,10 +163,10 @@ Faça o light dismiss dos controles, como teclado de interceptação de submenu 
 
 ## <a name="light-dismiss-behavior"></a>Comportamento de light dismiss
 Os submenus podem ser fechados com uma ação light dismiss rápida, incluindo
--   Tocar fora do submenu
--   Pressionar a tecla Escape no teclado
--   Pressionar o botão de Voltar do sistema de hardware ou software
--   Pressionar o botão B do gamepad
+-    Tocar fora do submenu
+-    Pressionar a tecla Escape no teclado
+-    Pressionar o botão de Voltar do sistema de hardware ou software
+-    Pressionar o botão B do gamepad
 
 Ao ignorar com um toque, esse gesto é normalmente absorvido e não passado para a interface do usuário abaixo. Por exemplo, se houver um botão visível por trás de um submenu aberto, o primeiro toque do usuário fechará o submenu, mas não ativará esse botão. Pressionar o botão requer um segundo toque.
 
@@ -177,7 +183,7 @@ No exemplo a seguir, todos os três botões dentro de FavoritesBar serão ativad
                 OverlayInputPassThroughElement="{x:Bind FavoritesBar}">
             <StackPanel>
                 <HyperlinkButton Content="Washington Trails Association"/>
-                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>  
+                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>
             </StackPanel>
         </Flyout>
     </Page.Resources>
@@ -188,7 +194,7 @@ No exemplo a seguir, todos os três botões dentro de FavoritesBar serão ativad
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="FavoritesBar" Orientation="Horizontal">
-            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>  
+            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>
             <Button x:Name="Folder1" Content="Travel" Flyout="{StaticResource TravelFlyout}"/>
             <Button x:Name="Folder2" Content="Entertainment" Click="Folder2_Click"/>
         </StackPanel>
@@ -210,7 +216,7 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 - [Dicas de ferramentas](../tooltips.md)

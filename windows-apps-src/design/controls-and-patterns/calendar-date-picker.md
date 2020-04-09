@@ -1,5 +1,5 @@
 ---
-Description: O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes.
+Description: O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário, na qual são importantes as informações contextuais, como dia da semana ou integridade do calendário.
 title: Seletor de data do calendário
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
@@ -12,23 +12,27 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de2f1cefc47e8740bfebbe7853ae317d25ab9d0
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 28248b3df4a3444441c7a4a19f1a360150170b1c
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363216"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081246"
 ---
 # <a name="calendar-date-picker"></a>Seletor de data do calendário
 
- 
+O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário, na qual são importantes as informações contextuais, como dia da semana ou integridade do calendário. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
-O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
+**Obter a biblioteca de interface do usuário do Windows**
 
-> **APIs importantes**: [classe CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [Propriedade de dados](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [evento DateChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
+> **APIs da plataforma**: [classe CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [Propriedade de dados](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [evento DateChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+
 Use um **seletor de data do calendário** para permitir que um usuário selecione uma única data de um modo de exibição de calendário contextual. Use-o para coisas como escolher a data de um compromisso ou de partida.
 
 Para permitir que um usuário selecione uma data conhecida, como uma data de nascimento, em que o contexto do calendário não é importante, considere usar um [seletor de data](date-picker.md).
@@ -40,7 +44,7 @@ Para obter mais informações sobre como escolher o controle correto, consulte o
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CalendarDatePicker">abrir o aplicativo e ver o CalendarDatePicker em ação</a>.</p>
     <ul>
@@ -106,7 +110,7 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

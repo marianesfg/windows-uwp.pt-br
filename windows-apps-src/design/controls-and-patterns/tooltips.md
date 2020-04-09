@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e1e4874051554a8b725c7921a60a2c2429b18bc1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364029"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081464"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
 
@@ -25,7 +25,13 @@ Dica de ferramenta é uma breve descrição vinculada a outro controle ou objeto
 
 ![Dica de ferramenta](images/controls/tool-tip.png)
 
-> **APIs importantes**: [classe ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [classe ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de Interface do Usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da plataforma**: [classe ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [classe ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -59,7 +65,7 @@ Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ToolTip">abrir o aplicativo e ver o ToolTip em ação</a>.</p>
     <ul>
@@ -108,7 +114,7 @@ Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.cont
 </TextBlock>
 ```
 
-### <a name="placement"></a>Colocação
+### <a name="placement"></a>Posicionamento
 
 Por padrão, uma ToolTip é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a ToolTip seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
 
@@ -125,7 +131,7 @@ Use a propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placemen
 </Image>
 ```
 
-Se uma ToolTip cobrir o conteúdo a que está se referindo, você poderá ajustar seu posicionamento com precisão usando a nova propriedade **PlacementRect**. PlacementRect ancora a posição da ToolTip e também serve como uma área que não será coberta por ela, desde que haja espaço suficiente na tela para desenhar a ToolTip fora desta área. Você pode especificar a origem do retângulo em relação ao proprietário da ToolTip e a altura e largura da área de exclusão. A propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se a ToolTip deve ser desenhada acima, abaixo, à esquerda ou à direita de PlacementRect. 
+Se uma ToolTip cobrir o conteúdo a que está se referindo, você poderá ajustar seu posicionamento com precisão usando a nova propriedade **PlacementRect**. PlacementRect ancora a posição da ToolTip e também serve como uma área que não será coberta por ela, desde que haja espaço suficiente na tela para desenhar a ToolTip fora desta área. Você pode especificar a origem do retângulo em relação ao proprietário da dica de ferramenta e a altura e largura da área de exclusão. A propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se a ToolTip deve ser desenhada acima, abaixo, à esquerda ou à direita de PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,7 +155,7 @@ Se uma ToolTip cobrir o conteúdo a que está se referindo, você poderá ajusta
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) – confira todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

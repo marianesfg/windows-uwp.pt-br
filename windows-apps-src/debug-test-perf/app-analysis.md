@@ -1,13 +1,13 @@
 ---
 title: Análise de aplicativo
-description: Analise seu aplicativo para os problemas de desempenho.
+description: Analise seu aplicativo quanto a problemas de desempenho.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
 ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73062759"
@@ -38,7 +38,7 @@ O aplicativo está usando SetSource() em vez de SetSourceAsync(). Você sempre d
 
 O BitmapImage está conectado à árvore XAML ativa após a configuração do conteúdo com SetSourceAsync ou UriSource. Você sempre deve anexar uma [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) à árvore ativa antes de definir a origem. Sempre que um elemento de imagem ou um pincel for especificado na marcação, esse será automaticamente o caso. Exemplos são fornecidos abaixo. 
 
-**Exemplos de árvore ao vivo**
+**Exemplos de árvore dinâmica**
 
 Exemplo 1 (bom) - Uniform Resource Identifier (URI) especificado em marcação.
 
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Exemplo 2 code-behind (inadequado) — definindo o UriSource da BitmapImage antes de conectá-lo à árvore.
+Exemplo 2 de code-behind (ruim) – configurar o UriSource de BitmapImage antes de conectá-lo à arvore.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -119,7 +119,7 @@ Defina um tamanho de decodificação explícito para criar uma versão da imagem
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos recolhidos em tempo de carregamento
 
-Um padrão comum em apps é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
+Um padrão comum em aplicativos é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criação do elemento durante o tempo de carregamento.
 
 Isso inclui os casos em que um booleano para conversor de visibilidade é usado para ocultar itens até um momento posterior.
 
@@ -133,9 +133,9 @@ Essa regra foi disparada porque um elemento foi recolhido em tempo de carregamen
 
 ### <a name="solution"></a>Solução
 
-Usando [x:Load attribute](../xaml-platform/x-load-attribute.md) ou [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute), você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Isso é bom para atrasar a interface do usuário de processamento que não é visível no primeiro quadro. Você pode optar por carregar o elemento quando necessário ou como parte de um conjunto de lógica atrasada. Para disparar o carregamento, chame findName no elemento que você deseja carregar. x:Load estende os recursos de x:DeferLoadStrategy, permitindo que os elementos sejam descarregados e que o estado de carregamento seja controlado via x:Bind.
+Quando você usa o [atributo x:Load](../xaml-platform/x-load-attribute.md) ou [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute), pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Isso é bom para atrasar a interface do usuário de processamento que não é visível no primeiro quadro. Você pode optar por carregar o elemento quando necessário ou como parte de um conjunto de lógica atrasada. Para disparar o carregamento, chame findName no elemento que você deseja carregar. x:Load estende os recursos de x:DeferLoadStrategy, permitindo que os elementos sejam descarregados e que o estado de carregamento seja controlado via x:Bind.
 
-Em alguns casos, usar findName para mostrar uma parte da interface do usuário pode não ser a solução. Isso é verdadeiro se você está esperando obter uma parte significativa da interface do usuário no clique de um botão com latência muito baixa. Nesse caso, convém compensar a latência de interfaces do usuário mais rápidas às custas de memória adicional; nesse caso, você deve usar X:DeferLoadStrategy e definir Visibility como Collapsed no elemento que deseja observar. Depois que a página tiver sido carregada e o thread da interface do usuário estiver livre, você poderá chamar findName quando necessário para carregar os elementos. Os elementos não ficarão visíveis para o usuário até que você defina a Visibilidade do elemento como Visible.
+Em alguns casos, usar findName para mostrar uma parte da interface do usuário pode não ser a solução. Isso é verdadeiro se você está esperando obter uma parte significativa da interface do usuário no clique de um botão com latência muito baixa. Nesse caso, convém compensar a latência de interface do usuário mais rápida com o custo de memória adicional. Se fizer isso, use x: DeferLoadStrategy e defina Visibility como Collapsed no elemento que quiser observar. Depois que a página tiver sido carregada e o thread da interface do usuário estiver livre, você poderá chamar findName quando necessário para carregar os elementos. Os elementos não ficarão visíveis para o usuário até que você defina a Visibilidade do elemento como Visible.
 
 ## <a name="listview-is-not-virtualized"></a>ListView não está virtualizado
 
@@ -209,7 +209,7 @@ Use X:Key em vez de X:Name quando não estiver fazendo referência a recursos a 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>O controle de coletas está usando um painel sem virtualização
 
-Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos ListView serão gerados somente quando você estiver usando um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
+Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos de ListView são acionados somente ao usar um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
 
 A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer para melhorar o desempenho da coleta. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. ListView e GridView (e outros controles derivados de ItemsControl padrão) executam a virtualização de interface do usuário para você. Quando os itens estão quase sendo rolados para a exibição (a algumas páginas distância), a estrutura gera a interface do usuário para os itens e os armazena em cache. Quando torna-se improvável que os itens sejam mostrados novamente, a estrutura recupera a memória.
 

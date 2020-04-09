@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a3a2adee262a521bde77d657aa4f5283b68ddcf
-ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
+ms.openlocfilehash: a2123c8baa93356a0bb5adcfb2a32ac71af173cc
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603433"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081577"
 ---
 # <a name="scroll-viewer-controls"></a>Controles do visualizador de rolagem
 
@@ -35,7 +35,7 @@ Dependendo da situação, a barra de rolagem do visualizador de rolagem usa duas
 
 ![Uma amostra da aparência dos controles de barra de rolagem e indicador de movimento panorâmico](images/SCROLLBAR.png)
 
-O visualizador de rolagem reconhece o método de entrada do usuário e o usa para determinar qual visualização exibir.
+O visualizador de rolagem reconhece o método de entrada do usuário e o utiliza para determinar qual visualização exibir.
 
 * Quando a região é rolada sem manipulação direta da barra de rolagem, por exemplo, por toque, o indicador de movimento panorâmico é exibido, exibindo a posição de rolagem atual.
 * Quando o cursor do mouse ou caneta se move sobre o indicador de movimento panorâmico, ele se transforma na barra de rolagem tradicional.  A área de rolagem é manipulada ao arrastar a barra de rolagem.
@@ -56,7 +56,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem um aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ScrollViewer">abrir o aplicativo e ver o ScrollViewer em ação</a>.</p>
     <ul>

@@ -1,12 +1,12 @@
 ---
 title: Execução da otimização guiada por perfil (PGO) em aplicativos da Plataforma Universal do Windows (UWP)
-description: Um guia passo a passo para a aplicação de PGO (otimização guiada por perfil) a aplicativos de Plataforma Universal do Windows (UWP).
+description: Um guia passo a passo para aplicar a otimização guiada por perfil (PGO) a aplicativos da Plataforma Universal do Windows (UWP).
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
 ms.openlocfilehash: c784812d2e070aba0857cb84e5729b1426717b8d
 ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73062374"
@@ -17,7 +17,7 @@ Este tópico apresenta um guia passo a passo para aplicar a otimização guiada 
 
 Este é um passo a passo básico da aplicação de PGO ao modelo de aplicativo (UWP) DirectX 11 padrão usando-se o Visual Studio 2015 Update 3.
  
-As capturas de tela em todo este guia são baseadas no novo projeto a seguir: ![caixa de diálogo novo projeto](images/pgo-001.png)
+As capturas de tela ao longo deste guia se baseiam neste novo projeto: ![Caixa de diálogo Novo Projeto](images/pgo-001.png)
 
 Para aplicar PGO ao modelo de aplicativo DirectX 11:
 
@@ -67,7 +67,7 @@ Para aplicar PGO ao modelo de aplicativo DirectX 11:
   pgosweep.exe App1.exe "C:\Users\<USER>\Documents\Visual Studio 2015\Projects\App1\Release\App1\App1!1.pgc"
   ```
  
-  Uma coleta adicional também pode ser `App1!CoreScenario.pgc`, `App1!UseCase5.pgc` etc. Se os arquivos .pgc forem nomeados dessa maneira e, no local de saída da compilação com o .pgd, eles serão automaticamente mesclados durante o vínculo na etapa 9.
+  Uma coleta adicional também pode ser `App1!CoreScenario.pgc`, `App1!UseCase5.pgc` etc. Se os arquivos .pgc forem nomeados dessa maneira e, no local de saída da build com o .pgd, eles serão automaticamente mesclados durante o vínculo na etapa 9.
  
 8. OPCIONAL: Por padrão, todos os arquivos .pgc nomeados conforme especificado na etapa 7 e colocados ao lado do .pgd serão mesclados durante a vinculação e ponderados igualmente, mas você também pode ter mais controle sobre como determinadas execuções são ponderadas. Para isso, você usará a ferramenta **pgomgr.exe** também localizada na mesma pasta onde encontrou inicialmente a cópia de `pgort140.dll`. Por exemplo, para mesclar a execução `CoreScenario` com 3 vezes a prioridade de outras execuções, posso usar o seguinte comando:
  
@@ -81,7 +81,7 @@ Para aplicar PGO ao modelo de aplicativo DirectX 11:
  
 10. Quando o projeto for compilado, o vinculador chamará pgomgr.exe para mesclar todos os arquivos `<PGDName>!*.pgc` no .pgd com o peso padrão 1, e o aplicativo resultante será otimizado com base nos dados da criação de perfil.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Desempenho](performance-and-xaml-ui.md)
 
  

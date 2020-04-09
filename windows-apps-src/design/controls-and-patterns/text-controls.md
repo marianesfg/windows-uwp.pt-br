@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c171a431180ee63956bae1c235224f64642601a
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 7f2421316be30d24ef44784974fc2c6c199a6570
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340227"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081493"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -37,7 +37,7 @@ Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. V
 
 TextBlock geralmente é mais fácil de usar e fornece melhor desempenho na renderização de texto do que RichTextBlock, por isso é o preferido para a maioria do texto da interface do usuário de aplicativo. Você pode facilmente acessar e usar o texto de um TextBlock em seu aplicativo, obtendo o valor da propriedade [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text).
 
-Também fornece muitas das mesmas opções de formatação para personalizar como o texto será renderizado. Embora você possa colocar quebras de linha no texto, TextBlock é projetado para exibir um único parágrafo e não oferece suporte a recuo de texto.
+Também fornece muitas das mesmas opções de formatação para personalizar como o texto será renderizado. Embora você possa colocar quebras de linha no texto, o TextBlock é projetado para exibir um único parágrafo e não é compatível com recuo de texto.
 
 Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, texto com várias colunas ou outros layouts de texto complexos ou elementos de interface do usuário embutidos como imagens. RichTextBlock fornece vários recursos para layout de texto avançado.
 
@@ -49,7 +49,7 @@ Use o controle **TextBox** para permitir que o usuário digite e edite texto nã
 
 Você pode tornar um TextBox somente leitura, mas deve ser um estado temporário e condicional. Se o texto nunca for editável, considere usar um TextBlock.
 
-Use o controle **PasswordBox** para receber uma senha ou outros dados particulares, como um número de CPF. Caixa de senha é uma caixa para entrada de texto que oculta os caracteres digitados nela, por uma questão de privacidade. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido. O caractere do marcador pode ser personalizado.
+Use o controle **PasswordBox** para receber uma senha ou outros dados particulares, como um número do seguro social. Caixa de senha é uma caixa para entrada de texto que oculta os caracteres digitados nela, por uma questão de privacidade. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido. O caractere do marcador pode ser personalizado.
 
 Use o controle **AutoSuggestBox** para mostrar ao usuário uma lista de sugestões das quais escolher ao digitar. Caixa de sugestão automática é uma caixa de entrada de texto que aciona uma lista de sugestões de pesquisa básica. Os termos sugeridos podem ser extraídos de uma combinação de termos de pesquisa populares e termos do histórico inseridos pelo usuário.
 
@@ -75,7 +75,7 @@ Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas p
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/category/Text">abri-lo e ver os controles de texto em ação</a>.</p>
     <ul>

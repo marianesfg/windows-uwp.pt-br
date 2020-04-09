@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d02c75775dfd63281dbf46c7f9fc58f48ac1e20
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66359966"
@@ -16,12 +16,12 @@ ms.locfileid: "66359966"
 
 A *XAML condicional* fornece uma forma de usar o método [ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent) na marcação XAML. Com isso, você pode definir propriedades e instanciar objetos na marcação com base na presença de uma API sem a necessidade de usar code-behind. Analisa seletivamente elementos ou atributos para determinar se eles estarão disponíveis no momento da execução. Instruções condicionais são avaliadas no momento da execução, e os elementos qualificados com uma marca XAML condicional são analisados se forem avaliados como **true**; caso contrário, são ignorados.
 
-A XAML condicional estará disponível a partir da Atualização para Criadores (versão 1703, compilação 15063). Para usar a XAML condicional, a Versão Mínima do seu projeto do Visual Studio deve ser definida como compilação 15063 (Atualização para Criadores) ou posterior, e a Versão de Destino deve ser definida como uma versão mais recente que a Mínima. Consulte [Aplicativos adaptáveis de versão](version-adaptive-apps.md) para obter informações sobre como configurar seu projeto do Visual Studio.
+A XAML condicional estará disponível a partir da Atualização para Criadores (versão 1703, compilação 15063). Para usar a XAML condicional, a Versão Mínima do seu projeto do Visual Studio deve ser definida como compilação 15063 (Atualização para Criadores) ou posterior, e a Versão de Destino deve ser definida como uma versão mais recente que a Mínima. Confira [Aplicativos adaptáveis de versão](version-adaptive-apps.md) para obter informações sobre como configurar seu projeto do Visual Studio.
 
 > [!NOTE]
 > Para criar um aplicativo adaptável de versão, uma Versão Mínima inferior à compilação 15063, você deve usar o [código adaptável de versão](version-adaptive-code.md), não a XAML.
 
-Para obter informações de apoio importantes sobre ApiInformation e contratos de API, consulte [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
+Para obter informações de apoio importantes sobre ApiInformation e contratos de API, confira [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
 
 ## <a name="conditional-namespaces"></a>Namespaces condicionais
 
@@ -36,7 +36,7 @@ Um namespace condicional pode ser dividido em duas partes pelo delimitador "?".
 - O conteúdo que precede o delimitador indica o namespace ou o esquema que contém a API sendo referenciada. 
 - O conteúdo após o delimitador "?" representa o método condicional que determina se o namespace condicional avalia como **true** ou **false**.
 
-Na maioria dos casos, o esquema será o namespace XAML padrão.
+Na maioria dos casos, o esquema será o namespace XAML padrão:
 
 ```xaml
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -44,7 +44,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
 A XAML condicional é compatível com os seguintes métodos condicionais:
 
-Método | Inverso
+Método | Inverse
 ------ | -------
 IsApiContractPresent(ContractName, VersionNumber) | IsApiContractNotPresent(ContractName, VersionNumber)
 IsTypePresent(ControlType) | IsTypeNotPresent(ControlType)
@@ -90,7 +90,7 @@ Veja a XAML completa.
 
 Ao executar esse exemplo no Fall Creators Update, o texto “Olá, XAML Condicional” é exibido; ao executá-lo na Atualização para Criadores, nenhum texto é exibido.
 
-A XAML condicional permite realizar as verificações de API que, em vez disso, você pode fazer no código da marcação. Eis o código equivalente para essa verificação.
+A XAML condicional permite realizar as verificações de API que, em vez disso, você pode fazer no código da marcação. Aqui está o código equivalente para essa verificação.
 
 ```csharp
 if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 5))
@@ -99,7 +99,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-Observe que, embora o método IsApiContractPresent use uma cadeia de caracteres para o parâmetro *contractName*, você não o coloca entre aspas ("") na declaração de namespace de XAML.
+Observe que, embora o método IsApiContractPresent use uma cadeia de caracteres para o parâmetro *contractName*, você não o coloca entre aspas (" ") na declaração de namespace de XAML.
 
 ## <a name="use-ifelse-conditions"></a>Usar as condições if/else
 
@@ -110,7 +110,7 @@ No exemplo anterior, a propriedade Text é definida apenas quando o aplicativo �
 <TextBlock Text="Hello, World" contract5Present:Text="Hello, Conditional XAML"/>
 ```
 
-Ele funcionará quando for executado na Atualização para Criadores, mas, quando for executado no Fall Creators Update, ocorrerá um erro informando que a propriedade Text é definida mais de uma vez.
+Ela funcionará quando for executada na Atualização para Criadores, mas, quando for executada no Fall Creators Update, ocorrerá um erro informando que a propriedade Text foi definida mais de uma vez.
 
 Para definir um texto diferente quando o aplicativo é executado em versões diferentes do Windows 10, outra condição é necessária. Uma XAML condicional fornece o inverso de cada método ApiInformation compatível para permitir que você crie cenários condicionais if/else como este.
 
@@ -132,7 +132,7 @@ IsApiContractNotPresent retorna o inverso de IsApiContractPresent. Várias chama
 - IsApiContractNotPresent(Windows.Foundation.UniversalApiContract, 2) = false
 - IsApiContractNotPresent(Windows.Foundation.UniversalApiContract, 1) = false
 
-Para usar a condição inversa, crie um segundo namespace de XAML condicional que usa o condicional **IsApiContractNotPresent**. Neste exemplo, temos o prefixo "contract5NotPresent."
+Para usar a condição inversa, crie um segundo namespace de XAML condicional que usa o condicional **IsApiContractNotPresent**. Neste exemplo, temos o prefixo "contract5NotPresent".
 
 ```xaml
 xmlns:contract5NotPresent="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractNotPresent(Windows.Foundation.UniversalApiContract,5)"
@@ -172,7 +172,7 @@ Neste exemplo, um [ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xa
                               VerticalAlignment="Center">
 ```
 
-É possível usar qualificadores condicionais com formas diferentes de [Sintaxe da propriedade XAML](../xaml-platform/xaml-syntax-guide.md). Neste exemplo, a propriedade Fill do retângulo é definida usando-se a sintaxe de elemento de propriedade para o Fall Creators Update e usando-se uma sintaxe de atributo para versões anteriores.
+É possível usar qualificadores condicionais com formas diferentes de [Sintaxe da propriedade XAML](../xaml-platform/xaml-syntax-guide.md). Neste exemplo, a propriedade Fill do retângulo é definida usando a sintaxe de elemento de propriedade para o Fall Creators Update e uma sintaxe de atributo para versões anteriores.
 
 ```xaml
 <Rectangle x:Name="colorRectangle" Width="200" Height="200"
@@ -183,7 +183,7 @@ Neste exemplo, um [ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xa
 </Rectangle>
 ```
 
-Ao associar uma propriedade com outra que depende de um namespace condicional, é preciso usar a mesma condição em ambas as propriedades. Neste exemplo, `colorPicker.Color` depende do namespace condicional "contract5Present". Por isso, também é preciso colocar o prefixo "contract5Present" na propriedade SolidColorBrush.Color. (Ou, você pode colocar o prefixo 'contract5Present' em SolidColorBrush, em vez de na propriedade de cor.) Se você não fizer isso, você obterá um erro de tempo de compilação.
+Ao associar uma propriedade com outra que depende de um namespace condicional, é preciso usar a mesma condição em ambas as propriedades. Neste exemplo, `colorPicker.Color` depende do namespace condicional "contract5Present". Por isso, também é preciso colocar o prefixo "contract5Present" na propriedade SolidColorBrush.Color. (Ou é possível colocar o prefixo "contract5Present" na propriedade SolidColorBrush em vez da propriedade Color.) Caso contrário, você obterá um erro de tempo de compilação.
 
 ```xaml
 <SolidColorBrush contract5Present:Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
@@ -191,7 +191,7 @@ Ao associar uma propriedade com outra que depende de um namespace condicional, �
 
 Esta é a XAML completa que demonstra esses cenários. Este exemplo contém um retângulo e uma interface de usuário que permite definir a cor do retângulo.
 
-Quando o aplicativo é executado no Fall Creators Update, use ColorPicker para que o usuário possa definir a cor. O ColorPicker não estará disponível antes do Fall Creators Update. Portanto, quando o aplicativo é executado em versões anteriores, use um combo box para fornecer opções de cor simplificadas para o usuário.
+Quando o aplicativo é executado no Fall Creators Update, use ColorPicker para que o usuário possa definir a cor. O ColorPicker não estará disponível antes do Fall Creators Update. Portanto, quando o aplicativo é executado em versões anteriores, use uma caixa de combinação para fornecer opções de cor simplificadas para o usuário.
 
 ```xaml
 <Page
@@ -244,6 +244,6 @@ Quando o aplicativo é executado no Fall Creators Update, use ColorPicker para q
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Guia para aplicativos UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detectar dinamicamente os recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-- [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo da Compilação 2015)
+- [Guia para aplicativos da UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Detectar recursos dinamicamente com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo do build 2015)

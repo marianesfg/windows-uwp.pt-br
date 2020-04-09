@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f4d2443370d285322e94c4ca21e7d616f96794b7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6b85177e5d3d0f4a2a37010ba9122861216a4b6b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257732"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081956"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
@@ -25,17 +25,24 @@ O submenu da barra de comandos permite que você forneça aos usuários acesso f
 
 ![Um submenu da barra de comandos de texto expandido](images/command-bar-flyout-header.png)
 
-> CommandBarFlyout exige o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
-
-> - **APIs da plataforma**: [classe CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [classe AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
->- **APIs da biblioteca de interface do usuário do Windows**: [classe CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
-
 Assim como [CommandBar](app-bars.md), CommandBarFlyout tem as propriedades **PrimaryCommands** e **SecondaryCommands** que você pode usar para adicionar comandos. É possível colocar comandos em uma das coleções ou em ambas. Quando e como os comandos principais e secundários são exibidos depende do modo de exibição.
 
 O submenu da barra de comandos tem dois modos de exibição: *recolhido* e *expandido*.
 
-- No modo recolhido, somente os comandos principais são mostrados. Se o submenu da barra de comandos tiver comandos principais e secundários, um botão "ver mais", representado por um sinal de reticências \[•••\], será exibido. Isso permite que o usuário tenha acesso aos comandos secundários fazendo a transição para o modo expandido.
+- No modo recolhido, somente os comandos principais são mostrados. Se o submenu da barra de comandos tiver comandos principais e secundários, um botão "ver mais", representado por um sinal de reticências \[***\], será exibido. Isso permite que o usuário tenha acesso aos comandos secundários fazendo a transição para o modo expandido.
 - No modo expandido, os comandos principais e secundários são mostrados. (Se o controle tiver apenas itens secundários, eles serão exibidos de forma semelhante ao controle MenuFlyout).
+
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **CommandBarFlyout** está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+>**APIs da biblioteca de interface do usuário do Windows**: [classe CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
+>
+>**APIs da plataforma**: [classe CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [classe AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>
+> CommandBarFlyout exige o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -56,7 +63,7 @@ Para mostrar comandos em um menu de contexto, você pode usar CommandBarFlyout o
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/CommandBarFlyout">abri-lo e ver o CommandBarFlyout em funcionamento</a>.</p>
     <ul>
@@ -386,8 +393,8 @@ Esta tabela mostra os comandos incluídos em um TextCommandBarFlyout e quando el
 
 | Comando | Mostrado... |
 | ------- | -------- |
-| Bold | quando o controle de texto não é somente leitura (RichEditBox somente). |
-| Italic | quando o controle de texto não é somente leitura (RichEditBox somente). |
+| Negrito | quando o controle de texto não é somente leitura (RichEditBox somente). |
+| Itálico | quando o controle de texto não é somente leitura (RichEditBox somente). |
 | Underline | quando o controle de texto não é somente leitura (RichEditBox somente). |
 | Revisão de texto | quando IsSpellCheckEnabled é **verdadeiro** e texto digitado incorretamente é selecionado. |
 | Recortar | quando o controle de texto não é somente leitura e texto é selecionado. |

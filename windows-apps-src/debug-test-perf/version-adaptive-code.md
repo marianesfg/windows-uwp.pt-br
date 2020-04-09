@@ -8,7 +8,7 @@ ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c03475c0c4007508a18c17645dbe99eeb7d6cb0
 ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/06/2020
 ms.locfileid: "75681977"
@@ -17,24 +17,24 @@ ms.locfileid: "75681977"
 
 Você pode pensar em escrever código adaptável da mesma forma que pensa em [criar uma interface do usuário adaptável](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml). Você pode projetar a interface do usuário básica para ser executada na tela menor e então mover ou adicionar elementos ao detectar que o aplicativo está sendo executado em uma tela maior. Com código adaptável, você escreve o código base para ser executado na versão mais baixa do sistema operacional e pode adicionar recursos selecionados a mão quando você detecta que o aplicativo está sendo executado em uma versão mais recente em que o novo recurso está disponível.
 
-Para obter informações de apoio importantes sobre ApiInformation e contratos de API e sobre como configurar o Visual Studio, consulte [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
+Para obter informações de apoio importantes sobre ApiInformation, contratos de API e como configurar o Visual Studio, confira [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
 
-### <a name="runtime-api-checks"></a>Verificações de API de tempo de execução
+### <a name="runtime-api-checks"></a>Verificações de API de runtime
 
-Você usa a classe [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) em uma condição no código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como **true** em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Isso permite que você escreva código adaptável de versão para criar aplicativos que usam APIs que estão disponíveis somente em determinadas versões do sistema operacional.
+Você usa a classe [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) em uma condição no código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como **true** em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Isso permite que você escreva código adaptável de versão para criar aplicativos que usam as APIs disponíveis somente em determinadas versões do sistema operacional.
 
-Neste artigo, analisaremos exemplos específicos para o direcionamento de novos recursos do Windows Insider Preview. Para obter uma visão geral do uso de **ApiInformation**, consulte [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) e a postagem do blog [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (em inglês).
+Analisaremos aqui exemplos específicos para o direcionamento de novos recursos do Windows Insider Preview. Para obter uma visão geral do uso de **ApiInformation**, confira [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) e a postagem no blog [Detectar dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/).
 
 > [!TIP]
-> Várias verificações de API do tempo de execução podem afetar o desempenho do seu aplicativo. Mostramos as verificações em linha nesses exemplos. No código de produção, você deve executar a verificação de uma vez e armazenar o resultado em cache. Depois, usar o resultado em cache em todo o aplicativo. 
+> Várias verificações de API do runtime podem afetar o desempenho do seu aplicativo. Mostramos as verificações em linha nesses exemplos. No código de produção, você deve executar a verificação de uma vez e armazenar o resultado em cache. Depois, usar o resultado em cache em todo o aplicativo. 
 
 ### <a name="unsupported-scenarios"></a>Cenários sem suporte
 
-Na maioria dos casos, você pode manter a versão mínima do aplicativo configurada para a versão 10240 do SDK e usar verificações de tempo de execução para habilitar quaisquer novas APIs quando o aplicativo for executado em uma versão mais recente. No entanto, existem alguns casos em que você deve aumentar a versão Mínima do aplicativo para usar os novos recursos.
+Na maioria dos casos, você pode manter a versão mínima do aplicativo configurada para a versão 10240 do SDK e usar verificações de runtime para habilitar quaisquer novas APIs quando o aplicativo for executado em uma versão mais recente. No entanto, existem alguns casos em que você deve aumentar a versão Mínima do aplicativo para usar os novos recursos.
 
 Você deve aumentar a versão Mínima do seu aplicativo se você usar:
 - uma nova API que exija uma funcionalidade que não esteja disponível em uma versão anterior. Você deve aumentar a versão mínima com suporte para uma que inclua essa funcionalidade. Para saber mais, consulte [Declarações de funcionalidades do aplicativo](../packaging/app-capability-declarations.md).
-- chaves de recurso nova adicionadas a generic.xaml e não disponíveis em uma versão anterior. A versão do generic.xaml usada no tempo de execução será determinada pela versão do sistema operacional que dispositivo estiver executando. Não é possível usar verificações de API do tempo de execução para determinar a presença de recursos XAML. Portanto, você deve usar somente as chaves de recurso que estão disponíveis na versão mínima à qual o aplicativo dá suporte ou [XAMLParseException](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlparseexception) causará uma falha do aplicativo no tempo de execução.
+- chaves de recurso nova adicionadas a generic.xaml e não disponíveis em uma versão anterior. A versão do generic.xaml usada no runtime será determinada pela versão do sistema operacional que dispositivo estiver executando. Não é possível usar verificações de API do runtime para determinar a presença de recursos XAML. Portanto, você deve usar somente as chaves de recurso que estão disponíveis na versão mínima à qual o aplicativo dá suporte ou [XAMLParseException](https://docs.microsoft.com/uwp/api/windows.ui.xaml.markup.xamlparseexception) causará uma falha do aplicativo no runtime.
 
 ### <a name="adaptive-code-options"></a>Opções de código adaptável
 
@@ -73,12 +73,12 @@ Nesta seção, mostraremos vários exemplos de código adaptável que usam APIs 
 
 ### <a name="example-1-new-enum-value"></a>Exemplo 1: novo valor de enumeração
 
-O Windows 10, versão 1607 adiciona um novo valor à enumeração [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
+O Windows 10, versão 1607, adiciona um novo valor à enumeração [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
 
 Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji** está presente e define a propriedade [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) de um **TextBox** se estiver presente. Se não estiver presente no sistema em que o aplicativo for executado, a propriedade **InputScope** será definida como **Chat** em vez disso. O código mostrado poderia ser colocado em um construtor de página ou em um manipulador de eventos Page.Loaded.
 
 > [!TIP]
-> Quando você verificar uma API, use cadeias estáticas em vez de usar recursos de linguagem .NET. Caso contrário, o aplicativo pode tentar acessar um tipo que não esteja definido e falhar no tempo de execução.
+> Quando você verificar uma API, use cadeias estáticas em vez de usar recursos de linguagem .NET. Caso contrário, o aplicativo pode tentar acessar um tipo que não esteja definido e falhar no runtime.
 
 **C#**
 ```csharp
@@ -152,7 +152,7 @@ Agora que temos um exemplo concreto, vamos ver como as configurações de versã
 
 Nesses exemplos, você pode usar o valor de enumeração Chat em XAML ou no código sem uma verificação, porque ele está presente na versão mínima do sistema operacional com suporte. 
 
-Se você usar o valor de ChatWithoutEmoji em XAML ou no código sem uma verificação, ele será compilado sem erros porque está presente na versão de Destino do sistema operacional. Ele também será executado sem erros em um sistema com a versão de Destino do sistema operacional. No entanto, quando o aplicativo for executado em um sistema que use a versão Mínima, haverá falha no tempo de execução porque o valor de enumeração ChatWithoutEmoji não está presente. Portanto, você deve usar esse valor somente no código e encapsulá-lo em uma verificação de API do tempo de execução para que seja chamado somente se for compatível com o sistema atual.
+Se você usar o valor de ChatWithoutEmoji em XAML ou no código sem uma verificação, ele será compilado sem erros porque está presente na versão de Destino do sistema operacional. Ele também será executado sem erros em um sistema com a versão de Destino do sistema operacional. No entanto, quando o aplicativo for executado em um sistema que use a versão Mínima, haverá falha no runtime porque o valor de enumeração ChatWithoutEmoji não está presente. Portanto, você deve usar esse valor somente no código e encapsulá-lo em uma verificação de API do runtime para que seja chamado somente se for compatível com o sistema atual.
 
 ### <a name="example-2-new-control"></a>Exemplo 2: novo controle
 
@@ -160,7 +160,7 @@ Uma nova versão do Windows normalmente traz novos controles para a superfície 
 
 O Windows 10, versão 1607 introduz um novo controle de mídia chamado [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement). Esse controle complementa a classe [MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer), para que ele ofereça recursos como a capacidade de enquadrar-se facilmente ao áudio em segundo plano, e faz uso de melhorias arquiteturais na pilha de mídia.
 
-No entanto, se o aplicativo for executado em um dispositivo que estiver executando uma versão mais antiga do que a versão 1607 do Windows 10, você deve usar o controle [**MediaElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement) em vez do novo controle **MediaPlayerElement**. Você pode usar o método [**ApiInformation.IsTypePresent**](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) para verificar a presença do controle MediaPlayerElement no tempo de execução e carregar qualquer controle que seja adequado ao sistema em que o aplicativo esteja sendo executado.
+No entanto, se o aplicativo for executado em um dispositivo que estiver executando uma versão mais antiga do que a versão 1607 do Windows 10, você deve usar o controle [**MediaElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement) em vez do novo controle **MediaPlayerElement**. Você pode usar o método [**ApiInformation.IsTypePresent**](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) para verificar a presença do controle MediaPlayerElement no runtime e carregar qualquer controle que seja adequado ao sistema em que o aplicativo esteja sendo executado.
 
 Este exemplo mostra como criar um aplicativo que usa o novo MediaPlayerElement ou o antigo MediaElement dependendo se o tipo de MediaPlayerElement estiver presente. Nesse código, você usa a classe [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para separar em componentes os controles, a interface do usuário e o código relacionados a eles para que você possa alterná-los com base na versão do sistema operacional. Como alternativa, você pode usar um controle personalizado que fornece mais funcionalidades e comportamento personalizado do que é necessário para este exemplo simples.
  
@@ -267,9 +267,9 @@ O `MediaElementUserControl` encapsula um controle **MediaElement**.
 > [!NOTE]
 > A página de código para `MediaElementUserControl` só contém código gerado, portanto ela não é mostrada.
 
-**Inicializar um controle com base em IsTypePresent**
+**Inicializar um controle baseado em IsTypePresent**
 
-No tempo de execução, você chama **ApiInformation.IsTypePresent** para verificar se há o MediaPlayerElement. Se ele estiver presente, você carrega `MediaPlayerUserControl`. Se não estiver, você carrega `MediaElementUserControl`.
+No runtime, você chama **ApiInformation.IsTypePresent** para verificar se há o MediaPlayerElement. Se ele estiver presente, você carrega `MediaPlayerUserControl`. Se não estiver, você carrega `MediaElementUserControl`.
 
 **C#**
 ```csharp
@@ -446,4 +446,4 @@ class IsEnumPresentTrigger : StateTriggerBase
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detecção dinâmica de recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

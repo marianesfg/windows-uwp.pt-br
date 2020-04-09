@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13901e044cbf6a14ac0ede6e9ed0f451859e49a1
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 202c1cb16e461d7cfbbe82cea999f1ed17523850
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629147"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081060"
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
@@ -30,7 +30,7 @@ Os controles de data e hora oferecem formas padrão e localizadas para permitir 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/category/DataInput">abrir o aplicativo e ver estes controles em ação</a>.</p>
     <ul>
@@ -63,11 +63,11 @@ A exibição de calendário é composta de três visões separadas: a visão de 
 ![Exemplo de seletor de data do calendário](images/calendar-view-3-views.png)
 
 - Se precisar permitir que o usuário selecione várias datas, você deverá usar um **CalendarView**.
-- Se você precisar permitir que o usuário selecione apenas uma única data e não precisar de um calendário sempre visível, considere usar um controle **CalendarDatePicker** ou **DatePicker**.
+- Se você precisar permitir que o usuário selecione apenas uma única data, e não precisar que o calendário fique visível, considere usar um controle **CalendarDatePicker** ou **DatePicker**.
 
 ### <a name="calendar-date-picker"></a>Seletor de data do calendário
 
-**CalendarDatePicker** é um controle suspenso otimizado para selecionar uma única data em uma visão de calendário, onde informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
+**CalendarDatePicker** é um controle suspenso otimizado para selecionar uma única data em uma exibição de calendário, em que informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
 O ponto de entrada exibirá o texto de espaço reservado se uma data não tiver sido definida; caso contrário, ele exibirá a data escolhida. Quando o usuário seleciona o ponto de entrada, uma exibição de calendário se expande para que o usuário faça uma seleção de data. A exibição de calendário se sobrepõe à outra interface do usuário; ela não remove a outra interface do usuário.
 
