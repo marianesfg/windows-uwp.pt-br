@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d5014532be613e8284a1e2d6496f71b9f2b8e892
-ms.sourcegitcommit: 5002836b3c8d3e0f2970da1333ec8f42da861ae3
+ms.openlocfilehash: 00c51fed9f2d327afe6f493891b2744243501ea1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77071248"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080959"
 ---
 # <a name="dialog-controls"></a>Controles de caixa de diálogo
 
@@ -25,21 +25,26 @@ Controles de caixas de diálogo são sobreposições de interface do usuário mo
 
 ![Exemplo de uma caixa de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
+**Obter a biblioteca de interface do usuário do Windows**
 
-> **APIs importantes**: [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](../images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs de plataforma:** [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use caixas de diálogo para notificar os usuários sobre informações importantes, ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída.
 
-Para ver recomendações sobre quando usar uma caixa de diálogo e quando usar um submenu (um controle semelhante), confira [Caixas de diálogo e submenus](index.md). 
+Para ver recomendações sobre quando usar uma caixa de diálogo e quando usar um submenu (um controle semelhante), confira [Caixas de diálogo e submenus](index.md).
 
 ## <a name="examples"></a>Exemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver o <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> ou <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> em ação.</p>
     <ul>
@@ -66,7 +71,7 @@ Para ver recomendações sobre quando usar uma caixa de diálogo e quando usar u
     - Verifique se o texto dos botões de ação é conciso. Cadeias de caracteres curtas permitem que o usuário faça uma escolha de modo rápido e seguro.
     - Além da ação segura e não destrutiva, você pode, opcionalmente, apresentar ao usuário um ou dois botões de ação relacionados à instrução principal. Esses botões de ação "faça isso" confirmam o ponto principal da caixa de diálogo. Use as APIs PrimaryButton e SecondaryButton para adicionar essas ações "faça isso".
     - Os botões de ação "faça isso" devem aparecer como os botões da extrema esquerda. A ação segura e não destrutiva deve aparecer como o botão da extrema direita.
-    - Como opção, você pode optar por diferenciar um dos três botões como botão padrão da caixa de diálogo. Use a API DefaultButton para diferenciar um dos botões.  
+    - Como opção, você pode optar por diferenciar um dos três botões como botão padrão da caixa de diálogo. Use a API DefaultButton para diferenciar um dos botões.
 -   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 - Use a [classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) para criar sua experiência de caixa de diálogo. Não use a API MessageDialog preterida.
 
@@ -135,7 +140,7 @@ private async void DisplayNoWifiDialog()
 }
 ```
 
-Quando as caixas de diálogo são usadas para exibir uma pergunta de bloqueio, sua caixa de diálogo deve apresentar ao usuário botões de ação relacionados à pergunta. O botão de ação "segura" e não destrutiva pode ser acompanhado por um ou dois botões de ação "faça isso". Ao apresentar para o usuário várias opções, certifique-se de que os botões expliquem claramente as ações "faça isso" seguras/"não faça isso" relacionadas à pergunta proposta.
+Quando as caixas de diálogo são usadas para exibir uma pergunta de bloqueio, sua caixa de diálogo deve apresentar ao usuário botões de ação relacionados à pergunta. O botão de ação "segura" e não destrutiva pode ser acompanhado por um ou dois botões de ação "faça isso". Ao apresentar para o usuário várias opções, garanta que os botões expliquem claramente as ações "faça isso" seguras/"não faça isso" relacionadas à pergunta proposta.
 
 ![Uma caixa de diálogo de dois botões](../images/dialogs/dialog_RS2_two_button.png)
 
@@ -212,7 +217,7 @@ Como opção, você pode optar por diferenciar um dos três botões como o botã
 - O botão responderá à tecla ENTER automaticamente
     - Quando o usuário pressiona a tecla ENTER no teclado, o manipulador de cliques associado ao Botão Padrão será acionado e o ContentDialogResult retornará o valor associado ao Botão Padrão
     - Se o usuário tiver colocado o Foco do Teclado em um controle que manipula ENTER, o Botão Padrão não responderá ao pressionamento de ENTER
-- O botão receberá o foco automaticamente quando a caixa de diálogo for aberta, exceto quando o conteúdo da caixa de diálogo apresentar a interface do usuário focalizável
+- O botão receberá o foco automaticamente quando a caixa de diálogo for aberta, exceto quando o conteúdo da caixa de diálogo apresentar interface do usuário focalizável
 
 Use a propriedade ContentDialog.DefaultButton para indicar o botão padrão. Por padrão, nenhum botão padrão está definido.
 
@@ -236,8 +241,8 @@ private async void DisplaySubscribeDialog()
 ```
 
 ## <a name="confirmation-dialogs-okcancel"></a>Caixas de diálogo de confirmação (OK/Cancelar)
-Uma caixa de diálogo de confirmação proporciona aos usuários a oportunidade de confirmar que desejam executar uma ação. Ele podem afirmar a ação, ou optar por cancelar.  
-Uma caixa de diálogo de confirmação típica tem dois botões: um botão de afirmação ("OK") e um botão Cancelar.  
+Uma caixa de diálogo de confirmação proporciona aos usuários a oportunidade de confirmar que desejam executar uma ação. Ele podem afirmar a ação, ou optar por cancelar.
+Uma caixa de diálogo de confirmação típica tem dois botões: um botão de afirmação ("OK") e um botão Cancelar.
 
 <ul>
     <li>

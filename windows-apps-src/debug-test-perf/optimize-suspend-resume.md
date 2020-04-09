@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 610b6237071c9d7435ca167c1a89b4ef7c40b333
 ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71339579"
@@ -42,7 +42,7 @@ Para aplicativos gerenciados, o sistema executará uma passagem de coleta de lix
 
 O ideal é que seu aplicativo conclusa a lógica de suspensão em menos de 1 segundo. Quanto mais rápido for a suspensão, melhor – isso resultará em uma experiência de usuário mais ágil para outros aplicativos e partes do sistema. Se necessário, sua lógica de suspensão pode demorar até 5 segundos em dispositivos desktop ou 10 segundos em dispositivos móveis. Se esses tempos forem excedidos, seu aplicativo será encerrado abruptamente. Você não quer que isso aconteça – pois se acontecer, quando o usuário voltar ao seu aplicativo, um novo processo será iniciado e a experiência parecerá muito mais lenta em comparação à retomada de um aplicativo suspenso.
 
-## <a name="resume"></a>Continuar
+## <a name="resume"></a>Retomar
 
 A maioria dos aplicativos não precisa fazer nada de especial quando é retomada. Então, normalmente você não manipula esse evento. Alguns aplicativos usam a retomada para restaurar conexões que foram fechadas durante a suspensão ou para atualizar os dados que podem estar obsoletos. Em vez de fazer esse tipo de trabalho avidamente, projete seu aplicativo para iniciar essas atividades sob demanda. Isso resultará em uma experiência mais rápida quando o usuário retornar para um aplicativo suspenso, além de garantir que você realize somente o trabalho que o usuário necessita.
 
@@ -64,7 +64,7 @@ As opções disponíveis de tecnologia de serialização para aplicativos .NET s
 
 A partir de uma perspectiva de desempenho, é recomendável usar a classe [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer). O **XmlSerializer** tem os menores tempos de serialização e desserialização, além de manter um baixo volume de memória. O **XmlSerializer** tem poucas dependências na estrutura .NET, o que significa que comparado a outras tecnologias de serialização, menos módulos precisam ser carregados em seu aplicativo para usar o **XmlSerializer**.
 
-O [**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) torna mais fácil serializar classes personalizadas, embora tenha um impacto maior no desempenho do que o **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
+O [**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) facilita a serialização de classes personalizadas, embora tenha um impacto de desempenho maior do que o **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reduzir o volume de memória
 
@@ -85,7 +85,7 @@ A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://docs
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Diretrizes para suspender e retomar o aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [Diretrizes para suspensão e retomada de aplicativos](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

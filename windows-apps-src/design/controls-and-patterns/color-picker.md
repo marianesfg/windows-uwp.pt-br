@@ -11,21 +11,28 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b791768d4ccd78b46fef2d4e494ce06ef9f6ca6a
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: f287f738c39e21ea76ff2595cc34ac715a1b52ca
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062213"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081185"
 ---
 # <a name="color-picker"></a>Seletor de cor
 
 Um seletor de cor é usado para navegar e selecionar cores. Por padrão, ele permite que um usuário navegue por cores dentre uma variedade de opções ou especifique uma cor em caixas de texto RGB, valor de matiz e saturação (HSV) ou hexadecimal.
 
-> **APIs importantes**: [classe ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propriedade Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
-
 ![Um seletor de cor padrão](images/color-picker-default.png)
 
+**Obter a biblioteca de interface do usuário do Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ColorPicker** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de interface do usuário do Windows:** [classe ColorPicker](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [propriedade Color](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
+>
+> **APIs de plataforma:** [classe ColorPicker](/uwp/api/windows.ui.xaml.controls.colorpicker), [propriedade Color](/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -38,7 +45,7 @@ Se o aplicativo for para tarefas de desenho ou semelhantes usando a caneta, cons
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/ColorPicker">abrir o aplicativo e ver o ColorPicker em ação</a>.</p>
     <ul>
@@ -63,7 +70,7 @@ Por padrão, o seletor de cor mostra uma versão prévia da cor escolhida na bar
 
 Quando a seleção de cor precisa entrar em vigor imediatamente, você pode usar a associação de dados para associar a propriedade Color ou manipular o evento ColorChanged para acessar a cor selecionada no código.
 
-Neste exemplo, você associa a propriedade Color de SolidColorBrush usado como Preenchimento de um retângulo diretamente para a cor selecionada no seletor de cor. Qualquer alteração no seletor de cor resulta em uma alteração em tempo real da propriedade associada.
+Neste exemplo, você associa a propriedade Color de um SolidColorBrush usado como Preenchimento de um retângulo diretamente para a cor selecionada no seletor de cor. Qualquer alteração no seletor de cor resulta em uma alteração em tempo real da propriedade associada.
 
 ```xaml
 <ColorPicker x:Name="myColorPicker"
@@ -204,7 +211,7 @@ Valores hexadecimais | IsHexInputVisible
 - Pense sobre que tipo de experiência de seleção de cor é apropriado para o aplicativo. Alguns cenários podem não exigir a seleção de cor granular e se beneficiariam de um seletor simplificado
 - Para obter a experiência de seleção de cores mais precisa, use o espectro quadrado e verifique se há pelo menos 256 x 256 px ou inclua os campos de entrada de texto para permitir que os usuários refinem a cor selecionada.
 - Quando usado em um submenu, a seleção de cor não é confirmada ao tocar no espectro ou ajustar o controle deslizante. Para confirmar a seleção:
-  - Forneça os botões de confirmação e cancelamento para aplicar ou cancelar a seleção. Ao pressionar o botão Voltar ou tocar fora do submenu você o ignora e não salva a seleção do usuário.
+  - Forneça os botões de confirmação e cancelamento para aplicar ou cancelar a seleção. Ao pressionar o botão Voltar ou tocar fora do submenu, você o ignora e não salva a seleção do usuário.
   - Ou confirme a seleção ao descartar o submenu tocando fora do submenu ou pressionando o botão Voltar.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo

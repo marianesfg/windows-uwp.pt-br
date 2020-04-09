@@ -4,12 +4,12 @@ description: Saiba mais sobre os princípios de cantos arredondados, abordagens 
 ms.date: 10/08/2019
 ms.topic: article
 keywords: Windows 10, UWP, raio do canto, arredondado
-ms.openlocfilehash: 84cd27bf8c65ed65a6ee2b0f044e0ffb3ef86bf0
-ms.sourcegitcommit: 49af415e4eefea125c023b7071adaa5dc482e223
+ms.openlocfilehash: a83473b5ad836633bc195aa2b5afe87fa092e0ee
+ms.sourcegitcommit: 3c3730e968fba89b21459390735614cd4c9d9c67
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74799920"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320424"
 ---
 # <a name="corner-radius"></a>Raio de canto
 
@@ -186,3 +186,15 @@ Você pode modificar a propriedade [CornerRadius](/uwp/api/windows.ui.xaml.contr
 |`<CheckBox Content="Checkbox"/>` | `<CheckBox Content="Checkbox" CornerRadius="5"/> ` |
 
 Nem todos os cantos dos controles responderão à sua propriedade `CornerRadius` que está sendo modificada. Para garantir que o controle cujos cantos você deseja arredondar realmente responda à sua propriedade de `CornerRadius` da maneira esperada, primeiro verifique se os recursos `ControlCornerRadius` ou `OverlayCornerRadius` globais afetam o controle em questão. Se não afetarem, verifique se o controle que você deseja arredondar tem cantos. Muitos de nossos controles não renderizam bordas reais e, portanto, não podem usar adequadamente a propriedade `CornerRadius`.
+
+### <a name="basing-custom-styles-on-winui"></a>Basear estilos personalizados na WinUI
+
+Você pode basear seus estilos personalizados nos estilos de cantos arredondados da WinUI ao especificar o atributo `BasedOn` correto neles. Por exemplo, para criar um estilo de botão personalizado baseado no estilo de botão da WinUI, faça o seguinte:
+
+```xaml
+<Style x:Key="MyCustomButtonStyle" BasedOn="{StaticResource DefaultButtonStyle}">
+   ...
+</Style>
+```
+
+Em geral, os estilos de controle da WinUI seguem uma convenção de nomenclatura consistente: "DefaultXYZStyle", em que "XYZ" é o nome do controle. Para obter a referência completa, você pode procurar os arquivos XAML no repositório da WinUI.

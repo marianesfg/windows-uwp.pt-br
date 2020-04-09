@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 59397f12ec66bfa2864d830eaf80a9dcaaf06592
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74257877"
@@ -27,7 +27,7 @@ Outras métricas têm um impacto menos óbvio na experiência do usuário, como 
 
 É melhor definir uma meta inicial e revisá-la mais tarde do que não ter meta alguma. As metas de desempenho do seu aplicativo devem ser específicas e mensuráveis e se enquadrar em três categorias: quanto tempo os usuários ou o aplicativo levam para concluir tarefas, a taxa e continuidade com que o aplicativo redesenha a si em resposta à interação do usuário (fluidez) e como o aplicativo se sai ao conservar recursos de sistema, incluindo a carga da bateria (eficiência).
 
-## <a name="time"></a>Tempo
+## <a name="time"></a>Hora
 
 Pense nos intervalos aceitáveis de tempo decorrido (*classes de interação*) que leva para os usuários concluírem suas tarefas em seu aplicativo. Para cada classe de interação, atribua um rótulo, um sentimento na percepção do usuário e as durações ideal e máxima. A seguir estão algumas sugestões.
 
@@ -36,7 +36,7 @@ Pense nos intervalos aceitáveis de tempo decorrido (*classes de interação*) q
 | Rápido                    | Atraso minimamente perceptível      | 100 milissegundos | 200 milissegundos | Ativar a barra de aplicativos; pressionar um botão (primeira resposta)                        |
 | Típico                 | Ágil, mas não rápido             | 300 milissegundos | 500 milissegundos | Redimensionar; zoom semântico                                                        |
 | Responsivo              | Não rápido, mas perceptivelmente responsivo | 500 milissegundos | 1 segundo         | Navegar até uma página diferente; retomar o aplicativo de um estado suspenso          |
-| Launch                  | Experiência competitiva          | 1 segundo         | 3 segundos        | Iniciar o aplicativo pela primeira vez ou depois que ele foi encerrado anteriormente |
+| Inicializar                  | Experiência competitiva          | 1 segundo         | 3 segundos        | Iniciar o aplicativo pela primeira vez ou depois que ele foi encerrado anteriormente |
 | Contínuo              | Não há mais a percepção de resposta      | 500 milissegundos | 5 segundos        | Baixar um arquivo da Internet                                            |
 | Cativo                 | Longo tempo; o usuário pode alternar para outro aplicativo    | 500 milissegundos | 10 segundos       | Instalar vários aplicativos da Loja                                         |
 
@@ -79,12 +79,12 @@ As metas de eficiência específicas e mensuráveis para seu aplicativo podem in
 
 Agora você pode usar suas metas de desempenho para influenciar o design de seu aplicativo. Usando o aplicativo de exemplo para alimentos e refeições, depois que o usuário navega para a página da receita, você pode optar por [atualizar itens de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que o nome da receita seja renderizado primeiro, a exibição dos ingredientes seja adiada e a exibição das imagens seja ainda mais adiada. Isso mantém a capacidade de resposta e uma interface do usuário flexível ao movimento panorâmico/rolagem, com a renderização de total fidelidade ocorrendo depois que a interação diminui a um ritmo que permita que o thread de interface do usuário acompanhe. Consulte a seguir outros aspectos que devem ser levados em consideração.
 
-**CONECTÁVEL**
+**Interface do usuário**
 
 -   Maximize o tempo de análise e carregamento e a eficiência da memória para cada página da interface do usuário do seu aplicativo (especialmente a página inicial) [otimizando sua marcação XAML](optimize-xaml-loading.md). Resumindo, adie o carregamento da interface do usuário e do código até que seja necessário.
 -   Para [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), crie todos os itens do mesmo tamanho e use o máximo de [técnicas de otimização de ListView e GridView](optimize-gridview-and-listview.md) possível.
 -   Declare a interface do usuário na forma de marcação, que a estrutura pode carregar e reutilizar em blocos, em vez de construí-la imperativamente em código.
--   Atrase a criação de elementos da interface do usuário até que o usuário precise deles. Veja o atributo [**x:Load**](../xaml-platform/x-load-attribute.md).
+-   Atrase a criação de elementos da interface do usuário até que o usuário precise deles. Confira o atributo [**x:Load**](../xaml-platform/x-load-attribute.md).
 -   Prefira as transições de tema e animações às animações de storyboard. Para obter mais informações, consulte [Visão geral das animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview). Lembre-se de que as animações de storyboard requerem atualizações constantes na tela e mantêm ativo o pipeline de CPU e elementos gráficos. Para preservar a bateria, não deixe animações em execução se o usuário não estiver interagindo com o aplicativo.
 -   As imagens que você carregar devem ser carregadas em um tamanho apropriado ao modo de exibição de apresentação, usando o método [**GetThumbnailAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync).
 
@@ -107,7 +107,7 @@ Agora você pode usar suas metas de desempenho para influenciar o design de seu 
 -   Adie a tela inicial do aplicativo e só a estenda se for necessário. Para obter detalhes, consulte [Criando uma experiência rápida e fluida de inicialização de aplicativos](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/21/creating-a-fast-and-fluid-app-launch-experience.aspx) e [Exibir uma tela inicial por mais tempo](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen).
 -   Desabilite animações que aparecem logo depois que a tela inicial é ignorada, pois elas geram unicamente uma percepção de atraso no tempo de inicialização do aplicativo.
 
-**Interface do usuário adaptável e orientação**
+**Orientação e interface do usuário adaptável**
 
 -   Use a classe [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager).
 -   Conclua imediatamente apenas o trabalho exigido, adiando o trabalho de aplicativo intensivo — seu aplicativo tem entre 200 e 800 milissegundos para concluir o trabalho antes de o usuário ver a IU do aplicativo em um estado recortado.
@@ -165,19 +165,19 @@ Use essas técnicas e ferramentas para testar como seu aplicativo se compara às
 -   Faça testes com base em várias configurações de hardware, incluindo PCs de desktop e multifuncionais, laptops e ultrabooks e tablets, entre outros dispositivos móveis.
 -   Faça testes com base em uma ampla variedade de tamanhos de tela. Embora tamanhos de tela mais amplos possam mostrar muito mais conteúdo, trazer todo esse conteúdo extra pode prejudicar o desempenho.
 -   Elimine o máximo possível das variáveis de teste.
-    -   Desative aplicativos em segundo plano no dispositivo de teste. Para fazer isso, no Windows, selecione **configurações** no menu iniciar &gt; **personalização** &gt; **tela de bloqueio**. Selecione cada aplicativo ativo e selecione **Nenhum**.
+    -   Desative aplicativos em segundo plano no dispositivo de teste. Para isso, no Windows, selecione **Configurações** no menu Iniciar&gt; **Personalização** &gt; **Tela de bloqueio**. Selecione cada aplicativo ativo e selecione **Nenhum**.
     -   Compile seu aplicativo no código nativo o criando na configuração da versão antes de implantá-lo no dispositivo de teste.
     -   Para garantir que a manutenção automática não afete o desempenho do dispositivo de teste, dispare-o manualmente e aguarde a conclusão. No Windows, no menu Iniciar, procure **Segurança e Manutenção**. Na área de **Manutenção**, em **Manutenção Automática**, selecione **Iniciar manutenção** e aguarde o status sair de **Manutenção em progresso**.
     -   Execute o aplicativo várias vezes para ajudar a eliminar variáveis de teste aleatórias e a garantir medições consistentes.
 -   Teste a disponibilidade de redução de energia. O dispositivo de seus usuários pode ter significativamente menos energia de que seu computador de desenvolvimento. O Windows foi projetado para dispositivos de baixo consumo de energia, como dispositivos móveis. Os aplicativos que são executados na plataforma devem garantir um bom desempenho nesses dispositivos. Como aprendizado, espere que um dispositivo de baixa energia execute em cerca de um quarto da velocidade de um computador desktop e defina suas metas de acordo.
 -   Use uma combinação de ferramentas, como o Microsoft Visual Studio e o Windows Performance Analyzer, para medir o desempenho do aplicativo. O Visual Studio foi projetado para fornecer análises centradas no aplicativo, como vinculação de código-fonte. O Windows Performance Analyzer foi projetado para fornecer análises centradas no sistema, como o fornecimento de informações do sistema, informações sobre eventos de manipulação de toque e informações sobre E/S (entrada e saída) de disco e custo da GPU (unidade de processamento gráfico). Ambas as ferramentas oferecem captura e exportação de rastreamento e podem reabrir rastreamentos compartilhados e post-mortem.
--   Antes de enviar seu aplicativo para a loja para certificação, não se esqueça de incorporar em seus planos de teste os casos de teste relacionados ao desempenho conforme descrito na seção "testes de desempenho" dos [testes do kit de certificação de aplicativos do Windows](windows-app-certification-kit-tests.md) e na seção "desempenho e estabilidade" dos casos de teste do [aplicativo UWP](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10)).
+-   Antes de enviar seu aplicativo à Store para certificação, incorpore em seus planos de teste os casos de teste relacionados ao desempenho, conforme descrito na seção "Testes de desempenho" de [Testes do Kit de Certificação de Aplicativos Windows](windows-app-certification-kit-tests.md) e na seção "Desempenho e estabilidade" de [Casos de teste de aplicativos UWP](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10)).
 
 Para obter mais informações, consulte esses recursos e ferramentas de criação de perfil.
 
--   [Analisador de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
+-   [Windows Performance Analyzer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
 -   [Kit de Ferramentas de Desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))
--   [Analisar o desempenho usando as ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
+-   [Analisar o desempenho usando ferramentas de diagnóstico do Visual Studio](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
 -   A sessão //build/ [Desempenho do XAML](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   A sessão //build/ [Novas ferramentas XAML no Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 

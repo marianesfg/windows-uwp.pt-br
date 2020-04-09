@@ -12,24 +12,26 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e5ff5d0e9172432110d60a007228e59e48785b9
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.openlocfilehash: 66dc74e73207feb9b155adffc116f857dcb3027d
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830803"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081627"
 ---
 # <a name="progress-controls"></a>Controles de progresso
 
 Um controle de progresso oferece feedback ao usuário que uma operação de execução longa está em andamento. Isso pode significar que o usuário não pode interagir com o aplicativo quando o indicador de progresso está visível e também pode indicar a duração do tempo de espera, dependendo do indicador usado.
 
-| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
-| - | - |
-| [classe ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive) | [Classe ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate) |
+**Obter a biblioteca de interface do usuário do Windows**
 
-| **Obter a biblioteca de interface do usuário do Windows** |
-| - |
-| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ProgressBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de Interface do Usuário do Windows:** [Classe ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate)
+>
+> **APIs de plataforma:** [classe ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 > [!NOTE]
 > Há duas versões do controle da ProgressBar: uma na plataforma, representada pelo namespace Windows.UI.XAML e outra na biblioteca de interface do usuário do Windows, o namespace Microsoft.UI.XAML. Embora a API para ProgressBar seja a mesma, a aparência do controle é diferente entre essas duas versões. Este documento mostrará imagens da versão mais recente da biblioteca da interface do usuário do Windows.
@@ -72,7 +74,7 @@ Além disso, um controle de progresso é somente leitura, não é interativo. Is
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abrir o aplicativo para ver a <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> ou <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> em ação.</p>
     <ul>
@@ -85,7 +87,7 @@ Além disso, um controle de progresso é somente leitura, não é interativo. Is
 
 ## <a name="when-to-use-each-control"></a>Quando usar cada controle
 
-Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar ao tentar mostrar que algo está acontecendo. Às vezes, uma tarefa é tão óbvia que não requer um controle de progresso – e, às vezes, mesmo se um controle de progresso é usado, uma linha de texto ainda é necessária para explicar ao usuário qual operação está em andamento.
+Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar ao tentar mostrar que algo está acontecendo. Às vezes, uma tarefa é tão óbvia que não requer um controle de progresso e, em algumas ocasiões, mesmo se um controle de progresso é usado, uma linha de texto ainda é necessária para explicar ao usuário qual operação está em andamento.
 
 ### <a name="progressbar"></a>ProgressBar
 -   **O controle tem uma duração definida ou um fim previsível?**
@@ -94,11 +96,11 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 
 -   **O usuário pode continuar sem precisar monitorar o andamento da operação?**
 
-    Quando um ProgressBar está em uso, a interação é não modal, o que geralmente significa que o usuário não está bloqueado pela conclusão da operação e pode continuar a usar o aplicativo de outras maneiras, até que esse aspecto seja concluído.
+    Quando ProgressBar está em uso, a interação é não modal, o que geralmente significa que o usuário não está bloqueado pela conclusão da operação e pode continuar a usar o aplicativo de outras maneiras, até que esse aspecto seja concluído.
 
 -   **Palavras-chave**
 
-    Se a sua operação se enquadrar nessas palavras-chave, ou se você estiver mostrando texto junto com a operação de progresso que corresponda a essas palavras-chave, considere o uso de um ProgressBar:
+    Caso sua operação se enquadre nestas palavras-chave, ou você esteja mostrando texto junto com a operação de progresso que corresponde a estas palavras-chave, considere o uso de um ProgressBar:
 
     - *Carregando...*
     - *Recuperando*
@@ -112,11 +114,11 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 
 -   **O aplicativo está aguardando que o usuário execute uma tarefa?**
 
-    Em caso afirmativo, use um ProgressRing, pois ele indica um tempo de espera desconhecido para o usuário.
+    Em caso afirmativo, use ProgressRing, que indica um tempo de espera desconhecido para o usuário.
 
 -   **Palavras-chave**
 
-    Se a sua operação se enquadrar nessas palavras-chave, ou se você estiver mostrando texto junto com a operação de progresso que corresponda a essas palavras-chave, considere o uso de um ProgressRing:
+    Caso sua operação se enquadre nestas palavras-chave, ou você esteja mostrando texto junto com a operação de progresso que corresponde a estas palavras-chave, considere o uso de um ProgressRing:
 
     - *Atualizando*
     - *Entrando...*
@@ -125,7 +127,7 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 ### <a name="no-progress-indication-necessary"></a>Nenhuma indicação de progresso necessária
 -   **O usuário precisa saber que algo está acontecendo?**
 
-    Por exemplo, se o aplicativo está baixando alguma coisa em tela de fundo, e o usuário não iniciou o download, o usuário não precisa necessariamente saber disso.
+    Por exemplo, se o aplicativo está baixando alguma coisa em segundo plano, e o usuário não iniciou o download, o usuário não precisa necessariamente saber disso.
 
 -   **A operação é uma atividade em tela de fundo que não bloqueia a atividade do usuário e é de interesse mínimo (porém existente) para o usuário?**
 
@@ -137,7 +139,7 @@ Nem sempre é óbvio qual controle ou estado (determinado vs indeterminado) usar
 
 ## <a name="progress-controls-best-practices"></a>Práticas recomendadas de controles de progresso
 
-Às vezes, é melhor ver algumas representações visuais de quando e onde usar esses diferentes controles de progresso:
+Às vezes, é melhor ver algumas representações visuais de quando e onde usar estes diferentes controles de progresso:
 
 **ProgressBar – determinado**
 
@@ -159,7 +161,7 @@ Quando não se sabe o tempo que operação levará, use um ProgressBar indetermi
 
 ![Exemplo de ProgressRing indeterminado](images/PR_IndeterminateExample.png)
 
-O ProgressRing indeterminado é usado quando toda a interação do usuário com o aplicativo é interrompida ou o aplicativo está esperando a entrada do usuário para continuar. O exemplo "entrando..." acima é um cenário perfeito para o ProgressRing, o usuário não pode continuar a usar o aplicativo até que a entrada seja concluída.
+O ProgressRing indeterminado é usado quando toda a interação do usuário com o aplicativo é interrompida ou quando o aplicativo está esperando a entrada do usuário para continuar. O exemplo acima, "Entrando...", é um cenário perfeito para o ProgressRing, e o usuário não pode continuar a usar o aplicativo até que a entrada seja concluída.
 
 ## <a name="customizing-a-progress-control"></a>Personalizando um controle de progresso
 

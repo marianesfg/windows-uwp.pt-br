@@ -4,11 +4,11 @@ title: Device Portal para celulares
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, portal do dispositivo
+keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
 ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72281896"
@@ -25,15 +25,15 @@ Para saber mais sobre como habilitar o Modo de desenvolvedor, consulte [Habilita
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>Ativar a descoberta e o emparelhamento de dispositivos
 
-Para se conectar ao Device Portal, você deve habilitar a Descoberta de dispositivo e o Device Portal nas configurações do seu telefone. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
+Para se conectar ao Portal de Dispositivos, você deve habilitar a Descoberta de dispositivo e o Portal de Dispositivos nas configurações de seu telefone. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
 
 Na primeira vez que você se conectar ao Device Portal, será solicitado a fornecer um código de segurança de 6 caracteres que diferencia maiúsculas de minúsculas. Isso garante que você tenha acesso ao telefone e o mantém protegido contra invasores. Pressione o botão Emparelhar no seu telefone para gerar e exibir o código. Em seguida, insira os 6 caracteres na caixa de texto no navegador.
 
 ![Configurações da descoberta de dispositivos do Modo de desenvolvedor](images/device-portal/mob-dev-mode-pairing.png)
 
-Você pode escolher entre três maneiras de se conectar ao portal do dispositivo: USB, host local e pela rede local (incluindo VPN e compartilhamento de Internet).
+Você pode escolher entre três maneiras de se conectar ao Portal de Dispositivos: USB, host local e pela rede local (incluindo VPN e compartilhamento de Internet).
 
-**Para se conectar ao portal do dispositivo**
+**Para se conectar ao Portal de Dispositivos**
 
 1. Em seu navegador, insira o endereço mostrado aqui para o tipo de conexão que você está usando.
 
@@ -49,7 +49,7 @@ Você pode escolher entre três maneiras de se conectar ao portal do dispositivo
 
     Use esse endereço para se conectar por uma rede local.
 
-    O endereço IP do telefone é mostrado nas configurações do Device Portal no telefone. O HTTPS é necessário para autenticação e comunicação segura. O nome do host (editável em Configurações > > do sistema) também pode ser usado para acessar o portal do dispositivo na rede local (por exemplo, http://Phone360), que é útil para dispositivos que podem alterar redes ou endereços IP com frequência ou devem ser compartilhados. 
+    O endereço IP do telefone é mostrado nas configurações do Device Portal no telefone. O HTTPS é necessário para autenticação e comunicação segura. O nome do host (editável em Configurações > Sistema > Sobre) também pode ser usado para acessar o Portal de Dispositivos na rede local (por exemplo, http://Phone360), que é útil para dispositivos que podem alterar redes ou endereços IP com frequência ou que precisem ser compartilhados. 
 
 2. Pressione o botão Emparelhar no seu telefone para gerar e exibir o código de segurança necessário.
 
@@ -81,7 +81,7 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 - Dispositivos
 - Rede
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-* [Visão geral do portal de dispositivos Windows](device-portal.md)
-* [Referência da API principal do portal do dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Visão geral do Portal de Dispositivos do Windows](device-portal.md)
+* [Referência de API central do Portal de Dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

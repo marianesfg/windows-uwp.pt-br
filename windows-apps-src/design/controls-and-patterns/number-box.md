@@ -7,21 +7,28 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bcabe0867e21b20f97405d514b16bef2165821fb
-ms.sourcegitcommit: be25b7628b1ff22175a682e670539947db2fa85a
+ms.openlocfilehash: 5307448b6209228cd8c4550a739c6db15091ba54
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74852858"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081666"
 ---
 # <a name="number-box"></a>Caixa de número
 
 Representa um controle que pode ser usado para exibir e editar números. Isso dá suporte para validação, passo a passo incremental e computação de cálculos embutidos de equações básicas, como multiplicação, divisão, adição e subtração.
 
+![Exemplo de um menu de contexto típico](images/contextmenu_rs2_icons.png)
 
-**APIs importantes:** [Classe NumberBox](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+**Obter a biblioteca de interface do usuário do Windows**
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto? 
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **NumberBox** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+**APIs da Biblioteca de interface do usuário do Windows:** [Classe NumberBox](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Você pode usar um controle NumberBox para capturar e exibir a entrada matemática. Se você precisar de uma caixa de texto editável que aceite mais que números, use o controle [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Se você precisar de uma caixa de texto editável que aceite senhas ou outra entrada confidencial, confira [PasswordBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox). Se você precisar de uma caixa de texto para inserir termos de pesquisa, confira [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox). Se você precisar inserir ou editar texto formatado, confira [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox).
 
@@ -30,7 +37,7 @@ Você pode usar um controle NumberBox para capturar e exibir a entrada matemáti
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TextBox">abri-lo e ver a NumberBox em ação</a>.</p>
     <ul>

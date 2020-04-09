@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654101"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798249"
 ---
 # <a name="beta-testing"></a>Teste beta
 
@@ -32,7 +32,7 @@ Com o teste beta, você pode:
 -   Testar seu aplicativo em uma variedade de dispositivos.
 -   Identificar problemas de desempenho e outros bugs que talvez você não encontrasse de outra forma.
 -   Obter informações de uso do mundo real que podem ser usadas para melhorar a experiência do usuário.
--   Receba comentários sem afetar as classificações públicas em que a Microsoft Store.
+-   Receber comentários sem afetar classificações públicas na Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Quando fazer o teste beta
 
@@ -40,7 +40,7 @@ Com o teste beta, você pode:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Na [Partner Center](https://partner.microsoft.com/dashboard), você pode limitar a distribuição de seus aplicativos para somente seus testadores, independentemente de quais sistemas operacionais de destino do seu aplicativo. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
+No [Partner Center](https://partner.microsoft.com/dashboard), você pode limitar a distribuição de seus aplicativos somente para os testadores, independentemente dos sistemas operacionais para os quais seu aplicativo seja direcionado. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
 
 Consulte [Teste beta e distribuição direcionada](../publish/beta-testing-and-targeted-distribution.md) para saber como enviar seu aplicativo para a loja para teste beta.
 

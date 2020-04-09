@@ -10,24 +10,30 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 6276ef9bcb6b01fd557057d3d36939350314015b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684101"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081049"
 ---
 # <a name="teaching-tip"></a>Dica de ensino
 
 Uma dica de ensino é um submenu semipersistente e rico em conteúdo que fornece informações contextuais. Geralmente, é usada para informar, lembrar e ensinar os usuários sobre recursos novos e importantes que podem aprimorar a experiência.
 
-**APIs importantes:** [Classe TeachingTip](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
-
 Uma dica de ensino pode ser um light dismiss ou exigir uma ação explícita para ser fechada. Uma dica de ensino pode apontar para um elemento específico da interface do usuário com sua cauda. Também pode não ter uma cauda ou um alvo.
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto? 
+**Obter a biblioteca de interface do usuário do Windows**
 
-Use um controle **TeachingTip** para focar a atenção do usuário em atualizações e recursos novos ou importantes, lembrá-lo de opções não essenciais que melhorariam a experiência ou ensinar como uma tarefa deve ser concluída. 
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](../images/winui-logo-64x64.png) | O controle **TeachingTip** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de interface do usuário do Windows:** [Classe TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+
+Use um controle **TeachingTip** para focar a atenção do usuário em atualizações e recursos novos ou importantes, lembrá-lo de opções não essenciais que melhorariam a experiência ou ensinar como uma tarefa deve ser concluída.
 
 Como a dica de ensino é transitória, não seria o controle recomendado para avisar os usuários sobre erros ou alterações de status importantes.
 
@@ -37,7 +43,7 @@ Como a dica de ensino é transitória, não seria o controle recomendado para av
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tem o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/TeachingTip">abri-lo e ver o TeachingTip em ação</a>.</p>
     <ul>
@@ -50,7 +56,7 @@ Como a dica de ensino é transitória, não seria o controle recomendado para av
 
 Uma dica de ensino pode ter várias configurações, incluindo essas mais notáveis.
 
-Uma dica de ensino pode apontar para um elemento específico da interface do usuário com sua cauda para aumentar a clareza contextual das informações apresentadas. 
+Uma dica de ensino pode apontar para um elemento específico da interface do usuário com sua cauda para aumentar a clareza contextual das informações apresentadas.
 
 ![Um aplicativo de exemplo com uma dica de ensino sobre o botão Salvar. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo". Há um botão Fechar no canto superior direito da dica de ensino.](../images/teaching-tip-targeted.png)
 
@@ -58,14 +64,15 @@ Quando as informações apresentadas não pertencem a um elemento específico da
 
 ![Um aplicativo de exemplo com uma dica de ensino no canto inferior direito. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo". Há um botão Fechar no canto superior direito da dica de ensino.](../images/teaching-tip-non-targeted.png)
 
-Uma dica de ensino pode exigir que usuário a ignore por meio do botão "X" no canto superior ou pelo botão "Fechar" na parte inferior. Além disso, uma dica de ensino pode ser habilitada para light dismiss. Nesse caso, não haverá um botão para ignorá-la. Ela desaparecerá quando o usuário rolar a tela ou interagir com outros elementos do aplicativo. Por causa desse comportamento, o light dismiss é a melhor solução quando uma dica precisa ser colocada em uma área rolável. 
+Uma dica de ensino pode exigir que usuário a ignore por meio do botão "X" no canto superior ou pelo botão "Fechar" na parte inferior. Além disso, uma dica de ensino pode ser habilitada para light dismiss. Nesse caso, não haverá um botão para ignorá-la. Ela desaparecerá quando o usuário rolar a tela ou interagir com outros elementos do aplicativo. Por causa desse comportamento, o light dismiss é a melhor solução quando uma dica precisa ser colocada em uma área rolável.
 
 ![Um aplicativo de exemplo com uma dica com light dismiss no canto inferior direito. O título da dica é "Salvar automaticamente" e o subtítulo é "Salvamos suas alterações conforme são feitas, para que você nunca precise fazê-lo".](../images/teaching-tip-light-dismiss.png)
 
 
 ### <a name="create-a-teaching-tip"></a>Criar uma dica de ensino
 
-Veja o XAML de um controle de dica de ensino com alvo que demonstra o visual padrão de TeachingTip com título e subtítulo. Observe que a dica de ensino pode aparecer em qualquer local na árvore de elementos ou no code-behind. No exemplo a seguir, está localizada em um ResourceDictionary.
+Veja o XAML de um controle de dica de ensino com alvo que demonstra o visual padrão de TeachingTip com título e subtítulo.
+Observe que a dica de ensino pode aparecer em qualquer local na árvore de elementos ou no code-behind. No exemplo a seguir, está localizada em um ResourceDictionary.
 
 XAML
 ```XAML
@@ -118,7 +125,7 @@ Neste exemplo, observe que TeachingTip está na árvore de elementos, e não em 
 
 ### <a name="preferred-placement"></a>Posição preferencial
 
-A dica de ensino replica o comportamento de posicionamento [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) do submenu com a propriedade TeachingTipPlacementMode. O modo de posicionamento padrão tentará colocar a dica de ensino com alvo acima do alvo e uma dica de ensino sem alvo centralizada na parte inferior da raiz XAML. Assim como no submenu, se o modo de posicionamento preferencial não deixar espaço para a exibição da dica de ensino, outro modo de posicionamento será escolhido automaticamente. 
+A dica de ensino replica o comportamento de posicionamento [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) do submenu com a propriedade TeachingTipPlacementMode. O modo de posicionamento padrão tentará colocar a dica de ensino com alvo acima do alvo e uma dica de ensino sem alvo centralizada na parte inferior da raiz XAML. Assim como no submenu, se o modo de posicionamento preferencial não deixar espaço para a exibição da dica de ensino, outro modo de posicionamento será escolhido automaticamente.
 
 Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
 
@@ -162,7 +169,7 @@ O diagrama a seguir mostra o resultado de todos os 13 modos PreferredPlacement q
 O diagrama a seguir mostra o resultado de todos os 13 modos PreferredPlacement que podem ser definidos nas dicas de ensino sem alvo.
 ![Ilustração de nove dicas de ensino, cada uma demonstrando um modo de posicionamento sem alvo diferente. Cada dica de ensino é rotulada com o modo que representa. A primeira palavra de um modo de posicionamento indica o lado da raiz XAML em que a dica de ensino aparecerá centralizada. Se houver uma segunda palavra no modo de posicionamento, a dica de ensino se autoposicionará em direção ao canto especificado da raiz XAML. Por exemplo, o modo de posicionamento "TopRight" fará com que a dica de ensino apareça no canto superior direito da raiz XAML. Em todos os modos de posicionamento sem alvo, a ordem das duas palavras não afeta a posição. TopRight é equivalente a RightTop. O modo de posicionamento "Center" é único e fará com que a dica de ensino apareça no centro da raiz XAML, na vertical e na horizontal.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
 
-### <a name="add-a-placement-margin"></a>Adicionar uma margem de posicionamento  
+### <a name="add-a-placement-margin"></a>Adicionar uma margem de posicionamento
 
 Com a propriedade PlacementMargin, é possível controlar a distância entre a dica de ensino com alvo e o alvo, bem como a distância entre uma dica de ensino sem alvo e as bordas da raiz XAML. Assim como [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tem quatro valores – esquerda, direita, parte superior e parte inferior. Assim, somente os valores relevantes são usados. Por exemplo, PlacementMargin.Left é usado quando a dica está à esquerda do alvo ou da borda da raiz XAML.
 
@@ -185,7 +192,7 @@ XAML
 
 ### <a name="add-content"></a>Adicionar conteúdo
 
-É possível adicionar conteúdo a uma dica de ensino usando a propriedade Content. Se o conteúdo a ser mostrado for maior que o tamanho permitido pela dica de ensino, uma barra de rolagem será automaticamente habilitada para que o usuário possa rolar a área de conteúdo. 
+É possível adicionar conteúdo a uma dica de ensino usando a propriedade Content. Se o conteúdo a ser mostrado for maior que o tamanho permitido pela dica de ensino, uma barra de rolagem será automaticamente habilitada para que o usuário possa rolar a área de conteúdo.
 
 XAML
 ```XAML
@@ -217,7 +224,7 @@ Por padrão, um botão de fechar "X" é mostrado ao lado do título de uma dica 
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -243,7 +250,7 @@ XAML
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -260,7 +267,7 @@ XAML
 
 ### <a name="add-an-icon"></a>Adicionar um ícone
 
-É possível adicionar um ícone ao lado do título e do subtítulo usando a propriedade IconSource. É recomendável usar ícones nos tamanhos de 16px, 24px e 32px. 
+É possível adicionar um ícone ao lado do título e do subtítulo usando a propriedade IconSource. É recomendável usar ícones nos tamanhos de 16px, 24px e 32px.
 
 XAML
 ```XAML
@@ -282,9 +289,9 @@ XAML
 
 ### <a name="enable-light-dismiss"></a>Habilitar o light dismiss
 
-A funcionalidade light dismiss fica desabilitada por padrão. No entanto, é possível habilitá-la para que a dica de ensino seja ignorada, por exemplo, quando o usuário rola a tela ou interage com outros elementos do aplicativo. Por causa desse comportamento, o light dismiss é a melhor solução quando uma dica precisa ser colocada em uma área rolável. 
+A funcionalidade light dismiss fica desabilitada por padrão. No entanto, é possível habilitá-la para que a dica de ensino seja ignorada, por exemplo, quando o usuário rola a tela ou interage com outros elementos do aplicativo. Por causa desse comportamento, o light dismiss é a melhor solução quando uma dica precisa ser colocada em uma área rolável.
 
-O botão Fechar será automaticamente removido de uma dica de ensino habilitada para light dismiss, para que o comportamento seja identificado pelos usuários. 
+O botão Fechar será automaticamente removido de uma dica de ensino habilitada para light dismiss, para que o comportamento seja identificado pelos usuários.
 
 XAML
 ```XAML
@@ -322,7 +329,7 @@ XAML
 
 ### <a name="canceling-and-deferring-close"></a>Cancelar e adiar o fechamento
 
-O evento Closing pode ser usado para cancelar e/ou adiar o fechamento de uma dica de ensino. É possível usá-lo para manter a dica de ensino aberta ou dar tempo para que uma ação ou animação personalizada ocorra. Quando o fechamento de uma dica de ensino é cancelado, IsOpen voltará a ser true. No entanto, ficará como false durante o adiamento. Um fechamento programático também pode ser cancelado. 
+O evento Closing pode ser usado para cancelar e/ou adiar o fechamento de uma dica de ensino. É possível usá-lo para manter a dica de ensino aberta ou dar tempo para que uma ação ou animação personalizada ocorra. Quando o fechamento de uma dica de ensino é cancelado, IsOpen voltará a ser true. No entanto, ficará como false durante o adiamento. Um fechamento programático também pode ser cancelado.
 
 **Observação: se nenhuma opção de posicionamento permitir que a dica de ensino completa seja mostrada, ela iterará ao longo do ciclo de vida do evento para forçar o fechamento em vez de ser exibida sem um botão Fechar acessível. Se o aplicativo cancelar o evento Closing, a dica de ensino poderá permanecer aberta sem um botão Fechar acessível.**
 
@@ -357,16 +364,16 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ## <a name="remarks"></a>Comentários
 
-### <a name="related-articles"></a>Artigos relacionados 
+### <a name="related-articles"></a>Artigos relacionados
 
 * [Caixas de diálogo e submenus](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>Recomendações
-* As dicas não são permanentes e não devem conter informações ou opções críticas para a experiência de um aplicativo. 
-* Tente evitar mostrá-las com muita frequência. É mais provável que uma dica de ensino receba atenção individualizada quando está intercalada ao longo de sessões demoradas ou em várias sessões.    
+* As dicas não são permanentes e não devem conter informações ou opções críticas para a experiência de um aplicativo.
+* Tente evitar mostrá-las com muita frequência. É mais provável que uma dica de ensino receba atenção individualizada quando está intercalada ao longo de sessões demoradas ou em várias sessões.
 * As dicas precisam ser breves e o tópico deve ser claro. Pesquisas mostram que, em média, os usuários só leem de três a cinco palavras e compreendem somente duas a três palavras antes de decidir se querem interagir com uma dica.
 * A acessibilidade de uma dica de ensino no gamepad não é garantida. Para aplicativos que preveem entrada de gamepad, confira [Interações de gamepad e de controle remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). É recomendável fazer o teste de acessibilidade de cada dica de ensino no gamepad com todas as configurações possíveis da interface do usuário do aplicativo.
-* Ao habilitar uma dica de ensino para escapar da raiz XAML, é recomendável também habilitar a propriedade IsLightDismissEnabled e definir o modo PreferredPlacement mais próximo do centro da raiz XAML. 
+* Ao habilitar uma dica de ensino para escapar da raiz XAML, é recomendável também habilitar a propriedade IsLightDismissEnabled e definir o modo PreferredPlacement mais próximo do centro da raiz XAML.
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>Reconfigurar uma dica de ensino aberta
 

@@ -7,26 +7,30 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 3b7eb2aa8f753c3e8b956ed722d1f807362bc204
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684392"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081716"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
 Use um [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) para criar experiências de coleção personalizadas usando um sistema de layout flexível, exibições personalizadas e virtualização.
 
-Diferentemente de [ListView](/uwp/api/windows.ui.xaml.controls.listview), [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) não proporciona uma experiência do usuário final abrangente: ele não tem interface do usuário padrão nem fornece nenhuma política relacionada a foco, seleção ou interação do usuário. Em vez disso, ele é um bloco de construção que você pode usar para criar suas próprias experiências baseadas em coleção e controles personalizados exclusivas. Embora ele não tenha nenhuma política interna, permite que você anexe a política para criar a experiência de que precisa. Por exemplo, você pode definir o layout a ser usado, a política de teclado, a política de seleção etc.
+Diferentemente de [ListView](/uwp/api/windows.ui.xaml.controls.listview), [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) não proporciona uma experiência do usuário final abrangente: ele não tem interface do usuário padrão nem fornece nenhuma política relacionada a foco, seleção ou interação do usuário. Em vez disso, ele é um bloco de construção que você pode usar para criar suas próprias experiências baseadas em coleção e controles personalizados exclusivos. Embora ele não tenha nenhuma política interna, permite que você anexe a política para criar a experiência de que precisa. Por exemplo, você pode definir o layout a ser usado, a política de teclado, a política de seleção etc.
 
 Você pode pensar em [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) conceitualmente como um painel controlado por dados, em vez de um controle completo, como ListView. Você especifica uma coleção de itens de dados a serem exibidos, um modelo de item que gera um elemento de interface do usuário para cada item de dados e um layout que determina como os elementos devem ser dimensionados e posicionados. Em seguida, ItemsRepeater produz elementos filho com base na fonte de dados e exibe-os conforme especificado pelo layout e pelo modelo de item. Não é necessário que os itens exibidos sejam homogêneos, pois o ItemsRepeater pode carregar o conteúdo para representar os itens de dados com base em critérios especificados por você em um seletor de modelo de dados.
 
-| **Obter a biblioteca de interface do usuário do Windows** |
-| - |
-| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, inclusive instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+**Obter a biblioteca de interface do usuário do Windows**
 
-> **APIs importantes**: [Classe ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), [classe ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
+|  |  |
+| - | - |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ItemsRepeater** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de interface do usuário do Windows:** [Classe ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
+>
+> **APIs de plataforma:** [Classe ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -46,7 +50,7 @@ O ItemsRepeater não tem uma coleção de Itens internos. Se você precisa forne
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para abri-lo e ver o <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> em funcionamento.</p>
     <ul>
@@ -203,7 +207,7 @@ Esta lista mostra as interfaces disponíveis e quando considerar o uso de cada u
 
     Como a interface **INotifyCollectionChanged**, permite que o controle observe e reaja a alterações na fonte de dados.
 
-    **Aviso**: O Windows.Foundation.IObservableVector\<T > não dá suporte a uma ação de 'Mover'. Isso pode fazer a interface do usuário de um item perder seu estado visual.  Por exemplo, um item selecionado no momento e/ou com foco em que a mudança é obtida por uma ação de 'Remover' seguida por 'Adicionar' perderá o foco e não será mais selecionado.
+    **Aviso**: O Windows.Foundation.IObservableVector\<T> não dá suporte a uma ação de "Mover". Isso pode fazer a interface do usuário de um item perder seu estado visual.  Por exemplo, um item selecionado no momento e/ou com foco em que a movimentação é obtida por uma ação de "Remover" seguida por "Adicionar" perderá o foco e não será mais selecionado.
 
     O Platform.Collections.Vector\<T> usa IObservableVector\<T> e tem essa mesma limitação. Se o suporte para uma ação de 'Mover' for necessário, use a interface **INotifyCollectionChanged**.  A classe do .NET ObservableCollection\<T> usa **INotifyCollectionChanged**.
 
