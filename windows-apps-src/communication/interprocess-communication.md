@@ -1,17 +1,17 @@
 ---
-title: Comunicação entre processos (IPC)
+title: IPC (Comunicação Entre Processos)
 description: Este tópico explica várias maneiras de executar a IPC (comunicação entre processos) entre os aplicativos Plataforma Universal do Windows (UWP) e os aplicativos Win32.
 ms.date: 03/23/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.openlocfilehash: 7a41c72ee57f7c87278576cfb135a96651456214
-ms.sourcegitcommit: 84c46591a32bf0613efc72d7e7c40cc7b4c51062
+ms.openlocfilehash: 2407a54439157be16b186b48759746238962f8b4
+ms.sourcegitcommit: 2d375e1c34473158134475af401532cc55fc50f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80377975"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888504"
 ---
-# <a name="interprocess-communication-ipc"></a>Comunicação entre processos (IPC)
+# <a name="interprocess-communication-ipc"></a>IPC (Comunicação Entre Processos)
 
 Este tópico explica várias maneiras de executar a IPC (comunicação entre processos) entre os aplicativos Plataforma Universal do Windows (UWP) e os aplicativos Win32.
 
@@ -19,7 +19,7 @@ Este tópico explica várias maneiras de executar a IPC (comunicação entre pro
 
 Os serviços de aplicativos permitem que os aplicativos exponham serviços que aceitam e retornam pacotes de propriedades de primitivos ([**valor**](/uwp/api/Windows.Foundation.Collections.ValueSet)) em segundo plano. Os objetos avançados podem ser passados se forem [serializados](https://stackoverflow.com/questions/46367985/how-to-make-a-class-that-can-be-added-to-the-windows-foundation-collections-valu).
 
-Os serviços de aplicativos podem ser executados [fora do processo](/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) como uma tarefa em segundo plano ou [em processo](/windows/uwp/launch-resume/convert-app-service-in-process) no aplicativo em primeiro plano.
+Os serviços de aplicativos podem ser executados [fora do processo](/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) como uma tarefa em segundo plano ou [em processo](/windows/uwp/launch-resume/convert-app-service-in-process) dentro do aplicativo em primeiro plano.
 
 Os serviços de aplicativos são mais bem usados para compartilhar pequenas quantidades de dados em que a latência quase em tempo real não é necessária.
 
@@ -41,11 +41,12 @@ Por padrão, o IPC por meio do sistema de arquivos para aplicativos empacotados 
 
 O [PublisherCacheFolder](/uwp/api/windows.storage.applicationdata.getpublishercachefolder) permite que aplicativos empacotados declarem pastas em seu manifesto que podem ser compartilhadas com outros pacotes pelo mesmo editor.
 
-A pasta de armazenamento compartilhado tem os seguintes requisitos e restrições.
+A pasta de armazenamento compartilhado tem os seguintes requisitos e restrições:
 
-* Não há backup ou roaming dos dados na pasta de armazenamento compartilhado. Além disso, o usuário pode limpar o conteúdo da pasta de armazenamento compartilhado.
-* Você não pode usar esse recurso para compartilhar dados entre aplicativos de editores diferentes.
-* Você não pode usar esse recurso para compartilhar dados entre usuários diferentes.
+* Não é feito backup ou roaming dos dados na pasta de armazenamento compartilhado.
+* O usuário pode limpar o conteúdo da pasta de armazenamento compartilhado.
+* Você não pode usar a pasta de armazenamento compartilhado para compartilhar dados entre aplicativos de Publicadores diferentes.
+* Você não pode usar a pasta de armazenamento compartilhado para compartilhar dados entre usuários diferentes.
 * A pasta de armazenamento compartilhado não tem gerenciamento de versão.
 
 Se você publicar vários aplicativos e estiver procurando um mecanismo simples para compartilhar dados entre eles, o PublisherCacheFolder será uma opção simples baseada em FileSystem.
@@ -70,18 +71,22 @@ Os arquivos podem ser compartilhados passando tokens [SharedStorageAccessManager
 
 Loopback é o processo de comunicação com um servidor de rede que escuta no localhost (o endereço de loopback).
 
-Para manter o isolamento de segurança e rede, as conexões de loopback para IPC são bloqueadas por padrão para aplicativos empacotados. Você pode habilitar conexões de loopback entre aplicativos empacotados confiáveis usando [as propriedades](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)de [recursos](/previous-versions/windows/apps/hh770532(v=win.10)) e de manifesto.
+Para manter o isolamento de segurança e rede, as conexões de loopback para IPC são bloqueadas por padrão para aplicativos empacotados. Você pode habilitar conexões de loopback entre aplicativos de pacote confiáveis usando [as propriedades](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)de [recursos](/previous-versions/windows/apps/hh770532(v=win.10)) e de manifesto.
 
 * Todos os aplicativos empacotados que participam de conexões de loopback precisarão declarar o recurso de `privateNetworkClientServer` em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
-* Dois aplicativos empacotados podem se comunicar por loopback declarando [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules) em seus manifestos de pacote. Cada aplicativo deve listar o outro em seu LoopbackAccessRules. O cliente declara uma regra "out" para o servidor e o servidor declara as regras "in" para seus clientes com suporte.
+* Dois aplicativos empacotados podem se comunicar por loopback declarando [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules) em seus manifestos de pacote.
+    * Cada aplicativo deve listar o outro em seu [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). O cliente declara uma regra "out" para o servidor e o servidor declara as regras "in" para seus clientes com suporte.
 
 > [!NOTE]
 > O nome da família de pacotes necessário para identificar um aplicativo nessas regras pode ser encontrado por meio do editor de manifesto de pacote no Visual Studio durante o tempo de desenvolvimento, por meio do [Partner Center](/windows/uwp/publish/view-app-identity-details) para aplicativos publicados por meio da Microsoft Store ou por meio do comando [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) do PowerShell para aplicativos que já estão instalados.
 
 Os aplicativos e serviços desempacotados não têm a identidade do pacote, portanto, eles não podem ser declarados em [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). Você pode configurar um aplicativo empacotado para se conectar por meio de auto-retorno com aplicativos e serviços desempacotados via [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)), no entanto, isso só é possível para cenários de Sideload ou de depuração em que você tem acesso local ao computador e tem privilégios de administrador.
+
 * Todos os aplicativos empacotados que participam de conexões de loopback precisam declarar o recurso `privateNetworkClientServer` em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
 * Se um aplicativo empacotado estiver se conectando a um aplicativo ou serviço não empacotado, execute `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>` para adicionar uma isenção de auto-retorno para o aplicativo empacotado.
-* Se um aplicativo ou serviço não empacotado estiver se conectando a um aplicativo empacotado, execute `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>` para permitir que o aplicativo empacotado receba conexões de loopback de entrada. O [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) deve estar em execução continuamente enquanto o aplicativo empacotado está escutando conexões. O sinalizador `-is` foi introduzido no Windows 10, versão 1607 (10,0; Build 14393).
+* Se um aplicativo ou serviço não empacotado estiver se conectando a um aplicativo empacotado, execute `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>` para permitir que o aplicativo empacotado receba conexões de loopback de entrada.
+    * O [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) deve estar em execução continuamente enquanto o aplicativo empacotado está escutando conexões.
+    * O sinalizador `-is` foi introduzido no Windows 10, versão 1607 (10,0; Build 14393).
 
 > [!NOTE]
 > O nome da família de pacotes necessário para o sinalizador de `-n` de [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) pode ser encontrado por meio do editor de manifesto de pacote no Visual Studio durante o tempo de desenvolvimento, por meio do [Partner Center](/windows/uwp/publish/view-app-identity-details) para aplicativos publicados por meio do Microsoft Store ou por meio do comando do PowerShell [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) para aplicativos que já estão instalados.
@@ -92,9 +97,10 @@ O [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) t
 
 Os [pipes](/windows/win32/ipc/pipes) permitem uma comunicação simples entre um servidor de pipe e um ou mais clientes de pipe.
 
-[Pipes anônimos](/windows/win32/ipc/anonymous-pipes) e [pipes nomeados](/windows/win32/ipc/named-pipes) têm suporte com as seguintes restrições.
+[Pipes anônimos](/windows/win32/ipc/anonymous-pipes) e [pipes nomeados](/windows/win32/ipc/named-pipes) têm suporte com as seguintes restrições:
 
-* Os pipes nomeados em aplicativos empacotados só têm suporte entre os processos no mesmo pacote, a menos que um processo seja confiança total.
+* Por padrão, os pipes nomeados em aplicativos empacotados só têm suporte entre os processos no mesmo pacote, a menos que um processo seja confiança total.
+* Pipes nomeados podem ser compartilhados entre pacotes seguindo as diretrizes para [compartilhar objetos nomeados](/windows/uwp/communication/sharing-named-objects).
 * Pipes nomeados em aplicativos empacotados devem usar a sintaxe `\\.\pipe\LOCAL\` para o nome do pipe.
 
 ## <a name="registry"></a>Registro
@@ -113,4 +119,9 @@ Os pontos de extremidade RPC também podem ser ACLeddos a aplicativos empacotado
 
 ## <a name="shared-memory"></a>Memória compartilhada
 
-O [mapeamento de arquivo](/windows/win32/memory/sharing-files-and-memory) pode ser usado para compartilhar um arquivo ou memória entre dois ou mais processos dentro do mesmo pacote.
+O [mapeamento de arquivo](/windows/win32/memory/sharing-files-and-memory) pode ser usado para compartilhar um arquivo ou memória entre dois ou mais processos com as seguintes restrições:
+
+* Por padrão, os mapeamentos de arquivo em aplicativos empacotados têm suporte apenas entre os processos no mesmo pacote, a menos que um processo seja confiança total.
+* Mapeamentos de arquivo podem ser compartilhados entre pacotes seguindo as diretrizes para [compartilhar objetos nomeados](/windows/uwp/communication/sharing-named-objects).
+
+A memória compartilhada é recomendada para compartilhar e manipular grandes quantidades de dados com eficiência.
