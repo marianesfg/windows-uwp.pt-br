@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31371c2b2a4826939de428fb6d7c082b78d05843
-ms.sourcegitcommit: 6951827b7d0948618e1fbb082c28794c7f23f83c
+ms.openlocfilehash: b008b12c5f92d56c127c5ec8026d305d3d57a869
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923150"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081678"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -26,13 +26,15 @@ Menus e menus de contexto exibem uma lista de comandos ou opções quando o usu�
 
 ![Exemplo de um menu de contexto típico](images/contextmenu_rs2_icons.png)
 
-| **Obter a biblioteca de interface do usuário do Windows** |
-| - |
-| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+**Obter a biblioteca de interface do usuário do Windows**
 
-| **APIs da plataforma** | **APIs da biblioteca de interface do usuário do Windows** |
+|  |  |
 | - | - |
-| [classe MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [classe MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propriedade ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propriedade FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) | [Classe MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **MenuBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **APIs da Biblioteca de interface do usuário do Windows:** [Classe MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar)
+>
+> **APIs de plataforma:** [classe MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [classe MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propriedade ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propriedade FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties)
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -57,7 +59,7 @@ Você também pode usar o MenuBar em conjunto com o CommandBar. A MenuBar pode s
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/MenuFlyout">abri-lo e ver o MenuFlyout em ação</a>.</p>
     <ul>
@@ -85,7 +87,7 @@ Se você quiser adicionar comandos (como recortar, copiar e colar) a um elemento
 
 ![Exemplo de um menu de contexto na galeria de fotos](images/ContextMenu_example.png)
 
-### <a name="menus"></a>Menus:
+### <a name="menus"></a>Menus
 
 - Têm um único ponto de entrada (um menu Arquivo na parte superior da tela, por exemplo) que sempre é exibido.
 - Geralmente são ligados a um botão ou um item de menu pai.
@@ -106,7 +108,7 @@ Considere fornecer ícones de item de menu para:
 - Os itens de menu cujo ícone é bem conhecido ou padrão.
 - Os itens de menu cujo ícone ilustra bem o que faz o comando.
 
-Não se sinta obrigado a fornecer ícones para comandos que não têm uma visualização padrão. Os ícones criptografados não são úteis, criam poluição visual e impedem que os usuários se concentrem nos itens de menu mais importantes.
+Não se sinta obrigado a fornecer ícones para comandos que não têm uma visualização padrão. Os ícones criptografados não são úteis, criam poluição visual e impedem que os usuários se concentrem nos itens de menu importantes.
 
 ![Exemplo de um menu de contexto com ícones](images/contextmenu_rs2_icons.png)
 
@@ -268,7 +270,7 @@ Você pode usar os mesmos elementos para criar menus em uma barra de menus, como
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 - [Exemplo do menu de contexto XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ## <a name="related-articles"></a>Artigos relacionados
