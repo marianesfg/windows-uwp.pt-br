@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ab62a6e6c2e294e8d6b5222eab4a1a9ae25a2e
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: c61d1478c38df315a3fe3c20151de8c2bfbca4e2
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081014"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123585"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -24,15 +24,12 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 
 > **APIs de plataforma:** [Classe ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [classe Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-:::row:::
-    :::column:::
 **Caixas de diálogo**
 
 ![Exemplo de uma caixa de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
 Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. As caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.
-    :::column-end:::
-    :::column::: 
+
 **Submenus**
 
 ![Exemplo de um submenu](../images/flyout-example2.png)
@@ -40,9 +37,6 @@ Caixas de diálogo são sobreposições de interface do usuário modais que forn
 Um submenu é um pop-up contextual leve que exibe a interface do usuário relacionada ao que o usuário está fazendo. Inclui a lógica de dimensionamento e posicionamento e, além disso, pode ser usado para exibir um controle secundário ou mostrar mais detalhes sobre um item.
 
 Ao contrário de uma caixa de diálogo, um submenu pode ser ignorado rapidamente tocando ou clicando em algum lugar fora do submenu, pressionando a tecla Escape ou botão Back, redimensionando a janela do aplicativo ou mudando a orientação do dispositivo.
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
@@ -52,8 +46,6 @@ Depois de determinar que você deseja usar uma caixa de diálogo ou menu suspens
 
 Considerando que as caixas de diálogo bloqueiam interações e os submenus não, as caixas de diálogo devem ser reservadas para situações em que você deseja que o usuário solte tudo para focar em uma informação específica ou responder a uma pergunta. Submenus, por outro lado, podem ser usados quando você deseja chamar a atenção para algo, mas terá problemas se o usuário desejar ignorá-lo.
 
-:::row:::
-    :::column:::
    <p><b>Use uma caixa de diálogo para...</b> <br/>
 <ul>
 <li>Expressar informações importantes que o usuário <b>deve</b> ler e confirmar antes de prosseguir. Alguns exemplos:
@@ -69,17 +61,14 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 <li>Perguntas, quando o aplicativo precisar fazer uma pergunta de bloqueio ao usuário, por exemplo, quando o aplicativo não puder escolher em nome do usuário. Uma pergunta de bloqueio não pode ser ignorada ou adiada e deve oferecer ao usuário opções bem-definidas.</li>
 </ul>
 </p>
-    :::column-end:::
-    :::column:::
+
+
    <p><b>Use um submenu para...</b> <br/>
 <ul>
 <li>Coletar informações adicionais necessárias para que uma ação possa ser concluída.</li>
 <li>Exibir informações que são relevantes apenas algumas vezes. Por exemplo, em um aplicativo da galeria de fotos, quando o usuário clica em uma miniatura da imagem, você pode usar um submenu para exibir uma versão grande da imagem.</li>
 <li>Exibindo mais informações, como detalhes ou descrições mais longas de um item na página.</li>
 </ul></p>
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Maneiras de evitar o uso de caixas de diálogo e submenus
 
