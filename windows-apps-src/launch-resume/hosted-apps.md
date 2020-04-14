@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 870042f3a7737e5caf646d4d14ffd49af39a079f
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: a3017073b15ea18214e9c78263fb212bb192132b
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108139"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266924"
 ---
 # <a name="create-hosted-apps"></a>Criar aplicativos hospedados
 
 A partir do Windows 10, versão 2004, você pode criar *aplicativos hospedados*. Um aplicativo hospedado compartilha o mesmo executável e definição como um aplicativo *host* pai, mas parece e se comporta como um aplicativo separado no sistema.
 
-Os aplicativos hospedados são úteis para cenários em que você deseja que um componente (como um arquivo executável ou um arquivo de script) se comporte como um aplicativo do Windows 10, mas o componente requer um processo de host para ser executado. Por exemplo, um script do PowerShell ou Python poderia ser entregue como um aplicativo hospedado que exige a instalação de um host para ser executado. Um aplicativo hospedado pode ter seu próprio bloco inicial, identidade e integração profunda com recursos do Windows 10, como tarefas em segundo plano, notificações, blocos e destinos de compartilhamento.
+Os aplicativos hospedados são úteis para cenários em que você deseja que um componente (como um arquivo executável ou um arquivo de script) se comporte como um aplicativo autônomo do Windows 10, mas o componente requer um processo de host para ser executado. Por exemplo, um script do PowerShell ou Python poderia ser entregue como um aplicativo hospedado que exige a instalação de um host para ser executado. Um aplicativo hospedado pode ter seu próprio bloco inicial, identidade e integração profunda com recursos do Windows 10, como tarefas em segundo plano, notificações, blocos e destinos de compartilhamento.
 
 O recurso aplicativos hospedados tem suporte de vários elementos e atributos no manifesto do pacote que permitem que um aplicativo hospedado use um executável e uma definição em um pacote de aplicativo host. Quando um usuário executa o aplicativo hospedado, o sistema operacional inicia automaticamente o host executável sob a identidade do aplicativo hospedado. O host pode, então, carregar ativos visuais, conteúdo ou chamar APIs como o aplicativo hospedado. O aplicativo hospedado Obtém a interseção de recursos declarados entre o host e o aplicativo hospedado. Isso significa que um aplicativo hospedado não pode solicitar mais recursos do que o fornecido pelo host.
 
@@ -132,7 +132,7 @@ Use os métodos a seguir da classe [PackageManager](https://docs.microsoft.com/u
     ```
 -->
 
-## <a name="sample"></a>Exemplo
+## <a name="sample"></a>Amostra
 
 Para um aplicativo de exemplo totalmente funcional que se declara como um host e, em seguida, registra dinamicamente um pacote de aplicativo hospedado em tempo de execução, consulte o [exemplo de aplicativo hospedado](https://aka.ms/hostedappsample).
 
