@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: 592458c6e6157e8cef0d1312ebf6e5c9f15b7919
-ms.sourcegitcommit: 7dcf74b11aa0cb2f3ff4ab10caf26ba769f96dfb
+ms.openlocfilehash: d942fd58619c12192fd8429c0e8aeb5aa070fd4d
+ms.sourcegitcommit: 2a80888843bb53cc1f926dcdfc992cf065539a67
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662383"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81005446"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -78,7 +78,10 @@ Para saber como criar uma instância de suas classes de runtime implementadas lo
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado ao consumo geral pelos aplicativos cliente do Windows Runtime), é recomendável implementar também **IClosable** para dar suporte ao consumo de sua classe de tempo de execução por linguagens que carecem de finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close), ou ambos forem chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.
 
 ## <a name="do-i-need-to-call-iclosableclose-on-runtime-classes-that-i-consume"></a>É necessário chamar [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) nas classes de runtime que eu consumo?
-**IClosable** existe para dar suporte a linguagens que não têm finalização determinística. Portanto, você não deve chamar **IClosable::Close** de C++/WinRT, exceto em casos bem raros, envolvendo corridas de desligamento ou adoções semifatais. Se estiver usando tipos **Windows.UI.Composition**, por exemplo, você poderá se deparar com casos em que queira descartar objetos em uma sequência definida, como uma alternativa para permitir que a destruição do wrapper de C++/WinRT faça o trabalho para você.
+**IClosable** existe para dar suporte a linguagens que não têm finalização determinística. Portanto, em geral, não é necessário chamar **IClosable::Close** no C++/WinRT. Porém, considere essas exceções a essa regra geral.
+- Há casos bem raros que envolvem corridas de desligamento ou adoções semifatais, em que é necessário chamar **IClosable::Close**. Se estiver usando tipos **Windows.UI.Composition**, por exemplo, você poderá se deparar com casos em que queira descartar objetos em uma sequência definida, como uma alternativa para permitir que a destruição do wrapper de C++/WinRT faça o trabalho para você.
+- Se você não puder garantir que tem a última referência restante a um objeto (porque você a passou para outras APIs, que poderiam estar mantendo uma referência), será uma boa ideia chamar **IClosable::Close**.
+- Em caso de dúvida, é seguro chamar **IClosable::Close** manualmente, em vez de esperar que o wrapper o chame na destruição.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>É possível usar LLVM/Clang para compilar com C++/WinRT?
 Não oferecemos suporte à cadeia de ferramentas LLVM e Clang para C++/WinRT, mas podemos usá-la internamente para validar a conformidade de padrões do C ++/WinRT. Por exemplo, se quiser emular o que fazemos internamente, faça um teste, como descrito abaixo.

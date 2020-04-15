@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 23d7fbf129e9cf53a9510200aa4e3836dffa602f
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 93badc28c9c4fa1684836fc4a883e54661e8d4dc
+ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80482644"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80986961"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedar um controle UWP personalizado em um aplicativo C++ Win32
 
@@ -377,9 +377,11 @@ Em seguida, atualize o projeto **MyDesktopWin32App** para definir uma macro para
 4. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **MyDesktopWin32App (Descarregado)** e selecione **Recarregar Projeto**.
 
 5. Clique com o botão direito do mouse em **MyDesktopWin32App**, selecione **Propriedades** e clique no nó **C/C++** no painel esquerdo. Confirme se a macro **Diretórios de Inclusão Adicionais** foi definida após a alteração de arquivo de projeto feita na etapa anterior.
+
     ![Configurações de projeto C/C++](images/xaml-islands/xaml-island-cpp-7.png)
 
 6. Na caixa de diálogo **Páginas de Propriedades**, expanda **Ferramenta de Manifesto** -> **Entrada e Saída**. Defina a propriedade **Reconhecimento de DPI** como **Reconhecimento de Alto DPI por Monitor**. Se você não definir essa propriedade, poderá receber um erro de configuração do manifesto em alguns cenários de alto DPI.
+
     ![Configurações de projeto C/C++](images/xaml-islands/xaml-island-cpp-8.png)
 
 ## <a name="host-the-custom-uwp-xaml-control-in-the-desktop-project"></a>Hospedar o controle UWP XAML personalizado no projeto de área de trabalho

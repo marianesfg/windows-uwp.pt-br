@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e198e65052e9ef79ee38863260bce1c1f798ba38
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 75bc81f4295fb76f5a7cc61b3cadd1496f57dc4c
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081744"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893476"
 ---
 # <a name="collections-and-lists"></a>Coleções e listas
 
@@ -38,6 +38,8 @@ Diretrizes de design, recursos e exemplos são fornecidos abaixo para cada contr
 Cada um desses controles (com exceção do ItemsRepeater) proporciona estilos e interação internos. No entanto, para personalizar ainda mais a aparência visual da exibição de coleção e os itens dentro dela, é usado um [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). Informações detalhadas sobre os modelos de dados e a personalização da aparência de uma exibição de coleção podem ser encontradas na página [Contêineres e modelos do item](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates).
 
 Cada um desses controles (com exceção do ItemsRepeater) também tem o comportamento interno de permitir a seleção de um ou vários itens. Consulte a [Visão geral dos modos de seleção](selection-modes.md) para saber mais.
+
+Um dos cenários não abordados neste artigo é a exibição de coleções em uma tabela ou em várias colunas. Se você estiver procurando exibir uma coleção nesse formato, considere usar o [Controle DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) do [Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/). 
 
 > **Windows 10 Fall Creators Update – alteração de comportamento** Por padrão, em vez de realizar uma seleção, uma caneta ativa agora faz a rolagem/aplica panorâmica em uma lista nos aplicativos UWP (como toque, touchpad e caneta passiva).
 > Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a [Classe ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).

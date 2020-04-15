@@ -4,12 +4,12 @@ description: Como usar as classes XamlUICommand e StandardUICommand (juntamente 
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 57e4a135e97c0a8f5d09834f2eb8c729c6422af0
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081754"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123597"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Aplique comandos em aplicativos da UWP (Plataforma Universal do Windows) usando StandardUICommand, XamlUICommand e ICommand
 
@@ -37,7 +37,7 @@ Os comandos podem ser operados em um contexto específico no aplicativo, como ao
 
 A imagem a seguir mostra duas interfaces de comando (um [CommandBar](app-bars.md) e um [CommandBarFlyout](command-bar-flyout.md) contextual flutuante) que compartilham alguns dos mesmos comandos.
 
-![Barra de comandos no Fotos do Windows](images/control-examples/command-bar-photos.png)<br>*Barra de comandos no Fotos do Windows*
+![Barra de comandos expandida](images/control-examples/command-bar-photos.png)<br>*Barra de comandos*
 
 ![Menu de contexto na galeria do Fotos do Windows](images/ContextMenu_example.png)<br>*Menu de contexto na galeria do Fotos do Windows*
 

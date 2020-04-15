@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e95a9a1f6a0d34e377f48c5b19497eb638fb186e
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.openlocfilehash: c130505ec79ca83698fd79df26464969afe79c36
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830824"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893466"
 ---
 # <a name="list-view-and-grid-view"></a>Exibição de lista e exibição de grade
 
@@ -26,7 +26,7 @@ A maioria dos aplicativos manipula e exibe conjuntos de dados, como uma galeria 
 > **APIs importantes**: [Classe ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Classe GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Propriedade ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [Propriedade Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
 
 > [!NOTE]
-> Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* para o equivalente a grade correspondente (GridView ou GridViewItem). 
+> Os controles ListView e GridView são derivados da classe [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), portanto, eles têm a mesma funcionalidade, mas exibem os dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* no equivalente a grade correspondente (GridView ou GridViewItem). 
 
 ListView e GridView fornecem muitos benefícios para trabalhar com coleções. Ambos são fáceis de serem implementados e oferecem uma interface do usuário básica; interação; e rolagem e ainda são facilmente personalizáveis. O ListView e o GridView podem ser associados a fontes de dados dinâmicos existentes ou dados embutidos em código fornecidos no próprio XAML/code-behind. 
 
@@ -36,7 +36,7 @@ Esses dois controles são flexíveis para muitos casos de uso, mas, de maneira g
 ## <a name="differences-between-listview-and-gridview"></a>Diferenças entre ListView e GridView
 
 ### <a name="listview"></a>ListView
-O ListView exibe dados empilhados verticalmente em uma única coluna. O ListView funciona melhor para itens que têm texto como ponto focal e para coleções que devem ser lidas de cima para baixo (ou seja, em ordem alfabética). Alguns casos de uso comuns para o ListView incluem listas de mensagens e resultados da pesquisa.
+O ListView exibe dados empilhados verticalmente em uma única coluna. O ListView funciona melhor para itens que têm texto como ponto focal e para coleções que devem ser lidas de cima para baixo (ou seja, em ordem alfabética). Alguns casos de uso comuns para o ListView incluem listas de mensagens e resultados da pesquisa. As coleções que precisam ser exibidas em várias colunas ou em formato de tabela _não_ devem usar ListView, mas devem considerar o uso de um [DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid).
 
 ![Uma exibição de lista com dados agrupados](images/listview-grouped-example-resized-final.png)
 
@@ -413,7 +413,7 @@ Esta tabela descreve as interações com o teclado, o mouse e de toque quando o 
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhuma | <li>Um usuário pode selecionar um único item usando a barra de espaço, um clique do mouse ou um toque.</li>
+Não | <li>Um usuário pode selecionar um único item usando a barra de espaço, um clique do mouse ou um toque.</li>
 Ctrl | <li>Um usuário pode desmarcar um único item usando a barra de espaço, um clique do mouse ou um toque.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
 
 Quando o SelectionMode é definido como **Único**, é possível obter o item de dados selecionado da propriedade [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem). Você pode obter o índice na coleção do item selecionado usando a propriedade [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex). Se nenhum item estiver selecionado, SelectedItem será **nulo** e SelectedIndex será -1. 
@@ -426,7 +426,7 @@ Esta tabela descreve as interações com o teclado, o mouse e de toque quando o 
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhuma | <li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
+Não | <li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
 Shift | <li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li>
 
 ### <a name="extended-selection"></a>Seleção estendida
@@ -435,7 +435,7 @@ Esta tabela descreve as interações com o teclado, o mouse e de toque quando o 
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhuma | <li>O comportamento é o mesmo que da seleção **Único**.</li>
+Não | <li>O comportamento é o mesmo que da seleção **Único**.</li>
 Ctrl | <li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
 Shift | <li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li>
 
@@ -610,7 +610,7 @@ Os controles ListView e GridView permitem arrastar e soltar itens dentro deles m
 
 - [Exemplo de XAML ListView e GridView](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) - demonstra os controles ListView e GridView.
 - [Exemplo de XAML arrastar e soltar](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlDragAndDrop) - demonstra o arrastar e soltar com o controle ListView.
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) - veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c32b60b3d9e717a916b5424f3b8bd78102439f30
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 483e5d33f67ad2cd27403d7a1b229edebedfebb9
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081965"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123631"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -51,9 +51,9 @@ O controle CommandBar é um controle de finalidade geral, flexível e leve que p
 </tr>
 </table>
 
-Uma barra de comandos expandida no aplicativo Fotos da Microsoft.
+Uma barra de comandos expandida.
 
-![Barra de comandos no aplicativo Fotos da Microsoft](images/control-examples/command-bar-photos.png)
+![Barra de comandos expandida](images/control-examples/command-bar-photos.png)
 
 Uma barra de comandos no calendário do Outlook no Windows Phone.
 

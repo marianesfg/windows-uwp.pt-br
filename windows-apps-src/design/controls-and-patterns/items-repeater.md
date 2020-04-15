@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b7eb2aa8f753c3e8b956ed722d1f807362bc204
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 5782c6e9ba42fed07c2b1382f2d17b1d311d0a13
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081716"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893456"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -298,7 +298,7 @@ Você também pode definir o espaçamento mínimo para o layout a ser incluído 
 
 ![Espaçamento e dimensionamento uniformes de grade](images/uniform-grid-sizing-spacing.png)
 
-Após o número, se itens em uma linha ou coluna tiverem sido determinados com base no espaçamento e o tamanho do item mínima, poderá haver espaço não utilizado deixado após o último item na linha ou coluna (conforme ilustrado na imagem anterior). Você pode especificar se qualquer espaço extra é ignorado, usado para aumentar o tamanho de cada item ou usado para criar o espaço extra entre os itens. Isso é controlado pelas propriedades [ItemsStretch](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsstretch) e [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification).
+Após o número de itens em uma linha ou coluna ter sido determinado com base no espaçamento e no tamanho mínimos do item, poderá haver espaço não utilizado deixado após o último item na linha ou coluna (conforme ilustrado na imagem anterior). Você pode especificar se qualquer espaço extra é ignorado, usado para aumentar o tamanho de cada item ou usado para criar o espaço extra entre os itens. Isso é controlado pelas propriedades [ItemsStretch](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsstretch) e [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification).
 
 Você pode definir a propriedade [ItemsStretch](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsstretch) para especificar como o tamanho do item é aumentado para preencher o espaço não utilizado.
 
@@ -740,22 +740,22 @@ public class MyPage : Page
 {
     // ...
 
-    protected override void OnNavigatedTo(NavigationEventArgs e)
+     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
         base.OnNavigatedTo(e);
 
-            // retrieve saved offset + index(es) of the tracked element and then bring it into view.
-            // ... 
+        // retrieve saved offset + index(es) of the tracked element and then bring it into view.
+        // ... 
+        
+        var element = repeater.GetOrCreateElement(index);
 
-            var element = repeater.GetOrCreateElement(index);
+        // ensure the item is given a valid position
+        element.UpdateLayout();
 
-            // ensure the item is given a valid position
-            element.UpdateLayout();
-
-            element.StartBringIntoView(new BringIntoViewOptions()
-            {
-                VerticalOffset = relativeVerticalOffset
-            });
+        element.StartBringIntoView(new BringIntoViewOptions()
+        {
+            VerticalOffset = relativeVerticalOffset
+        });
     }
 
     protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -765,8 +765,8 @@ public class MyPage : Page
         // retrieve and save the relative offset and index(es) of the scrollviewer's current anchor element ...
         var anchor = this.scrollviewer.CurrentAnchor;
         var index = this.repeater.GetElementIndex(anchor);
-        var anchorBounds = anchor.TransformToVisual(this.scrollviewer).TransformBounds(new Rect(0, 0, anchor.ActualWidth, anchor.ActualHeight));
-        relativeVerticalOffset = this.sv.VerticalOffset – anchorBounds.Top;
+        var anchorBounds = anchor.TransformToVisual(this.scrollviewer).TransformBounds(new Rect(0, 0, anchor.ActualSize.X, anchor.ActualSize.Y));
+        relativeVerticalOffset = this.scrollviewer.VerticalOffset - anchorBounds.Top;
     }
 }
 
