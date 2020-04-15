@@ -1,5 +1,5 @@
 ---
-Description: Este artigo aborda as opções de quatro notificação &\#8212; local, agendada periódica e enviar por push &\#8212; que fornecer atualizações de bloco e selo e do sistema de conteúdo da notificação.
+Description: Este artigo aborda as quatro opções de notificação &\#8212; local, agendado, periódico e por push &\#8212, que entrega atualizações de bloco e de notificação e conteúdo de notificações do sistema.
 title: Escolher um método de entrega de notificação
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b1ea41a509b1673b7c4f5812d34db93dd6b0c93e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 80a06f5199c49f5fcd7a08dc9c9baef18ee19db9
+ms.sourcegitcommit: 017f2f1492f3220da0fae8b4c99de7206a185dff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365940"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385847"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
 
@@ -28,9 +28,9 @@ Este artigo aborda as quatro opções de notificação - local, agendada, perió
 Existem quatro mecanismos que um aplicativo pode usar para entregar uma notificação:
 
 -   **Local**
--   **Agendado**
--   **Periódica**
--   **envio por push**
+-   **Agendada**
+-   **Troca**
+-   **Push**
 
 Esta tabela resume os tipos de entrega de notificação.
 
@@ -79,7 +79,7 @@ Esta tabela resume os tipos de entrega de notificação.
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">Por push</td>
+<td align="left">Push</td>
 <td align="left">Bloco, Notificação, Notificação do Sistema, Notificação Bruta</td>
 <td align="left">As notificações são enviadas de um servidor em nuvem, mesmo se o aplicativo não estiver em execução.</td>
 <td align="left"><ul>
@@ -103,8 +103,8 @@ Recomendamos que seu aplicativo atualize o respectivo bloco localmente na primei
 
 Embora as chamadas de API sejam locais, as notificações podem fazer referência a imagens da Web. Se a imagem da Web não estiver disponível para download, estiver corrompida ou não atender às especificações da imagem, os blocos e a notificação do sistema responderão de maneira diferente:
 
--   Blocos: A atualização não é mostrada
--   Toast: A notificação é exibida, mas sua imagem é descartada
+-   Blocos: as atualizações não são mostradas
+-   Notificação do sistema: a notificação é exibida, mas sua imagem será removida
 
 Por padrão, as notificações do sistema local expiram em três dias e as notificações de bloco local nunca expiram. Recomendamos substituir esses padrões por um prazo de expiração explícito que seja compatível com suas notificações (as notificações do sistema têm um prazo máximo de três dias). 
 
@@ -112,7 +112,7 @@ Para saber mais, consulte estes tópicos:
 
 -   [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)
 -   [Enviar uma notificação do sistema local](send-local-toast.md)
--   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Exemplos de código de notificações do Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="scheduled-notifications"></a>Notificações agendadas
 
@@ -125,7 +125,8 @@ Por padrão, as notificações agendadas expiram três dias depois que são entr
 
 Para saber mais, consulte estes tópicos:
 
--   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Agendando uma notificação do sistema](scheduled-toast.md)
+-   [Exemplos de código de notificações do Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="periodic-notifications"></a>Notificações periódicas
 
@@ -139,7 +140,7 @@ Por padrão, as notificações periódicas expiram três dias depois que a sonda
 Para saber mais, consulte estes tópicos:
 
 -   [Visão geral de notificações periódicas](periodic-notification-overview.md)
--   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Exemplos de código de notificações do Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="push-notifications"></a>Notificações por push
 
@@ -154,7 +155,7 @@ Para obter mais informações, consulte:
 
 -   [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 -   [Diretrizes para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
--   [Exemplos de código de notificações do Universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Exemplos de código de notificações do Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
@@ -166,7 +167,7 @@ Para obter mais informações, consulte:
 * [Diretrizes para notificações do sistema](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
 * [Visão geral de notificações periódicas](periodic-notification-overview.md)
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
-* [Notificações do Universal Windows Platform (UWP) exemplos de código no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+* [Exemplos de código de notificações do Plataforma Universal do Windows (UWP) no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  
 
  
