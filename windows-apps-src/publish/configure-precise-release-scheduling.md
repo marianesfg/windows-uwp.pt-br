@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: eebd98d8e1ce39ef8d9876ab4749bcc76012f9fa
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 98f4ca9cb1b0b9bf2178fc0b80d0819e15448d24
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210382"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545036"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 
@@ -36,7 +36,7 @@ As seleções feitas para o agendamento base se aplicarão a todos os mercados e
 
 Você verá duas opções aqui: **Lançamento** e **Parar aquisição**. 
 
-## <a name="release"></a>Versão
+## <a name="release"></a>Liberação
 
 Na lista suspensa **Lançamento**, você pode definir quando deseja que o aplicativo seja disponibilizado na Loja. Isso significa que o aplicativo pode ser descoberto na Loja por meio de pesquisa ou navegação, e que os clientes podem ver a listagem da Loja e adquirir o aplicativo.
 
@@ -76,9 +76,9 @@ Para adicionar uma agenda personalizada para um mercado adicional ou um grupo de
 
 ## <a name="global-time-zones"></a>Fusos horários globais
 
-Abaixo está uma tabela que mostra quais fusos horários específicos são usados em cada mercado, portanto, quando o envio usa a hora local (por exemplo, lançamento às 9h local), você pode descobrir em que hora ele será lançado em cada mercado, especialmente útil com mercados que tenham mais de uma hora z um, como o Canadá.
+Abaixo está uma tabela que mostra quais fusos horários específicos são usados em cada mercado, portanto, quando seu envio usa a hora local (por exemplo, lançamento às 9h local), você pode descobrir em que hora ele será lançado em cada mercado, especialmente útil com mercados com mais de um fuso horário, como o Canadá.
 
-| Mercado | Fuso Horário |
+| Market | Fuso Horário |
 |--------|-----------|
 | Afeganistão  |  (UTC + 04:30) Cabul |
 | Albânia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
@@ -139,7 +139,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Croácia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | CuraÃ § ao  |  (UTC-04:00) Cuiabá |
 | Chipre  |  (UTC + 02:00) Chisinau |
-| República Tcheca  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Czechia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
 | Dinamarca  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Djibuti  |  (UTC + 03:00) Nairóbi |
 | Dominica  |  (UTC-04:00) Hora do Atlântico (Canadá) |
@@ -155,14 +155,14 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Ilhas Faroés  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
 | Fiji  |  (UTC + 12:00) Ilhas |
 | Finlândia  |  (UTC + 02:00) Helsinque, Kiev, Riga, Sófia, Tallinn, Vilnius |
-| França  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| France  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Guiana Francesa  |  (UTC-03:00) Caiena, fortaleza |
 | Polinésia Francesa  |  (UTC-10:00) Havaí |
 | Terras Austrais e Antárticas Francesas  |  (UTC + 05:00) Ashgabat, Tashkent |
 | Gabão  |  (UTC + 01:00) Centro-oeste da África |
 | Gâmbia, A  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Geórgia  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
-| Alemanha  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Germany  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
 | Gana  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Gibraltar  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Grécia  |  (UTC + 02:00) Atenas, Bucareste |
@@ -195,7 +195,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Cazaquistão  |  (UTC + 05:00) Ashgabat, Tashkent |
 | Quênia  |  (UTC + 03:00) Nairóbi |
 | Kiribati  |  (UTC + 14:00) Ilha Kiritimati |
-| Coreia  |  (UTC + 09:00) Seul |
+| Coreia do Sul  |  (UTC + 09:00) Seul |
 | Kuwait  |  (UTC + 04:00) Abu Dhabi, Mascate |
 | Quirguistão  |  (UTC + 06:00) Astana |
 | Laos  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
@@ -208,7 +208,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Lituânia  |  (UTC + 02:00) Chisinau |
 | Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | RAE de Macau  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
-| Macedônia do Norte  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
+| Macedônia (ARIM)  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Madagascar  |  (UTC + 03:00) Nairóbi |
 | Malaui  |  (UTC + 02:00) Harare, Pretória |
 | Malásia  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
@@ -277,7 +277,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Sérvia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Seicheles  |  (UTC + 04:00) Abu Dhabi, Mascate |
 | Serra Leoa  |  (UTC + 00:00) Monróvia, Reykjavík |
-| Cingapura  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
+| Singapura  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
 | Sint Maarten (parte holandesa)  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Eslováquia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
 | Eslovênia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |

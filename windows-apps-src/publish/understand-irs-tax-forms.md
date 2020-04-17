@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos, imposto, imposto de renda, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 55143f109398aae1988b7ac0d060cda138e7e48e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e01e1615cb05ab7b0f3d3fa12861e46b231642a8
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258964"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545066"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -21,7 +21,7 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 
 ## <a name="types-of-tax-forms"></a>Tipos de formulários fiscais
 
-| Formulário fiscal da Receita Federal dos EUA | Descrição | Disponibilidade |
+| Formulário fiscal da Receita Federal dos EUA | Descrição | Availability |
 |--------------|-------------|--------------|
 |1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Os formulários impressos serão carimbados em ou antes de **31 de janeiro**e as cópias. pdf estarão disponíveis no [Partner Center](https://partner.microsoft.com/dashboard) (em **configurações de conta > Perfil de imposto**) ao mesmo tempo |
 |1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Os formulários impressos serão carimbados em ou antes de **15 de março**e as cópias de PDF estarão disponíveis no Partner Center (em configurações de **conta > perfil de imposto**) ao mesmo tempo |
@@ -33,18 +33,18 @@ Os formulários de imposto serão enviados a você por meio dos seguintes endere
 
 **Cidadãos dos EUA:**
 <table>
-<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
+<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Endereço</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond, WA 98052 EUA</td></tr>
 <tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>Estrada de 6100 Neil<br>Reno, NV 89511 EUA</td></tr>
 <table> 
 
 **Cidadãos não-EUA:**
 <table>
-<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
+<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Endereço</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (o pagamento é feito pela Microsoft Corporation pela Microsoft Ireland atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um local da Microsoft<br>Condado de&nbsp;de Sul&nbsp;parque de&nbsp;de negócios<br>Leopardstown, Dublin 18 Irlanda</td></tr>
 <tr><td>Anuncia</td><td>Microsoft Ireland Operations Limited (pagamento é feito pela Microsoft Online Inc. via Microsoft Ireland atuando como agente de pagamento da Microsoft Online Inc.)</td><td>Um local da Microsoft<br>Condado de&nbsp;de Sul&nbsp;parque de&nbsp;de negócios<br>Leopardstown, Dublin 18 Irlanda</td></tr>
 <tr><td>Publicidade</td><td>Microsoft Online Inc.</td><td>Estrada de 6100 Neil<br>Reno, NV 89511 EUA</td></tr>
-<tr><td colspan="3">* Os cidadãos dos seguintes países ganhando receita de publicidade serão pagos pela Microsoft Ireland Operations Limited: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, Países Baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
+<tr><td colspan="3">* Os cidadãos dos seguintes países que estão ganhando receita de publicidade serão pagos pela Microsoft Ireland Operations Limited: Áustria, Bélgica, Bulgária, Croácia, Chipre, Czechia, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, Holanda, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos
@@ -68,7 +68,7 @@ Recebi pelo menos $600 em pagamentos não relacionados a vendas de aplicativos d
   </tr>
   <tr>
     <td valign="top">Nenhuma das opções acima.</td>
-    <td valign="top">Nenhuma</td>
+    <td valign="top">Nenhum</td>
   </tr>
   <tr>
     <td valign="top">&nbsp;</td>
@@ -84,7 +84,7 @@ Recebi pelo menos $600 em pagamentos não relacionados a vendas de aplicativos d
   </tr>
   <tr> 
      <td valign="top">Recebi <b>menos de US$ 600 em pagamentos</b> de anúncios em aplicativos no ano fiscal aplicável</td>
-     <td valign="top">Nenhuma</td>
+     <td valign="top">Nenhum</td>
   </tr>
 </table>
 

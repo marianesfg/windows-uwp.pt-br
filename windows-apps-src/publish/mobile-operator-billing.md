@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
 ms.localizationpriority: medium
-ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
-ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
+ms.openlocfilehash: 77e157698203b5f55c3fd2ce9dd59e8c94051f5b
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258352"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545026"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -31,18 +31,18 @@ No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de c
 | Áustria              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
 | Bélgica              | Base, Proximus                                          |
 | Canadá               | Telus                                                   |
-| República Tcheca       | T-Mobile                                                |
+| Czechia              | T-Mobile                                                |
 | Dinamarca              | 3, TDC / YouSee, Telenor, Telia                         |
 | Finlândia              | DNA, Elisa                                              |
-| França               | Orange                                                  |
-| Alemanha              | O2, Telekom Deutschland, Vodafone                       |
+| France               | Orange                                                  |
+| Germany              | O2, Telekom Deutschland, Vodafone                       |
 | Hungria              | Telenor                                                 |
 | Itália                | Wind, Tre                                               |
 | Malásia             | Digi                                                    |
 | Países Baixos          | KPN/Telfort                                           |
 | Noruega               | Telenor/Talkmore, Telia/OneCall                     |
 | Polônia               | Laranja, reproduzir                                            |
-| Cingapura            | M1 Limited, StarHub                                     |
+| Singapura            | M1 Limited, StarHub                                     |
 | Eslováquia             | Slovak Telekom                                          |
 | África do Sul         | Vodacom                                                 |
 | Espanha                | Orange                                                  |

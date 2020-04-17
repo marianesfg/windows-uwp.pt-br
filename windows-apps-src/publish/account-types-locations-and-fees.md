@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: a7ab3d40b48caecc82fafef4df964b7a1dbf8071
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210902"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545086"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -29,7 +29,7 @@ Contas de empresa são projetadas para organizações e empresas. Para contas em
 
 Aqui estão as principais diferenças entre os dois tipos de conta.
 
-| Conta individual | Conta empresarial |
+| Conta individual | Conta da empresa |
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
@@ -93,7 +93,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Côte d’Ivoire                     | 19 USD              | 99 USD           |  
 | Croácia                           | 107 HRK             | 500 HRK          |  
 | Chipre                            | 14 EUR              | 75 EUR           |  
-| República Tcheca                    | 365 CZK             | 1720 CZK         |  
+| Czechia                           | 365 CZK             | 1720 CZK         |  
 | Dinamarca                           | 106 DKK             | 530 DKK          |  
 | Djibuti                          | 19 USD              | 99 USD           | 
 | Dominica                          | 19 USD              | 99 USD           | 
@@ -108,11 +108,11 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Ilhas Faroés                     | 19 USD              | 99 USD           |  
 | Fiji                              | 19 USD              | 99 USD           |  
 | Finlândia                           | 14 EUR              | 75 EUR           |  
-| França                            | 14 EUR              | 75 EUR           |  
+| France                            | 14 EUR              | 75 EUR           |  
 | Gabão                             | 19 USD              | 99 USD           |  
 | Gâmbia                        | 19 USD              | 99 USD           |  
 | Geórgia                           | 19 USD              | 99 USD           |  
-| Alemanha                           | 14 EUR              | 75 EUR           |  
+| Germany                           | 14 EUR              | 75 EUR           |  
 | Gana                             | 19 USD              | 99 USD           |  
 | Grécia                            | 14 EUR              | 75 EUR           |  
 | Groenlândia                         | 19 USD              | 99 USD           |  
@@ -138,7 +138,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Cazaquistão                        | 2897 KZT            | 15038 KZT        |  
 | Quênia                             | KES 1900            | KES 9999         |  
 | Kiribati                          | 19 USD              | 99 USD           |  
-| Coreia                             | 21216 KRW           | 108000 KRW       |  
+| Coreia do Sul                             | 21216 KRW           | 108000 KRW       |  
 | Kuwait                            | 5 KWD               | 28 KWD           |  
 | Quirguistão                        | 19 USD              | 99 USD           |  
 | Laos                              | 19 USD              | 99 USD           |  
@@ -151,7 +151,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Lituânia                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macau                         | 19 USD              | 99 USD           |  
-| Macedônia do Norte                 | 19 USD              | 99 USD           |  
+| Macedônia (ARIM)                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malaui                            | 19 USD              | 99 USD           |  
 | Malásia                          | 62 MYR              | 300 MYR          |  
@@ -203,7 +203,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Sérvia                            | 1619 RSD            | 7000 RSD         |  
 | Seicheles                        | 19 USD              | 99 USD           |  
 | Serra Leoa                      | 19 USD              | 99 USD           |  
-| Cingapura                         | 24 SGD              | 120 SGD          |  
+| Singapura                         | 24 SGD              | 120 SGD          |  
 | Eslováquia                          | 14 EUR              | 75 EUR           |  
 | Eslovênia                          | 14 EUR              | 75 EUR           |  
 | Ilhas Salomão                   | 19 USD              | 99 USD           |  

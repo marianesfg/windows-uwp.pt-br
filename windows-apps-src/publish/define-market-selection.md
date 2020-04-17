@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
-ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 0b1a51a98746594a8563de2f309bec9cb5dda0b3
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210962"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545046"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
@@ -139,7 +139,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Croácia</td>
     <td>Curaçao</td>
     <td>Chipre</td>
-    <td>República Tcheca *</td>
+    <td>Czechia *</td>
   </tr>
   <tr>
     <td>Dinamarca *</td>
@@ -439,11 +439,11 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 | Chile                | Cartão-presente       | 2,24%                         | Março de 2016     |
 | China                | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Colômbia             | Cartão-presente       | 2,24%                         | Março de 2016     |
-| República Tcheca       | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Czechia              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Dinamarca              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Finlândia              | Cartão-presente       | 2,24%                         | Março de 2016     |
-| França               | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Alemanha              | Cartão-presente       | 2,24%                         | Março de 2016     |
+| France               | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Germany              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Grécia               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Hong Kong            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Hungria              | Cartão-presente       | 2,24%                         | Março de 2016     |
@@ -459,7 +459,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 | Portugal             | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Rússia               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Arábia Saudita         | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Cingapura            | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Singapura            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Eslováquia             | Cartão-presente       | 2,24%                         | Março de 2016     |
 | África do Sul         | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Coreia do Sul          | Cartão-presente       | 2,24%                         | Março de 2016     |

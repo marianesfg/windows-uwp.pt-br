@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 45a491364a4b1f406169cba76b7e7ea1ded00886
-ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
+ms.openlocfilehash: e9a6ce5dac2e6a8480b3c6e95472b437ad6f947c
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79434213"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545006"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
@@ -79,7 +79,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Côte d' Ivoire                    | Sim               | Sim                                      | Sim    | Não              |
 | Croácia                          | Sim               | Sim                                      | Sim    | Não              |
 | Chipre                           | Sim               | Sim                                      | Sim    | Sim             |
-| República Tcheca                   | Sim               | Sim                                      | Sim    | Sim             |
+| Czechia                          | Sim               | Sim                                      | Sim    | Sim             |
 | Dinamarca                          | Sim               | Sim                                      | Sim    | Sim             |
 | Dominica                         | Sim               | Sim                                      | Não     | Sim             |
 | República Dominicana               | Sim               | Sim                                      | Sim    | Sim             |
@@ -100,7 +100,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Guiné                           | Sim               | Sim                                      | Sim    | Não              |
 | Haiti                            | Sim               | Sim                                      | Sim    | Não              |
 | Honduras                         | Sim               | Sim                                      | Sim    | Sim             |
-| RAE de Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
+| Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
 | Hungria                          | Sim               | Sim                                      | Sim    | Sim             |
 | Islândia                          | Sim               | Sim                                      | Sim    | Não              |
 | Índia                            | Sim               | Sim                                      | Sim    | Sim             |
@@ -124,7 +124,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Liechtenstein                    | Sim               | Sim                                      | Sim    | Sim             |
 | Lituânia                        | Sim               | Sim                                      | Sim    | Não              |
 | Luxemburgo                       | Sim               | Sim                                      | Sim    | Sim             |
-| Macedônia do Norte                        | Não                | Sim                                      | Sim    | Não              |
+| Macedônia, ARJ da                        | Não                | Sim                                      | Sim    | Não              |
 | Madagascar                       | Sim               | Sim                                      | Sim    | Não              |
 | Malaui                           | Sim               | Sim                                      | Sim    | Sim             |
 | Malásia                         | Sim               | Sim                                      | Sim    | Sim             |
