@@ -7,18 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eada4c65933151eb6d40b7e3cfdbf31369d6d35
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: d0e4a290da0d67560715f80bf20fc6ae4d44a8f6
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614126"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266954"
 ---
 # <a name="number-box"></a>Caixa de número
 
 Representa um controle que pode ser usado para exibir e editar números. Isso dá suporte para validação, passo a passo incremental e computação de cálculos embutidos de equações básicas, como multiplicação, divisão, adição e subtração.
-
-![Exemplo de um menu de contexto típico](images/contextmenu_rs2_icons.png)
 
 **Obter a biblioteca de interface do usuário do Windows**
 

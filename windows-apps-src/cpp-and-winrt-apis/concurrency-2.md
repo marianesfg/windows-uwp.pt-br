@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a671a319be49e07d3a8fcdacb569c4ae76e299b
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: bbdce669faa73b1db2071173014dec474160affb
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209251"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266944"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidade e assincronia mais avançadas com o C++/WinRT
 
@@ -538,7 +538,7 @@ int main()
 
 ## <a name="reporting-progress"></a>Relatório de progresso
 
-Se a sua corrotina retornar um [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_) ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), você poderá recuperar o objeto retornado pela função [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) e usá-lo para relatar o progresso para um manipulador de progresso. Aqui está um exemplo de código.
+Se a sua corrotina retornar um [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress-1) ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2), você poderá recuperar o objeto retornado pela função [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) e usá-lo para relatar o progresso para um manipulador de progresso. Aqui está um exemplo de código.
 
 ```cppwinrt
 // main.cpp
@@ -835,9 +835,9 @@ property_value.GetInt32Array(my_array); // Unbox back into an array.
 
 ## <a name="important-apis"></a>APIs importantes
 * [Interface IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
-* [Interface IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
-* [Interface IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation_tresult_)
-* [Interface IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)
+* [Interface IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress-1)
+* [Interface IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation-1)
+* [Interface IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [winrt::fire_and_forget](/uwp/cpp-ref-for-winrt/fire-and-forget)
 * [winrt::get_cancellation_token](/uwp/cpp-ref-for-winrt/get-cancellation-token)
