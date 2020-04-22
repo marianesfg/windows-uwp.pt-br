@@ -114,7 +114,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ...
 ```
 
-Como seu tipo de **Aplicativo***é um* **IFrameworkViewSource**, você poderá passar apenas um para **Executar**.
+Como seu tipo de **Aplicativo** *é um* **IFrameworkViewSource**, você poderá passar apenas um para **Executar**.
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
