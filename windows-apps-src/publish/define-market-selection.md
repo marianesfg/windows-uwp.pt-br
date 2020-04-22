@@ -244,7 +244,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>RAE de Macau</td>
   </tr>
   <tr>
-    <td>Macedônia, ARI da</td>
+    <td>Macedônia do Norte</td>
     <td>Madagascar</td>
     <td>Malaui</td>
     <td>Malásia</td>
@@ -445,7 +445,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 | France               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Germany              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Grécia               | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Hong Kong            | Cartão-presente       | 2,24%                         | Março de 2016     |
+| RAE de Hong Kong            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Hungria              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Índia                | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Irlanda              | Cartão-presente       | 2,24%                         | Março de 2016     |
@@ -613,7 +613,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Libéria</td>
     <td>Liechtenstein</td>
     <td>RAE de Macau</td>
-    <td>Macedônia, ARI da</td>
+    <td>Macedônia do Norte</td>
   </tr>
   <tr>
     <td>Madagascar</td>
