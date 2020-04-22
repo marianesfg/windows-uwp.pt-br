@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 0f596047cfdd01fcfca568ea1c63b1e2cc14c272
-ms.sourcegitcommit: 1670eec29b4360ec37cde2910b76078429273cb0
+ms.openlocfilehash: dbae7ada227b4f3019a2e17c91e6b06b7f2f276f
+ms.sourcegitcommit: 0acdafcf75fcd19e5c3181eb16defcfee3918cb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80329504"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81441861"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Hospedar controles XAML do UWP em aplicativos da área de trabalho (Ilhas XAML)
 
@@ -148,6 +148,8 @@ As seções a seguir abordam limitações e soluções alternativas para alguns 
 :no_entry_sign: Entrada de texto com a exibição de texto manuscrito. Para obter mais informações sobre esse recurso, confira [este artigo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-handwriting-view).
 
 :no_entry_sign: Controles de texto que usam links de conteúdo `@Places` e `@People`. Para obter mais informações sobre esse recurso, confira [este artigo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links).
+
+:no_entry_sign: Ilhas XAML não dão suporte à hospedagem de um [ContentDialog](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) que contenha um controle que aceita entrada de texto, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) ou [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox). Se você fizer isso, o controle de entrada não responderá adequadamente aos pressionamentos de tecla. Para obter funcionalidade semelhante usando uma Ilha XAML, recomendamos hospedar uma [Pop-up](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup) que contenha o controle de entrada.
 
 ### <a name="window-host-context-for-xaml-islands"></a>Contexto do host de janela para Ilhas XAML
 

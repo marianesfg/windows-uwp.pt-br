@@ -8,25 +8,20 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
-ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
+ms.openlocfilehash: d997c6109256974f17bc0f86a518e34ef55960a7
+ms.sourcegitcommit: ecd7bce5bbe15e72588937991085dad6830cec71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588714"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224269"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Conceder identidade a aplicativos da área de trabalho não empacotados
 
-<!--
-> [!NOTE]
-> The features described in this article require Windows 10 Insider Preview Build 10.0.19000.0 or a later release.
--->
-
 Muitos recursos de extensibilidade do Windows 10 exigem que o [identificador de pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) seja usado de aplicativos da área de trabalho que não são UWP, incluindo tarefas em segundo plano, notificações, blocos dinâmicos e destinos de compartilhamento. Para esses cenários, o sistema operacional requer identidade para que possa identificar o chamador da API correspondente.
 
-Em versões do sistema operacional antes Windows 10 Insider Preview Build 10.0.19000.0, a única maneira de conceder identidade a um aplicativo da área de trabalho era [empacotá-lo em um pacote MSIX assinado](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para esses aplicativos, a identidade é especificada no manifesto do pacote e o registro de identidade é realizado pelo pipeline de implantação do MSIX com base nas informações no manifesto. Todo o conteúdo referenciado no manifesto do pacote está presente no pacote MSIX.
+Em versões do sistema operacional antes do Windows 10 versão 2004, a única maneira de conceder identidade a um aplicativo da área de trabalho era [colocá-lo em um pacote MSIX assinado](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para esses aplicativos, a identidade é especificada no manifesto do pacote e o registro de identidade é realizado pelo pipeline de implantação do MSIX com base nas informações no manifesto. Todo o conteúdo referenciado no manifesto do pacote está presente no pacote MSIX.
 
-Começando no Windows 10 Insider Preview Build 10.0.19000.0, você pode conceder um identificador de pacote a aplicativos da área de trabalho que não são empacotados em um pacote MSIX criando e registrando um *pacote esparso* com o aplicativo. Esse suporte permite que os aplicativos da área de trabalho que ainda não são capazes de adotar o empacotamento MSIX para implantação usem recursos de extensibilidade do Windows 10 que exigem o identificador de pacote. Para obter mais informações de contexto, confira [esta postagem de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
+Da versão 2004 do Windows 10 em diante, é possível conceder um identificador de pacote a aplicativos da área de trabalho que não estão em um pacote MSIX por meio da criação e registro de um *pacote esparso* com o aplicativo. Esse suporte permite que os aplicativos da área de trabalho que ainda não são capazes de adotar o empacotamento MSIX para implantação usem recursos de extensibilidade do Windows 10 que exigem o identificador de pacote. Para obter mais informações de contexto, confira [esta postagem de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
 
 Para criar e registrar um pacote esparso que concede um identificador de pacote ao seu aplicativo da área de trabalho, siga estas etapas.
 
@@ -162,9 +157,9 @@ O manifesto do aplicativo lado a lado deve existir no mesmo diretório que o arq
 
 ## <a name="register-your-sparse-package-at-run-time"></a>Registrar o pacote esparso no runtime
 
-Para conceder o identificador de pacote ao seu aplicativo da área de trabalho, o aplicativo deve registrar o pacote esparso usando a classe [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Você pode adicionar código ao aplicativo para registrar o pacote esparso quando o aplicativo é executado pela primeira vez ou pode executar código para registrar o pacote enquanto seu aplicativo da área de trabalho é instalado (por exemplo, se estiver usando o MSI para instalar o aplicativo da área de trabalho, você poderá executar esse código de uma ação personalizada).
+Para conceder o identificador de pacote ao seu aplicativo da área de trabalho, o aplicativo deve registrar o pacote esparso usando o método **AddPackageByUriAsync** da classe [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Esse método está disponível do Windows 10, versão 2004, em diante. Você pode adicionar código ao aplicativo para registrar o pacote esparso quando o aplicativo é executado pela primeira vez ou pode executar código para registrar o pacote enquanto seu aplicativo da área de trabalho é instalado (por exemplo, se estiver usando o MSI para instalar o aplicativo da área de trabalho, você poderá executar esse código de uma ação personalizada).
 
-O exemplo a seguir demonstra como registrar um pacote esparso. Esse código cria um objeto **AddPackageOptions** que contém o caminho para a localização externa em que o manifesto do pacote pode fazer referência ao conteúdo fora do pacote. Em seguida, o código passa esse objeto para o método **PackageManager.AddPackageByUriAsync** para registrar o pacote esparso. Esse método também recebe a localização do pacote esparso assinado como um URI. Para obter um exemplo mais completo, confira o arquivo de código `StartUp.cs` no [exemplo](#sample) relacionado.
+O exemplo a seguir demonstra como registrar um pacote esparso. Esse código cria um objeto **AddPackageOptions** que contém o caminho para a localização externa em que o manifesto do pacote pode fazer referência ao conteúdo fora do pacote. Em seguida, o código passa esse objeto para o método **AddPackageByUriAsync** para registrar o pacote esparso. Esse método também recebe a localização do pacote esparso assinado como um URI. Para obter um exemplo mais completo, confira o arquivo de código `StartUp.cs` no [exemplo](#sample) relacionado.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)
