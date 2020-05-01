@@ -4,13 +4,13 @@ title: Referência de API do Device Portal para HoloLens
 description: Saiba mais sobre as APIs REST do Windows Device Portal para Hololens que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
 ms.date: 03/22/2018
 ms.topic: article
-keywords: windows 10, uwp, portal de dispositivo
+keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb068908adf6d6c40a50cee3aececba1861ee8
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801385"
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>Referência de API do Device Portal para HoloLens
@@ -46,7 +46,7 @@ Você pode obter os requisitos de HTTPS para o Device Portal usando o seguinte f
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -77,7 +77,7 @@ Você pode obter o valor armazenado da DIP usando o seguinte formato de solicita
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -108,7 +108,7 @@ Você pode obter uma lista de provedores ETW específicos do HoloLens que não s
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -140,7 +140,7 @@ Você pode obter o estado de todos os serviços em execução no momento usando 
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -176,7 +176,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -212,7 +212,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -250,7 +250,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -326,7 +326,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -357,7 +357,7 @@ Você pode excluir um fluxo de controle usando o seguinte formato de solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -388,7 +388,7 @@ Você pode abrir uma conexão de soquete da Web para um fluxo de controle usando
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -419,7 +419,7 @@ Você pode obter o modo de simulação usando o seguinte formato de solicitaçã
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -454,7 +454,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -491,7 +491,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -522,7 +522,7 @@ Você pode obter todas as gravações disponíveis usando o seguinte formato de 
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -557,7 +557,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -588,7 +588,7 @@ Você pode obter todas as gravações carregadas disponíveis usando o seguinte 
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -728,7 +728,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -763,7 +763,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -798,7 +798,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -829,7 +829,7 @@ Você pode carregar uma gravação usando o seguinte formato de solicitação:
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -862,7 +862,7 @@ Você pode obter a estado de gravação atual usando o seguinte formato de solic
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -904,7 +904,7 @@ Para esses parâmetros, um dos seguintes parâmetros deve ser definido exatament
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -935,7 +935,7 @@ Você pode parar a gravação atual usando o seguinte formato de solicitação: 
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -972,7 +972,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1008,7 +1008,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1039,7 +1039,7 @@ Você pode obter as configurações de MRC usando o seguinte formato de solicita
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1070,7 +1070,7 @@ Você pode obter o status da gravação de MRC usando o seguinte formato de soli
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1101,7 +1101,7 @@ Você pode obter os arquivos de MRC armazenados no dispositivo usando o seguinte
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1132,7 +1132,7 @@ Você pode definir as configurações de MRC usando o seguinte formato de solici
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1163,7 +1163,7 @@ Você pode iniciar uma gravação de MRC usando o seguinte formato de solicitaç
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1194,7 +1194,7 @@ Você pode parar a atual gravação de MRC usando o seguinte formato de solicita
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1225,7 +1225,7 @@ Você pode tirar uma foto de MRC usando o seguinte formato de solicitação: A f
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1265,7 +1265,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1303,7 +1303,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1341,7 +1341,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.
 
@@ -1379,6 +1379,6 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 - Não
 
-**Código de status**
+**Código de Status**
 
 - Códigos de status padrão.

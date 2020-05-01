@@ -7,17 +7,17 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, coleção
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4f1b15ec377b030a467dded634abe3fdde717896
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68270150"
 ---
 # <a name="collections-with-cwinrt"></a>Coleções com C++/WinRT
 
-Internamente, uma coleção do Tempo de Execução do Windows tem muitas partes móveis complicadas. Entretanto, quando você deseja passar um objeto de coleção para uma função do Tempo de Execução do Windows ou implementar seus próprios tipos de coleção e propriedades de coleção, há funções e classes base no [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para ajudá-lo. Esses recursos eliminam a complexidade para você e diminuem a sobrecarga de tempo e esforço.
+Internamente, uma coleção do Windows Runtime tem muitas partes móveis complicadas. Entretanto, quando você deseja passar um objeto de coleção para uma função do Windows Runtime ou implementar seus próprios tipos de coleção e propriedades de coleção, há funções e classes base no [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para ajudá-lo. Esses recursos eliminam a complexidade para você e diminuem a sobrecarga de tempo e esforço.
 
-[**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) é a interface do Tempo de Execução do Windows implementada por qualquer coleção de acesso aleatório de elementos. Se você implementar **IVector** por conta própria, também precisará implementar [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_) e [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_). Mesmo se você *precisar* de um tipo de coleção personalizada, isso envolverá muito trabalho. Porém, se você tiver dados em um **std::vector** (ou em um **std::map** ou **std::unordered_map**) e quiser apenas passá-lo para uma API do Tempo de Execução do Windows, será melhor evitar esse nível de trabalho. E evitar isso *é* possível, porque o C++/WinRT ajuda você a criar coleções de forma eficiente e com pouco esforço.
+[**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) é a interface do Windows Runtime implementada por qualquer coleção de acesso aleatório de elementos. Se você implementar **IVector** por conta própria, também precisará implementar [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_) e [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_). Mesmo se você *precisar* de um tipo de coleção personalizada, isso envolverá muito trabalho. Porém, se você tiver dados em um **std::vector** (ou em um **std::map** ou **std::unordered_map**) e quiser apenas passá-lo para uma API do Windows Runtime, será melhor evitar esse nível de trabalho. E evitar isso *é* possível, porque o C++/WinRT ajuda você a criar coleções de forma eficiente e com pouco esforço.
 
 Confira também [Controles de itens XAML; associar a uma coleção C++/WinRT](binding-collection.md).
 
@@ -55,7 +55,7 @@ int main()
 }
 ```
 
-Como você pode ver no exemplo de código anterior, após a criação da coleção é possível acrescentar elementos, iterá-los e geralmente tratar o objeto como você faria com qualquer objeto de coleção do Tempo de Execução do Windows, que você pode ter recebido de uma API. Se precisar de uma exibição imutável da coleção, você poderá chamar [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão apresentado anteriormente&mdash;de criar e consumir uma coleção&mdash;é apropriado para cenários simples em que você deseje passar dados para uma API ou extrair dados dela. Você pode passar um **IVector** ou um **IVectorView** em qualquer lugar em que um [ **IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) é esperado.
+Como você pode ver no exemplo de código anterior, após a criação da coleção é possível acrescentar elementos, iterá-los e geralmente tratar o objeto como você faria com qualquer objeto de coleção do Windows Runtime, que você pode ter recebido de uma API. Se precisar de uma exibição imutável da coleção, você poderá chamar [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão apresentado anteriormente&mdash;de criar e consumir uma coleção&mdash;é apropriado para cenários simples em que você deseje passar dados para uma API ou extrair dados dela. Você pode passar um **IVector** ou um **IVectorView** em qualquer lugar em que um [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) é esperado.
 
 No exemplo de código anterior, a chamada para **winrt::init_apartment** inicializa o thread no Windows Runtime; por padrão, em um Multi-Threaded Apartment. A chamada também inicializa o COM.
 
@@ -63,7 +63,7 @@ No exemplo de código anterior, a chamada para **winrt::init_apartment** inicial
 
 Esta seção aborda o cenário em que você deseja criar uma coleção e preenchê-la ao mesmo tempo.
 
-Você pode evitar a sobrecarga de chamadas para **Append** no exemplo de código anterior. Talvez você já tenha os dados de origem ou prefira preencher os dados de origem antes de criar o objeto de coleção do Tempo de Execução do Windows. Veja a seguir como fazer isso.
+Você pode evitar a sobrecarga de chamadas para **Append** no exemplo de código anterior. Talvez você já tenha os dados de origem ou prefira preencher os dados de origem antes de criar o objeto de coleção do Windows Runtime. Veja a seguir como fazer isso.
 
 ```cppwinrt
 auto coll1{ winrt::single_threaded_vector<int>({ 1,2,3 }) };
@@ -88,7 +88,7 @@ auto bookSkus{ winrt::single_threaded_vector<Windows::Foundation::IInspectable>(
 bookSkus.Append(winrt::make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 ```
 
-É possível criar uma coleção do Tempo de Execução do Windows a partir de dados e obter uma exibição dela pronta para passar para uma API, tudo sem copiar nada.
+É possível criar uma coleção do Windows Runtime a partir de dados e obter uma exibição dela pronta para passar para uma API, tudo sem copiar nada.
 
 ```cppwinrt
 std::vector<float> values{ 0.1f, 0.2f, 0.3f };
@@ -212,11 +212,11 @@ private:
 
 Estas são as classes base que o C++/WinRT fornece para ajudar a implementar as coleções personalizadas.
 
-### <a name="winrtvector_view_baseuwpcpp-ref-for-winrtvector-view-base"></a>[winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
+### <a name="winrtvector_view_base"></a>[winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
 
 Confira os exemplos de código acima.
 
-### <a name="winrtvector_baseuwpcpp-ref-for-winrtvector-base"></a>[winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
+### <a name="winrtvector_base"></a>[winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
 
 ```cppwinrt
 struct MyVector :
@@ -238,7 +238,7 @@ private:
 };
 ```
 
-### <a name="winrtobservable_vector_baseuwpcpp-ref-for-winrtobservable-vector-base"></a>[winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
+### <a name="winrtobservable_vector_base"></a>[winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
 
 ```cppwinrt
 struct MyObservableVector :
@@ -260,7 +260,7 @@ private:
 };
 ```
 
-### <a name="winrtmap_view_baseuwpcpp-ref-for-winrtmap-view-base"></a>[winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
+### <a name="winrtmap_view_base"></a>[winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
 
 ```cppwinrt
 struct MyMapView :
@@ -279,7 +279,7 @@ private:
 };
 ```
 
-### <a name="winrtmap_baseuwpcpp-ref-for-winrtmap-base"></a>[winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
+### <a name="winrtmap_base"></a>[winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
 
 ```cppwinrt
 struct MyMap :
@@ -303,7 +303,7 @@ private:
 };
 ```
 
-### <a name="winrtobservable_map_baseuwpcpp-ref-for-winrtobservable-map-base"></a>[winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
+### <a name="winrtobservable_map_base"></a>[winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
 
 ```cppwinrt
 struct MyObservableMap :
@@ -327,7 +327,7 @@ private:
 };
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Propriedade ItemsControl.ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
 * [Interface IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)
 * [Interface IVector](/uwp/api/windows.foundation.collections.ivector_t_)

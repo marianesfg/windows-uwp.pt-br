@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, associação, coleção
 ms.localizationpriority: medium
 ms.openlocfilehash: a98056190d035910a8ed83d2f37799a98b685ce6
-ms.sourcegitcommit: eb683734801c1de5977db70e626609cf7e5b7654
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "70304526"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de itens XAML; associar a uma coleção C++/WinRT
@@ -19,10 +19,10 @@ Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é
 Se você deseja acompanhar este tópico, recomendamos que crie primeiro o projeto descrito em [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md). Este tópico adiciona mais código e expande os conceitos explicados naquele tópico.
 
 > [!IMPORTANT]
-> Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de tempo de execução com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
+> Para ver conceitos e termos essenciais que ajudam a entender como utilizar e criar classes de runtime com C++/WinRT, confira [Utilizar APIs com C++/WinRT](consume-apis.md) e [Criar APIs com C++/WinRT](author-apis.md).
 
 ## <a name="what-does-observable-mean-for-a-collection"></a>O que significa *observável* para uma coleção?
-Se uma classe de tempo de execução que representa uma coleção escolhe acionar o evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) sempre que um elemento é adicionado ou removido dele, então a classe de tempo de execução é uma coleção observável. Um controle de itens XAML pode se associar e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando a si mesmo para mostrar os elementos atuais.
+Se uma classe de runtime que representa uma coleção escolhe acionar o evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) sempre que um elemento é adicionado ou removido dele, então a classe de runtime é uma coleção observável. Um controle de itens XAML pode se associar e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando a si mesmo para mostrar os elementos atuais.
 
 > [!NOTE]
 > Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
@@ -120,9 +120,9 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 
 Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos **Click**. Vimos que a implementação de **Append** aciona um evento para informar à interface do usuário que a coleção foi alterada; a **ListBox** consulta novamente a coleção para atualizar seu próprio valor de **Items**. Exatamente como antes, o título de um dos livros muda e essa alteração de título é refletida no botão e na caixa de listagem.
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
-* [Modelo da função winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [modelo da função winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 92dca27a4cfb02f5d1bcb722683eca89ec16a6d6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66362217"
 ---
 # <a name="optimize-your-xaml-layout"></a>Otimizar seu layout XAML
@@ -70,7 +70,7 @@ Embora esse seja o modelo mais simples, ele usa 5 elementos do painel e resulta 
 </StackPanel>
 ```
 
-Opção 2: Um único [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
+Opção 2: um único [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
 
 O [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) adiciona certa complexidade, mas usa apenas um único elemento do painel.
 
@@ -103,7 +103,7 @@ O [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) a
 </Grid>
 ```
 
-Opção 3: Um único [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
+Opção 3: um único [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
 
 Esse painel único também é um pouco mais complexo do que a utilização de painéis aninhados, mas pode ser mais fácil de entender e manter do que um [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid).
 
@@ -160,7 +160,7 @@ Um requisito da interface do usuário comum é ter um layout em que elementos se
 
 ## <a name="use-a-panels-built-in-border-properties"></a>Use as propriedades de borda internas do painel
 
-Os controles [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel), [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) e [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) têm propriedades de borda internas que permitem que você desenhe uma borda em torno deles sem acrescentar um elemento [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) ao XAML. As novas propriedades que suportam bordas internas são: **BorderBrush**, **BorderThickness**, **CornerRadius** e **Padding**. Cada um desses é um [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
+Os controles [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel), [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) e [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) têm propriedades de borda internas que permitem que você desenhe uma borda em torno deles sem acrescentar um elemento [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) ao XAML. As novas propriedades que oferecem suporte à borda interna são: **BorderBrush**, **BorderThickness**, **CornerRadius** e **preenchimento**. Cada um desses é um [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
 
 Se a sua interface do usuário tem elementos [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) em torno desses painéis, use a borda interna ao invés, o que economiza um elemento extra na estrutura do layout de seu aplicativo. Como mencionado anteriormente, isso pode ser uma economia significativa, principalmente no caso de interface do usuário repetida.
 

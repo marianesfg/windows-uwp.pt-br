@@ -13,10 +13,10 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 31cf2134fb8f77809b75a5abf3e6980443452059
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68867399"
 ---
 # <a name="motion-for-uwp-apps"></a>Movimento para aplicativos UWP
@@ -74,21 +74,21 @@ O movimento inteligente fornece comentários ao usuário de forma alinhada com a
 
 :::row:::
     :::column:::
-### <a name="timing-and-easingtiming-and-easingmd"></a>[Tempo e suavização](timing-and-easing.md)
+### <a name="timing-and-easing"></a>[Tempo e suavização](timing-and-easing.md)
 O tempo e a suavização são elementos importantes que tornam o movimento natural para objetos que entram, saem ou se movem na interface do usuário.
     :::column-end:::
     :::column:::
-### <a name="directionality-and-gravitydirectionality-and-gravitymd"></a>[Direcionalidade e gravidade](directionality-and-gravity.md)
+### <a name="directionality-and-gravity"></a>[Direcionalidade e gravidade](directionality-and-gravity.md)
 Os sinais de direção ajudam a fornecer um modelo mental sólido da jornada do usuário nas experiências. O movimento direcional está sujeito a forças como gravidade, o que reforça a sensação natural da movimentação.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-### <a name="page-transitionspage-transitionsmd"></a>[Transições de página](page-transitions.md)
+### <a name="page-transitions"></a>[Transições de página](page-transitions.md)
 As transições de página navegam os usuários entre as páginas de um aplicativo, fornecendo comentários sobre o relacionamento entre as páginas. Elas ajudam os usuários a entender onde estão na hierarquia de navegação.
     :::column-end:::
     :::column:::
-### <a name="connected-animationconnected-animationmd"></a>[Animação conectada](connected-animation.md)
+### <a name="connected-animation"></a>[Animação conectada](connected-animation.md)
 As animações conectadas permitem que você crie uma experiência de navegação dinâmica e convincente pela animação da transição de um elemento entre duas exibições diferentes.
     :::column-end:::
 :::row-end:::

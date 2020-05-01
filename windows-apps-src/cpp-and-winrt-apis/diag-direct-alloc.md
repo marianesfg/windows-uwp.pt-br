@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projeção, direta, pilha, alocações, projetado, implementação
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fe8ff6653b8655ee25cd9adc0c11acb22d42a11
-ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68372787"
 ---
 # <a name="diagnosing-direct-allocations"></a>Diagnosticando alocações diretas
@@ -38,7 +38,7 @@ void Print(IStringable const& stringable)
 }
 ```
 
-O problema é que nosso tipo **MyStringable** *não* é um **IStringable**.
+O problema é que nosso tipo **MyStringable***não* é um **IStringable**.
 
 - Nosso tipo **MyStringable** é uma implementação da interface **IStringable**.
 - O tipo **IStringable** é um tipo projetado.
@@ -116,7 +116,7 @@ Novamente, isso é questionável. A propriedade exclusiva é oposta ao tempo de 
 
 ## <a name="the-solution-with-cwinrt-20"></a>A solução com C++/WinRT 2.0
 
-Com o C++/WinRT 2.0, todas essas tentativas de alocar tipos de implementação diretamente levam a um erro do compilador. Esse é o melhor tipo de erro e infinitamente melhor do que um bug de tempo de execução misterioso.
+Com o C++/WinRT 2.0, todas essas tentativas de alocar tipos de implementação diretamente levam a um erro do compilador. Esse é o melhor tipo de erro e infinitamente melhor do que um bug de runtime misterioso.
 
 Sempre que precisar realizar uma implementação, você poderá simplesmente usar [**winrt::make**](/uwp/cpp-ref-for-winrt/make) ou [**winrt::make_self**](/uwp/cpp-ref-for-winrt/make-self), conforme mostrado acima. Agora, se você se esquecer de fazer isso, receberá um erro do compilador que fará alusão a isso com uma referência a uma função abstrata denominada **use_make_function_to_create_this_object**. Não é exatamente um `static_assert`, mas é quase isso. Ainda assim, essa é a maneira mais confiável de detectar todos os erros descritos.
 
@@ -126,14 +126,14 @@ Primeiro, a função virtual só está presente em builds de depuração. Isso s
 
 Segundo, como a classe derivada que o **winrt::make** usa é `final`, isso significa que qualquer desvirtualização que o otimizador puder possivelmente deduzir acontecerá mesmo que você tenha optado anteriormente por não marcar sua classe de implementação como `final`. Portanto, é uma melhoria. O contrário é que sua implementação *não pode* ser `final`. Novamente, isso não importa, porque o tipo instanciado sempre será `final`.
 
-Terceiro, nada impede que você marque funções virtuais em sua implementação como `final`. É claro que o C++/WinRT é muito diferente do COM clássico e das implementações como WRL, em que tudo sobre sua implementação tende a ser virtual. No C++/WinRT, o envio virtual está limitado à ABI (interface binária do aplicativo) (que é sempre `final`), e seus métodos de implementação dependem do tempo de compilação ou do polimorfismo estático. Isso evita o polimorfismo de tempo de execução desnecessário e também significa que há uma pequena razão para as funções virtuais em sua implementação do C++/WinRT. O que é uma coisa boa e leva a um inlining bem mais previsível.
+Terceiro, nada impede que você marque funções virtuais em sua implementação como `final`. É claro que o C++/WinRT é muito diferente do COM clássico e das implementações como WRL, em que tudo sobre sua implementação tende a ser virtual. No C++/WinRT, o envio virtual está limitado à ABI (interface binária do aplicativo) (que é sempre `final`), e seus métodos de implementação dependem do tempo de compilação ou do polimorfismo estático. Isso evita o polimorfismo de runtime desnecessário e também significa que há uma pequena razão para as funções virtuais em sua implementação do C++/WinRT. O que é uma coisa boa e leva a um inlining bem mais previsível.
 
 Quarto, como **winrt::make** injeta uma classe derivada, sua implementação não pode ter um destruidor privado. Os destruidores privados eram populares com implementações COM clássicas, porque, novamente, tudo era virtual e era comum lidar diretamente com ponteiros brutos e, portanto, era fácil chamar acidentalmente `delete` em vez de [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). O C++/WinRT esforça-se para que seja difícil você lidar diretamente com ponteiros brutos. E você precisa *realmente* se esforçar para obter um ponteiro bruto em C++/WinRT no qual você possa eventualmente chamar `delete`. Semântica de valor significa que você está lidando com valores e referências; raramente com ponteiros.
 
 Portanto, o C++/WinRT desafia nossas noções preconcebidas do que significa escrever código COM clássico. E isso é perfeitamente razoável, porque o WinRT não é o COM clássico. O COM clássico é a linguagem assembly do Windows Runtime. Ele não deve ser o código que você escreve todos os dias. Em vez disso, o C++/WinRT o leva a escrever um código mais parecido com o C++ moderno e menos parecido com o COM clássico.
 
-## <a name="important-apis"></a>APIs Importantes
-* [Modelo da função winrt::make](/uwp/cpp-ref-for-winrt/make)
+## <a name="important-apis"></a>APIs importantes
+* [modelo da função winrt::make](/uwp/cpp-ref-for-winrt/make)
 * [modelo da função winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
 
 ## <a name="related-topics"></a>Tópicos relacionados

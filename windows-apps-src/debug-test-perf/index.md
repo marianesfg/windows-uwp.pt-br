@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57582037"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "63787110"
 ---
 # <a name="debugging-testing-and-performance"></a>Depuração, teste e desempenho
 
@@ -29,4 +29,4 @@ Esta seção mostra como usar o Microsoft Visual Studio para depurar, testar e o
 | [Portal de Dispositivos do Windows](device-portal.md) | O Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB. |
 | [Kit de Certificação de Aplicativos Windows](windows-app-certification-kit.md) | Para aumentar as chances de seu aplicativo ser publicado na Microsoft Store ou obter a certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows. |
 | [Desempenho](performance-and-xaml-ui.md) | Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. |
-| [Aplicativos adaptáveis de versão](version-adaptive-apps.md) | Aproveite as APIs e os recursos mais recentes atingindo o público-alvo mais amplo possível. Use verificações de API de tempo de execução para adaptar seu código e XAML no tempo de execução aos recursos disponíveis na versão do Windows 10 em que seu aplicativo está sendo executado. |
+| [Aplicativos adaptáveis de versão](version-adaptive-apps.md) | Aproveite as APIs e os recursos mais recentes atingindo o público-alvo mais amplo possível. Use verificações de API de runtime para adaptar seu código e XAML no runtime aos recursos disponíveis na versão do Windows 10 em que seu aplicativo está sendo executado. |
