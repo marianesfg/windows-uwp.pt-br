@@ -9,10 +9,10 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 50ee005fc0de52a3e0217a71fb3d391445c486db
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80226230"
 ---
 # <a name="advanced-scenarios-for-xaml-islands-in-c-win32-apps"></a>Cenários avançados das Ilhas XAML em aplicativos C++ Win32
@@ -89,4 +89,4 @@ Para configurar seu aplicativo para ter reconhecimento de DPI por monitor, adici
 * [Hospedar um controle UWP padrão em um aplicativo C++ Win32](host-standard-control-with-xaml-islands-cpp.md)
 * [Hospedar um controle UWP personalizado em um aplicativo C++ Win32](host-custom-control-with-xaml-islands-cpp.md)
 * [Exemplos de código de Ilhas XAML](https://github.com/microsoft/Xaml-Islands-Samples)
-* [Exemplo de ilhas XAML do C++ Win32](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Samples/Win32/SampleCppApp)
+* [Exemplo de Ilhas XAML do C++ Win32](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Samples/Win32/SampleCppApp)

@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9d683b73b64ef1cf2bd8d267aa40e2e1c419ac92
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: aca79bda3b2b92df4e8788adc8a57a5d9c269b49
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218486"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148932"
 ---
 # <a name="design-toolkits-and-samples-for-windows-apps"></a>Projetar kits de ferramentas e amostras para aplicativos do Windows
 
@@ -90,10 +90,10 @@ Funções auxiliares, controles personalizados e serviços de aplicativos.<br />
 
 :::row:::
     :::column:::
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
+<a href="https://download.microsoft.com/download/B/5/F/B5F22952-44DF-46EC-820B-11951AE01AEC/UWP tile and icon asset generator.zip"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para Adobe Photoshop** Esse conjunto de ações para Adobe Photoshop gera os 68 ativos de bloco e ícone recomendados usando apenas 7 arquivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Baixe o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para Adobe Photoshop** Esse conjunto de ações para Adobe Photoshop gera os 68 ativos de bloco e ícone recomendados usando apenas 7 arquivos. <br/><a href="https://download.microsoft.com/download/B/5/F/B5F22952-44DF-46EC-820B-11951AE01AEC/UWP tile and icon asset generator.zip">Baixe o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 

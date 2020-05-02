@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, caminho de aprendizagem, arquivos, e/s de arquivo, ler arquivo, gravar arquivo, criar arquivo, gravar texto, ler texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 29cfeef852f240548f1cd961f73766346da7afa4
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1270d49cc8746b2793b1414306f9ee842cb40f40
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321129"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82166242"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -141,8 +141,8 @@ Veja um resumo rápido de APIs e outras documentações úteis para ajudar você
 
 | Exemplo de código | Descrição |
 |-----------------|---------------|
-| [Amostra de dados de aplicativos](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) | Mostra como armazenar e recuperar dados específicos de cada usuário usando as APIs de dados de aplicativos. |
+| [Amostra de dados de aplicativos](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/applicationdata/) | Mostra como armazenar e recuperar dados específicos de cada usuário usando as APIs de dados de aplicativos. |
 | [Exemplo de acesso a arquivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Mostra como criar, ler, gravar, copiar e excluir um arquivo. |
-| [Exemplo do seletor de arquivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário, e mostra como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
+| [Exemplo do seletor de arquivos](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/filepicker/) | Mostra como acessar arquivos e pastas, permitindo que o usuário as escolha com a interface do usuário, e mostra como salvar um arquivo para que o usuário possa especificar o nome, o tipo e o local de um arquivo para salvar. |
 | [Exemplo de JSON](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) | Mostra como codificar e decodificar objetos JSON (JavaScript Object Notation), matrizes, cadeias de caracteres, números e boolianos usando o [namespace Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Exemplos de código adicionais](https://developer.microsoft.com/windows/samples) | Escolha **Arquivos, pastas e bibliotecas** na lista suspensa de categoria. |

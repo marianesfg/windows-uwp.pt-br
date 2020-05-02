@@ -353,11 +353,13 @@
             - name: Esquema de conteúdo de notificação do sistema
               href: shell/tiles-and-notifications/toast-schema.md
             - name: Enviar notificação do sistema local
-              href: shell/tiles-and-notifications/send-local-toast.md
               items:
+                - name: Aplicativos UWP
+                  href: shell/tiles-and-notifications/send-local-toast.md
                 - name: Aplicativos da área de trabalho
-                  href: shell/tiles-and-notifications/toast-desktop-apps.md
                   items:
+                    - name: Visão geral
+                      href: shell/tiles-and-notifications/toast-desktop-apps.md
                     - name: 'Aplicativos em C#'
                       href: shell/tiles-and-notifications/send-local-toast-desktop.md
                     - name: Aplicativos em C++ WRL

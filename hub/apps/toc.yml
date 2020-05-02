@@ -1,0 +1,89 @@
+- name: Criar aplicativos para Windows
+  href: index.yml
+  items:
+    - name: Criar aplicativos da área de trabalho
+      items:
+        - name: Visão geral
+          href: desktop/index.md
+        - name: Escolha sua plataforma de aplicativo
+          href: desktop/choose-your-platform.md
+    - name: Modernize seus aplicativos da área de trabalho
+      items:
+        - name: Visão geral
+          href: desktop/modernize/index.md
+        - name: Chamar APIs UWP
+          items:
+            - name: Visão geral
+              href: desktop/modernize/desktop-to-uwp-enhance.md
+            - name: APIs UWP disponíveis
+              href: desktop/modernize/desktop-to-uwp-supported-api.md
+        - name: Hospedar controles XAML UWP (ilhas de XAML)
+          items:
+            - name: Visão geral
+              href: desktop/modernize/xaml-islands.md
+            - name: Ilhas XAML no WPF e aplicativos do Windows Forms
+              items:
+                - name: Hospedar um controle UWP padrão
+                  href: desktop/modernize/host-standard-control-with-xaml-islands.md
+                - name: Hospedar um controle UWP personalizado
+                  href: desktop/modernize/host-custom-control-with-xaml-islands.md
+            - name: Ilhas XAML em aplicativos C++ Win32
+              items:
+                - name: Usando o XAML da UWP que hospeda a API
+                  href: desktop/modernize/using-the-xaml-hosting-api.md
+                - name: Hospedar um controle UWP padrão
+                  href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
+                - name: Hospedar um controle UWP personalizado
+                  href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
+                - name: Cenários avançados
+                  href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
+        - name: Usar a camada Visual (Windows.UI.Composition)
+          items:
+            - name: Visão geral
+              href: desktop/modernize/visual-layer-in-desktop-apps.md
+            - name: WPF
+              href: desktop/modernize/using-the-visual-layer-with-wpf.md
+            - name: Windows Forms
+              href: desktop/modernize/using-the-visual-layer-with-windows-forms.md
+            - name: Win32
+              href: desktop/modernize/using-the-visual-layer-with-win32.md
+        - name: Recursos que exigem a identidade do pacote
+          items:
+            - name: Visão geral
+              href: desktop/modernize/modernize-packaged-apps.md
+            - name: Integrar com extensões de pacote
+              href: desktop/modernize/desktop-to-uwp-extensions.md
+            - name: Estender com componentes UWP
+              href: desktop/modernize/desktop-to-uwp-extend.md
+            - name: Distribuir seu aplicativo empacotado
+              href: desktop/modernize/desktop-to-uwp-distribute.md
+        - name: 'Tutorial: Modernizar um aplicativo WPF'
+          items:
+            - name: Visão geral
+              href: desktop/modernize/modernize-wpf-tutorial.md
+            - name: Migrar o aplicativo Contoso Expenses para o .NET Core 3
+              href: desktop/modernize/modernize-wpf-tutorial-1.md
+            - name: Adicionar um controle InkCanvas da UWP usando ilhas de XAML
+              href: desktop/modernize/modernize-wpf-tutorial-2.md
+            - name: Adicionar um controle CalendarView da UWP usando ilhas de XAML
+              href: desktop/modernize/modernize-wpf-tutorial-3.md
+            - name: Adicionar atividades e notificações de usuário do Windows 10
+              href: desktop/modernize/modernize-wpf-tutorial-4.md
+            - name: Empacotar e implantar com o MSIX
+              href: desktop/modernize/modernize-wpf-tutorial-5.md
+        - name: Conceder identidade a aplicativos da área de trabalho não empacotados
+          href: desktop/modernize/grant-identity-to-nonpackaged-apps.md
+    - name: Desenvolver para Windows 10X
+      items:
+        - name: Perguntas frequentes sobre o desenvolvimento para Windows 10X
+          href: 10x/faq.md
+    - name: Sistema Fluent Design
+      href: fluent-design-system.md
+    - name: Acessibilidade
+      href: accessibility.md
+    - name: Speech
+      href: speech.md
+    - name: Recursos e tecnologias
+      href: features-and-technologies.md
+    - name: Atualizações mais recentes do documento
+      href: whats-new/latest-doc-updates.md

@@ -1,10 +1,10 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows/
   items:
-    - name: Windows
-      tocHref: /windows/
-      topicHref: /windows/
+    - name: Aplicativos
+      tocHref: /windows/apps/
+      topicHref: /windows/apps/
       items:
         - name: UWP
           tocHref: /windows/uwp/
@@ -136,7 +136,7 @@
                 - name: Camada visual
                   tocHref: /windows/uwp/visual-layer/
                   topicHref: /windows/uwp/visual-layer/index
-                - name: Componentes do Tempo de Execução do Windows
+                - name: componentes do Windows Runtime
                   tocHref: /windows/uwp/winrt-components/
                   topicHref: /windows/uwp/winrt-components//index
                 - name: Plataforma XAML

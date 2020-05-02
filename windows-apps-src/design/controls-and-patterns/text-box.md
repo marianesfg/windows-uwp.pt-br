@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0167d1f0ed69f8354fa6ee7cd77387aee9aee842
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 26e64c286124537eeb20af6c46f16e83edc88414
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081508"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643756"
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -294,11 +294,11 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 
 - Use um conjunto de controles de entrada de texto curtos, de tamanho fixo e de linha única para inserir dados com um formato específico.
 
-    ![Entrada de dados formatados](images/textinput_example_productkey.png)
+    ![Entrada de dados formatados](images/textinput-example-productkey.png)
 
 - Use um controle de entrada de texto irrestrito e de linha única para inserir ou editar cadeias, combinado com um botão de comando que ajuda os usuários a selecionarem valores válidos.
 
-    ![Entrada de dados assistida](images/textinput_example_assisted.png)
+    ![Entrada de dados assistida](images/textinput-example-assisted.png)
 
 ### <a name="multi-line-text-input-controls"></a>Controles de entrada de texto de várias linhas
 

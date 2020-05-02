@@ -22,7 +22,7 @@
           items:
             - name: Estrutura do aplicativo de tutorial de banco de dados de clientes
               href: ../enterprise/customer-database-app-structure.md
-    - name: Aplicativos Web progressivos
+    - name: Aplicativos Web Progressivos
       href: /microsoft-edge/progressive-web-apps
 - name: 'Áudio, vídeo e câmera'
   href: ../audio-video-camera/index.md
@@ -303,7 +303,7 @@
           href: ../debug-test-perf/loose-file-registration.md
         - name: Teste beta
           href: ../debug-test-perf/beta-testing.md
-        - name: Windows Device Portal
+        - name: Portal de Dispositivos do Windows
           href: ../debug-test-perf/device-portal.md
           items:
             - name: Device Portal para desktop
@@ -1330,7 +1330,7 @@
               href: ../launch-resume/launch-settings-app.md
             - name: Iniciar o aplicativo da Microsoft Store
               href: ../launch-resume/launch-store-app.md
-            - name: Iniciar o app Mapas do Windows
+            - name: Iniciar o aplicativo Mapas do Windows
               href: ../launch-resume/launch-maps-app.md
             - name: Iniciar o app Pessoas
               href: ../launch-resume/launch-people-apps.md

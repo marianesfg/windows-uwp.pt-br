@@ -10,10 +10,10 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 0b54b04f2f36c2661de8baf58d0da1aec75ae590
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79210142"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
@@ -379,7 +379,7 @@ O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas
 
 ### <a name="binding-object-declared-using-binding"></a>Objeto de associação declarado usando {Binding}
 
-Se estiver usando C++/WinRT ou extensões de componentes do Visual C++ (C++/CX), para usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension), você precisará adicionar o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) a qualquer classe de runtime à qual quiser associar. Para usar [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension), você não precisa desse atributo.
+Se estiver usando C++/WinRT ou extensões de componentes do Visual C++ (C++/CX), para usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension), você precisará adicionar o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) a qualquer classe de runtime à qual quiser associar. Você não precisa desse atributo para usar [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
 
 ```cppwinrt
 // HostViewModel.idl
@@ -390,7 +390,7 @@ runtimeclass HostViewModel : Windows.UI.Xaml.Data.INotifyPropertyChanged
 ```
 
 > [!IMPORTANT]
-> Se você estiver usando [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) estará disponível se você tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para que seja possível usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension).
+> Caso você esteja usando [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) estará disponível se você tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para que seja possível usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension).
 
 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) presume que, por padrão, você está associando ao [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) da sua página de marcação. Portanto, definiremos o **DataContext** de nossa página como uma instância de nossa classe de origem de associação (do tipo **HostViewModel**, nesse caso). O exemplo a seguir mostra a marcação que declara o objeto de associação. Usamos o mesmo destino da associação **Button.Content** usado na seção "Destino da associação" anteriormente e associamos à propriedade **HostViewModel.NextButtonText**.
 
