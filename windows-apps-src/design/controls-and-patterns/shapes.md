@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e78fddf1a0dae39d4479a4a1786a36687337c75e
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71340237"
 ---
 # <a name="draw-shapes"></a>Desenhar formas
@@ -233,7 +233,7 @@ Aqui está o [**Caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path).
 
 ![Um Caminho renderizado.](images/shapes-path.jpg)
 
-O exemplo a seguir mostra a utilização de outra técnica que discutimos: [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup) com [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry). Este exemplo mostra alguns dos tipos de geometria que podem ser usados ​​como parte de um **PathGeometry**: [**PathFigure** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) e os vários elementos que podem ser um segmento em [**PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments).
+O exemplo a seguir mostra a utilização de outra técnica que discutimos: [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup) com [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry). Este exemplo mostra alguns dos tipos de geometria que podem ser usados ​​como parte de um **PathGeometry**: [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) e os vários elementos que podem ser um segmento em [**PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments).
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">

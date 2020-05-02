@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eb7ef49d0ce1876635dc36e84f43432c13e1791
-ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72690364"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
@@ -25,7 +25,7 @@ Os *Dados de aplicativo* são dados mutáveis, criados e gerenciados por um apli
 
 Existem dois tipos de dados de aplicativo: configurações e arquivos.
 
-### <a name="settings"></a>Configurações
+### <a name="settings"></a>Settings
 
 Use configurações para armazenar as preferências do usuário e informações de estado do aplicativo. A API de dados de aplicativo permite que você crie e recupere facilmente configurações (mostraremos alguns exemplos neste artigo).
 
@@ -189,7 +189,7 @@ Dependendo do tempo de vida esperado da configuração, os dados deverão ser gr
 
 O sistema conta com vários mecanismos ativos de proteção para evitar o uso inapropriado de recursos. Se os dados de aplicativo não forem transmitidos como esperado, é provável que o dispositivo esteja temporariamente restrito. Normalmente, basta esperar alguns instantes para que a situação seja solucionada automaticamente, sem a necessidade de nenhuma ação do usuário.
 
-### <a name="versioning"></a>Controle de versão
+### <a name="versioning"></a>Versão
 
 Os dados de aplicativo podem utilizar o controle de versão para atualizar de uma estrutura para outra. O número da versão é diferente da versão do aplicativo e pode ser definido conforme desejado. Ainda que não seja obrigatório, é altamente recomendável usar somente números de versão crescentes, pois a transferência para números de verão inferiores que representarem novos dados poderá resultar em complicações indesejadas (inclusive perda de dados).
 

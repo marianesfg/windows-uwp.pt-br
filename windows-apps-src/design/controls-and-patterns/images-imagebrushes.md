@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a07fc5c669d3c9cd374a4a031fba2ee6ef6d5756
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74257284"
 ---
 # <a name="images-and-image-brushes"></a>Imagens e pincéis de imagem
@@ -81,7 +81,7 @@ Este é o Ellipse pintado pelo ImageBrush.
 Se não definir os valores [Width](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) ou [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) de uma **Image**, ela será exibida com as dimensões da imagem especificada por **Source**. A configuração de **Width** e de **Height** cria um área de conteúdo retangular na qual a imagem é exibida. Especifique como a imagem deve preencher essa área de conteúdo usando a propriedade [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.stretch). A propriedade Stretch aceita estes valores, que a enumeração [Stretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Stretch) define:
 
 -   **Nenhum**: a imagem não é ampliada para preencher as dimensões de saída. Tenha cuidado com essa configuração Stretch: se a imagem de origem for maior que a área de conteúdo, sua imagem será recortada e, geralmente, isso não é desejável, pois você não tem controle sobre o visor, como em um [Clip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip) deliberado.
--   **Uniform**: a imagem é redimensionada para preencher as dimensões de saída. Mas a proporção do conteúdo é preservada. Esse é o valor padrão.
+-   **Uniform**: a imagem é redimensionada para preencher as dimensões de saída. Mas a proporção do conteúdo é preservada. Este é o valor padrão.
 -   **UniformToFill**: a imagem é redimensionada para que preencha completamente a área de saída, mas preserva a sua proporção original.
 -   **Fill**: a imagem é redimensionada para preencher as dimensões de saída. Como a largura e a altura do conteúdo são redimensionadas de maneira independente, a proporção original da imagem pode não ser preservada. Isto é, a imagem pode ser distorcida para preencher completamente a área de saída.
 

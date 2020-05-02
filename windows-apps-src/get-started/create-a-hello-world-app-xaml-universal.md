@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, uwp, primeiro aplicativo, olá mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
-ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73847609"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um aplicativo "Hello, world" (XAML)
@@ -50,7 +50,7 @@ Aqui, você aprenderá a:
 
     ![Como repetir o processo de instalação](images/win10-cs-install.png)
 
-4.  Escolha o modelo **Aplicativo em branco (Universal Windows)** e insira "HelloWorld" como **nome**. Clique em **OK**.
+4.  Escolha o modelo **Aplicativo em branco (Universal Windows)** e insira "HelloWorld" como **nome**. Selecione **OK**.
 
     ![A janela Novo projeto](images/win10-cs-01.png)
 
@@ -235,11 +235,11 @@ Parabéns, você criou seu primeiro aplicativo para Windows 10 e para a UWP!
 
 Para saber como usar XAML para definir os controles usados por seu aplicativo, experimente o [tutorial de grade](../design/layout/grid-tutorial.md) ou vá diretamente para as [próximas Etapas](learn-more.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 * [Seu primeiro aplicativo](your-first-app.md)
 * [Publicando seu aplicativo UWP](https://docs.microsoft.com/windows/uwp/publish/).
 * [Artigos de instruções sobre como desenvolver aplicativos UWP](https://docs.microsoft.com/windows/uwp/develop/)
-* [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
+* [Amostras de código para desenvolvedores da UWP](https://developer.microsoft.com/windows/samples)
 * [O que é um aplicativo Universal do Windows?](universal-application-platform-guide.md)
 * [Inscreva-se em uma conta do Windows](sign-up.md)

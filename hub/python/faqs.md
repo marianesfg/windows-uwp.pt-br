@@ -9,10 +9,10 @@ keywords: Python, Windows 10, Microsoft, pip, py.exe, caminhos de arquivos, PYTH
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
-ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74663553"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Perguntas frequentes sobre como usar o Python no Windows
@@ -31,7 +31,7 @@ Alguns pacotes incluem código nativo que exige um compilador C ou C++ para inst
 
 Você pode acabar com várias versões do Python instaladas em seu computador, já que está trabalhando em diferentes tipos de projetos do Python. Como todas usam o comando `python`, talvez não seja tão óbvio qual versão do Python você está usando. Como padrão, é recomendável usar o comando `python3` (ou `python3.7` para selecionar uma versão específica).
 
-O [inicializador py.exe](https://docs.python.org/3/using/windows.html#launcher) selecionará automaticamente a versão mais recente do Python que você instalou. Você também pode usar comandos como `py -3.7` para selecionar uma versão específica ou `py --list` para ver quais versões podem ser usadas. **NO ENTANTO**, o inicializador py.exe só funcionará se você estiver usando uma versão do Python instalada de [python.org](https://www.python.org/downloads/windows/). Quando você instala o Python da Microsoft Store, o comando `py` **não está incluído**. Para Linux, macOS, WSL e a versão Microsoft Store do Python você deve usar o comando `python3` (ou `python3.7`).
+O [inicializador py.exe](https://docs.python.org/3/using/windows.html#launcher) selecionará automaticamente a versão mais recente do Python que você instalou. Você também pode usar comandos como `py -3.7` para selecionar uma versão específica ou `py --list` para ver quais versões podem ser usadas. **NO ENTANTO**, o inicializador py.exe só funcionará se você estiver usando uma versão do Python instalada de [python.org](https://www.python.org/downloads/windows/). Quando você instala o Python da Microsoft Store, o comando `py`**não está incluído**. Para Linux, macOS, WSL e a versão Microsoft Store do Python você deve usar o comando `python3` (ou `python3.7`).
 
 ## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>Por que executar o python.exe abre a Microsoft Store?
 

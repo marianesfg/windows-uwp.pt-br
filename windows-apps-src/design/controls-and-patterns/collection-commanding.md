@@ -13,10 +13,10 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801199"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuais para coleções e listas
@@ -237,7 +237,7 @@ O usuário pode invocar os menus de contexto usando essas "ações de contexto":
 | Entrada    | Ação de contexto                          |
 | -------- | --------------------------------------- |
 | Mouse    | Clicar com o botão direito do mouse                             |
-| Teclado | Shift+F10, botão de menu                  |
+| Keyboard | Shift+F10, botão de menu                  |
 | Touch    | Pressionamento longo em item                      |
 | Caneta      | Pressionamento de botão da caneta, um pressionamento longo em item |
 | Gamepad  | Botão Menu                             |
@@ -370,7 +370,7 @@ Os botões exibidos no estado de foco podem ser acessados somente por meio do ti
 
 ### <a name="touch-accelerators"></a>Aceleradores de toque
 
-#### <a name="swipe"></a>Passar o dedo
+#### <a name="swipe"></a>Swipe
 
 ![Deslizar o dedo sobre um item para revelar o comando](images/ContextualCommand_Swipe.png)
 

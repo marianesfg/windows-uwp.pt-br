@@ -7,10 +7,10 @@ keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, associa�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3cebf51bdf9fa9942a0b88ed7b4cf66204671781
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71340330"
 ---
 # <a name="display-customers-in-a-list"></a>Exibir clientes em uma lista
@@ -33,7 +33,7 @@ Cada associação de dados tem duas partes:
 Para implementar uma associação de dados, é necessário adicionar código à fonte que fornece dados para a associação. Você também precisará adicionar uma ou duas extensões de marcação ao seu XAML para especificar as propriedades da fonte de dados. Veja a seguir a diferença chave entre as duas:
 
 * [**x:Bind**](../xaml-platform/x-bind-markup-extension.md) é fortemente tipada e gera código no tempo de compilação para melhorar o desempenho. x:Bind tem como padrão uma associação ocasional, que otimiza a exibição rápida de dados somente leitura que não mudam.
-* [**Binding**](../xaml-platform/binding-markup-extension.md) é fracamente tipada e montada no tempo de execução. Isso resulta em um desempenho inferior em comparação com x:Bind. Em quase todos os casos, você deve usar x:Bind em vez de Binding. No entanto, é provável que você a encontre em código mais antigo. Binding é padronizada para transferência de dados unidirecional, a qual é otimizada para dados somente leitura que podem mudar na origem.
+* [**Binding**](../xaml-platform/binding-markup-extension.md) é fracamente tipada e montada no runtime. Isso resulta em um desempenho inferior em comparação com x:Bind. Em quase todos os casos, você deve usar x:Bind em vez de Binding. No entanto, é provável que você a encontre em código mais antigo. Binding é padronizada para transferência de dados unidirecional, a qual é otimizada para dados somente leitura que podem mudar na origem.
 
 É recomendável usar **x:Bind** sempre que possível e mostraremos isso em snippets deste artigo. Para saber mais sobre as diferenças, consulte a [Comparação entre os recursos {x:Bind} e {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
 

@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63808694"
 ---
 # <a name="thumbnail-images"></a>Imagens em miniatura
@@ -100,7 +100,7 @@ Veja a seguir exemplos mostrando como as imagens em miniatura recuperadas difere
 <th>Quando recuperado usando: <ul><li>SingleItem</ul></th>
 <tr>
 <tr>
-<td>Imagem</td>
+<td>Picture</td>
 <td>A imagem em miniatura usa a taxa de proporção original do arquivo. <br />
 <img src="images/thumbnail-pic-picvidmode.png" alt="Picture thumbnail in picture or video mode"/></td>
 <td>A miniatura é recortada de acordo com uma taxa de proporção quadrada. <br />

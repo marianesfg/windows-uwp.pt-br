@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
 ms.openlocfilehash: 37819d1626d3adc6f5647f447567a9273e72668d
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68270125"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
@@ -19,7 +19,7 @@ Este tópico aborda as estratégias para processar erros ao programar com [C++/W
 ## <a name="avoid-catching-and-throwing-exceptions"></a>Evitar a captura e a geração de exceções
 É recomendável continuar escrevendo [código à prova de exceções](/cpp/cpp/how-to-design-for-exception-safety), mas evite a captura e a geração de exceções sempre que possível. Se não houver nenhum manipulador para uma exceção, o Windows vai gerar automaticamente um relatório de erros (incluindo um minidespejo da falha), que ajudará você a detectar onde está o problema.
 
-Não gere uma exceção que você pretende capturar. E não use exceções para falhas esperadas. Gere uma exceção *somente quando ocorrer um erro de tempo de execução inesperado* e manipule todo o restante com códigos de erro/resultado&mdash;diretamente, e feche a origem da falha. Dessa forma, quando uma exceção *for* gerada, você saberá que a causa é um bug no código ou um estado de erro excepcional no sistema.
+Não gere uma exceção que você pretende capturar. E não use exceções para falhas esperadas. Gere uma exceção *somente quando ocorrer um erro de runtime inesperado* e manipule todo o restante com códigos de erro/resultado&mdash;diretamente, e feche a origem da falha. Dessa forma, quando uma exceção *for* gerada, você saberá que a causa é um bug no código ou um estado de erro excepcional no sistema.
 
 Considere o cenário de acesso ao Registro do Windows. Se o aplicativo falhar ao ler um valor no Registro, isso era esperado, e você deve tratar a situação normalmente. Não gere uma exceção; em vez disso, retorne um valor `bool` ou `enum`, indicando que, e talvez por que, o valor não foi lido. Por outro lado, a falha ao *gravar* um valor no Registro, provavelmente indica que há um problema maior que você pode processar de maneira perceptível em seu aplicativo. Em casos assim, não é recomendado que o aplicativo continue. Portanto, uma exceção que resulta em um relatório de erros é a maneira mais rápida de impedir que o aplicativo cause danos.
 
@@ -27,7 +27,7 @@ Em outro exemplo, considere recuperar uma imagem em miniatura de uma chamada a [
 
 A geração de exceções tende a ser mais lenta do que usar códigos de erro. Caso uma exceção seja gerada somente quando um erro fatal ocorrer, e se tudo correr bem, você nunca terá um problema de desempenho.
 
-Mas um impacto mais provável no desempenho envolve a sobrecarga do tempo de execução ao garantir que os destruidores apropriados sejam chamados no evento improvável de geração da exceção. O custo dessa garantia é percebido não importando se uma exceção é de fato gerada ou não. Assim, você deve garantir que o compilador tenha uma boa noção sobre quais funções podem potencialmente gerar exceções. Se o compilador puder provar que não haverá qualquer exceção nas funções específicas (a especificação `noexcept`), é possível otimizar o código gerado.
+Mas um impacto mais provável no desempenho envolve a sobrecarga do runtime ao garantir que os destruidores apropriados sejam chamados no evento improvável de geração da exceção. O custo dessa garantia é percebido não importando se uma exceção é de fato gerada ou não. Assim, você deve garantir que o compilador tenha uma boa noção sobre quais funções podem potencialmente gerar exceções. Se o compilador puder provar que não haverá qualquer exceção nas funções específicas (a especificação `noexcept`), é possível otimizar o código gerado.
 
 ## <a name="catching-exceptions"></a>Capturando exceções
 Uma condição de erro que surge na camada [ABI do Windows Runtime](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) é retornada na forma de um valor HRESULT. Mas você não precisa processar HRESULTs em seu código. O código de projeção do C++/WinRT gerado para uma API no lado de consumo detecta um código de erro de HRESULT na camada ABI e converte o código em uma exceção [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error), que você pode capturar e processar. Se você *realmente* desejar processar HRESULTS, use o tipo **winrt::hresult**.
@@ -153,7 +153,7 @@ O código na seção anterior ainda falha rapidamente. Conforme escrito, esse c�
 
 Mas esse formato é superior, pois garante a capacidade de depuração. Em casos raros, talvez você deseje aplicar `try/catch` e tratar determinadas exceções. Mas isso deve ser raro porque, como este tópico explica, não recomendamos o uso de exceções como um mecanismo de controle de fluxo para condições esperadas.
 
-Lembre-se de que é uma boa ideia deixar uma exceção sem tratamento fazer escape de um contexto `noexcept` naked. Sob essa condição, o tempo de execução C++ usará **std::terminate** para terminar o processo, perdendo todas as informações de exceção recolhidas cuidadosamente registradas pelo C++/WinRT.
+Lembre-se de que é uma boa ideia deixar uma exceção sem tratamento fazer escape de um contexto `noexcept` naked. Sob essa condição, o runtime C++ usará **std::terminate** para terminar o processo, perdendo todas as informações de exceção recolhidas cuidadosamente registradas pelo C++/WinRT.
 
 ## <a name="assertions"></a>Asserções
 Para suposições internas em seu aplicativo, existem asserções. Prefira **static_assert** para a validação de tempo de compilação sempre que possível. Para condições de tempo de execução, use `WINRT_ASSERT` com uma expressão booliana. `WINRT_ASSERT` é uma definição de macro e se expande para [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
@@ -171,7 +171,7 @@ WINRT_VERIFY(::CloseHandle(value));
 WINRT_VERIFY_(TRUE, ::CloseHandle(value));
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Modelo de função winrt::check_bool](/uwp/cpp-ref-for-winrt/error-handling/check-bool)
 * [Função winrt::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
 * [Modelo de função winrt::check_nt](/uwp/cpp-ref-for-winrt/error-handling/check-nt)

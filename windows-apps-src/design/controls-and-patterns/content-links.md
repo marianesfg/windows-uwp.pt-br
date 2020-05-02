@@ -11,10 +11,10 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b72d7fced63a4c3ef4b1b233afcbb9f9874d9a3f
-ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68796716"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
@@ -154,7 +154,7 @@ O seletor de Locais cria um ContentLinkInfo com uma raiz de URI de https://maps.
 - Se LinkContentKind não for "Locais", ele tenta abrir o aplicativo **Mapas** na localização especificada. Por exemplo, isso poderá acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
 - Se o URI não puder ser aberto no aplicativo Mapas, o mapa será aberto no navegador padrão. Isso normalmente acontece quando as configurações _aplicativos para sites_ do usuário não permitirem abrir o URI com o aplicativo **Mapas**.
 
-##### <a name="people"></a>People
+##### <a name="people"></a>Pessoas
 
 O seletor de pessoas cria um ContentLinkInfo com um URI que usa o protocolo **ms-people**.
 

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c95d915c8906e2052243fee509e260fc8864454
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258364"
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
@@ -69,8 +69,8 @@ Se você quiser personalizar o dispositivo e instalar outros recursos ou pacotes
 
 Para obter a lista completa de ferramentas e downloads, consulte [Downloads](https://developer.microsoft.com/windows/downloads).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 * [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
-* [O que é um aplicativo UWP?](universal-application-platform-guide.md)
+* [O que é um aplicativo da UWP?](universal-application-platform-guide.md)
 * [Criar uma conta do Windows](sign-up.md)

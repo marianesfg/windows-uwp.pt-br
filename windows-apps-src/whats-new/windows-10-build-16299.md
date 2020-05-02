@@ -6,15 +6,15 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c54321d1d9db95a33d2de6363a79d93243c07d1f
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258884"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novidades no Windows 10 para desenvolvedores, build 16299
 
-O Windows 10, build 16299 (também conhecido como Fall Creators Update ou versão 1709), junto com o Visual Studio 2019 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para criar aplicativos incríveis da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+O Windows 10, build 16299 (também conhecido como Fall Creators Update ou versão 1709), junto com o Visual Studio 2019 e o SDK atualizado, fornece as ferramentas, os recursos e as experiências para criar aplicativos incríveis da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/create-uwp-apps.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 Esta é uma coleção de recursos novos e aprimorados e diretrizes de interesse para os desenvolvedores do Windows neste lançamento. Para obter uma lista completa de namespaces novos adicionados ao SDK do Windows, confira as [Alterações na API do Windows 10 build 16299](windows-10-build-16299-api-diff.md). Para saber mais sobre os recursos em destaque do Windows 10, confira [Novidades no Windows 10](https://developer.microsoft.com/windows/windows-10-for-developers). Além disso, confira [Recursos da Plataforma para Desenvolvedores Windows](https://developer.microsoft.com/windows/platform/features) para ter mais detalhes das adições passadas e futuras à plataforma do Windows.
 
@@ -86,7 +86,7 @@ Listagens da Loja | A listagem da Store foi aperfeiçoada com novos recursos par
 API de envio | Agora, a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) permite que você inclua [trailers de vídeo](../monetize/manage-app-submissions.md#trailer-object) e [opções de jogos](../monetize/manage-app-submissions.md#gaming-options-object) com seus envios de aplicativo.
 Ofertas direcionadas | [Ofertas direcionadas](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md) permitem que você direcione segmentos específicos dos seus clientes com conteúdo atrativo e personalizado, para aumentar o envolvimento, a retenção e a monetização.
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 ### <a name="lunch-scheduler"></a>Lunch Scheduler
 

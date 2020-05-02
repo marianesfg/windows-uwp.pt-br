@@ -8,10 +8,10 @@ ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f30ba67acc12d622acd09f9fae872ee2058a2f
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66215153"
 ---
 # <a name="using-the-visual-layer-with-wpf"></a>Usar a Camada Visual com WPF
@@ -46,7 +46,7 @@ Para criar um projeto de aplicativo WPF no C# visual chamado _HelloComposition_:
 
 1. Abra o Visual Studio e selecione **Arquivo** > **Novo** > **Projeto**.
 
-    A caixa de diálogo **Novo projeto** é aberta.
+    A caixa de diálogo **Novo Projeto** é aberta.
 1. Na categoria **Instalado**, expanda o nó **Visual C#** e selecione **Área de trabalho do Windows**.
 1. Selecione o modelo de **aplicativo WPF (.NET Framework)** .
 1. Nomeie-o como _HelloComposition_, selecione a estrutura **.NET Framework 4.7.2** e clique em **OK**.

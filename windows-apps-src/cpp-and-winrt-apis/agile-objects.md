@@ -6,24 +6,24 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66360327"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágeis em C++/WinRT
 
 Na maior parte dos casos, uma instância da classe do Windows Runtime pode ser acessada de qualquer thread (da mesma forma que a maioria dos objetos C++ podem). Essa classe do Windows Runtime é *ágil*. Apenas poucas classes do Windows Runtime que acompanham o Windows não são ágeis, mas ao consumi-las, é necessário levar em consideração o modelo de threading e o comportamento de marshaling (transmissão de dados por um limite de apartment). É um padrão conveniente que todos os objetos do Windows Runtime sejam ágeis, portanto, os seus próprios tipos do [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) serão ágeis por padrão.
 
-Mas você poderá recusar esse padrão. É possível que você tenha um motivo convincente para exigir que um objeto do seu tipo resida, por exemplo, em um determinado single-threaded apartment. Normalmente, isso envolve os requisitos de reentrância. Entretanto, cada vez mais, até mesmo as APIs da interface do usuário oferecem objetos ágeis. Em geral, a agilidade é a opção mais simples e eficiente. Além disso, quando você implementa um alocador de ativação, ele deve ser ágil mesmo que a classe de tempo de execução correspondente não seja.
+Mas você poderá recusar esse padrão. É possível que você tenha um motivo convincente para exigir que um objeto do seu tipo resida, por exemplo, em um determinado single-threaded apartment. Normalmente, isso envolve os requisitos de reentrância. Entretanto, cada vez mais, até mesmo as APIs da interface do usuário oferecem objetos ágeis. Em geral, a agilidade é a opção mais simples e eficiente. Além disso, quando você implementa um alocador de ativação, ele deve ser ágil mesmo que a classe de runtime correspondente não seja.
 
 > [!NOTE]
 > O Windows Runtime se baseia em COM. Em termos COM, uma classe ágil é registrada com `ThreadingModel` = *Ambos*. Para saber mais sobre os modelos de threading COM e apartments, confira as [noções básicas e uso de modelos de threading COM](/previous-versions/ms809971(v=msdn.10)).
 
 ## <a name="code-examples"></a>Exemplos de código
 
-Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++/WinRT dá suporte à agilidade.
+Vamos usar um exemplo de implementação de uma classe de runtime para ilustrar como C++/WinRT dá suporte à agilidade.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -74,7 +74,7 @@ struct MyImplementation: implements<MyImplementation, IStringable, winrt::non_ag
 }
 ```
 
-Se você estiver criando uma classe de tempo de execução.
+Se você estiver criando uma classe de runtime.
 
 ```cppwinrt
 struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
@@ -113,7 +113,7 @@ winrt::hstring message{ nonagile_obj_again.Message() };
 
 A chamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-function) retorna um proxy que pode ser utilizado com segurança dentro do contexto de thread no qual **get** é chamado.
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 
 * [Interface IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject)
 * [Interface IMarshal](/windows/desktop/api/objidl/nn-objidl-imarshal)

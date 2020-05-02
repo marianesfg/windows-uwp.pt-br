@@ -7,10 +7,10 @@ keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, COM, com
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5ff3677c3624974759d1f6ff21d6e53cf9d33144
-ms.sourcegitcommit: c5699e74b60c5c7a88658b4ebe30c1475eef5c27
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71344513"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Criar componentes COM com C++/WinRT
@@ -19,7 +19,7 @@ O [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) pod
 
 ## <a name="how-cwinrt-behaves-by-default-with-respect-to-com-interfaces"></a>Como C++/WinRT se comporta, por padrão, em relação a interfaces COM
 
-O modelo [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) de C++/WinRT é a base da qual suas classes de tempo de execução e as fábricas de ativação derivam direta ou indiretamente.
+O modelo [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) de C++/WinRT é a base da qual suas classes de runtime e as fábricas de ativação derivam direta ou indiretamente.
 
 Por padrão, **winrt::implements** dá suporte apenas a interfaces baseadas em [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable) e ignora silenciosamente interfaces COM clássicas. Qualquer chamada de **QueryInterface** (QI) para interfaces COM clássicas, consequentemente, falharão com **E_NOINTERFACE**.
 
@@ -584,7 +584,7 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 };
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Interface IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [Interface IUnknown](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 * [Modelo de struct winrt::implements](/uwp/cpp-ref-for-winrt/implements)

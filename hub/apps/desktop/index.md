@@ -8,10 +8,10 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.openlocfilehash: c27826980127674b4a4356af8a3c36056e86bd83
-ms.sourcegitcommit: cf88f5e8e1de476ed2635e791a5e5e82ae4bd8cf
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74056866"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Crie aplicativos da área de trabalho para PCs Windows
@@ -43,22 +43,22 @@ A tabela a seguir apresenta as plataformas. Para uma comparação detalhada dess
 <tr class="odd">
 <td><a href="https://docs.microsoft.com/windows/uwp/">UWP (Plataforma Universal do Windows)</a></td>
 <td><p>A plataforma de ponta para jogos e aplicativos do Windows 10. Você pode criar aplicativos UWP que usam exclusivamente controles e APIs da UWP ou pode usar controles e APIs da UWP em aplicativos de área de trabalho criados com uma das outras plataformas.</p></td>
-<td><a href="/windows/uwp/get-started/">Introdução</a><br/><a href="/uwp/">Referência de API</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">Exemplos</a></td>
+<td><a href="/windows/uwp/get-started/">Introdução</a><br/><a href="/uwp/">Referência de API</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">Amostras</a></td>
 </tr>
 <tr class="even">
 <td><a href="https://docs.microsoft.com/windows/win32/">Win32</a></td>
 <td><p>A plataforma preferencial para aplicativos nativos do Windows em C/C++ que exigem acesso direto ao Windows e ao hardware.</p></td>
-<td><a href="/windows/win32/desktop-programming/">Introdução</a><br/><a href="/windows/win32/apiindex/windows-api-list/">Referência de API</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">Exemplos</a></td>
+<td><a href="/windows/win32/desktop-programming/">Introdução</a><br/><a href="/windows/win32/apiindex/windows-api-list/">Referência de API</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">Amostras</a></td>
 </tr>
 <tr class="odd">
 <td><a href="https://docs.microsoft.com/dotnet/framework/wpf/">WPF</a></td>
 <td><p>A plataforma baseada em .NET bem estabelecida para aplicativos do Windows gerenciados e avançados graficamente com um modelo de interface do usuário em XAML. Esses aplicativos podem ter como destino o <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> ou o .NET Framework completo.</p></td>
-<td><a href="/dotnet/framework/wpf/getting-started/">Introdução</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referência de API (.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">Exemplos</a></td>
+<td><a href="/dotnet/framework/wpf/getting-started/">Introdução</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referência de API (.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">Amostras</a></td>
 </tr>
 <tr class="even">
 <td><a href="https://docs.microsoft.com/dotnet/framework/winforms/">Windows Forms</a></td>
 <td><p>Uma plataforma baseada em .NET criada para aplicativos de linha de negócios gerenciados com um modelo leve de interface do usuário. Esses aplicativos podem ter como destino o <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> ou o .NET Framework completo.</p></td>
-<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introdução</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referência de API (.NET)</a><br/><a href="https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=Windows%20Forms">Exemplos</a></td>
+<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introdução</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referência de API (.NET)</a><br/><a href="https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=Windows%20Forms">Amostras</a></td>
 </tr>
 </tbody>
 </table>

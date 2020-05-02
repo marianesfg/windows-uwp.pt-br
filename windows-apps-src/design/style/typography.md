@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282408"
 ---
 # <a name="typography"></a>Tipografia
@@ -19,7 +19,7 @@ ms.locfileid: "72282408"
 
 Como a representação visual da linguagem, a principal tarefa da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, discutiremos como definir o estilo de tipografia em seu aplicativo UWP para ajudar os usuários a entenderem o conteúdo de modo fácil e eficiente.
 
-## <a name="font"></a>Font
+## <a name="font"></a>Fonte
 
 Você precisa usar uma fonte em toda a interface do usuário do aplicativo, e recomendamos manter a fonte padrão para aplicativos UWP, a **Segoe UI**. Ela foi projetado para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
