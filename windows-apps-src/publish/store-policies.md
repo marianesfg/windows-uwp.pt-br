@@ -7,10 +7,10 @@ keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
 ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79209351"
 ---
 # <a name="microsoft-store-policies"></a>Políticas da Microsoft Store
@@ -379,7 +379,7 @@ Os produtos que emulam um sistema de jogo não são permitidos em qualquer famí
 
 **10.13.11**
 
-Os seguintes requisitos de privacidade se aplicam aos dados de usuário do Xbox Live:
+Os seguintes requisitos de privacidade se aplicam aos dados de usuário do Xbox Live: 
 - Os serviços e dados do usuário devem ser usadas apenas em seu jogo por você. Não venda, licencie ou compartilhe os dados fornecidos por nós ou nossos serviços. Se você receber dados pessoais de usuários finais por meio do Xbox Live, você será um controlador independente de tais dados e deverá ter uma política de privacidade em vigor com os usuários finais que regule o uso que você faz de dados pessoais, conforme exigido pelo Contrato de Desenvolvedor de Aplicativos. Recomendamos que você inclua um link para sua política de privacidade em seu site e nas páginas de seus jogos na Microsoft Store.
 - Os serviços e dados do usuário devem ser usados adequadamente nos jogos. Esses dados incluem (sem limitação) dados de uso, identificadores de conta e quaisquer outros dados de identificação pessoal, estatísticas, pontuações, classificações, avaliações, conexões com outros usuários e outros dados relacionados a atividades sociais do usuário.
 - Não armazene dados de gráficos sociais do Xbox Live (por exemplo, listas de amigos), com exceção de identificadores de conta para usuários que vincularam suas contas do Xbox Live ao jogo.
@@ -400,7 +400,7 @@ As seguintes políticas se aplicam ao conteúdo e aos metadados (incluindo o nom
 O conteúdo dos metadados e qualquer outro conteúdo que você enviar para acompanhar seu produto devem fazer jus à classificação PEGI 12, ESRB EVERYONE 10+ ou inferior.
 
 
-### <a name="112-content-including-names-logos-original-and-third-party"></a>11.2 Conteúdo Original e de Terceiros que Inclua Nomes e Logotipos
+### <a name="112-content-including-names-logos-original-and-third-party"></a> 11.2 Conteúdo Original e de Terceiros que Inclua Nomes e Logotipos
 
 Todo o conteúdo existente em seu produto e os metadados associados devem ser originalmente criados pelo fornecedor do aplicativo, devidamente licenciados pelo detentor de seus respectivos direitos, usados, conforme permitido pelo detentor desses direitos ou usados de alguma forma permitida por lei.
 
