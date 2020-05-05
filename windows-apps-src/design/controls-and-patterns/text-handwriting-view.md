@@ -12,15 +12,15 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684281"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com exibição de texto manuscrito
 
-![Caixa de texto se expande quando tocada com a caneta](images/handwritingview/handwritingview2.gif)
+![Caixa de texto se expande quando tocado com a caneta](images/handwritingview/handwritingview2.gif)
 
 Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto UWP, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), e controles derivados destes, como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
 

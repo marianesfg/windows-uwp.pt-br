@@ -12,10 +12,10 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b781e6074468fbe73446e4057e36ff31266d05
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72165093"
 ---
 # <a name="selection-mode-overview"></a>Visão geral do modo de seleção
@@ -25,9 +25,9 @@ O modo de seleção permite que os usuários selecionem e executem ações em um
 ## <a name="different-selection-modes"></a>Modos de seleção diferentes
 Há três modos de seleção diferentes:
 
-- Único: o usuário pode selecionar apenas um item de cada vez.
-- Múltiplo: o usuário pode selecionar vários itens sem usar um modificador.
-- Estendido: o usuário pode selecionar diversos itens com um modificador, como ao segurar a tecla SHIFT.
+- Única: o usuário pode selecionar apenas um item de cada vez.
+- Múltipla: o usuário pode selecionar vários itens sem usar um modificador.
+- Estendida: o usuário pode selecionar vários itens com um modificador, por exemplo, segurando a tecla SHIFT.
 
 ## <a name="selection-mode-examples"></a>Exemplos de modos de seleção
 ### <a name="here-is-a-listview-with-single-selection-mode-enabled"></a>Aqui está um ListView com o modo de seleção única habilitado.

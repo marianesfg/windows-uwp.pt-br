@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089492"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu aplicativo UWP
 
-Você pode usar o Azure Pipelines para criar builds automatizados para seus projetos da UWP. Neste artigo, vamos analisar diferentes maneiras de fazer isso. Também mostraremos como realizar essas tarefas usando a linha de comando para que seja possível fazer a integração com qualquer sistema de build.
+Você pode usar o Azure Pipelines para criar builds automatizados para seus projetos da UWP. Neste artigo, vamos analisar diferentes maneiras de fazer isso. Também mostraremos como realizar essas tarefas usando a linha de comando para que seja possível integrar com qualquer outro sistema de build.
 
 ## <a name="create-a-new-azure-pipeline"></a>Crie um novo pipeline do Azure
 

@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73062759"
 ---
 # <a name="app-analysis-overview"></a>Visão geral da análise de aplicativo
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Exemplo 2 de code-behind (ruim) – configurar o UriSource de BitmapImage antes de conectá-lo à arvore.
+Exemplo 2 de code-behind (ruim) – configurar o UriSource do BitmapImage antes de conectá-lo à arvore.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -209,7 +209,7 @@ Use X:Key em vez de X:Name quando não estiver fazendo referência a recursos a 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>O controle de coletas está usando um painel sem virtualização
 
-Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos de ListView são acionados somente ao usar um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
+Se você oferece um modelo de painel de itens personalizado (consulte ItemsPanel), certifique-se de usar um painel de virtualização como ItemsWrapGrid ou ItemsStackPanel. Se você usar VariableSizedWrapGrid, WrapGrid ou StackPanel, não obterá a virtualização. Além disso, os seguintes eventos ListView serão gerados somente quando você estiver usando um ItemsWrapGrid ou um ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer e ContainerContentChanging.
 
 A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer para melhorar o desempenho da coleta. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. ListView e GridView (e outros controles derivados de ItemsControl padrão) executam a virtualização de interface do usuário para você. Quando os itens estão quase sendo rolados para a exibição (a algumas páginas distância), a estrutura gera a interface do usuário para os itens e os armazena em cache. Quando torna-se improvável que os itens sejam mostrados novamente, a estrutura recupera a memória.
 

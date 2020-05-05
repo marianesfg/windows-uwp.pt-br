@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36835a198d03a8ad5f5e811a74e120c9bbd25c08
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258584"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinando a disponibilidade de arquivos do Microsoft OneDrive
@@ -42,10 +42,10 @@ Os usuários podem marcar os arquivos OneDrive como disponível offline (padrão
 
 | Tipo de arquivo                              | Online | Rede limitada        | Offline |
 |-------------------------------------------|--------|------------------------|---------|
-| Arquivo local                                | True   | True                   | True    |
-| Arquivo OneDrive marcado como disponível offline | True   | True                   | True    |
-| Arquivo OneDrive marcado como somente online       | True   | Baseado nas configurações do usuário | False   |
-| Arquivo de rede                              | True   | Baseado nas configurações do usuário | False   |
+| Arquivo local                                | verdadeiro   | verdadeiro                   | verdadeiro    |
+| Arquivo OneDrive marcado como disponível offline | verdadeiro   | verdadeiro                   | verdadeiro    |
+| Arquivo OneDrive marcado como somente online       | verdadeiro   | Baseado nas configurações do usuário | False   |
+| Arquivo de rede                              | verdadeiro   | Baseado nas configurações do usuário | False   |
 
  
 
@@ -53,7 +53,7 @@ As etapas a seguir ilustram como determinar se um arquivo está disponível no m
 
 1.  Declare uma funcionalidade apropriada para a biblioteca que você quer acessar.
 2.  Inclua o namespace [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage). Esse namespace inclui os tipos para gerenciamento de arquivos, pastas e configurações de aplicativos. Inclui também o tipo [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) necessário.
-3.  Obtenha um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para o(s) arquivo(s) desejado(s). Se estiver enumerando uma biblioteca, essa etapa será normalmente realizada pela chamada ao método [**StorageFolder.CreateFileQuery**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfilequery) e, depois, chamando o método [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) do objeto resultante [**StorageFileQueryResult**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.StorageFileQueryResult). O método **GetFilesAsync** retorna uma coleção [IReadOnlyList](https://msdn.microsoft.com/library/hh192385.aspx) de objetos **StorageFile**.
+3.  Obtenha um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para o(s) arquivo(s) desejado(s). Se estiver enumerando uma biblioteca, essa etapa será normalmente realizada pela chamada ao método [**StorageFolder.CreateFileQuery**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.createfilequery) e, depois, chamando o método [**GetFilesAsync**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.StorageFileQueryResult) do objeto resultante [**StorageFileQueryResult**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync). O método **GetFilesAsync** retorna uma coleção [IReadOnlyList](https://msdn.microsoft.com/library/hh192385.aspx) de objetos **StorageFile**.
 4.  Quando você tiver acesso a um objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) representando os arquivos desejados, o valor da propriedade [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) refletirá se o arquivo está ou não disponível.
 
 O método genérico a seguir ilustra como enumerar qualquer pasta e retorna a coleção de objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) dessa pasta. O método chamado faz a iteração sobre a coleção retornada, referenciando a propriedade [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) de cada arquivo.

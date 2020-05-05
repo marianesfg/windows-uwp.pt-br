@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c4b1a0dab6bf1eb3301ba9fb97abd95fd896c53e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259165"
 ---
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
@@ -22,7 +22,7 @@ Uma rápida visão geral das tecnologias de rede disponíveis para um desenvolve
 
 Use [soquetes](sockets.md) quando você se comunicar com outro dispositivo e desejar usar seu próprio protocolo.
 
-Há duas implementações de soquetes disponíveis para desenvolvedores da UWP (Plataforma Universal do Windows): [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) e [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
+Há duas implementações de soquetes disponíveis para desenvolvedores da Plataforma Universal do Windows (UWP): [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) e [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2). Se você estiver escrevendo código novo, Windows.Networking.Sockets tem a vantagem de ser uma API moderna, desenvolvida para uso por desenvolvedores UWP. Se você estiver usando bibliotecas de rede de plataforma cruzada ou outro código Winsock existente, ou se preferir a API Winsock, use essa.
 
 ### <a name="when-to-use-sockets"></a>Quando usar soquetes
 

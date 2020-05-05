@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e17b155966c609537c40050edc4c11ee6935b0d
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089462"
 ---
 # <a name="enterprise"></a>Enterprise
@@ -128,7 +128,7 @@ Os aplicativos de linha de negócios com frequência precisam se comunicar com u
 | [Serialização de XML e SOAP](https://docs.microsoft.com/dotnet/framework/serialization/xml-and-soap-serialization) | A serialização XML converte objetos em um fluxo XML que obedece a uma determinada linguagem de definição de esquema XML (XSD). Para converter XML em uma classe fortemente tipada, você pode usar a classe nativa [XDocument](https://docs.microsoft.com/dotnet/api/system.xml.linq.xdocument) ou uma biblioteca externa. |
 | [Serialização JSON](https://docs.microsoft.com/uwp/api/Windows.Data.Json) | A serialização JSON (JavaScript Object Notation) é um formato popular para comunicação com APIs REST. O [Newtonsoft Json.NET](https://www.newtonsoft.com/json), que é totalmente compatível com os aplicativos da UWP. |
 
-## <a name="devices"></a>Dispositivos
+## <a name="devices"></a>.
 
 Para fazer integração com ferramentas de linha de negócios, como impressoras, scanners de código de barras ou leitores de cartão inteligente, talvez seja necessário integrar dispositivos externos ou sensores no seu aplicativo. Aqui estão alguns exemplos de recursos que você pode adicionar ao seu aplicativo usando a tecnologia descrita nesta seção.
 
@@ -155,7 +155,7 @@ Você tem opções para distribuir aplicativos aos usuários da sua organizaçã
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Documentação de MSIX](https://docs.microsoft.com/windows/msix/) | O MSIX é um formato de pacote do aplicativo do Windows que combina os melhores recursos de MSI, .appx, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável. |
+| [Documentação de MSIX](https://docs.microsoft.com/windows/msix/) | O MSIX é um formato de pacote de aplicativos do Windows que combina os melhores recursos de MSI, .appx, App-V e ClickOnce para fornecer uma experiência de empacotamento moderna e confiável. |
 | [Distribua aplicativos LOB às empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | Conheça as opções para distribuir aplicativos de linha de negócios sem tornar os aplicativos amplamente disponíveis ao público, incluindo a implantação baseada no Instalador de Aplicativo, o Microsoft Endpoint Configuration Manager e o Microsoft Intune e a publicação no Microsoft Store para Empresas. |
 | [Sideload de apps](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
 | [Publicar aplicativos para a Microsoft Store](https://developer.microsoft.com/store/publish-apps) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |

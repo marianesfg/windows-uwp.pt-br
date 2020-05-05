@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de runtime, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: fcdeaec3728306de420baa4a2aea06ef1952641e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209271"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255260"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -32,7 +32,7 @@ Em ambos os casos, o tipo que implementa as APIs C++/WinRT é denominado *tipo d
 O cenário mais simples é aquele em que você implementará uma interface do Windows Runtime para consumo local. Você não precisa de uma classe de runtime; apenas uma classe C++ comum. Por exemplo, você pode estar escrevendo um aplicativo com base em [**CoreApplication**](/uwp/api/windows.applicationmodel.core.coreapplication).
 
 > [!NOTE]
-> Para obter informações sobre como instalar e usar o C++/WinRT Visual Studio Extension (VSIX) e o pacote NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira as informações de [suporte do Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para saber mais sobre como instalar e usar a VSIX (Extensão do Visual Studio) para C++/WinRT e o pacote do NuGet (que juntos fornecem um modelo de projeto e suporte ao build), confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 No Visual Studio, o modelo de projeto do Aplicativo Core **Windows Universal** >  do **Visual Studio C++**  >  **(C++/WinRT)** ilustra o padrão **CoreApplication**. O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
@@ -239,7 +239,7 @@ Já vimos que o fluxo de trabalho é usar o IDL para declarar sua classe de runt
 Aqui estão alguns exemplos.
 
 - Você pode relaxar os tipos de parâmetro. Por exemplo, se no IDL seu método usar uma **SomeClass**, você poderá optar por alterá-la para **IInspectable** em sua implementação. Isso funciona porque qualquer **SomeClass** pode ser encaminhada para **IInspectable** (o inverso, obviamente, não funcionaria).
-- Você pode aceitar um parâmetro copiável por valor, em vez de por referência. Por exemplo, altere `SomeClass` para `SomeClass const&`. Isso é necessário quando você precisa evitar capturar uma referência em uma corrotina (consulte [Passagem de parâmetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
+- Você pode aceitar um parâmetro copiável por valor, em vez de por referência. Por exemplo, altere `SomeClass const&` para `SomeClass`. Isso é necessário quando você precisa evitar capturar uma referência em uma corrotina (consulte [Passagem de parâmetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
 - Você pode relaxar o valor retornado. Por exemplo, você pode alterar **void** para [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget).
 
 Os dois últimos são muito úteis quando você está escrevendo um manipulador de eventos assíncronos.
@@ -316,7 +316,7 @@ Nos casos em que você tem um objeto de interface e sabe que é uma interface na
 > [!NOTE]
 > Se você ainda não instalou o SDK do Windows, versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior, você precisará chamar [**winrt::from_abi**](/uwp/cpp-ref-for-winrt/from-abi) em vez de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-Aqui está um exemplo. Há outro exemplo no artigo [Implementar a classe personalizada **BgLabelControl**](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
+Veja um exemplo. Há outro exemplo no artigo [Implementar a classe personalizada **BgLabelControl**](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)

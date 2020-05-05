@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f76f093724788dbf7d32133acaf2e16e933b166
-ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
+ms.openlocfilehash: 2b28c4271865c813aa8a0f327fba96f995370301
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80290038"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81759936"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -62,8 +62,8 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Mover do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico descreve os detalhes técnicos envolvidos na portabilidade do código-fonte em um projeto [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) para seu equivalente em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
 | [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre objetos de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) e de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
 | [Mudar do WRL para o C++/WinRT](move-to-winrt-from-wrl.md) | Este tópico mostra como fazer a portabilidade o código da [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](/cpp/windows/windows-runtime-cpp-template-library-wrl) para seu equivalente no [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
-| [Portando o exemplo da área de transferência de C# para C++/WinRT&mdash;um estudo de caso](clipboard-to-winrt-from-csharp.md) | Este tópico apresenta um estudo de caso de portabilidade de um [exemplo de aplicativo UWP (Plataforma Universal do Windows)](https://github.com/microsoft/Windows-universal-samples) de [C#](/visualstudio/get-started/csharp) para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
-| [Mover do C# para C++/WinRT](move-to-winrt-from-csharp.md) | Este tópico descreve os detalhes técnicos envolvidos em portar o código-fonte em um projeto [C#](/visualstudio/get-started/csharp) para seu equivalente em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
+| [Portando o exemplo da área de transferência de C# para C++/WinRT&mdash;um estudo de caso](clipboard-to-winrt-from-csharp.md) | Este tópico apresenta um estudo de caso de portabilidade de um [exemplo de aplicativo UWP (Plataforma Universal do Windows)](https://github.com/microsoft/Windows-universal-samples) de [C#](/visualstudio/get-started/csharp) para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Você pode adquirir prática e experiência em portabilidade seguindo o passo a passo e fazendo a portabilidade da amostra para si mesmo à medida que avança. |
+| [Mover do C# para C++/WinRT](move-to-winrt-from-csharp.md) | Este tópico cataloga de modo abrangente os detalhes técnicos envolvidos em portar o código-fonte em um projeto [C#](/visualstudio/get-started/csharp) para seu equivalente em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
 | [Referências fortes e fracas em C++/WinRT](weak-references.md) | O Windows Runtime é um sistema de contagem de referência; e, em um sistema desse tipo, é importante que você conheça o significado e a distinção entre referências fortes e fracas. |
 | [Objetos ágeis](agile-objects.md) | Um objeto ágil é aquele que pode ser acessado de qualquer thread. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los. |

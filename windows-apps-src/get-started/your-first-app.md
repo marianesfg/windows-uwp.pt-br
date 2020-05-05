@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, uwp, primeiro aplicativo, c#, c + +, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75685156"
 ---
 # <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
@@ -69,7 +69,7 @@ Aplicativos Web podem ser empacotados facilmente na estrutura da UWP como aplica
 * [Converter seu aplicativo Web em um aplicativo UWP](../porting/hwa-create-windows.md)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
 * [Comece a codificar](create-uwp-apps.md)
 * [O que é um aplicativo da UWP?](universal-application-platform-guide.md)

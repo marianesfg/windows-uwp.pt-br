@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0b38cf60f1f890649af33ad34f244bc348af2832
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257874"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148698"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -54,7 +54,7 @@ O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos di
 ### <a name="installing"></a>Instalando o
 O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [página de download do Visual Studio](https://developer.microsoft.com/windows/downloads).
 
-Também é possível instalar o Emulador Microsoft para Windows 10 Mobile usando a [instalação do Microsoft Emulator](https://go.microsoft.com/fwlink/p/?LinkID=615095).
+Também é possível instalar o Emulador Microsoft para Windows 10 Mobile usando a [instalação do Microsoft Emulator](https://download.microsoft.com/download/E/3/4/E347E8C5-BD79-49AF-941C-D08893A45268/emulator/EmulatorSetup.exe).
 
 ### <a name="uninstalling"></a>Desinstalação
 
@@ -362,7 +362,7 @@ No modo **Rota** você pode selecionar um dos seguintes perfis de velocidade na 
 
 | Perfil | Velocidade por hora               | Velocidade por segundo | Descrição | 
 |---------|------------------------------|------------------|-------------|
-| Limite de velocidade | Limite de velocidade da rota | Não Aplicável   | Atravessa a rota no limite de velocidade postado. |
+| Limite de velocidade | Limite de velocidade da rota | Não aplicável   | Atravessa a rota no limite de velocidade postado. |
 | Caminhada     | 5 km/h                   | 1,39 m           | Atravessa a rota em um passo de caminhada natural de 5 km/h. |
 | Pedalando      | 25 km/h                  | 6,94 m           | Atravessa a rota em uma pedalada natural de 25 km/h. |
 | Rápido        |                          |                  |Atravessa a rota mais rápido do que o limite de velocidade postado. | 
@@ -646,13 +646,13 @@ Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de 
 Para desativar a aceleração de hardware:
 
 1. Abra o Editor do Registro.
-2. Se não existir, crie a subchave de Registro a seguir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+2. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
 4. Clique em **DisableRemoteFx** e pressione Enter.
 5. Clique duas vezes em **DisableRemoteFx**, digite 1 na caixa de dados **Valor**, selecione a opção **Decimal** e, em seguida, clique em **OK**.
 6. Feche o Editor do Registro.
 
-**Observação**: depois de definir esse valor de Registro, você precisa excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
+**Observação:** depois de definir esse valor de Registro, você deve excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
 
 ## <a name="support-resources"></a>Recursos de suporte
 

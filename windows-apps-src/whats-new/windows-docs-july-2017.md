@@ -6,15 +6,15 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684746"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novidades nos documentos do desenvolvedor do Windows em julho de 2017
 
-A Documentação do Desenvolvedor do Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Foram disponibilizadas visões gerais de recursos, diretrizes para desenvolvedores e exemplos de código a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
+A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Foram disponibilizadas visões gerais de recursos, diretrizes para desenvolvedores e exemplos de código a seguir, contendo informações novas e atualizadas para desenvolvedores do Windows.
 
 [Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/your-first-app.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -72,7 +72,7 @@ Os seguintes recursos novos estão disponíveis:
 
 * A listagem da Store do seu aplicativo agora pode incluir [trailers de vídeo](../publish/app-screenshots-and-images.md#trailers).
 
-* Novos opções de disponibilidade e preços permitem [agendar alterações de preço](../publish/set-and-schedule-app-pricing.md) e [definir datas de lançamento precisas](..//publish/configure-precise-release-scheduling.md).
+* Novos preços e opções de disponibilidade permitem [agendar alterações de preço](../publish/set-and-schedule-app-pricing.md) e [definir datas de lançamento precisas](..//publish/configure-precise-release-scheduling.md).
 
 * É possível [importar e exportar as listagens da Store](../publish/import-and-export-store-listings.md) para fazer atualizações de forma mais rápida, especialmente se você tiver listagens em vários idiomas.
 

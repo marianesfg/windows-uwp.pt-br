@@ -6,17 +6,17 @@ ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74902466"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novidades nos Documentos de Desenvolvedor do Windows em janeiro de 2019
 
 A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores e os vídeos a seguir foram disponibilizados em janeiro.
 
-[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/create-uwp-apps.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -68,7 +68,7 @@ Nossas [perguntas frequentes](/windows/communitytoolkit/controls/wpf-winforms/we
 
 ## <a name="videos"></a>Vídeos
 
-### <a name="progressive-web-apps"></a>Aplicativos Web progressivos
+### <a name="progressive-web-apps"></a>Aplicativos Web Progressivos
 
 Aplicativos Web progressivos são sites da Web que funcionam como aplicativos nativos em diferentes navegadores e uma ampla variedade de dispositivos do Windows 10. [Assista ao vídeo](https://youtu.be/ugAewC3308Y) para saber mais e [confira os documentos](https://developer.microsoft.com/windows/pwa) para começar a usar.
 

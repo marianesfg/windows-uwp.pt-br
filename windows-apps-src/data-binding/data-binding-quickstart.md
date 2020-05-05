@@ -11,10 +11,10 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 0a967c923d9f8616a3a05af5bb0ebb612251d3b8
-ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71674541"
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
@@ -502,7 +502,7 @@ Há duas maneiras de lidar com isso. Você pode associar o modo de exibição de
 Se estiver usando extensões de componentes do C++/WinRT ou do Visual C++ (C++/CX), para usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension), você precisará adicionar o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) a qualquer classe de runtime à qual queira associá-lo. Você não precisa desse atributo para usar [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
 
 > [!IMPORTANT]
-> Caso você esteja usando [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) estará disponível se você tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para que seja possível usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension).
+> Se você estiver usando [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) estará disponível se você tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para que seja possível usar a extensão de marcação [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension).
 
 Primeiro, a técnica [**SelectedItem**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem).
 

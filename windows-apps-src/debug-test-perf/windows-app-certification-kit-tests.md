@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, app certification
 ms.localizationpriority: medium
 ms.openlocfilehash: 9de761a0b127d7218c7dc2bb4c6862626b7c60e4
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089422"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
@@ -178,7 +178,7 @@ Esse teste é realizado apenas em código gerenciado (C#, .NET etc.).
 
 ### <a name="span-idbinscope-2spansafeseh-exception-handling-protection"></a><span id="binscope-2"> </span>Proteção de tratamento de exceções /SafeSEH
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste SafeSEHCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SafeSEHCheck
 
 Um manipulador de exceções é executado quando o aplicativo encontra uma condição excepcional, tal como um erro de divisão por zero. Como o endereço do manipulador da exceção é armazenado na pilha quando uma função é chamadas, ele ficaria vulnerável a um ataque de estouro de buffer se algum software malicioso substituísse a pilha.
 
@@ -206,7 +206,7 @@ Recomendamos que você teste os seus aplicativos em uma CPU habilitada para DEP 
 
 ### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>ASLR (Address Space Layout Randomization)
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste DBCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste DBCheck
 
 O ASLR carrega imagens executáveis em locais imprevisíveis da memória, o que dificulta a ação de softwares mal-intencionados que esperam que um programa seja carregado em um determinado endereço virtual para operar de maneira previsível. Seu aplicativo e todos os componentes usados por ele devem oferecer suporte para ASLR.
 
@@ -222,7 +222,7 @@ Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenc
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Ler/gravar seção PE compartilhada
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste SharedSectionsCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SharedSectionsCheck.
 
 Arquivos binários com seções graváveis marcadas como compartilhadas são uma ameaça à segurança. Não compile aplicativos com seções graváveis compartilhadas, a não ser que isso seja realmente necessário. Use [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) ou [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile) para criar um objeto de memória compartilhado devidamente protegido.
 
@@ -236,7 +236,7 @@ Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenc
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste AppContainerCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste AppContainerCheck.
 
 AppContainerCheck verifica se o bit **appcontainer** no cabeçalho PE de um binário executável está definido. Os aplicativos devem ter o bit **appcontainer** em todos os arquivos .exe e em todas as DLLs não gerenciadas para serem executados corretamente.
 
@@ -252,7 +252,7 @@ Esse teste é realizado em todos os arquivos .exe e em todas as DLLs não gerenc
 
 ### <a name="span-idbinscope-7spanexecutableimportscheck"></a><span id="binscope-7"></span>ExecutableImportsCheck
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste ExecutableImportsCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste ExecutableImportsCheck.
 
 Uma imagem PE é reprovada nesse teste quando sua tabela de importação foi inserida em uma seção de código executável. Isso poderá ocorrer se você tiver habilitado a mesclagem de .rdata para a imagem PE, definindo o sinalizador */merge* do vinculador Visual C++ como */merge:.rdata=.text*.
 
@@ -266,7 +266,7 @@ Esse teste é realizado em todo o código binário, com exceção de assemblies 
 
 ### <a name="span-idbinscope-8spanwxcheck"></a><span id="binscope-8"></span>WXCheck
 
-**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste WXCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste WXCheck.
 
 A verificação ajuda a garantir que um binário não tenha nenhuma página mapeada como gravável e executável. Isso pode acontecer se o binário tem uma seção gravável e executável ou se *SectionAlignment* do binário é menor que *PAGE\-SIZE*.
 
@@ -595,11 +595,11 @@ Verifica se os arquivos **.winmd** no pacote estão em conformidade com as regra
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
--   **Teste do atributo ExclusiveTo:** Verifique se as classes UWP não implementem interfaces marcadas como outra classe ExclusiveTo.
--   **Teste de localização do tipo:** Verifique se os metadados de todos os tipos UWP estão localizados no arquivo winmd que tem o nome correspondente ao namespace mais longo no pacote do aplicativo.
--   **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipo:** Verifique se todos os tipos UWP têm nomes exclusivos que não diferenciam maiúsculas de minúsculas no pacote do aplicativo. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
--   **Teste de exatidão do nome de tipo:** Verifique se não há tipos UWP no namespace global nem no namespace de nível superior do Windows.
--   **Teste de exatidão dos metadados gerais:** Verifique se o compilador que você está usando para gerar seus tipos esteja atualizado de acordo com as especificações da UWP.
+-   **Teste do atributo ExclusiveTo:** assegure-se de que as classes UWP não implementem interfaces marcadas como outra classe ExclusiveTo.
+-   **Teste de localização de tipos:** assegure-se de que os metadados de todos os tipos UWP estejam localizados no arquivo winmd que tem o nome correspondente ao namespace mais longo no pacote do aplicativo.
+-   **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipos:** verifique se todos os tipos UWP têm nomes exclusivos e sem diferenciação de maiúsculas e minúsculas no pacote do aplicativo. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
+-   **Teste de exatidão de nomes de tipos:** assegure-se de que não haja tipos UWP no namespace global nem no namespace de nível superior do Windows.
+-   **Teste de exatidão de metadados gerais:** assegure-se de que o compilador que você está usando para gerar seus tipos esteja atualizado de acordo com as especificações da UWP.
 -   **Teste de propriedades:** verifique se todas as propriedades em uma classe UWP têm um método get (os métodos set são opcionais). Verifique se o tipo do valor de retorno do método get corresponde ao tipo do parâmetro de entrada do método set em todas as propriedades em tipos UWP.
 
 ## <a name="package-sanity-tests"></a>Testes de integridade do pacote

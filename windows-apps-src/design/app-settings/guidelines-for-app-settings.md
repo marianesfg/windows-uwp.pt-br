@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72163709"
 ---
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
@@ -83,7 +83,7 @@ Celular:
 
 
 Se o aplicativo permitir que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/combo-box.md) com o cabeçalho "Escolher um modo de aplicativo". As opções devem ser as seguintes
-- Claro
+- Leve
 - Escuro
 - Padrão do Windows
 
@@ -124,10 +124,10 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 - Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
 - Use os seguintes controles para configurações do aplicativo:
 
-    - [Switches de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
-    - [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item dentre um conjunto de até cinco opções relacionadas e mutuamente exclusivas.
+    - [Botões de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
+    - [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item de um conjunto de até cinco opções relacionadas exclusivas.
     - [Caixa de entrada de texto](../controls-and-patterns/text-block.md): para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
-    - [Hiperlinks](../controls-and-patterns/hyperlinks.md): para direcionar o usuário a outra página dentro do aplicativo ou a um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
+    - [Hiperlinks](../controls-and-patterns/hyperlinks.md): para conduzir o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
     - [Botões](../controls-and-patterns/buttons.md): para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu Configurações atual.
 - Adicione uma mensagem descritiva se um dos controles estiver desativado. Coloque esta mensagem acima do controle desativado.
 - Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) ou [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) com um deslocamento à esquerda de 100px.

@@ -7,10 +7,10 @@ keywords: contrato de políticas da store
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
 ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
-ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77607239"
 ---
 # <a name="developer-code-of-conduct"></a>Código de Conduta do desenvolvedor
@@ -18,7 +18,7 @@ ms.locfileid: "77607239"
 Como desenvolvedor de aplicativos para a Microsoft Store, você está vinculado pelos termos do [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e por quaisquer outras licenças ou contratos firmados entre você e a Microsoft. Este Código de Conduta é fornecido para sua informação e não substitui nenhum contrato.
 
 
-## <a name="1-publisher-name"></a>1. Nome do Editor
+## <a name="1-publisher-name"></a>1. Nome do Fornecedor
 
 Seu nome de fornecedor deve ser exclusivo. Não declare sua conta como sendo de alguma empresa, órgão governamental ou outra entidade sem ter permissão para isso. Isso inclui, mas não se limita, usar os nomes de fornecedores que são enganosos ou semelhantes a nomes de entidades conhecidas.
 
