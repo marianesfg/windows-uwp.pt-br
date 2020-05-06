@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: ab5b509aa69dc54d18ef3643d7ccd46bc2984676
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: 68682d7b47e42995060601f5ae1c9b8d891aa3ff
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614098"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643709"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -472,7 +472,7 @@ O controle **TreeView** é compatível com seleção única e múltipla. Por pad
 
 Quando a seleção múltipla está habilitada, uma caixa de seleção é mostrada ao lado de cada nó do modo de exibição de árvore e os itens selecionados aparecem realçados. Um usuário pode selecionar ou desmarcar um item usando a caixa de seleção; clicar no item ainda faz com que ele seja invocado.
 
-Selecionar ou desmarcar um nó pai selecionará ou desmarcará todos os filhos sob aquele nó. Se alguns, mas não todos os filhos sob um nó pai forem selecionados, a caixa de seleção para o nó pai será mostrada como indeterminada (preenchida com uma caixa preta).
+Selecionar ou desmarcar um nó pai selecionará ou desmarcará todos os filhos sob aquele nó. Se alguns, mas nem todos os filhos em um nó pai forem selecionados, a caixa de seleção do nó pai será mostrada como no estado indeterminado.
 
 ![Seleção múltipla em um modo de exibição de árvore](images/treeview-selection.png)
 

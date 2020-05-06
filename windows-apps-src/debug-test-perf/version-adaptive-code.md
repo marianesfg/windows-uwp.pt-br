@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c03475c0c4007508a18c17645dbe99eeb7d6cb0
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75681977"
 ---
 # <a name="version-adaptive-code"></a>Código adaptável de versão
@@ -73,7 +73,7 @@ Nesta seção, mostraremos vários exemplos de código adaptável que usam APIs 
 
 ### <a name="example-1-new-enum-value"></a>Exemplo 1: novo valor de enumeração
 
-O Windows 10, versão 1607, adiciona um novo valor à enumeração [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
+O Windows 10, versão 1607 adiciona um novo valor à enumeração [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
 
 Este exemplo mostra como verificar se o valor de enumeração **ChatWithoutEmoji** está presente e define a propriedade [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) de um **TextBox** se estiver presente. Se não estiver presente no sistema em que o aplicativo for executado, a propriedade **InputScope** será definida como **Chat** em vez disso. O código mostrado poderia ser colocado em um construtor de página ou em um manipulador de eventos Page.Loaded.
 
@@ -446,4 +446,4 @@ class IsEnumPresentTrigger : StateTriggerBase
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detectar dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detectar recursos dinamicamente com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

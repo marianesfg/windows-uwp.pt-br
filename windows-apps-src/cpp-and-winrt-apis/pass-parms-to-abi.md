@@ -5,12 +5,12 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, passar, parâmetros, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: c1e172fc4dbd5b865add1828a98dc1a030d5dc6f
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 9c5ce6a30e68fe6fc26316bc2f41c6e2556b98ef
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844348"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255250"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>Passagem de parâmetros para o limite do ABI
 
@@ -45,7 +45,7 @@ Observe que objetos **std::wstring_view** não são terminados em nulo, mas C++/
 
 Coleções do Windows Runtime já são **IIterable**.
 
-|Tipos que você pode passar|Sync|Async|Observações|
+|Tipos que você pode passar|Sincronização|Async|Observações|
 |-|-|-|-|
 | `nullptr` | Sim | Sim | Você precisa verificar se o método subjacente dá suporte a `nullptr`.|
 | **IIterable\<T\>** | Sim | Sim | Ou qualquer coisa que possa ser convertida nele.|
@@ -81,7 +81,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 A implementação de [**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.foundation.collections.iiterator-1.getmany) é mais eficiente quando o iterador é um `RandomAcessIt`. Caso contrário, ela faz várias passagens pelo intervalo.
 
-|Tipos que você pode passar|Sync|Async|Observações|
+|Tipos que você pode passar|Sincronização|Async|Observações|
 |-|-|-|-|
 | `nullptr` | Sim | Sim | Você precisa verificar se o método subjacente dá suporte a `nullptr`.|
 | **IIterable\<IKeyValuePair\<K, V\>\>** | Sim | Sim | Ou qualquer coisa que possa ser convertida nele.|
@@ -98,7 +98,7 @@ A implementação de [**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.found
 
 Você pode usar [**IVector\<T\>.GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview) para obter um **IVectorView** de um **IVector**.
 
-|Tipos que você pode passar|Sync|Async|Observações|
+|Tipos que você pode passar|Sincronização|Async|Observações|
 |-|-|-|-|
 | `nullptr` | Sim | Sim | Você precisa verificar se o método subjacente dá suporte a `nullptr`.|
 | **IVectorView\<T\>** | Sim | Sim | Ou qualquer coisa que possa ser convertida nele.|
@@ -115,7 +115,7 @@ A versão com iterador duplo pode ser usada para criar exibições de vetor usan
 
 Você pode usar **IMap::GetView** para obter um **IMapView** de um **IMap**.
 
-|Tipos que você pode passar|Sync|Async|Observações|
+|Tipos que você pode passar|Sincronização|Async|Observações|
 |-|-|-|-|
 | `nullptr` | Sim | Sim | Você precisa verificar se o método subjacente dá suporte a `nullptr`.|
 | **IMapView\<K, V\>** | Sim | Sim | Ou qualquer coisa que possa ser convertida nele.|
@@ -164,3 +164,5 @@ O **winrt::array_view\<T\>** não está no namespace **winrt::param**, mas é us
 | **std::vector<C>** | Um **std::vector** C++ de **C**, em que **C** pode ser convertido em **T** e `sizeof(C) == sizeof(T)`. |
 | `{ T*, T* }` | Um par de ponteiros representa o intervalo [início, fim).|
 | **std::initializer_list\<T\>** ||
+
+Confira também a postagem no blog [Os vários padrões para transmitir matrizes em estilo C entre o limite do ABI do Windows Runtime](https://devblogs.microsoft.com/oldnewthing/20200205-00/?p=103398).

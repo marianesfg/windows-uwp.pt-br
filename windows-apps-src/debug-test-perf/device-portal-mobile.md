@@ -4,13 +4,13 @@ title: Device Portal para celulares
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, portal de dispositivos
+keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72281896"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para celulares
@@ -31,7 +31,7 @@ Na primeira vez que você se conectar ao Device Portal, será solicitado a forne
 
 ![Configurações da descoberta de dispositivos do Modo de desenvolvedor](images/device-portal/mob-dev-mode-pairing.png)
 
-Você pode escolher entre três maneiras de se conectar ao Portal de Dispositivos: USB, host local e pela rede local (incluindo VPN e compartilhamento de Internet).
+Você pode escolher entre 3 maneiras de se conectar ao Device Portal: USB, host local e pela rede local (incluindo VPN e compartilhamento).
 
 **Para se conectar ao Portal de Dispositivos**
 
@@ -78,7 +78,7 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 - Gráficos de desempenho
 - Rastreamento de Eventos para Windows (ETW)
 - Rastreamento de desempenho (WPR) 
-- Dispositivos
+- .
 - Rede
 
 ## <a name="see-also"></a>Veja também

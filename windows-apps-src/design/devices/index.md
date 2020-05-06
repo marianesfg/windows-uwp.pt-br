@@ -9,15 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258117"
 ---
 #  <a name="ui-considerations-for-uwp-devices"></a>Considerações sobre UI para dispositivos UWP
 
-![Dispositivos](../images/devices-2x.png)
+![.](../images/devices-2x.png)
 
 Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
 
@@ -47,7 +47,7 @@ Considerações sobre a interface do usuário
 
 Entradas
 -   Mouse
--   Teclado
+-   Keyboard
 -   Touch em laptops e em desktops tudo em um.
 -   Consoles, por exemplo, o controlador do Xbox, algumas vezes são usados.
 
@@ -118,7 +118,7 @@ Considerações sobre a interface do usuário
 
 Entradas
 - Gamepad (como um controle do Xbox)
-- Controle remoto
+- Remoto
 - Voz (ocasionalmente, se o cliente tiver um Kinect ou headset)
 
 Recursos típicos do dispositivo

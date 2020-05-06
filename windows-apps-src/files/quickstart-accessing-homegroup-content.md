@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66369391"
 ---
 # <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
@@ -193,7 +193,7 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra a seleção de arquivos do usuário para obter acesso de leitura, defina o fluxo do arquivo como a origem do**  [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) e reproduza o arquivo.
+3.  **Abra a seleção de arquivos do usuário para obter acesso de leitura, defina o fluxo do arquivo como a origem do** [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) e reproduza o arquivo.
     ```cs
     if (file != null)
     {

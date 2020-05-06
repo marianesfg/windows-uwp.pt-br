@@ -6,17 +6,17 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd84892f9d90a69379ac5a7f84dfa188adf1211e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258782"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades nos documentos de Desenvolvedor Windows em maior de 2018
 
 A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recursos, as diretrizes para desenvolvedores, os vídeos e as amostras a seguir foram disponibilizados em maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build/).
 
-[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/create-uwp-apps.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -89,7 +89,7 @@ Pacotes opcionais em seu aplicativo agora podem conter código executável C#. [
 
 As [Transições de página](../design/motion/page-transitions.md) possibilitam que os usuários naveguem entre páginas em um aplicativo. Elas ajudam os usuários a entender onde eles estão na hierarquia de navegação e fornecem comentários sobre a relação entre as páginas.
 
-### <a name="project-rome"></a>Project Rome
+### <a name="project-rome"></a>Projeto Roma
 
 A equipe do Project Rome aperfeiçoou seus SDKs para iOS e Android, adicionando novos recursos como Atividades do Usuário e refatorando grande parte de seu código para fornecer uma experiência de programação consistente entre os diferentes SDKs. [A referência de API e documentos de instruções totalmente novos](https://docs.microsoft.com/windows/project-rome/) entrarão em vigor durante a conferência de desenvolvedores Build 2018.
 
@@ -103,7 +103,7 @@ O recurso de Conjuntos está disponível nas versões prévias do Windows Inside
 
 Renovamos nossos conteúdos de Introdução com novos roteiros de aprendizagem. Esses novos tópicos têm como objetivo fornecer a novos desenvolvedores do Windows 10 informações sobre algumas tarefas comuns que eles podem querer realizar. Eles não são tutoriais e não fornecerem um passo a passo, mas destacam onde está a documentação existente e como usá-la. Confira a página [Começar a codificar](../get-started/create-uwp-apps.md) remodelada ou explore cada roteiro de aprendizado individual:
 
-* [Construir um formulário](../get-started/construct-form-learning-track.md)
+* [Criar um formulário](../get-started/construct-form-learning-track.md)
 * [Exibir clientes em uma lista](../get-started/display-customers-in-list-learning-track.md)
 * [Salvar e carregar configurações](../get-started/settings-learning-track.md)
 * [Trabalhar com arquivos](../get-started/fileio-learning-track.md)
@@ -128,7 +128,7 @@ O C++/WinRT é uma nova maneira de criar e consumir APIs do Windows Runtime. Ele
 
 O Windows agora permite que você execute várias instâncias do seu aplicativo UWP, com cada um em seu próprio processo separado. [Assista ao vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para aprender a criar um aplicativo compatível com esse recurso, em seguida, [leia os documentos do desenvolvedor](../launch-resume/multi-instance-uwp.md) para obter mais informações sobre como e por que usar esse recurso.
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 ### <a name="customer-database-tutorial"></a>Tutorial de banco de dados de clientes
 

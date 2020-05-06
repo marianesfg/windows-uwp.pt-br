@@ -6,15 +6,15 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684721"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades nos documentos de desenvolvedor do Windows de agosto de 2017
 
-A Documentação do Desenvolvedor do Windows recebe atualizações constantes com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados e contêm informações novas e atualizadas para desenvolvedores do Windows.
+A Documentação do Desenvolvedor Windows recebe atualizações constantes com informações sobre novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados e contêm informações novas e atualizadas para desenvolvedores do Windows.
 
 [Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/your-first-app.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 

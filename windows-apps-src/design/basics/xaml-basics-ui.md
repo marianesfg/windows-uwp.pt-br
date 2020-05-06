@@ -6,10 +6,10 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c23a9539d0fc3902f715917b380e8b6b3e132c15
-ms.sourcegitcommit: 1d868968297d0d6d02cc38fe84d0a3ab5bccfb60
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68974457"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Criar uma interface do usuário
@@ -183,7 +183,7 @@ Para adicionar um controle usando o editor XAML:
 
     Para saber mais sobre layout usando um **RelativePanel**, confira [Painéis de layout](https://docs.microsoft.com/windows/uwp/layout/layout-panels#relativepanel).
 
-2. Abaixo do elemento **TextBlock**, adicione um controle **GridView** chamado **ImageGridView**. Defina as _propriedades anexadas_ de **RelativePanel** para colocar o controle abaixo do texto do título e ampliá-lo ao longo de toda a largura da tela.
+2. Abaixo do elemento **TextBlock**, adicione um controle **GridView** chamado **ImageGridView**. Defina as **propriedades anexadas** de _RelativePanel_ para colocar o controle abaixo do texto do título e ampliá-lo ao longo de toda a largura da tela.
 
     **Adicionar este XAML**
 

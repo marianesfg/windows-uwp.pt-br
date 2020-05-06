@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74260560"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criar um aplicativo complexo da UWP (Plataforma Universal do Windows)
@@ -126,7 +126,7 @@ Técnicas comuns:
 
 -   **Compartilhamento**  Permita que os usuários compartilhem o conteúdo do seu aplicativo com outras pessoas por meio de outros aplicativos e também recebam conteúdo compartilhável de outras pessoas e aplicativos.
 -   **Reproduzir em**  Permite que seus usuários aproveitem áudio, vídeo e imagens transmitidos do seu aplicativo para outros dispositivos pela rede doméstica.
--   **Seletor de arquivos e extensões de seletor de arquivos**   Permita que os usuários carreguem e salvem seus arquivos do sistema de arquivos local, de dispositivos de armazenamento conectado, de Grupos Domésticos ou até mesmo de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
+-   **Seletor de arquivos e extensões de seletor de arquivos**   Permita que os usuários carreguem e salvem arquivos do sistema de arquivos local, de dispositivos do Armazenamento Conectado, do Grupo Doméstico ou, até mesmo, de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
 
 Para saber mais, consulte as [extensões e contratos de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10)).
 <!-- Win 8 page. Should have replacement. -->
@@ -155,7 +155,7 @@ Claro, você pode se beneficiar de inúmeras vantagens de interações de toque,
 
 -   **Gestos de proximidade**  Permite que os usuários conectem dispositivos com outros usuários fisicamente próximos aproximando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10)).
 -   **Câmeras e dispositivos de armazenamento externos**  Conecte seus usuários a suas câmeras internas ou conectadas para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em que seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://docs.microsoft.com/previous-versions/windows/apps/hh465189(v=win.10)).
--   **Acelerômetros e outros sensores**     Os dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
+-   **Acelerômetros e outros sensores**     Atualmente, os dispositivos são fornecidos com vários sensores. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
 -   **Geolocalização**  Use informações de localização geográfica de dados Web padrão ou de sensores de localização geográfica para ajudar os usuários a circular, encontrar a posição deles no mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://docs.microsoft.com/previous-versions/windows/apps/hh465139(v=win.10)).
 
 Vamos considerar o aplicativo de viagens novamente. Para ser ótimo em ajudar amigos a criar de forma colaborativa itinerários de viagens em grupo, você pode usar alguns destes recursos:

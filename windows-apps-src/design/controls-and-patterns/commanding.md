@@ -5,10 +5,10 @@ ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
 ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
-ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81123597"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Aplique comandos em aplicativos da UWP (Plataforma Universal do Windows) usando StandardUICommand, XamlUICommand e ICommand
@@ -241,7 +241,7 @@ public class ListItemData
 }
 ```
 
-2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o Delete do [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) associado e com texto).
+2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o Delete do [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) associado e com texto).
 
 ```csharp
 /// <summary>
@@ -540,7 +540,7 @@ public class ListItemData
 }
 ```
 
-2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) associado e com texto).
+2. Na classe MainPage, definimos uma coleção de objetos `ListItemData` para [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) de [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) de [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate). Podemos, em seguida, populá-lo com uma coleção inicial de cinco itens (com o [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) associado e com texto).
 
 ```csharp
 ObservableCollection<ListItemData> collection = new ObservableCollection<ListItemData>();

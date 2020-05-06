@@ -11,10 +11,10 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a2f73fe6280d3a86510ce48f47017dd4897139a
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79208981"
 ---
 # <a name="xaml-styles"></a>Estilos de XAML
@@ -165,7 +165,7 @@ Substituir os pincéis do sistema é geralmente feito no nível do aplicativo ou
 </Page.Resources>
 ```
 
-Para estados como PointerOver (mouse passa sobre o botão), **PointerPressed** (botão foi invocado) ou Desabilitado (botão não é interativo). Essas terminações são acrescentadas aos nomes originais do estilo leve: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** etc. Modificar também os pincéis garantirá que seus controles sejam coloridos de forma consistente com o tema do aplicativo.
+Para estados como PointerOver (mouse passa sobre o botão), **PointerPressed** (botão foi invocado) ou Desabilitado (botão não é interativo). Essas terminações são acrescentadas aos nomes de estilo leve originais: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. A modificação daqueles pincéis, também, irá assegurar que seus controles sejam coloridos conforme o tema do seu aplicativo.
 
 Colocar essas substituições de pincel no nível **App.Resources** irá alterar todos os botões dentro do aplicativo inteiro, em vez de em uma única página.
 

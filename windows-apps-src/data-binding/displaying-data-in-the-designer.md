@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f08c2cc39bb4cdf9a49351f70143a0f86df1fb7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74254721"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
@@ -132,7 +132,7 @@ Se você usar um arquivo de dados de amostra JSON em vez da XAML, deverá defini
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de design de um arquivo XAML ou JSON. Uma alternativa é a extensão de marcação **d:DesignInstance**, que indica que a origem em tempo de design baseia-se na classe especificada pela propriedade **Type**. Aqui está um exemplo.
+Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de design de um arquivo XAML ou JSON. Uma alternativa é a extensão de marcação **d:DesignInstance**, que indica que a origem em tempo de design baseia-se na classe especificada pela propriedade **Type**. Veja um exemplo.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"

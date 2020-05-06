@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, perguntas frequentes
 ms.localizationpriority: medium
-ms.openlocfilehash: d942fd58619c12192fd8429c0e8aeb5aa070fd4d
-ms.sourcegitcommit: 2a80888843bb53cc1f926dcdfc992cf065539a67
+ms.openlocfilehash: 95f5ad82831b6b07e0bbc2127947f777f0cd50e5
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81005446"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81759928"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 As respostas às perguntas que você pode ter sobre a criação e o consumo de APIs do Windows Runtime com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -82,6 +82,8 @@ Se você tiver uma classe de tempo de execução que libera recursos em seu dest
 - Há casos bem raros que envolvem corridas de desligamento ou adoções semifatais, em que é necessário chamar **IClosable::Close**. Se estiver usando tipos **Windows.UI.Composition**, por exemplo, você poderá se deparar com casos em que queira descartar objetos em uma sequência definida, como uma alternativa para permitir que a destruição do wrapper de C++/WinRT faça o trabalho para você.
 - Se você não puder garantir que tem a última referência restante a um objeto (porque você a passou para outras APIs, que poderiam estar mantendo uma referência), será uma boa ideia chamar **IClosable::Close**.
 - Em caso de dúvida, é seguro chamar **IClosable::Close** manualmente, em vez de esperar que o wrapper o chame na destruição.
+
+Portanto, se você souber que tem a última referência, poderá deixar o destruidor de wrapper fazer o trabalho. Caso precise fechá-lo antes da última referência desaparecer, chame a função **Fechar**. Para ser à prova de exceções, você deverá usar **Fechar** em um tipo RAII (aquisição de recursos é inicialização) (para que o fechamento aconteça no desenrolamento). O C++/WinRT não tem um wrapper **unique_close**, mas você pode fazer um próprio.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>É possível usar LLVM/Clang para compilar com C++/WinRT?
 Não oferecemos suporte à cadeia de ferramentas LLVM e Clang para C++/WinRT, mas podemos usá-la internamente para validar a conformidade de padrões do C ++/WinRT. Por exemplo, se quiser emular o que fazemos internamente, faça um teste, como descrito abaixo.

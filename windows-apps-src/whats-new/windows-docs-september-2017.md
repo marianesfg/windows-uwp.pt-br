@@ -6,10 +6,10 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fb63a5f7cefbccbedc09b0c74d9daea9d26b63a8
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74734951"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
@@ -18,7 +18,7 @@ A Documentação do Desenvolvedor Windows recebe atualizações constantes com i
 
 O Fall Creators Update também está chegando, portanto, fique atento a uma grande variedade de documentações no próximo mês.
 
-[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/your-first-app.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
+[Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo universal do Windows](../get-started/your-first-app.md) ou explorar como você pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
 ## <a name="features"></a>Recursos
 
@@ -49,7 +49,7 @@ A seção Introdução dos documentos da UWP foi atualizada com uma [nova págin
 
 Adicionamos novas [diretrizes sobre voz e tom em aplicativos UWP](https://docs.microsoft.com/windows/uwp/in-app-help/voice-and-tone) para fornecer orientações para a produção de texto em seu aplicativo. Independentemente do que você estiver criando, é importante que a linguagem usada seja acessível, amigável e informativa.
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 ### <a name="photolab-sample"></a>Amostra do PhotoLab
 

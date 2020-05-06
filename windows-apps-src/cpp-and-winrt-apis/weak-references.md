@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, forte, fraca, referência
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 781b63f9f32a0fdf7edee6479b60fd82822cc745
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: dc991ff485d9e4ba90264e1b8082a40e0f4ab801
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209231"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267484"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referências fortes e fracas em C++/WinRT
 
@@ -359,7 +359,7 @@ Na cláusula de captura lambda, é criada uma variável temporária, que represe
 
 ## <a name="weak-references-in-cwinrt"></a>Referências fracas em C++/WinRT
 
-Acima, nós vimos referências fracas sendo usadas. Em geral, eles são bons para quebrar referências cíclicas. Por exemplo, quando se trata da implementação nativa da estrutura da IU baseada em XAML &mdash; devido ao design histórico da estrutura &mdash; o mecanismo de referência fraca em C++/WinRT é necessário para tratar as referências cíclicas. Fora do XAML, no entanto, você provavelmente não precisará usar referências fracas (não há nada nelas inerentemente específico a XAML). Ao contrário, você deve ser capaz na maioria das vezes de criar suas próprias APIs C++/WinRT, de modo a evitar a necessidade de referências cíclicas e referências fracas. 
+Acima, nós vimos referências fracas sendo usadas. Em geral, eles são bons para quebrar referências cíclicas. Por exemplo, quando se trata da implementação nativa da estrutura da interface do usuário baseada em XAML&mdash;devido ao design histórico da estrutura&mdash;o mecanismo de referência fraca em C++/WinRT é necessário para tratar as referências cíclicas. Fora do XAML, no entanto, você provavelmente não precisará usar referências fracas (não há nada nelas inerentemente específico a XAML). Ao contrário, você deve ser capaz na maioria das vezes de criar suas próprias APIs C++/WinRT, de modo a evitar a necessidade de referências cíclicas e referências fracas. 
 
 Em qualquer tipo declarado, não fica imediatamente óbvio para o C++/WinRT se ou quando são necessárias referências fracas. Portanto, o C++/WinRT dá suporte a referência fraca automaticamente no modelo de struct [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), do qual são derivados direta ou indiretamente seus próprios tipos C++/WinRT. Ele é pago pelo uso, o que significa que você só pagará se o objeto for consultado em busca de [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource). E você pode optar explicitamente por [recusar esse suporte](#opting-out-of-weak-reference-support).
 

@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521337"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730247"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -36,11 +36,11 @@ O .NET Core 3 é a versão principal mais recente do .NET Core. O destaque dessa
 
 Para obter mais informações, consulte [Novidades do .NET Core 3.0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).
 
-## <a name="uwp-apis"></a>APIs UWP
+## <a name="windows-runtime-apis"></a>APIs do Windows Runtime
 
-Você pode chamar várias APIs UWP diretamente no seu aplicativo da área de trabalho Win32 WPF, Windows Forms ou C++ para integrar experiências modernas interessantes para usuários do Windows 10. Por exemplo, você pode chamar APIs UWP para adicionar notificações do sistema ao seu aplicativo da área de trabalho.
+É possível chamar várias APIs do Windows Runtime diretamente no seu aplicativo da área de trabalho Win32 do WPF, do Windows Forms ou do C++ para integrar experiências modernas interessantes para usuários do Windows 10. Por exemplo, você pode chamar APIs do Windows Runtime para adicionar notificações do sistema ao seu aplicativo da área de trabalho.
 
-Para obter mais informações, consulte [Usar APIs UWP em aplicativos da área de trabalho](desktop-to-uwp-enhance.md).
+Para saber mais, confira [Usar APIs do Windows Runtime em aplicativos de área de trabalho](desktop-to-uwp-enhance.md).
 
 ## <a name="host-uwp-controls-xaml-islands"></a>Controles de host UWP (ilhas de XAML)
 
@@ -50,18 +50,18 @@ Para obter mais informações, consulte [Controles UWP em aplicativos da área d
 
 ## <a name="use-the-visual-layer-in-desktop-apps"></a>Usar a camada Visual em aplicativos da área de trabalho
 
-Agora você pode usar as APIs UWP em aplicativos de área de trabalho não UWP para aprimorar a aparência, a funcionalidade de seus aplicativos Win32, WPF, Windows Forms e C++, além de tirar proveito dos recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio da UWP. Isso é útil quando você precisa criar experiências personalizadas que vão além dos controles internos da UWP que você pode hospedar usando ilhas de XAML.
+Agora é possível usar as APIs do Windows Runtime em aplicativos de área de trabalho não UWP para aprimorar a aparência e a funcionalidade de seus aplicativos Win32 do WPF, do Windows Forms e do C++, além de tirar proveito dos recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio da UWP. Isso é útil quando você precisa criar experiências personalizadas que vão além dos controles internos da UWP que você pode hospedar usando ilhas de XAML.
 
 Para obter mais informações, consulte [Modernize seu aplicativo da área de trabalho usando a camada Visual](visual-layer-in-desktop-apps.md).
 
 ## <a name="additional-features-available-to-apps-with-package-identity"></a>Recursos adicionais disponíveis para aplicativos com identidade de pacote
 
-Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplicativos da área de trabalho com [identidade de pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Esses recursos incluem certas APIs UWP, extensões de pacote e componentes UWP. Para obter mais informações, consulte [recursos que exigem a identidade do pacote](modernize-packaged-apps.md).
+Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplicativos da área de trabalho com [identidade de pacote](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Esses recursos incluem certas APIs do Windows Runtime, extensões de pacote e componentes UWP. Para obter mais informações, consulte [recursos que exigem a identidade do pacote](modernize-packaged-apps.md).
 
 Há várias maneiras de conceder identidade a um aplicativo da área de trabalho:
 
 * Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote de aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
-* Se não for possível adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, do Build 10.0.19000.0 do Windows 10 Insider Preview em diante você poderá conceder a identidade do pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
+* Se não for possível adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, da versão 2004 do Windows 10 em diante você poderá conceder a identidade do pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
 
 <a id="desktop-uwp-controls"/>
 

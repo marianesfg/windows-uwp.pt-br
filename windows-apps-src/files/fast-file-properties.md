@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, arquivo, propriedades
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63799621"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Acesso rápido às propriedades de arquivo na UWP 
@@ -17,8 +17,8 @@ ms.locfileid: "63799621"
 Saiba como reunir rapidamente uma lista de arquivos e respectivas propriedades em uma biblioteca e usá-las em um aplicativo.  
 
 Pré-requisitos 
-- **Programação assíncrona para aplicativos de Plataforma Universal do Windows (UWP)**   Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
-- **Permissões de acesso a bibliotecas**   O código nestes exemplos requer a funcionalidade **picturesLibrary**, mas a localização do arquivo pode precisar de uma funcionalidade diferente ou de nenhuma funcionalidade. Para saber mais, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
+- **Programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**     Para saber como escrever aplicativos assíncronos em C# ou Visual Basic, confira [Chamar APIs assíncronas em C# ou Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps). 
+- **Permissões de acesso a bibliotecas**   O código destes exemplos exige a funcionalidade **picturesLibrary**, mas a localização do arquivo poderá precisar de uma funcionalidade diferente ou de nenhuma funcionalidade. Para saber mais, consulte [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions). 
 - **Enumeração simples de arquivos**    Este exemplo usa o objeto [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para definir algumas propriedades avançadas de enumeração. Para saber mais sobre como obter uma lista simples de arquivos para um diretório menor, consulte [Enumerar e consultar arquivos e pastas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders). 
 
 ## <a name="usage"></a>Uso  
@@ -114,7 +114,7 @@ Os arquivos de StorageFile resultantes contêm apenas as propriedades solicitada
 ## <a name="adding-folders-to-libraries"></a>Adicionando pastas a bibliotecas 
 Os aplicativos podem solicitar ao usuário que adicione o local ao índice usando [StorageLibrary.RequestAddFolderAsync](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibrary.RequestAddFolderAsync). Depois que o local for incluído, ele será indexado automaticamente e os aplicativos poderão usar essa técnica para enumerar os arquivos.
  
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 [Referência de API de QueryOptions](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions)  
 [Enumerar e consultar arquivos e pastas](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)  
 [Permissões de acesso a arquivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)  

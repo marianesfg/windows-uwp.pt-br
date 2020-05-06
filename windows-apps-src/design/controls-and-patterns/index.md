@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80218446"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicativos do Windows
@@ -32,7 +32,7 @@ Instruções gerais e exemplos de código para adicionar e estilizar controles e
 :::row:::
     :::column:::
       <p><b><a href="controls-and-events-intro.md">Adicionar controles e manipular eventos</a></b> <br/>
-Há 3 etapas principais para adicionar controles ao seu aplicativo: Adicione um controle ao seu aplicativo da interface do usuário, defina as propriedades no controle e adicione código aos manipuladores de eventos do controle para que ele faça algo.</p>
+Há 3 etapas principais para adicionar controles ao seu aplicativo: adicionar um controle à interface do usuário de seu aplicativo, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</p>
     :::column-end:::
     :::column:::
       <p><b><a href="xaml-styles.md">Aplicando estilos a controles</a></b> <br/>

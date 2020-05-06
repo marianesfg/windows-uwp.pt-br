@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, portabilidade, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: 91602c75cdaddc325407529ab4d231db46ecca39
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79209141"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidade entre C++/WinRT e ABI
@@ -43,7 +43,7 @@ namespace ABI::Windows::Foundation
 
 **IUriRuntimeClass** é uma interface COM. Porém, mais do que isso, &mdash;considerando que sua base é **IInspectable**&mdash;**IUriRuntimeClass**, é uma interface do Windows Runtime. Observe o tipo de retorno **HRESULT**, em vez da geração de exceções. E o uso de artefatos como o identificador **HSTRING** (essa é uma boa prática para definir esse identificador novamente como `nullptr` quando tiver terminado de trabalhar com ele). Isso dá uma ideia da aparência do Windows Runtime no nível binário do aplicativo. Em outras palavras, no nível de programação COM.
 
-O Windows Runtime baseia-se nas APIs de COM (Component Object Model). Acesse o Windows Runtime dessa forma ou por meio de *projeções de linguagem*. Uma projeção oculta os detalhes de COM e oferece uma experiência de programação mais natural para determinada linguagem.
+O Windows Runtime baseia-se nas APIs de COM (Component Object Model). Acesse o Windows Runtime dessa forma ou por meio de *projeções de linguagem*. Uma projeção oculta os detalhes do COM e oferece uma experiência de programação mais natural para uma linguagem específica.
 
 Por exemplo, se você analisar a pasta "%DiretorioSDKWindows%Include\10.0.17134.0\cppwinrt\winrt" (novamente, ajuste o número de versão do SDK para o seu caso, se necessário), encontrará os cabeçalhos de projeção da linguagem C++/WinRT. Há um cabeçalho para cada namespace do Windows, assim como há um cabeçalho ABI por namespace do Windows. Este é um exemplo da inclusão de um dos cabeçalhos de C++/WinRT.
 

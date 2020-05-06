@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto de partida
 ms.localizationpriority: medium
 ms.openlocfilehash: c058a727e09f00e01664c314d8c198f3f25e841e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74255128"
 ---
 # <a name="get-started-with-cwinrt"></a>Introdução ao C++/WinRT
@@ -119,7 +119,7 @@ Nem tampouco é necessário processar os códigos de retorno de HRESULT. O C++/W
 
 ## <a name="modify-a-windows-desktop-application-project-to-add-cwinrt-support"></a>Modificar um projeto de aplicativo de Área de Trabalho do Windows para adicionar suporte ao C++/WinRT
 
-Esta seção mostra como é possível adicionar suporte ao C++/WinRT a um projeto de aplicativo de Área de Trabalho do Windows que você possa ter. Se você não tiver um projeto de aplicativo de Área de Trabalho do Windows existente, siga estas etapas para criar um. Por exemplo, abra o Visual Studio e crie um projeto **Visual C++** \> **Área de Trabalho do Windows** \> **Aplicativo de Área de Trabalho do Windows**.
+Esta seção mostra como é possível adicionar suporte ao C++/WinRT a um projeto de aplicativo de Área de Trabalho do Windows que você possa ter. Se você não tiver um projeto de aplicativo de Área de Trabalho do Windows existente, siga estas etapas para criar um. Por exemplo, abra o Visual Studio e crie um projeto **Visual C++** \> **Área de Trabalho do Windows** \> **Aplicativo da Área de Trabalho do Windows**.
 
 Se desejar, você pode instalar a [VSIX (Extensão do Visual Studio) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) e o pacote NuGet. Para obter detalhes, confira [Suporte ao Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
@@ -149,7 +149,7 @@ Em `pch.h`, inclua `winrt/base.h`.
 
 A projeção de linguagem de C++/WinRT depende de determinadas funções livres (não membros) do Windows Runtime, que exigem vinculação à biblioteca [WindowsApp.lib](/uwp/win32-and-com/win32-apis). Esta seção descreve três maneiras de atender ao vinculador.
 
-A primeira opção é adicionar ao seu projeto do Visual Studio todos os destinos e propriedades MSBuild de C++/WinRT. Para isso, instale o [pacote NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Projeto** \> **Gerenciar Pacotes NuGet...** \> **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e clique em **Instalar** para instalar o pacote para o projeto.
+A primeira opção é adicionar ao seu projeto do Visual Studio todos os destinos e propriedades MSBuild de C++/WinRT. Para isso, instale o [pacote NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) em seu projeto. Abra o projeto no Visual Studio, clique em **Projeto** \> **Gerenciar Pacotes NuGet...** \> **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e clique em **Instalar** para instalar o pacote do projeto.
 
 Você também pode usar as configurações de link do projeto para vincular `WindowsApp.lib` explicitamente. Ou você pode fazê-lo no código-fonte (em `pch.h`, por exemplo) como se segue.
 
@@ -179,7 +179,7 @@ Esse cenário trata-se de compilar aplicativos e controles na estrutura de inter
 
 Lembre-se de que o XAML funciona melhor com linguagens de programação que oferecem reflexão. No C++/WinRT, às vezes você precisa ter um pouco mais de trabalho para interoperar com a estrutura XAML. Todos esses casos são abordados na documentação. Bons locais para começar são [Controles XAML; associar a uma propriedade de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property) e [controles personalizados XAML (com modelo) com o C++/WinRT](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl).
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Propriedade SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [Struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)

@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: bbdce669faa73b1db2071173014dec474160affb
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: 26a0ea1ec70f4ae4255030541a6513541db1fb99
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266944"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267504"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidade e assincronia mais avançadas com o C++/WinRT
 
@@ -673,7 +673,7 @@ Tecnicamente, nossa corrotina está recebendo seus parâmetros por valor, como d
 IAsyncAction Async(winrt::handle event)
 {
     co_await DoWorkAsync();
-    co_await resume_on_signal(event); // The incoming handle *is* not valid here.
+    co_await resume_on_signal(event); // The incoming handle *is* valid here.
 }
 ```
 
@@ -717,7 +717,7 @@ IAsyncAction SampleCaller()
 
 ## <a name="asynchronous-timeouts-made-easy"></a>Tempos limite assíncronos simplificados
 
-O C++/WinRT é investido pesadamente em corrotinas do C++. Seu efeito na gravação de código de simultaneidade é transformativo. Esta seção aborda casos em que os detalhes de assincronia não são importantes, e tudo o que você deseja é obter o resultado rapidamente. Por esse motivo, a implementação do C++/WinRT da interface da operação assíncrona [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) do Windows Runtime tem uma função **get**, semelhante àquela fornecida por **std::function**.
+O C++/WinRT é investido pesadamente em corrotinas do C++. Seu efeito na gravação de código de simultaneidade é transformativo. Esta seção aborda casos em que os detalhes de assincronia não são importantes, e tudo o que você deseja é obter o resultado rapidamente. Por esse motivo, a implementação do C++/WinRT da interface da operação assíncrona [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) do Windows Runtime tem uma função **get**, semelhante àquela fornecida por **std::future**.
 
 ```cppwinrt
 using namespace winrt::Windows::Foundation;
@@ -731,7 +731,7 @@ int main()
 
 A função **get** é bloqueada indefinidamente, enquanto o objeto async é concluído. Objetos async tendem a ter uma vida curta; portanto, geralmente isso é tudo de que você precisa.
 
-Mas há casos em que isso não é suficiente e você precisará abandonar a espera depois que algum tempo tiver decorrido. Escrever esse código sempre foi possível graças aos blocos de construção fornecidos pelo Windows Runtime. Mas agora o C++/WinRT torna muito mais fácil fornecer a função **wait_for**. Ela também é implementada em **IAsyncAction** e, novamente, é semelhante ao fornecido por **std::function**.
+Mas há casos em que isso não é suficiente e você precisará abandonar a espera depois que algum tempo tiver decorrido. Escrever esse código sempre foi possível graças aos blocos de construção fornecidos pelo Windows Runtime. Mas agora o C++/WinRT torna muito mais fácil fornecer a função **wait_for**. Ela também é implementada em **IAsyncAction** e, novamente, é semelhante à fornecida por **std::future**.
 
 ```cppwinrt
 using namespace std::chrono_literals;
