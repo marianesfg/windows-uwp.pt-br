@@ -1,6 +1,6 @@
 ---
 Description: Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela.
-title: Animações de interface de usuário baseadas em borda em aplicativos UWP
+title: Animações da interface de usuário baseadas em bordas
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
@@ -8,22 +8,22 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd7071092a66f46a81095a5cb6aff8b623a774a5
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 02108ad2926fc1514ca94f08d11f565bc342a62d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366620"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970311"
 ---
-# <a name="edge-based-ui-animations"></a>Animações de interface de usuário baseadas em borda
+# <a name="edge-based-ui-animations"></a>Animações da interface de usuário baseadas em bordas
 
 
 
 
 
-Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo aplicativo. A interface do usuário pode sobrepor o aplicativo ou fazer parte da superfície principal do aplicativo. Se a interface do usuário fizer parte da superfície do aplicativo, talvez seja necessário redimensionar o restante do aplicativo para acomodá-la.
+Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo aplicativo. A interface do usuário pode sobrepor o aplicativo ou fazer parte da superfície principal do aplicativo. Se a interface do usuário fizer parte da superfície do app, talvez seja necessário redimensionar o restante do app para acomodá-la.
 
-> **APIs importantes**: [**Classe EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
+> **APIs importantes**: [**classe EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -46,12 +46,12 @@ Animações de borda mostram ou ocultam a interface do usuário que tem origem n
 
 **Para desenvolvedores**
 * [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animando a interface do usuário baseada na borda](https://docs.microsoft.com/previous-versions/windows/apps/jj649428(v=win.10))
-* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [Animando interface do usuário de borda](https://docs.microsoft.com/previous-versions/windows/apps/jj649428(v=win.10))
+* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Classe EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
 * [**Classe PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition)
-* [Animando esmaece](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
-* [Animando reposiciona](https://docs.microsoft.com/previous-versions/windows/apps/jj649434(v=win.10))
+* [Animando fades](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
+* [Animando reposições](https://docs.microsoft.com/previous-versions/windows/apps/jj649434(v=win.10))
 
  
 

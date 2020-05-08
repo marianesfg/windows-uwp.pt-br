@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, barra de tarefas, gerenciador de barra de tarefas, fixar na barra de tarefas, bloco principal
 ms.localizationpriority: medium
-ms.openlocfilehash: 3aa259cd8c5c45ea99d83eaecb8e30fb0438aa8f
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 44ef6430398960e13fe5eebb40a52d022df6f0d2
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684530"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970651"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>Fixar seu aplicativo na barra de tarefas
 
@@ -55,7 +55,7 @@ else
 
 ## <a name="2-check-whether-taskbar-is-present-and-allows-pinning"></a>2. Verifique se a barra de tarefas está presente e permite a fixação
 
-Os aplicativos UWP podem ser executados em uma ampla variedade de dispositivos; nem todas eles são compatíveis com a barra de tarefas. No momento, somente dispositivos desktop são compatíveis com a barra de tarefas. 
+Os aplicativos do Windows podem ser executados em uma ampla variedade de dispositivos; Nem todos eles dão suporte à barra de tarefas. No momento, somente dispositivos desktop são compatíveis com a barra de tarefas. 
 
 Mesmo que a barra de tarefas esteja disponível, uma política de grupo no computador do usuário pode desabilitar a fixação na barra de tarefas. Portanto, antes de tentar fixar seu app, você precisa verificar se a opção é possível fixar apps na barra de tarefas. A [propriedade TaskbarManager.IsPinningAllowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsPinningAllowed) retorna true se a barra de tarefas estiver presente e permitir a fixação. 
 
@@ -108,6 +108,6 @@ Esse método retorna um valor booliano que indica se o seu app está fixado na b
 
 ## <a name="resources"></a>Recursos
 
-* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
+* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
 * [Classe TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [Fixar um aplicativo no menu iniciar](tiles-and-notifications/primary-tile-apis.md)
+* [Fixar um app no menu Iniciar](tiles-and-notifications/primary-tile-apis.md)

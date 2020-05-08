@@ -1,5 +1,5 @@
 ---
-Description: Descreve os requisitos para declarar o seu aplicativo da Plataforma Universal do Windows (UWP) como acessível na Microsoft Store.
+Description: Descreve os requisitos para declarar seu aplicativo do Windows como acessível no Microsoft Store.
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: Acessibilidade na Loja
 label: Accessibility in the Store
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f00bb9449d9e48518d16e08fa6b6665eecd2f85
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad128aca1a633c5ce33830b5ee9231f7a794a60c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359743"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969671"
 ---
 # <a name="accessibility-in-the-store"></a>Acessibilidade na Loja  
 
 
 
-Descreve os requisitos para declarar o seu aplicativo da Plataforma Universal do Windows (UWP) como acessível na Microsoft Store.
+Descreve os requisitos para declarar seu aplicativo do Windows como acessível no Microsoft Store.
 
 Ao enviar o seu aplicativo para a Microsoft Store para certificação, você pode declará-lo como acessível. Declarar o seu aplicativo como acessível facilita descobrir os usuários que estão interessados em aplicativos acessíveis, como os usuários com deficiências visuais. Os usuários descobrem aplicativos acessíveis usando o filtro **Acessível** ao pesquisar a Microsoft Store. Declarar o seu aplicativo como acessível também adiciona a marca **Acessível** à descrição do aplicativo.
 

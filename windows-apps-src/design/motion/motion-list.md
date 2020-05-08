@@ -1,6 +1,6 @@
 ---
 Description: Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
-title: Adicionar e excluir animações em aplicativos UWP
+title: Adicionar e excluir animações
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d0dc449c0134799f3de675fff4bdbbda66046be8
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 4264a9a3a75c076fc033bb98dad45ff8dc99f2ef
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317092"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970281"
 ---
 # <a name="add-and-delete-animations"></a>Adicionar e excluir animações
 
@@ -21,7 +21,7 @@ ms.locfileid: "67317092"
 
 Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
 
-> **APIs importantes**: [**Classe AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
+> **APIs importantes**: [**classe AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -39,8 +39,8 @@ Animações de lista permitem inserir ou remover um ou vários itens de uma cole
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animando lista adições e exclusões](https://docs.microsoft.com/previous-versions/windows/apps/jj649430(v=win.10))
-* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [Animando adições e exclusões de lista](https://docs.microsoft.com/previous-versions/windows/apps/jj649430(v=win.10))
+* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Classe AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
  

@@ -1,5 +1,5 @@
 ---
-Description: Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
+Description: Os aplicativos do Windows que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta em um arquivo de formato de tinta (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
 title: Armazenar e recuperar dados de traço do Windows Ink
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
@@ -8,17 +8,17 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2919a2f61f3185d85b91bdf6fd6be22402eb77d0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 819358fb775444d62cbad414668a779fc5c305ca
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258264"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970241"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 
 
-Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
+Os aplicativos do Windows que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta em um arquivo de formato de tinta (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
 
 > [!NOTE]
 > O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
@@ -31,7 +31,7 @@ Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**Ink
 
 **Baixe este exemplo de [salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
-1.  Primeiro, definimos a interface do usuário.
+1.  Primeiro, configuramos a interface do usuário.
 
     A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
@@ -63,7 +63,7 @@ Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**Ink
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```csharp
 public MainPage()
     {
@@ -85,7 +85,7 @@ public MainPage()
 
 3.  Por fim, salvamos os dados à tinta no manipulador de eventos de clique do botão **Salvar**.
 
-    [  **FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
+    [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
 
     Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) definido como [**ReadWrite**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
@@ -163,7 +163,7 @@ Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los
 
 **Baixe este exemplo de [salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
-1.  Primeiro, definimos a interface do usuário.
+1.  Primeiro, configuramos a interface do usuário.
 
     A interface do usuário inclui os botões "Salvar", "Carregar", "Limpar", bem como [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
@@ -195,7 +195,7 @@ Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```csharp
 public MainPage()
     {
@@ -217,7 +217,7 @@ public MainPage()
 
 3.  Por fim, carregamos os dados à tinta no manipulador de eventos de clique do botão **Carregar**.
 
-    [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
+    [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
 
     Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) definido como [**Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
@@ -262,7 +262,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 > [!NOTE]
 > O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
 
-| Formato                    | Descrição |
+| Formatar                    | Descrição |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | Especifica dados à tinta persistentes usando ISF. Essa é a representação mais compacta e persistente de tinta. Ela pode ser inserida em um formato de documento binário ou colocada diretamente na Área de Transferência.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | Especifica dados à tinta persistentes codificando o ISF como um fluxo base64. Esse formato é oferecido para que dados à tinta possam ser codificados diretamente em um arquivo XML ou HTML.                                                                                                                                                                                                                                                |
@@ -279,7 +279,7 @@ Para este exemplo, habilitamos a seleção de traço quando a entrada é modific
 
 **Baixe este exemplo de [salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
 
-1.  Primeiro, definimos a interface do usuário.
+1.  Primeiro, configuramos a interface do usuário.
 
     A interface do usuário inclui os botões "Recortar", "Copiar" e "Limpar", juntamente com [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e uma tela de seleção.
 ```    XAML
@@ -436,17 +436,17 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 * [Interações por caneta](pen-and-stylus-interactions.md)
 
-**Exemplos de tópico**
-* [Salvar e carregar traços de tinta de um arquivo de formato serializado da tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+**Amostras de tópico**
+* [Salvar e carregar traços de tinta de um arquivo ISF (Ink Serialized Format)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
 * [Salvar e carregar traços de tinta da área de transferência](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
 **Outros exemplos**
-* [Exemplo de tinta simplesC#(C++/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
-* [Amostra de tinta complexaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
-* [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de introdução: suporte à tinta em seu aplicativo UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
-* [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
-* [Exemplo de notas da família](https://github.com/Microsoft/Windows-appsample-familynotes)
+* [Exemplo de tinta simples (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Amostra de tinta complexa (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+* [Exemplo de tinta (JavaScript)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BJavaScript%5D-Windows%208%20app%20samples/JavaScript/Windows%208%20app%20samples/Input%20Ink%20sample%20(Windows%208))
+* [Tutorial de introdução: suporte à tinta em seu aplicativo do Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Exemplo de livro de colorir](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Exemplo de anotações da família](https://github.com/Microsoft/Windows-appsample-familynotes)
 
 
 

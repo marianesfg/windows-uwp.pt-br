@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c59982c174909a3fb8ab0b21d5dd792969cfeebc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d2b6ba88587f4f536d4fe6fc2750a520166fde18
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259481"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606345"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -23,7 +23,7 @@ ms.locfileid: "74259481"
 
 -   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
 -   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
--   [**ApplicationData. Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
+-   [**ApplicationData.Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
 
 Saiba como criar uma tarefa em segundo plano que reconhece uma solicitação de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 
@@ -67,7 +67,7 @@ void ExampleBackgroundTask::OnCanceled(
 }
 ```
 
-Adicione uma variável de sinalizador chamada **\_CancelRequested** à classe de tarefa em segundo plano. Essa variável será usada para indicar quando uma solicitação de cancelamento tiver sido feita.
+Adicione uma variável de sinalizador chamada ** \_CancelRequested** à classe de tarefa background. Essa variável será usada para indicar quando uma solicitação de cancelamento tiver sido feita.
 
 ```csharp
 volatile bool _CancelRequested = false;
@@ -83,9 +83,9 @@ private:
     volatile bool CancelRequested;
 ```
 
-No método **cancelado** criado na etapa 1, defina a variável de sinalizador **\_CancelRequested** como **true**.
+No método **cancelado** criado na etapa 1, defina a variável ** \_** de sinalizador CancelRequested como **true**.
 
-O método completo de [exemplo de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509) **descancelou** define **\_CancelRequested** como **true** e grava saída de depuração potencialmente útil.
+O método [background task sample]( https://code.msdn.microsoft.com/windowsapps/Background-Task-Sample-9209ade9) **oncancelar** de exemplo de tarefa de fundo completo define ** \_CancelRequested** como **true** e grava saída de depuração potencialmente útil.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -131,9 +131,9 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Manipular o cancelamento saindo da sua tarefa em segundo plano
 
-Quando uma solicitação de cancelamento é recebida, o método que faz o trabalho em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** é definido como **true**. Para tarefas em segundo plano em processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Run** .
+Quando uma solicitação de cancelamento é recebida, o método que faz o trabalho em segundo plano precisa parar o trabalho e sair reconhecendo quando ** \_cancelRequested** está definido como **true**. Para tarefas em segundo plano em processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Run** .
 
-Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** for definido como true, pare o trabalho de continuar.
+Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se ** \_cancelRequested** for definido como true, pare o trabalho de continuar.
 
 O [exemplo de tarefa em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) inclui uma verificação que interrompe o retorno de chamada de timer periódico se a tarefa em segundo plano for cancelada.
 
@@ -402,10 +402,10 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
+- [Criar e registrar uma tarefa em segundo plano em andamento](create-and-register-an-inproc-background-task.md).
 - [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 - [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-- [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+- [Diretrizes de tarefas em segundo plano](guidelines-for-background-tasks.md)
 - [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 - [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 - [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
@@ -414,4 +414,4 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 - [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 - [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-- [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+- [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

@@ -1,5 +1,5 @@
 ---
-Description: Saiba quando e onde você deve usar blocos secundários em seu aplicativo UWP.
+Description: Saiba mais sobre quando e onde você deve usar blocos secundários em seu aplicativo do Windows.
 title: Diretrizes de design de blocos secundários
 label: Secondary tiles
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, blocos secundários, orientação, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 875513840d8dc752fe336241fa54710aebad6103
-ms.sourcegitcommit: 2d709ddcc31f52d2a4ace1134aea45057d99a615
+ms.openlocfilehash: 400b0d48fd68c720d613325d1938c0c4a70931a7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74782573"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971021"
 ---
 # <a name="secondary-tile-guidance"></a>Diretriz de bloco secundário
 
@@ -45,10 +45,10 @@ Ao habilitar blocos secundários em seu aplicativo, considere as seguintes recom
 * Os blocos secundários, como todos os blocos na tela inicial, são saídas dinâmicas que podem ser frequentemente atualizadas com novo conteúdo. Os blocos secundários podem exibir notificações e atualizações usando os mesmos mecanismos que qualquer outro bloco. Consulte [Escolher um método de entrega de notificação](choosing-a-notification-delivery-method.md) para saber mais.
 
 
-## <a name="related"></a>Relacionado
+## <a name="related"></a>Relacionados
 
-* [Visão geral dos blocos secundários](secondary-tiles.md)
+* [Visão geral de blocos secundários](secondary-tiles.md)
 * [Fixar blocos secundários](secondary-tiles-pinning.md)
 * [Ativos de bloco](app-assets.md)
-* [Documentação do conteúdo do bloco](create-adaptive-tiles.md)
+* [Documentação sobre conteúdo de blocos](create-adaptive-tiles.md)
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)

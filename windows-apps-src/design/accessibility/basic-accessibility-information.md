@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fa9ba2b8c9b327a51218dfc5f100c147f2d566e8
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 39b019495235ca2ff4bec2f9e6bc1b9230a15599
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521257"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969511"
 ---
 # <a name="expose-basic-accessibility-information"></a>Expor informações básicas de acessibilidade  
 
@@ -56,7 +56,7 @@ Nem todos os controles têm um valor. Os controles que não têm um valor report
 ## <a name="influencing-the-ui-automation-tree-views"></a>Influenciando as exibições de árvore de automação da IU  
 A estrutura de Automação da IU tem um conceito de exibições em árvore, onde os clientes da Automação da Interface do Usuário podem recuperar as relações entre os elementos de uma interface do usuário usando três visualizações possíveis: bruto, de controle e de conteúdo. A visualização de controle é a visualização usada frequentemente por clientes da Automação da Interface do Usuário, pois fornece uma boa representação e organização dos elementos em uma interface do usuário que são interativos. As ferramentas de teste costumam permitir que você escolha qual modo de exibição de árvore usar quando a ferramenta apresenta a organização dos elementos.
 
-Por padrão, qualquer classe derivada de [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e alguns outros elementos aparecerão na visualização de controle quando a estrutura de Automação da IU representar a IU para um aplicativo da Plataforma Universal do Windows (UWP). Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
+Por padrão, qualquer classe derivada de [**controle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e alguns outros elementos aparecerão no modo de exibição de controle quando a estrutura de automação da interface do usuário representar a interface do usuário para um aplicativo de aplicativo do Windows. Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>
@@ -64,7 +64,7 @@ Por padrão, qualquer classe derivada de [**Control**](https://docs.microsoft.co
 ## <a name="name-from-inner-text"></a>Nome do texto interno  
 Para facilitar o uso de cadeias de caracteres que já existem na IU visível para valores de nome acessível, muitos dos controles e outros elementos de IU oferecem suporte para determinar automaticamente um nome acessível padrão com base no texto interno dentro do elemento ou a partir de valores de cadeias de caracteres com propriedades de conteúdo.
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) e **RichTextBlock** cada um promove o valor da propriedade **Text** como o nome padrão acessível.
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) e **RichTextBlock** promovem o valor da propriedade **Text** como o nome acessível padrão.
 * Qualquer subclasse [**ContentControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) usa uma técnica "ToString" iterativa para encontrar cadeias de caracteres em seu valor [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) e promove essas cadeias de caracteres como o nome acessível padrão.
 
 > [!NOTE]
@@ -157,5 +157,5 @@ Observe que as propriedades anexadas, como as propriedades [**AutomationProperti
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
 * [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
-* [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
+* [Amostra de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [Testes de acessibilidade](accessibility-testing.md)

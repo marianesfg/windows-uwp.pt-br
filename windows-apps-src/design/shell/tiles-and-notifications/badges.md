@@ -1,6 +1,6 @@
 ---
 Description: Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
-title: Notificações de selo para aplicativos UWP
+title: Notificações de notificação para aplicativos do Windows
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e0c3802f0b6163ad5f0e179d90148bae543aeab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1d3aa9658e8a57a7993eb79d164b1e17ac23b9ac
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320852"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970871"
 ---
-# <a name="badge-notifications-for-uwp-apps"></a>Notificações de selo para aplicativos UWP
+# <a name="badge-notifications-for-windows-apps"></a>Notificações de notificação para aplicativos do Windows
 
  
 
@@ -65,7 +65,7 @@ Em vez de um número, um selo pode exibir um de um conjunto de glifos de status 
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td>atividade</td>
+    <td>activity</td>
     <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
@@ -194,9 +194,9 @@ private void clearBadge()
 }
 ````
 
-## <a name="get-the-sample-code"></a>Obter o código de exemplo
+## <a name="get-the-sample-code"></a>Obter o código de amostra
 
-* [Exemplo de notificações](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
+* [Amostra de notificações](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
 
 ## <a name="related-articles"></a>Artigos relacionados
 

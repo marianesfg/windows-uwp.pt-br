@@ -1,5 +1,5 @@
 ---
-Description: Saiba como gerenciar programaticamente a navegação em foco com ferramentas de teclado, gamepad e acessibilidade em um aplicativo UWP.
+Description: Saiba como gerenciar programaticamente a navegação em foco com ferramentas de teclado, gamepad e acessibilidade em um aplicativo do Windows.
 title: Navegação por foco programática com teclado, gamepad e ferramentas de acessibilidade
 label: Programmatic focus navigation
 keywords: teclado, controlador de jogo, controle remoto, navegação, estratégia de navegação, entrada, interação do usuário, acessibilidade, usabilidade
@@ -10,18 +10,18 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d919a86a44110d5b3b444fdf47d41f31637ccb6b
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 6b66363588ddad01b05ccc9cc6b3b7912fa21594
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210002"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970141"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegação por foco programática
 
 ![Teclado, remoto e direcional](images/dpad-remote/dpad-remote-keyboard.png)
 
-Para mover o foco de forma programática no seu aplicativo UWP, você pode usar o método [FocusManager.TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) ou [FocusManager.FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_).
+Para mover o foco programaticamente em seu aplicativo do Windows, você pode usar o método [FocusManager. TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) ou o método [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) .
 
 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) tenta mudar o foco do elemento com foco para o próximo elemento focalizável na direção especificada, enquanto [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) recupera o elemento (como um [DependencyObject](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject)) que receberá o foco com base na direção de navegação especificada (apenas navegação direcional, não pode ser usado para emular a navegação por guias).
 
@@ -143,7 +143,7 @@ Quando o elemento B tem o foco, FindNextElement identifica I como o candidato de
 
 ![Comportamento de navegação por foco personalizada usando dicas de navegação](images/keyboard/navigation-hints.png)
 
-*Comportamento de navegação de foco personalizado usando dicas de navegação*
+*Comportamento de navegação por foco personalizada usando dicas de navegação*
 
 ## <a name="navigation-focus-events"></a>Eventos de foco de navegação
 
@@ -204,14 +204,14 @@ Aqui está a ordem de execução para os eventos de foco:
 
 1.  [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) Se o foco for restaurado para o elemento que perdia o foco ou se [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.losingfocuseventargs#Windows_UI_Xaml_Input_LosingFocusEventArgs_TryCancel) for bem-sucedido, nenhum outro evento será acionado.
 2.  [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) Se o foco for restaurado para o elemento que perdia o foco ou se [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_TryCancel) for bem-sucedido, nenhum outro evento será acionado.
-3.  [Perda](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)
-4.  [Ocorre](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
+3.  [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)
+4.  [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
 
 A imagem a seguir mostra como, ao mover de A para a direita, o XYFocus escolhe B4 como um candidato. O B4 dispara o evento GettingFocus, onde o ListView tem a oportunidade de reatribuir foco a B3.
 
 ![Alterando o destino da navegação por foco no evento GettingFocus](images/keyboard/focus-events.png)
 
-*Alterando o destino de navegação de foco no evento GettingFocus*
+*Alterando o destino da navegação por foco no evento GettingFocus*
 
 Aqui, mostramos como manipular o evento [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) e redirecionar o foco.
 
@@ -327,6 +327,6 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Navegação de foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade](focus-navigation.md)
+- [Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade](focus-navigation.md)
 - [Interações de teclado](keyboard-interactions.md)
 - [Acessibilidade do teclado](../accessibility/keyboard-accessibility.md)

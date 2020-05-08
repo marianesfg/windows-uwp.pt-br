@@ -8,12 +8,12 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 825b13fe4b854a7a792ce11dd50a2da34ac40c76
-ms.sourcegitcommit: d7d509fe0f636e798adb2fa6e2299ba692847dd2
+ms.openlocfilehash: d496051a066ffcf9e8df5d4798415e6089cad4d1
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74906927"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970911"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconhecer traços do Windows Ink como texto e formas
 
@@ -67,7 +67,7 @@ Neste exemplo, o reconhecimento é iniciado quando o usuário clica em um botão
 2. No arquivo UI code-behind (MainPage.xaml.cs), adicione as referências de tipo de namespace necessárias para a nossa funcionalidade de análise de tinta e tinta:
     - [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/windows.ui.input.inking)
     - [Windows. UI. Input. teleking. Analysis](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.analysis)
-    - [Windows. UI. XAML. Shapes](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes)
+    - [Windows.UI.Xaml.Shapes](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes)
 
 3. Em seguida, podemos especificar nossas variáveis globais:
 
@@ -481,7 +481,7 @@ Consulte o tópico da propriedade [**InkRecognizer.Name**](https://docs.microsof
 
 Seu aplicativo pode consultar o conjunto de mecanismos de reconhecimento de manuscrito instalados e usar um deles ou permitir que o usuário selecione o idioma que preferir.
 
-**Observação**   os usuários podem ver uma lista de idiomas instalados acessando **configurações-&gt; hora & idioma**. Os idiomas instalados estão listados em **Idiomas**.
+**Observação**    os usuários podem ver uma lista de idiomas instalados acessando **configurações&gt; -hora & idioma**. Os idiomas instalados estão listados em **Idiomas**.
 
 Para instalar novos pacotes de idiomas e habilitar o reconhecimento de manuscrito para o idioma:
 
@@ -872,14 +872,14 @@ Para este exemplo, usaremos as mesmas configurações de traço e interface do u
 
 ### <a name="topic-samples"></a>Amostras de tópico
 
-- [Exemplo de análise de tinta (básicoC#) ()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-- [Exemplo de reconhecimento de manuscritoC#de tinta ()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+- [Exemplo de análise de tinta (básico) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+- [Exemplo de reconhecimento de manuscrito à tinta (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
-### <a name="other-samples"></a>Outros exemplos
+### <a name="other-samples"></a>Outras amostras
 
-- [Exemplo de tinta simplesC#(C++/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
-- [Amostra de tinta complexaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
-- [Exemplo de tinta (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-- [Tutorial de introdução: suporte à tinta em seu aplicativo UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
-- [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
-- [Exemplo de notas da família](https://github.com/Microsoft/Windows-appsample-familynotes)
+- [Exemplo de tinta simples (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+- [Amostra de tinta complexa (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+- [Exemplo de tinta (JavaScript)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BJavaScript%5D-Windows%208%20app%20samples/JavaScript/Windows%208%20app%20samples/Input%20Ink%20sample%20(Windows%208))
+- [Tutorial de introdução: suporte à tinta em seu aplicativo do Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+- [Exemplo de livro de colorir](https://github.com/Microsoft/Windows-appsample-coloringbook)
+- [Exemplo de anotações da família](https://github.com/Microsoft/Windows-appsample-familynotes)

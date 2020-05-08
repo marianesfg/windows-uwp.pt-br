@@ -1,33 +1,31 @@
 ---
-Description: O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado.
+Description: O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de build personalizado.
 title: Compilar recursos manualmente com o MakePri.exe
 template: detail.hbs
 ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: c6674fc38d41e3a18709dcb81edc95d164f9f86c
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: c23eced05d7539c869a40db1f2b641282b75f503
+ms.sourcegitcommit: 963316e065cf36c17b6360c3f89fba93a1a94827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320589"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82868894"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente com o MakePri.exe
 
-O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado.
+O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de build personalizado.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você verificar a **SDK do Windows para aplicativos gerenciados do UWP** opção durante a instalação do Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
-
-O limite de tamanho em um arquivo PRI é 64 KB.
+> O MakePri. exe é instalado quando você verifica o **SDK do Windows para a opção de aplicativos gerenciados UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como em pastas chamadas para outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="in-this-section"></a>Nesta seção
 |Tópico|Descrição|
 |-|-|
-| [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md) | O MakePri.exe tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso. |
+| [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md) | O MakePri.exe tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso. |
 | [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md) | Este tópico descreve o esquema do arquivo de configuração XML MakePri.exe. |
-| [Indexadores de formato específicas de MakePri.exe](makepri-exe-format-specific-indexers.md) | Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos. |
+| [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md) | Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos. |
 
 ## <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
@@ -43,13 +41,13 @@ O MakePri.exe é normalmente usado com as opções `new`, `versioned` e `resourc
 
 ## <a name="makepriexe-warnings-and-error-messages"></a>Mensagens de erro e de aviso do MakePri.exe
 
-### <a name="resources-found-for-languages-languages-but-no-resources-found-for-default-languages-languages-change-the-default-language-or-qualify-resources-with-the-default-language"></a>Idiomas de padrão de recursos localizados para idiomas '< idiomas >', mas nenhum recurso encontrado para: '< idiomas >'. Alterar o idioma padrão ou qualifique recursos com o idioma padrão.
+### <a name="resources-found-for-languages-languages-but-no-resources-found-for-default-languages-languages-change-the-default-language-or-qualify-resources-with-the-default-language"></a>Os recursos encontrados para os idiomas ' <idioma (s) > ', mas não foram encontrados recursos para os idiomas padrão: ' <idioma (s) > '. Altere o idioma padrão ou qualifique os recursos com o idioma padrão.
 
-Esse aviso é exibido quando MakePri.exe ou MSBuild descobre arquivos ou recursos de cadeia de caracteres para um determinado recurso nomeado que parecem ser marcado com qualificadores de linguagem, mas nenhuma candidata é encontrada para um idioma padrão. O processo para usar qualificadores nos nomes de arquivo e de pasta é descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md). Um arquivo ou uma pasta pode conter um nome de idioma, mas não é descoberto nenhum recurso qualificado para o idioma padrão exato. Por exemplo, se um projeto usa "en-US" como idioma padrão e tem um arquivo chamado "de/logo.png", mas não tem nenhum arquivo marcado com o idioma padrão "en-US", esse aviso será exibido. Para remover esse aviso, algum arquivo ou recurso de cadeia de caracteres deve estar qualificado com o idioma padrão ou o idioma padrão deve ser alterado. Para alterar o idioma padrão, com sua solução aberta no Visual Studio, abra `Package.appxmanifest`. Na guia Aplicativo, confirme se o idioma padrão está definido corretamente (por exemplo, "en" ou "en-US").
+Esse aviso é exibido quando MakePri. exe ou MSBuild descobre arquivos ou recursos de cadeia de caracteres para um determinado recurso nomeado que parece estar marcado com qualificadores de idioma, mas nenhum candidato foi encontrado para um idioma padrão. O processo para usar qualificadores nos nomes de arquivo e de pasta é descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md). Um arquivo ou uma pasta pode conter um nome de idioma, mas não é descoberto nenhum recurso qualificado para o idioma padrão exato. Por exemplo, se um projeto usa "en-US" como idioma padrão e tem um arquivo chamado "de/logo.png", mas não tem nenhum arquivo marcado com o idioma padrão "en-US", esse aviso será exibido. Para remover esse aviso, algum arquivo ou recurso de cadeia de caracteres deve estar qualificado com o idioma padrão ou o idioma padrão deve ser alterado. Para alterar o idioma padrão, com sua solução aberta no Visual Studio, abra `Package.appxmanifest`. Na guia Aplicativo, confirme se o idioma padrão está definido corretamente (por exemplo, "en" ou "en-US").
 
-### <a name="no-default-or-neutral-resource-given-for-resource-identifier-the-application-may-throw-an-exception-for-certain-user-configurations-when-retrieving-the-resources"></a>Nenhum padrão ou o recurso neutro fornecido para '<resource identifier>'. O aplicativo pode lançar uma exceção para determinadas configurações de usuário ao recuperar os recursos.
+### <a name="no-default-or-neutral-resource-given-for-resource-identifier-the-application-may-throw-an-exception-for-certain-user-configurations-when-retrieving-the-resources"></a>Nenhum recurso padrão ou neutro fornecido para '<resource identifier>'. O aplicativo pode gerar uma exceção para determinadas configurações de usuário ao recuperar os recursos.
 
-Esse aviso é exibido quando MakePri.exe ou MSBuild descobre arquivos ou recursos que parecem ser marcado com qualificadores de idioma para o qual os recursos são claras. Há qualificadores, mas não há garantia de que um candidato a recurso específico possa ser retornado para esse identificador de recurso no tempo de execução. Se não for possível encontrar nenhum candidato a recurso de um determinado idioma, região ou outro qualificador que seja um padrão ou que sempre corresponda ao contexto de um usuário, esse aviso será exibido. Em tempo de execução, para configurações de usuário específicas, como preferências de idioma ou local de residência de um usuário (**Configurações** > **Hora e idioma** > **Região e idioma**), as APIs usadas para recuperar o recurso podem gerar uma exceção inesperada. Para remover esse aviso, devem ser fornecidos recursos padrão, como um recurso no idioma padrão ou na região de residência global (homeregion-001) do projeto.
+Esse aviso é exibido quando o MakePri. exe ou o MSBuild descobre arquivos ou recursos que parecem estar marcados com qualificadores de idioma para os quais os recursos estão inclaros. Há qualificadores, mas não há garantia de que um candidato a recurso específico possa ser retornado para esse identificador de recurso no tempo de execução. Se não for possível encontrar nenhum candidato a recurso de um determinado idioma, região ou outro qualificador que seja um padrão ou que sempre corresponda ao contexto de um usuário, esse aviso será exibido. Em tempo de execução, para configurações de usuário específicas, como preferências de idioma do usuário ou local inicial (**configurações** > **de hora &** > região de idioma **& idioma**), as APIs usadas para recuperar o recurso podem gerar uma exceção inesperada. Para remover esse aviso, devem ser fornecidos recursos padrão, como um recurso no idioma padrão ou na região de residência global (homeregion-001) do projeto.
 
 ## <a name="using-makepriexe-in-a-build-system"></a>Usando o MakePri.exe em um sistema de compilação
 
@@ -62,7 +60,7 @@ Os sistemas de compilação também podem usar o indexador específico de format
 Quando forem criados arquivos PRI para outros componentes, bibliotecas de classes, assemblies, DLLs e SDKs, a configuração **initialPath** deverá ser usada para garantir que os recursos de componente tenham seus próprios mapas de sub-recursos que não gerem conflitos com o app no qual estão incluídos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Opções de linha de comando MakePri.exe](makepri-exe-command-options.md)
-* [Configuração de MakePri.exe](makepri-exe-configuration.md)
-* [Indexadores de formato específicas de MakePri.exe](makepri-exe-format-specific-indexers.md)
-* [Personalize seus recursos de idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md)
+* [Configuração do MakePri.exe](makepri-exe-configuration.md)
+* [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md)
+* [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)

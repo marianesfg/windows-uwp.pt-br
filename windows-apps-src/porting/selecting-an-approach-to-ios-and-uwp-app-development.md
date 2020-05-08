@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a76b451a3d268e418ae24998afdd29d32bb43ed6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 538fbc33d161f5f91033427af76438f49d3d3b68
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260133"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148580"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 
@@ -54,7 +54,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Se a sua lógica de negócios principal está escrita em C++, em vez de Objective-C ou Swift, você geralmente pode usar esse código com apenas algumas pequenas alterações em seu projeto. Em seguida, você pode usar XAML para definir sua interface do usuário, como com outros aplicativos Windows, e chamar no código C++ quando necessário.
 
--   [Use o ângulo para executar OpenGL ES no Windows](https://github.com/microsoft/angle/wiki)
+-   [Use o ANGLE para executar o OpenGL ES no Windows](https://github.com/microsoft/angle/wiki)
 
     Uma etapa intermediária para portabilidade de seu projeto do OpenGL ES 2.0 é usar o ANGLE. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
 
@@ -64,7 +64,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Um ambiente de criação de jogos.
 
--   [Construção 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
+-   [Construct 2]( https://www.scirra.com/)
 
     Um ambiente de criação de jogos.
 
@@ -76,7 +76,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Uma biblioteca de códigos para várias plataformas para manipulação de sprites e modelagem física.
 
--   [Impact. js](https://impactjs.com/)
+-   [Impact.js](https://impactjs.com/)
 
     Uma biblioteca de jogos em HTML.
 

@@ -5,28 +5,28 @@ ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72bad5bff8092e63a73cc1e32f4424b70867d245
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 502395d1daa698e1b05e40f355e65f074219e9a5
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366037"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970851"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Escolhendo o tipo de canal de notificação por push certo
 
-Este artigo trata dos três tipos de canais de notificação por push UWP (primários, secundários e alternativos) que ajudam você a fornecer conteúdo no seu aplicativo. 
+Este artigo aborda os três tipos de canais de notificação por push do Windows (primário, secundário e alternativo) que o ajudam a fornecer conteúdo para seu aplicativo. 
 
-(Para obter detalhes sobre como criar notificações por push, consulte o [visão geral do Windows Push Notification Services (WNS)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md).) 
+(Para obter detalhes sobre como criar notificações por push, consulte a [visão geral do WNS (Windows push Notification Services)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md). 
 
 ## <a name="types-of-push-channels"></a>Tipos de canais de push 
 
-Há três tipos de canais de push que podem ser usados para enviar notificações para um aplicativo UWP. São eles: 
+Há três tipos de canais de push que podem ser usados para enviar notificações a um aplicativo do Windows. Eles são: 
 
-[Canal primário](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - o canal de push "tradicional". Pode ser usado por qualquer aplicativo no repositório do sistema de envio, lado a lado, bruta, ou notificações de selos. [Saiba mais aqui](windows-push-notification-services--wns--overview.md).
+[Canal primário](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - o canal de push "tradicional". Pode ser usado por qualquer aplicativo na loja para enviar notificações de notificação, bloco, não processado ou de notificação. [Saiba mais aqui](windows-push-notification-services--wns--overview.md).
 
-[Canal de bloco secundário](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - usado para enviar atualizações de bloco para um bloco secundário. Só pode ser usado para enviar notificações de bloco ou selo para um bloco secundário fixado na tela inicial do usuário
+[Canal de bloco secundário](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -usado para enviar por push atualizações de bloco para um bloco secundário. Só pode ser usado para enviar notificações de bloco ou selo para um bloco secundário fixado na tela inicial do usuário
 
-[Canal alternativo](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - um novo tipo de canal adicionado na Atualização para Criadores. Ele permite o envio de notificações brutas a qualquer aplicativo UWP, incluindo aqueles que não estão registrados na Store. 
+[Canal alternativo](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - um novo tipo de canal adicionado na Atualização para Criadores. Ele permite que notificações brutas sejam enviadas a qualquer aplicativo do Windows, incluindo aquelas que não estão registradas na loja. 
 
 > [!NOTE]
 > Não importa qual canal de push você usar, quando o aplicativo estiver em execução no dispositivo, ele sempre será capaz de enviar notificações do sistema local, de bloco ou de selo. Ele pode enviar notificações locais dos processos de aplicativo em primeiro plano ou de uma tarefa em segundo plano. 
@@ -38,10 +38,10 @@ Esses são os canais mais usados no Windows atualmente e eles são úteis em pra
 
 ### <a name="what-do-primary-channels-enable"></a>O que os canais primários permitem?
 
--   **Enviando atualizações de bloco ou notificação ao bloco primário.** Se o usuário tiver optado por fixar seu bloco na tela inicial, essa é a sua chance de mostrar. Enviar atualizações com informações ou lembretes úteis de experiências dentro de seu aplicativo. 
--   **Enviando notificações do sistema.** As notificações do sistema são uma oportunidade de apresentar informações ao usuário imediatamente. Elas são pintadas pelo shell sobre a maioria dos aplicativos e residem na central de ações para que o usuário possa voltar e interagir com elas posteriormente. 
--   **Enviando notificações brutas para disparar uma tarefa em segundo plano.** Às vezes você deseja fazer algum trabalho em nome do usuário com base em uma notificação. As notificações brutas permitem que as tarefas em segundo plano do seu aplicativo sejam executadas 
--   **Criptografia de mensagens em trânsito fornecida pelo Windows usando o TLS.** As mensagens são criptografadas durante a transmissão tanto na chegada ao WNS como na ida para o dispositivo do usuário.  
+-   **Enviar atualizações de bloco ou selo ao bloco primário.** Se o usuário tiver optado por fixar seu bloco na tela inicial, essa é a sua chance de mostrar. Enviar atualizações com informações ou lembretes úteis de experiências dentro de seu aplicativo. 
+-   **Enviar notificações do sistema.** As notificações do sistema são uma oportunidade de apresentar informações ao usuário imediatamente. Elas são pintadas pelo shell sobre a maioria dos aplicativos e residem na central de ações para que o usuário possa voltar e interagir com elas posteriormente. 
+-   **Enviar notificações brutas para acionar uma tarefa em segundo plano.** Às vezes você deseja fazer algum trabalho em nome do usuário com base em uma notificação. As notificações brutas permitem que as tarefas em segundo plano do seu aplicativo sejam executadas 
+-   **Criptografia de mensagem em trânsito fornecida pelo Windows usando o TLS.** As mensagens são criptografadas durante a transmissão tanto na chegada ao WNS como na ida para o dispositivo do usuário.  
 
 ### <a name="limitations-of-primary-channels"></a>Limitações de canais primários
 
@@ -84,14 +84,14 @@ PushNotificationChannel channel =
 Os canais alternativos permitem que os aplicativos enviem notificações por push sem que haja a necessidade de registro na Microsoft Store ou da criação de canais de push fora do canal primário usado para o aplicativo. 
  
 ### <a name="what-do-alternate-channels-enable"></a>O que os canais alternativos permitem?
--   Enviar notificações brutas por push para um UWP em execução em qualquer dispositivo Windows. Canais alternativos permitem apenas notificações brutas (no entanto você ainda pode retornar uma tarefa em segundo plano para mostrar notificação do sistema localmente ou notificações de bloco).
+-   Envie notificações por push brutas para um Windows em execução em qualquer dispositivo Windows. Os canais alternativos só permitem notificações brutas (no entanto, você ainda pode ativar uma tarefa em segundo plano para mostrar localmente as notificações de notificação do sistema ou do bloco).
 -   Permitem que aplicativos criem vários canais de push brutos para diferentes recursos dentro do aplicativo. Um aplicativo pode criar até 1.000 canais alternativos, e cada um é válido por 30 dias. Cada um desses canais pode ser gerenciado ou revogado separadamente pelo aplicativo.
 -   Os canais de push alternativos podem ser criados sem registrar um aplicativo na Microsoft Store. Se o seu aplicativo for instalado em dispositivos sem que tenha sido registrado na Microsoft Store, ele ainda poderá receber notificações por push.
 -   Servidores podem enviar notificações usando protocolos APIs REST padrão W3C e VAPID. Canais alternativos usam o protocolo padrão W3C, isso permite que você simplifique a lógica do servidor que precisa ser mantida.
 -   Criptografia de mensagem completa, de ponta a ponta. O canal primário fornece criptografia em trânsito, mas se você quiser mais segurança, canais alternativos permitem que seu aplicativo passe por cabeçalhos de criptografia para proteger uma mensagem. 
 
 ### <a name="limitations-of-alternate-channels"></a>Limitações de canais alternativos
--   Servidor do aplicativo não é possível enviar por push do sistema, bloco ou notificações de tipo de notificação. Você só pode enviar por push notificações brutas. O aplicativo ainda é capaz de enviar notificações locais a partir da tarefa em segundo plano. 
+-   O servidor do aplicativo não pode enviar notificações de notificação por push, bloco ou tipo de notificação. Você só pode enviar notificações brutas por push. O aplicativo ainda é capaz de enviar notificações locais a partir da tarefa em segundo plano. 
 -   Requerem uma API REST diferente dos canais de bloco primário ou secundário. Usar a API REST padrão W3C significa que o aplicativo precisará ter uma lógica diferente para enviar atualizações de notificações do sistema ou de bloco
 
 ### <a name="creating-an-alternate-channel"></a>Criando um canal alternativo 
@@ -108,13 +108,13 @@ Aqui está uma rápida comparação entre os diferentes tipos de canal:
 
 <tr class="header">
 <th align="left"><b>Tipo</b></th>
-<th align="left"><b>Enviar por push do sistema?</b></th>
-<th align="left"><b>Enviar notificação de bloco /?</b></th>
-<th align="left"><b>Enviar notificações brutas?</b></th>
+<th align="left"><b>Envia notificação do sistema?</b></th>
+<th align="left"><b>Envia notificações de bloco/selo?</b></th>
+<th align="left"><b>Envia notificações brutas?</b></th>
 <th align="left"><b>Autenticação</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>Registro de Store necessário?</b></th>
-<th align="left"><b>Canais</b></th>
+<th align="left"><b>É necessário o registro na Store?</b></th>
+<th align="left"><b>Channels</b></th>
 <th align="left"><b>Criptografia</b></th>
 </tr>
 
@@ -142,7 +142,7 @@ Aqui está uma rápida comparação entre os diferentes tipos de canal:
 <td align="left">Em trânsito</td>
 </tr>
 <tr class="odd">
-<td align="left">Alternativa</td>
+<td align="left">Alternativo</td>
 <td align="left">Não</td>
 <td align="left">Não</td>
 <td align="left">Sim</td>
@@ -167,11 +167,11 @@ Em geral, recomendamos que você use o canal primário no aplicativo, com alguma
 
 * [Enviar uma notificação de bloco local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Notificações do sistema interativas e adaptáveis](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [Guia de início rápido: Enviar uma notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Guia de início rápido: enviando uma notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
 * [Como atualizar uma notificação por meio de notificações por push](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
 * [Como solicitar, criar e salvar um canal de notificação](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [Como interceptar as notificações para aplicativos em execução](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [Como autenticar com o serviço de notificação por Push o Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [Cabeçalhos de solicitação e resposta do serviço de notificação de push](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [Diretrizes e lista de verificação para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Como interceptar notificações para aplicativos em execução](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Como autenticar com o Serviço de Notificação por Push do Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Cabeçalhos de solicitação e resposta de serviço de notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Diretrizes e lista de verificação de notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 * [Notificações brutas](raw-notification-overview.md)
