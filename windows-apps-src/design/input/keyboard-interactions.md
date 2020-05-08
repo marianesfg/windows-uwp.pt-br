@@ -1,5 +1,5 @@
 ---
-Description: Aprenda como projetar e otimizar seus aplicativos UWP para que eles ofereçam a melhor experiência possível tanto para usuários avançados como para usuários com deficiências e outras necessidades de acessibilidade.
+Description: Saiba como projetar e otimizar seus aplicativos do Windows para que eles forneçam a melhor experiência possível para usuários avançados de teclado e para aqueles com deficiências e outros requisitos de acessibilidade.
 title: Interações por teclado
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
@@ -11,26 +11,26 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 449f0c81bdd54d99ef0977ca1c9b6ba10ba5eae7
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 1d883243b60b2b2693fbf0f21315008e556b5743
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210102"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970751"
 ---
 # <a name="keyboard-interactions"></a>Interações por teclado
 
-![imagem hero do teclado](images/keyboard/keyboard-hero.jpg)
+![imagem do teclado](images/keyboard/keyboard-hero.jpg)
 
-Aprenda como projetar e otimizar seus aplicativos UWP para que eles ofereçam a melhor experiência possível tanto para usuários avançados como para usuários com deficiências e outras necessidades de acessibilidade.
+Saiba como projetar e otimizar seus aplicativos do Windows para que eles forneçam a melhor experiência possível para usuários avançados de teclado e para aqueles com deficiências e outros requisitos de acessibilidade.
 
-Em qualquer dispositivo, as entradas por teclado são uma parte importante da experiência interativa geral da Plataforma Universal do Windows (UWP). Uma experiência de teclado bem projetada permite que os usuários naveguem de forma eficiente pela interface de usuário do seu aplicativo e acessem todas as suas funcionalidades sem precisar tirar as mãos do teclado.
+Em dispositivos, a entrada de teclado é uma parte importante da experiência geral de interação do aplicativo Windows. Uma experiência de teclado bem projetada permite que os usuários naveguem de forma eficiente pela interface de usuário do seu aplicativo e acessem todas as suas funcionalidades sem precisar tirar as mãos do teclado.
 
 ![imagem de teclado e gamepad](images/keyboard/keyboard-gamepad.jpg)
 
-***Os padrões comuns de interação são compartilhados entre o teclado e o gamepad***
+***Padrões de interação comuns são compartilhados entre teclado e gamepad***
 
-Neste tópico, nos focamos especificamente no design de aplicativo UWP para entradas por teclado em computadores. No entanto, uma experiência de teclado bem projetada é importante para dar suporte a ferramentas de acessibilidade, como o Windows Narrator, o uso de teclados de [software](#software-keyboard) , como o Touch Keyboard e o teclado na tela (OSK), e para lidar com outros tipos de dispositivos de entrada, como o Xbox gamepad e o controle remoto.
+Neste tópico, nos concentramos especificamente no design de aplicativos do Windows para entrada de teclado em PCs. No entanto, uma experiência de teclado bem projetada é importante para dar suporte a ferramentas de acessibilidade, como o Windows Narrator, o uso de teclados de [software](#software-keyboard) , como o Touch Keyboard e o teclado na tela (OSK), e para lidar com outros tipos de dispositivos de entrada, como o Xbox gamepad e o controle remoto.
 
 Muitas das diretrizes e recomendações discutidas aqui, incluindo os [elementos visuais de foco](#focus-visuals), as [teclas de acesso](#access-keys), e a [navegação da interface de usuário](#navigation), também se aplicam a outros cenários.
 
@@ -44,7 +44,7 @@ Todos os controles UWP incluem suporte interno para experiências de teclado ava
 
 ![imagem de teclado com telefone](images/keyboard/keyboard-phone.jpg)
 
-***O UWP dá suporte a teclado com qualquer dispositivo***
+***A UWP suporta teclado para qualquer dispositivo***
 
 ## <a name="basic-experiences"></a>Experiências básicas
 ![Dispositivo baseados no foco](images/keyboard/focus-based-devices.jpg)
@@ -57,8 +57,8 @@ Aqui estão os dispositivos e ferramentas discutidos neste tópico:
 
 | Dispositivo/ferramenta                       | Descrição     |
 |-----------------------------------|-----------------|
-|Teclado (hardware e software)   |Além do teclado de hardware padrão, os aplicativos UWP dão suporte a dois teclados de software: o [toque (ou software)](#software-keyboard) e o teclado [na tela](#on-screen-keyboard).|
-|Gamepad e controle remoto         |O gamepad do Xbox e o controle remoto são dispositivos de entrada fundamentais para a [experiência de 3 metros](../devices/designing-for-tv.md). Para obter detalhes específicos a respeito do suporte da UWP para o gamepad e o controle remoto, consulte [Interações por gamepad e controle remoto](gamepad-and-remote-interactions.md).|
+|Teclado (hardware e software)   |Além do teclado de hardware padrão, os aplicativos do Windows suportam dois teclados de software: o [toque (ou software)](#software-keyboard) e o teclado [na tela](#on-screen-keyboard).|
+|Gamepad e controle remoto         |O gamepad do Xbox e o controle remoto são dispositivos de entrada fundamentais para a [experiência de 3 metros](../devices/designing-for-tv.md). Para obter detalhes específicos sobre o suporte do Windows para gamepad e controle remoto, consulte [gamepad e interações de controle remoto](gamepad-and-remote-interactions.md).|
 |Leitores de tela (Narrador)          |O Narrador é um leitor de tela interno para Windows que oferece experiências de interação e funcionalidade exclusivas, mas que ainda depende da navegação e da entrada básica por teclado. Para obter detalhes sobre o Narrador, consulte [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator).|
 
 ## <a name="custom-experiences-and-efficient-keyboarding"></a>Experiências personalizadas e uso eficiente do teclado
@@ -71,10 +71,10 @@ Conforme mencionado, o suporte ao teclado é essencial para garantir que os apli
     - Forneça teclas de aceleração para ações rápidas (consulte [Aceleradores](#accelerators))
     - Fornecer chaves de acesso para navegar pela interface do usuário do aplicativo (consulte [chaves de acesso](access-keys.md))
 
-### <a name="focus-visuals"></a>Visuais de foco
+### <a name="focus-visuals"></a>Elementos visuais de foco 
 
 A UWP oferece suporte a um design visual de foco único que funciona bem para todos os tipos e experiências de entrada.
-](images/keyboard/focus-visual.png) do Visual de foco do ![
+![Visual de foco](images/keyboard/focus-visual.png)
 
 Um visual de foco:
 
@@ -95,7 +95,7 @@ Para excluir especificamente um controle da ordem de tabulação, defina a propr
 
 Por padrão, a ordem de tabulação reflete a ordem na qual elementos da interface de usuário são criados. Por exemplo, se um `StackPanel` contém um `Button`, uma `Checkbox`, e uma `TextBox`, a ordem de tabulação é `Button`, `Checkbox`, e `TextBox`.
 
-Você pode substituir a ordem de tabulação padrão definindo a propriedade [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) .
+Você pode substituir a ordem de tabulação padrão definindo a propriedade [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex).
 
 #### <a name="tab-order-should-be-logical-and-predictable"></a>A Ordem de tabulação deve ser previsível e lógica
 
@@ -111,7 +111,7 @@ Consulte [acessibilidade do teclado](../accessibility/keyboard-accessibility.md)
 
 Coordenar a ordem de tabulação e a ordem visual (também conhecida como ordem de leitura ou ordem de exibição) ajuda a reduzir a confusão para os usuários à medida que navegam pela interface do usuário do aplicativo.
 
-Experimente classificar e apresentar os comandos, controles e conteúdos mais importantes primeiro na ordem de tabulação e na ordem visual. Entretanto, a posição de exibição real pode depender do contêiner de layout pai e de certas propriedades dos elementos filho que influenciam o layout. Especificamente, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem visual bem diferente da ordem de tabulação.
+Experimente classificar e apresentar os comandos, controles e conteúdos mais importantes primeiro na ordem de tabulação e na ordem visual. No entanto, a posição de exibição real pode depender do recipiente do layout pai e de certas propriedades dos elementos filho que influenciam o layout. Especificamente, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem visual bem diferente da ordem de tabulação.
 
 **OBSERVAÇÃO** A ordem visual também depende do local e do idioma.
 
@@ -119,11 +119,11 @@ Experimente classificar e apresentar os comandos, controles e conteúdos mais im
 
 O foco inicial especifica o elemento da interface de usuário que recebe o foco quando um aplicativo ou uma página é iniciada ou ativada pela primeira vez. Ao usar um teclado, é desse elemento que um usuário começa interagindo com a interface do usuário do seu aplicativo.
 
-Para aplicativos UWP, o foco inicial é definido como o elemento com o [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) mais alto que pode receber o foco. Elementos filho de controles do recipiente são ignorados. No case de empate, o primeiro elemento na árvore visual recebe o foco.
+Para aplicativos UWP, o foco inicial é definido para o elemento com o maior [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) que pode receber foco. Elementos filho de controles do recipiente são ignorados. No case de empate, o primeiro elemento na árvore visual recebe o foco.
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>Definir o foco inicial para o elemento mais lógico
 
-Defina o foco inicial para o elemento da interface de usuário com a primeira ação, ou ação primária, que os usuários provavelmente executarão ao iniciar o aplicativo ou navegar pela página. Veja a seguir alguns exemplos:
+Defina o foco inicial para o elemento da interface de usuário com a primeira ação, ou ação primária, que os usuários provavelmente executarão ao iniciar o aplicativo ou navegar pela página. Alguns exemplos incluem:
 -   Um aplicativo de fotos, onde o foco é definido como o primeiro item em uma galeria
 -   Um aplicativo de música, onde o foco é definido como o botão Reproduzir
 
@@ -142,11 +142,11 @@ A navegação por teclado é geralmente suportada através da tecla Tab e das te
 Por padrão, os controles UWP seguem esses comportamentos de teclado básicos:
 -   **Tecla Tab** navegar entre controles acionáveis/ativos na ordem de tabulação.
 -   **Shift + Tab** navegar entre controles em ordem de tabulação reversa. Se o usuário navegou dentro do controle usando a tecla de seta, o foco é definido para o último valor conhecido dentro do controle.
--   **Teclas de seta** expor a "navegação interna" com controles específicos quando o usuário inicia a "navegação interna", teclas de seta não permitem a navegação fora de um controle. Veja a seguir alguns exemplos:
-    -   A tecla de seta para cima/para baixo move o foco dentro de `ListView` e `MenuFlyout`
-    -   Modificar os valores atualmente selecionados para `Slider` e `RatingsControl`
-    -   Mover o cursor para dentro `TextBox`
-    -   Expandir/recolher itens dentro de `TreeView`
+-   **Teclas de seta** expor a "navegação interna" com controles específicos quando o usuário inicia a "navegação interna", teclas de seta não permitem a navegação fora de um controle. Alguns exemplos incluem:
+    -   A tecla de seta para cima/para `ListView` baixo move o foco para dentro e`MenuFlyout`
+    -   Modifique os valores selecionados no `Slider` momento para e`RatingsControl`
+    -   Mover o cursor para dentro`TextBox`
+    -   Expandir/recolher itens dentro`TreeView`
 
 Use esses comportamentos padrão para otimizar a navegação por teclado do seu aplicativo.
 
@@ -158,7 +158,7 @@ Por exemplo, o controle `ContentDialog` mostrado aqui fornece navegação intern
 
 ![exemplo de diálogo](images/keyboard/dialog.png)
 
-***A interação com uma coleção de botões relacionados é facilitada com a navegação de tecla de seta***
+***A interação com um conjunto de botões relacionados se torna mais fácil com a navegação pelas teclas de seta***
 
 Se os itens são exibidos em uma única coluna, as setas Para cima/Para baixo navegam pelos itens. Se os itens são exibidos em uma única linha, as setas Direita/Esquerda navegam pelos itens. Se os itens são várias colunas, todas as 4 teclas de seta fazem a navegação.
 
@@ -174,7 +174,7 @@ Por exemplo, as imagens a seguir mostram dois controles `ListView` empilhados. A
   <td><img src="images/keyboard/arrow-only.png" alt="arrow only" /></td>
 </table>
 
-***A interação com dois controles ListView empilhados pode se tornar mais fácil e mais eficiente, eliminando a parada de tabulação e navegando com apenas teclas de direção.***
+***A interação com dois controles ListView empilhados pode ser mais fácil e eficiente através da eliminação da parada de tabulação, navegando apenas através das teclas de seta.***
 
 Visite a seção [Grupo de Controles](#control-group) para aprender como aplicar os exemplos de otimização na interface de usuário do seu aplicativo.
 
@@ -233,7 +233,7 @@ Por exemplo, para os controles `ListView` e `GridView`, a tecla **Page up** sobe
 
 ![teclas page up e page down](images/keyboard/page-up-and-down.png)
 
-### <a name="keyboard-shortcuts"></a>Atalhos de teclado
+### <a name="keyboard-shortcuts"></a>Atalhos do teclado
 
 Os atalhos de teclado podem facilitar o uso do seu aplicativo fornecendo suporte aprimorado para acessibilidade e eficiência aprimorada para usuários de teclado.
 
@@ -260,17 +260,17 @@ As aceleradoras possuem as seguintes características:
 -   Eles têm efeito em todo o aplicativo, quando há suporte.
 -   Eles devem ser atribuídos de forma consistente à medida que são memorizados e não documentados diretamente.
 
-#### <a name="access-keys"></a>Teclas de acesso
+#### <a name="access-keys"></a>Chaves de acesso
 
 Consulte a página [Teclas de acesso](access-keys.md) para obter informações mais detalhadas sobre o suporte às teclas de acesso na UWP.
 
 As teclas de acesso ajudam os usuários com deficiências motoras e aqueles capazes de pressionar apenas uma tecla por vez para agir sobre um item específico da interface de usuário. Além disso, as teclas de acesso podem ser usadas para comunicar teclas de atalho adicionais, ajudando usuários avançados a executar ações mais rapidamente.
 
-Teclas de acesso têm as seguintes características:
--   Elas usam a tecla Alt mais uma tecla alfanumérica.
+As teclas de acesso possuem as seguintes características:
+-   Elas usam a tecla Alt, mais uma tecla alfanumérica.
 -   Elas são principalmente para acessibilidade.
 -   Eles são documentados diretamente na interface do usuário, adjacentes ao controle, por meio de [dicas de tecla](access-keys.md).
--   Elas têm efeito somente na janela atual e navegam até o item de menu ou controle correspondente.
+-   Elas afetam apenas a janela atual, navegando ao menu de itens ou controle correspondente.
 -   As chaves de acesso devem ser atribuídas consistentemente aos comandos mais usados (especialmente botões de confirmação), sempre que possível.
 -   Elas são localizadas.
 
@@ -278,18 +278,18 @@ Teclas de acesso têm as seguintes características:
 
 A tabela a seguir é uma pequena amostra de atalhos de teclado usados com frequência. 
 
-| Ação                               | Comando de tecla                                      |
+| Ação                               | Comando de teclas                                      |
 |--------------------------------------|--------------------------------------------------|
 | Selecionar tudo                           | Ctrl+A                                           |
-| Selecionar continuamente                  | Shift+Tecla de cursor                                  |
+| Selecionar continuamente                  | Shift+Tecla de seta                                  |
 | Salvar                                 | Ctrl+S                                           |
 | Localizar                                 | Ctrl+F                                           |
-| Print                                | Ctrl+P                                           |
+| Imprimir                                | Ctrl+P                                           |
 | Copiar                                 | Ctrl+C                                           |
 | Recortar                                  | Ctrl+X                                           |
 | Colar                                | Ctrl+V                                           |
 | Desfazer                                 | Ctrl+Z                                           |
-| Guia Próximo                             | Ctrl+Tab                                         |
+| Próxima guia                             | Ctrl+Tab                                         |
 | Fechar a guia                            | Ctrl+F4 ou Ctrl+W                                |
 | Zoom Semântico                        | Ctrl++ ou Ctrl+-                                 |
 
@@ -306,9 +306,9 @@ Você pode agrupar um conjunto de controles relacionados, ou complementares, em 
 #### <a name="arrow-key-navigation"></a>Navegação por teclas de seta
 
 Os usuários esperam suporte para navegação com teclas de seta quando existe um grupo de controles semelhantes, relacionados, em uma região da interface de usuário:
--   `AppBarButtons` em um `CommandBar`
--   `ListItems` ou `GridItems` dentro `ListView` ou `GridView`
--   `Buttons` dentro `ContentDialog`
+-   `AppBarButtons`em um`CommandBar`
+-   `ListItems`ou `GridItems` dentro `ListView` de ou`GridView`
+-   `Buttons`neste`ContentDialog`
 
 Os controles UWP suportem a navegação pelas setas por padrão. Para layouts personalizados e grupos de controles, use `XYFocusKeyboardNavigation="Enabled"` para fornecer um comportamento semelhante.
 
@@ -320,7 +320,7 @@ Considere adicionar suporte para navegação de tecla de seta ao usar os seguint
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>Botões de diálogo</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>Botões</sup></p>     
+      <p><sup>RadioButtons</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
@@ -347,7 +347,7 @@ Em casos onde o layout segue um padrão de interface de usuário conhecido para 
 
 Os exemplos incluem:
 -   `RadioButtons`
--   Várias `ListViews` semelhantes e se comportam como uma única `ListView`
+-   Várias `ListViews` semelhantes e se comportam como uma única`ListView`
 -   Qualquer interface de usuário feita para se parecer e se comportar como grade de blocos (como os blocos do menu Iniciar)
 
 #### <a name="specifying-control-group-behavior"></a>Especificando o comportamento do grupo de controles
@@ -402,8 +402,8 @@ Veja a seguir algum mapeamentos de teclas entre teclado, gamepad e controle remo
 
 | **Teclado**  | **Gamepad**                         | **Controle remoto**  |
 |---------------|-------------------------------------|---------------------|
-| Espaço         | Botão A                            | Botão de seleção       |
-| Enter         | Botão A                            | Botão de seleção       |
+| Space         | Botão A                            | Botão de seleção       |
+| Digite         | Botão A                            | Botão de seleção       |
 | Escape        | Botão B                            | Botão Voltar         |
 | Home/End      | N/D                                 | N/D                 |
 | Page Up/Down  | RT e LT para rolagem vertical, RB e LB para rolagem horizontal   | N/D                 |
@@ -429,16 +429,16 @@ Ao contrário do teclado, quando um aplicativo sai do [modo do mouse](gamepad-an
   <tr>
     <td>
       <p><img src="images/keyboard/directional-navigation.png" alt="directional navigation"/></p>
-      <p><em><strong>navegação direcional com suporte</strong></br>Usando chaves direcionais (setas de teclado, gamepad e controle remoto D-pad), o usuário pode navegar entre diferentes controles.</em></p>
+      <p><em><strong>Navegação direcional com suporte</strong></br>Usando as teclas direcionais (setas do teclado, gamepad e controle remoto D-pad), o usuário pode navegar entre controles diferentes.</em></p>
     </td>
     <td>
       <p><img src="images/keyboard/no-directional-navigation.png" alt="no directional navigation"/></p>
-      <p><em><strong>navegação direcional sem suporte</strong> </br>O usuário não pode navegar entre diferentes controles usando as teclas direcionais. Outros métodos de navegação entre controles (tecla Tab) não são afetados.</em></p>
+      <p><em><strong>Navegação direcional sem suporte</strong> </br>O usuário não pode navegar entre diferentes controles usando as teclas direcionais. Outros métodos de navegação entre controles (tecla tab) não são afetados.</em></p>
     </td>
   </tr>
 </table>
 
-### <a name="built-in-keyboard-optimization"></a>Otimização de teclado interna
+### <a name="built-in-keyboard-optimization"></a>Otimização de teclado integrada 
 
 Dependendo do layout e controles usados, aplicativos UWP podem ser otimizados especificamente para entrada por teclado.
 
@@ -454,7 +454,7 @@ O exemplo a seguir mostra um grupo de itens de lista, itens de grade e itens de 
 
 ![navegação por setas em colunas e linhas múltiplas](images/keyboard/multiple-column-and-row-navigation.png)
 
-***Navegação de teclas de seta de várias colunas/linhas***
+***Navegação por Setas em Colunas/Linhas Múltiplas***
 
 #### <a name="wrapping-homogeneous-list-and-grid-view-items"></a>Envolvendo Itens Homogêneos de Exibição de Lista e Grade
 
@@ -476,12 +476,12 @@ Na ordem coluna-principal (onde os itens preenchem de cima para baixo, da esquer
     </td>
     <td>
       <p><img src="images/keyboard/column-major-keyboard.png" alt="column major keyboard navigation"/></p>
-      <p><em>Navegação de teclado principal da coluna</em></p>
+      <p><em>Navegação por teclado na ordem coluna principal</em></p>
     </td>
   </tr>
 </table>
 
-#### <a name="popup-ui"></a>Interface do usuário pop-up
+#### <a name="popup-ui"></a>Interface de usuário pop-up 
 
 Conforme mencionado, você deve tentar garantir que a navegação direcional corresponda à ordem visual dos controles na interface do usuário do seu aplicativo.
 
@@ -501,19 +501,19 @@ Se o último item tiver foco e a tecla de seta para baixo for pressionada, o foc
 
 Recomendamos que você eMule esses mesmos comportamentos em seus controles personalizados. O exemplo de código sobre como implementar esse comportamento pode ser encontrado na documentação de [navegação de foco programático](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) .
 
-## <a name="test-your-app"></a>Teste seu aplicativo
+## <a name="test-your-app"></a>Testar seu aplicativo
 
 Teste seu aplicativo com todos os dispositivos de entrada suportados para garantir que a navegação pelos elementos da interface de usuário aconteça de maneira coerente e intuitiva para que nenhum elemento não esperado interfira na ordem de tabulação desejada.
 
 ## <a name="related-articles"></a>Artigos relacionados
 * [Eventos de teclado](keyboard-events.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-* [Responder à presença do teclado de toque](respond-to-the-presence-of-the-touch-keyboard.md)
-* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)
+* [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 ## <a name="appendix"></a>Apêndice
 
-### <a name="software-keyboard"></a>Teclado de software
+### <a name="software-keyboard"></a>Teclado de software 
 
 O teclado de software é um teclado exibido na tela, que o usuário pode utilizar no lugar do teclado físico para digitar e inserir dados através do toque, caneta/stylus ou outro dispositivo apontador (não é necessária uma tela sensível ao toque). Na tela sensível ao toque, esses teclados também podem ser tocados diretamente para inserir texto. Em dispositivos Xbox One, teclas individuais precisam ser selecionadas, movendo o visual do foco ou utilizando teclas de atalho no gamepad ou controle remoto.
 
@@ -529,7 +529,7 @@ Dependendo do dispositivo, o teclado de software aparece quando um campo de text
 
 ![ícone de teclado virtual no centro de notificações](images/keyboard/touch-keyboard-notificationcenter.png)
 
-Se o seu aplicativo define o foco por meio de programação para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
+Se o seu aplicativo define o foco de forma programática para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
 
 Normalmente, o teclado virtual permanece visível enquanto o usuário navega entre controles em um formulário. Esse comportamento pode variar com base nos outros tipos de controle no formulário.
 
@@ -542,17 +542,17 @@ A seguir há uma lista de controles que não são de edição que podem receber 
 -   Árvore
 -   Item de árvore
 -   Menu
--   Barra de menu
+-   Barra de menus
 -   Item de menu
 -   Barra de ferramentas
--   List
+-   Lista
 -   Item de lista
 
-Veja aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilustra o layout padrão; a segunda, o layout em miniatura (que pode não estar disponível em todos os idiomas).
+Veja aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilustra o layout padrão, a segunda é o layout em miniatura (que pode não estar disponível em todos os idiomas).
 
 ![o teclado virtual no modo de layout padrão](images/keyboard/default.png)
 
-***O teclado de toque no modo de layout padrão***
+***O teclado virtual no modo de layout padrão***
 
 ![o teclado virtual no modo de layout expandido](images/keyboard/extendedview.png)
 
@@ -562,16 +562,16 @@ Interações de teclado bem-sucedidas permitem que os usuários utilizem cenári
 
 **Observação**  o teclado de toque não dá suporte à alternância e à maioria dos comandos do sistema.
 
-#### <a name="on-screen-keyboard"></a>Teclado virtual
+#### <a name="on-screen-keyboard"></a>Teclado Virtual
 Como o teclado de software, o Teclado Virtual é um teclado de software, visual, que pode ser usado no lugar do teclado físico para digitar e inserir dados através do toque, mouse, caneta/stylus ou outro dispositivo apontador (não é necessária uma tela sensível ao toque). O teclado virtual é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O teclado virtual emula a maior parte, se não toda a funcionalidades de um teclado de hardware.
 
-O teclado virtual pode ser ativado na página Teclado em Configurações &gt; Facilidade de acesso.
+O Teclado Virtual pode ser ativado pela página Teclado em Configurações &gt; Facilidade de acesso.
 
-**OBSERVAÇÃO** O Teclado Virtual possui prioridade sobre o teclado virtual, que não será exibido caso o Teclado Virtual esteja presente.
+**Observação** O teclado na tela tem prioridade sobre o teclado de toque, que não será mostrado se o teclado na tela estiver presente.
 
 ![o teclado virtual](images/keyboard/osk.png)
 
-***Teclado virtual***
+***Teclado Virtual***
 
 Visite [a página Teclado Virtual](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) para obter mais detalhes sobre o Teclado Virtual.
 

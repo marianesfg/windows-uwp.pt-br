@@ -1,5 +1,5 @@
 ---
-Description: Use comentários visuais para mostrar os usuários quando suas interações com um aplicativo UWP forem detectadas, interpretadas e manipuladas.
+Description: Use comentários visuais para mostrar os usuários quando suas interações com um aplicativo do Windows forem detectadas, interpretadas e manipuladas.
 title: Feedback visual
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -8,16 +8,16 @@ keywords: feedback visual, feedback de foco, feedback de toque, visualização d
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bba80403934987569c25b96eced9a610226431b5
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: fcb6945c488bc1b715c339fa39949ea62bdb2a12
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209972"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970071"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
-Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Além de retransmitir o status do sistema, também reduz os erros.
+Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Ele também retransmite o status do sistema e reduz os erros.
 
 > **APIs importantes**:  [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
@@ -31,7 +31,7 @@ Use o feedback visual para mostrar aos usuários quando suas interações são d
 - Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
 - Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
-## <a name="additional-usage-guidance"></a>Diretriz de uso adicional
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
 
 As visualizações por contato são especialmente críticas para as interações por toque que exigem exatidão e precisão. Por exemplo, seu app deve indicar claramente o local de um toque para permitir que um usuário saiba se errou o seu destino, o quanto errou e quais ajustes deve fazer.
 
@@ -40,7 +40,7 @@ Usar os controles da plataforma padrão XAML disponíveis garante que o aplicati
 > [!Important]
 > Não recomendamos mudar o comportamento da interação dos gestos internos.
 
-**Comentários entre dispositivos**
+**Comentários em todos os dispositivos**
 
 O feedback visual geralmente depende do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
 
@@ -62,10 +62,10 @@ Para a **experiência de 10 pés** típica do uso de Xbox e programa de TV, o Wi
 
 ## <a name="color-branding--customizing"></a>Personalização e identidade visual de cores
 
-**Propriedades da borda**
+### <a name="border-properties"></a>Propriedades da borda
 
-Há duas partes nos elementos visuais de foco de alta visibilidade: a borda principal e a borda secundária. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária.
-![Redlines do Visual de foco de alta visibilidade](images/FocusRectRedlines.png)
+Há duas partes nos elementos visuais de foco de alta visibilidade: a borda principal e a borda secundária. A borda principal tem espessura de **2px** e é traçada em torno da parte *externa* da borda secundária. A borda secundária tem espessura de **1px** e é traçada em torno da parte *interna* da borda principal.
+![Linhas vermelhas dos elementos visuais de foco de alta visibilidade](images/FocusRectRedlines.png)
 
 Para alterar a espessura de qualquer tipo de borda (principal ou secundária), use **FocusVisualPrimaryThickness** ou **FocusVisualSecondaryThickness**, respectivamente:
 ```XAML
@@ -73,15 +73,15 @@ Para alterar a espessura de qualquer tipo de borda (principal ou secundária), u
 ```
 ![Espessuras de margem do elemento visual de foco de alta visibilidade](images/FocusMargin.png)
 
-A margem é uma propriedade do tipo [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Veja abaixo: ![a espessura da margem visual de foco de alta visibilidade somente inferior](images/FocusThicknessSide.png)
+A margem é uma propriedade do tipo [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Veja abaixo: ![foco na alta visibilidade de margens visuais de margem Visual somente inferior](images/FocusThicknessSide.png)
 
-A margem é o espaço entre os limites do controle visual e o início da *borda secundária* dos elementos visuais de foco. A margem padrão está **1px** além dos limites de controle. Você pode editar essa margem em uma base por controle. Basta alterar a propriedade **FocusVisualMargin**:
+A margem é o espaço entre os limites visuais do controle e o início da *borda secundária*dos visuais de foco. A margem padrão é **1px** fora dos limites do controle. Você pode editar essa margem em uma base por controle, alterando a propriedade **FocusVisualMargin** :
 ```XAML
 <Slider Width="200" FocusVisualMargin="-5"/>
 ```
 ![Diferenças de margem dos elementos visuais de foco de alta visibilidade](images/FocusPlusMinusMargin.png)
 
-*Uma margem negativa enviará a borda para fora do centro do controle e uma margem positiva moverá a borda para mais perto do centro do controle.*
+*Uma margem negativa colocará a borda além do centro do controle, e uma margem positiva moverá a borda para mais perto do centro do controle.*
 
 Para desativar totalmente os elementos visuais de foco no controle, basta desabilitar **UseSystemFocusVisuals**:
 ```XAML
@@ -90,7 +90,7 @@ Para desativar totalmente os elementos visuais de foco no controle, basta desabi
 
 A espessura, a margem ou a opção do desenvolvedor do aplicativo de ter ou não os elementos visuais de foco são determinadas com base no controle.
 
-**Propriedades de cor**
+### <a name="color-properties"></a>Propriedades de cor
 
 Há somente duas propriedades de cor para os elementos visuais de foco: a cor da borda principal e a cor da borda secundária. Essas cores de borda dos elementos visuais podem ser alteradas por controle no nível da página e globalmente no nível do aplicativo:
 
@@ -108,27 +108,31 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-**Para designers**
-* [Diretrizes para panorâmica](guidelines-for-panning.md)
+### <a name="for-designers"></a>Para designers
 
-**Para desenvolvedores**
-* [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [Diretrizes de movimento panorâmico](guidelines-for-panning.md)
 
-**Exemplos**
-* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+### <a name="for-developers"></a>Para desenvolvedores
 
-**Amostras de arquivo-morto**
-* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [Entrada: exemplo de gestos do Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [Exemplo de entrada do DirectX Touch](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
+- [Interações personalizadas do usuário](https://docs.microsoft.com/windows/uwp/design/layout/index)
+
+### <a name="samples"></a>Exemplos
+
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+
+### <a name="archive-samples"></a>Exemplos de arquivo-morto
+
+- [Entrada: amostra de eventos de entrada do usuário XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Entrada: amostra de funcionalidades do dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: amostra de teste de hit de toque](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [Exemplo de rolagem, panorâmica e zoom do XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: amostra de tinta simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
+- [Entrada: amostra de gestos no Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: exemplo de manipulações e gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [Amostra de entrada por toque do DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  
 
  

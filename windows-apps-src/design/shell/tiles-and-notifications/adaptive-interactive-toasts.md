@@ -8,28 +8,28 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, notificações do sistema, notificações do sistema interativas, notificações do sistema adaptáveis, conteúdo de notificação do sistema, conteúdo da notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b424da3b9413c7528cb6f6a6a888e9fe2cc7cb7
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: bda62b76973adb7b6cfe068cdd9ca33b1a54454c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209852"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970921"
 ---
 # <a name="toast-content"></a>Conteúdo da notificação do sistema
 
 As notificações do sistema interativas e adaptáveis permitem a criação de notificações flexíveis com texto, imagens e botões/entradas.
 
-> **APIs importantes**: [pacote NuGet de Notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **APIs importantes**: [Pacote do nuget de notificações de kit de ferramentas de comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Para ver os modelos herdados de Windows 8.1 e Windows Phone 8,1, consulte o [Catálogo de modelos de notificação do sistema herdado](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
+> Para ver os modelos herdados do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
 
 
 ## <a name="getting-started"></a>Introdução
 
 **Instale a biblioteca de notificações.** Se você quiser usar a linguagem C# em vez de XML para gerar notificações, instale o pacote NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (procure por "notificações uwp"). Os exemplos em linguagem C# fornecidos neste artigo usam o pacote NuGet, versão 1.0.0.
 
-**Instale o Visualizador de notificações.** Esse aplicativo UWP gratuito ajuda você a criar notificações interativas do sistema, fornecendo uma visualização instantânea da notificação enquanto você a edita, semelhante ao modo de exibição de editor/design XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**Instale o Visualizador de Notificações.** Esse aplicativo gratuito do Windows ajuda você a criar notificações interativas do sistema fornecendo uma visualização Visual instantânea de sua notificação ao editá-la, semelhante à exibição de design/editor XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="sending-a-toast-notification"></a>Envio da notificação do sistema
@@ -103,7 +103,7 @@ A identidade do seu aplicativo na notificação do sistema é transmitida por me
 
 ## <a name="text-elements"></a>Elementos de texto
 
-Cada notificação do sistema deve ter pelo menos um elemento de texto e conter dois elementos de texto adicionais, todos do tipo [**AdaptiveText**](toast-schema.md#adaptivetext).
+Cada notificação deve ter pelo menos um elemento de texto e pode conter dois elementos de texto adicionais, todos do tipo [**AdaptiveText**](toast-schema.md#adaptivetext).
 
 <img alt="Toast with title and description" src="images/toast-title-and-description.jpg" width="364"/>
 
@@ -144,7 +144,7 @@ new ToastBindingGeneric()
 
 ## <a name="app-logo-override"></a>Substituição de logotipo do aplicativo
 
-Por padrão, o sistema exibirá o logotipo do aplicativo. No entanto, você pode substituir esse logotipo com sua própria imagem [**ToastGenericAppLogo**](toast-schema.md#toastgenericapplogo). Por exemplo, se esta for uma notificação de uma pessoa, recomendamos substituir o logotipo do aplicativo por uma foto da pessoa.
+Por padrão, o sistema exibirá o logotipo do aplicativo. No entanto, você pode substituir esse logotipo por sua própria imagem [**ToastGenericAppLogo**](toast-schema.md#toastgenericapplogo) . Por exemplo, se esta for uma notificação de uma pessoa, recomendamos substituir o logotipo do aplicativo por uma foto da pessoa.
 
 <img alt="Toast with app logo override" src="images/toast-applogooverride.jpg" width="364"/>
 
@@ -879,6 +879,6 @@ Para saber como manipular ativações de notificações do sistema (o usuário c
  
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Enviar um sistema de notificação local e lidar com a ativação](send-local-toast.md)
-* [Biblioteca de notificações no GitHub (parte do UWP Community Toolkit)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
-* [Suporte à notificação de bloco e do sistema para idioma, escala e alto contraste](tile-toast-language-scale-contrast.md)
+* [Enviar uma notificação do sistema local e manipular a ativação](send-local-toast.md)
+* [Biblioteca de notificações no GitHub (parte do Kit de ferramentas da comunidade UWP)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Suporte à notificação de bloco e do sistema para o idioma, a escala e o alto contraste](tile-toast-language-scale-contrast.md)

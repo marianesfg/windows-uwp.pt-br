@@ -1,21 +1,21 @@
 ---
-Description: O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com Microsoft Visual Studio 2019 para fornecer aplicativos UWP com suporte à tradução, gerenciamento de arquivos de tradução e ferramentas de editor.
+Description: O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com o Microsoft Visual Studio 2019 para fornecer aos aplicativos do Windows suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de editor.
 title: Use o Kit de Ferramentas de Aplicativo Multilíngue
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 34bc609d06705f1dfa6a5c7370ce6022ae9c3ff8
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: f11ee858be112db899e0fd25dd2fe274d5a092fd
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684242"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970961"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Use o Kit de Ferramentas de Aplicativo Multilíngue 4.0
 
-O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com Microsoft Visual Studio 2019 para fornecer aplicativos UWP com suporte à tradução, gerenciamento de arquivos de tradução e ferramentas de editor. Aqui estão algumas das propostas de valor do kit de ferramentas.
+O kit de ferramentas de aplicativo multilíngue (passe-partout) 4,0 integra-se com o Microsoft Visual Studio 2019 para fornecer aos aplicativos do Windows suporte a tradução, gerenciamento de arquivos de tradução e ferramentas de editor. Aqui estão algumas das propostas de valor do kit de ferramentas.
 
 - Ajuda você a gerenciar as alterações de recursos e o status da tradução durante o desenvolvimento.
 - Fornece uma IU para escolha de idiomas com base nos provedores de tradução configurados.
@@ -58,7 +58,7 @@ Na janela de saída (mostrando a saída do Kit de Ferramentas de Aplicativo Mult
 Siga estas etapas para adicionar idiomas ao seu projeto.
 
 1. Clique com o botão direito no nó do projeto, em Gerenciador de Soluções.
-2. Clique em **Kit de Ferramentas de Aplicativo Multilíngue** > **Adicionar idiomas de tradução...** .
+2. Clique em **Kit de ferramentas** > de aplicativo multilíngüe**Adicionar idiomas de tradução...**.
 3. No diálogo Idiomas de Tradução, selecione o(s) idioma(s) aos quais deseja oferecer suporte e clique em OK.
 
 O kit de ferramentas faz isso em resposta.
@@ -69,7 +69,7 @@ O kit de ferramentas faz isso em resposta.
 
 Sempre que você adicionar/remover um Arquivo de Recursos (.resw) no idioma padrão ou adicionar/remover uma cadeia de caracteres em um Arquivo de Recursos (.resw) no idioma padrão, faça a compilação do projeto novamente para ressincronizar os arquivos .xlf. Isso garante que os arquivos .xlf contenham a união das cadeias de caracteres no idioma padrão.
 
-Os provedores de tradução instalados&mdash; como os serviços do [Portal de Idiomas Microsoft](https://www.microsoft.com/Language/) e [Microsoft Translator](https://www.microsofttranslator.com/)&mdash; podem ser usados para traduzir os recursos do seu app. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
+Os provedores&mdash;de tradução instalados, como o Microsoft [Language portal](https://www.microsoft.com/Language/) e o [Microsoft Translator](https://www.microsofttranslator.com/)&mdash;, podem ser usados para converter os recursos do aplicativo. Quando um provedor dá suporte a um idioma específico, o ícone do provedor é exibido próximo do nome do idioma no diálogo Idiomas de Tradução.
 
 Na caixa de diálogo Idiomas de Tradução, todo idioma baseado em .xlf existente detectável pelo kit de ferramentas terá a caixa de seleção pré-marcada para indicar que o idioma já está incluído no projeto.
 
@@ -82,8 +82,8 @@ Pseudoidioma é uma modificação artificial do produto de software destinada a 
 Siga estas etapas para pseudolocalizar e testar seu projeto.
 
 1. Use a caixa de diálogo Idiomas de Tradução para adicionar o Pseudoidioma (Pseudo) [qps-ploc] ao seu projeto.
-2. Clique com botão direito no arquivo `<project-name>.qps-ploc.xlf` do Gerenciador de Soluções e clique em **Kit de Ferramentas de Aplicativo Multilíngue** > **Gerar Traduções Automáticas**.
-3. Em **Configurações** > **Hora e idioma** > **Região e idioma** > **Idiomas**, clique em **Adicionar um idioma**.
+2. Clique com o botão `<project-name>.qps-ploc.xlf` direito do mouse no arquivo em Gerenciador de soluções e clique em **Kit de ferramentas** > de aplicativo multilíngüe**gerar traduções do computador**.
+3. Em **configurações** > **hora & região de idioma** > **&** > **idiomas**de idioma, clique em **Adicionar um idioma**.
 5. Na caixa de pesquisa, digite `qps-ploc`.
 6. Clique em `English (qps-ploc)` para adicionar.
 7. Na lista de idiomas, selecione `English (qps-ploc)` e clique em **Definir como padrão**.
@@ -115,11 +115,11 @@ Você também pode iniciar o Editor Multilíngue da seguinte forma. Ir até o In
 
 #### <a name="option-2-send-the-xlf-files-to-a-third-party-for-translation"></a>Opção 2. Envie os arquivos .xlf para um terceiro para serem traduzidos
 
-Para terceirizar o trabalho de tradução e edição aos tradutores, selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Exportar traduções...** .
+Para terceirizar o trabalho de tradução e edição para localizadores, selecione os arquivos. XLF desejados no Gerenciador de soluções, clique com o botão direito do mouse neles e clique em tradução do **Kit de ferramentas** > de aplicativo multilíngüe **...**.
 
 Selecione **Saída: Destinatário do e-mail** na caixa de diálogo Exportar recursos de sequência e clique em OK. Seus arquivos serão zipados e anexados a um novo email. Selecione **Saída: Local da pasta de arquivos**, navegue pela pasta e clique em OK, opcionalmente escolha a compactação (zip) dos arquivos, clique em OK novamente e seus arquivos serão (zipados e) salvos no local que você escolheu, dentro de uma nova pasta com o nome do seu projeto.
 
-Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos .xlf desejados no Gerenciador de Soluções, clique neles com o botão direito do mouse e em **Kit de Ferramentas de Aplicativo Multilíngue** > **Importar/reciclar traduções...** . Clique em **Adicionar**, navegue até os arquivos .xlf ou .zip e clique em **Importar**.
+Depois que os tradutores concluírem o trabalho de tradução e enviarem os arquivos .xlf traduzidos, você poderá importá-los para o seu projeto. Selecione os arquivos. XLF desejados no Gerenciador de soluções, clique com o botão direito do mouse neles e clique em > **importar/reciclar traduções**do kit de **ferramentas de aplicativo multilíngüe**.... Clique em **Adicionar**, navegue até os arquivos. XLF ou. zip e clique em **importar**.
 
 **Observação** O processo de importação executa uma validação básica antes da importação. Isso garante que as informações da cultura de destino nos arquivos que estão sendo importados correspondam aos arquivos .xlf existentes.
 
@@ -162,16 +162,16 @@ Antes de começar o processo de Certificação da Microsoft Store, exclua o arqu
 
 * [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](../../app-resources/localize-strings-ui-manifest.md)
 * [Globalização e localização](globalizing-portal.md)
-* [Diretrizes para globalização](guidelines-and-checklist-for-globalizing-your-app.md)
-* [Tornar seu aplicativo localizável](prepare-your-app-for-localization.md)
-* [BCP-marca de idioma 47](https://tools.ietf.org/html/bcp47)
+* [Diretrizes de globalização](guidelines-and-checklist-for-globalizing-your-app.md)
+* [Torne seu aplicativo localizável](prepare-your-app-for-localization.md)
+* [Marca de idioma BCP-47](https://tools.ietf.org/html/bcp47)
 
 ## <a name="downloads"></a>Downloads
 
-* [Kit de ferramentas de aplicativo multilíngue 4,0. instalador VSIX](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [Instalador do kit de ferramentas de aplicativo multilíngue 4,0. msi](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit)
+* [Instalador .vsix do Kit de Ferramentas de Aplicativo Multilíngue 4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
+* [Instalador .msi do Kit de Ferramentas de Aplicativo Multilíngue 4.0](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>Serviços de tradução
 
-* [Portal de linguagem da Microsoft](https://www.microsoft.com/Language/)
+* [Portal de Idiomas Microsoft](https://www.microsoft.com/Language/)
 * [Microsoft Translator](https://www.microsofttranslator.com/)

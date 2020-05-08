@@ -1,17 +1,17 @@
 ---
-description: Este artigo explica como adicionar o recurso de arrastar e soltar em seu aplicativo UWP (Plataforma Universal do Windows).
+description: Este artigo explica como adicionar arrastar e soltar em seu aplicativo de aplicativo do Windows.
 title: Arrastar e soltar
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fec8ef45cff07d7a092fd46bd2d960bfcaf0c50a
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: e14ab0d7e6ef8b79ce29addf37ec1fc52b737923
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684516"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970151"
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
 
@@ -109,14 +109,14 @@ A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielemen
 
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Comunicação de aplicativo a aplicativo](index.md)
 * [AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)
-* [Canarrastar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)
+* [CanDrag](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)
 * [DragOver](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 * [AcceptedOperation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation)
 * [DataView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview)
-* [DragUIOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
-* [Remover](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
-* [Isarrastto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)
+* [DragUiOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
+* [Suspensa](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+* [IsDragSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)

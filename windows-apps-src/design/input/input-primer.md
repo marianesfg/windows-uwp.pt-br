@@ -1,5 +1,5 @@
 ---
-Description: As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, Cortana, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
+Description: As interações do usuário no aplicativo do Windows são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, Touchpad, fala, Cortana, controlador, gesto, olhar e assim por diante), juntamente com vários modos ou modificadores que habilitam experiências estendidas (incluindo a roda do mouse e botões, botões de rosca e de segundo plano, teclado de toque e
 title: Cartilha de interação
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
@@ -8,20 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b9fbe76244d37bda69a1737e04f7172a64b3af44
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ef3adfd192acbef45ee341b133e4133e1f1ff586
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684219"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968152"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
-As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, foco, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
+As interações do usuário no aplicativo do Windows são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, Touchpad, fala, **Cortana**, controlador, gesto, olhar e assim por diante), juntamente com vários modos ou modificadores que habilitam experiências estendidas (incluindo a roda do mouse e botões, botões de rosca e de segundo plano, teclado de toque e
 
-A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
+A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de lidar individualmente com os tipos exclusivos de entrada recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
 Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, recursos e limitações quando combinados com determinados fatores forma. Isso pode ajudar você a decidir se os controles e as funcionalidades da plataforma são suficientes para seu aplicativo, ou exigem que você forneça experiências de interação personalizadas.
 
@@ -39,11 +39,11 @@ Na **Atualização de abril de 2018 para o Windows 10**, introduziu o suporte pa
 
 ### <a name="typical-usage"></a>Uso típico
 
-Acompanhe o foco, a atenção e a presença do usuário com base na localização e na movimentação de seus olhos. Essa nova maneira eficiente de usar e interagir com seus aplicativos UWP é útil como uma tecnologia adaptativa para usuários com doenças neuro musculares (por exemplo, ALS) e outras deficiências envolvendo funções musculares ou dos nervos. Entrada com foco também oferece oportunidades atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
+Acompanhe o foco, a atenção e a presença do usuário com base na localização e na movimentação de seus olhos. Essa nova maneira poderosa de usar e interagir com os aplicativos do Windows é especialmente útil como uma tecnologia assistencial para usuários com neuro-muscular doenças (como ALS) e outras deficiências que envolvem funções imemparelhadas de capacidade ou núcleo. Entrada com foco também oferece oportunidades atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
-[Interações de olhar e acompanhamento de olho](gaze-interactions.md)
+[Interações de foco e rastreamento de olhos](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
@@ -58,20 +58,20 @@ Na **Atualização de Aniversário do Windows 10**, introduzimos a categoria de 
 
 Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial destina-se como um dispositivo de entrada secundário para vários tipos de mídia que complementa ou modifica a entrada de um dispositivo principal. Na maioria dos casos, o dispositivo é manipulado pela mão não dominante de um usuário durante a execução de uma tarefa com a mão dominante (por exemplo, escrita à tinta com uma caneta).
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
-[Diretrizes de design de discagem de superfície](windows-wheel-interactions.md)
+[Diretrizes de design do Surface Dial](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-No Windows 10, a extensibilidade da **Cortana** permite que você manipule comandos de voz de um usuário e inicie seu aplicativo para realizar uma única ação.
+No Windows 10, a extensibilidade da **Cortana** permite lidar com comandos de voz de um usuário e iniciar um aplicativo para executar uma única ação.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 -   Xbox
 -   HoloLens
@@ -84,12 +84,12 @@ Um comando de voz é uma fala única, definida em um arquivo VCD (Definição de
 
 A integração da funcionalidade básica do seu aplicativo e o fornecimento de um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente permitem que a **Cortana** se torne uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar muito tempo e esforço do usuário. Para saber mais, consulte [Diretrizes de design da Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines).
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
 [Diretrizes de design da Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
-## <a name="speech"></a>Controle por voz
+## <a name="speech"></a>Speech
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
 
@@ -102,7 +102,7 @@ A conversão de texto em fala (também conhecida como TTS ou sintetização de v
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 -   Xbox
 -   HoloLens
@@ -113,7 +113,7 @@ A conversão de texto em fala (também conhecida como TTS ou sintetização de v
 
 Há três modos de interação de fala:
 
-**Idioma natural**
+**Linguagem natural**
 
 A linguagem natural é como interagimos verbalmente com as pessoas em geral. Nossa fala varia de acordo com a pessoa e a situação, e é geralmente entendida. Quando não é, geralmente usamos palavras e uma ordem de palavras diferentes para comunicar a mesma ideia.
 
@@ -133,7 +133,7 @@ O método de entrada de fala mais básico. Cada expressão é convertida em text
 
 O ditado normalmente é usado quando um aplicativo não precisa compreender o significado ou a intenção.
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
 [Diretrizes de design de controle por voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
  
@@ -142,7 +142,7 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
-**Observação**  há dois tipos de dispositivos de caneta: ativo e passivo.
+**Observe**  que há dois tipos de dispositivos de caneta: ativos e passivos.
   -   As canetas passivas não são eletrônicas, e emulam efetivamente a entrada touch de um dedo. Elas exigem uma exibição básica do dispositivo, que reconhece a entrada com base na pressão do contato. Como os usuários geralmente repousam a mão enquanto escrevem na superfície de entrada, os dados de entrada podem ficar poluídos devido a rejeição da palma da mão bem-sucedida.
   -   As canetas ativas são eletrônicas e podem funcionar com telas de dispositivos complexas para fornecer dados de entrada muito mais extensos (incluindo passagem do mouse ou dados de proximidade) ao sistema e seu aplicativo. A rejeição da palma da mão é muito mais robusta.
 
@@ -153,7 +153,7 @@ Quando nos referimos a dispositivos de caneta aqui, estamos fazendo referência 
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 
 ![caneta](images/input-interactions/icons-pen01.png)
@@ -166,7 +166,7 @@ A caneta e o touch apresentam divergências quando o assunto é a capacidade do 
 
 Você deve fornecer comandos de interface do usuário específicos à caneta, ou funcionalidades, para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
 [Diretrizes para design de caneta](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
@@ -180,7 +180,7 @@ Com o touch, os gestos físicos de um ou mais dedos podem ser usados para emular
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 
 ![touch](images/input-interactions/icons-touch01.png)
@@ -201,9 +201,9 @@ Em geral, o touch é:
 -   Não restrito à orientação do dispositivo.
 -   Usado para todas as interações, incluindo entrada de texto (teclado virtual) e tinta (configurado pelo aplicativo).
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
-[Diretrizes para design de touch](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
+[Diretrizes de design de toque](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
  
 
 ## <a name="touchpad"></a>Touchpad
@@ -225,7 +225,7 @@ Devido a essa convergência de experiências de interação compatíveis com tou
 
 Você deve fornecer comandos de interface do usuário, ou funcionalidades, específicos ao mouse para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
 [Diretrizes de design do touchpad](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
@@ -234,14 +234,14 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
-Com o [Continuum para telefone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), uma nova experiência para dispositivos compatíveis com Windows 10 Mobile, os usuários podem conectar seus telefones a um mouse e teclado para fazer com que seus telefones funcionem como um laptop.
+Com o [Continuum para telefone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um mouse e um teclado para fazê-los funcionar como um notebook.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 -   Xbox
 -   HoloLens
@@ -256,7 +256,7 @@ O OSK é um teclado de software visual que você pode usar em vez do teclado fí
 
 O teclado virtual é um teclado de software visual usado para entrada de texto por touch. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
 
-**Observação**  o OSK tem prioridade sobre o teclado de toque, que não será mostrado se o OSK estiver presente.
+**Observe**  que o OSK tem prioridade sobre o teclado de toque, que não será mostrado se o OSK estiver presente.
 
 Em geral, um teclado é:
 
@@ -265,7 +265,7 @@ Em geral, um teclado é:
 -   Usado para entrada de texto, navegação, jogabilidade e acessibilidade.
 -   Sempre disponível, de forma proativa ou reativa.
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
 [Diretrizes de design do teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
  
@@ -279,7 +279,7 @@ Um mouse é mais adequado para aplicativos de produtividade e interfaces do usu�
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 
 ![mouse](images/input-interactions/icons-mouse01.png)
@@ -292,9 +292,9 @@ Assim como a caneta, o mouse e o touch apresentam divergências quando o assunto
 
 Você deve fornecer comandos de interface do usuário, ou funcionalidades, específicos ao mouse para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### <a name="more-info"></a>Mais informações
+### <a name="more-info"></a>Obter mais informações
 
-[Diretrizes de design de mouse](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
+[Diretrizes para design de mouse](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
  
 
 ## <a name="gesture"></a>Gesto
@@ -351,7 +351,7 @@ Acomodar o máximo possível de usuários e dispositivos e projetar seus aplicat
 -   Telefones e phablets
 -   Tablet
 -   Computadores e notebooks
--   Surface Hub
+-   Hub de Superfície
 -   IoT
 -   Xbox
 -   HoloLens

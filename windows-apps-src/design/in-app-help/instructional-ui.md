@@ -1,5 +1,5 @@
 ---
-Description: Crie uma interface do usuário das instruções (IU) que ensina os usuários a trabalhar com seu aplicativo UWP.
+Description: Projete uma interface do usuário de instrução (IU) que ensina aos usuários como trabalhar com seu aplicativo do Windows.
 title: Diretrizes para criar uma interface do usuário instrucional
 label: Instructional UI
 template: detail.hbs
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 ms.localizationpriority: medium
-ms.openlocfilehash: b39507fb1333fdb642601c6b4828c3d160c6ceb5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cda4b3c49ac0fd021823f72fde6358f910fcdc73
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656431"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970171"
 ---
 # <a name="instructional-ui-guidelines"></a>Diretrizes da interface do usuário instrucional
 
@@ -31,37 +31,37 @@ A menos que seu aplicativo dependa de gestos de toque, interface do usuário ins
 
 ## <a name="principles-of-writing-instructional-ui"></a>Princípios de escrita da interface do usuário instrucional
 
-Uma boa interface do usuário instrucional é relevante e educativa para o usuário e melhora a experiência do usuário. Ela deve ser:
+Uma boa interface do usuário instrucional é relevante e educativa para o usuário e melhora a experiência do usuário. Ele deveria ser:
 
--   **Simples:** Os usuários não querem sua experiência seja interrompida com informações complicadas
--   **Fácil de ser lembrado:** Os usuários não querem ver as mesmas instruções toda vez que ele tente uma tarefa, portanto, precisam de instruções seja algo que vai se lembrar.
--   **Imediatamente relevante:** Se a interface do usuário das instruções não ensinar a um usuário sobre algo que eles desejam fazer imediatamente, eles não tem um motivo para prestar atenção a ela.
+-   **Simples:** os usuários não querem que a experiência seja interrompida com informações complicadas
+-   **Memorável:** os usuários não querem ver as mesmas instruções sempre que tentam executar uma tarefa, logo, as instruções precisam ser algo de que se lembrarão.
+-   **Imediatamente relevantes:** se a interface do usuário instrucional não ensinar um usuário sobre algo que ele deseja fazer imediatamente, ele não terá motivo para prestar atenção a ela.
 
 Evite o uso excessivo de interface do usuário instrucional e certifique-se de escolher os tópicos certos. Não ensine:
 
--   **Recursos fundamentais:** Se um usuário precisar de instruções para usar seu aplicativo, considere o design de aplicativo mais intuitiva.
--   **Recursos óbvios:** Se um usuário pode descobrir um recurso por conta própria, sem a instrução, a interface do usuário das instruções apenas receberá da forma.
--   **Recursos complexos:** Interface do usuário das instruções deve ser conciso, e usuários interessados em recursos complexos são normalmente dispostos a busca de instruções e não precisam ser concedido a eles.
+-   **Recursos fundamentais:** se um usuário precisar de instruções para usar seu aplicativo, considere tornar o design do aplicativo mais intuitivo.
+-   **Recursos óbvios:** se um usuário conseguir descobrir um recurso por conta própria sem instrução, a interface do usuário instrucional só acabará atrapalhando.
+-   **Recursos complexos:** a interface do usuário instrucional deve ser concisa, e os usuários interessados em recursos complexos normalmente estão dispostos a buscar instruções e não precisam recebê-las.
 
 Evite ser inconveniente para o usuário com sua interface do usuário instrucional. Não:
 
--   **Obscuras informações importantes:** Interface do usuário das instruções nunca deve ser em termos de outros recursos de seu aplicativo.
--   **Forçar os usuários a participar:** Os usuários devem ser capazes de ignorar a interface do usuário das instruções e ainda o andamento por meio do aplicativo.
--   **Exibindo informações de repetição:** Não perseguir o usuário com a interface do usuário das instruções, mesmo se eles ignorá-la na primeira vez. Adicionar uma configuração para exibir a interface do usuário instrucional novamente é a melhor solução.
+-   **Obscureça informações importantes:** a interface do usuário instrucional nunca deve atrapalhar outros recursos de seu aplicativo.
+-   **Force os usuários a participar:** os usuários devem conseguir ignorar a interface do usuário instrucional e ainda usar bem o aplicativo.
+-   **Como exibir informações repetidas:** não assedie o usuário com a interface do usuário instrucional, mesmo que ele a ignore na primeira vez. Adicionar uma configuração para exibir a interface do usuário instrucional novamente é a melhor solução.
 
 ## <a name="examples-of-instructional-ui"></a>Exemplos de interface do usuário instrucional
 
 Estas são algumas situações nas quais a interface do usuário instrucional pode ajudar seus usuários a aprender:
 
--   **Ajudando os usuários a descobrir interações de toque.** A captura de tela a seguir mostra uma interface do usuário instrucional ensinando um jogador a usar gestos de touch no jogo Cut the Rope.
+-   **Ajudando os usuários a descobrir interações por toque.** A captura de tela a seguir mostra uma interface do usuário instrucional ensinando um jogador a usar gestos de touch no jogo Cut the Rope.
 
     ![captura de tela de jogo mostrando mensagem da interface do usuário instrucional, "deslize para cortar a corda"](images/in-game-controls-3.png)
 
--   **Fazendo uma primeira impressão excelente.** Quando o Editor de Vídeos é iniciado pela primeira vez, a interface do usuário instrucional solicita que o usuário comece a criar vídeos sem obstruir sua experiência.
+-   **Causando uma ótima primeira impressão.** Quando o Editor de Vídeos é iniciado pela primeira vez, a interface do usuário instrucional solicita que o usuário comece a criar vídeos sem obstruir sua experiência.
 
     ![tela de inicialização do aplicativo Editor de Vídeos](images/instructional-ui-movie.png)
 
--   **A orientação dos usuários para ir para a próxima etapa em uma tarefa complicada.** No aplicativo Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
+-   **Orientando o usuário a realizar a próxima etapa de uma tarefa complicada.** No aplicativo Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
 
     ![captura de tela cortada do aplicativo windows mail mostrando uma mensagem da interface do usuário instrucional](images/instructional-ui-mail-inbox.png)
 
@@ -73,4 +73,4 @@ Estas são algumas situações nas quais a interface do usuário instrucional po
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Diretrizes para obter ajuda sobre o aplicativo](guidelines-for-app-help.md)
+* [Diretrizes da ajuda ao aplicativo](guidelines-for-app-help.md)

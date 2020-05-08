@@ -1,42 +1,42 @@
 ---
-Description: Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
-title: Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
+Description: Compartilhar código entre um aplicativo de área de trabalho e um aplicativo UWP
+title: Compartilhar código entre um aplicativo de área de trabalho e um aplicativo UWP
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 344ee7060edcee3376e271fc21e104490d8724d7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 4c07a3bbff4b29d2b59ef7d6d8a5912ce3675a4e
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319717"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730350"
 ---
-# <a name="move-from-a-desktop-application-to-uwp"></a>Mover de um aplicativo da área de trabalho para UWP
+# <a name="move-from-a-desktop-application-to-uwp"></a>Mover de um aplicativo de área de trabalho para UWP
 
-Se você tiver um aplicativo de área de trabalho existente que foi criado usando o .NET Framework (inclusive WPF e Windows Forms) ou C++ APIs do Win32, você tem várias opções para mover para a plataforma Universal do Windows (UWP) e Windows 10.
+Se você tiver um aplicativo de área de trabalho existente criado usando o .NET Framework (incluindo WPF e Windows Forms) ou APIs Win32 do C++, terá várias opções para mudar para o Plataforma Universal do Windows (UWP) e para o Windows 10.
 
-## <a name="package-your-desktop-application-in-an-msix-package"></a>Empacotar o aplicativo da área de trabalho em um pacote MSIX
+## <a name="package-your-desktop-application-in-an-msix-package"></a>Empacotar seu aplicativo de desktop em um pacote MSIX
 
-Você pode empacotar seu aplicativo da área de trabalho em um pacote MSIX para obter acesso a muitos outros recursos do Windows 10. MSIX é um formato de pacote do aplicativo do Windows moderno, que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, incluindo aplicativos UWP, WPF, Windows Forms e Win32. Empacotar seus aplicativos da área de trabalho do Windows em pacotes MSIX fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento empresarial e muitos modelos de distribuição personalizados. Você pode empacotar seu aplicativo se você tiver o código-fonte ou se tiver apenas um arquivo de instalador existente (como um instalador MSI ou o App-V). Depois que você empacota seu aplicativo, você pode integrar os recursos UWP, como extensões do pacote e outros componentes UWP.
+Você pode empacotar seu aplicativo de área de trabalho em um pacote MSIX para obter acesso a muitos outros recursos do Windows 10. MSIX é um formato de pacote do aplicativo do Windows moderno, que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, incluindo aplicativos UWP, WPF, Windows Forms e Win32. Empacotar seus aplicativos da área de trabalho do Windows em pacotes MSIX fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento empresarial e muitos modelos de distribuição personalizados. Você pode empacotar seu aplicativo se tiver o código-fonte ou se tiver apenas um arquivo do instalador existente (como um MSI ou um instalador do App-V). Depois de empacotar seu aplicativo, você pode integrar recursos de UWP, como extensões de pacote e outros componentes UWP.
 
-Para obter mais informações, consulte [empacotar aplicativos da área de trabalho (ponte de Desktop)](/windows/msix/desktop/desktop-to-uwp-root) e [recursos que exigem a identidade do pacote](/windows/apps/desktop/modernize/modernize-packaged-apps).
+Para obter mais informações, consulte [empacotar aplicativos de área de trabalho (ponte de desktop)](/windows/msix/desktop/desktop-to-uwp-root) e [recursos que exigem a identidade do pacote](/windows/apps/desktop/modernize/modernize-packaged-apps).
 
-## <a name="use-uwp-apis"></a>Usar APIs UWP
+## <a name="use-windows-runtime-apis"></a>Usar Windows Runtime APIs
 
-Você pode chamar várias APIs UWP diretamente no seu aplicativo da área de trabalho Win32 WPF, Windows Forms ou C++ para integrar experiências modernas interessantes para usuários do Windows 10. Por exemplo, você pode chamar APIs UWP para adicionar notificações do sistema ao seu aplicativo da área de trabalho.
+É possível chamar várias APIs do Windows Runtime diretamente no seu aplicativo da área de trabalho Win32 do WPF, do Windows Forms ou do C++ para integrar experiências modernas interessantes para usuários do Windows 10. Por exemplo, você pode chamar APIs do Windows Runtime para adicionar notificações do sistema ao seu aplicativo da área de trabalho.
 
-Para obter mais informações, consulte [Usar APIs UWP em aplicativos da área de trabalho](/windows/apps/desktop/modernize/desktop-to-uwp-enhance).
+Para saber mais, confira [Usar APIs do Windows Runtime em aplicativos de área de trabalho](/windows/apps/desktop/modernize/desktop-to-uwp-enhance).
 
-## <a name="migrate-a-net-framework-app-to-a-uwp-app"></a>Migrar um .NET Framework de aplicativo para um aplicativo UWP
+## <a name="migrate-a-net-framework-app-to-a-uwp-app"></a>Migrar um aplicativo .NET Framework para um aplicativo UWP
 
-Se seu aplicativo for executado no .NET Framework, você pode migrá-lo para um aplicativo UWP, aproveitando o .NET Standard 2.0. Mova a quantidade de código conforme você pode em bibliotecas de classes do .NET Standard 2.0 e, em seguida, crie um aplicativo UWP que faz referência a suas bibliotecas do .NET Standard 2.0. 
+Se seu aplicativo for executado no .NET Framework, você poderá migrá-lo para um aplicativo UWP aproveitando .NET Standard 2,0. Mova o máximo de código que você pode em .NET Standard bibliotecas de classe 2,0 e, em seguida, crie um aplicativo UWP que referencie suas bibliotecas de .NET Standard 2,0. 
 
 ### <a name="share-code-in-a-net-standard-20-library"></a>Compartilhar código em uma biblioteca .NET 2.0 padrão
 
-Se seu aplicativo for executado no .NET Framework, coloque a quantidade de código conforme você pode em .NET Standard 2.0 bibliotecas de classes. Contanto que seu código use APIs que são definidos no padrão, você pode reutilizá-los em um aplicativo UWP. É mais fácil do que nunca foi compartilhar código em uma biblioteca .NET padrão porque muitas APIs mais estão incluídas no .NET padrão 2.0.
+Se o seu aplicativo for executado no .NET Framework, coloque o mesmo código que você pode em .NET Standard bibliotecas de classes 2,0. Contanto que seu código use APIs que são definidos no padrão, você pode reutilizá-los em um aplicativo UWP. É mais fácil do que nunca foi compartilhar código em uma biblioteca .NET padrão porque muitas APIs mais estão incluídas no .NET padrão 2.0.
 
-Aqui está um vídeo que diz a você mais informações sobre ele.
+Aqui está um vídeo que explica mais sobre isso.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1]
 
@@ -76,13 +76,13 @@ Se seu código não for compatível com o padrão, considere a possibilidade de 
 
 Parte de seu código será específica de plataforma e precisará permanecer em seu projeto de aplicativo da área de trabalho.
 
-#### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Exemplo: Migrando código de acesso de dados em uma biblioteca do .NET Standard 2.0
+#### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Exemplo: Migrando o código de acesso de dados a uma biblioteca .NET Standard 2.0
 
-Vamos supor que temos um aplicativo bem básico do Windows Forms que mostra os clientes do nosso banco de dados de exemplo Northwind.
+Vamos supor que tenhamos um aplicativo de Windows Forms muito básico que mostra os clientes de nosso banco de dados de exemplo Northwind.
 
 ![Aplicativo de formulário do Windows](images/desktop-to-uwp/win-forms-app.png)
 
-O projeto contém uma biblioteca de classes do .NET Standard 2.0 com uma classe estática chamada **Northwind**. Se nós movermos esse código na classe **Northwind**, ele não será compilado porque usa as classes ``SQLConnection``, ``SqlCommand`` e ``SqlDataReader``, e essas classes que não estão disponíveis no .NET Standard 2.0.
+O projeto contém uma biblioteca de classes do .NET Standard 2.0 com uma classe estática chamada **Northwind**. Se movermos esse código para a classe **Northwind** , ele não compilará porque ele usa ``SQLConnection``as ``SqlCommand``classes, ``SqlDataReader`` , e, e as classes que não estão disponíveis no .net Standard 2,0.
 
 ```csharp
 public static ArrayList GetCustomerNames()
@@ -234,7 +234,7 @@ Assim como UWPs, o custo para adicionar um aplicativo iOS ou Android é menor po
 
 Primeiro, adicione um projeto **Android**, **iOS**, ou **Plataforma cruzada** à sua solução.
 
-Você pode encontrar esses modelos na caixa de diálogo **Adicionar novo projeto** no grupo **Visual C#** .
+Você pode encontrar esses modelos na caixa de diálogo **Adicionar novo projeto** no grupo **Visual C#**.
 
 ![Aplicativos Xamarin](images/desktop-to-uwp/xamarin-projects.png)
 
@@ -282,10 +282,10 @@ Para começar com Android, iOS e projetos de plataforma cruzada, consulte o [Por
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Encontre respostas para suas perguntas**
+**Encontrar respostas para suas dúvidas**
 
 Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [marcas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Você também pode entrar em contato conosco [aqui](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Fazer comentários ou sugestões de recursos**
 
-Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
+Confira [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

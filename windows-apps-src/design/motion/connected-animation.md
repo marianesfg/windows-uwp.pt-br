@@ -9,14 +9,14 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e17b1c18fc8e643ac788e5e13ac78cae49a35ef
-ms.sourcegitcommit: 6d743cf9c3e09f87ea2879b8e1f2dc4a1b1a16fe
+ms.openlocfilehash: 385c11e48695c2486fd5a2b72633923454e2f8ea
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74166083"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970631"
 ---
-# <a name="connected-animation-for-uwp-apps"></a>Animação conectada para aplicativos UWP
+# <a name="connected-animation-for-windows-apps"></a>Animação conectada para aplicativos do Windows
 
 As animações conectadas permitem que você crie uma experiência de navegação dinâmica e convincente pela animação da transição de um elemento entre duas exibições diferentes. Isso ajuda o usuário a manter o contexto e oferece continuidade entre os modos de exibição.
 
@@ -55,7 +55,7 @@ Neste vídeo rápido, um aplicativo usa uma animação conectada para animar uma
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>Animação conectada e o Sistema de Design Fluent
 
- O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Animação conectada é um componente do Sistema de Design Fluent que acrescenta movimento ao seu aplicativo. Para saber mais, confira a [Visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
+ O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Animação conectada é um componente do Sistema de Design Fluent que acrescenta movimento ao seu aplicativo. Para saber mais, confira a [visão geral do design fluente](/windows/apps/fluent-design-system).
 
 ## <a name="why-connected-animation"></a>Por que animação conectada?
 
@@ -100,8 +100,8 @@ Para obter os vários efeitos, algumas configurações ignoram essas propriedade
 
 | Configuração | Respeita defaultduration? | Respeita DefaultEasingFunction? |
 | - | - | - |
-| Gravidade | Sim | Sim* <br/> **a conversão básica de a para B usa essa função de atenuação, mas o "dip de gravidade" tem sua própria função de atenuação.*  |
-| Encaminhe | Não <br/> *Anima sobre 150ms.*| Não <br/> *Usa a função de atenuação de desaceleração.* |
+| Gravidade | Sim | Sim* <br/> **A conversão básica de a para B usa essa função de atenuação, mas o "dip de gravidade" tem sua própria função de atenuação.*  |
+| Direto | Não <br/> *Anima sobre 150ms.*| Não <br/> *Usa a função de atenuação de desaceleração.* |
 | Básico | Sim | Sim |
 
 ## <a name="how-to-implement-connected-animation"></a>Como implementar uma animação conectada
@@ -268,7 +268,7 @@ void PrepareAnimationWithItem(ContactsItem item)
 }
 ```
 
-Para iniciar uma animação com esse elemento como o destino, como ao navegar de volta de um modo de exibição de detalhes, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Se você acabou de carregar a fonte de dados para ListView, TryStartConnectedAnimationAsync aguardará para iniciar a animação até que o contêiner de item correspondente tenha sido criado.
+Para iniciar uma animação com esse elemento como o destino, como ao navegar de volta de um modo de exibição de detalhes, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Se você acabou de carregar a fonte de dados para o ListView, o TryStartConnectedAnimationAsync irá esperar para iniciar a animação até que o recipiente do item correspondente seja criado.
 
 ```csharp
 private void ContactsListView_Loaded(object sender, RoutedEventArgs e)

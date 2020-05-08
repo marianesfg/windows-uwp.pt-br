@@ -1,5 +1,5 @@
 ---
-description: Descreve as etapas necessárias para garantir que seu aplicativo UWP (Plataforma Universal do Windows) seja utilizável quando um tema de alto contraste estiver ativo.
+description: Descreve as etapas necessárias para garantir que seu aplicativo de aplicativo do Windows seja utilizável quando um tema de alto contraste estiver ativo.
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de alto contraste
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 634f85ec64597f14210cf83fd67189f2f54bad4d
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 118f604b8c8c95a863773270825ff4db5c5a1b3a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521247"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969451"
 ---
 # <a name="high-contrast-themes"></a>Temas de alto contraste  
 
@@ -20,7 +20,7 @@ O Windows dá suporte para temas de alto contraste do sistema operacional e dos 
 
 ![Calculadora mostrada no tema claro e no tema Preto em Alto Contraste.](images/high-contrast-calculators.png)
 
-*Calculadora mostrada em tema claro e Alto Contraste tema preto.*
+*Calculadora mostrada no tema claro e no tema Preto em Alto Contraste.*
 
 Você pode mudar para um tema de alto contraste usando *Configurações > Facilidade de acesso > Alto contraste*.
 
@@ -39,13 +39,13 @@ Embora os controles comuns venham com suporte completo para alto contraste de gr
 
 Quando a cor `#E6E6E6` é definida embutida no primeiro exemplo, a grade mantém essa cor de fundo em todos os temas. Se o usuário mudar para o tema Preto em Alto Contraste, ele vai esperar que seu aplicativo tenha uma tela de fundo preta. Como `#E6E6E6` é praticamente branco, alguns usuários podem não conseguir interagir com seu aplicativo.
 
-No segundo exemplo, a [**extensão de marcação {ThemeResource}** ](../../xaml-platform/themeresource-markup-extension.md) é usada para fazer referência a uma cor na coleção de [**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries), uma propriedade dedicada de um elemento [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). **ThemeDictionaries** permite que o XAML troque as cores automaticamente com base no tema atual do usuário.
+No segundo exemplo, a [**extensão de marcação {ThemeResource}**](../../xaml-platform/themeresource-markup-extension.md) é usada para fazer referência a uma cor na coleção de [**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries), uma propriedade dedicada de um elemento [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary). O **ThemeDictionaries** permite que o XAML troque automaticamente as cores por você com base no tema atual do usuário.
 
 ## <a name="theme-dictionaries"></a>Dicionários de temas
 
 Quando você precisar alterar uma cor padrão do sistema, crie uma coleção de ThemeDictionaries para seu aplicativo.
 
-1. Comece criando o caminho adequado, caso ainda não exista. No App.xaml, crie uma coleção de **ThemeDictionaries**, incluindo no mínimo **Default** e **HighContrast**.
+1. Comece criando o caminho adequado, caso ainda não exista. Em app. XAML, crie uma coleção **ThemeDictionaries** , incluindo **Default** e **HighContrast** no mínimo.
 2. Em **Default**, crie o tipo de [Brush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush) de que você precisa, geralmente um **SolidColorBrush**. Dê a ele um nome de *x:Key* específico para o que ele está sendo usado.
 3. Atribua a **Color** desejada para ele.
 4. Copie esse **Brush** em **HighContrast**.
@@ -78,7 +78,7 @@ Quando você precisar alterar uma cor padrão do sistema, crie uma coleção de 
 A última etapa é determinar a cor que será usada em alto contraste, o que é explicado na próxima seção.
 
 > [!NOTE]
-> **HighContrast** não é o único nome de chave disponível. Também há **HighContrastBlack**, **HighContrastWhite** e **HighContrastCustom**. Na maioria dos casos, **HighContrast** é tudo que você precisa.
+> **HighContrast** não é o único nome de chave disponível. Também há **HighContrastBlack**, **HighContrastWhite**e **HighContrastCustom**. Na maioria dos casos, **HighContrast** é tudo o que você precisa.
 
 ## <a name="high-contrast-colors"></a>Cores de alto contraste
 
@@ -114,7 +114,7 @@ Muitas vezes é útil procurar aplicativos existentes, Iniciar ou os controles c
 * Testar os 4 temas de alto contraste enquanto seu aplicativo estiver em execução. O usuário não deve ter de reiniciar seu aplicativo quando mudar de tema.
 * Ser consistente.
 
-**Não**
+**Não deve ser feito**
 
 * Codificar uma cor do tema **HighContrast**; use os recursos **SystemColor*Color**.
 * Escolher um recurso de cor por estética. Lembre-se de que elas mudam com o tema!
@@ -154,7 +154,7 @@ Posteriormente em seu aplicativo, você pode definir a tela de fundo.
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-Observe como **\{a mera\}** é usada duas vezes, uma vez para fazer referência a **SystemColorWindowColor** e novamente para fazer referência a **BrandedPageBackgroundBrush**. Ambos são necessários para seu aplicativo aplicar o tema corretamente no tempo de execução. Esse é um bom momento para testar a funcionalidade em seu aplicativo. A tela de fundo da grade será atualizada automaticamente quando você mudar para um tema de alto contraste. Ela também será atualizada ao alternar entre temas de alto contraste diferentes.
+Observe como ** \{a\} mera** é usada duas vezes, uma vez para fazer referência a **SystemColorWindowColor** e novamente para fazer referência a **BrandedPageBackgroundBrush**. Ambos são necessários para seu aplicativo aplicar o tema corretamente no tempo de execução. Esse é um bom momento para testar a funcionalidade em seu aplicativo. A tela de fundo da grade será atualizada automaticamente quando você mudar para um tema de alto contraste. Ela também será atualizada ao alternar entre temas de alto contraste diferentes.
 
 ## <a name="when-to-use-borders"></a>Quando usar bordas
 
@@ -235,7 +235,7 @@ Você pode verificar programaticamente se o tema atual é um tema de alto contra
 
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
-* [Exemplo de contraste e configurações da interface do usuário](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
-* [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
-* [Exemplo de alto contraste XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
+* [Amostra de configurações e contraste da interface do usuário](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
+* [Amostra de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
+* [Amostra de alto contraste XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
 * [**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)

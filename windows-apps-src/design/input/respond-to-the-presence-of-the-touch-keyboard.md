@@ -7,39 +7,39 @@ template: detail.hbs
 keywords: teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: e26bbe00bba8b3d91d7ee842cb4d9c984a941f2b
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 76b468eedd136522a4af9fb5880049278548865d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521357"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970261"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder à presença do teclado virtual
 
 Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
 
-### <a name="important-apis"></a>APIs Importantes
+### <a name="important-apis"></a>APIs importantes
 
 - [AutomationPeer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer)
 - [InputPane](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane)
 
 ![o teclado virtual no modo de layout padrão](images/keyboard/default.png)
 
-<sup>O teclado de toque no modo de layout padrão</sup>
+<sup>O teclado virtual no modo de layout padrão</sup>
 
-O teclado virtual permite a entrada de texto para dispositivos que dão suporte para toque. Controles de entrada de texto da Plataforma Universal do Windows (UWP) invocam o teclado virtual por padrão quando um usuário toca em um campo de entrada editável. O teclado virtual normalmente fica visível enquanto o usuário navega entre controles em um formulário, mas esse comportamento pode variar com base nos outros tipos de controle dentro do formulário.
+O teclado virtual permite a entrada de texto para dispositivos que dão suporte para toque. Os controles de entrada de texto do aplicativo do Windows invocam o teclado de toque por padrão quando um usuário toca em um campo de entrada editável. O teclado virtual normalmente fica visível enquanto o usuário navega entre controles em um formulário, mas esse comportamento pode variar com base nos outros tipos de controle dentro do formulário.
 
-Para dar suporte ao comportamento de teclado de toque correspondente em um controle de entrada de texto personalizado que não é derivado de um controle de entrada de texto padrão, você deve usar a classe <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">AutomationPeer</a> para expor seus controles à automação da interface do usuário da Microsoft e implementar os padrões de controle de automação da interface do usuário corretos. Consulte [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/design/accessibility/keyboard-accessibility) e [Pares de automação personalizados](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers).
+Para dar suporte ao comportamento do teclado virtual correspondente em um controle de entrada de texto personalizado que não derive de um controle de entrada de texto padrão, você deve usar a classe <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">AutomationPeer</a> para expor seus controles à Automação da Interface do Usuário da Microsoft e implementar os padrões de controle corretos da Automação da Interface do Usuário. Consulte [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/design/accessibility/keyboard-accessibility) e [Pares de automação personalizados](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers).
 
 Depois que esse suporte for adicionado ao seu controle personalizado, você poderá responder adequadamente à presença do teclado virtual.
 
-**Pré-requisitos**
+**Pré-requisitos:**
 
 Este tópico complementa [Interações por teclado](keyboard-interactions.md).
 
 Você deve ter um conhecimento básico de interações por teclado padrão, manipulação de entradas e eventos por teclado e Automação da Interface do Usuário.
 
-Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
+Se você for novo no desenvolvimento de aplicativos de aplicativos do Windows, conheça esses tópicos para se familiarizar com as tecnologias discutidas aqui.
 
 - [Crie seu primeiro aplicativo](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 - Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
@@ -60,13 +60,13 @@ Estas são algumas recomendações básicas para controles de entrada de texto p
 
 - Garanta que os usuários sempre possam ver o campo de entrada com o qual estejam interagindo.
 
-    Devido ao fato de o teclado virtual obstruir uma grande parte da tela, a UWP garante que o campo de entrada com foco role para a exibição à medida um usuário navegar pelos controles no formulário, incluindo os controles que não estejam em exibição no momento.
+    Como o teclado de toque occludes uma grande parte da tela, o Windows garante que o campo de entrada com foco rola para a exibição à medida que um usuário navega pelos controles no formulário, incluindo controles que não estão atualmente na exibição.
 
-    Ao personalizar sua interface do usuário, forneça um comportamento semelhante na aparência do teclado de toque manipulando os eventos de [exibição](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) e [ocultação](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) expostos pelo objeto [**InputPane**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane) .
+    Ao personalizar sua interface do usuário, forneça um comportamento semelhante sobre a aparência do teclado virtual manipulando os eventos [Showing](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) e [Hiding](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding), expostos pelo objeto [**InputPane**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane).
 
     ![um formulário com e sem o teclado virtual em exibição](images/touch-keyboard-pan1.png)
 
-    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo:
+    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo: 
 
     ![um formulário que contém áreas que devem ser sempre exibidas](images/touch-keyboard-pan2.png)
 
@@ -208,19 +208,19 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 }
 ```
 
-## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Interações de teclado](keyboard-interactions.md)
 - [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 - [Pares de automação personalizados](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
 
-**Exemplos**
+### <a name="samples"></a>Exemplos
 
-- [Exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+- [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 
-**Amostras de arquivo-morto**
+### <a name="archive-samples"></a>Exemplos de arquivo-morto
 
-- [Entrada: exemplo de teclado de toque](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-- [Respondendo à aparência do exemplo de teclado na tela](https://code.msdn.microsoft.com/windowsapps/keyboard-events-sample-866ba41c)
-- [Exemplo de edição de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
-- [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
+- [Entrada: amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+- [Respondendo ao aparecimento da amostra de teclado na tela](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Responding%20to%20the%20appearance%20of%20the%20on-screen%20keyboard%20sample)
+- [Amostra de edição de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BVB%5D-Windows%208%20app%20samples/VB/Windows%208%20app%20samples/XAML%20text%20editing%20sample%20(Windows%208))
+- [Amostra de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)

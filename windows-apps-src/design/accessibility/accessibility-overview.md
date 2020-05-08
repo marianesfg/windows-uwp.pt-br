@@ -1,5 +1,5 @@
 ---
-Description: Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos da Plataforma Universal do Windows (UWP).
+Description: Este artigo é uma visão geral dos conceitos e das tecnologias relacionadas aos cenários de acessibilidade para aplicativos do Windows.
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: Visão geral de acessibilidade
 label: Accessibility overview
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22f614d65728c0f5121cadfdcbfb58a7b817a47d
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 386ea9a5ea9b66b0756963da10f72c3dbed53ff9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521270"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969651"
 ---
 # <a name="accessibility-overview"></a>Visão geral de acessibilidade
 
-Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos da Plataforma Universal do Windows (UWP).
+Este artigo é uma visão geral dos conceitos e das tecnologias relacionadas aos cenários de acessibilidade para aplicativos do Windows.
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility/player]
 
@@ -41,7 +41,7 @@ Além disso, a vinculação de dados, o estilo e os recursos de modelos facilita
 <span id="ui_automation"/>
 <span id="UI_AUTOMATION"/>
 
-## <a name="ui-automation"></a>Automação da Interface de Usuário
+## <a name="ui-automation"></a>Automação da interface do usuário
 
 O suporte à acessibilidade vem principalmente do suporte integrado à estrutura de Automação da IU da Microsoft. Esse suporte é fornecido através de classes base e do comportamento nativo da implementação de classe para tipos de controle, e uma representação da interface da API do provedor de Automação da Interface do Usuário. Cada classe de controle usa os conceitos de pares e padrões de automação da Automação da Interface do Usuário para relatar a função do controle e o conteúdo para os clientes de Automação da Interface do Usuário. O aplicativo é tratado como janela principal pela Automação da Interface do Usuário e pela Estrutura de Automação da IU todo conteúdo relevante à acessibilidade dentro da janela do aplicativo está disponível para um cliente de Automação da Interface do Usuário. Para saber mais sobre Automação da Interface do Usuário, consulte [UI Automation Overview](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-uiautomationoverview).
 
@@ -83,7 +83,7 @@ Existem várias outras propriedades de automação disponíveis (incluindo as pr
 <span id="keyboard_support"/>
 <span id="KEYBOARD_SUPPORT"/>
 
-## <a name="keyboard-support"></a>Suporte ao teclado
+## <a name="keyboard-support"></a>Suporte de teclado
 
 Para fornecer um bom suporte ao teclado, você precisa assegurar que todas as partes de seu aplicativo possam ser usadas com teclado. Se o seu aplicativo usa basicamente os controles padrão e não usa controles personalizados, você já avançou bastante. O modelo de controle XAML básico fornece suporte interno a teclado, incluindo navegação da guia, entrada de texto, e suporte específico de controle. Os elementos que servem como contêineres de layout (como painéis) usam a ordem do layout para estabelecer uma ordem de tabulação padrão. Essa ordem costuma ser a ordem de guia correta a se usar em uma representação acessível de interface do usuário. Se você usa os controles [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) e [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) para exibir dados, eles fornecem navegação interna por setas. Ou se você usa um controle [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), ele já lida com a barra de espaço e a tecla enter para ativação de botões.
 
@@ -205,7 +205,7 @@ O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (us
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [**Windows. UI. XAML. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
-* [Design para acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
-* [Exemplo de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
+* [Design de acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [Amostra de acessibilidade XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [Acessibilidade](accessibility.md)
-* [Introdução ao narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)
+* [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

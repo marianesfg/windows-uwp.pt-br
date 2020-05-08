@@ -1,6 +1,6 @@
 ---
 title: Interações por foco
-Description: Saiba como projetar e otimizar seus aplicativos UWP para fornecer a melhor experiência possível para os usuários que dependem da entrada olhar de rastreadores de olho e cabeça.
+Description: Saiba como projetar e otimizar seus aplicativos do Windows para fornecer a melhor experiência possível para os usuários que dependem da entrada olhar de rastreadores de olho e cabeça.
 label: Gaze interactions
 template: detail.hbs
 keywords: foco, rastreamento de olhos, rastreamento de cabeça, ponto de foco, entrada, interação do usuário, acessibilidade, usabilidade
@@ -11,14 +11,14 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6176bdce1a725c1024af9f4ecf0c37cabb0f5376
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4cfd84d54ecd1425b3b7e66c54c96fbd78c2dd46
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684231"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970121"
 ---
-# <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interações de foco e rastreamento de olhos em aplicativos UWP
+# <a name="gaze-interactions-and-eye-tracking-in-windows-apps"></a>Interações de olhar e acompanhamento de olho em aplicativos do Windows
 
 ![Hero de rastreamento de olhos](images/gaze/eyecontrolbanner1.png)
 
@@ -31,22 +31,22 @@ Forneça o suporte para o rastreamento do foco, da atenção e da presença do u
 
 ## <a name="overview"></a>Visão geral
 
-A entrada por Foco é maneira eficiente de interagir e usar o Windows e os aplicativos UWP. Isso é útil como uma tecnologia adaptativa para usuários com doenças neuro musculares (por exemplo, ALS) e outras deficiências envolvendo funções musculares ou dos nervos.
+A entrada olhar é uma maneira poderosa de interagir e usar aplicativos do Windows que é especialmente útil como uma tecnologia assistencial para usuários com neuro-muscular doenças (como ALS) e outras deficiências que envolvem funções de capacidade ou núcleo prejudicadas.
 
 Além disso, a entrada usando o foco oferece oportunidades igualmente atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
 
 > [!NOTE]
-> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de APIs UWP ([Windows. Devices. Input. Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para a criação de aplicativos que podem interagir com o hardware de acompanhamento de olho está disponível com a **atualização do Windows 10 de abril de 2018 (versão 1803, Build 17134)** e mais recente.
+> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala. Um conjunto de APIs de Windows Runtime ([Windows. Devices. Input. Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para a criação de aplicativos que podem interagir com o hardware de acompanhamento de olho está disponível com a **atualização do Windows 10 de abril de 2018 (versão 1803, Build 17134)** e mais recente.
 
 ## <a name="privacy"></a>Privacidade
 
-Devido aos dados pessoais potencialmente confidenciais coletados por dispositivos de acompanhamento de olhos, você precisa declarar a funcionalidade `gazeInput` no manifesto do seu aplicativo UWP (veja a seção **Configuração** a seguir). Quando declarado, o Windows apresenta aos usuários uma caixa de diálogo de consentimento (quando o aplicativo é executado pela primeira vez), onde o usuário deve conceder permissão para o aplicativo se comunicar com o dispositivo de rastreamento de olho e acessar esses dados.
+Devido aos dados pessoais potencialmente confidenciais coletados pelos dispositivos de controle de olhos, é necessário declarar o `gazeInput` recurso no manifesto do aplicativo (consulte a seção **instalação** a seguir). Quando declarado, o Windows apresenta aos usuários uma caixa de diálogo de consentimento (quando o aplicativo é executado pela primeira vez), onde o usuário deve conceder permissão para o aplicativo se comunicar com o dispositivo de rastreamento de olho e acessar esses dados.
 
 Além disso, se o aplicativo coleta, armazena ou transfere dados de rastreamento de olhos, você deve descrever isso na política de privacidade do aplicativo e seguir todos os outros requisitos de **Informações pessoais** no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e nas [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
-## <a name="setup"></a>Configuração
+## <a name="setup"></a>Instalação
 
-Para usar as APIs de entrada por foco no aplicativo UWP você deve: 
+Para usar as APIs de entrada do olhar em seu aplicativo do Windows, você precisará: 
 
 - Especificar a funcionalidade `gazeInput` no manifesto do aplicativo.
 
@@ -64,13 +64,13 @@ Para usar as APIs de entrada por foco no aplicativo UWP você deve:
 
 ## <a name="basic-eye-tracking"></a>Rastreamento de olhos básico
 
-Neste exemplo, demonstramos como acompanhar o foco do usuário em um aplicativo UWP e usar uma função de tempo com teste de ocorrência básico para indicar quanto eles podem manter o foco em um elemento específico.
+Neste exemplo, demonstramos como controlar o olhar do usuário em um aplicativo do Windows e usar uma função de tempo com o teste de clique básico para indicar como eles podem manter o foco do olhar em um elemento específico.
 
 Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do aplicativo enquanto um [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar) do [Kit de ferramentas da comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/) é colocado aleatoriamente na tela. Quando o foco é detectado na barra de progresso, um temporizador é iniciado e a barra de progresso é realocada aleatoriamente na tela quando a barra de progresso atinge 100%.
 
 ![Rastreamento de foco com amostra de temporizador](images/gaze/gaze-input-timed2.gif)
 
-*Acompanhamento de olhar com exemplo de temporizador*
+*Rastreamento de foco com amostra de temporizador*
 
 **Baixar este exemplo do [exemplo de entrada do olhar (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
 
@@ -499,9 +499,9 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
     ```
 6. Por fim, veja os métodos usados para gerenciar o temporizador de foco para este aplicativo.
 
-    `DoesElementContainPoint` verifica se o ponteiro olhar está sobre a barra de progresso. Em caso afirmativo, ele inicia o temporizador de foco e aumenta a barra de progresso a cada tique do temporizador.
+    `DoesElementContainPoint`verifica se o ponteiro olhar está sobre a barra de progresso. Em caso afirmativo, ele inicia o temporizador de foco e aumenta a barra de progresso a cada tique do temporizador.
 
-    `SetGazeTargetLocation` define o local inicial da barra de progresso e, se a barra de progresso for concluída (dependendo do temporizador olhar Focus), o moverá a barra de progresso para um local aleatório.
+    `SetGazeTargetLocation`define o local inicial da barra de progresso e, se a barra de progresso for concluída (dependendo do temporizador olhar Focus), o moverá a barra de progresso para um local aleatório.
 
     ```csharp
     /// <summary>
@@ -596,12 +596,12 @@ Uma elipse pequena é usada para mostrar onde o ponto de foco está no visor do 
     }
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 ### <a name="resources"></a>Recursos
 
-- [Biblioteca olhar do Windows Community Toolkit](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
+- [Biblioteca de Foco do Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>Amostras de tópico
 
-- [Exemplo de olhar (básico)C#()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)
+- [Amostra de foco (básico) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)

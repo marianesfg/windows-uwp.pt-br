@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 323b9b80a7d0087a07faf34d598f51d643e1324c
-ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
+ms.openlocfilehash: 47db0abfa96ae572c20d6bfd7496d7b5d168ab50
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70930342"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968411"
 ---
 # <a name="title-bar-customization"></a>Personalização da barra de título
 
@@ -20,7 +20,7 @@ ms.locfileid: "70930342"
 
 Quando seu aplicativo é executado em uma janela da área de trabalho, você pode personalizar as barras de título para corresponder a personalidade do seu aplicativo. Os APIs de personalização da barra de título permitem que você especifique cores para elementos da barra de título, ou estenda o conteúdo do seu aplicativo para a área da barra de título e assuma o controle total dele.
 
-> **APIs importantes**: [Propriedade ApplicationView. TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [classe CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **APIs importantes**: [Propriedade ApplicationView.TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [Classe ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [Classe CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
 ## <a name="how-much-to-customize-the-title-bar"></a>Quanto para personalizar a barra de título
 
@@ -33,7 +33,7 @@ A outra opção é ocultar a barra de título padrão e substituí-la com seu pr
 Quando você optar por personalização completa, você é responsável por colocar o conteúdo na área de barra de título, e você pode definir sua próprias região arrastável. Os botões Voltar, Fechar, Minimizar e Maximizar ainda estão disponíveis e são manipulados pelo sistema, mas não são como elementos, como o título do aplicativo. Você precisará criar esses elementos sozinho, conforme necessário pelo seu aplicativo.
 
 > [!NOTE]
-> Personalização de cores simples está disponível para aplicativos UWP em DirectX, XAML e HTML. A personalização completa está disponível somente para aplicativos UWP usando XAML.
+> A personalização simples de cores está disponível para aplicativos do Windows usando XAML, DirectX e HTML. A personalização completa está disponível somente para aplicativos do Windows usando XAML.
 
 ## <a name="simple-color-customization"></a>Personalização de cor simples
 
@@ -103,6 +103,11 @@ A região da barra de título arrastável define onde o usuário pode clicar e a
 
 Aqui está como definir uma grade de conteúdo como a região de barra de título arrastável. Esse código entra em XAML e code-behind para a primeira página do seu aplicativo. Consulte a seção [Exemplo de personalização completa](./title-bar.md#full-customization-example) para o código completo.
 
+
+> [!IMPORTANT]
+> Por padrão, alguns elementos da interface do usuário, como grade, não participam de testes de colisão quando não têm um conjunto de plano de fundo.
+> Para a grade `AppTitleBar` no exemplo abaixo para permitir arrastar, portanto, precisamos definir o plano de fundo como `Transparent`.
+
 ```xaml
 <Grid x:Name="AppTitleBar" Background="Transparent">
     <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
@@ -170,7 +175,7 @@ Você pode desenhar conteúdo sob a área de controle de legenda definida por es
 
 Você pode manipular o evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a alterações no tamanho dos botões de legenda. Por exemplo, isso pode acontecer quando o botão Voltar do sistema é mostrado ou ocultado. Manipule esse evento para verificar e atualizar o posicionamento dos elementos de interface do usuário que dependem do tamanho da barra de título.
 
-Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn` e`RightPaddingColumn` são declarados no XAML mostrado anteriormente.
+Este exemplo mostra como ajustar o layout de sua barra de título para levar em conta alterações como o botão Voltar do sistema sendo mostrado ou ocultado. `AppTitleBar`, `LeftPaddingColumn`e `RightPaddingColumn` são declarados no XAML mostrado anteriormente.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -279,7 +284,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. O [_modo tablet_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em hardware com suporte, portanto, um usuário pode optar por executar qualquer aplicativo no modo tablet.
+>O modo _Tela inteira_ pode ser inserido somente se suportado por seu aplicativo. Consulte [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obter mais informações. [_Modo Tablet_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) é uma opção de usuário em hardware com suporte, portanto, um usuário pode optar por executar qualquer aplicativo no modo tablet.
 
 ## <a name="full-customization-example"></a>Exemplo de personalização completa
 

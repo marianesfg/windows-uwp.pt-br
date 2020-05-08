@@ -1,6 +1,6 @@
 ---
-Description: Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out.
-title: Animações de fade em aplicativos UWP
+Description: Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações comuns de esmaecimento são fade-in e fade-out.
+title: Animações de fade
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d8642e911a3ad4275e0a7a0f147ca9d70f415b0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6b937ba4174d01096a09a98f7efd4e7e3dce9632
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366793"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970301"
 ---
 # <a name="fade-animations"></a>Animações de fade
 
 
 
-Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out.
+Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações comuns de esmaecimento são fade-in e fade-out.
 
-> **APIs importantes**: [**Classe FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [ **FadeOutThemeAnimation classe**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
+> **APIs importantes**: [**classe FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [**classe FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
@@ -35,8 +35,8 @@ Use animações de fade para trazer itens para uma exibição ou retirá-los de 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Visão geral de animações](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animando esmaece](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
-* [Guia de início rápido: Animando sua interface do usuário usando animações de biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [Animando fades](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
+* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Classe FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation)
 * [**Classe FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 

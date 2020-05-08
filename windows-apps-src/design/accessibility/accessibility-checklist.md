@@ -1,5 +1,5 @@
 ---
-Description: Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível.
+Description: Fornece uma lista de verificação para ajudá-lo a garantir que seu aplicativo do Windows esteja acessível.
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: Lista de verificação de acessibilidade
 label: Accessibility checklist
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b789102b90e63e5456c030f6eb90df372354d7a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: c7775c2d6c9e579e14c9f607fa0a09b665dbb24b
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319006"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969757"
 ---
 # <a name="accessibility-checklist"></a>Lista de verificação de acessibilidade
 
-Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível.
+Fornece uma lista de verificação para ajudá-lo a garantir que seu aplicativo do Windows esteja acessível.
 
 Aqui nós fornecemos uma lista de verificação que você pode usar para garantir que seu aplicativo é acessível.
 
@@ -27,7 +27,7 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
     Você deve definir o nome acessível de forma explicita para imagens ou outros controles que não promovem o conteúdo do texto interno como um nome acessível implícito. Você deve usar rótulos para elementos de formulário para que o texto do rótulo possa ser usado como um destino [**LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) no modelo de Automação da Interface do Usuário da Microsoft para correlacionar rótulos e entradas. Se você deseja fornecer mais diretrizes de interface do usuário para os usuários além das que são geralmente incluídas no nome acessível, dicas e descrições acessíveis ajudam os usuários a entender a interface do usuário.
 
-    Para saber mais, consulte [Nome acessível](basic-accessibility-information.md#accessible_name) e [Descrição acessível](basic-accessibility-information.md).
+    Para saber mais, consulte [Nome acessível](basic-accessibility-information.md#accessible_name) e [Descrição acessível.](basic-accessibility-information.md).
 
 2. Implementar a acessibilidade do teclado:
 
@@ -39,16 +39,16 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
     Para obter mais informações, consulte [Interações por teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
 
-3. Verifique se o texto é um tamanho legível
+3. Garantir que o texto seja um tamanho legível
 
-    * Windows incluem várias ferramentas de acessibilidade e configurações que os usuários podem aproveitar e ajustar a suas próprias necessidades e preferências para a leitura de texto. Como por exemplo:
-        * A ferramenta de Lente de aumento, que amplia uma área selecionada de interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não o torna difícil de usar a Lente de aumento para leitura.
-        * Configurações globais de escala e a resolução no **Configurações -> sistema -> Exibir -> escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar conforme isso depende dos recursos do dispositivo de vídeo.
-        * As configurações de tamanho do texto no **Configurações -> a facilidade de acesso -> exibição**. Ajustar a **tornar o texto maior** configuração para especificar apenas o tamanho do texto para oferecer suporte a controles em todos os aplicativos e telas (suportam a todos os controles de texto UWP o dimensionamento experiência sem nenhuma personalização ou modelagem de texto).
+    * O Windows inclui várias ferramentas de acessibilidade e configurações que os usuários podem aproveitar e ajustar às suas próprias necessidades e preferências para ler o texto. Eles incluem:
+        * A ferramenta Lupa, que amplia uma área selecionada da interface do usuário. Você deve garantir que o layout do texto em seu aplicativo não torna difícil usar a lupa para leitura.
+        * Configurações globais de escala e resolução em **configurações – >sistema->exibição->escala e layout**. Exatamente quais opções de dimensionamento estão disponíveis podem variar, pois isso depende dos recursos do dispositivo de vídeo.
+        * Configurações de tamanho de texto em **configurações->facilidade de acesso->exibição**. Ajuste a configuração **tornar texto maior** para especificar apenas o tamanho do texto em controles de suporte em todos os aplicativos e telas (todos os controles de texto UWP dão suporte à experiência de dimensionamento de texto sem qualquer personalização ou modelagem).
         > [!NOTE]
-        > O **tornar tudo maior** configuração permite que um usuário especificar o tamanho preferido para texto e aplicativos em geral, na tela principal somente.
+        > A configuração **tornar tudo maior** permite que um usuário especifique seu tamanho preferido para texto e aplicativos em geral somente na tela principal.
 
-4. Observe a interface do usuário para confirmar se o contraste do texto está adequado, se os elementos são renderizados corretamente nos temas de alto contraste e se as cores são usadas corretamente.
+4. Verifique sua interface do usuário para garantir que o contraste do texto esteja adequado, que os elementos renderizem corretamente nos temas em alto contraste e que as cores estejam sendo usadas corretamente.
 
     * Use uma ferramenta de análise de cor para verificar se a taxa de contraste visual do texto é pelo menos 4.5:1.
     * Mude para um tema de alto contraste e veja se é possível ler e usar a interface do usuário de seu aplicativo.
@@ -73,7 +73,7 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 ## <a name="related-topics"></a>Tópicos relacionados  
 
 * [Requisitos de texto acessível](accessible-text-requirements.md)
-* [Escala de texto](../input/text-scaling.md)
+* [Colocar texto em escala](../input/text-scaling.md)
 * [Acessibilidade](accessibility.md)
-* [Design para acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
-* [Práticas a serem evitadas](practices-to-avoid.md)
+* [Design de acessibilidade](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [Práticas que devem ser evitadas](practices-to-avoid.md)

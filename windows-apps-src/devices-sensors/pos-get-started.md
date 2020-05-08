@@ -1,22 +1,22 @@
 ---
 title: Introdução ao Ponto de Serviço
-description: Este artigo contém informações sobre a introdução às APIs de UWP de ponto de serviço.
+description: Este artigo contém informações sobre como começar a usar as APIs de Windows Runtime de ponto de serviço.
 ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: d059f0e33f7343fa0ac9919a243008ed486e31ff
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f5f19d1337a7ae49f46ab65d8420fedb775eeb2f
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63772734"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730383"
 ---
 # <a name="getting-started-with-point-of-service"></a>Introdução ao Ponto de Serviço
 
 Ponto de serviço, ponto de venda ou dispositivos de Ponto de Serviço são periféricos de computador usados para facilitar as transações de varejo. Exemplos de dispositivos de Ponto de Serviço incluem caixas registradoras eletrônicos, scanners de código, leitores de tarjas magnéticas e impressoras de recibo.
 
-Aqui você conhecerá as noções básicas de estabelecer interface com dispositivos de Ponto de Serviço usando as APIs de Ponto de Serviço da Plataforma Universal do Windows (UWP). Abordaremos enumeração do dispositivo, verificação de recursos do dispositivo, declaração de dispositivos e compartilhamento de dispositivos. Usamos um dispositivo de scanner de código de barras como exemplo, mas quase todas as diretrizes aqui se aplicam a qualquer dispositivo de Ponto de Serviço compatível com a UWP. (Para obter uma lista de dispositivos compatíveis, consulte [Suporte a dispositivo de Ponto de Serviço](pos-device-support.md)).
+Aqui você aprenderá as noções básicas de como fazer a interface com dispositivos de ponto de serviço usando o Windows Runtime ponto de APIs de serviço. Abordaremos enumeração do dispositivo, verificação de recursos do dispositivo, declaração de dispositivos e compartilhamento de dispositivos. Usamos um dispositivo de scanner de código de barras como exemplo, mas quase todas as diretrizes aqui se aplicam a qualquer dispositivo de Ponto de Serviço compatível com a UWP. (Para obter uma lista de dispositivos compatíveis, consulte [Suporte a dispositivo de Ponto de Serviço](pos-device-support.md)).
 
 ## <a name="finding-and-connecting-to-point-of-service-peripherals"></a>Localização e conexão com periféricos de Ponto de Serviço
 
@@ -152,7 +152,7 @@ catch (Exception ex)
 ```
 
 ### <a name="retaining-the-device"></a>Retenção do dispositivo
-Ao usar um dispositivo de Ponto de Serviço em uma rede ou conexão Bluetooth, talvez você queira compartilhar o dispositivo com outros aplicativos na rede. (Para obter mais informações sobre isso, consulte [compartilhamento dispositivos](#sharing-a-device-between-apps).) Em outros casos, convém manter o dispositivo para uso prolongado. Este exemplo mostra como manter um scanner de código de barras declarado depois que outro aplicativo solicitou que o dispositivo seja lançado.
+Ao usar um dispositivo de Ponto de Serviço em uma rede ou conexão Bluetooth, talvez você queira compartilhar o dispositivo com outros aplicativos na rede. (Para obter mais informações sobre isso, consulte [Sharing Devices](#sharing-a-device-between-apps).) Em outros casos, pode ser que você queira manter o dispositivo para uso prolongado. Este exemplo mostra como manter um scanner de código de barras declarado depois que outro aplicativo solicitou que o dispositivo seja lançado.
 
 ```Csharp
 claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
@@ -207,10 +207,10 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > As classes de dispositivos de Ponto de Serviço declarados e não declarados implementam [Interface IClosable](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable). Se um dispositivo for conectado a um aplicativo por meio de rede ou bluetooth, os objetos declarados e não declarados devem ser descartados antes que outro aplicativo possa se conectar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 + [Exemplo de scanner de código de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
-+ [Exemplo de gaveta de pagamento à vista]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
-+ [Exemplo de exibição de linha](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
-+ [Amostra de leitor magnética](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
-+ [Exemplo de POSPrinter](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
++ [Exemplo de caixa registradora]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
++ [Exemplo de display de balcão](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
++ [Exemplo de leitor de tarjas magnéticas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
++ [Exemplo de impressora de Ponto de Serviço](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

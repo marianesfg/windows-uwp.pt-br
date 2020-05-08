@@ -1,5 +1,5 @@
 ---
-Description: Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
+Description: Aprenda a desenvolver aplicativos do Windows acessíveis que incluem navegação de teclado, configurações de cor e contraste e suporte para tecnologias assistenciais.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08f9d3f20974c1e1ce7ef62c01c26a44d3ff4889
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f3d2866b3e04d2fa531e9bd538badd96205a8c65
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319235"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969421"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desenvolvendo aplicativos inclusivos do Windows  
 
-Este artigo discute como desenvolver aplicativos UWP (Plataforma Universal do Windows) acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
+Este artigo discute como desenvolver aplicativos de aplicativo do Windows acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos do Windows acessíveis que incluem navegação de teclado, configurações de cor e contraste e suporte para tecnologias assistenciais.
 
 Se você ainda não tiver feito isso, comece lendo [Criando software inclusivo](designing-inclusive-software.md).
 
@@ -27,7 +27,7 @@ Há três coisas que você deve fazer para se certificar de que seu aplicativo s
 2. Certifique-se de que seu aplicativo dê suporte a [navegação de teclado](#keyboard-navigation) pessoas que não são capazes de usar um mouse ou uma tela touch.
 3. Certifique-se de que seu aplicativo dê suporte a configurações [cor e contraste](#color-and-contrast) acessíveis.
 
-## <a name="programmatic-access"></a>Acesso programático  
+## <a name="programmatic-access"></a>Acesso Programático  
 O acesso programático é essencial para a criação de acessibilidade em aplicativos. Isso é realizado por meio da definição do nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo. Isso garante que os controles de interface do usuário sejam expostos à tecnologia assistencial (a), como leitores de tela (por exemplo, o Narrador) ou dispositivos de saída alternativos (como telas em Braille). Sem acesso programático, as APIs de tecnologia assistencial não conseguem interpretar informações corretamente, deixando o usuário incapaz de usar os produtos suficientemente ou forçando o AT a usar as interfaces de programação não documentadas ou técnicas nunca antes usadas como uma interface de acessibilidade. Quando os controles de interface do usuário são expostos à tecnologia assistencial, a AT é capaz de determinar quais ações e opções estão disponíveis para o usuário.  
 
 Para saber mais sobre como tornar os elementos de interface do usuário do seu aplicativo disponíveis para as tecnologias assistenciais (AT), veja [Expor informações básicas de acessibilidade](basic-accessibility-information.md).
@@ -73,7 +73,7 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 
 1. Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
 2. Implemente a acessibilidade do teclado.
-3. Observe a interface do usuário para confirmar se o contraste do texto está adequado, se os elementos são renderizados corretamente nos temas de alto contraste e se as cores são usadas corretamente.
+3. Verifique sua interface do usuário para garantir que o contraste do texto esteja adequado, que os elementos renderizem corretamente nos temas em alto contraste e que as cores estejam sendo usadas corretamente.
 4. Execute ferramentas de acessibilidade, resolva problemas relatados e verifique a experiência de leitura da tela. (Veja o tópico Testes de acessibilidade)
 5. Verifique se as configurações do manifesto do aplicativo seguem as diretrizes de acessibilidade.
 6. Declare seu aplicativo como acessível na Microsoft Store. (Veja o tópico [Acessibilidade na loja](accessibility-in-the-store.md)).
@@ -81,9 +81,9 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilidade](accessibility-checklist.md) inteiro.
 
 ## <a name="related-topics"></a>Tópicos relacionados  
-* [Projetando software inclusivo](designing-inclusive-software.md)  
+* [Criando software inclusivo](designing-inclusive-software.md)  
 * [Design inclusivo](https://www.microsoft.com/design/inclusive/)
-* [Práticas recomendadas de acessibilidade para evitar](practices-to-avoid.md)
+* [Práticas de acessibilidade a evitar](practices-to-avoid.md)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Cenários de desenvolvedor de acessibilidade do Microsoft](https://developer.microsoft.com/windows/accessible-apps)
+* [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Acessibilidade](accessibility.md)

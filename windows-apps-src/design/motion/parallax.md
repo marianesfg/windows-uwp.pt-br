@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ac195916e76ad7b3f03adc39a293422d0d58f7a4
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: d659683d6871d9d48fd17b73c74477e7bd03e258
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614080"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970491"
 ---
 # <a name="parallax"></a>Paralaxe
 
@@ -45,7 +45,7 @@ Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se mov
 
 ## <a name="parallax-and-the-fluent-design-system"></a>Paralaxe e o Sistema de Design Fluent
 
- O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, confira a [visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
+ O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Paralaxe é um componente do Sistema de Design Fluent que acrescenta movimento, profundidade e escala ao seu aplicativo. Para saber mais, confira a [visão geral do design fluente](/windows/apps/fluent-design-system).
 
 ## <a name="how-it-works-in-a-user-interface"></a>Como ele funciona em uma interface de usuário
 
@@ -121,8 +121,8 @@ Para obter uma lista completa das maneiras de personalizar a paralaxe, consulte 
 - Considere usar a paralaxe em ListViewItems quando ListViewItems contêm uma imagem
 - Não use em todo lugar, o uso em excesso pode diminuir seu impacto
 
-## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
 - [Design Fluente para UWP](/windows/apps/fluent-design-system)
-- [Ciência no sistema: design e profundidade fluentes](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Ciência no sistema: Design Fluente e profundidade](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

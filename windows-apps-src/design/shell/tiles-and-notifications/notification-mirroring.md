@@ -7,25 +7,25 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, central de ações na nuvem, espelhamento de notificação, notificação, entre dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: dc870601159a80bc6d03a287fd19f082e968e09e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b897c6574f6cbfe78406d1c624f2e3b7286ef582
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657311"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971051"
 ---
 # <a name="notification-mirroring"></a>Espelhamento de notificação
 
 O espelhamento de notificação, fornecido pela Central de ações na nuvem, permite que você veja as notificações do seu telefone no computador.
 
 > [!IMPORTANT]
-> **Requer a atualização de aniversário do**: Você deve estar executando build 14393 ou superior para ver a notificação de trabalho de espelhamento. Se você gostaria de recusar a notificação de espelhamento do aplicativo, é necessário direcionar o SDK 14393 para acessar as APIs de espelhamento.
+> **Requer a Atualização de Aniversário**: você precisa usar a versão 14393 ou posterior para ver o espalhamento de notificação. Se você gostaria de recusar a notificação de espelhamento do aplicativo, é necessário direcionar o SDK 14393 para acessar as APIs de espelhamento.
 
 Com o espelhamento de notificação e a Cortana, os usuários podem receber e agir em relação às notificações do telefone (Windows Mobile e Android) pelo computador. Como desenvolvedor, você não precisa fazer nada para habilitar o espelhamento de notificação: o espelhamento funciona automaticamente. Clique nos botões da notificação do sistema espelhada, como respostas rápidas de mensagem, e você será enviado novamente para o telefone, invocando uma tarefa em segundo plano ou iniciando seu aplicativo em primeiro plano.
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Os desenvolvedores obtêm dois ótimos benefícios do espelhamento de notificação: As notificações espelhadas resultam em mais envolvimento do usuário com o seu serviço, e eles também ajudam os usuários descobrir seu aplicativo de desktop da Microsoft Store! Os usuários talvez não saibam que você tem um aplicativo UWP incrível disponível para seu computador Windows 10. Quando os usuários recebem a notificação espelhada de seu telefone, os usuários podem clicar a notificação do sistema a ser executada para a Microsoft Store, onde eles poderão instalar seu aplicativo da área de trabalho da UWP.
+Os desenvolvedores obtêm dois ótimos benefícios do espelhamento de notificação: as notificações espelhadas resultam em mais envolvimento do usuário com seu serviço e também ajudam os usuários a descobrir seu Microsoft Store aplicativo de área de trabalho! Os usuários podem nem mesmo saber que você tem um aplicativo Windows incrível disponível para sua área de trabalho do Windows 10. Quando os usuários recebem a notificação espelhada de seu telefone, os usuários podem clicar na notificação do sistema para ser levado para a Microsoft Store, onde podem instalar seu aplicativo do Windows.
 
 O espelhamento funciona no Windows Phone e no Android. Os usuários devem estar conectados à Cortana no telefone e no computador para que o espelhamento de notificação funcione.
 
@@ -42,7 +42,7 @@ Se o aplicativo de computador ainda não enviou uma notificação do sistema, ai
 
 ## <a name="how-to-opt-out-of-mirroring"></a>Como recusar o espelhamento
 
-Os usuários, as empresas e desenvolvedores de aplicativo UWP podem optar por desabilitar o espelhamento de notificação.
+Os desenvolvedores de aplicativos do Windows, as empresas e os usuários podem optar por desabilitar o espelhamento de notificação.
 
 > [!NOTE]
 > Ao desabilitar o espelhamento, também será desativado o [Ignorar universal](universal-dismiss.md).
@@ -52,7 +52,7 @@ Os usuários, as empresas e desenvolvedores de aplicativo UWP podem optar por de
 
 Ocasionalmente, você pode ter uma notificação específica de dispositivo a qual você não deseja que seja espelhada para outros dispositivos. Você pode impedir que uma notificação específica seja espelhada ao definir a propriedade **Mirroring** na notificação do sistema. No momento, essa propriedade de espelhamento pode ser definida somente em notificações locais (ela não pode ser especificada ao enviar uma notificação WNS por push).
 
-**Problema conhecido**: Recuperando a propriedade de espelhamento por meio de `ToastNotificationHistory.GetHistory()` API sempre retornará o valor padrão (**permitidos**) em vez da opção que você especificou. Não se preocupe, tudo está funcionando, está apenas recuperando o valor violado.
+**Problema conhecido**: a recuperação da propriedade de espelhamento por meio da API de `ToastNotificationHistory.GetHistory()` sempre retornará o valor padrão (**Permitido**) em vez da opção que você especificou. Não se preocupe, tudo está funcionando, está apenas recuperando o valor violado.
 
 ```csharp
 var toast = new ToastNotification(xml)
@@ -67,7 +67,7 @@ ToastNotificationManager.CreateToastNotifier().Show(toast);
 
 ### <a name="as-a-developer-opt-out-completely"></a>Como desenvolvedor, recuse completamente
 
-Alguns desenvolvedores podem optar por recusar completamente o espelhamento de notificação no aplicativo. Embora acreditemos que todos os aplicativos pode se beneficiar do espelhamento, tornamos fácil recusá-la. Basta chamar o método a seguir, uma vez, e seu aplicativo será retirado. Por exemplo, você pode colocar essa chamada no construtor do aplicativo dentro de `App.xaml.cs`...
+Alguns desenvolvedores podem optar por recusar completamente o espelhamento de notificação no aplicativo. Embora acreditamos que todos os aplicativos se beneficiam com o espelhamento, facilitamos a recusa. Apenas chame o método a seguir uma vez e seu aplicativo será retirado. Por exemplo, você pode colocar essa chamada no construtor do aplicativo em `App.xaml.cs`...
 
 ```csharp
 public App()

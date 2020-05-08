@@ -13,16 +13,16 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 431b8912e43647bc2678aaab7efc9ec68b866d10
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 24cc85c255f26b61603690d6b39c3a6ffdcbb544
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209992"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970721"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
-Projete seu aplicativo UWP (Plataforma Universal do Windows) para que ele tenha uma boa aparência e funcione bem no Xbox One e em telas de televisão.
+Projete seu aplicativo de aplicativo do Windows para que ele pareça bom e funcione bem em telas do Xbox One e de televisão.
 
 Confira [interações de gamepad e controle remoto](../input/gamepad-and-remote-interactions.md) para obter orientação sobre experiências de interação em aplicativos UWP na experiência de *10 pés* .
 
@@ -69,24 +69,24 @@ Agora que você conhece os princípios de design de aplicativo UWP adequados par
 | Recurso        | Descrição           |
 | -------------------------------------------------------------- |--------------------------------|
 | [Dimensionamento de elemento de interface do usuário](#ui-element-sizing)  | A Plataforma Universal do Windows usa [dimensionamento e pixels eficazes](../basics/design-and-ui-intro.md#effective-pixels-and-scaling) para dimensionar a interface do usuário de acordo com a distância de exibição. Compreender o dimensionamento e aplicá-lo em sua interface do usuário ajudará você a otimizar seu aplicativo para o ambiente de 3 metros.  |
-|  [Área de TV-seguro](#tv-safe-area) | A UWP evitará automaticamente exibir qualquer interface do usuário em áreas não seguras para TV (áreas perto das bordas da tela) por padrão. No entanto, isso cria um efeito de "box-in" em que a interface do usuário parece estar em letterbox. Para que seu aplicativo seja realmente imersivo na TV, você deve modificá-lo para que ele se estenda para as bordas da tela em TVs compatíveis com esse recurso. |
+|  [Área segura para a TV](#tv-safe-area) | A UWP evitará automaticamente exibir qualquer interface do usuário em áreas não seguras para TV (áreas perto das bordas da tela) por padrão. No entanto, isso cria um efeito de "box-in" em que a interface do usuário parece estar em letterbox. Para que seu aplicativo seja realmente imersivo na TV, você deve modificá-lo para que ele se estenda para as bordas da tela em TVs compatíveis com esse recurso. |
 | [Cores](#colors)  |  A UWP é compatível com temas de cores e um aplicativo que respeita o tema do sistema será padonizado como **escuro** no Xbox One. Se o seu aplicativo tiver um tema de cor específico, você deve considerar que algumas cores não funcionam bem na TV e devem ser evitadas. |
 | [Som](../style/sound.md)    | Sons desempenham um papel fundamental na experiência de 3 metros, ajudando a imergir e enviar seus comentários para o usuário. A UWP fornece funcionalidade que ativa sons para controles comuns automaticamente quando o aplicativo é executado no Xbox One. Saiba mais sobre o suporte a som incorporado à UWP e saiba como tirar proveito dele.    |
-| [Diretrizes para controles de interface do usuário](#guidelines-for-ui-controls)  |  Há vários controles de interface do usuário que funcionam bem em vários dispositivos, mas existem certas considerações quando usados na TV. Leia sobre algumas práticas recomendadas para usar esses controles ao projetar para a experiência de 3 metros. |
+| [Diretrizes de controles da interface do usuário](#guidelines-for-ui-controls)  |  Há vários controles de interface do usuário que funcionam bem em vários dispositivos, mas existem certas considerações quando usados na TV. Leia sobre algumas práticas recomendadas para usar esses controles ao projetar para a experiência de 3 metros. |
 | [Gatilho de estado visual personalizado para Xbox](#custom-visual-state-trigger-for-xbox) | Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você use um *gatilho de estado visual* personalizado para fazer alterações de layout quando o app detectar que foi iniciado em um console Xbox. |
 
 Além das considerações de design e layout anteriores, há uma série de otimizações de [interação de controle remoto e gamepad](../input/gamepad-and-remote-interactions.md) que você deve considerar ao criar seu aplicativo.
 
 | Recurso        | Descrição           |
 | -------------------------------------------------------------- |--------------------------------|
-| [Navegação e interação de foco XY](../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) | A **navegação de foco XY** permite que o usuário navegue pela interface do usuário do seu aplicativo. No entanto, isso limita o usuário a navegar para cima, para baixo, para a esquerda e direita. Recomendações para lidar com isso e outras considerações são descritas nesta seção. |
-| [Modo de mouse](../input/gamepad-and-remote-interactions.md#mouse-mode)|A navegação de foco XY não é prática, ou até mesmo possível, para alguns tipos de aplicativos, como mapas ou aplicativos de desenho e pintura. Nesses casos, o **modo de mouse** permite que os usuários naveguem livremente com um gamepad ou controle remoto, assim como um mouse em um PC.|
+| [Interação e navegação de foco do plano XY](../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) | A **navegação de foco XY** permite que o usuário navegue pela interface do usuário do seu aplicativo. No entanto, isso limita o usuário a navegar para cima, para baixo, para a esquerda e direita. Recomendações para lidar com isso e outras considerações são descritas nesta seção. |
+| [Modo do mouse](../input/gamepad-and-remote-interactions.md#mouse-mode)|A navegação de foco XY não é prática, ou até mesmo possível, para alguns tipos de aplicativos, como mapas ou aplicativos de desenho e pintura. Nesses casos, o **modo de mouse** permite que os usuários naveguem livremente com um gamepad ou controle remoto, assim como um mouse em um PC.|
 | [Visual de foco](../input/gamepad-and-remote-interactions.md#focus-visual)  | O Visual de foco é uma borda que realça o elemento de interface do usuário focalizado no momento. Isso ajuda o usuário a identificar rapidamente a interface do usuário com a qual eles estão navegando ou interagindo.  |
 | [Compromisso de foco](../input/gamepad-and-remote-interactions.md#focus-engagement) | O compromisso de foco exige que o usuário pressione o botão **a/selecionar** em um gamepad ou controle remoto quando um elemento de interface do usuário tiver foco para interagir com ele. |
 | [Botões de hardware](../input/gamepad-and-remote-interactions.md#hardware-buttons) | O gamepad e o controle remoto fornecem botões e configurações muito diferentes. |
 
 > [!NOTE]
-> A maioria dos snippets de código deste tópico está em XAML/C#; entretanto, os princípios e conceitos se aplicam a todos os aplicativos UWP. Se você estiver desenvolvendo um aplicativo UWP HTML/JavaScript para Xbox, confira a excelente biblioteca [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) no GitHub.
+> A maioria dos trechos de código deste tópico está em XAML/C#; entretanto, os princípios e conceitos se aplicam a todos os aplicativos UWP. Se você estiver desenvolvendo um aplicativo UWP HTML/JavaScript para Xbox, confira a excelente biblioteca [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) no GitHub.
 
 ## <a name="ui-element-sizing"></a>Dimensionamento de elemento de interface do usuário
 
@@ -140,14 +140,14 @@ Ao usar texto maior na sua interface do usuário, escolha um tamanho que não li
 Recomendamos que seu aplicativo tire proveito do suporte ao fator de escala, o que o ajudará a ser executado adequadamente em todos os dispositivos, dimensionando para cada tipo de dispositivo.
 No entanto, é possível recusar esse comportamento e projetar toda a sua interface do usuário em escala de 100%. Observe que você não pode alterar o fator de escala para algo diferente de 100%.
 
-Para apps XAML, você pode recusar o fator de escala usando o seguinte snippet:
+Para apps XAML, você pode recusar o fator de escala usando o seguinte trecho de código:
 
 ```csharp
 bool result =
     Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
 ```
 
-`result` informará se você recusou com êxito.
+`result`informará se você optou por sair com êxito.
 
 Para obter mais informações, incluindo o código de exemplo para HTML/JavaScript, consulte [Como desativar a colocação em escala](../../xbox-apps/disable-scaling.md).
 
@@ -161,7 +161,7 @@ A área insegura para TV é representada pela área azul na imagem a seguir.
 
 ![Área insegura para TV](images/designing-for-tv/tv-unsafe-area.png)
 
-Você pode definir o plano de fundo para uma cor estática ou temática, ou uma imagem, como os snippets de código a seguir demonstram.
+Você pode definir o plano de fundo para uma cor estática ou temática, ou uma imagem, como os trechos de código a seguir demonstram.
 
 ### <a name="theme-color"></a>Cor do tema
 
@@ -220,7 +220,7 @@ O uso dos limites da janela principal conforme descrito anteriormente permitirá
 Aqui, o plano de fundo do painel de navegação foi estendido para as bordas da tela, enquanto os itens de navegação são mantidos na área de segurança para TV.
 O conteúdo da `SplitView` (neste caso, uma grade de itens) foi estendido até a parte inferior da tela para parecer que ele continua e não é cortado, enquanto a parte superior da grade ainda está dentro da área de segurança para TV. (Saiba mais sobre como fazer isso em [Rolando fins de listas e grades](#scrolling-ends-of-lists-and-grids)).
 
-O snippet a seguir tem este efeito:
+O trecho de código a seguir tem este efeito:
 
 ```xml
 <SplitView x:Name="RootSplitView"
@@ -321,7 +321,7 @@ A UWP tem uma funcionalidade que mantém o foco visual dentro do [VisibleBounds]
 </Style>
 ```
 
-Você poderia colocar o code-snippet anterior nos recursos da página ou do aplicativo e, em seguida, acessá-lo da seguinte maneira:
+Você poderia colocar o trecho de código anterior nos recursos da página ou do aplicativo e, em seguida, acessá-lo da seguinte maneira:
 
 ```xml
 <Page>
@@ -333,7 +333,7 @@ Você poderia colocar o code-snippet anterior nos recursos da página ou do apli
 > [!NOTE]
 > Este trecho de código é especificamente para `ListView`s; para um estilo de `GridView`, defina o atributo [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) como [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) e [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) como `GridView`.
 
-Para obter um controle mais refinado sobre como os itens são trazidos para exibição, se o seu aplicativo tiver como destino a versão 1803 ou posterior, você poderá usar o [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-lo em [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para o **ListView**/**GridView** para capturá-lo antes do **ScrollViewer** interno, como nos trechos de código a seguir:
+Para obter um controle mais refinado sobre como os itens são trazidos para exibição, se o seu aplicativo tiver como destino a versão 1803 ou posterior, você poderá usar o [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-lo em [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para que o**GridView** do **ListView**/o acompanhe antes que o **ScrollViewer** interno faça, como nos trechos de código a seguir:
 
 ```xaml
 <GridView x:Name="gridView">
@@ -436,7 +436,7 @@ Um [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) of
 
 Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) como `true` para que os pivôs sempre mantenham a mesma posição, em vez de fazer o cabeçalho dinâmico selecionado sempre se mover para a primeira posição. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois a disposição do cabeçalho pode distrair os usuários. Se nem todos os cabeçalhos dinâmicos couberem na tela ao mesmo tempo, haverá uma barra de rolagem para permitir que os clientes vejam os outros cabeçalhos; entretanto, você deveria garantir que todos eles se encaixassem na tela para proporcionar a melhor experiência. Para saber mais, consulte [Guias e pivôs](/windows/uwp/design/controls-and-patterns/pivot).
 
-### <a name="navigation-pane-a-namenavigation-pane-"></a>Painel de navegação <a name="navigation-pane" />
+### <a name="navigation-pane"></a>Painel de navegação <a name="navigation-pane" />
 
 Um painel de navegação (também conhecido como *menu hambúrguer*) é um controle de navegação frequentemente usado em aplicativos UWP. Normalmente é um painel com várias opções para seleção em um menu de estilo de lista que levará o usuário a páginas diferentes. Em geral, esse painel começa recolhido para economizar espaço, e o usuário pode abri-lo clicando em um botão.
 
@@ -462,7 +462,7 @@ Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de 
 
 A interface do usuário aninhada expõe itens acionáveis aninhados dentro de um elemento de interface do usuário do contêiner onde o item aninhado, bem como o item de contêiner podem focar de forma independente umas nas outras.
 
-A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é inserir elementos de interface do usuário aninhados em um `ContextFlyout`.
+A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é posicionar elementos de interface do usuário `ContextFlyout`aninhados em um.
 
 Para obter mais informações sobre a interface do usuário aninhada, consulte [Interface do usuário aninhada em itens de lista](../controls-and-patterns/nested-ui.md).
 
@@ -499,7 +499,7 @@ Na experiência de 3 m, geralmente é mais fácil para os clientes usar uma expe
 
 ## <a name="custom-visual-state-trigger-for-xbox"></a>Gatilho de estado visual personalizado para Xbox
 
-Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você faça alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox. Uma maneira de fazer isso é usando um *gatilho de estado visual* personalizado. Os gatilhos de estado visual são mais úteis quando você deseja editar no **Blend for Visual Studio**. O snippet a seguir mostra como criar um gatilho de estado visual para Xbox:
+Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você faça alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox. Uma maneira de fazer isso é usando um *gatilho de estado visual* personalizado. Os gatilhos de estado visual são mais úteis quando você deseja editar no **Blend for Visual Studio**. O trecho de código a seguir mostra como criar um gatilho de estado visual para Xbox:
 
 ```xml
 <VisualStateManager.VisualStateGroups>
@@ -566,6 +566,6 @@ O design para a experiência de 3 metros tem algumas considerações especiais a
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Os aplicativos da UWP (primer for Plataforma Universal do Windows) do dispositivo](index.md)
+- [Instruções de dispositivo para aplicativos de aplicativos do Windows](index.md)
 - [Interações de gamepad e de controle remoto](../input/gamepad-and-remote-interactions.md)
 - [Som em aplicativos UWP](../style/sound.md)

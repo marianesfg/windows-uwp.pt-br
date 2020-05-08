@@ -1,5 +1,5 @@
 ---
-Description: Aprenda a melhorar a usabilidade e a acessibilidade do seu aplicativo UWP, oferecendo uma forma intuitiva de navegação e interação aos usuários, com uma interface de usuário do aplicativo visível através de um teclado em vez de um dispositivo de ponteiro (como mouse ou toque).
+Description: Saiba como melhorar a usabilidade e a acessibilidade do seu aplicativo do Windows fornecendo uma maneira intuitiva para que os usuários naveguem e interajam rapidamente com a interface do usuário visível de um aplicativo por meio de um teclado, em vez de um dispositivo de ponteiro (como toque ou mouse).
 title: Diretrizes do design de teclas de acesso
 label: Access keys design guidelines
 keywords: teclado, tecla de acesso, dica de tecla, acessibilidade, navegação, foco, texto, entrada, interação do usuário
@@ -11,14 +11,14 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f73bb15d2746dbac4403ca6daffb603588cf7a58
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: c0d5808c462beb72341fd83c6fc4c1cfc0178b2f
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340097"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970971"
 ---
-# <a name="access-keys"></a>Teclas de acesso
+# <a name="access-keys"></a>Chaves de acesso
 
 As teclas de acesso são atalhos de teclado que melhoram a usabilidade e a acessibilidade dos aplicativos do Windows, oferecendo aos usuários uma forma intuitiva e rápida de navegação e interação com uma interface de usuário do aplicativo visível por meio de um teclado em vez de um dispositivo de ponteiro (como mouse ou touch).
 
@@ -27,7 +27,7 @@ Consulte o tópico [Teclas aceleradoras](keyboard-accelerators.md) para obter de
 > [!NOTE]
 > Um teclado é indispensável para usuários com determinadas deficiências (veja [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)), além de ser uma ferramenta importante para usuários que o preferem como maneira mais eficiente de interagir com um aplicativo.
 
-A Plataforma Universal do Windows (UWP) oferece suporte interno para os controles da plataforma, tanto para teclas de acesso baseadas no teclado como para comentários sobre a interface do usuário associado por meio de indicações visuais, chamadas de Dicas de Tecla.
+O aplicativo do Windows fornece suporte interno entre controles de plataforma para chaves de acesso baseadas em teclado e comentários de interface do usuário associados por meio de indicações visuais chamadas de dicas de tecla.
 
 ## <a name="overview"></a>Visão geral
 
@@ -44,7 +44,7 @@ Os aplicativos do Microsoft Office oferecem suporte extensivo para as teclas de 
 
 ![Selos da Dica de Tecla para teclas de acesso no Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-_Notificações KeyTip para chaves de acesso no Microsoft Word_
+_Selos KeyTip para teclas de acesso no Microsoft Word_
 
 Para adicionar uma tecla de acesso a um controle, use a **propriedade AccessKey**. O valor desta propriedade especifica a sequência de teclas de acesso, o atalho (caso seja um único alfanumérico) e a Dica de Tecla.
 
@@ -62,7 +62,7 @@ Recomendamos que você especifique teclas de acesso sempre que for apropriado em
 
 2.  **As teclas de acesso tornam seu aplicativo mais funcional** para usuários avançados que preferem interagir através do teclado.
 
-    Os usuários experientes apresentam, muitas vezes, uma forte preferência pelo teclado, pois os comandos por teclado podem ser inseridos mais rapidamente e não exigem que eles retirem as mãos do teclado. Para esses usuários, eficiência e consistência são cruciais; capacidade de abrangência é importante apenas para os comandos usados com mais frequência.
+    Os usuários experientes apresentam, muitas vezes, uma forte preferência pelo teclado, pois os comandos por teclado podem ser inseridos mais rapidamente e não exigem que eles retirem as mãos do teclado. Para esses usuários, eficiência e consistência são cruciais; a abrangência é importante apenas para os comandos mais usados.
 
 ## <a name="set-access-key-scope"></a>Definir o âmbito das teclas de acesso
 
@@ -72,11 +72,11 @@ Por exemplo, o Microsoft Word fornece dois âmbitos para as teclas de acesso: um
 
 As imagens a seguir demonstram os dois âmbitos de teclas de acesso no Word. A primeira mostra as teclas de acesso primárias que permitem que um usuário selecione a aba e outros comandos de alto nível, e a segunda mostra as teclas de acesso secundárias para a aba Página Inicial.
 
-![chaves de acesso primárias no Microsoft Word](images/accesskeys/primary-access-keys-word.png)
-_chaves de acesso primário no Microsoft Word_
+![Chaves de acesso primárias nas](images/accesskeys/primary-access-keys-word.png)
+_chaves de acesso primário do Microsoft Word no Microsoft Word_
 
-![chaves de acesso secundárias no Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-_chaves de acesso secundárias no Microsoft Word_
+![Chaves de acesso secundárias nas](images/accesskeys/secondary-access-keys-word.png)
+_chaves de acesso secundárias do Microsoft Word no Microsoft Word_
 
 As teclas de acesso podem ser duplicadas para elementos de âmbitos diferentes. No exemplo anterior, "2" é a tecla de acesso para Desfazer no âmbito principal, e também para "Itálico" no âmbito secundário.
 
@@ -110,11 +110,11 @@ Aqui, mostramos como definir o escopo das teclas de acesso.
 
 ![Teclas de acesso primárias para o CommandBar](images/accesskeys/primary-access-keys-commandbar.png)
 
-_Escopo principal de CommandBar e chaves de acesso com suporte_
+_Âmbito primário do CommandBar e teclas de acesso suportadas_
 
 ![Teclas de acesso secundárias para o CommandBar](images/accesskeys/secondary-access-keys-commandbar.png)
 
-_Escopo secundário de CommandBar e chaves de acesso com suporte_
+_Escopo secundário do CommandBar e teclas de acesso suportadas_
 
 ### <a name="windows-10-creators-update-and-older"></a>Atualização do Windows 10 para Criadores e anteriores
 
@@ -233,13 +233,13 @@ Recursos para cada idioma são adicionados às respectivas pastas de Caracteres 
 
 ![Pastas de caracteres dos recursos em inglês e espanhol](images/accesskeys/resource-string-folders.png)
 
-_Pastas de cadeia de caracteres de recursos em inglês e espanhol_
+_Pastas de caracteres dos recursos em inglês e espanhol_
 
 As teclas de acesso para diferentes regiões são especificadas no arquivo resources.resw do projeto:
 
 ![Especificar a propriedade AccessKey especificada no arquivo resources.resw](images/accesskeys/resource-resw-file.png)
 
-_Especifique a propriedade AccessKey especificada no arquivo Resources. resw_
+_Especificar a propriedade AccessKey especificada no arquivo resources.resw_
 
 Para obter mais informações, consulte [Traduzindo recursos da interface de usuário ](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10))
 
@@ -261,18 +261,18 @@ No entanto, caso precise de um controle maior sobre o posicionamento da Dica de 
     b.  A Dica de Tecla deve **evitar cobrir elementos habilitados** que possuam teclas de acesso.   
     c.  Se uma Dica de Tecla não puder ser colocada perto do seu proprietário, ela deve sobrepô-lo. 
 
-2.  **Detectabilidade**: O usuário pode descobrir o controle rapidamente com a Dica de Tecla.
+2.  **Capacidade**de descoberta: o usuário pode descobrir o controle com a dica de chave rapidamente.
 
     a.  A Dica de Tecla nunca **sobrepõe** outras Dicas de Tecla.  
 
-3.  **Verificação fácil:** O usuário pode ler as Dicas de Tecla facilmente.
+3.  **Digitalização fácil:** O usuário pode rapidamente obter as dicas-chave facilmente.
 
     a.  As Dicas de Tecla devem estar **alinhadas** entre si e com o elemento de interface do usuário.
     b.  As Dicas de Tecla devem ser **agrupadas** o máximo possível. 
 
 ### <a name="relative-position"></a>Posição relativa
 
-Use a propriedade **KeyTipPlacementMode** para personalizar o posicionamento da Dica de Tecla por elemento ou por grupo.
+Use a propriedade **KeyTipPlacementMode** para personalizar o posicionamento da dica de chave em uma base por elemento ou por grupo.
 
 Os modos de posicionamento são: Superior, Inferior, Direito, Esquerdo, Oculto, Central e Automático.
 
@@ -303,7 +303,7 @@ A propriedade KeyTipHorizontalOffset indica o quanto mover a Dica de Tecla para 
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-offsets.png)
 
-_Definir deslocamentos verticais e horizontais para uma dica de chave_
+_Definir deslocamentos horizontal e vertical para uma Dica de Tecla_
 
 ``` xaml
 <Button
@@ -320,7 +320,7 @@ A localização de uma Dica de Tecla é ajustada automaticamente com base nas bo
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytips-screen-edge.png)
 
-_A borda da tela faz com que a dica de chave seja automaticamente reposicionada_
+_As bordas da tela fazem com que a Dica de Tecla se reposicione automaticamente_
 
 ## <a name="key-tip-style"></a>Estilo da Dica de Tecla
 
@@ -330,7 +330,7 @@ Caso precise especificar seus próprios estilos da Dica de Tecla, use recursos d
 
 ![Modos de posicionamento da dica de tecla](images/accesskeys/keytip-customization.png)
 
-_Opções de personalização da dica de chave_
+_Opções de personalização da dica de tecla_
 
 Este exemplo demonstra como alterar esses recursos do aplicativo:
 
@@ -349,7 +349,7 @@ Este exemplo demonstra como alterar esses recursos do aplicativo:
 </Application.Resources>
 ```
 
-## <a name="access-keys-and-narrator"></a>Teclas de acesso e narrador
+## <a name="access-keys-and-narrator"></a>Teclas de acesso e Narrador
 
 A estrutura XAML expõe Propriedades de Automação que permitem que clientes da Automação da interface de usuário descubram informações sobre elementos da interface de usuário.
 
@@ -360,7 +360,7 @@ Se você especificar a propriedade AccessKey em um controle de UIElement ou Text
 * [Interações de teclado](keyboard-interactions.md)
 * [Aceleradores de teclado](keyboard-accelerators.md)
 
-**Exemplos**
+**Amostras**
 * [Galeria de controles XAML (também conhecido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

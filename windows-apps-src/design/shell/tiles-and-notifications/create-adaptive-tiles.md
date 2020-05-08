@@ -1,5 +1,5 @@
 ---
-Description: Modelos de bloco adaptável são um novo recurso no Windows 10, permitindo que você crie seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapta a diferentes densidades de tela.
+Description: Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes.
 title: Criar blocos adaptáveis
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -8,25 +8,25 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3fa029c5046b1c3f20058275aec0ff901706e65
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: b91b5d8ce39f34c6065f6dce61e90a752b36c8ef
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320942"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971061"
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
-Modelos de bloco adaptável são um novo recurso no Windows 10, permitindo que você crie seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapta a diferentes densidades de tela. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
+Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo do Windows. Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
 
-(Se você desejar, você ainda poderá usar os modelos predefinidos do [catálogo de modelos do Windows 8 lado a lado](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) durante a criação de notificações para o Windows 10.)
+(Se quiser, você ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) durante a criação de notificações para o Windows 10.)
 
 
 ## <a name="getting-started"></a>Introdução
 
 **Instale a biblioteca de notificações.** Se você quiser usar a linguagem C# em vez de XML para gerar notificações, instale o pacote NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (procure por "notificações uwp"). Os exemplos em linguagem C# fornecidos neste artigo usam o pacote NuGet, versão 1.0.0.
 
-**Instale o Visualizador de notificações.** Esse aplicativo UWP gratuito ajuda você a criar blocos dinâmicos adaptáveis, fornecendo uma visualização instantânea de seu bloco enquanto você o edita semelhante ao modo de exibição de editor/design XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**Instale o Visualizador de Notificações.** Esse aplicativo gratuito do Windows ajuda você a criar blocos dinâmicos adaptáveis, fornecendo uma visualização Visual instantânea do seu bloco ao editá-lo, semelhante à exibição de design/editor XAML do Visual Studio. Consulte [Visualizador de notificações](notifications-visualizer.md) para obter mais informações ou [Baixar o Visualizador de notificações da Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
 ## <a name="how-to-send-a-tile-notification"></a>Como enviar uma notificação de bloco
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação**  Windows Mobile não oferece suporte o logotipo de canto, então "logotipo" e "nameAndLogo" padrão como "name" em dispositivos móveis.
+**Observação:**  o Windows Mobile não dá suporte ao logotipo do canto, portanto, "logo" e "nameAndLogo" têm como padrão "Name" em dispositivos móveis.
 
  
 
@@ -274,17 +274,17 @@ TileContent content = new TileContent()
 };
 ```
 
-**Padrão de identidade visual do resultado:**
+**Resultado de identidade visual padrão:**
 
 ![identidade visual padrão em blocos](images/adaptive-tiles-defaultbranding.png)
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observação**    essa é uma alteração do Windows 8. x, em que a identidade visual padrão era "logotipo".
+**Observe**    que essa é uma alteração do Windows 8. x, na qual a identidade visual padrão era "logotipo".
 
  
 
-## <a name="display-name"></a>Display name
+## <a name="display-name"></a>Nome de exibição
 
 
 Você pode substituir o nome de exibição de uma notificação digitando a cadeia de caracteres de texto de sua escolha com o atributo **displayName**. Assim como na identidade visual, você pode especificar isso no elemento [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual), que afeta todo o conteúdo da notificação, ou no elemento [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding), que afeta somente blocos individuais.
@@ -335,7 +335,7 @@ TileContent content = new TileContent()
 
 ![nome de exibição de blocos adaptáveis](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>Text
+## <a name="text"></a>Texto
 
 
 O elemento [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) é usado para exibir texto. Você pode usar dicas para modificar a aparência do texto.
@@ -406,26 +406,26 @@ new AdaptiveText()
 
 ![estilos de texto de blocos adaptáveis](images/adaptive-tiles-textstyles.png)
 
-**Observação**  o estilo padrão de legenda se estilo dica não for especificado.
+**Observe**  que o estilo padrão será legenda se o estilo de dica não for especificado.
 
  
 
-**Estilos de texto básica**
+**Estilos de texto básicos**
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style="\*" /&gt; | Altura da fonte               | Espessura da fonte |
+| &lt;Dica de texto-Style =\*""/&gt; | Altura da fonte               | Espessura da fonte |
 | caption                        | 12 pixels efetivos (epx) | Regular     |
 | body                           | 15 epx                    | Regular     |
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Regular     |
 | title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Claro       |
-| header                         | 46 epx                    | Claro       |
+| subheader                      | 34 epx                    | Leve       |
+| cabeçalho                         | 46 epx                    | Leve       |
 
  
 
-**Variações de estilo de texto numérico**
+**Variações numéricas de estilo de texto**
 
 Essas variações reduzem a altura da linha para que o conteúdo acima e abaixo se aproxime bem do texto.
 
@@ -437,7 +437,7 @@ Essas variações reduzem a altura da linha para que o conteúdo acima e abaixo 
 
  
 
-**Variações de estilo do texto sutis**
+**Variações sutis de estilo de texto**
 
 Cada estilo tem uma variação sutil que oferece ao texto uma opacidade de 60%, o que geralmente torna a cor do texto um tom de cinza-claro.
 
@@ -485,7 +485,7 @@ Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está
 
 Para proporcionar a melhor experiência em dispositivos e telas, forneça vários grupos. Ter vários grupos permite que seu bloco se adapte a telas maiores.
 
-**Observação**  filho só é válido de um grupo é um subgrupo.
+**Observe**  que o único filho válido de um grupo é um subgrupo.
 
  
 
@@ -607,7 +607,7 @@ O atributo **hint-weight** permite que você controle as larguras das colunas. O
 <td align="left">25%</td>
 </tr>
 <tr class="even">
-<td align="left">Peso total: 4</td>
+<td align="left">Espessura total: 4</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -638,7 +638,7 @@ Para tornar uma coluna duas vezes maior que outra coluna, atribua à coluna meno
 <td align="left">66,7%</td>
 </tr>
 <tr class="even">
-<td align="left">Peso total: 3</td>
+<td align="left">Espessura total: 3</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -669,7 +669,7 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 <td align="left">80%</td>
 </tr>
 <tr class="even">
-<td align="left">Peso total: 100</td>
+<td align="left">Espessura total: 100</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -679,7 +679,7 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 
 ![subgrupos, com espessuras totalizando 100](images/adaptive-tiles-subgroups03.png)
 
-**Observação**  uma margem de 8 pixels é adicionada automaticamente entre as colunas.
+**Observe**  que uma margem de 8 pixels é adicionada automaticamente entre as colunas.
 
  
 
@@ -1179,7 +1179,7 @@ TileWide = new TileBinding()
 
 ![exemplos de imagens de "espiar"](images/adaptive-tiles-imagepeeking.png)
 
-**Corte do círculo para imagens de inspeção e plano de fundo**
+**Corte em círculo para imagens de "espiar" e de plano de fundo**
 
 Use o seguinte atributo hint-crop em imagens de "espiar" e de plano de fundo para fazer um corte em círculo:
 
@@ -1195,15 +1195,15 @@ new TilePeekImage()
 }
 ```
 
-O resultado ficará assim:
+O resultado terá esta aparência:
 
 ![corte em círculo para imagens de "espiar" e de plano de fundo](images/circlecrop-image.png)
 
-**Usar imagem de inspeção e plano de fundo**
+**Usar imagem dinâmica e de plano de fundo**
 
 Para usar uma imagem de "espiar" e de plano de fundo em uma notificação de bloco, especifique uma imagem de "espiar" e uma imagem de plano de fundo em sua carga de notificação.
 
-O resultado ficará assim:
+O resultado terá esta aparência:
 
 ![imagem de "espiar" e imagem de plano de fundo usadas juntas](images/peekandbackground.png)
 
@@ -1212,7 +1212,7 @@ O resultado ficará assim:
 
 Você pode definir uma sobreposição preta em suas imagens de "espiar" e de plano de fundo usando **hint-overlay**, que aceita inteiros de 0 a 100, sendo 0 nenhuma sobreposição e 100 uma sobreposição total preta. Você pode usar a sobreposição para assegurar que o texto em seu bloco seja legível.
 
-**Use a dica de sobreposição em uma imagem de plano de fundo**
+**Use hint-overlay em uma imagem de plano de fundo**
 
 Sua imagem de plano de fundo será padronizada com uma sobreposição de 20% desde que você tenha alguns elementos de texto em sua carga (caso contrário, o padrão será 0% sobreposição).
 
@@ -1239,11 +1239,11 @@ TileWide = new TileBinding()
 }
 ```
 
-**Resultado de sobreposição de dica:**
+**Resultado de hint-overlay:**
 
 ![exemplo de uma sobreposição de dica de imagem](images/adaptive-tiles-image-hintoverlay.png)
 
-**Use a sobreposição de dica em uma imagem de espiada**
+**Use hint-overlay em uma imagem de "espiar"**
 
 Na versão 1511 do Windows 10, também oferecemos suporte a uma sobreposição para sua imagem de "espiar", da mesma forma que fizemos para a imagem de plano de fundo. Especifique hint-overlay no elemento de imagem de "espiar", como um número inteiro de 0 a 100. A sobreposição padrão para imagens de "espiar" é 0 (nenhuma sobreposição).
 
@@ -1393,7 +1393,7 @@ TileWide = new TileBinding()
 * [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md)
 * [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md)
 * [Modelos de blocos especiais](special-tile-templates-catalog.md)
-* [UWP Community Toolkit - notificações](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Kit de ferramentas de comunidade UWP - Notificações](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [Notificações do Windows no GitHub](https://github.com/WindowsNotifications)
 
  

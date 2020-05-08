@@ -1,6 +1,6 @@
 ---
-Description: Saiba como usar as transições de página em seus aplicativos UWP.
-title: Transições de página em aplicativos UWP
+Description: Saiba como usar as transições de página em seus aplicativos do Windows.
+title: Transições de página
 template: detail.hbs
 ms.date: 04/08/2018
 ms.topic: article
@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9b3244c24ff4fa8e3c85ee9970536b1b35d8efd5
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 6239d8409767cab06d4d2c8c9c3abb9d743ca1c9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444196"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970511"
 ---
 # <a name="page-transitions"></a>Transições de página
 
@@ -28,7 +28,7 @@ Duas animações diferentes são fornecidas para navegação entre páginas em u
 <tr>
 <td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
-    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PageTransition">abrir o aplicativo e ver as transições de página em ação</a>.</p>
+    <p>Se você tiver o aplicativo da <strong style="font-weight: semi-bold">Galeria de controles XAML</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/PageTransition">abrir o aplicativo e ver as transições de página em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -53,9 +53,9 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ```
 
-**Observação**: Um [ **quadro** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) usa automaticamente [ **NavigationThemeTransition** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar a navegação entre as duas páginas. Por padrão, a animação é a atualização de página.
+**Observação**: um [**Quadro**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) usa automaticamente [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar a navegação entre duas páginas. Por padrão, a animação é a atualização de página.
 
-## <a name="drill"></a>Análise detalhada
+## <a name="drill"></a>Drill
 
 Use a análise detalhada quando os usuários navegarem mais profundamente em um app, por exemplo, quando estiverem exibindo mais informações após selecionar um item.
 
@@ -72,9 +72,9 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>Slide horizontal
 
-Use o slide de horizontal para mostrar que as páginas irmãs aparecem próximos uns dos outros. O [NavigationView](../controls-and-patterns/navigationview.md) controle usa automaticamente essa animação de navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
+Use o slide horizontal para mostrar que as páginas irmãos aparecem ao lado umas das outras. O controle [NavigationView](../controls-and-patterns/navigationview.md) usa automaticamente essa animação para a navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, poderá implementar um slide horizontal com SlideNavigationTransitionInfo.
 
-A sensação desejada é que o usuário está navegando entre as páginas que estão próximos uns dos outros. 
+A sensação desejada é que o usuário está navegando entre páginas que estão próximas umas das outras. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage
@@ -84,9 +84,9 @@ myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { 
 myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft } );
 ```
 
-## <a name="suppress"></a>Supressão
+## <a name="suppress"></a>Suprimir
 
-Para evitar a reprodução de qualquer animação durante a navegação, use [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) em vez de outros subtipos de **NavigationTransitionInfo**.
+Para evitar a reprodução de qualquer animação durante a navegação, use [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) no lugar de outros subtipos de **NavigationTransitionInfo** .
 
 ```csharp
 // Suppress the default animation
@@ -95,7 +95,7 @@ myFrame.Navigate(typeof(Page2), null, new SuppressNavigationTransitionInfo());
 
 A supressão da animação será útil se você estiver criando sua própria transição por meio das [Animações conectadas](connected-animation.md) ou animações de mostrar/ocultar implícitas.
 
-## <a name="backwards-navigation"></a>Navegação para trás
+## <a name="backwards-navigation"></a>Navegação regressiva
 
 Para reproduzir uma transição específica ao navegar para trás, use `Frame.GoBack(NavigationTransitionInfo)`.
 
@@ -103,5 +103,5 @@ Isso poderá ser útil quando você modificar o comportamento de navegação din
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Navegar entre as duas páginas](../basics/navigate-between-two-pages.md)
-- [Movimento em aplicativos UWP](index.md)
+- [Navegar entre duas páginas](../basics/navigate-between-two-pages.md)
+- [Movimento em aplicativos UWindowsWP](index.md)

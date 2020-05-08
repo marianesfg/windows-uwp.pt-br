@@ -1,5 +1,5 @@
 ---
-Description: Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
+Description: Saiba mais sobre a evolução do Design Inclusivo com aplicativos de aplicativo do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Projetando software inclusivo no Windows 10
 label: Designing inclusive software
@@ -8,35 +8,35 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cc88792e6cfdc581a4c7dc27ecc060cc0000c3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0f048d9d3541b52994713c8040c451a421df3e0a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317344"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969431"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Projetando software inclusivo para Windows 10  
 
-Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
+Saiba mais sobre a evolução do Design Inclusivo com aplicativos de aplicativo do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
 
 Na Microsoft, estamos desenvolvendo nossos princípios de design e práticas recomendadas. Eles mostram a aparência, a função e o comportamento das nossas experiências. Estamos elevando a nossa perspectiva.
 
 Essa nova filosofia de design é chamada de design inclusivo. A ideia é criar um software com todas as pessoas em mente desde o começo. Isso é o oposto de enxergar a acessibilidade como uma tecnologia você inclui no final do processo de desenvolvimento para satisfazer alguns pequenos grupos de usuários.
 
-"Definimos deficiência como uma incompatibilidade entre as necessidades do indivíduo e o serviço, produto ou ambiente oferecidos. Qualquer pessoa pode sofrer uma deficiência. É uma característica humana comum a ser eliminada".  \- dos [inclusivo](https://www.microsoft.com/design/inclusive/) vídeo  
+"Definimos deficiência como uma incompatibilidade entre as necessidades do indivíduo e o serviço, produto ou ambiente oferecidos. Qualquer pessoa pode sofrer uma deficiência. É uma característica humana comum a ser eliminada".  \-do vídeo [inclusivo](https://www.microsoft.com/design/inclusive/)  
 
 O design inclusivo cria produtos melhores para todos. Trata-se de considerar a gama completa de diversidade humana. Considere os recortes de meio-fio que você encontra na maioria das calçadas das esquinas. Eles foram claramente pensados para serem usados por pessoas em cadeiras de rodas. Mas agora quase todo mundo os usa, inclusive pessoas com carrinhos de bebê, ciclistas, esqueitistas. Até mesmo pedestres geralmente os usam porque estão disponíveis e proporcionam uma melhor experiência. O controle remoto da televisão pode ser considerado uma tecnologia assistencial (AT) para alguém com limitações físicas. No entanto hoje é praticamente impossível comprar uma televisão sem um. Antes de as crianças aprenderem a amarrar os sapatos, elas podem usar sapatos com fechamento de velcro. Sapatos que são fáceis de calçar e tirar geralmente são preferenciais em culturas nas quais eles são removidos antes de entrar em uma casa. Eles também são melhores para pessoas com problemas de destreza como artrite ou até mesmo um pulso temporariamente quebrado.
 
 ## <a name="inclusive-design-principles"></a>Princípios de design inclusivo  
 Os quatro princípios seguintes estão orientando a mudança da Microsoft para o design inclusivo:
 
-**Pense universal**: Vamos nos concentrar no que unifica as pessoas — motivações humanas, relações e capacidades. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
+**Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
 
-**Torne-o pessoal**: Em seguida, podemos desafio que nós mesmos para criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
+**Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
 
-**Manter a simplicidade**: Começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
+**Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
 
-**Criar a felicidade**: Experiências e interessantes evocar maravilhado e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
+**Crie alegria**: experiências alegres evocam admiração e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
 
 ## <a name="inclusive-design-users"></a>Usuários de design inclusivo  
 Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
@@ -46,7 +46,7 @@ Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
 
 A maioria dos usuários de computador (54%) conhece alguma forma de tecnologia assistencial e 44% dos usuários de computador usa alguma forma dela, mas muitos deles não está usando a AT que poderia beneficiá-los (Forrester 2004).  
 
-Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade &mdash;57%&mdash; dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. Forrester (2003) também encontrou o seguinte número de usuários com essas dificuldades específicos: Um em quatro experiências uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
+Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade &mdash;57%&mdash; dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. A Forrester (2003) também descobriu o seguinte número de usuários com estas dificuldades específicas: um em quatro tem uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
 
 Além de deficiências permanentes, a gravidade e os tipos de dificuldades que uma pessoa tem podem variar durante a vida dela. Não existe um ser humano normal. Nossas habilidades estão sempre mudando. Margaret Meade disse, "Somos todos únicos. Sermos todos únicos nos torna iguais".  
 
@@ -106,6 +106,6 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Design inclusivo](https://www.microsoft.com/design/inclusive/)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Cenários de desenvolvedor de acessibilidade do Microsoft](https://developer.microsoft.com/windows/accessible-apps)
+* [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md) 
 * [Acessibilidade](accessibility.md)

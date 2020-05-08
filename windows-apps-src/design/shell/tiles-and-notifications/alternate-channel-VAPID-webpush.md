@@ -1,43 +1,43 @@
 ---
-title: Canais de push alternativo usando VAPID na UWP
-description: Instruções para usar os canais de push alternativo com o protocolo VAPID de um aplicativo UWP
+title: Canais de push alternativos usando VAPID no UWP
+description: Instruções para usar canais de push alternativos com o protocolo VAPID de um aplicativo do Windows
 ms.date: 01/10/2017
 ms.topic: article
-keywords: Windows 10, uwp, API do WinRT, WNS
+keywords: Windows 10, UWP, API do WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: 6512eb891967b6c17bc4845d5e47639ae3c97d31
-ms.sourcegitcommit: 0c97c025d751082db3424cb9941bf6688d9b7381
+ms.openlocfilehash: 382dca376e2393d83c2803043b61db76226b3995
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67835020"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970861"
 ---
-# <a name="alternate-push-channels-using-vapid-in-uwp"></a>Canais de push alternativo usando VAPID na UWP 
-A partir o Fall Creators Update, aplicativos UWP podem usar a autenticação VAPID para enviar notificações por push.  
+# <a name="alternate-push-channels-using-vapid-in-windows"></a>Canais de push alternativos usando VAPID no Windows 
+A partir da atualização de criadores de outono, os aplicativos do Windows podem usar a autenticação VAPID para enviar notificações por push.  
 
 > [!NOTE]
-> Essas APIs são destinadas para navegadores da web que estão hospedando outros sites e criar canais em seu nome.  Se você estiver procurando para adicionar notificações webpush ao seu aplicativo web, é recomendável que você siga os padrões W3C e WhatWG para criar um trabalho de serviço e enviar uma notificação.
+> Essas APIs são destinadas a navegadores da Web que hospedam outros sites e a criação de canais em seu nome.  Se você estiver procurando adicionar notificações do webpush ao seu aplicativo Web, recomendamos seguir os padrões W3C e WhatWG para criar um trabalhador de serviço e enviar uma notificação.
 
 ## <a name="introduction"></a>Introdução
-A introdução do padrão de envio por push da web permite que sites podem funcionar mais como aplicativos, mesmo quando os usuários não estão no site do envio de notificações.
+A introdução do padrão de push da Web permite que os sites possam agir mais como aplicativos, enviando notificações mesmo quando os usuários não estão no site.
 
-O protocolo de autenticação VAPID foi criado para permitir que os sites autenticar com os servidores de envio por push em um fornecedor de maneira independente. Com todos os fornecedores usando o protocolo VAPID, sites podem enviar notificações por push sem conhecer o navegador no qual ele está em execução. Isso é uma melhoria significativa sobre a implementação de um protocolo de envio por push diferentes para cada plataforma. 
+O protocolo de autenticação VAPID foi criado para permitir que sites se autentiquem com servidores de push de maneira independente de fornecedor. Com todos os fornecedores que usam o protocolo VAPID, os sites podem enviar notificações por push sem saber o navegador no qual ele está sendo executado. Essa é uma melhoria significativa em relação à implementação de um protocolo de push diferente para cada plataforma. 
 
-Aplicativos UWP podem usar VAPID para enviar notificações por push com essas vantagens. Esses protocolos podem economizar tempo de desenvolvimento para novos aplicativos e simplificar o suporte de plataforma cruzada para aplicativos existentes. Além disso, aplicativos corporativos ou aplicativos com sideload agora podem enviar notificações sem registrar em que a Microsoft Store. Felizmente, isso abrirá novas maneiras de interagir com usuários em todas as plataformas.  
+Os aplicativos do Windows também podem usar o VAPID para enviar notificações por push com essas vantagens. Esses protocolos podem economizar tempo de desenvolvimento para novos aplicativos e simplificar o suporte de plataforma cruzada para aplicativos existentes. Além disso, aplicativos empresariais ou aplicativos Sideload agora podem enviar notificações sem se registrar no Microsoft Store. Espero que isso abra novas maneiras de se envolver com os usuários em todas as plataformas.  
 
 ## <a name="alternate-channels"></a>Canais alternativos 
-Na UWP, esses canais VAPID são chamados de canais alternativos em fornecem funcionalidade semelhante a um canal de push da web. Eles podem disparar uma tarefa de plano de fundo do aplicativo para executar, habilitar a criptografia de mensagem e permitir vários canais de um único aplicativo. Para obter mais informações sobre a diferença entre os tipos de canal diferente, consulte [escolhendo o canal corretos](channel-types.md).
+No UWP, esses canais VAPID são chamados de canais alternativos e fornecem funcionalidade semelhante a um canal de push da Web. Eles podem disparar a execução de uma tarefa em segundo plano do aplicativo, habilitar a criptografia de mensagens e permitir vários canais de um único aplicativo. Para obter mais informações sobre a diferença entre os diferentes tipos de canal, consulte [escolher o canal correto](channel-types.md).
 
-Usar canais alternativos é uma ótima maneira de acessar as notificações por push se seu aplicativo não é possível usar um canal principal ou se você quiser compartilhar código entre seu site e aplicativo. Como configurar um canal é fácil e familiar para qualquer pessoa que tenha usado o padrão de envio por push da web ou trabalhou com Windows notificações por push antes.
+Usar canais alternativos é uma ótima maneira de acessar notificações por Push se seu aplicativo não puder usar um canal primário ou se você quiser compartilhar código entre seu site e aplicativo. A configuração de um canal é fácil e familiar para qualquer pessoa que tenha usado o padrão de push da Web ou trabalhou com notificações por push do Windows antes.
 
 ## <a name="code-example"></a>Exemplo de código
 
-O processo básico de como configurar um canal alternativo para um aplicativo UWP é semelhante à configuração de um canal primário ou secundário. Primeiro, registre-se para um canal com o [server WNS](windows-push-notification-services--wns--overview.md). Em seguida, registre-se para ser executado como uma tarefa em segundo plano. Depois que a notificação é enviada e a tarefa em segundo plano é disparada, manipule o evento.  
+O processo básico de configuração de um canal alternativo para um aplicativo do Windows é semelhante à configuração de um canal primário ou secundário. Primeiro, registre-se para um canal com o [servidor WNS](windows-push-notification-services--wns--overview.md). Em seguida, registre-se para executar como uma tarefa em segundo plano. Depois que a notificação for enviada e a tarefa em segundo plano for disparada, manipule o evento.  
 
 ### <a name="get-a-channel"></a>Obter um canal 
-Para criar um canal alternativo, o aplicativo deve fornecer duas informações: a chave pública do seu servidor e o nome do canal, ele está criando. Os detalhes sobre as chaves de servidor estão disponíveis nas especificações de envio por push da web, mas é recomendável usar uma biblioteca de push padrão da web no servidor para gerar as chaves.  
+Para criar um canal alternativo, o aplicativo deve fornecer duas informações: a chave pública para seu servidor e o nome do canal que está sendo criado. Os detalhes sobre as chaves de servidor estão disponíveis na especificação de push da Web, mas é recomendável usar uma biblioteca de push da Web padrão no servidor para gerar as chaves.  
 
-A ID do canal é particularmente importante porque um aplicativo pode criar diversos canais alternativos. Cada canal deve ser identificado por uma ID exclusiva que será incluída com qualquer cargas de notificação enviadas junto esse canal.  
+A ID do canal é particularmente importante porque um aplicativo pode criar vários canais alternativos. Cada canal deve ser identificado por uma ID exclusiva que será incluída com quaisquer cargas de notificação enviadas ao longo desse canal.  
 
 ```csharp
 private async void AppCreateVAPIDChannelAsync(string appChannelId, IBuffer applicationServerKey) 
@@ -57,13 +57,13 @@ private async void AppCreateVAPIDChannelAsync(string appChannelId, IBuffer appli
     AppPassChannelToSite(webChannel.Uri); 
 } 
 ```
-O aplicativo envia o canal de volta até seu servidor e a salva localmente. Salvando a identificação do canal localmente, permite que o aplicativo diferenciar entre os canais e canais de renovação para impedir que eles expirem.
+O aplicativo envia o backup do canal para seu servidor e o salva localmente. Salvar a ID do canal localmente permite que o aplicativo diferencie os canais e renove os canais para impedir que eles expirem.
 
-Como cada outro tipo de canal de notificação por push, canais da web podem expirar. Para impedir que os canais expirando sem saber seu aplicativo, crie um novo canal sempre que seu aplicativo é iniciado.    
+Assim como todos os outros tipos de canal de notificação por push, os canais da Web podem expirar. Para evitar que os canais expirem sem que seu aplicativo saiba, crie um novo canal toda vez que seu aplicativo for iniciado.    
 
-### <a name="register-for-a-background-task"></a>Registre-se para uma tarefa em segundo plano 
+### <a name="register-for-a-background-task"></a>Registrar-se para uma tarefa em segundo plano 
 
-Quando seu aplicativo tiver criado um canal alternativo, ele deve se registrar para receber as notificações em primeiro plano ou segundo plano. O exemplo a seguir registra para usar o modelo de um processo para receber as notificações na tela de fundo.  
+Depois que o aplicativo tiver criado um canal alternativo, ele deverá se registrar para receber as notificações em primeiro plano ou em segundo plano. O exemplo a seguir registra para usar o modelo de um processo para receber as notificações em segundo plano.  
 
 ```csharp
 var builder = new BackgroundTaskBuilder(); 
@@ -73,7 +73,7 @@ BackgroundTaskRegistration task = builder.Register();
 ```
 ### <a name="receive-the-notifications"></a>Receber as notificações 
 
-Depois que o aplicativo tenha sido registrado para receber as notificações, ele precisa ser capaz de processar as notificações recebidas. Uma vez que um único aplicativo pode registrar vários canais, certifique-se de verificar a ID do canal antes de processar a notificação.  
+Depois que o aplicativo for registrado para receber as notificações, ele precisará ser capaz de processar as notificações de entrada. Como um único aplicativo pode registrar vários canais, certifique-se de verificar a ID do canal antes de processar a notificação.  
 
 ```csharp
 protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args) 
@@ -100,17 +100,17 @@ protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 } 
 ```
 
-Observe que se a notificação é proveniente de um canal primário, em seguida, a ID do canal não será definida.  
+Observe que, se a notificação for proveniente de um canal primário, a ID do canal não será definida.  
 
-## <a name="note-on-encryption"></a>Observe na criptografia 
+## <a name="note-on-encryption"></a>Observação sobre criptografia 
 
-Você pode usar qualquer esquema de criptografia você considere mais útil para seu aplicativo. Em alguns casos, é suficiente para contar com o padrão TLS entre o servidor e qualquer dispositivo do Windows. Em outros casos, pode fazer mais sentido usar o esquema de criptografia de envio por push da web ou outro esquema de seu design.  
+Você pode usar qualquer esquema de criptografia que achar mais útil para seu aplicativo. Em alguns casos, é suficiente contar com o padrão TLS entre o servidor e qualquer dispositivo Windows. Em outros casos, pode fazer mais sentido usar o esquema de criptografia por push da Web ou outro esquema de seu design.  
 
-Se você quiser usar outra forma de criptografia, a chave é o uso bruto. Propriedade Headers. Ele contém todos os cabeçalhos de criptografia que foram incluídos na solicitação POST para o servidor de envio por push. A partir daí, seu aplicativo pode usar as chaves para descriptografar a mensagem.  
+Se você quiser usar outra forma de criptografia, a chave será usar o RAW. Propriedade Headers. Ele contém todos os cabeçalhos de criptografia que foram incluídos na solicitação POST para o servidor de envio por push. A partir daí, seu aplicativo pode usar as chaves para descriptografar a mensagem.  
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [Tipos de canais de notificação](channel-types.md)
-- [Serviços de notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
+- [Tipos de canal de notificação](channel-types.md)
+- [Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 - [Classe PushNotificationChannel](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [Classe PushNotificationChannelManager](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

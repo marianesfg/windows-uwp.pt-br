@@ -1,21 +1,21 @@
 ---
 ms.assetid: ''
-title: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
-description: Um tutorial passo a passo para adicionar suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP.
+title: Suporte à discagem de superfície (e a outros dispositivos de roda) em seu aplicativo do Windows
+description: Um tutorial passo a passo para adicionar suporte para a superfície de discagem (e outros dispositivos de roda) ao seu aplicativo do Windows.
 keywords: dial, radial, tutorial
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 79503f38941fd6fd54c47582811c5e28c4d89db2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 74bb75fb6bced451daeb6f03fba78636d0998cec
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258284"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970271"
 ---
-# <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Suporte ao Surface Dial (e a outros dispositivos de roda de rolagem) no aplicativo UWP
+# <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-windows-app"></a>Tutorial: suporte à discagem de superfície (e outros dispositivos de roda) em seu aplicativo do Windows
 
-![imagem de discagem de superfície com o Surface Studio](images/radialcontroller/dial-pen-studio-600px.png)  
+![Imagem do Surface Dial com Surface Studio](images/radialcontroller/dial-pen-studio-600px.png)  
 *Surface Dial com Surface Studio e Caneta Surface* (disponível para compra na [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
 Este tutorial descreve como personalizar as experiências de interação do usuário compatíveis com dispositivos de roda de rolagem, como o Surface Dial. Usamos trechos de um aplicativo de exemplo, que você pode baixar no GitHub (consulte [Código de exemplo](#sample-code)), para demonstrar os diversos recursos e APIs [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) associadas abordados em cada etapa.
@@ -27,7 +27,7 @@ Centraremos a atenção no seguinte:
 * Personalizando as interações de clique
 * Personalizando as interações de rotação
 
-Para obter mais informações sobre como implementar esses e outros recursos, consulte [Interações do Surface Dial nos aplicativos UWP](windows-wheel-interactions.md).
+Para saber mais sobre como implementar esses e outros recursos, confira [interações de discagem de superfície em aplicativos do Windows](windows-wheel-interactions.md).
 
 ## <a name="introduction"></a>Introdução
 
@@ -44,9 +44,9 @@ O Dial oferece suporte a três gestos básicos:
 * [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
 * [SDK do Windows 10 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Um dispositivo de roda de rolagem (somente o [Surface Dial](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116) no momento)
-* Se você for novato no desenvolvimento de aplicativos UWP (Plataforma Universal do Windows) com o Visual Studio, dê uma olhada nestes tópicos antes de iniciar este tutorial:  
+* Se você for novo no desenvolvimento de aplicativos do Windows com o Visual Studio, leia estes tópicos antes de iniciar este tutorial:  
     * [Prepare-se para começar](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
-    * [Criar um aplicativo "Olá, mundo" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [Criar um app "Hello, world" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>Configure seus dispositivos
 
@@ -63,8 +63,8 @@ O Dial oferece suporte a três gestos básicos:
 > [!NOTE]
 > Os dispositivos de roda de rolagem podem ser configurados por meio das configurações de **Roda**:
 > 1. No menu **Iniciar**, selecione **Configurações**.
-> 2. Selecione **Dispositivos** > **Roda**.    
-> tela de configurações do ![Wheel](images/radialcontroller/wheel-settings.png)
+> 2. Selecione **dispositivos** > **Wheel**.    
+> ![Tela de configurações de roda](images/radialcontroller/wheel-settings.png)
 
 Agora você está pronto para iniciar este tutorial. 
 
@@ -73,22 +73,22 @@ Neste tutorial, usamos um aplicativo de exemplo para demonstrar os conceitos e a
 
 Baixe este código-fonte e de exemplo do Visual Studio no [GitHub](https://github.com/) em [windows-appsample-get-started-radialcontroller sample](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController):
 
-1. Selecione o botão verde **Clone or download**.  
-![clonar o repositório](images/radialcontroller/wheel-clone.png)
-2. Se você tiver uma conta do GitHub, poderá clonar o repositório no computador local escolhendo **Open in Visual Studio**. 
-3. Se você não tiver uma conta do GitHub ou apenas quiser uma cópia local do projeto, escolha **Download ZIP** (você precisará fazer verificações regulares para baixar as atualizações mais recentes).
+1. Selecione o botão de **clone ou download** verde.  
+![Clonar o repositório](images/radialcontroller/wheel-clone.png)
+2. Se você tiver uma conta do GitHub, poderá clonar o repositório em seu computador local escolhendo **abrir no Visual Studio**. 
+3. Se você não tiver uma conta do GitHub ou se quiser apenas uma cópia local do projeto, escolha **baixar zip** (você precisará verificar regularmente para baixar as atualizações mais recentes).
 
 > [!IMPORTANT]
 > Grande parte do código no exemplo é comentado. À medida que percorrermos cada etapa deste tópico, você será solicitado a remover os comentários das várias seções do código. No Visual Studio, basta realçar as linhas de código, pressionar CTRL-K e, em seguida, CTRL-U.
 
 ## <a name="components-that-support-wheel-functionality"></a>Componentes que oferecem suporte à funcionalidade de roda de rolagem
 
-Esses objetos proporcionam a maior parte da experiência com dispositivos de roda de rolagem nos aplicativos UWP.
+Esses objetos fornecem a maior parte da experiência do dispositivo de roda para aplicativos do Windows.
 
 | Componente | Descrição |
 | --- | --- |
-| [Classe **RadialController** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) e relacionada | Representa um acessório ou dispositivo de entrada de roda de rolagem, como o Surface Dial. |
-| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [ **IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Não abordaremos essa funcionalidade aqui; para obter mais informações, consulte o [Exemplo de área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Permite a interoperabilidade com um aplicativo UWP. |
+| [**Classe RadialController**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) e componentes relacionados | Representa um acessório ou dispositivo de entrada de roda de rolagem, como o Surface Dial. |
+| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [**IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Não abordaremos essa funcionalidade aqui; para obter mais informações, consulte o [Exemplo de área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Permite a interoperabilidade com um aplicativo do Windows. |
 
 ## <a name="step-1-run-the-sample"></a>Etapa 1: Executar o exemplo
 
@@ -98,13 +98,13 @@ Após baixar o aplicativo de exemplo RadialController, verifique se ele é execu
 3. Pressione F5 para compilar, implantar e executar. 
 
 > [!NOTE]
-> Como alternativa, você pode selecionar **depurar** > **Iniciar** o item de menu ou selecionar o botão Executar do **computador local** mostrado aqui: ![botão do projeto de compilação do Visual Studio](images/radialcontroller/wheel-vsrun.png)
+> Como alternativa, você pode selecionar **depurar** > item de menu**Iniciar Depuração** ou selecionar o botão Executar do **computador local** mostrado aqui ![: botão do projeto de compilação do Visual Studio](images/radialcontroller/wheel-vsrun.png)
 
 A janela do aplicativo será aberta e, depois que uma tela inicial aparecer por alguns segundos, você verá esta tela inicial.
 
 ![Aplicativo vazio](images/radialcontroller/wheel-app-step1-empty.png)
 
-Agora temos o aplicativo UWP básico que usaremos durante todo o restante deste tutorial. Nas etapas a seguir, adicionamos nossa funcionalidade **RadialController**.
+Bem, agora temos o aplicativo básico do Windows que usaremos no restante deste tutorial. Nas etapas a seguir, adicionamos nossa funcionalidade **RadialController**.
 
 ## <a name="step-2-basic-radialcontroller-functionality"></a>Etapa 2: Funcionalidade básica RadialController
 
@@ -346,7 +346,7 @@ O Surface Dial e outros dispositivos de roda de rolagem podem fornecer aos usuá
 Nesta etapa, vamos mostrar como personalizar comentários hápticos associando os controles deslizantes e de botão de alternância e usando-os para especificar dinamicamente o comportamento desses comentários. Neste exemplo, o botão de alternância deve ser ativado para que os comentários sejam habilitados enquanto o valor do controle deslizante especifica a frequência em que os comentários de clique são repetidos. 
 
 > [!NOTE]
-> Os comentários hápticos podem ser desabilitados pelo usuário na página **Configurações** >  **Dispositivos** > **Roda**.
+> Os comentários do Haptic podem ser desabilitados pelo usuário na página de**roda** **configurações** >  **dispositivos** > .
 
 1. Abra o arquivo App.xaml.cs.
 2. Localize o código marcado com o título desta etapa ("Etapa 6: Personalizar a háptica do dispositivo").
@@ -611,11 +611,11 @@ Para ver isso em ação (você precisará do Surface Studio):
 
 ## <a name="summary"></a>Resumo
 
-Parabéns, você concluiu o *Tutorial de Introdução: Suporte ao Surface Dial (e outros dispositivos de roda de rolagem) no aplicativo UWP*! Mostramos a você o código básico necessário para oferecer suporte a um dispositivo de roda de rolagem nos aplicativos UWP e proporcionar algumas experiências de usuário mais sofisticadas compatíveis com as APIs **RadialController**.
+Parabéns, você concluiu o *tutorial de introdução: suporte à discagem de superfície (e outros dispositivos de roda) em seu aplicativo do Windows*! Mostramos o código básico necessário para dar suporte a um dispositivo de roda em seus aplicativos do Windows e como fornecer algumas das experiências de usuário mais avançadas com suporte pelas APIs do **RadialController** .
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-[Interações de discagem de superfície](windows-wheel-interactions.md)
+[Interações com o Surface Dial](windows-wheel-interactions.md)
 
 ### <a name="api-reference"></a>Referência de API
 
@@ -634,13 +634,13 @@ Parabéns, você concluiu o *Tutorial de Introdução: Suporte ao Surface Dial (
 
 ### <a name="samples"></a>Exemplos
 
-#### <a name="topic-samples"></a>Exemplos de tópico
+#### <a name="topic-samples"></a>Amostras de tópico
 
 [Personalização de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>Outros exemplos
+#### <a name="other-samples"></a>Outras amostras
 [Exemplo de livro de cores](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
 [Amostras da Plataforma Universal do Windows (C# e C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)
 
-[Exemplo de área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)
+[Exemplo da área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)

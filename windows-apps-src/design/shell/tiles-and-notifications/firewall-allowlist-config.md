@@ -8,16 +8,16 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, serviço de notificações do Windows, notificação, Windows, firewall, solução de problemas, IP, tráfego, Enterprise, rede, IPv4, VIP, FQDN, endereço IP público
 ms.localizationpriority: medium
-ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 7f87dc0cc174a22f474c91a58f3ffeb738822fa8
+ms.sourcegitcommit: 963316e065cf36c17b6360c3f89fba93a1a94827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080659"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82868911"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configurações de proxy e firewall corporativo para dar suporte ao tráfego WNS
 
-## <a name="background"></a>Tela de fundo
+## <a name="background"></a>Segundo plano
 Muitas empresas usam firewalls para bloquear tráfego e portas de rede indesejadas; Infelizmente, isso também pode bloquear coisas importantes, como comunicações do serviço de notificação do Windows. Isso significa que todas as notificações enviadas pelo WNS serão descartadas em determinadas configurações de rede. Para evitar isso, os administradores de rede podem adicionar a lista de FQDNs ou VIPs do WNS aprovados à sua lista de isenção para permitir que o tráfego do WNS passe pelo firewall. Abaixo estão mais detalhes sobre como e o que adicionar, bem como suporte para tipos de proxy diferentes.
 
 ## <a name="proxy-support"></a>Suporte a proxy
@@ -60,6 +60,10 @@ Independentemente do método que você escolher abaixo, você precisará permiti
         <IpRange Subnet=""/>
         <!-- See the file in Download Center for the complete list of IP ranges -->
     </ClientIPsIPv4>
+    <IdentityServiceDNS>
+        <DNS FQDN="login.microsoftonline.com"/>
+        <DNS FQDN="login.live.com"/>
+    </IdentityServiceDNS>
 </WNSPublicIpAddresses>
 
 ```
@@ -82,10 +86,10 @@ Se você estiver usando o serviço de notificação herdado, o MPNS, os interval
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Início rápido: enviando uma notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Guia de início rápido: enviando uma notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
 * [Como solicitar, criar e salvar um canal de notificação](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [Como interceptar notificações para executar aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [Como autenticar com o serviço de notificação por push do Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [Cabeçalhos de solicitação e resposta do serviço de notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [Diretrizes e lista de verificação para notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Como interceptar notificações para aplicativos em execução](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [Como autenticar com o Serviço de Notificação por Push do Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Cabeçalhos de solicitação e resposta de serviço de notificação por push](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Diretrizes e lista de verificação de notificações por push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
  

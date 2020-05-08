@@ -1,5 +1,5 @@
 ---
-Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
+Description: Crie aplicativos de aplicativos do Windows com experiências de interação do usuário intuitivas e padronizadas que são otimizadas para o Touchpad, mas são funcionalmente consistentes entre dispositivos de entrada.
 title: Interações por touchpad
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,12 +8,12 @@ keywords: touchpad, PTP, toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 991d85edd9c0a51412d33b48e364974d2095410e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: afbdf5c672328acfc60a82f9f66c75dc52370c99
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258228"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970231"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
@@ -29,7 +29,7 @@ Interações de touchpad requerem três coisas:
 
 -   Um touchpad padrão ou um Windows Precision Touchpad.
 
-    Os touchpads de precisão são otimizados para dispositivos da Plataforma Universal do Windows (UWP). Eles permitem que o sistema manipule determinados aspectos da experiência de touchpad de maneira nativa, como rastreamento do dedo e detecção da palma, para uma experiência mais consistente entre todos os dispositivos.
+    Os touchpads de precisão são otimizados para dispositivos de aplicativos do Windows. Eles permitem que o sistema manipule determinados aspectos da experiência de touchpad de maneira nativa, como rastreamento do dedo e detecção da palma, para uma experiência mais consistente entre todos os dispositivos.
 
 -   O contato direto de um ou mais dedos no touchpad.
 -   Movimento de contatos por toque (ou a ausência deles, com base em um limite de tempo).
@@ -40,7 +40,7 @@ Os dados de entrada fornecidos pelo sensor de touchpad podem ser:
 -   Reconhecidos como um método de entrada alternativo, como o mouse ou a caneta.
 -   Usados para complementar ou modificar aspectos de outros métodos de entrada, como borrar um traço de tinta desenhado com uma caneta.
 
-Um touchpad combina a entrada multitoque indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado à interface do usuário otimizada para toque e aos destinos geralmente menores de aplicativos de produtividade e do ambiente de área de trabalho. Otimize o design do seu aplicativo UWP para entrada por toque e obtenha, por padrão, o suporte básico para touchpad.
+Um touchpad combina a entrada multitoque indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado à interface do usuário otimizada para toque e aos destinos geralmente menores de aplicativos de produtividade e do ambiente de área de trabalho. Otimize seu design de aplicativo do Windows para entrada por toque e obtenha suporte a Touchpad por padrão.
 
 Devido à convergência de experiências de interação compatíveis com touchpads, recomendamos o uso do evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) para fornecer comandos de interface do usuário estilo mouse, além do suporte interno para entrada touch. Por exemplo, use os botões anterior e próximo para permitir que os usuários virem as páginas de conteúdo e também movimentem o conteúdo panoramicamente.
 
@@ -55,11 +55,11 @@ Os usuários podem definir muito mais gestos de touchpad de precisão e comporta
 
 ![configurações de touchpad padrão](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configurações de\\ padrão do\\ Touchpad</sup>
+<sup>Configurações\\ padrão\\ do Touchpad</sup>
 
 ![configurações do windows precision touchpad](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configurações do Windows\\ Precision\\ Touchpad\\</sup>
+<sup>Configurações\\ do\\ Touchpad\\ do Windows Precision</sup>
 
 Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar tarefas comuns.
 
@@ -151,20 +151,19 @@ Se você precisa personalizar o cursor do mouse:
 
 ## <a name="related-articles"></a>Artigos relacionados
 
+- [Manipular entrada de ponteiro](handle-pointer-input.md)
+- [Identificar dispositivos de entrada](identify-input-devices.md)
 
-* [Identificar entrada do ponteiro](handle-pointer-input.md)
-* [Identificar dispositivos de entrada](identify-input-devices.md)
-**Exemplos**
-* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Exemplo de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-**Exemplos de arquivo morto**
-* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: gestos e manipulações com GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
- 
+### <a name="samples"></a>Exemplos
 
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
+### <a name="archive-samples"></a>Exemplos de arquivo morto
 
+- [Entrada: amostra de funcionalidades do dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: amostra de eventos de entrada do usuário XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Exemplo de rolagem, panorâmica e zoom do XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: gestos e manipulações com o GestureRecognizer](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)

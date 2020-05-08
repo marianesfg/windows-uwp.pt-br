@@ -1,6 +1,6 @@
 ---
-Description: Saiba como Fluent usos de animação atingir o tempo e funções de easing.
-title: Tempo e suavização - animação em aplicativos UWP
+Description: Saiba como o Motion fluente usa funções de tempo e de atenuação.
+title: Tempo e suavização
 label: Timing and easing
 template: detail.hbs
 ms.date: 05/19/2017
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b736a10a7284e3cc9aa193e082dc654e908afe40
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 098a75da573a977aa393197a61a62b0337f0dc06
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444176"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970501"
 ---
 # <a name="timing-and-easing"></a>Tempo e suavização
 
@@ -28,7 +28,7 @@ Enquanto o movimento é baseado no mundo real, também estamos em um meio digita
 <tr>
 <td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
-    <p>Se você tiver o <strong style="font-weight: semi-bold">da Galeria de controles XAML</strong> aplicativo instalado, clique aqui para <a href="xamlcontrolsgallery:/item/EasingFunction">abrir o aplicativo e ver as funções de Easing em ação</a>.</p>
+    <p>Se você tiver o aplicativo da <strong style="font-weight: semi-bold">Galeria de controles XAML</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/EasingFunction">abrir o aplicativo e ver as funções de atenuação em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtenha o código-fonte (GitHub)</a></li>
@@ -49,17 +49,17 @@ O tempo é um elemento importante para fazer o movimento ser natural para objeto
 
 O tempo de movimento em fluente usa 500 ms (ou meio segundo) como uma linha de base, pois é a quantidade máxima de tempo que um usuário percebe como instante.
 
-![imagem hero](images/time.gif)
+![imagem Hero](images/time.gif)
 
 ### <a name="150ms-exit"></a>**150 ms** (saída)
 
 :::row:::
     :::column:::
-Use para objetos ou páginas que estão saindo da cena ou fechar.
+Use para objetos ou páginas que estão saindo da cena ou do fechamento.
 Permite um feedback direcional muito rápido de saída da interface do usuário, onde o tempo não impede a taxa de quadros de atingir uma animação suave.
     :::column-end:::
     :::column:::
-        ![150ms motion](images/150msAlt.gif)
+        ![150ms Motion](images/150msAlt.gif)
     :::column-end:::
 :::row-end:::
 
@@ -67,11 +67,11 @@ Permite um feedback direcional muito rápido de saída da interface do usuário,
 
 :::row:::
     :::column:::
-Use as páginas que estão inserindo a cena ou abrindo ou objetos.
+Use para objetos ou páginas que estão entrando na cena ou abrindo.
 Permite que uma quantidade razoável de tempo para comemorar o conteúdo quando entra em cena.
     :::column-end:::
     :::column:::
-        ![300ms motion](images/300ms.gif)
+        ![Movimento de 300 ms](images/300ms.gif)
     :::column-end:::
 :::row-end:::
 
@@ -79,10 +79,10 @@ Permite que uma quantidade razoável de tempo para comemorar o conteúdo quando 
 
 :::row:::
     :::column:::
-Use objetos que estão sendo traduzidas em uma única cena ou várias cenas. 
+Use para objetos que estão sendo convertidos em uma única cena ou em várias cenas. 
     :::column-end:::
     :::column:::
-        ![500ms motion](images/500ms.gif)
+        ![movimento de 500 MS](images/500ms.gif)
     :::column-end:::
 :::row-end:::
 
@@ -90,7 +90,7 @@ Use objetos que estão sendo traduzidas em uma única cena ou várias cenas.
 
 A suavização é uma maneira de manipular a velocidade de um objeto à medida que ele transita. Os movimentos fluentes são a cola que une todas as experiências de movimento. Embora seja extremo, a suavização é usada no sistema para ajudar a unificar a sensação física dos objetos se movendo pelo sistema. Esta é uma forma de imitar o mundo real e fazer objetos em movimento parecerem estar no seu ambiente.
 
-![imagem hero](images/easing.gif)
+![imagem Hero](images/easing.gif)
 
 ## <a name="apply-easing-to-motion"></a>Aplicar uma suavização de movimento
 
@@ -102,13 +102,13 @@ Os exemplos de código mostram como aplicar valores de suavização recomendados
 
 :::row:::
     :::column:::
-Uso para a interface do usuário ou objetos que estão saindo da cena.
+Use para interface do usuário ou objetos que estão saindo da cena.
 
-Objetos tornam-se da e ganhar momentum até atingirem a velocidade de escape.
-A aparência resultante é que o objeto está tentando seu mais difícil obter fora do caminho do usuário e liberar espaço para o novo conteúdo para entrar.
+Os objetos se tornam alimentados e recebem impulso até atingirem a velocidade de escape.
+A sensação resultante é que o objeto está experimentando seu mais difícil de sair do caminho do usuário e de liberar espaço para o novo conteúdo.
     :::column-end:::
     :::column:::
-        ![accelerate easing](images/accelEase.gif)
+        ![Acelere a atenuação](images/accelEase.gif)
     :::column-end:::
 :::row-end:::
 
@@ -141,15 +141,15 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 :::row:::
     :::column:::
-Uso da interface do usuário inserindo a cena, o navegar ou ao gerar ou objetos.
+Use para objetos ou interface do usuário entrando na cena, navegando ou gerando.
 
-Depois que na cena, o objeto for atendido com atrito extremo, o que reduz o objeto para o restante.
-A aparência resultante é que o objeto percorrida a partir de uma longa distância e inserido em uma velocidade extrema ou é retornar rapidamente para um estado rest.
+Uma vez em cena, o objeto é atendido com um resfricdor extremo, o que torna o restante do objeto lento.
+A sensação resultante é que o objeto percorreu de uma longa distância e entrou em uma velocidade extrema, ou retorna rapidamente a um estado Rest.
 
-Mesmo se ele é precedido por um momento de falta de resposta, a velocidade do objeto de entrada tem o efeito de se sentindo rápidos e responsivos.
+Mesmo que seja precedido por um momento de falta de resposta, a velocidade do objeto de entrada tem o efeito de se sentir rápido e responsivo.
     :::column-end:::
     :::column:::
-        ![decelerate easing](images/decelEase.gif)
+        ![atenuação desacelerada](images/decelEase.gif)
     :::column-end:::
 :::row-end:::
 
@@ -182,13 +182,13 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 :::row:::
     :::column:::
-Essa é a linha de base para qualquer alteração de parâmetro animado dentro do sistema de easing.
+Essa é a atenuação de linha de base para qualquer alteração de parâmetro animada dentro do sistema.
 Use a suavização padrão para objetos que mudam de um estado para outro na tela, como uma simples mudança de posição. Além disso, use-o para objetos que se transformam na cena, como um objeto que cresce.
 
-A aparência resultante é que superar os objetos de alteração do estado de A para B e tomadas pelo, força o natural.
+A sensação resultante é que os objetos que alteram o estado de a para B estão chegando e assumidos pelo, forças naturais.
     :::column-end:::
     :::column:::
-        ![standard easing](images/standardEase.gif)
+        ![atenuação padrão](images/standardEase.gif)
     :::column-end:::
 :::row-end:::
 
@@ -219,5 +219,5 @@ CubicBezierEasingFunction standard =
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Visão geral de animação](index.md)
+- [Visão geral do movimento](index.md)
 - [Direcionalidade e gravidade](directionality-and-gravity.md)

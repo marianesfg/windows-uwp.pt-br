@@ -1,57 +1,57 @@
 ---
-Description: Crie aplicativos UWP e controles personalizados/modelos que dão suporte ao dimensionamento de texto com a plataforma.
-title: Dimensionamento de texto
+Description: Crie aplicativos do Windows e controles personalizados/de modelo que dão suporte ao dimensionamento de texto da plataforma.
+title: Colocar texto em escala
 label: Text scaling
 template: detail.hbs
-keywords: Exibir UWP, texto, dimensionamento, acessibilidade, "facilidade de acesso", "Tornar o texto maior", a interação do usuário, a entrada
+keywords: UWP, texto, dimensionamento, acessibilidade, "facilidade de acesso", exibição, "tornar texto maior", interação do usuário, entrada
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 22ad7a1ac6160fd8b1cfb70c69f299c5d89192d3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4db3af0d2ec0ce1dbd0866f569ad9bf9b0392aa8
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57600811"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970561"
 ---
-# <a name="text-scaling"></a>Dimensionamento de texto
+# <a name="text-scaling"></a>Colocar texto em escala
 
-![Exemplo de texto de dimensionamento de 100 a 225%](images/coretext/text-scaling-news-hero-small.png)  
-*Exemplo de dimensionamento no Windows 10 (100% para % 225) de texto*
+![Exemplo de dimensionamento de texto de 100% para 225%](images/coretext/text-scaling-news-hero-small.png)  
+*Exemplo de dimensionamento de texto no Windows 10 (100% a 225%)*
 
 ## <a name="overview"></a>Visão geral
 
-Lendo o texto na tela do computador (a partir do dispositivo móvel para o laptop ao monitor da área de trabalho para a tela gigante de um Surface Hub) pode ser um desafio para muitas pessoas. Por outro lado, alguns usuários consideram os tamanhos de fonte usados em aplicativos e sites da web para ser maior que o necessário.
+A leitura de texto em uma tela de computador (do dispositivo móvel ao laptop para o monitor de área de trabalho na tela gigante de um Surface Hub) pode ser desafiadora para muitas pessoas. Por outro lado, alguns usuários encontram os tamanhos de fonte usados em aplicativos e sites para serem maiores do que o necessário.
 
-Para garantir que o texto é tão legível quanto possível para o intervalo mais amplo de usuários, o Windows fornece a capacidade dos usuários alterar o tamanho da fonte relativa entre o sistema operacional e de aplicativos individuais. Em vez de usando um aplicativo de Lupa (que normalmente amplia tudo dentro de uma área da tela e apresenta seus próprios problemas de usabilidade), alterar a resolução de vídeo ou no ajuste de DPI (que redimensiona tudo com base na exibição e exibição típica de terceira parte confiável distância), um usuário pode acessar rapidamente uma configuração para redimensionar somente texto, que variam de 100% (o tamanho padrão) até 225%.
+Para garantir que o texto seja o mais legível possível para a maior variedade de usuários, o Windows fornece a capacidade de os usuários alterarem o tamanho da fonte relativa no sistema operacional e nos aplicativos individuais. Em vez de usar um aplicativo de lupa (que normalmente amplia tudo dentro de uma área da tela e apresenta seus próprios problemas de usabilidade), alterar a resolução de vídeo ou depender do ajuste de DPI (que redimensiona tudo com base na exibição e na distância de exibição comum), um usuário pode acessar rapidamente uma configuração para redimensionar somente o texto, de 100% (o tamanho padrão) até 225%.
 
 ## <a name="support"></a>Suporte
 
-Aplicativos universais do Windows (padrão e PWA), dão suporte a texto dimensionamento por padrão.
+Os aplicativos universais do Windows (Standard e PWA) oferecem suporte ao dimensionamento de texto por padrão.
 
-Se seu aplicativo UWP inclui controles personalizados, superfícies de texto personalizado, alturas de controle codificadas, estruturas mais antigas ou estruturas de terceiros 3ª, provavelmente terá que fazer algumas atualizações para garantir uma experiência consistente e útil para seus usuários.  
+Se seu aplicativo do Windows inclui controles personalizados, superfícies de texto personalizadas, alturas de controle embutidas em código, estruturas mais antigas ou estruturas de terceiros, é provável que você precise fazer algumas atualizações para garantir uma experiência consistente e útil para os usuários.  
 
-O DirectWrite, GDI e SwapChainPanels XAML não suportados nativamente escala de texto, enquanto Win32 suporte é limitado a menus, ícones e barras de ferramentas.  
+DirectWrite, GDI e XAML SwapChainPanels não dão suporte nativo ao dimensionamento de texto, enquanto o suporte a Win32 é limitado a menus, ícones e barras de ferramentas.  
 
 <!-- If you want to support text scaling in your application with these frameworks, you’ll need to support the text scaling change event outlined below and provide alternative sizes for your UI and content.   -->
 
-## <a name="user-experience"></a>Experiência de usuário
+## <a name="user-experience"></a>Experiência do usuário
 
-Os usuários podem ajustar a escala do texto com o texto de marca -> maior controle deslizante nas configurações de facilidade de acesso -> tela de visão/exibição.
+Os usuários podem ajustar a escala de texto com o controle deslizante tornar o texto maior na tela Configurações – > facilidade de acesso – > visão/exibição.
 
-![Exemplo de texto de dimensionamento de 100 a 225%](images/coretext/text-scaling-settings-100-small.png)  
-*Configuração das configurações de dimensionamento de texto -> a facilidade de acesso -> tela de visão/exibição*
+![Exemplo de dimensionamento de texto de 100% para 225%](images/coretext/text-scaling-settings-100-small.png)  
+*Configuração de escala de texto de configurações-> facilidade de acesso-> visão/tela de exibição*
 
 ## <a name="ux-guidance"></a>Diretrizes de experiência do usuário
 
-Como o texto é redimensionado, controles e os contêineres também devem redimensionar e refluir para acomodar o texto e seu novo layout. Conforme mencionado anteriormente, dependendo do aplicativo, a estrutura e a plataforma, boa parte desse trabalho é feita para você. As diretrizes de experiência do usuário a seguir aborda os casos em que não é.
+À medida que o texto é redimensionado, os controles e os contêineres também devem ser redimensionados e refluídos para acomodar o texto e seu novo layout. Conforme mencionado anteriormente, dependendo do aplicativo, da estrutura e da plataforma, grande parte desse trabalho é feito para você. As diretrizes de UX a seguir abordam os casos em que não é.
 
-### <a name="use-the-platform-controls"></a>Use os controles de plataforma
+### <a name="use-the-platform-controls"></a>Usar os controles de plataforma
 
-Dissemos isso já? Vale a pena repetir: Quando possível, sempre use os controles internos fornecidos com as diversas estruturas de aplicativo do Windows para obter a experiência do usuário mais completa possível para o mínimo de esforço.
+Já dissemos isso? Vale a pena repetir: quando possível, sempre use os controles internos fornecidos com as várias estruturas de aplicativo do Windows para obter a experiência de usuário mais abrangente possível para a menor quantidade de esforço.
 
-Por exemplo, todos os controles de texto UWP dão suporte o dimensionamento experiência sem nenhuma personalização ou modelagem de texto completo.
+Por exemplo, todos os controles de texto UWP dão suporte à experiência de dimensionamento de texto completo sem qualquer personalização ou modelagem.
 
 Aqui está um trecho de um aplicativo UWP básico que inclui alguns controles de texto padrão:
 
@@ -93,14 +93,14 @@ Aqui está um trecho de um aplicativo UWP básico que inclui alguns controles de
 </Grid>
 ```
 
-![Texto animado de 100 a 225% de dimensionamento](images/coretext/text-scaling.gif)  
-*Dimensionamento do texto animado*
+![Dimensionamento de texto animado 100% para 225%](images/coretext/text-scaling.gif)  
+*Dimensionamento de texto animado*
 
 ### <a name="use-auto-sizing"></a>Usar o dimensionamento automático
 
-Não especifique tamanhos absolutos para seus controles. Sempre que possível, deixe a plataforma para redimensionar os controles automaticamente com base nas configurações de usuário e dispositivo.  
+Não especifique tamanhos absolutos para seus controles. Sempre que possível, permita que a plataforma redimensione os controles automaticamente com base nas configurações do usuário e do dispositivo.  
 
-Neste trecho de código do exemplo anterior, podemos usar o `Auto` e `*` valores de largura de um conjunto de colunas da grade e permitem a plataforma de ajustar o layout do aplicativo com base no tamanho dos elementos contidos dentro da grade.
+Neste trecho de código do exemplo anterior, usamos os `Auto` valores de `*` largura e para um conjunto de colunas de grade e permitimos que a plataforma ajuste o layout do aplicativo com base no tamanho dos elementos contidos na grade.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -110,30 +110,30 @@ Neste trecho de código do exemplo anterior, podemos usar o `Auto` e `*` valores
 </Grid.ColumnDefinitions>
 ```
 
-### <a name="use-text-wrapping"></a>Use a disposição do texto
+### <a name="use-text-wrapping"></a>Usar quebra automática de texto
 
-Para garantir que o layout do seu aplicativo é tão flexível e adaptável quanto possível, habilite a disposição do texto em qualquer controle que contém o texto (muitos controles não dão suporte a quebra automática de texto por padrão).
+Para garantir que o layout do seu aplicativo seja tão flexível e adaptável quanto possível, habilite a quebra de texto em qualquer controle que contenha texto (muitos controles não dão suporte ao encapsulamento de texto por padrão).
 
-Se você não especificar a disposição do texto, a plataforma usa outros métodos para ajustar o layout, incluindo o recorte (consulte o exemplo anterior).
+Se você não especificar a quebra automática de texto, a plataforma usará outros métodos para ajustar o layout, incluindo recorte (Veja o exemplo anterior).
 
-Aqui, podemos usar o `AcceptsReturn` e `TextWrapping` propriedades de caixa de texto para garantir que o layout é tão flexível quanto possível.
+Aqui, usamos as propriedades `AcceptsReturn` de `TextWrapping` TextBox e para garantir que o layout seja o mais flexível possível.
 
 ``` xaml
 <TextBox PlaceholderText="Type something here" 
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![Texto dimensionamento 100% a % de 225 com quebra de texto animado](images/coretext/text-scaling-textwrap.gif)  
-*Texto animado, dimensionando com quebra automática de texto*
+![Dimensionamento de texto animado 100% para 225% com disposição de texto](images/coretext/text-scaling-textwrap.gif)  
+*Dimensionamento de texto animado com disposição de texto*
 
-### <a name="specify-text-trimming-behavior"></a>Especificar o comportamento de filtragem de texto
+### <a name="specify-text-trimming-behavior"></a>Especificar o comportamento de corte de texto
 
-Se a quebra automática de texto não é o comportamento preferencial, a maioria dos controles de texto permitem que você recortar o texto ou especificar reticências para o comportamento de filtragem de texto. Recorte é preferencial para elipses pois elipses ocupam espaço em si.
+Se a quebra automática de texto não for o comportamento preferencial, a maioria dos controles de texto permitirá que você recorte o texto ou especifique reticências para o comportamento de corte de texto. O recorte é preferencial para reticências, pois as reticências ocupam o próprio espaço.
 
 > [!NOTE]
 > Se você precisar recortar o texto, recorte o final da cadeia de caracteres, não o início.
 
-Neste exemplo, vamos mostrar como Recortar o texto em um TextBlock usando o [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) propriedade.
+Neste exemplo, mostramos como recortar o texto em um TextBlock usando a propriedade [Textaparation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) .
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -141,14 +141,14 @@ Neste exemplo, vamos mostrar como Recortar o texto em um TextBlock usando o [Tex
 </TextBlock>
 ```
 
-![Dimensionamento 100% a % de 225 com distorção de textos de texto](images/coretext/text-scaling-clipping-small.png)  
-*Dimensionamento com distorção de textos de texto*
+![Dimensionamento de texto de 100% para 225% com recorte de texto](images/coretext/text-scaling-clipping-small.png)  
+*Dimensionamento de texto com recorte de texto*
 
-### <a name="use-a-tooltip"></a>Use uma dica de ferramenta
+### <a name="use-a-tooltip"></a>Usar uma dica de ferramenta
 
-Se você recortar o texto, use uma dica de ferramenta para fornecer o texto completo para seus usuários.
+Se você cortar o texto, use uma dica de ferramenta para fornecer o texto completo aos seus usuários.
 
-Aqui, vamos adicionar uma dica de ferramenta a um TextBlock que não oferece suporte a quebra de texto:
+Aqui, adicionamos uma dica de ferramenta a um TextBlock que não dá suporte ao encapsulamento de texto:
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -159,19 +159,19 @@ Aqui, vamos adicionar uma dica de ferramenta a um TextBlock que não oferece sup
 </TextBlock>
 ```
 
-### <a name="dont-scale-font-based-icons-or-symbols"></a>Não escalam ícones baseados em fonte ou símbolos
+### <a name="dont-scale-font-based-icons-or-symbols"></a>Não dimensionar ícones ou símbolos baseados em fonte
 
-Ao usar ícones baseados em fonte para a ênfase ou decoração, desabilite o dimensionamento sob esses caracteres.
+Ao usar ícones baseados em fonte para ênfase ou decoração, desabilite o dimensionamento nesses caracteres.
 
-Defina as [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) propriedade `false` para XAML a maioria dos controles.
+Defina a propriedade [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) como `false` para a maioria dos controles XAML.
 
-### <a name="support-text-scaling-natively"></a>Texto de suporte ao dimensionamento nativamente
+### <a name="support-text-scaling-natively"></a>Suporte ao dimensionamento de texto nativamente
 
-Lidar com o [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) configurações de UI evento de sistema em sua estrutura personalizada e controles. Esse evento é gerado sempre que o usuário define o fator de escala do texto em seu sistema.
+Manipule o evento do sistema [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings na estrutura e nos controles personalizados. Esse evento é gerado cada vez que o usuário define o fator de dimensionamento de texto em seu sistema.
 
 ## <a name="summary"></a>Resumo
 
-Este tópico fornece uma visão geral de suporte no Windows de dimensionamento de texto e inclui diretrizes de experiência do usuário e o desenvolvedor sobre como personalizar a experiência do usuário.
+Este tópico fornece uma visão geral do suporte ao dimensionamento de texto no Windows e inclui orientações de UX e desenvolvedor sobre como personalizar a experiência do usuário.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

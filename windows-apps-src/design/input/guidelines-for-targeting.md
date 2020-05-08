@@ -1,6 +1,6 @@
 ---
 Description: Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime.
-title: Direcionamento
+title: Configurando destinos
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
@@ -8,18 +8,18 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b1cac04405f18aaf3c8f39f9bfce2b965577807
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 199c120dcc85e5c113d6d4d529699a3f2fb28aa1
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257935"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970081"
 ---
 # <a name="guidelines-for-touch-targets"></a>Diretrizes para destinos de toque
 
-Todos os elementos interativos da interface do usuário no seu aplicativo de Plataforma Universal do Windows (UWP) devem ser grandes o suficiente para que os usuários acessem e usem com precisão, independentemente do tipo de dispositivo ou do método de entrada.
+Todos os elementos de interface do usuário interativos em seu aplicativo de aplicativo do Windows devem ser grandes o suficiente para que os usuários acessem e usem com precisão, independentemente do tipo de dispositivo ou do método de entrada.
 
-Dar suporte à entrada por toque (e a natureza relativamente precisa da área de contato de toque) requer mais otimização em relação ao tamanho de destino e ao layout de controle, pois o conjunto maior, mais complexo de dados de entrada relatados pelo digitalizador de toque é usado para determinar o destino pretendido (ou mais provável) do usuário.
+Dar suporte à entrada por toque (e a natureza relativamente precisa da área de contato de toque) requer mais otimização em relação ao tamanho de destino e ao layout de controle, pois o conjunto maior, mais complexo de dados de entrada relatados pelo Touch digitalizador é usado para determinar o destino pretendido (ou mais provável) do usuário.
 
 Todos os controles UWP foram projetados com tamanhos e layouts de destino por toque padrão que permitem que você crie aplicativos visualmente equilibrados e atraentes que são confortáveis, fáceis de usar e inspira confiança.
 
@@ -32,7 +32,7 @@ Neste tópico, descrevemos esses comportamentos padrão para que você possa pro
 O *Dimensionamento Fluent padrão* foi criado para fornecer um equilíbrio entre densidade de informações e conforto do usuário. Na verdade, todos os itens na tela se alinham a um alvo de 40 px x 40 px efetivos (epx), o que permite que os elementos da interface do usuário se alinhem com uma grade e sejam dimensionados de forma adequada com base no nível do sistema.
 
 > [!NOTE]
->Para saber mais sobre dimensionamento e pixels efetivos, confira [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+> Para obter mais informações sobre pixels e dimensionamento efetivos, consulte [introdução ao design de aplicativos do Windows](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
 >
 > Para saber mais sobre o dimensionamento no nível de sistema, confira [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
 
@@ -62,11 +62,11 @@ O dimensionamento compacto pode ser aplicado no nível da página ou da grade.
 </Grid>
 ```
 
-## <a name="target-size"></a>Tamanho do destino
+## <a name="target-size"></a>Tamanho de destino
 
 Em geral, defina seu tamanho de destino de toque como o intervalo quadrado de 7,5 mm (40x40 pixels em uma exibição de 135 PPI em um limite de dimensionamento 1.0 x). Normalmente, os controles UWP se alinham com o destino de toque de 7,5 mm (isso pode variar com base no controle específico e em qualquer padrão de uso comum). Consulte [tamanho e densidade do controle](../style/spacing.md) para obter mais detalhes.
 
-Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Aqui estão algumas coisas a serem consideradas:
+Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Estas são algumas coisas que você deve considerar:
 
 - Frequência de toques – considere a possibilidade de tornar os destinos que são pressionados repetidamente ou frequentemente maiores que o tamanho mínimo.
 - Conseqüência de erros-destinos que têm consequências graves se tocadas em erro devem ter um preenchimento maior e serem colocados além da borda da área de conteúdo. Isso vale principalmente para destinos que são tocados com frequência.
@@ -77,24 +77,24 @@ Essas recomendações de tamanho de destino podem ser ajustadas de acordo com de
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Introdução ao design de aplicativos UWP](../basics/design-and-ui-intro.md)
-- [Tamanho e densidade do controle](../style/spacing.md)
+- [Introdução ao design de aplicativos do Windows](../basics/design-and-ui-intro.md)
+- [Controle de tamanho e densidade](../style/spacing.md)
 - [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md)
 
 ### <a name="samples"></a>Exemplos
 
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-- [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 - [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+- [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 ### <a name="archive-samples"></a>Exemplos de arquivo-morto
 
-- [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-- [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-- [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-- [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-- [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-- [Entrada: exemplo de gestos do Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-- [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-- [Exemplo de entrada do DirectX Touch](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
+- [Entrada: amostra de eventos de entrada do usuário XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Entrada: amostra de funcionalidades do dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: amostra de teste de hit de toque](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [Exemplo de rolagem, panorâmica e zoom do XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: amostra de tinta simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
+- [Entrada: amostra de gestos no Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Entrada: exemplo de manipulações e gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [Amostra de entrada por toque do DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

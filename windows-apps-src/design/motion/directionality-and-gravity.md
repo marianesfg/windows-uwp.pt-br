@@ -1,6 +1,6 @@
 ---
-Description: Saiba como Fluent direcionalidade de usos de movimento e a gravidade.
-title: Direção e gravidade - animação em aplicativos UWP
+Description: Saiba como o Motion Fluent usa direcionalidade e gravidade.
+title: Direcionalidade e gravidade – animação em aplicativos do Windows
 label: Directionality and gravity
 template: detail.hbs
 ms.date: 10/02/2018
@@ -11,14 +11,14 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f1e36f0febeeaac5a12d408d7be8a717f0ab398
-ms.sourcegitcommit: 7c3b88198178d6f6a535f35e1bf8665410d41d92
+ms.openlocfilehash: ddcfac5e36500a8fc6dc41c7c86037f5a1483203
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569119"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970641"
 ---
-# <a name="directionality-and-gravity"></a>Direção e gravidade
+# <a name="directionality-and-gravity"></a>Direcionalidade e gravidade
 
 Os sinais de direção ajudam a solidificar o modelo mental da jornada do usuário nas experiências. É importante que a direção de qualquer movimento ofereça suporte à continuidade do espaço, bem como à integridade dos objetos no espaço.
 
@@ -43,11 +43,11 @@ O movimento direcional está sujeito às forças como a gravidade. A aplicação
 
 :::row:::
     :::column:::
-Direção do movimento corresponde ao movimento físico. Assim como na natureza, os objetos podem ser mover em qualquer eixo: X,Y e Z. Isso é como consideramos o movimento dos objetos na tela.
-Quando você move objetos, evite colisões não naturais. Tenha em mente onde objetos provenientes e vá para e sempre dar suporte a construções de nível superior que podem ser usadas na cena, como a hierarquia de direção ou do layout de rolagem.
+A direção da movimentação corresponde ao movimento físico. Assim como na natureza, os objetos podem ser mover em qualquer eixo: X,Y e Z. Isso é como consideramos o movimento dos objetos na tela.
+Ao mover objetos, evite colisões não naturais. Lembre-se de onde os objetos vêm e vão e sempre dão suporte a constructos de nível superior que podem ser usados na cena, como direção de rolagem ou hierarquia de layout.
     :::column-end:::
     :::column:::
-        ![direction backward in](images/Direction.gif)
+        ![Direção para trás e para dentro](images/Direction.gif)
     :::column-end:::
 :::row-end:::
 
@@ -65,7 +65,7 @@ Aqui, esses princípios são aplicados à medida que o item selecionado permanec
 
 Quando a navegação provoca a substituição de itens na tela, é importante mostrar para onde a cena de saída foi e de onde a nova cena vem.
 
-Isso tem vários benefícios:
+Isso tem várias vantagens:
 
 - Solidifica o modelo mental do usuário do espaço.
 - A duração da cena existente fornece mais tempo para preparar o conteúdo que será animada da cena de entrada.
@@ -75,34 +75,34 @@ Existem quatro direções discretas de navegação para considerar.
 
 :::row:::
     :::column:::
-**Encaminhamento em** celebrar o conteúdo, inserindo a cena de maneira que não colide com conteúdo de saída. Conteúdo desacelerada na cena.
+**Encaminhar** Comemora o conteúdo entrando na cena de maneira que não colide com o conteúdo de saída. O conteúdo é desacelerado na cena.
     :::column-end:::
     :::column:::
-        ![direction forward in](images/forwardIN.gif)
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-**Avanço horizontal** conteúdo surgir rapidamente. Aceleram a objetos fora da tela.
-    :::column-end:::
-    :::column:::
-        ![direction forward out](images/forwardOUT.gif)
+        ![Avançar direção](images/forwardIN.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-**Com versões anteriores no** igual Forward-In, mas revertidas.
+**Encaminhamento** O conteúdo é fechado rapidamente. Objetos aceleram a tela.
     :::column-end:::
     :::column:::
-        ![direction backward in](images/backwardIN.gif)
+        ![encaminhamento de direção](images/forwardOUT.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-**Horizontal com versões anteriores** mesmo que o encaminhamento de saída, mas invertidos.
+**Voltar** O mesmo que encaminhar, mas invertido.
     :::column-end:::
     :::column:::
-        ![direction backward out](images/backwardOUT.gif)
+        ![Direção para trás e para dentro](images/backwardIN.gif)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+**Saída para trás** O mesmo que o encaminhamento, mas invertido.
+    :::column-end:::
+    :::column:::
+        ![direção para fora](images/backwardOUT.gif)
     :::column-end:::
 :::row-end:::
 
@@ -118,5 +118,5 @@ Aqui, um elemento na linha superior da grade é afetado pela gravidade, provocan
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Visão geral de animação](index.md)
-- [Atingir o tempo e atenuação](timing-and-easing.md)
+- [Visão geral do movimento](index.md)
+- [Tempo e suavização](timing-and-easing.md)

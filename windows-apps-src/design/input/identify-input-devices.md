@@ -1,5 +1,5 @@
 ---
-Description: Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os seus recursos e atributos.
+Description: Identifique os dispositivos de entrada conectados a um dispositivo de aplicativo do Windows e identifique seus recursos e atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -8,17 +8,17 @@ keywords: dispositivo, digitalizador, entrada, interação
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b2a17d1f4664326cb54d9c53d828eb372ef93fe4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 792b2f71408928de0278dd0c623f13923a2165a8
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257891"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970021"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
 
-Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os seus recursos e atributos.
+Identifique os dispositivos de entrada conectados a um dispositivo de aplicativo do Windows e identifique seus recursos e atributos.
 
 > **APIs importantes**: [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
@@ -27,7 +27,7 @@ Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma
 
 O namespace [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contém a classe [**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities) usada para recuperar as propriedades expostas por um ou mais mouses conectados. Crie um novo objeto **MouseCapabilities** e obtenha as propriedades que interessam a você.
 
-**Observação**  os valores retornados pelas propriedades discutidas aqui são baseados em todos os mouses detectados: as propriedades booleanas retornam diferentes de zero se pelo menos um mouse oferecer suporte a uma funcionalidade específica e as propriedades numéricas retornarem o valor máximo exposto por um mouse.
+**Observe**  que os valores retornados pelas propriedades discutidas aqui são baseados em todos os mouses detectados: propriedades booleanas retornam diferente de zero se pelo menos um mouse der suporte a uma funcionalidade específica e as propriedades numéricas retornarem o valor máximo exposto por um mouse.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 O namespace [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contém a classe [**TouchCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.TouchCapabilities) usada para recuperar se um digitalizador de toque estiver conectado. Basta criar um novo objeto **TouchCapabilities** e obter as propriedades que interessam a você.
 
-**Observação**  os valores retornados pelas propriedades discutidas aqui se baseiam em todos os digitalizadores de toque detectados: as propriedades booleanas retornam diferentes de zero se pelo menos um digitalizador oferecer suporte a um recurso específico, e as propriedades numéricas retornarem o valor máximo exposto por qualquer digitalizador.
+**Observe**  que os valores retornados pelas propriedades discutidas aqui se baseiam em todos os digitalizadores de toque detectados: as propriedades booleanas retornam diferentes de zero se pelo menos um digitalizador oferecer suporte a um recurso específico, e as propriedades numéricas retornarem o valor máximo exposto por qualquer digitalizador.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 O namespace [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contém a classe [**PointerDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) usada para recuperar se um dispositivo detectado der suporte à entrada de ponteiro (toque, touchpad, mouse ou caneta). Basta criar um novo objeto **PointerDevice** e obter as propriedades que interessam a você.
 
-**Observação**  os valores retornados pelas propriedades discutidas aqui são baseados em todos os dispositivos de ponteiro detectados: as propriedades booleanas retornam diferentes de zero se pelo menos um dispositivo oferecer suporte a um recurso específico, e as propriedades numéricas retornarem o valor máximo exposto por um dispositivo de ponteiro.
+**Observe**  que os valores retornados pelas propriedades discutidas aqui se baseiam em todos os dispositivos de ponteiro detectados: as propriedades booleanas retornam um valor diferente de zero se pelo menos um dispositivo oferecer suporte a um recurso específico, e as propriedades numéricas retornarem os valores máximos expostos por um dispositivo de ponteiro.
 
 O código a seguir usa uma tabela para exibir as propriedades e valores de cada dispositivo de ponteiro.
 
@@ -176,18 +176,12 @@ private void GetPointerDevices()
 
 ## <a name="related-articles"></a>Artigos relacionados
 
+### <a name="samples"></a>Exemplos
 
-**Exemplos**
-* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 
-**Amostras de arquivo-morto**
-* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
- 
+### <a name="archive-samples"></a>Exemplos de arquivo-morto
 
- 
-
-
-
-
+- [Entrada: amostra de funcionalidades do dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
