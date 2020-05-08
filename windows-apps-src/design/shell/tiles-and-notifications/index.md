@@ -8,14 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: cc182d05b1cc02dd62f66506c12fcfcfc8a03952
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63806967"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969771"
 ---
-# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Blocos, selos e notificações para aplicativos UWP
+# <a name="tiles-badges-and-notifications-for-windows-apps"></a>Blocos, selos e notificações para aplicativos do Windows
  
 
 Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
@@ -23,7 +23,7 @@ Saiba como usar blocos, selos, notificações do sistema e notificações para f
 > **APIs importantes**: [Pacote do nuget de notificações de kit de ferramentas de comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
-Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP tem um bloco. Você pode habilitar diferentes tamanhos de bloco (pequeno, médio, largo e grande).</p>
+Bloco é a representação de um aplicativo no menu Iniciar. Cada aplicativo do Windows tem um bloco. Você pode habilitar diferentes tamanhos de bloco (pequeno, médio, largo e grande).</p>
 
 <p>Você pode usar uma <em>notificação de bloco</em> para atualizar o bloco regularmente para comunicar novas informações ao usuário, como manchetes, ou o assunto da mensagem mais recente não lida.</p>
 
@@ -37,9 +37,9 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 | Artigo | Descrição |
 | --- | --- |
 | [Criar blocos](creating-tiles.md) | Personalize o bloco padrão para seu aplicativo e forneça ativos para diferentes tamanhos de tela. |
-| [Ativos de ícone de aplicativo](app-assets.md) | Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados. |
+| [Ativos de ícone de aplicativo](app-assets.md) | Os ativos de ícone de aplicativo, que são exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada de seu aplicativo do Windows. Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados. |
 | [APIs de bloco primário](primary-tile-apis.md) | Solicite fixar o bloco principal do aplicativo e verifique se o bloco primário está atualmente fixado. |
-| [Conteúdo do bloco](create-adaptive-tiles.md) | O conteúdo da notificação de bloco é especificado utilizando um novo recurso adaptável no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). |
+| [Conteúdo do bloco](create-adaptive-tiles.md) | O conteúdo da notificação de bloco é especificado utilizando um novo recurso adaptável no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo do Windows. |
 | [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md) | Veja os elementos e os atributos que você usa para criar blocos adaptáveis. |
 | [Modelos de blocos especiais](special-tile-templates-catalog.md) | Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. |
 | [Enviar notificação de bloco local](sending-a-local-tile-notification.md) | Saiba como enviar uma notificação de bloco local, adicionando conteúdo dinâmico avançado ao Bloco Dinâmico. |
@@ -51,7 +51,7 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 | --- | --- |
 | [Notificações do sistema](adaptive-interactive-toasts.md) | As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional. |
 | [Enviar uma notificação do sistema local](send-local-toast.md) | Saiba como enviar uma notificação do sistema interativa. |
-| [Visualizador de notificações](notifications-visualizer.md) | Visualizador de Notificações é um novo aplicativo UWP (Plataforma Universal do Windows) [na Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10. |
+| [Visualizador de notificações](notifications-visualizer.md) | O Visualizador de Notificações é um novo aplicativo do Windows [na Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores com o design de blocos dinâmicos adaptáveis para o Windows 10. |
 | [Escolher um método de entrega de notificação](choosing-a-notification-delivery-method.md) | Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. |
 | [Visão geral de notificações periódicas](periodic-notification-overview.md) | Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem. |
 | [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md) | Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável. |

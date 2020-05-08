@@ -1,6 +1,6 @@
 ---
-Description: Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
-title: Considerações sobre UI para dispositivos UWP
+Description: Conhecer os dispositivos que dão suporte aos aplicativos do Windows ajudará você a oferecer a melhor experiência de usuário em cada fator forma.
+title: Considerações sobre a IU para dispositivos Windows
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
@@ -8,18 +8,18 @@ keywords: dispositivo, entrada, interação
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 121025dc5e87e7e3953b9517144e36ab382795bb
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258117"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968202"
 ---
-#  <a name="ui-considerations-for-uwp-devices"></a>Considerações sobre UI para dispositivos UWP
+#  <a name="ui-considerations-for-windows-devices"></a>Considerações sobre a IU para dispositivos Windows
 
-![.](../images/devices-2x.png)
+![Dispositivos](../images/devices-2x.png)
 
-Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
+Conhecer os dispositivos que dão suporte aos aplicativos do Windows ajudará você a oferecer a melhor experiência de usuário em cada fator forma.
 
 ![dispositivos da plataforma Windows](images/device-primer/device-primer-ramp.png)
 
@@ -96,7 +96,7 @@ Recursos típicos do dispositivo
 
 A experiência de sentar em seu sofá na sala, usando um gamepad ou um controle remoto para interagir com sua TV, é chamada de **experiência de 3 metros**. Ela é chamada assim porque o usuário em geral está sentado a aproximadamente 3 metros de distância da tela. Isso proporciona desafios únicos que não estão presentes na, digamos, experiência de *meio metro* ou na interação com um computador. Se você estiver desenvolvendo um aplicativo para Xbox One ou qualquer outro dispositivo que seja conectado a uma tela de TV e possa usar um gamepad ou controle remoto para entrada, você sempre deve ter isso em mente.
 
-Projetar seu aplicativo UWP para a experiência de 3 metros é muito diferente de projetar para qualquer uma das outras categorias de dispositivo listadas aqui. Para obter mais informações, consulte [Projetando para Xbox e TV](designing-for-tv.md).
+Projetar seu aplicativo do Windows para a experiência dos 3 metros é muito diferente de projeções para qualquer uma das outras categorias de dispositivo listadas aqui. Para obter mais informações, consulte [Projetando para Xbox e TV](designing-for-tv.md).
 
 Tamanhos de tela
 - A partir de 24"

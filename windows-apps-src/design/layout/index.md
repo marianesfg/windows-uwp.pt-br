@@ -1,17 +1,17 @@
 ---
-description: Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
-title: Visão geral do layout para aplicativos UWP
+description: Saiba como projetar e codificar um aplicativo do Windows que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
+title: Visão geral do layout para aplicativos do Windows
 keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface
 ms.date: 03/07/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ab0344acc40103620da5164faa397c081a4a079
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: c3647f6a4c3bbc3951fab45380762de472d13533
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867330"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970771"
 ---
 # <a name="layout"></a>Layout
 

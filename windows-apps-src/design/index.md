@@ -1,18 +1,18 @@
 ---
 description: Diretrizes do Design Fluente e exemplos de códigos da interface do usuário para criação de experiências de aplicativo no Windows 10
 keywords: guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de aplicativos
-title: Design e UI para UWP
+title: Design e código para aplicativos do Windows
 ms.date: 05/06/2019
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a2c674d95ea9fb9a8efb41cdcb0d991f26fe52c5
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 01e613088bba3c1e552180f398907145c6254705
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614989"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970341"
 ---
 # <a name="design-and-code-windows-apps"></a>Design e código de aplicativos do Windows
 
