@@ -1,19 +1,19 @@
 ---
 Description: Saiba como criar um aplicativo hospedado que herda o executável, o ponto de entrada e os atributos de tempo de execução de um aplicativo host.
 title: Criar aplicativos hospedados
-ms.date: 01/28/2020
+ms.date: 04/23/2020
 ms.topic: article
 keywords: Windows 10, área de trabalho, pacote, identidade, MSIX, Win32
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a3017073b15ea18214e9c78263fb212bb192132b
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: ed4356513e406c7c787ec111d32560ac08d293f1
+ms.sourcegitcommit: f26d0b22a70b05679fc7089e11d639ba1a4a23af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266924"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107719"
 ---
 # <a name="create-hosted-apps"></a>Criar aplicativos hospedados
 
@@ -25,14 +25,14 @@ O recurso aplicativos hospedados tem suporte de vários elementos e atributos no
 
 ## <a name="define-a-host"></a>Definir um host
 
-O *host* é o executável principal ou o processo de tempo de execução para o aplicativo hospedado. Atualmente, os únicos hosts com suporte são aplicativos da área C++de trabalho (.net ou/Win32) que têm a *identidade do pacote*. Não há suporte para aplicativos UWP como hosts no momento. Há várias maneiras para um aplicativo de área de trabalho ter a identidade do pacote:
+O *host* é o executável principal ou o processo de tempo de execução para o aplicativo hospedado. Atualmente, os únicos hosts com suporte são aplicativos da área de trabalho (.NET ou C++/Win32) que têm a *identidade do pacote*. Não há suporte para aplicativos UWP como hosts no momento. Há várias maneiras para um aplicativo de área de trabalho ter a identidade do pacote:
 
 * A maneira mais comum de conceder identidade de pacote a um aplicativo de desktop é [empacotá-lo em um pacote MSIX](https://docs.microsoft.com/windows/msix).
 * Em alguns casos, você também pode optar por conceder a identidade do pacote criando um [pacote esparso](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps). Essa opção será útil se você não puder adotar o empacotamento MSIX para implantar seu aplicativo de área de trabalho.
 
-O host é declarado em seu manifesto de pacote pela extensão **uap10: HostRuntime** . Essa extensão tem um atributo de **ID** que deve ser atribuído a um valor que também é referenciado pelo manifesto do pacote para o aplicativo hospedado. Quando o aplicativo hospedado é ativado, o host é iniciado sob a identidade do aplicativo hospedado e pode carregar conteúdo ou binários do pacote do aplicativo hospedado.
+O host é declarado em seu manifesto de pacote pela extensão [**uap10: HostRuntime**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-hostruntime) . Essa extensão tem um atributo de **ID** que deve ser atribuído a um valor que também é referenciado pelo manifesto do pacote para o aplicativo hospedado. Quando o aplicativo hospedado é ativado, o host é iniciado sob a identidade do aplicativo hospedado e pode carregar conteúdo ou binários do pacote do aplicativo hospedado.
 
-O exemplo a seguir demonstra como definir um host em um manifesto de pacote. A extensão **uap10: HostRuntime** é de todo o pacote e, portanto, é declarada como um filho do elemento [Package](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-package) .
+O exemplo a seguir demonstra como definir um host em um manifesto de pacote. A extensão **uap10: HostRuntime** é de todo o pacote e, portanto, é declarada como um filho do elemento [**Package**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-package) .
 
 ``` xml
 <Package xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10">
@@ -53,22 +53,22 @@ Anote esses detalhes importantes sobre os elementos a seguir.
 
 | Elemento              | Detalhes |
 |----------------------|-------|
-| **uap10: extensão** | A categoria `windows.hostRuntime` declara uma extensão em todo o pacote que define as informações de tempo de execução a serem usadas ao ativar um aplicativo hospedado. Um aplicativo hospedado será executado com as definições declaradas na extensão. Ao usar o aplicativo host declarado no exemplo anterior, um aplicativo hospedado será executado como o executável **PyScriptEngine. exe** no nível de confiança **mediumIL** .<br/><br/>Os atributos **executável**, **uap10: RuntimeBehavior**e **uap10: TrustLevel** especificam o nome do binário do processo de host no pacote e como os aplicativos hospedados serão executados. Por exemplo, um aplicativo hospedado usando os atributos no exemplo anterior será executado como o executável PyScriptEngine. exe no nível de confiança mediumIL. |
-| **uap10:HostRuntime** | O atributo **ID** declara o identificador exclusivo desse aplicativo host específico no pacote. Um pacote pode ter vários aplicativos de host, e cada um deve ter um elemento **uap10: HostRuntime** com uma **ID**exclusiva.
+| [**uap10:Extension**](https://docs.microsoft.com/wp/schemas/appxpackage/uapmanifestschema/element-uap10-extension) | A `windows.hostRuntime` categoria declara uma extensão em todo o pacote que define as informações de tempo de execução a serem usadas ao ativar um aplicativo hospedado. Um aplicativo hospedado será executado com as definições declaradas na extensão. Ao usar o aplicativo host declarado no exemplo anterior, um aplicativo hospedado será executado como o executável **PyScriptEngine. exe** no nível de confiança **mediumIL** .<br/><br/>Os atributos **executável**, **uap10: RuntimeBehavior**e **uap10: TrustLevel** especificam o nome do binário do processo de host no pacote e como os aplicativos hospedados serão executados. Por exemplo, um aplicativo hospedado usando os atributos no exemplo anterior será executado como o executável PyScriptEngine. exe no nível de confiança mediumIL. |
+| [**uap10:HostRuntime**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-hostruntime) | O atributo **ID** declara o identificador exclusivo desse aplicativo host específico no pacote. Um pacote pode ter vários aplicativos de host, e cada um deve ter um elemento **uap10: HostRuntime** com uma **ID**exclusiva.
 
 ## <a name="declare-a-hosted-app"></a>Declarar um aplicativo hospedado
 
-Um *aplicativo hospedado* declara uma dependência de pacote em um *host*. O aplicativo hospedado utiliza a ID do host (ou seja, o atributo **ID** da extensão **uap10: HostRuntime** no pacote do host) para ativação em vez de especificar um ponto de entrada executável em seu próprio pacote. O aplicativo hospedado normalmente contém conteúdo, ativos visuais, scripts ou binários que podem ser acessados pelo host. O valor de [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) no pacote do aplicativo hospedado deve ter como destino o mesmo valor que o host.
+Um *aplicativo hospedado* declara uma dependência de pacote em um *host*. O aplicativo hospedado utiliza a ID do host (ou seja, o atributo **ID** da extensão **uap10: HostRuntime** no pacote do host) para ativação em vez de especificar um ponto de entrada executável em seu próprio pacote. O aplicativo hospedado normalmente contém conteúdo, ativos visuais, scripts ou binários que podem ser acessados pelo host. O valor de [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) no pacote do aplicativo hospedado deve ter como destino o mesmo valor que o host.
 
 Pacotes de aplicativos hospedados podem ser assinados ou não assinados:
 
 * Os pacotes assinados podem conter arquivos executáveis. Isso é útil em cenários que têm um mecanismo de extensão binária, que permite que o host carregue uma DLL ou um componente registrado no pacote do aplicativo hospedado.
-* Pacotes não assinados só podem conter arquivos não executáveis. Isso é útil em cenários em que o host só precisa carregar imagens, ativos e conteúdo ou arquivos de script. Os pacotes não assinados devem incluir um valor especial de `OID` em seu elemento de [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) ou não poderão ser registrados. Isso impede que os pacotes não assinados entrem em conflito ou falsifiquem a identidade de um pacote assinado.
+* Pacotes não assinados só podem conter arquivos não executáveis. Isso é útil em cenários em que o host só precisa carregar imagens, ativos e conteúdo ou arquivos de script. Os pacotes não assinados devem incluir um `OID` valor especial em seu elemento de [**identidade**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) ou não poderão ser registrados. Isso impede que os pacotes não assinados entrem em conflito ou falsifiquem a identidade de um pacote assinado.
 
 Para definir um aplicativo hospedado, declare os seguintes itens no manifesto do pacote:
 
-* O elemento **uap10: HostRuntimeDependency** . Este é um filho do elemento [Dependencies](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-dependencies) .
-* O atributo **uap10: hostid** do elemento de [aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) (para um aplicativo) ou elemento de [extensão](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) (para uma extensão ativável).
+* O elemento [**uap10: HostRuntimeDependency**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-hostruntimedependency) . Este é um filho do elemento [Dependencies](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-dependencies) .
+* O atributo **uap10: hostid** do elemento de [**aplicativo**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) (para um aplicativo) ou elemento de [**extensão**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) (para uma extensão ativável).
 
 O exemplo a seguir demonstra as seções relevantes de um manifesto de pacote para um aplicativo hospedado não assinado.
 
@@ -98,23 +98,23 @@ Anote esses detalhes importantes sobre os elementos a seguir.
 
 | Elemento              | Detalhes |
 |----------------------|-------|
-| [**Identidade**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) | Como o pacote do aplicativo hospedado neste exemplo não está assinado, o atributo do **Publicador** deve incluir a cadeia de caracteres `OID.2.25.311729368913984317654407730594956997722=1`. Isso garante que o pacote não assinado não possa falsificar a identidade de um pacote assinado. |
+| [**Identidade**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) | Como o pacote do aplicativo hospedado neste exemplo não está assinado, o atributo do **Publicador** deve incluir `OID.2.25.311729368913984317654407730594956997722=1` a cadeia de caracteres. Isso garante que o pacote não assinado não possa falsificar a identidade de um pacote assinado. |
 | [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) | O atributo **MinVersion** deve especificar 10.0.19041.0 ou uma versão do sistema operacional posterior. |
-| **uap10:HostRuntimeDependency** | Esse elemento de elemento declara uma dependência no pacote do aplicativo host. Isso consiste no **nome** e no **Editor** do pacote do host, e a **MinVersion** depende. Esses valores podem ser encontrados no elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) no pacote do host. |
-| **Aplicativo** | O atributo **uap10: hostid** expressa a dependência no host. O pacote do aplicativo hospedado deve declarar esse atributo em vez dos atributos de **ponto de entrada** e **executáveis** usuais para um elemento [Application](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) ou [Extension](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) . Como resultado, o aplicativo hospedado herda os atributos **Executable**, **EntryPoint** e Runtime do host com o valor de **hostid** correspondente.<br/><br/>O atributo **uap10: Parameters** especifica parâmetros que são passados para a função de ponto de entrada do executável do host. Como o host precisa saber o que fazer com esses parâmetros, há um contrato implícito entre o host e o aplicativo hospedado. |
+| [**uap10:HostRuntimeDependency**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-hostruntimedependency)  | Esse elemento de elemento declara uma dependência no pacote do aplicativo host. Isso consiste no **nome** e no **Editor** do pacote do host, e a **MinVersion** depende. Esses valores podem ser encontrados no elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) no pacote do host. |
+| [**Aplicativo**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) | O atributo **uap10: hostid** expressa a dependência no host. O pacote do aplicativo hospedado deve declarar esse atributo em vez dos atributos de **ponto de entrada** e **executáveis** usuais para um elemento [**Application**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) ou [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) . Como resultado, o aplicativo hospedado herda os atributos **Executable**, **EntryPoint** e Runtime do host com o valor de **hostid** correspondente.<br/><br/>O atributo **uap10: Parameters** especifica parâmetros que são passados para a função de ponto de entrada do executável do host. Como o host precisa saber o que fazer com esses parâmetros, há um contrato implícito entre o host e o aplicativo hospedado. |
 
 ## <a name="register-an-unsigned-hosted-app-package-at-run-time"></a>Registrar um pacote de aplicativo hospedado não assinado em tempo de execução
 
-Um benefício da extensão **uap10: HostRuntime** é que ele permite que um host gere dinamicamente um pacote de aplicativo hospedado em tempo de execução e registre-o usando a API do [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) , sem a necessidade de conectá-lo. Isso permite que um host gere dinamicamente o conteúdo e o manifesto para o pacote do aplicativo hospedado e, em seguida, registre-o.
+Um benefício da extensão **uap10: HostRuntime** é que ele permite que um host gere dinamicamente um pacote de aplicativo hospedado em tempo de execução e registre-o usando a API do [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) , sem a necessidade de conectá-lo. Isso permite que um host gere dinamicamente o conteúdo e o manifesto para o pacote do aplicativo hospedado e, em seguida, registre-o.
 
-Use os métodos a seguir da classe [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) para registrar um pacote de aplicativo hospedado não assinado. Esses métodos estão disponíveis a partir do Windows 10, versão 2004.
+Use os métodos a seguir da classe [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) para registrar um pacote de aplicativo hospedado não assinado. Esses métodos estão disponíveis a partir do Windows 10, versão 2004.
 
 * **AddPackageByUriAsync**: registra um pacote MSIX não assinado usando a propriedade **AllowUnsigned** do parâmetro *Options* .
 * **RegisterPackageByUriAsync**: executa um registro de arquivo de manifesto de pacote flexível. Se o pacote for assinado, a pasta que contém o manifesto deverá incluir um [arquivo. P7X](https://docs.microsoft.com/windows/msix/overview#inside-an-msix-package) e um catálogo. Se não for assinado, a propriedade **AllowUnsigned** do parâmetro *Options* deverá ser definida.
 
 ### <a name="requirements-for-unsigned-hosted-apps"></a>Requisitos para aplicativos hospedados não assinados
 
-* Os elementos [Application](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) ou [Extension](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) no manifesto do pacote não podem conter dados de ativação, como os atributos **Executable**, **EntryPoint**ou **TrustLevel** . Em vez disso, esses elementos podem conter apenas um atributo **uap10: hostid** que expressa a dependência no host e um atributo **Uap10: Parameters** .
+* Os elementos [**Application**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) ou [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) no manifesto do pacote não podem conter dados de ativação, como os atributos **Executable**, **EntryPoint**ou **TrustLevel** . Em vez disso, esses elementos podem conter apenas um atributo **uap10: hostid** que expressa a dependência no host e um atributo **Uap10: Parameters** .
 * O pacote deve ser um pacote principal. Ele não pode ser um pacote, um pacote de estrutura, um recurso ou um pacotes opcionais.
 
 ### <a name="requirements-for-a-host-that-installs-and-registers-an-unsigned-hosted-app-package"></a>Requisitos para um host que instala e registra um pacote de aplicativo hospedado não assinado
@@ -134,11 +134,11 @@ Use os métodos a seguir da classe [PackageManager](https://docs.microsoft.com/u
 
 ## <a name="sample"></a>Amostra
 
-Para um aplicativo de exemplo totalmente funcional que se declara como um host e, em seguida, registra dinamicamente um pacote de aplicativo hospedado em tempo de execução, consulte o [exemplo de aplicativo hospedado](https://aka.ms/hostedappsample).
+Para um aplicativo de exemplo totalmente funcional que se declara como um host e, em seguida, registra dinamicamente um pacote de aplicativo hospedado em tempo de execução, consulte o [exemplo de aplicativo hospedado](https://github.com/microsoft/AppModelSamples/tree/master/Samples/HostedApps).
 
 ### <a name="the-host"></a>O host
 
-O host é denominado **PyScriptEngine**. Esse é um wrapper escrito em C# que executa scripts Python. Quando executado com o parâmetro `-Register`, o mecanismo de script instala um aplicativo hospedado que contém um script Python. Quando um usuário tenta iniciar o aplicativo hospedado recentemente instalado, o host é iniciado e executa o script Python **NumberGuesser** .
+O host é denominado **PyScriptEngine**. Este é um wrapper escrito em C# que executa scripts Python. Quando executado com o `-Register` parâmetro, o mecanismo de script instala um aplicativo hospedado que contém um script Python. Quando um usuário tenta iniciar o aplicativo hospedado recentemente instalado, o host é iniciado e executa o script Python **NumberGuesser** .
 
 O manifesto do pacote para o aplicativo host (o arquivo Package. appxmanifest na pasta PyScriptEnginePackage) contém uma extensão **uap10: HostRuntime** que declara o aplicativo como um host com a ID **PythonHost** e o executável **PyScriptEngine. exe**.  
 
@@ -151,10 +151,10 @@ O aplicativo hospedado consiste em um script Python e em artefatos de pacote, co
 
 O manifesto do pacote para o aplicativo hospedado (o arquivo NumberGuesser/AppxManifest. xml) contém os seguintes itens:
 
-* O atributo **Publisher** do elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) contém o identificador de `OID.2.25.311729368913984317654407730594956997722=1`, que é necessário para um pacote não assinado.
-* O atributo **uap10: hostid** do elemento [Application](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) identifica **PythonHost** como seu host.
+* O atributo **Publisher** do elemento [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) contém o `OID.2.25.311729368913984317654407730594956997722=1` identificador, que é necessário para um pacote não assinado.
+* O atributo **uap10: hostid** do elemento [**Application**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) identifica **PythonHost** como seu host.
 
-### <a name="run-the-sample"></a>Executar o exemplo
+### <a name="run-the-sample"></a>Execute o exemplo
 
 O exemplo requer a versão 10.0.19041.0 ou posterior do Windows 10 e o SDK do Windows.
 
@@ -169,6 +169,6 @@ O exemplo requer a versão 10.0.19041.0 ou posterior do Windows 10 e o SDK do Wi
     ```
 
     > [!NOTE]
-    > Você pode executar `pyscriptengine` na linha de comando porque o host no exemplo declara um [AppExecutionAlias](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias).
+    > Você pode executar `pyscriptengine` na linha de comando porque o host no exemplo declara um [**AppExecutionAlias**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias).
 
 6. Abra o menu **Iniciar** e clique em **NumberGuesser** para executar o aplicativo hospedado.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc8fecd7a5a1596d074c170d7a7211126e88b8ae
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 67bba732efd199c5093bb75e9b0a2c41b67e568c
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684860"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148579"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
@@ -72,7 +72,7 @@ O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesm
 
  
 
-Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619586) e [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obter alguns serviços GATT comuns.
+Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](https://www.bluetooth.org/en-us/specification/assigned-numbers/service-discovery) e [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obter alguns serviços GATT comuns.
 
 ## <a name="custom-bluetooth-le-services"></a>Serviços Bluetooth LE personalizados
 

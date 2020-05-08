@@ -6,12 +6,12 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: afe538292fe804dcf042c969005978c3161ec6b6
+ms.sourcegitcommit: 963316e065cf36c17b6360c3f89fba93a1a94827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209942"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82868882"
 ---
 # <a name="resource-management-system"></a>Sistema de Gerenciamento de Recursos
 O Sistema de Gerenciamento de Recursos tem recursos em tempo de compilação e em tempo de execução. No momento da compilação, o sistema cria um índice de todas as variantes dos recursos que são empacotados com o app. Trata-se do índice de recurso do pacote, conhecido também como PRI, que também está incluído no pacote do app. No momento da execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor, consulta as informações no PRI e carrega automaticamente os recursos que oferecem a melhor correspondência para essas configurações.
@@ -24,9 +24,8 @@ Cada pacote de aplicativo deve conter um índice binário dos recursos no app. E
 - O arquivo resources.pri na raiz de cada pacote é carregado automaticamente quando o [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) é instanciado.
 - Os arquivos PRI podem ser criados e despejados com a ferramenta [MakePRI.exe](compile-resources-manually-with-makepri.md).
 - Para o desenvolvimento comum de apps, você não precisará do MakePRI.exe, pois ele já está integrado ao fluxo de trabalho de compilação do Visual Studio. E o Visual Studio oferece suporte à edição de arquivos PRI em uma interface do usuário dedicada. No entanto, os tradutores e as ferramentas que eles usam talvez precisem do MakePRI.exe.
-- Cada arquivo PRI contém uma coleção nomeada de recursos, conhecida como um mapa de recursos. Quando um arquivo PRI de um pacote é carregado, o nome do mapa de recursos é verificado para constar se corresponde ao nome de identidade do pacote.
+- Cada arquivo PRI contém uma coleção nomeada de recursos, conhecida como mapa de recursos. Quando um arquivo PRI de um pacote é carregado, o nome do mapa de recursos é verificado para constar se corresponde ao nome de identidade do pacote.
 - Os arquivos PRI contêm somente dados, portanto, não use o formato de arquivo PE. Eles são criados especificamente para terem somente dados como formato de recurso do Windows. Eles substituem os recursos contidos em DLLs no modelo de app do Win32.
-- O limite de tamanho em um arquivo PRI é 64 KB.
 
 ## <a name="uwp-api-access-to-app-resources"></a>Acesso da API da UWP aos recursos do app
 
@@ -42,7 +41,7 @@ O objeto [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.cor
 
 Os recursos disponíveis para um app são armazenados em coleções hierárquicas, que você pode acessar com um objeto [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live). A classe **ResourceManager** fornece acesso às várias instâncias de **ResourceMap** de nível superior usadas pelo app, que correspondem aos vários pacotes do app. O valor [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) corresponde ao mapa de recursos para o pacote de aplicativos atual e exclui quaisquer pacotes de estrutura referenciados. Cada **ResourceMap** é nomeado de acordo com o nome do pacote especificado no manifesto do pacote. Em um **ResourceMap** estão as subárvores (consulte [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)), que ainda contêm os objetos **NamedResource**. As subárvores normalmente correspondem aos arquivos de recurso que contêm o recurso. Para obter mais informações, consulte [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos](localize-strings-ui-manifest.md) e [Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros](images-tailored-for-scale-theme-contrast.md).
 
-Aqui está um exemplo.
+Veja um exemplo.
 
 ```csharp
 // using Windows.ApplicationModel.Resources.Core;
@@ -60,7 +59,7 @@ As APIs [**StorageFile**](/uwp/api/Windows.Storage.StorageFile?branch=live) trat
 ### <a name="resourcecontext"></a>ResourceContext
 Os candidatos a recursos são escolhidos com base em um [**ResourceContext**](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext?branch=live) específico, que é uma coleção de valores de qualificador de recurso (idioma, escala, contraste etc.). Um contexto padrão usa a configuração atual do aplicativo para cada valor de qualificador, a menos que seja substituído. Por exemplo, recursos como imagens podem ser qualificados para escala, o que varia de um monitor para o outro e, portanto, de uma exibição de aplicativo para outra. Por esse motivo, cada exibição de aplicativo tem um contexto padrão distinto. O contexto padrão de uma determinada exibição pode ser obtido por meio de [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView). Sempre que você recupera um candidato a recurso, deve passar uma instância **ResourceContext** para obter o valor mais apropriado para uma determinada exibição.
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="important-apis"></a>APIs importantes
 * [ResourceLoader](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live)
 * [ResourceManager](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)

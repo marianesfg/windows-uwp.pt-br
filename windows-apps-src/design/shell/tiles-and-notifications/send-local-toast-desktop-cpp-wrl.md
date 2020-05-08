@@ -1,22 +1,22 @@
 ---
-Description: Saiba como os C++ aplicativos Win32 WRL podem enviar notificações do sistema local e manipular o usuário clicando no sistema de notificação.
+Description: Saiba como os aplicativos do Win32 C++ WRL podem enviar notificações do sistema local e manipular o usuário clicando no sistema de notificação.
 title: Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
-keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
+keywords: Windows 10, UWP, Win32, desktop, notificações do sistema, enviar um sistema de notificação, enviar notificação local, desktop Bridge, msix, pacote esparso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: abd3fc88f2ecacd0146a9f3a88a3240630078454
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: cc87f9281b9623c1f1b46def8f886cfebeb0438f
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684207"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968291"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
-Aplicativos de área de trabalho (Ponte de Desktop e Win32 clássico) podem enviar notificações do sistema interativas, assim como os aplicativos da Plataforma Universal do Windows (UWP). No entanto, existem algumas etapas especiais para aplicativos da área de trabalho devido aos esquemas de ativação diferentes e à ausência potencial do identificador de pacote se você não estiver usando a Ponte de Desktop.
+Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como aplicativos de aplicativos do Windows. No entanto, há algumas etapas especiais para aplicativos de desktop devido aos diferentes esquemas de ativação e a possível falta de identidade de pacote se você não estiver usando o MSIX ou um pacote esparso.
 
 > [!IMPORTANT]
 > Se você estiver criando um aplicativo UWP, consulte a [documentação da UWP](send-local-toast.md). Para outros idiomas da área de trabalho, consulte [Desktop C#](send-local-toast-desktop.md).
@@ -47,7 +47,7 @@ Se você estiver usando cabeçalhos pré-compilados, certifique-se de `#include 
 
 ## <a name="step-3-include-the-header-files-and-namespaces"></a>Etapa 3: incluir os arquivos de cabeçalho e namespaces
 
-Inclua o arquivo de cabeçalho da biblioteca de compatibilidade, os arquivos de cabeçalho e namespaces relacionados para usar as APIs da UWP.
+Inclua o arquivo de cabeçalho da biblioteca compatível e os arquivos de cabeçalho e namespaces relacionados ao uso das APIs do sistema do Windows.
 
 ```cpp
 #include "DesktopNotificationManagerCompat.h"
@@ -89,12 +89,12 @@ CoCreatableClass(NotificationActivator);
 
 ## <a name="step-5-register-with-notification-platform"></a>Etapa 5: registrar-se na plataforma de notificação
 
-Em seguida, você deve se registrar na plataforma de notificação. Existem diferentes etapas dependendo se você estiver usando a Ponte de Desktop ou o Win32 clássico. Em caso de suporte para ambos, você deve executar as duas etapas (no entanto, não há necessidade de bifurcar o código; a nossa biblioteca processa isso para você!).
+Em seguida, você deve se registrar na plataforma de notificação. Há diferentes etapas, dependendo se você estiver usando pacotes MSIX/esparsos ou Win32 clássico. Em caso de suporte para ambos, você deve executar as duas etapas (no entanto, não há necessidade de bifurcar o código; a nossa biblioteca processa isso para você!).
 
 
-### <a name="desktop-bridge"></a>Ponte de Desktop
+### <a name="msixsparse-package"></a>Pacote MSIX/esparso
 
-Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no **Package.appxmanifest** adicione:
+Se você estiver usando o [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) ou um [pacote esparso](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (ou se você der suporte a ambos), em seu **Package. appxmanifest**, adicione:
 
 1. Declaração para **xmlns:com**
 2. Declaração para **xmlns:desktop**
@@ -102,7 +102,7 @@ Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no 
 4. **com:Extension** do ativador COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
 5. **desktop:Extension** para **windows.toastNotificationActivation** a fim de declarar a CLSID do ativador de notificação do sistema (a GUID da etapa 4).
 
-**Package.appxmanifest**
+**Package. appxmanifest**
 
 ```xml
 <Package
@@ -147,7 +147,7 @@ Escolha uma AUMID exclusiva para identificar o aplicativo Win32. Em geral, isso 
 
 Se estiver usando o WiX como instalador, edite o arquivo **Product.wxs** para adicionar duas propriedades de atalho ao atalho do menu Iniciar, como mostrado abaixo. Certifique-se de que a GUID da etapa 4 esteja encapsulada em `{}` como visto abaixo.
 
-**Product. wxs**
+**Product.wxs**
 
 ```xml
 <Shortcut Id="ApplicationStartMenuShortcut" Name="Wix Sample" Description="Wix Sample" Target="[INSTALLFOLDER]WixSample.exe" WorkingDirectory="INSTALLFOLDER">
@@ -170,18 +170,18 @@ Se estiver usando o WiX como instalador, edite o arquivo **Product.wxs** para ad
 Em seguida, independentemente do instalador, no código de inicialização do aplicativo (antes de chamar quaisquer APIs de notificação), chame o método **RegisterAumidAndComServer**, especificando a classe de ativador de notificação da etapa 4 e a AUMID usada acima.
 
 ```cpp
-// Register AUMID and COM server (for Desktop Bridge apps, this no-ops)
+// Register AUMID and COM server (for MSIX/sparse package apps, this no-ops)
 hr = DesktopNotificationManagerCompat::RegisterAumidAndComServer(L"YourCompany.YourApp", __uuidof(NotificationActivator));
 ```
 
-Se você oferecer suporte para Ponte de Desktop e Win32 clássico, fique à vontade para chamar esse método independentemente. Se você estiver executando na Ponte de Desktop, esse método é retornado imediatamente. Não há necessidade de bifurcar o código.
+Se você der suporte ao pacote MSIX/esparso e ao Win32 clássico, sinta-se à vontade para chamar esse método independentemente. Se você estiver executando em um pacote MSIX ou esparso, esse método simplesmente retornará imediatamente. Não há necessidade de bifurcar o código.
 
 Esse método permite que você chame as APIs de compatibilidade para enviar e gerenciar notificações sem precisar fornecer constantemente a AUMID. Além disso, insere a chave de registro LocalServer32 do servidor COM.
 
 
 ## <a name="step-6-register-com-activator"></a>Etapa 6: registrar o ativador COM
 
-Para os aplicativos da Ponte de Desktop e do Win32 clássico, você deve registrar o tipo de ativador de notificação para poder manipular ativações de notificação do sistema.
+Para o pacote MSIX/esparso e os aplicativos Win32 clássicos, você deve registrar seu tipo de ativação de notificação para que possa lidar com ativações do sistema.
 
 No código de inicialização do aplicativo, chame o seguinte método **RegisterActivator**. É necessário chamá-lo para que você receba quaisquer ativações de notificação do sistema.
 
@@ -193,12 +193,12 @@ hr = DesktopNotificationManagerCompat::RegisterActivator();
 
 ## <a name="step-7-send-a-notification"></a>Etapa 7: enviar uma notificação
 
-O envio de notificações é idêntico ao dos aplicativos UWP, exceto que você usará **DesktopNotificationManagerCompat** para criar um **ToastNotifier**. A biblioteca de compatibilidade manipula automaticamente a diferença entre a Ponte de Desktop e o Win32 clássico para que você não precise bifurcar o código. Para o Win32 clássico, a biblioteca de compatibilidade armazena em cache a AUMID fornecida ao chamar **RegisterAumidAndComServer** para que você não precisa se preocupar sobre quando deve fornecer ou não a AUMID.
+O envio de notificações é idêntico ao dos aplicativos UWP, exceto que você usará **DesktopNotificationManagerCompat** para criar um **ToastNotifier**. A biblioteca de compatibilidade lida automaticamente com a diferença entre o pacote MSIX/esparso e o Win32 clássico, para que você não precise bifurcar seu código. Para o Win32 clássico, a biblioteca de compatibilidade armazena em cache a AUMID fornecida ao chamar **RegisterAumidAndComServer** para que você não precisa se preocupar sobre quando deve fornecer ou não a AUMID.
 
 Certifique-se de usar a associação **ToastGeneric** conforme visto abaixo, pois os modelos de notificação do sistema herdados do Windows 8.1 não ativam o ativador de notificação COM criado na etapa 4.
 
 > [!IMPORTANT]
-> As imagens http são suportadas apenas em aplicativos de Ponte de Desktop com a funcionalidade de Internet em seu manifesto. Os aplicativos do Win32 clássicos não oferecem suporte às imagens http; você deve baixar a imagem para os dados de aplicativo local e referenciá-los localmente.
+> As imagens http têm suporte apenas em aplicativos de pacote MSIX/esparsos que têm o recurso de Internet em seu manifesto. Os aplicativos do Win32 clássicos não oferecem suporte às imagens http; você deve baixar a imagem para os dados de aplicativo local e referenciá-los localmente.
 
 ```cpp
 // Construct XML
@@ -322,7 +322,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR cm
     HRESULT hr = winRtInitializer;
     if (SUCCEEDED(hr))
     {
-        // Register AUMID and COM server (for Desktop Bridge apps, this no-ops)
+        // Register AUMID and COM server (for MSIX/sparse package apps, this no-ops)
         hr = DesktopNotificationManagerCompat::RegisterAumidAndComServer(L"WindowsNotifications.DesktopToastsCpp", __uuidof(NotificationActivator));
         if (SUCCEEDED(hr))
         {
@@ -395,7 +395,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="step-10-deploying-and-debugging"></a>Etapa 10: implantação e depuração
 
-Para implantar e depurar o aplicativo de Ponte de Desktop, consulte [Executar, depurar e testar um aplicativo de área de trabalho empacotado](/windows/uwp/porting/desktop-to-uwp-debug).
+Para implantar e depurar seu aplicativo de pacote MSIX/esparso, consulte [Executar, depurar e testar um aplicativo de desktop empacotado](/windows/uwp/porting/desktop-to-uwp-debug).
 
 Para implantar e depurar seu aplicativo para Win32 clássico, você deve instalar o aplicativo pelo instalador uma vez antes da depuração normal para que o atalho no menu Iniciar com a AUMID e a CLSID esteja presente. Depois que o atalho de Iniciar estiver presente, você pode depurar usando F5 no Visual Studio.
 
@@ -403,11 +403,11 @@ Caso suas notificações simplesmente não apareçam no aplicativo para Win32 cl
 
 Se as notificações aparecem, mas não continuam na Central de Ações (desaparecem após ignorar o pop-up), isso significa que você ainda não implementou o ativador COM corretamente.
 
-Se você instalou a Ponte de Desktop e o aplicativo do Win32 clássico, observe que o aplicativo de Ponte de Desktop substituirá o aplicativo do Win32 clássico ao processar as ativações de notificação do sistema. Isso significa que as notificações do sistema do aplicativo Win32 clássico ainda iniciar o aplicativo de Ponte de Desktop quando clicadas. A desinstalação do aplicativo de Ponte de Desktop reverterá as ativações de volta para o aplicativo clássico do Win32.
+Se você tiver instalado o pacote MSIX/esparso e o aplicativo Win32 clássico, observe que o aplicativo de pacote MSIX/esparso substituirá o aplicativo Win32 clássico ao lidar com ativações do sistema. Isso significa que as notificações do aplicativo Win32 clássico ainda iniciarão o aplicativo de pacote MSIX/esparso quando clicado. A desinstalação do aplicativo de pacote MSIX/esparso reverterá as ativações de volta para o aplicativo Win32 clássico.
 
 Se você receber `HRESULT 0x800401f0 CoInitialize has not been called.`, certifique-se de chamar `CoInitialize(nullptr)` no aplicativo antes de chamar as APIs.
 
-Se você receber `HRESULT 0x8000000e A method was called at an unexpected time.` ao chamar as APIs de compatibilidade, isso significa que ocorreu falha ao chamar os métodos de registro necessários (ou no caso de um aplicativo de Ponte de Desktop, você não está executando o aplicativo no contexto da Ponte de Desktop).
+Se você receber `HRESULT 0x8000000e A method was called at an unexpected time.` enquanto chama as APIs de compatibilidade, isso provavelmente significa que você não pôde chamar os métodos de registro necessários (ou se um aplicativo de pacote MSIX/esparso, você não está executando seu aplicativo no contexto MSIX/esparso).
 
 Caso receba vários erros de compilação `unresolved external symbol`, você provavelmente esqueceu de adicionar `runtimeobject.lib` às **Dependências adicionais** na etapa 1 (ou apenas adicionou à configuração de Depuração e não a configuração de Versão).
 
@@ -418,10 +418,10 @@ Se houver suporte para o Windows 8.1 ou anterior, você deve verificar no tempo 
 
 O Windows 8 introduziu as notificações do sistema, mas usava os [modelos de notificação do sistema herdados](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. A ativação era manipulada pelo evento **Ativado** na memória na classe **ToastNotification** pois as notificações do sistema eram apenas breves pop-ups que não continuaram. O Windows 10 introduziu as [notificações do sistema interativas ToastGeneric](adaptive-interactive-toasts.md), assim como a Central de Ações em que as notificações são mantidas por vários dias. A introdução da Central de Ações exigiu a introdução de um ativador COM para que a notificação do sistema possa ser ativada alguns dias após sua criação.
 
-| SO | ToastGeneric | Ativador COM | Modelos de notificação do sistema herdados |
+| Sistema operacional | ToastGeneric | Ativador COM | Modelos de notificação do sistema herdados |
 | -- | ------------ | ------------- | ---------------------- |
 | Windows 10 | Com suporte | Com suporte | Suportado (mas não ativa o servidor COM) |
-| Windows 8.1/8 | N/D | N/D | Com suporte |
+| Windows 8.1/8 | N/D | N/D | Suportado |
 | Windows 7 e anterior | N/D | N/D | N/D |
 
 Para verificar se você está executando no Windows 10, inclua o cabeçalho `<VersionHelpers.h>` e verifique o método **IsWindows10OrGreater**. Se isso retorna true, continue chamando todos os métodos descritos nesta documentação. 
@@ -443,6 +443,6 @@ if (IsWindows10OrGreater())
 
 ## <a name="resources"></a>Recursos
 
-* [Exemplo de código completo no GitHub](https://github.com/WindowsNotifications/desktop-toasts)
-* [Notificações do sistema de aplicativos da área de trabalho](toast-desktop-apps.md)
-* [Documentação do conteúdo do sistema](adaptive-interactive-toasts.md)
+* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/desktop-toasts)
+* [Notificações do sistema a partir de aplicativos da área de trabalho](toast-desktop-apps.md)
+* [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)

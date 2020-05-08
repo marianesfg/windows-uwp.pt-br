@@ -1,5 +1,5 @@
 ---
-Description: Simule e automatizar a entrada de dispositivos, como o teclado, mouse, toque, caneta e gamepad em seus aplicativos UWP.
+Description: Simule e automatize a entrada de dispositivos como teclado, mouse, toque, caneta e gamepad em seus aplicativos do Windows.
 title: Simular a entrada do usuário por meio de injeção de entrada
 label: Input injection
 template: detail.hbs
@@ -7,28 +7,28 @@ keywords: dispositivo, digitalizador, entrada, interação, injeção
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff3150d4c1ed713451669b8918906141daa9659
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: d15305fecb562546bdeaf15c501890151c7dd29a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065241"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968023"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular a entrada do usuário por meio de injeção de entrada
 
-Simule e automatize a entrada do usuário a partir de dispositivos como teclado, mouse, toque, caneta e gamepad em seus aplicativos UWP.
+Simule e automatize a entrada do usuário de dispositivos como teclado, mouse, toque, caneta e gamepad em seus aplicativos do Windows.
 
 > **APIs importantes**: [**Windows.UI.Input.Preview.Injection**](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)
 
 ## <a name="overview"></a>Visão geral
 
-A injeção de entrada permite que seu aplicativo UWP simule a entrada de vários dispositivos de entrada e direcione a entrada em qualquer lugar, incluindo fora da área de cliente do aplicativo (até mesmo para aplicativos que são executados com privilégios de Administrador, como o Editor do Registro).
+A injeção de entrada permite que seu aplicativo do Windows simule a entrada de uma variedade de dispositivos de entrada e direcione essa entrada em qualquer lugar, incluindo fora da área do cliente do aplicativo (mesmo para aplicativos executados com privilégios de administrador, como o editor do registro).
 
-A injeção de entrada é útil para aplicativos UWP e ferramentas que precisam fornecer funcionalidade, que inclui recursos de acessibilidade, testes (ad-hoc, automatizado), acesso remoto e suporte.
+A injeção de entrada é útil para aplicativos e ferramentas do Windows que precisam fornecer funcionalidade que inclua recursos de acessibilidade, teste (ad-hoc, automatizado) e acesso remoto e suporte.
 
-## <a name="setup"></a>Configuração
+## <a name="setup"></a>Instalação
 
-Para usar as APIs de injeção de entrada em seu aplicativo UWP, é necessário adicionar o seguinte ao manifesto do aplicativo:
+Para usar as APIs de injeção de entrada em seu aplicativo do Windows, você precisará adicionar o seguinte ao manifesto do aplicativo:
 
 1. Clique com o botão direito do mouse no arquivo **Package.appxmanifest** e selecione **Exibir código**.
 1. Insira o seguinte no nó `Package`:
@@ -41,17 +41,17 @@ Para usar as APIs de injeção de entrada em seu aplicativo UWP, é necessário 
 
 | ![Amostra de injeção de entrada touch](images/injection/touch-input-injection.gif) | 
 |:--:|
-| *Amostra de injeção de entrada de toque* |
+| *Amostra de injeção de entrada touch* |
 
 Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.UI.Input.Preview.Injection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)) para escutar eventos de entrada do mouse em uma região de um aplicativo e simular eventos de entrada touch em outra região de entrada.
 
-**Baixar esse exemplo no [amostra de injeção de entrada (mouse tocar)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
+**Baixe este exemplo do [exemplo de injeção de entrada (mouse para toque)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
 
 1. Primeiro, configuramos a interface do usuário (MainPage.xaml).
 
     Temos duas áreas de grade (um para entrada de mouse e outra para entrada por touch injetado), cada uma com quatro botões.
       > [!NOTE] 
-      > O plano de fundo da grade deve ser atribuído um valor (`Transparent`, nesse caso), caso contrário, os eventos de ponteiro não são detectados.
+      > O plano de fundo da grade deve ser atribuído`Transparent`a um valor (, neste caso), caso contrário, eventos de ponteiro não são detectados.
 
     Quando qualquer clique é detectado na área de entrada, um evento de toque correspondente é injetado na área de injeção de entrada. Cliques de botão de entrada de inserção são relatados na área de título.
 
@@ -361,8 +361,8 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
 
 4. Finalmente, identificamos qualquer evento roteador de [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) do botão na área de injeção de entrada e atualizamos a interface do usuário com o nome do botão clicado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-### <a name="topic-samples"></a>Exemplos de tópico
+### <a name="topic-samples"></a>Amostras de tópico
 
-- [Amostra de injeção de entrada (mouse tocar)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)
+- [Amostra de injeção de entrada (mouse para toque)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)

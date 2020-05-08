@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 34425a0e754d62a1d9d7716bca3576463aec3ba5
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: dbf9d40d4dc2cfedaa78cbca5b16c4cc26d2d4e1
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259724"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730069"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox
 
 Este tópico descreve problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One. Para saber mais sobre esse programa, consulte [UWP no Xbox](index.md). 
 
-\[se você veio aqui de um link em um tópico de referência de API e está procurando informações de API da família de dispositivos universais, consulte os [recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
+\[Se você veio aqui de um link em um tópico de referência de API e está procurando informações de API da família de dispositivos universais, consulte os [recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
 
 A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora essa não seja uma lista completa. 
 
@@ -58,9 +58,9 @@ Isso pode afetar os desenvolvedores do Xbox que desejam copiar os arquivos impla
 
 Os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos do Xbox One não podem se associar a portas na faixa [57344, 65535], inclusive. Embora a associação a essas portas possa parecer ter sido bem-sucedida em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir o aplicativo. Seu aplicativo deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
-## <a name="uwp-api-coverage"></a>Cobertura de API UWP
+## <a name="windows-runtime-api-coverage"></a>Cobertura de API Windows Runtime
 
-Nem todas as APIs UWP têm suporte no Xbox. Para obter a lista de APIs que sabemos que não funcionam, consulte [Recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN). Se você encontrar problemas com outras APIs, informe-os nos fóruns. 
+Nem todas as APIs Windows Runtime têm suporte no Xbox. Para obter a lista de APIs que sabemos que não funcionam, consulte [Recursos da UWP que ainda não têm suporte no Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN). Se você encontrar problemas com outras APIs, informe-os nos fóruns. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navegar para o WDP provoca um aviso de certificado
@@ -115,6 +115,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)

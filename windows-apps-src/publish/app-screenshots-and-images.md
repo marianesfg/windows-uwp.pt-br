@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 7995f7d8539ee5835ee9ae079305731879decc95
+ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210892"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255180"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -25,14 +25,14 @@ A loja também pode usar o ícone do aplicativo e outras imagens que você inclu
 
 ## <a name="screenshots"></a>Capturas de tela
 
-As capturas de tela são as imagens do seu aplicativo que são exibidas para os clientes nos detalhes de seu aplicativo.
+As capturas de tela são as imagens do app exibidas para os clientes na listagem da Store do app.
 
 Você tem a opção de fornecer capturas de tela para as diferentes famílias de dispositivos com seu app é compatível a fim de que as capturas de tela apropriadas apareçam quando um cliente exibir a listagem da Store do app nesse tipo de dispositivo. 
 
 Apenas uma captura de tela (para qualquer família de dispositivos) é necessária para seu envio, mas você pode fornecer várias; até nove capturas de tela de desktop e até oito capturas de tela das outras famílias de dispositivos. Sugerimos que você forneça pelo menos quatro capturas de tela de cada família de dispositivos compatíveis com seu aplicativo para que todos vejam como será a aparência do aplicativo no dispositivo. (Não inclua capturas de tela para as famílias de dispositivos que não são compatíveis com seu app). Observe que as capturas de tela de **Desktop** também serão mostradas aos clientes em dispositivos Surface Hub.
 
 > [!NOTE]
-> O Microsoft Visual Studio oferece uma [ferramenta para facilitar a obtenção das capturas de tela](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store).
+> O Microsoft Visual Studio fornece uma [ferramenta para ajudá-lo a capturar capturas de tela](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store).
 
 Cada captura de tela deve ser um arquivo .png em orientação paisagem ou retrato e o tamanho do arquivo não pode ser maior que 50 MB.
 
@@ -128,7 +128,7 @@ Siga estas recomendações para que seus trailers sejam eficazes:
 
 Você também deve cumprir os requisitos listados a seguir.
 
-**Para adicionar trailers à sua listagem:**
+**Para adicionar trailers à listagem:**
 1. Carregue o **arquivo de vídeo** do trailer na caixa indicada. Uma caixa suspensa também é mostrada caso você queira reutilizar um trailer que já tenha sido carregado (talvez para uma listagem da Loja em outro idioma).
 2. Após carregar o trailer, você precisará carregar uma **imagem em miniatura** para acompanhá-lo. Essa imagem deve ser um arquivo .png de 1920 x 1080 pixels e é geralmente uma imagem estática obtida a partir do trailer.
 3. Clique no ícone de lápis para adicionar um **título** para o trailer (255 caracteres ou menos).
@@ -144,10 +144,9 @@ Para remover um trailer da lista, clique em **X** ao lado do nome de arquivo. Vo
 
 Ao fornecer os trailers, verifique estes requisitos estão sendo cumpridos:
 
-- O formato do vídeo deve ser MOV ou MP4. Se você estiver carregando vídeo de 4K, haverá suporte apenas para MP4.
-- A duração do vídeo não deve exceder 60 segundos.
+- O formato do vídeo deve ser MOV ou MP4.
 - O arquivo do trailer deve ter no máximo 2 GB.
-- A resolução de vídeo deve ser 1920 x 1080 pixels ou 3840 x 2160 pixels.
+- A resolução de vídeo deve ser 1920 x 1080 pixels.
 - A miniatura deve ser um arquivo PNG com uma resolução de 1920 x 1080 pixels ou 3840 x 2160 pixels.
 - O título não pode exceder 255 caracteres.
 - Não inclua classificações etárias em seus trailers.
@@ -226,7 +225,7 @@ A imagem **2:1 (2400 x 1200)** só será usada se o seu app for compatível com 
 
 Se o aplicativo enviado anteriormente oferecer suporte a versões anteriores do sistema operacional (Windows 8. x e/ou Windows Phone 8. x), essas imagens deverão ser fornecidas para que possamos considerar o seu aplicativo em layouts promocionais (embora eles não garantam que seu aplicativo será apresentado). Se seu aplicativo não oferecer suporte a essas versões anteriores do sistema operacional, pule esta seção. (Esta seção anteriormente era chamada de **Imagens promocionais opcionais**).
 
-**Para o Windows Phone 8.1 e versões anteriores**, dois tamanhos de imagem podem ser usados em layouts promocionais: **1000 x 800 pixels (5:4)** e **358 x 358 pixels (1:1)** . Se seu aplicativo for executado no Windows Phone 8,1 ou anterior, é recomendável fornecer imagens em ambos os tamanhos.  
+**Para o Windows Phone 8.1 e versões anteriores**, dois tamanhos de imagem podem ser usados em layouts promocionais: **1000 x 800 pixels (5:4)** e **358 x 358 pixels (1:1)**. Se seu aplicativo for executado no Windows Phone 8,1 ou anterior, é recomendável fornecer imagens em ambos os tamanhos.  
 
 > [!TIP]
 > Forneça uma imagem Ícone do bloco de aplicativo 300 x 300 na seção [Logotipos da Loja](#store-logos) para qualquer envio compatível com o Windows Phone 8.1 ou anterior. Isso garantirá que o aplicativo não aparecerá na Loja com um ícone em branco.  

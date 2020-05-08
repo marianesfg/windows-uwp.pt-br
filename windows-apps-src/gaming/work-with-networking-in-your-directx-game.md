@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, rede, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 79a1640964902f1effc08196372128bd38bebe2d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2e693016fa6b87f231c1cbbfac4c2e55d44623c9
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258403"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606365"
 ---
 # <a name="networking-for-games"></a>Rede para jogos
 
@@ -19,7 +19,7 @@ ms.locfileid: "74258403"
 
 Saiba como desenvolver e incorporar recursos de rede em seu jogo com o DirectX.
 
-## <a name="concepts-at-a-glance"></a>Conceitos básicos
+## <a name="concepts-at-a-glance"></a>Visão rápida de conceitos
 
 
 Diversos recursos de rede podem ser usados em seu jogo em DirectX, seja um simples jogo individual ou jogos com grandes quantidades de jogadores. O uso mais simples da rede seria para armazenar nomes de usuários e pontuações de jogos em um servidor de rede central.
@@ -38,7 +38,7 @@ No caso de dispositivos móveis, é importante monitorar os recursos de rede dis
 
 O isolamento de rede faz parte do modelo de segurança do aplicativo usado pelo Windows. O Windows descobre ativamente os limites da rede e impõe as restrições de acesso para isolamento de rede. Os aplicativos devem declarar funcionalidades de isolamento de rede para definir o escopo do acesso à rede. Sem declarar essas funcionalidades, seu aplicativo não terá acesso aos recursos da rede. Para saber mais sobre como o Windows impõe o isolamento de rede para os aplicativos, consulte [Como configurar recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)).
 
-## <a name="design-considerations"></a>Considerações de design
+## <a name="design-considerations"></a>Considerações sobre o design
 
 
 Diversas APIs de rede podem ser usadas em jogos DirectX. Portanto, é importante escolher a API correta. O Windows oferece suporte para uma série de APIs de rede que seu aplicativo pode usar para se comunicar com outros computadores e dispositivos pela Internet ou por redes privadas. Sua primeira etapa é calcular quais recursos de rede seu aplicativo precisa.
@@ -271,7 +271,7 @@ Adicionar código para validar uma cadeia para uma URI do usuário
 
 O namespace [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/windows.web.http) não tem uma função de conveniência. Portanto, o aplicativo que usa [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) e outras classes nesse namespace precisa usar o valor **HRESULT**.
 
-Nos aplicativos em C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa um erro durante a execução do aplicativo quando há uma exceção. A propriedade [**Platform::Exception::HResult**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) retorna o **HRESULT** atribuído à exceção específica. A propriedade [**Platform::Exception::Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+Nos aplicativos em C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa um erro durante a execução do aplicativo quando há uma exceção. A propriedade [**Platform:: Exception:: HRESULT**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) retorna o **HRESULT** atribuído à exceção específica. A propriedade [**Platform:: Exception:: Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor **HRESULT** . Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
 Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**. Para algumas chamadas de método ilícitas, o **HRESULT** retornado é **E\_ILLEGAL\_METHOD\_CALL**.
 
@@ -370,13 +370,13 @@ using namespace Windows::Web::Http;
 
 **Outros recursos**
 
-* [Conectando com um soquete de datagrama](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
+* [Conectando-se com um soquete de datagrama](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
 * [Conectando-se a um recurso de rede com um soquete de fluxo](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
-* [Conectando aos serviços de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
-* [Conectando-se aos serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+* [Conectando-se aos serviços de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+* [Conectando-se a serviços Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 * [Noções básicas de rede](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
-* [Como configurar os recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [Como habilitar o loopback e depurar o isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
+* [Como configurar recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [Como habilitar loopback e depurar o isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
 
 **Referência**
 
@@ -386,9 +386,9 @@ using namespace Windows::Web::Http;
 * [**Windows:: Web:: http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
 * [**Windows:: Networking:: Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
 
-**Exemplos**
+**Amostras**
 
 * [Exemplo de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
-* [Exemplo de HttpClient]( https://go.microsoft.com/fwlink/p/?linkid=242550)
+* [Amostra de HttpClient]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
 * [Exemplo de proximidade](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
 * [Exemplo do StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

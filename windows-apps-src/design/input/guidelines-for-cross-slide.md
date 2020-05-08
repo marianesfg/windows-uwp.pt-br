@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 833949effd311c707de8dd1823ec6eee06e91e87
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 685c71ca0e6ed0989932b7c9a0169088d5b83bd2
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257973"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82558833"
 ---
 # <a name="guidelines-for-cross-slide"></a>Diretrizes de deslizamento transversal
 
@@ -33,7 +33,7 @@ Use o deslizamento transversal para dar suporte à seleção com o gesto de desl
 -   Utilize o deslizamento transversal para seleção de itens quando a interação de toque for utilizada para outra finalidade.
 -   Não utilize o deslizamento transversal para adicionar itens a uma fila.
 
-## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicionais
+## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
 
 
 Gestos de selecionar e arrastar só são possíveis em uma área de conteúdo que permite movimento panorâmico unidirecional (vertical ou horizontal). Para qualquer uma dessas interações funcionar, uma direção de movimento panorâmico deve ser bloqueada, e o gesto deve ser realizado na direção perpendicular à direção do momento panorâmico.
@@ -56,7 +56,7 @@ Aqui estão algumas diretrizes a serem consideradas ao incluir a funcionalidade 
 
 Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
 
-**Observe**  em casos em que a área de conteúdo pode ser panorâmica em duas direções, como navegadores da Web ou leitores eletrônicos, a interação com tempo de pressionar e segurar deve ser usada para invocar o menu de contexto para objetos como imagens e hiperlinks.
+**Observe**  que, nos casos em que a área de conteúdo pode ser panorâmica em duas direções, como navegadores da Web ou leitores eletrônicos, a interação com tempo de pressionar e manter deve ser usada para invocar o menu de contexto para objetos como imagens e hiperlinks.
 
  
 
@@ -69,7 +69,7 @@ Use o deslizamento transversal para listas ou coleções que rolam em uma única
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
-**Selecione**
+**Seleção**
 
 Seleção é marcar, sem iniciar ou ativar, um ou mais objetos. Esta ação é semelhante a dar um único clique no mouse, ou pressionar a tecla Shift e clicar com o mouse, em um ou mais objetos.
 
@@ -123,29 +123,31 @@ Por esses motivos, a interação de seleção de deslizamento transversal não d
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**Arraste**
+**Arrastar**
 
 Use o gesto de arrastar para mover um ou mais objetos de um local para outro.
 
 Se for necessário mover mais de um objeto, permita que os usuários selecionem vários itens e depois arrastem todos eles de uma só vez.
 
-## <a name="span-idrelated_topicsspanrelated-articles"></a><span id="related_topics"></span>Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
+### <a name="samples"></a>Exemplos
 
-**Exemplos**
-* [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Exemplo de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Exemplo de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-**arquivar amostras**
-* [Entrada: exemplo de eventos de entrada do usuário XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Entrada: exemplo de recursos do dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: exemplo de teste de colisão de toque](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [Exemplo de rolagem, panorâmica e zoom do XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: exemplo de tinta simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [Entrada: exemplo de gestos do Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Entrada: exemplo de manipulações e gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [Exemplo de entrada do DirectX Touch](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
+- [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+
+### <a name="archive-samples"></a>Exemplos de arquivo-morto
+
+- [Entrada: amostra de eventos de entrada do usuário XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Entrada: amostra de funcionalidades do dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: amostra de teste de hit de toque](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [Exemplo de rolagem, panorâmica e zoom do XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: amostra de tinta simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
+- [Entrada: amostra de gestos no Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: exemplo de manipulações e gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [Amostra de entrada por toque do DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  
 
  

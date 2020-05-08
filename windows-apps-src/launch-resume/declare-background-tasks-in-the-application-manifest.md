@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 53fb8c0b213705a5a79680356bb4f1773594dcdc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 32472f698381f4b109f280f0b964f00cdbcec66a
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260483"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606195"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
 
@@ -20,7 +20,7 @@ ms.locfileid: "74260483"
 
 **APIs importantes**
 
--   [**Esquema BackgroundTasks**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**Esquema de BackgroundTasks**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
 -   [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
@@ -90,7 +90,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 2.  Modifique a lista de atributos Tipo de Tarefa para indicar o tipo do registro de tarefa usado com essa tarefa em segundo plano. Se a tarefa em segundo plano for registrada com vários tipos de gatilho, adicione outros elementos Task e atributos Type para cada um deles.
 
-    **Observe**  certifique-se de listar cada um dos tipos de gatilho que você está usando, ou a tarefa em segundo plano não será registrada com os tipos de gatilho não declarados (o método [**Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) irá falhar e gerar uma exceção).
+    **Observação**  certifique-se de listar cada um dos tipos de gatilho que você está usando, ou a tarefa em segundo plano não será registrada com os tipos de gatilho não declarados (o método [**Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) irá falhar e gerar uma exceção).
 
     Este exemplo de trecho indica o uso de gatilhos de evento do sistema e notificações por push:
 
@@ -107,7 +107,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 Repita a etapa 2 para cada classe adicional de tarefa em segundo plano registrada pelo aplicativo.
 
-O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do seu aplicativo.
+O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( https://code.msdn.microsoft.com/windowsapps/Background-Task-Sample-9209ade9). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do aplicativo.
 
 ```xml
 <Applications>
@@ -213,7 +213,7 @@ Esse exemplo declara uma tarefa em segundo plano executada em um novo processo q
 
 ```xml
 <Package
-    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+    xmlns:uap4="https://schemas.microsoft.com/appx/manifest/uap/windows10/4"
     ...
     <Applications>
         <Application ...>
@@ -236,4 +236,4 @@ Esse exemplo declara uma tarefa em segundo plano executada em um novo processo q
 
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+* [Diretrizes de tarefas em segundo plano](guidelines-for-background-tasks.md)

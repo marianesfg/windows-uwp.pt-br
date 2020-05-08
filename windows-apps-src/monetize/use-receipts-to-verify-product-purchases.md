@@ -6,18 +6,18 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a26d98de58c954f1bec588b335483de08404862b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ba87de0755469f373f9000f3d96d3021c9197985
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259229"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148884"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
 Cada transação da Microsoft Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação. Esse recibo fornece informações sobre o produto listado e o custo monetário ao cliente.
 
-Ter acesso a essas informações dá suporte a cenários nos quais seu app precisa verificar se um usuário adquiriu seu app ou fez compras de complemento (também chamado de produto no app ou IAP) na Microsoft Store. Por exemplo, imagine um jogo que oferece conteúdo para download. Se o usuário que comprou o conteúdo do jogo desejar jogar em outro dispositivo, será necessário verificar se ele de fato comprou o conteúdo. Veja como fazer isso.
+Ter acesso a essas informações dá suporte a cenários nos quais seu app precisa verificar se um usuário adquiriu seu app ou fez compras de complemento (também chamado de produto no app ou IAP) na Microsoft Store. Por exemplo, imagine um jogo que oferece conteúdo para download. Se o usuário que comprou o conteúdo do jogo desejar jogar em outro dispositivo, será necessário verificar se ele de fato comprou o conteúdo. Veja como.
 
 > [!IMPORTANT]
 > Este artigo mostra como usar os membros do namespace [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) para obter e validar um recibo de uma compra realizada em aplicativo. Se você estiver usando o namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) para compras realizadas em aplicativo (introduzido no Windows 10, versão 1607 e disponível para projetos que visam o **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio), esse namespace não fornece uma API para a obtenção de comprovantes para compras realizadas em aplicativo. No entanto, você pode usar um método REST na API de coleção da Microsoft Store para obter dados de uma transação de compra. Para obter mais informações, consulte [Recibos para compras realizadas em aplicativo](in-app-purchases-and-trials.md#receipts).
@@ -87,7 +87,7 @@ Você pode usar qualquer um desses exemplos de recibo para testar seu código de
 
 ## <a name="validating-a-receipt"></a>Validando um recibo
 
-Para validar a autenticidade do recibo, você precisa de seu sistema back-end (um serviço web ou algo semelhante) para verificar a assinatura do recibo usando o certificado público. Para obter esse certificado, use a URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, onde ```CertificateId``` é o valor **CertificateId** no recibo.
+Para validar a autenticidade do recibo, você precisa de seu sistema back-end (um serviço web ou algo semelhante) para verificar a assinatura do recibo usando o certificado público. Para obter esse certificado, use a URL ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ```certificateid ' ' ' é o valor de **certificateid** no recibo.
 
 Veja aqui um exemplo desse processo de validação. Esse código é executado em um aplicativo de console do .NET Framework que inclui uma referência ao assembly **System. Security**.
 
@@ -114,7 +114,7 @@ O elemento raiz desse arquivo é o elemento **Receipt**, que contém informaçõ
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **Version**  |    O número de versão do recibo.            |
+|  **Versão**  |    O número de versão do recibo.            |
 |  **CertificateId**  |     A impressão digital do certificado usado para assinar o recibo.          |
 |  **ReceiptDate**  |    A data do recibo foi assinado e baixado.           |  
 |  **ReceiptDeviceId**  |   Identifica o dispositivo usado para solicitar o recibo.         |  |
@@ -129,10 +129,10 @@ Este elemento contém informações de compra para o app atual.
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **Sessão**  |    Identifica a compra.           |
+|  **Id**  |    Identifica a compra.           |
 |  **AppId**  |     O valor do Nome da Família de Pacotes que o sistema operacional usa para o app.           |
 |  **LicenseType**  |    **Full**, se o usuário tiver adquirido a versão completa do app. **Trial**, se o usuário baixou uma versão de avaliação do app.           |  
-|  **Adquirido**  |    A data de aquisição do app.          |  |
+|  **PurchaseDate**  |    A data de aquisição do app.          |  |
 
 <span id="productreceipt" />
 
@@ -144,11 +144,11 @@ Esse elemento contém informações sobre uma compra realizada em aplicativo par
 
 |  Atributo  |  Descrição   |
 |-------------|-------------------|
-|  **Sessão**  |    Identifica a compra.           |
+|  **Id**  |    Identifica a compra.           |
 |  **AppId**  |     Identifica o app por meio do qual o usuário fez a compra.           |
 |  **ProductId**  |     Identifica o produto adquirido.           |
 |  **ProductType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
-|  **Adquirido**  |    A data em que ocorreu a compra.          |  |
+|  **PurchaseDate**  |    A data em que ocorreu a compra.          |  |
 
  
 

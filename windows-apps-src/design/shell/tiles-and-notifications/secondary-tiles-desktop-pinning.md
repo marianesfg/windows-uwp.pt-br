@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: cd6debb076aac4286c8cb9a33730ade4942b5030
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 7ddcd96eadbb6d2edbc3a72fa58ff3cc8931a09b
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209912"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730360"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 
@@ -29,7 +29,7 @@ Adicionar um bloco secundário do aplicativo WPF ou WinForms é muito parecido c
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Empacotar o aplicativo com a Ponte de Desktop
 
-Se você não tiver empacotado o aplicativo com a Ponte de Desktop, [deverá fazer isso primeiro](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) para conseguir usar quaisquer APIs UWP.
+Se você não tiver empacotado seu aplicativo com a ponte de desktop, [deverá fazê](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) -lo primeiro antes de poder usar qualquer Windows Runtime APIs.
 
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>Habilitar acesso à interface IInitializeWithWindow
@@ -46,7 +46,7 @@ public interface IInitializeWithWindow
 }
 ```
 
-Como alternativa, se você estiver usando C++, adicione uma referência ao arquivo de cabeçalho **shobjidl.h** no código. Este arquivo de cabeçalho contém a declaração da interface *IInitializeWithWindow*.
+Como alternativa, se você estiver usando C++, adicione uma referência ao arquivo de cabeçalho **shobjidl.h** no código. Esse arquivo de cabeçalho contém a declaração da interface *IInitializeWithWindow*.
 
 
 ## <a name="initialize-the-secondary-tile"></a>Inicializar o bloco secundário
@@ -98,7 +98,7 @@ O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Cons
 ## <a name="resources"></a>Recursos
 
 * [Exemplo de código completo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
-* [Visão geral dos blocos secundários](secondary-tiles.md)
+* [Visão geral de blocos secundários](secondary-tiles.md)
 * [Fixar blocos secundários (UWP)](secondary-tiles-pinning.md)
-* [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop)
-* [Exemplos de código de ponte de desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+* [Ponte de desktop](https://developer.microsoft.com/windows/bridges/desktop)
+* [Exemplos de código da Ponte de Desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
