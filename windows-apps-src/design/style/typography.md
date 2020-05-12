@@ -1,31 +1,31 @@
 ---
 description: Aprenda a usar a tipografia em seu aplicativo para ajudar os usuários a entenderem o conteúdo facilmente.
-title: Tipografia em aplicativos UWP
+title: Tipografia em aplicativos do Windows
 ms.date: 04/06/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3a5b6df7a5d8333e0f4834c256a38fc912f8f51e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72282408"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970621"
 ---
-# <a name="typography"></a>Tipografia
+# <a name="typography-in-windows-apps"></a>Tipografia em aplicativos do Windows
 
 ![imagem Hero](images/header-typography.svg)
 
-Como a representação visual da linguagem, a principal tarefa da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, discutiremos como definir o estilo de tipografia em seu aplicativo UWP para ajudar os usuários a entenderem o conteúdo de modo fácil e eficiente.
+Como a representação visual da linguagem, a principal tarefa da tipografia é informar. Seu estilo nunca deve atrapalhar essa meta. Neste artigo, abordaremos como definir o estilo de tipografia em seu aplicativo do Windows para ajudar os usuários a entenderem o conteúdo de modo fácil e eficiente.
 
 ## <a name="font"></a>Fonte
 
-Você precisa usar uma fonte em toda a interface do usuário do aplicativo, e recomendamos manter a fonte padrão para aplicativos UWP, a **Segoe UI**. Ela foi projetado para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
+Você deve usar uma fonte em toda a interface do usuário do aplicativo, e recomendamos manter a fonte padrão para aplicativos do Windows, a **Segoe UI**. Ela foi projetado para manter a legibilidade ideal em todos os tamanhos e densidades de pixel, e oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
 ![Texto de exemplo da fonte Segoe UI](images/type/segoe-sample.svg)
 
-Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o seu aplicativo, confira [Idiomas](#languages) e [Fontes](#fonts) e veja as fontes recomendadas para aplicativos UWP.
+Para exibir idiomas diferentes do inglês ou selecionar uma fonte diferente para o seu aplicativo, confira [Idiomas](#languages) e [Fontes](#fonts) e veja as fontes recomendadas para aplicativos do Windows.
 
 :::row:::
     :::column:::
@@ -46,7 +46,7 @@ Devido ao funcionamento do sistema de dimensionamento, você está projetando em
 
 :::row:::
     :::column:::
-![fazer](images/do.svg) Seguir o dimensionamento da [rampa de tipos da UWP](#type-ramp).
+![fazer](images/do.svg) Seguir o dimensionamento da [rampa de tipos](#type-ramp) do Windows.
     :::column-end:::
     :::column:::
 ![não fazer](images/dont.svg) Usar um tamanho de fonte inferior a 12 px.
@@ -57,7 +57,7 @@ Devido ao funcionamento do sistema de dimensionamento, você está projetando em
 
 :::row:::
     :::column:::
-Os usuário dependem de uma hierarquia visual ao examinar uma página: os cabeçalhos resumem o conteúdo e o texto do corpo fornece mais detalhes. Para criar uma hierarquia visual clara em seu aplicativo, siga a rampa de tipos da UWP.
+Os usuário dependem de uma hierarquia visual ao examinar uma página: os cabeçalhos resumem o conteúdo e o texto do corpo fornece mais detalhes. Para criar uma hierarquia visual clara em seu aplicativo, siga a rampa de tipos do Windows.
     :::column-end:::
     :::column:::
 ![estilos de bloco de texto](images/type/type-hierarchy.svg)
@@ -66,7 +66,7 @@ Os usuário dependem de uma hierarquia visual ao examinar uma página: os cabeç
 
 ### <a name="type-ramp"></a>Rampa de tipos
 
-A rampa de tipos da UWP estabelece relações específicas entre os estilos de tipo em uma página, ajudando os usuários a ler o conteúdo facilmente. Todos os tamanhos estão em pixels efetivos e são otimizados para aplicativos UWP executados em todos os dispositivos.
+A rampa de tipos do Windows estabelece relações essenciais entre os estilos de tipo em uma página, ajudando os usuários a ler o conteúdo facilmente. Todos os tamanhos estão em pixels efetivos e são otimizados para aplicativos UWP executados em todos os dispositivos.
 
 ![Rampa de tipos](images/type/type-ramp.png)
 

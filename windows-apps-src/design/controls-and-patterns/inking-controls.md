@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 892e8e9bdeed562a83e566266a7391e9c24b2ad3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 848d682b2672e1a397e3ac867ae981c707873e8e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081727"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970411"
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
 
 
-Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos do Windows: [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
 O controle InkCanvas renderiza uma entrada à caneta como um traço de tinta (usando as configurações padrão de cor e espessura) ou um traço de apagar. Esse controle é uma sobreposição transparente que não inclui interfaces do usuário internas para alterar as propriedades de traço de tinta padrão.
 
@@ -84,7 +84,7 @@ Adicionar um InkCanvas ao aplicativo requer apenas uma linha de marcação:
 ```
 
 > [!NOTE]
-> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, confira o artigo ["Interações com caneta em aplicativos UWP"](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions).
+> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, confira o artigo ["Interações com caneta e Windows Ink em aplicativos do Windows"](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions).
 
 O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporação de um InkToolbar (com todas as ferramentas internas) ao seu aplicativo requer uma linha de marcação adicional:
 
@@ -170,6 +170,6 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta e Windows Ink em aplicativos UWP](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
+- [Interações com caneta e Windows Ink em aplicativos do Windows](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
 - [Reconhecer traços do Windows Ink como texto e formas](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)
 - [Armazenar e recuperar dados de traço do Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/save-and-load-ink)

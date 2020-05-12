@@ -1,29 +1,29 @@
 ---
-title: Layout da página para aplicativos UWP
-description: Ao criar seu aplicativo, o primeiro aspecto a ser considerado é a estrutura do layout. Este artigo aborda a estrutura comum de layouts de página básicos, incluindo quais elementos de interface do usuário você precisará e onde eles devem ir em uma página. Em aplicativos UWP, cada página geralmente tem elementos de navegação, comando e conteúdo.
+title: Layout da página para aplicativos do Windows
+description: Ao criar seu aplicativo, o primeiro aspecto a ser considerado é a estrutura do layout. Este artigo aborda a estrutura comum de layouts de página básicos, incluindo quais elementos de interface do usuário você precisará e onde eles devem ir em uma página. Em aplicativos do Windows, cada página geralmente tem elementos de navegação, comando e conteúdo.
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 7333cebc945715412e3ff1140ca26e1ed5368704
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3dbdf8d006472c288369fd528e89663aca5a9e10
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684543"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970881"
 ---
 # <a name="page-layout"></a>Layout de página
 
-Em aplicativos UWP, cada [**Página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) geralmente tem elementos de navegação, comando e conteúdo. 
+Em aplicativos do Windows, cada [**Página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) geralmente tem elementos de navegação, comando e conteúdo. 
 
-Seu aplicativo pode ter várias páginas: quando um usuário inicia um aplicativo UWP, o código do aplicativo cria um [**Quadro**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) para ser colocado dentro da [**Janela**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) do aplicativo. Em seguida, o quadro pode [navegar](../basics/navigate-between-two-pages.md) entre as instâncias da [**Página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) do aplicativo. 
+Seu aplicativo pode ter várias páginas: quando um usuário inicia um aplicativo do Windows, o código do aplicativo cria um [**Quadro**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) para ser colocado dentro da [**Janela**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) do aplicativo. Em seguida, o quadro pode [navegar](../basics/navigate-between-two-pages.md) entre as instâncias da [**Página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) do aplicativo. 
 
 A maioria das páginas segue uma estrutura de layout comum e este artigo aborda os elementos da interface do usuário que você precisará e onde eles devem ir em uma página. 
 
 ![estrutura da página](images/page-components.svg)
 
 ## <a name="navigation"></a>Navegação
-O layout do aplicativo começa com o modelo de navegação escolhido, que define como os usuários navegam entre páginas em seu aplicativo. Neste artigo, discutiremos dois padrões de navegação comuns: navegação à esquerda e navegação superior. Para obter orientação sobre como escolher outras opções de navegação, confira [Noções básicas de design de navegação para aplicativos UWP](../basics/navigation-basics.md).
+O layout do aplicativo começa com o modelo de navegação escolhido, que define como os usuários navegam entre páginas em seu aplicativo. Neste artigo, discutiremos dois padrões de navegação comuns: navegação à esquerda e navegação superior. Para obter diretrizes sobre como escolher outras opções de navegação, confira [Noções básicas de design de navegação para aplicativos do Windows](../basics/navigation-basics.md).
 
 ![padrões de navegação superior e esquerda](images/top-left-nav.svg)
 
@@ -91,7 +91,7 @@ O modelo [mestre/detalhes](../controls-and-patterns/master-details.md) consiste 
 Um [formulário](../controls-and-patterns/forms.md) é um grupo de controles que coleta e envia dados de usuários. A maioria, se não todos os aplicativos, usam um formulário para páginas de configurações, portais de logon, hubs de comentários, criação de conta ou outros fins. 
 
 ## <a name="sample-apps"></a>Exemplos de aplicativos
-Para ver como esses padrões podem ser implementados, confira nossos [aplicativos de exemplo UWP](https://developer.microsoft.com/windows/samples):
+Para ver como esses padrões podem ser implementados, confira nossos [aplicativos de exemplo do Windows](https://developer.microsoft.com/windows/samples):
 - [Player de vídeo BuildCast](https://github.com/Microsoft/BuildCast)
 - [Lunch Scheduler](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
 - [Livro de Colorir](https://github.com/Microsoft/Windows-appsample-coloringbook)

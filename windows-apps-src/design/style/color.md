@@ -1,18 +1,18 @@
 ---
-description: Saiba como usar temas e cores de destaque em seus aplicativos UWP.
-title: Cor em aplicativos UWP
+description: Saiba como usar temas e cores de destaque em seus aplicativos do Windows.
+title: Cor em aplicativos do Windows
 ms.date: 04/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f5e103b7661c53fb70561dd1bd654188be2704ff
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684579"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970761"
 ---
 # <a name="color"></a>Cor
 
@@ -20,7 +20,7 @@ ms.locfileid: "75684579"
 
 A cor é uma maneira intuitiva de comunicar informações aos usuários em seu aplicativo: ela pode ser usada para indicar interatividade, enviar comentários sobre ações do usuário e oferecer uma noção de continuidade visual para a interface.
 
-Nos aplicativos UWP, as cores são determinadas principalmente por cor de destaque e tema. Neste artigo, vamos discutir como você pode usar cores em seu aplicativo e como usar recursos de tema e cor de destaque para que o aplicativo UWP possa ser usado em qualquer contexto de tema.
+Nos aplicativos do Windows, as cores são determinadas principalmente por cor de destaque e tema. Neste artigo, discutiremos como você pode usar cores em seu aplicativo e como usar recursos de tema e cor de destaque para que o aplicativo do Windows possa ser usado em qualquer contexto de tema.
 
 ## <a name="color-principles"></a>Princípios de cores
 
@@ -48,7 +48,7 @@ Considere como as cores que você usa serão interpretadas por pessoas de cultur
 
 ## <a name="themes"></a>Temas
 
-Os aplicativos UWP podem usar um tema de aplicativo claro ou escuro. O tema afeta as cores da tela de fundo, do texto, dos ícones e dos [controles comuns](../controls-and-patterns/index.md) do aplicativo.
+Os aplicativos do Windows podem usar um tema de aplicativo claro ou escuro. O tema afeta as cores da tela de fundo, do texto, dos ícones e dos [controles comuns](../controls-and-patterns/index.md) do aplicativo.
 
 ### <a name="light-theme"></a>Tema claro
 
@@ -58,7 +58,7 @@ Os aplicativos UWP podem usar um tema de aplicativo claro ou escuro. O tema afet
 
 ![tema escuro](images/color/dark-theme.svg)
 
-Por padrão, o tema do aplicativo UWP é a preferência de tema do usuário das Configurações do Windows ou o tema do padrão do dispositivo (ou seja, escuro no Xbox). No entanto, você pode definir o tema do aplicativo UWP.
+Por padrão, o tema do aplicativo do Windows é a preferência de tema do usuário das Configurações do Windows ou o tema do padrão do dispositivo (ou seja, escuro no Xbox). No entanto, é possível definir o tema do aplicativo do Windows.
 
 ### <a name="changing-the-theme"></a>Alterar o tema
 

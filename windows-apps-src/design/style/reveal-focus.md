@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 824476cb098d0ff561fca67497a896586c70b8fb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 098c46499e65c34e3699b09e137ea94c40590ef7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681957"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968002"
 ---
 # <a name="reveal-focus"></a>Foco de Revelação
 
@@ -168,7 +168,7 @@ Outra maneira de personalizar o Foco de Revelação é recusar os visuais de foc
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Foco de Revelação e o Sistema de Design Fluente
 
-O Foco de Revelação é um componente do Sistema de Design Fluente que adiciona iluminação ao seu aplicativo. Para saber mais sobre o Sistema de Design Fluente e seus outros componentes, confira a [Visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
+O Foco de Revelação é um componente do Sistema de Design Fluente que adiciona iluminação ao seu aplicativo. Para saber mais sobre o sistema do Fluent Design e os outros componentes dele, confira a [Visão geral do Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

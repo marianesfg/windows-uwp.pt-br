@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a286056fc0c44d01482e23e52df0fa80eca0515
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 1b6ce3ce56b4afbf4c45b406c8af369bee4b55bb
+ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619320"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
@@ -127,7 +127,13 @@ Você pode chamar a função [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#c
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>Funções COM que adotam um ponteiro de interface **IUnknown**
 
-Você pode chamar a função [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para passar seu **com_ptr** para uma função que usa um ponteiro de interface **IUnknown**. Confira este tópico para obter um exemplo de código.
+É possível usar [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrget-function) para passar seu **com_ptr** para uma função que usa um ponteiro de interface **IUnknown**.
+
+É possível usar a função free [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para retornar o endereço da [interface IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) bruta subjacente (em outras palavras, um ponteiro para ela) de um objeto de um tipo projetado. Em seguida, é possível passar esse endereço para uma função que usa um ponteiro de interface **IUnknown**.
+
+Para obter informações sobre *tipos projetados*, confira [Consumir APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis).
+
+Para obter um exemplo de código de **get_unknown**, confira [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) ou [Listagem completa de código-fonte de um aplicativo Direct2D mínimo](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application) neste tópico.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>Passando e retornando ponteiros inteligentes COM
 

@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ef17fdc69f7a9f25831c5c17419768ff32874f80
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f4871b4a43284052a89d0fd37412528840e1ea5a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80080944"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968731"
 ---
 # <a name="flip-view"></a>Exibição de inversão
 
@@ -26,7 +26,7 @@ Use um recurso exibição de inversão para procurar imagens ou outros itens em 
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | A Biblioteca de interface do usuário do Windows 2.2 ou posterior inclui um novo modelo para esse controle que usa cantos arredondados. Para obter mais informações, confira [Raio de canto](/windows/uwp/design/style/rounded-corner). WinUI é um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs de plataforma:** [Classe FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [propriedade ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propriedade ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 

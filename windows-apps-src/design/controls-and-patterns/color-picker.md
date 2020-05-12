@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f287f738c39e21ea76ff2595cc34ac715a1b52ca
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6e7661beb52438640c570e1a5ec4d7f60502e119
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081185"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968891"
 ---
 # <a name="color-picker"></a>Seletor de cor
 
@@ -28,7 +28,7 @@ Um seletor de cor é usado para navegar e selecionar cores. Por padrão, ele per
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ColorPicker** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ColorPicker** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da Biblioteca de interface do usuário do Windows:** [classe ColorPicker](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [propriedade Color](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
 >
@@ -220,7 +220,7 @@ Valores hexadecimais | IsHexInputVisible
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta em aplicativos UWP](../input/pen-and-stylus-interactions.md)
+- [Interações com canetas em aplicativos do Windows](../input/pen-and-stylus-interactions.md)
 - [Escrita à tinta](inking-controls.md)
 
 <!--

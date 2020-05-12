@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, app certification
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ffd500f3b616367ac26dffbbfc03d43b507dac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 37c382fb81a4527b730840142643ff72b9020127
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089402"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730291"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo de Ponte de Desktop do Windows
 
@@ -37,7 +37,7 @@ Sempre é recomendável ter arquivos assinados digitalmente. Para saber mais, ve
 Esse teste examina o registro do pacote para verificar se qualquer verbo de associação de arquivo está registrado. 
 
 **Detalhes do teste**  
-Os aplicativos da área de trabalho convertidos podem ser aprimorados com uma ampla gama de APIs da Plataforma Universal do Windows. Este teste verifica se os binários da UWP no aplicativo não chamam APIs que não sejam da UWP. Os binários UWP têm o sinalizador **AppContainer** definido.
+Os aplicativos da área de trabalho convertidos podem ser aprimorados com uma ampla gama de APIs do Windows Runtime. Este teste verifica se os binários da UWP no aplicativo não chamam APIs que não sejam do Windows Runtime. Os binários UWP têm o sinalizador **AppContainer** definido.
 
 **Ações corretivas**  
 Veja [Ponte de Desktop para UWP: extensões de aplicativos](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para obter uma explicação sobre essas extensões e como usá-las corretamente. 

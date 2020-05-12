@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b008b12c5f92d56c127c5ec8026d305d3d57a869
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 884bd2e1eded5e3c0dfa92f1488fe0b8661af18d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081678"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970351"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -30,7 +30,7 @@ Menus e menus de contexto exibem uma lista de comandos ou opções quando o usu�
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **MenuBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **MenuBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da Biblioteca de interface do usuário do Windows:** [Classe MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar)
 >

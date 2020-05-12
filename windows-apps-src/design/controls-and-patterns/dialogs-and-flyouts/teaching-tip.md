@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 06734c854f0097db5fa96e35d4123dde8bda8a95
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 479a289ff15ab6a3db7a51d52f4bf3b075e8a64b
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614145"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968771"
 ---
 # <a name="teaching-tip"></a>Dica de ensino
 
@@ -27,7 +27,7 @@ Uma dica de ensino pode ser um light dismiss ou exigir uma ação explícita par
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](../images/winui-logo-64x64.png) | O controle **TeachingTip** exige a Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](../images/winui-logo-64x64.png) | O controle **TeachingTip** exige a Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da Biblioteca de interface do usuário do Windows:** [Classe TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
 

@@ -7,12 +7,12 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc23e86f85c5db3dd10c5cec152047be387d4513
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9ee88e32ed0ce0fd193fe79e48814a11f494d062
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72282295"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970211"
 ---
 # <a name="attached-layouts"></a>Layouts anexados
 
@@ -22,7 +22,7 @@ Neste tópico, abordamos o que está envolvido na criação de um layout anexado
 
 | **Obter a biblioteca de interface do usuário do Windows** |
 | - |
-| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, inclusive instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Este controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs importantes**:
 

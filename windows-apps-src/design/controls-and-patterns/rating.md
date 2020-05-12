@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: edeebf177cf438931bb318ea19cd292a9c9b27c0
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d242107789f7c7575b5796c30d371dbe8bb0a412
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081600"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970791"
 ---
 # <a name="rating-control"></a>Controle de classificação
 
@@ -27,7 +27,7 @@ O controle de classificação permite que os usuários facilmente exibam e defin
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **RatingControl** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **RatingControl** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da Biblioteca de interface do usuário do Windows:** [Classe RatingControl](/uwp/api/microsoft.ui.xaml.controls.ratingcontrol)
 >

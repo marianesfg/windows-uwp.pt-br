@@ -1,5 +1,5 @@
 ---
-Description: Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto UWP, como TextBox, RichEditBox (e controles como o AutoSuggestBox, que fornecem uma experiência de entrada de texto semelhantes).
+Description: Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto do Windows, como TextBox, RichEditBox (e controles como o AutoSuggestBox, que fornecem uma experiência de entrada de texto semelhantes).
 title: Entrada de texto com exibição de texto manuscrito
 label: Text input with the handwriting view
 template: detail.hbs
@@ -11,18 +11,18 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ccd21481a8488a101ee79ae0b0224651a94461a7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684281"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82967961"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com exibição de texto manuscrito
 
-![Caixa de texto se expande quando tocado com a caneta](images/handwritingview/handwritingview2.gif)
+![Caixa de texto se expande quando tocada com a caneta](images/handwritingview/handwritingview2.gif)
 
-Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto UWP, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), e controles derivados destes, como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
+Personalize a exibição interna de manuscrito para entrada tinta em texto que é compatível com controles de texto do Windows, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), e controles derivados desses, como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
 
 ## <a name="overview"></a>Visão geral
 

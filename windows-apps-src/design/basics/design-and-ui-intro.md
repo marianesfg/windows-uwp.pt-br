@@ -1,24 +1,24 @@
 ---
 Description: Os recursos de design universais inclusos em todos os aplicativos UWP ajudam a compilar aplicativos que se adaptam perfeitamente em diversos dispositivos.
-title: Introdução ao design de aplicativos UWP (Plataforma Universal do Windows) (aplicativos do Windows)
+title: Introdução ao design de aplicativos do Windows (aplicativos do Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 05/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d0e7ad60e8c709cf4a7b075b1d7307bbd61ed79c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209311"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969351"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
 ![exemplo de aplicativo de iluminação](images/introUWP-header.jpg)
 
-As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados.
+As diretrizes de design de aplicativos do Windows são recursos que ajudam você a projetar e criar aplicativos belos e refinados.
 
 Não é uma lista de regras limitadoras, é um documento dinâmico, projetado para se adaptar ao nosso [Sistema de Design Fluente](/windows/apps/fluent-design-system), que está em constante evolução, bem como às necessidades de nossa comunidade de criação de aplicativos.
 

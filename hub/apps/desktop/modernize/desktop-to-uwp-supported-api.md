@@ -1,6 +1,6 @@
 ---
-Description: Os aplicativos da área de trabalho empacotados poderão usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo empacotado pode usar.
-title: APIs UWP disponíveis para um aplicativo da área de trabalho empacotado (Ponte de Desktop)
+Description: Os aplicativos da área de trabalho empacotados poderão usar uma ampla variedade de APIs do Windows Runtime, mesmo se eles não tiverem feito a transição completa para um aplicativo da UWP. Este artigo lista as classes disponíveis que seu aplicativo empacotado pode usar.
+title: APIs do Windows Runtime disponíveis para um aplicativo da área de trabalho empacotado (Ponte de Desktop)
 ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,18 +9,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 68c2427fe6b02385325f0f224cc837912621f6bb
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209662"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729857"
 ---
-# <a name="uwp-apis-available-to-desktop-apps"></a>APIs UWP disponíveis para aplicativos da área de trabalho
+# <a name="windows-runtime-apis-available-to-desktop-apps"></a>APIs do Windows Runtime disponíveis para aplicativos da área de trabalho
 
 Os aplicativos da área de trabalho poderão usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo da área de trabalho pode usar.
 
-Muitas APIs UWP exigem que o [identificador de pacote](modernize-packaged-apps.md) seja usado em um aplicativo da área de trabalho. A maioria das APIs UWP funciona bem com aplicativos que têm identificador de pacote. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada.
+Muitas APIs do Windows Runtime exigem que o [identificador de pacote](modernize-packaged-apps.md) seja usado em um aplicativo da área de trabalho. A maioria das APIs do Windows Runtime funciona bem com aplicativos que têm identificador de pacote. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada.
 
 | Área do recurso | Detalhes |
 |--------------|---------|
@@ -45,9 +45,9 @@ Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No 
 
 ## <a name="list-of-apis"></a>Lista de APIs
 
-Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos da área de trabalho. Você pode ver [APIs com suporte somente em aplicativos com identificador de pacote](#new) ou [APIs com suporte em todos os aplicativos da área de trabalho](#both).
+Veja a seguir uma lista completa de APIs do Windows Runtime com suporte em aplicativos da área de trabalho. Você pode ver [APIs com suporte somente em aplicativos com identificador de pacote](#new) ou [APIs com suporte em todos os aplicativos da área de trabalho](#both).
 
-Para obter exemplos sobre como usar APIs UWP, confira os [Exemplos de Ponte de Desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub. Você também pode consultar a postagem do blog Compilação de aplicativos para Windows [Como chamar APIs do Windows 10 de um aplicativo da área de trabalho](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
+Para obter exemplos sobre como usar APIs do Windows Runtime, confira os [Exemplos de Ponte de Desktop](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples) no GitHub. Você também pode consultar a postagem do blog Compilação de aplicativos para Windows [Como chamar APIs do Windows 10 de um aplicativo da área de trabalho](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
 
 <a id="new" />
 

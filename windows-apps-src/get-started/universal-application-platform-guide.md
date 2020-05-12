@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb06581639391c09c445c8497f67af28a8405df
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c9b2c270538ec49a139b88fb1c7eddb92acad10a
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685008"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730089"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da UWP (Plataforma Universal do Windows)?
 
@@ -152,6 +152,6 @@ Se você estiver criando um aplicativo da UWP (Plataforma Universal do Windows),
 
 O Windows Runtime e APIs do WinRT são uma evolução das APIs do Windows. Originalmente, o Windows foi programado por meio de APIs Win32 em etilo C simples. A elas, foram adicionadas APIs COM (sendo [DirectX](https://docs.microsoft.com/windows/desktop/directx) um exemplo de destaque). Windows Forms, WPF, .NET e linguagens gerenciadas trouxeram sua própria maneira de escrever aplicativos do Windows e sua própria variante de tecnologia de API. O Windows Runtime é, nos bastidores, o próximo estágio do COM. Na camada ABI (interface binária de aplicativo) propriamente dita, suas raízes em COM tornam-se visíveis. Mas o Windows Runtime foi projetado para poder ser chamado de uma gama maior de diferentes linguagens de programação. E pode ser chamado de uma maneira muito natural para cada uma dessas linguagens. Para esse fim, o acesso ao Windows Runtime é disponibilizado por meio das chamadas projeções de linguagem. Há uma projeção de linguagem do Windows Runtime para C#, Visual Basic, C++ padrão, JavaScript e assim por diante. Além disso, uma vez empacotado corretamente (confira [Ponte de Desktop](/windows/uwp/porting/desktop-to-uwp-root)), você pode chamar APIs do WinRT de um aplicativo criado em um de uma ampla gama de modelos de aplicativos: Win32, .NET, WinForms e WPF.
 
-E, claro, você pode chamar APIs do WinRT do seu aplicativo da UWP. UWP é um modelo de aplicativo criado com base no Windows Runtime. Tecnicamente, o modelo de aplicativo UWP baseia-se em [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), embora esse detalhe possa estar oculto de você, dependendo de sua escolha de linguagem de programação. Como este tópico explicou, de um ponto de vista de proposta de valor, a UWP é útil para escrever um único binário que pode, se você quiser, ser publicado na Microsoft Store e executado em uma grande variedade de fatores forma de dispositivo. O alcance de dispositivo de seu aplicativo UWP depende do subconjunto de APIs de UWP que você limita o seu aplicativo a chamar ou que você chama condicionalmente.
+E, claro, você pode chamar APIs do WinRT do seu aplicativo da UWP. UWP é um modelo de aplicativo criado com base no Windows Runtime. Tecnicamente, o modelo de aplicativo UWP baseia-se em [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), embora esse detalhe possa estar oculto de você, dependendo de sua escolha de linguagem de programação. Como este tópico explicou, de um ponto de vista de proposta de valor, a UWP é útil para escrever um único binário que pode, se você quiser, ser publicado na Microsoft Store e executado em uma grande variedade de fatores forma de dispositivo. O alcance de dispositivo de seu aplicativo da UWP depende do subconjunto de APIs do Windows Runtime que você limita o seu aplicativo a chamar ou que você chama condicionalmente.
 
 Espero que esta seção tenha sido bem-sucedida em descrever a diferença entre a tecnologia subjacente de APIs do Windows Runtime e o mecanismo e o valor comercial da plataforma Universal do Windows.

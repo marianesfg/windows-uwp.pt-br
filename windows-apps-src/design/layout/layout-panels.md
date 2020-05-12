@@ -1,16 +1,16 @@
 ---
 Description: Use os painéis de layout para organizar e agrupar elementos de interface do usuário em seu aplicativo.
-title: Painéis de layout para aplicativos UWP (Plataforma Universal do Windows)
+title: Painéis de layout para aplicativos do Windows
 ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 68aceb1fe4b0136bac9f8ff342f079f0dc23c1c7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210202"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970941"
 ---
 # <a name="layout-panels"></a>Painéis de layout
 

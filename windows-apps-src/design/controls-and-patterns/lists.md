@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 75bc81f4295fb76f5a7cc61b3cadd1496f57dc4c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9896003fb1d55a2dbb57468848edd66a3d8d8d88
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80893476"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970391"
 ---
 # <a name="collections-and-lists"></a>Coleções e listas
 
@@ -41,7 +41,7 @@ Cada um desses controles (com exceção do ItemsRepeater) também tem o comporta
 
 Um dos cenários não abordados neste artigo é a exibição de coleções em uma tabela ou em várias colunas. Se você estiver procurando exibir uma coleção nesse formato, considere usar o [Controle DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) do [Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/windows/communitytoolkit/). 
 
-> **Windows 10 Fall Creators Update – alteração de comportamento** Por padrão, em vez de realizar uma seleção, uma caneta ativa agora faz a rolagem/aplica panorâmica em uma lista nos aplicativos UWP (como toque, touchpad e caneta passiva).
+> **Windows 10 Fall Creators Update – alteração de comportamento** Por padrão, em vez de realizar uma seleção, uma caneta ativa agora faz a rolagem/aplica panorâmica em uma lista nos aplicativos do Windows (como toque, touchpad e caneta passiva).
 > Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Para obter detalhes, confira o tópico de referência de API para a [Classe ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 ## <a name="examples"></a>Exemplos

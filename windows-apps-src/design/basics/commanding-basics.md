@@ -1,6 +1,6 @@
 ---
-Description: Em um aplicativo da Plataforma Universal do Windows (UWP), elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário.
-title: Noções básicas de design de comando para aplicativos da Plataforma Universal do Windows (UWP)
+Description: Em um aplicativo do Windows, elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário.
+title: Noções básicas de design de comando para aplicativos do Windows
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
@@ -10,16 +10,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6be51c274078d3b8db5ae50033bbf714ec4aa12a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 26d649e5a27ae7eef0131964f5c277f3539da73f
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081398"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969371"
 ---
-# <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para aplicativos UWP
+# <a name="command-design-basics-for-windows-apps"></a>Noções básicas de design de comando para aplicativos do Windows
 
-Em um aplicativo UWP (Plataforma Universal do Windows), *elementos de comando* são os elementos interativos da interface do usuário que permitem aos usuários executar ações como enviar um email, excluir um item ou enviar um formulário. As *interfaces de comando* são formadas por elementos de comando comuns, as superfícies de comando que as hospedam, as interações compatíveis com elas e as experiências que elas oferecem.
+Em um aplicativo do Windows, *elementos de comando* são os elementos interativos da interface do usuário que permitem aos usuários executar ações como enviar um email, excluir um item ou enviar um formulário. As *interfaces de comando* são formadas por elementos de comando comuns, as superfícies de comando que as hospedam, as interações compatíveis com elas e as experiências que elas oferecem.
 
 ## <a name="provide-the-best-command-experience"></a>Proporcionar a melhor experiência de comando
 
@@ -33,7 +33,7 @@ Veja algumas experiências de comando comuns:
 - Abrir, salvar e excluir arquivos
 - Editar ou criar conteúdo
 
-Seja criativo ao projetar experiências de comando. Escolha quais dispositivos de entrada serão compatíveis e como o aplicativo responderá a cada um deles. Ao oferecer compatibilidade com a mais ampla variedade de funcionalidades e preferências, o aplicativo fica o mais utilizável, móvel e acessível o possível. Confira [Noções básicas de design de comandos para aplicativos da UWP (Plataforma Universal do Windows)](../controls-and-patterns/commanding.md) para saber mais detalhes.
+Seja criativo ao projetar experiências de comando. Escolha quais dispositivos de entrada serão compatíveis e como o aplicativo responderá a cada um deles. Ao oferecer compatibilidade com a mais ampla variedade de funcionalidades e preferências, o aplicativo fica o mais utilizável, portátil e acessível possível (confira [Noções básicas de design de comandos para aplicativos do Windows](../controls-and-patterns/commanding.md) para saber mais detalhes).
 
 
 
@@ -43,7 +43,7 @@ When designing a command interface, the most important decision is choosing what
 
 ## <a name="choose-the-right-command-elements"></a>Escolher os elementos de comando certos
 
-Usar os elementos certos em uma interface de comando pode fazer a diferença entre um aplicativo que parece intuitivo e fácil de usar e um que parece difícil ou confuso. Um conjunto abrangente de elementos de comando está disponível na UWP (Plataforma Universal do Windows). Veja uma lista de alguns dos elementos de comando mais comuns da UWP.
+Usar os elementos certos em uma interface de comando pode fazer a diferença entre um aplicativo que parece intuitivo e fácil de usar e um que parece difícil ou confuso. Um conjunto abrangente de elementos de comando está disponível no aplicativo do Windows. Veja uma lista de alguns dos elementos de comando mais comuns da UWP.
 
 :::row:::
     :::column:::

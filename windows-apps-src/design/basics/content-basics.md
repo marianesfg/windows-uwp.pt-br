@@ -1,6 +1,6 @@
 ---
-Description: Uma visão geral de padrões comuns de página e elementos de interface do usuário para exibir conteúdo no aplicativo UWP.
-title: Noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)
+Description: Uma visão geral de padrões comuns de página e elementos de interface do usuário para exibir conteúdo no aplicativo do Windows.
+title: Noções básicas de design de conteúdo para aplicativos do Windows
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
@@ -9,14 +9,14 @@ ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fdb4f21c2837fdc201d9e9847541cfd2bf728468
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63796347"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969341"
 ---
-# <a name="content-design-basics-for-uwp-apps"></a>Noções básicas de design de conteúdo para aplicativos UWP
+# <a name="content-design-basics-for-windows-apps"></a>Noções básicas de design de conteúdo para aplicativos do Windows
 
 O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Já que os aplicativos existem por diversos motivos, o conteúdo vem em diversos formatos: em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, mapas e informações sobre destinos de viagem são o conteúdo; e assim por diante. 
 

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5ae8094ac3fbb1de8958b1cc138953d3e1b887cc
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684382"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970381"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -24,6 +24,9 @@ O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição d
 > **APIs importantes**: [classe ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
+
+> [!TIP]
+> Se deseja usar um controle XAML que implemente esse padrão para você, recomendamos o [Controle XAML MasterDetailsView](/windows/communitytoolkit/controls/masterdetailsview) do Kit de Ferramentas da Comunidade do Windows.
 
 ## <a name="is-this-the-right-pattern"></a>Este é o padrão certo?
 
@@ -61,7 +64,7 @@ Para a página de visualização mestre, um controle de [exibição de lista](li
 
 Para a página de visualização de detalhes, use o [content element](../layout/layout-panels.md) que faz mais sentido. Se tiver muitos campos separados, considere o uso de um layout de **grade** para organizar os elementos em um formulário.
 
-Para navegação entre páginas, confira [Histórico de navegação e navegação regressiva para aplicativos UWP](../basics/navigation-history-and-backwards-navigation.md).
+Para navegação entre páginas, confira o [histórico de navegação e navegação regressiva para aplicativos do Windows](../basics/navigation-history-and-backwards-navigation.md).
 
 ## <a name="side-by-side-style"></a>Estilo lado a lado
 
@@ -98,6 +101,9 @@ Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adapt�
 - [Exemplo de mestre/detalhes do Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
+
+> [!TIP]
+> Se deseja usar um controle XAML que implemente esse padrão para você, recomendamos o [Controle XAML MasterDetailsView](/windows/communitytoolkit/controls/masterdetailsview) do Kit de Ferramentas da Comunidade do Windows.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

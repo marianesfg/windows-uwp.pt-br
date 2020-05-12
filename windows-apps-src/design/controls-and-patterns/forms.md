@@ -1,16 +1,16 @@
 ---
-Description: Diretrizes de layout para formulários em aplicativos da UWP.
+Description: Diretrizes de layout para formulários em aplicativos do Windows.
 title: Formulários
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluente
-ms.openlocfilehash: b6533864748b4245b16ec7bcea9d2a831ff1c88a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 69ffaf4ff67d4ee78e78c195d759ae242a069e8e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76520441"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968507"
 ---
 # <a name="forms"></a>Formulários
 Um formulário é um grupo de controles que coleta e envia dados de usuários. Os formulários são usados normalmente em páginas de configurações, pesquisas, criação de contas e muito mais. 
@@ -62,7 +62,7 @@ Os [rótulos](labels.md) devem estar alinhados à esquerda e ser colocados acima
 
 Para [design com acessibilidade](../accessibility/accessibility.md), rotule todos os indivíduos e grupos de controles para maior clareza tanto para leitores de tela quanto para pessoas. 
 
-Para estilos de fonte, use o padrão [rampa de tipo UWP](../style/typography.md). Use `TitleTextBlockStyle` para títulos de página, `SubtitleTextBlockStyle` para cabeçalhos de grupo e `BodyTextBlockStyle` para rótulos de controle.
+Para estilos de fonte, use o padrão [rampa de tipos do Windows](../style/typography.md). Use `TitleTextBlockStyle` para títulos de página, `SubtitleTextBlockStyle` para cabeçalhos de grupo e `BodyTextBlockStyle` para rótulos de controle.
 
 <div class="mx-responsive-img">
 <table>
@@ -149,7 +149,7 @@ Control | Uso
 ### <a name="additional-controls"></a>Controles adicionais 
 Para obter uma lista completa de controles da UWP, confira [índice de controles por função](controls-by-function.md).
 
-Para controles de interface do usuário mais complexos e personalizados, confira os recursos da UWP disponíveis de empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) e [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
+Para controles de interface do usuário mais complexos e personalizados, confira os recursos disponíveis de empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) e [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
 
 ## <a name="one-column-form-example"></a>Exemplo de formulário de uma coluna
 Este exemplo usa uma [exibição de lista](master-details.md) [mestre/detalhada](lists.md) Acrílica e o controle [NavigationView](navigationview.md).

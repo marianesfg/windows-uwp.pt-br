@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e098283bae6f58b927892c680a4981d83f9e31e8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4f0814621c67c01d5d1a73235faf02d3d753f2c2
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081381"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970051"
 ---
 # <a name="buttons"></a>Botões
 
@@ -42,7 +42,7 @@ Control | Descrição
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | **DropDownButton**, **SplitButton** e **ToggleSplitButton** estão incluídos como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | **DropDownButton**, **SplitButton** e **ToggleSplitButton** estão incluídos como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **APIs da Biblioteca de interface do usuário do Windows:** [Classe DropDownButton](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [Classe SplitButton](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [Classe ToggleSplitButton](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton)
 >
@@ -550,7 +550,7 @@ Se o layout exige apenas um botão, ele deve ser alinhado à esquerda ou à dire
 
 ## <a name="back-buttons"></a>Botões Voltar
 
-O botão Voltar é um elemento de interface do usuário fornecida pelo sistema que permite a navegação regressiva através da pilha Voltar ou do histórico de navegação de um usuário. Você não precisa criar seu próprio botão Voltar, mas talvez precise trabalhar um pouco para permitir uma boa experiência de navegação regressiva. Para obter mais informações, consulte [Histórico de navegação e navegação retroativa para aplicativos UWP](../basics/navigation-history-and-backwards-navigation.md).
+O botão Voltar é um elemento de interface do usuário fornecida pelo sistema que permite a navegação regressiva através da pilha Voltar ou do histórico de navegação de um usuário. Você não precisa criar seu próprio botão Voltar, mas talvez precise trabalhar um pouco para permitir uma boa experiência de navegação regressiva. Para obter mais informações, confira [Histórico de navegação e navegação regressiva para aplicativos do Windows](../basics/navigation-history-and-backwards-navigation.md).
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo

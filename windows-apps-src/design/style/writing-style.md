@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f5f38fdfb3ba9fd32a6e06ec19cdbfb6c3b09f24
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8d79d4f3394bcf8f7892f2c6dc3d4e0ca72972ab
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867680"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970601"
 ---
 # <a name="writing-style"></a>Estilo de escrita
 
@@ -103,7 +103,7 @@ Fale diretamente com o usuário.
 
 :::row:::
     :::column:::
-![Fazer](images/do.svg) As orientações sobre design da UWP (Plataforma Universal do Windows) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Com os recursos de design que estão incluídos em cada aplicativo UWP, você pode criar UIs (interfaces do usuário) que sejam dimensionadas em uma ampla variedade de dispositivos.
+![Fazer](images/do.svg) As diretrizes de design de aplicativos do Windows são recursos que ajudam você a projetar e criar aplicativos belos e refinados. Com os recursos de design que estão incluídos em cada aplicativo do Windows, você pode criar IUs (interfaces do usuário) que sejam dimensionadas em uma ampla variedade de dispositivos.
     :::column-end:::
     :::column:::
     :::column-end:::

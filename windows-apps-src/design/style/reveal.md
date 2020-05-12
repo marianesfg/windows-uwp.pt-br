@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a7ee8550b72356199645f54b587480275c2bcd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 26e756b52d4faf18eff2fc684c7db94bca058642
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685078"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971071"
 ---
 # <a name="reveal-highlight"></a>Realce de Revelação
 
@@ -282,7 +282,7 @@ Ao habilitar a Revelação em um controle personalizado ou remodelado ou em uma 
 
 ## <a name="reveal-and-the-fluent-design-system"></a>Revelação e o Sistema de Design Fluente
 
- O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Revelação é um componente do Sistema de Design Fluente que acrescenta luz ao seu aplicativo. Para saber mais, confira a [Visão geral do Design Fluente para UWP](/windows/apps/fluent-design-system).
+ O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Revelação é um componente do Sistema de Design Fluente que acrescenta luz ao seu aplicativo. Para saber mais, confira a [Visão geral do Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artigos relacionados
 

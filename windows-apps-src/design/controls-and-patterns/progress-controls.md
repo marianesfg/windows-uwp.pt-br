@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 66dc74e73207feb9b155adffc116f857dcb3027d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 34eca0c822b0da96cae39463777c5c3e9888240c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081627"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970801"
 ---
 # <a name="progress-controls"></a>Controles de progresso
 
@@ -27,14 +27,14 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ProgressBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **ProgressBar** está incluído como parte da Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para obter mais informações, incluindo instruções de instalação, confira [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-> **APIs da Biblioteca de Interface do Usuário do Windows:** [Classe ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate)
+> **APIs da Biblioteca de interface do usuário do Windows:** [classe ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/Microsoft.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/Microsoft.ui.xaml.controls.progressring.isactive)
 >
 > **APIs de plataforma:** [classe ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propriedade IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [classe ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propriedade IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 > [!NOTE]
-> Há duas versões do controle da ProgressBar: uma na plataforma, representada pelo namespace Windows.UI.XAML e outra na biblioteca de interface do usuário do Windows, o namespace Microsoft.UI.XAML. Embora a API para ProgressBar seja a mesma, a aparência do controle é diferente entre essas duas versões. Este documento mostrará imagens da versão mais recente da biblioteca da interface do usuário do Windows.
+> Há duas versões dos controles ProgressBar e ProgressRing: uma na plataforma, representada pelo namespace Windows.UI.Xaml e outra na biblioteca de interface do usuário do Windows, o namespace Microsoft.UI.Xaml. Embora as APIs para ProgressRing e ProgressBar sejam as mesmas, as aparências do controle são diferentes entre as duas versões. Este documento mostrará imagens da versão mais recente da biblioteca da interface do usuário do Windows.
 Neste documento, usaremos o alias **muxc** em XAML para representar a APIs da Biblioteca de interface do usuário do Windows que incluímos em nosso projeto. Adicionamos isso ao nosso elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page):
 
 ```xaml
@@ -195,7 +195,7 @@ Por padrão, a cor principal dos controles de progresso é definida como a cor d
 <muxc:ProgressBar Width="100" Foreground="Green"/>
 ```
 
-A alteração da cor de primeiro plano do ProgressRing alterará as cores dos pontos. A propriedade de primeiro plano do ProgressBar alterará a cor de preenchimento da barra – para alterar a parte não preenchida da barra, basta substituir a propriedade de plano de fundo.
+A alteração da cor de primeiro plano do ProgressRing vai alterar a cor de preenchimento do anel. A propriedade de primeiro plano do ProgressBar alterará a cor de preenchimento da barra – para alterar a parte não preenchida da barra, basta substituir a propriedade de plano de fundo.
 
 **Mostrar um cursor de espera**
 

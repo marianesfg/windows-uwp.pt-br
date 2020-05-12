@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: Windows, win32, desenvolvimento de área de trabalho
-ms.openlocfilehash: bf8a5970d1999427023592f919ef0b92737fa934
-ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
+ms.openlocfilehash: 906126c14dd32a9c0196d53deab5bc36c07f4bef
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79510979"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729841"
 ---
 # <a name="choose-your-app-platform"></a>Escolha sua plataforma de aplicativo
 
@@ -31,6 +31,8 @@ Todas essas plataformas de aplicativos permitem criar aplicativos da área de tr
 * **WPF e Windows Forms**. Essas plataformas fornecem um Common Type System, APIs e um modelo de aplicativo para aplicativos gerenciados em execução no .NET.
 
 * **API do Win32**. A API do Win32 (também chamada de API do Windows) é plataforma original para aplicativos nativos do Windows em C/C++ que exigem acesso direto ao Windows e ao hardware. Isso torna a API do Win32 a plataforma preferida para aplicativos que precisam do nível mais alto de desempenho e acesso direto ao hardware do sistema.
+
+No Windows 10, todas essas plataformas dão suporte ao uso da [Biblioteca de Interface do Usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui) para criar as respectivas interfaces do usuário. O WinUI fornece um conjunto de controles modernos, incluindo versões aprimoradas dos controles XAML existentes e novos controles. O WinUI também dá suporte às versões anteriores do Windows 10 para maximizar a disponibilidade.
 
 Tanto a UWP quanto o .NET têm integração profunda com o Visual Studio. Isso gera muitos benefícios, principalmente nas áreas de produtividade do desenvolvedor, interface do usuário sofisticada e personalizável e segurança do aplicativo. Como essas estruturas dão suporte a designers visuais e marcação de interface do usuário para criar rapidamente a interface do usuário, elas são especialmente adequadas para aplicativos de linha de negócios.
 
@@ -110,7 +112,7 @@ A tabela a seguir compara várias características do Windows Forms, do WPF e da
 | **Software livre** | [Sim (somente na biblioteca de interface do usuário do Windows)](https://github.com/Microsoft/microsoft-ui-xaml)  |  [Sim (somente no .NET Core)](https://github.com/dotnet/wpf) | [Sim (somente no .NET Core)](https://github.com/dotnet/winforms)  |
 | **Dá suporte a XAML** |   Sim   |  Sim  |   Não   |
 | **Pontos fortes**  |  <ul><li>Marcação XAML para interface do usuário</li><li>UX rica e personalizável</li><li>Suas bases de código existentes estão em conformidade com .NET Standard</li><li>Suporte a DPI alto</li><li>Suporte para vários tipos de entrada em dispositivos Windows (incluindo toque, caneta, gamepad, mouse e teclado)</li><li>Suporte para Xbox, HoloLens, IoT ou Surface Hub</li><li>Interface do usuário densa (compacta) opcional</li><li>Suporte para C++ nativo</li><li>Duração da bateria otimizada</li><li>Suporte à acessibilidade moderna (como leitores de tela)</li><li>Funcionalidades de dados de Rich Text (como a verificação ortográfica interna)</li><li>Suporte à escrita à tinta</li><li>Execução segura por meio de contêineres de aplicativo (por exemplo, conteúdo não confiável está em área restrita)</li></ul>  |  <ul><li>Marcação XAML para interface do usuário</li><li>UX rica e personalizável</li><li>Grande coleção de controles da Microsoft e de parceiros</li><li>Interface do usuário densa</li><li>Suporte para o Windows 7</li><li>Suporte de plataforma para validação de entrada</li></ul> | <ul><li>Método RAD</li><li>Editor WYSIWYG para criar a interface do usuário</li><li>Grande coleção de controles da Microsoft e de parceiros</li><li>Interface do usuário densa</li><li>Suporte para o Windows 7</li><li>Entrada de mouse e teclado</li></ul>          |
-| **Cenários com suporte limitado** |  <ul><li>Suporte a várias janelas<sup>1</sup></li><li>Suporte de plataforma para validação de entrada<sup>1</sup></li><li>Não há suporte para Windows 7</li><li>Algumas APIs da UWP exigem versões mínimas específicas do Windows 10</li><li>Suporte completo à plataforma e integração de shell (por exemplo, a UWP atualmente não dá suporte à integração da bandeja do sistema nem acesso completo a todos os dispositivos)</li><li>Acesso direto a todos os arquivos em disco</li><li>ADO.NET</li><li>Bibliotecas de classes base de código existentes que usam APIs em conformidade com o Kit de Certificação de Aplicativos não .NET Standard ou não Windows</li><li>Suporte a loopback de rede local (ou seja, se o seu aplicativo precisar se comunicar com o localhost sem criar uma isenção de loopback no dispositivo de destino)</li><li>E/S de arquivo intensiva</li></ul>     |  <ul><li>Suporte a DPI alto<sup>2</sup></li><li>Entrada por toque<sup>2</sup></li></ul>  |  <ul><li>Suporte a DPI alto<sup>2</sup></li><li>Entrada por toque<sup>2</sup></li><li>Interface do usuário personalizável</li><li>Gráficos avançados e experiências do usuário (como toque e animações)</li><li>Abstração avançada de exibições e modelos de dados</li></ul>    |   |
+| **Cenários com suporte limitado** |  <ul><li>Suporte a várias janelas<sup>1</sup></li><li>Suporte de plataforma para validação de entrada<sup>1</sup></li><li>Não há suporte para Windows 7</li><li>Algumas APIs do Windows Runtime exigem versões mínimas específicas do Windows 10</li><li>Suporte completo à plataforma e integração de shell (por exemplo, a UWP atualmente não dá suporte à integração da bandeja do sistema nem acesso completo a todos os dispositivos)</li><li>Acesso direto a todos os arquivos em disco</li><li>ADO.NET</li><li>Bibliotecas de classes base de código existentes que usam APIs em conformidade com o Kit de Certificação de Aplicativos não .NET Standard ou não Windows</li><li>Suporte a loopback de rede local (ou seja, se o seu aplicativo precisar se comunicar com o localhost sem criar uma isenção de loopback no dispositivo de destino)</li><li>E/S de arquivo intensiva</li></ul>     |  <ul><li>Suporte a DPI alto<sup>2</sup></li><li>Entrada por toque<sup>2</sup></li></ul>  |  <ul><li>Suporte a DPI alto<sup>2</sup></li><li>Entrada por toque<sup>2</sup></li><li>Interface do usuário personalizável</li><li>Gráficos avançados e experiências do usuário (como toque e animações)</li><li>Abstração avançada de exibições e modelos de dados</li></ul>    |   |
 
 <sup>1</sup> Anunciamos recursos publicamente que abordarão esse cenário em uma versão futura do Windows 10.
 

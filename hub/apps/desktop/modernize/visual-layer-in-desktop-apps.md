@@ -7,16 +7,16 @@ keywords: windows 10, uwp
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 249291c59a31036fa967ac338209404557b57503
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 33a5f0bc31a8fe1421f7ab0de5f229d2feb77915
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66215172"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730134"
 ---
 # <a name="using-the-visual-layer-in-desktop-apps"></a>Usar a Camada visual em aplicativos da área de trabalho
 
-Agora, você pode usar as APIs da UWP em aplicativos da área de trabalho não UWP para aprimorar a aparência e a funcionalidade de seus aplicativos WPF, Windows Forms e Win32 C++, além de tirar proveito dos recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio da UWP.
+Agora, é possível usar as APIs do Windows Runtime em aplicativos da área de trabalho não UWP para aprimorar a aparência e a funcionalidade de seus aplicativos WPF, Windows Forms e Win32 C++, além de aproveitar os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio da UWP.
 
 Para muitos cenários, você pode usar [ilhas XAML](xaml-islands.md) para adicionar controles XAML modernos ao seu aplicativo. No entanto, quando você precisa criar experiências personalizadas que vão além dos controles internos, é possível acessar as APIs da Camada visual.
 

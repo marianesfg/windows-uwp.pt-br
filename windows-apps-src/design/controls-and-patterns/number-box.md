@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d0e4a290da0d67560715f80bf20fc6ae4d44a8f6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a74d98298f2c51059d8293022817e91ba573cf45
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81266954"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970691"
 ---
 # <a name="number-box"></a>Caixa de número
 
@@ -22,7 +22,7 @@ Representa um controle que pode ser usado para exibir e editar números. Isso d�
 
 |  |  |
 | - | - |
-| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **NumberBox** exige a Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| ![Logotipo do WinUI](images/winui-logo-64x64.png) | O controle **NumberBox** exige a Biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos do Windows. Para saber obter mais informações, incluindo instruções de instalação, confira a [visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 **APIs da Biblioteca de interface do usuário do Windows:** [Classe NumberBox](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
 

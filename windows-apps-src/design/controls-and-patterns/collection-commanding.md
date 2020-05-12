@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b97041e305cfaac2a5fe202212741a282dccdb54
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63801199"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968871"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuais para coleções e listas
 
@@ -31,7 +31,7 @@ Muitos aplicativos contêm coleções de conteúdo na forma de listas, grades e 
 
 ## <a name="creating-commands-for-all-input-types"></a>Criar comandos para todos os tipos de entrada
 
-Como os usuários podem interagir com um aplicativo UWP usando [uma ampla variedade de dispositivos e entradas](../devices/index.md), o aplicativo deve expor comandos por meio de menus de contexto independentes do tipo de entrada e aceleradores de entrada específicos. A inclusão de ambos permite que o usuário invoque rapidamente comandos no conteúdo, independentemente do tipo de entrada ou dispositivo.
+Como os usuários podem interagir com um aplicativo do Windows usando [uma ampla variedade de dispositivos e entradas](../devices/index.md), o aplicativo deve expor comandos por meio de menus de contexto independentes do tipo de entrada e aceleradores de entrada específicos. A inclusão de ambos permite que o usuário invoque rapidamente comandos no conteúdo, independentemente do tipo de entrada ou dispositivo.
 
 Esta tabela mostra alguns comandos típicos de coleção e os modos de expô-los. 
 
@@ -445,7 +445,7 @@ Para otimizar o aplicativo para entrada de caneta, confira o artigo [Interação
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
-* Verifique se os usuários podem acessar todos os comandos de todos os tipos de dispositivos UWP.
+* Verifique se os usuários podem acessar todos os comandos de todos os tipos de dispositivos Windows.
 * Inclua um menu de contexto que fornece acesso a todos os comandos disponíveis para um item da coleção. 
 * Forneça aceleradores de entradas para comandos usados com frequência. 
 * Use a [interface ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand) para implementar comandos. 

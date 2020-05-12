@@ -1,6 +1,6 @@
 ---
-Description: Aprimore seu aplicativo da área de trabalho para usuários do Windows 10 usando as APIs da UWP (Plataforma Universal do Windows).
-title: Usar as APIs da UWP em aplicativos de área de trabalho
+Description: Aprimore seu aplicativo de área de trabalho para usuários do Windows 10 usando as APIs do Windows Runtime.
+title: Chamar APIs do Windows Runtime em aplicativos da área de trabalho
 ms.date: 08/20/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,24 +8,24 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 78d9760c5ef21b29d09babaace0f4379b6a51209
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 444699c00a17dd90fe4c08c44ff56d540cadb3d6
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302600"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729864"
 ---
-# <a name="call-uwp-apis-in-desktop-apps"></a>Chamar as APIs da UWP em aplicativos de área de trabalho
+# <a name="call-windows-runtime-apis-in-desktop-apps"></a>Chamar APIs do Windows Runtime em aplicativos da área de trabalho
 
 Você pode usar APIs da UWP (Plataforma Universal do Windows) para adicionar experiências modernas aos seus aplicativos de área de trabalho, que se destaquem para os usuários do Windows 10.
 
-Primeiro, configure seu projeto com as referências necessárias. Em seguida, chame as APIs da UWP do seu código para adicionar experiências do Windows 10 ao aplicativo da área de trabalho. Você pode criar separadamente para usuários do Windows 10 ou distribuir os mesmos binários a todos os usuários, independentemente da versão do Windows executada.
+Primeiro, configure seu projeto com as referências necessárias. Em seguida, chame as APIs do Windows Runtime do seu código para adicionar experiências do Windows 10 ao aplicativo da área de trabalho. Você pode criar separadamente para usuários do Windows 10 ou distribuir os mesmos binários a todos os usuários, independentemente da versão do Windows executada.
 
-Algumas APIs da UWP têm suporte apenas em aplicativos de área de trabalho que possuem [identificador de pacote](modernize-packaged-apps.md). Para obter mais informações, confira [APIs da UWP disponíveis](desktop-to-uwp-supported-api.md).
+Algumas APIs do Windows Runtime são compatíveis apenas com aplicativos da área de trabalho que têm um [identificador de pacote](modernize-packaged-apps.md). Para saber mais, confira [APIs do Windows Runtime disponíveis](desktop-to-uwp-supported-api.md).
 
 ## <a name="set-up-your-project"></a>Configurar o projeto
 
-Você precisará fazer algumas alterações em seu projeto para usar as APIs da UWP.
+Será necessário fazer algumas alterações em seu projeto para usar as APIs do Windows Runtime.
 
 ### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Modificar um projeto .NET para usar APIs do Windows Runtime
 

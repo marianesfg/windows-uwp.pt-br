@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d0c2f5c5aa6c5d5bfcaee8e9b0ec14bbcd4ff3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8ed4515a90df50a1ff8c0d6b82eb8cda5a4a78c9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71339374"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968741"
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -186,7 +186,7 @@ Uma forma rápida de aplicar temas aos seus controles é clicar com o botão dir
 
 ## <a name="controls-and-accessibility"></a>Controles e acessibilidade
 
-Ao criar um novo modelo de controle, além da possibilidade de mudar o comportamento e a aparência visual do controle, você também pode alterar como o controle se representa nas estruturas de acessibilidade. A Plataforma Universal do Windows (UWP) é compatível com a estrutura de Automação da IU Microsoft para acessibilidade. Todos os controles padrão e seus modelos permitem tipos e padrões comuns de controle de Automação da Interface do Usuário adequados para a finalidade e a função do controle. Esses tipos e padrões de controle são interpretados por clientes de Automação da Interface do Usuário, como tecnologias adaptativas, permitindo acessar um controle como parte de uma interface do usuário de aplicativo acessível maior.
+Ao criar um novo modelo de controle, além da possibilidade de mudar o comportamento e a aparência visual do controle, você também pode alterar como o controle se representa nas estruturas de acessibilidade. O aplicativo do Windows é compatível com a estrutura de Automação da Interface do Usuário da Microsoft para acessibilidade. Todos os controles padrão e seus modelos permitem tipos e padrões comuns de controle de Automação da Interface do Usuário adequados para a finalidade e a função do controle. Esses tipos e padrões de controle são interpretados por clientes de Automação da Interface do Usuário, como tecnologias adaptativas, permitindo acessar um controle como parte de uma interface do usuário de aplicativo acessível maior.
 
 Para separar a lógica de controle básica e também atender a alguns requisitos de arquitetura da Automação da Interface do Usuário, as classes de controle incluem o suporte para acessibilidade em uma classe separada, um par de automação. Os pares de automação às vezes têm interações com os modelos de controle, pois os pares esperam que existam determinadas partes nomeadas nos modelos para que funcionalidades, como a habilitação de tecnologias adaptativas, possam invocar as ações dos botões.
 

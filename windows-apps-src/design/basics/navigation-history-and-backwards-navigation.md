@@ -1,5 +1,5 @@
 ---
-Description: Saiba como implementar a navegação regressiva para analisar o histórico de navegação do usuário em um aplicativo UWP.
+Description: Saiba como implementar a navegação regressiva para analisar o histórico de navegação do usuário em um aplicativo do Windows.
 title: Histórico de navegação e navegação regressiva
 template: detail.hbs
 op-migration-status: ready
@@ -7,18 +7,18 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 05b435eb6f070634507c143bd028d2cb051c97bc
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0601aea88d0705377490fb4adf26ce3da9c4e573
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74735021"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969142"
 ---
-# <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para aplicativos UWP
+# <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Histórico de navegação e navegação regressiva para aplicativos do Windows
 
 > **APIs importantes**: [evento BackRequested](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [classe SystemNavigationManager](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
-A UWP (Plataforma Universal do Windows) oferece um sistema de navegação regressiva consistente a fim de analisar o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
+O aplicativo do Windows oferece um sistema de navegação regressiva consistente a fim de analisar o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
 
 Para implementar navegação regressiva no aplicativo, coloque um [botão Voltar](#back-button) no canto superior esquerdo da interface do usuário do aplicativo. Se o aplicativo usar o controle [NavigationView](../controls-and-patterns/navigationview.md), você poderá usar o [botão Voltar integrado no NavigationView](../controls-and-patterns/navigationview.md#backwards-navigation).
 

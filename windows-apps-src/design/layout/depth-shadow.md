@@ -1,7 +1,7 @@
 ---
 author: knicholasa
 description: Profundidade Z, ou profundidade relativa, e sombra são duas maneiras de incorporar profundidade ao seu aplicativo para ajudar os usuários a se concentrarem de maneira natural e eficiente.
-title: Profundidade Z e sombra para aplicativos UWP
+title: Profundidade Z e sombra para aplicativos do Windows
 template: detail.hbs
 ms.date: 04/19/2019
 ms.topic: article
@@ -9,18 +9,18 @@ ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 216974ba564a192f94473469f3a7a49191ef2192
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 2655abd69f0f02efada9de5bab22e463c86b5d7e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081393"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970181"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidade Z e sombra
 
 ![Um gif mostrando quatro retângulos cinza empilhados na diagonal, um em cima do outro. O GIF é animado para que as sombras apareçam e desapareçam.](images/elevation-shadow/shadow.gif)
 
-Criar uma hierarquia visual de elementos torna a interface do usuário fácil de examinar e definir no que é mais importante se concentrar. A elevação, o ato de trazer os elementos selecionados da interface do usuário para a frente, é geralmente usada para atingir essa hierarquia no software. Este artigo discute como criar elevação em um aplicativo UWP usando profundidade Z e sombra.
+Criar uma hierarquia visual de elementos torna a interface do usuário fácil de examinar e definir no que é mais importante se concentrar. A elevação, o ato de trazer os elementos selecionados da interface do usuário para a frente, é geralmente usada para atingir essa hierarquia no software. Este artigo discute como criar elevação em um aplicativo do Windows usando a profundidade Z e sombra.
 
 Profundidade Z é um termo usado entre os criadores de aplicativos 3D para indicar a distância entre duas superfícies ao longo do eixo z. Ela ilustra o quanto um objeto está próximo do visualizador. Imagine-a como um conceito semelhante às coordenadas x/y, mas na direção z.
 
@@ -32,7 +32,7 @@ No mundo físico, tendemos a nos concentrar em objetos que estão mais próximos
 
 A sombra é uma maneira de o usuário perceber a elevação. A luz acima de um objeto elevado cria uma sombra na superfície abaixo. Quanto mais alto o objeto, maior e mais suave a sombra se torna. Objetos elevados na sua interface do usuário não precisam ter sombras, mas ajudam a criar a aparência de elevação.
 
-Nos aplicativos UWP, as sombras devem ser usadas de maneira proposital, e não estética. O uso de muitas sombras diminuirá ou eliminará a capacidade da sombra de focalizar o usuário.
+Nos aplicativos do Windows, as sombras devem ser usadas de maneira proposital, e não estética. O uso de muitas sombras diminuirá ou eliminará a capacidade da sombra de focalizar o usuário.
 
 Se você usar controles padrão, as sombras do ThemeShadow serão incorporadas automaticamente à sua interface do usuário. No entanto, você pode incluir sombras manualmente na interface do usuário usando as APIs ThemeShadow ou DropShadow. 
 
