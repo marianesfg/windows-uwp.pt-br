@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cc182d05b1cc02dd62f66506c12fcfcfc8a03952
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bb65acf606ffa44f075016720ebcd055ba5febc8
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969771"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234462"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Blocos, selos e notificações para aplicativos do Windows
  
@@ -37,9 +37,9 @@ Bloco é a representação de um aplicativo no menu Iniciar. Cada aplicativo do 
 | Artigo | Descrição |
 | --- | --- |
 | [Criar blocos](creating-tiles.md) | Personalize o bloco padrão para seu aplicativo e forneça ativos para diferentes tamanhos de tela. |
-| [Ativos de ícone de aplicativo](app-assets.md) | Os ativos de ícone de aplicativo, que são exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada de seu aplicativo do Windows. Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados. |
+| [Ativos de ícone de aplicativo](app-assets.md) | Os ativos de ícone de aplicativo, que são exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo do Windows. Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados. |
 | [APIs de bloco primário](primary-tile-apis.md) | Solicite fixar o bloco principal do aplicativo e verifique se o bloco primário está atualmente fixado. |
-| [Conteúdo do bloco](create-adaptive-tiles.md) | O conteúdo da notificação de bloco é especificado utilizando um novo recurso adaptável no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo do Windows. |
+| [Conteúdo do bloco](create-adaptive-tiles.md) | O conteúdo da notificação de bloco é especificado utilizando um novo recurso adaptável no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para o seu aplicativo do Windows. |
 | [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md) | Veja os elementos e os atributos que você usa para criar blocos adaptáveis. |
 | [Modelos de blocos especiais](special-tile-templates-catalog.md) | Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. |
 | [Enviar notificação de bloco local](sending-a-local-tile-notification.md) | Saiba como enviar uma notificação de bloco local, adicionando conteúdo dinâmico avançado ao Bloco Dinâmico. |
