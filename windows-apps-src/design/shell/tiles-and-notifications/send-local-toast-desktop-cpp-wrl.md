@@ -7,16 +7,16 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, desktop, notificações do sistema, enviar um sistema de notificação, enviar notificação local, desktop Bridge, msix, pacote esparso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: cc87f9281b9623c1f1b46def8f886cfebeb0438f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 3e103c41de7bf169629085fd259e23e17804360d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968291"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234663"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
-Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como aplicativos de aplicativos do Windows. No entanto, há algumas etapas especiais para aplicativos de desktop devido aos diferentes esquemas de ativação e a possível falta de identidade de pacote se você não estiver usando o MSIX ou um pacote esparso.
+Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como os aplicativos do Windows. No entanto, há algumas etapas especiais para aplicativos de desktop devido aos diferentes esquemas de ativação e a possível falta de identidade de pacote se você não estiver usando o MSIX ou um pacote esparso.
 
 > [!IMPORTANT]
 > Se você estiver criando um aplicativo UWP, consulte a [documentação da UWP](send-local-toast.md). Para outros idiomas da área de trabalho, consulte [Desktop C#](send-local-toast-desktop.md).

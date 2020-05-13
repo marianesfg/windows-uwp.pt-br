@@ -6,19 +6,19 @@ keywords: tinta, escrita à tinta, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b4dc6fbec0e16428035348114b1b160d50cff0
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: d0df2b531510d86591c44bc69f6ed5c6ad9f200f
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968141"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234621"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>Tutorial: dar suporte à tinta em seu aplicativo do Windows
 
 ![Caneta Surface](images/ink/ink-hero-small.png)  
 *Caneta Surface* (disponível para compra na [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
-Este tutorial percorre como criar um aplicativo de aplicativo do Windows básico que dá suporte à gravação e ao desenho com o Windows Ink. Usamos trechos de um aplicativo de exemplo, que você pode baixar no GitHub (consulte [Código de exemplo](#sample-code)), para demonstrar os diversos recursos e APIs associadas do Windows Ink (consulte [Componentes da plataforma Windows Ink](#components-of-the-windows-ink-platform)) abordados em cada etapa.
+Este tutorial percorre como criar um aplicativo básico do Windows que dá suporte à gravação e ao desenho com o Windows Ink. Usamos trechos de um aplicativo de exemplo, que você pode baixar no GitHub (consulte [Código de exemplo](#sample-code)), para demonstrar os diversos recursos e APIs associadas do Windows Ink (consulte [Componentes da plataforma Windows Ink](#components-of-the-windows-ink-platform)) abordados em cada etapa.
 
 Centraremos a atenção no seguinte:
 * Adicionando suporte básico a tinta
@@ -79,7 +79,7 @@ Após baixar o aplicativo de exemplo RadialController, verifique se ele é execu
 3. Pressione F5 para compilar, implantar e executar.  
 
    > [!NOTE]
-   > Como alternativa, você pode selecionar **depurar** > item de menu**Iniciar Depuração** ou selecionar o botão executar **computador local** mostrado aqui.
+   > Como alternativa, você pode selecionar **depurar**  >  item de menu**Iniciar Depuração** ou selecionar o botão executar **computador local** mostrado aqui.
    > ![Botão de projeto Visual Studio Build](images/ink/ink-vsrun-small.png)
 
 A janela do aplicativo será aberta e, depois que uma tela inicial aparecer por alguns segundos, você verá esta tela inicial.
@@ -112,7 +112,7 @@ Para adicionar a funcionalidade básica de escrita, basta posicionar um controle
 ```
 
 4. Abra o arquivo MainPage.xaml.
-5. Localize o código marcado com o título desta etapa ("\<!--etapa 2: escrita básica com InkCanvas-->").
+5. Localize o código marcado com o título desta etapa (" \< !--etapa 2: escrita básica com InkCanvas-->").
 6. Remova o comentário da linha a seguir.  
 
 ``` xaml
@@ -165,7 +165,7 @@ Para adicionar um [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui
 
 ### <a name="in-the-sample"></a>No exemplo
 1. Abra o arquivo MainPage.xaml.
-2. Localize o código marcado com o título desta etapa ("\<!--etapa 4: adicionar uma barra de ferramentas de tinta-->").
+2. Localize o código marcado com o título desta etapa (" \< !--etapa 4: adicionar uma barra de ferramentas de tinta-->").
 3. Remova o comentário das linhas a seguir.  
 
 ``` xaml
@@ -212,14 +212,14 @@ Nesta etapa, usamos os recursos de reconhecimento de manuscrito do Windows Ink p
 > [!NOTE]
 > É possível melhorar o reconhecimento de manuscrito por meio das configurações de **Caneta e Windows Ink**:
 > 1. Abra o menu Iniciar e selecione **Configurações**.
-> 2. Na tela Configurações, selecione **dispositivos** > **caneta & Windows Ink**.
+> 2. Na tela Configurações, selecione **dispositivos**  >  **caneta & Windows Ink**.
 > ![InkToolbar no bloco de esboços do Espaço de Trabalho do Ink](images/ink/ink-settings-small.png)
 > 3. Selecione **Conhecer meu manuscrito** para abrir a caixa de diálogo **Personalização de Manuscrito**.
 > ![InkToolbar no bloco de esboços do Espaço de Trabalho do Ink](images/ink/ink-settings-handwritingpersonalization-small.png)
 
 ### <a name="in-the-sample"></a>No exemplo:
 1. Abra o arquivo MainPage.xaml.
-2. Localize o código marcado com o título desta etapa ("\<!--etapa 5: suporte ao reconhecimento de manuscrito-->").
+2. Localize o código marcado com o título desta etapa (" \< !--etapa 5: suporte ao reconhecimento de manuscrito-->").
 3. Remova o comentário das linhas a seguir.  
 
 ``` xaml
@@ -347,7 +347,7 @@ Neste exemplo, não tente redesenhar traços de tinta (embora isso seja possíve
 
 ### <a name="in-the-sample"></a>No exemplo:
 1. Abra o arquivo MainPage.xaml
-2. Localize o código marcado com o título desta etapa ("\<!--etapa 6: reconhecer formas-->")
+2. Localize o código marcado com o título desta etapa (" \< !--etapa 6: reconhecer formas-->")
 3. Remova o comentário desta linha.  
 
 ``` xaml
@@ -402,7 +402,7 @@ Nesta etapa, conectamos os botões **Salvar** e **Carregar** localizados ao lado
 
 ### <a name="in-the-sample"></a>No exemplo:
 1. Abra o arquivo MainPage.xaml.
-2. Localize o código marcado com o título desta etapa ("\<!--etapa 7: Salvando e carregando tinta – >").
+2. Localize o código marcado com o título desta etapa (" \< !--etapa 7: Salvando e carregando tinta – >").
 3. Remova o comentário das linhas a seguir. 
 
 ``` xaml
@@ -464,9 +464,9 @@ Parabéns, você concluiu o tutorial de **entrada: suporte à tinta no seu aplic
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Interações de caneta e Windows Ink em aplicativos do Windows](pen-and-stylus-interactions.md)
+* [Interações com caneta e Windows Ink em aplicativos do Windows](pen-and-stylus-interactions.md)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 * [Exemplo de análise de tinta (básico) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
 * [Exemplo de reconhecimento de manuscrito à tinta (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)

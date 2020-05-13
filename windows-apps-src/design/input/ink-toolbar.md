@@ -1,25 +1,25 @@
 ---
 Description: Adicione um InkToolbar padrão a um aplicativo de escrita à tinta de aplicativo do Windows, adicione um botão de caneta personalizado ao InkToolbar e associe o botão de caneta personalizada a uma definição de caneta personalizada.
-title: Adicionar um InkToolbar a um aplicativo de aplicativo do Windows
-label: Add an InkToolbar to a Windows app app
+title: Adicionar um InkToolbar a um aplicativo do Windows
+label: Add an InkToolbar to a Windows app
 template: detail.hbs
 keywords: Windows Ink, escrita à tinta Windows, DirectInk, InkPresenter, InkCanvas, InkToolbar, Plataforma Universal do Windows, UWP, interação do usuário, entrada
 ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: e8076c9a9022cedbd66991ddf5d5b6bab1d57cc7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 4052ac6daddcfecabb839d16fd5f81c3d207d01b
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968092"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233685"
 ---
-# <a name="add-an-inktoolbar-to-a-windows-app-app"></a>Adicionar um InkToolbar a um aplicativo de aplicativo do Windows
+# <a name="add-an-inktoolbar-to-a-windows-app"></a>Adicionar um InkToolbar a um aplicativo do Windows
 
 
 
-Há dois controles diferentes que facilitam a escrita de tinta em aplicativos de aplicativos do Windows: [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
+Há dois controles diferentes que facilitam a escrita de tinta em aplicativos do Windows: [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
 O controle [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) fornece a funcionalidade básica do Windows Ink. Use-o para renderizar a entrada à caneta como traço de tinta (usando as configurações padrão de cor e espessura) ou como traço de apagar.
 
@@ -39,7 +39,7 @@ Como uma sobreposição completamente transparente, o InkCanvas não fornece qua
 
 ## <a name="default-inktoolbar"></a>InkToolbar padrão
 
-Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como a cor da tinta, a espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
+Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como cor da tinta, espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
 
 ![InkToolbar](./images/ink/ink-tools-invoked-toolbar-small.png)  
 *Barra de ferramentas do Windows Ink padrão*
@@ -351,7 +351,7 @@ Você também pode usar a associação para cuidar das atualizações da interfa
                     TargetInkCanvas="{x:Bind inkCanvas}" />
         ```
 
-1. Retorne ao arquivo InkToolbarSnippetHostViewModel.cs para adicionar as `PortraitLayout` propriedades `LeftHandedLayout` e bool à classe `InkToolbarSnippetHostViewModel` , juntamente com o suporte para reassociação `PortraitLayout` quando o valor da propriedade for alterado. 
+1. Retorne ao arquivo InkToolbarSnippetHostViewModel.cs para adicionar `PortraitLayout` `LeftHandedLayout` as propriedades e bool à `InkToolbarSnippetHostViewModel` classe, juntamente com o suporte para reassociação `PortraitLayout` quando o valor da propriedade for alterado. 
     ```csharp
     public bool LeftHandedLayout
     {
@@ -592,19 +592,19 @@ Você pode personalizar e estender o conjunto de botões (e os recursos de escri
 
 O InkToolbar consiste em dois grupos distintos de tipos de botões:
 
-1. Um grupo de botões de "ferramentas" que contém os botões internos para desenhar, apagar e realçar. Canetas e ferramentas personalizadas são adicionadas aqui.
-> **Note**&nbsp;Observação&nbsp;a seleção de recursos é mutuamente exclusiva.
+1. Um grupo de botões de "ferramentas" que contém os botões internos para desenhar, apagar e realçar. Canetas personalizadas e ferramentas são adicionadas aqui.
+> **Note** &nbsp; Observação &nbsp; A seleção de recursos é mutuamente exclusiva.
 
-2. Um grupo de botões de "alternância" que contém o botão de régua interno. Alternâncias personalizadas são adicionadas aqui.
-> **Note**&nbsp;Observação&nbsp;os recursos não são mutuamente exclusivos e podem ser usados simultaneamente com outras ferramentas ativas.
+2. Um grupo de botões de "alternância" que contém o botão de régua interno. As alternâncias personalizadas são adicionadas aqui.
+> **Note** &nbsp; Observação &nbsp; Os recursos não são mutuamente exclusivos e podem ser usados simultaneamente com outras ferramentas ativas.
 
 Dependendo de seu aplicativo e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
 
 - Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo aplicativo host.
 - Ferramenta personalizada – uma ferramenta sem caneta, definida pelo aplicativo host.
-- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
+- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
 
-> **Note**&nbsp;Observação&nbsp;você não pode alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
+> **Note** &nbsp; Observação &nbsp; Você não pode alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
 
 ### <a name="custom-pen"></a>Caneta personalizada
 
@@ -722,7 +722,7 @@ Em seguida, adicionamos as referências necessárias à caneta personalizada em 
 
 ### <a name="custom-toggle"></a>Alternância personalizada
 
-Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
+Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
 
 Neste exemplo, definimos um botão de alternância personalizada que permite escrever à tinta com entrada por toque (por padrão, escrita à tinta por toque não está habilitada).
 
@@ -735,7 +735,7 @@ Quando o aplicativo é iniciado, somente a escrita com caneta é compatível e o
 
 > [!NOTE]
 > Confira [controles de tinta](../controls-and-patterns/inking-controls.md) para as diretrizes de UX de [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) . As seguintes recomendações são relevantes para este exemplo:
-> - O [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar), e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo. 
+> - A [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)e a tinta em geral são mais bem experimentadas por uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo. 
 > - Para dar suporte à escrita à tinta com entrada por toque, recomendamos usar o ícone "ED5F" da fonte "Segoe MLD2 Assets" para o botão de alternância, com uma dica de ferramenta "Escrita por toque". 
 
 **XAML**

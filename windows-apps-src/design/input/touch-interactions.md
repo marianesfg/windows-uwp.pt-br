@@ -1,5 +1,5 @@
 ---
-Description: Crie aplicativos de aplicativos do Windows com experiências de interação do usuário intuitivas e padronizadas que são otimizadas para toque, mas são funcionalmente consistentes entre dispositivos de entrada.
+Description: Crie aplicativos do Windows com experiências de interação do usuário intuitiva e distinta que são otimizadas para toque, mas são funcionalmente consistentes entre dispositivos de entrada.
 title: Interações por toque
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99926de0ea26b0cef9184756add777a39330d934
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e753b5c92dc22f967e2f518e8435d3a4fb41a529
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970251"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234844"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -121,7 +121,7 @@ Para evitar a oclusão de dedo e mão:
 
     Posicione os menus e pop-ups sobre a área de contato sempre que possível.
 
--   Dicas de Ferramenta
+-   Dicas de ferramenta
 
     Mostre dicas de ferramentas quando um usuário mantém o dedo em contato com um objeto. Isso é útil para descrever a funcionalidade do objeto. O usuário pode retirar a ponta do dedo para sair do objeto e assim evitar a invocação da dica de ferramenta.
 
@@ -192,7 +192,7 @@ Para oferecer suporte a toque personalizado, você pode manipular vários evento
 
 Aqui está o conjunto básico de gestos de toque aceitos pela UWP.
 
-| Nome           | Type                 | Descrição                                                                            |
+| Nome           | Tipo                 | Descrição                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | Toque            | Gesto estático       | Um dedo toca na tela e levanta.                                            |
 | Pressionar e segurar | Gesto estático       | Um dedo toca a tela e permanece no local.                                      |
@@ -592,7 +592,7 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 - [Manipular entrada de ponteiro](handle-pointer-input.md)
 - [Identificar dispositivos de entrada](identify-input-devices.md)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

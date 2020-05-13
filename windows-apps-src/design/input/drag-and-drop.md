@@ -1,17 +1,17 @@
 ---
-description: Este artigo explica como adicionar arrastar e soltar em seu aplicativo de aplicativo do Windows.
+description: Este artigo explica como adicionar arrastar e soltar em seu aplicativo do Windows.
 title: Arrastar e soltar
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e14ab0d7e6ef8b79ce29addf37ec1fc52b737923
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 52fb9c5d6b9c594be1ad4f1fa1a4421d99cae5fa
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970151"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234617"
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
 
@@ -51,7 +51,7 @@ Você não precisa fazer mais nada para permitir arrastar, a menos que queira pe
 
 Na maioria dos casos, o sistema construirá um pacote de dados para você. O sistema manipula automaticamente:
 * Imagens
-* Texto 
+* Text 
 
 Para outros tipos de conteúdo, você precisará manipular os eventos **DragStarted** e **DragCompleted** e usá-los para construir seu próprio [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage).
 
@@ -109,7 +109,7 @@ A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielemen
 
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Comunicação de aplicativo a aplicativo](index.md)
 * [AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)

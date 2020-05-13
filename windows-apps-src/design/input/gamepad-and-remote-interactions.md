@@ -9,12 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 207ad9cb3008f1a36402e413b7e246aa2135ae26
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5fd39acbf6549cddc075f8b63779f06a802bfdbb
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970161"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234671"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interações de gamepad e de controle remoto
 
@@ -22,7 +22,7 @@ ms.locfileid: "82970161"
 
 ***Muitas experiências de interação são compartilhadas entre o gamepad, o controle remoto e o teclado***
 
-Crie experiências de interação em seus aplicativos de aplicativo do Windows que asseguram que seu aplicativo seja utilizável e acessível por meio de tipos de entrada tradicionais de PCs, laptops e tablets (mouse, teclado, toque etc.), bem como os tipos de entrada típicos da experiência de TV e de *10 pés* do Xbox, como o gamepad e o controle remoto.
+Crie experiências de interação em seus aplicativos do Windows que asseguram que seu aplicativo seja utilizável e acessível por meio de tipos de entrada tradicionais de PCs, laptops e tablets (mouse, teclado, toque e assim por diante), bem como os tipos de entrada típicos da experiência de TV e de *10 pés* do Xbox, como o gamepad e o controle remoto.
 
 Consulte [design para Xbox e TV](../devices/designing-for-tv.md) para obter diretrizes de design geral em aplicativos do Windows na experiência de *10 pés* .
 
@@ -158,10 +158,10 @@ A tabela a seguir lista o suporte a acelerador incorporado à UWP, bem como o qu
 | Interação   | Teclado/Mouse   | Gamepad      | Incorporado em:  | Recomendado para: |
 |---------------|------------|--------------|----------------|------------------|
 | Page up/Page down  | Page up/Page down | Gatilhos esquerdo/direito | [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem vertical
-| Página esquerda/direita | Nenhum | Botões superiores esquerdo/direito | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem horizontal
-| Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhum | `ScrollViewer`, exibições que dão suporte a ampliação e redução |
-| Abrir/fechar painel de navegação | Nenhum | Visualizar | Nenhum | Painéis de navegação |
-| Search | Nenhum | Botão Y | Nenhum | Atalho para a função de pesquisa principal no aplicativo |
+| Página esquerda/direita | Não | Botões superiores esquerdo/direito | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Exibições que dão suporte à rolagem horizontal
+| Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Não | `ScrollViewer`, exibições que dão suporte a ampliação e redução |
+| Abrir/fechar painel de navegação | Não | Visualizar | Não | Painéis de navegação |
+| Search | Não | Botão Y | Não | Atalho para a função de pesquisa principal no aplicativo |
 | [Abrir menu de contexto](#commandbar-and-contextflyout) | Clique com o botão direito em | Botão Menu | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menus de contexto |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interação e navegação de foco do plano XY
@@ -557,7 +557,7 @@ Alguns controles tornam o ajuste de registro de foco comum o suficiente para gar
 | SemanticZoom          | Desativado                       |
 | Controle deslizante                | Por                        |
 
-Todos os outros controles do Windows resultarão em nenhuma alteração comportamental ou Visual `IsFocusEngagementEnabled="True"`quando.
+Todos os outros controles do Windows resultarão em nenhuma alteração comportamental ou Visual quando `IsFocusEngagementEnabled="True"` .
 
 ## <a name="summary"></a>Resumo
 
@@ -565,5 +565,5 @@ Você pode criar aplicativos do Windows que são otimizados para um dispositivo 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Projetar para TV e Xbox](../devices/designing-for-tv.md)
-- [Instruções de dispositivo para aplicativos de aplicativos do Windows](index.md)
+- [Projetando para TV e Xbox](../devices/designing-for-tv.md)
+- [Instruções do dispositivo para aplicativos do Windows](index.md)

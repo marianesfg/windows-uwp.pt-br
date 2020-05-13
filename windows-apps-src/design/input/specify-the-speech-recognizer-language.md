@@ -8,12 +8,12 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cd347b115a920c71ca1eb9b5f466adf05c69c64
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a1db38120252febefd55933fa106f473b3f920d8
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968241"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234864"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
 
@@ -31,7 +31,7 @@ Este tópico complementa [Reconhecimento de fala](speech-recognition.md).
 
 Você deve ter uma noção básica de reconhecimento de fala e restrições de reconhecimento.
 
-Se você for novo no desenvolvimento de aplicativos de aplicativos do Windows, conheça esses tópicos para se familiarizar com as tecnologias discutidas aqui.
+Se você for novo no desenvolvimento de aplicativos do Windows, conheça esses tópicos para se familiarizar com as tecnologias discutidas aqui.
 
 -   [Crie seu primeiro aplicativo](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 -   Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
@@ -56,7 +56,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
 
-**Observe**  que uma reinicialização é necessária após A instalação de um novo pacote de idiomas. Uma exceção com o código de\_erro\_SPERR não encontrado (0x8004503a) será gerada se o idioma especificado não tiver suporte ou se a instalação não tiver sido concluída.
+**Observação**    Uma reinicialização é necessária após a instalação de um novo pacote de idiomas. Uma exceção com o código de erro SPERR \_ não \_ encontrado (0x8004503a) será gerada se o idioma especificado não tiver suporte ou se a instalação não tiver sido concluída.
 
  
 

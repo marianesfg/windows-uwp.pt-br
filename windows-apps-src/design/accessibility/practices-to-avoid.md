@@ -1,5 +1,5 @@
 ---
-Description: Lista as práticas a serem evitadas se você quiser criar um aplicativo de aplicativo do Windows acessível.
+Description: Lista as práticas a serem evitadas se você quiser criar um aplicativo do Windows acessível.
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: Práticas de acessibilidade a evitar
 label: Accessibility practices to avoid
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95c23a00ebc9ee2563340fbd5594d53ac7edb066
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 75dad7eb676bd2d2a9d95fa57122085329e5e144
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970001"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233946"
 ---
 # <a name="accessibility-practices-to-avoid"></a>Práticas de acessibilidade a evitar
 
-Se você quiser criar um aplicativo de aplicativo do Windows acessível, consulte esta lista de práticas para evitar: 
+Se você quiser criar um aplicativo do Windows acessível, consulte esta lista de práticas para evitar: 
 
 * **Evite a criação de elementos de interface do usuário personalizados se for possível usar os controles padrão do Windows** ou os controles que já implementaram o suporte à Automação de Interface do Usuário da Microsoft. Controles padrão do Windows são acessíveis por padrão e costumam precisar da adição de apenas alguns atributos de acessibilidade específicas ao aplicativo. De forma contrária, implementar o suporte [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para um controle personalizado de verdade está, de certa maneira, mais evolvido (consulte [Pares de automação personalizados](custom-automation-peers.md)).
 * **Não coloque texto estático ou outros elementos não interativos na ordem de guia** (por exemplo, definir a propriedade [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) para um elemento que não é interativo). Se há elementos não interativos na ordem de guia, isso vai contra as diretrizes de acessibilidade do teclado porque diminui a eficiente da navegação do teclado para usuários. Muitas tecnologias assistenciais usam a ordem de tabulação e a capacidade de focar um elemento como parte de sua lógica de como apresentar uma interface do aplicativo para o usuário de tecnologia assistencial. Os elementos somente texto podem confundir os usuários que esperam apenas elementos interativos na ordem de tabulação (botões, caixas de seleção, campos de entrada, caixas de combinação, listas, etc.).

@@ -1,5 +1,5 @@
 ---
-Description: Receba, processe e gerencie dados de entrada de dispositivos apontadores, como Touch, mouse, caneta/caneta e Touchpad, em seus aplicativos de aplicativo do Windows.
+Description: Receba, processe e gerencie dados de entrada de dispositivos apontadores, como Touch, mouse, caneta/caneta e Touchpad, em seus aplicativos do Windows.
 title: Manipular entrada de ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,16 +8,16 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: db3b87bd187c64b04615fb6722e4e1f2b666b7dc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 609f6f1ad33c3736d9ac99ec40cbbfe7ade9500a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970061"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234823"
 ---
 # <a name="handle-pointer-input"></a>Manipular entrada de ponteiro
 
-Receba, processe e gerencie dados de entrada de dispositivos apontadores (como toque, mouse, caneta/caneta e touchpad) em seus aplicativos de aplicativo do Windows.
+Receba, processe e gerencie dados de entrada de dispositivos apontadores (como toque, mouse, caneta/caneta e touchpad) em seus aplicativos do Windows.
 
 > [!Important]
 > Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações com suporte dos controles da plataforma não oferecerem suporte ao seu cenário.  
@@ -72,7 +72,7 @@ Os aplicativos do Windows podem escutar os seguintes eventos de ponteiro:
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Ocorre quando outro elemento da interface do usuário captura o ponteiro, o ponteiro é liberado ou outro ponteiro é capturado programaticamente.</p>
 <div class="alert">
-<strong>Observe</strong>  que não há nenhum evento de captura de ponteiro correspondente.
+<strong>Observação</strong>    Não há nenhum evento de captura de ponteiro correspondente.
 </div>
 <div>
  
@@ -132,7 +132,7 @@ Aqui estão alguns trechos de código de um aplicativo de rastreamento de pontei
 
 ### <a name="create-the-ui"></a>Criar a interface do usuário
 
-Para este exemplo, usamos um [retângulo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) (`Target`) como a entrada de ponteiro de consumo de objeto. A cor do destino muda quando o status do ponteiro muda.
+Para este exemplo, usamos um [retângulo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) ( `Target` ) como a entrada de ponteiro de consumo de objeto. A cor do destino muda quando o status do ponteiro muda.
 
 Os detalhes de cada ponteiro são exibidos em um [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) flutuante que segue o ponteiro conforme ele se move. Os eventos de ponteiro propriamente ditos são relatados no [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) à direita do retângulo.
 

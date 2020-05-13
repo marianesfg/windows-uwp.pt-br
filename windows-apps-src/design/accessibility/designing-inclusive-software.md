@@ -1,5 +1,5 @@
 ---
-Description: Saiba mais sobre a evolução do Design Inclusivo com aplicativos de aplicativo do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
+Description: Saiba mais sobre a evolução do Design Inclusivo com aplicativos do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Projetando software inclusivo no Windows 10
 label: Designing inclusive software
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f048d9d3541b52994713c8040c451a421df3e0a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: f7286394f68d6cda82581a825117f12ce98493ba
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969431"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234082"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Projetando software inclusivo para Windows 10  
 
-Saiba mais sobre a evolução do Design Inclusivo com aplicativos de aplicativo do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
+Saiba mais sobre a evolução do Design Inclusivo com aplicativos do Windows para Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
 
 Na Microsoft, estamos desenvolvendo nossos princípios de design e práticas recomendadas. Eles mostram a aparência, a função e o comportamento das nossas experiências. Estamos elevando a nossa perspectiva.
 

@@ -1,5 +1,5 @@
 ---
-Description: Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo de aplicativo do Windows no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.
+Description: Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo do Windows no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.
 title: Blocos para aplicativos do Windows
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0882ac67766bc2ce037133cf8a39b5393f616e13
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8823116b8fed3503ccf0dadc488956c93ae6c32b
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970991"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234457"
 ---
 # <a name="tiles-for-windows-apps"></a>Blocos para aplicativos do Windows
 
  
 
-Um *bloco* é uma representação do aplicativo no menu iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo de aplicativo do Windows no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
+Um *bloco* é uma representação do aplicativo no menu iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo do Windows no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
 
 ## <a name="configure-the-default-tile"></a>Configurar o bloco padrão
 
@@ -55,11 +55,11 @@ Há alguns itens que você deve atualizar:
 
     As imagens dimensionadas seguem esta convenção de nomenclatura:
     
-    * &lt;nome&gt;da imagem*. escala-*&lt;fator&gt;de escala*. extensão de arquivo de imagem * &lt;&gt; * 
+    * &lt; nome &gt; da imagem*. escala-* &lt; fator &gt; de escala*.* &lt; extensão &gt; de arquivo de imagem* 
 
     Por exemplo: SplashScreen.scale-100.png
 
-    Ao fazer referência à imagem, você faz referência a ela como * &lt;nome&gt;da imagem*. extensão do arquivo de imagem ("SplashScreen. png" neste exemplo). * &lt;&gt; * O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
+    Ao fazer referência à imagem, você faz referência a ela como * &lt; nome &gt; da imagem*.* &lt; extensão &gt; do arquivo de imagem* ("SplashScreen. png" neste exemplo). O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
 
 -   Você não precisa, mas é altamente recomendável fornecer logotipos para tamanhos de bloco amplo e grande para que o usuário possa redimensionar o bloco do seu aplicativo para esses tamanhos. Para fornecer essas imagens adicionais, você cria um elemento **DefaultTile** e usa os atributos **Wide310x150Logo** e **Square310x310Logo** para especificar as imagens adicionais:
 ```    XML

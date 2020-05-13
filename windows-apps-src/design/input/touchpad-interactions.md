@@ -1,5 +1,5 @@
 ---
-Description: Crie aplicativos de aplicativos do Windows com experiências de interação do usuário intuitivas e padronizadas que são otimizadas para o Touchpad, mas são funcionalmente consistentes entre dispositivos de entrada.
+Description: Crie aplicativos do Windows com experiências de interação do usuário intuitiva e distinta que são otimizadas para o Touchpad, mas são funcionalmente consistentes entre dispositivos de entrada.
 title: Interações por touchpad
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,12 +8,12 @@ keywords: touchpad, PTP, toque, ponteiro, entrada, interação do usuário
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: afbdf5c672328acfc60a82f9f66c75dc52370c99
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ffc3ce96c7e8c2ad4a34aecd1ca85ff644bdef97
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970231"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234482"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
@@ -55,11 +55,11 @@ Os usuários podem definir muito mais gestos de touchpad de precisão e comporta
 
 ![configurações de touchpad padrão](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configurações\\ padrão\\ do Touchpad</sup>
+<sup>Configurações padrão do \\ Touchpad \\</sup>
 
 ![configurações do windows precision touchpad](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configurações\\ do\\ Touchpad\\ do Windows Precision</sup>
+<sup>Configurações do Touchpad do Windows \\ Precision \\ \\</sup>
 
 Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar tarefas comuns.
 
@@ -154,7 +154,7 @@ Se você precisa personalizar o cursor do mouse:
 - [Manipular entrada de ponteiro](handle-pointer-input.md)
 - [Identificar dispositivos de entrada](identify-input-devices.md)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 1d883243b60b2b2693fbf0f21315008e556b5743
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 44cb122f70825df3ceef043d84e57cd077780749
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970751"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234708"
 ---
 # <a name="keyboard-interactions"></a>Interações por teclado
 
@@ -89,13 +89,13 @@ Um visual de foco:
 
 Para usar um controle (incluindo os elementos de navegação) com o teclado, o controle precisa ter foco. Uma maneira de um controle receber o foco do teclado é torná-lo acessível por meio de navegação por tabulação, identificando-o como uma parada de tabulação na ordem de tabulação do seu aplicativo.
 
-Para que um controle seja incluído na ordem de tabulação, a propriedade [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) deve ser definida como **true** e a propriedade [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) deve ser definida como **true**.
+Para que um controle seja incluído na ordem de tabulação, a propriedade [IsEnabled](/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) deve ser definida como **true** e a propriedade [IsTabStop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) deve ser definida como **true**.
 
-Para excluir especificamente um controle da ordem de tabulação, defina a propriedade [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) como **false**.
+Para excluir especificamente um controle da ordem de tabulação, defina a propriedade [IsTabStop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) como **false**.
 
 Por padrão, a ordem de tabulação reflete a ordem na qual elementos da interface de usuário são criados. Por exemplo, se um `StackPanel` contém um `Button`, uma `Checkbox`, e uma `TextBox`, a ordem de tabulação é `Button`, `Checkbox`, e `TextBox`.
 
-Você pode substituir a ordem de tabulação padrão definindo a propriedade [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex).
+Você pode substituir a ordem de tabulação padrão definindo a propriedade [TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex).
 
 #### <a name="tab-order-should-be-logical-and-predictable"></a>A Ordem de tabulação deve ser previsível e lógica
 
@@ -119,7 +119,7 @@ Experimente classificar e apresentar os comandos, controles e conteúdos mais im
 
 O foco inicial especifica o elemento da interface de usuário que recebe o foco quando um aplicativo ou uma página é iniciada ou ativada pela primeira vez. Ao usar um teclado, é desse elemento que um usuário começa interagindo com a interface do usuário do seu aplicativo.
 
-Para aplicativos UWP, o foco inicial é definido para o elemento com o maior [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) que pode receber foco. Elementos filho de controles do recipiente são ignorados. No case de empate, o primeiro elemento na árvore visual recebe o foco.
+Para aplicativos UWP, o foco inicial é definido para o elemento com o maior [TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) que pode receber foco. Elementos filho de controles do recipiente são ignorados. No case de empate, o primeiro elemento na árvore visual recebe o foco.
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>Definir o foco inicial para o elemento mais lógico
 
@@ -143,8 +143,8 @@ Por padrão, os controles UWP seguem esses comportamentos de teclado básicos:
 -   **Tecla Tab** navegar entre controles acionáveis/ativos na ordem de tabulação.
 -   **Shift + Tab** navegar entre controles em ordem de tabulação reversa. Se o usuário navegou dentro do controle usando a tecla de seta, o foco é definido para o último valor conhecido dentro do controle.
 -   **Teclas de seta** expor a "navegação interna" com controles específicos quando o usuário inicia a "navegação interna", teclas de seta não permitem a navegação fora de um controle. Alguns exemplos incluem:
-    -   A tecla de seta para cima/para `ListView` baixo move o foco para dentro e`MenuFlyout`
-    -   Modifique os valores selecionados no `Slider` momento para e`RatingsControl`
+    -   A tecla de seta para cima/para baixo move o foco para dentro `ListView` e`MenuFlyout`
+    -   Modifique os valores selecionados no momento para `Slider` e`RatingsControl`
     -   Mover o cursor para dentro`TextBox`
     -   Expandir/recolher itens dentro`TreeView`
 
@@ -347,7 +347,7 @@ Em casos onde o layout segue um padrão de interface de usuário conhecido para 
 
 Os exemplos incluem:
 -   `RadioButtons`
--   Várias `ListViews` semelhantes e se comportam como uma única`ListView`
+-   Várias semelhantes `ListViews` e se comportam como uma única`ListView`
 -   Qualquer interface de usuário feita para se parecer e se comportar como grade de blocos (como os blocos do menu Iniciar)
 
 #### <a name="specifying-control-group-behavior"></a>Especificando o comportamento do grupo de controles
@@ -419,7 +419,7 @@ Algumas diferenças importantes que você deve conhecer ao projetar seu aplicati
 
 #### <a name="directional-navigation"></a>Navegação direcional
 
-A navegação direcional é gerenciada pela classe auxiliar [Gerenciador de Foco](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager), que analisa a tecla direcional pressionada (tecla de seta, D-pad) e tenta mover o foco na direção visual correspondente.
+A navegação direcional é gerenciada pela classe auxiliar [Gerenciador de Foco](/uwp/api/Windows.UI.Xaml.Input.FocusManager), que analisa a tecla direcional pressionada (tecla de seta, D-pad) e tenta mover o foco na direção visual correspondente.
 
 Ao contrário do teclado, quando um aplicativo sai do [modo do mouse](gamepad-and-remote-interactions.md#mouse-mode), a navegação direcional é aplicada em todo o aplicativo para gamepad e controle remoto. Confira [interações de gamepad e controle remoto](gamepad-and-remote-interactions.md) para obter mais detalhes sobre a otimização de navegação direcional.
 
@@ -501,6 +501,7 @@ Se o último item tiver foco e a tecla de seta para baixo for pressionada, o foc
 
 Recomendamos que você eMule esses mesmos comportamentos em seus controles personalizados. O exemplo de código sobre como implementar esse comportamento pode ser encontrado na documentação de [navegação de foco programático](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) .
 
+
 ## <a name="test-your-app"></a>Testar seu aplicativo
 
 Teste seu aplicativo com todos os dispositivos de entrada suportados para garantir que a navegação pelos elementos da interface de usuário aconteça de maneira coerente e intuitiva para que nenhum elemento não esperado interfira na ordem de tabulação desejada.
@@ -510,6 +511,7 @@ Teste seu aplicativo com todos os dispositivos de entrada suportados para garant
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 * [Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)
 * [Amostra de visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [Especificações de teclado de controle NavigationView](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation) 
 
 ## <a name="appendix"></a>Apêndice
 
@@ -545,7 +547,7 @@ A seguir há uma lista de controles que não são de edição que podem receber 
 -   Barra de menus
 -   Item de menu
 -   Barra de ferramentas
--   Lista
+-   List
 -   Item de lista
 
 Veja aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilustra o layout padrão, a segunda é o layout em miniatura (que pode não estar disponível em todos os idiomas).
@@ -560,7 +562,7 @@ Veja aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilu
 
 Interações de teclado bem-sucedidas permitem que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão. Diversos fatores podem afetar o grau de sucesso, incluindo a navegação por teclado, as teclas de acesso para acessibilidade e as teclas de aceleração (atalho) para usuários avançados.
 
-**Observação**  o teclado de toque não dá suporte à alternância e à maioria dos comandos do sistema.
+**Observação**    O teclado de toque não dá suporte à alternância e à maioria dos comandos do sistema.
 
 #### <a name="on-screen-keyboard"></a>Teclado Virtual
 Como o teclado de software, o Teclado Virtual é um teclado de software, visual, que pode ser usado no lugar do teclado físico para digitar e inserir dados através do toque, mouse, caneta/stylus ou outro dispositivo apontador (não é necessária uma tela sensível ao toque). O teclado virtual é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O teclado virtual emula a maior parte, se não toda a funcionalidades de um teclado de hardware.

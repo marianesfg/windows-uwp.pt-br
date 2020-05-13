@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: de18e77137941acfba6e9cb3fb6421de8fe156f0
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 5f7c124c1d77cbce140cb42cdc07682dad8f78f2
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730258"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280246"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -119,7 +119,7 @@ O Programa de Criadores do Xbox Live permite que qualquer pessoa integre o Xbox 
 
 Você pode implantar, criar e publicar seu jogo no Programa de Criadores sem um kit de desenvolvimento exclusivo, usando apenas um hardware de varejo. Para começar, baixe o [Aplicativo Ativação do Modo de Desenvolvedor](https://docs.microsoft.com/windows/uwp/xbox-apps/devkit-activation) no seu Xbox One.
 
-Se você quiser acesso a mais recursos do Xbox Live, suporte dedicado a marketing e desenvolvimento e a oportunidade de ser apresentado na loja principal do Xbox One, aplique-se [ID@Xbox](https://www.xbox.com/Developers/id) ao programa.
+Se você quiser acesso a mais recursos do Xbox Live, suporte dedicado a marketing e desenvolvimento e a oportunidade de ser apresentado na loja principal do Xbox One, aplique-se ao [ID@Xbox](https://www.xbox.com/Developers/id) programa.
 
 <table>
     <colgroup>
@@ -134,7 +134,7 @@ Se você quiser acesso a mais recursos do Xbox Live, suporte dedicado a marketin
 
 #### <a name="idxbox"></a>ID@Xbox
 
-O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. Recomendamos que você se aplique ID@Xbox ao primeiro antes de registrar-se para uma conta de desenvolvedor no Partner Center.
+O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. Recomendamos que você se aplique ao ID@Xbox primeiro antes de registrar-se para uma conta de desenvolvedor no Partner Center.
 
 <table>
     <colgroup>
@@ -218,7 +218,7 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>
     <tr>
         <td>Exemplos de jogos do Windows (Galeria de Códigos do MSDN)</td>
-        <td><a href="https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=game&f%5B1%5D.Type=Contributors&f%5B1%5D.Value=Microsoft&f%5B1%5D.Text=Microsoft">Exemplos de jogos da Microsoft Store</a></td>
+        <td><a href="https://docs.microsoft.com/samples/browse/?term=games">Exemplos de jogos da Microsoft Store</a></td>
     </tr>
     <tr>
         <td>Amostra de jogo em JavaScript 2D</td>
@@ -1078,7 +1078,7 @@ Separadamente do design da experiência do usuário, o design de jogo, como o de
     </tr>
     <tr>
         <td>Projete seu aplicativo UWP para Xbox One e telas de televisão</td>
-        <td><a href="https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv">Projetar para TV e Xbox</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv">Projetando para TV e Xbox</a></td>
     </tr>
     <tr>
         <td>Focando em vários fatores forma de dispositivo (vídeo)</td>
@@ -1833,8 +1833,8 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://edadfs.partners.extranet.microsoft.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fdeveloper.xboxlive.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fen-us%252flive%252fcertification%252frequirements%252fPages%252fTCR.aspx&wct=2019-11-20T19%3a55%3a26Z">Requisitos do Xbox para o Xbox Live no Windows 10</a></td>
     </tr>
     <tr>
-        <td>Exemplos</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Exemplos de código ID@Xbox para desenvolvedores</a></td>
+        <td>Amostras</td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Exemplos de código para ID@Xbox desenvolvedores</a></td>
     </tr>  
     <tr>
         <td>Visão geral de desenvolvimento de jogos para o Xbox Live (vídeo)</td>

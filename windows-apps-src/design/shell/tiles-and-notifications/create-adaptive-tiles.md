@@ -8,16 +8,16 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b91b5d8ce39f34c6065f6dce61e90a752b36c8ef
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bbc0f23ad712850e565814febe5b7e681e58a85d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971061"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234570"
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
-Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo do Windows. Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
+Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo mostra como criar blocos dinâmicos adaptáveis para seu aplicativo do Windows. Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
 
 (Se quiser, você ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) durante a criação de notificações para o Windows 10.)
 
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação:**  o Windows Mobile não dá suporte ao logotipo do canto, portanto, "logo" e "nameAndLogo" têm como padrão "Name" em dispositivos móveis.
+**Observação**    O Windows Mobile não dá suporte ao logotipo de canto, portanto, "logo" e "nameAndLogo" têm como padrão "Name" em dispositivos móveis.
 
  
 
@@ -280,7 +280,7 @@ TileContent content = new TileContent()
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observe**    que essa é uma alteração do Windows 8. x, na qual a identidade visual padrão era "logotipo".
+**Observação**    Essa é uma alteração do Windows 8. x, na qual a identidade visual padrão era "logotipo".
 
  
 
@@ -335,7 +335,7 @@ TileContent content = new TileContent()
 
 ![nome de exibição de blocos adaptáveis](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>Texto
+## <a name="text"></a>Text
 
 
 O elemento [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) é usado para exibir texto. Você pode usar dicas para modificar a aparência do texto.
@@ -406,7 +406,7 @@ new AdaptiveText()
 
 ![estilos de texto de blocos adaptáveis](images/adaptive-tiles-textstyles.png)
 
-**Observe**  que o estilo padrão será legenda se o estilo de dica não for especificado.
+**Observação**    O estilo padrão será legenda se o estilo de dica não for especificado.
 
  
 
@@ -414,12 +414,12 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;Dica de texto-Style =\*""/&gt; | Altura da fonte               | Espessura da fonte |
+| &lt;Dica de texto-Style = " \* "/&gt; | Altura da fonte               | Espessura da fonte |
 | caption                        | 12 pixels efetivos (epx) | Regular     |
 | body                           | 15 epx                    | Regular     |
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Regular     |
-| title                          | 24 epx                    | Semilight   |
+| título                          | 24 epx                    | Semilight   |
 | subheader                      | 34 epx                    | Leve       |
 | cabeçalho                         | 46 epx                    | Leve       |
 
@@ -485,7 +485,7 @@ Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está
 
 Para proporcionar a melhor experiência em dispositivos e telas, forneça vários grupos. Ter vários grupos permite que seu bloco se adapte a telas maiores.
 
-**Observe**  que o único filho válido de um grupo é um subgrupo.
+**Observação**    O único filho válido de um grupo é um subgrupo.
 
  
 
@@ -679,7 +679,7 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 
 ![subgrupos, com espessuras totalizando 100](images/adaptive-tiles-subgroups03.png)
 
-**Observe**  que uma margem de 8 pixels é adicionada automaticamente entre as colunas.
+**Observação**    Uma margem de 8 pixels é adicionada automaticamente entre as colunas.
 
  
 

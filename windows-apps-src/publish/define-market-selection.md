@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b1a51a98746594a8563de2f309bec9cb5dda0b3
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: ed80d8ef727d3c9be276b295a504b8cc02b373aa
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545046"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234650"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
@@ -39,7 +39,7 @@ Observe que as seleções feitas aqui se aplicam apenas a novas aquisições; se
 Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e restrições ou outros fatores podem impedir que certos aplicativos sejam listados em alguns países e regiões. Além disso, alguns mercados podem ter requisitos específicos relacionados às classificações etárias. Se o seu aplicativo não cumprir esses requisitos, não poderemos oferecer o seu aplicativo nesse mercado. Veja [Classificações etárias](age-ratings.md) para saber mais.
 
 > [!NOTE]
-> Para aplicativos publicados anteriormente que incluem pacotes direcionados para o Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "REST do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Para aplicativos publicados anteriormente que incluem pacotes direcionados para o Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "REST do mundo". Para obter mais informações, consulte [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 Você também verá uma caixa de seleção que permitirá a você informar se deseja oferecer seu aplicativo em qualquer mercado que a Loja possa adicionar no futuro. Se você deixar essa caixa marcada e posteriormente adicionamos novos mercados, o preço base e a data de disponibilidade geral do seu envio serão usados para o aplicativo nesses mercados. Se você não quiser que isso aconteça, desmarque essa caixa; nesse caso, não listaremos seu aplicativo em nenhum mercado futuro (porém, você sempre poderá adicioná-lo posteriormente).
  
@@ -50,7 +50,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
 
 
 <table>
-  
+
   <tr>
     <td>Afeganistão</td>
     <td>Ilhas Aland</td>
@@ -88,7 +88,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Benin</td>
   </tr>
   <tr>
-    <td>Bermuda</td>
+    <td>Bermudas</td>
     <td>Butão</td>
     <td>Bolívia</td>
     <td>Bonaire</td>
@@ -113,7 +113,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
   </tr>
   <tr>
     <td>Camarões</td>
-    <td>Canadá</td>
+    <td>Canada</td>
     <td>Ilhas Cayman</td>
     <td>República Centro-Africana</td>
   </tr>
@@ -160,7 +160,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
     <td>Ilhas Malvinas</td>
   </tr>
   <tr>
-    <td>Ilhas Faroés</td>
+    <td>Ilhas Faroe</td>
     <td>Fiji</td>
     <td>Finlândia *</td>
     <td>França *</td>
@@ -354,7 +354,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
   <tr>
     <td>Somália</td>
     <td>África do Sul *</td>
-    <td>Ilhas Geórgia do Sul e Sandwich do Sul</td>
+    <td>Geórgia do Sul e Ilhas Sandwich do Sul</td>
     <td>Espanha *</td>
   </tr>
   <tr>
@@ -389,7 +389,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
   </tr>
   <tr>
     <td>Territórios Insulares dos EUA</td>
-    <td>Ilhas Virgens Americanas</td>
+    <td>Ilhas Virgens dos Estados Unidos</td>
     <td>Uganda</td>
     <td>Ucrânia</td>
   </tr>
@@ -408,12 +408,12 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
   <tr>
     <td>Vietnã</td>
     <td>Wallis e Futuna</td>
-    <td>Saara Ocidental (Área em Disputa)</td>
     <td>Iêmen</td>
+    <td>Zâmbia</td>
   </tr>
   <tr>
-    <td>Zâmbia</td>
     <td>Zimbábue</td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -428,22 +428,22 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 
 &nbsp;
 
-| País/região       | Forma de pagamento  | Ajuste de Expansão do Comércio | Data efetiva |
+| País/região       | Método de pagamento  | Ajuste de Expansão do Comércio | Data efetiva |
 |----------------------|-----------------|-------------------------------|----------------|
 | Argentina            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Austrália            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Áustria              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Bélgica              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Brasil               | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Canadá               | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Canada               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Chile                | Cartão-presente       | 2,24%                         | Março de 2016     |
 | China                | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Colômbia             | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Czechia              | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Tchéquia              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Dinamarca              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Finlândia              | Cartão-presente       | 2,24%                         | Março de 2016     |
-| France               | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Germany              | Cartão-presente       | 2,24%                         | Março de 2016     |
+| França               | Cartão-presente       | 2,24%                         | Março de 2016     |
+| Alemanha              | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Grécia               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | RAE de Hong Kong            | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Hungria              | Cartão-presente       | 2,24%                         | Março de 2016     |
@@ -469,7 +469,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 | Taiwan               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Turquia               | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Emirados Árabes Unidos | Cartão-presente       | 2,24%                         | Março de 2016     |
-| Reino Unido       | Cartão-presente       | 2,24%                         | Março de 2016     |
+| United Kingdom       | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Estados Unidos        | Cartão-presente       | 2,24%                         | Março de 2016     |
 
  
@@ -510,7 +510,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
   <tr>
     <td>Belize</td>
     <td>Benin</td>
-    <td>Bermuda</td>
+    <td>Bermudas</td>
     <td>Butão</td>
   </tr>
   <tr>
@@ -563,7 +563,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
   </tr>
   <tr>
     <td>Ilhas Malvinas</td>
-    <td>Ilhas Faroés</td>
+    <td>Ilhas Faroe</td>
     <td>Fiji</td>
     <td>Guiana Francesa</td>
   </tr>
@@ -694,7 +694,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Somália</td>
   </tr>
   <tr>
-    <td>Ilhas Geórgia do Sul e Sandwich do Sul</td>
+    <td>Geórgia do Sul e Ilhas Sandwich do Sul</td>
     <td>Suriname</td>
     <td>Svalbard e Jan Mayen</td>
     <td>Suazilândia</td>
@@ -715,7 +715,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
     <td>Tuvalu</td>
     <td>Uganda</td>
     <td>Territórios Insulares dos EUA</td>
-    <td>Ilhas Virgens Americanas</td>
+    <td>Ilhas Virgens dos Estados Unidos</td>
   </tr>
   <tr>
     <td>Uzbequistão</td>
@@ -738,4 +738,4 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 </table>
 
 > [!NOTE]
-> para obter uma lista dos países e regiões em que você pode se registrar para uma conta de desenvolvedor, consulte [tipos de conta, locais e taxas](account-types-locations-and-fees.md).
+> Para obter uma lista dos países e regiões em que você pode se registrar para uma conta de desenvolvedor, consulte [tipos de conta, locais e taxas](account-types-locations-and-fees.md).

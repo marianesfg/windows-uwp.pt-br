@@ -1,6 +1,6 @@
 ---
-Description: Crie aplicativos de aplicativos do Windows que dão suporte a interações personalizadas de dispositivos de caneta e caneta, incluindo tinta digital para experiências de desenho e escrita natural.
-title: Interações de caneta e Windows Ink em aplicativos do Windows
+Description: Crie aplicativos do Windows que dão suporte a interações personalizadas de dispositivos de caneta e caneta, incluindo tinta digital para experiências de desenho e escrita natural.
+title: Interações com caneta e Windows Ink em aplicativos do Windows
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
 template: detail.hbs
@@ -8,21 +8,21 @@ keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, Ink
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2cda9b2775ac1e0dca2cd37d1082bc6d75b1bad
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 1c9986ee6d4dacc929a8c2d243becf7d5c9d973e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968381"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234901"
 ---
-# <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Interações de caneta e Windows Ink em aplicativos do Windows
+# <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Interações com caneta e Windows Ink em aplicativos do Windows
 
 ![Caneta Surface](images/ink/hero-small.png)  
 *Caneta Surface* (disponível para compra na [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
 ## <a name="overview"></a>Visão geral
 
-Otimize seu aplicativo de aplicativo do Windows para entrada de caneta para fornecer a funcionalidade de [**dispositivo de ponteiro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) padrão e a melhor experiência de Ink do Windows para seus usuários.
+Otimize seu aplicativo do Windows para entrada de caneta para fornecer a funcionalidade de [**dispositivo de ponteiro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) padrão e a melhor experiência de Ink do Windows para seus usuários.
 
 > [!NOTE]
 > Este tópico se concentra na plataforma Windows Ink. Para manipulação de entrada de ponteiro geral (semelhante ao mouse, toque e touchpad), consulte [Identificar entrada do ponteiro](handle-pointer-input.md).
@@ -480,7 +480,7 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 - [**Windows. UI. Input. teleking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 - [**Windows. UI. Input. teleking. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.Core)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Tutorial de introdução: suporte à tinta em seu aplicativo do Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
 - [Exemplo de tinta simples (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)

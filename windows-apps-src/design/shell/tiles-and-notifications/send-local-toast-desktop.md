@@ -8,16 +8,16 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, área de trabalho, notificações do sistema, enviar um sistema de notificação, enviar notificação local, desktop Bridge, msix, pacotes esparsos, C#, C sustenido, notificações do sistema, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: f177660ce6e367caf69de849839a94472f5343fb
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 679254aa35ea49e72f7feaae02ba0ccbddeafdad
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968281"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233667"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 
-Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como aplicativos de aplicativos do Windows. No entanto, há algumas etapas especiais para aplicativos de desktop devido aos diferentes esquemas de ativação e a possível falta de identidade de pacote se você não estiver usando MSIX ou pacotes esparsos.
+Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como os aplicativos do Windows. No entanto, há algumas etapas especiais para aplicativos de desktop devido aos diferentes esquemas de ativação e a possível falta de identidade de pacote se você não estiver usando MSIX ou pacotes esparsos.
 
 > [!IMPORTANT]
 > Se você estiver criando um aplicativo UWP, consulte a [documentação da UWP](send-local-toast.md). Para outros idiomas da área de trabalho, consulte [WRL C++ da área de trabalho](send-local-toast-desktop-cpp-wrl.md).

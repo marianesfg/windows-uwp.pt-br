@@ -13,16 +13,16 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 24cc85c255f26b61603690d6b39c3a6ffdcbb544
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5025a63f5c96365ba1f14311b9c68ed41f4fc5aa
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970721"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234593"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
-Projete seu aplicativo de aplicativo do Windows para que ele pareça bom e funcione bem em telas do Xbox One e de televisão.
+Projete seu aplicativo do Windows para que ele pareça bom e funcione bem nas telas do Xbox One e da televisão.
 
 Confira [interações de gamepad e controle remoto](../input/gamepad-and-remote-interactions.md) para obter orientação sobre experiências de interação em aplicativos UWP na experiência de *10 pés* .
 
@@ -333,7 +333,7 @@ Você poderia colocar o trecho de código anterior nos recursos da página ou do
 > [!NOTE]
 > Este trecho de código é especificamente para `ListView`s; para um estilo de `GridView`, defina o atributo [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) como [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) e [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) como `GridView`.
 
-Para obter um controle mais refinado sobre como os itens são trazidos para exibição, se o seu aplicativo tiver como destino a versão 1803 ou posterior, você poderá usar o [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-lo em [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para que o**GridView** do **ListView**/o acompanhe antes que o **ScrollViewer** interno faça, como nos trechos de código a seguir:
+Para obter um controle mais refinado sobre como os itens são trazidos para exibição, se o seu aplicativo tiver como destino a versão 1803 ou posterior, você poderá usar o [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-lo em [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para que o GridView do **ListView**o / **GridView** acompanhe antes que **o ScrollViewer** interno faça, como nos trechos de código a seguir:
 
 ```xaml
 <GridView x:Name="gridView">
@@ -462,7 +462,7 @@ Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de 
 
 A interface do usuário aninhada expõe itens acionáveis aninhados dentro de um elemento de interface do usuário do contêiner onde o item aninhado, bem como o item de contêiner podem focar de forma independente umas nas outras.
 
-A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é posicionar elementos de interface do usuário `ContextFlyout`aninhados em um.
+A interface do usuário aninhada funciona bem para alguns tipos de entrada, mas nem sempre para gamepad e remoto, que dependem de navegação do plano XY. Certifique-se de seguir as orientações neste tópico para garantir que sua interface do usuário seja otimizada para o ambiente de 3 metros e que o usuário possa acessar facilmente todos os elementos interativos. Uma solução comum é posicionar elementos de interface do usuário aninhados em um `ContextFlyout` .
 
 Para obter mais informações sobre a interface do usuário aninhada, consulte [Interface do usuário aninhada em itens de lista](../controls-and-patterns/nested-ui.md).
 
@@ -566,6 +566,6 @@ O design para a experiência de 3 metros tem algumas considerações especiais a
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Instruções de dispositivo para aplicativos de aplicativos do Windows](index.md)
+- [Instruções do dispositivo para aplicativos do Windows](index.md)
 - [Interações de gamepad e de controle remoto](../input/gamepad-and-remote-interactions.md)
 - [Som em aplicativos UWP](../style/sound.md)

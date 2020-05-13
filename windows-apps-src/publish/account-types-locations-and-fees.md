@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: a7ab3d40b48caecc82fafef4df964b7a1dbf8071
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: 829bbc857f3856962dfbbbc4bb589fa677b8e264
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545086"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234813"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -29,9 +29,9 @@ Contas de empresa são projetadas para organizações e empresas. Para contas em
 
 Aqui estão as principais diferenças entre os dois tipos de conta.
 
-| Conta individual | Conta da empresa |
+| Conta individual | Conta empresarial |
 |--------------------|-----------------|
-| <ul><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
+| <ul><li>Custa aproximadamente US$ 19 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
 As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. De acordo com as [políticas de armazenamento](store-policies.md#1014-account-type), os aplicativos com determinadas funcionalidades, como as que acessam informações de conta financeira ou que exigem autenticação para acessar a funcionalidade primária (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas da empresa.
 
@@ -39,9 +39,9 @@ As contas empresariais são um pouco mais caras, principalmente porque exigem al
 
 Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não pode enviar aplicativos de uma conta da empresa até que ela seja verificada, mas enquanto estiver aguardando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continue criando e testando aplicativos e trabalhando para preparar seus envios.
 
-Você pode verificar o status da verificação na página **Configurações da conta**. 
+Você pode verificar o status da verificação na página **Configurações da conta**.
 
-## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de aplicativos
+## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de app
 
 Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativos se morar ou tiver uma empresa em um país ou região listado a seguir.
 
@@ -80,7 +80,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Cabo Verde                        | 19 USD              | 99 USD           |  
 | Camboja                          | 19 USD              | 99 USD           |  
 | Camarões                          | 19 USD              | 99 USD           |  
-| Canadá                            | 20 CAD              | 99 CAD           |  
+| Canada                            | 20 CAD              | 99 CAD           |  
 | República Centro-Africana          | 19 USD              | 99 USD           |  
 | Chade                              | 19 USD              | 99 USD           |  
 | Chile                             | 9776 CLP            | 46.000 CLP        |  
@@ -93,10 +93,10 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Côte d’Ivoire                     | 19 USD              | 99 USD           |  
 | Croácia                           | 107 HRK             | 500 HRK          |  
 | Chipre                            | 14 EUR              | 75 EUR           |  
-| Czechia                           | 365 CZK             | 1720 CZK         |  
+| Tchéquia                           | 365 CZK             | 1720 CZK         |  
 | Dinamarca                           | 106 DKK             | 530 DKK          |  
-| Djibuti                          | 19 USD              | 99 USD           | 
-| Dominica                          | 19 USD              | 99 USD           | 
+| Djibuti                          | 19 USD              | 99 USD           |
+| Dominica                          | 19 USD              | 99 USD           |
 | República Dominicana                | 19 USD              | 99 USD           |  
 | Equador                           | 19 USD              | 99 USD           |  
 | Egito                             | 133 EGP             | 600 EGP          |  
@@ -105,14 +105,14 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Eritreia                           | 19 USD              | 99 USD           |  
 | Estônia                           | 14 EUR              | 75 EUR           |  
 | Etiópia                          | 19 USD              | 99 USD           |  
-| Ilhas Faroés                     | 19 USD              | 99 USD           |  
+| Ilhas Faroe                     | 19 USD              | 99 USD           |  
 | Fiji                              | 19 USD              | 99 USD           |  
 | Finlândia                           | 14 EUR              | 75 EUR           |  
-| France                            | 14 EUR              | 75 EUR           |  
+| França                            | 14 EUR              | 75 EUR           |  
 | Gabão                             | 19 USD              | 99 USD           |  
 | Gâmbia                        | 19 USD              | 99 USD           |  
 | Geórgia                           | 19 USD              | 99 USD           |  
-| Germany                           | 14 EUR              | 75 EUR           |  
+| Alemanha                           | 14 EUR              | 75 EUR           |  
 | Gana                             | 19 USD              | 99 USD           |  
 | Grécia                            | 14 EUR              | 75 EUR           |  
 | Groenlândia                         | 19 USD              | 99 USD           |  
@@ -124,9 +124,9 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Haiti                             | 19 USD              | 99 USD           |  
 | Honduras                          | 19 USD              | 99 USD           |  
 | RAE de Hong Kong                     | 147 HKD             | 760 HKD          |  
-| Hungria                           | 4\.237 HUF            | 18.800 HUF        |  
-| Islândia                           | 2\.319 ISK            | 11.929 ISK        |
-| Índia                             | 1\.201 INR            | 4\.500 INR         |  
+| Hungria                           | 4.237 HUF            | 18.800 HUF        |  
+| Islândia                           | 2.319 ISK            | 11.929 ISK        |
+| Índia                             | 1.201 INR            | 4.500 INR         |  
 | Indonésia                         | 203015 IDR          | 1000000 IDR      |
 | Iraque                              | 22078 IQD           | 120000 IQD       |  
 | Irlanda                           | 14 EUR              | 75 EUR           |  
@@ -151,7 +151,6 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Lituânia                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macau                         | 19 USD              | 99 USD           |  
-| Macedônia (ARIM)                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malaui                            | 19 USD              | 99 USD           |  
 | Malásia                          | 62 MYR              | 300 MYR          |  
@@ -176,7 +175,8 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Nova Zelândia                       | 24 NZD              | 140 NZD          |  
 | Nicarágua                         | 19 USD              | 99 USD           |  
 | Níger                             | 19 USD              | 99 USD           |  
-| Nigéria                           | NGN 3700            | NGN 19500        |  
+| Nigéria                           | NGN 3700            | NGN 19500        |
+| Macedônia do Norte                   | 19 USD              | 99 USD           |    
 | Noruega                            | 113 NOK             | 580 NOK          |  
 | Omã                              | 7 OMR               | 40 OMR           |  
 | Paquistão                          | 1959 PKR            | 9000 PKR         |  
@@ -190,7 +190,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Portugal                          | 14 EUR              | 75 EUR           |  
 | Catar                             | 69 QAR              | 360 QAR          |  
 | Romênia                           | 14 EUR              | 75 EUR           |  
-| Rússia                            | 626 RUB             | 3000 RUB         |  
+| Rússia                            | 626 RUB             | RUB 3000         |  
 | Ruanda                            | 19 USD              | 99 USD           |  
 | São Cristóvão e Névis             | 19 USD              | 99 USD           |  
 | Santa Lúcia                       | 19 USD              | 99 USD           |  
@@ -230,7 +230,7 @@ Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua c
 | Uganda                            | 19 USD              | 99 USD           |  
 | Ucrânia                           | 156 UAH             | 800 UAH          |  
 | Emirados Árabes Unidos              | 19 USD              | 99 USD           |  
-| Reino Unido                    | 12 GBP              | 65 GBP           |  
+| United Kingdom                    | 12 GBP              | 65 GBP           |  
 | Estados Unidos                     | 19 USD              | 99 USD           |  
 | Uruguai                           | 19 USD              | 99 USD           |  
 | Uzbequistão                        | 19 USD              | 99 USD           |  

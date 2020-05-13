@@ -7,16 +7,16 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, área de trabalho, notificações do sistema, ponte de área de trabalho, msix, pacote esparso, opções para enviar notificações de notificação, servidor com, com, com, falso com, sem com, sem com, enviar notificação
 ms.localizationpriority: medium
-ms.openlocfilehash: 020cdeb1aaddac7fe879e91d18e258aea1b387ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b84120a592a1c2f5f18c6b6121568cbf126a582e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970981"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234547"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 
-Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como aplicativos de aplicativos do Windows. No entanto, há algumas opções diferentes para aplicativos da área de trabalho por causa de esquemas de ativação diferentes.
+Os aplicativos da área de trabalho (incluindo aplicativos [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) empacotados, aplicativos que usam [pacotes esparsos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obter a identidade do pacote e aplicativos Win32 não empacotados clássicos) podem enviar notificações de sistema interativas, assim como os aplicativos do Windows. No entanto, há algumas opções diferentes para aplicativos da área de trabalho por causa de esquemas de ativação diferentes.
 
 Neste artigo, listamos as opções que você tem para enviar uma notificação do sistema no Windows 10. Cada opção oferece suporte completo para...
 

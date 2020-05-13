@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: e9a6ce5dac2e6a8480b3c6e95472b437ad6f947c
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: 21061105287c97b4a665dad791703dfab2e9ce8f
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545006"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233818"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
@@ -26,7 +26,7 @@ Normalmente enviaremos qualquer pagamento devido em um dado mês até o 15º dia
 > [!NOTE]
 > Os dias mostrados abaixo são aproximados; qualquer pagamento pode demorar mais ou menos tempo.
 
-| Forma de pagamento     | Número de dias até chegar à conta de pagamento     |
+| Método de pagamento     | Número de dias até chegar à conta de pagamento     |
 |--------------------|--------------------------------------------|
 | PayPal             | 1 dia útil                             |
 | ACH/SEPA           | De 2 a 3 dias úteis                          |
@@ -39,7 +39,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 > [!NOTE]
 > Os limites de pagamento em todas as regiões são US $ $50.
 
-| País                          | Azure Marketplace | Armazenar, anunciar, mixar e Minecraft | Office | Pagamentos do PayPal |
+| País/Região                          | Azure Marketplace | Armazenar, anunciar, mixar e Minecraft | Office | Pagamentos do PayPal |
 |----------------------------------|-------------------|------------------------------------------|--------|-----------------|
 | Afeganistão                      | Sim               | Sim                                      | Não     | Não              |
 | Albânia                          | Sim               | Sim                                      | Sim    | Sim             |
@@ -66,7 +66,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Burundi                          | Sim               | Sim                                      | Sim    | Não              |
 | Camboja                         | Sim               | Sim                                      | Sim    | Não              |
 | Camarões                         | Sim               | Sim                                      | Sim    | Não              |
-| Canadá                           | Sim               | Sim                                      | Sim    | Sim             |
+| Canada                           | Sim               | Sim                                      | Sim    | Sim             |
 | República Centro-Africana         | Sim               | Sim                                      | Sim    | Não              |
 | Chade                             | Sim               | Sim                                      | Sim    | Não              |
 | Chile                            | Sim               | Sim                                      | Sim    | Sim             |
@@ -79,7 +79,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Côte d' Ivoire                    | Sim               | Sim                                      | Sim    | Não              |
 | Croácia                          | Sim               | Sim                                      | Sim    | Não              |
 | Chipre                           | Sim               | Sim                                      | Sim    | Sim             |
-| Czechia                          | Sim               | Sim                                      | Sim    | Sim             |
+| Tchéquia                          | Sim               | Sim                                      | Sim    | Sim             |
 | Dinamarca                          | Sim               | Sim                                      | Sim    | Sim             |
 | Dominica                         | Sim               | Sim                                      | Não     | Sim             |
 | República Dominicana               | Sim               | Sim                                      | Sim    | Sim             |
@@ -89,18 +89,18 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Eritreia                          | Sim               | Sim                                      | Sim    | Não              |
 | Estônia                          | Sim               | Sim                                      | Sim    | Sim             |
 | Etiópia                         | Sim               | Sim                                      | Sim    | Não              |
-| Fiji                     | Sim               | Sim                                      | Não     | Não              |
+| Ilhas Fiji                     | Sim               | Sim                                      | Não     | Não              |
 | Finlândia                          | Sim               | Sim                                      | Sim    | Sim             |
-| France                           | Sim               | Sim                                      | Sim    | Sim             |
+| França                           | Sim               | Sim                                      | Sim    | Sim             |
 | Geórgia                          | Sim               | Sim                                      | Sim    | Sim             |
-| Germany                          | Sim               | Sim                                      | Sim    | Sim             |
+| Alemanha                          | Sim               | Sim                                      | Sim    | Sim             |
 | Gana                            | Sim               | Sim                                      | Sim    | Não              |
 | Grécia                           | Sim               | Sim                                      | Sim    | Sim             |
 | Guatemala                        | Sim               | Sim                                      | Sim    | Sim             |
 | Guiné                           | Sim               | Sim                                      | Sim    | Não              |
 | Haiti                            | Sim               | Sim                                      | Sim    | Não              |
 | Honduras                         | Sim               | Sim                                      | Sim    | Sim             |
-| Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
+| RAE de Hong Kong                        | Sim               | Sim                                      | Sim    | Sim             |
 | Hungria                          | Sim               | Sim                                      | Sim    | Sim             |
 | Islândia                          | Sim               | Sim                                      | Sim    | Não              |
 | Índia                            | Sim               | Sim                                      | Sim    | Sim             |
@@ -124,7 +124,6 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Liechtenstein                    | Sim               | Sim                                      | Sim    | Sim             |
 | Lituânia                        | Sim               | Sim                                      | Sim    | Não              |
 | Luxemburgo                       | Sim               | Sim                                      | Sim    | Sim             |
-| Macedônia, ARJ da                        | Não                | Sim                                      | Sim    | Não              |
 | Madagascar                       | Sim               | Sim                                      | Sim    | Não              |
 | Malaui                           | Sim               | Sim                                      | Sim    | Sim             |
 | Malásia                         | Sim               | Sim                                      | Sim    | Sim             |
@@ -143,6 +142,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Nicarágua                        | Sim               | Sim                                      | Sim    | Sim             |
 | Níger                            | Sim               | Sim                                      | Sim    | Não              |
 | Nigéria                          | Sim               | Sim                                      | Sim    | Não              |
+| Macedônia do Norte                  | Não                | Sim                                      | Sim    | Não              |
 | Noruega                           | Sim               | Sim                                      | Sim    | Sim             |
 | Omã                             | Sim               | Sim                                      | Sim    | Sim             |
 | Paquistão                         | Sim               | Sim                                      | Sim    | Não              |
@@ -185,7 +185,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 | Uganda                           | Sim               | Sim                                      | Sim    | Não              |
 | Ucrânia                          | Sim               | Sim                                      | Não     | Não              |
 | Emirados Árabes Unidos             | Sim               | Sim                                      | Sim    | Sim             |
-| Reino Unido                   | Sim               | Sim                                      | Sim    | Sim             |
+| United Kingdom                   | Sim               | Sim                                      | Sim    | Sim             |
 | Estados Unidos                    | Sim               | Sim                                      | Sim    | Sim             |
 | Uruguai                          | Sim               | Sim                                      | Sim    | Sim             |
 | Uzbequistão                       | Sim               | Sim                                      | Não     | Não              |

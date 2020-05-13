@@ -1,5 +1,5 @@
 ---
-Description: As APIs de texto principal no namespace Windows. UI. Text. Core permitem que um aplicativo de aplicativo do Windows receba entrada de texto de qualquer serviço de texto com suporte em dispositivos Windows.
+Description: As APIs de texto principal no namespace Windows. UI. Text. Core permitem que um aplicativo do Windows receba entrada de texto de qualquer serviço de texto com suporte em dispositivos Windows.
 title: Visão geral da entrada de texto personalizada
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
@@ -8,18 +8,18 @@ keywords: teclado, texto, texto básico, texto personalizado, Estrutura de Servi
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f42f7da525211442c37d34a2e3ce96ec9f7af568
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bf2fb934d4ae6f2e954cf32e612ebf2b2538d7ce
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970931"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234439"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
 
 
-As APIs de texto principal no namespace [**Windows. UI. Text. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core) permitem que um aplicativo de aplicativo do Windows receba entrada de texto de qualquer serviço de texto com suporte em dispositivos Windows. As APIs são semelhantes às APIs [Estrutura de Serviços de Texto](https://docs.microsoft.com/windows/desktop/TSF/text-services-framework) em que o aplicativo não precisa ter conhecimento detalhado dos serviços de texto. Isso permite que o aplicativo receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
+As APIs de texto principal no namespace [**Windows. UI. Text. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core) permitem que um aplicativo do Windows receba entrada de texto de qualquer serviço de texto com suporte em dispositivos Windows. As APIs são semelhantes às APIs [Estrutura de Serviços de Texto](https://docs.microsoft.com/windows/desktop/TSF/text-services-framework) em que o aplicativo não precisa ter conhecimento detalhado dos serviços de texto. Isso permite que o aplicativo receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
 
 > **APIs importantes**: [**Windows.UI.Text.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core), [**CoreTextEditContext**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextEditContext)
 
@@ -56,12 +56,12 @@ Os intervalos de texto e as seleções são representados pela estrutura [**Core
 
 | Campo                  | Tipo de dados                                                                 | Descrição                                                                      |
 |------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **StartCaretPosition** | **Número** \[de JavaScript\] | .NET **System. Int32** \[\] | C++ **Int32** \[\] | A posição inicial de um intervalo é a ACP pouco antes do primeiro caractere. |
-| **EndCaretPosition**   | **Número** \[de JavaScript\] | .NET **System. Int32** \[\] | C++ **Int32** \[\] | A posição final de um intervalo é a ACP logo depois do último caractere.     |
+| **StartCaretPosition** | **Número** \[ de Linguagem\] | **.NET System. Int32** \[\] | **Int32** \[ C\] | A posição inicial de um intervalo é a ACP pouco antes do primeiro caractere. |
+| **EndCaretPosition**   | **Número** \[ de Linguagem\] | **.NET System. Int32** \[\] | **Int32** \[ C\] | A posição final de um intervalo é a ACP logo depois do último caractere.     |
 
  
 
-Por exemplo, no intervalo de texto mostrado anteriormente, o intervalo \[0, 5\] especifica a palavra "Olá". **StartCaretPosition** sempre deve ser menor ou igual a **EndCaretPosition**. O intervalo \[de 5,\] 0 é inválido.
+Por exemplo, no intervalo de texto mostrado anteriormente, o intervalo \[ 0, 5 \] especifica a palavra "Olá". **StartCaretPosition** sempre deve ser menor ou igual a **EndCaretPosition**. O intervalo de \[ 5, 0 \] é inválido.
 
 ### <a name="insertion-point"></a>Ponto de inserção
 
@@ -73,7 +73,7 @@ Alguns controles de edição dão suporte a seleções não contíguas. Por exem
 
 Por exemplo, considere este fluxo de texto:
 
-![diagrama](images/coretext/stream-2.png) de fluxo de texto de exemplo há duas seleções \[: 0,\] 1 \[e 6,\]11. O controle de edição deve relatar apenas um deles; \[0, 1\] ou \[6, 11\].
+![diagrama de fluxo de texto ](images/coretext/stream-2.png) de exemplo há duas seleções: \[ 0, 1 \] e \[ 6, 11 \] . O controle de edição deve relatar apenas um deles; \[0, 1 \] ou \[ 6, 11 \] .
 
 ## <a name="working-with-text"></a>Trabalhando com texto
 
@@ -94,13 +94,13 @@ O controle de edição normalmente deve aceitar solicitações de atualização 
 2.  Coloque a seleção na posição especificada em [**CoreTextTextUpdatingEventArgs.NewSelection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection).
 3.  Notifique o sistema de que a atualização foi bem-sucedida definindo [**CoreTextTextUpdatingEventArgs.Result**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result) como [**CoreTextTextUpdatingResult.Succeeded**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingResult).
 
-Por exemplo, esse é o estado de um controle de edição antes de o usuário digitar "d". O ponto de inserção é \[de 10,\]10.
+Por exemplo, esse é o estado de um controle de edição antes de o usuário digitar "d". O ponto de inserção é de \[ 10, 10 \] .
 
-![exemplo de diagrama](images/coretext/stream-3.png) de fluxo de texto quando o usuário digita "d", um evento [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) é gerado com os seguintes dados de [**CoreTextTextUpdatingEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) :
+![exemplo de diagrama ](images/coretext/stream-3.png) de fluxo de texto quando o usuário digita "d", um evento [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) é gerado com os seguintes dados de [**CoreTextTextUpdatingEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) :
 
--   [**Range**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.range) = Intervalo\[de 10, 10\]
+-   [**Intervalo de**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.range)  =  \[ 10, 10\]
 -   [**Text**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.text) = "d"
--   [**NewSelection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection) = NewSelection\[11, 11\]
+-   [**NewSelection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection)  =  NewSelection \[ 11, 11\]
 
 Em seu controle de edição, aplique as alterações especificadas e defina [**Result**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result) como **Succeeded**. Aqui está o estado do controle após as alterações serem aplicadas.
 
@@ -115,15 +115,15 @@ Por exemplo, considere um controle de edição que aceita apenas um endereço de
 
 Às vezes, o controle de edição faz alterações no texto, como quando o texto é colado ou corrigido automaticamente. Nesses casos, você deve notificar os serviços de texto dessas alterações chamando o método [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged).
 
-Por exemplo, esse é o estado de um controle de edição antes de o usuário colar "World". O ponto de inserção está \[em 6,\]6.
+Por exemplo, esse é o estado de um controle de edição antes de o usuário colar "World". O ponto de inserção está em \[ 6, 6 \] .
 
-![diagrama](images/coretext/stream-5.png) de fluxo de texto de exemplo o usuário executa a ação colar e o controle de edição termina com o seguinte texto:
+![diagrama de fluxo ](images/coretext/stream-5.png) de texto de exemplo o usuário executa a ação colar e o controle de edição termina com o seguinte texto:
 
-![exemplo de diagrama](images/coretext/stream-4.png) de fluxo de texto quando isso acontece, você deve chamar [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) com estes argumentos:
+![exemplo de diagrama de fluxo de texto ](images/coretext/stream-4.png) quando isso acontece, você deve chamar [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) com estes argumentos:
 
--   *modifiedRange* = modifiedRange\[6, 6\]
+-   *modifiedRange*  =  modifiedRange \[ 6, 6\]
 -   *newLength* = 5
--   *newSelection* = newSelection\[11, 11\]
+-   *newSelection*  =  newSelection \[ 11, 11\]
 
 Um ou mais [**TextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textrequested) eventos virão depois, tratados para atualizar o texto com que os serviços de texto estão trabalhando.
 
@@ -131,17 +131,17 @@ Um ou mais [**TextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.tex
 
 No controle de edição, convém substituir uma atualização de texto para fornecer recursos de correção automática.
 
-Por exemplo, considere um controle de edição que forneça um recurso de correção que formaliza contrações. Esse é o estado do controle de edição antes de o usuário digitar a tecla de espaço para acionar a correção. O ponto de inserção está \[em 3,\]3.
+Por exemplo, considere um controle de edição que forneça um recurso de correção que formaliza contrações. Esse é o estado do controle de edição antes de o usuário digitar a tecla de espaço para acionar a correção. O ponto de inserção está em \[ 3, 3 \] .
 
-![diagrama](images/coretext/stream-6.png) de fluxo de texto de exemplo o usuário pressiona a tecla de espaço e um evento [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) correspondente é gerado. O controle de edição aceita a atualização de texto. Esse é o estado do controle de edição para um breve momento antes de a correção ser concluída. O ponto de inserção é \[de 4,\]4.
+![diagrama de fluxo ](images/coretext/stream-6.png) de texto de exemplo o usuário pressiona a tecla de espaço e um evento [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) correspondente é gerado. O controle de edição aceita a atualização de texto. Esse é o estado do controle de edição para um breve momento antes de a correção ser concluída. O ponto de inserção é de \[ 4, 4 \] .
 
-![exemplo de diagrama](images/coretext/stream-7.png) de fluxo de texto fora do manipulador de eventos [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) , o controle de edição faz a correção a seguir. Este é o estado do controle de edição após a correção estar concluída. O ponto de inserção está \[em 5,\]5.
+![exemplo de diagrama ](images/coretext/stream-7.png) de fluxo de texto fora do manipulador de eventos [**textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) , o controle de edição faz a correção a seguir. Este é o estado do controle de edição após a correção estar concluída. O ponto de inserção está em \[ 5, 5 \] .
 
-![exemplo de diagrama](images/coretext/stream-8.png) de fluxo de texto quando isso acontece, você deve chamar [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) com estes argumentos:
+![exemplo de diagrama de fluxo de texto ](images/coretext/stream-8.png) quando isso acontece, você deve chamar [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) com estes argumentos:
 
--   *modifiedRange* = modifiedRange\[1, 2\]
+-   *modifiedRange*  =  modifiedRange \[ 1, 2\]
 -   *newLength* = 2
--   *newSelection* = newSelection\[5, 5\]
+-   *newSelection*  =  newSelection \[ 5, 5\]
 
 Um ou mais [**TextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textrequested) eventos virão depois, tratados para atualizar o texto com que os serviços de texto estão trabalhando.
 
@@ -153,7 +153,7 @@ Haverá vezes em que o [**Range**](https://docs.microsoft.com/uwp/api/windows.ui
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Exemplo de controle de edição personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)
 

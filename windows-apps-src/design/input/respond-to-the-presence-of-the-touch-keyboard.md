@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: 76b468eedd136522a4af9fb5880049278548865d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 969d0c24c86a47e72cbfec08d835c25b6e6779c4
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970261"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234880"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder à presença do teclado virtual
 
@@ -39,7 +39,7 @@ Este tópico complementa [Interações por teclado](keyboard-interactions.md).
 
 Você deve ter um conhecimento básico de interações por teclado padrão, manipulação de entradas e eventos por teclado e Automação da Interface do Usuário.
 
-Se você for novo no desenvolvimento de aplicativos de aplicativos do Windows, conheça esses tópicos para se familiarizar com as tecnologias discutidas aqui.
+Se você for novo no desenvolvimento de aplicativos do Windows, conheça esses tópicos para se familiarizar com as tecnologias discutidas aqui.
 
 - [Crie seu primeiro aplicativo](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 - Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
@@ -66,7 +66,7 @@ Estas são algumas recomendações básicas para controles de entrada de texto p
 
     ![um formulário com e sem o teclado virtual em exibição](images/touch-keyboard-pan1.png)
 
-    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo: 
+    Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo:
 
     ![um formulário que contém áreas que devem ser sempre exibidas](images/touch-keyboard-pan2.png)
 
@@ -214,7 +214,7 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 - [Acessibilidade do teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 - [Pares de automação personalizados](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Amostra de teclado virtual](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 

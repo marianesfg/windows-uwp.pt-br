@@ -8,16 +8,16 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 199c120dcc85e5c113d6d4d529699a3f2fb28aa1
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 13737e9aeb906e0430b2a18dd75ae1fce3a75956
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970081"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234582"
 ---
 # <a name="guidelines-for-touch-targets"></a>Diretrizes para destinos de toque
 
-Todos os elementos de interface do usuário interativos em seu aplicativo de aplicativo do Windows devem ser grandes o suficiente para que os usuários acessem e usem com precisão, independentemente do tipo de dispositivo ou do método de entrada.
+Todos os elementos interativos da interface do usuário no seu aplicativo do Windows devem ser grandes o suficiente para que os usuários acessem e usem com precisão, independentemente do tipo de dispositivo ou do método de entrada.
 
 Dar suporte à entrada por toque (e a natureza relativamente precisa da área de contato de toque) requer mais otimização em relação ao tamanho de destino e ao layout de controle, pois o conjunto maior, mais complexo de dados de entrada relatados pelo Touch digitalizador é usado para determinar o destino pretendido (ou mais provável) do usuário.
 
@@ -32,7 +32,7 @@ Neste tópico, descrevemos esses comportamentos padrão para que você possa pro
 O *Dimensionamento Fluent padrão* foi criado para fornecer um equilíbrio entre densidade de informações e conforto do usuário. Na verdade, todos os itens na tela se alinham a um alvo de 40 px x 40 px efetivos (epx), o que permite que os elementos da interface do usuário se alinhem com uma grade e sejam dimensionados de forma adequada com base no nível do sistema.
 
 > [!NOTE]
-> Para obter mais informações sobre pixels e dimensionamento efetivos, consulte [introdução ao design de aplicativos do Windows](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+> Para saber mais sobre dimensionamento e pixels efetivos, confira [Introdução ao design de aplicativos do Windows](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
 >
 > Para saber mais sobre o dimensionamento no nível de sistema, confira [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md).
 
@@ -81,7 +81,7 @@ Essas recomendações de tamanho de destino podem ser ajustadas de acordo com de
 - [Controle de tamanho e densidade](../style/spacing.md)
 - [Alinhamento, margem, preenchimento](../layout/alignment-margin-padding.md)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

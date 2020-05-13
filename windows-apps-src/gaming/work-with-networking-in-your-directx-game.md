@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, rede, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e693016fa6b87f231c1cbbfac4c2e55d44623c9
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: d2d1487c708b8618feec5cb735fb8af260608e00
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606365"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280266"
 ---
 # <a name="networking-for-games"></a>Rede para jogos
 
@@ -121,7 +121,7 @@ O namespace [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/
 
 Um erro encontrado na operação [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) ou [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) resulta em uma exceção sendo gerada. A causa da exceção é um valor de erro representado como um valor **HRESULT**. O método [**SocketError.GetStatus**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.socketerror.getstatus) é usado para converter um erro de rede de uma operação de soquete em um valor de enumeração [**SocketErrorStatus**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.SocketErrorStatus). A maioria dos valores de enumeração **SocketErrorStatus** corresponde a um erro retornado pela operação nativa de soquetes do Windows. Um aplicativo pode filtrar por um valor específico de enumeração **SocketErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**.
+Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E \_ INVALIDARG**.
 
 Adicionar código para trabalhar com exceções ao tentar fazer uma conexão de soquete de fluxo
 
@@ -273,7 +273,7 @@ O namespace [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/windows.
 
 Nos aplicativos em C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa um erro durante a execução do aplicativo quando há uma exceção. A propriedade [**Platform:: Exception:: HRESULT**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) retorna o **HRESULT** atribuído à exceção específica. A propriedade [**Platform:: Exception:: Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor **HRESULT** . Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**. Para algumas chamadas de método ilícitas, o **HRESULT** retornado é **E\_ILLEGAL\_METHOD\_CALL**.
+Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E \_ INVALIDARG**. Para algumas chamadas de método ilícitas, o **HRESULT** retornado é **E\_ILLEGAL\_METHOD\_CALL**.
 
 Adicionar código para trabalhar com exceções ao tentar usar [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) para se conectar a um servidor HTTP
 
@@ -388,7 +388,7 @@ using namespace Windows::Web::Http;
 
 **Amostras**
 
-* [Exemplo de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [Exemplo de DatagramSocket](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
 * [Amostra de HttpClient]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
-* [Exemplo de proximidade](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [Exemplo de proximidade](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
 * [Exemplo do StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

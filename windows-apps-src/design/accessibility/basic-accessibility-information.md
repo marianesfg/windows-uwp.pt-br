@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b019495235ca2ff4bec2f9e6bc1b9230a15599
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ff19eea5a2fa57d4e5b2728ddbd87e5d99ff539a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969511"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234138"
 ---
 # <a name="expose-basic-accessibility-information"></a>Expor informações básicas de acessibilidade  
 
@@ -56,7 +56,7 @@ Nem todos os controles têm um valor. Os controles que não têm um valor report
 ## <a name="influencing-the-ui-automation-tree-views"></a>Influenciando as exibições de árvore de automação da IU  
 A estrutura de Automação da IU tem um conceito de exibições em árvore, onde os clientes da Automação da Interface do Usuário podem recuperar as relações entre os elementos de uma interface do usuário usando três visualizações possíveis: bruto, de controle e de conteúdo. A visualização de controle é a visualização usada frequentemente por clientes da Automação da Interface do Usuário, pois fornece uma boa representação e organização dos elementos em uma interface do usuário que são interativos. As ferramentas de teste costumam permitir que você escolha qual modo de exibição de árvore usar quando a ferramenta apresenta a organização dos elementos.
 
-Por padrão, qualquer classe derivada de [**controle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e alguns outros elementos aparecerão no modo de exibição de controle quando a estrutura de automação da interface do usuário representar a interface do usuário para um aplicativo de aplicativo do Windows. Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
+Por padrão, qualquer classe derivada de [**controle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e alguns outros elementos aparecerão no modo de exibição de controle quando a estrutura de automação da interface do usuário representar a interface do usuário para um aplicativo do Windows. Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>

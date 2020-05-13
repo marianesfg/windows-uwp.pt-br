@@ -6,12 +6,12 @@ keywords: dial, radial, tutorial
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74bb75fb6bced451daeb6f03fba78636d0998cec
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 3972e04c59748efabd51b423f6f24fc22291a6d1
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970271"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234892"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-windows-app"></a>Tutorial: suporte à discagem de superfície (e outros dispositivos de roda) em seu aplicativo do Windows
 
@@ -63,7 +63,7 @@ O Dial oferece suporte a três gestos básicos:
 > [!NOTE]
 > Os dispositivos de roda de rolagem podem ser configurados por meio das configurações de **Roda**:
 > 1. No menu **Iniciar**, selecione **Configurações**.
-> 2. Selecione **dispositivos** > **Wheel**.    
+> 2. Selecione **dispositivos**  >  **Wheel**.    
 > ![Tela de configurações de roda](images/radialcontroller/wheel-settings.png)
 
 Agora você está pronto para iniciar este tutorial. 
@@ -88,7 +88,7 @@ Esses objetos fornecem a maior parte da experiência do dispositivo de roda para
 | Componente | Descrição |
 | --- | --- |
 | [**Classe RadialController**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) e componentes relacionados | Representa um acessório ou dispositivo de entrada de roda de rolagem, como o Surface Dial. |
-| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [**IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Não abordaremos essa funcionalidade aqui; para obter mais informações, consulte o [Exemplo de área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Permite a interoperabilidade com um aplicativo do Windows. |
+| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop)  /  [ **IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Não abordaremos essa funcionalidade aqui; para obter mais informações, consulte o [Exemplo de área de trabalho clássica do Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Permite a interoperabilidade com um aplicativo do Windows. |
 
 ## <a name="step-1-run-the-sample"></a>Etapa 1: Executar o exemplo
 
@@ -98,7 +98,7 @@ Após baixar o aplicativo de exemplo RadialController, verifique se ele é execu
 3. Pressione F5 para compilar, implantar e executar. 
 
 > [!NOTE]
-> Como alternativa, você pode selecionar **depurar** > item de menu**Iniciar Depuração** ou selecionar o botão Executar do **computador local** mostrado aqui ![: botão do projeto de compilação do Visual Studio](images/radialcontroller/wheel-vsrun.png)
+> Como alternativa, você pode selecionar **depurar**  >  item de menu**Iniciar Depuração** ou selecionar o botão Executar do **computador local** mostrado aqui: ![ botão do projeto de compilação do Visual Studio](images/radialcontroller/wheel-vsrun.png)
 
 A janela do aplicativo será aberta e, depois que uma tela inicial aparecer por alguns segundos, você verá esta tela inicial.
 
@@ -125,7 +125,7 @@ Agora, começaremos com uma personalização básica.
 Primeiro, vamos adicionar a interface do usuário do aplicativo:
 
 1. Abra o arquivo MainPage_Basic.xaml.
-2. Localize o código marcado com o título desta etapa ("\<!--etapa 3: adicionar controles para entrada de roda-->").
+2. Localize o código marcado com o título desta etapa (" \< !--etapa 3: adicionar controles para entrada de roda-->").
 3. Remova o comentário das linhas a seguir.
 
     ```xaml
@@ -346,7 +346,7 @@ O Surface Dial e outros dispositivos de roda de rolagem podem fornecer aos usuá
 Nesta etapa, vamos mostrar como personalizar comentários hápticos associando os controles deslizantes e de botão de alternância e usando-os para especificar dinamicamente o comportamento desses comentários. Neste exemplo, o botão de alternância deve ser ativado para que os comentários sejam habilitados enquanto o valor do controle deslizante especifica a frequência em que os comentários de clique são repetidos. 
 
 > [!NOTE]
-> Os comentários do Haptic podem ser desabilitados pelo usuário na página de**roda** **configurações** >  **dispositivos** > .
+> Os comentários do Haptic podem ser desabilitados pelo usuário na página de roda **configurações**  >   **dispositivos**  >  **Wheel** .
 
 1. Abra o arquivo App.xaml.cs.
 2. Localize o código marcado com o título desta etapa ("Etapa 6: Personalizar a háptica do dispositivo").
@@ -358,7 +358,7 @@ Nesta etapa, vamos mostrar como personalizar comentários hápticos associando o
     rootFrame.Navigate(typeof(MainPage), e.Arguments);
     ```
 4. Abra o arquivo MainPage_Haptics.xaml.
-5. Localize o código marcado com o título desta etapa ("\<!--etapa 6: personalizar o dispositivo haptics-->").
+5. Localize o código marcado com o título desta etapa (" \< !--etapa 6: personalizar o dispositivo haptics-->").
 6. Remova o comentário das linhas a seguir. (Este código de interface do usuário simplesmente indica quais recursos hápticos são compatíveis com o dispositivo atual.)    
 
     ```xaml
@@ -632,7 +632,7 @@ Parabéns, você concluiu o *tutorial de introdução: suporte à discagem de su
 - [**RadialControllerMenuKnownIcon** enum](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuKnownIcon) 
 - [**RadialControllerSystemMenuItemKind** enum](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 #### <a name="topic-samples"></a>Amostras de tópico
 

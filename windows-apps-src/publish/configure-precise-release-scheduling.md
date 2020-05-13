@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 98f4ca9cb1b0b9bf2178fc0b80d0819e15448d24
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: b674b2569a40a4f7a504bc6b7bc55ac932b83d01
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545036"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234807"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 
@@ -34,9 +34,9 @@ Observe que você não conseguirá configurar as datas na seção **Agendamento*
 
 As seleções feitas para o agendamento base se aplicarão a todos os mercados em que o aplicativo está disponível, a menos que você adicione posteriormente datas para mercados específicos (ou grupos de mercados), selecionando [Personalizar para mercados específicos](#customize-the-schedule-for-specific-markets).
 
-Você verá duas opções aqui: **Lançamento** e **Parar aquisição**. 
+Você verá duas opções aqui: **Lançamento** e **Parar aquisição**.
 
-## <a name="release"></a>Liberação
+## <a name="release"></a>Versão
 
 Na lista suspensa **Lançamento**, você pode definir quando deseja que o aplicativo seja disponibilizado na Loja. Isso significa que o aplicativo pode ser descoberto na Loja por meio de pesquisa ou navegação, e que os clientes podem ver a listagem da Loja e adquirir o aplicativo.
 
@@ -56,14 +56,14 @@ Na lista suspensa **Parar aquisição**, você pode definir uma data e hora em q
 
 Por padrão, a opção **Parar aquisição** é definida como nunca. Para alterar essa configuração, selecione **em** na lista suspensa e especifique uma data e hora, conforme descrito acima. Na data e hora que você selecionar, os clientes não poderão mais adquirir o aplicativo.
 
-É importante entender que essa opção tem o mesmo impacto que selecionar **tornar este aplicativo detectável, mas não disponível** na seção de [visibilidade](choose-visibility-options.md#discoverability) e escolher **parar a aquisição: qualquer cliente com um link direto pode ver a listagem de armazenamento do produto, mas eles só poderão baixá-lo se possuírem o produto antes ou tiver um código promocional e estiver usando um dispositivo Windows 10.** Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+É importante entender que essa opção tem o mesmo impacto que selecionar **tornar este aplicativo detectável, mas não disponível** na seção de [visibilidade](choose-visibility-options.md#discoverability) e escolher **parar a aquisição: qualquer cliente com um link direto pode ver a listagem de armazenamento do produto, mas eles só poderão baixá-lo se possuírem o produto antes ou tiver um código promocional e estiver usando um dispositivo Windows 10.** Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Como remover um aplicativo da Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Se você selecionar uma data para **Parar aquisição** e depois decidir disponibilizar o aplicativo novamente, poderá criar um novo envio e alterar **Parar aquisição** para **Nunca**. O aplicativo ficará disponível novamente depois que o envio atualizado for publicado.
 
-## <a name="customize-the-schedule-for-specific-markets"></a>Personalizar o agendamento para mercados específicos 
+## <a name="customize-the-schedule-for-specific-markets"></a>Personalizar o agendamento para mercados específicos
 
-Por padrão, as opções selecionadas acima serão aplicadas a todos os mercados em que o aplicativo for oferecido. Para personalizar o preço para mercados específicos, clique em **Personalizar para mercados específicos**. A janela pop-up **Seleção de mercado** será exibida, listando todos os mercados em que você optou por disponibilizar o app. Se você tiver excluído algum mercado na seção [Mercados](define-pricing-and-market-selection.md), esses mercados não serão mostrados aqui. 
+Por padrão, as opções selecionadas acima serão aplicadas a todos os mercados em que o aplicativo for oferecido. Para personalizar o preço para mercados específicos, clique em **Personalizar para mercados específicos**. A janela pop-up **Seleção de mercado** será exibida, listando todos os mercados em que você optou por disponibilizar o app. Se você tiver excluído algum mercado na seção [Mercados](define-pricing-and-market-selection.md), esses mercados não serão mostrados aqui.
 
 Para adicionar a agenda de um mercado, selecione-a e clique em **Salvar**. Depois, você verá as mesmas opções **Lançamento** e **Parar aquisição** descritas acima, mas as seleções feitas serão aplicadas somente a esse mercado.
 
@@ -72,13 +72,13 @@ Para adicionar um agendamento que se aplicará a vários mercados, crie um *grup
 Para adicionar uma agenda personalizada para um mercado adicional ou um grupo de mercados adicional, basta clicar novamente em **Personalizar para mercados específicos** e repetir essas etapas. Para alterar os mercados incluídos em um grupo de mercados, selecione seu nome. Para remover o agendamento personalizado de um grupo de mercados (ou um mercado individual), clique em **Remover**.
 
 > [!NOTE]
-> Um mercado não pode pertencer a mais de um dos grupos de mercado usados na seção **Agendamento**. 
+> Um mercado não pode pertencer a mais de um dos grupos de mercado usados na seção **Agendamento**.
 
 ## <a name="global-time-zones"></a>Fusos horários globais
 
 Abaixo está uma tabela que mostra quais fusos horários específicos são usados em cada mercado, portanto, quando seu envio usa a hora local (por exemplo, lançamento às 9h local), você pode descobrir em que hora ele será lançado em cada mercado, especialmente útil com mercados com mais de um fuso horário, como o Canadá.
 
-| Market | Fuso Horário |
+| Market | Fuso horário |
 |--------|-----------|
 | Afeganistão  |  (UTC + 04:30) Cabul |
 | Albânia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
@@ -95,7 +95,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Austrália  |  (UTC + 10:00) Camberra, Melbourne, Sydney |
 | Áustria  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
 | Azerbaijão  |  (UTC + 04:00) Baku |
-| Bahamas, As  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Bahamas  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Bahrein  |  (UTC + 04:00) Abu Dhabi, Mascate |
 | Bangladesh  |  (UTC + 06:00) Dacca |
 | Barbados  |  (UTC-04:00) Hora do Atlântico (Canadá) |
@@ -103,7 +103,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Bélgica  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Belize  |  (UTC-06:00) Hora central (EUA & Canadá) |
 | Benin  |  (UTC + 01:00) Centro-oeste da África |
-| Bermuda  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Bermudas  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Butão  |  (UTC + 06:00) Dacca |
 | República Bolivariana da Venezuela  |  (UTC-04:00) Caracas |
 | Bolívia  |  (UTC-04:00) Georgetown, la paz, Manaus, San Juan |
@@ -121,7 +121,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | CÃ ́te d' Ivoire  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Camboja  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
 | Camarões  |  (UTC + 01:00) Centro-oeste da África |
-| Canadá  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
+| Canada  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Cabo Verde  |  (UTC-01:00) Ilha de cabo verde |
 | Ilhas Cayman  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | República Centro-Africana  |  (UTC + 01:00) Centro-oeste da África |
@@ -139,7 +139,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Croácia  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | CuraÃ § ao  |  (UTC-04:00) Cuiabá |
 | Chipre  |  (UTC + 02:00) Chisinau |
-| Czechia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
+| Tchéquia  |  (UTC + 01:00) Belgrado, Bratislava, Budapeste, Liubliana, Praga |
 | Dinamarca  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Djibuti  |  (UTC + 03:00) Nairóbi |
 | Dominica  |  (UTC-04:00) Hora do Atlântico (Canadá) |
@@ -151,18 +151,18 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Eritreia  |  (UTC + 03:00) Nairóbi |
 | Estônia  |  (UTC + 02:00) Chisinau |
 | Etiópia  |  (UTC + 03:00) Nairóbi |
-| Ilhas Malvinas  |  (UTC-04:00) Santiago |
-| Ilhas Faroés  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| Ilhas Malvinas (Falkland)  |  (UTC-04:00) Santiago |
+| Ilhas Faroe  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
 | Fiji  |  (UTC + 12:00) Ilhas |
 | Finlândia  |  (UTC + 02:00) Helsinque, Kiev, Riga, Sófia, Tallinn, Vilnius |
-| France  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
+| França  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Guiana Francesa  |  (UTC-03:00) Caiena, fortaleza |
 | Polinésia Francesa  |  (UTC-10:00) Havaí |
 | Terras Austrais e Antárticas Francesas  |  (UTC + 05:00) Ashgabat, Tashkent |
 | Gabão  |  (UTC + 01:00) Centro-oeste da África |
 | Gâmbia, A  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Geórgia  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
-| Germany  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
+| Alemanha  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
 | Gana  |  (UTC + 00:00) Monróvia, Reykjavík |
 | Gibraltar  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Grécia  |  (UTC + 02:00) Atenas, Bucareste |
@@ -208,7 +208,6 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Lituânia  |  (UTC + 02:00) Chisinau |
 | Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | RAE de Macau  |  (UTC + 08:00) Pequim, Chonquim, Hong Kong, Urumqi |
-| Macedônia (ARIM)  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Madagascar  |  (UTC + 03:00) Nairóbi |
 | Malaui  |  (UTC + 02:00) Harare, Pretória |
 | Malásia  |  (UTC + 08:00) Kuala Lumpur, Cingapura |
@@ -242,6 +241,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Nigéria  |  (UTC + 01:00) Centro-oeste da África |
 | Niue  |  (UTC + 13:00) Samoa |
 | Ilha Norfolk  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
+| Macedônia do Norte  |  (UTC + 01:00) Sarajevo, Skopje, Varsóvia, Zagreb |
 | Ilhas Marianas do Norte  |  (UTC + 10:00) Guam, porta Moresby |
 | Noruega  |  (UTC + 01:00) Amsterdã, Berlim, Berna, Roma, Estocolmo, Viena |
 | Omã  |  (UTC + 04:00) Abu Dhabi, Mascate |
@@ -259,7 +259,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Catar  |  (UTC + 04:00) Abu Dhabi, Mascate |
 | Reunião  |  (UTC + 04:00) Porta Louis |
 | Romênia  |  (UTC + 02:00) Chisinau |
-| FILA  |  (UTC-07:00) Hora das montanhas (EUA & Canadá) |
+| ROW  |  (UTC-07:00) Hora das montanhas (EUA & Canadá) |
 | Rússia  |  (UTC + 03:00) Moscou, São Petersburgo |
 | Ruanda  |  (UTC + 02:00) Harare, Pretória |
 | SÃ £ o TomÃ © e PrÃncipe  |  (UTC + 00:00) Monróvia, Reykjavík |
@@ -284,7 +284,7 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Ilhas Salomão  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
 | Somália  |  (UTC + 03:00) Nairóbi |
 | África do Sul  |  (UTC + 02:00) Harare, Pretória |
-| Ilhas Geórgia do Sul e Sandwich do Sul  |  (UTC-02:00) Meados do Atlântico-antigo |
+| Geórgia do Sul e Ilhas Sandwich do Sul  |  (UTC-02:00) Meados do Atlântico-antigo |
 | Espanha  |  (UTC + 01:00) Bruxelas, Copenhague, Madri, Paris |
 | Sri Lanka  |  (UTC + 05:30) Chennai, Kolkata, Mumbai, Nova Délhi |
 | Suriname  |  (UTC-03:00) Caiena, fortaleza |
@@ -307,18 +307,17 @@ Abaixo está uma tabela que mostra quais fusos horários específicos são usado
 | Ilhas Turcas e Caicos  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Tuvalu  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
 | Territórios Insulares dos EUA  |  (UTC + 13:00) Samoa |
-| Ilhas Virgens Americanas  |  (UTC-04:00) Hora do Atlântico (Canadá) |
+| Ilhas Virgens dos Estados Unidos  |  (UTC-04:00) Hora do Atlântico (Canadá) |
 | Uganda  |  (UTC + 03:00) Nairóbi |
 | Ucrânia  |  (UTC + 02:00) Chisinau |
 | Emirados Árabes Unidos  |  (UTC + 04:00) Abu Dhabi, Mascate |
-| Reino Unido  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
+| United Kingdom  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
 | Estados Unidos  |  (UTC-05:00) Hora do leste (EUA & Canadá) |
 | Uruguai  |  (UTC-03:00) Brasília |
 | Uzbequistão  |  (UTC + 05:00) Ashgabat, Tashkent |
 | Vanuatu  |  (UTC + 11:00) Ilhas Salomão, Nova Caledônia |
 | Vietnã  |  (UTC + 07:00) Bancoc, Hanói, Jacarta |
 | Wallis e Futuna  |  (UTC + 12:00) Petropavlovsk-Kamchatsky-antigo |
-| Saara Ocidental (Área em Disputa)  |  (UTC + 00:00) Dublin, Edimburgo, Lisboa, Londres |
 | Iêmen  |  (UTC + 04:00) Abu Dhabi, Mascate |
 | Zâmbia  |  (UTC + 02:00) Harare, Pretória |
 | Zimbábue  |  (UTC + 02:00) Harare, Pretória |

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d2866b3e04d2fa531e9bd538badd96205a8c65
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 37fb7cc81d1a86a159526af5d580a02482d13f9a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969421"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233972"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desenvolvendo aplicativos inclusivos do Windows  
 
-Este artigo discute como desenvolver aplicativos de aplicativo do Windows acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos do Windows acessíveis que incluem navegação de teclado, configurações de cor e contraste e suporte para tecnologias assistenciais.
+Este artigo discute como desenvolver aplicativos do Windows acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos do Windows acessíveis que incluem navegação de teclado, configurações de cor e contraste e suporte para tecnologias assistenciais.
 
 Se você ainda não tiver feito isso, comece lendo [Criando software inclusivo](designing-inclusive-software.md).
 
@@ -32,7 +32,7 @@ O acesso programático é essencial para a criação de acessibilidade em aplica
 
 Para saber mais sobre como tornar os elementos de interface do usuário do seu aplicativo disponíveis para as tecnologias assistenciais (AT), veja [Expor informações básicas de acessibilidade](basic-accessibility-information.md).
 
-## <a name="keyboard-navigation"></a>Navegação de teclado  
+## <a name="keyboard-navigation"></a>Navegação por teclado  
 Para usuários cegos ou que têm problemas de mobilidade, é extremamente importante ser capaz de navegar a interface do usuário com um teclado. No entanto, apenas os controles de interface do usuário que exigem interação do usuário à função devem ter o foco do teclado. Componentes que não exigem uma ação, como imagens estáticas, não precisam do foco do teclado.  
 
 É importante lembrar que, ao contrário da navegação com um mouse ou toque, a navegação de teclado é linear. Ao considerar a navegação de teclado, pense em como o usuário interagirá com seu produto e qual será a lógica de navegação. Em culturas ocidentais, as pessoas leem da esquerda para a direita, de cima para baixo. Portanto, é prática comum seguir esse padrão para navegação de teclado.  

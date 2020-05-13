@@ -1,5 +1,5 @@
 ---
-Description: O Visualizador de Notificações é um novo aplicativo do Windows na Store que ajuda os desenvolvedores com o design de blocos dinâmicos adaptáveis para o Windows 10.
+Description: O Visualizador de notificações é um novo aplicativo do Windows na loja que ajuda os desenvolvedores a criar blocos dinâmicos adaptáveis para o Windows 10.
 title: Visualizador de notificações
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -7,19 +7,19 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d355570ef7002d1424457bf29f8161680f2c77
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5f9dc51a8ba387018a50e95702db1c539e889a5d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971031"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234681"
 ---
 # <a name="notifications-visualizer"></a>Visualizador de notificações
 
  
 
 
-O Visualizador de notificações é um novo aplicativo de aplicativo do Windows [na loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores a criar blocos dinâmicos adaptáveis e notificações de sistema interativas para o Windows 10.
+O Visualizador de notificações é um novo aplicativo [do Windows na loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores a criar blocos dinâmicos adaptáveis e notificações de sistema interativas para o Windows 10.
 
 
 ## <a name="overview"></a>Visão geral
@@ -34,7 +34,7 @@ Esta captura de tela do aplicativo mostra a carga XML e como tamanhos de bloco s
 
 Com o Visualizador de notificações, é possível criar e testar o conteúdo de bloco adaptável e notificações do sistema sem que seja necessário editar e implantar o aplicativo. Depois que tiver criado uma carga com resultados visuais ideais, você pode integrá-la ao aplicativo. Consulte [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) e [Enviar uma notificação de sistema local](send-local-toast.md) para saber mais.
 
-**Observação**    a simulação do Visualizador de notificações do menu Iniciar do Windows e as notificações do sistema nem sempre são completamente precisas e não oferece suporte a algumas propriedades avançadas de carga. Quando tiver o bloco ou da notificação do sistema que você deseja, teste fixando o bloco ou usando a notificação no menu Iniciar real para verificar se ele é exibido como você deseja.
+**Observação**    A simulação do Visualizador de notificações do menu Iniciar do Windows e as notificações do sistema nem sempre são completamente precisas e não oferece suporte a algumas propriedades avançadas de carga. Quando tiver o bloco ou da notificação do sistema que você deseja, teste fixando o bloco ou usando a notificação no menu Iniciar real para verificar se ele é exibido como você deseja.
 
  
 

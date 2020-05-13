@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0591a62134f09c1b3a9d115d038020e95f0c139
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2d6ddf03541e94f89d0950a4f4c03eebaa0e396e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970711"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234473"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
-Otimize seu design de aplicativo do Windows para entrada por toque e obtenha suporte básico ao mouse por padrão. 
+Otimize seu design de aplicativo do Windows para entrada por toque e obtenha suporte básico para mouse por padrão. 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
 
@@ -59,7 +59,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
 <td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observação</strong>  clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos de interface do usuário apropriados Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
+<strong>Observação</strong>    Clique com o botão direito do mouse para exibir um menu de contexto se os comandos de seleção ou de barra de aplicativos não forem comportamentos de interface do usuário apropriados Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -160,7 +160,7 @@ Se você precisa personalizar o cursor do mouse:
 - [Identificar dispositivos de entrada](identify-input-devices.md)
 - [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Amostra de entrada de baixa latência](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

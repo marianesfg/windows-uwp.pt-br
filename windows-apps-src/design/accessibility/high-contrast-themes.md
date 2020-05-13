@@ -1,5 +1,5 @@
 ---
-description: Descreve as etapas necessárias para garantir que seu aplicativo de aplicativo do Windows seja utilizável quando um tema de alto contraste estiver ativo.
+description: Descreve as etapas necessárias para garantir que seu aplicativo do Windows seja utilizável quando um tema de alto contraste estiver ativo.
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de alto contraste
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 118f604b8c8c95a863773270825ff4db5c5a1b3a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ce3fe9ea96f4b4ce2f541fb5f7a9682a0dee5e0e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969451"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234035"
 ---
 # <a name="high-contrast-themes"></a>Temas de alto contraste  
 
@@ -108,13 +108,13 @@ Recurso | Uso |
 
 Muitas vezes é útil procurar aplicativos existentes, Iniciar ou os controles comuns para ver como outras pessoas resolveram problemas de design de alto contraste similares aos seus.
 
-**Coincide**
+**O que fazer**
 
 * Respeitar os pares de tela de fundo/primeiro plano sempre que possível.
 * Testar os 4 temas de alto contraste enquanto seu aplicativo estiver em execução. O usuário não deve ter de reiniciar seu aplicativo quando mudar de tema.
 * Ser consistente.
 
-**Não deve ser feito**
+**O que não fazer**
 
 * Codificar uma cor do tema **HighContrast**; use os recursos **SystemColor*Color**.
 * Escolher um recurso de cor por estética. Lembre-se de que elas mudam com o tema!
@@ -154,7 +154,7 @@ Posteriormente em seu aplicativo, você pode definir a tela de fundo.
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-Observe como ** \{a\} mera** é usada duas vezes, uma vez para fazer referência a **SystemColorWindowColor** e novamente para fazer referência a **BrandedPageBackgroundBrush**. Ambos são necessários para seu aplicativo aplicar o tema corretamente no tempo de execução. Esse é um bom momento para testar a funcionalidade em seu aplicativo. A tela de fundo da grade será atualizada automaticamente quando você mudar para um tema de alto contraste. Ela também será atualizada ao alternar entre temas de alto contraste diferentes.
+Observe como a ** \{ mera \} ** é usada duas vezes, uma vez para fazer referência a **SystemColorWindowColor** e novamente para fazer referência a **BrandedPageBackgroundBrush**. Ambos são necessários para seu aplicativo aplicar o tema corretamente no tempo de execução. Esse é um bom momento para testar a funcionalidade em seu aplicativo. A tela de fundo da grade será atualizada automaticamente quando você mudar para um tema de alto contraste. Ela também será atualizada ao alternar entre temas de alto contraste diferentes.
 
 ## <a name="when-to-use-borders"></a>Quando usar bordas
 
