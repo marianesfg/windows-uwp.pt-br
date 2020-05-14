@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee49b5fe5b5956e9069ea196c4d2e029b3a15763
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: e7d6ea614a9d85eadfcb807c6e6100dbe15ed0c4
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68729515"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970731"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição para um aplicativo
 
@@ -32,11 +32,11 @@ Há diversos cenários que podem se beneficiar do uso de várias exibições. Ve
 
 Embora cada layout de aplicativo seja exclusivo, recomendamos incluir um botão de "nova janela" em um local previsível, como o canto superior direito do conteúdo que pode ser aberto em uma nova janela. Considere também incluir uma opção de [menu de contexto](../controls-and-patterns/menus.md) em "Abrir em uma nova janela".
 
-Para criar instâncias separadas do seu aplicativo (em vez de janelas separadas para a mesma instância), confira [Criar um aplicativo UWP de várias instâncias](../../launch-resume/multi-instance-uwp.md).
+Para criar instâncias separadas do seu aplicativo (em vez de janelas separadas para a mesma instância), confira [Criar um aplicativo do Windows de várias instâncias](../../launch-resume/multi-instance-uwp.md).
 
 ## <a name="windowing-hosts"></a>Hosts de janelas
 
-Há diferentes formas de hospedar conteúdo da UWP em um aplicativo.
+Há diferentes formas de hospedar conteúdo do Windows em um aplicativo.
 
 - [CoreWindow](/uwp/api/windows.ui.core.corewindow)/[ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)
 
@@ -47,7 +47,7 @@ Há diferentes formas de hospedar conteúdo da UWP em um aplicativo.
     Para saber como usar o ApplicationView para mostrar janelas secundárias no seu aplicativo, confira [Use ApplicationView](application-view.md).
 - [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)
 
-    O AppWindow simplifica a criação de aplicativos UWP com várias janelas porque opera no mesmo thread da interface do usuário do qual ele foi criado.
+    O AppWindow simplifica a criação de aplicativos do Windows com várias janelas porque opera no mesmo thread da IU do qual ele foi criado.
 
     A classe AppWindow e outras APIs no namespace [WindowManagement](/uwp/api/windows.ui.windowmanagement) estão disponíveis a partir do Windows 10, versão 1903 (SDK 18362). Caso seu aplicativo tenha como alvo versões anteriores do Windows 10, use o ApplicationView para criar janelas secundárias.
 
