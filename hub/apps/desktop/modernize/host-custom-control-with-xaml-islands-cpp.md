@@ -1,19 +1,19 @@
 ---
 description: Este artigo demonstra como hospedar um controle UWP personalizado em um aplicativo C++ Win32 usando a API de Hospedagem XAML.
 title: Hospedar um controle UWP personalizado em um aplicativo C++ Win32 usando a API de Hospedagem XAML
-ms.date: 03/23/2020
+ms.date: 04/07/2020
 ms.topic: article
 keywords: windows 10, uwp, C++, Win32, xaml islands, custom controls, user controls, host controls
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 93badc28c9c4fa1684836fc4a883e54661e8d4dc
-ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
+ms.openlocfilehash: eac2574d48864ba8b8dc907c8a7ec43ef266358b
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80986961"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606326"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedar um controle UWP personalizado em um aplicativo C++ Win32
 
@@ -512,6 +512,72 @@ Por fim, você estará pronto para adicionar o código ao projeto **MyDesktopWin
 
 9. Salve o arquivo.
 10. Compile a solução e confirme se ela foi compilada com êxito.
+
+## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>Adicionar um controle da biblioteca WinUI ao controle personalizado
+
+Tradicionalmente, os controles UWP foram lançados como parte do sistema operacional Windows 10 e disponibilizados para os desenvolvedores por meio do SDK do Windows. A [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) é uma abordagem alternativa, em que as versões atualizadas dos controles UWP do SDK do Windows são distribuídas em um pacote NuGet que não está vinculado às versões de SDK do Windows. Essa biblioteca também inclui novos controles que não fazem parte do SDK do Windows e da plataforma UWP padrão. Confira nosso [roteiro da biblioteca WinUI](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) para obter mais detalhes.
+
+Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu controle de usuário.
+
+1. No projeto **MyUWPApp**, instale a versão de lançamento ou pré-lançamento mais recente do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
+
+    > [!NOTE]
+    > Se seu aplicativo da área de trabalho estiver empacotado em um [pacote MSIX](https://docs.microsoft.com/windows/msix), será possível usar uma versão de pré-lançamento ou de lançamento do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml). Se seu aplicativo da área de trabalho não estiver empacotado usando MSIX, será necessário instalar uma versão de pré-lançamento do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
+
+2. No arquivo pch.h desse projeto, adicione as instruções `#include` a seguir e salve as alterações. Essas instruções trazem um conjunto necessário de cabeçalhos de projeção da biblioteca WinUI para seu projeto. Essa etapa é necessária para qualquer projeto C++/WinRT que usa a biblioteca WinUI. Para obter mais informações, consulte [este artigo](https://docs.microsoft.com/uwp/toolkits/winui/getting-started#additional-steps-for-a-cwinrt-project).
+
+    ```cpp
+    #include "winrt/Microsoft.UI.Xaml.Automation.Peers.h"
+    #include "winrt/Microsoft.UI.Xaml.Controls.Primitives.h"
+    #include "winrt/Microsoft.UI.Xaml.Media.h"
+    #include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
+    ```
+
+3. No arquivo App.xaml no mesmo projeto, adicione o elemento filho a seguir ao elemento `<xaml:XamlApplication>` e salve suas alterações.
+
+    ```xml
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
+    ```
+
+    Depois de adicionar esse elemento, o conteúdo do arquivo agora deve ser semelhante a este.
+
+    ```xml
+    <Toolkit:XamlApplication
+        x:Class="MyUWPApp.App"
+        xmlns:Toolkit="using:Microsoft.Toolkit.Win32.UI.XamlHost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:MyUWPApp">
+        <Application.Resources>
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+        </Application.Resources>
+    </Toolkit:XamlApplication>
+    ```
+
+4. No mesmo projeto, abra o arquivo MyUserControl.xaml e adicione a declaração de namespace a seguir ao elemento `<UserControl>`.
+
+    ```xml
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    ```
+
+5. No mesmo arquivo, adicione um elemento `<winui:RatingControl />` como um filho do `<StackPanel>` e salve suas alterações. Esse elemento adiciona uma instância da classe [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol da biblioteca WinUI. Depois de adicionar esse elemento, o `<StackPanel>` agora deve ficar com a aparência a seguir.
+
+    ```xml
+    <StackPanel HorizontalAlignment="Center" Spacing="10" 
+                Padding="20" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" 
+                       Text="Hello from XAML Islands" FontSize="30" />
+        <TextBlock HorizontalAlignment="Center" Margin="15" TextWrapping="Wrap"
+                       Text="😍❤💋🌹🎉😎�🐱‍👤" FontSize="16" />
+        <Button HorizontalAlignment="Center" 
+                x:Name="Button" Click="ClickHandler">Click Me</Button>
+        <winui:RatingControl />
+    </StackPanel>
+    ```
+
+6. Compile a solução e confirme se ela foi compilada com êxito.
 
 ## <a name="test-the-app"></a>Testar o aplicativo
 

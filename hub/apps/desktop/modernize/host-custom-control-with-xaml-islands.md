@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fa8dd744120d5751dcf8c10a090ccc31094000d2
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 5f3e4eee486edd47901fc2b97a6e10c880cb04b1
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80482496"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606295"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar um controle UWP personalizado em um aplicativo WPF usando as Ilhas XAML
 
@@ -235,7 +235,10 @@ Tradicionalmente, os controles UWP foram lançados como parte do sistema operaci
 
 Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu controle de usuário, para que você possa hospedar esse controle em no aplicativo WPF.
 
-1. No projeto do aplicativo UWP, instale a versão mais recente do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
+1. No projeto do aplicativo da UWP, instale a versão de lançamento ou pré-lançamento mais recente do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
+
+    > [!NOTE]
+    > Se seu aplicativo da área de trabalho estiver empacotado em um [pacote MSIX](https://docs.microsoft.com/windows/msix), será possível usar uma versão de pré-lançamento ou de lançamento do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml). Se seu aplicativo da área de trabalho não estiver empacotado usando MSIX, será necessário instalar uma versão de pré-lançamento do pacote NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
 
 2. No arquivo App.xaml deste projeto, adicione o elemento filho a seguir ao elemento `<xaml:XamlApplication>`.
 
@@ -268,7 +271,7 @@ Esta seção demonstra como adicionar um controle UWP da biblioteca WinUI ao seu
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     ```
 
-5. No mesmo arquivo, adicione um elemento `<winui:RatingControl />` como um filho do `<StackPanel>`. Esse elemento adiciona uma instância da classe [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol?view=winui-2.2) da biblioteca WinUI. Depois de adicionar esse elemento, o `<StackPanel>` agora deve ficar com a aparência a seguir.
+5. No mesmo arquivo, adicione um elemento `<winui:RatingControl />` como um filho do `<StackPanel>`. Esse elemento adiciona uma instância da classe [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) da biblioteca WinUI. Depois de adicionar esse elemento, o `<StackPanel>` agora deve ficar com a aparência a seguir.
 
     ```xml
     <StackPanel Background="LightCoral">

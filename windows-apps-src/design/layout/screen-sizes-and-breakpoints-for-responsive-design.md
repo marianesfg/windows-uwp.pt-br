@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f79b7247a7e1a1889c530a16c280f490db51042e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210172"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970741"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
-Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Windows 10, o que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela no ecossistema do Windows 10, em vez de otimizar a interface do usuário de cada dispositivo, é recomendável projetar algumas categorias de largura chave (também denominadas "pontos de interrupção"): 
+Os aplicativos do Windows podem ser executados em qualquer dispositivo que executa o Windows, o que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela no ecossistema do Windows 10, em vez de otimizar a interface do usuário de cada dispositivo, é recomendável projetar algumas categorias de largura chave (também denominadas "pontos de interrupção"): 
 - Pequena (menor que 640 px)
 - Média (641 px a 1.007 px)
 - Grande (1.008 px e maior)
@@ -34,7 +34,7 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 <th align="left">Classe Size</th>
 <th align="left">Pontos de interrupção</th>
 <th align="left">Tamanho da tela típico (diagonal)</th>
-<th align="left">.</th>
+<th align="left">Dispositivos</th>
 <th align="left">Tamanhos de janela</th>
 </tr>
 </thead>

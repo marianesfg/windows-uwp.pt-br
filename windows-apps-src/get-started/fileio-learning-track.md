@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, caminho de aprendizagem, arquivos, e/s de arquivo, ler arquivo, gravar arquivo, criar arquivo, gravar texto, ler texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1270d49cc8746b2793b1414306f9ee842cb40f40
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c36f4885dffa86452543f05f5b7a59a882d25710
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82166242"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730052"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -26,7 +26,7 @@ Vamos examinar o código para gravar e ler texto de um arquivo e como acessar as
 Veja os principais tipos que você precisa conhecer para ler ou gravar texto de/para um arquivo:
 
 - [Windows.Storage.StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) representa um arquivo. Essa classe tem propriedades que fornecem informações sobre o arquivo e métodos para criar, abrir, copiar, excluir e renomear arquivos.
-Você pode estar acostumado a lidar com caminhos de cadeia de caracteres. Há algumas APIs da UWP que usam uma cadeia de caracteres, mas com mais frequência, você usará um **StorageFile** para representar um arquivo, pois alguns arquivos trabalhados na UWP podem não ter um caminho ou podem ter um caminho complicado. Use [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync) a fim de converter um caminho de cadeia de caracteres em um **StorageFile**. 
+Você pode estar acostumado a lidar com caminhos de cadeia de caracteres. Há algumas APIs do Windows Runtime que usam uma cadeia de caracteres, mas com mais frequência, você usará um **StorageFile** para representar um arquivo, pois alguns arquivos com os quais você trabalha na UWP podem não ter um caminho ou podem ter um caminho complicado. Use [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync) a fim de converter um caminho de cadeia de caracteres em um **StorageFile**. 
 
 - A classe [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) fornece uma maneira fácil de ler e gravar texto. Essa classe também pode fazer a leitura/gravação de uma matriz de bytes ou do conteúdo de um buffer. Essa classe é muito parecida com a classe [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio). A principal diferença é que em vez de usar um caminho de cadeia de caracteres, como **PathIO**, ele usa um **StorageFile**.
 - [Windows.Storage.StorageFolder](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder) representa uma pasta (diretório). Essa classe tem métodos para criar arquivos, consultar o conteúdo de uma pasta, criar, renomear e excluir pastas, além de propriedades que fornecem informações sobre uma pasta. 

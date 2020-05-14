@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, introduction
 ms.localizationpriority: medium
-ms.openlocfilehash: 250e3626c5abee43cf3b8ca3320c78ec4f8f9751
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ddf2cd876ac629f4cb3c49e349e43dee8fdb0c7a
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80662381"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730307"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -27,10 +27,10 @@ O C++/WinRT é a substituição recomendada da Microsoft para o [C++/CX](/cpp/cp
 > Algumas das partes mais importantes do C++/WinRT a serem consideradas são descritas nas seções [Suporte do SDK para C++/WinRT](#sdk-support-for-cwinrt) e [Suporte do Visual Studio para C++/WinRT, XAML, a extensão do VSIX e o pacote NuGet](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="language-projections"></a>Projeções de linguagem
-O Windows Runtime baseia-se nas APIs do COM (Component Object Model) e foi projetado para ser acessado por meio de *projeções de linguagem*. Uma projeção oculta os detalhes do COM e oferece uma experiência de programação mais natural para uma linguagem específica.
+O Windows Runtime baseia-se nas APIs do COM (Component Object Model) e foi projetado para ser acessado por meio de *projeções de linguagem*. Uma projeção oculta os detalhes de COM e oferece uma experiência de programação mais natural para determinada linguagem.
 
-### <a name="the-cwinrt-language-projection-in-the-windows-uwp-api-reference-content"></a>A projeção de linguagem C++/WinRT no conteúdo de referência de API da UWP no Windows
-Quando você estiver navegando nas [APIs da UWP no Windows](https://docs.microsoft.com/uwp/api/), clique na caixa de combinação **Linguagem** no canto superior direito e selecione **C++/WinRT** para exibir os blocos de sintaxe de API conforme aparecem na projeção de linguagem do C++/WinRT.
+### <a name="the-cwinrt-language-projection-in-the-windows-runtime-api-reference-content"></a>A projeção de linguagem C++/WinRT no conteúdo de referência da API do Windows Runtime
+Quando você estiver navegando nas [APIs do Windows Runtime](https://docs.microsoft.com/uwp/api/), clique na caixa de combinação **Linguagem** no canto superior direito e selecione **C++/WinRT** para exibir os blocos de sintaxe de API conforme aparecem na projeção de linguagem do C++/WinRT.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>Suporte do Visual Studio para C++/WinRT, XAML, a extensão do VSIX e o pacote NuGet
 Para obter suporte do Visual Studio, você precisará do Visual Studio 2019 ou Visual Studio 2017 (pelo menos versão 15.6; é recomendável pelo menos a versão 15.7). No instalador do Visual Studio, instale a carga de trabalho de **Desenvolvimento para a Plataforma Universal do Windows**. Em **Detalhes da Instalação** > **Desenvolvimento com a Plataforma Universal do Windows** , marque as opções **Ferramentas da Plataforma Universal do Windows do C++ (v14x)** , se você ainda não fez isso. No Windows, em **Configurações** > **Atualizar \& Segurança** > **Para desenvolvedores**, escolha a opção **Modo de desenvolvedor** em vez da opção **Aplicativos sideload**.
@@ -151,4 +151,4 @@ Na programação do C++/WinRT, você pode usar os recursos de linguagem C++ padr
 * [Introdução ao C++/WinRT](get-started.md)
 * [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md)
 * [Processamento da cadeia de caracteres em C++/WinRT](strings.md)
-* [APIs da UWP no Windows](https://docs.microsoft.com/uwp/api/)
+* [APIs do Windows Runtime](https://docs.microsoft.com/uwp/api/)

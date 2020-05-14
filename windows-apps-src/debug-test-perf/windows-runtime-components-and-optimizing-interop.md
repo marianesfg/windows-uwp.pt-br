@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc68520bbf83ec637c0814c333dfada2f974d1e
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: 2b5fd5061f3b466743cad2e9e412d79caebaf2f0
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735001"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730283"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>Componentes UWP e otimização de interoperabilidade
 
@@ -28,7 +28,7 @@ Interoperabilidade pode ter um grande impacto no desempenho, e talvez você a es
 
 A UWP tem uma biblioteca de tipos que estão acessíveis em qualquer linguagem na qual se possa escrever um aplicativo UWP. Use os tipos UWP em C# ou Microsoft Visual Basic da mesma forma que usa objetos .NET. Não é preciso fazer chamadas de método de invocação de plataforma para acessar os componentes UWP. Isso torna a escrita dos seus aplicativos menos complexa, mas é importante observar que pode haver mais interoperabilidade do que o esperado. Se um componente UWP for escrito em uma linguagem diferente de C# ou Visual Basic, os limites da interoperabilidade serão transpostos quando você o utilizar. Transpor os limites da interoperabilidade pode afetar o desempenho de um aplicativo.
 
-Quando você desenvolve um aplicativo UWP em C# ou Visual Basic, os dois conjuntos de APIs mais comuns usados são as APIs UWP e as APIs .NET para aplicativos UWP. Em geral, os tipos que são definidos no UWP estão em namespaces que começam com "Windows". e os tipos .NET estão em namespaces que começam com "System". Mas há exceções. Os tipos em .NET para aplicativos UWP não exigem interoperabilidade quando são usados. Se você achar que tem mau desempenho em uma área que usa a UWP, poderá usar APIs .NET para aplicativos UWP para obter melhor desempenho.
+Quando você desenvolve um aplicativo da UWP em C# ou Visual Basic, os dois conjuntos de APIs mais comuns usados são as APIs do Windows Runtime e as APIs do .NET para aplicativos da UWP. Em geral, os tipos que são definidos no UWP estão em namespaces que começam com "Windows". e os tipos .NET estão em namespaces que começam com "System". Mas há exceções. Os tipos em .NET para aplicativos UWP não exigem interoperabilidade quando são usados. Se você achar que tem mau desempenho em uma área que usa a UWP, poderá usar APIs .NET para aplicativos UWP para obter melhor desempenho.
 
 **Observação**   A maior parte dos componentes UWP fornecidos com o Windows 10 é implementada em C++, para que você possa transpor os limites da interoperabilidade ao usá-los em C# ou Visual Basic. Como sempre, não deixe de avaliar seu aplicativo para observar se o uso de componentes UWP afeta o desempenho do aplicativo antes de investir em alterações do seu código.
 
@@ -52,7 +52,7 @@ Há certos casos em que você pode realizar uma tarefa usando UWP ou .NET para a
 
 Quando um componente UWP retorna um objeto UWP, pode ser benéfico copiar o objeto retornado em um objeto .NET. Dois momentos em que isso é especialmente importante ocorrem no trabalho com coleções e fluxos.
 
-Se você chamar uma API UWP que retorne uma coleção e salvar e acessar essa coleção muitas vezes, pode ser benéfico copiar a coleção em uma coleção .NET e, daí em diante, usar a versão .NET.
+Se você chamar uma API do Windows Runtime que retorna uma coleção e salvar e acessar essa coleção muitas vezes, talvez seja benéfico copiar a coleção em uma coleção .NET e, daí em diante, usar a versão .NET.
 
 ### <a name="cache-the-results-of-calls-to-uwp-components-for-later-use"></a>Armazenar em cache os resultados das chamadas a componentes UWP para uso posterior
 
@@ -72,7 +72,7 @@ Se você escrever um componente UWP que possa ser usado por aplicativos escritos
 
 A UWP facilita a interoperabilidade entre o código nativo e o gerenciado, mas, se você não tiver cuidado, poderá haver custos de desempenho. Consulte como obter bom desempenho ao usar a interoperabilidade em seus aplicativos UWP gerenciados.
 
-A UWP permite que os desenvolvedores criem aplicativos em XAML usando o idioma de sua preferência, graças às projeções das APIs UWP disponíveis em cada idioma. Quando um aplicativo é desenvolvido em C# ou Visual Basic, essa conveniência tem um custo interoperabilidade, pois as APIs UWP são geralmente implementadas no código nativo, e qualquer invocação da UWP a partir do C# ou do Visual Basic exige que o CLR faça transição de um registro de ativação gerenciado para um nativo e realize marshaling dos parâmetros de funções para representações acessíveis pelo código nativo. Essa sobrecarga é irrisória para a maioria dos aplicativos. Mas quando você faz muitas chamadas (de centenas de milhares a milhões) a APIs UWP no caminho crítico de um aplicativo, esse custo pode se tornar perceptível. Em resumo, você quer ter certeza de que o tempo gasto na transição entre as linguagens seja curto, em comparação com o tempo gasto na execução do resto do seu código. Isso é mostrado no diagrama a seguir.
+A UWP permite que os desenvolvedores criem aplicativos em XAML usando o idioma de sua preferência, graças às projeções das APIs do Windows Runtime disponíveis em cada idioma. Quando um aplicativo é desenvolvido em C# ou Visual Basic, essa conveniência tem um custo de interoperabilidade, pois as APIs do Windows Runtime são geralmente implementadas no código nativo, e qualquer invocação da UWP no C# ou no Visual Basic exige que o CLR faça transição de um registro de ativação gerenciado para um nativo e realize marshaling dos parâmetros de funções para representações acessíveis pelo código nativo. Essa sobrecarga é irrisória para a maioria dos aplicativos. Mas quando você faz muitas chamadas (de centenas de milhares a milhões) a APIs do Windows Runtime no caminho crítico de um aplicativo, esse custo pode se tornar perceptível. Em resumo, você quer ter certeza de que o tempo gasto na transição entre as linguagens seja curto, em comparação com o tempo gasto na execução do resto do seu código. Isso é mostrado no diagrama a seguir.
 
 ![As transições de interoperabilidade não podem dominar o tempo de execução do programa.](images/interop-transitions.png)
 
@@ -80,7 +80,7 @@ Os tipos listados em [ **.NET for Windows apps**](https://dotnet.microsoft.com/a
 
 Meça seu aplicativo e determine se a interoperabilidade está ocupando uma parte considerável do tempo de execução dos seus aplicativos, antes de otimizar seus custos de interoperabilidade. Ao analisar o desempenho do seu aplicativo com o Visual Studio, você pode obter uma estimativa dos custos de interoperabilidade usando o modo de exibição **Funções** e consultando o tempo inclusivo gasto em métodos que chamam a UWP.
 
-Se seu aplicativo está lento devido à sobrecarga de interoperabilidade, você pode melhorar seu desempenho reduzindo as chamadas a APIs UWP em caminhos de código executados intensivamente. Por exemplo, um mecanismo de jogo que esteja executando uma grande quantidade de cálculos de física consultando constantemente a posição e as dimensões de [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) pode poupar muito tempo armazenando as informações necessárias de **UIElements** em variáveis locais, fazendo cálculos nesses valores armazenados em cache e atribuindo o resultado final novamente a **UIElements** após a conclusão dos cálculos. Outro exemplo: se uma coleção é intensamente acessada por código em C# ou Visual Basic, é mais eficiente usar uma coleção do namespace [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections), em vez de uma coleção do namespace [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections). Você também pode considerar o uso de chamadas combinadas a componentes UWP, por exemplo, com o uso de APIs [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess).
+Se seu aplicativo está lento devido à sobrecarga de interoperabilidade, você pode aprimorar o desempenho dele reduzindo as chamadas a APIs do Windows Runtime em caminhos de código executados intensivamente. Por exemplo, um mecanismo de jogo que esteja executando uma grande quantidade de cálculos de física consultando constantemente a posição e as dimensões de [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) pode poupar muito tempo armazenando as informações necessárias de **UIElements** em variáveis locais, fazendo cálculos nesses valores armazenados em cache e atribuindo o resultado final novamente a **UIElements** após a conclusão dos cálculos. Outro exemplo: se uma coleção é intensamente acessada por código em C# ou Visual Basic, é mais eficiente usar uma coleção do namespace [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections), em vez de uma coleção do namespace [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections). Você também pode considerar o uso de chamadas combinadas a componentes UWP, por exemplo, com o uso de APIs [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess).
 
 ### <a name="building-a-uwp-component"></a>Criando um componente UWP
 
