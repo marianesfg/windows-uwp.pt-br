@@ -6,14 +6,18 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8db29561afa06a2f6a2be67565d59e9387240d1c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 29c6609a2e57abede7fe606be8c028e503270d4c
+ms.sourcegitcommit: f910b29d35ac7afd0b759640bcac1d2fee399b3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259200"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82973272"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicações de rede em segundo plano
+
+> [!NOTE]
+> **Algumas informações relacionam-se ao produto de pré-lançamento, o qual poderá ser substancialmente modificado antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.**
+
 Para continuar a comunicação de rede enquanto não está em primeiro plano, seu aplicativo pode usar tarefas em segundo plano e uma destas duas opções.
 - Agente de soquete. Se seu aplicativo usa soquetes para conexões de longo prazo, quando ele sai do primeiro plano, pode delegar a propriedade de um soquete a um agente de soquete do sistema. O agente ativa o aplicativo quando o tráfego chega no soquete, transfere a propriedade de volta para o aplicativo e o aplicativo então processa o tráfego de chegada.
 - Gatilhos de canal de controle. 
@@ -160,6 +164,10 @@ Em primeiro lugar, verifique se você está usando gatilhos de canal de controle
 Se estiver usando WebSockets,[**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) ou [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient), você deverá usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger com WebSockets
+
+> [!IMPORTANT]
+> O recurso descrito nesta seção (**ControlChannelTrigger com WebSockets**) tem suporte na versão 10.0.15063.0 do SDK e versões anteriores. Ele também tem suporte em versões de pré-lançamento do [Windows 10 Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK).
+
 Algumas considerações especiais se aplicam quando usamos [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) ou [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um **MessageWebSocket** ou um **StreamWebSocket** com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em **StreamWebSocket**. As solicitações para receber pacotes no **MessageWebSocket** não são afetadas.
 
 Os seguintes padrões de uso e práticas recomendadas devem ser seguidos ao usar [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) ou [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger):
