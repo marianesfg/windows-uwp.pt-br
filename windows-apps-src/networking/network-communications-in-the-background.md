@@ -6,12 +6,12 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 29c6609a2e57abede7fe606be8c028e503270d4c
-ms.sourcegitcommit: f910b29d35ac7afd0b759640bcac1d2fee399b3d
+ms.openlocfilehash: 764f5b1d0ab73eea1afe523404958f1714496476
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82973272"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280286"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicações de rede em segundo plano
 
@@ -433,7 +433,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-Para obter mais informações sobre o uso de [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) ou [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger StreamWebSocket sample](https://code.msdn.microsoft.com/windowsapps/ControlChannelTrigger-91f6bed8).
+Para obter mais informações sobre o uso de [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) ou [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger StreamWebSocket sample](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208)).
 
 ## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger com HttpClient
 Algumas considerações especiais se aplicam quando usamos [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(VS.110).aspx) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(VS.110).aspx) com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(VS.110).aspx).
@@ -581,7 +581,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 }
 ```
 
-Para obter mais informações sobre o uso de [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(VS.110).aspx) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger HttpClient sample](https://code.msdn.microsoft.com/windowsapps/ControlChannelTrigger-HTTP-9d7a6b3d).
+Para obter mais informações sobre o uso de [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(VS.110).aspx) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger HttpClient sample](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20XMLHTTPRequest%20sample%20(Windows%208)).
 
 ## <a name="controlchanneltrigger-with-ixmlhttprequest2"></a>ControlChannelTrigger com IXMLHttpRequest2
 Algumas considerações especiais se aplicam quando usamos [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um **IXMLHTTPRequest2** com **ControlChannelTrigger**. O uso de **ControlChannelTrigger** não afeta o modo como são manipuladas as solicitações para enviar ou receber solicitações HTTP no **IXMLHTTPRequest2**.
@@ -592,7 +592,7 @@ Padrões de uso e práticas recomendadas ao usar [**IXMLHTTPRequest2**](https://
 -   O aplicativo pode precisar chamar os métodos [**SetProperty**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nf-msxml6-ixmlhttprequest2-setproperty) e [**SetRequestHeader**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nf-msxml6-ixmlhttprequest2-setrequestheader) para configurar o transporte HTTP antes de chamar o método [**Send**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nf-msxml6-ixmlhttprequest2-send).
 -   Um aplicativo talvez precise fazer uma solicitação inicial para testar e configurar o transporte adequadamente antes de criar o transporte [**Send**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nf-msxml6-ixmlhttprequest2-send) para uso com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Depois que o aplicativo determina que o transporte está configurado adequadamente, o objeto [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) pode ser configurado como o objeto de transporte usado com o objeto **ControlChannelTrigger**. Esse processo foi desenvolvido para impedir que alguns cenários interrompam a conexão estabelecida por meio do transporte. Usando SSL com um certificado, um aplicativo pode exigir a exibição de uma caixa de diálogo para entrada do PIN ou caso haja vários certificados disponíveis para escolha. A autenticação de proxy e a autenticação de servidor podem ser necessárias. Se a autenticação de proxy ou de servidor expirar, a conexão poderá ser fechada. Uma maneira pela qual um aplicativo pode lidar com esses problemas de expiração da autenticação é definindo um temporizador. Quando um redirecionamento HTTP é necessário, não é garantido que a segunda conexão possa ser estabelecida de maneira confiável. Uma solicitação de teste inicial garante que o aplicativo pode usar a URL redirecionada mais recente antes de usar o objeto **IXMLHTTPRequest2** como transporte com o objeto **ControlChannelTrigger**.
 
-Para obter mais informações sobre o uso de [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger with IXMLHTTPRequest2 sample](https://code.msdn.microsoft.com/windowsapps/ControlChannelTrigger-HTTP-9d7a6b3d/).
+Para obter mais informações sobre o uso de [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) com [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), consulte [ControlChannelTrigger with IXMLHTTPRequest2 sample](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20XMLHTTPRequest%20sample%20(Windows%208)).
 
 ## <a name="important-apis"></a>APIs importantes
 * [SocketActivityTrigger](/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)

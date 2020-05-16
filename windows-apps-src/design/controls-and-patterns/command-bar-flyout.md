@@ -12,18 +12,18 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9388df4159d7e9acd68c75163465339183b41314
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bdd18fea2fe563fcee835e6b61e24d6a9b03d029
+ms.sourcegitcommit: f945df77f8a19961ba053ee62e593ec8e015038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968791"
+ms.locfileid: "82989814"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
 O submenu da barra de comandos permite que você forneça aos usuários acesso fácil a tarefas comuns mostrando comandos em uma barra de ferramentas flutuante relacionada a um elemento em sua tela da interface do usuário.
 
-![Um submenu da barra de comandos de texto expandido](images/command-bar-flyout-header.png)
+![Um submenu da barra de comandos de texto expandido](images/command-bar-flyout-text-full.png)
 
 Assim como [CommandBar](app-bars.md), CommandBarFlyout tem as propriedades **PrimaryCommands** e **SecondaryCommands** que você pode usar para adicionar comandos. É possível colocar comandos em uma das coleções ou em ambas. Quando e como os comandos principais e secundários são exibidos depende do modo de exibição.
 
