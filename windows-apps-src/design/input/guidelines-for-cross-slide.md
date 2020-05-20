@@ -33,7 +33,7 @@ Use o deslizamento transversal para dar suporte à seleção com o gesto de desl
 -   Utilize o deslizamento transversal para seleção de itens quando a interação de toque for utilizada para outra finalidade.
 -   Não utilize o deslizamento transversal para adicionar itens a uma fila.
 
-## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicionais
 
 
 Gestos de selecionar e arrastar só são possíveis em uma área de conteúdo que permite movimento panorâmico unidirecional (vertical ou horizontal). Para qualquer uma dessas interações funcionar, uma direção de movimento panorâmico deve ser bloqueada, e o gesto deve ser realizado na direção perpendicular à direção do momento panorâmico.
@@ -56,7 +56,7 @@ Aqui estão algumas diretrizes a serem consideradas ao incluir a funcionalidade 
 
 Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
 
-**Observe**  que, nos casos em que a área de conteúdo pode ser panorâmica em duas direções, como navegadores da Web ou leitores eletrônicos, a interação com tempo de pressionar e manter deve ser usada para invocar o menu de contexto para objetos como imagens e hiperlinks.
+**Observação**    Nos casos em que a área de conteúdo pode ser panorâmica em duas direções, como navegadores da Web ou leitores eletrônicos, a interação com tempo de pressionar e manter deve ser usada para invocar o menu de contexto para objetos como imagens e hiperlinks.
 
  
 
