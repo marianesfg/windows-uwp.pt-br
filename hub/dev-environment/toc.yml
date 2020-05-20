@@ -1,6 +1,36 @@
 - name: Ambiente de desenvolvimento do Windows
   href: index.yml
   items:
+    - name: Gerenciador de Pacotes do Windows
+      items:
+        - name: Visão geral
+          href: ../package-manager/index.md
+        - name: Usar a ferramenta winget
+          items:
+            - name: Visão geral
+              href: ../package-manager/winget/index.md
+            - name: Comando hash
+              href: ../package-manager/winget/hash.md
+            - name: Comando help
+              href: ../package-manager/winget/help.md
+            - name: Comando install
+              href: ../package-manager/winget/install.md
+            - name: Comando search
+              href: ../package-manager/winget/search.md
+            - name: Comando show
+              href: ../package-manager/winget/show.md
+            - name: Comando source
+              href: ../package-manager/winget/source.md
+            - name: Comando validate
+              href: ../package-manager/winget/validate.md
+        - name: Enviar pacotes
+          items:
+            - name: Visão geral
+              href: ../package-manager/package/index.md
+            - name: Criar o manifesto do pacote
+              href: ../package-manager/package/manifest.md
+            - name: Enviar seu manifesto para o repositório
+              href: ../package-manager/package/repository.md
     - name: Desenvolva com o Python
       items:
         - name: Visão geral
@@ -39,7 +69,7 @@
           href: ../android/overview.md
         - name: Introdução ao Android nativo
           href: ../android/native-android.md
-        - name: 'Introdução à multiplataforma '
+        - name: Introdução à multiplataforma
           items:
             - name: Xamarin nativo
               href: ../android/xamarin-android.md

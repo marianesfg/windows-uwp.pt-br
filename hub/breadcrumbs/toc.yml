@@ -9,20 +9,72 @@
         - name: Criar aplicativos da área de trabalho
           tocHref: /windows/apps/desktop/
           topicHref: /windows/apps/desktop/
-        - name: Modernizar aplicativos da área de trabalho
-          tocHref: /windows/apps/desktop/modernize/
-          topicHref: /windows/apps/desktop/modernize/
           items:
-            - name: Chamar APIs de Windows Runtime
-              topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-enhance
-            - name: Ilhas XAML
-              topicHref: /windows/apps/desktop/modernize/xaml-islands
-            - name: Camada visual
-              topicHref: /windows/apps/desktop/modernize/visual-layer-in-desktop-apps
-            - name: Recursos que exigem a identidade do pacote
-              topicHref: /windows/apps/desktop/modernize/modernize-packaged-apps
-            - name: 'Tutorial: Modernizar um aplicativo WPF'
-              topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial
+            - name: Modernizar aplicativos da área de trabalho
+              tocHref: /windows/apps/desktop/modernize/
+              topicHref: /windows/apps/desktop/modernize/
+              items:
+                - name: Chamar APIs de Windows Runtime
+                  topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-enhance
+                  items:
+                    - name: APIs do Windows Runtime disponíveis
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-supported-api
+                - name: Ilhas XAML
+                  topicHref: /windows/apps/desktop/modernize/xaml-islands
+                  items:
+                    - name: Hospedar um controle UWP padrão em um aplicativo WPF
+                      topicHref: /windows/apps/desktop/modernize/host-standard-control-with-xaml-islands
+                    - name: Hospedar um controle UWP personalizado em um aplicativo WPF
+                      topicHref: /windows/apps/desktop/modernize/host-custom-control-with-xaml-islands
+                    - name: Usando o XAML da UWP que hospeda a API
+                      topicHref: /windows/apps/desktop/modernize/using-the-xaml-hosting-api
+                    - name: Hospedar um controle UWP padrão em um aplicativo C++ Win32
+                      topicHref: /windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp
+                    - name: Hospedar um controle UWP personalizado em um aplicativo C++ Win32
+                      topicHref: /windows/apps/desktop/modernize/host-custom-control-with-xaml-islands-cpp
+                    - name: Cenários avançados das Ilhas XAML em aplicativos C++ Win32
+                      topicHref: /windows/apps/desktop/modernize/advanced-scenarios-xaml-islands-cpp
+                - name: Camada visual
+                  topicHref: /windows/apps/desktop/modernize/visual-layer-in-desktop-apps
+                  items:
+                    - name: WPF
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-wpf
+                    - name: Windows Forms
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-windows-forms
+                    - name: Win32
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-win32
+                - name: Recursos que exigem a identidade do pacote
+                  topicHref: /windows/apps/desktop/modernize/modernize-packaged-apps
+                  items:
+                    - name: Integrar com extensões de pacote
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-extensions
+                    - name: Estender com componentes UWP
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-extend
+                    - name: Distribuir seu aplicativo de área de trabalho empacotado
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-distribute
+                - name: 'Tutorial: Modernizar um aplicativo WPF'
+                  topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial
+                  items:
+                    - name: Parte 1
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-1
+                    - name: Parte 2
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-2
+                    - name: Parte 3
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-3
+                    - name: Parte 4
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-4
+                    - name: Parte 5
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-5
+        - name: Biblioteca de Interface do Usuário do Windows (WinUI)
+          tocHref: /windows/apps/winui/
+          topicHref: /windows/apps/winui/
+          items:
+            - name: WinUI 3
+              tocHref: /windows/apps/winui/winui3/
+              topicHref: /windows/apps/winui/winui3
+            - name: WinUI 2
+              tocHref: /windows/apps/winui/winui2/
+              topicHref: /windows/apps/winui/winui2
         - name: .NET TraceProcessing
           tocHref: /windows/apps/trace-processing/
           topicHref: /windows/apps/trace-processing/overview
@@ -42,6 +94,9 @@
       tocHref: /windows/dev-environment/
       topicHref: /windows/dev-environment/
       items:
+        - name: Gerenciador de Pacotes do Windows
+          tocHref: /windows/package-manager/
+          topicHref: /windows/package-manager
         - name: Python
           tocHref: /windows/python/
           topicHref: /windows/python

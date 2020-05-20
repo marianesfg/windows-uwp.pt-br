@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730247"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83579923"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -21,6 +21,17 @@ Este artigo descreve os recursos do Windows 10 e da UWP que você pode usar em s
 
 > [!NOTE]
 > Você precisa de assistência para migrar os aplicativos da área de trabalho para o Windows 10? O serviço [Garantia de Aplicativo da Área de Trabalho](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) fornece suporte direto e sem custos para os desenvolvedores que estão compatibilizando seus aplicativos com o Windows 10. Esse programa está disponível para todos os ISVs e empresas qualificadas. Para obter mais detalhes sobre qualificação e sobre o programa propriamente dito, visite [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered). Para começar agora mesmo, [envie sua solicitação](https://fasttrack.microsoft.com/dl/daa).
+
+## <a name="windows-ui-library"></a>Biblioteca de Interface do Usuário do Windows
+
+A Biblioteca de Interface do Usuário do Windows é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos do Windows 10. O WinUI começou como um kit de ferramentas que fornecia versões novas e atualizadas de controles da UWP para aplicativos UWP voltados para versões de nível inferior do Windows 10. O WinUI cresceu em escopo e agora é a plataforma moderna de interface do usuário nativa para aplicativos do Windows 10 que usam a UWP, o .NET e o Win32.
+
+Você pode usar o WinUI das seguintes maneiras em aplicativos da área de trabalho:
+
+* Você pode atualizar os aplicativos existentes do WPF, Windows Forms e C++ /Win32 para usar [Ilhas XAML](xaml-islands.md) a fim de hospedar controles do WinUI 2. x nos aplicativos.
+* Começando com o [WinUI 3.0 Versão prévia 1](../../winui/winui3/index.md), você pode criar [Aplicativos .NET e C++/Win32 que usam uma interface do usuário totalmente baseada no WinUI](../../winui/winui3/get-started-winui3-for-desktop.md).
+
+Confira [Biblioteca de Interface do Usuário do Windows (WinUI)](../../winui/index.md).
 
 ## <a name="msix-packages"></a>Pacotes de MSIX
 
@@ -61,7 +72,7 @@ Algumas experiências modernas do Windows 10 estão disponíveis apenas em aplic
 Há várias maneiras de conceder identidade a um aplicativo da área de trabalho:
 
 * Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote de aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
-* Se não for possível adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, da versão 2004 do Windows 10 em diante você poderá conceder a identidade do pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
+* Se você não puder adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, no Windows 10, versão 2004 em diante, conceda o identificador de pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
 
 <a id="desktop-uwp-controls"/>
 
@@ -79,12 +90,6 @@ Esteja você criando um aplicativo UWP destinado exclusivamente à família de d
 | [ComboBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) | Agora você pode tornar uma caixa de combinação editável para que o usuário possa inserir valores que não estão listados no controle.  |
 | [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) | Agora você pode configurar um modo de exibição de árvore para habilitar associação de dados, modelos de item e funcionalidade de arrastar e soltar.  |
 | [DataGridView](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) |   Oferece uma maneira flexível de exibir um conjunto de dados em linhas e colunas. Esse controle está disponível no [Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/).  |
-
-## <a name="windows-ui-library"></a>Biblioteca de Interface do Usuário do Windows
-
-A biblioteca de interface do usuário do Windows é um conjunto de pacotes NuGet que fornecem novos controles e outros elementos de interface do usuário para aplicativos UWP. As APIs da biblioteca de interface do usuário do Windows funcionam em versões anteriores do Windows 10, de modo que seu aplicativo funcione mesmo se os usuários não estiverem executando a versão mais recente do Windows 10. Isso permite a você adotar novos controles conforme eles são lançados na biblioteca de interface do usuário do Windows sem precisar se preocupar sobre incluir verificações de versão ou XAML condicional.
-
-Veja a [Biblioteca de Interface do Usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 ## <a name="other-technologies-for-modern-desktop-apps"></a>Outras tecnologias para aplicativos modernos de área de trabalho
 

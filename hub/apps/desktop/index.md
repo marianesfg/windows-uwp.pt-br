@@ -7,12 +7,12 @@ keywords: Windows, win32, desenvolvimento de área de trabalho
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c27826980127674b4a4356af8a3c36056e86bd83
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 5a55a1578fba7052396ecec725db2678ea8bd6ff
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74056866"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83580013"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Crie aplicativos da área de trabalho para PCs Windows
 
@@ -62,6 +62,9 @@ A tabela a seguir apresenta as plataformas. Para uma comparação detalhada dess
 </tr>
 </tbody>
 </table>
+
+> [!NOTE]
+> Todas essas plataformas de aplicativos fornecem uma estrutura da IU completa, bem como um conjunto de controles de IU que permitem criar aplicativos da área de trabalho como o Word, o Excel e o Photoshop executados na área de trabalho clássica do Windows e aproveitar ao máximo os recursos específicos desse ambiente. No Windows 10, cada uma dessas plataformas também dá suporte ao uso da Biblioteca de Interface do Usuário do Windows (WinUI) para criar as respectivas interfaces do usuário. Para obter mais informações sobre o WinUI para aplicativos de área de trabalho, confira [esta seção](choose-your-platform.md#windows-ui-library).
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Atualizar aplicativos existentes da área de trabalho para o Windows 10
 
