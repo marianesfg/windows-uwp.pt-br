@@ -1,17 +1,17 @@
 ---
 title: Alterações de API da Atualização do Windows 10 para Criadores
 description: Os desenvolvedores podem usar a lista a seguir para identificar namespaces novos ou alterados no Windows 10 build 15063
-keywords: novidade, novidades, atualizações, Windows 10, 1703, criadores, 15063
+keywords: Windows 10, 1703, 15063
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: d1f6739d-eaea-4c5d-b79a-9f7214e42727
 ms.localizationpriority: medium
-ms.openlocfilehash: fb258c23e38fb2aee5f6f5194371bb72940e51b5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 85c58e915e4dc60c416bfe3f33c78d4bb5253ec9
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63780429"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234731"
 ---
 # <a name="new-apis-in-windows-10-build-15063"></a>Novas APIs no Windows 10 build 15063
 

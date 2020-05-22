@@ -1,17 +1,17 @@
 ---
 title: Novidades no Windows 10, build 15063
 description: O Windows 10, build 15063, e as novas ferramentas para desenvolvedores fornecem as ferramentas, os recursos e as experiências da Plataforma Universal do Windows.
-keywords: novidades, novidades, atualizar, atualizações, recursos, novos, Windows 10, 1703, março, mais novo, 15063
+keywords: Windows 10, 1703, 15063
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: 53604de72eb32f7f6a8162b0cdb9cf481f6e9537
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ba6eb59cb6b5808f8298e3e0ab3b6c2f889e57ec
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258878"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234630"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novidades no Windows 10 para desenvolvedores, build 15063
 

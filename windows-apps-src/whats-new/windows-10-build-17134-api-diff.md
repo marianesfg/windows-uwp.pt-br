@@ -1,16 +1,16 @@
 ---
 title: Alterações na API do Windows 10 build 17134
 description: Os desenvolvedores podem usar a lista a seguir para identificar namespaces novos ou alterados no Windows 10 build 17134
-keywords: novidade, novidades, atualizações, Windows 10, último, apis, 17134
+keywords: Windows 10, apis, 17134, 1803
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eb3ec9646848f74e4a147a102c0e2bd803073d74
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9f3613793a44222f4612a5ae64514546abb6ca66
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67322010"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234692"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Novas APIs no Windows 10 build 17134
 

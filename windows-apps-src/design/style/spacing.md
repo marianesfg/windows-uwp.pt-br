@@ -6,16 +6,16 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 5bcc7d45646651cdb60228a3c08123378eedb960
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 634393e700538dc5db43b2d4065c6742fd7673f1
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970611"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234332"
 ---
 # <a name="control-size-and-density"></a>Controle de tamanho e densidade
 
-Use uma combinação de tamanho e densidade do controle para otimizar o aplicativo do Windows e fornecer uma experiência de usuário que é mais apropriada aos requisitos de funcionalidade e interação do seu aplicativo.
+Use uma combinação de tamanho e densidade de controle para otimizar o aplicativo do Windows e fornecer uma experiência do usuário mais apropriada aos requisitos de funcionalidade e interação do seu aplicativo.
 
 Por padrão, os aplicativos UWP são processados com um layout de baixa densidade (ou `Standard`). No entanto, a partir do WinUI 2.1, também é compatível com uma opção de layout de alta densidade (ou `Compact`), para oferecer uma interface de usuário rica em informações e cenários especializados semelhantes. Isso pode ser especificado por meio de um recurso de estilo básico (veja os exemplos abaixo).
 

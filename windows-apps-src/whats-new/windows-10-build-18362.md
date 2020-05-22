@@ -1,17 +1,17 @@
 ---
 title: Novidades no Windows 10, build 18362
 description: O Windows 10, build 18362, e as novas ferramentas para desenvolvedores fornecem as ferramentas, os recursos e as experiências da Plataforma Universal do Windows.
-keywords: novidades, novidade, Windows, Windows 10, atualização, atualizações, recursos, novos, mais recente, desenvolvedores, 18362, maio
+keywords: Windows 10, 18362, 1903
 ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 334dac56c12bf914cb767787bddc06b1c5dc9da2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b5fb6c5ebd300c393c4aef7b73750fe00c6b1f6d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80759380"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234361"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>Novidades no Windows 10 para desenvolvedores, build 18362
 
