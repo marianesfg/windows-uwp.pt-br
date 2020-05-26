@@ -8,12 +8,15 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: af04bfcc9b105b19ace18086921a17cc609e5d71
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: addb4e7d929fb0222deda63494546d731f01cecd
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969981"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775800"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
@@ -102,6 +105,9 @@ Aqui está como definir a propriedade Foreground em código.
 ```csharp
 Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 ```
+```cppwinrt
+Button1().Foreground(Media::SolidColorBrush(Windows::UI::Colors::Beige()));
+```
 
 ## <a name="create-an-event-handler"></a>Criar um manipulador de eventos 
 
@@ -122,6 +128,22 @@ private void Button_Click(object sender, RoutedEventArgs e)
     b.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
 }
 ```
+```cppwinrt
+#MainPage.h
+struct MainPage : MainPageT<MainPage>
+    {
+        MainPage();
+        ...
+        void Button1_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& e);
+    };
+    
+#MainPage.cpp
+void MainPage::Button1_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& e)
+    {
+        auto b{ sender.as<winrt::Windows::UI::Xaml::Controls::Button>() };
+        b.Foreground(Media::SolidColorBrush(Windows::UI::Colors::Blue()));
+    }
+```
 
 Você também pode associar um manipulador de eventos em XAML. No editor XAML, digite o nome do evento que deseja manipular. O Visual Studio mostra uma janela IntelliSense quando você começa a digitar. Depois de especificar o evento, você pode clicar duas vezes em `<New Event Handler>` na janela IntelliSense para criar um novo manipulador de eventos com o nome padrão, ou selecionar um manipulador de eventos existente na lista. 
 
@@ -139,6 +161,9 @@ Você também pode associar um evento ao manipulador de eventos no code-behind. 
 
 ```csharp
 Button1.Click += new RoutedEventHandler(Button_Click);
+```
+```cppwinrt
+Button1().Click({ this, &MainPage::Button1_Click });
 ```
 
 ## <a name="related-topics"></a>Tópicos relacionados

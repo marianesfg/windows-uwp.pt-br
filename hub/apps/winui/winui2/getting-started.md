@@ -4,12 +4,12 @@ description: Como instalar e usar a Biblioteca de Interface do Usuário do Windo
 ms.topic: reference
 ms.date: 05/08/2020
 keywords: windows 10, uwp, sdk do kit de ferramentas
-ms.openlocfilehash: 2205a95dfd342503674662d5cb0e4ed598eda870
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 585475df4138c6a5d4d8b885582137c972a64287
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580403"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775864"
 ---
 # <a name="getting-started-with-the-windows-ui-library"></a>Introdução à Biblioteca de Interface do Usuário do Windows
 
@@ -18,7 +18,7 @@ A versão [WinUI 2.4](release-notes/winui-2.4.md) é a menos estável do WinUI e
 A biblioteca está disponível como um pacote do NuGet que pode ser adicionado a qualquer projeto novo ou existente do Visual Studio.
 
 > [!NOTE]
-> Para obter mais informações sobre como experimentar as versões prévias anteriores do WinUI 3.0, confira [WinUI 3.0 (Alfa)](../winui3/index.md).
+> Para saber mais sobre como experimentar as versões prévias anteriores do WinUI 3.0, confira o [WinUI 3.0 Versão Prévia 1](../winui3/index.md).
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Baixar e instalar a Biblioteca de Interface do Usuário do Windows
 
@@ -39,12 +39,12 @@ Outra opção é verificar "Incluir pré-lançamento" para ver as versões de pr
 
 4. Adicione os Recursos de Tema do WinUI (Interface do Usuário do Windows) aos recursos App.xaml. Se você tem outros recursos de aplicativo, há duas maneiras de fazer isso.
 
-    a. Se você não tem outros recursos de aplicativo, adicione `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>` a Application.Resources: 
+    a. Se você não tem outros recursos de aplicativo, adicione `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>` a Application.Resources:
 
     ``` XAML
     <Application>
         <Application.Resources>
-            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" /> 
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         </Application.Resources>
     </Application>
     ```
@@ -57,7 +57,7 @@ Outra opção é verificar "Incluir pré-lançamento" para ver as versões de pr
             <ResourceDictionary>
                 <ResourceDictionary.MergedDictionaries>
                     <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                </ResourceDictionary.MergedDictionaries> 
+                </ResourceDictionary.MergedDictionaries>
             </ResourceDictionary>
         </Application.Resources>
     </Application>
@@ -102,6 +102,6 @@ O WinUI é um projeto de software livre hospedado no GitHub.
 
 Relatórios de bugs, solicitações de recursos e contribuições de código da comunidade são bem-vindos no [Repositório da Biblioteca de Interface do Usuário do Windows](https://aka.ms/winui).
 
-## <a name="other-resources"></a>Outros recursos 
+## <a name="other-resources"></a>Outros recursos
 
 Se você for iniciante na UWP, é recomendável visitar as páginas [Introdução ao desenvolvimento na UWP](https://developer.microsoft.com/windows/getstarted) no Portal do Desenvolvedor.

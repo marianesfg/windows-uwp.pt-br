@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aa60db28003c4f231cf36b653c5e69b422978c1a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 28dc4a62bf580da41d424c98c186413dc96a8aae
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340060"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775823"
 ---
 # <a name="transforms-overview"></a>Visão geral das transformações
 
@@ -37,6 +37,8 @@ Você pode combinar as transformações, e há duas classes de Windows Runtime q
 No layout XAML, as transformações são aplicadas depois que o cálculo de layout é concluído, então os cálculos de espaço disponível e outras decisões de layout foram tomadas antes da aplicação das transformações. Como o layout vem primeiro, você às vezes obterá resultados inesperados se transformar elementos que estão em uma célula [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) ou um contêiner de layout semelhante que aloca espaço durante o layout. O elemento transformado poderá parecer truncado ou obscurecido porque está tentando desenhar em uma área que não calculou as dimensões pós-transformação ao dividir espaço em seu contêiner pai. Talvez seja necessário experimentar os resultados da transformação e ajustar algumas configurações. Por exemplo, em vez de usar o layout adaptável e o dimensionamento em estrela, você pode precisar alterar as propriedades **Center** ou declarar medidas de pixel fixo para o espaço do layout, a fim de verificar se o pai aloca espaço suficiente.
 
 **Observação de migração:**  o WPF (Windows Presentation Foundation) tinha uma propriedade **LayoutTransform** que aplicava transformações antes do cálculo de layout. Porém, o XAML do Windows Runtime não aceita uma propriedade **LayoutTransform**. (O Microsoft Silverlight não tinha essa propriedade também.)
+
+Como alternativa, o Kit de Ferramentas da Comunidade do Windows oferece o [LayoutTransformControl](/windows/communitytoolkit/controls/LayoutTransformControl), que aplica transformações de Matriz a qualquer FrameworkElement do aplicativo.
 
 ## <a name="span-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanapplying-a-transform-to-a-ui-element"></a><span id="Applying_a_transform_to_a_UI_element"></span><span id="applying_a_transform_to_a_ui_element"></span><span id="APPLYING_A_TRANSFORM_TO_A_UI_ELEMENT"></span>Aplicar uma transformação em um elemento de interface do usuário
 

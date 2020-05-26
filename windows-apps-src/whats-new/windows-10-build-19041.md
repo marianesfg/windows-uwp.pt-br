@@ -5,12 +5,12 @@ keywords: novidades, novidade, Windows, Windows 10, atualização, atualizaçõe
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e5f07e83d7e2e1b96c4bade5a2a6998c11e0559
-ms.sourcegitcommit: dbb368861c85c45f34ea0d5b77eb3af2416be1b2
+ms.openlocfilehash: bb7630afd6cc69497494a2e86e6c5e3544acefec
+ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83382798"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83790983"
 ---
 # <a name="whats-new-for-developers-in-windows-10-build-19041"></a>Novidades para desenvolvedores no Windows 10 build 19041
 
@@ -36,7 +36,7 @@ Wi-Fi | Várias novas funções e estruturas Wi-Fi nativas foram adicionadas, co
 Hotspot Wi-Fi 2 | [Provisionar um perfil Wi-Fi por meio de um site](/windows/win32/nativewifi/prov-wifi-profile-via-website) descreve as novas funcionalidades do Hotspot Wi-Fi 2.
 Interoperabilidade do Windows Holographic | O cabeçalho [`windows.graphics.holographic.interop.h`](/windows/win32/api/windows.graphics.holographic.interop) foi adicionado com 17 APIs do Win32. As APIs são para interoperação entre o Win32 e o Windows Runtime. Enquanto as APIs foram adicionadas no Windows 10 build 18362, o cabeçalho é novo no build 19041.
 Windows Sockets | Foram feitos aprimoramentos no conteúdo do Windows Sockets 2 SPI. Um exemplo dos muitos tópicos que aprimoramos e ampliamos é o tópico [Função de retorno de chamada LPWSPEVENTSELECT](/windows/win32/api/ws2spi/nc-ws2spi-lpwspeventselect).
-Ilhas XAML – noções básicas | Hospede controles XAML UWP nos aplicativos Windows da área de trabalho com ilhas XAML. Saiba como [hospedar um controle UWP padrão em um aplicativo WPF](/windows/apps/desktop/modernize/host-standard-control-with-xaml-island) e [hospedar um controle UWP padrão em um aplicativo C++ Win32](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp).
+Ilhas XAML – noções básicas | Hospede controles XAML UWP nos aplicativos Windows da área de trabalho com ilhas XAML. Saiba como [hospedar um controle UWP padrão em um aplicativo WPF](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands) e [hospedar um controle UWP padrão em um aplicativo C++ Win32](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp).
 Ilhas XAML – controles personalizados | Os pacotes NuGet [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) e [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) facilitam a hospedagem de controles XAML UWP personalizados em aplicativos .NET e C++ Win32. </br> Para obter instruções passo a passo, confira [Hospedar um controle UWP personalizado em um aplicativo WPF](/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands) e [Hospedar um controle UWP personalizado em um aplicativo C++ Win32](/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands-cpp). </br> Por fim, para obter diretrizes sobre cenários mais complicados do C++ Win32, confira [Cenários avançados para ilhas XAML](/windows/apps/desktop/modernize/advanced-scenarios-xaml-islands-cpp).
 
 ## <a name="build-with-windows"></a>Criar com o Windows

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2445f1b718532fd0862c276e8fadf12e88fe36ac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d0834a905c50b92003c3aa78ff8226d35c25e5dd
+ms.sourcegitcommit: ddc65c170834bcce524b5e1d36e6755eae1e3af2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209071"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83729859"
 ---
 # <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
@@ -313,7 +313,7 @@ O modelo de controle de um item contém os elementos visuais que exibem o estado
 
 - Foco – um retângulo cinza-claro desenhado abaixo o modelo de dados.  
 - Seleção – um retângulo azul-claro desenhado abaixo do modelo de dados. 
-- Foco do teclado – uma borda pontilhada em preto e branco desenhada sobre o modelo de item. 
+- Foco do teclado – um [visual de foco de alta visibilidade](/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) desenhado sobre o modelo de item.
 
 ![Elementos visuais de estado da exibição de lista](images/listview-state-visuals.png)
 
