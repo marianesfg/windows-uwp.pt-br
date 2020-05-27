@@ -3,12 +3,12 @@ title: WinUI 3.0 Versão prévia 1 (maio de 2020)
 description: Visão geral da versão prévia do WinUI 3.0.
 ms.date: 05/14/2020
 ms.topic: article
-ms.openlocfilehash: 9141fe7ff215f28557020c7f76dd35c3560edfe5
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 3aac14807f8455eb9a9294c40ddc76ddfa224659
+ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580133"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688483"
 ---
 # <a name="windows-ui-library-30-preview-1-may-2020"></a>Biblioteca de Interface do Usuário do Windows 3.0 Versão prévia 1 (maio de 2020)
 
@@ -64,12 +64,12 @@ Instale o Visual Studio 2019, versão 16.7 versão prévia 1. Você pode baixá-
 
 Você precisa incluir as seguintes cargas de trabalho ao instalar o Visual Studio Preview:
 
-- Desenvolvimento de Win32 com .NET
+- Desenvolvimento para desktop com .NET
 - Desenvolvimento para a Plataforma Universal do Windows
 
 Para compilar aplicativos em C++, você também precisa incluir as seguintes cargas de trabalho:
 
-- Desenvolvimento de Win32 com C++
+- Desenvolvimento para desktop com C++
 - O componente opcional *Ferramentas da Plataforma Universal do Windows para C++ (v142)* para a carga de trabalho da Plataforma Universal do Windows
 
 ### <a name="visual-studio-project-templates"></a>Modelos de projeto do Visual Studio
@@ -133,24 +133,30 @@ O WinUI 3.0 Versão prévia 1 é compatível com computadores que executam a Atu
 - MapControl
 - Navegação hierárquica com o NavigationView
 - SwapChainPanel não tem suporte para transparência
-- Em C#, é necessário usar `WinRT.WeakReference<T>` em vez de `System.WeakReference<T>`.
 - A Revelação Global usa comportamento de fallback, um pincel sólido
 - Não há suporte para Ilhas XAML nesta versão
 - Bibliotecas de ecossistemas de terceiros não funcionam completamente
 - IMEs não funcionam
 - Não é possível chamar métodos no namespace Windows.UI.Text
-  
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+- Para aplicativos da área de trabalho em C#:
+   - Você precisa usar `WinRT.WeakReference<T>` em vez de `System.WeakReference<T>` para referências fracas a objetos do Windows (incluindo objetos XAML).
+   - Os structs [Point](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [Rect](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) e [Size](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) têm membros que são do tipo Float em vez de Double.
+
+
 ## <a name="xaml-controls-gallery-winui-30-preview-1-branch"></a>Galeria de Controles XAML (branch do WinUI 3.0 Versão prévia 1)
 
-Confira em [Branch do WinUI 3.0 Versão prévia 1 da Galeria de Controles XAML](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview1) um aplicativo de exemplo que inclui todos os controles e recursos do WinUI 1 3.0 Versão prévia 1.
+Confira em [Branch do WinUI 3.0 Versão prévia 1 da Galeria de Controles XAML](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview) um aplicativo de exemplo que inclui todos os controles e recursos do WinUI 1 3.0 Versão prévia 1.
 
 ![Aplicativo da Galeria de Controles XAML do WinUI 3.0 Versão prévia 1](images/WinUI3XamlControlsGallery.png)<br/>
 *Aplicativo de exemplo da Galeria de Controles XAML do WinUI 3.0 Versão prévia 1*
 
-Para baixar o exemplo, clone o branch **winui3preview1** usando o seguinte comando:
+Para baixar a amostra, clone a ramificação **winui3preview** usando o seguinte comando:
 
-> `git clone --single-branch --branch winui3preview1 https://github.com/microsoft/Xaml-Controls-Gallery.git`
+> `git clone --single-branch --branch winui3preview https://github.com/microsoft/Xaml-Controls-Gallery.git`
 
-Depois de clonar, mude para o branch **winui3preview1** em seu ambiente do Git local:
+Depois de clonar, mude para a ramificação **winui3preview** no seu ambiente do Git local:
 
-> `git checkout winui3preview1`
+> `git checkout winui3preview`
