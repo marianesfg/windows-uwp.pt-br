@@ -6,19 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, chave de autenticação de mapa, controle de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: c3bc74d83c3f713149e9001de4ec10fe0a4706de
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ab0d1900398c313021600c18338ecc1201241410
+ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259384"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791002"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar uma chave de autenticação de mapas
 
-
-
-
-Seu [aplicativo Universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) deve ser autenticado para que possa usar o [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
+Seu [aplicativo universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) deve ser autenticado antes de poder usar os serviços [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) e MAP no namespace [**Windows. Services. Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) . Para autenticar o aplicativo, você precisa especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
 
 **Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples) no GitHub:
 
@@ -31,7 +28,7 @@ Crie e gerencie chaves de autenticação de mapa para aplicativos Universal do W
 
 Para criar uma nova chave
 
-1.  No navegador, navegue até o centro de desenvolvedores do Bing Maps ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  No navegador, navegue até o centro de desenvolvedores do Bing Maps ( [https://www.bingmapsportal.com](https://www.bingmapsportal.com/) ).
 
 2.  Caso você precise fazer logon, insira a conta da Microsoft e clique em **Entrar**.
 
@@ -45,8 +42,8 @@ Para criar uma nova chave
 
 7.  Preencha o formulário **Criar Chave** e clique em **Criar**.
 
-    -   **Nome do aplicativo:** o nome do seu aplicativo.
-    -   **URL do aplicativo (opcional):** a URL do seu aplicativo.
+    -   **Nome do aplicativo:** o nome do aplicativo.
+    -   **URL do aplicativo (opcional):** a URL do aplicativo.
     -   **Tipo de chave:** selecione **Básico** ou **Empresa**.
     -   **Tipo de aplicativo:** Selecione o **aplicativo do Windows** para uso em seu aplicativo universal do Windows.
 
@@ -92,5 +89,5 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://docs.micros
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Diretrizes de design para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [Vídeo de Build 2015: aproveitando mapas e local em telefone, Tablet e PC em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

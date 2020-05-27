@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 385c11e48695c2486fd5a2b72633923454e2f8ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ad94d7b887e28ac01156592ac47cfc9ac4783193
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970631"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775905"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Animação conectada para aplicativos do Windows
 
@@ -55,7 +55,7 @@ Neste vídeo rápido, um aplicativo usa uma animação conectada para animar uma
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>Animação conectada e o Sistema de Design Fluent
 
- O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Animação conectada é um componente do Sistema de Design Fluent que acrescenta movimento ao seu aplicativo. Para saber mais, confira a [visão geral do design fluente](/windows/apps/fluent-design-system).
+ O Sistema de Design Fluente ajuda a criar uma interface do usuário arrojada e moderna que incorpora luz, profundidade, movimento, materiais e escala. Animação conectada é um componente do Sistema de Design Fluent que acrescenta movimento ao seu aplicativo. Para saber mais, confira a [Visão geral do Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="why-connected-animation"></a>Por que animação conectada?
 
@@ -100,8 +100,8 @@ Para obter os vários efeitos, algumas configurações ignoram essas propriedade
 
 | Configuração | Respeita defaultduration? | Respeita DefaultEasingFunction? |
 | - | - | - |
-| Gravidade | Sim | Sim* <br/> **A conversão básica de a para B usa essa função de atenuação, mas o "dip de gravidade" tem sua própria função de atenuação.*  |
-| Direto | Não <br/> *Anima sobre 150ms.*| Não <br/> *Usa a função de atenuação de desaceleração.* |
+| Gravidade | Yes | Sim* <br/> **A conversão básica de a para B usa essa função de atenuação, mas o "dip de gravidade" tem sua própria função de atenuação.*  |
+| Direto | No <br/> *Anima sobre 150ms.*| No <br/> *Usa a função de atenuação de desaceleração.* |
 | Básico | Sim | Sim |
 
 ## <a name="how-to-implement-connected-animation"></a>Como implementar uma animação conectada
@@ -271,7 +271,7 @@ void PrepareAnimationWithItem(ContactsItem item)
 Para iniciar uma animação com esse elemento como o destino, como ao navegar de volta de um modo de exibição de detalhes, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Se você acabou de carregar a fonte de dados para o ListView, o TryStartConnectedAnimationAsync irá esperar para iniciar a animação até que o recipiente do item correspondente seja criado.
 
 ```csharp
-private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
+private async void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 {
     ContactsItem item = GetPersistedItem(); // Get persisted item
     if (item != null)

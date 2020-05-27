@@ -6,18 +6,18 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, educação
 ms.localizationpriority: medium
-ms.openlocfilehash: 31672ff989da7d72f751a33ec3df3d8d528e22ec
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3708252908c9f63bbb5070ef864b8418c857ac19
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317819"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854713"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um teste](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) é um aplicativo UWP baseado em navegador que renderiza bloqueada avaliações de online para teste de alto risco, permitindo que os educadores para se concentrar na avaliação do conteúdo em vez de como fornecer um seguro ambiente de teste. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) é um aplicativo UWP baseado em navegador que processa avaliações online bloqueadas para testes de alta análise, permitindo que educadores se concentrem no conteúdo da avaliação, em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
-Consulte a [Referência técnica do app Fazer um Teste](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para a solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos](troubleshooting.md).
+Consulte a [Referência técnica do app Fazer um Teste](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentação de referência
 A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs dependem de um objeto `SecureBrowser` global.
@@ -28,15 +28,15 @@ A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs 
 
 ### <a name="security-namespace"></a>Namespace de segurança
 
-O namespace de segurança permite que você bloquear o dispositivo, verifique a lista de processos do sistema e do usuário, obter os endereços MAC e IP e limpar os recursos da web em cache.
+O namespace de segurança permite bloquear o dispositivo, verificar a lista de processos de usuário e sistema, obter endereços MAC e IP e limpar os recursos da Web em cache.
 
 | Método | Descrição   |
 |--------|---------------|
-|[lockDown](#lockDown) | Bloqueia o dispositivo para teste. |
+|[Bloqueado](#lockDown) | Bloqueia o dispositivo para teste. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina se o contexto de bloqueio continua aplicado ao dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. |
 |[examineProcessList](#examineProcessList)|Obtém a lista de processos de usuário e sistema em execução.|
-|[close](#close) | Fecha o navegador e desbloqueia o dispositivo. |
+|[inclui](#close) | Fecha o navegador e desbloqueia o dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Verifica se o modo permissivo está ativado ou desativado.|
 |[setPermissiveMode](#setPermissiveMode)|Ativa ou desativa o modo permissivo.|
 |[emptyClipBoard](#emptyClipBoard)|Limpa a área de transferência do sistema.|
@@ -52,15 +52,15 @@ O namespace de segurança permite que você bloquear o dispositivo, verifique a 
 <span id="lockDown"/>
 
 ### <a name="lockdown"></a>lockDown
-Bloqueia o dispositivo. Também usado para desbloquear o dispositivo. O aplicativo Web de teste invocará esta chamada antes de permitir que os alunos comecem o teste. O implementador é necessário para executar quaisquer ações necessárias para proteger o ambiente de teste. As etapas executadas para proteger o ambiente de dispositivo específico e, por exemplo, incluir aspectos, como capturas de tela de desabilitação, desabilitando o bate-papo no modo seguro, limpando a área de transferência do sistema, entrar em um modo de quiosque, desabilitando espaços no OSX 10.7 + dispositivos, etc. O aplicativo de teste permitirá bloqueio antes de uma avaliação começa e desabilitará o bloqueio quando o aluno foi concluída a avaliação e está fora do teste seguro.
+Bloqueia o dispositivo. Também usado para desbloquear o dispositivo. O aplicativo Web de teste invocará esta chamada antes de permitir que os alunos comecem o teste. O implementador é necessário para executar quaisquer ações necessárias para proteger o ambiente de teste. As etapas executadas para proteger o ambiente são específicas de dispositivo e, por exemplo, incluem aspectos como desabilitar capturas de tela, desabilitar chat por voz quando estiver em modo seguro, limpar a área de transferência do sistema, entrar em um modo de quiosque, desabilitar Espaços nos dispositivos OSX 10.7 + etc. O aplicativo de teste habilitará o bloqueio antes do início de uma avaliação e desabilitará o bloqueio quando o aluno concluir a avaliação e estiver fora do teste seguro.
 
 **Sintaxe**  
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parâmetros**  
-* `enable` - **Verdadeiro** para executar o aplicativo fazer um teste acima da tela de bloqueio e aplicar políticas abordadas neste [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** interrompe a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o app não esteja bloqueado; nesse caso, não haverá nenhum efeito.  
-* `onSuccess` -[opcional] a função a ser chamada após o bloqueio tem sido habilitado ou desabilitado com êxito. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
-* `onError` -[opcional] a função ser chamada se a operação de bloqueio falhou. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
+* `enable` - **true** para executar o aplicativo Take-a-Test acima da tela de bloqueio e aplicar políticas discutidas neste [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** interrompe a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o app não esteja bloqueado; nesse caso, não haverá nenhum efeito.  
+* `onSuccess`-[opcional] a função a ser chamada depois que o bloqueio tiver sido habilitado ou desabilitado com êxito. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
+* `onError`-[opcional] a função a ser chamada se a operação de bloqueio falhar. Ela deve estar no formato `Function(Boolean currentlockdownstate)`.  
 
 **Requisitos**  
 Windows 10, versão 1709
@@ -76,7 +76,7 @@ Determina se o contexto de bloqueio continua aplicado ao dispositivo. O aplicati
 `void SecureBrowser.security.isEnvironmentSecure(Function callback);`
 
 **Parâmetros**  
-* `callback` -A função para chamar quando esta função é concluída. Ela deve estar no formato `Function(String state)`, em que `state` é uma cadeia de caracteres JSON que contém dois campos. O primeiro é o campo `secure`, que mostrará `true` somente se todos os bloqueios necessários tiverem sido habilitados (ou os recurso tiverem sido desabilitados) para permitir um ambiente de teste seguro e nenhum deles tiver sido comprometido desde que o app entrou no modo de bloqueio. O campo, `messageKey`, inclui outros detalhes ou informações específicas do fornecedor. O objetivo aqui é permitir que os fornecedores insiram informações adicionais que ampliam o sinalizador booliano `secure`:
+* `callback`-A função a ser chamada quando essa função for concluída. Ela deve estar no formato `Function(String state)`, em que `state` é uma cadeia de caracteres JSON que contém dois campos. O primeiro é o campo `secure`, que mostrará `true` somente se todos os bloqueios necessários tiverem sido habilitados (ou os recurso tiverem sido desabilitados) para permitir um ambiente de teste seguro e nenhum deles tiver sido comprometido desde que o app entrou no modo de bloqueio. O campo, `messageKey`, inclui outros detalhes ou informações específicas do fornecedor. O objetivo aqui é permitir que os fornecedores insiram informações adicionais que ampliam o sinalizador booliano `secure`:
 
 ```JSON
 {
@@ -99,12 +99,12 @@ Obtém detalhes sobre a plataforma em que o aplicativo de teste é executado. É
 `void SecureBrowser.security.getDeviceInfo(Function callback);`
 
 **Parâmetros**  
-* `callback` -A função para chamar quando esta função é concluída. Ela deve estar no formato `Function(String infoObj)`, em que `infoObj` é uma cadeia de caracteres JSON que contém vários campos. Há suporte para os seguintes campos:
-    * `os` representa o tipo de sistema operacional (por exemplo: Windows, macOS, Linux, iOS, Android, etc.)
-    * `name` representa o nome de versão do sistema operacional, se houver (por exemplo: Sierra, Ubuntu).
-    * `version` representa a versão do sistema operacional (por exemplo: 10.1, 10 pro, etc.)
-    * `brand` representa a identidade visual do navegador seguro (por exemplo: OAKS, CA, SmarterApp, etc.)
-    * `model` representa o modelo do dispositivo para dispositivos móveis. /não utilizados para navegadores de desktop.
+* `callback`-A função a ser chamada quando essa função for concluída. Ela deve estar no formato `Function(String infoObj)`, em que `infoObj` é uma cadeia de caracteres JSON que contém vários campos. Há suporte para os seguintes campos:
+    * `os`representa o tipo de sistema operacional (por exemplo: Windows, macOS, Linux, iOS, Android etc.)
+    * `name`representa o nome da versão do sistema operacional, se houver (por exemplo: Sierra, Ubuntu).
+    * `version`representa a versão do sistema operacional (por exemplo: 10,1, 10 pro, etc.)
+    * `brand`representa a identidade visual do navegador seguro (por exemplo: OAKS, CA, SmarterApp, etc.)
+    * `model`representa o modelo de dispositivo somente para dispositivos móveis; nulo/não usado para navegadores de desktop.
 
 **Requisitos**  
 Windows 10, versão 1709
@@ -120,8 +120,8 @@ Obtém a lista de todos os processos em execução no computador cliente pertenc
 `void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
 
 **Parâmetros**  
-* `blacklistedProcessList` -A lista de processos que o aplicativo de teste possui na lista de bloqueio.  
-`callback` -A função para invocar uma vez que os processos ativos foram encontrados. Deve estar no formato: `Function(String foundBlacklistedProcesses)` em que `foundBlacklistedProcesses` está no formato: `"['process1.exe','process2.exe','processEtc.exe']"`. Ele estará vazio se nenhum processo não autorizado tiver sido encontrado. Se for nulo, isso indica que ocorreu um erro na chamada da função original.
+* `blacklistedProcessList`-A lista de processos em que o aplicativo de teste foi suspenso.  
+`callback`-A função a ser invocada depois que os processos ativos forem encontrados. Deve estar no formato: `Function(String foundBlacklistedProcesses)` em que `foundBlacklistedProcesses` está no formato: `"['process1.exe','process2.exe','processEtc.exe']"`. Ele estará vazio se nenhum processo não autorizado tiver sido encontrado. Se for nulo, isso indica que ocorreu um erro na chamada da função original.
 
 **Comentários** A lista não inclui processos do sistema.
 
@@ -139,7 +139,7 @@ Fecha o navegador e desbloqueia o dispositivo. O aplicativo de teste deve invoca
 `void SecureBrowser.security.close(restart);`
 
 **Parâmetros**  
-* `restart` -Este parâmetro é ignorado, mas deve ser fornecido.
+* `restart`-Esse parâmetro é ignorado, mas deve ser fornecido.
 
 **Comentários** No Windows 10, versão 1607, o dispositivo deve estar inicialmente bloqueado. Em versões posteriores, este método fecha o navegador, não importando se o dispositivo está bloqueado.
 
@@ -157,7 +157,7 @@ O aplicativo Web de teste deve invocar este parâmetro para determinar se o modo
 `void SecureBrowser.security.getPermissiveMode(Function callback)`
 
 **Parâmetros**  
-* `callback` -A função a ser invocado quando essa chamada é concluída. Deve estar no formato: `Function(Boolean permissiveMode)`, em que `permissiveMode` indica se o navegador está atualmente no modo permissivo. Se for nulo ou não definido, ocorreu um erro na operação de obtenção.
+* `callback`-A função a ser invocada quando essa chamada for concluída. Deve estar no formato: `Function(Boolean permissiveMode)`, em que `permissiveMode` indica se o navegador está atualmente no modo permissivo. Se for nulo ou não definido, ocorreu um erro na operação de obtenção.
 
 **Requisitos**  
 Windows 10, versão 1709
@@ -173,8 +173,8 @@ O aplicativo Web de teste deve invocar este parâmetro para ativar ou desativar 
 `void SecureBrowser.security.setPermissiveMode(Boolean enable, Function callback)`
 
 **Parâmetros**  
-* `enable` -O valor booliano que indica o status do modo permissivo pretendido.  
-* `callback` -A função a ser invocado quando essa chamada é concluída. Deve estar no formato: `Function(Boolean permissiveMode)`, em que `permissiveMode` indica se o navegador está atualmente no modo permissivo. Se for nulo ou não definido, ocorreu um erro na operação de conjuntos.
+* `enable`-O valor booliano que indica o status do modo permissivo pretendido.  
+* `callback`-A função a ser invocada quando essa chamada for concluída. Deve estar no formato: `Function(Boolean permissiveMode)`, em que `permissiveMode` indica se o navegador está atualmente no modo permissivo. Se for nulo ou não definido, ocorreu um erro na operação de conjuntos.
 
 **Requisitos**  
 Windows 10, versão 1709
@@ -203,7 +203,7 @@ Obtém a lista de endereços MAC do dispositivo. O aplicativo de teste deve invo
 `void SecureBrowser.security.getMACAddress(Function callback);`
 
 **Parâmetros**  
-* `callback` -A função a ser invocado quando essa chamada é concluída. Deve estar no formato: `Function(String addressArray)` em que `addressArray` está no formato: `"['00:11:22:33:44:55','etc']"`.
+* `callback`-A função a ser invocada quando essa chamada for concluída. Deve estar no formato: `Function(String addressArray)` em que `addressArray` está no formato: `"['00:11:22:33:44:55','etc']"`.
 
 **Comentários**  
 É difícil contar com endereços IP de origem para fazer a distinção entre os computadores de usuário final nos servidores de teste, pois os firewalls/NATs/Proxies estão geralmente em uso nas escolas. Os endereços MAC permitem que o app faça a distinção de computadores de cliente final atrás de um firewall comum para fins de diagnóstico.
@@ -219,9 +219,9 @@ Windows 10, versão 1709
 Obtém a hora em que o app de teste foi iniciado.
 
 **Sintaxe**  
-`DateTime SecureBrowser.settings.getStartTime();`
+`DateTime SecureBrowser.security.getStartTime();`
 
-**Retornar**  
+**Exibir**  
 Um objeto DateTime que indica a hora em que o app de teste foi iniciado.
 
 **Requisitos**  
@@ -238,9 +238,9 @@ Verifica se uma funcionalidade está habilitada ou desabilitada.
 `Object SecureBrowser.security.getCapability(String feature)`
 
 **Parâmetros**  
-`feature` -A cadeia de caracteres para determinar qual recurso de consulta. As cadeias de caracteres de funcionalidade válidas são "screenMonitoring", "printing" e "textSuggestions" (não diferencia maiúsculas de minúsculas).
+`feature`-A cadeia de caracteres para determinar qual recurso deve ser consultado. As cadeias de caracteres de funcionalidade válidas são "screenMonitoring", "printing" e "textSuggestions" (não diferencia maiúsculas de minúsculas).
 
-**Valor de retorno**  
+**Valor Retornado**  
 Esta função retorna um objeto JavaScript ou literal com o formato: `{<feature>:true|false}`. **true** se a funcionalidade consultada estiver habilitada; **false** se a funcionalidade não estiver habilitada ou a cadeia de caracteres de funcionalidade for inválida.
 
 **Requisitos** Windows 10, versão 1703
@@ -256,10 +256,10 @@ Habilita ou desabilita uma funcionalidade específica no navegador.
 `void SecureBrowser.security.setCapability(String feature, String value, Function onSuccess, Function onError)`
 
 **Parâmetros**  
-* `feature` -A cadeia de caracteres para determinar quais recursos para definir. As cadeias de caracteres de funcionalidade válidas são `"screenMonitoring"`, `"printing"` e `"textSuggestions"` (não diferencia maiúsculas de minúsculas).  
-* `value` -A configuração desejada para o recurso. Deve ser `"true"` ou `"false"`.  
-* `onSuccess` -[opcional] a função ser chamada depois que a operação de definição concluída com êxito. Deve estar no formato `Function(String jsonValue)`, em que *jsonValue* está no formato: `{<feature>:true|false|undefined}`.  
-* `onError` -[opcional] a função ser chamada se a operação de conjuntos falhou. Deve estar no formato `Function(String jsonValue)`, em que *jsonValue* está no formato: `{<feature>:true|false|undefined}`.
+* `feature`-A cadeia de caracteres para determinar qual recurso definir. As cadeias de caracteres de funcionalidade válidas são `"screenMonitoring"`, `"printing"` e `"textSuggestions"` (não diferencia maiúsculas de minúsculas).  
+* `value`-A configuração pretendida para o recurso. Deve ser `"true"` ou `"false"`.  
+* `onSuccess`-[opcional] a função a ser chamada depois que a operação de definição foi concluída com êxito. Deve estar no formato `Function(String jsonValue)`, em que *jsonValue* está no formato: `{<feature>:true|false|undefined}`.  
+* `onError`-[opcional] a função a ser chamada se a operação de definição falhar. Deve estar no formato `Function(String jsonValue)`, em que *jsonValue* está no formato: `{<feature>:true|false|undefined}`.
 
 **Comentários**  
 Se o recurso de destino for desconhecido para o navegador, esta função passará um valor `undefined` para a função de retorno de chamada.

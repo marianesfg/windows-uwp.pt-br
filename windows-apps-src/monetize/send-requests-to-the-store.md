@@ -1,17 +1,17 @@
 ---
-Description: Você pode usar o método SendRequestAsync para enviar solicitações para a Microsoft Store para operações que ainda não tiver uma API disponível no SDK do Windows.
+Description: Você pode usar o método SendRequestAsync para enviar solicitações para o Microsoft Store para operações que ainda não têm uma API disponível no SDK do Windows.
 title: Enviar solicitações para Microsoft Store
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 810c546eb0ee0263dcb50b3ce58e593ad294435c
+ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589791"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83867326"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitações para Microsoft Store
 
@@ -34,7 +34,7 @@ public async Task<bool> AddUserToFlightGroup()
 {
     StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
         StoreContext.GetDefault(), 8,
-        "{ \"type\": \"AddToFlightGroup\", \"parameters\": \"{ \"flightGroupId\": \"your group ID\" }\" }");
+        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
 
     if (result.ExtendedError == null)
     {
@@ -77,7 +77,7 @@ Essa solicitação recupera as variáveis do grupo de versão de pré-lançament
 |  *requestKind*                   |  Especifique 7 para retornar o grupo de versão de pré-lançamento melhor classificado para o dispositivo ou 8 para retornar o grupo de versão de pré-lançamento melhor classificado para o usuário e o dispositivo atual. É recomendável usar o valor 8 para o parâmetro *requestKind*, pois esse valor retornará o grupo de versão de pré-lançamento melhor classificado em todos os membros para o usuário e o dispositivo atual.  |
 |  *parametersAsJson*                   |  Passe uma cadeia de caracteres formatada em JSON que contém os dados mostrados no exemplo a seguir.  |
 
-O exemplo a seguir mostra o formato dos dados JSON para passar a *parametersAsJson*. O campo *type* deve ser atribuído à cadeia de caracteres *GetRemoteVariables*. Atribuir a *projectId* campo para a ID do projeto no qual você definiu as variáveis remotas no Partner Center.
+O exemplo a seguir mostra o formato dos dados JSON para passar a *parametersAsJson*. O campo *type* deve ser atribuído à cadeia de caracteres *GetRemoteVariables*. Atribua o campo *ProjectId* à ID do projeto no qual você definiu as variáveis remotas no Partner Center.
 
 ```json
 { 
@@ -90,9 +90,9 @@ Depois de enviar essa solicitação, a propriedade [Response](https://docs.micro
 
 |  Campo  |  Descrição  |
 |----------------------|---------------|
-|  *Anônimo*                   |  Um valor Booleano, onde **true** indica que a identidade do usuário ou do dispositivo não estava presente na solicitação, e **false** indica que a identidade do usuário ou dispositivo estava presente na solicitação.  |
+|  *anônimo*                   |  Um valor Booleano, onde **true** indica que a identidade do usuário ou do dispositivo não estava presente na solicitação, e **false** indica que a identidade do usuário ou dispositivo estava presente na solicitação.  |
 |  *name*                   |  Uma cadeia de caracteres que contém o nome do grupo de versão de pré-lançamento melhor classificado ao qual o dispositivo ou usuário pertence.  |
-|  *Configurações*                   |  Um dicionário de pares de chave/valor que contêm o nome e o valor das variáveis remotas que o desenvolvedor configurou para o grupo de versão de pré-lançamento.  |
+|  *configurações*                   |  Um dicionário de pares de chave/valor que contêm o nome e o valor das variáveis remotas que o desenvolvedor configurou para o grupo de versão de pré-lançamento.  |
 
 O exemplo a seguir demonstra um valor de retorno para essa solicitação.
 
@@ -156,5 +156,5 @@ Se houver um erro com a solicitação, a propriedade [HttpStatusCode](https://do
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Mostrar uma classificação e examine a caixa de diálogo no seu aplicativo](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
+* [Mostrar um diálogo de classificação e opinião em seu app](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
 * [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)

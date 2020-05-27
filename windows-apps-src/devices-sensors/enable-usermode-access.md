@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 08c802154180f5577c43a3ad5f349f53e3d9b5d3
-ms.sourcegitcommit: 20ee991a1cf87ef03c158cd3f38030c7d0e483fa
+ms.openlocfilehash: eb8f4cf619e2e2b3fe089ce9478ae61315d1c13e
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77037896"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854762"
 ---
 # <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>Habilitar o acesso do modo de usuário a GPIO, I2C e SPI
 
@@ -22,11 +22,11 @@ Este documento descreve como especificar essa configuração na ACPI (interface 
 > [!IMPORTANT]
 > O público-alvo deste documento é Unified Extensible Firmware Interface (UEFI) e os desenvolvedores de ACPI. Presume-se familiaridade com ACPI, criação do ASL (ACPI Source Language) e SpbCx/GpioClx.
 
-O acesso de modo de usuário a barramentos de baixo nível no Windows é direcionado por meio das estruturas `GpioClx` e `SpbCx` existentes. Um novo driver chamado *RhProxy*, disponível no Windows IOT Core e no Windows Enterprise, expõe `GpioClx` e `SpbCx` recursos para o modo de usuário. Para habilitar as APIs, um nó de dispositivo para rhproxy deve ser declarado em suas tabelas ACPI com cada um dos recursos GPIO e SPB que devem ser expostos ao modo de usuário. Este documento discorre sobre a criação e a verificação de ASL.
+O acesso de modo de usuário a barramentos de baixo nível no Windows é direcionado por meio de `GpioClx` estruturas existentes e `SpbCx` . Um novo driver chamado *RhProxy*, disponível no Windows IOT Core e no Windows Enterprise, expõe `GpioClx` e `SpbCx` recursos para o modo de usuário. Para habilitar as APIs, um nó de dispositivo para rhproxy deve ser declarado em suas tabelas ACPI com cada um dos recursos GPIO e SPB que devem ser expostos ao modo de usuário. Este documento discorre sobre a criação e a verificação de ASL.
 
 ## <a name="asl-by-example"></a>ASL por exemplo
 
-Vamos examinar a declaração do nó de dispositivo rhproxy Raspberry Pi 2. Primeiro, crie a declaração de dispositivo ACPI no escopo do \\_SB.
+Vamos examinar a declaração do nó de dispositivo rhproxy Raspberry Pi 2. Primeiro, crie a declaração de dispositivo ACPI no \\ escopo de _SB.
 
 ```cpp
 Device(RHPX)
@@ -37,9 +37,9 @@ Device(RHPX)
 }
 ```
 
-* _HID – ID de Hardware. Defina isso como uma ID de hardware específica do fornecedor.
-* _CID – ID compatível. Deve ser "MSFT8000".
-* _UID – ID exclusiva. Defina como 1.
+- _HID – ID de Hardware. Defina isso como uma ID de hardware específica do fornecedor.
+- _CID – ID compatível. Deve ser "MSFT8000".
+- _UID – ID exclusiva. Defina como 1.
 
 Em seguida, declaramos cada um dos recursos GPIO e SPB que devem ser expostos ao modo de usuário. A ordem em que os recursos são declarados é importante porque os índices de recurso são usados para associar propriedades a recursos. Se houver vários barramentos I2C ou SPI expostos, o primeiro barramento declarado será considerado o barramento 'padrão' para esse tipo, e será a instância retornada pelos métodos `GetDefaultAsync()`[Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) e [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
 
@@ -107,20 +107,20 @@ Package(2) { "SPI0-SupportedDataBitLengths", Package() { 8 }},
 
 A propriedade **SupportedDataBitLengths** lista os tamanhos de bit de dados aceitos pelo controlador. Vários valores podem ser especificados em uma lista separada por vírgulas. A API impedirá que os usuários especifiquem valores fora dessa lista. O tamanho de bit de dados é passado para seu driver SPB no campo _LEN do descritor de conexão (ACPI seção 6.4.3.8.2.2).
 
-Você pode considerar essas declarações de recursos como "modelos". Alguns dos campos são corrigidos na inicialização do sistema, enquanto outros são especificados dinamicamente no runtime. Os campos a seguir do descritor de SPISerialBus são fixos:
+Você pode considerar essas declarações de recursos como "modelos". Alguns dos campos são corrigidos na inicialização do sistema, enquanto outros são especificados dinamicamente no tempo de execução. Os campos a seguir do descritor de SPISerialBus são fixos:
 
-* DeviceSelection
-* DeviceSelectionPolarity
-* WireMode
-* SlaveMode
-* ResourceSource
+- DeviceSelection
+- DeviceSelectionPolarity
+- WireMode
+- SlaveMode
+- ResourceSource
 
-Os campos a seguir são espaços reservados para os valores especificados pelo usuário no runtime:
+Os campos a seguir são espaços reservados para os valores especificados pelo usuário no tempo de execução:
 
-* DataBitLength
-* ConnectionSpeed
-* ClockPolarity
-* ClockPhase
+- DataBitLength
+- ConnectionSpeed
+- ClockPolarity
+- ClockPhase
 
 Como o SPI1 contém somente uma linha de seleção de chip, um único recurso `SPISerialBus()` é declarado:
 
@@ -155,11 +155,11 @@ Isso cria um barramento chamado "SPI1" e o associa ao índice de recurso 2.
 
 #### <a name="spi-driver-requirements"></a>Requisitos de driver SPI
 
-* Deve usar `SpbCx` ou ser compatível com SpbCx
-* Deve ter sido aprovado nos [Testes SPI MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
-* Deve aceitar a velocidade de clock de 4Mhz
-* Deve aceitar o tamanho de dados de 8 bits
-* Deve aceitar todos os modos de SPI: 0, 1, 2, 3
+- Deve usar `SpbCx` ou ser compatível com SpbCx
+- Deve ter sido aprovado nos [Testes SPI MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
+- Deve aceitar a velocidade de clock de 4Mhz
+- Deve aceitar o tamanho de dados de 8 bits
+- Deve aceitar todos os modos de SPI: 0, 1, 2, 3
 
 ### <a name="i2c"></a>I2C
 
@@ -189,30 +189,30 @@ Isso declara um barramento I2C com o nome amigável "I2C1" que se refere ao índ
 
 Os campos a seguir do descritor de I2CSerialBus() são fixos:
 
-* SlaveMode
-* ResourceSource
+- SlaveMode
+- ResourceSource
 
-Os campos a seguir são espaços reservados para os valores especificados pelo usuário no runtime.
+Os campos a seguir são espaços reservados para os valores especificados pelo usuário no tempo de execução.
 
-* SlaveAddress
-* ConnectionSpeed
-* AddressingMode
+- SlaveAddress
+- ConnectionSpeed
+- AddressingMode
 
 #### <a name="i2c-driver-requirements"></a>Requisitos de driver I2C
 
-* Deve usar SpbCx ou ser compatível com SpbCx
-* Deve ter sido aprovado nos [Testes I2C MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/run-mitt-tests-for-an-i2c-controller-)
-* Deve aceitar endereçamento de 7 bits
-* Deve aceitar velocidade de clock de 100kHz
-* Deve aceitar velocidade de clock de 400kHz
+- Deve usar SpbCx ou ser compatível com SpbCx
+- Deve ter sido aprovado nos [Testes I2C MITT](https://docs.microsoft.com/windows-hardware/drivers/spb/run-mitt-tests-for-an-i2c-controller-)
+- Deve aceitar endereçamento de 7 bits
+- Deve aceitar velocidade de clock de 100kHz
+- Deve aceitar velocidade de clock de 400kHz
 
 ### <a name="gpio"></a>GPIO
 
 Em seguida, declaramos todos os Pins do GPIO expostos ao modo de usuário. Oferecemos a orientação a seguir ao decidir quais pinos expor:
 
-* Declare todos os pinos em cabeçalhos expostos.
-* Declare pinos que estão conectados a funções onboard úteis como botões e LEDs.
-* Não declare pinos que são reservados para funções de sistema ou não estão conectados a nada.
+- Declare todos os pinos em cabeçalhos expostos.
+- Declare pinos que estão conectados a funções onboard úteis como botões e LEDs.
+- Não declare pinos que são reservados para funções de sistema ou não estão conectados a nada.
 
 O bloco de ASL seguir declara dois pinos – GPIO4 e GPIO5. Os outros pinos não são mostrados aqui por questão de brevidade. O Apêndice C contém um exemplo de script de powershell que pode ser usado para gerar os recursos GPIO.
 
@@ -228,17 +228,17 @@ GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, “\\_SB.GPI0”,) { 5 }
 
 Os requisitos a seguir devem ser observados ao se declarar pinos GPIO:
 
-* Só há suporte para controladores GPIO mapeados na memória. Não há suporte para controladores GPIO com interface sobre I2C/SPI. O driver do controlador é um controlador de memória mapeado se ele definir o sinalizador [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) na estrutura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) em resposta ao retorno de chamada [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information).
-* Cada pino requer um recurso GpioIO e GpioInt. O recurso GpioInt deve seguir imediatamente o recurso GpioIO e deve se referir ao mesmo número de pino.
-* Os recursos GPIO devem ser ordenados, aumentando o número de pino.
-* Cada recurso GpioIO e GpioInt deve conter exatamente um número de pino na lista de pinos.
-* O campo ShareType de ambos os descritores deve ser Shared
-* O campo EdgeLevel do descritor de GpioInt deve ser Edge
-* O campo ActiveLevel do descritor de GpioInt deve ser ActiveBoth
-* O campo PinConfig
-  * Deve ser o mesmo nos descritores de GpioIO e GpioInt
-  * Deve ser PullUp, PullDown ou PullNone. Não pode ser PullDefault.
-  * A configuração de recepção deve coincidir com o estado de ativação do pino. Colocar o pino no modo de recepção especificado do estado de ativação não deve alterar o estado do pino. Por exemplo, se a folha de dados especifica que o pino sai com um puxão, especifique PinConfig como PullUp.
+- Só há suporte para controladores GPIO mapeados na memória. Não há suporte para controladores GPIO com interface sobre I2C/SPI. O driver do controlador é um controlador de memória mapeado se ele definir o sinalizador [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) na estrutura [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) em resposta ao retorno de chamada [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information).
+- Cada pino requer um recurso GpioIO e GpioInt. O recurso GpioInt deve seguir imediatamente o recurso GpioIO e deve se referir ao mesmo número de pino.
+- Os recursos GPIO devem ser ordenados, aumentando o número de pino.
+- Cada recurso GpioIO e GpioInt deve conter exatamente um número de pino na lista de pinos.
+- O campo ShareType de ambos os descritores deve ser Shared
+- O campo EdgeLevel do descritor de GpioInt deve ser Edge
+- O campo ActiveLevel do descritor de GpioInt deve ser ActiveBoth
+- O campo PinConfig
+  - Deve ser o mesmo nos descritores de GpioIO e GpioInt
+  - Deve ser PullUp, PullDown ou PullNone. Não pode ser PullDefault.
+  - A configuração de recepção deve coincidir com o estado de ativação do pino. Colocar o pino no modo de recepção especificado do estado de ativação não deve alterar o estado do pino. Por exemplo, se a folha de dados especifica que o pino sai com um puxão, especifique PinConfig como PullUp.
 
 O firmware, o UEFI e o código de inicialização de driver não mudarão o estado de ativação de um pino durante a inicialização. Somente o usuário sabe o que está anexado a um pino e, portanto, quais transições de estado são seguras. O estado de ativação de cada pino deve ser documentado para que os usuários possam projetar corretamente o hardware que faz interface com um pino. Um pino não deve mudar de estado inesperadamente durante a inicialização.
 
@@ -267,8 +267,8 @@ Se o sinal de um GPIO passar por um comutador de nível antes de atingir um cabe
 
 O Windows oferece suporte a dois esquemas de numeração de pino:
 
-* Numeração de pino sequencial: os usuários veem números como 0, 1, 2... até o número de pinos expostos. 0 é o primeiro recurso GpioIo declarado no ASL, 1 é o segundo recurso GpioIo declarado no ASL e assim por diante.
-* Numeração de PIN nativo – os usuários veem os números de PIN especificados em descritores de GpioIo, por exemplo, 4, 5, 12, 13,...
+- Numeração de pino sequencial: os usuários veem números como 0, 1, 2... até o número de pinos expostos. 0 é o primeiro recurso GpioIo declarado no ASL, 1 é o segundo recurso GpioIo declarado no ASL e assim por diante.
+- Numeração de PIN nativo – os usuários veem os números de PIN especificados em descritores de GpioIo, por exemplo, 4, 5, 12, 13,...
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
@@ -288,15 +288,15 @@ Escolha o esquema de numeração mais compatível com a documentação existente
 
 #### <a name="gpio-driver-requirements"></a>Requisitos de driver GPIO
 
-* Deve usar `GpioClx`
-* Deve ser mapeado na memória SOC
-* Deve usar tratamento de interrupção de ActiveBoth emulado
+- Deve usar`GpioClx`
+- Deve ser mapeado na memória SOC
+- Deve usar tratamento de interrupção de ActiveBoth emulado
 
 ### <a name="uart"></a>UART
 
-Se o seu driver UART usa `SerCx` ou `SerCx2`, você pode usar rhproxy para expor o driver ao modo de usuário. Os drivers UART que criam uma interface de dispositivo do tipo `GUID_DEVINTERFACE_COMPORT` não precisam usar o rhproxy. O driver `Serial.sys` da caixa de entrada é um desses casos.
+Se o seu driver UART `SerCx` usa `SerCx2` o ou o, você pode usar o rhproxy para expor o driver ao modo de usuário. Os drivers UART que criam uma interface de dispositivo do tipo `GUID_DEVINTERFACE_COMPORT` não precisam usar o rhproxy. O driver `Serial.sys` da caixa de entrada é um desses casos.
 
-Para expor um UART estilo `SerCx`para o modo de usuário, declare um recurso de `UARTSerialBus` da seguinte maneira.
+Para expor um `SerCx` UART estilo ao modo de usuário, declare um `UARTSerialBus` recurso da seguinte maneira.
 
 ```cpp
 // Index 2
@@ -317,7 +317,7 @@ UARTSerialBus(           // Pin 17, 19 of JP1, for SIO_UART2
     )
 ```
 
-Somente o campo ResourceSource é fixo enquanto todos os outros campos são espaços reservados para os valores especificados no runtime pelo usuário.
+Somente o campo ResourceSource é fixo enquanto todos os outros campos são espaços reservados para os valores especificados no tempo de execução pelo usuário.
 
 A declaração de nome amigável correspondente é:
 
@@ -327,9 +327,9 @@ Package(2) { "bus-UART-UART2", Package() { 2 }},
 
 Isso atribui o nome amigável "UART2" ao controlador, que é o identificador que os usuários usarão para acessar o barramento do modo de usuário.
 
-## <a name="runtime-pin-muxing"></a>Multiplexação de pino no runtime
+## <a name="runtime-pin-muxing"></a>Multiplexação de pino no tempo de execução
 
-Multiplexação de pino é a capacidade de usar o mesmo pino físico para funções diferentes. Vários periféricos no chip diferentes, como um controlador I2C, controlador SPI e controlador GPIO, podem ser encaminhados para o mesmo pino físico em um SOC. O bloco do multiplexador controla qual função está ativa no pino a qualquer momento. Tradicionalmente, o firmware é responsável por estabelecer atribuições de função na inicialização, e essa atribuição permanece estática durante a sessão de inicialização. A multiplexação de pino no runtime adiciona a capacidade de reconfigurar atribuições de função de pino no runtime. Permitir que os usuários escolham a função do pino no runtime agiliza o desenvolvimento, pois permite que os usuários reconfigurem rapidamente os pinos de uma placa, e possibilita ao hardware dar suporte a uma gama maior de aplicativos do que uma configuração estática daria.
+Multiplexação de pino é a capacidade de usar o mesmo pino físico para funções diferentes. Vários periféricos no chip diferentes, como um controlador I2C, controlador SPI e controlador GPIO, podem ser encaminhados para o mesmo pino físico em um SOC. O bloco do multiplexador controla qual função está ativa no pino a qualquer momento. Tradicionalmente, o firmware é responsável por estabelecer atribuições de função na inicialização, e essa atribuição permanece estática durante a sessão de inicialização. A multiplexação de pino no tempo de execução adiciona a capacidade de reconfigurar atribuições de função de pino no tempo de execução. Permitir que os usuários escolham a função do pino no tempo de execução agiliza o desenvolvimento, pois permite que os usuários reconfigurem rapidamente os pinos de uma placa, e possibilita ao hardware dar suporte a uma gama maior de aplicativos do que uma configuração estática daria.
 
 Os usuários consomem o suporte à multiplexação para GPIO, I2C, SPI e UART sem ter que escrever código adicional. Quando um usuário abre um GPIO ou barramento usando [OpenPin()](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiocontroller.openpin) ou [FromIdAsync()](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice.fromidasync), os pinos físicos subjacentes são multiplexados automaticamente para a função solicitada. Se os pinos já estiverem sendo usados por uma função diferente, a chamada a OpenPin() ou FromIdAsync() falhará. Quando o usuário fecha o dispositivo descartando o objeto [GpioPin](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiopin), [I2cDevice](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice), [SpiDevice](https://docs.microsoft.com/uwp/api/windows.devices.spi.spidevice) ou [SerialDevice](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice), os pinos são liberados, o que permite que eles sejam abertos mais tarde para uma função diferente.
 
@@ -343,9 +343,9 @@ Esta seção descreve as interfaces e os protocolos subjacentes envolvidos na mu
 
 A multiplexação de pino é feito com a cooperação de vários componentes.
 
-* Servidores de multiplexação de pino são os drivers que controlam o bloco de controle de multiplexação de pino. Os servidores de multiplexação de pino recebem as solicitações de multiplexação de pino de clientes via solicitações para reservar recursos de multiplexação (via solicitações *IRP_MJ_CREATE*), e solicitações para alternar a função de um pino (via solicitações *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*). O servidor de multiplexação de pino geralmente é o driver GPIO, já que o bloco de multiplexação às vezes faz parte do bloco GPIO. Mesmo que o bloco de multiplexação seja um periférico separado, o driver GPIO é um lugar lógico para colocar a funcionalidade de multiplexação.
-* Clientes de multiplexação de pino são drivers que consomem multiplexação de pino. Os clientes de multiplexação de pino recebem recursos de multiplexação de pino do firmware da ACPI. Os recursos de multiplexação de pino são um tipo de recurso de conexão e são gerenciados pelo hub de recursos. Os clientes de multiplexação de pino reservam os recursos de multiplexação abrindo um identificador para o recurso. Para efeito de uma alteração de hardware, os clientes devem confirmar a configuração enviando uma solicitação *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Os clientes liberam os recursos de multiplexação de pino fechando o identificador, momento em que a configuração de multiplexação é revertida para seu estado padrão.
-* O firmware da ACPI especifica a configuração de multiplexação com recursos `MsftFunctionConfig()`. Os recursos MsftFunctionConfig expressam quais pinos, em qual configuração de multiplexação, são exigidos por um cliente. Os recursos MsftFunctionConfig contêm o número de função, a configuração de recepção e a lista de números de pino. Os recursos MsftFunctionConfig são fornecidos para clientes de multiplexação de pino como recursos de hardware, que são recebidos por drivers no retorno de chamada PrepareHardware semelhantemente aos recursos de conexão GPIO e SPB. Os clientes recebem uma ID de hub de recurso que pode ser usada para abrir um identificador para o recurso.
+- Servidores de multiplexação de pino são os drivers que controlam o bloco de controle de multiplexação de pino. Os servidores muxing de PIN recebem solicitações muxing de PIN de clientes por meio de solicitações para reservar solicitações de muxing (via *IRP_MJ_CREATE*) e solicitações para alternar a função de um PIN (via * IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS-requests). O servidor de multiplexação de pino geralmente é o driver GPIO, já que o bloco de multiplexação às vezes faz parte do bloco GPIO. Mesmo que o bloco de multiplexação seja um periférico separado, o driver GPIO é um lugar lógico para colocar a funcionalidade de multiplexação.
+- Clientes de multiplexação de pino são drivers que consomem multiplexação de pino. Os clientes de multiplexação de pino recebem recursos de multiplexação de pino do firmware da ACPI. Os recursos de multiplexação de pino são um tipo de recurso de conexão e são gerenciados pelo hub de recursos. Os clientes de multiplexação de pino reservam os recursos de multiplexação abrindo um identificador para o recurso. Para efeito de uma alteração de hardware, os clientes devem confirmar a configuração enviando uma solicitação *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Os clientes liberam os recursos de multiplexação de pino fechando o identificador, momento em que a configuração de multiplexação é revertida para seu estado padrão.
+- O firmware da ACPI especifica a configuração de multiplexação com recursos `MsftFunctionConfig()`. Os recursos MsftFunctionConfig expressam quais pinos, em qual configuração de multiplexação, são exigidos por um cliente. Os recursos MsftFunctionConfig contêm o número de função, a configuração de recepção e a lista de números de pino. Os recursos MsftFunctionConfig são fornecidos para clientes de multiplexação de pino como recursos de hardware, que são recebidos por drivers no retorno de chamada PrepareHardware semelhantemente aos recursos de conexão GPIO e SPB. Os clientes recebem uma ID de hub de recurso que pode ser usada para abrir um identificador para o recurso.
 
 > Você deve passar a opção de linha de comando `/MsftInternal` para `asl.exe` para compilar arquivos ASL que contêm descritores `MsftFunctionConfig()`, pois esses descritores estão atualmente sob a análise de trabalho da ACPI. Por exemplo: `asl.exe /MsftInternal dsdt.asl`
 
@@ -524,11 +524,11 @@ O servidor deve validar o descritor e extrair o modo de compartilhamento e a lis
 
 A arbitragem de compartilhamento terá êxito em geral se for bem-sucedida para cada pino da lista de pinos. Cada pino deve ser arbitrado da seguinte maneira:
 
-* Se o pino já não estiver reservado, a arbitragem de compartilhamento terá êxito.
-* Se o pino já estiver reservado como exclusivo, a arbitragem de compartilhamento falhará.
-* Se o pino já estiver reservado como compartilhado,
-  * e a solicitação de entrada for compartilhada, a arbitragem de compartilhamento terá exito.
-  * e a solicitação de entrada for exclusiva, a arbitragem de compartilhamento falhará.
+- Se o pino já não estiver reservado, a arbitragem de compartilhamento terá êxito.
+- Se o pino já estiver reservado como exclusivo, a arbitragem de compartilhamento falhará.
+- Se o pino já estiver reservado como compartilhado,
+  - e a solicitação de entrada for compartilhada, a arbitragem de compartilhamento terá exito.
+  - e a solicitação de entrada for exclusiva, a arbitragem de compartilhamento falhará.
 
 Se a arbitragem de compartilhamento falhar, a solicitação deverá ser concluída com *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Se a arbitragem de compartilhamento tiver êxito, a solicitação deverá concluída com *STATUS_SUCCESS*.
 
@@ -538,8 +538,8 @@ Observe que o modo de compartilhamento da solicitação de entrada deve ser extr
 
 Depois que o cliente tiver reservado um recurso MsftFunctionConfig com êxito abrindo um identificador, ele poderá enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar que o servidor realize a operação de multiplexação de hardware em si. Quando o servidor recebe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, para cada pino da lista de pino, ele deve:
 
-* Definir o modo de recepção especificado no membro PinConfiguration da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR no hardware.
-* Multiplexar o pino para a função especificada pelo membro FunctionNumber da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR.
+- Definir o modo de recepção especificado no membro PinConfiguration da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR no hardware.
+- Multiplexar o pino para a função especificada pelo membro FunctionNumber da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR.
 
 Em seguida, o servidor deve concluir a solicitação com *STATUS_SUCCESS*.
 
@@ -553,7 +553,7 @@ Quando um cliente não requer mais um recurso de multiplexação, ela fecha seu 
 
 ### <a name="authoring-guidelines-for-acpi-tables"></a>Criando diretrizes para tabelas ACPI
 
-Esta seção descreve como fornecer recursos de multiplexação para drivers de cliente. Observe que você precisará do compilador ASL da Microsoft compilação 14327 ou posterior para compilar tabelas contendo recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` recursos são fornecidos para fixar clientes muxing como recursos de hardware. `MsftFunctionConfig()` recursos devem ser fornecidos a drivers que exigem alterações de muxing de PIN, que normalmente são drivers de controlador serial e SPB, mas que não devem ser fornecidos para drivers do SPB e periférico serial, pois o driver do controlador manipula a configuração do muxing.
+Esta seção descreve como fornecer recursos de multiplexação para drivers de cliente. Observe que você precisará do compilador ASL da Microsoft compilação 14327 ou posterior para compilar tabelas contendo recursos `MsftFunctionConfig()`. `MsftFunctionConfig()`os recursos são fornecidos para fixar clientes muxing como recursos de hardware. `MsftFunctionConfig()`os recursos devem ser fornecidos aos drivers que exigem alterações muxing de PIN, que normalmente são o SPB e drivers de controlador serial, mas não devem ser fornecidos para drivers SPB e periférico serial, pois o driver do controlador manipula a configuração do muxing.
 A macro da ACPI `MsftFunctionConfig()` é definida da seguinte maneira:
 
 ```cpp
@@ -567,18 +567,18 @@ A macro da ACPI `MsftFunctionConfig()` é definida da seguinte maneira:
 
 ```
 
-* Compartilhado/exclusivo – Se exclusivo, o pino pode ser adquirido por um único cliente de cada vez. Se compartilhado, vários clientes compartilhados podem adquirir o recurso. Defina sempre como exclusivo, já que permitir que vários clientes não coordenados acessem um recurso mutável pode causar corridas aos dados e, portanto, resultados imprevisíveis.
-* PinPullConfig – um de
-  * PullDefault – usar a configuração de recepção de ativação padrão definida pelo SOC
-  * PullUp – habilitar a resistência de conexão
-  * PullDown – habilitar a resistência de suspensão
-  * PullNone – desabilitar todas as resistências de recepção
-* FunctionNumber – o número da função a ser programada no multiplexador.
-* ResourceSource – o caminho do namespace da ACPI do servidor de multiplexação de pino
-* ResourceSourceIndex – defina como 0
-* ResourceConsumer/ResourceProducer – defina como ResourceConsumer
-* VendorData – dados binários opcionais cujo significado é definido pelo servidor de multiplexação de pino. Isso geralmente deve ser deixado em branco
-* Lista de pinos – uma lista separada por vírgulas de números de pinos aos quais a configuração se aplica. Quando o servidor de multiplexação de pino é um driver GpioClx, esses são os números de pino GPIO e têm o mesmo significado que os números de pino em um descritor GpioIo.
+- Compartilhado/exclusivo – Se exclusivo, o pino pode ser adquirido por um único cliente de cada vez. Se compartilhado, vários clientes compartilhados podem adquirir o recurso. Defina sempre como exclusivo, já que permitir que vários clientes não coordenados acessem um recurso mutável pode causar corridas aos dados e, portanto, resultados imprevisíveis.
+- PinPullConfig – um de
+  - PullDefault – usar a configuração de recepção de ativação padrão definida pelo SOC
+  - PullUp – habilitar a resistência de conexão
+  - PullDown – habilitar a resistência de suspensão
+  - PullNone – desabilitar todas as resistências de recepção
+- FunctionNumber – o número da função a ser programada no multiplexador.
+- ResourceSource – o caminho do namespace da ACPI do servidor de multiplexação de pino
+- ResourceSourceIndex – defina como 0
+- ResourceConsumer/ResourceProducer – defina como ResourceConsumer
+- VendorData – dados binários opcionais cujo significado é definido pelo servidor de multiplexação de pino. Isso geralmente deve ser deixado em branco
+- Lista de pinos – uma lista separada por vírgulas de números de pinos aos quais a configuração se aplica. Quando o servidor de multiplexação de pino é um driver GpioClx, esses são os números de pino GPIO e têm o mesmo significado que os números de pino em um descritor GpioIo.
 
 O exemplo a seguir mostra como devemos fornecer um recurso MsftFunctionConfig() para um driver do controlador I2C.
 
@@ -605,23 +605,23 @@ Device(I2C1)
 }
 ```
 
-Além dos recursos de memória e de interrupção geralmente exigidos por um driver de controlador, um recurso `MsftFunctionConfig()` também é especificado. Esse recurso permite que o driver do controlador I2C Coloque os pinos 2 e 3-gerenciados pelo nó do dispositivo em \\_SB. GPIO0 – na função 4 com reresistência de ativação habilitado.
+Além dos recursos de memória e de interrupção geralmente exigidos por um driver de controlador, um recurso `MsftFunctionConfig()` também é especificado. Esse recurso permite que o driver do controlador I2C Coloque os pinos 2 e 3-gerenciados pelo nó do dispositivo em \\ _SB. GPIO0 – na função 4 com reresistência de ativação habilitado.
 
 ## <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>Suporte à multiplexação em drivers de cliente GpioClx
 
-`GpioClx` tem suporte interno para o PIN muxing. Drivers de miniporta GpioClx (também chamados de "drivers de cliente GpioClx"), hardware do controlador GPIO da unidade. A partir do Windows 10 compilação 14327, os drivers de miniporta GpioClx podem adicionar suporte à multiplexação de pino implementando duas novas DDIs:
+`GpioClx`tem suporte interno para o PIN muxing. Drivers de miniporta GpioClx (também chamados de "drivers de cliente GpioClx"), hardware do controlador GPIO da unidade. A partir do Windows 10 compilação 14327, os drivers de miniporta GpioClx podem adicionar suporte à multiplexação de pino implementando duas novas DDIs:
 
-* CLIENT_ConnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a aplicar a configuração de multiplexação especificada.
-* CLIENT_DisconnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a reverter a configuração de multiplexação especificada.
+- CLIENT_ConnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a aplicar a configuração de multiplexação especificada.
+- CLIENT_DisconnectFunctionConfigPins – chamada pelo `GpioClx` para forçar o driver de miniporta a reverter a configuração de multiplexação especificada.
 
 Consulte [Funções de retorno de chamada de evento GpioClx](https://docs.microsoft.com/previous-versions/hh439464(v=vs.85)) para obter uma descrição dessas rotinas.
 
 Além dessas duas novas DDIs, as DDIs existentes devem ser auditadas em relação à compatibilidade de multiplexação de pino:
 
-* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o MsftFunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e MsftFunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO.
-* CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – esta rotina deve retornar os pinos para o estado em que estavam quando CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt foi chamada, a menos que o sinalizador PreserveConfiguration seja especificado. Além de reverter a direção dos pinos para seu estado padrão, a miniporta também deve reverter o estado de multiplexação de cada pino para o estado em que estava quando a rotina _Connect foi chamada.
+- CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o MsftFunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e MsftFunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO.
+- CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – esta rotina deve retornar os pinos para o estado em que estavam quando CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt foi chamada, a menos que o sinalizador PreserveConfiguration seja especificado. Além de reverter a direção dos pinos para seu estado padrão, a miniporta também deve reverter o estado de multiplexação de cada pino para o estado em que estava quando a rotina _Connect foi chamada.
 
-Por exemplo, presuma que a configuração de multiplexação padrão de um pino seja UART e o pino também pode ser usado como GPIO. Quando CLIENT_ConnectIoPins é chamada para conectar o pin para GPIO, ela deve multiplexar o pino para GPIO e, em CLIENT_DisconnectIoPins, ela deve multiplexar o pino de volta para UART. Em geral, as rotinas _Disconnect devem desfazer operações feitas pelas rotinas _Connect.
+Por exemplo, presuma que a configuração de multiplexação padrão de um pino seja UART e o pino também pode ser usado como GPIO. Quando CLIENT_ConnectIoPins é chamada para conectar o pin para GPIO, ela deve multiplexar o pino para GPIO e, em CLIENT_DisconnectIoPins, ela deve multiplexar o pino de volta para UART. Em geral, as rotinas de desconexão devem desfazer as operações realizadas pelas rotinas de conexão.
 
 ## <a name="supporting-muxing-in-spbcx-and-sercx-controller-drivers"></a>Suporte à multiplexação em drivers de controlador SpbCx e SerCx
 
@@ -633,18 +633,18 @@ O diagrama a seguir mostra as dependências entre cada um desses componentes. Co
 
 Durante o tempo de inicialização do dispositivo, as estruturas `SpbCx` e `SerCx` analisam todos os recursos `MsftFunctionConfig()` fornecidos como recursos de hardware para o dispositivo. SpbCx/SerCx, em seguida, adquire e libera os recursos de multiplexação de pino sob demanda.
 
-`SpbCx` aplica a configuração de PIN muxing em seu manipulador de *IRP_MJ_CREATE* , logo antes de chamar o retorno de chamada de [EvtSpbTargetConnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) do driver do cliente. Se não tiver sido possível aplicar a configuração de multiplexação, o retorno de chamada `EvtSpbTargetConnect()` do driver do controlador não será chamado. Portanto, um driver de controlador SPB pode pressupor que os pinos são multiplexados para a função SPB no momento em que `EvtSpbTargetConnect()` é chamado.
+`SpbCx`aplica a configuração de PIN muxing em seu manipulador de *IRP_MJ_CREATE* , logo antes de chamar o retorno de chamada de [EvtSpbTargetConnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) do driver de cliente. Se não tiver sido possível aplicar a configuração de multiplexação, o retorno de chamada `EvtSpbTargetConnect()` do driver do controlador não será chamado. Portanto, um driver de controlador SPB pode pressupor que os pinos são multiplexados para a função SPB no momento em que `EvtSpbTargetConnect()` é chamado.
 
-`SpbCx` reverte a configuração de muxing de PIN em seu manipulador de *IRP_MJ_CLOSE* , logo após invocar o retorno de chamada de [EvtSpbTargetDisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) do driver do controlador. O resultado é que os pinos são multiplexados para a função SPB sempre que um driver periférico abre um identificador para o driver do controlador SPB, e são multiplexados de volta quando o driver periférico fecha seu identificador.
+`SpbCx`reverte a configuração de muxing do PIN em seu manipulador de *IRP_MJ_CLOSE* , logo após invocar o retorno de chamada de [EvtSpbTargetDisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) do driver do controlador. O resultado é que os pinos são multiplexados para a função SPB sempre que um driver periférico abre um identificador para o driver do controlador SPB, e são multiplexados de volta quando o driver periférico fecha seu identificador.
 
-`SerCx` se comporta da mesma forma. `SerCx` adquire todos os recursos de `MsftFunctionConfig()` em seu manipulador de *IRP_MJ_CREATE* antes de invocar o retorno de chamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) do driver do controlador e libera todos os recursos em seu manipulador de IRP_MJ_CLOSE, logo após invocar o retorno de chamada [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) do driver do controlador.
+`SerCx`se comporta da mesma forma. `SerCx`adquire todos os `MsftFunctionConfig()` recursos em seu manipulador de *IRP_MJ_CREATE* antes de invocar o retorno de chamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) do driver do controlador e libera todos os recursos em seu manipulador de IRP_MJ_CLOSE, logo após invocar o retorno de chamada [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) do driver do controlador.
 
 A implicação da multiplexação de pino dinâmica para drivers de controlador `SerCx` e `SpbCx` é que eles devem ser capazes de tolerar que os pinos sejam multiplexados de volta da função SPB/UART em determinados momentos. Os drivers de controlador presumem que os pinos não serão multiplexados até que `EvtSpbTargetConnect()` ou `EvtSerCx2FileOpen()` seja chamado. Os pinos não precisam ser multiplexados para a função SPB/UART durante os retornos de chamada a seguir. A lista a seguir não está completa, mas representa as rotinas PNP mais comuns implementadas por drivers de controlador.
 
-* DriverEntry
-* EvtDriverDeviceAdd
-* EvtDevicePrepareHardware/EvtDeviceReleaseHardware
-* EvtDeviceD0Entry/EvtDeviceD0Exit
+- DriverEntry
+- EvtDriverDeviceAdd
+- EvtDevicePrepareHardware/EvtDeviceReleaseHardware
+- EvtDeviceD0Entry/EvtDeviceD0Exit
 
 ## <a name="verification"></a>Verificação
 
@@ -652,7 +652,7 @@ Quando você estiver pronto para testar o rhproxy, será útil usar o seguinte p
 
 1. Verifique se os drivers de controlador `SpbCx`, `GpioClx` e `SerCx` estão carregando e funcionando corretamente.
 1. Verifique se o `rhproxy` estiver presente no sistema. Não é encontrado em algumas edições e compilações do Windows.
-1. Compilar e carregar o nó rhproxy usando `ACPITABL.dat`
+1. Compilar e carregar o nó rhproxy usando`ACPITABL.dat`
 1. Verifique se o nó do dispositivo `rhproxy` existe.
 1. Verifique se o `rhproxy` está sendo carregado e iniciado
 1. Verifique se os dispositivos esperados estão expostos ao modo de usuário
@@ -688,32 +688,32 @@ Agora que você já criou um nó de ASL de rhproxy, é hora de compilá-lo e car
 
 1. Crie um arquivo chamado suaplaca.asl e coloque o nó do dispositivo RHPX dentro de um DefinitionBlock:
 
-```cpp
-DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
-{
-    Scope (\_SB)
+    ```cpp
+    DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
     {
-        Device(RHPX)
+        Scope (\_SB)
         {
-        ...
+            Device(RHPX)
+            {
+            ...
+            }
         }
     }
-}
-```
+    ```
 
-2. Baixe o [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) e encontre `asl.exe` em `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
+2. Baixe o [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) e encontre `asl.exe` em`C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
 3. Execute o comando a seguir para gerar o ACPITABL.dat:
 
-```ps
-asl.exe yourboard.asl
-```
+    ```ps
+    asl.exe yourboard.asl
+    ```
 
 4. Copie o arquivo ACPITABL.dat resultante para c:\windows\system32 no seu sistema em teste.
 5. Ative testsigning; no seu sistema em teste:
 
-```ps
-bcdedit /set testsigning on
-```
+    ```ps
+    bcdedit /set testsigning on
+    ```
 
 6. Reinicialize o sistema em teste. O sistema acrescentará as tabelas ACPI definidas no ACPITABL.dat às tabelas de firmware do sistema.
 
@@ -737,14 +737,14 @@ devcon status *msft8000
 
 Se a saída indicar que o rhproxy foi iniciado, o rhproxy foi carregado e iniciado com êxito. Caso apareça um código de problema, você precisará investigá-lo. Alguns códigos de problema comuns são:
 
-* Problema 51 - `CM_PROB_WAITING_ON_DEPENDENCY` - O sistema não está iniciando o rhproxy porque uma de suas dependências não foi carregada. Isso significa que os recursos passados ao rhproxy apontam para os nós de ACPI inválidos ou que os dispositivos de destino não estão sendo iniciados. Primeiro, verifique se todos os dispositivos estão sendo executados com sucesso (consulte "Verifique os drivers de controlador" acima). Em seguida, verifique o ASL e certifique-se de que todos os caminhos de recursos (por exemplo, `\_SB.I2C1`) estejam corretos e aponte para nós válidos em seu DSDT.
-* Problema 10 - `CM_PROB_FAILED_START` - O rhproxy não foi iniciado, muito provavelmente por causa de um problema de análise de recurso. Além de examinar seu ASL e conferir os índices de recurso no DSD, verifique se os recursos GPIO são especificados no aumento da ordem do número de pino.
+- Problema 51 - `CM_PROB_WAITING_ON_DEPENDENCY` - O sistema não está iniciando o rhproxy porque uma de suas dependências não foi carregada. Isso significa que os recursos passados ao rhproxy apontam para os nós de ACPI inválidos ou que os dispositivos de destino não estão sendo iniciados. Primeiro, verifique se todos os dispositivos estão sendo executados com sucesso (consulte "Verifique os drivers de controlador" acima). Em seguida, verifique o ASL e certifique-se de que todos os caminhos de recursos (por exemplo, `\_SB.I2C1` ) estejam corretos e aponte para nós válidos em seu DSDT.
+- Problema 10 - `CM_PROB_FAILED_START` - O rhproxy não foi iniciado, muito provavelmente por causa de um problema de análise de recurso. Além de examinar seu ASL e conferir os índices de recurso no DSD, verifique se os recursos GPIO são especificados no aumento da ordem do número de pino.
 
 ### <a name="verify-that-the-expected-devices-are-exposed-to-user-mode"></a>Verifique se os dispositivos esperados estão expostos ao modo de usuário
 
 Agora que o rhproxy está em execução, ele deve ter criado as interfaces de dispositivos que podem ser acessadas pelo modo de usuário. Usaremos várias ferramentas de linha de comando para enumerar os dispositivos e verificar se estão presentes.
 
-Clone o repositório de [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) e crie os exemplos de `GpioTestTool`, `I2cTestTool`, `SpiTestTool`e `Mincomm`. Copie as ferramentas no dispositivo em teste e use os comandos a seguir para enumerar os dispositivos.
+Clone o [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) repositório e crie os `GpioTestTool` `I2cTestTool` exemplos,, `SpiTestTool` e `Mincomm` . Copie as ferramentas no dispositivo em teste e use os comandos a seguir para enumerar os dispositivos.
 
 ```ps
 I2cTestTool.exe -list
@@ -800,26 +800,24 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 Use as amostras a seguir para permitir que dispositivos funcionem na UWP.
 
-| Amostra | Link |
-|------|------|
-| IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
-| IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C |
-| IoT-SPI | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-SPI |
-| CustomSerialDeviceAccess | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomSerialDeviceAccess |
+- [IoT-GPIO](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO)
+- [IoT-I2C](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C)
+- [IoT-SPI](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-SPI)
+- [CustomSerialDeviceAccess](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomSerialDeviceAccess)
 
 ### <a name="run-the-hlk-tests"></a>Executar os testes HLK
 
 Baixe o [Kit de Laboratório de Hardware (HLK)](https://docs.microsoft.com/windows-hardware/test/hlk/windows-hardware-lab-kit). Os seguintes testes estão disponíveis:
 
-* [Testes funcionais e de stress do GPIO](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
-* [Testes de gravação do WinRT I2C (EEPROM necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
-* [Testes de leitura do WinRT do I2C (EEPROM necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
-* [Testes de endereço subordinado não existente I2C do WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
-* [Testes funcionais avançados do I2C do WinRT (Mbed LPC1768 necessários)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
-* [Testes de verificação de frequência de relógio do SPI WinRT (Mbed LPC1768 obrigatório)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
-* [Testes de transferência de e/s SPI (Mbed LPC1768 necessários)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)
-* [Testes de verificação de Stride do SPI WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/20c6b079-62f7-4067-953f-e252bd271938)
-* [Testes de detecção de lacuna de transferência do SPI WinRT (Mbed LPC1768 obrigatório)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/6da79d04-940b-4c49-8f00-333bf0cfbb19)
+- [Testes funcionais e de resistência GPIO WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
+- [Teste de gravação I2C WinRT (EEPROM necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
+- [Teste de leitura I2C WinRT (EEPROM necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
+- [Testes de endereço escravo não existentes I2C WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
+- [Testes funcionais avançados I2C WinRT (mbed LPC1768 necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
+- [Testes de verificação de frequência do relógio SPI WinRT (mbed LPC1768 necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
+- [Testes de transferência de E/S SPI WinRT (mbed LPC1768 necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)
+- [Testes de verificação de distância SPI WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/20c6b079-62f7-4067-953f-e252bd271938)
+- [Testes de detecção de lacuna de transferência SPI WinRT (mbed LPC1768 necessário)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/6da79d04-940b-4c49-8f00-333bf0cfbb19)
 
 Quando você selecionar o nó do dispositivo rhproxy no gerenciador de HLK, os testes aplicáveis serão selecionados automaticamente.
 
@@ -835,30 +833,28 @@ Clique em Run Selected (Executar Selecionado). Você encontrará mais documenta�
 
 ## <a name="resources"></a>Recursos
 
-| Destino | Link |
-|-------------|------|
-| Especificação ACPI 5.0 | http://acpi.info/spec.htm |
-| Asl.exe (compilação ASL da Microsoft) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |
-| Windows.Devices.Gpio | https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.aspx |
-| Windows.Devices.I2c | https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.aspx |
-| Windows.Devices.Spi | https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.aspx |
-| Windows.Devices.SerialCommunication | https://msdn.microsoft.com/library/windows/apps/windows.devices.serialcommunication.aspx |
-| Estrutura de execução e criação de testes (TAEF) | https://msdn.microsoft.com/library/windows/hardware/hh439725.aspx |
-| SpbCx | https://msdn.microsoft.com/library/windows/hardware/hh450906.aspx |
-| GpioClx | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
-| SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
-| Testes MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| GpioTestTool | https://developer.microsoft.com/windows/iot/samples/GPIOTestTool |
-| I2cTestTool | https://developer.microsoft.com/windows/iot/samples/I2cTestTool |
-| SpiTestTool | https://developer.microsoft.com/windows/iot/samples/spitesttool |
-| MinComm (Serial) | https://github.com/ms-iot/samples/tree/develop/MinComm |
-| Kit de Laboratório de Hardware (HLK) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
+- [Especificação ACPI 5.0](http://acpi.info/spec.htm)
+- [Asl.exe (compilação ASL da Microsoft)](https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx)
+- [Windows. Devices. GPIO](https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.aspx)
+- [Windows. Devices. I2C](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.aspx)
+- [Windows.Devices.Spi](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.aspx)
+- [Windows.Devices.SerialCommunication](https://msdn.microsoft.com/library/windows/apps/windows.devices.serialcommunication.aspx)
+- [Estrutura de execução e criação de testes (TAEF)](https://msdn.microsoft.com/library/windows/hardware/hh439725.aspx)
+- [SpbCx](https://msdn.microsoft.com/library/windows/hardware/hh450906.aspx)
+- [GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx)
+- [SerCx](https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx)
+- [Testes MITT I2C](https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx)
+- [GpioTestTool](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/GpioTestTool)
+- [I2cTestTool](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/I2cTestTool)
+- [SpiTestTool](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/SpiTestTool)
+- [MinComm (Serial)](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/MinComm)
+- [Kit de Laboratório de Hardware (HLK)](https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx)
 
 ## <a name="appendix"></a>Apêndice
 
 ### <a name="appendix-a---raspberry-pi-asl-listing"></a>Apêndice A - Listagem de ASL de Raspberry Pi
 
-Pinagem de cabeçalho: https://developer.microsoft.com/windows/iot/samples/PinMappingsRPi2
+Veja também [mapeamentos de PIN do Raspberry Pi 2 & 3](/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)
 
 ```cpp
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -1020,7 +1016,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 
 ### <a name="appendix-b---minnowboardmax-asl-listing"></a>Apêndice B - Listagem de ASL de MinnowBoardMax
 
-Pinagem de cabeçalho: https://developer.microsoft.com/windows/iot/samples/PinMappingsMBM
+Confira também [MinnowBoard máximo de mapeamentos de PIN](/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsmbm)
 
 ```cpp
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)

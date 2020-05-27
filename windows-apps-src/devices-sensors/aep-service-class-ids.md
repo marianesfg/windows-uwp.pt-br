@@ -6,31 +6,29 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67bba732efd199c5093bb75e9b0a2c41b67e568c
-ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
+ms.openlocfilehash: 0af0e8b17578c2ef3cd3fb0a466446b06f8e4a00
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82148579"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854730"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
-
-
-
-**APIs importantes**
-
-- [**Windows. Devices. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
 Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
 Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind).
 
+> **APIs importantes**
+>
+> - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
+
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Serviços Bluetooth e Bluetooth LE
 
 Os serviços Bluetooth se enquadram em um destes dois protocolos: o protocolo de Bluetooth ou o protocolo de Bluetooth LE. Os identificadores desses protocolos são:
 
--   ID do protocolo Bluetooth: {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
--   ID do protocolo Bluetooth LE: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
+- ID do protocolo Bluetooth: {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
+- ID do protocolo Bluetooth LE: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
 
 O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesmo formato básico. Os quatro primeiros dígitos do GUID variam de acordo com o serviço, mas todos os GUIDs de Bluetooth terminam com **0000-0000-1000-8000-00805F9B34FB**. Por exemplo, o serviço RFCOMM tem o precursor 0x0003, então a ID completa seria **00030000-0000-1000-8000-00805F9B34FB**. A tabela a seguir lista alguns serviços Bluetooth comuns.
 
@@ -70,9 +68,7 @@ O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesm
 | GATT - Dados de usuário                     | **181C0000-0000-1000-8000-00805F9B34FB** |
 | GATT - Balança                  | **181D0000-0000-1000-8000-00805F9B34FB** |
 
- 
-
-Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](https://www.bluetooth.org/en-us/specification/assigned-numbers/service-discovery) e [aqui](https://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obter alguns serviços GATT comuns.
+Para obter uma lista mais completa dos serviços Bluetooth disponíveis, consulte a [especificação dos serviços GATTs](https://www.bluetooth.com/specifications/gatt/services/). Você também pode usar a API [**GattServiceUuids**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obter alguns serviços GATT comuns.
 
 ## <a name="custom-bluetooth-le-services"></a>Serviços Bluetooth LE personalizados
 
@@ -101,8 +97,6 @@ Em geral, todos os serviços UPnP têm seus nomes com hash em um GUID usando o a
 | Diretório de conteúdo                  | **89e701dd-0597-5279-a31c-235991d0db1c**  |
 | DIAL                               | **085dfa4a-3948-53c7-a0d7-16d8ec26b29b**  |
 
- 
-
 ## <a name="wsd-services"></a>Serviços WSD
 
 Os serviços WSD usam o seguinte identificador de protocolo: {782232aa-a2f9-4993-971b-aedc551346b0}
@@ -114,8 +108,6 @@ Em geral, todos os serviços WSD têm seus nomes com hash em um GUID usando o al
 | Impressora      | **65dca7bd-2611-583e-9a12-ad90f47749cf** |
 | Scanner      | **56ec8b9e-0237-5cae-aa3f-d322dd2e6c1e** |
 
- 
-
 ## <a name="aqs-sample"></a>Amostra de AQS
 
 Esse AQS filtrará para todos os objetos **AssociationEndpointService** UPnP que ofereçam suporte para DIAL. Neste caso, [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) é definido como **AsssociationEndpointService**.
@@ -124,7 +116,3 @@ Esse AQS filtrará para todos os objetos **AssociationEndpointService** UPnP que
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D7-16D8EC26B29B}"
 ```
-
- 
-
- 
