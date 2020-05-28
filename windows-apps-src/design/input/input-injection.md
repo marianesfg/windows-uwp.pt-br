@@ -7,12 +7,12 @@ keywords: dispositivo, digitalizador, entrada, interação, injeção
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d15305fecb562546bdeaf15c501890151c7dd29a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7bcd63d940e53d90d925f83f27e4c77165a11650
+ms.sourcegitcommit: 124cea09be7f12444bfff541badb65d539d55c83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968023"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84124115"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular a entrada do usuário por meio de injeção de entrada
 
@@ -51,7 +51,7 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
 
     Temos duas áreas de grade (um para entrada de mouse e outra para entrada por touch injetado), cada uma com quatro botões.
       > [!NOTE] 
-      > O plano de fundo da grade deve ser atribuído`Transparent`a um valor (, neste caso), caso contrário, eventos de ponteiro não são detectados.
+      > O plano de fundo da grade deve ser atribuído a um valor ( `Transparent` , neste caso), caso contrário, eventos de ponteiro não são detectados.
 
     Quando qualquer clique é detectado na área de entrada, um evento de toque correspondente é injetado na área de injeção de entrada. Cliques de botão de entrada de inserção são relatados na área de título.
 
@@ -361,7 +361,7 @@ Neste exemplo, demonstramos como usar as APIs de injeção de entrada ([Windows.
 
 4. Finalmente, identificamos qualquer evento roteador de [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) do botão na área de injeção de entrada e atualizamos a interface do usuário com o nome do botão clicado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 ### <a name="topic-samples"></a>Amostras de tópico
 

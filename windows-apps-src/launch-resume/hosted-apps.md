@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ed4356513e406c7c787ec111d32560ac08d293f1
-ms.sourcegitcommit: f26d0b22a70b05679fc7089e11d639ba1a4a23af
+ms.openlocfilehash: 1847fb707d633cc7960b3b9767db974452414a25
+ms.sourcegitcommit: eae9859ee06c1e5e4afa08d8d3da072ad06d24a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107719"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84110398"
 ---
 # <a name="create-hosted-apps"></a>Criar aplicativos hospedados
 
 A partir do Windows 10, versão 2004, você pode criar *aplicativos hospedados*. Um aplicativo hospedado compartilha o mesmo executável e definição como um aplicativo *host* pai, mas parece e se comporta como um aplicativo separado no sistema.
 
-Os aplicativos hospedados são úteis para cenários em que você deseja que um componente (como um arquivo executável ou um arquivo de script) se comporte como um aplicativo autônomo do Windows 10, mas o componente requer um processo de host para ser executado. Por exemplo, um script do PowerShell ou Python poderia ser entregue como um aplicativo hospedado que exige a instalação de um host para ser executado. Um aplicativo hospedado pode ter seu próprio bloco inicial, identidade e integração profunda com recursos do Windows 10, como tarefas em segundo plano, notificações, blocos e destinos de compartilhamento.
+Aplicativos hospedados são úteis para cenários em que você deseja que um componente (como um arquivo executável ou um arquivo de script) se comporte como um aplicativo autônomo do Windows 10, mas o componente requer um processo de host para ser executado. Por exemplo, um script do PowerShell ou Python poderia ser entregue como um aplicativo hospedado que exige a instalação de um host para ser executado. Um aplicativo hospedado pode ter seu próprio bloco inicial, identidade e profunda integração com os recursos do Windows 10, como tarefas em segundo plano, notificações, blocos e destinos de compartilhamento.
 
 O recurso aplicativos hospedados tem suporte de vários elementos e atributos no manifesto do pacote que permitem que um aplicativo hospedado use um executável e uma definição em um pacote de aplicativo host. Quando um usuário executa o aplicativo hospedado, o sistema operacional inicia automaticamente o host executável sob a identidade do aplicativo hospedado. O host pode, então, carregar ativos visuais, conteúdo ou chamar APIs como o aplicativo hospedado. O aplicativo hospedado Obtém a interseção de recursos declarados entre o host e o aplicativo hospedado. Isso significa que um aplicativo hospedado não pode solicitar mais recursos do que o fornecido pelo host.
 
@@ -98,7 +98,7 @@ Anote esses detalhes importantes sobre os elementos a seguir.
 
 | Elemento              | Detalhes |
 |----------------------|-------|
-| [**Identidade**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) | Como o pacote do aplicativo hospedado neste exemplo não está assinado, o atributo do **Publicador** deve incluir `OID.2.25.311729368913984317654407730594956997722=1` a cadeia de caracteres. Isso garante que o pacote não assinado não possa falsificar a identidade de um pacote assinado. |
+| [**Identidade**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) | Como o pacote do aplicativo hospedado neste exemplo não está assinado, o atributo do **Publicador** deve incluir a `OID.2.25.311729368913984317654407730594956997722=1` cadeia de caracteres. Isso garante que o pacote não assinado não possa falsificar a identidade de um pacote assinado. |
 | [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) | O atributo **MinVersion** deve especificar 10.0.19041.0 ou uma versão do sistema operacional posterior. |
 | [**uap10:HostRuntimeDependency**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-hostruntimedependency)  | Esse elemento de elemento declara uma dependência no pacote do aplicativo host. Isso consiste no **nome** e no **Editor** do pacote do host, e a **MinVersion** depende. Esses valores podem ser encontrados no elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) no pacote do host. |
 | [**Aplicativo**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) | O atributo **uap10: hostid** expressa a dependência no host. O pacote do aplicativo hospedado deve declarar esse atributo em vez dos atributos de **ponto de entrada** e **executáveis** usuais para um elemento [**Application**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) ou [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-1-extension) . Como resultado, o aplicativo hospedado herda os atributos **Executable**, **EntryPoint** e Runtime do host com o valor de **hostid** correspondente.<br/><br/>O atributo **uap10: Parameters** especifica parâmetros que são passados para a função de ponto de entrada do executável do host. Como o host precisa saber o que fazer com esses parâmetros, há um contrato implícito entre o host e o aplicativo hospedado. |
@@ -109,8 +109,8 @@ Um benefício da extensão **uap10: HostRuntime** é que ele permite que um host
 
 Use os métodos a seguir da classe [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) para registrar um pacote de aplicativo hospedado não assinado. Esses métodos estão disponíveis a partir do Windows 10, versão 2004.
 
-* **AddPackageByUriAsync**: registra um pacote MSIX não assinado usando a propriedade **AllowUnsigned** do parâmetro *Options* .
-* **RegisterPackageByUriAsync**: executa um registro de arquivo de manifesto de pacote flexível. Se o pacote for assinado, a pasta que contém o manifesto deverá incluir um [arquivo. P7X](https://docs.microsoft.com/windows/msix/overview#inside-an-msix-package) e um catálogo. Se não for assinado, a propriedade **AllowUnsigned** do parâmetro *Options* deverá ser definida.
+* [**AddPackageByUriAsync**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackagebyuriasync): registra um pacote MSIX não assinado usando a propriedade **AllowUnsigned** do parâmetro *Options* .
+* [**RegisterPackageByUriAsync**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.registerpackagebyuriasync): executa um registro de arquivo de manifesto de pacote flexível. Se o pacote for assinado, a pasta que contém o manifesto deverá incluir um [arquivo. P7X](https://docs.microsoft.com/windows/msix/overview#inside-an-msix-package) e um catálogo. Se não for assinado, a propriedade **AllowUnsigned** do parâmetro *Options* deverá ser definida.
 
 ### <a name="requirements-for-unsigned-hosted-apps"></a>Requisitos para aplicativos hospedados não assinados
 
