@@ -6,14 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, chave de autenticação de mapa, controle de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: ab0d1900398c313021600c18338ecc1201241410
-ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
+ms.openlocfilehash: 2f4a76edfe5772665564cb8890ffcdf56205a2f7
+ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791002"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172588"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar uma chave de autenticação de mapas
+
+> [!WARNING]
+> Os serviços de mapas online podem não estar disponíveis em versões mais antigas do Windows 10. Nas versões a seguir, MapControl pode deixar de exibir mapas e APIs no namespace Windows. Services. Maps pode não retornar resultados:
+> - Windows 10, versão 1607 e versões anteriores: os serviços de mapa ficarão indisponíveis em todo o mundo, a partir de outubro de 2020
+> - Windows 10, versão 1703 e versões anteriores: os serviços de mapa não estão disponíveis em [alguns dispositivos vendidos na China](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-mapcontrol-desktop-chinavariantwin10)
 
 Seu [aplicativo universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) deve ser autenticado antes de poder usar os serviços [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) e MAP no namespace [**Windows. Services. Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) . Para autenticar o aplicativo, você precisa especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
 
