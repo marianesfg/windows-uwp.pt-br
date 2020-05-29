@@ -5,12 +5,12 @@ keywords: uwp desenvolvimento de aplicativo threading plataforma assíncrona vis
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 233666294555c46b5ba8b1e558eb32d6aed84e2a
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: f969c1c9ea5bb436ebad8d5e0410b6bf553885c0
+ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614951"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172598"
 ---
 # <a name="develop-uwp-apps"></a>Desenvolver aplicativos UWP
 
@@ -156,7 +156,7 @@ Artigos de instruções e código para a criação de aplicativos UWP para Windo
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Plataforma</h3>
-        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT<</a><br/>
+        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a><br/>
         <a href="/windows/uwp/launch-resume/">Início, retomada e tarefas em segundo plano</a><br/>
         <a href="/windows/uwp/security/">Segurança</a><br/>
         <a href="/windows/uwp/threading-async/">Threading e programação assíncrona</a><br/>
