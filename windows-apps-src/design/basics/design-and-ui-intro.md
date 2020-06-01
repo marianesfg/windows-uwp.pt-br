@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 299a25bb92c5afdb86ebc1569a1f98916baa3d09
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: add292dd5b58c3e8da1a0ce2c2371bf211b2a617
+ms.sourcegitcommit: 7704c888a28edc7ab0515a75afac93d1dda4d693
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233956"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84151945"
 ---
 # <a name="introduction-to-windows-app-design"></a>Introdução ao design de aplicativos do Windows
 
@@ -120,7 +120,7 @@ Seu aplicativo UWP interage com a experiência mais ampla do Windows com blocos 
 
 Os blocos são exibidos no menu Iniciar e quando seu aplicativo é iniciado e fornecem uma prévia do que está acontecendo em seu aplicativo. A energia deles vem do conteúdo por trás deles e da inteligência e habilidade com a qual são oferecidos.
 
-Os aplicativos UWP têm quatro tamanhos de bloco (pequeno, médio, largo e grande) que podem ser personalizados com o ícone e a identidade do aplicativo. Para obter diretrizes sobre design de blocos para seu aplicativo UWP, consulte [Diretrizes para blocos e ativos de ícones](../shell/tiles-and-notifications/app-assets.md).
+Os aplicativos UWP têm quatro tamanhos de bloco (pequeno, médio, largo e grande) que podem ser personalizados com o ícone e a identidade do aplicativo. Para obter diretrizes sobre design de blocos para seu aplicativo UWP, consulte [Diretrizes para blocos e ativos de ícones](../style/app-icons-and-logos.md).
     :::column-end:::
     :::column:::
 ![blocos no menu Iniciar](images/shell.svg)
