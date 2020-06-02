@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, compatibilizar, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 804c22b782dada9c0bde3c379ebfe5a37f1dcff9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 38ad2d4f2b0af65424e6d9fa50f2c21b626e1914
+ms.sourcegitcommit: 3125d5e2e32831481790266f44967851585888b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81759943"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172827"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Mover do C# para C++/WinRT
 
@@ -27,7 +27,7 @@ Em relação a quais tipos de portabilidade devem ser esperados, é possível ag
 - [**Portar a projeção de linguagem**](#port-the-language-projection). O WinRT (Windows Runtime) é *projetado* em várias linguagens de programação. Cada uma dessas projeções de linguagem foi criada para dar um aspecto idiomático à linguagem de programação em questão. Quanto ao C#, alguns tipos do Windows Runtime foram projetados como tipos .NET. Por exemplo, você converterá [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1) novamente em [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1). Também em C#, algumas operações do Windows Runtime foram projetadas como recursos da linguagem C# convenientes. Um exemplo é que, em C#, você usa a sintaxe do operador `+=` para registrar um delegado de processamento de eventos. Portanto, você converterá recursos de linguagem como esse novamente na operação fundamental que está sendo executada (registro de evento, neste exemplo).
 - [**Portar a sintaxe da linguagem**](#port-language-syntax). Muitas dessas alterações são transformações mecânicas simples, com a substituição de um símbolo por outro. Por exemplo, alteração do ponto (`.`) para dois-pontos (`::`).
 - [**Portar o procedimento da linguagem**](#port-language-procedure). Algumas dessas podem ser alterações simples e repetitivas (como `myObject.MyProperty` para `myObject.MyProperty()`). Outras precisam de alterações mais profundas (por exemplo, portar um procedimento que envolve o uso de **System.Text.StringBuilder** para um que envolve o uso de **std::wostringstream**).
-- [**Portar tarefas específicas para o C++/WinRT**](#porting-tasks-that-are-specific-to-cwinrt). Alguns detalhes do Windows Runtime são resolvidos implicitamente pelo C#, nos bastidores. Esses detalhes são realizados explicitamente no C++/WinRT. Um exemplo disso é que você usa um arquivo `.idl` para definir as classes de runtime.
+- [**Tarefas relacionadas à portabilidade que são específicas para o C++/WinRT**](#porting-related-tasks-that-are-specific-to-cwinrt). Alguns detalhes do Windows Runtime são resolvidos implicitamente pelo C#, nos bastidores. Esses detalhes são realizados explicitamente no C++/WinRT. Um exemplo disso é que você usa um arquivo `.idl` para definir as classes de runtime.
 
 O restante deste tópico é estruturado de acordo com essa taxonomia.
 
@@ -88,6 +88,21 @@ namespace winrt::MyProject::implementation
     }
 };
 ```
+
+Um último cenário é quando o projeto C# que você está portando se *associa* ao manipulador de eventos da marcação (para obter mais informações sobre esse cenário, confira [Funções em x:Bind](/windows/uwp/data-binding/function-bindings)).
+
+```xaml
+<Button x:Name="OpenButton" Click="{x:Bind OpenButton_Click}" />
+```
+
+Você pode alterar essa marcação para o `Click="OpenButton_Click"` mais simples. Ou, caso prefira, você pode manter essa marcação como está. Tudo o que você precisa fazer para dar suporte a ela é declarar o manipulador de eventos em IDL.
+
+```idl
+void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
+```
+
+> [!NOTE]
+> Declare a função como `void` mesmo se você *implementá-la* como [Disparar e esquecer](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget).
 
 ## <a name="port-language-syntax"></a>Portar a sintaxe da linguagem
 
@@ -230,7 +245,7 @@ Para a construção de cadeia de caracteres, o C# tem um tipo [**StringBuilder**
 
 Confira também [Como portar o método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring) e [Como portar o método **DisplayChangedFormats**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#displaychangedformats).
 
-## <a name="porting-tasks-that-are-specific-to-cwinrt"></a>Como portar tarefas específicas para o C++/WinRT
+## <a name="porting-related-tasks-that-are-specific-to-cwinrt"></a>Tarefas relacionadas à portabilidade que são específicas para o C++/WinRT
 
 ### <a name="define-your-runtime-classes-in-idl"></a>Definir as classes de runtime na IDL
 
@@ -273,7 +288,7 @@ Para obter um exemplo, confira [Como portar o método **OnNavigatedTo**](/window
 
 Uma cadeia de caracteres é, de algumas maneiras, um tipo de valor e, de outras, um tipo de referência. O C# e o C++/WinRT tratam as cadeias de caracteres de maneira diferente.
 
-O tipo do ABI [**HSTRING**](/windows/win32/winrt/hstring) é um ponteiro para uma cadeia de caracteres de contagem de referências. Mas ele não é derivado de [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable), portanto, não é tecnicamente um *objeto*. Além disso, um **HSTRING** nulo representa a cadeia de caracteres vazia. A conversão boxing de itens não derivados de **IInspectable** é feita encapsulando-os dentro de um [**IReference\<T\>** ](/uwp/api/windows.foundation.ireference_t_) e o Windows Runtime fornece uma implementação padrão na forma do objeto [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) (os tipos personalizados são relatados como [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)).
+O tipo do ABI [**HSTRING**](/windows/win32/winrt/hstring) é um ponteiro para uma cadeia de caracteres de contagem de referências. Mas ele não é derivado de [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable), portanto, não é tecnicamente um *objeto*. Além disso, um **HSTRING** nulo representa a cadeia de caracteres vazia. É feita a conversão boxing de coisas não derivadas de **IInspectable** por meio do encapsulamento delas dentro de um [**IReference\<T\>** ](/uwp/api/windows.foundation.ireference_t_). Além disso, o Windows Runtime fornece uma implementação padrão na forma do objeto [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) (tipos personalizados são relatados como [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)).
 
 O C# representa uma cadeia de caracteres do Windows Runtime como um tipo de referência, enquanto o C++/WinRT projeta uma cadeia de caracteres como um tipo de valor. Isso significa que uma cadeia de caracteres nula convertida pode ter diferentes representações, dependendo do procedimento adotado.
 
@@ -309,7 +324,7 @@ Para obter mais informações e exemplos de código, confira [Como consumir obje
 
 ### <a name="making-a-data-source-available-to-xaml-markup"></a>Como disponibilizar uma fonte de dados para marcação XAML
 
-No C++/WinRT versão 2.0.190530.8 e superior, [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) cria um vetor observável que dá suporte a **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** e **IObservableVector\<IInspectable\>** . Para obter um exemplo, confira [Como portar a propriedade **Scenarios**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios).
+No C++/WinRT versão 2.0.190530.8 e posterior, [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) cria um vetor observável que dá suporte a **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** e **IObservableVector\<IInspectable\>** . Para obter um exemplo, confira [Como portar a propriedade **Scenarios**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios).
 
 Você pode criar o **arquivo MIDL (.idl)** desta forma (confira também [Como fatorar classes de runtime em arquivos MIDL (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)).
 
@@ -359,7 +374,7 @@ Para obter informações, confira [Controles de itens XAML; associação a uma c
 
 ### <a name="making-a-data-source-available-to-xaml-markup-prior-to-cwinrt-201905308"></a>Como disponibilizar uma fonte de dados para marcação XAML (antes do C++/WinRT 2.0.190530.8)
 
-A vinculação de dados XAML exige que uma origem de itens implemente **[IIterable](/uwp/api/windows.foundation.collections.iiterable_t_)\<IInspectable\>** , bem como uma das combinações de interfaces a seguir.
+A vinculação de dados XAML exige que uma fonte de itens implemente **[IIterable](/uwp/api/windows.foundation.collections.iiterable_t_)\<IInspectable\>** , bem como uma das combinações de interfaces a seguir.
 
 - **IObservableVector\<IInspectable\>**
 - **IBindableVector** e **INotifyCollectionChanged**
@@ -368,9 +383,9 @@ A vinculação de dados XAML exige que uma origem de itens implemente **[IIterab
 - **IVector\<IInspectable\>**
 - **IBindableIterable** (iterará e salvará elementos em uma coleção particular)
 
-Uma interface genérica, como **IVector\<T\>** , não pode ser detectada em runtime. Cada **IVector\<T\>** tem um IID (identificador de interface) diferente, que é uma função de **T**. Qualquer desenvolvedor pode expandir o conjunto de **T** de forma arbitrária e, portanto, é evidente que o código de associação XAML nunca pode saber o conjunto completo a ser consultado. Essa restrição não é um problema para o C#, porque cada objeto CLR que implementa **IEnumerable\<T\>** implementa **IEnumerable** automaticamente. No nível do ABI, isso significa que cada objeto que implementa **IObservableVector\<T\>** implementa **IObservableVector\<IInspectable\>** automaticamente.
+Uma interface genérica, como **IVector\<T\>** , não pode ser detectada em runtime. Cada **IVector\<T\>** tem um IID (identificador de interface) diferente, que é uma função de **T**. Qualquer desenvolvedor pode expandir o conjunto de **T** de forma arbitrária e, portanto, é evidente que o código de associação XAML nunca pode saber o conjunto completo a ser consultado. Essa restrição não é um problema para o C# porque cada objeto CLR que implementa **IEnumerable\<T\>** implementa **IEnumerable** automaticamente. No nível da ABI, isso significa que cada objeto que implementa **IObservableVector\<T\>** implementa **IObservableVector\<IInspectable\>** automaticamente.
 
-O C++/WinRT não oferece essa garantia. Se uma classe de runtime do C++/WinRT implementar **IObservableVector\<T\>** , não poderemos pressupor que uma implementação de **IObservableVector\<IInspectable\>** também seja fornecida de alguma forma.
+O C++/WinRT não oferece essa garantia. Se uma classe de runtime do C++/WinRT implementa **IObservableVector\<T\>** , não podemos pressupor que uma implementação de **IObservableVector\<IInspectable\>** também seja fornecida.
 
 Consequentemente, veja abaixo como o exemplo anterior precisará ser examinado.
 
