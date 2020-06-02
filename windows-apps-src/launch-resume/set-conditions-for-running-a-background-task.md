@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 618c8891551d851c27414968be76fb465eb89bf0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 04f351a2eed5290e31a3f40c5421addf01422154
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260414"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262777"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -31,7 +31,7 @@ Saiba como definir condições que controlam quando a sua tarefa em segundo plan
 
 Colocar condições em tarefas em segundo plano poupa bateria e CPU, evitando que as tarefas sejam executadas sem necessidade. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente executando apenas a tarefa em segundo plano quando o temporizador tiver expirado *e* a Internet estiver disponível.
 
-Também é possível combinar diversas condições ao chamar **AddCondition** diversas vezes no mesmo [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
+Também é possível combinar várias condições chamando **addcondition** várias vezes no mesmo [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
 
 ## <a name="create-a-systemcondition-object"></a>Criar um objeto SystemCondition
 
@@ -91,11 +91,6 @@ Windows::ApplicationModel::Background::BackgroundTaskRegistration task{ recurrin
 ```cpp
 BackgroundTaskRegistration ^ task = taskBuilder->Register();
 ```
-
-> [!NOTE]
-> Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar qualquer tipo de gatilho em segundo plano.
-
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) e, em seguida, chame [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 > [!NOTE]
 > Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
@@ -182,9 +177,9 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
 * [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -194,4 +189,4 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (ao depurar)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

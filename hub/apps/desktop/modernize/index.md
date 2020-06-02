@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 31d7805e7ae936e5c7427b54f2eb9b0ad4b4c3e9
+ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83579923"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257377"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernize seus aplicativos da área de trabalho
 
@@ -74,7 +74,7 @@ Há várias maneiras de conceder identidade a um aplicativo da área de trabalho
 * Empacote-o em um [pacote MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX é um formato moderno de pacote de aplicativo que fornece uma experiência de empacotamento universal para todos os aplicativos do Windows, como aplicativos WPF, Windows Forms e Win32. Ele fornece a você acesso a uma experiência robusta de instalação e atualização, um modelo de segurança gerenciado com um sistema de capacidade flexível, suporte à Microsoft Store, gerenciamento corporativo e muitos modelos de distribuição personalizados. Para obter mais informações, consulte [empacotar aplicativos da área de trabalho](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) na documentação do MSIX.
 * Se você não puder adotar o empacotamento MSIX para implantar seu aplicativo da área de trabalho, no Windows 10, versão 2004 em diante, conceda o identificador de pacote criando um *pacote MSIX esparso* que contenha apenas um manifesto do pacote. Para obter mais informações, consulte [Conceder identidade a aplicativos da área de trabalho não empacotados](grant-identity-to-nonpackaged-apps.md).
 
-<a id="desktop-uwp-controls"/>
+<a id="desktop-uwp-controls"></a>
 
 ## <a name="uwp-controls-optimized-for-desktop-apps"></a>Controles UWP otimizados para aplicativos de área de trabalho
 
