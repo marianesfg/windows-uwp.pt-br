@@ -6,12 +6,12 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: c903c923a82edc03ffdce9c5790060cb65232cf8
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 8c460ccd18bb1bb12e5322e0e08a17edbd9692f7
+ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824987"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166235"
 ---
 # <a name="install-command-winget"></a>Comando install (winget)
 
@@ -47,14 +47,33 @@ As opções permitem que você personalize a experiência de instalação para a
 | **--name**   |  Limita a pesquisa ao nome do aplicativo. |  
 | **--moniker**   | Limita a pesquisa ao moniker listado para o aplicativo. |  
 | **-v, --version**  |  Permite que você especifique uma versão exata a ser instalada. Se ela não for especificada, a mais recente instalará o aplicativo com versão mais alta. |  
-| **--tag**   |   Limita a pesquisa às tags listadas para o aplicativo. |  
-| **-s, -source**   |  Restringe a pesquisa ao nome de origem fornecido. Deve ser seguido pelo nome de origem. |  
-| **-e, -exact**   |   Usa a cadeia de caracteres exata na consulta, incluindo a verificação da diferenciação de maiúsculas e minúsculas. Ele não usará o comportamento padrão de uma substring. |  
-| **-i, -interactive** |  Executa o instalador no modo interativo. A experiência padrão mostra o progresso do instalador. |  
-| **-h, -silent** |  Executa o instalador no modo sem confirmação. Isso suprime todas as interfaces do usuário. A experiência padrão mostra o progresso do instalador. |  
+| **-s, --source**   |  Restringe a pesquisa ao nome de origem fornecido. Deve ser seguido pelo nome de origem. |  
+| **-e, --exact**   |   Usa a cadeia de caracteres exata na consulta, incluindo a verificação da diferenciação de maiúsculas e minúsculas. Ele não usará o comportamento padrão de uma substring. |  
+| **-i, --interactive** |  Executa o instalador no modo interativo. A experiência padrão mostra o progresso do instalador. |  
+| **-h, --silent** |  Executa o instalador no modo sem confirmação. Isso suprime todas as interfaces do usuário. A experiência padrão mostra o progresso do instalador. |  
 | **-o, --log**  |  Direciona o log a um arquivo de log. É necessário fornecer um caminho para um arquivo ao qual você tem direitos de gravação. |
-| **-override** | Uma cadeia de caracteres que será passada diretamente para o instalador.    |
-| **-l,--location** |    Local da instalação (se houver suporte). |
+| **--override** | Uma cadeia de caracteres que será passada diretamente para o instalador.    |
+| **-l, --location** |    Local da instalação (se houver suporte). |
+
+### <a name="example-queries"></a>Exemplos de consulta
+
+O exemplo a seguir instala uma versão específica de um aplicativo.
+
+```CMD
+winget install powertoys --version 0.15.2
+```
+
+O exemplo a seguir instala um aplicativo por meio da ID dele.
+
+```CMD
+winget install --id Microsoft.PowerToys
+```
+
+O exemplo a seguir instala um aplicativo por versão e ID.
+
+```CMD
+winget install --id Microsoft.PowerToys --version 0.15.2
+```
 
 ## <a name="multiple-selections"></a>Seleções múltiplas
 
@@ -68,11 +87,11 @@ Uso: `winget install --manifest \<file>`
 
 | Opção  | Descrição |
 |-------------|-------------|  
-|  **-m,--manifest** | O caminho para o manifesto do aplicativo a ser instalado. |
+|  **-m, --manifest** | O caminho para o manifesto do aplicativo a ser instalado. |
 
 ### <a name="log-files"></a>Arquivos de log
 
-Os arquivos de log do winget, a menos que redirecionados, estarão localizados na seguinte pasta:  ** \%temp%\\AICLI\\ *.log**
+Os arquivos de log do winget, a menos que sejam redirecionados, estão localizados na seguinte pasta:  **\%temp%\\AICLI\\*.log**
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

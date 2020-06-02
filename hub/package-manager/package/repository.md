@@ -6,12 +6,12 @@ ms.author: denelon
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c1a8ab3c6a2cc697729fb5551e686a465bf6a0c
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: c5ebcc564b4db16c1d16385cbeaf7fd6d82c8f18
+ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83825117"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865023"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>Enviar seu manifesto para o repositório
 
@@ -91,9 +91,9 @@ Agora você já pode enviar seu novo manifesto por push para o repositório remo
     git commit -m "Submitting  ContosoApp version 1.0.0.yaml"
     ```
 
-3. Use o comando `push` para enviar por push as alterações do repositório remoto.
+3. Use o comando `push` para enviar por push as alterações para o repositório remoto.
     ```CMD
-    `git push`
+    git push
     ```
 
 ### <a name="step-5-create-a-pull-request"></a>Etapa 5: Criar uma solicitação pull
@@ -104,7 +104,7 @@ Após enviar suas alterações por push, volte para [https://github.com/microsof
 
 ## <a name="validation-process"></a>Processo de validação
 
-Quando você criar uma solicitação pull, isso iniciará um processo de automação que valida o manifesto e processa sua solicitação pull. Adicionamos rótulos à sua solicitação pull para que você possa acompanhar o progresso.
+Quando você criar uma solicitação pull, isso iniciará um processo de automação que valida o manifesto e processa sua solicitação pull. Adicionamos rótulos à solicitação de pull para que você possa acompanhar o progresso.
 
 ### <a name="submission-expectations"></a>Expectativas de envio
 

@@ -6,12 +6,12 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: edbd11724ed523f7d6efc57af9a8ef3a7e06bf5a
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 5a176c1138ebfe3f3a9eb2cbef02dad745cfe170
+ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824957"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865013"
 ---
 # <a name="search-command-winget"></a>Comando search (winget)
 
@@ -49,7 +49,7 @@ As cadeias de caracteres de pesquisa podem ser filtradas com as opções a segui
 | **--id**        |   Limita a pesquisa à ID do aplicativo. A ID inclui o editor e o nome do aplicativo. |
 | **--name**      |  Limita a pesquisa ao nome do aplicativo. |
 | **--moniker**  |    Limita a pesquisa ao moniker especificado. |
-|  **--tag**    |  Limita a pesquisa às tags listadas para o aplicativo. |
+| **--tag**    |  Limita a pesquisa às tags listadas para o aplicativo. |
 | **--command**   |   Limita a pesquisa ao nome do aplicativo. |
 
 A cadeia de caracteres será tratada como uma substring. A pesquisa, por padrão, também não diferencia maiúsculas de minúsculas. Por exemplo, `winget search micro` poderia retornar o seguinte:
@@ -64,7 +64,7 @@ Os comandos de pesquisa dão suporte a várias opções ou filtros para ajudar a
 
 | Opção  | Descrição |
  --------------|-------------|
-| **e, --exact**  |     Usa a cadeia de caracteres exata na consulta, incluindo a verificação da diferenciação de maiúsculas e minúsculas. Ele não usará o comportamento padrão de uma substring.  |  
+| **-e, --exact**  |     Usa a cadeia de caracteres exata na consulta, incluindo a verificação da diferenciação de maiúsculas e minúsculas. Ele não usará o comportamento padrão de uma substring.  |  
 | **-n, --count**      |  Restringe a saída da exibição à contagem especificada. |
 | **-s, --source**     |  Restringe a pesquisa ao nome de [origem](source.md) especificado.  |
 

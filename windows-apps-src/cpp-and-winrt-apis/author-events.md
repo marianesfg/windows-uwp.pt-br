@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fc12bf1abeabd1a1c3cfccfe3c6d3f12ebda65f3
+ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209201"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200776"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos em C++/WinRT
 
@@ -71,6 +71,7 @@ Em `BankAccount.cpp`, implemente as funções, como mostrado no exemplo de códi
 ```cppwinrt
 // BankAccount.cpp
 ...
+#include "BankAccountWRC.g.cpp"
 namespace winrt::BankAccountWRC::implementation
 {
     winrt::event_token BankAccount::AccountIsInDebit(Windows::Foundation::EventHandler<float> const& handler)
@@ -156,7 +157,7 @@ Cada vez que você clicar na janela, você subtrai 1 do saldo da conta bancária
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Delegados parametrizados e sinais simples em uma ABI
 
-Se o evento deve estar acessível por meio de uma ABI (interface binária de aplicativo), como entre um componente e seu aplicativo de consumo, o evento deve usar um tipo delegado do Windows Runtime. O exemplo acima usa o tipo delegado [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler) do Windows Runtime. [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo delegado do Windows Runtime.
+Se o evento deve estar acessível por meio de uma ABI (interface binária de aplicativo), como entre um componente e seu aplicativo de consumo, o evento deve usar um tipo delegado do Windows Runtime. O exemplo acima usa o tipo delegado do Windows Runtime [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler). [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo delegado do Windows Runtime.
 
 Os parâmetros de tipo desses dois tipos delegados têm que cruzar a ABI, portanto, os parâmetros de tipo também devem ser do tipo do Windows Runtime. Isso inclui classes de runtime primárias e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador o ajudará com um erro "*deve ser do tipo WinRT*", caso você esqueça essa restrição.
 
@@ -253,7 +254,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ```
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Delegados parametrizados, sinais simples e retornos de chamada dentro de um projeto
-Se você precisar de eventos internos a seu projeto do Visual Studio (não entre binários), em que esses eventos não se limitem aos tipos do Windows Runtime, você ainda poderá usar o modelo da classe [**winrt::event**](/uwp/cpp-ref-for-winrt/event)\<Delegate\>. Basta usar [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate), em vez de um tipo de delegado do Windows Runtime real, já que **winrt::delegate** também dá suporte a parâmetros que não são do Windows Runtime.
+Caso você precise de eventos internos ao projeto do Visual Studio (não entre binários), em que esses eventos não se limitam aos tipos do Windows Runtime, ainda é possível usar o modelo de classe [**winrt::event**](/uwp/cpp-ref-for-winrt/event)\<Delegate\>. Basta usar [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate), em vez de um tipo de delegado do Windows Runtime real, já que **winrt::delegate** também dá suporte a parâmetros que não são do Windows Runtime.
 
 O exemplo a seguir mostra primeiro uma assinatura do delegado que não usa parâmetros (basicamente, um sinal simples) e, em seguida, outra que usa uma cadeia de caracteres.
 

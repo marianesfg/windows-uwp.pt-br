@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d870c82a3e4a8bc6c2ce923026010eff953eead2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c90400c577110f326c693a6c06d28582033a86f6
+ms.sourcegitcommit: eae9859ee06c1e5e4afa08d8d3da072ad06d24a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82107709"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84110379"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Conceder identidade a aplicativos da área de trabalho não empacotados
 
@@ -157,9 +157,9 @@ O manifesto do aplicativo lado a lado deve existir no mesmo diretório que o arq
 
 ## <a name="register-your-sparse-package-at-run-time"></a>Registrar o pacote esparso no runtime
 
-Para conceder o identificador de pacote ao aplicativo da área de trabalho, o aplicativo precisa registrar o pacote esparso usando o método **AddPackageByUriAsync** da classe [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Esse método está disponível do Windows 10, versão 2004, em diante. Você pode adicionar código ao aplicativo para registrar o pacote esparso quando o aplicativo é executado pela primeira vez ou pode executar código para registrar o pacote enquanto seu aplicativo da área de trabalho é instalado (por exemplo, se estiver usando o MSI para instalar o aplicativo da área de trabalho, você poderá executar esse código de uma ação personalizada).
+Para conceder identidade de pacote ao aplicativo da área de trabalho, ele deve registrar o pacote esparso usando o método [**AddPackageByUriAsync**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackagebyuriasync) da classe [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Esse método está disponível do Windows 10, versão 2004, em diante. Você pode adicionar código ao aplicativo para registrar o pacote esparso quando o aplicativo é executado pela primeira vez ou pode executar código para registrar o pacote enquanto seu aplicativo da área de trabalho é instalado (por exemplo, se estiver usando o MSI para instalar o aplicativo da área de trabalho, você poderá executar esse código de uma ação personalizada).
 
-O exemplo a seguir demonstra como registrar um pacote esparso. Esse código cria um objeto **AddPackageOptions** que contém o caminho para a localização externa em que o manifesto do pacote pode fazer referência ao conteúdo fora do pacote. Em seguida, o código passa esse objeto para o método **AddPackageByUriAsync** para registrar o pacote esparso. Esse método também recebe a localização do pacote esparso assinado como um URI. Para obter um exemplo mais completo, confira o arquivo de código `StartUp.cs` no [exemplo](#sample) relacionado.
+O exemplo a seguir demonstra como registrar um pacote esparso. Esse código cria um objeto [**AddPackageOptions**](https://docs.microsoft.com/uwp/api/windows.management.deployment.addpackageoptions) que contém o caminho para a localização externa em que o manifesto do pacote pode fazer referência ao conteúdo fora do pacote. Em seguida, o código passa esse objeto para o método **AddPackageByUriAsync** para registrar o pacote esparso. Esse método também recebe a localização do pacote esparso assinado como um URI. Para obter um exemplo mais completo, confira o arquivo de código `StartUp.cs` no [exemplo](#sample) relacionado.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)

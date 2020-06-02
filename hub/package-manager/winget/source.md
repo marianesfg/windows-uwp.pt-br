@@ -6,16 +6,19 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: b44f20021a0fa33da862e2361be60b730b041b49
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: cb897f25324ab8a516d18f5defe7cffa3e6a0109
+ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824967"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166239"
 ---
 # <a name="source-command-winget"></a>Comando source (winget)
 
 [!INCLUDE [preview-note](../../includes/package-manager-preview.md)]
+
+> [!NOTE]
+> No momento, o comando **source** é somente para uso interno. Por enquanto, não há suporte para fontes adicionais.
 
 O comando **source** da ferramenta [winget](index.md) gerencia os repositórios acessados pelo Gerenciador de Pacotes do Windows. Com o comando **source**, é possível **adicionar**, **remover**, **listar** e **atualizar** os repositórios.
 
@@ -76,16 +79,18 @@ O subcomando **add** também dá suporte ao parâmetro **type** opcional. O par�
 
 o subcomando **list** enumera as fontes habilitadas no momento. Esse subcomando também fornece detalhes sobre uma fonte específica.
 
-Uso: `winget list [-n, --name] \<name>`
+Uso: `winget source list [-n, --name] \<name>`
 
 ### <a name="list-all"></a>list all
 
 O subcomando **list** por si só revelará a lista completa de fontes com suporte. Por exemplo:
 
 ```CMD
-> C:\winget list
-> Current sources:
->     Contoso ->  https://www.contoso.com/cache
+> C:\winget source list
+> Name   Arg
+> -----------------------------------------
+> winget https://winget.azureedge.net/cache
+
 ```
 
 ### <a name="list-source-details"></a>list source details
@@ -111,7 +116,7 @@ Para obter detalhes completos sobre a fonte, passe o nome usado para identificá
 
 O subcomando **update** força uma atualização para uma fonte individual ou para todas.
 
-uso: `winget update [-n, --name] \<name>`
+uso: `winget source update [-n, --name] \<name>`
 
 ### <a name="update-all"></a>update all
 
@@ -119,7 +124,7 @@ O subcomando **update** por si só solicitará e atualizará cada repositório. 
 
 ### <a name="update-source"></a>atualizar origem
 
-O subcomando **update** combinado com a opção **--name** pode direcionar e atualizar para uma fonte individual. Por exemplo: `C:\winget update --name contoso`
+O subcomando **update** combinado com a opção **--name** pode direcionar e atualizar para uma fonte individual. Por exemplo: `C:\winget source update --name contoso`
 
 ## <a name="remove"></a>remover
 
