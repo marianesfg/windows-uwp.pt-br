@@ -1,29 +1,32 @@
 ---
 Description: Saiba mais sobre como receber pagamentos para seus aplicativos, Complementos (produtos no aplicativo) e ganhos de publicidade.
-title: Sendo pago
+title: Ser pago
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.date: 03/05/2019
+ms.date: 05/29/2020
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: 853554a0a3a0507f1a8b9d8994618d16aa44bccc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 5927e6636f1c5a60b4f3453e0493755176c649ad
+ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260000"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84334221"
 ---
-# <a name="getting-paid"></a>Sendo pago
+# <a name="getting-paid"></a>Ser pago
 Aqui estão algumas informações importantes sobre o recebimento de pagamentos para seus aplicativos, Complementos e anúncios de publicidade.
 
 > [!IMPORTANT]
 > Antes de poder receber dinheiro das vendas de aplicativos na Microsoft Store, você precisa [configurar sua conta de pagamento e preencher os formulários de imposto necessários](setting-up-your-payout-account-and-tax-forms.md).
 
+> [!NOTE]
+> Se você estiver procurando suporte em relação a pagamentos, incluindo a configuração de contas de pagamento, pagamentos ausentes, colocação de pagamentos em espera ou qualquer outra coisa, entre em contato com o suporte [aqui](https://developer.microsoft.com/windows/support).
+
 ## <a name="store-fee"></a>Taxa da loja
 
 Ao [se inscrever para uma conta de desenvolvedor](https://developer.microsoft.com/store/register), você aceita o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Esse contrato explica o relacionamento entre você e a Microsoft em relação à venda de apps na Microsoft Store, incluindo a taxa da Store cobrada pela Microsoft por cada venda feita.
 
-As taxas estão oficialmente definidas no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Sempre que tiver alguma dúvida, leia esse documento.
+As taxas estão oficialmente definidas no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Sempre que tiver alguma dúvida, leia este documento.
 
 A taxa da Store é aplicada a todas as vendas de aplicativos recolhidas pela Microsoft Store, incluindo complementos.
 
@@ -51,7 +54,7 @@ Você pode acessar detalhes sobre suas informações de pagamento e baixar relat
 
 ## <a name="payout-timeframe"></a>Período de pagamento
 
-Os pagamentos são feitos mensalmente (desde que o limite de pagamento aplicável tenha sido atingido e você ainda não tenha colocado seu pagamento em espera conforme descrito abaixo). Normalmente, enviaremos qualquer pagamento pendente até o 15º dia do dito mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e prazos de pagamento](payment-thresholds-methods-and-timeframes.md).
+Os pagamentos são feitos mensalmente (desde que o limite de pagamento aplicável tenha sido atingido e você ainda não tenha colocado seu pagamento em espera conforme descrito abaixo). Normalmente, enviaremos qualquer pagamento pendente até o 15º dia do dito mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e períodos de pagamento](payment-thresholds-methods-and-timeframes.md).
 
 
 ##  <a name="payout-hold-status"></a>Status de espera de pagamento
