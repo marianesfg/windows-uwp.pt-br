@@ -12,18 +12,18 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a8938d8c405a98275232c0905d04b4cf27cbae0e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 59fef3ea55d6aa0ddfa2ef809634be7565d54f90
+ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969081"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84437160"
 ---
 # <a name="auto-suggest-box"></a>Caixa de sugestão automática
 
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
 
-![Uma caixa de sugestão automática](images/controls/auto-suggest-box-open.png)
+![Uma caixa de sugestão automática](images/controls_autosuggest_expanded01.png)
 
 **Obter a biblioteca de interface do usuário do Windows**
 
