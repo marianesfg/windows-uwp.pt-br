@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7f05b58a74b6270f0893dd4be238eb766629fb77
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 2ac2e95e4233a490187066e0d19f1eeb4f330265
+ms.sourcegitcommit: 3b8fac693c0b031def5cedc8ae3632a2aa00f1f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234011"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84467746"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 
@@ -396,11 +396,14 @@ No modo Minimal ou Compact, o Painel do modo de exibição de navegação abre c
 
 ## <a name="code-example"></a>Exemplo de código
 
-Este exemplo mostra como usar o NavigationView com um painel de navegação superior em tamanhos de janela grandes e um painel de navegação à esquerda em tamanhos de janela pequenos. Ele pode ser adaptado para navegação somente à esquerda ao remover as configurações de navegação _top_ no VisualStateManager.
+> [!IMPORTANT]
+> Para qualquer projeto que usa o kit de ferramentas da Biblioteca de WinUI (Interface do Usuário do Windows), siga as mesmas etapas preliminares de configuração. Para obter mais informações de contexto, configuração e suporte, confira [Introdução à Biblioteca de Interface do Usuário do Windows](/uwp/toolkits/winui/getting-started).
 
-O exemplo demonstra a maneira recomendada para configurar dados de navegação que funcionarão para diversos cenários comuns. Também demonstra como implementar a navegação regressiva com o botão Voltar e a navegação de teclado de NavigationView.
+Este exemplo mostra como é possível usar o **NavigationView** com um painel de navegação superior em tamanhos de janela grandes e com um painel de navegação à esquerda em tamanhos de janela pequenos. Ele pode ser adaptado à navegação somente à esquerda removendo as configurações de navegação *superior* no **VisualStateManager**.
 
-Esse código pressupõe que seu aplicativo contém páginas com os seguintes nomes: _HomePage_, _AppsPage_, _GamesPage_, _MusicPage_, _MyContentPage_ e _SettingsPage_. O código dessas páginas não é exibido.
+O exemplo demonstra a maneira recomendada para configurar dados de navegação que funcionarão para diversos cenários comuns. Ele também demonstra como implementar a navegação regressiva com o botão Voltar e com a navegação de teclado do **NavigationView**.
+
+Esse código pressupõe que seu aplicativo contém páginas com os seguintes nomes: *HomePage*, *AppsPage*, *GamesPage*, *MusicPage*, *MyContentPage* e *SettingsPage*. O código dessas páginas não é exibido.
 
 > [!IMPORTANT]
 > As informações sobre as páginas do aplicativo são armazenadas em [ValueTuple](/dotnet/api/system.valuetuple). Essa estrutura requer que a versão mínima de seu projeto de aplicativo seja a SDK 17763 ou posterior. Caso queira usar a versão WinUI do NavigationView visando versões anteriores do Windows 10, é possível usar o [pacote System.ValueTuple do NuGet](https://www.nuget.org/packages/System.ValueTuple/).
@@ -450,7 +453,7 @@ Esse código pressupõe que seu aplicativo contém páginas com os seguintes nom
             <VisualState>
                 <VisualState.StateTriggers>
                     <AdaptiveTrigger
-                        MinWindowWidth="{x:Bind NavView.CompactModeThresholdWidth}"/>
+                        MinWindowWidth="{x:Bind NavViewCompactModeThresholdWidth}"/>
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
                     <!-- Remove the next 3 lines for left-only navigation. -->
@@ -472,6 +475,8 @@ Esse código pressupõe que seu aplicativo contém páginas com os seguintes nom
 ```csharp
 // Add "using" for WinUI controls.
 // using muxc = Microsoft.UI.Xaml.Controls;
+
+private double NavViewCompactModeThresholdWidth { get { return NavView.CompactModeThresholdWidth; } }
 
 private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
 {
@@ -507,18 +512,18 @@ private void NavView_Loaded(object sender, RoutedEventArgs e)
     // If navigation occurs on SelectionChanged, this isn't needed.
     // Because we use ItemInvoked to navigate, we need to call Navigate
     // here to load the home page.
-    NavView_Navigate("home", new EntranceNavigationTransitionInfo());
+    NavView_Navigate("home", new Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo());
 
     // Add keyboard accelerators for backwards navigation.
-    var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
+    var goBack = new KeyboardAccelerator { Key = Windows.System.VirtualKey.GoBack };
     goBack.Invoked += BackInvoked;
     this.KeyboardAccelerators.Add(goBack);
 
     // ALT routes here
     var altLeft = new KeyboardAccelerator
     {
-        Key = VirtualKey.Left,
-        Modifiers = VirtualKeyModifiers.Menu
+        Key = Windows.System.VirtualKey.Left,
+        Modifiers = Windows.System.VirtualKeyModifiers.Menu
     };
     altLeft.Invoked += BackInvoked;
     this.KeyboardAccelerators.Add(altLeft);
@@ -555,7 +560,7 @@ private void NavView_SelectionChanged(muxc.NavigationView sender,
     }
 }
 
-private void NavView_Navigate(string navItemTag, NavigationTransitionInfo transitionInfo)
+private void NavView_Navigate(string navItemTag, Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
 {
     Type _page = null;
     if (navItemTag == "settings")
@@ -630,7 +635,243 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 }
 ```
 
-Abaixo apresentamos uma versão do [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) para o manipulador **NavView_ItemInvoked** do exemplo de código C# acima. A técnica no manipulador C++/WinRT envolve primeiro armazenar o nome de tipo completo da página para a qual você deseja navegar na marca do [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem). No manipulador, é possível converter esse valor, transformá-lo em um objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) e usá-lo para navegar até a página de destino. A variável de mapeamento `_pages`, vista no exemplo de C#, não é necessária e é possível criar testes de unidade para confirmar que os valores dentro de suas marcas são de um tipo válido. Confira também [Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+> [!NOTE]
+> Para a versão [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) deste exemplo de código, comece criando um projeto com base no modelo de projeto **Aplicativo em Branco (C++/WinRT)** e adicione o código da lista aos arquivos de código-fonte indicados. Para usar o código-fonte exatamente como mostrado na lista, dê ao novo projeto o nome *NavigationViewCppWinRT*
+
+```cppwinrt
+// MainPage.idl
+runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+{
+    ...
+    Double NavViewCompactModeThresholdWidth{ get; };
+}
+
+// pch.h
+...
+#include "winrt/Windows.UI.Xaml.Input.h"
+#include "winrt/Windows.UI.Xaml.Media.Animation.h"
+#include "winrt/Microsoft.UI.Xaml.Controls.h"
+#include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
+
+// MainPage.h
+#pragma once
+
+#include "MainPage.g.h"
+
+namespace muxc
+{
+    using namespace winrt::Microsoft::UI::Xaml::Controls;
+};
+
+namespace wuxc
+{
+    using namespace winrt::Windows::UI::Xaml::Controls;
+};
+
+namespace winrt::NavigationViewCppWinRT::implementation
+{
+    struct MainPage : MainPageT<MainPage>
+    {
+        MainPage()
+        {
+            InitializeComponent();
+            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"home", winrt::xaml_typename<NavigationViewCppWinRT::HomePage>()));
+            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"apps", winrt::xaml_typename<NavigationViewCppWinRT::AppsPage>()));
+            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"games", winrt::xaml_typename<NavigationViewCppWinRT::GamesPage>()));
+            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"music", winrt::xaml_typename<NavigationViewCppWinRT::MusicPage>()));
+        }
+
+        double MainPage::NavViewCompactModeThresholdWidth()
+        {
+            return NavView().CompactModeThresholdWidth();
+        }
+
+        void ContentFrame_NavigationFailed(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& args)
+        {
+            throw winrt::hresult_error(E_FAIL, winrt::hstring(L"Failed to load Page ") + args.SourcePageType().Name);
+        }
+
+        // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
+        std::vector<std::pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>> m_pages;
+
+        void NavView_Loaded(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::RoutedEventArgs const& /* args */)
+        {
+            // You can also add items in code.
+            NavView().MenuItems().Append(muxc::NavigationViewItemSeparator());
+            muxc::NavigationViewItem navigationViewItem;
+            navigationViewItem.Content(winrt::box_value(L"My content"));
+            navigationViewItem.Icon(wuxc::SymbolIcon(static_cast<wuxc::Symbol>(0xF1AD)));
+            navigationViewItem.Tag(winrt::box_value(L"content"));
+            NavView().MenuItems().Append(navigationViewItem);
+            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"content", winrt::xaml_typename<NavigationViewCppWinRT::MyContentPage>()));
+
+            // Add handler for ContentFrame navigation.
+            ContentFrame().Navigated({ this, &MainPage::On_Navigated });
+
+            // NavView doesn't load any page by default, so load home page.
+            NavView().SelectedItem(NavView().MenuItems().GetAt(0));
+            // If navigation occurs on SelectionChanged, this isn't needed.
+            // Because we use ItemInvoked to navigate, we need to call Navigate
+            // here to load the home page.
+            NavView_Navigate(L"home", Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo());
+
+            // Add keyboard accelerators for backwards navigation.
+            Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
+            goBack.Key(Windows::System::VirtualKey::GoBack);
+            goBack.Invoked({ this, &MainPage::BackInvoked });
+            KeyboardAccelerators().Append(goBack);
+
+            // ALT routes here
+            Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
+            goBack.Key(Windows::System::VirtualKey::Left);
+            goBack.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
+            goBack.Invoked({ this, &MainPage::BackInvoked });
+            KeyboardAccelerators().Append(altLeft);
+        }
+
+        void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const& /* sender */, muxc::NavigationViewItemInvokedEventArgs const& args)
+        {
+            if (args.IsSettingsInvoked())
+            {
+                NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
+            }
+            else if (args.InvokedItemContainer())
+            {
+                NavView_Navigate(winrt::unbox_value_or<winrt::hstring>(args.InvokedItemContainer().Tag(), L"").c_str(), args.RecommendedNavigationTransitionInfo());
+            }
+        }
+
+        // NavView_SelectionChanged is not used in this example, but is shown for completeness.
+        // You will typically handle either ItemInvoked or SelectionChanged to perform navigation,
+        // but not both.
+        void NavView_SelectionChanged(muxc::NavigationView const& /* sender */, muxc::NavigationViewSelectionChangedEventArgs const& args)
+        {
+            if (args.IsSettingsSelected())
+            {
+                NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
+            }
+            else if (args.SelectedItemContainer())
+            {
+                NavView_Navigate(winrt::unbox_value_or<winrt::hstring>(args.SelectedItemContainer().Tag(), L"").c_str(), args.RecommendedNavigationTransitionInfo());
+            }
+        }
+
+        void NavView_Navigate(std::wstring navItemTag, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& transitionInfo)
+        {
+            Windows::UI::Xaml::Interop::TypeName pageTypeName;
+            if (navItemTag == L"settings")
+            {
+                pageTypeName = winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>();
+            }
+            else
+            {
+                for (auto&& eachPage : m_pages)
+                {
+                    if (eachPage.first == navItemTag)
+                    {
+                        pageTypeName = eachPage.second;
+                        break;
+                    }
+                }
+            }
+            // Get the page type before navigation so you can prevent duplicate
+            // entries in the backstack.
+            Windows::UI::Xaml::Interop::TypeName preNavPageType = ContentFrame().CurrentSourcePageType();
+
+            // Navigate only if the selected page isn't currently loaded.
+            if (pageTypeName.Name != L"" && preNavPageType.Name != pageTypeName.Name)
+            {
+                ContentFrame().Navigate(pageTypeName, nullptr, transitionInfo);
+            }
+        }
+
+        void NavView_BackRequested(muxc::NavigationView const& /* sender */, muxc::NavigationViewBackRequestedEventArgs const& /* args */)
+        {
+            On_BackRequested();
+        }
+
+        void BackInvoked(Windows::UI::Xaml::Input::KeyboardAccelerator const& /* sender */, Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
+        {
+            On_BackRequested();
+            args.Handled(true);
+        }
+
+        bool On_BackRequested()
+        {
+            if (!ContentFrame().CanGoBack())
+                return false;
+
+            // Don't go back if the nav pane is overlaid.
+            if (NavView().IsPaneOpen() &&
+                (NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Compact ||
+                    NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Minimal))
+                return false;
+
+            ContentFrame().GoBack();
+            return true;
+        }
+
+        void On_Navigated(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::Navigation::NavigationEventArgs const& args)
+        {
+            NavView().IsBackEnabled(ContentFrame().CanGoBack());
+
+            if (ContentFrame().SourcePageType().Name == winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>().Name)
+            {
+                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
+                NavView().SelectedItem(NavView().SettingsItem().as<muxc::NavigationViewItem>());
+                NavView().Header(winrt::box_value(L"Settings"));
+            }
+            else if (ContentFrame().SourcePageType().Name != L"")
+            {
+                for (auto&& eachPage : m_pages)
+                {
+                    if (eachPage.second.Name == args.SourcePageType().Name)
+                    {
+                        for (auto&& eachMenuItem : NavView().MenuItems())
+                        {
+                            auto navigationViewItem = eachMenuItem.try_as<muxc::NavigationViewItem>();
+                            {
+                                if (navigationViewItem)
+                                {
+                                    winrt::hstring hstringValue = winrt::unbox_value_or<winrt::hstring>(navigationViewItem.Tag(), L"");
+                                    if (hstringValue == eachPage.first)
+                                    {
+                                        NavView().SelectedItem(navigationViewItem);
+                                        NavView().Header(navigationViewItem.Content());
+                                    }
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+    };
+}
+
+namespace winrt::NavigationViewCppWinRT::factory_implementation
+{
+    struct MainPage : MainPageT<MainPage, implementation::MainPage>
+    {
+    };
+}
+
+// MainPage.cpp
+#include "pch.h"
+#include "MainPage.h"
+#include "MainPage.g.cpp"
+
+namespace winrt::NavigationViewCppWinRT::implementation
+{
+}
+```
+
+### <a name="alternative-cwinrt-implementation"></a>Implementação alternativa do C++/WinRT
+
+O código C# e C++/WinRT mostrado acima foi desenvolvido para que você possa usar a mesma marcação XAML para ambas as versões. No entanto, há outra maneira de implementar a versão C++/WinRT descrita nesta seção, a qual você talvez prefira.
+
+Abaixo é mostrada uma versão alternativa do manipulador de **NavView_ItemInvoked**. A técnica nessa versão do manipulador requer que primeiro você armazene (na marca do [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) o nome de tipo completo da página até a qual você deseja navegar. No manipulador, é possível converter esse valor, transformá-lo em um objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) e usá-lo para navegar até a página de destino. A variável de mapeamento chamada `_pages`, que pode ser vista nos exemplos acima, não é necessária. Além disso, será possível criar testes de unidade que confirmam que os valores dentro das marcas são de um tipo válido. Confira também [Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
@@ -648,6 +889,7 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
     }
 }
 ```
+
 ## <a name="hierarchical-navigation"></a>Navegação hierárquica
 Alguns aplicativos podem ter uma estrutura hierárquica mais complexa que exija mais do que apenas uma lista simples de itens de navegação. Talvez seja interessante usar itens de navegação de nível superior para exibir categorias de páginas, com itens filhos exibindo páginas específicas. Também será útil se você tiver páginas de estilo de hub que só se vinculem a outras páginas. Para esses tipos de casos, você deve criar um NavigationView hierárquico.
 
