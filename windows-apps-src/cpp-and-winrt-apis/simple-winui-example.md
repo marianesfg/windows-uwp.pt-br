@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, Biblioteca de Interface do Usuário do Windows, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 0dce8e7ea08b18921f228b3da2e679a9edb02228
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8242055e3c448e2720226859f2ea10e1ae54794f
+ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79200974"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84437130"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>Um exemplo simples da Biblioteca de Interface do Usuário do Windows em C++/WinRT
 
@@ -49,26 +49,28 @@ Em seguida, abra `MainPage.xaml`. Na marcação da **Página** de abertura exist
 </muxc:NavigationView>
 ```
 
-## <a name="edit-mainpagecpp-and-h-as-necessary"></a>Editar MainPage.cpp e .h conforme necessário
+## <a name="edit-pchh-as-necessary"></a>Edite pch.h, conforme necessário
+
+Quando você adiciona um pacote NuGet a um projeto C++/WinRT (como o pacote **Microsoft.UI.Xaml**, que você adicionou anteriormente) e compila o projeto, as ferramentas geram um conjunto de arquivos de cabeçalhos de projeção em sua pasta `\Generated Files\winrt` do projeto. Se você seguiu as instruções passo a passo, terá agora uma pasta `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt`. Para usar esses arquivos de cabeçalho no seu projeto, de modo que as referências a esses novos tipos sejam resolvidas, acesse o arquivo de cabeçalho pré-compilado (normalmente, `pch.h`) e inclua-os.
+
+Você precisa incluir somente os cabeçalhos que correspondem aos tipos que você usa. Segue um exemplo que inclui todos os arquivos de cabeçalho gerados para o pacote **Microsoft.UI.Xaml**.
+
+```cppwinrt
+// pch.h
+...
+#include "winrt/Microsoft.UI.Xaml.Automation.Peers.h"
+#include "winrt/Microsoft.UI.Xaml.Controls.h"
+#include "winrt/Microsoft.UI.Xaml.Controls.Primitives.h"
+#include "winrt/Microsoft.UI.Xaml.Media.h"
+#include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
+...
+```
+
+## <a name="edit-mainpagecpp"></a>Edite MainPage.cpp
 
 Em `MainPage.cpp`, exclua o código dentro da implementação de **MainPage::ClickHandler**, pois *myButton* não está mais na marcação XAML.
 
-Em `MainPage.h`, edite as inclusões para que pareçam com as da listagem abaixo.
-
-```cppwinrt
-#include "MainPage.g.h"
-#include "winrt/Microsoft.UI.Xaml.Controls.h"
-#include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
-```
-
-Então, compile o projeto.
-
-Quando você adiciona um pacote NuGet a um projeto C++/WinRT (como o pacote **Microsoft.UI.Xaml**, que você adicionou anteriormente) e compila o projeto, as ferramentas geram um conjunto de arquivos de cabeçalhos de projeção em sua pasta `\Generated Files\winrt` do projeto. Se você seguiu as instruções passo a passo, terá agora uma pasta `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt`. A edição feita a `MainPage.h` acima faz com que os arquivos de cabeçalho de projeção para WinUI se tornem visíveis para **MainPage**. E isso é necessário para que a referência em **MainPage** ao tipo **Microsoft::UI::Xaml::Controls::NavigationView** seja resolvida.
-
-> [!IMPORTANT]
-> Em um aplicativo do mundo real, você desejará que os arquivos de cabeçalho de projeção de WinUI fiquem visíveis para *todas* as páginas XAML no projeto, não apenas para **MainPage**. Nesse caso, você moverá as inclusões dos dois arquivos de cabeçalho de projeção de WinUI para seu arquivo de cabeçalho pré-compilado (normalmente `pch.h`). Em seguida, as referências em qualquer lugar do projeto para os tipos no pacote NuGet serão resolvidas. Para um aplicativo mínimo de uma página, como o que está sendo criado neste passo a passo, não há necessidade de usar `pch.h`, mas incluir os cabeçalhos em `MainPage.h` é apropriado.
-
-Agora você pode executar o projeto.
+Agora você poderá compilar e executar o projeto.
 
 ![Captura de tela simples da Biblioteca de Interface do Usuário do Windows em C++/WinRT](images/winui.png)
 
