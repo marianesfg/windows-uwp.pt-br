@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e2509743bf9e847fb740816e3552f4172cf644c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 694ab7a3897bdf13189d61ab70ed05b9169b834c
+ms.sourcegitcommit: 020d0ff0e5abf46b2ed660eac61251b32bf150bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970701"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716034"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -331,7 +331,7 @@ Recomendamos que você crie aceleradores de teclado consistentes entre os aplica
 
 Talvez isso não seja sempre possível devido às diferenças na funcionalidade entre aplicativos.
 
-| **Editar** | **Acelerador de teclado comum** |
+| **Edição** | **Acelerador de teclado comum** |
 | ------------- | ----------------------------------- |
 | Iniciar o modo de edição | Ctrl + E |
 | Selecionar todos os itens em um controle focado ou em uma janela | Ctrl + A |
@@ -348,8 +348,8 @@ Talvez isso não seja sempre possível devido às diferenças na funcionalidade 
 | Excluir o item selecionado (com desfazer) | Del, Ctrl+D |
 | Excluir o item selecionado (sem desfazer) | Shift + Del |
 | Negrito | Ctrl + B |
-| Sublinhar | Ctrl + U |
-| Italic | Ctrl + I |
+| Underline | Ctrl + U |
+| Itálico | Ctrl + I |
 
 | **Navegação** | |
 | ------------- | ----------------------------------- |
@@ -364,14 +364,14 @@ Talvez isso não seja sempre possível devido às diferenças na funcionalidade 
 | Reduzir | Ctrl + - | 
 | Zoom para o modo de exibição padrão | Ctrl + 0 | 
 | Salvar | Ctrl + S | 
-| Feche | Ctrl + W | 
+| Fechar | Ctrl + W | 
 | Imprimir | Ctrl + P | 
 
 Observe que algumas dessas combinações não são válidas para versões localizadas do Windows. Por exemplo, na versão em espanhol do Windows, Ctrl + N é usado para negrito em vez de Ctrl + B. É recomendável fornecer aceleradores de teclado localizados, se o aplicativo for localizado.
 
 ## <a name="usability-affordances-for-keyboard-accelerators"></a>Funcionalidades de usabilidade para aceleradores de teclado
 
-### <a name="tooltips"></a>Dicas de Ferramenta
+### <a name="tooltips"></a>Dicas de ferramenta
 
 Como os aceleradores de teclado não são geralmente descritos diretamente na interface do usuário do seu aplicativo do Windows, você pode melhorar a capacidade de descoberta por meio de [dicas de ferramentas](../controls-and-patterns/tooltips.md), que são exibidas automaticamente quando o usuário move o foco para, pressiona e mantém ou passa o ponteiro do mouse sobre um controle. A dica de ferramenta pode identificar se um controle tem um acelerador de teclado associado e, em caso afirmativo, qual é a combinação de teclas aceleradoras.
 
@@ -576,8 +576,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 É recomendável fazer a localização de todos os aceleradores de teclado. Você pode fazer isso com o arquivo UWP padrão (.resw) e o atributo x:Uid nas declarações XAML. Neste exemplo, o Windows Runtime carrega automaticamente os recursos.
 
-![Localização do acelerador de teclado com](images/accelerators/accelerators_localization.png)
-recursos do UWP***localização do acelerador de teclado do arquivo com recursos de UWP***
+![Localização do acelerador de teclado com recursos do UWP ](images/accelerators/accelerators_localization.png)
+ ***localização do acelerador de teclado do arquivo com recursos de UWP***
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">
@@ -602,8 +602,8 @@ void AddAccelerator(
       { 
         Modifiers = keyModifiers, Key = key
       };
-    accelerator.Invoked = handler;
-    this.KeyAccelerators.Add(accelerator);
+    accelerator.Invoked += handler;
+    this.KeyboardAccelerators.Add(accelerator);
   }
 ```
 
@@ -635,9 +635,9 @@ public class MyListView : ListView
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações de teclado](keyboard-interactions.md)
+- [Interações por teclado](keyboard-interactions.md)
 - [Chaves de acesso](access-keys.md)
 
 ### <a name="samples"></a>Exemplos
 
-- [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery)
+- [Galeria de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery)
