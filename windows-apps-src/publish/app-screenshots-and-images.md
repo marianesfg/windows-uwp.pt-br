@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 7995f7d8539ee5835ee9ae079305731879decc95
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 6a09395a57a83eaa57124173723b96a87d14b3b3
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255180"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746746"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do aplicativo
 
@@ -55,13 +55,13 @@ Você também pode fornecer uma legenda curta que descreva cada captura de tela 
 Observe que, se você criar as listagens da Loja em [vários idiomas](supported-languages.md), você terá uma página de **listagem da Loja** para cada um. Você precisará carregar imagens para cada idioma separadamente (mesmo que esteja usando as mesmas imagens) e fornecer legendas a serem usadas para cada idioma. (Se você tiver listagens de lojas em vários idiomas, poderá achar mais fácil atualizá-las [exportando os dados de listagem e trabalhando offline](import-and-export-store-listings.md).)
 
 
-## <a name="store-logos"></a>Logotipos da Loja
+## <a name="store-logos"></a>Armazenar logotipos
 
 Você pode carregar logotipos da Store para criar uma exibição mais personalizada na Store. Recomendamos que você forneça essas imagens de forma que sua listagem da Store apareça idealmente em todos os dispositivos e versões do sistema operacional compatíveis com o app. Observe que, se seu app estiver disponível para clientes no Xbox, algumas dessas imagens serão necessárias.
 
 Você pode fornecer essas imagens como arquivos .png (com até 50 MB), que devem seguir as diretrizes abaixo.
 
-### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>9:16 Arte de cartaz (720 x 1080 ou 1440 x 2160 pixels)
+### <a name="23-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>arte de cartaz 2:3 (720 x 1080 ou 1440 x 2160 pixels)
 
 É usado como a imagem de logotipo principal para clientes no Windows 10 e dispositivos Xbox; portanto, é **altamente recomendável** fornecer essa imagem para garantir uma exibição adequada. Sua listagem poderá não parecer boa se você não a incluir, e não será consistente com outras listagens que os clientes veem ao navegar na loja. Essa imagem também pode ser usada nos resultados da pesquisa ou nas coleções editorialmente comissionadas.
 
@@ -72,7 +72,7 @@ Essa imagem deve incluir o nome do app, e qualquer texto na imagem deve atender 
 
 ### <a name="11-box-art-1080-x-1080-or-2160-x-2160-pixels"></a>1:1 box art (1080 x 1080 ou 2160 x 2160 pixels)
 
-Essa imagem pode aparecer em várias páginas da Store para Windows 10 (incluindo Xbox), e se você não fornecer a imagem **16:9 Arte de cartaz**, ela será usada como seu logotipo principal. Essa imagem também deve incluir o nome do app. As sobreposições de texto podem aparecer no quarto inferior dessa imagem, portanto não inclua texto ou imagens chave ali. Inclua o nome do seu app nessa imagem. 
+Essa imagem pode aparecer em várias páginas de repositório para o Windows 10 (incluindo o Xbox) e, se você não fornecer a imagem de **arte do pôster 2:3** , ela será usada como seu logotipo principal. Essa imagem também deve incluir o nome do app. As sobreposições de texto podem aparecer no quarto inferior dessa imagem, portanto não inclua texto ou imagens chave ali. Inclua o nome do seu app nessa imagem. 
 
 > [!NOTE]
 > Se o seu app estiver disponível para clientes no Xbox, essa imagem será **necessária** e deverá incluir o título do produto. O título deve aparecer nos três quartos superiores da imagem, já que sobreposições de texto podem aparecer no quarto inferior da imagem.
@@ -147,7 +147,7 @@ Ao fornecer os trailers, verifique estes requisitos estão sendo cumpridos:
 - O formato do vídeo deve ser MOV ou MP4.
 - O arquivo do trailer deve ter no máximo 2 GB.
 - A resolução de vídeo deve ser 1920 x 1080 pixels.
-- A miniatura deve ser um arquivo PNG com uma resolução de 1920 x 1080 pixels ou 3840 x 2160 pixels.
+- A miniatura deve ser um arquivo PNG com uma resolução de 1920 x 1080 pixels.
 - O título não pode exceder 255 caracteres.
 - Não inclua classificações etárias em seus trailers.
 

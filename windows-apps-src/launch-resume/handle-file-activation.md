@@ -11,19 +11,19 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 079746d3c1619fe940ba243410f0247b7b850ed9
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4377db57b3cd713bae8f9c80a0116d016722be19
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259457"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756523"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
 **APIs importantes**
 
--   [**Windows. ApplicationModel. Activation. fileactivable**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
--   [**Windows. UI. XAML. Application. OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+-   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+-   [**Windows.UI.Xaml.Application.OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
 
 Seu aplicativo pode se registrar para se tornar o manipulador padrão para um determinado tipo de arquivo. Os aplicativos da área de trabalho do Windows e os aplicativos da Plataforma Universal do Windows (UWP) podem ser registrados como um manipulador de arquivo padrão. Se o usuário escolher seu aplicativo como o manipulador padrão de um determinado tipo de arquivo, seu aplicativo será ativado quando esse tipo de arquivo for iniciado.
 
@@ -31,7 +31,7 @@ Recomendamos que você só se registre para um tipo de arquivo se quiser manipul
 
 Estas etapas mostram como registrar um tipo de arquivo personalizado, o .alsdk, e como ativar seu aplicativo quando o usuário inicia um arquivo .alsdk.
 
-> **Observe**  em aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos internos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Para obter mais informações, consulte [Nomes de arquivos e esquemas de URI reservados](reserved-uri-scheme-names.md).
+> **Observação**    Em aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos internos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Para obter mais informações, consulte [Nomes de arquivos e esquemas de URI reservados](reserved-uri-scheme-names.md).
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Etapa 1: especificar o ponto de extensão no manifesto do pacote
 
@@ -43,16 +43,16 @@ O aplicativo recebe os eventos de ativação somente para as extensões de arqui
 
 | Campo | Descrição |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome de exibição** | Especifique o nome de exibição para um grupo de tipos de arquivos. O nome de exibição é usado para identificar o tipo de arquivo em [Definir Programas Padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs) no **Painel de Controle**. |
+| **Nome de Exibição** | Especifique o nome de exibição para um grupo de tipos de arquivos. O nome de exibição é usado para identificar o tipo de arquivo em [Definir Programas Padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs) no **Painel de Controle**. |
 | **Logotipo** | Especifique o logotipo que é usado para identificar o tipo de arquivo na área de trabalho e em [Definir Programas Padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
 | **Dica de informações** | Especifique a [dica de informações](https://docs.microsoft.com/windows/desktop/shell/fa-progids) para um grupo de tipos de arquivo. O texto dessa dica de ferramenta é exibido quando o usuário passa o mouse sobre o ícone de um arquivo desse tipo. |
 | **Nome** | Escolha o nome de um grupo de tipos de arquivos que compartilham o mesmo nome de exibição, logotipo, dica de informações e sinalizadores de edição. Escolha um nome de grupo que se mantenha igual entre atualizações de aplicativos. **Observação**  O nome precisa estar completamente em letras minúsculas. |
 | **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. **Observação importante sobre tipos de conteúdo permitidos:** esta é uma lista em ordem alfabética dos tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
 | **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". **Tipos de arquivos reservados e proibidos:** consulte [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista em ordem alfabética dos tipos de arquivo para apps internos para os quais você não pode registrar seus aplicativos UWP porque são reservados ou proibidos. |
 
-2.  Insira `alsdk` como o **Nome**.
+2.  Insira `alsdk` como o **nome**.
 3.  Insira `.alsdk` como o **Tipo de arquivo**.
-4.  Insira "imagens\\ícone. png" como o logotipo.
+4.  Insira "imagens \\Icon.png" como o logotipo.
 5.  Pressione Ctrl+S para salvar a alteração no package.appxmanifest.
 
 As etapas acima adicionam um elemento [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) semelhante a este ao manifesto do pacote. A categoria **windows.fileTypeAssociation** indica se o aplicativo manipula arquivos com a extensão `.alsdk`.
@@ -79,7 +79,7 @@ Os aplicativos que se tornam padrão para um tipo de arquivo têm seus ícones e
 -   Seletor de arquivos
 -   Nos Resultados da pesquisa na tela inicial
 
-Inclua um ícone 44x44 com seu projeto para que seu logotipo apareça nesses locais. Combine a aparência do logotipo do bloco do aplicativo e use a cor de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Consulte [Diretrizes para ativos de bloco e ícone](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/app-assets) para obter mais detalhes sobre ícones.
+Inclua um ícone 44x44 com seu projeto para que seu logotipo apareça nesses locais. Combine a aparência do logotipo do bloco do aplicativo e use a cor da tela de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Consulte [Diretrizes para ativos de bloco e ícone](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/app-assets) para obter mais detalhes sobre ícones.
 
 ## <a name="step-3-handle-the-activated-event"></a>Etapa 3: manipular o evento ativado
 
@@ -135,22 +135,22 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 ### <a name="complete-example"></a>Exemplo completo
 
-* [Exemplo de inicialização de associação](https://code.msdn.microsoft.com/windowsapps/Association-Launching-535d2cec)
+* [Amostra de inicialização de associação](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 ### <a name="concepts"></a>Conceitos
 
 * [Programas padrão](https://docs.microsoft.com/windows/desktop/shell/default-programs)
-* [Modelo de associações de protocolo e tipo de arquivo](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
+* [Tipo de Arquivo e Modelo de Associações de Protocolo](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
 
 ### <a name="tasks"></a>Tarefas
 
-* [Iniciar o aplicativo padrão para um arquivo](launch-the-default-app-for-a-file.md)
+* [Iniciar o app padrão para um arquivo](launch-the-default-app-for-a-file.md)
 * [Tratar a ativação do URI](handle-uri-activation.md)
 
 ### <a name="guidelines"></a>Diretrizes
 
-* [Diretrizes para tipos de arquivo e URIs](https://docs.microsoft.com/windows/uwp/files/index)
+* [Diretrizes para tipos de arquivos e URIs](https://docs.microsoft.com/windows/uwp/files/index)
 
 ### <a name="reference"></a>Referência
-* [Windows. ApplicationModel. Activation. fileactivable](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
-* [Windows. UI. XAML. Application. OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+* [Windows.UI.Xaml.Application.OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
