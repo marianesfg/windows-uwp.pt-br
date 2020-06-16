@@ -6,22 +6,20 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f7c124c1d77cbce140cb42cdc07682dad8f78f2
-ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
+ms.openlocfilehash: 24414ba36e2ee1af8f391eec38b04d9e17bb7237
+ms.sourcegitcommit: 2e597438dafedde3bde24424ef005bb4c24ba3bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280246"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800322"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
-
 
 Bem-vindo ao guia de desenvolvimento de jogos do Windows 10!
 
 Este guia fornece uma coleção completa dos recursos e informações necessários para desenvolver um jogo da Plataforma Universal do Windows (UWP). Uma versão em inglês (EUA) deste guia está disponível em formato [PDF](https://download.microsoft.com/download/9/C/9/9C9D344F-611F-412E-BB01-259E5C76B17F/Windev_Game_Dev_Guide_Oct_2017.pdf).
 
 ## <a name="introduction-to-game-development-for-the-universal-windows-platform-uwp"></a>Introdução ao desenvolvimento de jogos para a Plataforma Universal do Windows (UWP)
-
 
 Quando você cria um jogo do Windows 10, tem a oportunidade de alcançar milhões de jogadores em todo mundo no celular, computador e Xbox One. Com o Xbox no Windows, o Xbox Live, multijogadores entre dispositivos, uma incrível comunidade de jogos e os novos recursos avançados como a UWP (Plataforma Universal do Windows) e o DirectX 12, os jogos do Windows 10 emocionam jogadores de todas as idades e gêneros. A nova UWP (Plataforma Universal do Windows) oferece compatibilidade para seu jogo entre dispositivos Windows 10 com uma API comum para celular, computador e Xbox One, juntamente com ferramentas e opções para ajustar seu jogo a cada experiência do dispositivo.
 
@@ -37,7 +35,6 @@ De documentação a programas, fóruns, blogs e exemplos para desenvolvedores, h
 
 > [!Note]
 > Alguns recursos são gerenciados por meio de vários programas. Este guia abrange uma ampla variedade de recursos, então, você pode descobrir que alguns recursos não são acessíveis dependendo do programa em que você está ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#developer-programs).
-
 
 ### <a name="game-development-documentation"></a>Documentação de desenvolvimento de jogos
 
@@ -108,12 +105,11 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
 
 A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável ver se algum deles é adequado para você antes de se registrar em uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
 
-
 ### <a name="developer-programs"></a>Programas de desenvolvedor
 
 A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Considere a possibilidade de participar de um programa de desenvolvedor se você quiser desenvolver jogos para Xbox One e integrar recursos do Xbox Live ao seu jogo. Para publicar um jogo no Microsoft Store, você também precisará criar uma conta de desenvolvedor no [Partner Center](https://partner.microsoft.com/dashboard) .
 
-#### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
+#### <a name="xbox-live-creators-program"></a>Programa do Xbox Live Creators
 
 O Programa de Criadores do Xbox Live permite que qualquer pessoa integre o Xbox Live a seu título e publique no Xbox One e no Windows 10. Há um processo de certificação simplificado, e nenhuma aprovação de conceito é necessária fora das [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) padrão.
 
@@ -165,7 +161,6 @@ O programa de ferramentas e middleware do Xbox licencia kits de desenvolvimento 
         <td><xboxtlsm@microsoft.com></td>
     </tr>
 </table>
-
 
 ### <a name="game-samples"></a>Exemplos de jogos
 
@@ -234,10 +229,9 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>      
 </table>
 
-
 ### <a name="developer-forums"></a>Fóruns para desenvolvedores
 
-Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder perguntas sobre desenvolvimento de jogos e conectar-se com a comunidade de desenvolvimento de jogos. Os fóruns também podem ser recursos fantásticos para encontrar respostas existentes para problemas difíceis que os desenvolvedores encontraram e resolveram no passado.
+Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder a perguntas de desenvolvimento de jogos e conectar-se à comunidade de desenvolvimento de jogos. Os fóruns também podem ser recursos fantásticos para encontrar respostas existentes para problemas difíceis que os desenvolvedores encontraram e resolveram no passado.
 
 <table>
     <colgroup>
@@ -246,42 +240,33 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     </colgroup>
     <tr>
         <td>Publicando fóruns de desenvolvedores de aplicativos e jogos</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsapps">Publicação e anúncios-em aplicativos</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en/home?forum=windowsstore%2Cwpsubmit%2Caiaads%2Caiasdk%2Caiamgr">Publicação e anúncios-em aplicativos</a></td>
     </tr>
     <tr>
         <td>Fórum do desenvolvedor de aplicativos UWP</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop">Desenvolvendo aplicativos da Plataforma Universal do Windows</a></td>
+        <td><a href="https://docs.microsoft.com/answers/topics/uwp.html">Desenvolvendo aplicativos da Plataforma Universal do Windows</a></td>
     </tr>
     <tr>
         <td>Fóruns de desenvolvedores de aplicativos da área de trabalho</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev">Fóruns de aplicativos da área de trabalho do Windows</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en/home?forum=windowsgeneraldevelopmentissues">Fóruns de aplicativos da área de trabalho do Windows</a></td>
     </tr>
     <tr>
         <td>Jogos da Microsoft Store com DirectX (postagens arquivadas no fórum)</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wingameswithdirectx">Criando jogos da Microsoft Store com DirectX (arquivado)</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en/home?forum=wingameswithdirectx">Criando jogos da Microsoft Store com DirectX (arquivado)</a></td>
     </tr>
     <tr>
         <td>Fóruns de desenvolvedores parceiros gerenciados do Windows 10</td>
         <td><a href="https://forums.xboxlive.com/users/login.html">Fóruns de desenvolvedores XBOX: Windows 10</a></td>
     </tr>
     <tr>
-        <td>Fóruns do DirectX</td>
-        <td><a href="https://forums.directxtech.com/index.php">Fórum do DirectX 12</a></td>
-    </tr>
-    <tr>
-        <td>Fóruns da plataforma Azure</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsazureplatform">Fórum do Azure</a></td>
-    </tr>
-    <tr>
         <td>Fórum do Xbox Live</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=xboxlivedev">Fórum de desenvolvimento do Xbox Live</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en/home?forum=xboxlivedev">Fórum de desenvolvimento do Xbox Live</a></td>
     </tr>
     <tr>
         <td>Fóruns da PlayFab</td>
         <td><a href="https://community.playfab.com/index.html">Fóruns da PlayFab</a></td>
     </tr>
 </table>
-
 
 ### <a name="developer-blogs"></a>Blogs de desenvolvedores
 
@@ -333,10 +318,8 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
         <td><a href="https://blogs.msdn.microsoft.com/appinstaller/">Blog da equipe de criação e implantação de aplicativos UWP</a></td>
     </tr>
 </table>
- 
 
 ## <a name="concept-and-planning"></a>Conceito e planejamento
-
 
 Na fase de conceito e planejamento, você decide como será seu jogo e as tecnologias e ferramentas que você usará para dar vida a ele.
 
@@ -356,7 +339,6 @@ Se você já decidiu quais tecnologias você usará em seu jogo, ótimo! Caso co
         <td><a href="game-development-platform-guide.md">Tecnologias de jogos para aplicativos UWP</a></td>
     </tr>
 </table>
- 
 
 Estes três vídeos da GDC 2015 fornecem uma boa visão geral do desenvolvimento e da experiência de jogos do Windows 10.
 
@@ -402,8 +384,6 @@ Estes são alguns tópicos de conceito e planejamento de nível alto a serem con
     </tr>
 </table>
 
-
-
 ### <a name="choosing-your-graphics-technology-and-programming-language"></a>Escolhendo a tecnologia de elementos gráficos e a linguagem de programação
 
 Há várias tecnologias gráficas e linguagens de programação disponíveis para os jogos do Windows 10. Seu caminho dependerá do tipo de jogo que está desenvolvendo, da experiência e das preferências de seu estúdio de desenvolvimento e dos requisitos de recursos específicos do seu jogo. Você usará o C#, C++ ou JavaScript? DirectX, XAML ou HTML5?
@@ -444,7 +424,6 @@ Os vários recursos e a profunda integração da plataforma do DirectX possibili
         <td><a href="https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA">Microsoft DirectX 12 and Graphics Education</a></td>
     </tr>
 </table>
- 
 
 #### <a name="xaml"></a>XAML
 
@@ -464,7 +443,6 @@ O XAML é uma linguagem de interface do usuário declarativa fácil de usar com 
         <td><a href="https://docs.microsoft.com/windows/uwp/design/basics/">Controles, layouts e texto</a></td>
     </tr>
 </table>
- 
 
 #### <a name="html-5"></a>HTML 5
 
@@ -477,7 +455,7 @@ O HTML (HyperText Markup Language) é uma linguagem de marcação da interface d
     </colgroup>
     <tr>
         <td>Informações sobre modelos de objetos HTML5 e de documento</td>
-        <td><a href="https://developer.mozilla.org/en-US/docs/Web">Referência de HTML e DOM</a></td>
+        <td><a href="https://developer.mozilla.org/docs/Web">Referência de HTML e DOM</a></td>
     </tr>
     <tr>
         <td>Recomendação de HTML5 do W3C</td>
@@ -485,8 +463,7 @@ O HTML (HyperText Markup Language) é uma linguagem de marcação da interface d
     </tr>
 </table>
  
-
-#### <a name="combining-presentation-technologies"></a>Combinando tecnologias de apresentação
+####Combinando tecnologias de apresentação
 
 O Microsoft DirectX Graphics Infrastructure (DXGI) oferece interoperabilidade e compatibilidade entre várias tecnologias gráficas. Para elementos gráficos de alto desempenho, você pode combinar XAML e DirectX, usando XAML para menus e outras interfaces do usuário simples e DirectX para a renderização de cenas 2D e 3D complexas. A DXGI também fornece compatibilidade entre Direct2D, Direct3D, DirectWrite, DirectCompute e Microsoft Media Foundation.
 
@@ -505,8 +482,7 @@ O Microsoft DirectX Graphics Infrastructure (DXGI) oferece interoperabilidade e 
     </tr>
 </table>
  
-
-#### <a name="c"></a>C++
+#### C++
 
 O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a poderosa combinação de velocidade, compatibilidade e acesso à plataforma. Com o C++/CX, é fácil usar todos os excelentes recursos de jogo no Windows 10, inclusive o DirectX e o Xbox Live. Você também pode reutilizar o código C++ e as bibliotecas existentes. O C++/CX cria código nativo rápido que não incorre na sobrecarga de coleta de lixo para que seu jogo possa ter um ótimo desempenho e baixo consumo de energia, fazendo com que a bateria dure mais. Use o C++/CX com DirectX ou XAML, orou crie um jogo usando uma combinação dos dois.
 
@@ -525,8 +501,7 @@ O C++/CX é uma linguagem de baixa sobrecarga e alto desempenho que oferece a po
     </tr>
 </table>
  
-
-#### <a name="c"></a>C#
+#### C#
 
 O C# (fala-se "C sharp") é uma linguagem inovadora e moderna, simples, eficiente, fortemente tipada e orientada a objeto. O C# permite um desenvolvimento rápido, pois mantém a familiaridade e expressividade das linguagens no estilo C. Embora seja fácil de usar, o C# tem vários recursos de linguagem avançados, como polimorfismo, representantes, lambdas, fechamentos, métodos de iterador, covariância e expressões de consulta integrada à linguagem (LINQ). O C# é uma excelente opção se você está visando o XAML, deseja começar a desenvolver seu jogo rapidamente ou tem experiência anterior em C#. O C# é usado principalmente com XAML. Portanto, para usar DirectX, escolha C++, ou crie parte do seu jogo como um componente C++ que interaja com DirectX. Ou considere o [Win2D](https://github.com/Microsoft/Win2D), uma biblioteca de elementos gráficos em modo imediato Direct2D para C# e C++.
 
@@ -541,8 +516,7 @@ O C# (fala-se "C sharp") é uma linguagem inovadora e moderna, simples, eficient
     </tr>
 </table>
  
-
-#### <a name="javascript"></a>JavaScript
+####Linguagem
 
 O JavaScript é uma linguagem de scripts dinâmica amplamente usada em aplicativos cliente avançados e da Web moderna.
 
@@ -559,7 +533,6 @@ Os aplicativos do Windows em JavaScript podem acessar os recursos avançados da 
     </tr>
 </table>
 
-
 #### <a name="use-windows-runtime-components-to-combine-languages"></a>Usar componentes Windows Runtime para combinar idiomas
 
 Com a Plataforma Universal do Windows, é fácil combinar componentes criados em linguagens diferentes. Crie Windows Runtime componentes em C++, C# ou Visual Basic e, em seguida, chame-os de JavaScript, C#, C++ ou Visual Basic. Essa é uma ótima maneira de programar partes do jogo na linguagem de sua escolha. O componentes também permitem o uso de bibliotecas externas disponíveis somente em uma determinada linguagem, além do código herdado que você já criou.
@@ -574,7 +547,6 @@ Com a Plataforma Universal do Windows, é fácil combinar componentes criados em
         <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Componentes do Windows Runtime com C++/CX</a></td>
     </tr>
 </table>
-
 
 ### <a name="which-version-of-directx-should-your-game-use"></a>Que versão do DirectX seu jogo deve usar?
 
@@ -602,7 +574,6 @@ O Direct3D 11.3 é uma API de elemento gráfico de baixo nível que usa o modelo
         <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-11-on-12">Direct3D 11 on 12</a></td>
     </tr>
 </table>
-
 
 ### <a name="bridges-game-engines-and-middleware"></a>Pontes, mecanismos de jogos e middleware
 
@@ -674,8 +645,7 @@ Agora parte da família Microsoft, a PlayFab é uma plataforma completa de back-
     </tr>
 </table>
  
-
-#### <a name="unity"></a>Unity
+#### Unity
 
 O Unity fornece uma plataforma para criação de ótimos aplicativos e jogos em 2D, 3D, VR e RA. Permite que você concretize sua visão criativa de forma rápida e fornece seu conteúdo a quase todos os dispositivos e mídias.
 
@@ -736,8 +706,7 @@ A partir do Unity 5.4, o Unity oferece suporte ao desenvolvimento do Direct3D 12
     </tr>
 </table>
  
-
-#### <a name="havok"></a>Havok
+####Havok
 
 O pacote modular de ferramentas e tecnologias do Havok ajuda criadores de jogos a alcançar novos níveis de interatividade e imersão. O Havok oferece física altamente realista, simulações interativas e uma cinemática incrível. Versão 2015.1 e superior oficialmente dá suporte a UWP no Visual Studio 2015 em x86, 64 bits e ARM.
 
@@ -760,8 +729,7 @@ O pacote modular de ferramentas e tecnologias do Havok ajuda criadores de jogos 
     </tr>
 </table>
  
-
-#### <a name="monogame"></a>MonoGame
+####MonoGame
 
 MonoGame é uma estrutura de desenvolvimento de jogos de plataforma cruzada e código aberto originalmente com base no XNA Framework 4.0 da Microsoft. O Monogame atualmente oferece suporte para Windows, Windows Phone e Xbox, bem como Linux, macOS, iOS, Android e várias outras plataformas.
 
@@ -787,7 +755,6 @@ MonoGame é uma estrutura de desenvolvimento de jogos de plataforma cruzada e c�
         <td><a href="../get-started/get-started-tutorial-game-mg2d.md">Criar um jogo UWP em MonoGame 2D</a></td>
     </tr>    
 </table>
-
 
 #### <a name="cocos2d"></a>Cocos2d
 
@@ -815,7 +782,6 @@ Cocos2d-x é um pacote de ferramentas e mecanismos de desenvolvimento de jogos d
         <td><a href="https://api.playfab.com/docs/getting-started/cocos2d-x-getting-started-guide">Introdução: crie sua primeira chamada à API da PlayFab no seu jogo Cocos2d-x</a></td>
     </tr>
 </table>
-
 
 #### <a name="unreal-engine"></a>Unreal Engine
 
@@ -902,7 +868,7 @@ Se você tiver um jogo existente, há muitos recursos e guias disponíveis para 
     </tr>
     <tr>
         <td>Fazendo a portabilidade do Direct3D 11 para o Direct3D 12</td>
-        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Fazendo a portabilidade do Direct3D 11 para o Direct3D 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Portar do Direct3D 11 para o Direct3D 12</a></td>
     </tr>
     <tr>
         <td>Fazendo a portabilidade do OpenGL ES para o Direct3D 11</td>
@@ -918,9 +884,7 @@ Se você tiver um jogo existente, há muitos recursos e guias disponíveis para 
     </tr>
 </table>
 
-
 ## <a name="prototype-and-design"></a>Protótipo e design
-
 
 Agora que você decidiu o tipo de jogo que deseja criar e as ferramentas e a tecnologia de elementos gráficos que usará para criá-lo, você está pronto para começar a trabalhar no design e no protótipo. Essencialmente, seu jogo é um aplicativo da Plataforma Universal do Windows. Portanto, é por aí que você vai começar.
 
@@ -945,8 +909,7 @@ As referências a seguir são guias excelentes que explicam em detalhes os aplic
     </tr>
 </table>
  
-
-### <a name="getting-started-with-uwp-development"></a>Introdução ao desenvolvimento da UWP
+###Introdução ao desenvolvimento de UWP
 
 É fácil e rápido se preparar para desenvolver um aplicativo da Plataforma Universal do Windows. Os guias a seguir explicarão o processo passo a passo para você.
 
@@ -1034,8 +997,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do 
     </tr>
 </table>
  
-
-### <a name="process-lifetime-management"></a>Gerenciamento do tempo de vida do processo
+###Gerenciamento de tempo de vida do processo
 
 Gerenciamento do tempo de vida do processo, ou ciclo de vida do aplicativo, descreve os vários estados de ativação pelos quais um aplicativo da Plataforma Universal do Windows pode passar. Seu jogo pode ser ativado, suspenso, retomado ou encerrado e pode passar por esses estados em uma variedade de maneiras.
 
@@ -1054,8 +1016,7 @@ Gerenciamento do tempo de vida do processo, ou ciclo de vida do aplicativo, desc
     </tr>
 </table>
  
-
-### <a name="designing-game-ux"></a>Projetando a experiência do usuário para jogos
+###Projetando o Game UX
 
 O origem de um jogo excelente é o design inspirado.
 
@@ -1086,8 +1047,7 @@ Separadamente do design da experiência do usuário, o design de jogo, como o de
     </tr>   
 </table>
  
-
-#### <a name="color-guideline-and-palette"></a>Diretrizes e paleta de cores
+####Orientação de cores e paleta
 
 Seguir uma diretriz de cores consistente no jogo melhora sua estética, ajuda na navegação e é uma ferramenta poderosa para mostrar as funcionalidades do menu e de HUD ao jogador. O uso de cores coerentes nos elementos do jogo, como avisos, perigo, desempenho extremo e conquistas resulta em uma interface do usuário mais limpa e reduz a necessidade de rótulos explícitos.
 
@@ -1101,7 +1061,6 @@ Seguir uma diretriz de cores consistente no jogo melhora sua estética, ajuda na
         <td><a href="https://assets.windowsphone.com/499cd2be-64ed-4b05-a4f5-cd0c9ad3f6a3/101_BestPractices_Color_InvariantCulture_Default.zip">Práticas recomendadas: cores</a></td>
     </tr>
 </table>
- 
 
 #### <a name="typography"></a>Tipografia
 
@@ -1117,7 +1076,6 @@ O uso apropriado da tipografia melhora vários aspectos do jogo, como layout, na
         <td><a href="https://cmsresources.windowsphone.com/devcenter/common/resources/content/101_BestPractices_Typography.pdf">Práticas recomendadas: tipografia</a></td>
     </tr>
 </table>
- 
 
 #### <a name="ui-map"></a>Mapa da interface do usuário
 
@@ -1231,7 +1189,7 @@ Saiba o que mudou no Direct3D 12 e como começar a programar usando o Direct3D 1
     </tr>
     <tr>
         <td>Como fazer a portabilidade do Direct3D 11 para o Direct3D 12</td>
-        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Fazendo a portabilidade do Direct3D 11 para o Direct3D 12</a></td>
+        <td><a href="https://docs.microsoft.com/windows/desktop/direct3d12/porting-from-direct3d-11-to-direct3d-12">Portar do Direct3D 11 para o Direct3D 12</a></td>
     </tr>
     <tr>
         <td>Conceitos de associação de recursos (abrangendo descritor, tabela de descritores, heap de descritor e assinatura de raiz) </td>
@@ -1243,8 +1201,7 @@ Saiba o que mudou no Direct3D 12 e como começar a programar usando o Direct3D 1
     </tr>
 </table>
  
-
-#### <a name="directx-tool-kit-and-libraries"></a>Bibliotecas e kit de ferramentas do DirectX
+####Kit de ferramentas e bibliotecas do DirectX
 
 O kit de ferramentas DirectX, a biblioteca de processamento de texturas DirectX, a biblioteca de processamento de geometria DirectXMesh, a biblioteca UVAtlas e a biblioteca DirectXMath fornecem textura, malha, sprite e outras classes auxiliares e funcionalidades de utilitários para desenvolvimento no DirectX. Essas bibliotecas podem ajudá-lo a economizar tempo e esforço de desenvolvimento.
 
@@ -1310,9 +1267,7 @@ Esta é a documentação adicional do DirectX criada por parceiros externos.
     </tr>
 </table>
 
-
 ## <a name="production"></a>Produção
-
 
 Agora seu estúdio está totalmente preparado e passando para o ciclo de produção, com trabalho distribuído por toda a sua equipe. Você está retocando, refatorando e estendendo o protótipo para transformá-lo em um jogo completo.
 
@@ -1354,7 +1309,6 @@ Um bloco é a representação de seu jogo no menu Iniciar. Os blocos e notifica�
         <td><a href="https://blogs.windows.com/buildingapps/2016/02/15/uwp-tile-generator-extension-for-visual-studio/">Dicas sobre como usar a ferramenta de gerador de bloco UWP</a></td>
     </tr>
 </table>
- 
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras do produto (complemento) no aplicativo
 
@@ -1383,8 +1337,7 @@ Um complemento (produto no aplicativo) é um item suplementar que os jogadores p
     </tr>
 </table>
  
-
-### <a name="debugging-performance-optimization-and-monitoring"></a>Depuração, otimização de desempenho e monitoramento
+###Depuração, otimização de desempenho e monitoramento
 
 Para otimizar o desempenho, aproveite o Modo de Jogo no Windows 10 para fornecer aos jogadores a melhor experiência de jogo possível utilizando totalmente a capacidade de hardware atual.
 
@@ -1495,7 +1448,6 @@ Crie o conteúdo do jogo que usa os recursos de cor completos de HDR.
     </tr>   
 </table>
 
-
 ### <a name="globalization-and-localization"></a>Globalização e localização
 
 Desenvolva jogos prontos para o mundo para a plataforma Windows e saiba mais sobre os recursos internacionais incorporados aos principais produtos da Microsoft.
@@ -1519,7 +1471,7 @@ Desenvolva jogos prontos para o mundo para a plataforma Windows e saiba mais sob
 
 Os guias e as informações a seguir ajudam a tornar o processo de publicação e envio o mais simples possível.
 
-### <a name="publishing"></a>Publicação
+### <a name="publishing"></a>Publicando
 
 Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para publicar e gerenciar seus pacotes de jogos.
 
@@ -1567,7 +1519,7 @@ Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para pu
     </tr>
     <tr>
         <td>Empacotar seu jogo UWP</td>
-        <td><a href="../packaging/index.md">Empacotando apps</a></td>
+        <td><a href="../packaging/index.md">Empacotando aplicativos</a></td>
     </tr>
     <tr>
         <td>Empacote seu jogo do DirectX UWP</td>
@@ -1591,7 +1543,6 @@ Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para pu
     </tr>
 </table>
 
-
 ### <a name="policies-and-certification"></a>Políticas e certificação
 
 Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aqui estão as políticas e os problemas comuns de certificação sobre os quais você deve estar ciente.
@@ -1614,7 +1565,6 @@ Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aq
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/avoid-common-certification-failures">Evitar erros comuns de certificação</a></td>
     </tr>
 </table>
- 
 
 ### <a name="store-manifest-storemanifestxml"></a>Manifesto da Store (StoreManifest.xml)
 
@@ -1630,10 +1580,8 @@ O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional
         <td><a href="https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root">Esquema StoreManifest (Windows 10)</a></td>
     </tr>
 </table>
- 
 
 ## <a name="game-lifecycle-management"></a>Gerenciamento do ciclo de vida do jogo
-
 
 Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". Você pode ter terminado o desenvolvimento da primeira versão, mas a jornada de seu jogo no mercado está apenas começando. Você pode monitorar o uso e os relatórios de erros, responder aos comentários dos usuários e publicar atualizações para seu jogo.
 
@@ -1662,8 +1610,7 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
     </tr>
 </table>
  
-
-### <a name="visual-studio-application-insights"></a>Application Insights do Visual Studio
+###Application Insights do Visual Studio
 
 O Visual Studio Application Insights fornece análises de desempenho, telemetria e uso para seu jogo publicado. O Application Insights ajuda a detectar e solucionar problemas depois que seu jogo é lançado, a monitorar e aprimorar continuamente o uso e a entender como os jogadores continuam a interagir com seu jogo. O Aplicativo Insights funciona adicionando um SDK ao seu aplicativo, que envia a telemetria para o [Portal do Azure](https://portal.azure.com/).
 
@@ -1681,7 +1628,6 @@ O Visual Studio Application Insights fornece análises de desempenho, telemetria
         <td><a href="https://azure.microsoft.com/documentation/articles/app-insights-windows-get-started/">Application Insights para aplicativos do Windows Phone e da Store</a></td>
     </tr>
 </table>
-
 
 ### <a name="third-party-solutions-for-analytics-and-promotion"></a>Soluções de terceiros para análises e promoções
 
@@ -1715,7 +1661,6 @@ O Visual Studio Application Insights fornece análises de desempenho, telemetria
         <td><a href="https://publisher.vungle.com/sdk/">Obtenha o SDK do Windows para Vungle</a></td>
     </tr>
 </table>
- 
 
 ### <a name="creating-and-managing-content-updates"></a>Criando e gerenciando atualizações de conteúdo
 
@@ -1735,7 +1680,6 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/package-version-numbering">Diretrizes para gerenciamento do pacote do aplicativo</a></td>
     </tr>
 </table>
-
 
 ## <a name="adding-xbox-live-to-your-game"></a>Adicionando o Xbox Live ao seu jogo
 
@@ -1766,7 +1710,6 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://docs.microsoft.com/gaming/xbox-live/introduction-to-xbox-live-apis.md">Introdução às APIs do Xbox Live</a></td>
     </tr>
 </table>
-
 
 ### <a name="for-developers-in-the-xbox-live-creators-program"></a>Para desenvolvedores no Programa de Criadores do Xbox Live
 
@@ -1833,7 +1776,7 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://edadfs.partners.extranet.microsoft.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fdeveloper.xboxlive.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fen-us%252flive%252fcertification%252frequirements%252fPages%252fTCR.aspx&wct=2019-11-20T19%3a55%3a26Z">Requisitos do Xbox para o Xbox Live no Windows 10</a></td>
     </tr>
     <tr>
-        <td>Amostras</td>
+        <td>Exemplos</td>
         <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Exemplos de código para ID@Xbox desenvolvedores</a></td>
     </tr>  
     <tr>
@@ -1853,7 +1796,6 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live">Práticas recomendadas para utilizar as estatísticas e as conquistas do usuário baseado em nuvem no Xbox Live</a></td>
     </tr>
 </table>
-
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
@@ -1879,11 +1821,3 @@ O Xbox Live é uma rede de jogos de primeira linha que conecta milhões de jogad
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10">Jogos de computador para Windows 10</a></td>
     </tr>
 </table>
-
-
-
- 
-
- 
-
- 
