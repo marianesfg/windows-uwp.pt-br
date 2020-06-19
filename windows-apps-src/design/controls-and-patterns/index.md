@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 82e6d91b5a4147237cd04b46dc5b69b8151fece9
+ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978378"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicativos do Windows
 
@@ -32,7 +32,7 @@ Instruções gerais e exemplos de código para adicionar e estilizar controles e
 :::row:::
     :::column:::
       <p><b><a href="controls-and-events-intro.md">Adicionar controles e manipular eventos</a></b> <br/>
-Há 3 etapas principais para adicionar controles ao seu aplicativo: adicionar um controle à interface do usuário de seu aplicativo, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</p>
+Há 3 etapas principais para adicionar controles ao seu aplicativo: Adicione um controle ao seu aplicativo da interface do usuário, defina as propriedades no controle e adicione código aos manipuladores de eventos do controle para que ele faça algo.</p>
     :::column-end:::
     :::column:::
       <p><b><a href="xaml-styles.md">Aplicando estilos a controles</a></b> <br/>
@@ -95,8 +95,8 @@ Informações detalhadas sobre controles e padrões específicos. (Para obter um
 - [Imagem da pessoa](person-picture.md) ![Logotipo do WinUI](images/winui-logo-16x16.png)
 - [Pivô](pivot.md)
 - [Barra de progresso](progress-controls.md) ![Logotipo do WinUI](images/winui-logo-16x16.png)
-- [Anel de progresso](progress-controls.md)
-- [Botão de opção](radio-button.md)
+- [Anel de progresso](progress-controls.md) ![Logotipo do WinUI](images/winui-logo-16x16.png)
+- [Botão de opção](radio-button.md) ![Logotipo do WinUI](images/winui-logo-16x16.png)
 - [Controle de classificação](rating.md) ![Logotipo do WinUI](images/winui-logo-16x16.png)
 - [Botão de repetição](buttons.md#create-a-repeat-button)
 - [Caixa de edição avançada](rich-edit-box.md)

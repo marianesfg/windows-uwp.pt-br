@@ -10,19 +10,19 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 1fb1a971e897bc88d090c589b266542c6de2d1c9
-ms.sourcegitcommit: b432a639fb3d15ebd22d429ccee4dbb03e8550ca
+ms.openlocfilehash: 2c48b4bbfb7fb361b598722d070962db32665042
+ms.sourcegitcommit: d708ac4ec4fac0135dafc0d8c5161ef9fd945ce7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069457"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
 **APIs importantes**
 
 - [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows. Devices. Bluetooth. RFCOMM**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
+- [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
 
 Este artigo apresenta uma visão geral do Bluetooth RFCOMM em aplicativos da Plataforma Universal do Windows (UWP), além do código de exemplo sobre como enviar ou receber um arquivo.
 
@@ -40,7 +40,7 @@ Para ver um exemplo de código completo que fornece detalhes sobre a operação 
 
 Ao enviar um arquivo, o cenário mais básico é estabelecer conexão com um dispositivo emparelhado com base em um serviço desejado. Isso envolve as seguintes etapas:
 
-- Use as funções de **\*RfcommDeviceService. GetDeviceSelector** para ajudar a gerar uma consulta AQS que pode ser usada para enumerar instâncias de dispositivo emparelhadas do serviço desejado.
+- Use as funções **RfcommDeviceService. \* GetDeviceSelector** para ajudar a gerar uma consulta AQS que pode ser usada para enumerar instâncias de dispositivo emparelhado do serviço desejado.
 - Escolha um dispositivo enumerado, crie um [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService) e leia os atributos SDP conforme necessário (usando [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) para analisar os dados do atributo).
 - Crie um soquete e use as propriedades [**RfcommDeviceService.ConnectionHostName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) e [**RfcommDeviceService.ConnectionServiceName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) para [**StreamSocket.ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) para o serviço de dispositivo remoto com os parâmetros apropriados.
 - Siga os padrões de fluxo de dados estabelecidos para ler dados do arquivo e enviá-lo no [**StreamSocket.OutputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream) do soquete para o dispositivo.
