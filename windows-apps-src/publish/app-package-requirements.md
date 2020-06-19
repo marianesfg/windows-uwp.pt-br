@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 144e2fefc5802d53187684b6e34cbb2af1d8da0a
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 9c478b038ff729f753696d10fc18b21391a3a7de
+ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84945984"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do aplicativo
 
@@ -40,7 +40,7 @@ Os pacotes do seu aplicativo não precisam ser assinados com um certificado prov
 Para aplicativos UWP, o Visual Studio pode gerar um pacote de aplicativo (. msixbundle ou. appxbundle) para reduzir o tamanho do aplicativo que os usuários baixam. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
 
 > [!NOTE]
-> Um pacote de aplicativo pode conter seus pacotes para todas as arquiteturas.
+> Um pacote de aplicativos pode conter seus pacotes para todas as arquiteturas.
 
 Com um lote de aplicativo, o usuário só baixa os arquivos relevantes, em vez de todos os recursos possíveis. Para obter mais informações sobre lotes de aplicativos, consulte [Empacotando aplicativos](../packaging/index.md) e [Empacotar um aplicativo UWP com o Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
@@ -54,10 +54,10 @@ Confira a documentação [Manifesto do pacote do aplicativo](https://docs.micros
 Seu manifesto deve incluir algumas informações específicas sobre sua conta e seu aplicativo. Você pode encontrar essa informação em [visualizar detalhes de identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento de aplicativo** da página de visão geral do seu aplicativo no painel.
 
 > [!NOTE]
-> Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem corresponder. Insira os valores com cuidado e os revise para garantir que estejam corretos.
+> Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem coincidir. Insira os valores com cuidado e os revise para garantir que estejam corretos.
 
 
-Os pacotes de aplicativo (. msixbundle ou. appxbundle) usam um manifesto diferente. Analise a documentação do [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para obter os detalhes e os requisitos para manifestos de lote de aplicativo. Observe que em um. msixbundle ou. appxbundle, o manifesto de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Os pacotes de aplicativo (. msixbundle ou. appxbundle) usam um manifesto diferente. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que em um. msixbundle ou. appxbundle, o manifesto de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Certifique-se de executar o [Kit de certificação de aplicativos para Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
@@ -69,11 +69,11 @@ Os pacotes de seu aplicativo devem atender a estes requisitos.
 
 | Propriedade de pacote de aplicativos | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamanho do pacote         | . msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>pacotes. msix ou. Appx destinados ao Windows 10: máximo de 25 GB por pacote<br>pacotes. Appx direcionados Windows 8.1: máximo de 8 GB por pacote <br> pacotes. Appx destinados ao Windows 8: máximo de 2 GB por pacote <br> pacotes. Appx direcionados Windows Phone 8,1: máximo de 4 GB por pacote <br> pacotes. xap: máximo de 1 GB por pacote                                                                           |
+| Tamanho do pacote         | . msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>pacotes. msix ou. Appx destinados ao máximo do Windows 10:25 GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
 | Hashes do mapa de blocos     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, os produtos recém-criados não podem incluir pacotes destinados ao Windows 8. x/Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta postagem no [blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> Você não pode mais carregar novos pacotes XAP criados usando os SDKs do Windows Phone 8. x. Os aplicativos que já estão em armazenamento com pacotes XAP continuarão a funcionar em dispositivos Windows 10 Mobile. Para obter mais informações, consulte esta [postagem no blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 ## <a name="supported-versions"></a>Versões com suporte
 
@@ -86,7 +86,7 @@ As versões compatíveis atualmente variam de:
 
 ## <a name="storemanifest-xml-file"></a>Arquivo XML StoreManifest
 
-StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, o StoreManifest. xml é enviado com o pacote do aplicativo e deve estar na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, StoreManifest.xml é enviado com o pacote do aplicativo e deve estar na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

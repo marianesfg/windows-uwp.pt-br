@@ -6,25 +6,25 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 96994566d19e03f1d85b751242331f04fef098ad
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 11d992baf42f320856134f0e8fba845c5ad61393
+ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84945924"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
 >[!WARNING]
 > A partir de 1º de junho de 2020, a plataforma Microsoft ad monetização para aplicativos UWP do Windows será desligada. [Saiba mais](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-Use o **monetizar** &gt; página **de anúncios no aplicativo** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades do AD para:
+Use a **Monetize** &gt; página **anúncios no aplicativo** monetizar no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades do AD para:
 
 * Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK).
 * Aplicativos do Windows 8. x e Windows Phone 8. x publicados anteriormente que usam o [SDK do Microsoft Advertising para Windows e o Windows Phone 8. x](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDKforWindowsandWindowsPhone8x).
 
 > [!IMPORTANT]
-> A partir de 31 de outubro de 2018, os produtos recém-criados não podem incluir pacotes destinados ao Windows 8. x/Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem no blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> Você não pode mais carregar novos pacotes XAP criados usando os SDKs do Windows Phone 8. x. Os aplicativos que já estão em armazenamento com pacotes XAP continuarão a funcionar em dispositivos Windows 10 Mobile. Para obter mais informações, consulte esta [postagem no blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 Para obter mais informações sobre como integrar esses SDKs com seus aplicativos para exibir anúncios, consulte [Exibir anúncios em seu aplicativo com o SDK do Microsoft Advertising](../monetize/display-ads-in-your-app.md).
 
@@ -34,7 +34,7 @@ Para obter mais informações sobre como integrar esses SDKs com seus aplicativo
 
 Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banner-ads.md), [Anúncio intersticial](../monetize/interstitial-ads.md) ou [Anúncio nativo](../monetize/native-ads.md) em seu aplicativo:
 
-1.  Acesse o **monetizar** &gt; página **de anúncios no aplicativo** no Partner Center e clique em **criar unidade de anúncio**.
+1.  Acesse a **Monetize** &gt; página de **anúncios no aplicativo** monetizar no Partner Center e clique em **criar unidade de anúncio**.
 2.  Na lista suspensa **Nome do aplicativo**, selecione o aplicativo no qual a unidade publicitária será usada.
 3.  No campo **Nome da unidade de anúncio**, insira um nome para a unidade publicitária. Pode ser qualquer cadeia de caracteres descritiva a ser usada para identificar a unidade publicitária para fins de relatório.
 4.  Na lista suspensa **Tipo de unidade de anúncio**, selecione o tipo de anúncio.
@@ -43,7 +43,7 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
     * Se você estiver mostrando um anúncio do intersticial video ad ou intersticial banner em seu aplicativo, selecione **vídeo intersticial** ou **faixa intersticial** (certifique-se de selecionar a opção apropriada para o tipo de intersticial AD que você deseja mostrar).
     * Se você estiver mostrando um anúncio nativo em seu aplicativo, selecione **nativo**.
 
-5. Na lista suspensa **Família de dispositivos**, selecione a família de dispositivos direcionada pelo aplicativo no qual a unidade publicitária será usada. As opções disponíveis são: **UWP (Windows 10)** , **Computador/Tablet (Windows 8.1)** ou **Celular (Windows Phone 8.x)** .
+5. Na lista suspensa **Família de dispositivos**, selecione a família de dispositivos direcionada pelo aplicativo no qual a unidade publicitária será usada. As opções disponíveis são: **UWP (Windows 10)**, **Computador/Tablet (Windows 8.1)** ou **Celular (Windows Phone 8.x)**.
 
 6. Defina as seguintes configurações adicionais conforme desejado:
 
@@ -51,18 +51,18 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
     * Se você selecionar a família de dispositivos **Computador/Tablet (Windows 8.1)** ou **Celular (Windows Phone 8. x)** para uma unidade de anúncio em faixa, você pode selecionar opcionalmente **Mostrar anúncios da comunidade em seu aplicativo** para optar por [Anúncios de comunidade](about-community-ads.md).
 
 7.  Se você ainda não tiver definido a conformidade com COPPA para o aplicativo selecionado, escolha uma opção na seção [Conformidade com COPPA](#coppa).
-8.  Clique em **Criar unidade de anúncio**.
+8.  Clique em **Criar unidade publicitária**.
 
-Depois de criar a nova unidade do AD, ela aparecerá na tabela de unidades do AD disponíveis no **monetizar** &gt; página **de anúncios no aplicativo** .
+Depois de criar a nova unidade publicitária, ela aparecerá na tabela de unidades publicitárias disponíveis na página **Monetizar** &gt; **Anúncios em aplicativo**.
 
 <span id="available-ad-units" />
 
 ## <a name="review-and-edit-ad-units"></a>Revisar e editar unidades de anúncio
 
-Depois de criar unidades do AD para um ou mais aplicativos em sua conta, essas unidades do AD aparecem em uma tabela na parte inferior da página de anúncios do **monetizar** &gt; **no aplicativo** . Esta tabela mostra a **ID do aplicativo** e **ID da unidade publicitária** para cada unidade publicitária, juntamente com outras informações. Para mostrar anúncios em seu aplicativo, você precisará usar estes valores em seu código. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](../monetize/set-up-ad-units-in-your-app.md).
+Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta, essas unidades aparecem em uma tabela na parte inferior da página **Monetizar** &gt; **Anúncios em aplicativos**. Esta tabela mostra a **ID do aplicativo** e **ID da unidade publicitária** para cada unidade publicitária, juntamente com outras informações. Para mostrar anúncios em seu aplicativo, você precisará usar estes valores em seu código. Para obter mais informações, consulte [Configurar unidades publicitárias no app](../monetize/set-up-ad-units-in-your-app.md).
 
 * Se o aplicativo mostrar [anúncios em banner](../monetize/banner-ads.md), atribua esses valores às propriedades [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) e [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) de seu objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol).
-* Se seu aplicativo mostrar [anúncios intersticiais](../monetize/interstitial-ads.md), passe esses valores para o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) de seu objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad).
+* Se seu aplicativo mostrar [anúncios intersticial](../monetize/interstitial-ads.md), passe esses valores para o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) do seu objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) .
 * Se seu aplicativo mostrar [anúncios nativos](../monetize/native-ads.md), passe esses valores para o construtor **NativeAdsManagerV2** .
   > [!IMPORTANT]
   > Você pode usar cada unidade publicitária em apenas um app. Se você usar uma unidade publicitária em mais de um app, os anúncios não serão veiculados para essa unidade publicitária.
@@ -100,7 +100,7 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 5. Na seção **Redes de publicidade pagas**, marque a caixa de seleção na coluna **Ativa** de cada [rede paga](#paid-networks) a ser usada e, em seguida, use as setas na coluna **Classificação** para ordenar as redes por classificação (isso especifica a frequência em que cada rede deve ser usada pelo controle).
 6. Se você tiver selecionado uma unidade publicitária **Em faixa** ou **Intersticial de faixa**, também é possível exibir uma seção chamada **Outras redes de publicidade**. As redes nesta seção não geram receita por impressões de anúncios. Em vez disso, essas redes mostram anúncios de fontes como campanhas de promoção de aplicativos.
 
-    Na seção **Outras redes de publicidade**, marque a caixa de seleção na coluna **Ativa** de cada [rede](#other-networks) a ser usada e, em seguida, use as setas na coluna **Classificação** para ordenar as redes por classificação (isso especifica a frequência em que cada rede deve ser usada pelo controle). Há suporte também para as seguintes redes:
+    Na seção **outras redes do AD** , marque a caixa de seleção na **coluna ativo** para cada [outra rede](#other-networks) que você deseja usar e, em seguida, use as setas na coluna **classificação** para ordenar as redes por classificação (isso especifica a frequência com que cada rede deve ser usada pelo seu controle). Há suporte também para as seguintes redes:
 
 7. Para cada mercado em que você deseja substituir a configuração de controle padrão, selecione o mercado na lista suspensa **Destino** e atualize as seleções de rede de publicidade e classificação.
 8. Clique em **Criar unidade publicitária** (se você estiver criando uma nova unidade publicitária) ou **Salvar** (se você estiver editando uma unidade publicitária existente).
