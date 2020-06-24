@@ -4,12 +4,12 @@ description: Este tópico explica várias maneiras de executar a IPC (comunicaç
 ms.date: 03/23/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.openlocfilehash: 2407a54439157be16b186b48759746238962f8b4
-ms.sourcegitcommit: 2d375e1c34473158134475af401532cc55fc50f4
+ms.openlocfilehash: 5db029db3ffb538802f39aa616c96dbe75601eac
+ms.sourcegitcommit: bf7d4f6739aeeaac735aae3dd0dcbda63a8c5e69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888504"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256376"
 ---
 # <a name="interprocess-communication-ipc"></a>IPC (Comunicação Entre Processos)
 
@@ -29,11 +29,11 @@ O [com](/windows/win32/com/component-object-model--com--portal) é um sistema di
 
 Os aplicativos empacotados com o recurso [runFullTrust](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) podem registrar servidores com fora do processo para IPC por meio do [manifesto do pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-com-extension). Isso é conhecido como [com empacotado](https://blogs.windows.com/windowsdeveloper/2017/04/13/com-server-ole-document-support-desktop-bridge/).
 
-## <a name="filesystem"></a>WPD
+## <a name="filesystem"></a>Sistema de arquivos
 
 ### <a name="broadfilesystemaccess"></a>BroadFileSystemAccess
 
-Os aplicativos empacotados podem executar o IPC usando o amplo sistema de arquivos, declarando o recurso restrito [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) .
+Os aplicativos empacotados podem executar o IPC usando o amplo sistema de arquivos, declarando o recurso restrito [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) . Esse recurso concede ao [Windows. Storage](/uwp/api/Windows.Storage) APIs e às APIs do [xxxFromApp](/previous-versions/windows/desktop/legacy/mt846585(v=vs.85)) do Win32 acesso ao amplo sistema de arquivos.
 
 Por padrão, o IPC por meio do sistema de arquivos para aplicativos empacotados é restrito aos outros mecanismos descritos nesta seção.
 
@@ -73,25 +73,25 @@ Loopback é o processo de comunicação com um servidor de rede que escuta no lo
 
 Para manter o isolamento de segurança e rede, as conexões de loopback para IPC são bloqueadas por padrão para aplicativos empacotados. Você pode habilitar conexões de loopback entre aplicativos de pacote confiáveis usando [as propriedades](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)de [recursos](/previous-versions/windows/apps/hh770532(v=win.10)) e de manifesto.
 
-* Todos os aplicativos empacotados que participam de conexões de loopback precisarão declarar o recurso de `privateNetworkClientServer` em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
+* Todos os aplicativos empacotados que participam de conexões de loopback precisarão declarar o `privateNetworkClientServer` recurso em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
 * Dois aplicativos empacotados podem se comunicar por loopback declarando [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules) em seus manifestos de pacote.
     * Cada aplicativo deve listar o outro em seu [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). O cliente declara uma regra "out" para o servidor e o servidor declara as regras "in" para seus clientes com suporte.
 
 > [!NOTE]
 > O nome da família de pacotes necessário para identificar um aplicativo nessas regras pode ser encontrado por meio do editor de manifesto de pacote no Visual Studio durante o tempo de desenvolvimento, por meio do [Partner Center](/windows/uwp/publish/view-app-identity-details) para aplicativos publicados por meio da Microsoft Store ou por meio do comando [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) do PowerShell para aplicativos que já estão instalados.
 
-Os aplicativos e serviços desempacotados não têm a identidade do pacote, portanto, eles não podem ser declarados em [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). Você pode configurar um aplicativo empacotado para se conectar por meio de auto-retorno com aplicativos e serviços desempacotados via [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)), no entanto, isso só é possível para cenários de Sideload ou de depuração em que você tem acesso local ao computador e tem privilégios de administrador.
+Os aplicativos e serviços desempacotados não têm a identidade do pacote, portanto, eles não podem ser declarados em [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). Você pode configurar um aplicativo empacotado para se conectar por meio de auto-retorno com aplicativos e serviços desempacotados por meio de [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)), no entanto, isso só é possível para cenários de Sideload ou de depuração em que você tem acesso local ao computador e tem privilégios de administrador.
 
-* Todos os aplicativos empacotados que participam de conexões de loopback precisam declarar o recurso `privateNetworkClientServer` em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
-* Se um aplicativo empacotado estiver se conectando a um aplicativo ou serviço não empacotado, execute `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>` para adicionar uma isenção de auto-retorno para o aplicativo empacotado.
+* Todos os aplicativos empacotados que participam de conexões de loopback precisam declarar a `privateNetworkClientServer` funcionalidade em seus [manifestos de pacote](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
+* Se um aplicativo empacotado estiver se conectando a um aplicativo ou serviço não empacotado, execute `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>` para adicionar uma isenção de loopback para o aplicativo empacotado.
 * Se um aplicativo ou serviço não empacotado estiver se conectando a um aplicativo empacotado, execute `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>` para permitir que o aplicativo empacotado receba conexões de loopback de entrada.
-    * O [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) deve estar em execução continuamente enquanto o aplicativo empacotado está escutando conexões.
-    * O sinalizador `-is` foi introduzido no Windows 10, versão 1607 (10,0; Build 14393).
+    * [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) deve estar em execução continuamente enquanto o aplicativo empacotado está escutando conexões.
+    * O `-is` sinalizador foi introduzido no Windows 10, versão 1607 (10,0; Build 14393).
 
 > [!NOTE]
-> O nome da família de pacotes necessário para o sinalizador de `-n` de [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) pode ser encontrado por meio do editor de manifesto de pacote no Visual Studio durante o tempo de desenvolvimento, por meio do [Partner Center](/windows/uwp/publish/view-app-identity-details) para aplicativos publicados por meio do Microsoft Store ou por meio do comando do PowerShell [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) para aplicativos que já estão instalados.
+> O nome da família de pacotes necessário para o `-n` sinalizador de [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) pode ser encontrado por meio do editor de manifesto de pacote no Visual Studio durante o tempo de desenvolvimento, por meio do [Partner Center](/windows/uwp/publish/view-app-identity-details) para aplicativos publicados por meio do Microsoft Store ou por meio do comando [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) do PowerShell para aplicativos que já estão instalados.
 
-O [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) também é útil para [depurar problemas de isolamento de rede](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues).
+[CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) também é útil para [depurar problemas de isolamento de rede](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues).
 
 ## <a name="pipes"></a>Pipes
 
