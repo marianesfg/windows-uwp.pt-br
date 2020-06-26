@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 279f0d007be927e29632986ce8178c4e0b9778b3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: db9d47fdef12e5d838c919b2b5b653ea00c1196d
+ms.sourcegitcommit: f44f94c2ef41b33c1a9719fa7b303ec525d479b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259855"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382706"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -25,12 +25,12 @@ Para dar suporte a uma propriedade de dependência, o objeto que define a propri
 
 A finalidade das propriedades de dependência é oferecer uma forma sistêmica de computar o valor de uma propriedade com base em outras entradas (outras propriedades, eventos e estados que ocorrem em seu aplicativo enquanto ele é executado). Essas outras entradas podem incluir:
 
-- Entrada externa; por exemplo, preferência do usuário
+-  Entrada externa; por exemplo, preferência do usuário
 - Mecanismos de determinação de propriedade just-in-time; por exemplo, vinculação de dados, animações e storyboards.
 - Padrões de modelagem para múltiplos usos; por exemplo, recursos e estilos
 - Valores conhecidos por meio das relações pai-filho com outros elementos da árvore de objetos
 
-Uma propriedade de dependência representa ou dá suporte a um recurso específico do modelo de programação para definir um aplicativo Windows Runtime com XAML C#para interface do usuário e C++ , Microsoft Visual BasicC++ou extensões de componente Visual (/CX) para código. Esses recursos incluem:
+A propriedade de dependência representa ou permite um recurso específico do modelo de programação para a definição de um aplicativo da Windows Store com XAML para interface do usuário e C#, extensões de componente do Microsoft Visual Basic ou Visual C++ (C++/CX) para código. Esses recursos incluem:
 
 - Associação de dados
 - Estilos
@@ -55,36 +55,36 @@ Aqui está uma somatória da terminologia que usamos na documentação ao discut
 
 O wrapper da propriedade não é apenas conveniência para os chamadores, ele também apresenta a propriedade de dependência a qualquer processo, ferramenta ou projeção que use as  definições do Windows Runtime para propriedades.
 
-O exemplo a seguir define uma propriedade de dependência personalizada "IsSpinning", conforme definida para C#, e mostra a relação do identificador de propriedade de dependência com o wrapper de propriedade.
+O exemplo a seguir define uma propriedade de dependência personalizada, conforme definido para C#, e mostra a relação do identificador da propriedade de dependência com o wrapper de propriedade.
 
 ```csharp
-// IsSpinningProperty is the dependency property identifier
-// no need for info in the last PropertyMetadata parameter, so we pass null
-public static readonly DependencyProperty IsSpinningProperty =
-    DependencyProperty.Register(
-        "IsSpinning", typeof(Boolean),
-        typeof(ExampleClass), null
-    );
-// The property wrapper, so that callers can use this property through a simple ExampleClassInstance.IsSpinning usage rather than requiring property system APIs
-public bool IsSpinning
+public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
+  "Label",
+  typeof(string),
+  typeof(ImageWithLabelControl),
+  new PropertyMetadata(null)
+);
+
+
+public string Label
 {
-    get { return (bool)GetValue(IsSpinningProperty); }
-    set { SetValue(IsSpinningProperty, value); }
+    get { return (string)GetValue(LabelProperty); }
+    set { SetValue(LabelProperty, value); }
 }
 ```
 
 > [!NOTE]
-> O exemplo anterior não se destina como o exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para um exemplo mais complexo, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
+> O exemplo anterior não se destina como o exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para obter uma explicação mais completa deste exemplo, consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md).
 
 ## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência
 
-Quando você obtém o valor de uma propriedade de dependência, está obtendo um valor que foi definido para essa propriedade por meio de qualquer uma das entradas que participam do sistema de propriedades do Tempo de execução do Windows. A precedência do valor de propriedade de dependência existe de forma que o sistema de propriedades do Windows Runtime possa calcular valores de uma forma previsível, e é importante que você também esteja familiarizado com a ordem de precedência básica. Caso contrário, você pode se encontrar em uma situação em que esteja tentando definir uma propriedade em um nível, mas algo (o sistema, chamadores de terceiros, parte de seu próprio código) a está definindo em outro nível, e você ficará frustrado tentando descobrir qual valor da propriedade é usado e de onde esse valor veio.
+Quando você obtém o valor de uma propriedade de dependência, está obtendo um valor que foi definido para essa propriedade por meio de qualquer uma das entradas que participam do sistema de propriedades do Tempo de execução do Windows. A precedência do valor de propriedade de dependência existe de forma que o sistema de propriedades do Tempo de Execução do Windows possa calcular valores de uma forma previsível, e é importante que você também esteja familiarizado com a ordem de precedência básica. Caso contrário, você pode se encontrar em uma situação em que esteja tentando definir uma propriedade em um nível, mas algo (o sistema, chamadores de terceiros, parte de seu próprio código) a está definindo em outro nível, e você ficará frustrado tentando descobrir qual valor da propriedade é usado e de onde esse valor veio.
 
 Por exemplo, os estilos e modelos destinam-se a ser um ponto de partida compartilhado para estabelecer valores de propriedade e, assim, a aparência de um controle. Mas, em uma ocorrência específica do controle, pode ser preciso alterar esse valor em relação ao valor de modelo comum, como aplicar a esse controle uma cor da tela de fundo diferente ou uma cadeia de caracteres de texto diferente como conteúdo. O sistema de propriedades do Tempo de execução do Windows considera valores locais em precedência maior que os valores fornecidos por estilos e modelos. Isso permite que o cenário de valores específicos do aplicativo substituam os modelos, de modo que os controles sejam úteis para o próprio uso deles na interface do usuário do aplicativo.
 
-### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência
+### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência 
 
-A seguir está a ordem definitiva que o sistema de propriedades usa ao atribuir o valor do tempo de execução de uma propriedade de dependência. A maior precedência é listada primeiro. Você encontrará explicações mais detalhadas logo após essa lista.
+A seguir está a ordem definitiva que o sistema de propriedades usa ao atribuir o valor do tempo de execução de uma propriedade de dependência. A precedência mais alta é listada primeiro. Você encontrará explicações mais detalhadas logo após essa lista.
 
 1. **Valores animados:** animações ativas, animações de estado visual ou animações com um comportamento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior). Para ter efeito prático, uma animação aplicada a uma propriedade deve ter precedência sobre o valor básico (não animado), mesmo que esse valor seja definido localmente.
 1. **Valor local:** um valor local pode ser definido por meio da conveniência do wrapper da propriedade, que também equivale à configuração como um elemento de atributo ou de propriedade na XAML ou por uma chamada ao método [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso estático, eles atuarão na precedência como se um valor local fosse definido, e as referências de associações ou de recursos serão apagadas se um novo valor local for definido.
@@ -115,7 +115,7 @@ Para uma propriedade animada, o valor base ainda pode ter um efeito no comportam
 
 Entretanto, uma animação que especifica um **To** com um comportamento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) pode substituir um valor local até que a animação seja removida, mesmo que ela pareça estar visualmente interrompida. Conceitualmente, ela é como uma animação que é executada infinitamente mesmo que não haja uma animação visual na interface do usuário.
 
-Várias animações podem ser aplicadas a uma única propriedade. Cada uma dessas animações pode ter sido definida para substituir valores base que vêm de pontos diferentes na precedência de valor. Entretanto, essas animações serão executadas simultaneamente no tempo de execução, e isso frequentemente significa que elas devem combinar seus valores porque cada animação tem a mesma influência no valor. Isso depende exatamente de como as animações são definidas, e do tipo do valor que está sendo animado.
+Várias animações podem ser aplicadas a uma única propriedade. Cada uma dessas animações pode ter sido definida para substituir valores base que vêm de pontos diferentes na precedência de valor. Entretanto, essas animações serão executadas simultaneamente no tempo de execução, e isso frequentemente significa que elas devem combinar seus valores porque cada animação tem a mesma influência no valor. Isso depende de como exatamente as animações são definidas e do tipo do valor que está sendo animado.
 
 Para saber mais, consulte [Animações com storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
 
@@ -129,14 +129,14 @@ As propriedades de dependência ainda possuem valores padrão, mesmo que esses v
 - Uma propriedade que usa um valor básico, como números ou um valor booliano (um *tipo de valor*) usa um padrão esperado para esse valor. Por exemplo, 0 para inteiros e números de ponto flutuante, **false** para um booliano.
 - Uma propriedade que usa uma estrutura do Tempo de Execução do Windows possui um valor padrão que é obtido pela chamada ao construtor padrão implícito dessa estrutura. Esse construtor usa os padrões de cada um dos campos de valor básico da estrutura. Por exemplo, um padrão de um valor [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) é inicializado com seus valores **X** e **Y** como 0.
 - Uma propriedade que usa uma enumeração possui um valor padrão do primeiro membro definido nessa enumeração. Verifique a referência a enumerações específicas para ver qual é o valor padrão.
-- Uma propriedade que usa uma cadeia de caracteres ([**System.String**](https://docs.microsoft.com/dotnet/api/system.string) para .NET, [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class) para C++/CX) tem um valor padrão de uma cadeia de caracteres vazia ( **""** ).
+- Uma propriedade que usa uma cadeia de caracteres ([**System.String**](https://docs.microsoft.com/dotnet/api/system.string) para .NET, [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class) para C++/CX) tem um valor padrão de uma cadeia de caracteres vazia (**""**).
 - As propriedades de coleção não são normalmente implementadas como propriedades de dependência, por razões discutidas mais adiante neste tópico. Mas se você implementar uma propriedade de coleção personalizada e quiser que ela seja uma propriedade de dependência, lembre-se de evitar um *singleton não intencional* conforme descrito quase no final de [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Funcionalidade de propriedade fornecida por uma propriedade de dependência
 
 ### <a name="data-binding"></a>Associação de dados
 
-Uma propriedade de dependência pode ter seu valor definido por meio de uma vinculação de dados. A vinculação de dados usa a sintaxe da [extensão de marcação {Binding}](binding-markup-extension.md) em XAML, [extensão de marcação {x:Bind}](x-bind-markup-extension.md) ou a classe [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) no nó. Para uma propriedade associada aos dados, a determinação do valor final da propriedade é adiada até o tempo de execução. Nesse momento, o valor é obtido de uma fonte de dados. A função que o sistema de propriedades de dependência exerce aqui é permitir um comportamento de espaço reservado para operações como carregamento do XAML quando o valor ainda não é conhecido, e o fornecer o valor no runtime por meio da interação com o mecanismo de vinculação de dados do Windows Runtime.
+Uma propriedade de dependência pode ter seu valor definido por meio de uma vinculação de dados. A vinculação de dados usa a sintaxe da [extensão de marcação {Binding}](binding-markup-extension.md) em XAML, [extensão de marcação {x:Bind}](x-bind-markup-extension.md) ou a classe [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) no nó. Para uma propriedade associada aos dados, a determinação do valor final da propriedade é adiada até o tempo de execução. Nesse momento, o valor é obtido de uma fonte de dados. A função que o sistema de propriedades de dependência exerce aqui é permitir um comportamento de espaço reservado para operações como carregamento do XAML quando o valor ainda não é conhecido, e o fornecer o valor no tempo de execução por meio da interação com o mecanismo de vinculação de dados do Tempo de Execução do Windows.
 
 O exemplo a seguir define o valor [**Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) para um elemento [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), usando uma associação no XAML. A associação usa um contexto de dados herdado e um objeto da fonte de dados. (Nenhum destes é exibido no exemplo curto; para obter uma amostra mais completa que mostre o contexto e a fonte, consulte [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).)
 
@@ -159,7 +159,7 @@ Se você estiver criando uma associação no código, observe que a API [**SetBi
 
 Tanto para código ou XAML, lembre-se que [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) é uma propriedade de [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement). Usando uma forma de herança de propriedade pai-filha (geralmente estabelecida na marcação XAML), o sistema de associações pode resolver um **DataContext** que existe em um elemento pai. Essa herança pode avaliar inclusive se o objeto filho (que possui a propriedade de destino) não é **FrameworkElement** e, portanto, não mantém seu próprio valor **DataContext**. Entretanto, o elemento pai que está sendo herdado deve ser um **FrameworkElement** para definir e manter o **DataContext**. Como alternativa, você deve definir a associação para que ela possa funcionar com um valor **null** para **DataContext**.
 
-Conectar a associação não é a única coisa que é necessária para a maioria dos cenários de associação. Para uma associação unidirecional ou bidirecional ser eficaz, a propriedade de origem deve dar suporte a notificações de alteração que se propagam para o sistema de associação e, portanto, o destino. Para fontes de associação personalizadas, isso significa que a propriedade deve ser uma propriedade de dependência ou o objeto deve suportar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged). As coleções devem dar suporte a [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged). Determinadas classes dão suporte a uma dessas interfaces em suas implementações para que sejam úteis como classes básicas para situações de vinculação de dados; um exemplo dessa classe é [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1). Para saber mais sobre vinculação de dados e como a vinculação de dados se relaciona ao sistema de propriedades, consulte [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+Conectar a associação não é a única coisa que é necessária para a maioria dos cenários de associação. Para uma associação unidirecional ou bidirecional ser eficaz, a propriedade de origem deve dar suporte a notificações de alteração que se propagam para o sistema de associação e, portanto, o destino. Para fontes de associação personalizadas, isso significa que a propriedade deve ser uma propriedade de dependência ou o objeto deve suportar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged). As coleções devem dar suporte a [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged). Determinadas classes dão suporte a uma dessas interfaces em suas implementações para que sejam úteis como classes básicas para situações de vinculação de dados; um exemplo dessa classe é [**ObservableCollection&lt;T&gt;**](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1). Para saber mais sobre vinculação de dados e como a vinculação de dados se relaciona ao sistema de propriedades, consulte [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 > [!NOTE]
 > Os tipos listados aqui dão suporte a Microsoft .NET fontes de dados. As fontes de dados C++/CX usam interfaces diferentes para notificação de alteração ou comportamento observável, consulte a seção [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
@@ -182,7 +182,7 @@ O princípio de máquina de estado é consagrado pelo uso de animações com sto
 
 ### <a name="property-changed-behavior"></a>Comportamento de propriedade alterado
 
-O comportamento de propriedade alterado é a origem da parte "dependência" da terminologia de propriedade de dependência. A manutenção de valores válidos de uma propriedade em que outra propriedade pode influenciar o valor da primeira propriedade é um problema de desenvolvimento difícil em muitas estruturas. No sistema de propriedades do Windows Runtime, cada propriedade de dependência pode especificar um retorno de chamada que é invocado quando o respectivo valor de propriedade é alterado. Esse retorno de chamada pode ser usado para notificar ou alterar valores de propriedades relacionados de forma geralmente síncrona. Muitas propriedades de dependência existentes têm um comportamento de propriedade alterado. Você também pode adicionar comportamento semelhante de retorno de chamada para propriedades de dependência personalizadas e implementar os seus próprios retornos de chamada de propriedade alterada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) para ver um exemplo.
+O comportamento de propriedade alterado é a origem da parte "dependência" da terminologia de propriedade de dependência. A manutenção de valores válidos de uma propriedade em que outra propriedade pode influenciar o valor da primeira propriedade é um problema de desenvolvimento difícil em muitas estruturas. No sistema de propriedades do Tempo de Execução do Windows, cada propriedade de dependência pode especificar um retorno de chamada que é invocado quando o respectivo valor de propriedade é alterado. Esse retorno de chamada pode ser usado para notificar ou alterar valores de propriedades relacionados de forma geralmente síncrona. Muitas propriedades de dependência existentes têm um comportamento de propriedade alterado. Você também pode adicionar comportamento semelhante de retorno de chamada para propriedades de dependência personalizadas e implementar os seus próprios retornos de chamada de propriedade alterada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) para ver um exemplo.
 
 O Windows 10 apresenta o método [**RegisterPropertyChangedCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.registerpropertychangedcallback). Isso permite que o código do aplicativo se registre para receber notificações de alteração quando a propriedade de dependência especificada é alterada em uma instância de [**DependencyObject**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject).
 
@@ -205,7 +205,7 @@ Os aspectos de threading de [**DependencyObject**](https://docs.microsoft.com/uw
 - [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 - [Visão geral das propriedades anexadas](attached-properties-overview.md)
 - [Vinculação de dados em detalhes](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
-- [Animações storyboarded](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
+- [Animações com storyboard](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
 - [Criando componentes de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
 - [Usuário XAML e exemplo de controles personalizados](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
 

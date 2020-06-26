@@ -1,17 +1,17 @@
 ---
-description: Descrevemos o conceito de programação de eventos em um aplicativo Windows Runtime, ao C#usar, Visual Basic ou C++ as extensões deC++componente Visual (/CX) como sua linguagem de programação e XAML para sua definição de interface do usuário.
+description: Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário.
 title: Visão geral de eventos e eventos roteados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.date: 07/12/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 044a0e97f51a8e34c5949e789b203abf896f035d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b12854252160eec5f606b20a5ec723df89c81959
+ms.sourcegitcommit: ac4399574f673834ba9c1b8e460e3bdbbc20a983
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258754"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85372042"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
@@ -19,7 +19,7 @@ ms.locfileid: "74258754"
 - [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)
 - [**RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs)
 
-Descrevemos o conceito de programação de eventos em um aplicativo Windows Runtime, ao C#usar, Visual Basic ou C++ as extensões deC++componente Visual (/CX) como sua linguagem de programação e XAML para sua definição de interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêineres de layout.
+Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêineres de layout.
 
 ## <a name="events-as-a-programming-concept"></a>Eventos como um conceito de programação
 
@@ -27,11 +27,11 @@ De um modo geral, os conceitos de eventos na programação de um aplicativo do W
 
 Quando você usa C#, Visual Basic ou C++/CX como linguagem de programação, a interface do usuário é definida na marcação (XAML). Na sintaxe de marcação XAML, alguns dos princípios de conexão de eventos entre elementos de marcação e entidades de código em tempo de execução são similares a outras tecnologias da Web, tais como ASP.NET ou HTML5.
 
-**Observe**  o código que fornece a lógica de tempo de execução para uma interface do usuário definida pelo XAML é geralmente conhecido como *code-behind* ou o arquivo code-behind. Nas visualizações de soluções do Microsoft Visual Studio, essa relação é mostrada graficamente, com o arquivo code-behind sendo um arquivo dependente e aninhado em contraposição à página XAML à qual ele se refere.
+**Observação**    O código que fornece a lógica de tempo de execução para uma interface do usuário definida pelo XAML é geralmente conhecido como *code-behind* ou o arquivo code-behind. Nas visualizações de soluções do Microsoft Visual Studio, essa relação é mostrada graficamente, com o arquivo code-behind sendo um arquivo dependente e aninhado em contraposição à página XAML à qual ele se refere.
 
 ## <a name="buttonclick-an-introduction-to-events-and-xaml"></a>Button.Click: uma introdução a eventos e XAML
 
-Uma das tarefas de programação mais comuns para um aplicativo do Windows Runtime é a captura de entrada do usuário na interface do usuário. Por exemplo, a sua interface do usuário pode ter um botão em que o usuário deve clicar para enviar informações ou mudar o estado.
+Uma das tarefas de programação mais comuns para um aplicativo do Tempo de Execução do Windows é a captura de entrada do usuário na interface do usuário. Por exemplo, a sua interface do usuário pode ter um botão em que o usuário deve clicar para enviar informações ou mudar o estado.
 
 Você define a interface do usuário para o seu aplicativo do Windows Runtime gerando a XAML. Esse XAML é geralmente o resultado de uma superfície de design no Visual Studio. A XAML também pode ser escrita em um editor de texto sem formatação ou em um editor XAML de terceiros. Durante a geração dessa XAML, você pode conectar manipuladores de eventos de elementos individuais da interface do usuário e, ao mesmo tempo, definir todos os demais atributos que estabelecem valores de propriedade desse elemento da interface do usuário.
 
@@ -45,7 +45,7 @@ Para conectar os eventos em XAML, você pode especificar o nome em forma de cade
 
 **Dica**  *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
 
-Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="ShowUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `ShowUpdatesButton_Click` como parte do código do aplicativo. `ShowUpdatesButton_Click` deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Por exemplo, este código define o manipulador `ShowUpdatesButton_Click`.
+Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="ShowUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `ShowUpdatesButton_Click` como parte do código do aplicativo. `ShowUpdatesButton_Click`deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento de [**clique**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) . Por exemplo, este código define o manipulador `ShowUpdatesButton_Click`.
 
 ```csharp
 private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
@@ -80,13 +80,13 @@ void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, W
 
 Neste exemplo, o método `ShowUpdatesButton_Click` baseia-se no delegado de [**RoutedEventHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventhandler). Você saberá que este é o delegado a ser usado, pois você verá esse delegado chamado na sintaxe para o método [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) .
 
-**Dica**  o Visual Studio fornece uma maneira conveniente de nomear o manipulador de eventos e definir o método de manipulador enquanto você estiver editando XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em **&lt;Novo Manipulador de Eventos&gt;** na lista, o Microsoft Visual Studio sugerirá um nome de método com base no **x:Name** do elemento (ou nome do tipo), no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá no menu suspenso de preenchimento automático com a opção **&lt;Novo Manipulador de Eventos&gt;** . Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
+**Dica**    O Visual Studio fornece uma maneira conveniente de nomear o manipulador de eventos e definir o método de manipulador enquanto você edita XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em ** &lt; novo manipulador &gt; de eventos** na lista, Microsoft Visual Studio irá sugerir um nome de método com base no **x:Name** (ou nome do tipo) do elemento, no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá na lista suspensa preenchimento automático junto com a ** &lt; nova &gt; ** opção de manipulador de eventos. Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
 
 ## <a name="defining-an-event-handler"></a>Definindo um manipulador de eventos
 
 Para objetos que são elementos da interface do usuário e foram declarados em XAML, o código de manipulador de eventos é definido na classe parcial que opera como o code-behind de uma página XAML. Manipuladores de eventos são métodos que você escreve como parte da classe parcial associada ao XAML. Esses manipuladores de eventos se baseiam nos delegados utilizados por um determinado evento. Os métodos de manipulador de eventos podem ser públicos ou particulares. O acesso particular funciona porque o manipulador e a instância criada no XAML são finalmente unidos pela geração de código. Em geral, recomendamos que você torne particulares os métodos de manipulador de eventos, na classe.
 
-**Observe**  manipuladores de eventos C++ para não são definidos em classes parciais, eles são declarados no cabeçalho como um membro de classe particular. As ações de compilação para um projeto em C++ cuidam da geração do código que dá suporte ao sistema de tipos XAML e do modelo code-behind para C++.
+**Observação**    Manipuladores de eventos para C++ não são definidos em classes parciais, eles são declarados no cabeçalho como um membro de classe particular. As ações de compilação para um projeto em C++ cuidam da geração do código que dá suporte ao sistema de tipos XAML e do modelo code-behind para C++.
 
 ### <a name="the-sender-parameter-and-event-data"></a>O parâmetro *sender* e dados do evento
 
@@ -98,7 +98,7 @@ Para alguns eventos, os valores de propriedade específicos dos dados de evento 
 
 ### <a name="event-handlers-that-use-the-async-pattern"></a>Manipuladores de eventos que usam o padrão **async**
 
-Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) em [**AppBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. O que você pode fazer é adicionar a palavra-chave **Async** ao manipulador de eventos, de modo que o manipulador agora é **Async** **void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
+Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) em [**AppBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. Portanto, o que você pode fazer é adicionar a palavra-chave **async** ao manipulador de eventos, de forma que ele agora seja **async** **void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
 
 Para conhecer um exemplo de manipulação de eventos de interação do usuário usando o padrão **async**, consulte [Acesso a arquivos e seletores](https://docs.microsoft.com/previous-versions/windows/apps/jj655411(v=win.10)) (parte da série [Criar seu primeiro aplicativo do Windows Runtime em C# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10))). Veja também [Chamar APIs assíncronas em C).
 
@@ -127,7 +127,7 @@ void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observe**  existe uma sintaxe mais detalhada. Em 2005, a linguagem C# adicionou um recurso chamado inferência de delegado, o qual permite que um compilador infira a nova instância do delegado e habilita a sintaxe anterior, mais simples. A sintaxe detalhada é funcionalmente idêntica ao exemplo anterior, mas cria explicitamente uma nova instância do delegado antes de registrá-la, assim, não tirando proveito da inferência do delegado. Essa sintaxe explícita é menos comum, mas você ainda pode vê-la em alguns exemplos de código.
+**Observação**    Existe uma sintaxe mais detalhada. Em 2005, a linguagem C# adicionou um recurso chamado inferência de delegado, o qual permite que um compilador infira a nova instância do delegado e habilita a sintaxe anterior, mais simples. A sintaxe detalhada é funcionalmente idêntica ao exemplo anterior, mas cria explicitamente uma nova instância do delegado antes de registrá-la, assim, não tirando proveito da inferência do delegado. Essa sintaxe explícita é menos comum, mas você ainda pode vê-la em alguns exemplos de código.
 
 ```csharp
 void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -147,13 +147,13 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**Observe**  o Visual Studio e sua superfície de design XAML geralmente promovem a técnica de manipulação de instância em vez da palavra-chave **Handles** . Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
+**Observação**    O Visual Studio e sua superfície de design XAML geralmente promovem a técnica de manipulação de instância em vez da palavra-chave **Handles** . Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
 
-Em C++/CX, você também usa a sintaxe **+=** , mas há diferenças no formato básico C# :
+No C++/CX, você também usa a **+=** sintaxe, mas há diferenças no formato básico do C#:
 
 - Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
 - O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.
-- O construtor delegate requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
+- O construtor delegate requer o método address como o segundo parâmetro, portanto, o **&** operador de referência precede o nome do método.
 
 ```cppwinrt
 textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
@@ -168,7 +168,7 @@ ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 
 Normalmente não é necessário remover manipuladores de eventos em código, mesmo se você adicioná-los em código. O comportamento de vida útil do objeto para a maioria dos objetos do Windows Runtime como páginas e controles destruirá os objetos quando forem desconectados da [**Janela**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) principal e de sua árvore visual, e todas as referências a delegados serão destruídas também. O .NET faz isso através de coleta de lixo, e o Tempo de Execução do Windows com C++/CX usa referências fracas por padrão.
 
-Há alguns casos em que você quer remover manipuladores de eventos explicitamente. São elas:
+Há alguns casos em que você quer remover manipuladores de eventos explicitamente. Eles incluem:
 
 - Manipuladores adicionados para eventos estáticos, que não podem sofrer a coleta de lixo de maneira convencional. Exemplos de eventos estáticos na API do Windows Runtime são os eventos das classes [**CompositionTarget**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CompositionTarget) e [**Clipboard**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard).
 - Teste o código quando quiser que o tempo da remoção dos manipuladores seja imediato ou quando quiser trocar antigos/novos manipuladores de eventos para um evento em tempo de execução.
@@ -176,9 +176,9 @@ Há alguns casos em que você quer remover manipuladores de eventos explicitamen
 - Eventos estáticos personalizados.
 - Manipuladores para navegações de página.
 
-[**FrameworkElement. Unloaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.unloaded) ou [**Page. NavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) são possíveis gatilhos de eventos que têm posições apropriadas no gerenciamento de estado e no tempo de vida do objeto, de modo que você pode usá-los para remover manipuladores de outros eventos.
+[**FrameworkElement.Unloaded**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.unloaded) ou [**Page.NavigatedFrom**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) são possíveis disparadores de eventos que têm posições apropriadas em gerenciamento de estados e vida útil de objetos de maneira que você pode usá-los para remover manipuladores para outros eventos.
 
-Por exemplo, você pode remover um manipulador de eventos chamado **textBlock1\_PointerEntered** do objeto de destino **textBlock1** usando este código.
+Por exemplo, você pode remover um manipulador de eventos chamado **textBlock1 \_ PointerEntered** do objeto de destino **textBlock1** usando este código.
 
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
@@ -208,12 +208,12 @@ O Windows Runtime com C#, Microsoft Visual Basic ou C++/CX aceita o conceito de 
 - [**Suspensa**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
 - [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
-- [**Ocorre**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Pressionado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
 - [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
-- [**Perda**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
+- [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
 - [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
 - [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
 - [**ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
@@ -228,11 +228,11 @@ O Windows Runtime com C#, Microsoft Visual Basic ou C++/CX aceita o conceito de 
 - [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
 - [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
-- [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown.md)
-- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup.md)
+- [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown)
+- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup)
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Cada**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
 Um evento roteado é um evento que é potencialmente passado adiante (*roteado*) de um objeto filho para cada um dos seus sucessivos objetos pais em uma árvore de objetos. A estrutura XAML da interface do usuário se aproxima dessa árvore, sendo que a raiz da árvore é o elemento raiz do XAML. A verdadeira árvore de objetos pode variar um pouco do aninhamento de elementos XAML porque a árvore de objetos não inclui recursos da linguagem XAML – como marcas de elementos de propriedades. Você pode conceber o evento roteado como *decorrente* de qualquer elemento filho de elemento de objeto XAML que aciona o evento em direção ao elemento de objeto pai que o contém. O evento e seus dados podem ser manipulados em vários objetos ao longo da rota de evento. Se nenhum elemento tiver manipuladores, a rota se mantém potencialmente em movimento até que o elemento raiz seja alcançado.
 
@@ -246,7 +246,7 @@ Quando um evento se propaga uma rota de eventos acima, *sender* não é mais o m
 
 Em alguns casos, *sender* não é o objeto de interesse e, em vez disso, você está interessado em informações como, por exemplo, em quais dos possíveis objetos filho o ponteiro está focalizado quando um evento de ponteiro é disparado ou qual objeto em uma interface do usuário maior tinha o foco quando um usuário pressionou uma tecla do teclado. Nesses casos, você pode usar o valor da propriedade [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource). Em todos os pontos da rota, a **OriginalSource** relata o objeto original que acionou o evento, e não o local onde o manipulador foi conectado. Contudo, para eventos de entrada de [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), esse objeto original costuma ser um objeto não imediatamente visível na XAML de definição de interface do usuário em nível de página. Em vez disso, o objeto original pode ser uma parte modelo de um controle. Por exemplo, se o usuário passa com o ponteiro sobre a borda de um [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), para a maioria dos eventos de ponteiro, **OriginalSource** é uma parte modelo [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) em [**Template**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template), e não o **Button** propriamente dito.
 
-A **dica**  a bolha de evento de entrada é especialmente útil se você estiver criando um controle modelo. Qualquer controle que tenha um modelo pode ter um novo modelo aplicado pelo seu consumidor. O consumidor que está tentando recriar um modelo de trabalho pode eliminar inadvertidamente uma parte da manipulação de eventos declarada no modelo padrão. Você ainda pode fornecer manipulação de eventos em nível de controle anexando manipuladores como parte da substituição de [**OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) na definição de classe. Em seguida, pode apanhar os eventos de entrada propagados rumo à raiz do controle na instanciação.
+**Dica**    A bolha de evento de entrada é especialmente útil se você estiver criando um controle modelo. Qualquer controle que tenha um modelo pode ter um novo modelo aplicado pelo seu consumidor. O consumidor que está tentando recriar um modelo de trabalho pode eliminar inadvertidamente uma parte da manipulação de eventos declarada no modelo padrão. Você ainda pode fornecer manipulação de eventos em nível de controle anexando manipuladores como parte da substituição de [**OnApplyTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) na definição de classe. Em seguida, pode apanhar os eventos de entrada propagados rumo à raiz do controle na instanciação.
 
 ### <a name="the-handled-property"></a>A propriedade **Handled**
 
@@ -275,20 +275,20 @@ Certos objetos participam de uma relação com a árvore visual primária que é
 Determinar se um elemento está visível para a entrada por mouse, toque e de caneta é chamado de *teste de clique*. Para ações de toque e também para eventos específicos de interação ou de manipulação resultantes de uma ação de toque, é preciso que o elemento esteja visível para teste de clique, para ser a origem do evento e acionar o evento associado à ação. Caso contrário, a ação passa pelo elemento em direção a qualquer elemento subjacente ou aos elementos pai na árvore visual que interage com essa entrada. Há vários fatores que influenciam o teste de clique, mas é possível determinar se um determinado elemento pode acionar eventos de entrada verificando sua propriedade [**IsHitTestVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.ishittestvisible). Esta propriedade retorna **true** apenas quando o elemento segue estes critérios:
 
 - O valor de propriedade [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) do elemento é [**Visible**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility).
-- O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor de [**pincel**](/uwp/api/Windows.UI.Xaml.Media.Brush) **nulo** resulta em transparência e invisibilidade de teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://docs.microsoft.com/uwp/api/windows.ui.colors.transparent) em vez de **null**.)
+- O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null** [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://docs.microsoft.com/uwp/api/windows.ui.colors.transparent) em vez de **null**.)
 
 **Observação**  **Background** e **Fill** não são definidos por [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) e, em vez disso, são definidos por diferentes classes derivadas, como [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) e [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
 
 - Se o elemento for um controle, o valor da sua propriedade [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) deverá ser **true**.
 - É preciso que o elemento tenha dimensões reais em layout. Um elemento em que [**ActualHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) e [**ActualWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) são iguais a 0 não acionará eventos.
 
-Alguns controles têm regras especiais para teste de hit. Por exemplo, o [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) não tem uma propriedade **Background**, mas ainda pode executar o teste de clique em toda a região de suas dimensões. Os controles [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) e [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) são pressionados com o pressionamento de suas dimensões de retângulo definidas, independentemente do conteúdo transparente, como o canal alfa, no arquivo de origem de mídia que está sendo exibido. Os controles [**WebView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) têm comportamento de teste de clique especial porque a entrada pode ser tratada pelos eventos HTML hospedado e acionar script.
+Alguns controles têm regras especiais para teste de hit. Por exemplo, o [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) não tem uma propriedade **Background**, mas ainda pode executar o teste de clique em toda a região de suas dimensões. Os controles [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) e [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) podem executar teste de clique nas dimensões do retângulo definido, independentemente do conteúdo transparente – por exemplo, canal alfa no arquivo de origem de mídia que está sendo exibido. Os controles [**WebView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) têm um comportamento especial de teste de clique, pois a entrada pode ser manipulada pelo HTML hospedado e acionar eventos de script.
 
 A maioria das classes [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel) e [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) não executa teste de clique na tela de fundo, mas essas classes ainda podem manipular os eventos de entrada do usuário que são roteados dos elementos que os contêm.
 
 Você pode determinar quais elementos estão localizados na mesma posição de um evento de entrada do usuário, independentemente de se os elementos são passíveis de teste de hit. Para fazer isso, chame o método [**FindElementsInHostCoordinates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper.findelementsinhostcoordinates). Como o nome sugere, esse método localiza os elementos em um local em relação a um elemento host especificado. Entretanto, transformações aplicadas e mudanças de layout podem ajustar o sistema de coordenadas relativas de um elemento e, portanto, influenciar quais elementos são encontrados em um determinado local.
 
-## <a name="commanding"></a>Execução de comandos
+## <a name="commanding"></a>Comando
 
 Um pequeno número de elementos da interface do usuário dão suporte a *comandos*. Comandos usam eventos roteados relacionados a entrada na sua implementação subjacente e permite o processamento de entrada relacionada da interface do usuário (uma determinada ação do ponteiro, uma tecla de aceleração específica) invocando um único manipulador de comandos. Se comandos estiverem disponíveis para um elemento da interface do usuário, considere usar as respectivas APIs de comando em vez de qualquer evento de entrada à parte. Em geral, você usa uma referência **Binding** em propriedades de uma classe que define o modelo de exibição para dados. As propriedades mantêm comandos nomeados que implementam o padrão de comandos **ICommand** específico de cada linguagem. Para obter mais informações, consulte [**ButtonBase.Command**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
 
@@ -296,8 +296,8 @@ Um pequeno número de elementos da interface do usuário dão suporte a *comando
 
 Para fins de definir eventos personalizados, o modo de adicionar o evento e o que isso significa para seu design de classe dependem bastante da linguagem de programação sendo usada.
 
-- Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET, desde que não esteja usando acessadores personalizados(**add**/**remove**). Outras dicas:
-    - Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>** ](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>** ](https://docs.microsoft.com/uwp/api/windows.foundation.eventhandler).
+- Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento padrão do .net, desde que não esteja usando acessadores personalizados (**Adicionar** / **remover**). Outras dicas:
+    - Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>**](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>**](https://docs.microsoft.com/uwp/api/windows.foundation.eventhandler).
     - Não use como base de sua classe de dados de eventos o [**System.EventArgs**](https://docs.microsoft.com/dotnet/api/system.eventargs) porque ele não é convertido para o Windows Runtime. Use uma classe de dados de eventos existente ou nenhuma classe base.
     - Se você estiver usando acessadores personalizados, consulte [eventos personalizados e acessadores de eventos em componentes do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh972883(v=vs.140)).
     - Se não tiver certeza do que é o padrão de evento .NET padrão, veja [Definindo eventos para classes personalizadas do Silverlight](https://docs.microsoft.com/previous-versions/windows/). Esse tópico foi escrito para o Microsoft Silverlight mas ainda é uma ótima referência do código e dos conceitos para o padrão de evento .NET padrão.
@@ -311,8 +311,8 @@ A definição de um evento personalizado normalmente é feita como parte do exer
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do XAML](xaml-overview.md)
-* [Início rápido: entrada por toque](https://docs.microsoft.com/previous-versions/windows/apps/hh465387(v=win.10))
-* [Interações de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
-* [Eventos e delegados do .NET](https://msdn.microsoft.com/library/17sde2xt.aspx)
+* [Guia de início rápido: entrada por toque](https://docs.microsoft.com/previous-versions/windows/apps/hh465387(v=win.10))
+* [Interações por teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
+* [Eventos .NET e delegados](https://msdn.microsoft.com/library/17sde2xt.aspx)
 * [Criando componentes de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
 * [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler)
