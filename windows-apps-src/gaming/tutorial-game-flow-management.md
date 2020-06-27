@@ -2,105 +2,87 @@
 title: Gerenciamento de fluxo de jogo
 description: Saiba como inicializar estados de jogo, manipular eventos e configurar loops de atualização de jogo.
 ms.assetid: 6c33bf09-b46a-4bb5-8a59-ca83ce257eb3
-ms.date: 10/24/2017
+ms.date: 06/24/2020
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e4d8f43893b5f2a9a58c2eb6209ecb7d8dd1c21
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 181eca743a9ccdc76ebfc1302e8bb04d85a32269
+ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367578"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409625"
 ---
 # <a name="game-flow-management"></a>Gerenciamento de fluxo de jogo
 
-Agora, o jogo tem uma janela, registrou alguns manipuladores de eventos e carrega ativos de forma assíncrona. Esta seção descreve o uso de estados de jogo, como gerenciar estados de jogos principais e como criar um loop de atualização para o mecanismo do jogo. Em seguida, conheceremos o fluxo da interface do usuário e, por fim, compreenderemos melhor os eventos e os manipuladores de eventos necessários em um jogo UWP.
+> [!NOTE]
+> Este tópico faz parte do [jogo criar um simples plataforma universal do Windows (UWP) com a série de tutoriais do DirectX](tutorial--create-your-first-uwp-directx-game.md) . O tópico nesse link define o contexto para a série.
 
->[!Note]
->Se você ainda não tiver baixado o código de jogo mais recente para este exemplo, acesse [Jogo de exemplo em Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este exemplo faz parte de uma grande coleção de exemplos de recursos UWP. Para obter instruções sobre como baixar o exemplo, consulte [Obtenha os exemplos da Plataforma Universal do Windows (UWP) do GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+O jogo agora tem uma janela, registrou alguns manipuladores de eventos e carregou ativos de forma assíncrona. Este tópico explica o uso de Estados de jogo, como gerenciar Estados de jogos-chave específicos e como criar um loop de atualização para o mecanismo de jogo. Em seguida, aprenderemos sobre o fluxo da interface do usuário e, por fim, entenderei mais sobre os manipuladores de eventos que são necessários para um jogo UWP.
 
 ## <a name="game-states-used-to-manage-game-flow"></a>Estados de jogo usados para gerenciar o fluxo do jogo
 
-Usamos os estados do jogo para gerenciar o fluxo do jogo. Seu jogo pode ter qualquer quantidade de estados possíveis, pois um usuário pode retomar um app de jogo UWP a partir de um estado suspenso a qualquer momento.
+Usamos os estados do jogo para gerenciar o fluxo do jogo.
 
-Neste exemplo de jogo, ele pode estar em um dos três estados quando iniciar:
-* O loop do jogo está em execução e está no meio de um nível.
-* O loop de jogo não está em execução porque um jogo tinha acabado de ser finalizado. (A pontuação máxima foi definida)
-* Nenhum jogo foi iniciado ou o jogo está entre níveis. (A pontuação máxima é 0)
+Quando o jogo de exemplo **Simple3DGameDX** é executado pela primeira vez em um computador, ele está em um estado em que nenhum jogo foi iniciado. Próximas vezes que o jogo é executado, ele pode estar em qualquer um desses Estados.
 
-Você pode definir o número de estados necessários, dependendo das necessidades do jogo. Mais uma vez, saiba que o jogo UWP pode ser finalizado a qualquer momento e, ao retomá-lo, o jogador espera que o jogo se comporte como se não tivesse sido interrompido.
+- Nenhum jogo foi iniciado ou o jogo está entre os níveis (a pontuação alta é zero).
+- O loop de jogo está em execução e está no meio de um nível.
+- O loop de jogo não está em execução devido a um jogo ter sido concluído (a pontuação alta tem um valor diferente de zero).
 
-## <a name="game-states-initialization"></a>Inicialização de estados do jogo
+Seu jogo pode ter tantos Estados quantos forem necessários. Mas lembre-se de que ele pode ser encerrado a qualquer momento. E quando ele é retomado, o usuário espera que ele retome no estado em que estava quando foi encerrado.
 
-Ao inicializar o jogo, você não apenas está focado na inicialização a frio, mas também na reinicialização após ele ter sido pausado ou encerrado. O jogo de exemplo sempre salva o estado do jogo deixando a impressão que ele permaneceu em execução. 
+## <a name="game-state-management"></a>Gerenciamento de estado do jogo
 
-No estado suspenso, a partida é suspensa, mas os recursos do jogo permanecem na memória. 
+Portanto, durante a inicialização do jogo, você precisará dar suporte à inicialização a frio e retomar o jogo depois de interrompê-lo em trânsito. O exemplo **Simple3DGameDX** sempre salva seu estado de jogo para dar a impressão de que ele nunca parou.
 
-Da mesma forma, o evento de retomada serve para garantir que o jogo de exemplo recomeçará do ponto onde foi suspenso ou encerrado pela última vez. Quando o jogo de exemplo reinicia após o término, ele inicia normalmente e depois determina qual o último estado conhecido, assim o jogador pode continuar a jogar.
+Em resposta a um evento de suspensão, o jogo é suspenso, mas os recursos dele ainda estão na memória. Da mesma forma, o evento resume é tratado para garantir que o jogo de exemplo seja escolhido no estado em que estava quando foi suspenso ou encerrado. Dependendo do estado, diferentes opções são apresentadas para o jogador. 
 
-Dependendo do estado, diferentes opções são apresentadas para o jogador. 
+- Se o jogo retomar o nível intermediário, ele aparecerá em pausa e a sobreposição oferecerá a opção de continuar.
+- Se o jogo for retomado em um estado em que o jogo está concluído, ele exibirá as pontuações altas e uma opção para jogar um novo jogo.
+- Por fim, se o jogo for retomado antes de um nível ser iniciado, a sobreposição apresentará uma opção start para o usuário.
 
-* Se o jogo for retomado a partir no nível médio, ele aparecerá como pausado e a sobreposição apresentará uma opção de continuidade.
-* Se o jogo for retomado em um estado no qual o jogo foi concluído, ele exibirá as pontuações máximas e uma opção para executar um novo jogo.
-* Por último, se o jogo for retomado antes de um nível ter sido iniciado, a sobreposição apresentará para o usuário uma opção de início.
+O jogo de exemplo não distingue se o jogo está começando por frio, iniciando pela primeira vez sem um evento de suspensão ou retomando-se de um estado suspenso. Este é o design adequado para qualquer aplicativo UWP.
 
-O exemplo de jogo não faz distinção entre inicialização a frio, inicialização pela primeira vez sem um evento suspenso ou retomada de um estado suspenso. Este é o design adequado para qualquer aplicativo UWP.
+Neste exemplo, a inicialização dos Estados do jogo ocorre em [**GameMain:: InitializeGameState**](#the-gamemaininitializegamestate-method) (um contorno desse método é mostrado na próxima seção).
 
-Neste exemplo, a inicialização dos estados de jogo ocorre em [__GameMain::InitializeGameState__](#gamemaininitializegamestate-method).
+Aqui está um fluxograma para ajudá-lo a visualizar o fluxo. Ele abrange a inicialização e o loop de atualização.
 
-Este fluxograma ajudará você a visualizar o fluxo; ele abordará a inicialização e o loop de atualização.
+- A inicialização começa no nó **Iniciar** quando você verifica o estado atual do jogo. Para o código de jogo, consulte [**GameMain:: InitializeGameState**](#the-gamemaininitializegamestate-method) na próxima seção.
+* Para saber mais sobre o loop de atualização, acesse [Atualizar mecanismo do jogo](#update-game-engine). Para o código de jogo, acesse [**GameMain:: Update**](#the-gamemainupdate-method).
 
-* A inicialização começa no nó __Iniciar__ quando você verifica o estado atual do jogo. No código do jogo, acesse [__GameMain::InitializeGameState__](#gamemaininitializegamestate-method).
-* Para saber mais sobre o loop de atualização, acesse [Atualizar mecanismo do jogo](#update-game-engine). No código do jogo, acesse [__App:: Update__](#appupdate-method).
+![a máquina de estado principal do nosso jogo](images/simple-dx-game-flow-statemachine.png)
 
-![a máquina de estado prinicpal do nosso jogo](images/simple-dx-game-flow-statemachine.png)
+### <a name="the-gamemaininitializegamestate-method"></a>O método GameMain:: InitializeGameState
 
-### <a name="gamemaininitializegamestate-method"></a>Método GameMain::InitializeGameState
+O método **GameMain:: InitializeGameState** é chamado indiretamente por meio do construtor da classe **GameMain** , que é o resultado da criação de uma instância **GameMain** dentro do **aplicativo:: Load**.
 
-O método __InitializeGameState__ é chamado na classe de construtor [__GameMain__](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameMain.cpp#L32-L131), que, por sua vez, é chamada quando o objeto de classe __GameMain__ é criado no método [__App::Load__](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/App.cpp#L115-L123).
-
-```cpp
-
-GameMain::GameMain(...)
+```cppwinrt
+GameMain::GameMain(std::shared_ptr<DX::DeviceResources> const& deviceResources) : ...
 {
     m_deviceResources->RegisterDeviceNotify(this);
     ...
-
-    create_task([this]()
-    {
-        ...
-
-    }).then([this]()
-    {
-        // The finalize code needs to run in the same thread context
-        // as the m_renderer object was created because the D3D device context
-        // can ONLY be accessed on a single thread.
-        m_renderer->FinalizeCreateGameDeviceResources();
-
-        InitializeGameState(); //Initialization of game states occurs here.
-        
-        ...
-    
-    }, task_continuation_context::use_current()).then([this]()
-    {
-        ...
-        
-    }, task_continuation_context::use_current());
+    ConstructInBackground();
 }
 
-```
+winrt::fire_and_forget GameMain::ConstructInBackground()
+{
+    ...
+    m_renderer->FinalizeCreateGameDeviceResources();
 
-```cpp
+    InitializeGameState();
+    ...
+}
 
 void GameMain::InitializeGameState()
 {
     // Set up the initial state machine for handling Game playing state.
     if (m_game->GameActive() && m_game->LevelActive())
     {
-        // The last time the game terminated it was in the middle of a level.
+        // The last time the game terminated it was in the middle
+        // of a level.
         // We are waiting for the user to continue the game.
-        //...
+        ...
     }
     else if (!m_game->GameActive() && (m_game->HighScore().totalHits > 0))
     {
@@ -108,98 +90,101 @@ void GameMain::InitializeGameState()
         // Show the high score.
         // We are waiting for the user to acknowledge the high score and start a new game.
         // The level resources for the first level will be loaded later.
-        //...
+        ...
     }
     else
     {
         // This is either the first time the game has run or
         // the last time the game terminated the level was completed.
         // We are waiting for the user to begin the next level.
-        m_updateState = UpdateEngineState::WaitingForResources;
-        m_pressResult = PressResultState::PlayLevel;
-        SetGameInfoOverlay(GameInfoOverlayState::LevelStart);
-        m_uiControl->SetAction(GameInfoOverlayCommand::PleaseWait);
+        ...
     }
     m_uiControl->ShowGameInfoOverlay();
 }
-
 ```
 
 ## <a name="update-game-engine"></a>Atualizar o mecanismo do jogo
 
-No método [__App::Run__](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/App.cpp#L127-L130), ele chama [__GameMain::Run__](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameMain.cpp#L143-L202). Neste método, o exemplo implementou uma máquina de estado básico para manipular todas as ações principais que o jogador pode realizar. O nível mais alto dessa máquina de estado lida com ações como carregar um jogo, jogar um nível específico ou continuar um nível depois que um jogo foi pausado (pelo sistema ou pelo jogador).
+O método **App:: Run** chama **GameMain:: Run**. Em **GameMain:: Run** é um computador de estado básico para lidar com todas as principais ações que um usuário pode executar. O nível mais alto dessa máquina de estado lida com o carregamento de um jogo, a reprodução de um nível específico ou a continuação de um nível após o jogo ter sido pausado (pelo sistema ou pelo usuário).
 
-No exemplo de jogo, há três estados principais (__UpdateEngineState__) em que o jogo pode estar:
+No jogo de exemplo, há três Estados principais (representados pela enumeração **UpdateEngineState** ) em que o jogo pode estar.
 
-1. __Aguardando recursos__: O loop do jogo está em exibição cíclica, não será possível transitar até os recursos (especificamente os recursos gráficos) estarem disponíveis. Quando as tarefas assíncronas para o carregamento de recursos são concluídas, o estado é atualizado para __ResourcesLoaded__. Isso geralmente acontece entre os níveis, quando o nível está carregando novos recursos do disco, do servidor do jogo ou do back-end da nuvem. No exemplo de jogo, simulamos esse comportamento porque o exemplo não precisa de nenhum recurso adicional por nível naquele momento.
-2. __Aguardando pressione__: O loop do jogo está em exibição cíclica, aguardando uma entrada específica do usuário. Esta entrada é um ação do jogador para carregar um jogo, iniciar um nível ou continuar um nível. O código de exemplo faz referência a esses subestados como valores de enumeração __PressResultState__.
-3. Na __Dynamics__: O loop do jogo está sendo executado com o usuário jogando. Enquanto o usuário está jogando, o jogo verifica três condições na qual ele pode transitar: 
-    * __TimeExpired__: expiração do tempo definido para um nível
-    * __LevelComplete__: conclusão de um nível pelo jogador 
-    * __GameComplete__: conclusão de todos os níveis pelo jogador
+1. **UpdateEngineState:: WaitingForResources**. O loop do jogo está em exibição cíclica, não será possível transitar até os recursos (especificamente os recursos gráficos) estarem disponíveis. Quando as tarefas de carregamento de recursos assíncronos forem concluídas, atualizaremos o estado para **UpdateEngineState:: ResourcesLoaded**. Isso geralmente ocorre entre os níveis quando o nível está carregando novos recursos do disco, de um servidor de jogos ou de um back-end de nuvem. No jogo de exemplo, simulamos esse comportamento, porque o exemplo não precisa de nenhum recurso adicional por nível no momento.
+2. **UpdateEngineState:: WaitingForPress**. O loop do jogo está em exibição cíclica, aguardando uma entrada específica do usuário. Essa entrada é uma ação do jogador para carregar um jogo, para iniciar um nível ou para continuar um nível. O código de exemplo refere-se a esses subcaminhos por meio da enumeração **PressResultState** .
+3. **UpdateEngineState::D ynamics**. O loop do jogo está sendo executado com o usuário jogando. Enquanto o usuário está jogando, o jogo verifica três condições na qual ele pode transitar: 
+ - **GameState:: expira**. Expiração do limite de tempo para um nível.
+ - **GameState:: LevelComplete**. Conclusão de um nível pelo Player.
+ - **GameState:: GameComplete**. Conclusão de todos os níveis pelo Player.
 
-Seu jogo é simplesmente uma máquina de estado que contém várias máquinas de estado menores. Em cada estado específico, ele deve ser definido por um critério muito específico. A transição de um estado para outro devem se basear em ações do sistema ou na entrada discreta do usuário (como carregamento de recursos gráficos). Ao planejar seu jogo, é recomendável desenhar o fluxo completo de jogo para garantir que todas as ações possíveis que o usuário ou o sistema pode executar serão abordadas. Os jogos podem ser bastante complicados; por isso, uma máquina de estado é uma ferramenta poderosa para visualizar essa complexidade e torná-la mais gerenciável.
+Um jogo é simplesmente uma máquina de estado que contém várias máquinas de estado menores. Cada estado específico deve ser definido por critérios muito específicos. As transições de um estado para outro devem ser baseadas na entrada discreta do usuário ou em ações do sistema (como o carregamento de recursos gráficos).
 
-Vamos dar uma olhada nos códigos do loop de atualização abaixo.
+Ao planejar seu jogo, considere desenhar todo o fluxo de jogos para garantir que você tenha abordado todas as ações possíveis que o usuário ou o sistema pode tomar. Um jogo pode ser muito complicado, portanto, uma máquina de estado é uma ferramenta poderosa para ajudá-lo a Visualizar essa complexidade e torná-la mais gerenciável.
 
-### <a name="appupdate-method"></a>Método App::Update
+Vamos dar uma olhada no código para o loop de atualização.
 
-A estrutura da máquina de estado usada para atualizar o mecanismo do jogo
+### <a name="the-gamemainupdate-method"></a>O método GameMain:: Update
 
-```cpp
+Esta é a estrutura do computador de estado usado para atualizar o mecanismo de jogo.
+
+```cppwinrt
 void GameMain::Update()
 {
-    m_controller->Update(); //the controller instance has its own update loop.
+    // The controller object has its own update loop.
+    m_controller->Update(); 
 
     switch (m_updateState)
     {
     case UpdateEngineState::WaitingForResources:
-        //...
+        ...
         break;
 
     case UpdateEngineState::ResourcesLoaded:
-        //...
+        ...
         break;
 
     case UpdateEngineState::WaitingForPress:
         if (m_controller->IsPressComplete())
         {
-            //...
+            ...
         }
         break;
 
     case UpdateEngineState::Dynamics:
         if (m_controller->IsPauseRequested())
         {
-            //...
+            ...
         }
         else
         {
-            GameState runState = m_game->RunGame(); //when the player is playing, the work is handled by this Simple3DGame::RunGame method.
+            // When the player is playing, work is done by Simple3DGame::RunGame.
+            GameState runState = m_game->RunGame();
             switch (runState)
             {
             case GameState::TimeExpired:
-                //...
+                ...
                 break;
 
             case GameState::LevelComplete:
-                //...
+                ...
                 break;
 
             case GameState::GameComplete:
-                //...
+                ...
                 break;
             }
         }
 
         if (m_updateState == UpdateEngineState::WaitingForPress)
         {
-            // Transitioning state, so enable waiting for the press event
-            m_controller->WaitForPress(m_renderer->GameInfoOverlayUpperLeft(), m_renderer->GameInfoOverlayLowerRight());
+            // Transitioning state, so enable waiting for the press event.
+            m_controller->WaitForPress(
+                m_renderer->GameInfoOverlayUpperLeft(),
+                m_renderer->GameInfoOverlayLowerRight());
         }
         if (m_updateState == UpdateEngineState::WaitingForResources)
         {
-            // Transitioning state, so shut down the input controller until resources are loaded
+            // Transitioning state, so shut down the input controller
+            // until resources are loaded.
             m_controller->Active(false);
         }
         break;
@@ -207,30 +192,33 @@ void GameMain::Update()
 }
 ```
 
-## <a name="update-user-interface"></a>Atualizar interface do usuário
+## <a name="update-the-user-interface"></a>Atualizar a interface do usuário
 
-Precisamos manter o jogador informado sobre o estado do sistema e permitir que o estado do jogo seja alterado de acordo com as ações do jogador e as regras que definem o jogo. Muitos jogos, incluindo este exemplo de jogo, comumente usam elementos de interface do usuário para apresentar essas informações ao jogador. A interface do usuário contém representações do estado do jogo e outras informações específicas do jogo, como pontuação, munição ou o número de chances restantes. A interface do usuário também é denominada sobreposição, pois ela é renderizada separadamente do pipeline gráfico principal e posicionada sobre a projeção 3D. Algumas informações da interface do usuário também são apresentadas como um painel transparente (HUD) para permitir que os usuários obtenham essas informações sem tirar os olhos da área de jogo principal. No jogo de exemplo, criamos essa sobreposição usando APIs Direct2D. Também podemos criar essa sobreposição usando XAML. Isso será abordado no tópico sobre [extensão do jogo de amostra](tutorial-resources.md).
+Precisamos manter o jogador informado sobre o estado do sistema e permitir que o estado do jogo seja alterado de acordo com as ações do jogador e as regras que definem o jogo. Muitos jogos, incluindo este jogo de exemplo, normalmente usam elementos da interface do usuário para apresentar essas informações ao Player. A interface do usuário contém representações do estado do jogo e outras informações específicas de reprodução, como score, ammo ou o número de chances restantes. A interface do usuário também é chamada de sobreposição porque é renderizada separadamente do pipeline de gráficos principal e colocada sobre a projeção 3D.
 
-Há dois componentes na interface do usuário:
+Algumas informações da interface do usuário também são apresentadas como uma HUD (exibição de cabeçotes) para permitir que o usuário Veja essas informações sem levar seus olhos completamente da área de jogos principal. No jogo de exemplo, criamos essa sobreposição usando as APIs Direct2D. Como alternativa, poderíamos criar essa sobreposição usando XAML, que abordamos ao [estender o jogo de exemplo](tutorial-resources.md).
 
--   A HUD, que contém a pontuação e as informações sobre o estado atual do jogo.
--   O bitmap de pausa, que é um retângulo preto com texto sobreposto durante o estado pausado/suspenso do jogo. Esta é a sobreposição do jogo. Ela será abordada com mais detalhes em [Adicionando uma interface do usuário](tutorial--adding-a-user-interface.md)
+Há dois componentes para a interface do usuário.
 
-Como era de se esperar, a sobreposição também tem uma máquina de estado. A sobreposição pode exibir uma mensagem de início de nível ou de fim de jogo. Basicamente, é uma tela que gera as informações sobre o estado do jogo que exibimos ao jogador quando o jogo é pausado ou suspenso.
+- O HUD que contém a pontuação e as informações sobre o estado atual de jogos.
+- O bitmap de pausa, que é um retângulo preto com texto sobreposto durante o estado pausado/suspenso do jogo. Esta é a sobreposição do jogo. Ela será abordada com mais detalhes em [Adicionando uma interface do usuário](tutorial--adding-a-user-interface.md)
 
-A sobreposição renderizada pode ser uma das seis telas, dependendo do estado do jogo: 
-1. Tela de carregamento de recursos no início do jogo
-2. Tela de estatísticas do jogo
-3. Tela de mensagem de início de nível
-4. Tela de término do jogo quando todos os níveis são concluídos sem esgotar o tempo
-5. Tele de término do jogo quando o tempo é esgotado
-6. Tela do menu de pausa
+Como era de se esperar, a sobreposição também tem uma máquina de estado. A sobreposição pode exibir um início de nível ou uma mensagem de jogo. É essencialmente uma tela na qual podemos gerar informações sobre o estado do jogo que desejamos exibir para o jogador enquanto o jogo é pausado ou suspenso.
 
-Separar a interface do usuário do pipeline gráfico do jogo permite trabalhar nele independentemente da engine de renderização gráfica do jogo, reduzindo consideravelmente a complexidade do código do jogo.
+A sobreposição renderizada pode ser uma dessas seis telas, dependendo do estado do jogo.
 
-Consulte como o jogo de amostra estrutura a máquina de estado da sobreposição.
+1. Tela de progresso do carregamento de recursos no início do jogo.
+2. Tela de estatísticas cheia.
+3. Tela de início de mensagem de nível.
+4. Tela de jogo quando todos os níveis forem concluídos sem o tempo esgotado.
+5. Tela de jogo quando o tempo esgotar.
+6. Pausar tela do menu.
 
-```cpp
+Separar a interface do usuário do pipeline gráfico do jogo permite que você trabalhe com ele independentemente do mecanismo de renderização de gráficos do jogo e reduz significativamente a complexidade do código do jogo.
+
+Veja como o jogo de exemplo estrutura o computador de estado da sobreposição.
+
+```cppwinrt
 void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
 {
     m_gameInfoOverlayState = state;
@@ -241,33 +229,35 @@ void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
         break;
 
     case GameInfoOverlayState::GameStats:
-        //...
+        ...
         break;
 
     case GameInfoOverlayState::LevelStart:
-        //...
+        ...
         break;
 
     case GameInfoOverlayState::GameOverCompleted:
-        //...
+        ...
         break;
 
     case GameInfoOverlayState::GameOverExpired:
-        //...
+        ...
         break;
 
     case GameInfoOverlayState::Pause:
-        //...
+        ...
         break;
     }
 }
 ```
 
-## <a name="events-handling"></a>Manipulação de eventos
+## <a name="event-handling"></a>Manipulação de eventos
 
-Nosso código de exemplo registrou vários manipuladores de eventos específicos em **Initialize**, **SetWindow** e **Load** no App.cpp. Esses são eventos importantes que precisam funcionar para que possamos adicionar a mecânica do jogo ou iniciar o desenvolvimento de elementos gráficos. Esses eventos são fundamentais para uma experiência adequada com aplicativos UWP. Como um aplicativo UWP pode ser ativado, desativado, redimensionado, ajustado, desajustado, suspenso ou retomado a qualquer momento, o jogo deve registrar esses eventos o quanto antes e manipulá-los de modo a manter a experiência fluida e previsível para o jogador.
+Como vimos no tópico [definir o aplicativo UWP do jogo](tutorial--building-the-games-uwp-app-framework.md) , muitos dos métodos do provedor de exibição da classe de **aplicativo** registram manipuladores de eventos. Esses métodos precisam lidar corretamente com esses eventos importantes antes de adicionar a mecânica de jogos ou iniciar o desenvolvimento de gráficos.
 
-Estes são os manipuladores de eventos usados neste exemplo e os eventos manipulados por eles.
+A manipulação adequada dos eventos em questão é fundamental para a experiência do aplicativo UWP. Como um aplicativo UWP pode ser ativado, desativado, redimensionado, encaixado, desajustado, suspenso ou retomado, o jogo deve se registrar nesses eventos assim que possível e tratá-los de uma forma que mantenha a experiência tranqüila e previsível para o jogador.
+
+Esses são os manipuladores de eventos usados neste exemplo e os eventos que eles manipulam.
 
 <table>
 <colgroup>
@@ -283,60 +273,61 @@ Estes são os manipuladores de eventos usados neste exemplo e os eventos manipul
 <tbody>
 <tr class="odd">
 <td align="left">OnActivated</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated"><strong>CoreApplicationView::Activated</strong></a>. O aplicativo de jogo foi trazido para o primeiro plano. Por isso, a janela principal foi ativada.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.applicationmodel.core.coreapplicationview.activated"><strong>CoreApplicationView::Activated</strong></a>. O app de jogo foi trazido para o primeiro plano. Por isso, a janela principal foi ativada.</td>
 </tr>
 <tr class="even">
 <td align="left">OnDpiChanged</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. O DPI da janela mudou e o jogo ajusta devidamente seus recursos.
+<td align="left">Manipula <a href="/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. O DPI da janela mudou e o jogo ajusta devidamente seus recursos.
 <div class="alert">
-<strong>Observação</strong> <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow"><strong>CoreWindow</strong> </a> coordenadas são em DIPs (Pixels independentes de dispositivo) para <a href="https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview">Direct2D</a>. Como resultado, você deve notificar o Direct2D sobre a alteração no DIP para exibir quaisquer ativos ou primitivas 2D corretamente.
+<strong>Observe</strong>que as coordenadas <a href="/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow"><strong>CoreWindow</strong></a> estão em pixels independentes de dispositivo (DIPs) para <a href="/windows/desktop/Direct2D/direct2d-overview">Direct2D</a>. Como resultado, você deve notificar o Direct2D sobre a alteração no DPI para exibir quaisquer ativos ou primitivas 2D corretamente.
 </div>
 <div>
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left">OnOrientationChanged</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_OrientationChanged"><strong>Graphics::Display::DisplayInformation::OrientationChanged</strong></a>. A orientação da tela é alterada e a renderização precisa ser atualizada.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_OrientationChanged"><strong>Graphics::Display::DisplayInformation::OrientationChanged</strong></a>. A orientação da tela é alterada e a renderização precisa ser atualizada.</td>
 </tr>
 <tr class="even">
 <td align="left">OnDisplayContentsInvalidated</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DisplayContentsInvalidated"><strong>Graphics::Display::DisplayInformation::DisplayContentsInvalidated</strong></a>. A exibição precisa ser redesenhada e o jogo precisa ser renderizado novamente.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DisplayContentsInvalidated"><strong>Graphics::Display::DisplayInformation::DisplayContentsInvalidated</strong></a>. A exibição precisa ser redesenhada e o jogo precisa ser renderizado novamente.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnResuming</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming"><strong>CoreApplication::Resuming</strong></a>. O aplicativo de jogo restaura o jogo de um estado suspenso.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.applicationmodel.core.coreapplication.resuming"><strong>CoreApplication::Resuming</strong></a>. O aplicativo de jogo restaura o jogo de um estado suspenso.</td>
 </tr>
 <tr class="even">
 <td align="left">OnSuspending</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending"><strong>CoreApplication::Suspending</strong></a>. O aplicativo de jogo salva seu estado em disco. Ele tem cinco segundos para salvar o estado no armazenamento.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.applicationmodel.core.coreapplication.suspending"><strong>CoreApplication::Suspending</strong></a>. O aplicativo de jogo salva seu estado em disco. Ele tem cinco segundos para salvar o estado no armazenamento.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnVisibilityChanged</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.visibilitychanged"><strong>CoreWindow::VisibilityChanged</strong></a>. O aplicativo de jogo tem visibilidade alterada e se torna visível ou foi tornado invisível por outro aplicativo que se tornou visível.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.ui.core.corewindow.visibilitychanged"><strong>CoreWindow::VisibilityChanged</strong></a>. O aplicativo de jogo tem visibilidade alterada e se torna visível ou foi tornado invisível por outro aplicativo que se tornou visível.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowActivationChanged</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.activated"><strong>CoreWindow::Activated</strong></a>. A janela principal do aplicativo de jogo foi desativada ou ativada. Por isso, ela deve remover o foco e pausar o jogo ou obter o foco novamente. Nos dois casos, a sobreposição indica que o jogo está em pausa.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.ui.core.corewindow.activated"><strong>CoreWindow::Activated</strong></a>. A janela principal do aplicativo de jogo foi desativada ou ativada. Por isso, ela deve remover o foco e pausar o jogo ou obter o foco novamente. Nos dois casos, a sobreposição indica que o jogo está em pausa.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnWindowClosed</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.closed"><strong>CoreWindow::Closed</strong></a>. O aplicativo de jogo fecha a janela principal e suspende o jogo.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.ui.core.corewindow.closed"><strong>CoreWindow::Closed</strong></a>. O aplicativo de jogo fecha a janela principal e suspende o jogo.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowSizeChanged</td>
-<td align="left">Manipula <a href="https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.sizechanged"><strong>CoreWindow::SizeChanged</strong></a>. O aplicativo de jogo realoca os recursos gráficos e a sobreposição para que acomodem a mudança de tamanho, atualizando o destino de renderização em seguida.</td>
+<td align="left">Manipula <a href="/uwp/api/windows.ui.core.corewindow.sizechanged"><strong>CoreWindow::SizeChanged</strong></a>. O app de jogo realoca os recursos gráficos e a sobreposição para acomodar a mudança de tamanho e, em seguida, atualiza o destino de renderização.</td>
 </tr>
 </tbody>
 </table>
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tópico, falamos sobre como o fluxo geral do jogo é gerenciado por meio dos estados do jogo e que um jogo é composto de várias máquinas de estado diferentes. Aprendemos também como atualizar a interface do usuário e gerenciar os manipuladores de eventos principais do app. Agora estamos prontos para nos aprofundar no loop de renderização, no jogo e em sua mecânica.
+Neste tópico, vimos como o fluxo de jogo geral é gerenciado usando Estados de jogo e que um jogo é composto por várias máquinas de estado diferentes. Também vimos como atualizar a interface do usuário e gerenciar os principais manipuladores de eventos do aplicativo. Agora estamos prontos para mergulhar no loop de renderização, no jogo e em sua mecânica.
  
-Você pode passar pelos outros componentes que compõem este jogo em qualquer ordem:
-* [Defina o principal objeto do jogo](tutorial--defining-the-main-game-loop.md)
-* [Framework de renderização i: Introdução à renderização](tutorial--assembling-the-rendering-pipeline.md)
-* [Framework de renderização II: Renderização de jogos](tutorial-game-rendering.md)
-* [Adicionar uma interface do usuário](tutorial--adding-a-user-interface.md)
-* [Adicionar controles](tutorial--adding-controls.md)
-* [Adicionar som](tutorial--adding-sound.md)
+Você pode percorrer os tópicos restantes que documentam este jogo em qualquer ordem.
+
+- [Definir o objeto principal do jogo](tutorial--defining-the-main-game-loop.md)
+- [Estrutura de renderização I: introdução à renderização](tutorial--assembling-the-rendering-pipeline.md)
+- [Estrutura de renderização II: introdução ao jogo](tutorial-game-rendering.md)
+- [Adicionar uma interface do usuário](tutorial--adding-a-user-interface.md)
+- [Adicionar controles](tutorial--adding-controls.md)
+- [Adicionar som](tutorial--adding-sound.md)

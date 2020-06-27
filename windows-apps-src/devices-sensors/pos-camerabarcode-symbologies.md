@@ -5,15 +5,23 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: cc2aaaf4e9779cb2be712119fb1dacdf946952c5
-ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
+ms.openlocfilehash: 481d10f2fea076f45124a3c75819dfe6494300bf
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243321"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448396"
 ---
 # <a name="symbologies"></a>Simbologias
-Este tópico fornece exemplos de códigos de barras para cada uma das simbologias suportadas pelo decodificador de código de barras de software fornecido com o Windows 10, incluindo: UPC/EAN, código 39, código 128, intercalado 2 de 5, Databar onidirecionais, Databar empilhado, código QR e GS1DWCode.
+
+Este tópico fornece amostras de códigos de barras para cada uma das simbologias compatíveis com o decodificador de códigos barras de software que acompanha o Windows 10, incluindo: UPC/EAN, código 39, código 128, intercalado 2 de 5, DataBar omnidirecional, Databar empilhado , código QR e GS1DWCode.
+
+O Windows 10 usa uma câmera de lente padrão combinada com um decodificador de software para gerar um scanner de código de barras. Este artigo refere-se aos simbologias com suporte do decodificador de software. Os simbologias adicionais podem ser suportados por dispositivos de scanner de código de barras dedicados que têm decodificadores de hardware internos, entre em contato com o fabricante do scanner de código de barras para obter detalhes. As simbologias listadas têm suporte em todas as edições do Windows 10 Build 17134 ou posterior, a menos que especificado de outra forma.
+
+Use [GetSupportedSymbologiesAsync](/uwp/api/windows.devices.pointofservice.barcodescanner.getsupportedsymbologiesasync) para determinar os simbologias específicos com suporte em um scanner de código de barras.
+
+> [!NOTE]
+> O decodificador de software interno do Windows 10 é fornecido pela [*Digimarc Corporation*](https://www.digimarc.com/).
 
 ## <a name="1d-symbologies"></a>Simbologias 1D
 
@@ -52,12 +60,9 @@ Este tópico fornece exemplos de códigos de barras para cada uma das simbologia
 
 Digitalize a imagem de um pacote abaixo com seu aplicativo de scanner de código de barras de câmera para ver o GS1DWCode em ação.  A imagem é codificada com UPCA 856107006854.  Visite http://www.digimarc.com para obter mais informações sobre as funcionalidades do GS1DWCode.
 
-![Exemplo de código de barras - GS1DWCode](images/pos/rice-box-v7.jpg)
+![Exemplo de código de barras - GS1DWCode](images/pos/Rice-Box-V7.jpg)
 
-> [!NOTE]
-> O decodificador de software integrado ao Windows 10 é uma cortesia fornecida pela [*Digimarc Corporation*](https://www.digimarc.com/)
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 ### <a name="samples"></a>Exemplos
 

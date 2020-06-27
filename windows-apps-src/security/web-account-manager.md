@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: c90a3257f8a54202e7ac50395e7e73f0538a484a
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e5b835c837ca750f2ccc1ebad9ec119047b02ce7
+ms.sourcegitcommit: 97d2ef33253af210ad2d4f036b4820056ff03f62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259873"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441623"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -24,7 +24,7 @@ Este artigo descreve como usar o **[AccountsSettingsPane](https://docs.microsoft
 
 Primeiro, crie um aplicativo em branco no Visual Studio. 
 
-Segundo, para conectar a provedores de identidade, será necessário associar seu aplicativo à Loja. Para isso, clique com o botão direito do mouse no projeto, escolha **Loja** > **Associar o aplicativo à Loja** e siga as instruções do assistente. 
+Segundo, para conectar a provedores de identidade, será necessário associar seu aplicativo à Loja. Para fazer isso, clique com o botão direito do mouse no projeto, escolha **armazenar**  >  **aplicativo associado com a loja**e siga as instruções do assistente. 
 
 Terceiro, crie uma interface do usuário básica que consiste em um botão XAML simples e duas caixas de texto.
 
@@ -76,7 +76,7 @@ Se você executar o aplicativo e clicar no botão "Fazer logon", uma janela vazi
 O painel está vazio porque o sistema fornece somente um shell de interface do usuário - cabe ao desenvolvedor popular o painel de forma programática com os provedores de identidade. 
 
 > [!TIP]
-> Opcionalmente, você pode usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** em vez de **[show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** , que retornará um **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** , para consultar o status da operação. 
+> Opcionalmente, você pode usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** em vez de **[show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que retornará um **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)**, para consultar o status da operação. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registro para AccountCommandsRequested
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https\://login.microsoft.com". 
+Em seguida, obtenha um provedor usando o método WebAuthenticationCoreManager.FindAccountProviderAsync. A URL para o provedor varia de acordo com o provedor e pode ser encontrada na documentação do provedor. Para contas da Microsoft e Azure Active Directory, é "https \: //login.Microsoft.com". 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -250,7 +250,7 @@ O modo como você chama diversas APIs REST varia de acordo com o provedor; consu
 
 Tokens são úteis para obter imediatamente informações sobre um usuário, mas eles geralmente têm tempo de vida variável - os tokens MSA, por exemplo, são válidos por algumas horas apenas. Felizmente, não é necessário mostrar novamente o **AccountsSettingsPane** sempre que um token expirar. Quando um usuário autoriza seu aplicativo uma vez, você pode armazenar as informações da conta do usuário para uso futuro. 
 
-Para fazer isso, use a classe **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)** . A **WebAccount** é retornada pelo mesmo método usado para solicitar o token:
+Para fazer isso, use a classe **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)**. A **WebAccount** é retornada pelo mesmo método usado para solicitar o token:
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -351,7 +351,7 @@ private async Task SignOutAccountAsync(WebAccount account)
 
 ## <a name="add-providers-that-dont-support-webaccountmanager"></a>Adicionar provedores que não dão suporte ao WebAccountManager
 
-Se você deseja integrar a autenticação de um serviço ao seu aplicativo, mas esse serviço não dá suporte ao WebAccountManager - Google+ ou Twitter, por exemplo - você ainda pode adicionar manualmente o provedor ao **AccountsSettingsPane**. Para isso, crie um novo objeto WebAccountProvider e forneça um nome e ícone .png, depois adicione-o à lista WebAccountProviderCommands. Veja um código stub: 
+Se você deseja integrar a autenticação de um serviço em seu aplicativo, mas esse serviço não dá suporte a webaccountmanager-Google + ou Twitter, por exemplo, você ainda pode adicionar manualmente esse provedor ao **AccountsSettingsPane**. Para isso, crie um novo objeto WebAccountProvider e forneça um nome e ícone .png, depois adicione-o à lista WebAccountProviderCommands. Veja um código stub: 
 
  ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCommandsRequestedEventArgs e)
@@ -373,7 +373,7 @@ private async void GetTwitterTokenAsync(WebAccountProviderCommand command)
 ```
 
 > [!NOTE] 
-> Isso apenas adiciona um ícone ao **AccountsSettingsPane** e executa o método especificado quando o ícone for clicado (GetTwitterTokenAsync, neste caso). Você deve fornecer o código que manipula a autenticação real. Para obter mais informações, consulte (Agente de autenticação da Web)[web-authentication-broker], que fornece métodos auxiliares para autenticação usando serviços REST. 
+> Isso apenas adiciona um ícone ao **AccountsSettingsPane** e executa o método especificado quando o ícone for clicado (GetTwitterTokenAsync, neste caso). Você deve fornecer o código que manipula a autenticação real. Para obter mais informações, consulte [agente de autenticação da Web](web-authentication-broker.md), que fornece métodos auxiliares para autenticação usando serviços REST. 
 
 ## <a name="add-a-custom-header"></a>Adicionar um cabeçalho personalizado
 
@@ -420,16 +420,16 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 Teoricamente, você pode usar comandos de configurações para tudo. No entanto, sugerimos limitar seu uso a cenários intuitivos relacionados à conta como os descritos acima. 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Namespace Windows. Security. Authentication. Web. Core](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
+[Namespace Windows.Security.Authentication.Web.Core](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
-[Namespace do Windows. Security. Credentials](https://docs.microsoft.com/uwp/api/windows.security.credentials)
+[Namespace Windows.Security.Credentials](https://docs.microsoft.com/uwp/api/windows.security.credentials)
 
 [Classe AccountsSettingsPane](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
-[Agente de autenticação na Web](web-authentication-broker.md)
+[Agente de autenticação da Web](web-authentication-broker.md)
 
 [Exemplo de gerenciamento de contas da Web](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
 
-[Aplicativo Agendador de almoço](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
+[App Lunch Scheduler](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)

@@ -1,26 +1,31 @@
 ---
 title: Anúncios de Bluetooth
 description: Esta seção contém artigos sobre como integrar anúncios de Bluetooth de baixa energia (LE) a aplicativos UWP (Plataforma Universal do Windows) por meio do usuário de APIs AdvertisementWatcher e AdvertisementPublisher.
-ms.date: 02/08/2017
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c4bef6045f75992e0fad503ff2a357d52363008
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2300871292e08588b0c2124c67a379d403ae53b3
+ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259683"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469521"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anúncios de Bluetooth LE
 
 
 **APIs importantes**
 
--   [**Windows. Devices. Bluetooth. anúncio**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
+-   [**Windows.Devices.Bluetooth.Advertisement**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 
 Este artigo fornece uma visão geral dos beacons de anúncios de Bluetooth de baixa energia (LE) para aplicativos UWP (Plataforma Universal do Windows).  
+
+> [!Important]
+> Você deve declarar o recurso "Bluetooth" em *Package. appxmanifest*.
+>
+> `<Capabilities> <DeviceCapability Name="bluetooth" /> </Capabilities>`
 
 ## <a name="overview"></a>Visão geral
 
@@ -43,7 +48,7 @@ Para usar a funcionalidade Bluetooth LE básica em um aplicativo da Plataforma U
 
 Anúncios de Bluetooth LE permitem que seu dispositivo envie constantemente beacons de uma carga específica, chamada de anúncio. Esse anúncio pode ser visto por qualquer dispositivo compatível com Bluetooth LE nas proximidades, se estiver configurado para escutar esse anúncio específico.
 
-> **Observação**: para a privacidade do usuário, o tempo de vida do anúncio está vinculado ao do app. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/index).
+> **Observação**: para a privacidade do usuário, o ciclo de vida do seu anúncio está vinculado ao do seu aplicativo. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicação básica
 

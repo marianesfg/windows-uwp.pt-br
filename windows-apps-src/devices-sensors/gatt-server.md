@@ -1,40 +1,45 @@
 ---
 title: Servidor GATT do Bluetooth
 description: Este artigo fornece uma visão geral do Servidor GATT (Perfil de Atributo Genérico) de Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para casos de uso comuns.
-ms.date: 02/08/2017
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cded3ee7fb2cc3157caa61939e022c3869f5232
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 65a4643e6a73e0eb015fc40c7354d0cd307fa0d1
+ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282374"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469541"
 ---
 # <a name="bluetooth-gatt-server"></a>Servidor GATT do Bluetooth
 
+Este artigo demonstra as APIs de Servidor GATT (Atributo Genérico) do Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para tarefas comuns de servidor GATT:
 
-**APIs importantes**
-- [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows. Devices. Bluetooth. GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
-
-
-Este artigo demonstra as APIs de Servidor GATT (Atributo Genérico) do Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para tarefas comuns de servidor GATT: 
 - Definir os serviços com suporte
 - Publicar o servidor para que ele possa ser descoberto por clientes remotos
 - Anunciar o suporte para o serviço
 - Responder a solicitações de leitura e gravação
 - Enviar notificações aos clientes inscritos
 
+> [!Important]
+> Você deve declarar o recurso "Bluetooth" em *Package. appxmanifest*.
+>
+> `<Capabilities> <DeviceCapability Name="bluetooth" /> </Capabilities>`
+
+**APIs importantes**
+
+- [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows. Devices. Bluetooth. GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
+
 ## <a name="overview"></a>Visão geral
+
 Geralmente, o Windows opera na função de cliente. No entanto, surgem muitos cenários que exigem que o Windows também atue como um servidor GATT do Bluetooth LE. Quase todos os cenários para dispositivos IoT, juntamente com a maioria das comunicações BLE de plataforma cruzada exigirão que o Windows seja um servidor GATT. Além disso, o envio de notificações para os dispositivos acessórios próximos tornou-se um cenário popular que também exige essa tecnologia.  
-> Verifique se todos os conceitos dos [documentos de Cliente GATT](gatt-client.md) estão claros antes de prosseguir.  
 
 As operações de servidor girarão em torno de Service Provider e de GattLocalCharacteristic. Essas duas classes fornecerão a funcionalidade necessária para declarar, implementar e expor uma hierarquia de dados a um dispositivo remoto.
 
 ## <a name="define-the-supported-services"></a>Definir os serviços com suporte
-Seu aplicativo pode declarar um ou mais serviços que serão publicados pelo Windows. Cada serviço é exclusivamente identificado por um UUID. 
+Seu aplicativo pode declarar um ou mais serviços que serão publicados pelo Windows. Cada serviço é exclusivamente identificado por um UUID.
 
 ### <a name="attributes-and-uuids"></a>Atributos e UUIDs
 Cada serviço, característica e descritor é definido por seu próprio UUID exclusivo de 128 bits.
@@ -144,8 +149,8 @@ GattServiceProviderAdvertisingParameters advParameters = new GattServiceProvider
 };
 serviceProvider.StartAdvertising(advParameters);
 ```
-- **Isstatable**: Anuncia o nome amigável para dispositivos remotos no anúncio, tornando o dispositivo detectável.
-- **Isconnectable**:  Anuncia um anúncio conectável para uso na função periférica.
+- **IsDiscoverable**: anuncia o nome amigável para dispositivos remotos no anúncio, tornando o dispositivo detectável.
+- **IsConnectable**: anuncia um anúncio conectável para uso na função periférica.
 
 > Quando um serviço for detectável e conectável, o sistema irá adicionar o Uuid do Serviço ao pacote de anúncio.  Há apenas 31 bytes no pacote de anúncio e um UUID de 128 bits ocupa 16 deles!
 
@@ -154,7 +159,7 @@ serviceProvider.StartAdvertising(advParameters);
 ## <a name="respond-to-read-and-write-requests"></a>Responder a solicitações de leitura e gravação
 Como vimos acima durante a declaração das características necessárias, GattLocalCharacteristics tem três tipos de eventos - ReadRequested, WriteRequested e SubscribedClientsChanged.
 
-### <a name="read"></a>Read
+### <a name="read"></a>Ler
 Quando um dispositivo remoto tenta ler um valor de uma característica (e não é um valor constante), o evento ReadRequested é chamado. A característica de que leitura foi chamada, bem como os argumentos (com as informações sobre o dispositivo remoto), são passados para o representante: 
 
 ```csharp
@@ -177,7 +182,7 @@ async void ReadCharacteristic_ReadRequested(GattLocalCharacteristic sender, Gatt
 }
 ``` 
 
-### <a name="write"></a>Gravação
+### <a name="write"></a>Gravar
 Quando um dispositivo remoto tenta gravar um valor de uma característica, o evento WriteRequested é chamado com detalhes sobre o dispositivo remoto, em qual característica será feita a gravação e o próprio valor: 
 
 ```csharp

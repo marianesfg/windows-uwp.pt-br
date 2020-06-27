@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ae87600c49b61e5ee426e8dd7ab33b3d3cf7ea3
-ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
+ms.openlocfilehash: f265f4051f8b300739a61f089a1bcdc3812f11cf
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448356"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproduzir áudio e vídeo com o MediaPlayer
 
-Este artigo mostra como reproduzir mídia em seu aplicativo Universal do Windows usando a classe [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer). Com o Windows 10, versão 1607, melhorias significativas foram feitas nas APIs de reprodução de mídia, incluindo um design de processo único simplificado para áudio em segundo plano, integração automática com os Controles de Transporte de Mídia do Sistema (SMTC), a capacidade de sincronizar vários media players, o recurso de uma superfície Windows.UI.Composition e uma interface simples para criar e programar pausas de mídia em seu conteúdo. Para tirar proveito dessas melhorias, a prática recomendada para a reprodução de mídia é usar a classe **MediaPlayer** em vez de **MediaElement**. O [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement), um controle XAML leve, foi introduzido para permitir que você renderize conteúdo de mídia em uma página XAML. Muitas das APIs de status e controle de reprodução fornecidas pelo **MediaElement** agora estão disponíveis por meio do novo objeto [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). O **MediaElement** continua a funcionar a fim de dar suporte à compatibilidade com versões anteriores, mas nenhum outro recurso será adicionado a essa classe.
+Este artigo mostra como reproduzir mídia em seu aplicativo Universal do Windows usando a classe [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer). Com o Windows 10, versão 1607, melhorias significativas foram feitas nas APIs de reprodução de mídia, incluindo um design de processo único simplificado para áudio em segundo plano, integração automática com os SMTC (controles de transporte de mídia do sistema), a capacidade de sincronizar vários players de mídia, a capacidade de renderizar quadros de vídeo em uma superfície Windows. Para tirar proveito dessas melhorias, a prática recomendada para a reprodução de mídia é usar a classe **MediaPlayer** em vez de **MediaElement**. O [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement), um controle XAML leve, foi introduzido para permitir que você renderize conteúdo de mídia em uma página XAML. Muitas das APIs de status e controle de reprodução fornecidas pelo **MediaElement** agora estão disponíveis por meio do novo objeto [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). O **MediaElement** continua a funcionar a fim de dar suporte à compatibilidade com versões anteriores, mas nenhum outro recurso será adicionado a essa classe.
 
 Este artigo fornecerá orientações sobre os recursos do **MediaPlayer** que serão usados por um aplicativo típico de reprodução de mídia. Observe que o **MediaPlayer** usa a classe [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource) como um contêiner para todos os itens de mídia. Essa classe permite carregar e reproduzir mídia de várias origens diferentes, incluindo arquivos locais, fluxos de memória e origens de rede, todos usando a mesma interface. Também há classes de nível superior que funcionam com o **MediaSource**, como [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackItem) e [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList), que oferecem recursos mais avançados, como playlists e a capacidade de gerenciar origens de mídia com várias faixas de áudio, vídeo e metadados. Para obter mais informações sobre **MediaSource** e APIs relacionadas, consulte [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md).
 
@@ -67,7 +67,7 @@ No evento [**SelectionChanged**](https://docs.microsoft.com/uwp/api/windows.ui.x
 [!code-cs[SetAudioEndpontSelectionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpontSelectionChanged)]
 
 ### <a name="playback-session"></a>Sessão de reprodução
-Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de download e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
+Conforme descrito anteriormente neste artigo, muitas das funções que são expostas pela classe **MediaElement** foram transferidas para a classe [**MediaPlaybackSession**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackSession). Isso inclui informações sobre o estado de reprodução do player, como a posição de reprodução atual, se o player está pausado ou em reprodução e a velocidade de reprodução atual. O **MediaPlaybackSession** também fornece vários eventos para avisá-lo quando o estado é alterado, inclusive o status de transferência e o buffer atual do conteúdo que está sendo reproduzido, bem como o tamanho natural e a taxa de proporção do conteúdo de vídeo em reprodução no momento.
 
 O exemplo a seguir mostra como implementar um manipulador de clique de botão que avança 10 segundos no conteúdo. Primeiro, o objeto**MediaPlaybackSession** do player é recuperado com a propriedade [**PlaybackSession**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.playbacksession). Em seguida, a propriedade [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position) é definida como a posição de reprodução atual mais 10 segundos.
 
@@ -82,13 +82,13 @@ A partir do Windows 10, versão 1803, você pode definir a rotação de apresent
 [!code-cs[SetRotation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetRotation)]
 
 ### <a name="detect-expected-and-unexpected-buffering"></a>Detectar buffer esperado e inesperado
-O objeto **MediaPlaybackSession** descrito na seção anterior fornece dois eventos de detecção quando o arquivo de mídia em reprodução começa e encerra o buffer, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** e **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)** . Isso permite que você atualize a interface do usuário para mostrar ao usuário que o buffer está ocorrendo. O buffer inicial é esperado quando um arquivo de mídia é aberto pela primeira vez ou quando o usuário alterna para um novo item de uma playlist. O buffer inesperado pode ocorrer quando a velocidade de rede degrada ou se o sistema de gerenciamento de conteúdo que fornece o conteúdo tiver problemas técnicos. A partir do RS3, você pode usar o evento **BufferingStarted** para determinar se o evento de buffer é esperado ou se é inesperado e interrompe a reprodução. Você pode usar essas informações como dados de telemetria para o serviço de entrega do aplicativo ou mídia. 
+O objeto **MediaPlaybackSession** descrito na seção anterior fornece dois eventos de detecção quando o arquivo de mídia em reprodução começa e encerra o buffer, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** e **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)**. Isso permite que você atualize a interface do usuário para mostrar ao usuário que o buffer está ocorrendo. O buffer inicial é esperado quando um arquivo de mídia é aberto pela primeira vez ou quando o usuário alterna para um novo item de uma playlist. O buffer inesperado pode ocorrer quando a velocidade de rede degrada ou se o sistema de gerenciamento de conteúdo que fornece o conteúdo tiver problemas técnicos. A partir do RS3, você pode usar o evento **BufferingStarted** para determinar se o evento de buffer é esperado ou se é inesperado e interrompe a reprodução. Você pode usar essas informações como dados de telemetria para o serviço de entrega do aplicativo ou mídia. 
 
 Registre manipuladores para os eventos **BufferingStarted** e **BufferingEnded** a fim de receber notificações de estado de buffer.
 
 [!code-cs[RegisterBufferingHandlers](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterBufferingHandlers)]
 
-No manipulador de evento **BufferingStarted**, transmita os argumentos de evento passados para o evento em um objeto **[MediaPlaybackSessionBufferingStartedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionbufferingstartedeventargs)** e verifique a propriedade **[IsPlaybackInterruption](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionbufferingstartedeventargs.IsPlaybackInterruption)** . Se esse valor for true, o buffer que disparou o evento é inesperado e interrompe a reprodução. Caso contrário, o buffer inicial é esperado. 
+No manipulador de evento **BufferingStarted**, transmita os argumentos de evento passados para o evento em um objeto **[MediaPlaybackSessionBufferingStartedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionbufferingstartedeventargs)** e verifique a propriedade **[IsPlaybackInterruption](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksessionbufferingstartedeventargs.IsPlaybackInterruption)**. Se esse valor for true, o buffer que disparou o evento é inesperado e interrompe a reprodução. Caso contrário, o buffer inicial é esperado. 
 
 [!code-cs[BufferingHandlers](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetBufferingHandlers)]
 
@@ -216,7 +216,7 @@ No manipulador de eventos **VideoTracksChanged**, obtenha as propriedades de cod
 ## <a name="use-mediaplayer-in-frame-server-mode"></a>Usar o MediaPlayer no modo de servidor de quadros
 A partir do Windows 10, versão 1703, você poderá usar o **MediaPlayer** no modo de servidor de quadros. Nesse modo, o **MediaPlayer** não renderiza automaticamente os quadros para um **MediaPlayerElement** associado. Em vez disso, seu app copia o quadro atual do **MediaPlayer** para um objeto que implementa [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). O principal cenário que esse recurso habilita é o uso de sombreadores de pixel para processar os quadros de vídeo fornecidos pelo **MediaPlayer**. Seu aplicativo é responsável pela exibição de cada quadro após o processamento, como ao mostrar o quadro em um controle [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) XAML.
 
-No exemplo a seguir, um novo **MediaPlayer** é inicializado e o conteúdo de vídeo é carregado. Em seguida, um manipulador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable) é registrado. O modo de servidor de quadros é habilitado por meio da configuração da propriedadeIsVideoFrameServerEnabled[**do objeto**MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) como **true**. Por fim, a reprodução de mídia é iniciada com uma chamada a [**Play**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
+No exemplo a seguir, um novo **MediaPlayer** é inicializado e o conteúdo de vídeo é carregado. Em seguida, um manipulador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable) é registrado. O modo de servidor de quadros é habilitado por meio da configuração da propriedade [**IsVideoFrameServerEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) do objeto **MediaPlayer** como **true**. Por fim, a reprodução de mídia é iniciada com uma chamada a [**Play**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
 
 [!code-cs[FrameServerInit](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetFrameServerInit)]
 
@@ -230,7 +230,7 @@ Depois que todos os objetos necessários tenham sido criados, **CopyFrameToVideo
 
 Para saber mais sobre como usar o Win2D, veja o [Repositório do Win2D no GitHub](https://github.com/Microsoft/Win2D). Para experimentar o código de exemplo mostrado acima, você precisará adicionar o pacote NuGet Win2D ao seu projeto com as instruções a seguir.
 
-**Para adicionar o pacote NuGet do Win2D ao seu projeto de efeito**
+**Para adicionar o pacote NuGet Win2D ao seu projeto de efeito**
 
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Gerenciar Pacotes NuGet**.
 2.  Na parte superior da janela, selecione a guia **Procurar**.
@@ -260,9 +260,9 @@ O usuário pode decidir que eles querem pausar ou continuar a reprodução, mesm
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
-* [Itens de mídia, listas de reprodução e faixas](media-playback-with-mediasource.md)
-* [Integrar com os controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md)
-* [Criar, agendar e gerenciar quebras de mídia](create-schedule-and-manage-media-breaks.md)
+* [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md)
+* [Integrar ao Controle de Transporte de Mídia do Sistema](integrate-with-systemmediatransportcontrols.md)
+* [Criar, programar e gerenciar pausas de mídia](create-schedule-and-manage-media-breaks.md)
 * [Reproduzir mídia em segundo plano](background-audio.md)
 
 
