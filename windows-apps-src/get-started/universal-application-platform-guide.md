@@ -52,7 +52,7 @@ O vídeo a seguir apresenta uma breve visão geral das famílias de dispositivos
 
 ## <a name="adaptive-controls-and-input"></a>Entrada e controles adaptáveis
 
-Os elementos de interface do usuário respondem ao tamanho e à resolução em DPI da tela em que o aplicativo está sendo executado, ajustando seu layout e escala. Os aplicativos UWP funcionam bem com vários tipos de entrada, como teclado, mouse, toque, caneta e controladores do Xbox One. Caso você precise personalizar mais sua interface do usuário para um tamanho de tela ou dispositivo específico, novos painéis de layout e ferramentas ajudarão a criar a interface do usuário que se adapte aos diferentes dispositivos e fatores forma nos quais os aplicativos podem ser executados.
+Os elementos de interface do usuário respondem ao tamanho e à resolução em DPI da tela em que o aplicativo está sendo executado, ajustando seu layout e escala. Os aplicativos UWP funcionam bem com vários tipos de entrada, como teclado, mouse, toque, caneta e controladores do Xbox One. Caso você precise personalizar mais sua interface do usuário para um tamanho de tela ou dispositivo específico, novos painéis de layout e ferramentas ajudarão a criar a interface do usuário que se adapte aos diferentes dispositivos e fatores de forma nos quais os aplicativos podem ser executados.
 
 ![Dispositivos Windows](images/1894834-hig-device-primer-01-500.png)
 
